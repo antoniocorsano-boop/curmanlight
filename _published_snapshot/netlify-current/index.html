@@ -399,8 +399,18 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
   .quick-toggle{padding:7px 8px}
 }
 
+.orientation-card{background:linear-gradient(135deg,#e8eaf6,#c5cae9);border-radius:12px;padding:14px 18px;margin:10px auto 0;max-width:calc(1600px - 24px);width:calc(100% - 24px);box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;gap:14px;align-items:flex-start}
+.orientation-card h2{font-size:14px;color:#1a237e;margin:0 0 5px}
+.orientation-card p{font-size:11px;color:#37474f;line-height:1.5;margin:0 0 6px}
+.orientation-steps{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 6px}
+.orientation-step{background:rgba(26,35,126,.1);border-radius:999px;padding:3px 10px;font-size:10px;font-weight:700;color:#1a237e;white-space:nowrap}
+.orientation-note{font-size:10px!important;color:#5d4037!important;background:#fff8e1;border-radius:6px;padding:5px 9px;margin:0!important}
+.orientation-dismiss{background:transparent;border:none;color:#7986cb;cursor:pointer;font-size:18px;padding:2px 6px;border-radius:50%;flex-shrink:0;margin-left:auto}
+.orientation-dismiss:hover{background:rgba(26,35,126,.12);color:#1a237e}
+@media(max-width:760px){.orientation-card{flex-wrap:wrap;padding:12px;margin:8px auto 0;width:calc(100% - 16px)}.orientation-steps{gap:5px}.orientation-step{font-size:9px;padding:3px 8px}}
+
 @media print{
-  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside{display:none!important}
+  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card{display:none!important}
   .layout{padding:0;display:block}
   .panels{grid-template-columns:1fr 1fr}
 }
@@ -444,6 +454,21 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
     <a class='course-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Significato operativo del motto latino'>🏛️ Motto e metodo</a>
     <button class="quick-btn" onclick="showWelcome(true)">❔ Guida rapida</button>
   </div>
+</div>
+<div class="orientation-card" id="orientation-card">
+  <div style="flex:1;min-width:0">
+    <h2>Revisione guidata del curricolo</h2>
+    <p>Lo strumento aiuta a confrontare il curricolo vigente (IN 2012) con le proposte di aggiornamento (IN 2025). Le sezioni disciplinari sono consultabili e modificabili solo nel percorso di revisione; ogni scelta deve essere validata dal gruppo di lavoro.</p>
+    <div class="orientation-steps">
+      <span class="orientation-step">1. Scegli una disciplina</span>
+      <span class="orientation-step">2. Confronta 2012 e 2025</span>
+      <span class="orientation-step">3. Valuta e decidi</span>
+      <span class="orientation-step">4. Approva, modifica o mantieni</span>
+      <span class="orientation-step">5. Consulta ed esporta</span>
+    </div>
+    <div class="orientation-note">Il sistema non approva automaticamente il curricolo: organizza il lavoro e rende tracciabili le decisioni.</div>
+  </div>
+  <button class="orientation-dismiss" onclick="this.parentElement.remove()" aria-label="Chiudi orientamento" title="Chiudi">×</button>
 </div>
 <div class="layout">
   <aside>
