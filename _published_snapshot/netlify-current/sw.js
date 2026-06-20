@@ -1,9 +1,9 @@
-const CACHE_NAME = "curricolo-don-milani-v4-testata-espandibile";
+const CACHE_NAME = "curmanlight-cache-v452b421";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
-  "./Corso_CurricoloDonMilani_IN2025.pdf",
+
   "./motto-non-multa-sed-multum.html",
   "./riferimenti_istituzionali_normativa.json",
   "./docs_distribuzione/FONTI_PTOF_RAV_NORMATIVA.md",
