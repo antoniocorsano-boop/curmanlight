@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3ea">
+  <title>CurManLight — Revisione curricolo</title>
+  <style>
+:root {
+  --bg: #f7f3ea;
+  --surface: #fffdf8;
+  --surface-strong: #ffffff;
+  --text: #1f2933;
+  --muted: #65717d;
+  --border: #ded7c7;
+  --accent: #765a2f;
+  --accent-soft: #efe4d1;
+  --success: #2f6d4c;
+  --warning: #946200;
+  --danger: #9f3434;
+  --shadow: 0 18px 48px rgba(39, 31, 18, 0.09);
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --focus: 0 0 0 3px rgba(118, 90, 47, 0.25);
+  --sidebar-width: 300px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 30;
+  padding: 0.75rem 1rem;
+  background: var(--text);
+  color: white;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #fffaf0 0%, #f1e8d8 100%);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  min-width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.brand-block h1 {
+  margin: 0.08rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.nav-list {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.nav-button {
+  width: 100%;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: left;
+  border-radius: 14px;
+  padding: 0.75rem 0.85rem;
+  color: var(--text);
+  display: grid;
+  grid-template-columns: 1.6rem minmax(0, 1fr);
+  gap: 0.55rem;
+  align-items: start;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--border);
+}
+
+.nav-button[aria-current="page"] {
+  background: var(--surface-strong);
+  border-color: var(--accent-soft);
+  box-shadow: 0 8px 22px rgba(39, 31, 18, 0.07);
+}
+
+.nav-index {
+  display: grid;
+  place-items: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.nav-title {
+  display: block;
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+.nav-desc {
+  display: block;
+  margin-top: 0.18rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.sidebar-note {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.58);
+  display: grid;
+  gap: 0.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.sidebar-note strong {
+  color: var(--text);
+}
+
+.main-area {
+  min-width: 0;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem clamp(1rem, 4vw, 2.4rem);
+  background: rgba(247, 243, 234, 0.86);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(222, 215, 199, 0.75);
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 0.55rem 0.85rem;
+  font-weight: 700;
+}
+
+.topbar-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar-copy strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-pill,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 999px;
+  padding: 0.38rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status-pill {
+  background: #f0e4c8;
+  color: #664600;
+}
+
+.view-root {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(1.1rem, 4vw, 2.6rem) 0 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.hero-card,
+.card,
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.hero-card h2,
+.view-heading h2 {
+  margin: 0.2rem 0 0.75rem;
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.55;
+  max-width: 70ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.35rem;
+}
+
+.button-primary,
+.button-secondary,
+.button-ghost,
+.inline-action {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.button-secondary {
+  background: var(--surface-strong);
+  color: var(--accent);
+}
+
+.button-ghost,
+.inline-action {
+  background: transparent;
+  color: var(--accent);
+}
+
+.button-primary:hover,
+.button-secondary:hover,
+.button-ghost:hover,
+.inline-action:hover {
+  transform: translateY(-1px);
+}
+
+.panel {
+  padding: 1rem;
+}
+
+.summary-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: start;
+}
+
+.summary-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: var(--accent);
+  margin-top: 0.45rem;
+}
+
+.summary-item dt {
+  font-weight: 800;
+}
+
+.summary-item dd {
+  margin: 0.18rem 0 0;
+  color: var(--muted);
+  line-height: 1.42;
+}
+
+.view-heading {
+  margin-bottom: 1rem;
+}
+
+.view-heading h2 {
+  margin-bottom: 0.45rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 253, 248, 0.72);
+}
+
+.field-group {
+  display: grid;
+  gap: 0.28rem;
+}
+
+.field-group label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem;
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  padding: 1.1rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h3,
+.card h4 {
+  margin: 0.16rem 0 0;
+  line-height: 1.2;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.content-block {
+  display: grid;
+  gap: 0.75rem;
+  line-height: 1.56;
+}
+
+.content-block ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.content-block li + li {
+  margin-top: 0.35rem;
+}
+
+.source-line {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.badge-locked {
+  background: #eef3f0;
+  color: var(--success);
+}
+
+.badge-work {
+  background: #f5ead8;
+  color: var(--warning);
+}
+
+.badge-risk {
+  background: #f9e2e2;
+  color: var(--danger);
+}
+
+.badge-info {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.locked-card {
+  position: relative;
+}
+
+.locked-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(47, 109, 76, 0.08);
+}
+
+.accordion {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.accordion-item + .accordion-item {
+  border-top: 1px solid var(--border);
+}
+
+.accordion-button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  text-align: left;
+  font-weight: 850;
+  color: var(--text);
+}
+
+.accordion-button:hover {
+  background: rgba(118, 90, 47, 0.06);
+}
+
+.accordion-content {
+  display: none;
+  padding: 0 1rem 1rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.accordion-item[data-open="true"] .accordion-content {
+  display: block;
+}
+
+.revision-card {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.revision-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.notice {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1rem;
+  background: #fff9ec;
+  color: #674b10;
+  line-height: 1.48;
+}
+
+.source-card {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.source-card a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.source-card a:hover {
+  text-decoration: underline;
+}
+
+.export-box {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.footer-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.print-only {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(88vw, var(--sidebar-width));
+    z-index: 20;
+    transform: translateX(-105%);
+    transition: transform 180ms ease;
+    box-shadow: var(--shadow);
+  }
+
+  .sidebar[data-open="true"] {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.two,
+  .grid.three,
+  .revision-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .view-root {
+    width: min(100% - 1rem, 1180px);
+    padding-bottom: 2rem;
+  }
+
+  .topbar {
+    padding-inline: 0.75rem;
+  }
+
+  .status-pill {
+    display: none;
+  }
+
+  .card,
+  .panel,
+  .hero-card {
+    border-radius: 18px;
+  }
+
+  .card-header {
+    display: grid;
+  }
+
+  .hero-actions,
+  .export-actions {
+    display: grid;
+  }
+
+  .button-primary,
+  .button-secondary,
+  .button-ghost,
+  .inline-action {
+    width: 100%;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .sidebar,
+  .topbar,
+  .hero-actions,
+  .toolbar,
+  .button-primary,
+  .button-secondary,
+  .button-ghost,
+  .inline-action,
+  .skip-link {
+    display: none !important;
+  }
+
+  .app-shell {
+    display: block;
+  }
+
+  .view-root {
+    width: 100%;
+    padding: 0;
+  }
+
+  .card,
+  .panel,
+  .hero-card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .print-only {
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navigazione principale">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">CL</div>
+        <div>
+          <p class="eyebrow">CurManLight</p>
+          <h1>Revisione curricolo</h1>
+        </div>
+      </div>
+
+      <nav class="nav-list" id="view-nav" aria-label="Viste dello strumento"></nav>
+
+      <section class="sidebar-note" aria-label="Stato dello strumento">
+        <strong>Strumento statico</strong>
+        <span>Nessun backend, nessun modulo, nessuna autenticazione.</span>
+      </section>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">
+          <span aria-hidden="true">☰</span>
+          Menu
+        </button>
+        <div class="topbar-copy">
+          <p class="eyebrow">Ambiente di lavoro</p>
+          <strong id="current-view-title">Home</strong>
+        </div>
+        <div class="status-pill" role="status">Validazione umana richiesta</div>
+      </header>
+
+      <main id="main-content" tabindex="-1">
+        <section id="view-root" class="view-root" aria-live="polite"></section>
+      </main>
+    </div>
+  </div>
+
+  <template id="locked-section-template">
+    <article class="card locked-card">
+      <div class="card-header">
+        <div>
+          <p class="eyebrow">Sezione generale</p>
+          <h3></h3>
+        </div>
+        <span class="badge badge-locked">Sola lettura</span>
+      </div>
+      <p class="muted"></p>
+      <div class="content-block"></div>
+      <footer class="source-line"></footer>
+    </article>
+  </template>
+
+  <script>
+window.CURMANLIGHT_DATA = {
+  meta: {
+    title: 'CurManLight — Revisione curricolo',
+    officialSourceName: 'Curricolo disciplinare WORD.docx',
+    sourceStatus: 'Fonte ufficiale da importare o verificare manualmente',
+    version: 'CML-001'
+  },
+  views: [
+    { id: 'home', title: 'Home', description: 'Percorso essenziale e prossima azione.' },
+    { id: 'documento-generale', title: 'Documento generale', description: 'Sezioni istituzionali in sola lettura.' },
+    { id: 'curricolo-attuale', title: 'Curricolo attuale', description: 'Consultazione del curricolo disciplinare.' },
+    { id: 'indicazioni-2012', title: 'Indicazioni 2012', description: 'Riferimento normativo stabile.' },
+    { id: 'nuove-2025', title: 'Nuove Indicazioni 2025', description: 'Confronto prudente e da validare.' },
+    { id: 'revisione', title: 'Revisione disciplinare', description: 'Proposte, priorità, fonti e note.' },
+    { id: 'fonti-export', title: 'Fonti ed esportazione', description: 'Riepilogo e uscita del lavoro.' }
+  ],
+  lockedGeneralSections: [
+    {
+      id: 'premessa',
+      title: 'Premessa e finalità del curricolo',
+      summary: 'Sezione istituzionale da mantenere stabile. Serve a chiarire funzione, destinatari e valore formativo del curricolo di istituto.',
+      paragraphs: [
+        'Il curricolo di istituto organizza il percorso formativo degli alunni in modo progressivo, coerente e condiviso tra ordini di scuola, discipline e comunità educante.',
+        'Questa sezione non è un campo di lavoro diretto: deve essere consultata come riferimento comune prima di intervenire sulle parti disciplinari.'
+      ],
+      bullets: ['Identità formativa dell’istituto', 'Continuità del percorso verticale', 'Centralità della progettazione collegiale'],
+      source: 'Documento ufficiale di istituto — sezione generale'
+    },
+    {
+      id: 'quadro-normativo',
+      title: 'Quadro di riferimento',
+      summary: 'Raccoglie i riferimenti che orientano la progettazione curricolare e la revisione periodica.',
+      paragraphs: [
+        'I riferimenti normativi e pedagogici devono essere usati come base di controllo, non come testo da riscrivere automaticamente.',
+        'Eventuali aggiornamenti devono essere distinti dal testo vigente e sottoposti a validazione umana.'
+      ],
+      bullets: ['Autonomia scolastica', 'Indicazioni nazionali vigenti', 'Competenze chiave europee', 'Valutazione e inclusione'],
+      source: 'Documento ufficiale di istituto — riferimenti generali'
+    },
+    {
+      id: 'profilo-studente',
+      title: 'Profilo dello studente e competenze attese',
+      summary: 'Descrive l’orizzonte formativo comune verso cui tendono le discipline.',
+      paragraphs: [
+        'Il profilo dello studente consente di collegare le scelte disciplinari a obiettivi trasversali, competenze personali e cittadinanza attiva.',
+        'Le discipline devono contribuire a tale profilo senza perdere la specificità dei propri saperi e linguaggi.'
+      ],
+      bullets: ['Sviluppo dell’autonomia', 'Responsabilità personale e sociale', 'Uso consapevole dei linguaggi', 'Pensiero critico e operativo'],
+      source: 'Documento ufficiale di istituto — profilo formativo'
+    },
+    {
+      id: 'organizzazione',
+      title: 'Organizzazione del curricolo verticale',
+      summary: 'Definisce criteri di progressione, raccordo e coerenza tra anni e ordini di scuola.',
+      paragraphs: [
+        'La revisione disciplinare deve rispettare la progressione verticale: non basta aggiornare singole attività, occorre verificare il raccordo tra traguardi, obiettivi e competenze.',
+        'Le modifiche operative vanno quindi motivate attraverso fonte, priorità e impatto sul percorso.'
+      ],
+      bullets: ['Progressione per anni', 'Raccordo tra ordini', 'Coerenza tra traguardi e obiettivi', 'Documentazione delle modifiche'],
+      source: 'Documento ufficiale di istituto — impianto verticale'
+    }
+  ],
+  disciplines: [
+    {
+      id: 'tecnologia',
+      name: 'Tecnologia',
+      status: 'Disciplina campione',
+      sections: [
+        {
+          title: 'Nuclei fondanti',
+          text: 'Materiali, energia, ambiente, rappresentazione tecnica, progettazione, digitale e processi produttivi. La sezione va verificata rispetto al curricolo ufficiale caricato.'
+        },
+        {
+          title: 'Traguardi di competenza',
+          text: 'Lo studente osserva, analizza e interpreta sistemi tecnici e tecnologici; progetta semplici soluzioni; usa strumenti e linguaggi in modo consapevole.'
+        },
+        {
+          title: 'Obiettivi di apprendimento',
+          text: 'Gli obiettivi devono essere articolati per anno e collegati a evidenze osservabili, evitando formulazioni generiche o non verificabili.'
+        },
+        {
+          title: 'Raccordi verticali',
+          text: 'La progressione deve chiarire cosa viene introdotto, consolidato e approfondito nei diversi anni del primo ciclo.'
+        }
+      ]
+    },
+    {
+      id: 'italiano',
+      name: 'Italiano',
+      status: 'Struttura predisposta',
+      sections: [
+        { title: 'Nuclei fondanti', text: 'Ascolto, parlato, lettura, scrittura, lessico, riflessione linguistica. Testo da allineare al documento ufficiale.' },
+        { title: 'Traguardi di competenza', text: 'Sezione predisposta per importazione o revisione controllata.' },
+        { title: 'Obiettivi di apprendimento', text: 'Sezione predisposta per anno, fonte e livello di priorità.' }
+      ]
+    },
+    {
+      id: 'matematica',
+      name: 'Matematica',
+      status: 'Struttura predisposta',
+      sections: [
+        { title: 'Nuclei fondanti', text: 'Numeri, spazio e figure, relazioni e funzioni, dati e previsioni. Testo da allineare al documento ufficiale.' },
+        { title: 'Traguardi di competenza', text: 'Sezione predisposta per importazione o revisione controllata.' },
+        { title: 'Obiettivi di apprendimento', text: 'Sezione predisposta per anno, fonte e livello di priorità.' }
+      ]
+    }
+  ],
+  references2012: [
+    {
+      title: 'Funzione delle Indicazioni 2012',
+      text: 'Le Indicazioni 2012 costituiscono il riferimento ordinario per il curricolo della scuola dell’infanzia e del primo ciclo. In questa vista sono trattate come base stabile di confronto.'
+    },
+    {
+      title: 'Uso nella revisione',
+      text: 'Ogni proposta di modifica deve chiarire se conferma il curricolo vigente, lo integra o segnala una possibile criticità di allineamento.'
+    },
+    {
+      title: 'Criterio operativo',
+      text: 'Non copiare automaticamente testi normativi. Usare il riferimento per verificare coerenza, progressione e osservabilità degli obiettivi.'
+    }
+  ],
+  references2025: [
+    {
+      title: 'Confronto prudente',
+      text: 'Le nuove formulazioni o bozze di aggiornamento devono essere lette come elementi di confronto fino alla validazione istituzionale definitiva.'
+    },
+    {
+      title: 'Separazione dal curricolo vigente',
+      text: 'La proposta 2025 non sovrascrive il curricolo attuale. Ogni suggerimento resta classificato come proposta, con fonte e motivazione.'
+    },
+    {
+      title: 'Impatto disciplinare',
+      text: 'La revisione deve indicare quali sezioni disciplinari sono interessate: traguardi, obiettivi, raccordi, attività, valutazione o lessico.'
+    }
+  ],
+  revisions: [
+    {
+      id: 'rev-tec-001',
+      discipline: 'Tecnologia',
+      title: 'Rendere più esplicito il raccordo tra progettazione, sostenibilità e digitale',
+      source: 'Curricolo attuale + confronto Indicazioni',
+      priority: 'alta',
+      status: 'bozza',
+      note: 'Verificare che la progressione per classe non sia solo tematica, ma collegata a competenze osservabili.'
+    },
+    {
+      id: 'rev-tec-002',
+      discipline: 'Tecnologia',
+      title: 'Distinguere meglio attività operative, competenze e criteri di valutazione',
+      source: 'Documento ufficiale di istituto',
+      priority: 'media',
+      status: 'da_verificare',
+      note: 'La proposta richiede controllo collegiale prima dell’eventuale inserimento nel documento.'
+    }
+  ],
+  sources: [
+    {
+      label: 'Curricolo disciplinare WORD.docx',
+      kind: 'Fonte ufficiale di istituto',
+      use: 'Base documentale da consultare e importare in modo controllato.'
+    },
+    {
+      label: 'Indicazioni nazionali 2012',
+      kind: 'Riferimento normativo',
+      use: 'Base stabile per traguardi, obiettivi e impianto curricolare.'
+    },
+    {
+      label: 'Nuove Indicazioni 2025',
+      kind: 'Confronto e aggiornamento',
+      use: 'Area prudenziale per proposte da validare.'
+    },
+    {
+      label: 'Delibere e documenti di istituto',
+      kind: 'Validazione interna',
+      use: 'Controllo umano, collegiale e istituzionale prima dell’adozione.'
+    }
+  ]
+};
+
+</script>
+  <script>
+(function () {
+  'use strict';
+
+  const data = window.CURMANLIGHT_DATA;
+  const root = document.getElementById('view-root');
+  const nav = document.getElementById('view-nav');
+  const currentTitle = document.getElementById('current-view-title');
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menu-toggle');
+  const storageKey = 'curmanlight.cml001.revisions.v1';
+
+  let activeView = getInitialView();
+  let activeDiscipline = data.disciplines[0].id;
+  let revisions = loadRevisions();
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function getInitialView() {
+    const hash = window.location.hash.replace('#', '');
+    return data.views.some((view) => view.id === hash) ? hash : 'home';
+  }
+
+  function loadRevisions() {
+    try {
+      const stored = window.localStorage.getItem(storageKey);
+      return stored ? JSON.parse(stored) : data.revisions;
+    } catch (error) {
+      return data.revisions;
+    }
+  }
+
+  function saveRevisions() {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(revisions));
+    } catch (error) {
+      console.warn('Salvataggio locale non disponibile', error);
+    }
+  }
+
+  function setView(viewId) {
+    activeView = viewId;
+    window.location.hash = viewId;
+    render();
+    closeMobileSidebar();
+    document.getElementById('main-content').focus({ preventScroll: true });
+  }
+
+  function closeMobileSidebar() {
+    sidebar.dataset.open = 'false';
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function renderNav() {
+    nav.innerHTML = data.views.map((view, index) => `
+      <button class="nav-button" type="button" data-view="${view.id}" aria-current="${activeView === view.id ? 'page' : 'false'}">
+        <span class="nav-index">${index + 1}</span>
+        <span>
+          <span class="nav-title">${escapeHtml(view.title)}</span>
+          <span class="nav-desc">${escapeHtml(view.description)}</span>
+        </span>
+      </button>
+    `).join('');
+
+    nav.querySelectorAll('[data-view]').forEach((button) => {
+      button.addEventListener('click', () => setView(button.dataset.view));
+    });
+  }
+
+  function render() {
+    const view = data.views.find((item) => item.id === activeView) || data.views[0];
+    currentTitle.textContent = view.title;
+    renderNav();
+
+    const renderers = {
+      home: renderHome,
+      'documento-generale': renderDocumentoGenerale,
+      'curricolo-attuale': renderCurricoloAttuale,
+      'indicazioni-2012': renderIndicazioni2012,
+      'nuove-2025': renderNuove2025,
+      revisione: renderRevisione,
+      'fonti-export': renderFontiExport
+    };
+
+    root.innerHTML = renderers[activeView] ? renderers[activeView]() : renderHome();
+    bindViewEvents();
+  }
+
+  function viewHeading(kicker, title, lead) {
+    return `
+      <header class="view-heading">
+        <p class="eyebrow">${escapeHtml(kicker)}</p>
+        <h2>${escapeHtml(title)}</h2>
+        <p class="lead">${escapeHtml(lead)}</p>
+      </header>
+    `;
+  }
+
+  function renderHome() {
+    const pending = revisions.filter((revision) => revision.status !== 'validata').length;
+    return `
+      <section class="hero">
+        <div class="hero-card">
+          <p class="eyebrow">Percorso consigliato</p>
+          <h2>Consulta il documento, confronta le fonti, lavora solo sulle proposte.</h2>
+          <p class="lead">Le sezioni generali restano bloccate. La revisione avviene sulle parti disciplinari, con fonte, priorità, stato e nota di validazione.</p>
+          <div class="hero-actions">
+            <button class="button-primary" type="button" data-view="documento-generale">Apri documento generale</button>
+            <button class="button-secondary" type="button" data-view="revisione">Vai alla revisione</button>
+          </div>
+        </div>
+        <aside class="panel" aria-label="Sintesi operativa">
+          <dl class="summary-list">
+            <div class="summary-item">
+              <span class="summary-dot" aria-hidden="true"></span>
+              <div><dt>Sezioni bloccate</dt><dd>${data.lockedGeneralSections.length} sezioni generali consultabili.</dd></div>
+            </div>
+            <div class="summary-item">
+              <span class="summary-dot" aria-hidden="true"></span>
+              <div><dt>Proposte aperte</dt><dd>${pending} elementi da controllare o validare.</dd></div>
+            </div>
+            <div class="summary-item">
+              <span class="summary-dot" aria-hidden="true"></span>
+              <div><dt>Fonte ufficiale</dt><dd>${escapeHtml(data.meta.officialSourceName)}</dd></div>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="grid three" aria-label="Azioni principali">
+        ${quickCard('1', 'Prima consulta', 'Leggi le sezioni istituzionali senza modificarle.', 'documento-generale')}
+        ${quickCard('2', 'Poi confronta', 'Verifica curricolo attuale, Indicazioni 2012 e proposta 2025.', 'curricolo-attuale')}
+        ${quickCard('3', 'Infine revisiona', 'Lavora sulle proposte disciplinari, sempre con validazione umana.', 'revisione')}
+      </section>
+    `;
+  }
+
+  function quickCard(index, title, text, viewId) {
+    return `
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Passo ${index}</p>
+            <h3>${escapeHtml(title)}</h3>
+          </div>
+          <span class="badge badge-info">Guidato</span>
+        </div>
+        <p class="muted">${escapeHtml(text)}</p>
+        <button class="inline-action" type="button" data-view="${viewId}">Apri</button>
+      </article>
+    `;
+  }
+
+  function renderDocumentoGenerale() {
+    return `
+      ${viewHeading('Consultazione istituzionale', 'Documento generale in sola lettura', 'Queste sezioni descrivono l’impianto comune del curricolo. Sono visibili, referenziate e non modificabili.')}
+      <div class="notice"><strong>Blocco di sicurezza:</strong> le sezioni generali non contengono campi di modifica. Per intervenire sul curricolo usare la vista “Revisione disciplinare”.</div>
+      <section class="grid two" aria-label="Sezioni generali bloccate">
+        ${data.lockedGeneralSections.map(renderLockedSection).join('')}
+      </section>
+    `;
+  }
+
+  function renderLockedSection(section) {
+    const bullets = section.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+    const paragraphs = section.paragraphs.map((item) => `<p>${escapeHtml(item)}</p>`).join('');
+    return `
+      <article class="card locked-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Sezione generale</p>
+            <h3>${escapeHtml(section.title)}</h3>
+          </div>
+          <span class="badge badge-locked">Sola lettura</span>
+        </div>
+        <p class="muted">${escapeHtml(section.summary)}</p>
+        <div class="content-block">
+          ${paragraphs}
+          <ul>${bullets}</ul>
+        </div>
+        <footer class="source-line">Fonte: ${escapeHtml(section.source)}</footer>
+      </article>
+    `;
+  }
+
+  function renderCurricoloAttuale() {
+    const discipline = data.disciplines.find((item) => item.id === activeDiscipline) || data.disciplines[0];
+    return `
+      ${viewHeading('Consultazione disciplinare', 'Curricolo attuale', 'Questa vista serve a leggere e confrontare. Le modifiche devono essere registrate come proposte, non applicate direttamente al documento.')}
+      ${renderDisciplineToolbar()}
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Disciplina selezionata</p>
+            <h3>${escapeHtml(discipline.name)}</h3>
+          </div>
+          <span class="badge badge-info">${escapeHtml(discipline.status)}</span>
+        </div>
+        <div class="accordion" data-accordion>
+          ${discipline.sections.map((section, index) => renderAccordionItem(section.title, section.text, index === 0)).join('')}
+        </div>
+      </article>
+    `;
+  }
+
+  function renderDisciplineToolbar() {
+    const options = data.disciplines.map((discipline) => `
+      <option value="${discipline.id}" ${discipline.id === activeDiscipline ? 'selected' : ''}>${escapeHtml(discipline.name)}</option>
+    `).join('');
+    return `
+      <div class="toolbar">
+        <div class="field-group">
+          <label for="discipline-select">Disciplina</label>
+          <select id="discipline-select">${options}</select>
+        </div>
+        <button class="button-secondary" type="button" data-view="revisione">Apri proposte di revisione</button>
+      </div>
+    `;
+  }
+
+  function renderAccordionItem(title, text, open) {
+    return `
+      <div class="accordion-item" data-open="${open ? 'true' : 'false'}">
+        <button class="accordion-button" type="button" aria-expanded="${open ? 'true' : 'false'}">
+          <span>${escapeHtml(title)}</span>
+          <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="accordion-content">${escapeHtml(text)}</div>
+      </div>
+    `;
+  }
+
+  function renderIndicazioni2012() {
+    return `
+      ${viewHeading('Riferimento stabile', 'Indicazioni nazionali 2012', 'Area di consultazione per controllare coerenza, progressione e osservabilità delle sezioni curricolari.')}
+      <section class="grid three">
+        ${data.references2012.map((item) => referenceCard(item, 'Sola lettura')).join('')}
+      </section>
+    `;
+  }
+
+  function renderNuove2025() {
+    return `
+      ${viewHeading('Confronto prudente', 'Nuove Indicazioni 2025', 'Le possibili innovazioni sono trattate come proposte da verificare, senza sostituire automaticamente il curricolo vigente.')}
+      <div class="notice"><strong>Nota di metodo:</strong> usare sempre formule prudenti: proposta, possibile aggiornamento, da validare collegialmente.</div>
+      <section class="grid three">
+        ${data.references2025.map((item) => referenceCard(item, 'Da validare')).join('')}
+      </section>
+    `;
+  }
+
+  function referenceCard(item, badge) {
+    return `
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Riferimento</p>
+            <h3>${escapeHtml(item.title)}</h3>
+          </div>
+          <span class="badge ${badge === 'Da validare' ? 'badge-work' : 'badge-locked'}">${escapeHtml(badge)}</span>
+        </div>
+        <p class="muted">${escapeHtml(item.text)}</p>
+      </article>
+    `;
+  }
+
+  function renderRevisione() {
+    return `
+      ${viewHeading('Area operativa', 'Revisione disciplinare', 'Qui si lavora sulle proposte. Ogni modifica resta locale e richiede controllo umano prima di diventare documento ufficiale.')}
+      <div class="toolbar">
+        <button class="button-primary" type="button" id="add-revision">Aggiungi proposta</button>
+        <button class="button-secondary" type="button" id="reset-revisions">Ripristina proposte iniziali</button>
+      </div>
+      <section class="grid" aria-label="Proposte di revisione">
+        ${revisions.map(renderRevisionCard).join('')}
+      </section>
+    `;
+  }
+
+  function renderRevisionCard(revision) {
+    return `
+      <article class="card revision-card" data-revision-id="${revision.id}">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">${escapeHtml(revision.discipline)}</p>
+            <h3>${escapeHtml(revision.title)}</h3>
+          </div>
+          <span class="badge ${revision.status === 'validata' ? 'badge-locked' : 'badge-work'}">${labelStatus(revision.status)}</span>
+        </div>
+        <div class="revision-grid">
+          <div class="field-group">
+            <label for="priority-${revision.id}">Priorità</label>
+            <select id="priority-${revision.id}" data-field="priority">
+              ${option('alta', 'Alta', revision.priority)}
+              ${option('media', 'Media', revision.priority)}
+              ${option('bassa', 'Bassa', revision.priority)}
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="status-${revision.id}">Stato</label>
+            <select id="status-${revision.id}" data-field="status">
+              ${option('bozza', 'Bozza', revision.status)}
+              ${option('da_verificare', 'Da verificare', revision.status)}
+              ${option('validata', 'Validata', revision.status)}
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="source-${revision.id}">Fonte</label>
+            <input id="source-${revision.id}" data-field="source" value="${escapeHtml(revision.source)}">
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="note-${revision.id}">Nota di revisione</label>
+          <textarea id="note-${revision.id}" data-field="note">${escapeHtml(revision.note)}</textarea>
+        </div>
+      </article>
+    `;
+  }
+
+  function option(value, label, selected) {
+    return `<option value="${value}" ${value === selected ? 'selected' : ''}>${label}</option>`;
+  }
+
+  function labelStatus(status) {
+    const labels = {
+      bozza: 'Bozza',
+      da_verificare: 'Da verificare',
+      validata: 'Validata'
+    };
+    return labels[status] || status;
+  }
+
+  function renderFontiExport() {
+    return `
+      ${viewHeading('Controllo finale', 'Fonti ed esportazione', 'Raccoglie le fonti usate e consente di produrre un riepilogo locale del lavoro, senza trasmettere dati all’esterno.')}
+      <section class="grid two">
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">Fonti</p>
+              <h3>Registro delle fonti</h3>
+            </div>
+            <span class="badge badge-info">${data.sources.length} elementi</span>
+          </div>
+          <div class="grid">
+            ${data.sources.map((source) => `
+              <div class="source-card">
+                <strong>${escapeHtml(source.label)}</strong>
+                <span class="muted">${escapeHtml(source.kind)} — ${escapeHtml(source.use)}</span>
+              </div>
+            `).join('')}
+          </div>
+        </article>
+        <article class="card export-box">
+          <div>
+            <p class="eyebrow">Esportazione locale</p>
+            <h3>Riepilogo del lavoro</h3>
+            <p class="muted">Le funzioni esportano o stampano ciò che è già presente nel browser. Non vengono usati servizi esterni.</p>
+          </div>
+          <div class="export-actions">
+            <button class="button-primary" type="button" id="copy-summary">Copia riepilogo</button>
+            <button class="button-secondary" type="button" id="download-json">Scarica JSON</button>
+            <button class="button-ghost" type="button" id="print-page">Stampa</button>
+          </div>
+          <p class="footer-note" id="export-feedback" role="status"></p>
+        </article>
+      </section>
+    `;
+  }
+
+  function bindViewEvents() {
+    root.querySelectorAll('[data-view]').forEach((button) => {
+      button.addEventListener('click', () => setView(button.dataset.view));
+    });
+
+    const disciplineSelect = document.getElementById('discipline-select');
+    if (disciplineSelect) {
+      disciplineSelect.addEventListener('change', (event) => {
+        activeDiscipline = event.target.value;
+        render();
+      });
+    }
+
+    root.querySelectorAll('.accordion-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.accordion-item');
+        const nextState = item.dataset.open !== 'true';
+        item.dataset.open = String(nextState);
+        button.setAttribute('aria-expanded', String(nextState));
+      });
+    });
+
+    root.querySelectorAll('[data-revision-id] input, [data-revision-id] textarea, [data-revision-id] select').forEach((field) => {
+      field.addEventListener('input', updateRevisionFromField);
+      field.addEventListener('change', updateRevisionFromField);
+    });
+
+    const addRevision = document.getElementById('add-revision');
+    if (addRevision) {
+      addRevision.addEventListener('click', () => {
+        revisions.unshift({
+          id: `rev-${Date.now()}`,
+          discipline: data.disciplines.find((item) => item.id === activeDiscipline)?.name || 'Disciplina',
+          title: 'Nuova proposta di revisione',
+          source: data.meta.officialSourceName,
+          priority: 'media',
+          status: 'bozza',
+          note: 'Descrivere la modifica proposta, la fonte e la motivazione didattica.'
+        });
+        saveRevisions();
+        render();
+      });
+    }
+
+    const resetRevisions = document.getElementById('reset-revisions');
+    if (resetRevisions) {
+      resetRevisions.addEventListener('click', () => {
+        revisions = data.revisions.map((item) => ({ ...item }));
+        saveRevisions();
+        render();
+      });
+    }
+
+    const copySummary = document.getElementById('copy-summary');
+    if (copySummary) copySummary.addEventListener('click', copyMarkdownSummary);
+
+    const downloadJson = document.getElementById('download-json');
+    if (downloadJson) downloadJson.addEventListener('click', downloadJsonSummary);
+
+    const printPage = document.getElementById('print-page');
+    if (printPage) printPage.addEventListener('click', () => window.print());
+  }
+
+  function updateRevisionFromField(event) {
+    const card = event.target.closest('[data-revision-id]');
+    const revision = revisions.find((item) => item.id === card.dataset.revisionId);
+    if (!revision) return;
+    revision[event.target.dataset.field] = event.target.value;
+    saveRevisions();
+  }
+
+  function buildMarkdownSummary() {
+    const lines = [
+      '# Riepilogo revisione curricolo',
+      '',
+      `Fonte ufficiale: ${data.meta.officialSourceName}`,
+      `Versione strumento: ${data.meta.version}`,
+      '',
+      '## Sezioni generali in sola lettura',
+      ...data.lockedGeneralSections.map((section) => `- ${section.title}`),
+      '',
+      '## Proposte di revisione',
+      ...revisions.flatMap((revision) => [
+        `### ${revision.title}`,
+        `- Disciplina: ${revision.discipline}`,
+        `- Priorità: ${revision.priority}`,
+        `- Stato: ${labelStatus(revision.status)}`,
+        `- Fonte: ${revision.source}`,
+        `- Nota: ${revision.note}`,
+        ''
+      ]),
+      '## Nota',
+      'Documento di lavoro. Ogni proposta richiede validazione umana e collegiale prima dell’adozione.'
+    ];
+    return lines.join('\n');
+  }
+
+  async function copyMarkdownSummary() {
+    const feedback = document.getElementById('export-feedback');
+    try {
+      await navigator.clipboard.writeText(buildMarkdownSummary());
+      feedback.textContent = 'Riepilogo copiato negli appunti.';
+    } catch (error) {
+      feedback.textContent = 'Copia automatica non disponibile. Usare la stampa o scaricare il JSON.';
+    }
+  }
+
+  function downloadJsonSummary() {
+    const payload = {
+      exportedAt: new Date().toISOString(),
+      meta: data.meta,
+      lockedGeneralSections: data.lockedGeneralSections.map(({ id, title, source }) => ({ id, title, source })),
+      revisions
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'curmanlight-riepilogo-revisione.json';
+    anchor.click();
+    URL.revokeObjectURL(url);
+    const feedback = document.getElementById('export-feedback');
+    if (feedback) feedback.textContent = 'File JSON generato localmente.';
+  }
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = sidebar.dataset.open === 'true';
+    sidebar.dataset.open = String(!isOpen);
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  window.addEventListener('hashchange', () => {
+    const nextView = getInitialView();
+    if (nextView !== activeView) {
+      activeView = nextView;
+      render();
+    }
+  });
+
+  render();
+})();
+
+</script>
+</body>
+</html>

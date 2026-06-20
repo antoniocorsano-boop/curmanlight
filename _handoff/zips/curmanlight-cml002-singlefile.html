@@ -1,0 +1,1844 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3ea">
+  <title>CurManLight — Revisione curricolo</title>
+  <style>
+:root {
+  --bg: #f7f3ea;
+  --surface: #fffdf8;
+  --surface-strong: #ffffff;
+  --text: #1f2933;
+  --muted: #65717d;
+  --border: #ded7c7;
+  --accent: #765a2f;
+  --accent-soft: #efe4d1;
+  --success: #2f6d4c;
+  --warning: #946200;
+  --danger: #9f3434;
+  --shadow: 0 18px 48px rgba(39, 31, 18, 0.09);
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --focus: 0 0 0 3px rgba(118, 90, 47, 0.25);
+  --sidebar-width: 300px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 30;
+  padding: 0.75rem 1rem;
+  background: var(--text);
+  color: white;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #fffaf0 0%, #f1e8d8 100%);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  min-width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.brand-block h1 {
+  margin: 0.08rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.nav-list {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.nav-button {
+  width: 100%;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: left;
+  border-radius: 14px;
+  padding: 0.75rem 0.85rem;
+  color: var(--text);
+  display: grid;
+  grid-template-columns: 1.6rem minmax(0, 1fr);
+  gap: 0.55rem;
+  align-items: start;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--border);
+}
+
+.nav-button[aria-current="page"] {
+  background: var(--surface-strong);
+  border-color: var(--accent-soft);
+  box-shadow: 0 8px 22px rgba(39, 31, 18, 0.07);
+}
+
+.nav-index {
+  display: grid;
+  place-items: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.nav-title {
+  display: block;
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+.nav-desc {
+  display: block;
+  margin-top: 0.18rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.sidebar-note {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.58);
+  display: grid;
+  gap: 0.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.sidebar-note strong {
+  color: var(--text);
+}
+
+.main-area {
+  min-width: 0;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem clamp(1rem, 4vw, 2.4rem);
+  background: rgba(247, 243, 234, 0.86);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(222, 215, 199, 0.75);
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 0.55rem 0.85rem;
+  font-weight: 700;
+}
+
+.topbar-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar-copy strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-pill,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 999px;
+  padding: 0.38rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status-pill {
+  background: #f0e4c8;
+  color: #664600;
+}
+
+.view-root {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(1.1rem, 4vw, 2.6rem) 0 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.hero-card,
+.card,
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.hero-card h2,
+.view-heading h2 {
+  margin: 0.2rem 0 0.75rem;
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.55;
+  max-width: 70ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.35rem;
+}
+
+.button-primary,
+.button-secondary,
+.button-ghost,
+.inline-action {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.button-secondary {
+  background: var(--surface-strong);
+  color: var(--accent);
+}
+
+.button-ghost,
+.inline-action {
+  background: transparent;
+  color: var(--accent);
+}
+
+.button-primary:hover,
+.button-secondary:hover,
+.button-ghost:hover,
+.inline-action:hover {
+  transform: translateY(-1px);
+}
+
+.panel {
+  padding: 1rem;
+}
+
+.summary-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: start;
+}
+
+.summary-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: var(--accent);
+  margin-top: 0.45rem;
+}
+
+.summary-item dt {
+  font-weight: 800;
+}
+
+.summary-item dd {
+  margin: 0.18rem 0 0;
+  color: var(--muted);
+  line-height: 1.42;
+}
+
+.view-heading {
+  margin-bottom: 1rem;
+}
+
+.view-heading h2 {
+  margin-bottom: 0.45rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 253, 248, 0.72);
+}
+
+.field-group {
+  display: grid;
+  gap: 0.28rem;
+}
+
+.field-group label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem;
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  padding: 1.1rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h3,
+.card h4 {
+  margin: 0.16rem 0 0;
+  line-height: 1.2;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.content-block {
+  display: grid;
+  gap: 0.75rem;
+  line-height: 1.56;
+}
+
+.content-block ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.content-block li + li {
+  margin-top: 0.35rem;
+}
+
+.source-line {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.badge-locked {
+  background: #eef3f0;
+  color: var(--success);
+}
+
+.badge-work {
+  background: #f5ead8;
+  color: var(--warning);
+}
+
+.badge-risk {
+  background: #f9e2e2;
+  color: var(--danger);
+}
+
+.badge-info {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.locked-card {
+  position: relative;
+}
+
+.locked-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(47, 109, 76, 0.08);
+}
+
+.accordion {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.accordion-item + .accordion-item {
+  border-top: 1px solid var(--border);
+}
+
+.accordion-button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  text-align: left;
+  font-weight: 850;
+  color: var(--text);
+}
+
+.accordion-button:hover {
+  background: rgba(118, 90, 47, 0.06);
+}
+
+.accordion-content {
+  display: none;
+  padding: 0 1rem 1rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.accordion-item[data-open="true"] .accordion-content {
+  display: block;
+}
+
+.revision-card {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.revision-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.notice {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1rem;
+  background: #fff9ec;
+  color: #674b10;
+  line-height: 1.48;
+}
+
+.source-card {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.source-card a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.source-card a:hover {
+  text-decoration: underline;
+}
+
+.export-box {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.footer-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.print-only {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(88vw, var(--sidebar-width));
+    z-index: 20;
+    transform: translateX(-105%);
+    transition: transform 180ms ease;
+    box-shadow: var(--shadow);
+  }
+
+  .sidebar[data-open="true"] {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.two,
+  .grid.three,
+  .revision-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .view-root {
+    width: min(100% - 1rem, 1180px);
+    padding-bottom: 2rem;
+  }
+
+  .topbar {
+    padding-inline: 0.75rem;
+  }
+
+  .status-pill {
+    display: none;
+  }
+
+  .card,
+  .panel,
+  .hero-card {
+    border-radius: 18px;
+  }
+
+  .card-header {
+    display: grid;
+  }
+
+  .hero-actions,
+  .export-actions {
+    display: grid;
+  }
+
+  .button-primary,
+  .button-secondary,
+  .button-ghost,
+  .inline-action {
+    width: 100%;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .sidebar,
+  .topbar,
+  .hero-actions,
+  .toolbar,
+  .button-primary,
+  .button-secondary,
+  .button-ghost,
+  .inline-action,
+  .skip-link {
+    display: none !important;
+  }
+
+  .app-shell {
+    display: block;
+  }
+
+  .view-root {
+    width: 100%;
+    padding: 0;
+  }
+
+  .card,
+  .panel,
+  .hero-card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .print-only {
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navigazione principale">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">CL</div>
+        <div>
+          <p class="eyebrow">CurManLight</p>
+          <h1>Revisione curricolo</h1>
+        </div>
+      </div>
+
+      <nav class="nav-list" id="view-nav" aria-label="Viste dello strumento"></nav>
+
+      <section class="sidebar-note" aria-label="Stato dello strumento">
+        <strong>Strumento statico</strong>
+        <span>Nessun backend, nessun modulo, nessuna autenticazione.</span>
+      </section>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">
+          <span aria-hidden="true">☰</span>
+          Menu
+        </button>
+        <div class="topbar-copy">
+          <p class="eyebrow">Ambiente di lavoro</p>
+          <strong id="current-view-title">Home</strong>
+        </div>
+        <div class="status-pill" role="status">Validazione umana richiesta</div>
+      </header>
+
+      <main id="main-content" tabindex="-1">
+        <section id="view-root" class="view-root" aria-live="polite"></section>
+      </main>
+    </div>
+  </div>
+
+  <template id="locked-section-template">
+    <article class="card locked-card">
+      <div class="card-header">
+        <div>
+          <p class="eyebrow">Sezione generale</p>
+          <h3></h3>
+        </div>
+        <span class="badge badge-locked">Sola lettura</span>
+      </div>
+      <p class="muted"></p>
+      <div class="content-block"></div>
+      <footer class="source-line"></footer>
+    </article>
+  </template>
+
+  <script>
+window.CURMANLIGHT_DATA = {
+  "meta": {
+    "title": "CurManLight — Revisione curricolo",
+    "officialSourceName": "Curricolo disciplinare WORD.docx",
+    "sourceStatus": "Fonte originale integrata nel pacchetto statico",
+    "version": "CML-002",
+    "sourceDigest": "Sezioni generali, riferimenti, profilo, livelli e discipline estratti dal documento Word originale."
+  },
+  "views": [
+    {
+      "id": "home",
+      "title": "Home",
+      "description": "Percorso essenziale e prossima azione."
+    },
+    {
+      "id": "documento-generale",
+      "title": "Documento generale",
+      "description": "Sezioni istituzionali in sola lettura."
+    },
+    {
+      "id": "curricolo-attuale",
+      "title": "Curricolo attuale",
+      "description": "Consultazione del curricolo disciplinare."
+    },
+    {
+      "id": "indicazioni-2012",
+      "title": "Indicazioni 2012",
+      "description": "Traccia di confronto prudenziale."
+    },
+    {
+      "id": "nuove-2025",
+      "title": "Nuove Indicazioni 2025",
+      "description": "Sezione di confronto importata dal documento."
+    },
+    {
+      "id": "revisione",
+      "title": "Revisione disciplinare",
+      "description": "Proposte locali da validare."
+    },
+    {
+      "id": "fonti-export",
+      "title": "Fonti ed esportazione",
+      "description": "Registro fonti e riepilogo."
+    }
+  ],
+  "lockedGeneralSections": [
+    {
+      "id": "premessa",
+      "title": "Premessa",
+      "summary": "Cornice educativa generale: centralità della persona, comunità educante e continuità verticale.",
+      "paragraphs": [
+        "La Costituzione mette al centro la persona e concepisce lo Stato per l’uomo e non l’uomo per lo Stato come opportunamente sottolineava il costituente Giorgio La Pira. Così la scuola pone le persone degli allievi1 al centro delle sue azioni e ne promuove i talenti attraverso la formazione integrale di tutte le dimensioni: cognitive, affettive, relazionali, corporee, estetiche, etiche, spirituali, religiose. (…) La scuola accompagna gli studenti, sin dalla scuola dell’infanzia, a capire chi sono, da dove vengono, per quale futuro si preparano, quale contributo possono dare alla società. E tali scoperte hanno luogo in quei mondi vitali che sono le aule, nelle relazioni fra pari, grazie alla mediazione didattica degli insegnanti. Tuttavia nessuna scuola può svolgere in solitudine il compito formativo, tanto più dinnanzi al mutamento dei nuovi preadolescenti e alla precocità di molti loro comportamenti che un tempo emergevano in fasi più tardive dello sviluppo. Tale compito può esplicarsi con efficacia grazie all’indispensabile alleanza con le famiglie che svolgono un ruolo complementare a quello della scuola. Scuola e famiglia costituiscono le due colonne portanti del percorso di crescita e di apprendimento di bambini e adolescenti. Tanto più oggi, nel tempo in cui la formazione non è più circoscritta alla sola scuola e nuovi luoghi e stimoli culturali, ampliati dalla realtà digitale, concorrono alla formazione e al benessere della persona.",
+        "Indicazioni Nazionali 2025",
+        "Il presente curricolo si ispira ai principi della Costituzione italiana e alle Indicazioni Nazionali 2025, che riconoscono nella persona il fondamento dell'azione educativa. La scuola pone al centro ogni alunno, valorizzandone l'identità, i talenti e le potenzialità attraverso un percorso di formazione integrale che coinvolge tutte le dimensioni dello sviluppo umano. In tale prospettiva, l'apprendimento si realizza all'interno di una comunità educante fondata sulla collaborazione tra scuola, famiglia e territorio, chiamata a sostenere la crescita culturale, civile e personale degli studenti affinché possano conoscere se stessi, sviluppare il proprio progetto di vita e contribuire in modo responsabile al bene comune.",
+        "Il curricolo si sviluppa in una prospettiva verticale e unitaria, accompagnando il percorso di crescita degli alunni dalla scuola dell'infanzia alla scuola primaria e alla scuola secondaria di primo grado. La continuità educativa e didattica garantisce la progressiva costruzione di conoscenze, abilità e competenze, nel rispetto dei tempi di sviluppo e delle caratteristiche di ciascuno. Attraverso un dialogo costante tra i diversi ordini di scuola, il curricolo promuove la coerenza del percorso formativo, valorizza le esperienze pregresse e sostiene il passaggio tra i diversi segmenti scolastici, affinché ogni alunno possa vivere il proprio cammino di apprendimento in modo significativo, graduale e inclusivo."
+      ],
+      "bullets": [
+        "centralità della persona",
+        "alleanza scuola-famiglia",
+        "continuità tra infanzia, primaria e secondaria"
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    },
+    {
+      "id": "nuove-indicazioni-2025",
+      "title": "Le Nuove Indicazioni Nazionali 2025",
+      "summary": "Sezione di inquadramento sull’aggiornamento richiamato dal documento originale.",
+      "paragraphs": [
+        "Le Nuove Indicazioni Nazionali per il curricolo della scuola dell'infanzia e del primo ciclo di istruzione, adottate con il Decreto Ministeriale n. 221 del 9 dicembre 2025, si collocano in continuità con il documento del 2012, confermandone i principi fondanti e aggiornandone l'impianto pedagogico e culturale alla luce delle sfide educative contemporanee. Particolare rilievo assume il rafforzamento del curricolo verticale, inteso come percorso unitario e progressivo che accompagna gli alunni dalla Scuola dell'Infanzia al termine del Primo Ciclo di Istruzione, garantendo coerenza educativa, gradualità degli apprendimenti e sviluppo armonico delle competenze."
+      ],
+      "bullets": [
+        "continuità con l’impianto precedente",
+        "curricolo verticale",
+        "coerenza educativa e gradualità"
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    },
+    {
+      "id": "principi-cambiamenti",
+      "title": "Principi ispiratori e cambiamenti",
+      "summary": "Sintesi dei principi e degli aggiornamenti richiamati dal curricolo.",
+      "paragraphs": [
+        "Le Nuove Indicazioni Nazionali per il curricolo 2025 (NIN) aggiornano il quadro educativo della scuola italiana dopo più di un decennio. Non si tratta di una rivoluzione, ma di un adattamento ai profondi cambiamenti culturali, sociali e tecnologici che hanno trasformato il modo di apprendere e insegnare. L’obiettivo principale è fornire ai docenti una cornice chiara e flessibile per progettare percorsi coerenti, inclusivi e significativi, capaci di connettere i saperi scolastici con la realtà contemporanea. Le NIN vogliono accompagnare l’autonomia delle scuole, offrendo riferimenti comuni e strumenti operativi, senza dettare programmi rigidi.",
+        "Le Indicazioni 2025 si fondano su alcuni principi cardine, che uniscono continuità e innovazione:"
+      ],
+      "bullets": [
+        "Le NIN introducono una serie di aggiornamenti significativi che toccano contenuti, metodi e finalità:",
+        "Riorganizzazione del curricolo: meno frammentazione, più attenzione ai nuclei fondanti e ai saperi essenziali (non multa, sed multum).",
+        "Valorizzazione delle discipline: ogni materia assume una fisionomia chiara, con obiettivi specifici, competenze attese e suggerimenti metodologici.",
+        "Introduzione del Latino per l’Educazione Linguistica (LEL) dalla seconda classe della secondaria di primo grado, per rafforzare la padronanza linguistica e logica.",
+        "Potenziamento delle discipline STEM: Matematica, Scienze e Tecnologia diventano centrali per sviluppare competenze logiche, digitali e scientifiche.",
+        "Nuovo approccio alla Storia: maggior rilievo alla Storia italiana ed europea, alla narrazione e alla memoria come strumenti di cittadinanza.",
+        "Educazione alla sostenibilità: la cura del pianeta entra stabilmente nel curricolo come dimensione trasversale."
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    },
+    {
+      "id": "didattica-valutazione",
+      "title": "Didattica, valutazione e competenze",
+      "summary": "Metodo didattico, valutazione formativa e competenze trasversali.",
+      "paragraphs": [
+        "Le NIN rafforzano la centralità del fare e dell’esperienza: l’apprendimento è visto come un processo attivo, che coinvolge corpo, mente e relazione.",
+        "Metodologie promosse:",
+        "didattica laboratoriale e interdisciplinare;",
+        "Le Nuove Indicazioni 2025 pongono la valutazione formativa al centro della didattica. Essa non è più intesa come controllo finale, ma come processo continuo di accompagnamento e miglioramento, basato su osservazione, feedback e documentazione.",
+        "Le competenze chiave europee restano il riferimento di fondo, integrate da nuove competenze trasversali:",
+        "competenze digitali e di cittadinanza;"
+      ],
+      "bullets": [
+        "apprendimento cooperativo e peer tutoring;",
+        "uso consapevole delle tecnologie e delle risorse digitali;",
+        "progettazione personalizzata secondo il modello dell’Universal Design for Learning;",
+        "valutazione formativa e partecipata, centrata sui processi e non solo sui risultati.",
+        "L’insegnante è chiamato a favorire un apprendimento significativo, capace di collegare conoscenze e competenze, di stimolare la riflessione critica e di rendere gli studenti protagonisti del proprio percorso.",
+        "competenze relazionali ed emotive;",
+        "consapevolezza ambientale e sostenibilità;",
+        "capacità di pensiero critico e creativo.",
+        "La valutazione diventa collegiale e trasparente, con criteri condivisi all’interno dei team docenti e strumenti oggettivi (rubriche, griglie, portfolio)."
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    },
+    {
+      "id": "riferimenti-normativi",
+      "title": "Riferimenti normativi",
+      "summary": "Elenco dei riferimenti normativi riportati nel documento di istituto; da verificare in sede di validazione formale.",
+      "paragraphs": [],
+      "bullets": [
+        "D.M. 9 dicembre 2025, n. 221 (Nuove Indicazioni Nazionali): entrato in vigore a partire dall’anno scolastico 2026/2027, questo regolamento aggiorna e sostituisce il vecchio impianto del D.M. 254/2012. È il testo cardine attuale a cui i dipartimenti e i docenti devono fare riferimento per definire la progressione verticale dall’Infanzia alla Secondaria di Primo Grado.",
+        "Legge 20 agosto 2019, n. 92 e Linee Guida per l’insegnamento dell’Educazione Civica: regolano la trasversalità di questa disciplina obbligatoria, che deve essere mappata all’interno del curricolo con il suo monte ore dedicato (minimo 33 ore annue) e i suoi macro-assi (Costituzione, Sviluppo Sostenibile, Cittadinanza Digitale).",
+        "D. Lgs. 13 aprile 2017, n.62: disciplina la valutazione e la certificazione delle competenze nel Primo Ciclo d’Istruzione, oltre allo svolgimento degli Esami di stato.",
+        "D.M. n. 14 del 30 gennaio 2024: fornisce i modelli nazionali unici per la certificazione delle competenze da rilasciare al termine della Scuola Primaria e della Scuola Secondaria di Primo Grado.",
+        "Raccomandazioni del Consiglio dell’Unione Europea 22 maggio 2018: definisce le 8 competenze chiave per l’apprendimento permanente. Il profilo dello studente al termine del Primo Ciclo deve riflettere questa matrice."
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    },
+    {
+      "id": "profilo-studente",
+      "title": "Profilo dello studente e competenze chiave",
+      "summary": "Profilo al termine del primo ciclo e competenze chiave europee richiamate dal documento.",
+      "paragraphs": [
+        "Il documento organizza il profilo dello studente attraverso le competenze chiave al termine del primo ciclo di istruzione."
+      ],
+      "bullets": [
+        "Competenza alfabetica funzionale: Creare, esprimere e interpretare concetti, sentimenti, fatti e opinioni in forma sia orale che scritta (comprensione orale, espressione orale, comprensione scritta ed espressione scritta). | Comprendere i punti chiave di un discorso complesso, riguardo sia temi concreti sia astratti, integrando con argomentazioni sulla base di quanto è noto.",
+        "Competenza multilinguistica: Utilizzare la lingua inglese a livello elementare in forma orale e scritta (comprensione orale e scritta, produzione scritta e produzione/interazione orale) in semplici situazioni di vita quotidiana relative ad ambiti di immediata rilevanza e su argomenti familiari e abituali, compresi contenuti di studio di altre discipline.",
+        "Competenza matematica e competenza in scienze, tecnologie e ingegneria: Utilizzare le conoscenze matematiche e scientifico-tecnologiche per analizzare dati e fatti della realtà e per verificare l’attendibilità di analisi quantitative proposte da altri. | Utilizzare il pensiero logico-scientifico per affrontare problemi e situazioni sulla base di elementi certi.",
+        "Competenza digitale: Utilizzare con consapevolezza e responsabilità le tecnologie digitali per ricercare, produrre ed elaborare dati e informazioni. | Interagire con gli altri sapendo scegliere i mezzi di comunicazione digitali adeguati a un determinato contesto.",
+        "Competenza personale, | sociale e capacità di imparare ad imparare: Avere cura e rispetto di sé, degli altri, dei beni pubblici e privati, dell’ambiente come presupposto di uno stile di vita sano e corretto. | Organizzare nuove conoscenze pianificando il modo in cui apprenderle con atteggiamento funzionale all’obiettivo di interesse. | Portare a compimento il lavoro iniziato, da soli o insieme ad altri.",
+        "Competenza in materia di cittadinanza: Comprendere la necessità di una convivenza civile, pacifica e solidale per la costruzione del bene comune e agire in modo coerente. | Esprimere le proprie personali opinioni e sensibilità nel rispetto degli altri. | Rispettare le autorità istituzionali riconosciute dalla Costituzione.",
+        "Competenza imprenditoriale: Dimostrare spirito di iniziativa, produrre idee e progetti creativi. | Assumersi le proprie responsabilità, dimostrare impegno e laboriosità. | Riflettere su sé stessi e misurarsi con le novità e gli imprevisti. | Orientare le proprie scelte in modo consapevole",
+        "Competenza in materia di consapevolezza ed espressione culturale: Conoscere le espressioni (lingua, patrimonio, tradizioni) progressivamente più ampie - locali, regionali, nazionali, europee e mondiali - della propria cultura. | Comprendere l’influenza reciproca tra culture."
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    },
+    {
+      "id": "obiettivi-processo-formativo",
+      "title": "Obiettivi generali del processo formativo",
+      "summary": "Declinazione operativa delle competenze per scuola primaria e secondaria di primo grado.",
+      "paragraphs": [
+        "Gli obiettivi del processo formativo rappresentano una declinazione operativa delle competenze indicate nel Profilo dello studente al termine del primo ciclo. Organizzati per aree di competenza e articolati per ciascun grado scolastico, essi costituiscono uno strumento fondamentale per guidare l’annuale progettazione educativo-didattica collegiale del consiglio di classe, la formulazione del sintetico giudizio intermedio e finale sul grado di sviluppo della maturazione complessiva dell’alunno, la certificazione delle competenze dell’alunno alla fine di ognuno dei due gradi scolastici. All’inizio di ogni anno scolastico, per ciascuna delle otto competenze, il team docente sceglierà e adeguerà alla realtà della propria classe quegli obiettivi educativi generali che siano ritenuti più pertinenti ad essa."
+      ],
+      "bullets": [
+        "Competenza alfabetica | funzionale — primaria/secondaria: 1. Decodificare e comprendere messaggi chiave: identificare le informazioni cruciali in diversi tipi di comunicazione orale (spiegazioni, racconti, dialoghi), scritta (istruzioni, brevi testi informativi, storie semplici, cartelli segnaletici), non verbale (comprensione del linguaggio del corpo, delle espressioni del volto). | 2.",
+        "Competenza multilinguistica — primaria/secondaria: 1. Comprendere e utilizzare espressioni di base: comprendere e utilizzare espressioni di uso quotidiano e frasi basilari per soddisfare bisogni immediati (es. salutare, chiedere informazioni semplici, esprimere gusti). | 2.",
+        "Competenza matematica, competenza in scienze, tecnologie e ingegneria — primaria/secondaria: 1.Utilizzare strumenti, tecnologie e dati per risolvere problemi semplici: utilizzare strumenti di misurazione di base (es. righello, bilancia), semplici tecnologie (es. calcolatrice, software didattico) e interpretare dati elementari (es.",
+        "Competenza digitale — primaria/secondaria: 1.Ricercare informazioni di base in ambienti digitali sicuri: effettuare semplici ricerche guidate per trovare dati, informazioni e contenuti pertinenti a compiti scolastici, utilizzando motori di ricerca adatti all’età e ad ambienti digitali controllati. | 2."
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    },
+    {
+      "id": "livelli-competenza",
+      "title": "Livelli di competenza",
+      "summary": "Rubrica generale dei livelli A, B, C, D riportata nel curricolo.",
+      "paragraphs": [],
+      "bullets": [
+        "Avanzato ( 9 - 10 ) A: L' alunno/a svolge compiti e risolve problemi complessi, mostrando padronanza nell' uso delle conoscenze e delle abilità; propone e sostiene le proprie opinioni e assume in modo responsabile decisioni consapevoli.",
+        "Intermedio ( 7 - 8 ) B: L' alunno/a svolge compiti e risolve problemi in situazioni nuove, compie scelte consapevoli, mostrando di saper utilizzate le conoscenze e le abilità acquisite.",
+        "Base ( 6 ) C: L' alunno/a svolge compiti semplici anche in situazioni nuove, mostrando di possedere conoscenze e abilità fondamentali e di saper applicare basilari regole e procedure apprese.",
+        "Iniziale ( 4-5 ) D: L'alunno/a, se opportunamente guidato/a, svolge compiti semplici in situazioni note."
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    },
+    {
+      "id": "raccordo-verticale",
+      "title": "Raccordo verticale tra campi, ambiti e discipline",
+      "summary": "Mappa di raccordo tra scuola dell’infanzia, primaria e secondaria di primo grado.",
+      "paragraphs": [
+        "Il documento esplicita il passaggio dai campi di esperienza alle aree e alle discipline, mantenendo un impianto verticale unitario."
+      ],
+      "bullets": [
+        "Competenza alfabetica | funzionale → I discorsi e le parole | (Comunicazione, lingua cultura) → Tutti gli ambiti disciplinari → Tutte le discipline",
+        "Competenza multilinguistica → I discorsi e le parole → Area linguistica → Inglese | Francese | Latino",
+        "Competenza matematica, competenza in scienze, tecnologie e ingegneria → La conoscenza del mondo (ordine- misura- spazio-tempo- natura ) → Area matematica-scientifica- tecnologica → Matematica | Scienze | Tecnologia",
+        "Competenza digitale → Tutti i campi di esperienza (linguaggi, creatività. Espressione) → Tutti gli ambiti disciplinari → Tutte le discipline",
+        "Competenza personale, sociale e capacità di imparare ad imparare → Tutti i campi di esperienza → Tutti gli ambiti disciplinari → Tutte le discipline",
+        "Competenze in materia di cittadinanza → Il sé e l’altro | Tutti i campi di esperienza → Ambito socio-antropologico | Tutti gli ambiti disciplinari → Tutte le discipline",
+        "Competenza imprenditoriale → Tutti i campi di esperienza → Tutti gli ambiti disciplinari → Tutte le discipline",
+        "Competenza in materia di | consapevolezza ed espressione culturali → Il corpo e il movimento → Area motoria | Ambito espressivo → Storia | Arte e immagine | Scienze motorie | Religione | Geografia | Musica | Latino"
+      ],
+      "source": "Curricolo disciplinare WORD.docx"
+    }
+  ],
+  "disciplines": [
+    {
+      "id": "tecnologia-secondaria-i-grado-17",
+      "name": "Tecnologia — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: TECNOLOGIA",
+          "text": "DISCIPLINA: TECNOLOGIA"
+        }
+      ]
+    },
+    {
+      "id": "italiano-infanzia-5",
+      "name": "Italiano — Infanzia",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA: COMPETENZA ALFABETICA FUNZIONALE",
+          "text": "COMPETENZA CHIAVE EUROPEA: COMPETENZA ALFABETICA FUNZIONALE"
+        },
+        {
+          "title": "CAMPO DI ESPERIENZA: I DISCORSI E LE PAROLE",
+          "text": "CAMPO DI ESPERIENZA: I DISCORSI E LE PAROLE"
+        },
+        {
+          "title": "COLLEGAMENTO VERTICALE DISCIPLINARE: ITALIANO",
+          "text": "COLLEGAMENTO VERTICALE DISCIPLINARE: ITALIANO"
+        },
+        {
+          "title": "FINALITÀ",
+          "text": "FINALITÀ"
+        },
+        {
+          "title": "La lingua rappresenta, nelle sue diverse forme e funzioni, un canale fondamental",
+          "text": "La lingua rappresenta, nelle sue diverse forme e funzioni, un canale fondamentale per comunicare, conoscere, imparare a confrontarsi con gli altri, secondo modalità via via più complesse, in grado di condurre ad esprimere in maniera chiara il proprio pensiero e a condividerlo con gli altri, a partire dalle proprie esperienze, dall’osservazione e dall’esplorazione dell’ambiente. Se la lingua materna è parte integrante dell’identità personale di ogni bambino, imparare fin da piccoli altre lingue significa poter entrare in contatto con mondi diversi di rappresentazione e di significato. | La promozione di una buona padronanza della lingua italiana, a partire dai meccanismi linguistici e comunicativi di base già acquisiti nei primi anni di vita e nel rispetto dell’eventuale conoscenza di una diversa lingua di origine (comprese le lingue minoritarie), passerà innanzitutto attraverso la sperimentazione di varie modalità di utilizzo in situazioni comunicative reali, che prevedono diverse forme di interazione verbale (come ascoltare, chiedere la parola, dialogare, spiegare, ecc.) durante i momenti della giornata scolastica. Narrare episodi personali o storie immaginarie, descrivere fenomeni osservati, dialogare con i pari e con gli adulti sono tutte attività educative volte all’acquisizione di una maggiore fiducia di sé e al consolidamento delle proprie competenze linguistiche, cognitive, di regolazione emotiva, espressive e sociali. | I bambini nella fascia d’età 3-6 anni posseggono un patrimonio linguistico variegato, frutto degli apprendimenti spontanei in famiglia, nel proprio ambiente di vita e nei servizi educativi per l’infanzia grazie anche allo svolgimento di routine quotidiane e di pratiche dialogiche, ma che necessita di un’adeguata osservazione in ragione della presenza di competenze differenziate, dovute anche a condizioni di disabilità o ad altri Bisogni Educativi Speciali. Poter parlare con i propri pari e con gli insegnanti mentre si svolgono attività stimolanti, come la manipolazione di materiali, l’esplorazione dell’ambiente, il gioco simbolico, il disegno, ecc., rappresenta un terreno fondamentale di sviluppo del pensiero riflessivo, attraverso la formulazione di piani e previsioni, ipotesi e congetture, soluzioni a problemi concreti. Inoltre, consente di arricchire il patrimonio lessicale posseduto e di migliorare le competenze personali di pronuncia di suoni, parole e frasi."
+        },
+        {
+          "title": "COMPETENZE ATTESE",
+          "text": "COMPETENZE ATTESE"
+        },
+        {
+          "title": "Avvalersi della lingua italiana per produrre e comprendere semplici enunciati a ",
+          "text": "Avvalersi della lingua italiana per produrre e comprendere semplici enunciati a partire dalle occasioni offerte dalla vita quotidiana. | Ascoltare e narrare racconti, rielaborare contenuti e inventare storie. | Giocare con la lingua attraverso rime, filastrocche, drammatizzazioni e invenzione di parole, riconoscendo analogie tra suoni e significati. | Avere una prima consapevolezza dell’esistenza di lingue e culture differenti, a partire anche da prime esperienze di apprendimento di una seconda lingua. | Esplorare e sperimentare il linguaggio scritto anche in forma creativa e fantasiosa. | Sviluppare la coordinazione motoria e la manualità attraverso il disegno, la riproduzione di segni e simboli, esplorando forme di rappresentazione grafica."
+        }
+      ]
+    },
+    {
+      "id": "italiano-primaria-6",
+      "name": "Italiano — Primaria",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA: COMPETENZA ALFABETICA FUNZIONALE",
+          "text": "COMPETENZA CHIAVE EUROPEA: COMPETENZA ALFABETICA FUNZIONALE"
+        },
+        {
+          "title": "DISCIPLINA: ITALIANO",
+          "text": "DISCIPLINA: ITALIANO"
+        }
+      ]
+    },
+    {
+      "id": "italiano-secondaria-i-grado-7",
+      "name": "Italiano — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: ITALIANO",
+          "text": "DISCIPLINA: ITALIANO"
+        }
+      ]
+    },
+    {
+      "id": "latino-secondaria-i-grado-8",
+      "name": "Latino — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: LATINO",
+          "text": "DISCIPLINA: LATINO"
+        },
+        {
+          "title": "TRAGUARDI DI COMPETENZA ",
+          "text": "TRAGUARDI DI COMPETENZA | Al termine scuola secondaria I grado"
+        },
+        {
+          "title": "Educazione linguistica diacronica ",
+          "text": "Educazione linguistica diacronica | Comprendere l’importanza del latino per raggiungere una piena consapevolezza nella lettura e nella scrittura dell’italiano. | Riconoscere l’origine latina di parole italiane appartenenti a registri linguistici differenti, dall’italiano parlato fino a quello letterario studiato. | Comprendere i primi elementi della lingua e della cultura latina e gli elementi di persistenza e variazione del lessico latino nei temi collegabili con l’ambito di cittadinanza. | Consapevolezza della centralità del latino nella tradizione culturale italiana | – Comprendere la funzione del latino nella produzione di testi e documenti con valenza storico-letterario-giuridica e nel patrimonio culturale nazionale (artistico, archeologico, epigrafico, museale) riflettendo consapevolmente sul presente alla luce del passato. | Confronto interlinguistico e interdisciplinare | – Partire dal latino per stabilire confronti con le strutture basilari di altre lingue flessive note."
+        }
+      ]
+    },
+    {
+      "id": "lingua-inglese-primaria-9",
+      "name": "Lingua inglese — Primaria",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: LINGUA INGLESE",
+          "text": "DISCIPLINA: LINGUA INGLESE"
+        }
+      ]
+    },
+    {
+      "id": "lingua-inglese-secondaria-i-grado-10",
+      "name": "Lingua inglese — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: LINGUA INGLESE",
+          "text": "DISCIPLINA: LINGUA INGLESE"
+        }
+      ]
+    },
+    {
+      "id": "francese-secondaria-i-grado-11",
+      "name": "Francese — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: FRANCESE",
+          "text": "DISCIPLINA: FRANCESE"
+        }
+      ]
+    },
+    {
+      "id": "storia-secondaria-i-grado-12",
+      "name": "Storia — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: STORIA",
+          "text": "DISCIPLINA: STORIA"
+        }
+      ]
+    },
+    {
+      "id": "geografia-secondaria-i-grado-13",
+      "name": "Geografia — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: GEOGRAFIA",
+          "text": "DISCIPLINA: GEOGRAFIA"
+        }
+      ]
+    },
+    {
+      "id": "matematica-primaria-14",
+      "name": "Matematica — Primaria",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA: Competenza alfabetica funzionale- Competenza matemati",
+          "text": "COMPETENZA CHIAVE EUROPEA: Competenza alfabetica funzionale- Competenza matematica e competenze di base in scienza e tecnologia - Competenza digitale -Competenza personale, sociale e capacità di imparare ad imparare- Competenza imprenditoriale"
+        },
+        {
+          "title": "Numeri",
+          "text": "Contare oggetti o eventi a voce e mentalmente, per mezzo di segni, in modo progressivo e regressivo. | Leggere e scrivere i numeri naturali, riconoscendo i due aspetti cardinale e ordinale e la notazione posizionale delle cifre. | Confrontare, ordinare e rappresentare i numeri naturali sulla retta. | Eseguire semplici addizioni e sottrazioni, verbalizzare le procedure di calcolo. Il numero naturale nei tre aspetti cardinale, ordinale e ricorsivo e la sua scrittura in notazione posizionale decimale. | Numeri naturali e loro rappresentazione sulla retta. Sistemi di notazione dei numeri che sono o sono stati in uso in luoghi, tempi e culture diverse da quella occidentale. | Operazioni aritmetiche (addizione, sottrazione)."
+        },
+        {
+          "title": "Spazio e figure",
+          "text": "Eseguire e descrivere un semplice percorso partendo dalla descrizione verbale o dal disegno e fornire istruzioni per far compiere un percorso desiderato. | Riconoscere, denominare, descrivere e disegnare le principali figure geometriche. Posizione di oggetti nello spazio; distanze a partire dal proprio corpo. | Binomi topologici (sopra/sotto, davanti/dietro, destra/sinistra, dentro/fuori). | Punti di riferimento e descrizione di un percorso. Prima classificazione e misurazione di figure geometriche. | Principali grandezze (lunghezze, tempo, ecc…). Proprietà delle figure geometriche: simmetrie."
+        },
+        {
+          "title": "Relazioni, dati e previsioni",
+          "text": "Classificare numeri, figure e oggetti in base alle proprietà, ricorrendo a rappresentazioni opportune a seconda del contesto. | Misurare grandezze (lunghezze, tempo, ecc.) utilizzando diversi strumenti e unità di misura. Il piano cartesiano; | Diagrammi, schemi e tabelle per rappresentare e leggere dati e relazioni."
+        },
+        {
+          "title": "Informatica",
+          "text": "Scegliere ed utilizzare oggetti o simboli per rappresentare informazioni. | Descrivere a parole attività della vita quotidiana tramite sequenze di passi precisi e saperle eseguire. Rappresentazione di dati e informazioni. Introduzione di semplici algoritmi e loro esecuzione."
+        }
+      ]
+    },
+    {
+      "id": "matematica-secondaria-i-grado-15",
+      "name": "Matematica — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: MATEMATICA",
+          "text": "DISCIPLINA: MATEMATICA"
+        }
+      ]
+    },
+    {
+      "id": "scienze-secondaria-i-grado-16",
+      "name": "Scienze — Secondaria I grado",
+      "status": "Documento originale",
+      "sections": [
+        {
+          "title": "COMPETENZA CHIAVE EUROPEA:",
+          "text": "COMPETENZA CHIAVE EUROPEA:"
+        },
+        {
+          "title": "DISCIPLINA: SCIENZE",
+          "text": "DISCIPLINA: SCIENZE"
+        }
+      ]
+    }
+  ],
+  "references2012": [
+    {
+      "title": "Riferimento di confronto",
+      "text": "Il documento originale richiama il rapporto di continuità con il precedente impianto curricolare. Questa vista resta una traccia di confronto e non sostituisce la verifica normativa."
+    },
+    {
+      "title": "Uso nella revisione",
+      "text": "Le parti disciplinari devono essere confrontate con traguardi, obiettivi e progressione verticale, distinguendo testo vigente, integrazione proposta e motivazione didattica."
+    },
+    {
+      "title": "Prudenza documentale",
+      "text": "Le proposte non modificano automaticamente il curricolo ufficiale: vanno registrate, motivate, discusse e validate collegialmente."
+    }
+  ],
+  "references2025": [
+    {
+      "title": "Perché una nuova riforma",
+      "text": "Le Nuove Indicazioni Nazionali per il curricolo 2025 (NIN) aggiornano il quadro educativo della scuola italiana dopo più di un decennio. Non si tratta di una rivoluzione, ma di un adattamento ai profondi cambiamenti culturali, sociali e tecnologici che hanno trasformato il modo di apprendere e insegnare. L’obiettivo principale è fornire ai docenti una cornice chiara e flessibile per progettare percorsi coerenti, inclusivi e significativi, capaci di connettere i saperi scolastici con la realtà contemporanea. Le NIN vogliono accompagnare l’autonomia delle scuole, offrendo riferimenti comuni e strumenti operativi, senza dettare programmi rigidi."
+    },
+    {
+      "title": "Cosa cambia",
+      "text": "Le NIN introducono una serie di aggiornamenti significativi che toccano contenuti, metodi e finalità: Riorganizzazione del curricolo: meno frammentazione, più attenzione ai nuclei fondanti e ai saperi essenziali (non multa, sed multum). Valorizzazione delle discipline: ogni materia assume una fisionomia chiara, con obiettivi specifici, competenze attese e suggerimenti metodologici. Introduzione del Latino per l’Educazione Linguistica (LEL) dalla seconda classe della secondaria di primo grado, per rafforzare la padronanza linguistica e logica. Potenziamento delle discipline STEM: Matematica, Scienze e Tecnologia diventano centrali per sviluppare competenze logiche, digitali e scientifiche. Nuovo approccio alla Storia: maggior rilievo alla Storia italiana ed europea, alla narrazione e alla memoria come strumenti di cittadinanza."
+    },
+    {
+      "title": "Come cambia la didattica",
+      "text": "Le NIN rafforzano la centralità del fare e dell’esperienza: l’apprendimento è visto come un processo attivo, che coinvolge corpo, mente e relazione. Metodologie promosse: didattica laboratoriale e interdisciplinare; apprendimento cooperativo e peer tutoring; uso consapevole delle tecnologie e delle risorse digitali; progettazione personalizzata secondo il modello dell’Universal Design for Learning; valutazione formativa e partecipata, centrata sui processi e non solo sui risultati. L’insegnante è chiamato a favorire un apprendimento significativo, capace di collegare conoscenze e competenze, di stimolare la riflessione critica e di rendere gli studenti protagonisti del proprio percorso."
+    },
+    {
+      "title": "Valutazione e competenze",
+      "text": "Le Nuove Indicazioni 2025 pongono la valutazione formativa al centro della didattica. Essa non è più intesa come controllo finale, ma come processo continuo di accompagnamento e miglioramento, basato su osservazione, feedback e documentazione. Le competenze chiave europee restano il riferimento di fondo, integrate da nuove competenze trasversali: competenze digitali e di cittadinanza; competenze relazionali ed emotive; consapevolezza ambientale e sostenibilità; capacità di pensiero critico e creativo. La valutazione diventa collegiale e trasparente, con criteri condivisi all’interno dei team docenti e strumenti oggettivi (rubriche, griglie, portfolio)."
+    }
+  ],
+  "revisions": [
+    {
+      "id": "rev-doc-001",
+      "discipline": "Documento generale",
+      "title": "Verificare formalmente i riferimenti normativi riportati nel documento",
+      "source": "Curricolo disciplinare WORD.docx — Riferimenti normativi",
+      "priority": "alta",
+      "status": "da_verificare",
+      "note": "La sezione normativa è stata importata come sola lettura; prima della pubblicazione istituzionale occorre controllo formale di date, denominazioni e stato di vigenza."
+    },
+    {
+      "id": "rev-tec-001",
+      "discipline": "Tecnologia — Secondaria I grado",
+      "title": "Controllare progressione tra vedere/osservare, progettare, produrre e informatica",
+      "source": "Curricolo disciplinare WORD.docx — Tecnologia",
+      "priority": "alta",
+      "status": "bozza",
+      "note": "La disciplina è presente con competenze attese, obiettivi e conoscenze. Verificare che la progressione per classe sia coerente e non solo descrittiva."
+    },
+    {
+      "id": "rev-mat-001",
+      "discipline": "Matematica",
+      "title": "Allineare la distinzione tra matematica primaria e secondaria nel percorso verticale",
+      "source": "Curricolo disciplinare WORD.docx — Matematica",
+      "priority": "media",
+      "status": "bozza",
+      "note": "Nel documento sono presenti parti di primaria e secondaria; la revisione deve mantenere chiara la continuità verticale."
+    },
+    {
+      "id": "rev-lin-001",
+      "discipline": "Area linguistica",
+      "title": "Verificare coerenza tra Italiano, Inglese, Francese e Latino",
+      "source": "Curricolo disciplinare WORD.docx — area linguistica",
+      "priority": "media",
+      "status": "bozza",
+      "note": "La presenza del Latino richiede raccordo esplicito con competenza multilinguistica, educazione linguistica e quadro disciplinare."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Curricolo disciplinare WORD.docx",
+      "kind": "Fonte originale caricata",
+      "use": "Base documentale effettiva integrata in CML-002."
+    },
+    {
+      "label": "Sezioni generali del curricolo",
+      "kind": "Sola lettura",
+      "use": "Premessa, riferimenti, profilo, obiettivi generali, livelli e raccordi."
+    },
+    {
+      "label": "Discipline del curricolo",
+      "kind": "Consultazione operativa",
+      "use": "Base per selezionare le aree da revisionare senza modificare direttamente il documento ufficiale."
+    },
+    {
+      "label": "Proposte di revisione locali",
+      "kind": "Lavoro non ufficiale",
+      "use": "Note salvate nel browser e da validare collegialmente."
+    }
+  ]
+};
+
+</script>
+  <script>
+(function () {
+  'use strict';
+
+  const data = window.CURMANLIGHT_DATA;
+  const root = document.getElementById('view-root');
+  const nav = document.getElementById('view-nav');
+  const currentTitle = document.getElementById('current-view-title');
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menu-toggle');
+  const storageKey = 'curmanlight.cml002.revisions.v1';
+
+  let activeView = getInitialView();
+  let activeDiscipline = data.disciplines[0].id;
+  let revisions = loadRevisions();
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function getInitialView() {
+    const hash = window.location.hash.replace('#', '');
+    return data.views.some((view) => view.id === hash) ? hash : 'home';
+  }
+
+  function loadRevisions() {
+    try {
+      const stored = window.localStorage.getItem(storageKey);
+      return stored ? JSON.parse(stored) : data.revisions;
+    } catch (error) {
+      return data.revisions;
+    }
+  }
+
+  function saveRevisions() {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(revisions));
+    } catch (error) {
+      console.warn('Salvataggio locale non disponibile', error);
+    }
+  }
+
+  function setView(viewId) {
+    activeView = viewId;
+    window.location.hash = viewId;
+    render();
+    closeMobileSidebar();
+    document.getElementById('main-content').focus({ preventScroll: true });
+  }
+
+  function closeMobileSidebar() {
+    sidebar.dataset.open = 'false';
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function renderNav() {
+    nav.innerHTML = data.views.map((view, index) => `
+      <button class="nav-button" type="button" data-view="${view.id}" aria-current="${activeView === view.id ? 'page' : 'false'}">
+        <span class="nav-index">${index + 1}</span>
+        <span>
+          <span class="nav-title">${escapeHtml(view.title)}</span>
+          <span class="nav-desc">${escapeHtml(view.description)}</span>
+        </span>
+      </button>
+    `).join('');
+
+    nav.querySelectorAll('[data-view]').forEach((button) => {
+      button.addEventListener('click', () => setView(button.dataset.view));
+    });
+  }
+
+  function render() {
+    const view = data.views.find((item) => item.id === activeView) || data.views[0];
+    currentTitle.textContent = view.title;
+    renderNav();
+
+    const renderers = {
+      home: renderHome,
+      'documento-generale': renderDocumentoGenerale,
+      'curricolo-attuale': renderCurricoloAttuale,
+      'indicazioni-2012': renderIndicazioni2012,
+      'nuove-2025': renderNuove2025,
+      revisione: renderRevisione,
+      'fonti-export': renderFontiExport
+    };
+
+    root.innerHTML = renderers[activeView] ? renderers[activeView]() : renderHome();
+    bindViewEvents();
+  }
+
+  function viewHeading(kicker, title, lead) {
+    return `
+      <header class="view-heading">
+        <p class="eyebrow">${escapeHtml(kicker)}</p>
+        <h2>${escapeHtml(title)}</h2>
+        <p class="lead">${escapeHtml(lead)}</p>
+      </header>
+    `;
+  }
+
+  function renderHome() {
+    const pending = revisions.filter((revision) => revision.status !== 'validata').length;
+    return `
+      <section class="hero">
+        <div class="hero-card">
+          <p class="eyebrow">Percorso consigliato</p>
+          <h2>Consulta il documento, confronta le fonti, lavora solo sulle proposte.</h2>
+          <p class="lead">Le sezioni generali restano bloccate. La revisione avviene sulle parti disciplinari, con fonte, priorità, stato e nota di validazione.</p>
+          <div class="hero-actions">
+            <button class="button-primary" type="button" data-view="documento-generale">Apri documento generale</button>
+            <button class="button-secondary" type="button" data-view="revisione">Vai alla revisione</button>
+          </div>
+        </div>
+        <aside class="panel" aria-label="Sintesi operativa">
+          <dl class="summary-list">
+            <div class="summary-item">
+              <span class="summary-dot" aria-hidden="true"></span>
+              <div><dt>Sezioni bloccate</dt><dd>${data.lockedGeneralSections.length} sezioni generali consultabili.</dd></div>
+            </div>
+            <div class="summary-item">
+              <span class="summary-dot" aria-hidden="true"></span>
+              <div><dt>Proposte aperte</dt><dd>${pending} elementi da controllare o validare.</dd></div>
+            </div>
+            <div class="summary-item">
+              <span class="summary-dot" aria-hidden="true"></span>
+              <div><dt>Fonte ufficiale</dt><dd>${escapeHtml(data.meta.officialSourceName)}</dd></div>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="grid three" aria-label="Azioni principali">
+        ${quickCard('1', 'Prima consulta', 'Leggi le sezioni istituzionali senza modificarle.', 'documento-generale')}
+        ${quickCard('2', 'Poi confronta', 'Verifica curricolo attuale, Indicazioni 2012 e proposta 2025.', 'curricolo-attuale')}
+        ${quickCard('3', 'Infine revisiona', 'Lavora sulle proposte disciplinari, sempre con validazione umana.', 'revisione')}
+      </section>
+    `;
+  }
+
+  function quickCard(index, title, text, viewId) {
+    return `
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Passo ${index}</p>
+            <h3>${escapeHtml(title)}</h3>
+          </div>
+          <span class="badge badge-info">Guidato</span>
+        </div>
+        <p class="muted">${escapeHtml(text)}</p>
+        <button class="inline-action" type="button" data-view="${viewId}">Apri</button>
+      </article>
+    `;
+  }
+
+  function renderDocumentoGenerale() {
+    return `
+      ${viewHeading('Consultazione istituzionale', 'Documento generale in sola lettura', 'Queste sezioni descrivono l’impianto comune del curricolo. Sono visibili, referenziate e non modificabili.')}
+      <div class="notice"><strong>Blocco di sicurezza:</strong> le sezioni generali non contengono campi di modifica. Per intervenire sul curricolo usare la vista “Revisione disciplinare”.</div>
+      <section class="grid two" aria-label="Sezioni generali bloccate">
+        ${data.lockedGeneralSections.map(renderLockedSection).join('')}
+      </section>
+    `;
+  }
+
+  function renderLockedSection(section) {
+    const bullets = section.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+    const paragraphs = section.paragraphs.map((item) => `<p>${escapeHtml(item)}</p>`).join('');
+    return `
+      <article class="card locked-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Sezione generale</p>
+            <h3>${escapeHtml(section.title)}</h3>
+          </div>
+          <span class="badge badge-locked">Sola lettura</span>
+        </div>
+        <p class="muted">${escapeHtml(section.summary)}</p>
+        <div class="content-block">
+          ${paragraphs}
+          <ul>${bullets}</ul>
+        </div>
+        <footer class="source-line">Fonte: ${escapeHtml(section.source)}</footer>
+      </article>
+    `;
+  }
+
+  function renderCurricoloAttuale() {
+    const discipline = data.disciplines.find((item) => item.id === activeDiscipline) || data.disciplines[0];
+    return `
+      ${viewHeading('Consultazione disciplinare', 'Curricolo attuale', 'Questa vista serve a leggere e confrontare. Le modifiche devono essere registrate come proposte, non applicate direttamente al documento.')}
+      ${renderDisciplineToolbar()}
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Disciplina selezionata</p>
+            <h3>${escapeHtml(discipline.name)}</h3>
+          </div>
+          <span class="badge badge-info">${escapeHtml(discipline.status)}</span>
+        </div>
+        <div class="accordion" data-accordion>
+          ${discipline.sections.map((section, index) => renderAccordionItem(section.title, section.text, index === 0)).join('')}
+        </div>
+      </article>
+    `;
+  }
+
+  function renderDisciplineToolbar() {
+    const options = data.disciplines.map((discipline) => `
+      <option value="${discipline.id}" ${discipline.id === activeDiscipline ? 'selected' : ''}>${escapeHtml(discipline.name)}</option>
+    `).join('');
+    return `
+      <div class="toolbar">
+        <div class="field-group">
+          <label for="discipline-select">Disciplina</label>
+          <select id="discipline-select">${options}</select>
+        </div>
+        <button class="button-secondary" type="button" data-view="revisione">Apri proposte di revisione</button>
+      </div>
+    `;
+  }
+
+  function renderAccordionItem(title, text, open) {
+    return `
+      <div class="accordion-item" data-open="${open ? 'true' : 'false'}">
+        <button class="accordion-button" type="button" aria-expanded="${open ? 'true' : 'false'}">
+          <span>${escapeHtml(title)}</span>
+          <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="accordion-content">${escapeHtml(text)}</div>
+      </div>
+    `;
+  }
+
+  function renderIndicazioni2012() {
+    return `
+      ${viewHeading('Riferimento stabile', 'Indicazioni nazionali 2012', 'Area di consultazione per controllare coerenza, progressione e osservabilità delle sezioni curricolari.')}
+      <section class="grid three">
+        ${data.references2012.map((item) => referenceCard(item, 'Sola lettura')).join('')}
+      </section>
+    `;
+  }
+
+  function renderNuove2025() {
+    return `
+      ${viewHeading('Confronto prudente', 'Nuove Indicazioni 2025', 'Le possibili innovazioni sono trattate come proposte da verificare, senza sostituire automaticamente il curricolo vigente.')}
+      <div class="notice"><strong>Nota di metodo:</strong> usare sempre formule prudenti: proposta, possibile aggiornamento, da validare collegialmente.</div>
+      <section class="grid three">
+        ${data.references2025.map((item) => referenceCard(item, 'Da validare')).join('')}
+      </section>
+    `;
+  }
+
+  function referenceCard(item, badge) {
+    return `
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Riferimento</p>
+            <h3>${escapeHtml(item.title)}</h3>
+          </div>
+          <span class="badge ${badge === 'Da validare' ? 'badge-work' : 'badge-locked'}">${escapeHtml(badge)}</span>
+        </div>
+        <p class="muted">${escapeHtml(item.text)}</p>
+      </article>
+    `;
+  }
+
+  function renderRevisione() {
+    return `
+      ${viewHeading('Area operativa', 'Revisione disciplinare', 'Qui si lavora sulle proposte. Ogni modifica resta locale e richiede controllo umano prima di diventare documento ufficiale.')}
+      <div class="toolbar">
+        <button class="button-primary" type="button" id="add-revision">Aggiungi proposta</button>
+        <button class="button-secondary" type="button" id="reset-revisions">Ripristina proposte iniziali</button>
+      </div>
+      <section class="grid" aria-label="Proposte di revisione">
+        ${revisions.map(renderRevisionCard).join('')}
+      </section>
+    `;
+  }
+
+  function renderRevisionCard(revision) {
+    return `
+      <article class="card revision-card" data-revision-id="${revision.id}">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">${escapeHtml(revision.discipline)}</p>
+            <h3>${escapeHtml(revision.title)}</h3>
+          </div>
+          <span class="badge ${revision.status === 'validata' ? 'badge-locked' : 'badge-work'}">${labelStatus(revision.status)}</span>
+        </div>
+        <div class="revision-grid">
+          <div class="field-group">
+            <label for="priority-${revision.id}">Priorità</label>
+            <select id="priority-${revision.id}" data-field="priority">
+              ${option('alta', 'Alta', revision.priority)}
+              ${option('media', 'Media', revision.priority)}
+              ${option('bassa', 'Bassa', revision.priority)}
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="status-${revision.id}">Stato</label>
+            <select id="status-${revision.id}" data-field="status">
+              ${option('bozza', 'Bozza', revision.status)}
+              ${option('da_verificare', 'Da verificare', revision.status)}
+              ${option('validata', 'Validata', revision.status)}
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="source-${revision.id}">Fonte</label>
+            <input id="source-${revision.id}" data-field="source" value="${escapeHtml(revision.source)}">
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="note-${revision.id}">Nota di revisione</label>
+          <textarea id="note-${revision.id}" data-field="note">${escapeHtml(revision.note)}</textarea>
+        </div>
+      </article>
+    `;
+  }
+
+  function option(value, label, selected) {
+    return `<option value="${value}" ${value === selected ? 'selected' : ''}>${label}</option>`;
+  }
+
+  function labelStatus(status) {
+    const labels = {
+      bozza: 'Bozza',
+      da_verificare: 'Da verificare',
+      validata: 'Validata'
+    };
+    return labels[status] || status;
+  }
+
+  function renderFontiExport() {
+    return `
+      ${viewHeading('Controllo finale', 'Fonti ed esportazione', 'Raccoglie le fonti usate e consente di produrre un riepilogo locale del lavoro, senza trasmettere dati all’esterno.')}
+      <section class="grid two">
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">Fonti</p>
+              <h3>Registro delle fonti</h3>
+            </div>
+            <span class="badge badge-info">${data.sources.length} elementi</span>
+          </div>
+          <div class="grid">
+            ${data.sources.map((source) => `
+              <div class="source-card">
+                <strong>${escapeHtml(source.label)}</strong>
+                <span class="muted">${escapeHtml(source.kind)} — ${escapeHtml(source.use)}</span>
+              </div>
+            `).join('')}
+          </div>
+        </article>
+        <article class="card export-box">
+          <div>
+            <p class="eyebrow">Esportazione locale</p>
+            <h3>Riepilogo del lavoro</h3>
+            <p class="muted">Le funzioni esportano o stampano ciò che è già presente nel browser. Non vengono usati servizi esterni.</p>
+          </div>
+          <div class="export-actions">
+            <button class="button-primary" type="button" id="copy-summary">Copia riepilogo</button>
+            <button class="button-secondary" type="button" id="download-json">Scarica JSON</button>
+            <button class="button-ghost" type="button" id="print-page">Stampa</button>
+          </div>
+          <p class="footer-note" id="export-feedback" role="status"></p>
+        </article>
+      </section>
+    `;
+  }
+
+  function bindViewEvents() {
+    root.querySelectorAll('[data-view]').forEach((button) => {
+      button.addEventListener('click', () => setView(button.dataset.view));
+    });
+
+    const disciplineSelect = document.getElementById('discipline-select');
+    if (disciplineSelect) {
+      disciplineSelect.addEventListener('change', (event) => {
+        activeDiscipline = event.target.value;
+        render();
+      });
+    }
+
+    root.querySelectorAll('.accordion-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.accordion-item');
+        const nextState = item.dataset.open !== 'true';
+        item.dataset.open = String(nextState);
+        button.setAttribute('aria-expanded', String(nextState));
+      });
+    });
+
+    root.querySelectorAll('[data-revision-id] input, [data-revision-id] textarea, [data-revision-id] select').forEach((field) => {
+      field.addEventListener('input', updateRevisionFromField);
+      field.addEventListener('change', updateRevisionFromField);
+    });
+
+    const addRevision = document.getElementById('add-revision');
+    if (addRevision) {
+      addRevision.addEventListener('click', () => {
+        revisions.unshift({
+          id: `rev-${Date.now()}`,
+          discipline: data.disciplines.find((item) => item.id === activeDiscipline)?.name || 'Disciplina',
+          title: 'Nuova proposta di revisione',
+          source: data.meta.officialSourceName,
+          priority: 'media',
+          status: 'bozza',
+          note: 'Descrivere la modifica proposta, la fonte e la motivazione didattica.'
+        });
+        saveRevisions();
+        render();
+      });
+    }
+
+    const resetRevisions = document.getElementById('reset-revisions');
+    if (resetRevisions) {
+      resetRevisions.addEventListener('click', () => {
+        revisions = data.revisions.map((item) => ({ ...item }));
+        saveRevisions();
+        render();
+      });
+    }
+
+    const copySummary = document.getElementById('copy-summary');
+    if (copySummary) copySummary.addEventListener('click', copyMarkdownSummary);
+
+    const downloadJson = document.getElementById('download-json');
+    if (downloadJson) downloadJson.addEventListener('click', downloadJsonSummary);
+
+    const printPage = document.getElementById('print-page');
+    if (printPage) printPage.addEventListener('click', () => window.print());
+  }
+
+  function updateRevisionFromField(event) {
+    const card = event.target.closest('[data-revision-id]');
+    const revision = revisions.find((item) => item.id === card.dataset.revisionId);
+    if (!revision) return;
+    revision[event.target.dataset.field] = event.target.value;
+    saveRevisions();
+  }
+
+  function buildMarkdownSummary() {
+    const lines = [
+      '# Riepilogo revisione curricolo',
+      '',
+      `Fonte ufficiale: ${data.meta.officialSourceName}`,
+      `Versione strumento: ${data.meta.version}`,
+      '',
+      '## Sezioni generali in sola lettura',
+      ...data.lockedGeneralSections.map((section) => `- ${section.title}`),
+      '',
+      '## Proposte di revisione',
+      ...revisions.flatMap((revision) => [
+        `### ${revision.title}`,
+        `- Disciplina: ${revision.discipline}`,
+        `- Priorità: ${revision.priority}`,
+        `- Stato: ${labelStatus(revision.status)}`,
+        `- Fonte: ${revision.source}`,
+        `- Nota: ${revision.note}`,
+        ''
+      ]),
+      '## Nota',
+      'Documento di lavoro. Ogni proposta richiede validazione umana e collegiale prima dell’adozione.'
+    ];
+    return lines.join('\n');
+  }
+
+  async function copyMarkdownSummary() {
+    const feedback = document.getElementById('export-feedback');
+    try {
+      await navigator.clipboard.writeText(buildMarkdownSummary());
+      feedback.textContent = 'Riepilogo copiato negli appunti.';
+    } catch (error) {
+      feedback.textContent = 'Copia automatica non disponibile. Usare la stampa o scaricare il JSON.';
+    }
+  }
+
+  function downloadJsonSummary() {
+    const payload = {
+      exportedAt: new Date().toISOString(),
+      meta: data.meta,
+      lockedGeneralSections: data.lockedGeneralSections.map(({ id, title, source }) => ({ id, title, source })),
+      revisions
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'curmanlight-riepilogo-revisione.json';
+    anchor.click();
+    URL.revokeObjectURL(url);
+    const feedback = document.getElementById('export-feedback');
+    if (feedback) feedback.textContent = 'File JSON generato localmente.';
+  }
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = sidebar.dataset.open === 'true';
+    sidebar.dataset.open = String(!isOpen);
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  window.addEventListener('hashchange', () => {
+    const nextView = getInitialView();
+    if (nextView !== activeView) {
+      activeView = nextView;
+      render();
+    }
+  });
+
+  render();
+})();
+
+</script>
+</body>
+</html>

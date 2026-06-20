@@ -1,0 +1,20 @@
+{
+  "project": "CurManLight",
+  "target_local_path": "C:\\Users\\anton\\CurManLight",
+  "published_site": "https://curmanlight.netlify.app/",
+  "netlify_project_name": "curmanlight",
+  "current_decision": "Do not replace the published app with generated prototypes. Use CML-001R conservative integration.",
+  "included_sources": [
+    "_handoff/sources/Curricolo disciplinare WORD.docx"
+  ],
+  "included_generated_artifacts": [
+    "_handoff/generated/cml001",
+    "_handoff/generated/cml002",
+    "_handoff/zips/curmanlight-cml001.zip",
+    "_handoff/zips/curmanlight-cml002.zip",
+    "_handoff/zips/curmanlight-cml001-singlefile.html",
+    "_handoff/zips/curmanlight-cml002-singlefile.html"
+  ],
+  "next_slice": "CML-001R_EXISTING_LOGIC_MAP",
+  "required_verdict": "CML_001R_EXISTING_LOGIC_MAP_READY"
+}

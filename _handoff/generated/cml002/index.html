@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3ea">
+  <title>CurManLight — Revisione curricolo</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navigazione principale">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">CL</div>
+        <div>
+          <p class="eyebrow">CurManLight</p>
+          <h1>Revisione curricolo</h1>
+        </div>
+      </div>
+
+      <nav class="nav-list" id="view-nav" aria-label="Viste dello strumento"></nav>
+
+      <section class="sidebar-note" aria-label="Stato dello strumento">
+        <strong>Strumento statico</strong>
+        <span>Nessun backend, nessun modulo, nessuna autenticazione.</span>
+      </section>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">
+          <span aria-hidden="true">☰</span>
+          Menu
+        </button>
+        <div class="topbar-copy">
+          <p class="eyebrow">Ambiente di lavoro</p>
+          <strong id="current-view-title">Home</strong>
+        </div>
+        <div class="status-pill" role="status">Validazione umana richiesta</div>
+      </header>
+
+      <main id="main-content" tabindex="-1">
+        <section id="view-root" class="view-root" aria-live="polite"></section>
+      </main>
+    </div>
+  </div>
+
+  <template id="locked-section-template">
+    <article class="card locked-card">
+      <div class="card-header">
+        <div>
+          <p class="eyebrow">Sezione generale</p>
+          <h3></h3>
+        </div>
+        <span class="badge badge-locked">Sola lettura</span>
+      </div>
+      <p class="muted"></p>
+      <div class="content-block"></div>
+      <footer class="source-line"></footer>
+    </article>
+  </template>
+
+  <script src="./src/data/content.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
