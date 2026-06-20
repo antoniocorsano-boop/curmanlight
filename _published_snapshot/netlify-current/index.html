@@ -408,9 +408,24 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
 .orientation-dismiss{background:transparent;border:none;color:#7986cb;cursor:pointer;font-size:18px;padding:2px 6px;border-radius:50%;flex-shrink:0;margin-left:auto}
 .orientation-dismiss:hover{background:rgba(26,35,126,.12);color:#1a237e}
 @media(max-width:760px){.orientation-card{flex-wrap:wrap;padding:12px;margin:8px auto 0;width:calc(100% - 16px)}.orientation-steps{gap:5px}.orientation-step{font-size:9px;padding:3px 8px}}
+@media(max-width:560px){.tabbar{gap:3px}.tabbar button{font-size:10px;padding:7px 5px;white-space:nowrap}.tabbar button:before{content:none}}
+@media(max-width:400px){.tabbar button{font-size:9px;padding:6px 3px;min-width:0}}
+.tab-generali{max-width:1000px;margin:0 auto;padding:16px 12px}
+.tab-generali h2{font-size:15px;color:#1a237e;margin:0 0 6px}
+.tab-generali h3{font-size:13px;color:#283593;margin:16px 0 6px;padding-bottom:3px;border-bottom:1px solid #c5cae9}
+.tab-generali p{font-size:12px;color:#333;line-height:1.6;margin:0 0 8px}
+.tab-generali .gen-badge{display:inline-block;background:#e8eaf6;color:#1a237e;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px;margin:0 0 6px}
+.tab-generali .gen-card{background:#f8f9ff;border:1px solid #e0e0e0;border-left:3px solid #5c6bc0;border-radius:8px;padding:10px 14px;margin:0 0 10px}
+.tab-generali .gen-card h4{font-size:12px;color:#1a237e;margin:0 0 4px}
+.tab-generali .gen-card p{font-size:11px;margin:0 0 3px;color:#444}
+.tab-generali .gen-card .gen-tag{display:inline-block;background:#e8eaf6;color:#3949ab;font-size:9px;font-weight:700;padding:1px 7px;border-radius:999px;margin:2px 2px 0 0}
+.tab-generali .gen-note{font-size:10px;color:#5d4037;background:#fff8e1;border-radius:6px;padding:6px 10px;margin:8px 0 0}
+.tab-generali .gen-source{font-size:10px;color:#78909c;font-style:italic;margin:2px 0 0}
+.tab-generali ul{font-size:12px;color:#333;line-height:1.6;margin:4px 0 8px;padding-left:18px}
+.tab-generali li{margin:0 0 4px}
 
 @media print{
-  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card{display:none!important}
+  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali{display:none!important}
   .layout{padding:0;display:block}
   .panels{grid-template-columns:1fr 1fr}
 }
@@ -440,6 +455,7 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
   <button class="active" onclick="setTab('lavoro')">✏️ Revisione per disciplina</button>
   <button onclick="setTab('riepilogo')">📋 Curricolo definitivo</button>
   <button onclick="setTab('normativa')">📜 Riferimenti normativi</button>
+  <button onclick="setTab('generali')">📖 Sezioni generali</button>
 </div>
 <div class="quick-info-bar compact-actions" id="quick-info-bar">
   <div class="quick-summary-row">
@@ -695,6 +711,113 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- TAB SEZIONI GENERALI -->
+    <div id="tab-generali" style="display:none">
+      <div class="tab-generali">
+        <h2>Sezioni generali del curricolo</h2>
+        <span class="gen-badge">Consultazione — non modificabile</span>
+        <p>Questa area raccoglie le sezioni generali del curricolo d'istituto: principi, riferimenti, profilo dello studente, competenze chiave, obiettivi formativi e raccordi verticali. I contenuti hanno funzione di orientamento e non modificano il percorso operativo di revisione disciplinare.</p>
+
+        <!-- PREMESSA -->
+        <h3>Premessa</h3>
+        <div class="gen-card">
+          <p>La Costituzione mette al centro la persona e concepisce lo Stato per l'uomo e non l'uomo per lo Stato. Così la scuola pone le persone degli allievi al centro delle sue azioni e ne promuove i talenti attraverso la formazione integrale di tutte le dimensioni: cognitive, affettive, relazionali, corporee, estetiche, etiche, spirituali, religiose. La scuola accompagna gli studenti, sin dalla scuola dell'infanzia, a capire chi sono, da dove vengono, per quale futuro si preparano, quale contributo possono dare alla società.</p>
+          <p>Tale compito si esplica con efficacia grazie all'indispensabile alleanza con le famiglie, che svolgono un ruolo complementare a quello della scuola. Scuola e famiglia costituiscono le due colonne portanti del percorso di crescita e di apprendimento di bambini e adolescenti.</p>
+          <div class="gen-source">Fonte: Curricolo disciplinare d'istituto — Premessa</div>
+        </div>
+
+        <!-- NUOVE INDICAZIONI NAZIONALI 2025 -->
+        <h3>Nuove Indicazioni Nazionali 2025</h3>
+        <div class="gen-card">
+          <p>Le Nuove Indicazioni Nazionali per il curricolo della scuola dell'infanzia e del primo ciclo di istruzione, adottate con il <strong>Decreto Ministeriale n. 221 del 9 dicembre 2025</strong>, si collocano in continuità con il documento del 2012, confermandone i principi fondanti e aggiornandone l'impianto pedagogico e culturale alla luce delle sfide educative contemporanee. Particolare rilievo assume il rafforzamento del curricolo verticale, inteso come percorso unitario e progressivo che accompagna gli alunni dalla Scuola dell'Infanzia al termine del Primo Ciclo di Istruzione, garantendo coerenza educativa, gradualità degli apprendimenti e sviluppo armonico delle competenze.</p>
+          <p>Il curricolo si sviluppa in una prospettiva verticale e unitaria. La continuità educativa e didattica garantisce la progressiva costruzione di conoscenze, abilità e competenze, nel rispetto dei tempi di sviluppo e delle caratteristiche di ciascuno.</p>
+          <p><strong>Principi ispiratori:</strong> Centralità della persona, Ruolo del docente come guida, Inclusione e personalizzazione, Comunità educante, Curricolo verticale, Educazione finanziaria, assicurativa e previdenziale.</p>
+          <div class="gen-source">Fonte: Curricolo disciplinare d'istituto — D.M. 221/2025, G.U. 27/01/2026</div>
+        </div>
+
+        <!-- RIFERIMENTI NORMATIVI -->
+        <h3>Riferimenti normativi</h3>
+        <div class="gen-card">
+          <ul>
+            <li><strong>D.M. 9 dicembre 2025, n. 221</strong> — Nuove Indicazioni Nazionali (vigore dal 01/09/2026)</li>
+            <li><strong>D.M. 16 novembre 2012, n. 254</strong> — Indicazioni Nazionali per il curricolo (base vigente fino al 2025/2026)</li>
+            <li><strong>Legge 20 agosto 2019, n. 92</strong> — Insegnamento dell'Educazione Civica</li>
+            <li><strong>D.Lgs. 13 aprile 2017, n. 62</strong> — Valutazione e certificazione delle competenze nel Primo Ciclo</li>
+            <li><strong>D.M. n. 14 del 30 gennaio 2024</strong> — Modelli nazionali per la certificazione delle competenze</li>
+            <li><strong>Raccomandazione del Consiglio UE 22 maggio 2018</strong> — 8 competenze chiave per l'apprendimento permanente</li>
+            <li><strong>D.P.R. 275/1999 e Legge 107/2015</strong> — Autonomia scolastica e PTOF</li>
+            <li><strong>D.M. 35/2020 e D.M. 183/2024</strong> — Linee guida Educazione civica</li>
+          </ul>
+          <div class="gen-source">Fonte: Curricolo disciplinare d'istituto — Riferimenti normativi</div>
+        </div>
+
+        <!-- PROFILO DELLO STUDENTE -->
+        <h3>Profilo dello studente</h3>
+        <div class="gen-card">
+          <p>Al termine del primo ciclo di istruzione, lo studente è in grado di orientarsi nelle diverse situazioni della vita, utilizzando le competenze maturate in modo integrato e consapevole. Il profilo si fonda sulle competenze chiave europee e definisce il traguardo formativo che ogni alunno dovrebbe aver raggiunto al termine della Scuola Secondaria di primo grado, in coerenza con le Indicazioni Nazionali e con il quadro delle competenze per l'apprendimento permanente.</p>
+          <div class="gen-source">Fonte: Curricolo disciplinare d'istituto — Profilo dello studente</div>
+        </div>
+
+        <!-- COMPETENZE CHIAVE -->
+        <h3>Competenze chiave al termine del primo ciclo</h3>
+        <div class="gen-card">
+          <h4>1. Competenza alfabetica funzionale</h4>
+          <p>Creare, esprimere e interpretare concetti, sentimenti, fatti e opinioni in forma sia orale che scritta. Comprendere i punti chiave di un discorso complesso. Interagire adeguatamente utilizzando materiali visivi, sonori e digitali.</p>
+          <h4>2. Competenza multilinguistica</h4>
+          <p>Utilizzare la lingua inglese e una seconda lingua comunitaria a livello elementare (A2/A1). Riconoscere somiglianze e differenze tra le lingue e le culture oggetto di studio.</p>
+          <h4>3. Competenza matematica e competenza in scienze, tecnologie e ingegneria</h4>
+          <p>Utilizzare conoscenze matematiche e scientifico-tecnologiche per analizzare dati e fenomeni. Applicare il pensiero logico-scientifico per affrontare problemi e situazioni.</p>
+          <h4>4. Competenza digitale</h4>
+          <p>Utilizzare con consapevolezza e responsabilità le tecnologie digitali. Interagire con gli altri scegliendo i mezzi di comunicazione digitali adeguati.</p>
+          <h4>5. Competenza personale, sociale e capacità di imparare ad imparare</h4>
+          <p>Avere cura e rispetto di sé, degli altri, dei beni pubblici e privati. Organizzare nuove conoscenze pianificando il modo di apprenderle. Portare a compimento il lavoro iniziato.</p>
+          <h4>6. Competenza in materia di cittadinanza</h4>
+          <p>Comprendere la necessità di una convivenza civile, pacifica e solidale. Rispettare le istituzioni. Partecipare alla vita civica. Riconoscere e rispettare le diverse identità e tradizioni.</p>
+          <h4>7. Competenza imprenditoriale</h4>
+          <p>Dimostrare spirito di iniziativa, produrre idee e progetti creativi. Assumersi responsabilità. Riflettere su sé stessi. Orientare le proprie scelte in modo consapevole.</p>
+          <h4>8. Competenza in materia di consapevolezza ed espressione culturale</h4>
+          <p>Conoscere le espressioni culturali (lingua, patrimonio, tradizioni). Comprendere l'influenza reciproca tra culture. Apprezzare la diversità dei linguaggi espressivi.</p>
+          <div class="gen-source">Fonte: Curricolo disciplinare d'istituto — Competenze chiave (Raccomandazione UE 22/05/2018)</div>
+        </div>
+
+        <!-- LIVELLI DI COMPETENZA -->
+        <h3>Livelli di competenza</h3>
+        <div class="gen-card">
+          <p>La valutazione delle competenze si articola su quattro livelli, in coerenza con il D.Lgs. 62/2017 e il D.M. 14/2024:</p>
+          <ul>
+            <li><strong>Avanzato:</strong> l'alunno svolge compiti e risolve problemi complessi, mostrando padronanza nell'uso delle conoscenze e delle abilità; propone e sostiene le proprie opinioni e assume autonomamente decisioni consapevoli</li>
+            <li><strong>Intermedio:</strong> l'alunno svolge compiti e risolve problemi in situazioni nuove, compie scelte consapevoli, mostrando di saper utilizzare le conoscenze e le abilità acquisite</li>
+            <li><strong>Base:</strong> l'alunno svolge compiti semplici anche in situazioni nuove, mostrando di possedere conoscenze e abilità fondamentali e di saper applicare basilari regole e procedure apprese</li>
+            <li><strong>Iniziale:</strong> l'alunno, se opportunamente guidato, svolge compiti semplici in situazioni note</li>
+          </ul>
+          <div class="gen-source">Fonte: Curricolo disciplinare d'istituto — D.Lgs. 62/2017, D.M. 14/2024, IN 2012</div>
+        </div>
+
+        <!-- OBIETTIVI GENERALI -->
+        <h3>Obiettivi generali del processo formativo</h3>
+        <div class="gen-card">
+          <p>Gli obiettivi del processo formativo rappresentano una declinazione operativa delle competenze indicate nel Profilo dello studente al termine del primo ciclo. Organizzati per aree di competenza e articolati per ciascun grado scolastico (Scuola Primaria e Scuola Secondaria di primo grado), costituiscono uno strumento fondamentale per guidare l'annullamento didattico, la progettazione dei percorsi di insegnamento e la valutazione degli apprendimenti.</p>
+          <p>Per la consultazione completa degli obiettivi per competenza e per ordine di scuola, si rimanda al documento originale del curricolo d'istituto.</p>
+          <div class="gen-source">Fonte: Curricolo disciplinare d'istituto — Obiettivi generali del processo formativo</div>
+        </div>
+
+        <!-- RACCORDO VERTICALE -->
+        <h3>Raccordo verticale tra gli ordini di scuola</h3>
+        <div class="gen-card">
+          <p>Il curricolo verticale garantisce un percorso unitario e progressivo dalla Scuola dell'Infanzia al termine del Primo Ciclo di Istruzione. Ogni competenza chiave è sviluppata in continuità tra i tre ordini di scuola, con gradualità e crescente complessità:</p>
+          <ul>
+            <li><strong>Scuola dell'Infanzia:</strong> i campi di esperienza (I discorsi e le parole, Il sé e l'altro, Corpo e movimento, Immagini suoni colori, La conoscenza del mondo) pongono le basi per lo sviluppo delle competenze</li>
+            <li><strong>Scuola Primaria:</strong> le discipline consolidano e sviluppano le competenze chiave, con obiettivi di apprendimento specifici per classe</li>
+            <li><strong>Scuola Secondaria di I grado:</strong> le discipline approfondiscono le competenze, preparando al successivo ciclo di istruzione</li>
+          </ul>
+          <div class="gen-source">Fonte: Curricolo disciplinare d'istituto — Raccordo verticale</div>
+        </div>
+
+        <!-- NOTA FINALE -->
+        <div class="gen-note">Le decisioni sul curricolo restano affidate al gruppo di lavoro. Lo strumento organizza la consultazione e rende più chiaro il confronto, ma non approva automaticamente alcuna modifica.</div>
+        <p style="margin-top:6px;font-size:11px;color:#78909c;text-align:center">Documento aggiornato al D.M. 221/2025 · G.U. 27/01/2026 · Vigore dal 01/09/2026</p>
       </div>
     </div>
   </main>
@@ -1416,8 +1539,9 @@ function setTab(t){
   document.getElementById("tab-lavoro").style.display=t==="lavoro"?"block":"none";
   document.getElementById("tab-riepilogo").style.display=t==="riepilogo"?"block":"none";
   document.getElementById("tab-normativa").style.display=t==="normativa"?"block":"none";
+  document.getElementById("tab-generali").style.display=t==="generali"?"block":"none";
   document.querySelectorAll(".tabbar button").forEach((b,i)=>{
-    const map=["lavoro","riepilogo","normativa"];
+    const map=["lavoro","riepilogo","normativa","generali"];
     b.classList.toggle("active",map[i]===t);
   });
   if(t==="riepilogo") renderRiepilogo();
