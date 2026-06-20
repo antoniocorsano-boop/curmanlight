@@ -78,6 +78,9 @@ main{flex:1;min-width:0}
 .local-save-bar.saved-flash{animation:localSavedFlash 1.1s ease-out}
 @keyframes localSavedFlash{0%{background:#c8e6c9;transform:scale(1.01)}100%{background:#e8f5e9;transform:scale(1)}}
 .readonly-order-note{margin:6px 10px 8px;padding:7px 9px;border-radius:7px;background:#eceff1;border-left:4px solid #78909c;color:#455a64;font-size:11px;line-height:1.4}
+.gap-header{margin:8px 10px 6px;padding:7px 10px;border-radius:7px;background:#f3e5f5;border-left:4px solid #7b1fa2;color:#4a148c;font-size:11px;line-height:1.4;display:flex;flex-direction:column;gap:3px}
+.gap-header .gap-label{font-weight:700;font-size:12px}
+.gap-header .gap-note{font-size:10px;color:#6a1b9a;opacity:.85}
 .card.readonly-order{opacity:.96}.card.readonly-order .panel.proposed{background:#f5f7fa}.card.readonly-order .panel-text{color:#455a64}
 button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.25)}
 .settings-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}.settings-field label{font-size:11px;font-weight:800;color:#37474f}.settings-field input,.settings-field select{border:1px solid #cfd8dc;border-radius:8px;padding:9px 10px;font-size:13px;font-family:inherit}.settings-school-box{background:#f5f7fa;border:1px solid #dfe3eb;border-radius:10px;padding:10px 12px;margin:10px 0 14px;font-size:12px;color:#37474f;line-height:1.55}.settings-actions{display:flex;gap:8px;flex-wrap:wrap}.settings-primary{background:#1a237e;color:#fff;border:none;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}.settings-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}
@@ -704,7 +707,7 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
             <div class="norm-icon">🧩</div>
             <div class="norm-body">
               <div class="norm-title">Gap 2025 da trattare come livello separato di revisione</div>
-              <div class="norm-desc">La base 2012 deve essere completata prima. Le proposte collegate alle Indicazioni 2025 non devono sovrascrivere la fonte ufficiale: devono comparire come gap, integrazioni o modifiche da discutere. Lo strumento dovrà distinguere: <strong>base ufficiale</strong>, <strong>evidenza PTOF/RAV</strong>, <strong>proposta 2025</strong>, <strong>decisione collegiale</strong>.</div>
+              <div class="norm-desc">La base 2012 deve essere completata prima. Le proposte collegate alle Indicazioni 2025 non devono sovrascrivere la fonte ufficiale: devono comparire come gap, integrazioni o modifiche da discutere. I gap 2025 non modificano automaticamente il curricolo. <a href="#" onclick="setTab('lavoro');return false" style="font-weight:700;color:#1a237e">Apri Revisione per disciplina</a> per valutare ogni proposta, confrontarla con il curricolo vigente e decidere se approvarla, respingerla o modificarla.</div>
               <div class="norm-meta">Uso operativo nello strumento · Revisione guidata disciplinare</div>
               <div class="norm-tags"><span class="norm-tag red">Gap 2025</span><span class="norm-tag">Da validare</span><span class="norm-tag">Dipartimenti</span><span class="norm-tag">Commissione curricolo</span></div>
               <div class="norm-warning">Le aree generali restano consultabili. Le sezioni disciplinari e didattiche sono l'area di lavoro per completamento 2012 e successiva revisione 2025.</div>
@@ -1273,6 +1276,7 @@ function cardHTML(item,type){
 
   // Carte da decidere — pannelli affiancati, ben spiegati
   return `<div class="card ${item.status}${readonlyClass}">
+    <div class="gap-header"><span class="gap-label">🧩 Gap 2025 della disciplina</span><span>Questa proposta evidenzia una possibile integrazione rispetto al curricolo vigente. Deve essere valutata dal gruppo di lavoro prima di entrare nel curricolo definitivo.</span><span class="gap-note">Base 2012, evidenze d'istituto e proposta 2025 restano distinguibili fino alla validazione.</span></div>
     <div class="card-hd">
       <span class="badge ${item.status}">${item.status==="nuovo"?"★ Proposta nuova nelle IN 2025":"✎ Le IN 2025 propongono una modifica"}</span>
       ${item.classe?`<span class="cl-tag">📍 ${item.classe}</span>`:""}
