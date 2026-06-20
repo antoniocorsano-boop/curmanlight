@@ -1,0 +1,9 @@
+Aggiornamento interfaccia mobile — testata espandibile
+
+Modifiche applicate:
+- testata superiore resa compatta e apribile con pulsante “Dettagli”;
+- statistiche, riferimenti normativi e motto spostati nei dettagli della testata;
+- barra azioni resa compatta con pulsante “Azioni”;
+- su mobile resta visibile solo: titolo sintetico, istituto/codice, salvataggio locale, profilo e pulsante azioni;
+- installazione, impostazioni, corso PDF, motto e guida rapida sono disponibili solo quando l’utente apre il gruppo azioni;
+- nessun dato curricolare modificato.

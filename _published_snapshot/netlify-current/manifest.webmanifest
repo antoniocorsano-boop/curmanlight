@@ -1,0 +1,30 @@
+{
+  "name": "Curricolo Verticale Don Milani",
+  "short_name": "Curricolo DM",
+  "description": "Strumento locale per la revisione del curricolo verticale dell’I.C. Calvario-Covotta don Lorenzo Milani.",
+  "lang": "it-IT",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f0f2f5",
+  "theme_color": "#1a237e",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "productivity"
+  ]
+}

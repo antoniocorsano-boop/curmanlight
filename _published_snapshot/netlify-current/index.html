@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1a237e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Curricolo Don Milani">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<title>Curricolo Verticale 2012→2025 — I.C. Calvario-Covotta «don Lorenzo Milani», Ariano Irpino</title>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/docx.umd.min.js" title="Libreria opzionale per esportazione Word avanzata"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;min-height:100vh;display:flex;flex-direction:column;font-size:13px}
+/* HEADER */
+header{background:linear-gradient(135deg,#1a237e,#283593);color:#fff;padding:12px 20px}
+header .sub{font-size:10px;opacity:.7;letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
+header h1{font-size:17px;font-weight:700}
+.norm-badge{background:rgba(255,255,255,.15);border-radius:5px;padding:2px 8px;font-size:10px;margin-top:5px;display:inline-block}
+.motto-link{color:#fff;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.75);font-weight:700}
+.motto-link:hover,.motto-link:focus{text-decoration:underline;outline:none}
+.footer-motto-link{color:#cfd8dc;text-decoration:none;border-bottom:1px dotted #90a4ae}
+.footer-motto-link:hover,.footer-motto-link:focus{text-decoration:underline}
+.norm-inline-link{color:#1a237e;font-weight:800;text-decoration:none;border-bottom:1px dotted #1a237e}
+.norm-inline-link:hover,.norm-inline-link:focus{text-decoration:underline}
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px}
+.stat{background:rgba(255,255,255,.13);border-radius:6px;padding:4px 10px;font-size:11px;display:flex;align-items:center;gap:4px}
+.stat strong{font-size:15px}
+/* TABS */
+.tabbar{background:#fff;border-bottom:2px solid #e0e0e0;display:flex;gap:0;overflow-x:auto}
+.tabbar button{padding:10px 16px;border:none;background:none;cursor:pointer;font-weight:600;font-size:12px;border-bottom:3px solid transparent;color:#666;transition:.15s;white-space:nowrap}
+.tabbar button.active{border-bottom-color:#1a237e;color:#1a237e}
+/* LAYOUT */
+.layout{display:flex;flex:1;padding:12px;gap:12px;max-width:1600px;width:100%;margin:0 auto}
+/* SIDEBAR */
+aside{width:185px;flex-shrink:0}
+.aside-box{background:#fff;border-radius:9px;box-shadow:0 1px 4px rgba(0,0,0,.1);overflow:hidden;position:sticky;top:12px;max-height:calc(100vh - 120px);overflow-y:auto}
+.aside-title{background:#37474f;color:#fff;padding:8px 11px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;position:sticky;top:0}
+.aside-ord{background:#eceff1;color:#455a64;padding:5px 11px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;border-top:1px solid #cfd8dc}
+.disc-btn{display:flex;align-items:center;width:100%;text-align:left;padding:7px 11px;border:none;background:transparent;border-left:4px solid transparent;cursor:pointer;font-size:11px;color:#333;transition:.1s;gap:5px}
+.disc-btn.active{background:#e8eaf6;border-left-color:#1a237e;color:#1a237e;font-weight:700}
+.disc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+/* MAIN */
+main{flex:1;min-width:0}
+/* TOOLBAR */
+.toolbar{background:#fff;border-radius:9px;padding:9px 13px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,.1);display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.filter-btn{padding:4px 11px;border-radius:18px;border:1.5px solid #ccc;background:#fff;cursor:pointer;font-size:11px;font-weight:600;color:#555;transition:.1s}
+.filter-btn.active{background:#1a237e;color:#fff;border-color:#1a237e}
+.export-btn{padding:5px 12px;border-radius:7px;border:none;cursor:pointer;font-size:11px;font-weight:700}
+.btn-word{background:#1e5a96;color:#fff}
+.btn-copy{background:#00695c;color:#fff}
+.btn-md{background:#5e35b1;color:#fff}
+.usage-notice{background:#fff8e1;border:1px solid #ffe082;border-left:4px solid #f9a825;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#5d4037;line-height:1.45;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.usage-notice strong{color:#3e2723}
+ .local-save-bar{background:#e8f5e9;border:1px solid #a5d6a7;border-left:4px solid #2e7d32;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#1b5e20;line-height:1.45;display:flex;gap:7px;align-items:center;flex-wrap:wrap;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.local-save-bar strong{color:#1b5e20}
+.local-save-status{font-size:10px;color:#2e7d32;margin-right:auto}
+.local-save-btn{padding:5px 10px;border-radius:7px;border:1px solid #81c784;background:#fff;color:#1b5e20;cursor:pointer;font-size:11px;font-weight:700}
+.local-save-btn.danger{border-color:#ef9a9a;color:#b71c1c}
+
+.quick-info-bar{max-width:1600px;width:calc(100% - 24px);margin:10px auto 0;background:#fff;border:1px solid #dfe3eb;border-radius:12px;padding:10px 12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.quick-info-bar .profile-summary{font-size:11px;color:#37474f;line-height:1.35;margin-left:auto;min-width:220px;text-align:right}
+.quick-btn,.course-link{display:inline-flex;align-items:center;gap:6px;text-decoration:none;border-radius:8px;border:1px solid #c5cae9;background:#fff;color:#1a237e;font-size:11px;font-weight:800;padding:7px 10px;cursor:pointer}
+.course-link{background:#e8eaf6;border-color:#9fa8da;color:#1a237e}
+
+.install-btn{background:#fff3e0;border-color:#ffcc80;color:#e65100}
+.install-hint{background:#fff8e1;border:1px solid #ffe082;border-left:4px solid #f9a825;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#5d4037;line-height:1.45}
+.install-hint strong{color:#e65100}
+.pwa-status-ok{color:#1b5e20;font-weight:800}.pwa-status-warn{color:#bf360c;font-weight:800}
+.save-chip{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:#e8f5e9;border:1px solid #a5d6a7;color:#1b5e20;font-size:11px;font-weight:800;padding:7px 11px;position:relative;box-shadow:0 0 0 0 rgba(46,125,50,.35);animation:savePulse 2.2s infinite}
+.save-chip::before{content:"";width:8px;height:8px;border-radius:50%;background:#2e7d32;box-shadow:0 0 0 0 rgba(46,125,50,.7);animation:saveDotPulse 1.6s infinite;flex-shrink:0}
+@keyframes savePulse{0%{box-shadow:0 0 0 0 rgba(46,125,50,.28)}70%{box-shadow:0 0 0 10px rgba(46,125,50,0)}100%{box-shadow:0 0 0 0 rgba(46,125,50,0)}}
+@keyframes saveDotPulse{0%{box-shadow:0 0 0 0 rgba(46,125,50,.7)}70%{box-shadow:0 0 0 7px rgba(46,125,50,0)}100%{box-shadow:0 0 0 0 rgba(46,125,50,0)}}
+.local-save-bar.saved-flash{animation:localSavedFlash 1.1s ease-out}
+@keyframes localSavedFlash{0%{background:#c8e6c9;transform:scale(1.01)}100%{background:#e8f5e9;transform:scale(1)}}
+.readonly-order-note{margin:6px 10px 8px;padding:7px 9px;border-radius:7px;background:#eceff1;border-left:4px solid #78909c;color:#455a64;font-size:11px;line-height:1.4}
+.card.readonly-order{opacity:.96}.card.readonly-order .panel.proposed{background:#f5f7fa}.card.readonly-order .panel-text{color:#455a64}
+button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.25)}
+.settings-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}.settings-field label{font-size:11px;font-weight:800;color:#37474f}.settings-field input,.settings-field select{border:1px solid #cfd8dc;border-radius:8px;padding:9px 10px;font-size:13px;font-family:inherit}.settings-school-box{background:#f5f7fa;border:1px solid #dfe3eb;border-radius:10px;padding:10px 12px;margin:10px 0 14px;font-size:12px;color:#37474f;line-height:1.55}.settings-actions{display:flex;gap:8px;flex-wrap:wrap}.settings-primary{background:#1a237e;color:#fff;border:none;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}.settings-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}
+.export-note{font-size:10px;color:#6d4c41;margin-left:6px}
+.btn-pdf{background:#c0392b;color:#fff}
+.toggle-lbl{font-size:11px;display:flex;align-items:center;gap:5px;cursor:pointer;margin-left:auto}
+/* PROGRESS */
+.progress-wrap{background:#e8eaf6;border-radius:8px;padding:8px 14px;margin-bottom:10px;display:flex;align-items:center;gap:12px}
+.prog-bar-bg{flex:1;height:8px;background:#c5cae9;border-radius:4px;overflow:hidden}
+.prog-bar-fill{height:100%;background:linear-gradient(90deg,#43a047,#66bb6a);border-radius:4px;transition:.4s}
+/* DISC HEADER */
+.disc-header{background:linear-gradient(135deg,#1a237e,#283593);color:#fff;border-radius:9px 9px 0 0;padding:12px 16px;margin-bottom:0}
+.disc-header h2{font-size:15px;font-weight:700;margin-bottom:3px}
+.disc-header .meta{font-size:11px;opacity:.8}
+.disc-header .nucl{font-size:10px;opacity:.7;margin-top:2px}
+/* ORDINE HEADING */
+.ordine-hd{display:flex;align-items:center;gap:8px;padding:8px 14px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;border-radius:6px;margin:10px 0 6px}
+.ordine-hd.infanzia{background:#f3e5f5;color:#6a1b9a}
+.ordine-hd.primaria{background:#e8eaf6;color:#283593}
+.ordine-hd.secondaria{background:#e3f2fd;color:#1565c0}
+/* CARDS */
+.card{border-radius:8px;margin-bottom:7px;border:1.5px solid;overflow:hidden;transition:.15s}
+.card.ok{background:#f1f8e9;border-color:#81c784}
+.card.modifica{background:#fff;border-color:#ffa726}
+.card.nuovo{background:#fff;border-color:#42a5f5}
+.card.eliminato{background:#fff8f8;border-color:#ef9a9a}
+.card.approvata{background:#e8f5e9;border-color:#43a047}
+.card.rifiutata{background:#fafafa;border-color:#bdbdbd}
+.card-hd{display:flex;align-items:flex-start;gap:7px;padding:7px 10px 4px;flex-wrap:wrap}
+.badge{border-radius:4px;padding:2px 7px;font-size:10px;font-weight:700;color:#fff;white-space:nowrap}
+.badge.ok{background:#66bb6a}
+.badge.modifica{background:#ffa726}
+.badge.nuovo{background:#42a5f5}
+.badge.eliminato{background:#ef5350}
+.badge.approvata{background:#43a047}
+.badge.rifiutata{background:#9e9e9e}
+.ord-tag{background:#e8eaf6;color:#3949ab;border-radius:4px;padding:2px 7px;font-size:10px;font-weight:600}
+.cl-tag{font-size:10px;color:#78909c;font-style:italic}
+/* PANELS */
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #eee}
+.panel{padding:9px 12px}
+.panel.current{background:#fffde7;border-right:1px solid #eee}
+.panel.proposed{background:#e8f5e9}
+.panel-lbl{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.panel.current .panel-lbl{color:#f57f17}
+.panel.proposed .panel-lbl{color:#2e7d32}
+.panel-text{font-size:12px;color:#212121;line-height:1.55}
+.panel-text.ed{width:100%;border:1px solid #a5d6a7;border-radius:5px;padding:5px;font-family:inherit;font-size:12px;line-height:1.55;resize:vertical;background:#fff;min-height:70px}
+.card-body{padding:7px 12px 8px;font-size:12px;color:#333;line-height:1.5}
+/* ACTIONS */
+.card-acts{display:flex;gap:5px;padding:6px 10px;background:rgba(0,0,0,.02);border-top:1px solid #f0f0f0;flex-wrap:wrap;align-items:center}
+.act{padding:4px 11px;border-radius:6px;border:1.5px solid;cursor:pointer;font-size:11px;font-weight:700;transition:.1s;display:flex;align-items:center;gap:3px}
+.act-approve{border-color:#43a047;color:#43a047;background:#f1f8e9}
+.act-approve:hover{background:#43a047;color:#fff}
+.act-edit{border-color:#1565c0;color:#1565c0;background:#e3f2fd}
+.act-edit:hover{background:#1565c0;color:#fff}
+.act-reject{border-color:#e53935;color:#e53935;background:#fce4ec}
+.act-reject:hover{background:#e53935;color:#fff}
+.act-save{border-color:#43a047;color:#fff;background:#43a047}
+.act-cancel{border-color:#9e9e9e;color:#555;background:#f5f5f5}
+.act-undo{border-color:#757575;color:#555;background:#fafafa;font-size:10px}
+.act-delete{border-color:#ef5350;color:#ef5350;background:transparent;margin-left:auto}
+/* ADD BTNS */
+.add-row{display:flex;gap:7px;margin:8px 0 4px}
+.add-btn{padding:5px 12px;border:none;border-radius:7px;cursor:pointer;font-size:11px;font-weight:700;display:flex;align-items:center;gap:4px}
+.add-t{background:#1a237e;color:#fff}
+.add-o{background:#455a64;color:#fff}
+/* RIEPILOGO */
+.sum-box{background:#fff;border-radius:9px;padding:12px 16px;box-shadow:0 1px 4px rgba(0,0,0,.1);margin-bottom:10px}
+.sum-box h2{font-size:14px;color:#1a237e;margin-bottom:6px}
+.grp-hd{border-radius:7px;padding:7px 12px;font-weight:700;font-size:12px;color:#fff;margin-bottom:7px;margin-top:14px}
+.act-card{border-radius:7px;padding:9px 12px;margin-bottom:6px;border:1px solid;border-left:4px solid}
+.act-card .dtag{background:#e8eaf6;color:#1a237e;border-radius:4px;padding:2px 7px;font-size:10px;font-weight:700;display:inline-block;margin-bottom:3px}
+.act-card .otag{background:#f3e5f5;color:#6a1b9a;border-radius:4px;padding:2px 6px;font-size:10px;margin-left:4px;display:inline-block}
+.act-card p{font-size:12px;color:#212121;margin:2px 0;line-height:1.4}
+.act-card .finale{font-size:11px;color:#2e7d32;font-weight:700;margin-top:3px}
+/* NORMATIVA TAB */
+.norm-page{max-width:920px;margin:0 auto}
+.norm-intro{background:#fff;border-radius:9px;padding:13px 17px;margin-bottom:13px;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.norm-intro h2{font-size:14px;color:#1a237e;margin-bottom:5px}
+.norm-intro p{font-size:12px;color:#555;line-height:1.6}
+.norm-cat{margin-bottom:18px}
+.norm-cat-title{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#607d8b;padding:6px 13px;background:#eceff1;border-radius:7px;margin-bottom:8px}
+.norm-card{background:#fff;border-radius:9px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:11px 15px;margin-bottom:7px;border-left:4px solid #ccc;display:flex;gap:13px;align-items:flex-start}
+.norm-card:hover{box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.norm-card.min{border-left-color:#1a237e}
+.norm-card.europa{border-left-color:#1565c0}
+.norm-card.scuola{border-left-color:#2e7d32}
+.norm-card.supporto{border-left-color:#6a1b9a}
+.norm-card.ricerca{border-left-color:#e65100}
+.norm-card.in2025{border-left-color:#c0392b;background:#fff5f5}
+.norm-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.norm-body{flex:1;min-width:0}
+.norm-title{font-size:13px;font-weight:700;color:#212121;margin-bottom:3px}
+.norm-desc{font-size:11px;color:#555;line-height:1.55;margin-bottom:6px}
+.norm-meta{font-size:10px;color:#90a4ae;margin-bottom:5px}
+.norm-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+.norm-tag{background:#e8eaf6;color:#3949ab;border-radius:4px;padding:2px 7px;font-size:10px;font-weight:600}
+.norm-tag.red{background:#fce4ec;color:#c62828}
+.norm-link{display:inline-flex;align-items:center;gap:4px;padding:4px 11px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:700;color:#fff;transition:.15s}
+.norm-link.primary{background:#1a237e}
+.norm-link.secondary{background:#455a64;margin-left:5px}
+.norm-link:hover{opacity:.85}
+.norm-warning{background:#fff8e1;border:1px solid #ffe082;border-radius:6px;padding:6px 11px;font-size:11px;color:#795548;margin-top:4px}
+footer{background:#263238;color:#90a4ae;padding:7px 20px;font-size:10px;text-align:center;margin-top:auto}
+
+
+/* ================================================================
+   RESPONSIVE FULL — telefono, tablet, desktop
+   Intervento: layout fluido, menu discipline orizzontale su mobile,
+   schede confronto impilate, pulsanti touch, normativa leggibile.
+   ================================================================ */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+button,input,textarea,select{font:inherit}
+button,.disc-btn,.filter-btn,.export-btn,.act,.add-btn{touch-action:manipulation}
+img,svg,video{max-width:100%;height:auto}
+
+@media (max-width:1180px){
+  .layout{max-width:100%;padding:10px;gap:10px}
+  aside{width:170px}
+  .toolbar{gap:6px}
+}
+
+@media (max-width:900px){
+  body{font-size:14px;background:#f6f7fb}
+  header{padding:12px 14px}
+  header .sub{font-size:9px;letter-spacing:1.2px;line-height:1.35}
+  header h1{font-size:clamp(17px,4.8vw,22px);line-height:1.25}
+  .norm-badge{font-size:10px;line-height:1.25;margin-top:6px;max-width:100%}
+  .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  .stat{min-width:0;justify-content:center;text-align:center;padding:7px 8px;font-size:11px}
+  .stat strong{font-size:16px}
+
+  .tabbar{position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.08);scrollbar-width:none}
+  .tabbar::-webkit-scrollbar{display:none}
+  .tabbar button{flex:0 0 auto;min-height:44px;padding:10px 14px;font-size:12px}
+
+  .layout{display:block;padding:10px;gap:0}
+  aside{width:100%;margin-bottom:10px}
+  .aside-box{position:relative;top:auto;max-height:none;overflow:hidden;border-radius:10px}
+  .aside-title{position:relative;top:auto;padding:7px 10px;font-size:10px}
+  #sidebar{display:flex;gap:6px;overflow-x:auto;padding:8px;scroll-snap-type:x proximity;scrollbar-width:thin}
+  .disc-btn{flex:0 0 auto;min-width:145px;max-width:205px;min-height:42px;border-left:none;border-bottom:3px solid transparent;border-radius:8px;background:#f7f8fb;padding:8px 9px;font-size:11px;scroll-snap-align:start;box-shadow:inset 0 0 0 1px #eceff1}
+  .disc-btn.active{border-left:none;border-bottom-color:#1a237e;background:#e8eaf6}
+  .disc-dot{width:7px;height:7px}
+
+  main{width:100%}
+  .toolbar{align-items:stretch;padding:10px;border-radius:10px;gap:7px}
+  .toolbar>span:first-child{width:100%;font-size:12px!important}
+  .filter-btn,.export-btn{min-height:40px;padding:8px 11px;font-size:12px;flex:1 1 auto;text-align:center;white-space:nowrap}
+  .toggle-lbl{margin-left:0;width:100%;justify-content:flex-start;min-height:38px;padding:7px 2px;font-size:12px}
+  .toggle-lbl input{width:18px;height:18px}
+
+  .progress-wrap{align-items:flex-start;gap:8px;padding:10px 12px;flex-wrap:wrap}
+  #prog-label{flex:1 1 100%;font-size:12px!important;line-height:1.35}
+  .prog-bar-bg{flex:1 1 auto;min-width:160px;height:10px}
+  #prog-pct{font-size:12px!important}
+
+  .disc-header{border-radius:10px 10px 0 0;padding:13px 14px}
+  .disc-header h2{font-size:17px;line-height:1.25}
+  .disc-header .meta{font-size:12px;line-height:1.35}
+  .disc-header .nucl{font-size:11px;line-height:1.35}
+  .ordine-hd{font-size:11px;letter-spacing:.7px;line-height:1.25;padding:9px 11px;margin:9px 0 7px}
+
+  .card{border-radius:10px;margin-bottom:9px}
+  .card-hd{padding:9px 10px 5px;gap:6px}
+  .badge,.ord-tag,.cl-tag{white-space:normal;line-height:1.25}
+  .panels{grid-template-columns:1fr}
+  .panel{padding:10px 12px}
+  .panel.current{border-right:none;border-bottom:1px solid #eee}
+  .panel-text,.card-body{font-size:13px;line-height:1.55}
+  .panel-text.ed{font-size:13px;min-height:120px;padding:10px}
+  .panel-lbl{font-size:10px;line-height:1.25}
+
+  .card-acts{display:grid;grid-template-columns:1fr;gap:7px;padding:9px 10px}
+  .act{min-height:42px;justify-content:center;text-align:center;padding:9px 10px;font-size:12px;line-height:1.2}
+  .act-delete{margin-left:0}
+  .add-row{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0 4px}
+  .add-btn{min-height:42px;justify-content:center;font-size:12px}
+
+  .sum-box{border-radius:10px;padding:12px;margin-bottom:10px}
+  .sum-box h2{font-size:16px;line-height:1.25}
+  .sum-box .export-btn{display:block;width:100%;margin:7px 0!important}
+  .act-card{padding:10px 11px;border-radius:9px}
+  .act-card p{font-size:13px;line-height:1.5}
+
+  .norm-page{max-width:100%}
+  .norm-intro{padding:13px;border-radius:10px}
+  .norm-intro h2{font-size:16px}
+  .norm-intro p{font-size:13px;line-height:1.55}
+  .norm-cat-title{font-size:10px;line-height:1.25}
+  .norm-card{display:block;padding:12px;border-radius:10px}
+  .norm-icon{font-size:24px;margin-bottom:6px}
+  .norm-title{font-size:14px;line-height:1.3}
+  .norm-desc{font-size:13px;line-height:1.55}
+  .norm-meta{font-size:11px;line-height:1.35}
+  .norm-link{display:flex;justify-content:center;width:100%;min-height:40px;margin:6px 0 0!important;text-align:center}
+  .norm-tags{gap:6px}
+
+  footer{font-size:10px;line-height:1.35;padding:10px 12px}
+}
+
+@media (max-width:560px){
+  header{padding:10px 11px}
+  header .sub{font-size:8.5px;letter-spacing:.7px}
+  header h1{font-size:18px}
+  .norm-badge{display:block;width:100%;font-size:9.5px;padding:4px 7px}
+  .stats{grid-template-columns:1fr 1fr;gap:6px}
+  .stat{font-size:10.5px;padding:6px 5px;line-height:1.2}
+  .stat strong{font-size:15px}
+
+  .tabbar button{font-size:11.5px;padding:9px 12px;min-height:42px}
+  .layout{padding:8px}
+  .aside-title{font-size:9px;letter-spacing:.8px}
+  #sidebar{padding:7px;gap:6px}
+  .disc-btn{min-width:135px;max-width:175px;font-size:10.5px;min-height:40px;padding:8px}
+
+  .toolbar{padding:9px;gap:6px}
+  .filter-btn{flex:1 1 calc(50% - 6px);font-size:11.5px;min-height:40px;padding:8px 7px}
+  .export-btn{flex:1 1 100%;font-size:12px;min-height:42px}
+  .toggle-lbl{font-size:11.5px}
+  .progress-wrap{padding:9px 10px}
+  .prog-bar-bg{min-width:0;width:100%}
+
+  .disc-header{padding:12px}
+  .disc-header h2{font-size:16px}
+  .ordine-hd{font-size:10px;letter-spacing:.4px;padding:8px 9px}
+  .badge,.ord-tag,.cl-tag{font-size:10px}
+  .panel,.card-body{padding:10px}
+  .panel-text,.card-body{font-size:12.5px}
+  .act{font-size:11.5px;min-height:42px}
+
+  .sum-box{padding:11px}
+  .norm-card{padding:11px}
+  .norm-title{font-size:13px}
+  .norm-desc{font-size:12.5px}
+  #app-toast{width:calc(100% - 24px)!important;bottom:12px!important;border-radius:14px!important;text-align:center!important;padding:10px 12px!important;font-size:12px!important}
+}
+
+@media (max-width:380px){
+  .stats{grid-template-columns:1fr}
+  .filter-btn{flex-basis:100%}
+  .disc-btn{min-width:130px}
+  .tabbar button{font-size:11px;padding:8px 10px}
+  header h1{font-size:16px}
+}
+
+@media (hover:none){
+  .act:hover,.filter-btn:hover,.disc-btn:hover,.norm-card:hover{box-shadow:none}
+}
+
+@media (max-width:640px){
+  .usage-notice{font-size:12px;padding:10px;margin-bottom:9px}
+  .export-note{display:block;width:100%;margin-left:0;margin-top:2px}
+}
+
+@media (max-width: 760px){
+  .quick-info-bar{width:calc(100% - 16px);margin-top:8px;padding:9px;gap:7px;align-items:stretch}
+  .quick-info-bar .profile-summary{width:100%;min-width:0;text-align:left;margin-left:0;background:#f5f7fa;border-radius:8px;padding:7px 9px}
+  .save-chip,.quick-btn,.course-link{width:100%;justify-content:center;font-size:12px;padding:9px 10px}
+  .settings-actions{flex-direction:column}.settings-actions button,.settings-actions a{width:100%}.settings-grid{grid-template-columns:1fr!important}
+}
+
+
+/* HEADER COMPATTO ED ESPANDIBILE — mobile first */
+header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.app-header-min{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;color:#fff}
+.app-title-wrap{min-width:0;flex:1}
+.app-kicker{font-size:9px;letter-spacing:.7px;text-transform:uppercase;opacity:.78;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:1px}
+.app-header h1{font-size:15px;line-height:1.2;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-subtitle{font-size:10px;opacity:.82;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.header-toggle,.quick-toggle{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap;min-height:34px}
+.header-toggle:focus,.quick-toggle:focus{outline:2px solid #fff;outline-offset:2px}
+.header-details{padding:0 12px 10px;color:#fff;border-top:1px solid rgba(255,255,255,.18)}
+.header-details[hidden],.quick-actions[hidden]{display:none!important}
+.header-details .header-detail-line{font-size:10px;opacity:.9;line-height:1.35;margin-top:8px}
+.header-details .header-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.header-details .stats{margin-top:8px}
+.header-details .stat{background:rgba(255,255,255,.13)}
+
+.quick-info-bar.compact-actions{display:block!important;padding:8px 10px;margin-top:8px;border-radius:11px}
+.quick-summary-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.quick-summary-row .profile-summary{flex:1;min-width:180px;text-align:left;margin-left:0;background:#f5f7fa;border-radius:999px;padding:7px 10px;font-size:11px;color:#37474f;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.quick-toggle{background:#1a237e;border-color:#1a237e;color:#fff}
+.quick-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;border-top:1px solid #eef1f5;padding-top:8px}
+.quick-actions .quick-btn,.quick-actions .course-link{width:auto}
+.tabbar{position:sticky;top:0;z-index:35;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+
+@media (max-width:760px){
+  header.app-header{position:sticky;top:0;z-index:70}
+  .app-header-min{padding:8px 10px}
+  .app-kicker{font-size:8px;letter-spacing:.4px}
+  .app-header h1{font-size:14.5px;max-width:100%}
+  .app-subtitle{font-size:9.5px}
+  .header-toggle{padding:6px 9px;font-size:10.5px;min-height:32px}
+  .header-details{padding:0 10px 9px}
+  .header-details .header-detail-line{font-size:9.5px}
+  .header-details .norm-badge{display:inline-block;width:auto;font-size:9px;margin-top:0;padding:4px 6px}
+  .header-details .stats{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .header-details .stat{font-size:10px;padding:6px 7px;min-height:34px;justify-content:center}
+  .quick-info-bar.compact-actions{width:calc(100% - 16px);padding:7px 8px}
+  .quick-summary-row{gap:6px;align-items:stretch}
+  .quick-summary-row .save-chip{width:auto;flex:0 0 auto;font-size:0;padding:8px 9px;min-width:34px;justify-content:center}
+  .quick-summary-row .save-chip::after{content:""}
+  .quick-summary-row .profile-summary{min-width:0;font-size:10.5px;border-radius:9px;padding:7px 8px;align-self:stretch;display:flex;align-items:center}
+  .quick-toggle{font-size:10.5px;padding:7px 9px;min-height:34px}
+  .quick-actions{display:grid;grid-template-columns:1fr;gap:7px}
+  .quick-actions .quick-btn,.quick-actions .course-link{width:100%;justify-content:center;font-size:12px;padding:9px 10px}
+  .tabbar{top:49px}
+  .tabbar button{font-size:11px;padding:8px 10px;min-height:38px}
+  .install-hint,.usage-notice,.local-save-bar{font-size:11.5px;line-height:1.4}
+}
+@media (max-width:380px){
+  .app-header h1{font-size:13px}
+  .app-subtitle{font-size:9px}
+  .header-details .stats{grid-template-columns:1fr}
+  .quick-summary-row .profile-summary{font-size:10px}
+  .quick-toggle{padding:7px 8px}
+}
+
+@media print{
+  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside{display:none!important}
+  .layout{padding:0;display:block}
+  .panels{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<header class="app-header" id="app-header">
+  <div class="app-header-min">
+    <div class="app-title-wrap">
+      <div class="app-kicker">I.C. Calvario-Covotta «don Lorenzo Milani»</div>
+      <h1>📚 Curricolo Verticale</h1>
+      <div class="app-subtitle">IN 2012 → IN 2025 · Ariano Irpino (AV) · AVIC849003</div>
+    </div>
+    <button id="header-toggle" class="header-toggle" type="button" onclick="toggleHeaderDetails()" aria-expanded="false" aria-controls="header-details">Dettagli ▾</button>
+  </div>
+  <div class="header-details" id="header-details" hidden>
+    <div class="header-detail-line">Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV) · Codice meccanografico AVIC849003</div>
+    <div class="header-badges">
+      <span class="norm-badge">D.M. 254/2012</span>
+      <span class="norm-badge" style="background:rgba(192,57,43,.4)">⚡ D.M. 221/2025 — G.U. 27/01/2026 — vigore da 01/09/2026</span>
+      <span class="norm-badge" style="background:rgba(255,255,255,.1)">Motto: <a class='motto-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Apri una breve spiegazione del motto latino: non molte cose, ma molto'>Non multa, sed multum</a></span>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+<div class="tabbar">
+  <button class="active" onclick="setTab('lavoro')">✏️ Revisione per disciplina</button>
+  <button onclick="setTab('riepilogo')">📋 Curricolo definitivo</button>
+  <button onclick="setTab('normativa')">📜 Riferimenti normativi</button>
+</div>
+<div class="quick-info-bar compact-actions" id="quick-info-bar">
+  <div class="quick-summary-row">
+    <span class="save-chip" title="Le modifiche vengono salvate nel browser di questo dispositivo">Salvataggio locale disponibile</span>
+    <span class="profile-summary" id="active-profile-summary">Profilo non configurato</span>
+    <button id="quick-actions-toggle" class="quick-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions">Azioni ▾</button>
+  </div>
+  <div class="quick-actions" id="quick-actions" hidden>
+    <button id="install-app-btn" class="quick-btn install-btn" onclick="handleInstallApp()">📲 Installa sul dispositivo</button>
+    <button class="quick-btn" onclick="openSettingsModal()">👤 Impostazioni / onboarding</button>
+    <a class="course-link" href="Corso_CurricoloDonMilani_IN2025.pdf" target="_blank" rel="noopener">📘 Apri il corso in PDF</a>
+    <a class='course-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Significato operativo del motto latino'>🏛️ Motto e metodo</a>
+    <button class="quick-btn" onclick="showWelcome(true)">❔ Guida rapida</button>
+  </div>
+</div>
+<div class="layout">
+  <aside>
+    <div class="aside-box">
+      <div class="aside-title">Discipline</div>
+      <div id="sidebar"></div>
+    </div>
+  </aside>
+  <main id="main-content">
+    <!-- TAB LAVORO -->
+    <div id="tab-lavoro">
+      <div class="install-hint" id="install-hint"><strong>Installazione:</strong> se lo strumento è aperto da un indirizzo web sicuro, puoi aggiungerlo alla schermata iniziale e usarlo come applicazione. Il lavoro resta salvato in locale nel browser del dispositivo.</div>
+      <div class="toolbar">
+        <span style="font-weight:700;color:#333;font-size:12px">Filtro:</span>
+        <button class="filter-btn active" onclick="setFilter('all',this)">Tutti</button>
+        <button class="filter-btn" onclick="setFilter('pending',this)">⏳ Da decidere</button>
+        <button class="filter-btn" onclick="setFilter('approvata',this)">✅ Approvati</button>
+        <button class="filter-btn" onclick="setFilter('rifiutata',this)">❌ Rifiutati</button>
+        <button class="filter-btn" onclick="setFilter('ok',this)">✓ Invariati</button>
+        <button class="filter-btn" onclick="setFilter('nuovo',this)">★ Nuovi</button>
+        <label class="toggle-lbl"><input type="checkbox" id="hide-ok" onchange="render()"> Nascondi invariati</label>
+        <button class="export-btn btn-word" onclick="exportWord()" title="Richiede connessione per la libreria Word avanzata">📄 Word</button>
+        <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word</button>
+        <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Markdown</button>
+        <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF</button>
+        <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: percorso sicuro.</span>
+      </div>
+      <div class="usage-notice"><strong>Uso ibrido.</strong> Lo strumento può essere aperto come file locale anche da telefono per consultare, revisionare, copiare il testo, scaricare Markdown e stampare/salvare in PDF. L’esportazione Word impaginata è un’opzione avanzata: funziona quando la libreria esterna è raggiungibile, preferibilmente da computer. <a href="Corso_CurricoloDonMilani_IN2025.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</div>
+      <div class="local-save-bar">
+        <strong>💾 Salvataggio locale attivo.</strong>
+        <span class="local-save-status" id="local-save-status">Ogni decisione viene conservata in questo browser. Usa Backup per portarla su altri dispositivi.</span>
+        <button class="local-save-btn" onclick="saveLocalState(false)">💾 Salva ora</button>
+        <button class="local-save-btn" onclick="exportLocalBackup()">⬇️ Backup</button>
+        <button class="local-save-btn" onclick="document.getElementById('local-backup-input').click()">⬆️ Importa</button>
+        <button class="local-save-btn danger" onclick="resetLocalState()">↺ Ripristina</button>
+        <input id="local-backup-input" type="file" accept="application/json,.json" onchange="importLocalBackup(event)" style="display:none">
+      </div>
+      <div class="progress-wrap">
+        <span style="font-size:11px;font-weight:700;color:#1a237e" id="prog-label">—</span>
+        <div class="prog-bar-bg"><div class="prog-bar-fill" id="prog-fill" style="width:0%"></div></div>
+        <span id="prog-pct" style="font-size:11px;color:#1a237e;font-weight:700">0%</span>
+      </div>
+      <div id="cards-area"></div>
+    </div>
+    <!-- TAB RIEPILOGO -->
+    <div id="tab-riepilogo" style="display:none">
+      <div class="sum-box">
+        <h2>📋 Curricolo Definitivo dopo Revisione</h2>
+        <p style="font-size:12px;color:#555;margin-bottom:8px">Voci approvate + invariate. Esporta per il documento ufficiale da presentare al Collegio dei Docenti.</p>
+        <button class="export-btn btn-word" onclick="exportWord(true)" style="margin-right:8px" title="Richiede connessione per la libreria Word avanzata">📄 Word (definitivo)</button>
+        <button class="export-btn btn-copy" onclick="copyForWord(true)" style="margin-right:8px" title="Funziona anche senza librerie esterne">📋 Copia per Word</button>
+        <button class="export-btn btn-md" onclick="exportMarkdown(true)" style="margin-right:8px" title="Funziona anche offline">📝 Markdown (definitivo)</button>
+        <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF</button>
+        <div class="usage-notice" style="margin-top:9px;margin-bottom:0"><strong>Per la condivisione con i colleghi:</strong> usare preferibilmente Copia per Word, Markdown o PDF. Il Word impaginato resta disponibile solo se il browser riesce a caricare la libreria esterna.</div>
+      </div>
+      <div id="riepilogo-body"></div>
+    </div>
+    <!-- TAB NORMATIVA -->
+    <div id="tab-normativa" style="display:none">
+      <div class="norm-page">
+        <div class="norm-intro">
+          <h2>📜 Fonti ufficiali, normativa e documenti strategici</h2>
+          <p>Questa sezione raccoglie i riferimenti da usare per la revisione del curricolo: <strong>Indicazioni Nazionali 2012</strong>, documenti strategici dell'Istituto, <strong>PTOF 2025-2028</strong>, <strong>RAV 2022-2025</strong>, Scuola in Chiaro e riferimenti nazionali collegati a valutazione, competenze, Educazione civica, inclusione, digitale e autonomia scolastica. Le fonti sono rese evidenti perché il lavoro sul curricolo deve distinguere sempre tra testo ufficiale, contesto di scuola e proposta di aggiornamento.</p>
+          <div class="norm-warning"><strong>Uso nello strumento:</strong> le fonti generali sono consultabili e non modificabili. Le modifiche si effettuano solo nelle sezioni disciplinari/didattiche, come proposte da validare in dipartimento, commissione e Collegio dei Docenti.</div>
+        </div>
+
+        <div class="norm-cat">
+          <div class="norm-cat-title">🏫 Fonti istituzionali dell'Istituto</div>
+          <div class="norm-card scuola">
+            <div class="norm-icon">🏛️</div>
+            <div class="norm-body">
+              <div class="norm-title">Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino</div>
+              <div class="norm-desc">Fonte anagrafica e istituzionale: Istituto Comprensivo statale con codice meccanografico <strong>AVIC849003</strong>. Il sito della scuola e Scuola in Chiaro sono i riferimenti da usare per dati identificativi, documenti strategici e collegamenti ufficiali.</div>
+              <div class="norm-meta">Sito istituzionale · Scuola in Chiaro · Codice meccanografico AVIC849003</div>
+              <div class="norm-tags"><span class="norm-tag">Identità scuola</span><span class="norm-tag">Codice AVIC849003</span><span class="norm-tag">Fonte ufficiale</span></div>
+              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/" target="_blank" rel="noopener">🌐 Sito istituzionale</a>
+              <a class="norm-link secondary" href="https://cercalatuascuola.istruzione.it/cercalatuascuola/istituti/AVIC849003/ic-calvario-covotta/" target="_blank" rel="noopener">🏫 Scuola in Chiaro</a>
+            </div>
+          </div>
+          <div class="norm-card scuola">
+            <div class="norm-icon">📘</div>
+            <div class="norm-body">
+              <div class="norm-title">PTOF 2025-2028 — Piano Triennale dell'Offerta Formativa</div>
+              <div class="norm-desc">Documento programmatico principale per contestualizzare il curricolo. Evidenzia il contesto dei plessi e dei comuni di riferimento, la rete territoriale, le risorse laboratoriali e la missione educativa centrata su apprendimento, educazione, orientamento e relazione.</div>
+              <div class="norm-meta">I.C. Calvario-Covotta · Documento pubblicato/revisionato 14/05/2025 · PDF allegato al sito scuola</div>
+              <div class="norm-tags"><span class="norm-tag">PTOF 2025-2028</span><span class="norm-tag">Contesto</span><span class="norm-tag">Missione</span><span class="norm-tag">Curricolo</span></div>
+              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/documento/ptof-25-28/" target="_blank" rel="noopener">📄 Scheda PTOF</a>
+              <a class="norm-link secondary" href="https://www.icdonmilaniariano.edu.it/wp-content/uploads/2025/05/AVIC849003-202528-202425-20241227.pdf" target="_blank" rel="noopener">⬇️ PDF PTOF</a>
+              <div class="norm-warning">Da riportare nel curricolo: continuità verticale, successo formativo, personalizzazione, inclusione, territorio, competenze chiave, digitale, STEM, orientamento e valutazione formativa.</div>
+            </div>
+          </div>
+          <div class="norm-card scuola">
+            <div class="norm-icon">📊</div>
+            <div class="norm-body">
+              <div class="norm-title">RAV 2022-2025 — Rapporto di Autovalutazione</div>
+              <div class="norm-desc">Fonte da usare per collegare il curricolo agli esiti e al miglioramento. Le priorità riguardano innalzamento dei livelli di apprendimento, prove standardizzate, competenze chiave europee, cittadinanza digitale/sociale e continuità-orientamento.</div>
+              <div class="norm-meta">I.C. Calvario-Covotta · Documento pubblicato/revisionato 14/05/2025 · PDF allegato al sito scuola</div>
+              <div class="norm-tags"><span class="norm-tag">RAV 2022-2025</span><span class="norm-tag">Priorità</span><span class="norm-tag">Piano di miglioramento</span><span class="norm-tag">Esiti</span></div>
+              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/documento/rav-2022-2025/" target="_blank" rel="noopener">📄 Scheda RAV</a>
+              <a class="norm-link secondary" href="https://www.icdonmilaniariano.edu.it/wp-content/uploads/2025/05/RAV_202425_AVIC849003_20241220114045.pdf" target="_blank" rel="noopener">⬇️ PDF RAV</a>
+              <div class="norm-warning">Da tradurre nel curricolo: prove comuni, rubriche valutative, compiti di prestazione, recupero delle abilità di base, potenziamento delle competenze chiave e monitoraggio della continuità.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="norm-cat">
+          <div class="norm-cat-title">🎯 Evidenze PTOF/RAV da usare per completare il curricolo</div>
+          <div class="norm-card supporto">
+            <div class="norm-icon">🧭</div>
+            <div class="norm-body">
+              <div class="norm-title">Cornice PTOF: contesto, identità, territorio, inclusione</div>
+              <div class="norm-desc">Il PTOF descrive l'Istituto come comunità educativa articolata su tre ordini di scuola e su più comuni, con una rete di collaborazioni territoriali e una forte attenzione a inclusione, intercultura, laboratori, competenze digitali, STEM e valorizzazione delle risorse locali.</div>
+              <div class="norm-meta">PTOF 2025-2028 · La scuola e il suo contesto · Scelte strategiche</div>
+              <div class="norm-tags"><span class="norm-tag">Territorio</span><span class="norm-tag">Inclusione</span><span class="norm-tag">STEM</span><span class="norm-tag">Digitale</span><span class="norm-tag">Laboratori</span></div>
+            </div>
+          </div>
+          <div class="norm-card supporto">
+            <div class="norm-icon">📈</div>
+            <div class="norm-body">
+              <div class="norm-title">Priorità RAV: miglioramento degli esiti e competenze chiave</div>
+              <div class="norm-desc">Il RAV richiede di innalzare i livelli di apprendimento, riequilibrare le fasce di livello verso esiti più alti, rafforzare Italiano, Matematica e Inglese, rielaborare il curricolo verticale per competenze e revisionare rubriche valutative e compiti di prestazione.</div>
+              <div class="norm-meta">RAV 2022-2025 · Individuazione delle priorità · Esiti degli studenti</div>
+              <div class="norm-tags"><span class="norm-tag">Italiano</span><span class="norm-tag">Matematica</span><span class="norm-tag">Inglese</span><span class="norm-tag">Rubriche</span><span class="norm-tag">Compiti di prestazione</span></div>
+            </div>
+          </div>
+          <div class="norm-card supporto">
+            <div class="norm-icon">⚖️</div>
+            <div class="norm-body">
+              <div class="norm-title">Educazione civica: aggiornamento curricolare obbligatorio</div>
+              <div class="norm-desc">Il PTOF richiama la Legge 92/2019 e le Linee guida adottate con D.M. 183/2024. Il curricolo di istituto deve essere aggiornato sui tre nuclei: Costituzione, sviluppo economico e sostenibilità, cittadinanza digitale.</div>
+              <div class="norm-meta">PTOF 2025-2028 · Indirizzi per l'aggiornamento del PTOF · Educazione civica</div>
+              <div class="norm-tags"><span class="norm-tag">Costituzione</span><span class="norm-tag">Sostenibilità</span><span class="norm-tag">Cittadinanza digitale</span><span class="norm-tag">Legge 92/2019</span><span class="norm-tag">D.M. 183/2024</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="norm-cat">
+          <div class="norm-cat-title">🏛 Normativa nazionale per la base IN 2012</div>
+          <div class="norm-card min">
+            <div class="norm-icon">📗</div>
+            <div class="norm-body">
+              <div class="norm-title">D.M. 16 novembre 2012, n. 254 — Indicazioni Nazionali per il curricolo</div>
+              <div class="norm-desc">È la fonte di riferimento per la base curricolare 2012 della scuola dell'infanzia e del primo ciclo di istruzione. La struttura del curricolo deve distinguere campi di esperienza, discipline, traguardi per lo sviluppo delle competenze e obiettivi di apprendimento.</div>
+              <div class="norm-meta">Gazzetta Ufficiale · Serie Generale n. 30 del 05/02/2013 · Entrata in vigore 20/02/2013</div>
+              <div class="norm-tags"><span class="norm-tag">IN 2012</span><span class="norm-tag">Base curricolo</span><span class="norm-tag">Infanzia</span><span class="norm-tag">Primo ciclo</span></div>
+              <a class="norm-link primary" href="https://www.gazzettaufficiale.it/eli/id/2013/02/05/13G00034/sg" target="_blank" rel="noopener">📜 Gazzetta Ufficiale</a>
+              <a class="norm-link secondary" href="https://www.miur.gov.it/documents/20182/51310/DM+254_2012.pdf" target="_blank" rel="noopener">📄 Testo PDF MIM</a>
+            </div>
+          </div>
+          <div class="norm-card min">
+            <div class="norm-icon">🏫</div>
+            <div class="norm-body">
+              <div class="norm-title">D.P.R. 275/1999 e Legge 107/2015 — Autonomia scolastica e PTOF</div>
+              <div class="norm-desc">La progettazione curricolare rientra nell'autonomia delle istituzioni scolastiche ed è parte dell'identità culturale e progettuale della scuola. Il PTOF deve restare collegato a contesto, curricolo, valutazione, miglioramento e risorse.</div>
+              <div class="norm-meta">Autonomia scolastica · Piano triennale dell'offerta formativa · Organi collegiali</div>
+              <div class="norm-tags"><span class="norm-tag">Autonomia</span><span class="norm-tag">PTOF</span><span class="norm-tag">Identità progettuale</span></div>
+            </div>
+          </div>
+          <div class="norm-card min">
+            <div class="norm-icon">🧾</div>
+            <div class="norm-body">
+              <div class="norm-title">D.Lgs. 62/2017 e D.M. 14/2024 — Valutazione e certificazione delle competenze</div>
+              <div class="norm-desc">La revisione del curricolo deve essere collegata a criteri di valutazione, livelli di competenza, rubriche, osservazioni, compiti autentici e certificazione delle competenze al termine della primaria e del primo ciclo.</div>
+              <div class="norm-meta">Valutazione · Certificazione competenze · Primo ciclo</div>
+              <div class="norm-tags"><span class="norm-tag">Valutazione</span><span class="norm-tag">Competenze</span><span class="norm-tag">Rubriche</span><span class="norm-tag">Evidenze</span></div>
+            </div>
+          </div>
+          <div class="norm-card min">
+            <div class="norm-icon">⚖️</div>
+            <div class="norm-body">
+              <div class="norm-title">Legge 92/2019, D.M. 35/2020 e D.M. 183/2024 — Educazione civica</div>
+              <div class="norm-desc">L'Educazione civica è trasversale e deve essere resa leggibile nel curricolo. Nella revisione va collegata alle discipline, ai compiti di realtà e ai tre nuclei richiamati dal PTOF: Costituzione, sviluppo economico e sostenibilità, cittadinanza digitale.</div>
+              <div class="norm-meta">Educazione civica · Curricolo trasversale · 33 ore annue</div>
+              <div class="norm-tags"><span class="norm-tag">Costituzione</span><span class="norm-tag">Sviluppo sostenibile</span><span class="norm-tag">Cittadinanza digitale</span><span class="norm-tag">Compiti di realtà</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="norm-cat">
+          <div class="norm-cat-title">🇪🇺 Quadri europei e riferimenti metodologici</div>
+          <div class="norm-card europa">
+            <div class="norm-icon">🔑</div>
+            <div class="norm-body">
+              <div class="norm-title">Raccomandazione del Consiglio UE 22 maggio 2018 — Competenze chiave</div>
+              <div class="norm-desc">Riferimento per il profilo dello studente e per il curricolo per competenze. Lo strumento deve mostrare il raccordo tra discipline, competenze chiave e rubriche valutative.</div>
+              <div class="norm-meta">Unione Europea · Apprendimento permanente · Competenze chiave</div>
+              <div class="norm-tags"><span class="norm-tag">Competenze chiave</span><span class="norm-tag">Profilo studente</span><span class="norm-tag">Rubriche</span></div>
+              <a class="norm-link primary" href="https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32018H0604(01)" target="_blank" rel="noopener">📄 EUR-Lex</a>
+            </div>
+          </div>
+          <div class="norm-card europa">
+            <div class="norm-icon">💻</div>
+            <div class="norm-body">
+              <div class="norm-title">DigComp 2.2 e Piano Nazionale Scuola Digitale</div>
+              <div class="norm-desc">Riferimenti utili per competenza digitale, uso consapevole delle tecnologie, cittadinanza digitale, sicurezza, dati, ricerca delle informazioni e produzione di contenuti digitali.</div>
+              <div class="norm-meta">Competenza digitale · Cittadinanza digitale · Innovazione didattica</div>
+              <div class="norm-tags"><span class="norm-tag">Digitale</span><span class="norm-tag">Sicurezza</span><span class="norm-tag">Dati</span><span class="norm-tag">Produzione digitale</span></div>
+              <a class="norm-link primary" href="https://publications.jrc.ec.europa.eu/repository/handle/JRC128415" target="_blank" rel="noopener">📄 DigComp 2.2</a>
+              <a class="norm-link secondary" href="https://www.mim.gov.it/piano-nazionale-scuola-digitale" target="_blank" rel="noopener">🔗 PNSD</a>
+            </div>
+          </div>
+          <div class="norm-card europa">
+            <div class="norm-icon">🌍</div>
+            <div class="norm-body">
+              <div class="norm-title">Agenda 2030 e Piano RiGenerazione Scuola</div>
+              <div class="norm-desc">Riferimenti per sostenibilità, cittadinanza attiva, cura dell'ambiente, territorio, benessere, compiti autentici e curricolo trasversale di Educazione civica.</div>
+              <div class="norm-meta">Sostenibilità · Ambiente · Territorio · Cittadinanza</div>
+              <div class="norm-tags"><span class="norm-tag">Agenda 2030</span><span class="norm-tag">Sostenibilità</span><span class="norm-tag">Territorio</span></div>
+              <a class="norm-link primary" href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">🌐 Agenda 2030 ONU</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="norm-cat">
+          <div class="norm-cat-title">⚡ Area di lavoro successiva — Gap verso le IN 2025</div>
+          <div class="norm-card in2025">
+            <div class="norm-icon">🧩</div>
+            <div class="norm-body">
+              <div class="norm-title">Gap 2025 da trattare come livello separato di revisione</div>
+              <div class="norm-desc">La base 2012 deve essere completata prima. Le proposte collegate alle Indicazioni 2025 non devono sovrascrivere la fonte ufficiale: devono comparire come gap, integrazioni o modifiche da discutere. Lo strumento dovrà distinguere: <strong>base ufficiale</strong>, <strong>evidenza PTOF/RAV</strong>, <strong>proposta 2025</strong>, <strong>decisione collegiale</strong>.</div>
+              <div class="norm-meta">Uso operativo nello strumento · Revisione guidata disciplinare</div>
+              <div class="norm-tags"><span class="norm-tag red">Gap 2025</span><span class="norm-tag">Da validare</span><span class="norm-tag">Dipartimenti</span><span class="norm-tag">Commissione curricolo</span></div>
+              <div class="norm-warning">Le aree generali restano consultabili. Le sezioni disciplinari e didattiche sono l'area di lavoro per completamento 2012 e successiva revisione 2025.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<footer>Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV) · AVIC849003 | IN 2012 → D.M. 221/2025 | DigComp 2.2 | Agenda 2030 | PTOF 2025-2028 | <a class='footer-motto-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Approfondisci il motto latino'>Non multa, sed multum</a></footer>
+<script>
+// ================================================================
+// DATI: Curricolo Verticale completo I.C. Calvario-Covotta «don Lorenzo Milani»
+// IN 2012 (testo) vs IN 2025 (proposto) — D.M. 221/2025
+// ================================================================
+const ORDINI = ["Infanzia","Primaria","Secondaria"];
+const ORDINE_LABEL = {Infanzia:"🧸 Scuola dell'Infanzia", Primaria:"📘 Scuola Primaria", Secondaria:"🎓 Scuola Secondaria I Grado"};
+const DISCIPLINE_META = {
+  "Italiano":{icon:"📝", comp:"Competenza alfabetica funzionale", nuclei:"Ascolto e parlato · Lettura · Scrittura · Lessico · Grammatica"},
+  "Matematica":{icon:"🔢", comp:"Competenza matematica e STEM", nuclei:"Numeri · Spazio e figure · Relazioni e funzioni · Dati e previsioni · Informatica"},
+  "Scienze":{icon:"🔬", comp:"Competenza in scienze, tecnologie e ingegneria", nuclei:"Chimica · Biologia · Geologia · Fisica e astronomia · Fonti di energia"},
+  "Tecnologia":{icon:"⚙️", comp:"Competenza digitale e STEM", nuclei:"Disegno tecnico · Materiali · Cicli tecnologici · Informatica"},
+  "Storia":{icon:"🏛️", comp:"Consapevolezza ed espressione culturale", nuclei:"Uso delle fonti · Organizzazione informazioni · Strumenti concettuali · Produzione"},
+  "Latino (LEL)":{icon:"🏺", comp:"Competenza alfabetica funzionale (LEL)", nuclei:"Confronto italiano-latino · Lessico comune · Cultura europea — NUOVA disciplina opzionale"},
+  "Geografia":{icon:"🗺️", comp:"Consapevolezza ed espressione culturale", nuclei:"Paesaggio · Transcalarità · Territorializzazione"},
+  "Inglese":{icon:"🇬🇧", comp:"Competenza multilinguistica", nuclei:"Ascolto · Lettura · Produzione orale e scritta · Interazione — Livello A2"},
+  "Seconda Lingua Comunitaria":{icon:"🇫🇷", comp:"Competenza multilinguistica", nuclei:"Comprensione e produzione — Livello A1"},
+  "Educazione Civica":{icon:"⚖️", comp:"Cittadinanza e competenza sociale", nuclei:"Costituzione · Sviluppo sostenibile · Cittadinanza digitale · Educazione finanziaria"},
+  "Arte e Immagine":{icon:"🎨", comp:"Consapevolezza ed espressione culturale", nuclei:"Esprimersi e comunicare · Osservare · Comprendere le opere d'arte"},
+  "Musica":{icon:"🎵", comp:"Consapevolezza ed espressione culturale", nuclei:"Linguaggi sonori · Espressione vocale e strumentale · Ascolto"},
+  "Educazione Fisica":{icon:"⚽", comp:"Competenza personale e sociale", nuclei:"Corpo e movimento · Linguaggio del corpo · Gioco-sport · Salute e benessere"},
+  "Religione Cattolica":{icon:"⛪", comp:"Consapevolezza ed espressione culturale", nuclei:"Dio e l'uomo · Bibbia e fonti · Linguaggio religioso · Valori etici"},
+};
+const DISCIPLINE = Object.keys(DISCIPLINE_META);
+
+let DATA = {
+"Italiano":{
+traguardi:[
+{id:"it_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino usa la lingua italiana, arricchisce e precisa il proprio lessico, comprende parole e discorsi.",status:"modifica",proposto:"Il bambino usa la lingua italiana con crescente consapevolezza, arricchisce il proprio lessico e comprende parole, discorsi e semplici testi, sviluppando la capacità di ascolto attivo e di narrazione.",decisione:null,testoFinale:null},
+{id:"it_inf2",ordine:"Infanzia",classe:"",testo:"Ascolta e comprende narrazioni, racconta e inventa storie, chiede e offre spiegazioni.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"it_inf3",ordine:"Infanzia",classe:"",testo:"Si avvicina alla lingua scritta, esplora e sperimenta prime forme di comunicazione attraverso la scrittura.",status:"modifica",proposto:"Si avvicina alla lingua scritta, esplora prime forme di comunicazione scritta; sviluppa un primo approccio al pregrafismo e al corsivo. [IN 2025: valorizzazione del corsivo fin dall'infanzia]",decisione:null,testoFinale:null},
+{id:"it_pri1",ordine:"Primaria",classe:"",testo:"L'alunno partecipa a scambi comunicativi con compagni e insegnanti rispettando il turno e formulando messaggi chiari.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"it_pri2",ordine:"Primaria",classe:"",testo:"Legge e comprende testi di vario tipo, individuandone le informazioni principali e lo scopo.",status:"modifica",proposto:"Legge e comprende testi di vario tipo — continui e non continui — individuandone le informazioni principali; legge integralmente almeno tre libri all'anno discutendone in classe. [IN 2025: lettura integrale di almeno 3 libri/anno]",decisione:null,testoFinale:null},
+{id:"it_pri3",ordine:"Primaria",classe:"",testo:"Scrive testi corretti nell'ortografia, chiari e coerenti, legati all'esperienza e alle diverse occasioni di scrittura.",status:"modifica",proposto:"Scrive testi corretti nell'ortografia — con cura della scrittura a mano in corsivo — chiari e coerenti; padroneggia le tecniche del riassunto e della riscrittura da testi-modello. [IN 2025: corsivo e riassunto centrali]",decisione:null,testoFinale:null},
+{id:"it_pri4",ordine:"Primaria",classe:"",testo:"Capisce e utilizza nell'uso orale e scritto i vocaboli fondamentali e quelli di alto uso.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"it_pri5",ordine:"Primaria",classe:"",testo:"Riconosce se una frase è o no completa, costituita dagli elementi essenziali.",status:"modifica",proposto:"Riconosce e usa correttamente gli elementi della morfosintassi, con attenzione alla centralità della regola grammaticale. [IN 2025: ritorno alla centralità della norma]",decisione:null,testoFinale:null},
+{id:"it_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno interagisce in modo efficace in diverse situazioni comunicative, attraverso modalità dialogiche rispettose delle idee altrui.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"it_sec2",ordine:"Secondaria",classe:"",testo:"Legge testi letterari di vario tipo e comincia a costruirne un'interpretazione.",status:"modifica",proposto:"Legge testi letterari di vario tipo — incluse opere intere (almeno 3 libri l'anno), graphic novel, albi illustrati, autori italiani e stranieri — costruendone un'interpretazione personale. [IN 2025: lettura integrale obbligatoria]",decisione:null,testoFinale:null},
+{id:"it_sec3",ordine:"Secondaria",classe:"",testo:"Scrive correttamente testi di tipo diverso adeguati a situazione, argomento, scopo, destinatario.",status:"modifica",proposto:"Scrive correttamente testi di tipo diverso; padroneggia riassunto e riscrittura da testi-modello; valorizza la scrittura a mano in corsivo come strumento cognitivo. [IN 2025: riassunto e corsivo riabilitati]",decisione:null,testoFinale:null},
+{id:"it_sec4",ordine:"Secondaria",classe:"",testo:"Padroneggia e applica in situazioni diverse le conoscenze fondamentali relative al lessico, alla morfologia e alla sintassi.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"it_ob_inf1",ordine:"Infanzia",classe:"3-4 anni",testo:"Ascoltare semplici narrazioni. Comunicare bisogni ed esperienze. Comprendere brevi storie.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"it_ob_inf2",ordine:"Infanzia",classe:"5 anni",testo:"Formulare frasi complete. Avvicinarsi alla scrittura spontanea di lettere e parole.",status:"modifica",proposto:"Formulare frasi complete e corrette; avvicinarsi al pregrafismo e al corsivo; memorizzare brevi filastrocche e poesie. [IN 2025: pregrafismo-corsivo; memorizzazione valorizzata]",decisione:null,testoFinale:null},
+{id:"it_ob_pri1",ordine:"Primaria",classe:"Cl. 1ª-2ª",testo:"Prendere la parola rispettando i turni. Scrivere sotto dettatura curando l'ortografia.",status:"modifica",proposto:"Prendere la parola rispettando i turni; scrivere sotto dettatura; acquisire la scrittura in corsivo come forma espressiva personale fin dalla classe 1ª. [IN 2025: corsivo curricolare dalla cl. 1ª]",decisione:null,testoFinale:null},
+{id:"it_ob_pri2",ordine:"Primaria",classe:"Cl. 3ª-4ª-5ª",testo:"Produrre racconti scritti. Ricavare informazioni da testi espositivi.",status:"modifica",proposto:"Produrre racconti scritti ed espositivi; saper riassumere e riscrivere da modello; leggere integralmente almeno un libro a quadrimestre e discuterne in classe. [IN 2025: riassunto centrale; 3 libri/anno]",decisione:null,testoFinale:null},
+{id:"it_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Scrivere testi di forma diversa: cronaca, lettere formali, testi argomentativi.",status:"modifica",proposto:"Scrivere cronaca, lettere formali, testi argomentativi; produrre riassunti e riscritture; confrontare opere italiane e straniere; memorizzare e recitare poesie. [IN 2025: memorizzazione e declamazione rivalutate]",decisione:null,testoFinale:null},
+]},
+"Matematica":{traguardi:[
+{id:"ma_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino raggruppa e ordina oggetti secondo criteri diversi, confronta quantità, ha familiarità con le strategie del contare.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ma_pri1",ordine:"Primaria",classe:"",testo:"L'alunno si muove con sicurezza nel calcolo scritto e mentale con i numeri naturali.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ma_pri2",ordine:"Primaria",classe:"",testo:"Ricerca dati per ricavare informazioni e costruisce rappresentazioni (tabelle e grafici).",status:"modifica",proposto:"Ricerca dati e costruisce rappresentazioni; sviluppa le basi del pensiero informatico attraverso semplici algoritmi. [IN 2025: Informatica come 5° ambito di Matematica dalla primaria]",decisione:null,testoFinale:null},
+{id:"ma_pri3",ordine:"Primaria",classe:"",testo:"",status:"nuovo",proposto:"Sviluppa un pensiero matematico critico per interpretare la realtà; sviluppa le prime nozioni di educazione finanziaria (valore del denaro, scambio, risparmio). [IN 2025: NUOVO — educazione finanziaria in Matematica]",decisione:null,testoFinale:null},
+{id:"ma_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno si muove con sicurezza nel calcolo anche con i numeri razionali.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ma_sec2",ordine:"Secondaria",classe:"",testo:"Analizza e interpreta rappresentazioni di dati per ricavarne misure di variabilità.",status:"modifica",proposto:"Analizza dati; sviluppa il pensiero computazionale con algoritmi, fogli di calcolo e software di geometria dinamica (GeoGebra). [IN 2025: Informatica in Matematica — algoritmi, GeoGebra]",decisione:null,testoFinale:null},
+{id:"ma_sec3",ordine:"Secondaria",classe:"",testo:"",status:"nuovo",proposto:"Sviluppa competenze di educazione finanziaria: gestione del denaro, risparmio, investimento; riconosce l'uso della matematica nelle decisioni economiche quotidiane. [IN 2025: NUOVO — educazione finanziaria STEM]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"ma_ob_inf",ordine:"Infanzia",classe:"3-4-5 anni",testo:"Contare fino a 10. Riconoscere forme geometriche. Classificare e seriare oggetti.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ma_ob_pri1",ordine:"Primaria",classe:"Cl. 1ª-2ª",testo:"Leggere e scrivere i numeri naturali. Eseguire operazioni mentalmente.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ma_ob_pri2",ordine:"Primaria",classe:"Cl. 3ª-4ª-5ª",testo:"Leggere e scrivere numeri decimali. Calcolare aree e perimetri.",status:"modifica",proposto:"Numeri decimali, aree e perimetri; costruire semplici algoritmi (sequenze di istruzioni); usare il foglio di calcolo per dati. [IN 2025: algoritmi e foglio di calcolo dalla primaria]",decisione:null,testoFinale:null},
+{id:"ma_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Risolvere equazioni di primo grado. Raccogliere e rappresentare dati.",status:"modifica",proposto:"Equazioni di primo grado; algoritmi con variabili; programmazione (Scratch, Python base); GeoGebra per geometria dinamica. [IN 2025: programmazione curricolare]",decisione:null,testoFinale:null},
+]},
+"Scienze":{traguardi:[
+{id:"sc_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino osserva con curiosità il mondo circostante, fa domande e ipotesi su ciò che vede.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"sc_pri1",ordine:"Primaria",classe:"",testo:"L'alunno sviluppa atteggiamenti di curiosità e modi di guardare il mondo che lo stimolano a cercare spiegazioni.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"sc_pri2",ordine:"Primaria",classe:"",testo:"Ha atteggiamenti di cura verso l'ambiente scolastico e naturale.",status:"modifica",proposto:"Ha cura dell'ambiente; comprende la necessità di ottimizzare l'uso delle risorse in ottica di sviluppo sostenibile. [IN 2025: NUOVO ambito Fonti di energia]",decisione:null,testoFinale:null},
+{id:"sc_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno esplora e sperimenta lo svolgersi dei più comuni fenomeni.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"sc_sec2",ordine:"Secondaria",classe:"",testo:"Ha curiosità e interesse verso i principali problemi legati all'uso della scienza nel campo dello sviluppo scientifico e tecnologico.",status:"modifica",proposto:"Conosce le fonti di energia (rinnovabili e non), le applicazioni tecnologiche e gli impatti ambientali; sviluppa consapevolezza storica delle scoperte, valorizzando il contributo delle figure femminili. [IN 2025: 5° ambito Fonti di energia; prospettiva storica e di genere]",decisione:null,testoFinale:null},
+{id:"sc_sec3",ordine:"Secondaria",classe:"",testo:"",status:"nuovo",proposto:"Riconosce l'errore come parte del processo scientifico; sviluppa capacità di decisioni informate su temi globali (clima, salute, biodiversità). [IN 2025: NUOVO — valore dell'errore; decisioni informate]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"sc_ob_inf",ordine:"Infanzia",classe:"3-4-5 anni",testo:"Osservare elementi naturali. Distinguere viventi e non viventi. Comprendere le stagioni.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"sc_ob_pri1",ordine:"Primaria",classe:"Cl. 1ª-3ª",testo:"Individuare proprietà di oggetti. Osservare e descrivere fenomeni naturali.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"sc_ob_pri2",ordine:"Primaria",classe:"Cl. 4ª-5ª",testo:"Conoscere la struttura del suolo. Riconoscere il funzionamento degli ecosistemi.",status:"modifica",proposto:"Struttura del suolo ed ecosistemi; fonti di energia e uso quotidiano; concetto di spreco energetico e comportamenti sostenibili. [IN 2025: fonti di energia dalla primaria]",decisione:null,testoFinale:null},
+{id:"sc_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Realizzare esperienze su proprietà fisiche e chimiche. Conoscere la cellula e i viventi.",status:"modifica",proposto:"Esperienze fisiche/chimiche; cellula, viventi, corpo umano; fonti di energia e applicazioni (nucleare, rinnovabili, fossili); storia delle scoperte con il contributo femminile. [IN 2025: fonti di energia obbligatorie; storia della scienza]",decisione:null,testoFinale:null},
+]},
+"Tecnologia":{traguardi:[
+{id:"te_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino usa con familiarità le tecnologie a disposizione nell'ambiente.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"te_pri1",ordine:"Primaria",classe:"",testo:"L'alunno si orienta tra i diversi mezzi di comunicazione ed è in grado di farne un uso adeguato.",status:"modifica",proposto:"Si orienta tra i mezzi di comunicazione; usa gli strumenti digitali con consapevolezza, sviluppando competenze base di informatica (hardware, software, reti). [IN 2025: Informatica come ambito specifico di Tecnologia]",decisione:null,testoFinale:null},
+{id:"te_pri2",ordine:"Primaria",classe:"",testo:"Inizia a riconoscere in modo critico le caratteristiche, le funzioni e i limiti della tecnologia attuale.",status:"modifica",proposto:"Riconosce criticamente caratteristiche e limiti della tecnologia, incluse le applicazioni dell'IA; valuta impatti ambientali e sociali delle tecnologie. [IN 2025: AI esplicitamente citata]",decisione:null,testoFinale:null},
+{id:"te_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno riconosce nell'ambiente i principali sistemi tecnologici e le molteplici relazioni che essi stabiliscono con gli esseri viventi.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"te_sec2",ordine:"Secondaria",classe:"",testo:"Progetta e realizza rappresentazioni grafiche o infografiche, relative alla struttura e al funzionamento di sistemi.",status:"modifica",proposto:"Progetta rappresentazioni grafiche con strumenti di disegno tecnico e applicazioni digitali (CAD, GeoGebra). [IN 2025: Disegno tecnico come 1° ambito; CAD esplicitato]",decisione:null,testoFinale:null},
+{id:"te_sec3",ordine:"Secondaria",classe:"",testo:"Sa utilizzare le tecnologie dell'informazione e della comunicazione per comunicare, calcolare, ricercare, archiviare dati.",status:"modifica",proposto:"Usa le TIC per comunicare e archiviare dati; conosce hardware, software, reti; usa strumenti di grafica, coding, internet, AI ed elaborazione dati; valuta sicurezza e impatto sociale. [IN 2025: 4° ambito Informatica — AI, coding, sicurezza]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"te_ob_inf",ordine:"Infanzia",classe:"3-4-5 anni",testo:"Usare LIM e tablet in modo guidato. Esplorare materiali.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"te_ob_pri1",ordine:"Primaria",classe:"Cl. 1ª-3ª",testo:"Osservare e descrivere oggetti riconoscendone funzione e materiali. Usare il computer con supervisione.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"te_ob_pri2",ordine:"Primaria",classe:"Cl. 4ª-5ª",testo:"Usare software didattici e videoscrittura. Cercare informazioni su internet.",status:"modifica",proposto:"Software didattici, videoscrittura, fogli di calcolo; valutazione critica delle informazioni online; algoritmi semplici; comportamenti sicuri in rete. [IN 2025: informatica di base dalla primaria]",decisione:null,testoFinale:null},
+{id:"te_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª",testo:"Leggere e interpretare semplici disegni tecnici. Analizzare oggetti d'uso comune.",status:"modifica",proposto:"Disegni tecnici; analisi di oggetti e materiali; elaborati grafici con strumenti tradizionali e CAD base; navigazione critica in internet. [IN 2025: CAD dalla cl. 1ª]",decisione:null,testoFinale:null},
+{id:"te_ob_sec2",ordine:"Secondaria",classe:"Cl. 2ª",testo:"Realizzare elaborati grafici in scala. Descrivere processi produttivi locali.",status:"modifica",proposto:"Elaborati grafici in scala con CAD; processi produttivi locali (ceramica arianese) in chiave tecnologica; reti informatiche; grafica digitale. [IN 2025: CAD, grafica digitale, reti]",decisione:null,testoFinale:null},
+{id:"te_ob_sec3",ordine:"Secondaria",classe:"Cl. 3ª",testo:"Conoscere reti e internet. Programmare con linguaggi a blocchi.",status:"modifica",proposto:"Internet e reti; programmazione a blocchi (Scratch) e Python base; uso critico dell'IA; elaborazione dati con fogli di calcolo; sicurezza informatica. [IN 2025: AI curricolare in Tecnologia cl. 3ª]",decisione:null,testoFinale:null},
+]},
+"Storia":{traguardi:[
+{id:"st_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino si orienta nelle prime generalizzazioni di passato, presente, futuro.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"st_pri1",ordine:"Primaria",classe:"",testo:"L'alunno riconosce elementi significativi del passato del suo ambiente di vita.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"st_pri2",ordine:"Primaria",classe:"",testo:"Individua le relazioni tra gruppi umani e contesti spaziali.",status:"modifica",proposto:"Individua relazioni tra gruppi umani e contesti spaziali; al termine della primaria conosce la storia dal Paleolitico alla fine dell'impero romano d'Occidente, estesa a regni romano-barbarici, monachesimo, Costantinopoli, Giustiniano, espansione islamica (VII sec.). [IN 2025: RACCORDO primaria-secondaria]",decisione:null,testoFinale:null},
+{id:"st_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno si informa in modo autonomo su fatti e problemi storici anche mediante l'uso di risorse digitali.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"st_sec2",ordine:"Secondaria",classe:"",testo:"Usa le conoscenze e le abilità per orientarsi nella complessità del presente.",status:"modifica",proposto:"Usa le conoscenze per orientarsi nel presente; conosce il contributo delle figure femminili nella storia; nuova periodizzazione triennale: I anno (Longobardi→Guerra 30 anni), II anno (Assolutismo→2ª Riv. Industriale), III anno (I GM→1994). [IN 2025: NUOVA periodizzazione triennale]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"st_ob_pri1",ordine:"Primaria",classe:"Cl. 1ª-2ª",testo:"Riordinare eventi in successione logica. Usare linee del tempo.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"st_ob_pri2",ordine:"Primaria",classe:"Cl. 3ª-4ª-5ª",testo:"Ricavare informazioni da documenti. Collocare la storia locale nel quadro italiano ed europeo.",status:"modifica",proposto:"Documenti e fonti; storia locale (Irpinia) nel quadro italiano/europeo; al termine cl. 5ª: storia fino al VII sec. d.C. con Giustiniano, monachesimo, nascita Islam. [IN 2025: raccordo — nuova scansione cl. 5ª]",decisione:null,testoFinale:null},
+{id:"st_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª",testo:"Analizzare il Medioevo nelle sue principali fasi.",status:"modifica",proposto:"Dai Longobardi alla Guerra dei Trent'anni e nascita del sistema europeo degli Stati; fonti digitali e archivi online; contributo femminile nel Medioevo/età moderna. [IN 2025: nuovo programma cl. 1ª]",decisione:null,testoFinale:null},
+{id:"st_ob_sec2",ordine:"Secondaria",classe:"Cl. 2ª",testo:"Studiare l'età moderna e la Rivoluzione industriale.",status:"modifica",proposto:"Dall'Assolutismo alla seconda Rivoluzione Industriale; figure femminili nell'età moderna; raccordo con Scienze sulla storia delle scoperte. [IN 2025: nuovo programma cl. 2ª]",decisione:null,testoFinale:null},
+{id:"st_ob_sec3",ordine:"Secondaria",classe:"Cl. 3ª",testo:"Studiare la storia contemporanea fino al secondo dopoguerra.",status:"modifica",proposto:"Dalla I Guerra Mondiale alle inchieste di Mani Pulite (1994); storia locale irpina nel '900; contributo femminile nel '900. [IN 2025: programma esteso fino al 1994]",decisione:null,testoFinale:null},
+]},
+"Latino (LEL)":{traguardi:[
+{id:"lat_sec1",ordine:"Secondaria",classe:"Cl. 2ª-3ª",testo:"",status:"nuovo",proposto:"L'alunno comprende i fondamenti del lessico e della grammatica latina in confronto con l'italiano; riconosce le radici latine nelle lingue europee moderne; apprezza il valore culturale del latino nella civiltà italiana ed europea. [IN 2025: NUOVA DISCIPLINA — Latino LEL, opzionale ma curricolare, 1h/sett. cl. 2ª-3ª]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"lat_ob_sec1",ordine:"Secondaria",classe:"Cl. 2ª",testo:"",status:"nuovo",proposto:"Confrontare italiano e latino (morfosintassi, lessico, desinenze); riconoscere prestiti latini nell'italiano contemporaneo; comprendere il ruolo del latino nelle lingue romanze. [IN 2025: percorso 1 — confronto italiano-latino]",decisione:null,testoFinale:null},
+{id:"lat_ob_sec2",ordine:"Secondaria",classe:"Cl. 3ª",testo:"",status:"nuovo",proposto:"Lessico latino nelle altre discipline (scienze, matematica, geografia); leggere e tradurre brevi testi elementari; comprendere il contributo della cultura latina alla civiltà europea. [IN 2025: percorso 2+3 — latino interdisciplinare]",decisione:null,testoFinale:null},
+]},
+"Geografia":{traguardi:[
+{id:"ge_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino individua posizioni di oggetti e persone nello spazio usando termini topologici.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ge_pri1",ordine:"Primaria",classe:"",testo:"L'alunno si orienta nello spazio circostante e sulle carte geografiche, utilizzando riferimenti topologici e punti cardinali.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ge_pri2",ordine:"Primaria",classe:"",testo:"Riconosce e denomina i principali oggetti geografici fisici.",status:"modifica",proposto:"Riconosce gli oggetti geografici fisici; studia l'Italia come metro di confronto con altre realtà europee e globali; sviluppa pensiero spaziale e transcalarità. [IN 2025: Italia come riferimento; pensiero spaziale]",decisione:null,testoFinale:null},
+{id:"ge_sec1",ordine:"Secondaria",classe:"",testo:"Osserva, legge e analizza sistemi territoriali vicini e lontani nello spazio e nel tempo.",status:"modifica",proposto:"Analizza sistemi territoriali secondo tre assi: Paesaggio (art. 9 Cost.), Transcalarità (locale-globale), Territorializzazione (comunità e pianeta); didattica laboratoriale con escursioni. [IN 2025: tre assi cardine; uscite didattiche]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"ge_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Orientarsi su carte geografiche. Analizzare interrelazioni tra fenomeni geografici.",status:"modifica",proposto:"Orientamento su carte; interrelazioni demografiche/sociali/economiche/ambientali; uscite didattiche sul territorio (Irpinia, Campania); geovisualizzazione digitale. [IN 2025: escursioni curricolari; geovisualizzazione]",decisione:null,testoFinale:null},
+]},
+"Inglese":{traguardi:[
+{id:"en_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino scopre la presenza di lingue diverse e sperimenta la pluralità dei linguaggi.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"en_pri1",ordine:"Primaria",classe:"",testo:"L'alunno comprende brevi messaggi orali e scritti relativi ad ambiti familiari.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"en_pri2",ordine:"Primaria",classe:"",testo:"Stabilisce relazioni tra elementi linguistico-comunicativi appartenenti alla lingua materna e alla lingua straniera.",status:"modifica",proposto:"Relazioni tra lingua madre e inglese; usa l'inglese per temi di cittadinanza globale e sostenibilità; conosce culture dei paesi anglofoni. [IN 2025: interdisciplinarità — inglese per cittadinanza globale]",decisione:null,testoFinale:null},
+{id:"en_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno comprende oralmente e per iscritto i punti essenziali di testi in lingua standard su argomenti familiari (livello A2).",status:"modifica",proposto:"Comprende testi in lingua standard (A2, superiore per classi con potenziamento); usa l'inglese come strumento interdisciplinare (cittadinanza globale, scienze, storia); confronta culture italiana e anglofona. [IN 2025: A2 confermato; pluralismo culturale]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"en_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Comprendere e produrre testi in lingua inglese. Scrivere lettere personali.",status:"modifica",proposto:"Testi in inglese (A2); lettere personali e testi di studio (CLIL leggero); progetti scolastici internazionali (gemellaggi, eTwinning); autovalutazione linguistica. [IN 2025: CLIL e gemellaggi incoraggiati]",decisione:null,testoFinale:null},
+]},
+"Seconda Lingua Comunitaria":{traguardi:[
+{id:"sl_sec1",ordine:"Secondaria",classe:"",testo:"Comprende frasi ed espressioni di uso frequente relative ad ambiti familiari (livello A1).",status:"modifica",proposto:"Comprende frasi di uso frequente (A1); usa la seconda lingua per esplorare culture francofone/ispanofone; confronto interculturale. [IN 2025: A1 confermato; pluralismo culturale]",decisione:null,testoFinale:null},
+{id:"sl_sec2",ordine:"Secondaria",classe:"",testo:"Interagisce in semplici scambi comunicativi.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"sl_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Comprendere e produrre frasi semplici in seconda lingua.",status:"modifica",proposto:"Frasi semplici (A1); aspetti culturali dei paesi francofoni/ispanofoni; progetti di internazionalizzazione. [IN 2025: internazionalizzazione e gemellaggi]",decisione:null,testoFinale:null},
+]},
+"Educazione Civica":{traguardi:[
+{id:"ec_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino gioca in modo costruttivo con gli altri, sviluppa il senso dell'identità personale, rispetta le regole.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ec_pri1",ordine:"Primaria",classe:"",testo:"L'alunno adotta comportamenti di rispetto delle regole e coerenti con i principi della Costituzione.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ec_pri2",ordine:"Primaria",classe:"",testo:"",status:"nuovo",proposto:"Sviluppa le prime nozioni di educazione finanziaria: valore del denaro, differenza tra bisogno e desiderio, importanza del risparmio. [IN 2025: NUOVO — educazione finanziaria dalla primaria]",decisione:null,testoFinale:null},
+{id:"ec_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno conosce l'organizzazione costituzionale e comprende i valori fondamentali della Costituzione.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ec_sec2",ordine:"Secondaria",classe:"",testo:"Esercita la cittadinanza digitale in modo consapevole.",status:"modifica",proposto:"Cittadinanza digitale (D.M. 183/2024); educazione finanziaria (denaro, risparmio, economia personale); empatia, rispetto, parità di genere. [IN 2025: allineamento D.M. 183/2024; educazione finanziaria; empatia]",decisione:null,testoFinale:null},
+{id:"ec_sec3",ordine:"Secondaria",classe:"",testo:"",status:"nuovo",proposto:"Educazione alle relazioni e all'affettività: rispetto di sé e degli altri, gestione delle emozioni, prevenzione della violenza di genere. [IN 2025: NUOVO — relazioni e rispetto come dimensione curricolare]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"ec_ob_pri1",ordine:"Primaria",classe:"Trasversale Cl. 1ª-5ª",testo:"Conoscere la Costituzione. Rispettare le regole della convivenza civile.",status:"modifica",proposto:"Costituzione e regole; empatia e rispetto reciproco; educazione finanziaria base; cura ambientale locale (Ariano Irpino). [IN 2025: empatia, educazione finanziaria, cura locale]",decisione:null,testoFinale:null},
+{id:"ec_ob_sec1",ordine:"Secondaria",classe:"Trasversale Cl. 1ª-3ª",testo:"Principi della Costituzione. SDGs Agenda 2030. Cittadinanza digitale.",status:"modifica",proposto:"Costituzione e istituzioni; SDGs collegati al territorio irpino; cittadinanza digitale (D.M. 183/2024); educazione finanziaria; educazione alle relazioni; prevenzione cyberbullismo. [IN 2025: allineamento D.M. 183/2024 completo]",decisione:null,testoFinale:null},
+]},
+"Arte e Immagine":{traguardi:[
+{id:"ai_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino esplora i materiali e li utilizza con creatività.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ai_pri1",ordine:"Primaria",classe:"",testo:"L'alunno utilizza le conoscenze relative al linguaggio visivo per produrre testi visivi e rielaborare immagini.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ai_sec1",ordine:"Secondaria",classe:"",testo:"Realizza elaborati personali e creativi sulla base di un'ideazione e progettazione originale.",status:"modifica",proposto:"Elaborati personali su progettazione originale; integra strumenti digitali (grafica, fotografia); valorizza il patrimonio artigianale locale (ceramica arianese). [IN 2025: interdisciplinarità STEM-arte]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"ai_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Leggere opere d'arte. Riconoscere beni culturali del territorio.",status:"modifica",proposto:"Opere d'arte in prospettiva storica, con contributo delle artiste femminili; beni culturali del territorio irpino (ceramica, centri storici); strumenti multimediali; interazione arte-scienze. [IN 2025: figure femminili nell'arte; integrazione STEM]",decisione:null,testoFinale:null},
+]},
+"Musica":{traguardi:[
+{id:"mu_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino esplora eventi sonori e canta semplici canzoni.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"mu_pri1",ordine:"Primaria",classe:"",testo:"L'alunno esplora diverse possibilità espressive della voce, di oggetti sonori e strumenti musicali.",status:"modifica",proposto:"Esplora voce, oggetti sonori e strumenti; sviluppa alfabetizzazione musicale (partiture, notazione) dalla cl. 3ª; pratica il canto corale come esperienza di comunità. [IN 2025: notazione musicale dalla cl. 3ª; canto corale]",decisione:null,testoFinale:null},
+{id:"mu_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno usa diversi sistemi di notazione funzionali alla lettura e alla produzione musicale.",status:"modifica",proposto:"Sistemi di notazione; canto corale e musica d'insieme; ambienti sonori digitali per produzione musicale; potenziale educativo mente-corpo-emozione. [IN 2025: musica d'insieme; tecnologie digitali]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"mu_ob_pri1",ordine:"Primaria",classe:"Cl. 1ª-2ª",testo:"Usare la voce per produrre fatti sonori. Eseguire brani vocali semplici.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"mu_ob_pri2",ordine:"Primaria",classe:"Cl. 3ª-4ª-5ª",testo:"Eseguire brani strumentali. Riconoscere elementi di un brano musicale.",status:"modifica",proposto:"Brani strumentali e vocali; lettura di semplici partiture; canto corale; elementi del linguaggio musicale. [IN 2025: notazione musicale curricolare]",decisione:null,testoFinale:null},
+{id:"mu_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Eseguire brani vocali e strumentali di diversi generi.",status:"modifica",proposto:"Brani di diversi generi; musica d'insieme; strumenti digitali per creare e condividere musica; collegamento musica-storia-emozioni. [IN 2025: musica d'insieme; produzione digitale]",decisione:null,testoFinale:null},
+]},
+"Educazione Fisica":{traguardi:[
+{id:"ef_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino vive pienamente la propria corporeità e controlla l'esecuzione del gesto.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ef_pri1",ordine:"Primaria",classe:"",testo:"L'alunno acquisisce consapevolezza di sé attraverso la percezione del proprio corpo.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ef_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno è consapevole delle proprie competenze motorie sia nei punti di forza che nei limiti.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"ef_sec2",ordine:"Secondaria",classe:"",testo:"Sa alimentarsi e si impegna in attività di moto per il proprio benessere.",status:"modifica",proposto:"Alimentazione corretta e attività motoria per il benessere; integrazione di mente, corpo ed emozione; stili di vita sani in raccordo con Scienze ed Ed. Civica. [IN 2025: approccio olistico mente-corpo-emozione]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"ef_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Partecipare ad attività sportive rispettando le regole. Adottare comportamenti sicuri.",status:"modifica",proposto:"Attività sportive e fair play; comportamenti sicuri; autoregolazione emotiva; alimentazione sana e prevenzione. [IN 2025: autoregolazione emotiva; integrazione corpo-emozione]",decisione:null,testoFinale:null},
+]},
+"Religione Cattolica":{traguardi:[
+{id:"rc_inf1",ordine:"Infanzia",classe:"",testo:"Il bambino riconosce nei segni del corpo l'esperienza religiosa propria e altrui.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"rc_pri1",ordine:"Primaria",classe:"",testo:"L'alunno riflette su Dio Creatore e Padre e sui dati fondamentali della vita di Gesù.",status:"ok",proposto:"",decisione:null,testoFinale:null},
+{id:"rc_sec1",ordine:"Secondaria",classe:"",testo:"L'alunno è aperto alla sincera ricerca della verità e sa interrogarsi sul trascendente.",status:"modifica",proposto:"Ricerca della verità; dialogo interreligioso e confronto rispettoso con credenze diverse; apporto delle tradizioni religiose alla cultura europea. [IN 2025: dialogo interreligioso rafforzato]",decisione:null,testoFinale:null},
+],obiettivi:[
+{id:"rc_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Conoscere le religioni monoteiste. Riflettere sul senso della vita.",status:"modifica",proposto:"Religioni monoteiste e radici storiche; valori etici condivisi; dialogo interreligioso come valore civico. [IN 2025: dialogo interreligioso come dimensione civica]",decisione:null,testoFinale:null},
+]},
+};
+
+// ================================================================
+// STATE
+// ================================================================
+let selDisc="Tecnologia", filterStatus="all", currentTab="lavoro";
+let editingId=null;
+const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:"Tecnologia",ordine:"Secondaria"};
+let userProfile={...DEFAULT_PROFILE};
+const SCHOOL_PROFILE={istituto:"Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani»",comune:"Ariano Irpino (AV)",codice:"AVIC849003"};
+const ORDER_PROFILE_LABELS={Infanzia:"Scuola dell'Infanzia",Primaria:"Scuola Primaria",Secondaria:"Scuola Secondaria di I grado",Tutti:"Tutti gli ordini / Commissione curricolo"};
+
+function allItems(){return Object.values(DATA).flatMap(d=>[...d.traguardi,...d.obiettivi]);}
+function discItems(disc){const d=DATA[disc];return d?[...d.traguardi,...d.obiettivi]:[];}
+function needsDecision(item){return (item.status==="modifica"||item.status==="nuovo")&&!item.decisione;}
+function escapeHtml(value){const div=document.createElement("div");div.textContent=String(value??"");return div.innerHTML;}
+function canEditOrder(ordine){return userProfile.ordine==="Tutti" || !userProfile.ordine || userProfile.ordine===ordine;}
+function selectedOrderLabel(){return ORDER_PROFILE_LABELS[userProfile.ordine]||"Ordine non impostato";}
+function profileDisplayName(){const name=[userProfile.nome,userProfile.cognome].filter(Boolean).join(" ").trim();return name||"utente non indicato";}
+function renderProfileSummary(){const el=document.getElementById("active-profile-summary");if(!el)return;el.innerHTML=`<strong>${escapeHtml(profileDisplayName())}</strong> · ${escapeHtml(userProfile.disciplina||selDisc)} · ${escapeHtml(selectedOrderLabel())}<br><span style="color:#78909c">${escapeHtml(SCHOOL_PROFILE.istituto)} · ${escapeHtml(SCHOOL_PROFILE.comune)} · ${escapeHtml(SCHOOL_PROFILE.codice)}</span>`;}
+function animateLocalSave(){const bar=document.querySelector(".local-save-bar");if(!bar)return;bar.classList.remove("saved-flash");void bar.offsetWidth;bar.classList.add("saved-flash");}
+function lockNoticeFor(item){if(canEditOrder(item.ordine))return "";return `<div class="readonly-order-note">🔒 Questa sezione è visibile per consultazione. Le modifiche sono abilitate solo per <strong>${escapeHtml(selectedOrderLabel())}</strong>. Per intervenire su questo ordine, apri <strong>Impostazioni / onboarding</strong> e cambia ordine di scuola.</div>`;}
+function disabledFor(item){return canEditOrder(item.ordine)?"":" disabled aria-disabled=\"true\"";}
+
+// ================================================================
+// SALVATAGGIO LOCALE — nessun invio dati, nessun account, nessun server
+// ================================================================
+const LOCAL_SAVE_KEY = "curricoloVerticaleDonMilani.v3.ibrido.localState";
+const LOCAL_SAVE_VERSION = 1;
+const INITIAL_DATA_JSON = JSON.stringify(DATA);
+let localSaveAvailable = false;
+
+function checkLocalSaveAvailable(){
+  try{
+    const testKey = LOCAL_SAVE_KEY + ".test";
+    localStorage.setItem(testKey,"1");
+    localStorage.removeItem(testKey);
+    localSaveAvailable = true;
+    return true;
+  }catch(err){
+    localSaveAvailable = false;
+    return false;
+  }
+}
+
+function setLocalSaveStatus(message, isWarning=false){
+  const el=document.getElementById("local-save-status");
+  if(!el) return;
+  el.textContent=message;
+  el.style.color=isWarning ? "#b71c1c" : "#2e7d32";
+}
+
+function saveLocalState(silent=true){
+  if(!localSaveAvailable && !checkLocalSaveAvailable()){
+    setLocalSaveStatus("Salvataggio locale non disponibile in questo browser.", true);
+    if(!silent) alert("Il browser non consente il salvataggio locale. Usa Backup o Markdown per conservare il lavoro.");
+    return false;
+  }
+  const payload={
+    version:LOCAL_SAVE_VERSION,
+    savedAt:new Date().toISOString(),
+    selectedDiscipline:selDisc,
+    filterStatus,
+    currentTab,
+    data:DATA,
+    profile:userProfile
+  };
+  try{
+    localStorage.setItem(LOCAL_SAVE_KEY, JSON.stringify(payload));
+    const when=new Date(payload.savedAt).toLocaleString("it-IT", {dateStyle:"short", timeStyle:"short"});
+    setLocalSaveStatus(`Salvato su questo dispositivo: ${when}.`);
+    animateLocalSave();
+    renderProfileSummary();
+    if(!silent) showToast("💾 Lavoro salvato su questo dispositivo");
+    return true;
+  }catch(err){
+    setLocalSaveStatus("Spazio locale insufficiente o salvataggio bloccato.", true);
+    if(!silent) alert("Non è stato possibile salvare localmente. Esporta un Backup o un Markdown.");
+    return false;
+  }
+}
+
+function loadLocalState(){
+  if(!checkLocalSaveAvailable()){
+    return false;
+  }
+  try{
+    const raw=localStorage.getItem(LOCAL_SAVE_KEY);
+    if(!raw){
+      setLocalSaveStatus("Nessun salvataggio precedente trovato. Le nuove modifiche saranno salvate qui.");
+      return false;
+    }
+    const payload=JSON.parse(raw);
+    if(!payload || !payload.data){
+      setLocalSaveStatus("Salvataggio locale non leggibile. Usa un backup se disponibile.", true);
+      return false;
+    }
+    DATA=payload.data;
+    if(payload.profile) userProfile={...DEFAULT_PROFILE,...payload.profile};
+    if(userProfile.disciplina && DATA[userProfile.disciplina]) selDisc=userProfile.disciplina;
+    else if(payload.selectedDiscipline && DATA[payload.selectedDiscipline]) selDisc=payload.selectedDiscipline;
+    if(payload.filterStatus) filterStatus=payload.filterStatus;
+    const when=payload.savedAt ? new Date(payload.savedAt).toLocaleString("it-IT", {dateStyle:"short", timeStyle:"short"}) : "data non disponibile";
+    setLocalSaveStatus(`Ripreso salvataggio locale del ${when}.`);
+    renderProfileSummary();
+    return true;
+  }catch(err){
+    setLocalSaveStatus("Salvataggio locale non leggibile. Usa un backup se disponibile.", true);
+    return false;
+  }
+}
+
+function resetLocalState(){
+  if(!confirm("Vuoi ripristinare lo strumento allo stato iniziale?\n\nLe decisioni e le modifiche salvate su questo dispositivo saranno eliminate. Prima di procedere, puoi usare Backup.")) return;
+  try{ if(localSaveAvailable) localStorage.removeItem(LOCAL_SAVE_KEY); }catch(err){}
+  DATA=JSON.parse(INITIAL_DATA_JSON);
+  userProfile={...DEFAULT_PROFILE};
+  selDisc=userProfile.disciplina;
+  editingId=null;
+  renderProfileSummary();
+  renderSidebar();
+  render();
+  setLocalSaveStatus("Stato iniziale ripristinato. Le nuove modifiche saranno salvate qui.");
+  showToast("↺ Stato iniziale ripristinato");
+}
+
+function exportLocalBackup(){
+  const payload={
+    version:LOCAL_SAVE_VERSION,
+    exportedAt:new Date().toISOString(),
+    source:"Curricolo Verticale IC Don Milani — salvataggio locale",
+    selectedDiscipline:selDisc,
+    filterStatus,
+    currentTab,
+    data:DATA,
+    profile:userProfile
+  };
+  const blob=new Blob([JSON.stringify(payload,null,2)], {type:"application/json;charset=utf-8"});
+  const date=new Date().toISOString().slice(0,10);
+  downloadBlob(blob, `Backup_CurricoloVerticale_IC_DonMilani_${date}.json`);
+  showToast("⬇️ Backup locale scaricato");
+}
+
+function importLocalBackup(event){
+  const input=event.target;
+  const file=input.files && input.files[0];
+  if(!file) return;
+  const reader=new FileReader();
+  reader.onload=()=>{
+    try{
+      const payload=JSON.parse(String(reader.result||""));
+      if(!payload || !payload.data) throw new Error("Formato non valido");
+      if(!confirm("Importare questo backup?\n\nIl lavoro attualmente aperto sarà sostituito dal contenuto del file.")) return;
+      DATA=payload.data;
+      if(payload.profile) userProfile={...DEFAULT_PROFILE,...payload.profile};
+      if(userProfile.disciplina && DATA[userProfile.disciplina]) selDisc=userProfile.disciplina;
+      else if(payload.selectedDiscipline && DATA[payload.selectedDiscipline]) selDisc=payload.selectedDiscipline;
+      editingId=null;
+      saveLocalState(true);
+      renderProfileSummary();
+      renderSidebar();
+      render();
+      showToast("⬆️ Backup importato e salvato");
+    }catch(err){
+      alert("Il file selezionato non è un backup valido dello strumento.");
+    }finally{
+      input.value="";
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ================================================================
+// STATS & PROGRESS (globali, in header)
+// ================================================================
+function updateStats(){
+  const all=allItems();
+  const pend=all.filter(needsDecision).length;
+  const app=all.filter(x=>x.decisione==="approvata").length;
+  const rif=all.filter(x=>x.decisione==="rifiutata").length;
+  const ok=all.filter(x=>x.status==="ok").length;
+  document.getElementById("stats").innerHTML=`
+    <div class="stat" title="Voci che richiedono ancora una tua decisione">⏳ <strong style="color:#ffe082">${pend}</strong> da decidere</div>
+    <div class="stat" title="Voci che hai approvato">✅ <strong style="color:#a5d6a7">${app}</strong> approvate</div>
+    <div class="stat" title="Voci che hai rifiutato (resta il testo attuale)">❌ <strong style="color:#ef9a9a">${rif}</strong> rifiutate</div>
+    <div class="stat" title="Voci che restano invariate, nessuna decisione necessaria">✓ <strong style="color:#90caf9">${ok}</strong> invariate</div>`;
+}
+
+function updateProgressBar(){
+  const items=discItems(selDisc).filter(x=>canEditOrder(x.ordine));
+  const decidibili=items.filter(x=>x.status==="modifica"||x.status==="nuovo").length;
+  const decise=items.filter(x=>x.decisione).length;
+  const pct=decidibili?Math.round((decise/decidibili)*100):100;
+  const label=document.getElementById("prog-label");
+  if(decidibili===0){
+    label.textContent="🎉 Nell'ordine selezionato non ci sono decisioni da prendere";
+  } else if(pct===100){
+    label.textContent=`🎉 Ambito completato (${selectedOrderLabel()}): ${decise}/${decidibili} decisioni prese`;
+  } else {
+    label.textContent=`Avanzamento modificabile (${selectedOrderLabel()}): ${decise}/${decidibili} decisioni`;
+  }
+  document.getElementById("prog-fill").style.width=pct+"%";
+  document.getElementById("prog-pct").textContent=pct+"%";
+}
+
+// ================================================================
+// SIDEBAR — raggruppata per area disciplinare con indicatori chiari
+// ================================================================
+function renderSidebar(){
+  let html="";
+  DISCIPLINE.forEach(d=>{
+    const items=discItems(d);
+    const pend=items.filter(needsDecision).length;
+    const app=items.filter(x=>x.decisione==="approvata").length;
+    const isNewDisc = items.length && items.every(x=>x.status==="nuovo");
+    let dot="#bdbdbd", emoji="";
+    if(pend>0){dot="#ff9800"; emoji=` <span style="font-size:9px;background:#ff9800;color:#fff;border-radius:8px;padding:1px 5px;margin-left:auto">${pend}</span>`;}
+    else if(items.length && app===items.filter(x=>x.status!=="ok").length && items.filter(x=>x.status!=="ok").length>0){dot="#43a047"; emoji=` <span style="font-size:11px;margin-left:auto">✅</span>`;}
+    const meta=DISCIPLINE_META[d];
+    html+=`<button class="disc-btn${d===selDisc?" active":""}" onclick="selectDisc('${d.replace(/'/g,"\\'")}')" title="${meta.comp}">
+      <span>${meta.icon}</span>
+      <span class="disc-dot" style="background:${dot}"></span>
+      <span style="flex:1">${d}${isNewDisc?' <span style="color:#1976d2;font-size:9px">★NEW</span>':''}</span>
+      ${emoji}
+    </button>`;
+  });
+  document.getElementById("sidebar").innerHTML=html;
+}
+function selectDisc(d){selDisc=d;editingId=null;renderSidebar();render();
+  document.getElementById("main-content").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+// ================================================================
+// CARD RENDERING
+// ================================================================
+function cardHTML(item,type){
+  const isEdit=editingId===item.id && canEditOrder(item.ordine);
+  const disabled=disabledFor(item);
+  const readonlyClass=canEditOrder(item.ordine)?"":" readonly-order";
+  const lockNotice=lockNoticeFor(item);
+
+  // Carte invariate (ok) — compatte, rassicuranti
+  if(item.status==="ok"){
+    return `<div class="card ok${readonlyClass}">
+      <div class="card-hd">
+        <span class="badge ok">✓ Nessuna modifica necessaria</span>
+        ${item.classe?`<span class="cl-tag">📍 ${item.classe}</span>`:""}
+      </div>
+      <div class="card-body">${item.testo}</div>
+      ${lockNotice}
+      <div class="card-acts">
+        <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')" title="Modifica comunque il testo se lo desideri">✏️ Modifica comunque</button>
+        <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')" title="Rimuovi questa voce dal curricolo">🗑 Rimuovi</button>
+      </div></div>`;
+  }
+
+  // Carte approvate o rifiutate — compatte con esito chiaro
+  if(item.decisione){
+    const isApp=item.decisione==="approvata";
+    const label=isApp?"✅ Hai approvato questa proposta":"❌ Hai mantenuto il testo attuale";
+    const testoShow=isApp?(item.testoFinale||item.proposto):(item.testo||"<em style='color:#999'>— Voce non inserita nel curricolo —</em>");
+    return `<div class="card ${item.decisione}${readonlyClass}">
+      <div class="card-hd">
+        <span class="badge ${item.decisione}">${label}</span>
+        ${item.status==="nuovo"?'<span class="ord-tag">★ Nuova voce IN 2025</span>':""}
+        ${item.classe?`<span class="cl-tag">📍 ${item.classe}</span>`:""}
+      </div>
+      <div class="card-body">${testoShow}</div>
+      ${lockNotice}
+      <div class="card-acts">
+        <button class="act act-undo"${disabled} onclick="undoDecision('${item.id}')" title="Torna indietro e decidi di nuovo">↩ Cambia idea</button>
+        <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')">✏️ Modifica testo</button>
+        <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')">🗑 Rimuovi</button>
+      </div></div>`;
+  }
+
+  // Carte da decidere — pannelli affiancati, ben spiegati
+  return `<div class="card ${item.status}${readonlyClass}">
+    <div class="card-hd">
+      <span class="badge ${item.status}">${item.status==="nuovo"?"★ Proposta nuova nelle IN 2025":"✎ Le IN 2025 propongono una modifica"}</span>
+      ${item.classe?`<span class="cl-tag">📍 ${item.classe}</span>`:""}
+    </div>
+    <div class="panels">
+      ${item.status==="modifica"?`<div class="panel current">
+        <div class="panel-lbl">📄 Cosa dice oggi il curricolo (IN 2012)</div>
+        <div class="panel-text">${item.testo||'<em style="color:#bbb">— nessun testo —</em>'}</div>
+      </div>`:`<div class="panel current" style="background:#f3e5f5">
+        <div class="panel-lbl" style="color:#7b1fa2">🆕 Voce non presente nel curricolo attuale</div>
+        <div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div>
+      </div>`}
+      <div class="panel proposed">
+        <div class="panel-lbl">✨ Cosa propongono le IN 2025</div>
+        ${isEdit
+          ?`<textarea class="panel-text ed" id="edit-${item.id}" rows="5">${item.testoFinale||item.proposto}</textarea>`
+          :`<div class="panel-text" style="cursor:${canEditOrder(item.ordine)?'text':'default'}" ${canEditOrder(item.ordine)?`ondblclick="startEdit('${item.id}')" title="Doppio click per modificare"`:`title="Solo consultazione per l'ordine selezionato"`}>${item.testoFinale||item.proposto}</div>`}
+      </div>
+    </div>
+    ${lockNotice}
+    <div class="card-acts">
+      ${isEdit
+        ?`<button class="act act-save" onclick="saveEditAndApprove('${item.id}')">✅ Salva e Approva</button>
+          <button class="act act-cancel" onclick="cancelEdit()">Annulla</button>`
+        :`<button class="act act-approve"${disabled} onclick="approve('${item.id}')" title="Accetta il testo proposto così com'è">✅ Approvo questa proposta</button>
+          <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')" title="Personalizza il testo prima di approvare">✏️ Voglio modificarlo</button>
+          <button class="act act-reject"${disabled} onclick="reject('${item.id}')" title="Mantieni il testo attuale, non applicare la modifica">❌ Mantieni il testo attuale</button>`}
+      <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')">🗑</button>
+    </div></div>`;
+}
+
+// ================================================================
+// FILTER & RENDER — raggruppato per ordine di scuola (Infanzia/Primaria/Secondaria)
+// ================================================================
+function setFilter(f,btn){
+  filterStatus=f;
+  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+  if(btn) btn.classList.add("active");
+  render();
+}
+
+function passesFilter(item){
+  const hideOk=document.getElementById("hide-ok")?.checked;
+  if(hideOk&&item.status==="ok") return false;
+  if(filterStatus==="all") return true;
+  if(filterStatus==="pending") return needsDecision(item);
+  if(filterStatus==="approvata") return item.decisione==="approvata";
+  if(filterStatus==="rifiutata") return item.decisione==="rifiutata";
+  if(filterStatus==="ok") return item.status==="ok";
+  if(filterStatus==="nuovo") return item.status==="nuovo";
+  return true;
+}
+
+function render(){
+  renderSidebar();
+  updateStats();
+  updateProgressBar();
+  const d=DATA[selDisc]||{traguardi:[],obiettivi:[]};
+  const meta=DISCIPLINE_META[selDisc]||{icon:"📘",comp:"",nuclei:""};
+  let html=`<div class="disc-header">
+    <h2>${meta.icon} ${selDisc}</h2>
+    <div class="meta">🎯 ${meta.comp}</div>
+    <div class="nucl">📚 Nuclei: ${meta.nuclei}</div>
+  </div>`;
+
+  let anyContent=false;
+  for(const ord of ORDINI){
+    for(const [type,label] of [["traguardi","🎯 Traguardi per lo sviluppo delle competenze"],["obiettivi","📋 Obiettivi di apprendimento"]]){
+      const itemsOrd=(d[type]||[]).filter(x=>x.ordine===ord);
+      if(!itemsOrd.length) continue;
+      const filtered=itemsOrd.filter(passesFilter);
+      if(!filtered.length) continue;
+      anyContent=true;
+      html+=`<div class="ordine-hd ${ord.toLowerCase()}">${ORDINE_LABEL[ord]} — ${label}</div>`;
+      html+=filtered.map(i=>cardHTML(i,type)).join("");
+    }
+  }
+  if(!anyContent){
+    html+=`<div style="text-align:center;padding:40px 20px;color:#90a4ae">
+      <div style="font-size:40px;margin-bottom:10px">🔍</div>
+      <div style="font-size:14px;font-weight:600">Nessuna voce trovata con questo filtro</div>
+      <div style="font-size:12px;margin-top:5px">Prova a selezionare "Tutti" oppure cambia disciplina dal menu a sinistra</div>
+    </div>`;
+  }
+  html+=`<div class="add-row">
+    <button class="add-btn add-t" onclick="addItem('traguardi')">➕ Aggiungi traguardo</button>
+    <button class="add-btn add-o" onclick="addItem('obiettivi')">➕ Aggiungi obiettivo</button>
+  </div>`;
+  document.getElementById("cards-area").innerHTML=html;
+}
+
+// ================================================================
+// ACTIONS
+// ================================================================
+function findItem(id){
+  for(const d of Object.values(DATA)){
+    for(const arr of [d.traguardi,d.obiettivi]){
+      const f=arr.find(x=>x.id===id);
+      if(f) return f;
+    }
+  }
+  return null;
+}
+
+function flashCard(id){
+  setTimeout(()=>{
+    const el=document.querySelector(`[data-flash="${id}"]`);
+  },10);
+}
+
+function approve(id){
+  const item=findItem(id);
+  if(!item) return;
+  if(!canEditOrder(item.ordine)){showToast("🔒 Sezione in sola consultazione per l'ordine selezionato");return;}
+  item.decisione="approvata";
+  item.testoFinale=item.testoFinale||item.proposto;
+  saveLocalState(true);
+  render();
+  showToast("✅ Proposta approvata!");
+}
+
+function reject(id){
+  const item=findItem(id);
+  if(!item) return;
+  if(!canEditOrder(item.ordine)){showToast("🔒 Sezione in sola consultazione per l'ordine selezionato");return;}
+  item.decisione="rifiutata";
+  saveLocalState(true);
+  render();
+  showToast("❌ Mantenuto il testo attuale");
+}
+
+function undoDecision(id){
+  const item=findItem(id);
+  if(!item) return;
+  if(!canEditOrder(item.ordine)){showToast("🔒 Sezione in sola consultazione per l'ordine selezionato");return;}
+  item.decisione=null;
+  saveLocalState(true);
+  render();
+  showToast("↩ Decisione annullata, puoi rivalutare");
+}
+
+function startEdit(id){
+  const item=findItem(id);
+  if(item && !canEditOrder(item.ordine)){showToast("🔒 Sezione in sola consultazione per l'ordine selezionato");return;}
+  editingId=id;render();
+  setTimeout(()=>{
+    const ta=document.getElementById("edit-"+id);
+    if(ta){ta.focus();ta.setSelectionRange(ta.value.length,ta.value.length);}
+  },50);
+}
+function cancelEdit(){editingId=null;render();}
+
+function saveEditAndApprove(id){
+  const item=findItem(id);
+  if(item && !canEditOrder(item.ordine)){showToast("🔒 Sezione in sola consultazione per l'ordine selezionato");return;}
+  const ta=document.getElementById("edit-"+id);
+  if(item&&ta){item.testoFinale=ta.value;item.decisione="approvata";}
+  saveLocalState(true);
+  editingId=null;render();
+  showToast("✅ Testo personalizzato e approvato!");
+}
+
+function confirmRemove(type,id){
+  if(confirm("Vuoi davvero rimuovere questa voce dal curricolo?\n\nQuesta azione non eliminerà nulla dal documento ufficiale finché non esporti — puoi sempre ricominciare ricaricando la pagina.")){
+    removeItem(type,id);
+  }
+}
+
+function removeItem(type,id){
+  const item=findItem(id);
+  if(item && !canEditOrder(item.ordine)){showToast("🔒 Sezione in sola consultazione per l'ordine selezionato");return;}
+  DATA[selDisc][type]=DATA[selDisc][type].filter(x=>x.id!==id);
+  saveLocalState(true);
+  render();
+  showToast("🗑 Voce rimossa");
+}
+
+function addItem(type){
+  let ordineValido=userProfile.ordine;
+  if(!ordineValido || ordineValido==="Tutti"){
+    const ordineScelto = prompt("Per quale ordine di scuola è questa nuova voce?\n\nScrivi: Infanzia, Primaria oppure Secondaria","Secondaria");
+    if(!ordineScelto) return;
+    ordineValido = ORDINI.find(o=>o.toLowerCase()===ordineScelto.trim().toLowerCase()) || "Secondaria";
+  }
+  DATA[selDisc][type].push({
+    id:type+"_new_"+Date.now(),
+    ordine:ordineValido,
+    classe:type==="obiettivi"?"Da definire":"",
+    testo:"",
+    status:"nuovo",
+    proposto:"✏️ Scrivi qui il testo della nuova voce, poi premi Approva",
+    decisione:null,
+    testoFinale:null
+  });
+  saveLocalState(true);
+  render();
+  showToast("➕ Nuova voce aggiunta nell'ordine selezionato");
+}
+
+// ================================================================
+// TOAST — feedback visivo immediato e rassicurante
+// ================================================================
+function showToast(msg){
+  let t=document.getElementById("app-toast");
+  if(!t){
+    t=document.createElement("div");
+    t.id="app-toast";
+    t.style.cssText="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#263238;color:#fff;padding:10px 20px;border-radius:30px;font-size:13px;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:9999;opacity:0;transition:opacity .25s;pointer-events:none";
+    document.body.appendChild(t);
+  }
+  t.textContent=msg;
+  t.style.opacity="1";
+  clearTimeout(window._toastTimer);
+  window._toastTimer=setTimeout(()=>{t.style.opacity="0";},1800);
+}
+
+// ================================================================
+// RIEPILOGO — raggruppato per ordine e disciplina
+// ================================================================
+function renderRiepilogo(){
+  let html="";
+  let totApprovate=0, totInvariate=0;
+  for(const disc of DISCIPLINE){
+    const d=DATA[disc];
+    if(!d) continue;
+    const all=[...d.traguardi,...d.obiettivi];
+    const definitivi=all.filter(x=>x.status==="ok"||x.decisione==="approvata");
+    const pendenti=all.filter(needsDecision);
+    if(!all.length) continue;
+    totApprovate += all.filter(x=>x.decisione==="approvata").length;
+    totInvariate += all.filter(x=>x.status==="ok").length;
+
+    const meta=DISCIPLINE_META[disc]||{icon:"📘"};
+    html+=`<div class="sum-box" style="margin-bottom:10px">
+      <h2 style="font-size:13px;color:#1a237e;margin-bottom:6px">${meta.icon} ${disc}</h2>`;
+    if(pendenti.length) html+=`<div style="background:#fff3e0;border-left:3px solid #ff9800;padding:6px 11px;border-radius:5px;font-size:11px;color:#e65100;margin-bottom:8px">⚠️ ${pendenti.length} voci ancora da decidere in questa disciplina — <a href="#" onclick="selectDisc('${disc.replace(/'/g,"\\'")}');setTab('lavoro');return false" style="color:#e65100;font-weight:700">vai a decidere →</a></div>`;
+    if(!definitivi.length){html+=`<div style="color:#bbb;font-size:12px">Nessuna voce approvata o invariata ancora.</div></div>`;continue;}
+    for(const ord of ORDINI){
+      for(const [type,label] of [["traguardi","Traguardi"],["obiettivi","Obiettivi"]]){
+        const items=(d[type]||[]).filter(x=>x.ordine===ord && (x.status==="ok"||x.decisione==="approvata"));
+        if(!items.length) continue;
+        html+=`<div style="font-size:10px;font-weight:700;color:#607d8b;text-transform:uppercase;letter-spacing:1px;margin:8px 0 4px">${ORDINE_LABEL[ord]} — ${label}</div>`;
+        html+=items.map(item=>{
+          const testo=item.status==="ok"?item.testo:(item.testoFinale||item.proposto);
+          const isNew=item.status==="nuovo";
+          return `<div class="act-card ${isNew?"":"approvata"}" style="border-color:${isNew?"#42a5f5":"#66bb6a"};border-left-color:${isNew?"#42a5f5":"#66bb6a"}">
+            ${item.classe?`<span class="dtag">${item.classe}</span>`:""}
+            <p>${testo}</p>
+            ${isNew?'<p class="finale" style="color:#1976d2">★ Nuova voce IN 2025</p>':''}
+          </div>`;
+        }).join("");
+      }
+    }
+    html+=`</div>`;
+  }
+  const introMsg = (totApprovate+totInvariate===0)
+    ? `<div class="sum-box" style="text-align:center;color:#90a4ae"><div style="font-size:32px;margin-bottom:8px">📝</div>Non hai ancora approvato nessuna proposta.<br>Vai alla scheda <strong>"Revisione per disciplina"</strong> per iniziare.</div>`
+    : "";
+  document.getElementById("riepilogo-body").innerHTML=introMsg+html||`<div style="color:#bbb;text-align:center;padding:30px">Nessuna voce approvata ancora.</div>`;
+}
+
+function setTab(t){
+  currentTab=t;
+  document.getElementById("tab-lavoro").style.display=t==="lavoro"?"block":"none";
+  document.getElementById("tab-riepilogo").style.display=t==="riepilogo"?"block":"none";
+  document.getElementById("tab-normativa").style.display=t==="normativa"?"block":"none";
+  document.querySelectorAll(".tabbar button").forEach((b,i)=>{
+    const map=["lavoro","riepilogo","normativa"];
+    b.classList.toggle("active",map[i]===t);
+  });
+  if(t==="riepilogo") renderRiepilogo();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+
+// ================================================================
+// SORGENTE UNICA: costruisce il contenuto testuale strutturato
+// usato sia per l'export Markdown che come base per Word e PDF.
+// Formato narrativo professionale (non tabelle a confronto) —
+// pensato per essere il documento ufficiale da allegare al PTOF.
+// ================================================================
+function buildDocumentModel(onlyApproved){
+  const oggi = new Date().toLocaleDateString("it-IT", {year:"numeric", month:"long", day:"numeric"});
+  const model = {
+    titolo: "Curricolo Verticale di Istituto",
+    sottotitolo: onlyApproved ? "Versione definitiva post-revisione" : "Documento di confronto — Indicazioni Nazionali 2012 → 2025",
+    istituto: SCHOOL_PROFILE.istituto,
+    livelloScolastico: selectedOrderLabel(),
+    comune: SCHOOL_PROFILE.comune,
+    codMecc: SCHOOL_PROFILE.codice,
+    data: oggi,
+    riferimenti: onlyApproved
+      ? "Indicazioni Nazionali D.M. 254/2012 — Aggiornamento D.M. 221/2025"
+      : "Indicazioni Nazionali D.M. 254/2012 | Confronto con D.M. 221/2025 (G.U. 27/01/2026)",
+    discipline: []
+  };
+
+  for(const disc of DISCIPLINE){
+    const d=DATA[disc];
+    if(!d) continue;
+    const all=[...d.traguardi,...d.obiettivi];
+    const toExport = onlyApproved ? all.filter(x=>x.status==="ok"||x.decisione==="approvata") : all;
+    if(!toExport.length) continue;
+
+    const meta = DISCIPLINE_META[disc]||{comp:"",nuclei:""};
+    const discModel = { nome:disc, comp:meta.comp, nuclei:meta.nuclei, ordini:[] };
+
+    for(const ord of ORDINI){
+      const ordModel = { nome:ord, traguardi:[], obiettivi:[] };
+      for(const [type,key] of [["traguardi","traguardi"],["obiettivi","obiettivi"]]){
+        const items=(d[type]||[]).filter(x=>x.ordine===ord && (onlyApproved?(x.status==="ok"||x.decisione==="approvata"):true));
+        items.forEach(item=>{
+          if(onlyApproved){
+            const testo = item.status==="ok" ? item.testo : (item.testoFinale||item.proposto);
+            ordModel[key].push({ classe:item.classe||"", testo, isNew:item.status==="nuovo" });
+          } else {
+            ordModel[key].push({
+              classe:item.classe||"",
+              status:item.status,
+              decisione:item.decisione,
+              testoAttuale:item.testo,
+              proposta:item.proposto,
+              testoFinale:item.testoFinale
+            });
+          }
+        });
+      }
+      if(ordModel.traguardi.length||ordModel.obiettivi.length) discModel.ordini.push(ordModel);
+    }
+    model.discipline.push(discModel);
+  }
+  return model;
+}
+
+// ================================================================
+// MARKDOWN — generato dalla sorgente unica
+// ================================================================
+function modelToMarkdown(model, onlyApproved){
+  let md = "";
+  md += `# ${model.titolo}\n\n`;
+  md += `**${model.istituto}**  \n${model.livelloScolastico} · ${model.comune} · Codice meccanografico: ${model.codMecc}  \n`;
+  md += `${model.sottotitolo} — ${model.data}  \n`;
+  md += `*${model.riferimenti}*\n\n---\n\n`;
+
+  if(!onlyApproved){
+    md += `## Legenda\n\n`;
+    md += `- ✓ **Invariato** — la voce resta come nelle IN 2012\n`;
+    md += `- ✎ **Da modificare → APPROVATO / RIFIUTATO / da decidere** — proposta delle IN 2025\n`;
+    md += `- ★ **Nuovo 2025** — voce introdotta ex novo dalle nuove Indicazioni\n\n---\n\n`;
+  }
+
+  model.discipline.forEach(disc=>{
+    md += `## ${disc.nome}\n`;
+    md += `*Competenza chiave: ${disc.comp}*  \n*Nuclei: ${disc.nuclei}*\n\n`;
+
+    disc.ordini.forEach(ord=>{
+      md += `### ${ORDINE_LABEL[ord.nome].replace(/[🧸📘🎓]/g,'').trim()}\n\n`;
+
+      [["traguardi","Traguardi per lo sviluppo delle competenze"],["obiettivi","Obiettivi di apprendimento"]].forEach(([key,label])=>{
+        const items = ord[key];
+        if(!items.length) return;
+        md += `**${label}**\n\n`;
+
+        if(onlyApproved){
+          items.forEach(it=>{
+            const tag = it.isNew ? " *(★ nuovo IN 2025)*" : "";
+            const cl = it.classe ? `*${it.classe}:* ` : "";
+            md += `- ${cl}${it.testo}${tag}\n`;
+          });
+        } else {
+          items.forEach(it=>{
+            const cl = it.classe ? `*${it.classe}*  \n` : "";
+            if(it.status==="ok"){
+              md += `- ✓ ${cl}${it.testoAttuale}\n`;
+            } else {
+              const statusLbl = it.status==="nuovo" ? "★ Nuovo 2025" : "✎ Da modificare";
+              const decLbl = it.decisione==="approvata" ? " → **APPROVATO**" : it.decisione==="rifiutata" ? " → **RIFIUTATO (mantenuto attuale)**" : " → *da decidere*";
+              md += `- **${statusLbl}${decLbl}** ${cl?("— "+it.classe):""}\n`;
+              if(it.status!=="nuovo") md += `  - Testo attuale (2012): ${it.testoAttuale||"— non presente —"}\n`;
+              md += `  - Proposta IN 2025: ${it.decisione==="approvata"?(it.testoFinale||it.proposta):it.proposta}\n`;
+            }
+          });
+        }
+        md += `\n`;
+      });
+    });
+    md += `---\n\n`;
+  });
+
+  return md;
+}
+
+// ================================================================
+// DOWNLOAD E COPIA — funzioni interne, senza librerie esterne
+// ================================================================
+function downloadBlob(blob, filename){
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.style.display = "none";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, 200);
+}
+
+function modelToPlainText(model, onlyApproved){
+  let out = "";
+  out += `${model.titolo}\n`;
+  out += `${model.istituto}\n${model.livelloScolastico} · ${model.comune} · Codice meccanografico: ${model.codMecc}\n`;
+  out += `${model.sottotitolo} — ${model.data}\n${model.riferimenti}\n\n`;
+  model.discipline.forEach(disc=>{
+    out += `\n${disc.nome.toUpperCase()}\n`;
+    out += `Competenza chiave: ${disc.comp}\nNuclei: ${disc.nuclei}\n`;
+    disc.ordini.forEach(ord=>{
+      const ordLabel = ORDINE_LABEL[ord.nome].replace(/[🧸📘🎓]/g,'').trim();
+      out += `\n${ordLabel}\n`;
+      [["traguardi","Traguardi per lo sviluppo delle competenze"],["obiettivi","Obiettivi di apprendimento"]].forEach(([key,label])=>{
+        const items = ord[key];
+        if(!items.length) return;
+        out += `\n${label}\n`;
+        items.forEach((it,idx)=>{
+          if(onlyApproved){
+            const cl = it.classe ? `${it.classe}: ` : "";
+            const tag = it.isNew ? " [Nuovo IN 2025]" : "";
+            out += `${idx+1}. ${cl}${it.testo}${tag}\n`;
+          } else {
+            const cl = it.classe ? `${it.classe} — ` : "";
+            if(it.status==="ok"){
+              out += `${idx+1}. [Invariato] ${cl}${it.testoAttuale}\n`;
+            } else {
+              const statusLbl = it.status==="nuovo" ? "Nuovo IN 2025" : "Da modificare";
+              const decLbl = it.decisione==="approvata" ? "APPROVATO" : it.decisione==="rifiutata" ? "RIFIUTATO" : "da decidere";
+              out += `${idx+1}. [${statusLbl} · ${decLbl}] ${cl}\n`;
+              if(it.status!=="nuovo") out += `   Testo attuale: ${it.testoAttuale||"— non presente —"}\n`;
+              out += `   Proposta/Testo: ${it.decisione==="approvata"?(it.testoFinale||it.proposta):it.proposta}\n`;
+            }
+          }
+        });
+      });
+    });
+    out += "\n";
+  });
+  return out.trim();
+}
+
+function copyTextToClipboard(text){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise((resolve,reject)=>{
+    const ta=document.createElement("textarea");
+    ta.value=text;
+    ta.setAttribute("readonly","");
+    ta.style.position="fixed";
+    ta.style.top="-1000px";
+    document.body.appendChild(ta);
+    ta.select();
+    try{
+      const ok=document.execCommand("copy");
+      document.body.removeChild(ta);
+      ok ? resolve() : reject(new Error("Copia non riuscita"));
+    }catch(err){
+      document.body.removeChild(ta);
+      reject(err);
+    }
+  });
+}
+
+function copyForWord(onlyApproved=false){
+  const model = buildDocumentModel(onlyApproved);
+  const text = modelToPlainText(model, onlyApproved);
+  copyTextToClipboard(text)
+    .then(()=>showToast("✅ Testo copiato: puoi incollarlo in Word"))
+    .catch(()=>{
+      const win = window.open("", "_blank");
+      if(!win){ alert("Il browser non consente la copia automatica. Usa il download Markdown come alternativa."); return; }
+      win.document.write(`<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><title>Testo per Word</title><style>body{font-family:Arial,sans-serif;padding:20px;line-height:1.5}textarea{width:100%;height:80vh;font-family:Arial,sans-serif;font-size:14px}</style></head><body><h1>Testo pronto per Word</h1><p>Seleziona tutto il testo, copialo e incollalo in Word o in un documento condiviso.</p><textarea>${text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</textarea></body></html>`);
+      win.document.close();
+    });
+}
+
+function exportMarkdown(onlyApproved=false){
+  showToast("⏳ Sto generando il Markdown...");
+  const model = buildDocumentModel(onlyApproved);
+  const md = modelToMarkdown(model, onlyApproved);
+  const blob = new Blob([md], {type:"text/markdown;charset=utf-8"});
+  const suffix = onlyApproved ? "_Definitivo" : "_Confronto2012-2025";
+  downloadBlob(blob, `CurricoloVerticale_IC_DonMilani${suffix}_${new Date().toISOString().slice(0,10)}.md`);
+  showToast("✅ Markdown scaricato!");
+}
+
+// ================================================================
+// WORD — documento professionale in stile narrativo (no tabelle
+// a confronto: frontespizio, intestazioni, struttura per disciplina)
+// ================================================================
+async function exportWord(onlyApproved=false){
+  if(typeof docx==="undefined"){
+    alert("⚠️ La libreria per generare Word non è disponibile.\n\nVerifica di avere una connessione internet attiva e ricarica la pagina.");
+    return;
+  }
+  showToast("⏳ Sto generando il documento Word...");
+  const {Document,Packer,Paragraph,TextRun,Table,TableRow,TableCell,Header,Footer,HeadingLevel,WidthType,BorderStyle,ShadingType,LevelFormat,AlignmentType,PageNumber}=docx;
+  const model = buildDocumentModel(onlyApproved);
+
+  const B={style:BorderStyle.SINGLE,size:1,color:"CCCCCC"};
+  const BORDERS={top:B,bottom:B,left:B,right:B};
+
+  function h1(text){ return new Paragraph({ heading:HeadingLevel.HEADING_1, pageBreakBefore:true,
+    children:[new TextRun({text,bold:true,size:32,color:"1A237E",font:"Arial"})],
+    spacing:{before:200,after:160}, border:{bottom:{style:BorderStyle.SINGLE,size:6,color:"1A237E",space:4}} }); }
+  function h2(text){ return new Paragraph({ heading:HeadingLevel.HEADING_2,
+    children:[new TextRun({text,bold:true,size:26,color:"283593",font:"Arial"})], spacing:{before:200,after:100} }); }
+  function h3(text){ return new Paragraph({ heading:HeadingLevel.HEADING_3,
+    children:[new TextRun({text,bold:true,size:22,color:"455A64",font:"Arial"})], spacing:{before:140,after:80} }); }
+  function bodyP(text,opts={}){ return new Paragraph({ children:[new TextRun({text,size:20,font:"Arial",...opts})], spacing:{after:80}, alignment:AlignmentType.JUSTIFIED }); }
+  function emptyLine(){ return new Paragraph({children:[new TextRun("")],spacing:{after:60}}); }
+
+  function cellList(items, widthDxa, fill="FFFFFF"){
+    return new TableCell({ borders:BORDERS, width:{size:widthDxa,type:WidthType.DXA}, shading:{fill,type:ShadingType.CLEAR},
+      margins:{top:80,bottom:80,left:140,right:140},
+      children: items.length ? items.map(t=>new Paragraph({ numbering:{reference:"bullets",level:0}, children:[new TextRun({text:t,size:18,font:"Arial"})] })) : [new Paragraph({children:[new TextRun({text:"—",size:18,italics:true,color:"9E9E9E",font:"Arial"})]})]
+    });
+  }
+  function cell(text,widthDxa,opts={}){
+    return new TableCell({ borders:BORDERS, width:{size:widthDxa,type:WidthType.DXA}, shading:{fill:opts.fill||"FFFFFF",type:ShadingType.CLEAR},
+      margins:{top:80,bottom:80,left:140,right:140}, verticalAlign:"top",
+      children:[new Paragraph({children:[new TextRun({text,bold:opts.bold||false,color:opts.color||"000000",size:opts.size||20,font:"Arial"})]})] });
+  }
+  function headerRow(cols,widths,fill="1A237E"){
+    return new TableRow({ tableHeader:true, children: cols.map((t,i)=>new TableCell({ borders:BORDERS, width:{size:widths[i],type:WidthType.DXA},
+      shading:{fill,type:ShadingType.CLEAR}, margins:{top:80,bottom:80,left:140,right:140},
+      children:[new Paragraph({children:[new TextRun({text:t,bold:true,color:"FFFFFF",size:18,font:"Arial"})],alignment:AlignmentType.CENTER})] })) });
+  }
+
+  const children=[];
+
+  // ── FRONTESPIZIO ──
+  children.push(
+    new Paragraph({children:[new TextRun("")],spacing:{after:1200}}),
+    new Paragraph({ children:[new TextRun({text:model.istituto.toUpperCase(),bold:true,size:28,color:"1A237E",font:"Arial"})], alignment:AlignmentType.CENTER, spacing:{after:80} }),
+    new Paragraph({ children:[new TextRun({text:`${model.livelloScolastico} — ${model.comune}`,size:22,color:"455A64",font:"Arial"})], alignment:AlignmentType.CENTER, spacing:{after:40} }),
+    new Paragraph({ children:[new TextRun({text:`Codice meccanografico: ${model.codMecc}`,size:18,color:"78909C",font:"Arial"})], alignment:AlignmentType.CENTER, spacing:{after:700} }),
+    new Paragraph({ children:[new TextRun({text:model.titolo.toUpperCase(),bold:true,size:44,color:"1A237E",font:"Arial"})], alignment:AlignmentType.CENTER, spacing:{after:240},
+      border:{bottom:{style:BorderStyle.SINGLE,size:12,color:"1A237E",space:8},top:{style:BorderStyle.SINGLE,size:12,color:"1A237E",space:8}} }),
+    new Paragraph({ children:[new TextRun({text:model.sottotitolo,italics:true,size:24,color:"283593",font:"Arial"})], alignment:AlignmentType.CENTER, spacing:{before:240,after:400} }),
+    new Paragraph({ children:[new TextRun({text:`Documento generato il ${model.data}`,size:22,color:"37474F",font:"Arial"})], alignment:AlignmentType.CENTER, spacing:{after:80} }),
+    new Paragraph({ children:[new TextRun({text:model.riferimenti,italics:true,size:18,color:"78909C",font:"Arial"})], alignment:AlignmentType.CENTER }),
+  );
+
+  // ── LEGENDA (solo versione di confronto) ──
+  if(!onlyApproved){
+    children.push(
+      new Paragraph({ heading:HeadingLevel.HEADING_1, pageBreakBefore:true,
+        children:[new TextRun({text:"LEGENDA E METODO DI LAVORO",bold:true,size:32,color:"1A237E",font:"Arial"})],
+        spacing:{before:200,after:160}, border:{bottom:{style:BorderStyle.SINGLE,size:6,color:"1A237E",space:4}} }),
+      bodyP("Questo documento confronta, voce per voce, il Curricolo Verticale vigente (Indicazioni Nazionali D.M. 254/2012) con le proposte delle nuove Indicazioni Nazionali 2025 (D.M. 221/2025), evidenziando lo stato di revisione di ciascun elemento."),
+      emptyLine(),
+      new Paragraph({children:[new TextRun({text:"✓  Invariato — ",bold:true,size:20,color:"2E7D32",font:"Arial"}),new TextRun({text:"la voce resta identica a quella delle IN 2012, nessuna azione richiesta.",size:20,font:"Arial"})]}),
+      new Paragraph({children:[new TextRun({text:"✎  Da modificare — ",bold:true,size:20,color:"F57F17",font:"Arial"}),new TextRun({text:"le IN 2025 propongono un aggiornamento del testo esistente.",size:20,font:"Arial"})]}),
+      new Paragraph({children:[new TextRun({text:"★  Nuovo 2025 — ",bold:true,size:20,color:"1565C0",font:"Arial"}),new TextRun({text:"voce introdotta ex novo dalle nuove Indicazioni, assente nel 2012.",size:20,font:"Arial"})]}),
+      emptyLine(),
+      bodyP("Per ogni voce non ancora confermata è indicato lo stato della decisione del dipartimento disciplinare: APPROVATA (il testo proposto entra nel curricolo), RIFIUTATA (si mantiene il testo attuale) o DA DECIDERE (in attesa di valutazione)."),
+    );
+  }
+
+  // ── DISCIPLINE ──
+  model.discipline.forEach((disc,di)=>{
+    children.push(h1(disc.nome));
+    children.push(bodyP(`Competenza chiave europea: ${disc.comp}`));
+    children.push(bodyP(`Nuclei tematici: ${disc.nuclei}`));
+    children.push(emptyLine());
+
+    disc.ordini.forEach(ord=>{
+      const ordLabel = ORDINE_LABEL[ord.nome].replace(/[🧸📘🎓]/g,'').trim();
+      children.push(h2(ordLabel.toUpperCase()));
+
+      [["traguardi","Traguardi per lo sviluppo delle competenze"],["obiettivi","Obiettivi di apprendimento"]].forEach(([key,label])=>{
+        const items = ord[key];
+        if(!items.length) return;
+        children.push(h3(label));
+
+        if(onlyApproved){
+          const rows = items.map(it=>{
+            const fill = it.isNew ? "E3F2FD" : "E8F5E9";
+            return new TableRow({children:[
+              cell(it.isNew?"★ Nuovo":"✓ Confermato", 1500, {fill, bold:true, size:18, color: it.isNew?"1565C0":"2E7D32"}),
+              new TableCell({borders:BORDERS, width:{size:7860,type:WidthType.DXA}, margins:{top:80,bottom:80,left:140,right:140},
+                children:[
+                  it.classe? new Paragraph({children:[new TextRun({text:it.classe,italics:true,size:16,color:"78909C",font:"Arial"})]}) : new Paragraph({children:[]}),
+                  new Paragraph({children:[new TextRun({text:it.testo,size:20,font:"Arial"})]})
+                ]})
+            ]});
+          });
+          children.push(new Table({width:{size:9360,type:WidthType.DXA}, columnWidths:[1500,7860], rows}));
+        } else {
+          // tabella confronto compatta: stato | classe | attuale | proposta/finale
+          const rows = items.map(it=>{
+            const isOk = it.status==="ok";
+            const isNew = it.status==="nuovo";
+            const dec = it.decisione;
+            const fillH = isOk?"E8F5E9":isNew?"E3F2FD":dec==="approvata"?"C8E6C9":dec==="rifiutata"?"EEEEEE":"FFF3E0";
+            const statusTxt = isOk?"✓ Invariato":isNew?"★ Nuovo 2025":"✎ Da modificare";
+            const decTxt = dec==="approvata"?" · APPROVATO":dec==="rifiutata"?" · RIFIUTATO":dec?"":" · da decidere";
+            const testoMostrato = isOk ? it.testoAttuale : (dec==="approvata"?(it.testoFinale||it.proposta):(dec==="rifiutata"?(it.testoAttuale||"—"):it.proposta));
+            return new TableRow({children:[
+              cell(statusTxt+decTxt, 2000, {fill:fillH, bold:true, size:16}),
+              new TableCell({borders:BORDERS, width:{size:7360,type:WidthType.DXA}, margins:{top:80,bottom:80,left:140,right:140},
+                children:[
+                  it.classe? new Paragraph({children:[new TextRun({text:it.classe,italics:true,size:16,color:"78909C",font:"Arial"})]}) : new Paragraph({children:[]}),
+                  new Paragraph({children:[new TextRun({text:safeText(testoMostrato),size:20,font:"Arial"})]})
+                ]})
+            ]});
+          });
+          children.push(new Table({width:{size:9360,type:WidthType.DXA}, columnWidths:[2000,7360], rows:[headerRow(["Stato","Voce di curricolo"],[2000,7360]), ...rows]}));
+        }
+        children.push(emptyLine());
+      });
+    });
+  });
+
+  function safeText(t){ return t || "— Voce non presente —"; }
+
+  const doc=new Document({
+    styles:{default:{document:{run:{font:"Arial",size:20}}}},
+    numbering:{config:[{reference:"bullets",levels:[{level:0,format:LevelFormat.BULLET,text:"•",alignment:AlignmentType.LEFT,style:{paragraph:{indent:{left:720,hanging:360}}}}]}]},
+    sections:[{
+      properties:{page:{size:{width:11906,height:16838},margin:{top:1134,right:1134,bottom:1134,left:1417}}},
+      headers:{default:new Header({children:[new Paragraph({
+        children:[
+          new TextRun({text:"I.C. Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV)  |  Curricolo Verticale di Istituto  ",size:16,color:"78909C",font:"Arial"}),
+          new TextRun({text:onlyApproved?"Versione definitiva":"Confronto IN 2012→2025",size:16,color:"78909C",font:"Arial"}),
+        ],
+        border:{bottom:{style:BorderStyle.SINGLE,size:4,color:"C5CAE9",space:4}}
+      })]})},
+      footers:{default:new Footer({children:[new Paragraph({
+        children:[
+          new TextRun({text:"Pagina ",size:16,color:"90A4AE",font:"Arial"}),
+          new TextRun({children:[PageNumber.CURRENT],size:16,color:"90A4AE",font:"Arial"}),
+          new TextRun({text:" di ",size:16,color:"90A4AE",font:"Arial"}),
+          new TextRun({children:[PageNumber.TOTAL_PAGES],size:16,color:"90A4AE",font:"Arial"}),
+        ],
+        alignment:AlignmentType.CENTER,
+        border:{top:{style:BorderStyle.SINGLE,size:4,color:"C5CAE9",space:4}}
+      })]})},
+      children
+    }]
+  });
+
+  const buf=await Packer.toBlob(doc);
+  const suffix=onlyApproved?"_Definitivo":"_Confronto2012-2025";
+  downloadBlob(buf,`CurricoloVerticale_IC_DonMilani${suffix}_${new Date().toISOString().slice(0,10)}.docx`);
+  showToast("✅ Documento Word scaricato!");
+}
+
+// ================================================================
+// PDF — vista di stampa dedicata, pulita, in stile documento
+// (genera un HTML formattato a partire dalla stessa sorgente dati
+// e apre la finestra di stampa del browser su quella vista)
+// ================================================================
+function exportPDF(onlyApproved=false){
+  showToast("⏳ Preparo l'anteprima di stampa...");
+  const model = buildDocumentModel(onlyApproved);
+  const win = window.open("", "_blank");
+  if(!win){ alert("⚠️ Il browser ha bloccato l'apertura della finestra di stampa.\n\nConsenti i popup per questo sito e riprova."); return; }
+
+  let body = `
+    <div class="frontespizio">
+      <div class="ist">${model.istituto.toUpperCase()}</div>
+      <div class="livello">${model.livelloScolastico} — ${model.comune}</div>
+      <div class="codmecc">Codice meccanografico: ${model.codMecc}</div>
+      <h1>${model.titolo.toUpperCase()}</h1>
+      <div class="sottotitolo">${model.sottotitolo}</div>
+      <div class="data">Documento generato il ${model.data}</div>
+      <div class="rif">${model.riferimenti}</div>
+    </div>`;
+
+  if(!onlyApproved){
+    body += `<div class="legenda">
+      <h2>Legenda</h2>
+      <p><strong style="color:#2e7d32">✓ Invariato</strong> — la voce resta identica alle IN 2012.</p>
+      <p><strong style="color:#f57f17">✎ Da modificare</strong> — le IN 2025 propongono un aggiornamento.</p>
+      <p><strong style="color:#1565c0">★ Nuovo 2025</strong> — voce introdotta ex novo.</p>
+    </div>`;
+  }
+
+  model.discipline.forEach(disc=>{
+    body += `<div class="disc-block">
+      <h1>${disc.nome}</h1>
+      <p class="meta"><em>Competenza chiave: ${disc.comp}</em><br><em>Nuclei: ${disc.nuclei}</em></p>`;
+    disc.ordini.forEach(ord=>{
+      const ordLabel = ORDINE_LABEL[ord.nome].replace(/[🧸📘🎓]/g,'').trim();
+      body += `<h2>${ordLabel}</h2>`;
+      [["traguardi","Traguardi per lo sviluppo delle competenze"],["obiettivi","Obiettivi di apprendimento"]].forEach(([key,label])=>{
+        const items = ord[key];
+        if(!items.length) return;
+        body += `<h3>${label}</h3><div class="items">`;
+        items.forEach(it=>{
+          if(onlyApproved){
+            body += `<div class="item ${it.isNew?'nuovo':'ok'}">
+              ${it.classe?`<span class="classe">${it.classe}</span>`:""}
+              <span class="badge">${it.isNew?"★ Nuovo":"✓ Confermato"}</span>
+              <p>${it.testo}</p></div>`;
+          } else {
+            const isOk = it.status==="ok";
+            const isNew = it.status==="nuovo";
+            const dec = it.decisione;
+            const cls = isOk?'ok':isNew?'nuovo':dec==="approvata"?'approvata':dec==="rifiutata"?'rifiutata':'pending';
+            const statusTxt = isOk?"✓ Invariato":isNew?"★ Nuovo 2025":"✎ Da modificare";
+            const decTxt = dec==="approvata"?" · APPROVATO":dec==="rifiutata"?" · RIFIUTATO":dec?"":" · da decidere";
+            body += `<div class="item ${cls}">
+              ${it.classe?`<span class="classe">${it.classe}</span>`:""}
+              <span class="badge">${statusTxt}${decTxt}</span>`;
+            if(isOk){
+              body += `<p>${it.testoAttuale}</p>`;
+            } else {
+              if(!isNew) body += `<p class="lbl">Testo attuale (2012):</p><p>${it.testoAttuale||"— non presente —"}</p>`;
+              body += `<p class="lbl">${dec==="approvata"?"Testo definitivo:":"Proposta IN 2025:"}</p><p>${dec==="approvata"?(it.testoFinale||it.proposta):(dec==="rifiutata"?"[Rifiutato — mantenuto testo attuale]":it.proposta)}</p>`;
+            }
+            body += `</div>`;
+          }
+        });
+        body += `</div>`;
+      });
+    });
+    body += `</div>`;
+  });
+
+  const html = `<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><title>${model.titolo}</title>
+  <style>
+    @page { size: A4; margin: 2cm 1.8cm; }
+    *{box-sizing:border-box}
+    body{font-family:'Georgia',serif;color:#212121;line-height:1.5;font-size:11pt;max-width:800px;margin:0 auto;padding:20px}
+    .frontespizio{text-align:center;padding:80px 0 40px;page-break-after:always}
+    .frontespizio .ist{font-size:16pt;font-weight:700;color:#1a237e;margin-bottom:6px}
+    .frontespizio .livello{font-size:13pt;color:#455a64;margin-bottom:4px}
+    .frontespizio .codmecc{font-size:10pt;color:#78909c;margin-bottom:50px}
+    .frontespizio h1{font-size:28pt;color:#1a237e;border-top:3px solid #1a237e;border-bottom:3px solid #1a237e;padding:18px 0;margin:20px 0}
+    .frontespizio .sottotitolo{font-size:14pt;color:#283593;font-style:italic;margin:25px 0}
+    .frontespizio .data{font-size:12pt;color:#37474f;margin-top:30px}
+    .frontespizio .rif{font-size:10pt;color:#78909c;font-style:italic;margin-top:8px}
+    .legenda{page-break-after:always}
+    .legenda h2{color:#1a237e;font-size:16pt;border-bottom:2px solid #1a237e;padding-bottom:6px}
+    .legenda p{font-size:11pt;margin:10px 0}
+    .disc-block{page-break-before:always}
+    h1{font-size:20pt;color:#1a237e;border-bottom:2px solid #1a237e;padding-bottom:6px;margin-top:0}
+    h2{font-size:15pt;color:#283593;margin-top:24px}
+    h3{font-size:12.5pt;color:#455a64;margin-top:16px}
+    .meta{font-size:10pt;color:#607d8b;margin-bottom:10px}
+    .items{margin-bottom:10px}
+    .item{border:1px solid #ddd;border-left:4px solid #999;border-radius:4px;padding:10px 14px;margin-bottom:10px;page-break-inside:avoid}
+    .item.ok{border-left-color:#43a047;background:#f1f8e9}
+    .item.nuovo{border-left-color:#1976d2;background:#e3f2fd}
+    .item.approvata{border-left-color:#2e7d32;background:#e8f5e9}
+    .item.rifiutata{border-left-color:#757575;background:#f5f5f5}
+    .item.pending{border-left-color:#f57f17;background:#fff8e1}
+    .item .badge{display:inline-block;font-size:9pt;font-weight:700;color:#37474f;margin-bottom:4px}
+    .item .classe{display:block;font-size:9pt;font-style:italic;color:#78909c}
+    .item .lbl{font-size:9pt;font-weight:700;color:#607d8b;margin:6px 0 2px}
+    .item p{margin:2px 0;font-size:10.5pt}
+    @media print { .noprint{display:none} }
+  </style></head><body>
+  <div class="noprint" style="position:fixed;top:10px;right:10px;background:#1a237e;color:#fff;padding:10px 16px;border-radius:8px;font-family:sans-serif;font-size:13px;z-index:999">
+    Premi <strong>Ctrl/Cmd + P</strong> e scegli "Salva come PDF"
+  </div>
+  ${body}
+  </body></html>`;
+
+  win.document.write(html);
+  win.document.close();
+  setTimeout(()=>{ win.focus(); win.print(); }, 600);
+  showToast("✅ Apri la finestra per salvare come PDF");
+}
+
+
+
+// ================================================================
+// IMPOSTAZIONI / ONBOARDING — sempre disponibile
+// ================================================================
+function openSettingsModal(){
+  const existing=document.getElementById("settings-overlay");
+  if(existing) existing.remove();
+  const overlay=document.createElement("div");
+  overlay.id="settings-overlay";
+  overlay.style.cssText="position:fixed;inset:0;background:rgba(26,35,126,.58);z-index:10001;display:flex;align-items:center;justify-content:center;padding:16px";
+  const disciplineOptions=DISCIPLINE.map(d=>`<option value="${escapeHtml(d)}" ${d===(userProfile.disciplina||selDisc)?"selected":""}>${escapeHtml(d)}</option>`).join("");
+  overlay.innerHTML=`
+    <div style="background:#fff;border-radius:16px;max-width:560px;width:100%;padding:22px;box-shadow:0 12px 42px rgba(0,0,0,.32);max-height:90vh;overflow-y:auto">
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px">
+        <div style="font-size:28px">👤</div>
+        <div style="flex:1">
+          <h2 style="font-size:18px;color:#1a237e;margin:0 0 4px">Impostazioni di lavoro</h2>
+          <p style="font-size:12px;color:#607d8b;line-height:1.45;margin:0">Imposta il profilo personale e l'ordine di scuola. Tutte le sezioni restano visibili; sono modificabili solo quelle coerenti con l'ordine selezionato.</p>
+        </div>
+        <button onclick="document.getElementById('settings-overlay').remove()" style="border:none;background:#eceff1;border-radius:50%;width:30px;height:30px;cursor:pointer;font-weight:800">×</button>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" class="settings-grid">
+        <div class="settings-field"><label for="profile-nome">Nome</label><input id="profile-nome" value="${escapeHtml(userProfile.nome)}" autocomplete="given-name"></div>
+        <div class="settings-field"><label for="profile-cognome">Cognome</label><input id="profile-cognome" value="${escapeHtml(userProfile.cognome)}" autocomplete="family-name"></div>
+      </div>
+      <div class="settings-field"><label for="profile-disciplina">Disciplina prevalente</label><select id="profile-disciplina">${disciplineOptions}</select></div>
+      <div class="settings-field"><label for="profile-ordine">Ordine di scuola su cui lavorare</label><select id="profile-ordine" onchange="updateSettingsSchoolPreview()">
+        <option value="Infanzia" ${userProfile.ordine==="Infanzia"?"selected":""}>Scuola dell'Infanzia</option>
+        <option value="Primaria" ${userProfile.ordine==="Primaria"?"selected":""}>Scuola Primaria</option>
+        <option value="Secondaria" ${userProfile.ordine==="Secondaria"?"selected":""}>Scuola Secondaria di I grado</option>
+        <option value="Tutti" ${userProfile.ordine==="Tutti"?"selected":""}>Tutti gli ordini / Commissione curricolo</option>
+      </select></div>
+      <div class="settings-school-box" id="settings-school-preview"></div>
+      <div style="background:#e8f5e9;border-left:4px solid #2e7d32;border-radius:8px;padding:9px 11px;font-size:11px;color:#1b5e20;line-height:1.45;margin-bottom:12px">
+        <strong>Salvataggio locale:</strong> queste impostazioni, insieme alle decisioni sulle voci di curricolo, vengono salvate nel browser di questo dispositivo. Per spostarle su un altro dispositivo usare <strong>Backup</strong>.
+      </div>
+      <div class="settings-actions">
+        <button class="settings-primary" onclick="saveSettingsProfile()">Salva impostazioni</button>
+        <button class="settings-secondary" onclick="document.getElementById('settings-overlay').remove()">Annulla</button>
+        <a class="settings-secondary" href="Corso_CurricoloDonMilani_IN2025.pdf" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">Apri corso PDF</a>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+  updateSettingsSchoolPreview();
+}
+function updateSettingsSchoolPreview(){
+  const ord=document.getElementById("profile-ordine")?.value || userProfile.ordine || "Secondaria";
+  const el=document.getElementById("settings-school-preview");
+  if(!el) return;
+  el.innerHTML=`<strong>Dati scuola precompilati</strong><br>${escapeHtml(SCHOOL_PROFILE.istituto)}<br>${escapeHtml(SCHOOL_PROFILE.comune)}<br>Codice meccanografico: <strong>${escapeHtml(SCHOOL_PROFILE.codice)}</strong><br>Livello scolastico selezionato: <strong>${escapeHtml(ORDER_PROFILE_LABELS[ord]||ord)}</strong>`;
+}
+function saveSettingsProfile(){
+  const nome=document.getElementById("profile-nome")?.value.trim()||"";
+  const cognome=document.getElementById("profile-cognome")?.value.trim()||"";
+  const disciplina=document.getElementById("profile-disciplina")?.value||selDisc;
+  const ordine=document.getElementById("profile-ordine")?.value||"Secondaria";
+  userProfile={nome,cognome,disciplina,ordine};
+  if(DATA[disciplina]) selDisc=disciplina;
+  editingId=null;
+  saveLocalState(true);
+  renderProfileSummary();
+  renderSidebar();
+  render();
+  const overlay=document.getElementById("settings-overlay");
+  if(overlay) overlay.remove();
+  showToast("👤 Impostazioni salvate");
+}
+
+
+// ================================================================
+// INSTALLAZIONE COME APPLICAZIONE WEB — manifest + service worker
+// ================================================================
+let deferredInstallPrompt=null;
+window.addEventListener("beforeinstallprompt", event=>{
+  event.preventDefault();
+  deferredInstallPrompt=event;
+  const btn=document.getElementById("install-app-btn");
+  if(btn){btn.style.display="inline-flex";btn.textContent="📲 Installa applicazione";}
+  updateInstallHint("ok","Installazione disponibile: premi “Installa sul dispositivo”.");
+});
+
+function updateInstallHint(type,msg){
+  const hint=document.getElementById("install-hint");
+  if(!hint) return;
+  const cls=type==="ok"?"pwa-status-ok":"pwa-status-warn";
+  hint.innerHTML=`<strong>Installazione:</strong> <span class="${cls}">${msg}</span> Le decisioni restano salvate in locale; usa Backup per spostarle su altri dispositivi.`;
+}
+
+function currentInstallContext(){
+  const ua=navigator.userAgent||"";
+  const isIos=/iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isAndroid=/Android/.test(ua);
+  const isStandalone=window.matchMedia?.("(display-mode: standalone)")?.matches || window.navigator.standalone===true;
+  return {isIos,isAndroid,isStandalone};
+}
+
+async function handleInstallApp(){
+  const ctx=currentInstallContext();
+  if(ctx.isStandalone){
+    showToast("✅ Applicazione già aperta in modalità installata");
+    return;
+  }
+  if(deferredInstallPrompt){
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt=null;
+    updateInstallHint("ok","Richiesta di installazione completata o annullata dal browser.");
+    return;
+  }
+  showInstallGuide();
+}
+
+function showInstallGuide(){
+  const ctx=currentInstallContext();
+  const overlay=document.createElement("div");
+  overlay.id="install-guide-overlay";
+  overlay.style.cssText="position:fixed;inset:0;background:rgba(26,35,126,.55);z-index:10001;display:flex;align-items:center;justify-content:center;padding:20px";
+  const iosSteps=`<ol style="margin-left:18px;line-height:1.65"><li>Apri questo collegamento con <strong>Safari</strong>.</li><li>Tocca il pulsante <strong>Condividi</strong>.</li><li>Scegli <strong>Aggiungi alla schermata Home</strong>.</li><li>Conferma con <strong>Aggiungi</strong>.</li></ol>`;
+  const androidSteps=`<ol style="margin-left:18px;line-height:1.65"><li>Apri il collegamento con <strong>Chrome</strong> o un browser compatibile.</li><li>Premi <strong>Installa applicazione</strong>, se compare.</li><li>In alternativa: menu del browser → <strong>Aggiungi alla schermata Home</strong>.</li></ol>`;
+  const desktopSteps=`<ol style="margin-left:18px;line-height:1.65"><li>Apri il collegamento con <strong>Chrome</strong> o <strong>Edge</strong>.</li><li>Usa l’icona di installazione nella barra degli indirizzi, oppure il menu del browser.</li><li>Dopo l’installazione l’applicazione si apre in una finestra autonoma.</li></ol>`;
+  const steps=ctx.isIos?iosSteps:(ctx.isAndroid?androidSteps:desktopSteps);
+  overlay.innerHTML=`
+    <div style="background:#fff;border-radius:16px;max-width:520px;width:100%;padding:24px;box-shadow:0 10px 40px rgba(0,0,0,.3);max-height:85vh;overflow-y:auto">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <div style="font-size:32px">📲</div>
+        <div><h2 style="font-size:18px;color:#1a237e;margin:0">Installare lo strumento</h2><div style="font-size:12px;color:#607d8b">Curricolo Don Milani — applicazione web installabile</div></div>
+      </div>
+      <p style="font-size:13px;color:#37474f;line-height:1.55;margin-bottom:12px">L’installazione non richiede negozi digitali: lo strumento viene aggiunto alla schermata iniziale dal browser. Dopo il primo caricamento, le parti essenziali restano disponibili anche senza rete.</p>
+      <div style="background:#f5f7fa;border-radius:10px;padding:12px 14px;font-size:13px;color:#37474f;margin-bottom:12px">${steps}</div>
+      <div style="background:#e8f5e9;border-left:4px solid #2e7d32;border-radius:8px;padding:9px 11px;font-size:12px;color:#1b5e20;line-height:1.45;margin-bottom:12px"><strong>Dati e salvataggio:</strong> decisioni, modifiche e profilo restano nel browser del dispositivo. Per trasferirli su altro dispositivo usare <strong>Backup</strong> e poi <strong>Importa</strong>.</div>
+      <button onclick="document.getElementById('install-guide-overlay').remove()" style="width:100%;padding:11px;background:#1a237e;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Ho capito</button>
+    </div>`;
+  document.body.appendChild(overlay);
+}
+
+
+function toggleHeaderDetails(force){
+  const panel=document.getElementById("header-details");
+  const btn=document.getElementById("header-toggle");
+  if(!panel||!btn) return;
+  const expand = typeof force === "boolean" ? force : panel.hasAttribute("hidden");
+  if(expand){
+    panel.removeAttribute("hidden");
+    btn.setAttribute("aria-expanded","true");
+    btn.textContent="Dettagli ▴";
+  } else {
+    panel.setAttribute("hidden","");
+    btn.setAttribute("aria-expanded","false");
+    btn.textContent="Dettagli ▾";
+  }
+}
+
+function toggleQuickActions(force){
+  const panel=document.getElementById("quick-actions");
+  const btn=document.getElementById("quick-actions-toggle");
+  if(!panel||!btn) return;
+  const expand = typeof force === "boolean" ? force : panel.hasAttribute("hidden");
+  if(expand){
+    panel.removeAttribute("hidden");
+    btn.setAttribute("aria-expanded","true");
+    btn.textContent="Chiudi ▴";
+  } else {
+    panel.setAttribute("hidden","");
+    btn.setAttribute("aria-expanded","false");
+    btn.textContent="Azioni ▾";
+  }
+}
+
+window.addEventListener("appinstalled",()=>{
+  updateInstallHint("ok","Applicazione installata correttamente su questo dispositivo.");
+  showToast("✅ Applicazione installata");
+});
+
+function registerOfflineSupport(){
+  if("serviceWorker" in navigator && window.isSecureContext){
+    navigator.serviceWorker.register("./sw.js").then(()=>{
+      updateInstallHint("ok","Supporto offline attivo o in preparazione.");
+    }).catch(()=>{
+      updateInstallHint("warn","Supporto offline non attivato: lo strumento resta comunque utilizzabile online.");
+    });
+  } else {
+    updateInstallHint("warn","Aprendo il file direttamente non si attiva l’installazione. Pubblicalo come sito HTTPS per installarlo su tutti i dispositivi.");
+  }
+}
+
+// ================================================================
+// WELCOME MODAL — onboarding per il primo utilizzo
+// ================================================================
+function showWelcome(force=false){
+  if(!force && sessionStorage.getItem("welcomeShown")) return;
+  const overlay=document.createElement("div");
+  overlay.id="welcome-overlay";
+  overlay.style.cssText="position:fixed;inset:0;background:rgba(26,35,126,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px";
+  overlay.innerHTML=`
+    <div style="background:#fff;border-radius:16px;max-width:480px;width:100%;padding:26px 24px;box-shadow:0 10px 40px rgba(0,0,0,.3);max-height:85vh;overflow-y:auto">
+      <div style="font-size:32px;margin-bottom:6px">👋</div>
+      <h2 style="font-size:18px;color:#1a237e;margin-bottom:10px">Benvenuto/a in questo strumento!</h2>
+      <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:12px">
+        Ti aiuta a confrontare il curricolo verticale attuale dell'istituto con le novità delle nuove Indicazioni Nazionali 2025, disciplina per disciplina.
+      </p>
+      <div style="background:#f5f5f5;border-radius:10px;padding:12px 14px;margin-bottom:12px">
+        <div style="font-size:12px;font-weight:700;color:#333;margin-bottom:8px">Come funziona, in 3 passi:</div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">1️⃣</span><span style="font-size:12px;color:#555">Scegli una <strong>disciplina</strong> dal menu a sinistra</span></div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">2️⃣</span><span style="font-size:12px;color:#555">Per ogni voce evidenziata, <strong>Approva</strong>, <strong>Modifica</strong> o <strong>Mantieni il testo attuale</strong></span></div>
+        <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:16px">3️⃣</span><span style="font-size:12px;color:#555">Quando hai finito, vai su <strong>"Curricolo definitivo"</strong> ed esporta in Word</span></div>
+      </div>
+      <p style="font-size:11px;color:#1b5e20;background:#e8f5e9;border-radius:8px;padding:8px 10px;margin-bottom:8px"><strong>Salvataggio locale:</strong> le decisioni, le modifiche e le impostazioni personali vengono salvate automaticamente su questo dispositivo. Per lavorare su un altro telefono o computer, usa il pulsante Backup.</p>
+      <p style="font-size:11px;color:#6d4c41;background:#fff8e1;border-radius:8px;padding:8px 10px;margin-bottom:10px"><strong>Nota sull’esportazione:</strong> Copia per Word, Markdown e PDF sono i percorsi più sicuri. Il Word impaginato richiede una libreria online e funziona meglio da computer.</p>
+      <p style="font-size:11px;color:#1a237e;background:#e8eaf6;border-radius:8px;padding:8px 10px;margin-bottom:16px"><strong>Corso operativo:</strong> il link al materiale di presentazione è disponibile in alto come PDF, accanto alle impostazioni.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button onclick="document.getElementById('welcome-overlay').remove();sessionStorage.setItem('welcomeShown','1');openSettingsModal()" style="flex:1;min-width:180px;padding:11px;background:#00695c;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Configura dati</button>
+        <button onclick="document.getElementById('welcome-overlay').remove();sessionStorage.setItem('welcomeShown','1')" style="flex:1;min-width:180px;padding:11px;background:#1a237e;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Inizia subito</button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+  sessionStorage.setItem("welcomeShown","1");
+}
+
+// ================================================================
+// INIT
+// ================================================================
+loadLocalState();
+renderProfileSummary();
+renderSidebar();
+render();
+registerOfflineSupport();
+showWelcome();
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "istituto": {
+    "denominazione": "Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani»",
+    "comune": "Ariano Irpino (AV)",
+    "codice_meccanografico": "AVIC849003",
+    "sito": "https://www.icdonmilaniariano.edu.it/",
+    "scuola_in_chiaro": "https://cercalatuascuola.istruzione.it/cercalatuascuola/istituti/AVIC849003/ic-calvario-covotta/"
+  },
+  "documenti_strategici": [
+    {
+      "tipo": "PTOF",
+      "titolo": "PTOF 2025-2028",
+      "scheda": "https://www.icdonmilaniariano.edu.it/documento/ptof-25-28/",
+      "pdf": "https://www.icdonmilaniariano.edu.it/wp-content/uploads/2025/05/AVIC849003-202528-202425-20241227.pdf",
+      "data_pubblicazione_revision": "14.05.2025",
+      "uso_curricolo": [
+        "contesto",
+        "missione",
+        "successo formativo",
+        "inclusione",
+        "territorio",
+        "STEM",
+        "digitale",
+        "continuità",
+        "orientamento"
+      ]
+    },
+    {
+      "tipo": "RAV",
+      "titolo": "RAV 2022-2025",
+      "scheda": "https://www.icdonmilaniariano.edu.it/documento/rav-2022-2025/",
+      "pdf": "https://www.icdonmilaniariano.edu.it/wp-content/uploads/2025/05/RAV_202425_AVIC849003_20241220114045.pdf",
+      "data_pubblicazione_revision": "14.05.2025",
+      "uso_curricolo": [
+        "priorità",
+        "traguardi",
+        "prove standardizzate",
+        "competenze chiave",
+        "rubriche",
+        "compiti di prestazione",
+        "continuità",
+        "orientamento"
+      ]
+    }
+  ],
+  "normativa": [
+    {
+      "sigla": "DM 254/2012",
+      "oggetto": "Indicazioni Nazionali per il curricolo della scuola dell'infanzia e del primo ciclo",
+      "url": "https://www.gazzettaufficiale.it/eli/id/2013/02/05/13G00034/sg",
+      "uso": "base IN 2012"
+    },
+    {
+      "sigla": "DPR 275/1999",
+      "oggetto": "Autonomia scolastica",
+      "uso": "PTOF e progettazione curricolare"
+    },
+    {
+      "sigla": "Legge 107/2015",
+      "oggetto": "Piano triennale dell'offerta formativa",
+      "uso": "PTOF triennale e miglioramento"
+    },
+    {
+      "sigla": "Legge 92/2019 e DM 183/2024",
+      "oggetto": "Educazione civica",
+      "uso": "curricolo trasversale: Costituzione, sostenibilità, cittadinanza digitale"
+    },
+    {
+      "sigla": "D.Lgs. 62/2017 e DM 14/2024",
+      "oggetto": "Valutazione e certificazione delle competenze",
+      "uso": "rubriche, evidenze, livelli, certificazione"
+    }
+  ],
+  "regola_strumento": "Le sezioni generali sono consultabili e non modificabili. Le sezioni disciplinari/didattiche sono l'area di lavoro per completamento IN 2012 e gap IN 2025."
+}
