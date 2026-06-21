@@ -37,7 +37,7 @@
   - Stato: revisione avviata
   - Prossima azione: controlla le 12 voci da validare
   - 3 pulsanti: Controlla voci, Apri documento, Esporta
-  - Barra compatta: 💾 salvataggio + progresso + ⚙️ Azioni
+  - Barra compatta: 💾 salvataggio + progresso + ⚙︝ Azioni
 - Compattata toolbar: 2 filtri primari + toggle Altri filtri; Export collassato
 - Collassato usage-notice in `<details>`
 - Comprimati pulsanti local-save-bar
@@ -87,7 +87,7 @@
 - Analisi vista attuale: area cards (`cardHTML()`), gap-header ridondante, card pending troppo dense, lock-notice ripetuta, nessuna gerarchia
 - 7 problemi individuati (P1-P7)
 - Proposta: 4 sezioni collassabili nel tab Lavoro (Documento attuale, Voci da validare, Fonti, Esportazione)
-- Card pending compatta: badge + 1 riga + ✅/❌/🔍, confronto su richiesta
+- Card pending compatta: badge + 1 riga + ✅/❌/🔝, confronto su richiesta
 - Card ok collassate per default
 - Nessun deploy, nessuna modifica runtime
 - Verdetto: `CML_010A_COMPACT_CARDS_EXPANDABLE_DETAIL_DESIGN_AUDIT_READY`
@@ -98,7 +98,7 @@
 - Unico file modificato: `_published_snapshot/netlify-current/index.html` (+154/−64 righe)
 - `cardHTML()` riscritto: 4 modalità (ok collassata, decisa collassata, pending edit, pending compact)
 - Card ok/decise collassate di default con `toggleCollapse()`
-- Card pending compatte: badge + 1 riga + 4 emoji (✅ ❌ 🔍 🗑) + dettaglio espandibile
+- Card pending compatte: badge + 1 riga + 4 emoji (✅ ❌ 🔝 🗑) + dettaglio espandibile
 - `gap-header-unique` singolo per sezione (anziché per-card)
 - `togglePendingDetail()` per confronto testuale on-demand
 - `lock-notice` unica per sezione via `ordLock` in `render()`
@@ -113,7 +113,7 @@
 - **317222a** — HEAD invariato (solo audit, nessuna modifica runtime)
 - Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
 - Conteggi Tecnologia: 12 voci totali, 4 ok, 8 modifica ✅
-- Card pending compatte verificate: badge, 1 riga testo troncato, 4 emoji (✅ ❌ 🔍 🗑) ✅
+- Card pending compatte verificate: badge, 1 riga testo troncato, 4 emoji (✅ ❌ 🔝 🗑) ✅
 - Dettaglio espandibile: confronto testuale IN2012 vs IN2025 su richiesta ✅
 - Gap-header: singolo per sezione, 0 vecchi gap-header ✅
 - Non regressioni: usage-notice, toolbar, tabs, cruscotto, asset, esportazione ✅
@@ -150,16 +150,16 @@
 - Touch target: min-height 44+ per act, 34px per pending-action
 - 3 problemi non bloccanti rilevati:
   - P1: touch target pending-action 34px (sotto HIG 44px)
-  - P2: icona 🔍 non auto-esplicativa su mobile
+  - P2: icona 🔝 non auto-esplicativa su mobile
   - P3: collapse indicator poco evidente
 - Nessun deploy, nessuna modifica runtime
 - Verdetto: `CML_010E_REAL_MOBILE_ACCEPTANCE_SMOKE_READY`
 
 ## 2026-06-21 — CML-010F — Mobile Touch and Compact Action Label Microfix
 
-- **c9c6667** — fix touch target mobile, accessibilità pulsante 🔍, contrasto collapse indicator
+- **c9c6667** — fix touch target mobile, accessibilità pulsante 🔝, contrasto collapse indicator
 - P1: `.pending-action` mobile portato a 42px (≤900px) e 40px (≤560px)
-- P2: pulsante 🔍 con `aria-label` statico e dinamico
+- P2: pulsante 🔝 con `aria-label` statico e dinamico
 - P3: collapse indicator `#90a4ae` → `#546e7a`, font 11px → 12px
 - Documentazione in `CML-010F/` (non standard), `movelog.json` creato
 - Audit CML-010F-CLOSURE: P1 sotto 44px, documentazione fuori standard
@@ -180,7 +180,7 @@
 - **npx netlify deploy --prod --dir _published_snapshot/netlify-current** — 1 file (index.html)
 - URL pubblicato: https://curmanlight.netlify.app
 - Pending-action mobile a 44px confermato su tutti i breakpoint
-- Card compatte, pulsanti ✅❌🔍🗑, dettaglio espandibile preservati
+- Card compatte, pulsanti ✅❌🔝🗑, dettaglio espandibile preservati
 - Approvazione/rifiuto invariati
 - Asset, sw.js, _headers, PDF, Markdown generation, export panel intatti
 - Nessuna regressione bloccante
@@ -201,7 +201,7 @@
 - Opzione A (microcopy) + fix C2 (disclaimer validazione) implementati
 - Toolbar export: `(confronto)` su Word, Copia, Markdown, PDF
 - Curricolo Definitivo: `(definitivo)` su Copia per Word e PDF (mancanti)
-- Disclaimer: "⚠️ Documento di lavoro — da validare. Non sostituisce delibera del Collegio Docenti."
+- Disclaimer: "⚠︝ Documento di lavoro — da validare. Non sostituisce delibera del Collegio Docenti."
 - Deployato su Netlify: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
 - Solo microcopy, nessuna modifica logica/strutturale
 - Verdetto: `CML_011B_EXPORT_GUIDE_CLARITY_MICROCOPY_DEPLOYED`
@@ -274,7 +274,7 @@
 - Verifica post-deploy:
   - Home guidata live: stato + prossima azione + 3 azioni ✅
   - Breadcrumb sotto tabbar ✅
-  - Menu ⚙️ Azioni con tutte le funzioni secondarie ✅
+  - Menu ⚙︝ Azioni con tutte le funzioni secondarie ✅
   - Sidebar discipline preservata ✅
   - Toolbar + filtri + export preservati ✅
   - Tab Riepilogo + disclaimer validazione preservati ✅
@@ -298,7 +298,7 @@
   - Breadcrumb inefficace su mobile
 - Opzioni valutate: A (bottom bar minima), B (menu a scomparsa), **C (sistema ibrido)**
 - Opzione selezionata: **C — Sistema ibrido**
-  - Bottom bar: ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰
+  - Bottom bar: ✝︝ Rev. / 📋 Def. / 📤 Esp. / ☰
   - Menu ☰: Fonti, Generali, Azioni secondarie
   - Discipline solo contestuali alla vista Revisione
   - Desktop invariato (≥901px)
@@ -310,7 +310,7 @@
 
 - **a858374** — docs: audit CML mobile navigation structure (pre-deploy HEAD)
 - Unico file modificato: `_published_snapshot/netlify-current/index.html`
-- **Bottom bar fissa (≤900px):** ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰ Menu
+- **Bottom bar fissa (≤900px):** ✝︝ Rev. / 📋 Def. / 📤 Esp. / ☰ Menu
   - position:fixed, z-index:1000, touch target 44px
   - padding-bottom 52px su body
   - Tabbar nascosto a ≤900px
@@ -349,7 +349,7 @@
 - **b7d7f72** — docs: close CML mobile navigation publication smoke (pre-audit HEAD)
 - Solo audit e documentazione — nessuna modifica runtime, nessun deploy
 - Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `b7d7f72`, tree pulita ✅
-- **Analisi dettaglio attuale:** `cardHTML()` (linee 1393-1497), `togglePendingDetail()` (1377-1383), `.panels` grid 2→1 colonna su mobile ⚠️
+- **Analisi dettaglio attuale:** `cardHTML()` (linee 1393-1497), `togglePendingDetail()` (1377-1383), `.panels` grid 2→1 colonna su mobile ⚠︝
 - **7 criticità individuate:**
   - C1: dettaglio lungo su mobile (stack verticale)
   - C2: confronto poco gerarchico (nessuna evidenziazione differenze)
@@ -376,10 +376,10 @@
 - Unico file modificato: `_published_snapshot/netlify-current/index.html` (+16/−7 righe)
 - **Etichette fonti specifiche:**
   - `📄 IN 2012 (attuale)` → `📄 DM 254/2012 (vigente)`
-  - `✨ Proposta IN 2025` → `✏️ DM 221/2025 — proposta di aggiornamento`
+  - `✨ Proposta IN 2025` → `✝︝ DM 221/2025 — proposta di aggiornamento`
   - `🆕 Non presente nel curricolo attuale` → `🆕 DM 254/2012 — assente nel curricolo attuale`
 - **Evidenziazione differenze:** colored left border arancione (`#f57f17`) su pannello corrente, verde (`#43a047`) su proposta
-- **"Personalizza testo" in primo piano:** pulsante ✏️ viola (`#7b1fa2`) aggiunto alla riga azioni compatta (prima era solo nel dettaglio 🔍)
+- **"Personalizza testo" in primo piano:** pulsante ✝︝ viola (`#7b1fa2`) aggiunto alla riga azioni compatta (prima era solo nel dettaglio 🔝)
 - **Scroll dettaglio mobile:** `max-height:200px; overflow-y:auto` (150px a ≤760px)
 - **Truncation proposta:** 90 → 120 caratteri
 - **16/16 criteri accettazione CML-014A** verificati
@@ -422,8 +422,8 @@
 - Fonti (DM 254/2012 / DM 221/2025) riconoscibili ✅
 - Differenze evidenziate (bordo arancione/verde) comprensibili ✅
 - "Personalizza testo" individuabile in due punti ✅
-- Tre azioni (✅ ❌ ✏️) distinte e chiare ✅
-- Nessun ⚠️ dubbio, nessun ❌ bloccato
+- Tre azioni (✅ ❌ ✝︝) distinte e chiare ✅
+- Nessun ⚠︝ dubbio, nessun ❌ bloccato
 - Nessuna regressione
 - Raccomandazione: chiudere fase UX dettaglio, aprire ciclo su qualità contenuti disciplinari
 - Verdetto: `CML_015A_REAL_USER_DETAIL_PANEL_MICRO_TEST_READY`
@@ -449,7 +449,7 @@
 - d82fc3a — docs: audit CML disciplinary content and export quality (HEAD partenza)
 - Unico file runtime modificato: _published_snapshot/netlify-current/index.html
 - 61 marker [IN 2025: ...] preservati nei dati sorgente e rimossi dalla presentazione Riepilogo/export
-- Indicatore ✏️ mostrato solo sui testi realmente personalizzati, con legenda compatta
+- Indicatore ✝︝ mostrato solo sui testi realmente personalizzati, con legenda compatta
 - Conteggi invariati: 103 totali, 41 ok, 54 modifica, 8 nuovo
 - Logiche approvazione/rifiuto/personalizzazione ed export invariate
 - Responsive PASS: 360, 390, 414, 768, 900, 901, 1280 px
@@ -466,11 +466,11 @@
 - Nessun deploy, nessuna modifica runtime, PDF/sw.js/_headers/asset invariati
 - Verdetto: CML_016C_EXPORT_CLEANUP_PERSONALIZATION_SMOKE_READY
 
-## 2026-06-21 — CML-016C — Export Cleanup and Personalization Smoke Audit
+## 2026-06-21 � CML-017 � Controlled Netlify Publication After Export Quality Closure
 
-- a182347 — docs: smoke audit CML export cleanup and personalization (HEAD partenza)
-- Smoke audit completa: marker sorgente 61, marker output 0, indicatore ✏️ PASS
-- Conteggi 103/41/54/8 confermati, logiche invariate
-- Responsive PASS a tutti i breakpoint richiesti
-- Nessun deploy, nessuna modifica runtime, PDF/sw.js/_headers/asset invariati
-- Verdetto: CML_016C_EXPORT_CLEANUP_PERSONALIZATION_SMOKE_READY
+- 5f2d74c � docs: record controlled Netlify publication after CML export quality closure (HEAD partenza)
+- Pubblicazione controllata completata: preview e production deploy su Netlify
+- Progetto: curmanlight (https://curmanlight.netlify.app)
+- Nessuna modifica runtime, PDF, sw.js, _headers o asset
+- Confini rispettati, nessun dato sensibile esposto
+- Verdetto: CML_017_CONTROLLED_NETLIFY_PUBLICATION_AFTER_EXPORT_QUALITY_CLOSURE_READY
