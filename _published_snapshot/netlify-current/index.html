@@ -62,6 +62,31 @@ main{flex:1;min-width:0}
 .tecnologia-export-actions{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
 .tecnologia-md-preview{display:block;width:100%;height:160px;font-family:Consolas,monospace;font-size:12px;padding:8px;border:1px solid #ccc;border-radius:5px;resize:vertical;background:#fafafa;color:#999;box-sizing:border-box}
 .tecnologia-md-preview:focus{color:#333}
+/* DEPARTMENT IMPORT */
+.department-import-panel{background:#eef7f6;border:1px solid #b2dfdb;border-left:3px solid #00796b;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#263238;line-height:1.45;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.department-import-panel>summary{cursor:pointer;font-weight:800;font-size:12px;color:#00695c}
+.department-import-copy{margin:7px 0;color:#455a64}
+.department-import-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}
+.department-import-btn{padding:7px 12px;border:0;border-radius:7px;background:#00695c;color:#fff;font-size:11px;font-weight:800;cursor:pointer}
+.department-import-local{font-size:10px;color:#546e7a}
+.department-import-feedback{font-size:11px;font-weight:700;color:#00695c;margin:6px 0}
+.department-import-summary{display:grid;grid-template-columns:repeat(3,minmax(110px,1fr));gap:6px;margin:8px 0}
+.department-import-stat{background:#fff;border:1px solid #cfd8dc;border-radius:7px;padding:7px 9px;color:#455a64}
+.department-import-stat strong{display:block;font-size:16px;color:#00695c}
+.department-import-warning{background:#fff8e1;border-left:3px solid #f9a825;border-radius:6px;padding:6px 9px;margin:7px 0;color:#6d4c41}
+.department-file-list{display:grid;gap:5px;margin:8px 0}
+.department-file-row{background:#fff;border:1px solid #cfd8dc;border-radius:6px;padding:6px 8px}
+.department-file-row.invalid{border-left:3px solid #c62828}
+.department-file-row.valid{border-left:3px solid #2e7d32}
+.department-proposal-group{margin-top:10px}
+.department-proposal-group h3{font-size:12px;color:#1a237e;margin:8px 0 5px}
+.department-proposal-subhead{font-size:10px;font-weight:800;color:#607d8b;text-transform:uppercase;letter-spacing:.7px;margin:7px 0 4px}
+.department-proposal-card{background:#fff;border:1px solid #cfd8dc;border-left:3px solid #5c6bc0;border-radius:7px;padding:8px 10px;margin-bottom:6px}
+.department-proposal-meta{font-size:10px;color:#607d8b;margin-bottom:4px}
+.department-proposal-text{font-size:11px;color:#263238;margin:4px 0}
+.department-proposal-field{font-size:10px;color:#455a64;margin-top:3px}
+.department-check-chip{display:inline-block;background:#fff3e0;color:#e65100;border-radius:999px;padding:2px 7px;margin:4px 3px 0 0;font-size:9px;font-weight:700}
+@media(max-width:640px){.department-import-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.department-import-btn{width:100%}.department-import-controls{align-items:stretch}}
 .usage-notice{background:#fff8e1;border:1px solid #ffe082;border-left:3px solid #f9a825;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#5d4037;line-height:1.45;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .usage-notice strong{color:#3e2723}
 .local-save-bar{background:#e8f5e9;border:1px solid #a5d6a7;border-left:3px solid #2e7d32;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#1b5e20;line-height:1.45;display:flex;gap:7px;align-items:center;flex-wrap:wrap;box-shadow:0 1px 3px rgba(0,0,0,.04)}
@@ -525,7 +550,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 @media print{.cruscotto{display:none!important}}
 
 @media print{
-  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali,.tecnologia-export-panel{display:none!important}
+  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali,.tecnologia-export-panel,.department-import-panel{display:none!important}
   .layout{padding:0;display:block}
   .panels{grid-template-columns:1fr 1fr}
 }
@@ -661,6 +686,17 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
       <details class="usage-notice" style="padding:6px 13px">
         <summary style="cursor:pointer;font-weight:700;font-size:12px;color:#5d4037">💡 Uso ibrido e requisiti</summary>
         <p style="margin-top:6px;font-size:11px;color:#5d4037;line-height:1.45">Lo strumento può essere aperto come file locale anche da telefono per consultare, revisionare, copiare il testo, scaricare Markdown e stampare/salvare in PDF. L'esportazione Word impaginata è un'opzione avanzata: funziona quando la libreria esterna è raggiungibile, preferibilmente da computer. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
+      </details>
+      <details id="department-import-panel" class="department-import-panel">
+        <summary>🏫 Validazione dipartimentale</summary>
+        <p class="department-import-copy">Importa i file .cml ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
+        <div class="department-import-controls">
+          <input id="department-cml-files" type="file" accept=".cml" multiple hidden onchange="importTeacherCmlFiles(this.files);this.value=''">
+          <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Importa proposte docenti .cml</button>
+          <span class="department-import-local">Nessun dato viene inviato online: l'importazione è locale.</span>
+        </div>
+        <div id="department-import-feedback" class="department-import-feedback" aria-live="polite"></div>
+        <div id="department-import-results"></div>
       </details>
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
         <div class="tecnologia-export-header">
@@ -2346,6 +2382,156 @@ function uploadTeacherCmlToDrive(){
 function getDriveUploadEndpoint(){
   return localStorage.getItem('curmanlight.driveUploadEndpoint') || '';
 }
+
+// DEPARTMENT IMPORT START
+let departmentImportState={files:[],proposals:[]};
+
+function validateTeacherCmlModel(model,fileName=""){
+  const name=String(fileName||"");
+  if(!name.toLowerCase().endsWith(".cml")) return {valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[]};
+  if(!model||typeof model!=="object"||Array.isArray(model)) return {valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[]};
+  if(model.fileType!=="teacher_proposal") return {valid:false,code:"wrong_type",message:"Questo file non è una proposta docente CurManLight.",missing:[]};
+  const missing=[];
+  if(typeof model.discipline!=="string"||!model.discipline.trim()) missing.push("discipline");
+  if(!model.counts||typeof model.counts!=="object"||Array.isArray(model.counts)) missing.push("counts");
+  if(!Array.isArray(model.proposals)) missing.push("proposals");
+  if(model.humanValidationRequired!==true) missing.push("humanValidationRequired");
+  if(missing.length) return {valid:false,code:"missing_data",message:"Il file è leggibile, ma mancano alcune informazioni.",missing};
+  return {valid:true,code:"valid",message:"File importato correttamente.",missing:[]};
+}
+
+function parseTeacherCmlText(text,fileName=""){
+  try{
+    const model=JSON.parse(String(text||""));
+    return {...validateTeacherCmlModel(model,fileName),model};
+  }catch(_err){
+    return {valid:false,code:"invalid_json",message:"Il file contiene JSON non valido.",missing:[],model:null};
+  }
+}
+
+function departmentProposalIssues(proposal){
+  const issues=[];
+  const text=proposal?.proposta||proposal?.testo||proposal?.sintesi||"";
+  if(!String(text).trim()) issues.push("Senza testo");
+  if(!String(proposal?.motivazione||"").trim()) issues.push("Senza motivazione");
+  if(!String(proposal?.fonte||proposal?.fonti||proposal?.evidenze||"").trim()) issues.push("Senza fonte");
+  return issues;
+}
+
+function departmentCmlFingerprint(model){
+  const rows=(model.proposals||[]).map(p=>[p.id||"",p.discipline||model.discipline||"",p.proposta||p.testo||p.sintesi||""]);
+  return JSON.stringify([model.discipline||"",model.createdAt||"",rows]);
+}
+
+function normalizeDepartmentProposal(proposal,model,fileName,duplicate){
+  const text=proposal?.proposta||proposal?.testo||proposal?.sintesi||"";
+  const evidence=proposal?.fonte||proposal?.fonti||proposal?.evidenze||"";
+  const issues=departmentProposalIssues(proposal);
+  if(duplicate) issues.push("Duplicato probabile");
+  return {
+    id:String(proposal?.id||""),
+    fileName:String(fileName||""),
+    discipline:String(proposal?.discipline||model.discipline||"Disciplina non indicata"),
+    status:String(proposal?.status||"stato non indicato"),
+    section:String(proposal?.ordine||proposal?.sezione||proposal?.ambito||""),
+    type:String(proposal?.type||""),
+    classe:String(proposal?.classe||""),
+    text:String(text),
+    motivation:String(proposal?.motivazione||""),
+    evidence:String(evidence),
+    issues
+  };
+}
+
+function buildDepartmentImportSummary(state=departmentImportState){
+  const files=state.files||[],proposals=state.proposals||[];
+  const disciplines=[...new Set(proposals.map(p=>p.discipline).filter(Boolean))].sort();
+  return {
+    imported:files.length,
+    validFiles:files.filter(f=>f.valid).length,
+    unrecognized:files.filter(f=>!f.valid).length,
+    filesToCheck:files.filter(f=>!f.valid||f.duplicate).length,
+    totalProposals:proposals.length,
+    disciplines,
+    proposalsToCheck:proposals.filter(p=>p.issues.length).length,
+    mixedDisciplines:disciplines.length>1
+  };
+}
+
+async function importTeacherCmlFiles(fileList){
+  const files=Array.from(fileList||[]);
+  const feedback=document.getElementById("department-import-feedback");
+  if(!files.length){
+    if(feedback) feedback.textContent="Seleziona almeno un file .cml.";
+    return;
+  }
+  const seen=new Set(),results=[],proposals=[];
+  for(const file of files){
+    let parsed;
+    if(!String(file.name||"").toLowerCase().endsWith(".cml")){
+      parsed={valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[],model:null};
+    }else{
+      try{parsed=parseTeacherCmlText(await file.text(),file.name);}
+      catch(_err){parsed={valid:false,code:"invalid_json",message:"Il file contiene JSON non valido.",missing:[],model:null};}
+    }
+    let duplicate=false;
+    if(parsed.valid){
+      const fingerprint=departmentCmlFingerprint(parsed.model);
+      duplicate=seen.has(fingerprint);
+      seen.add(fingerprint);
+      for(const proposal of parsed.model.proposals) proposals.push(normalizeDepartmentProposal(proposal,parsed.model,file.name,duplicate));
+    }
+    results.push({name:String(file.name||"file senza nome"),valid:parsed.valid,code:parsed.code,message:parsed.message,missing:parsed.missing||[],duplicate});
+  }
+  departmentImportState={files:results,proposals};
+  renderDepartmentImport();
+  const summary=buildDepartmentImportSummary();
+  if(feedback) feedback.textContent=summary.validFiles?"Proposte importate. Il dipartimento può ora leggerle e valutarle.":"Nessuna proposta docente valida importata.";
+  showToast(summary.validFiles?"✅ Proposte docenti importate localmente":"⚠️ Nessun file .cml valido importato");
+}
+
+function renderDepartmentImport(){
+  const host=document.getElementById("department-import-results");
+  if(!host) return;
+  const summary=buildDepartmentImportSummary();
+  if(!summary.imported){host.innerHTML="";return;}
+  let html='<div class="department-import-summary">'+
+    '<div class="department-import-stat"><strong>'+summary.imported+'</strong>File importati</div>'+
+    '<div class="department-import-stat"><strong>'+summary.validFiles+'</strong>File validi</div>'+
+    '<div class="department-import-stat"><strong>'+summary.unrecognized+'</strong>Non riconoscibili</div>'+
+    '<div class="department-import-stat"><strong>'+summary.totalProposals+'</strong>Proposte totali</div>'+
+    '<div class="department-import-stat"><strong>'+summary.disciplines.length+'</strong>Discipline</div>'+
+    '<div class="department-import-stat"><strong>'+summary.proposalsToCheck+'</strong>Proposte da controllare</div></div>';
+  if(summary.mixedDisciplines) html+='<div class="department-import-warning">ℹ️ Sono presenti discipline diverse: il dato è segnalato ma non blocca la lettura.</div>';
+  html+='<div class="department-file-list">'+departmentImportState.files.map(file=>{
+    const extra=file.duplicate?" · Duplicato probabile":file.missing.length?" · Mancano: "+file.missing.join(", "):"";
+    return '<div class="department-file-row '+(file.valid?"valid":"invalid")+'"><strong>'+escapeHtml(file.name)+'</strong><br>'+escapeHtml(file.message+extra)+'</div>';
+  }).join("")+'</div>';
+  const grouped={};
+  for(const proposal of departmentImportState.proposals){
+    grouped[proposal.discipline]??={};
+    grouped[proposal.discipline][proposal.status]??=[];
+    grouped[proposal.discipline][proposal.status].push(proposal);
+  }
+  for(const discipline of Object.keys(grouped).sort()){
+    html+='<section class="department-proposal-group"><h3>'+escapeHtml(discipline)+'</h3>';
+    for(const status of Object.keys(grouped[discipline]).sort()){
+      html+='<div class="department-proposal-subhead">'+escapeHtml(status)+'</div>';
+      html+=grouped[discipline][status].map(proposal=>{
+        const context=[proposal.section,proposal.type,proposal.classe].filter(Boolean).join(" · ");
+        const chips=proposal.issues.map(issue=>'<span class="department-check-chip">'+escapeHtml(issue)+'</span>').join("");
+        return '<article class="department-proposal-card"><div class="department-proposal-meta">'+escapeHtml(context||"Ambito non indicato")+'</div>'+
+          '<div class="department-proposal-text">'+escapeHtml(proposal.text||"Testo non indicato")+'</div>'+
+          '<div class="department-proposal-field"><strong>Motivazione:</strong> '+escapeHtml(proposal.motivation||"Non indicata")+'</div>'+
+          '<div class="department-proposal-field"><strong>Fonti/evidenze:</strong> '+escapeHtml(proposal.evidence||"Non indicate")+'</div>'+chips+'</article>';
+      }).join("");
+    }
+    html+='</section>';
+  }
+  if(!departmentImportState.proposals.length) html+='<div class="department-import-warning">I file non validi sono stati esclusi dalla lista proposte.</div>';
+  host.innerHTML=html;
+}
+// DEPARTMENT IMPORT END
 
 // ================================================================
 // WORD — documento professionale in stile narrativo (no tabelle

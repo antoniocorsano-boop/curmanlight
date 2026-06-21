@@ -512,3 +512,17 @@
 - Nessun Google API diretto, nessun Apps Script
 - Fallback manuale "Scarica proposta .cml" sempre disponibile
 - Verdetto: CML_020_TEACHER_PROPOSAL_DRIVE_UPLOAD_HANDOFF_READY_ENDPOINT_NOT_CONFIGURED
+
+
+## 2026-06-21 — CML-021 — Department Guided Teacher Proposal Import
+
+- bcc505f — feat: add teacher proposal Drive upload handoff (HEAD partenza)
+- Aggiunta sezione “Validazione dipartimentale” nel tab Revisione per disciplina
+- Import locale multi-file .cml con validazione schema teacher_proposal
+- Riepilogo file validi/non riconoscibili, proposte, discipline e controlli
+- Proposte raggruppate per disciplina e stato; motivazione/fonti/indicatori visibili
+- Duplicati probabili e discipline miste segnalati senza blocco
+- Nessuna rete, persistenza, Drive API, Apps Script, autenticazione o endpoint
+- Regressioni download docente e fallback upload: PASS
+- PDF, sw.js, _headers e asset invariati; nessun deploy
+- Verdetto: CML_021_DEPARTMENT_GUIDED_TEACHER_PROPOSAL_IMPORT_READY

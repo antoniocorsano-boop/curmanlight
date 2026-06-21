@@ -123,6 +123,16 @@
   - File non riconoscibili.
   - Proposte duplicate o simili.
 
+## 7.1 Implementazione CML-021 — import manuale guidato
+
+- Il coordinatore apre la sezione “Validazione dipartimentale” nel tab Revisione per disciplina.
+- Seleziona uno o più file .cml già scaricati o ricevuti dai docenti.
+- La lettura e la validazione avvengono esclusivamente nel browser, senza accesso automatico al Drive.
+- Sono accettati come validi solo JSON con fileType teacher_proposal, disciplina, counts, proposals e humanValidationRequired uguale a true.
+- File errati, JSON non valido e dati minimi mancanti sono elencati nel riepilogo ma esclusi dalla lista proposte.
+- L'import prepara una vista di lettura e controllo; non introduce ancora decisioni o export dipartimentali.
+- Lo stato è temporaneo per la sessione e resta separato dalla successiva decisione dipartimentale.
+
 ## 8. Import referente
 
 - Nella prima versione il referente importa manualmente gli esiti dipartimentali.
