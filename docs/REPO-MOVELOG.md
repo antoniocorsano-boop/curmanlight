@@ -185,3 +185,12 @@
 - Asset, sw.js, _headers, PDF, Markdown generation, export panel intatti
 - Nessuna regressione bloccante
 - Verdetto: `CML_010G_CONTROLLED_NETLIFY_PUBLICATION_MOBILE_ACTIONS_FIX_CLOSED`
+
+## 2026-06-21 — CML-011A — Export and Guide Clarity Selection Audit
+
+- **e12f5ca** — HEAD invariato (solo audit, nessuna modifica runtime)
+- 7 criticità individuate (C1-C7), la più grave: disclaimer validazione assente su "Curricolo Definitivo"
+- Opzioni valutate: A (microcopy), B (pannello formati), C (percorso guidato), D (fix C2)
+- Selezionata: **Opzione A + fix C2** — microcopy export labels + disclaimer su Definitivo
+- Nessuna modifica runtime, nessun deploy
+- Verdetto: `CML_011A_EXPORT_GUIDE_CLARITY_SELECTION_AUDIT_READY`
