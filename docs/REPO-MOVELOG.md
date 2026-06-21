@@ -46,3 +46,13 @@
 - Asset invariati: sw.js, _headers, PDF (hash verificati)
 - Test locale passato (localhost:5000, 200 OK)
 - Verdetto: `CML_009B_USER_VIEW_TOP_AREA_LIGHTENING_READY`
+
+## 2026-06-21 — CML-009C responsive smoke audit
+
+- **d45407a** → HEAD
+- Esito: tutti i breakpoint passati (360, 414, 768, 1280px)
+- Nessuna modifica runtime, nessun deploy
+- Nessun errore JavaScript bloccante
+- 3 problemi minori rilevati (P1: cruscotto visibile su tutti i tab, P2: touch target compatti, P3: toggle sono span)
+- Nessuno bloccante — pubblicabile
+- Verdetto: `CML_009C_USER_VIEW_TOP_AREA_RESPONSIVE_SMOKE_READY`
