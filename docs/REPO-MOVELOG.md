@@ -91,3 +91,33 @@
 - Card ok collassate per default
 - Nessun deploy, nessuna modifica runtime
 - Verdetto: `CML_010A_COMPACT_CARDS_EXPANDABLE_DETAIL_DESIGN_AUDIT_READY`
+
+## 2026-06-21 — CML-010B — Compact pending cards with expandable detail
+
+- **a240ab7** → HEAD
+- Unico file modificato: `_published_snapshot/netlify-current/index.html` (+154/−64 righe)
+- `cardHTML()` riscritto: 4 modalità (ok collassata, decisa collassata, pending edit, pending compact)
+- Card ok/decise collassate di default con `toggleCollapse()`
+- Card pending compatte: badge + 1 riga + 4 emoji (✅ ❌ 🔍 🗑) + dettaglio espandibile
+- `gap-header-unique` singolo per sezione (anziché per-card)
+- `togglePendingDetail()` per confronto testuale on-demand
+- `lock-notice` unica per sezione via `ordLock` in `render()`
+- Rimossi CSS inutilizzati `.act-approve` / `.act-reject`
+- Breakpoint responsivi per touch target mobile
+- Cose NON toccate: usage-notice, local-save-bar, tecnologia-export-panel, cruscotto, toolbar, filtri, tab, asset
+- Verifica locale DOM + 4 breakpoint passata
+- Verdetto: `CML_010B_COMPACT_PENDING_CARDS_EXPANDABLE_DETAIL_READY`
+
+## 2026-06-21 — CML-010C — Compact Pending Cards Runtime Smoke Audit
+
+- **317222a** — HEAD invariato (solo audit, nessuna modifica runtime)
+- Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
+- Conteggi Tecnologia: 12 voci totali, 4 ok, 8 modifica ✅
+- Card pending compatte verificate: badge, 1 riga testo troncato, 4 emoji (✅ ❌ 🔍 🗑) ✅
+- Dettaglio espandibile: confronto testuale IN2012 vs IN2025 su richiesta ✅
+- Gap-header: singolo per sezione, 0 vecchi gap-header ✅
+- Non regressioni: usage-notice, toolbar, tabs, cruscotto, asset, esportazione ✅
+- CML-009D preserved: pulsanti salvataggio, focus-visible, setTab, toolbar-toggle ✅
+- Sass: screenshot 360/414/768/1280px passati
+- Nessuna modifica runtime, nessun deploy
+- Verdetto: `CML_010C_COMPACT_PENDING_CARDS_RUNTIME_SMOKE_READY`
