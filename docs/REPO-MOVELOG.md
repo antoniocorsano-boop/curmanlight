@@ -526,3 +526,16 @@
 - Regressioni download docente e fallback upload: PASS
 - PDF, sw.js, _headers e asset invariati; nessun deploy
 - Verdetto: CML_021_DEPARTMENT_GUIDED_TEACHER_PROPOSAL_IMPORT_READY
+
+
+## 2026-06-21 — CML-021A — Department Proposal Import Smoke Audit
+
+- c241213 — feat: add department teacher proposal import (HEAD partenza)
+- Slice audit/docs-only; nessuna modifica runtime e nessun deploy
+- Smoke: 7 file, 3 validi, 4 esclusi, 5 proposte, 2 discipline, 3 controlli
+- JSON invalido, tipo errato, schema parziale, duplicati e discipline miste: PASS
+- Rendering XSS-safe, rete 0, localStorage invariato
+- Download docente e fallback Drive: PASS
+- Responsive PASS: 390, 768, 1280 px; console pulita
+- PDF, sw.js, _headers e asset invariati
+- Verdetto: CML_021A_DEPARTMENT_PROPOSAL_IMPORT_SMOKE_READY
