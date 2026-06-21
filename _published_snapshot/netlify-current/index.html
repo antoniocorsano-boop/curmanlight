@@ -175,6 +175,14 @@ button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.2
 .pending-action.del{border-color:#ef5350;color:#ef5350}
 .pending-detail{border-top:1px solid #eee;display:none}
 .pending-detail.open{display:block}
+.pending-detail .panels .panel.current{border-left:3px solid #f57f17}
+.pending-detail .panels .panel.proposed{border-left:3px solid #43a047}
+.pending-detail .panel-text{max-height:200px;overflow-y:auto;padding-right:4px}
+.pending-action.edit{border-color:#7b1fa2;color:#7b1fa2}
+.pending-action.edit:hover{background:#7b1fa2;color:#fff}
+@media(max-width:760px){
+  .pending-detail .panel-text{max-height:150px}
+}
 .gap-header-unique{margin:8px 12px;padding:7px 10px;border-radius:7px;background:#f3e5f5;border-left:3px solid #7b1fa2;color:#4a148c;font-size:11px;line-height:1.4}
 .gap-header-unique .gap-label{font-weight:700;display:block;margin-bottom:2px}
 .gap-header-unique .gap-note{font-size:10px;color:#6a1b9a;opacity:.85;display:block}
@@ -1451,10 +1459,10 @@ function cardHTML(item, type) {
       </div>
       <div class="panels">
         ${item.status === "modifica"
-          ? `<div class="panel current"><div class="panel-lbl">📄 IN 2012 (attuale)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
-          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 Non presente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div></div>`}
+          ? `<div class="panel current"><div class="panel-lbl">📄 DM 254/2012 (vigente)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
+          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 DM 254/2012 — assente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div></div>`}
         <div class="panel proposed">
-          <div class="panel-lbl">✨ Proposta IN 2025</div>
+          <div class="panel-lbl">✏️ DM 221/2025 — proposta di aggiornamento</div>
           <textarea class="panel-text ed" id="edit-${item.id}" rows="5">${item.testoFinale || item.proposto}</textarea>
         </div>
       </div>
@@ -1471,21 +1479,22 @@ function cardHTML(item, type) {
       ${item.classe ? `<span class="cl-tag">📍 ${item.classe}</span>` : ""}
     </div>
     <div class="pending-body">
-      <span class="pending-text">${truncate(proposalText, 90)}</span>
+      <span class="pending-text">${truncate(proposalText, 120)}</span>
       <span class="pending-actions">
         <button class="pending-action approve" onclick="approve('${item.id}')" title="Approva">✅</button>
         <button class="pending-action reject" onclick="reject('${item.id}')" title="Mantieni testo attuale">❌</button>
         <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" title="Mostra confronto" id="pdb-${item.id}" aria-label="Mostra confronto">🔍</button>
+        <button class="pending-action edit" onclick="startEdit('${item.id}')" title="Personalizza testo">✏️</button>
         <button class="pending-action del" onclick="confirmRemove('${type}','${item.id}')" title="Rimuovi">🗑</button>
       </span>
     </div>
     <div class="pending-detail" id="pd-${item.id}">
       <div class="panels">
         ${item.status === "modifica"
-          ? `<div class="panel current"><div class="panel-lbl">📄 IN 2012 (attuale)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
-          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 Non presente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div></div>`}
+          ? `<div class="panel current"><div class="panel-lbl">📄 DM 254/2012 (vigente)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
+          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 DM 254/2012 — assente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div></div>`}
         <div class="panel proposed">
-          <div class="panel-lbl">✨ Proposta IN 2025</div>
+          <div class="panel-lbl">✏️ DM 221/2025 — proposta di aggiornamento</div>
           <div class="panel-text">${proposalText}</div>
         </div>
       </div>

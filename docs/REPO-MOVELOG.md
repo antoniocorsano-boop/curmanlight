@@ -369,3 +369,20 @@
 - **16 criteri accettazione CML-014B** definiti
 - **Problemi cosmetici CML-013G:** lasciati come debt non bloccante (separati da CML-014B)
 - Verdetto: `CML_014A_CONTEXTUAL_DETAIL_PANEL_DESIGN_AUDIT_READY`
+
+## 2026-06-21 — CML-014B — Enhanced Pending Detail Panel
+
+- **9243e9e** — docs: audit CML contextual detail panel design (pre-implementation HEAD)
+- Unico file modificato: `_published_snapshot/netlify-current/index.html` (+16/−7 righe)
+- **Etichette fonti specifiche:**
+  - `📄 IN 2012 (attuale)` → `📄 DM 254/2012 (vigente)`
+  - `✨ Proposta IN 2025` → `✏️ DM 221/2025 — proposta di aggiornamento`
+  - `🆕 Non presente nel curricolo attuale` → `🆕 DM 254/2012 — assente nel curricolo attuale`
+- **Evidenziazione differenze:** colored left border arancione (`#f57f17`) su pannello corrente, verde (`#43a047`) su proposta
+- **"Personalizza testo" in primo piano:** pulsante ✏️ viola (`#7b1fa2`) aggiunto alla riga azioni compatta (prima era solo nel dettaglio 🔍)
+- **Scroll dettaglio mobile:** `max-height:200px; overflow-y:auto` (150px a ≤760px)
+- **Truncation proposta:** 90 → 120 caratteri
+- **16/16 criteri accettazione CML-014A** verificati
+- Asset invariati: sw.js, _headers, PDF
+- Nessun deploy (previsto CML-014C smoke audit)
+- Verdetto: `CML_014B_ENHANCED_PENDING_DETAIL_PANEL_READY`
