@@ -141,12 +141,8 @@ button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.2
 /* ACTIONS */
 .card-acts{display:flex;gap:5px;padding:6px 10px;background:rgba(0,0,0,.02);border-top:1px solid #f0f0f0;flex-wrap:wrap;align-items:center}
 .act{padding:4px 11px;border-radius:6px;border:1px solid;cursor:pointer;font-size:11px;font-weight:700;transition:.1s;display:flex;align-items:center;gap:3px}
-.act-approve{border-color:#43a047;color:#43a047;background:#f1f8e9}
-.act-approve:hover{background:#43a047;color:#fff}
 .act-edit{border-color:#1565c0;color:#1565c0;background:#e3f2fd}
 .act-edit:hover{background:#1565c0;color:#fff}
-.act-reject{border-color:#e53935;color:#e53935;background:#fce4ec}
-.act-reject:hover{background:#e53935;color:#fff}
 .act-save{border-color:#43a047;color:#fff;background:#43a047}
 .act-cancel{border-color:#9e9e9e;color:#555;background:#f5f5f5}
 .act-undo{border-color:#757575;color:#555;background:#fafafa;font-size:10px}
@@ -156,6 +152,32 @@ button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.2
 .add-btn{padding:5px 12px;border:none;border-radius:7px;cursor:pointer;font-size:11px;font-weight:700;display:flex;align-items:center;gap:4px}
 .add-t{background:#1a237e;color:#fff}
 .add-o{background:#455a64;color:#fff}
+/* COMPACT CARDS */
+.collapse-header{display:flex;align-items:center;gap:6px;padding:7px 10px;cursor:pointer;flex-wrap:wrap;user-select:none}
+.collapse-header:hover{opacity:.8}
+.collapse-summary{flex:1;min-width:0;font-size:11px;color:#666;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.35}
+.collapse-indicator{font-size:11px;color:#90a4ae;flex-shrink:0;transition:transform .15s}
+.collapse-body{display:none}
+.collapse-body.open{display:block}
+.pending-card{background:#fff;border-color:#ffcc80}
+.pending-card.nuovo{border-color:#90caf9}
+.pending-body{display:flex;align-items:center;gap:6px;padding:0 10px 6px;flex-wrap:wrap}
+.pending-text{flex:1;min-width:0;font-size:12px;color:#333;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pending-actions{display:flex;gap:3px;flex-shrink:0}
+.pending-action{padding:3px 8px;border-radius:5px;border:1px solid;cursor:pointer;font-size:12px;font-weight:700;line-height:1.3;background:#fff;transition:.1s}
+.pending-action:hover{opacity:.8}
+.pending-action.approve{border-color:#43a047;color:#43a047}
+.pending-action.approve:hover{background:#43a047;color:#fff}
+.pending-action.reject{border-color:#e53935;color:#e53935}
+.pending-action.reject:hover{background:#e53935;color:#fff}
+.pending-action.detail{border-color:#1565c0;color:#1565c0}
+.pending-action.detail:hover{background:#1565c0;color:#fff}
+.pending-action.del{border-color:#ef5350;color:#ef5350}
+.pending-detail{border-top:1px solid #eee;display:none}
+.pending-detail.open{display:block}
+.gap-header-unique{margin:8px 12px;padding:7px 10px;border-radius:7px;background:#f3e5f5;border-left:3px solid #7b1fa2;color:#4a148c;font-size:11px;line-height:1.4}
+.gap-header-unique .gap-label{font-weight:700;display:block;margin-bottom:2px}
+.gap-header-unique .gap-note{font-size:10px;color:#6a1b9a;opacity:.85;display:block}
 /* RIEPILOGO */
 .sum-box{background:#fff;border-radius:9px;padding:12px 16px;box-shadow:0 1px 3px rgba(0,0,0,.05);margin-bottom:10px}
 .sum-box h2{font-size:14px;color:#1a237e;margin-bottom:6px}
@@ -268,6 +290,11 @@ img,svg,video{max-width:100%;height:auto}
   .card-acts{display:grid;grid-template-columns:1fr;gap:7px;padding:9px 10px}
   .act{min-height:42px;justify-content:center;text-align:center;padding:9px 10px;font-size:12px;line-height:1.2}
   .act-delete{margin-left:0}
+  .collapse-header{min-height:40px;padding:7px 10px}
+  .pending-body{gap:5px;padding:0 10px 6px;flex-direction:column;align-items:stretch}
+  .pending-text{white-space:normal}
+  .pending-actions{justify-content:center;gap:5px}
+  .pending-action{min-height:34px;padding:5px 10px;font-size:12px}
   .add-row{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0 4px}
   .add-btn{min-height:42px;justify-content:center;font-size:12px}
 
@@ -321,6 +348,8 @@ img,svg,video{max-width:100%;height:auto}
   .badge,.ord-tag,.cl-tag{font-size:10px}
   .panel,.card-body{padding:10px}
   .panel-text,.card-body{font-size:12.5px}
+  .collapse-header{min-height:38px;padding:6px 8px}
+  .pending-action{font-size:11px;min-height:32px;padding:4px 7px}
   .act{font-size:11.5px;min-height:42px}
 
   .sum-box{padding:11px}
@@ -1291,79 +1320,132 @@ function selectDisc(d){selDisc=d;editingId=null;renderSidebar();render();
 // ================================================================
 // CARD RENDERING
 // ================================================================
-function cardHTML(item,type){
-  const isEdit=editingId===item.id && canEditOrder(item.ordine);
-  const disabled=disabledFor(item);
-  const readonlyClass=canEditOrder(item.ordine)?"":" readonly-order";
-  const lockNotice=lockNoticeFor(item);
+function truncate(txt, len) {
+  if (!txt) return "";
+  const s = String(txt).replace(/<[^>]*>/g, '');
+  return s.length > len ? s.slice(0, len) + "…" : s;
+}
 
-  // Carte invariate (ok) — compatte, rassicuranti
-  if(item.status==="ok"){
+function togglePendingDetail(id) {
+  const el = document.getElementById("pd-" + id);
+  if (!el) return;
+  const open = el.classList.toggle("open");
+  const btn = document.getElementById("pdb-" + id);
+  if (btn) btn.textContent = open ? "📖" : "🔍";
+}
+
+function toggleCollapse(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const open = el.classList.toggle("open");
+  const ico = document.getElementById("ico-" + id);
+  if (ico) ico.textContent = open ? "▾" : "▸";
+}
+
+function cardHTML(item, type) {
+  const isEdit = editingId === item.id && canEditOrder(item.ordine);
+  const disabled = disabledFor(item);
+  const readonlyClass = canEditOrder(item.ordine) ? "" : " readonly-order";
+
+  // ok — collassato per default
+  if (item.status === "ok") {
     return `<div class="card ok${readonlyClass}">
-      <div class="card-hd">
-        <span class="badge ok">✓ Nessuna modifica necessaria</span>
-        ${item.classe?`<span class="cl-tag">📍 ${item.classe}</span>`:""}
+      <div class="card-hd collapse-header" onclick="toggleCollapse('ok-${item.id}')" title="Clicca per mostrare/nascondere il testo">
+        <span class="badge ok">✓ Nessuna modifica</span>
+        ${item.classe ? `<span class="cl-tag">📍 ${item.classe}</span>` : ""}
+        <span class="collapse-summary">${truncate(item.testo, 60)}</span>
+        <span class="collapse-indicator" id="ico-ok-${item.id}">▸</span>
       </div>
-      <div class="card-body">${item.testo}</div>
-      ${lockNotice}
-      <div class="card-acts">
-        <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')" title="Modifica comunque il testo se lo desideri">✏️ Modifica comunque</button>
-        <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')" title="Rimuovi questa voce dal curricolo">🗑 Rimuovi</button>
-      </div></div>`;
+      <div class="collapse-body" id="ok-${item.id}">
+        <div class="card-body">${item.testo}</div>
+        <div class="card-acts">
+          <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')">✏️ Modifica</button>
+          <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')">🗑 Rimuovi</button>
+        </div>
+      </div>
+    </div>`;
   }
 
-  // Carte approvate o rifiutate — compatte con esito chiaro
-  if(item.decisione){
-    const isApp=item.decisione==="approvata";
-    const label=isApp?"✅ Hai approvato questa proposta":"❌ Hai mantenuto il testo attuale";
-    const testoShow=isApp?(item.testoFinale||item.proposto):(item.testo||"<em style='color:#999'>— Voce non inserita nel curricolo —</em>");
+  // approvate/rifiutate — collassate per default
+  if (item.decisione) {
+    const isApp = item.decisione === "approvata";
+    const label = isApp ? "✅ Approvata" : "❌ Rifiutata";
+    const testoShow = isApp ? (item.testoFinale || item.proposto) : (item.testo || "<em style='color:#999'>— Voce non inserita —</em>");
     return `<div class="card ${item.decisione}${readonlyClass}">
-      <div class="card-hd">
+      <div class="card-hd collapse-header" onclick="toggleCollapse('dec-${item.id}')" title="Clicca per mostrare/nascondere il testo">
         <span class="badge ${item.decisione}">${label}</span>
-        ${item.status==="nuovo"?'<span class="ord-tag">★ Nuova voce IN 2025</span>':""}
-        ${item.classe?`<span class="cl-tag">📍 ${item.classe}</span>`:""}
+        ${item.status === "nuovo" ? '<span class="ord-tag">★ Nuova IN 2025</span>' : ""}
+        ${item.classe ? `<span class="cl-tag">📍 ${item.classe}</span>` : ""}
+        <span class="collapse-summary">${truncate(testoShow, 60)}</span>
+        <span class="collapse-indicator" id="ico-dec-${item.id}">▸</span>
       </div>
-      <div class="card-body">${testoShow}</div>
-      ${lockNotice}
-      <div class="card-acts">
-        <button class="act act-undo"${disabled} onclick="undoDecision('${item.id}')" title="Torna indietro e decidi di nuovo">↩ Cambia idea</button>
-        <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')">✏️ Modifica testo</button>
-        <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')">🗑 Rimuovi</button>
-      </div></div>`;
+      <div class="collapse-body" id="dec-${item.id}">
+        <div class="card-body">${testoShow}</div>
+        <div class="card-acts">
+          <button class="act act-undo"${disabled} onclick="undoDecision('${item.id}')">↩ Cambia idea</button>
+          <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')">✏️ Modifica</button>
+          <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')">🗑 Rimuovi</button>
+        </div>
+      </div>
+    </div>`;
   }
 
-  // Carte da decidere — pannelli affiancati, ben spiegati
-  return `<div class="card ${item.status}${readonlyClass}">
-    <div class="gap-header"><span class="gap-label">🧩 Gap 2025 della disciplina</span><span>Questa proposta evidenzia una possibile integrazione rispetto al curricolo vigente. Deve essere valutata dal gruppo di lavoro prima di entrare nel curricolo definitivo.</span><span class="gap-note">Base 2012, evidenze d'istituto e proposta 2025 restano distinguibili fino alla validazione.</span></div>
-    <div class="card-hd">
-      <span class="badge ${item.status}">${item.status==="nuovo"?"★ Proposta nuova nelle IN 2025":"✎ Le IN 2025 propongono una modifica"}</span>
-      ${item.classe?`<span class="cl-tag">📍 ${item.classe}</span>`:""}
+  // pending — compatta con dettaglio espandibile
+  const badgeText = item.status === "nuovo" ? "★ Nuova IN 2025" : "✎ Modifica proposta";
+  const proposalText = item.proposto || "";
+
+  // edit mode: mostra pannelli completi
+  if (isEdit) {
+    return `<div class="card pending-card ${item.status}${readonlyClass}">
+      <div class="card-hd">
+        <span class="badge ${item.status}">${badgeText}</span>
+        ${item.classe ? `<span class="cl-tag">📍 ${item.classe}</span>` : ""}
+      </div>
+      <div class="panels">
+        ${item.status === "modifica"
+          ? `<div class="panel current"><div class="panel-lbl">📄 IN 2012 (attuale)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
+          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 Non presente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div></div>`}
+        <div class="panel proposed">
+          <div class="panel-lbl">✨ Proposta IN 2025</div>
+          <textarea class="panel-text ed" id="edit-${item.id}" rows="5">${item.testoFinale || item.proposto}</textarea>
+        </div>
+      </div>
+      <div class="card-acts">
+        <button class="act act-save" onclick="saveEditAndApprove('${item.id}')">✅ Salva e Approva</button>
+        <button class="act act-cancel" onclick="cancelEdit()">Annulla</button>
+      </div>
+    </div>`;
+  }
+
+  return `<div class="card pending-card ${item.status}${readonlyClass}">
+    <div class="card-hd" style="padding-bottom:4px">
+      <span class="badge ${item.status}">${badgeText}</span>
+      ${item.classe ? `<span class="cl-tag">📍 ${item.classe}</span>` : ""}
     </div>
-    <div class="panels">
-      ${item.status==="modifica"?`<div class="panel current">
-        <div class="panel-lbl">📄 Cosa dice oggi il curricolo (IN 2012)</div>
-        <div class="panel-text">${item.testo||'<em style="color:#bbb">— nessun testo —</em>'}</div>
-      </div>`:`<div class="panel current" style="background:#f3e5f5">
-        <div class="panel-lbl" style="color:#7b1fa2">🆕 Voce non presente nel curricolo attuale</div>
-        <div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div>
-      </div>`}
-      <div class="panel proposed">
-        <div class="panel-lbl">✨ Cosa propongono le IN 2025</div>
-        ${isEdit
-          ?`<textarea class="panel-text ed" id="edit-${item.id}" rows="5">${item.testoFinale||item.proposto}</textarea>`
-          :`<div class="panel-text" style="cursor:${canEditOrder(item.ordine)?'text':'default'}" ${canEditOrder(item.ordine)?`ondblclick="startEdit('${item.id}')" title="Doppio click per modificare"`:`title="Solo consultazione per l'ordine selezionato"`}>${item.testoFinale||item.proposto}</div>`}
+    <div class="pending-body">
+      <span class="pending-text">${truncate(proposalText, 90)}</span>
+      <span class="pending-actions">
+        <button class="pending-action approve" onclick="approve('${item.id}')" title="Approva">✅</button>
+        <button class="pending-action reject" onclick="reject('${item.id}')" title="Mantieni testo attuale">❌</button>
+        <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" title="Mostra confronto" id="pdb-${item.id}">🔍</button>
+        <button class="pending-action del" onclick="confirmRemove('${type}','${item.id}')" title="Rimuovi">🗑</button>
+      </span>
+    </div>
+    <div class="pending-detail" id="pd-${item.id}">
+      <div class="panels">
+        ${item.status === "modifica"
+          ? `<div class="panel current"><div class="panel-lbl">📄 IN 2012 (attuale)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
+          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 Non presente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div></div>`}
+        <div class="panel proposed">
+          <div class="panel-lbl">✨ Proposta IN 2025</div>
+          <div class="panel-text">${proposalText}</div>
+        </div>
+      </div>
+      <div class="card-acts">
+        <button class="act act-edit" onclick="startEdit('${item.id}')">✏️ Personalizza testo</button>
       </div>
     </div>
-    ${lockNotice}
-    <div class="card-acts">
-      ${isEdit
-        ?`<button class="act act-save" onclick="saveEditAndApprove('${item.id}')">✅ Salva e Approva</button>
-          <button class="act act-cancel" onclick="cancelEdit()">Annulla</button>`
-        :`<button class="act act-approve"${disabled} onclick="approve('${item.id}')" title="Accetta il testo proposto così com'è">✅ Approvo questa proposta</button>
-          <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')" title="Personalizza il testo prima di approvare">✏️ Voglio modificarlo</button>
-          <button class="act act-reject"${disabled} onclick="reject('${item.id}')" title="Mantieni il testo attuale, non applicare la modifica">❌ Mantieni il testo attuale</button>`}
-      <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')">🗑</button>
-    </div></div>`;
+  </div>`;
 }
 
 // ================================================================
@@ -1409,6 +1491,14 @@ function render(){
       if(!filtered.length) continue;
       anyContent=true;
       html+=`<div class="ordine-hd ${ord.toLowerCase()}">${ORDINE_LABEL[ord]} — ${label}</div>`;
+      const hasPending=filtered.some(i=>i.status==="modifica"||i.status==="nuovo");
+      if(hasPending){
+        html+=`<div class="gap-header-unique"><span class="gap-label">🧩 Gap 2025 — proposte di modifica e integrazione</span><span class="gap-note">Ogni proposta mostra il confronto tra il testo IN 2012 e la proposta IN 2025. Usa ✅ per approvare, ❌ per mantenere il testo attuale, 🔍 per vedere il confronto completo.</span></div>`;
+      }
+      const ordLock=!canEditOrder(ord) && userProfile.ordine && userProfile.ordine!=="Tutti";
+      if(ordLock){
+        html+=`<div class="readonly-order-note" style="margin:8px 12px 6px">🔒 Sezione in sola consultazione per <strong>${escapeHtml(selectedOrderLabel())}</strong>. Per intervenire su questo ordine, apri Impostazioni e cambia ordine di scuola.</div>`;
+      }
       html+=filtered.map(i=>cardHTML(i,type)).join("");
     }
   }
