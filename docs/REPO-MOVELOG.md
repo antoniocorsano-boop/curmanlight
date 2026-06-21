@@ -399,3 +399,16 @@
 - Nessuna regressione bloccante ✅
 - Nessuna modifica runtime, nessun nuovo deploy
 - Verdetto: `CML_014C_CONTROLLED_PUBLICATION_ENHANCED_DETAIL_PANEL_CLOSED`
+
+## 2026-06-21 — CML-014D — Enhanced Detail Panel Cycle Closure
+
+- **8a14dd6** — docs: record CML enhanced detail panel publication smoke (HEAD partenza)
+- Solo documentazione — nessuna modifica runtime, nessun deploy
+- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `8a14dd6`, tree pulita ✅
+- Catena CML-014 completa: A (audit) → B (implementation) → C (publication + smoke) → D (closure)
+- 7/7 enhancement pubblicati su https://curmanlight.netlify.app ✅
+- 16/16 criteri CML-014A verificati live ✅
+- Asset invariati: sw.js, _headers, PDF ✅
+- Nessuna regressione ✅
+- Debiti non bloccanti CML-013G lasciati fuori dal ciclo
+- Verdetto: `CML_014D_ENHANCED_DETAIL_PANEL_CYCLE_CLOSED`
