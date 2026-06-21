@@ -570,3 +570,12 @@
   - Nessuna chiamata di rete, nessuna persistenza permanente, nessun endpoint reale
   - Microcopy coerente con il processo scolastico, nessuna semantica rigida
 
+
+## 2026-06-22 — CML-024 — CML workflow end-to-end smoke and closure
+
+- **1e60403** — docs: close CML workflow end-to-end smoke
+  - Creazione di `docs/03_execution/CML-024.md`
+  - Creazione di `report/CML-024_cml_workflow_end_to_end_smoke_and_closure.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+  - Nessuna modifica runtime; nessun deploy; confermata presenza funzioni e flusso end-to-end locale.
+
