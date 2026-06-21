@@ -154,3 +154,21 @@
   - P3: collapse indicator poco evidente
 - Nessun deploy, nessuna modifica runtime
 - Verdetto: `CML_010E_REAL_MOBILE_ACCEPTANCE_SMOKE_READY`
+
+## 2026-06-21 — CML-010F — Mobile Touch and Compact Action Label Microfix
+
+- **c9c6667** — fix touch target mobile, accessibilità pulsante 🔍, contrasto collapse indicator
+- P1: `.pending-action` mobile portato a 42px (≤900px) e 40px (≤560px)
+- P2: pulsante 🔍 con `aria-label` statico e dinamico
+- P3: collapse indicator `#90a4ae` → `#546e7a`, font 11px → 12px
+- Documentazione in `CML-010F/` (non standard), `movelog.json` creato
+- Audit CML-010F-CLOSURE: P1 sotto 44px, documentazione fuori standard
+
+## 2026-06-21 — CML-010F2 — Mobile Pending Action Touch Target and Doc Normalization
+
+- **HEAD attuale** — fix: normalize CML mobile pending actions touch target
+- P1 risolto: 42px→44px (≤900px), 40px→44px (≤560px)
+- Documentazione normalizzata: `docs/03_execution/CML-010F2.md`, `report/`, `docs/REPO-MOVELOG.md`
+- File non standard CML-010F preservati (già committati)
+- Nessun deploy
+- Verdetto: `CML_010F2_MOBILE_TOUCH_TARGET_DOC_NORMALIZATION_READY`
