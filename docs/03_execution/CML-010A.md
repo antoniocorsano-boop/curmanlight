@@ -53,6 +53,10 @@ Audit progettuale completato. Nessuna modifica runtime.
 - Non toccare riepilogo / normativa / generali tab
 - Non toccare Markdown / PDF / sw.js / assets / Netlify
 
+## Esito
+
+Audit completato → CML-010B ([closure](CML-010B.md))
+
 ## Verdetto
 
 ```
