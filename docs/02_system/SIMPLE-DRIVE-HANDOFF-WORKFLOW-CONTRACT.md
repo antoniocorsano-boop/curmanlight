@@ -48,6 +48,50 @@
   - Controllo minimo
   - Validazione umana
 
+## 4.1 Schema `.cml` implementato (CML-019)
+
+```json
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "ISO-8601 datetime",
+  "role": "teacher",
+  "discipline": "nome disciplina o null",
+  "sourceContext": {
+    "currentFramework": "D.M. 254/2012",
+    "revisionFramework": "D.M. 221/2025"
+  },
+  "counts": {
+    "total": 103,
+    "ok": 41,
+    "modifica": 54,
+    "nuovo": 8
+  },
+  "proposals": [
+    {
+      "id": "string",
+      "discipline": "string",
+      "ordine": "string",
+      "classe": "string",
+      "type": "traguardo|obiettivo",
+      "status": "ok|modifica|nuovo",
+      "decisione": "approvata|rifiutata|null",
+      "testoAttuale": "string",
+      "proposta": "string",
+      "motivazione": "string",
+      "fonte": "string"
+    }
+  ],
+  "checks": {
+    "hasProposals": true,
+    "hasDiscipline": true,
+    "hasSources": true
+  },
+  "humanValidationRequired": true
+}
+```
+
 ## 5. Invio automatico al Drive
 
 - La prima automazione riguarda solo il docente.

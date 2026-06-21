@@ -492,3 +492,12 @@
 - Drive: `Revisione Curricolo Istituto`, struttura semplice
 - Nessuna modifica runtime, PDF, sw.js, _headers, asset, deploy o credenziali
 - Verdetto: CML_018A_SCHOOL_WORKSPACE_DRIVE_SETUP_CONTRACT_READY
+
+## 2026-06-21 — CML-019 — Teacher Proposal CML File Export
+
+- aa78b47 — feat: export teacher proposal cml file (HEAD partenza)
+- Funzione `exportTeacherCml()` aggiunta per generare file .cml JSON
+- Pulsanti "Scarica proposta .cml" aggiunti nel toolbar e tab Riepilogo
+- Schema .cml documentato: teacher_proposal, discipline, counts, proposals
+- Nessun Google API, nessun Apps Script, nessun deploy
+- Verdetto: CML_019_TEACHER_PROPOSAL_CML_FILE_EXPORT_READY

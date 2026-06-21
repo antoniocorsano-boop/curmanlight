@@ -94,6 +94,7 @@ button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.2
 .settings-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}.settings-field label{font-size:11px;font-weight:800;color:#37474f}.settings-field input,.settings-field select{border:1px solid #cfd8dc;border-radius:8px;padding:9px 10px;font-size:13px;font-family:inherit}.settings-school-box{background:#f5f7fa;border:1px solid #dfe3eb;border-radius:10px;padding:10px 12px;margin:10px 0 14px;font-size:12px;color:#37474f;line-height:1.55}.settings-actions{display:flex;gap:8px;flex-wrap:wrap}.settings-primary{background:#1a237e;color:#fff;border:none;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}.settings-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}
 .export-note{font-size:10px;color:#6d4c41;margin-left:6px}
 .btn-pdf{background:#c0392b;color:#fff}
+.btn-cml{background:#3949ab;color:#fff}
 .toggle-lbl{font-size:11px;display:flex;align-items:center;gap:5px;cursor:pointer;margin-left:auto}
 /* PROGRESS */
 .progress-wrap{background:#e8eaf6;border-radius:8px;padding:8px 14px;margin-bottom:10px;display:flex;align-items:center;gap:12px}
@@ -652,7 +653,8 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
           <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word (confronto)</button>
           <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Markdown (confronto)</button>
           <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF (confronto)</button>
-          <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: sicuri.</span>
+          <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
+          <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: sicuri. .cml: per Drive condiviso.</span>
         </span>
       </div>
       <details class="usage-notice" style="padding:6px 13px">
@@ -683,6 +685,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <button class="export-btn btn-copy" onclick="copyForWord(true)" style="margin-right:8px" title="Funziona anche senza librerie esterne">📋 Copia per Word (definitivo)</button>
         <button class="export-btn btn-md" onclick="exportMarkdown(true)" style="margin-right:8px" title="Funziona anche offline">📝 Markdown (definitivo)</button>
         <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF (definitivo)</button>
+        <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="margin-left:8px;background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
         <div class="usage-notice" style="margin-top:9px;margin-bottom:0"><strong>Per la condivisione con i colleghi:</strong> usare preferibilmente Copia per Word, Markdown o PDF. Il Word impaginato resta disponibile solo se il browser riesce a caricare la libreria esterna.</div>
         <p style="font-size:11px;color:#e65100;margin:6px 0 0;line-height:1.4">⚠️ <strong>Documento di lavoro — da validare.</strong> Non sostituisce delibera del Collegio Docenti.</p>
       </div>
@@ -2233,6 +2236,72 @@ function downloadTecnologiaMarkdown(){
   const filename = `CurricoloVerticale_IC_DonMilani_Tecnologia_Bozza_${new Date().toISOString().slice(0,10)}.md`;
   downloadMarkdownString(_tecnologiaMarkdownCache, filename);
   showToast('⬇ File Markdown scaricato!');
+}
+
+function buildTeacherCmlModel(){
+  const now = new Date();
+  const all = allItems();
+  const tot = all.length;
+  const ok = all.filter(x=>x.status==="ok").length;
+  const mod = all.filter(x=>x.status==="modifica").length;
+  const nuovo = all.filter(x=>x.status==="nuovo").length;
+  const proposals = [];
+  for(const disc in DATA){
+    const d = DATA[disc];
+    const items = [...(d.traguardi||[]), ...(d.obiettivi||[])];
+    const pending = items.filter(x=>x.status!=="ok");
+    for(const it of pending){
+      proposals.push({
+        id: it.id,
+        discipline: disc,
+        ordine: it.ordine,
+        classe: it.classe||"",
+        type: it.id && it.id.includes('ob') ? "obiettivo" : "traguardo",
+        status: it.status,
+        decisione: it.decisione||null,
+        testoAttuale: cleanInlineIn2025Marker(it.testo),
+        proposta: cleanInlineIn2025Marker(it.proposto),
+        motivazione: it.motivazione||"",
+        fonte: it.fonte||it.source||""
+      });
+    }
+  }
+  return {
+    schemaVersion: "1.0",
+    fileType: "teacher_proposal",
+    appName: "CurManLight",
+    createdAt: now.toISOString(),
+    role: "teacher",
+    discipline: selDisc || userProfile.disciplina,
+    sourceContext: {
+      currentFramework: "D.M. 254/2012",
+      revisionFramework: "D.M. 221/2025"
+    },
+    counts: {
+      total: tot,
+      ok: ok,
+      modifica: mod,
+      nuovo: nuovo
+    },
+    proposals: proposals,
+    checks: {
+      hasProposals: proposals.length>0,
+      hasDiscipline: Boolean(selDisc),
+      hasSources: proposals.some(p=>p.fonte)
+    },
+    humanValidationRequired: true
+  };
+}
+
+function exportTeacherCml(){
+  const model = buildTeacherCmlModel();
+  const json = JSON.stringify(model, null, 2);
+  const blob = new Blob([json], {type:"application/json;charset=utf-8"});
+  const discName = model.discipline || "Curricolo";
+  const safeDisc = discName.replace(/\s+/g, '_').replace(/[^\w\-]/g, '');
+  const filename = `proposta_docente_${safeDisc}_${new Date().toISOString().slice(0,10)}.cml`;
+  downloadBlob(blob, filename);
+  showToast('✅ File proposta .cml generato correttamente');
 }
 
 // ================================================================
