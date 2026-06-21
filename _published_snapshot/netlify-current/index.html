@@ -436,6 +436,36 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
 .tab-generali ul{font-size:12px;color:#333;line-height:1.6;margin:4px 0 8px;padding-left:18px}
 .tab-generali li{margin:0 0 4px}
 
+/* CRUSCOTTO */
+.cruscotto{background:linear-gradient(135deg,#e8eaf6,#c5cae9);border-radius:12px;padding:12px 16px;margin:8px auto 0;max-width:calc(1600px - 24px);width:calc(100% - 24px);box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.cruscotto-main{display:flex;flex-direction:column;gap:8px}
+.cruscotto-state{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#1a237e;opacity:.75}
+.cruscotto-next{font-size:14px;font-weight:700;color:#1a237e;margin:0}
+.cruscotto-btns{display:flex;gap:6px;flex-wrap:wrap}
+.cruscotto-btn{padding:7px 14px;border:1px solid #3f51b5;border-radius:999px;background:#fff;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:.1s;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.cruscotto-btn:hover{background:#e8eaf6}
+.cruscotto-primary{background:#1a237e;color:#fff;border-color:#1a237e}
+.cruscotto-primary:hover{background:#283593}
+.cruscotto-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:11px;color:#37474f;border-top:1px solid rgba(26,35,126,.12);padding-top:8px;margin-top:2px}
+.cruscotto-save{display:inline-flex;align-items:center;gap:4px;color:#2e7d32;font-weight:600;font-size:11px}
+.cruscotto-prog{display:inline-flex;align-items:center;gap:4px;color:#1a237e;font-weight:700;font-size:11px}
+.cruscotto-toggle{background:rgba(255,255,255,.7);border:1px solid #c5cae9;border-radius:999px;padding:4px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;color:#1a237e;margin-left:auto}
+.cruscotto-toggle:hover{background:#fff}
+.cruscotto .quick-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;padding-top:6px;border-top:1px solid rgba(26,35,126,.12)}
+.cruscotto-dismiss{background:transparent;border:none;color:#7986cb;cursor:pointer;font-size:16px;padding:0 4px;border-radius:50%;flex-shrink:0;line-height:1}
+.cruscotto-dismiss:hover{background:rgba(26,35,126,.12);color:#1a237e}
+@media(max-width:760px){
+  .cruscotto{width:calc(100% - 16px);padding:10px 12px;margin:6px auto 0}
+  .cruscotto-next{font-size:13px}
+  .cruscotto-btns{flex-direction:column}
+  .cruscotto-btn{width:100%;justify-content:center;min-height:40px;font-size:12px}
+  .cruscotto-bar{gap:7px}
+  .cruscotto-toggle{margin-left:0;width:auto;min-height:34px}
+  .cruscotto .quick-actions{flex-direction:column}
+  .cruscotto .quick-actions .quick-btn,.cruscotto .quick-actions .course-link{width:100%;justify-content:center;font-size:12px;padding:9px 10px}
+}
+@media print{.cruscotto{display:none!important}}
+
 @media print{
   .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali,.tecnologia-export-panel{display:none!important}
   .layout{padding:0;display:block}
@@ -469,11 +499,23 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
   <button onclick="setTab('normativa')">📜 Riferimenti normativi</button>
   <button onclick="setTab('generali')">📖 Sezioni generali</button>
 </div>
-<div class="quick-info-bar compact-actions" id="quick-info-bar">
-  <div class="quick-summary-row">
-    <span class="save-chip" title="Le modifiche vengono salvate nel browser di questo dispositivo">Salvataggio locale disponibile</span>
-    <span class="profile-summary" id="active-profile-summary">Profilo non configurato</span>
-    <button id="quick-actions-toggle" class="quick-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions">Azioni ▾</button>
+<div class="cruscotto" id="cruscotto">
+  <div class="cruscotto-main">
+    <div>
+      <span class="cruscotto-state">Stato: revisione avviata</span>
+      <div class="cruscotto-next">Prossima azione: controlla le 12 voci da validare</div>
+    </div>
+    <div class="cruscotto-btns">
+      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})">📋 Controlla voci</button>
+      <button class="cruscotto-btn" type="button" onclick="setTab('riepilogo')">📖 Apri documento</button>
+      <button class="cruscotto-btn" type="button" onclick="var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})">📤 Esporta</button>
+    </div>
+    <div class="cruscotto-bar">
+      <span class="cruscotto-save">💾 Salvataggio locale</span>
+      <span class="cruscotto-prog"><span id="prog-label" style="font-size:11px!important;font-weight:700!important;color:#1a237e!important">—</span> <span id="prog-pct" style="font-size:11px!important;color:#1a237e!important;font-weight:700!important">0%</span></span>
+      <div class="prog-bar-bg" style="flex:1;max-width:160px;height:6px"><div class="prog-bar-fill" id="prog-fill" style="width:0%;height:100%"></div></div>
+      <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions">⚙️ Azioni ▾</button>
+    </div>
   </div>
   <div class="quick-actions" id="quick-actions" hidden>
     <button id="install-app-btn" class="quick-btn install-btn" onclick="handleInstallApp()">📲 Installa sul dispositivo</button>
@@ -482,21 +524,6 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
     <a class='course-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Significato operativo del motto latino'>🏛️ Motto e metodo</a>
     <button class="quick-btn" onclick="showWelcome(true)">❔ Guida rapida</button>
   </div>
-</div>
-<div class="orientation-card" id="orientation-card">
-  <div style="flex:1;min-width:0">
-    <h2>Revisione guidata del curricolo</h2>
-    <p>Lo strumento aiuta a confrontare il curricolo vigente (IN 2012) con le proposte di aggiornamento (IN 2025). Le sezioni disciplinari sono consultabili e modificabili solo nel percorso di revisione; ogni scelta deve essere validata dal gruppo di lavoro.</p>
-    <div class="orientation-steps">
-      <span class="orientation-step">1. Scegli una disciplina</span>
-      <span class="orientation-step">2. Confronta 2012 e 2025</span>
-      <span class="orientation-step">3. Valuta e decidi</span>
-      <span class="orientation-step">4. Approva, modifica o mantieni</span>
-      <span class="orientation-step">5. Consulta ed esporta</span>
-    </div>
-    <div class="orientation-note">Il sistema non approva automaticamente il curricolo: organizza il lavoro e rende tracciabili le decisioni.</div>
-  </div>
-  <button class="orientation-dismiss" onclick="this.parentElement.remove()" aria-label="Chiudi orientamento" title="Chiudi">×</button>
 </div>
 <div class="layout">
   <aside>
@@ -508,36 +535,41 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
   <main id="main-content">
     <!-- TAB LAVORO -->
     <div id="tab-lavoro">
-      <div class="install-hint" id="install-hint"><strong>Installazione:</strong> se lo strumento è aperto da un indirizzo web sicuro, puoi aggiungerlo alla schermata iniziale e usarlo come applicazione. Il lavoro resta salvato in locale nel browser del dispositivo.</div>
+      <div class="install-hint" id="install-hint" style="display:none"><strong>Installazione:</strong> se lo strumento è aperto da un indirizzo web sicuro, puoi aggiungerlo alla schermata iniziale e usarlo come applicazione. Il lavoro resta salvato in locale nel browser del dispositivo.</div>
       <div class="toolbar">
         <span style="font-weight:700;color:#333;font-size:12px">Filtro:</span>
         <button class="filter-btn active" onclick="setFilter('all',this)">Tutti</button>
         <button class="filter-btn" onclick="setFilter('pending',this)">⏳ Da decidere</button>
-        <button class="filter-btn" onclick="setFilter('approvata',this)">✅ Approvati</button>
-        <button class="filter-btn" onclick="setFilter('rifiutata',this)">❌ Rifiutati</button>
-        <button class="filter-btn" onclick="setFilter('ok',this)">✓ Invariati</button>
-        <button class="filter-btn" onclick="setFilter('nuovo',this)">★ Nuovi</button>
-        <label class="toggle-lbl"><input type="checkbox" id="hide-ok" onchange="render()"> Nascondi invariati</label>
-        <button class="export-btn btn-word" onclick="exportWord()" title="Richiede connessione per la libreria Word avanzata">📄 Word</button>
-        <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word</button>
-        <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Markdown</button>
-        <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF</button>
-        <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: percorso sicuro.</span>
+        <span style="cursor:pointer;font-size:11px;color:#1a237e;font-weight:700" onclick="var e=document.getElementById('more-filters');e.hidden=!e.hidden;this.textContent=e.hidden?'⋯ Altri filtri':'⋯ Meno filtri'">⋯ Altri filtri</span>
+        <span id="more-filters" hidden>
+          <button class="filter-btn" onclick="setFilter('approvata',this)">✅ Approvati</button>
+          <button class="filter-btn" onclick="setFilter('rifiutata',this)">❌ Rifiutati</button>
+          <button class="filter-btn" onclick="setFilter('ok',this)">✓ Invariati</button>
+          <button class="filter-btn" onclick="setFilter('nuovo',this)">★ Nuovi</button>
+          <label class="toggle-lbl"><input type="checkbox" id="hide-ok" onchange="render()"> Nascondi invariati</label>
+        </span>
+        <span style="color:#ccc">|</span>
+        <span style="cursor:pointer;font-size:11px;color:#1a237e;font-weight:700" onclick="var e=document.getElementById('toolbar-export');e.hidden=!e.hidden;this.textContent=e.hidden?'📄 Export ▾':'📄 Export ▴'">📄 Export ▾</span>
+        <span id="toolbar-export" hidden>
+          <button class="export-btn btn-word" onclick="exportWord()" title="Richiede connessione per la libreria Word avanzata">📄 Word</button>
+          <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word</button>
+          <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Markdown</button>
+          <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF</button>
+          <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: sicuri.</span>
+        </span>
       </div>
-      <div class="usage-notice"><strong>Uso ibrido.</strong> Lo strumento può essere aperto come file locale anche da telefono per consultare, revisionare, copiare il testo, scaricare Markdown e stampare/salvare in PDF. L’esportazione Word impaginata è un’opzione avanzata: funziona quando la libreria esterna è raggiungibile, preferibilmente da computer. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</div>
-      <div class="local-save-bar">
-        <strong>💾 Salvataggio locale attivo.</strong>
+      <details class="usage-notice" style="padding:6px 13px">
+        <summary style="cursor:pointer;font-weight:700;font-size:12px;color:#5d4037">💡 Uso ibrido e requisiti</summary>
+        <p style="margin-top:6px;font-size:11px;color:#5d4037;line-height:1.45">Lo strumento può essere aperto come file locale anche da telefono per consultare, revisionare, copiare il testo, scaricare Markdown e stampare/salvare in PDF. L'esportazione Word impaginata è un'opzione avanzata: funziona quando la libreria esterna è raggiungibile, preferibilmente da computer. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
+      </details>
+      <div class="local-save-bar" style="padding:5px 13px;margin-bottom:8px;gap:6px;border-left-width:2px">
+        <strong>💾</strong>
         <span class="local-save-status" id="local-save-status">Ogni decisione viene conservata in questo browser. Usa Backup per portarla su altri dispositivi.</span>
-        <button class="local-save-btn" onclick="saveLocalState(false)">💾 Salva ora</button>
-        <button class="local-save-btn" onclick="exportLocalBackup()">⬇️ Backup</button>
-        <button class="local-save-btn" onclick="document.getElementById('local-backup-input').click()">⬆️ Importa</button>
-        <button class="local-save-btn danger" onclick="resetLocalState()">↺ Ripristina</button>
+        <button class="local-save-btn" onclick="saveLocalState(false)" style="padding:2px 7px;font-size:10px">💾 Salva</button>
+        <button class="local-save-btn" onclick="exportLocalBackup()" style="padding:2px 7px;font-size:10px">⬇️ Backup</button>
+        <button class="local-save-btn" onclick="document.getElementById('local-backup-input').click()" style="padding:2px 7px;font-size:10px">⬆️ Importa</button>
+        <button class="local-save-btn danger" onclick="resetLocalState()" style="padding:2px 7px;font-size:10px">↺ Ripristina</button>
         <input id="local-backup-input" type="file" accept="application/json,.json" onchange="importLocalBackup(event)" style="display:none">
-      </div>
-      <div class="progress-wrap">
-        <span style="font-size:11px;font-weight:700;color:#1a237e" id="prog-label">—</span>
-        <div class="prog-bar-bg"><div class="prog-bar-fill" id="prog-fill" style="width:0%"></div></div>
-        <span id="prog-pct" style="font-size:11px;color:#1a237e;font-weight:700">0%</span>
       </div>
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
         <div class="tecnologia-export-header">
