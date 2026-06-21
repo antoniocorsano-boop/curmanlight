@@ -156,7 +156,7 @@ button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.2
 .collapse-header{display:flex;align-items:center;gap:6px;padding:7px 10px;cursor:pointer;flex-wrap:wrap;user-select:none}
 .collapse-header:hover{opacity:.8}
 .collapse-summary{flex:1;min-width:0;font-size:11px;color:#666;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.35}
-.collapse-indicator{font-size:11px;color:#90a4ae;flex-shrink:0;transition:transform .15s}
+.collapse-indicator{font-size:12px;color:#546e7a;flex-shrink:0}
 .collapse-body{display:none}
 .collapse-body.open{display:block}
 .pending-card{background:#fff;border-color:#ffcc80}
@@ -294,7 +294,7 @@ img,svg,video{max-width:100%;height:auto}
   .pending-body{gap:5px;padding:0 10px 6px;flex-direction:column;align-items:stretch}
   .pending-text{white-space:normal}
   .pending-actions{justify-content:center;gap:5px}
-  .pending-action{min-height:34px;padding:5px 10px;font-size:12px}
+  .pending-action{min-height:42px;padding:5px 10px;font-size:12px}
   .add-row{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0 4px}
   .add-btn{min-height:42px;justify-content:center;font-size:12px}
 
@@ -349,7 +349,7 @@ img,svg,video{max-width:100%;height:auto}
   .panel,.card-body{padding:10px}
   .panel-text,.card-body{font-size:12.5px}
   .collapse-header{min-height:38px;padding:6px 8px}
-  .pending-action{font-size:11px;min-height:32px;padding:4px 7px}
+  .pending-action{font-size:11px;min-height:40px;padding:4px 7px}
   .act{font-size:11.5px;min-height:42px}
 
   .sum-box{padding:11px}
@@ -1331,7 +1331,7 @@ function togglePendingDetail(id) {
   if (!el) return;
   const open = el.classList.toggle("open");
   const btn = document.getElementById("pdb-" + id);
-  if (btn) btn.textContent = open ? "📖" : "🔍";
+  if (btn) { btn.textContent = open ? "📖" : "🔍"; btn.setAttribute("aria-label", open ? "Nascondi confronto" : "Mostra confronto"); }
 }
 
 function toggleCollapse(id) {
@@ -1427,7 +1427,7 @@ function cardHTML(item, type) {
       <span class="pending-actions">
         <button class="pending-action approve" onclick="approve('${item.id}')" title="Approva">✅</button>
         <button class="pending-action reject" onclick="reject('${item.id}')" title="Mantieni testo attuale">❌</button>
-        <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" title="Mostra confronto" id="pdb-${item.id}">🔍</button>
+        <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" title="Mostra confronto" id="pdb-${item.id}" aria-label="Mostra confronto">🔍</button>
         <button class="pending-action del" onclick="confirmRemove('${type}','${item.id}')" title="Rimuovi">🗑</button>
       </span>
     </div>

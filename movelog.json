@@ -1,0 +1,12 @@
+{
+  "movelog": [
+    {
+      "data": "2026-06-21",
+      "task": "CML-010F",
+      "descrizione": "Miglioramento UX mobile e accessibilità",
+      "file": "_published_snapshot/netlify-current/index.html",
+      "modifiche": 5,
+      "stato": "completato"
+    }
+  ]
+}
