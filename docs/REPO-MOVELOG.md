@@ -166,9 +166,22 @@
 
 ## 2026-06-21 — CML-010F2 — Mobile Pending Action Touch Target and Doc Normalization
 
-- **HEAD attuale** — fix: normalize CML mobile pending actions touch target
+- **4c8978b** — fix: normalize CML mobile pending actions touch target
 - P1 risolto: 42px→44px (≤900px), 40px→44px (≤560px)
 - Documentazione normalizzata: `docs/03_execution/CML-010F2.md`, `report/`, `docs/REPO-MOVELOG.md`
 - File non standard CML-010F preservati (già committati)
 - Nessun deploy
 - Verdetto: `CML_010F2_MOBILE_TOUCH_TARGET_DOC_NORMALIZATION_READY`
+
+## 2026-06-21 — CML-010G — Controlled Netlify Publication Mobile Actions Fix
+
+- **4c8978b** — fix: normalize CML mobile pending actions touch target (pre-deploy)
+- Count 12/8/4 vs 54/41/9 chiarito: scope diverso (Tecnologia vs tutte le discipline)
+- **npx netlify deploy --prod --dir _published_snapshot/netlify-current** — 1 file (index.html)
+- URL pubblicato: https://curmanlight.netlify.app
+- Pending-action mobile a 44px confermato su tutti i breakpoint
+- Card compatte, pulsanti ✅❌🔍🗑, dettaglio espandibile preservati
+- Approvazione/rifiuto invariati
+- Asset, sw.js, _headers, PDF, Markdown generation, export panel intatti
+- Nessuna regressione bloccante
+- Verdetto: `CML_010G_CONTROLLED_NETLIFY_PUBLICATION_MOBILE_ACTIONS_FIX_CLOSED`
