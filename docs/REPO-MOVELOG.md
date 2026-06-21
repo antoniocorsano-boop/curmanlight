@@ -121,3 +121,21 @@
 - Sass: screenshot 360/414/768/1280px passati
 - Nessuna modifica runtime, nessun deploy
 - Verdetto: `CML_010C_COMPACT_PENDING_CARDS_RUNTIME_SMOKE_READY`
+
+## 2026-06-21 — CML-010D — Controlled Netlify Publication (Compact Cards)
+
+- **68ce101** — HEAD (deploy da working tree pulita, nessuna modifica runtime)
+- Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
+- Asset invariati: sw.js, _headers, PDF (hash verificati) ✅
+- Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
+  - 1 file index.html, 4.2s
+  - URL: https://curmanlight.netlify.app
+- Verifica post-deploy:
+  - HTTP 200, 196511 bytes ✅
+  - pending-card, collapse-header, gap-header-unique ✅
+  - badge modifica ✅
+  - Cruscotto, usage-notice, export preservati ✅
+  - .act-approve old rimosso, vecchio gap-header assente ✅
+  - Screenshot 360/414/768/1280px passati ✅
+  - Nessun JS error ✅
+- Verdetto: `CML_010D_CONTROLLED_NETLIFY_PUBLICATION_COMPACT_CARDS_CLOSED`
