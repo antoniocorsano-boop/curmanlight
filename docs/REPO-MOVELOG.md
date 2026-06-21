@@ -427,3 +427,18 @@
 - Nessuna regressione
 - Raccomandazione: chiudere fase UX dettaglio, aprire ciclo su qualità contenuti disciplinari
 - Verdetto: `CML_015A_REAL_USER_DETAIL_PANEL_MICRO_TEST_READY`
+
+## 2026-06-21 — CML-016A — Disciplinary Content, Sources and Export Quality Audit
+
+- **9a6343f** — docs: record CML detail panel real user micro-test (HEAD partenza)
+- Solo audit e documentazione — nessuna modifica runtime, nessun deploy
+- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `9a6343f`, tree pulita ✅
+- Audit completo: 14 discipline analizzate, 8 criticità individuate (2 media gravità)
+- Contenuti disciplinari: linguaggio adeguato, riferimenti territoriali, distinzione vigente/proposta ✅
+- Fonti: specifiche e contestuali, normativa completa ✅
+- Curricolo definitivo: struttura chiara, disclaimer presente ✅
+- Export: Markdown/Word/PDF professionali, confronto/definitivo distinti ✅
+- C1: marker `[IN 2025]` inline nel testo proposto — da separare
+- C2: nessuna distinzione approvato/personalizzato nel Riepilogo — da indicare
+- Opzione D selezionata per CML-016B: cleanup marker + indicatore personalizzazione
+- Verdetto: `CML_016A_DISCIPLINARY_CONTENT_SOURCES_EXPORT_QUALITY_AUDIT_READY`
