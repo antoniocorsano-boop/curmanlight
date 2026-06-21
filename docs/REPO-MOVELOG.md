@@ -224,3 +224,10 @@
 - Opzione B strutturale NON necessaria — microcopy sufficiente
 - Obiettivo ciclo raggiunto: export/guida comprensibili, confronto/definitivo distinguibili, disclaimer validazione presente
 - Verdetto: `CML_011D_EXPORT_GUIDE_CLARITY_CYCLE_CLOSED`
+
+## 2026-06-21 — CML-012A — Real User Task Acceptance Test Design
+
+- **15fc009** (CML-011D) → HEAD + nuovo commit docs
+- Protocollo `T01-CML-REAL-USER-TASK` progettato: 8 passi, criterio 8/8 per chiusura UX
+- Nessuna modifica runtime, nessun deploy
+- Verdetto: `CML_012A_REAL_USER_TEST_DESIGN_READY`
