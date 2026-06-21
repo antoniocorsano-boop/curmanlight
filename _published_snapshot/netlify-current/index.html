@@ -218,6 +218,22 @@ button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.2
 footer{background:#37474f;color:#b0bec5;padding:7px 20px;font-size:10px;text-align:center;margin-top:auto}
 
 
+/* BREADCRUMB */
+.path-breadcrumb{font-size:11px;color:#78909c;padding:8px 0 2px;margin:0 auto;max-width:calc(1600px - 24px);width:calc(100% - 24px)}
+.path-breadcrumb .crumb-sep{margin:0 4px;color:#b0bec5}
+.path-breadcrumb .crumb-current{color:#37474f;font-weight:700}
+/* GUIDED HOME — cruscotto enhanced */
+.cruscotto-btn{font-size:13px;padding:9px 18px;box-shadow:0 1px 4px rgba(26,35,126,.1)}
+.cruscotto-primary{box-shadow:0 2px 8px rgba(26,35,126,.2)}
+.cruscotto-primary:hover{box-shadow:0 3px 12px rgba(26,35,126,.3)}
+.cruscotto-state{font-size:11px}
+.cruscotto-next{font-size:16px}
+/* SIDEBAR — less dominant on desktop */
+.aside-box{box-shadow:0 0 0 1px #eceff1}
+.aside-title{background:#78909c;padding:6px 11px}
+/* TOOLBAR — compact */
+.toolbar{box-shadow:none;border:1px solid #eceff1;padding:7px 11px}
+.filter-btn{font-size:10px;padding:3px 9px}
 /* ================================================================
    RESPONSIVE FULL — telefono, tablet, desktop
    Intervento: layout fluido, menu discipline orizzontale su mobile,
@@ -532,6 +548,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
   <button onclick="setTab('normativa')">📜 Riferimenti normativi</button>
   <button onclick="setTab('generali')">📖 Sezioni generali</button>
 </div>
+<div class="path-breadcrumb" id="breadcrumb"><span class="crumb-current">Revisione per disciplina</span></div>
 <div class="cruscotto" id="cruscotto">
   <div class="cruscotto-main">
     <div>
@@ -544,13 +561,18 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
       <button class="cruscotto-btn" type="button" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})">📤 Esporta</button>
     </div>
     <div class="cruscotto-bar">
-      <span class="cruscotto-save">💾 Salvataggio locale</span>
+      <span class="cruscotto-save"><span id="local-save-status">💾 Ogni decisione viene conservata in questo browser.</span></span>
       <span class="cruscotto-prog"><span id="prog-label" style="font-size:11px!important;font-weight:700!important;color:#1a237e!important">—</span> <span id="prog-pct" style="font-size:11px!important;color:#1a237e!important;font-weight:700!important">0%</span></span>
       <div class="prog-bar-bg" style="flex:1;max-width:160px;height:6px"><div class="prog-bar-fill" id="prog-fill" style="width:0%;height:100%"></div></div>
       <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions">⚙️ Azioni ▾</button>
     </div>
   </div>
   <div class="quick-actions" id="quick-actions" hidden>
+    <button class="quick-btn" onclick="saveLocalState(false)" style="gap:4px">💾 Salva</button>
+    <button class="quick-btn" onclick="exportLocalBackup()" style="gap:4px">⬇️ Backup</button>
+    <button class="quick-btn" onclick="document.getElementById('local-backup-input').click()" style="gap:4px">⬆️ Importa</button>
+    <button class="quick-btn" onclick="resetLocalState()" style="gap:4px;color:#b71c1c">↺ Ripristina</button>
+    <input id="local-backup-input" type="file" accept="application/json,.json" onchange="importLocalBackup(event)" style="display:none">
     <button id="install-app-btn" class="quick-btn install-btn" onclick="handleInstallApp()">📲 Installa sul dispositivo</button>
     <button class="quick-btn" onclick="openSettingsModal()">👤 Impostazioni / onboarding</button>
     <a class="course-link" href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener">📘 Apri il corso in PDF</a>
@@ -595,15 +617,6 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <summary style="cursor:pointer;font-weight:700;font-size:12px;color:#5d4037">💡 Uso ibrido e requisiti</summary>
         <p style="margin-top:6px;font-size:11px;color:#5d4037;line-height:1.45">Lo strumento può essere aperto come file locale anche da telefono per consultare, revisionare, copiare il testo, scaricare Markdown e stampare/salvare in PDF. L'esportazione Word impaginata è un'opzione avanzata: funziona quando la libreria esterna è raggiungibile, preferibilmente da computer. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
       </details>
-      <div class="local-save-bar" style="padding:5px 13px;margin-bottom:8px;gap:6px;border-left-width:2px">
-        <strong>💾</strong>
-        <span class="local-save-status" id="local-save-status">Ogni decisione viene conservata in questo browser. Usa Backup per portarla su altri dispositivi.</span>
-        <button class="local-save-btn" onclick="saveLocalState(false)" style="padding:4px 9px;font-size:11px">💾 Salva</button>
-        <button class="local-save-btn" onclick="exportLocalBackup()" style="padding:4px 9px;font-size:11px">⬇️ Backup</button>
-        <button class="local-save-btn" onclick="document.getElementById('local-backup-input').click()" style="padding:4px 9px;font-size:11px">⬆️ Importa</button>
-        <button class="local-save-btn danger" onclick="resetLocalState()" style="padding:4px 9px;font-size:11px">↺ Ripristina</button>
-        <input id="local-backup-input" type="file" accept="application/json,.json" onchange="importLocalBackup(event)" style="display:none">
-      </div>
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
         <div class="tecnologia-export-header">
           <span class="tecnologia-export-title">📤 Export del curricolo revisionato</span>

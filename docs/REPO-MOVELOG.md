@@ -240,3 +240,14 @@
 - Direzione: da dashboard a percorso guidato a livelli
 - Nessuna modifica runtime, nessun deploy
 - Verdetto: `CML_013A_FULL_UI_UX_REDESIGN_CONTRACT_READY`
+
+## 2026-06-21 — CML-013B — Guided Home Static Prototype
+
+- **e3c105d** (CML-013A) → HEAD + modifiche runtime minime
+- 23 insertion, 10 deletion su `_published_snapshot/netlify-current/index.html`
+- Solo CSS + HTML: cruscotto potenziato (3 pulsanti piu grandi), breadcrumb, sidebar meno dominante, toolbar piu compatta
+- Salva/Backup/Importa/Ripristina spostati da blocco locale-save-bar a menu Azioni
+- Salvataggio come stato compatto nel cruscotto-bar
+- Nessuna logica modificata, nessuna funzione persa
+- Nessun deploy
+- Verdetto: `CML_013B_GUIDED_HOME_STATIC_PROTOTYPE_READY`
