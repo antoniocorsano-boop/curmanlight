@@ -231,3 +231,12 @@
 - Protocollo `T01-CML-REAL-USER-TASK` progettato: 8 passi, criterio 8/8 per chiusura UX
 - Nessuna modifica runtime, nessun deploy
 - Verdetto: `CML_012A_REAL_USER_TEST_DESIGN_READY`
+
+## 2026-06-21 — CML-013A — Full UI/UX Redesign Study and Contract
+
+- **2c32bab** (CML-012A) → HEAD + nuovo commit docs
+- CML-012A preservato come verifica futura (non modificato)
+- Studio completo: diagnosi, architettura (5 livelli), navigazione desktop/mobile, componenti, mappa 30 elementi, criteri accettazione CML-013B
+- Direzione: da dashboard a percorso guidato a livelli
+- Nessuna modifica runtime, nessun deploy
+- Verdetto: `CML_013A_FULL_UI_UX_REDESIGN_CONTRACT_READY`
