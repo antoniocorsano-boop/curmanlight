@@ -215,3 +215,12 @@
 - Opzione B (strutturale) NON necessaria
 - Raccomandazione: chiudere ciclo CML-011
 - Verdetto: `CML_011C_EXPORT_GUIDE_REAL_TASK_SMOKE_READY`
+
+## 2026-06-21 — CML-011D — Export and Guide Clarity Cycle Closure
+
+- **72bef0c** (CML-011C) → HEAD + nuovo commit docs
+- Solo docs — nessuna modifica runtime, nessun deploy
+- Catena CML-011 completa: A (audit) → B (microcopy + deploy) → C (smoke) → D (chiusura)
+- Opzione B strutturale NON necessaria — microcopy sufficiente
+- Obiettivo ciclo raggiunto: export/guida comprensibili, confronto/definitivo distinguibili, disclaimer validazione presente
+- Verdetto: `CML_011D_EXPORT_GUIDE_CLARITY_CYCLE_CLOSED`
