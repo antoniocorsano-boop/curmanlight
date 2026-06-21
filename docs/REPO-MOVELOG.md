@@ -343,3 +343,29 @@
 - **Problemi:** 2 cosmetici non bloccanti (CSS `.local-save-bar` morto, sintassi media query nidificata ridondante)
 - Asset invariati: sw.js, _headers, PDF (confermati da git diff)
 - Verdetto: `CML_013G_MOBILE_NAVIGATION_PUBLICATION_SMOKE_CLOSED`
+
+## 2026-06-21 — CML-014A — Contextual Detail Panel Design Audit
+
+- **b7d7f72** — docs: close CML mobile navigation publication smoke (pre-audit HEAD)
+- Solo audit e documentazione — nessuna modifica runtime, nessun deploy
+- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `b7d7f72`, tree pulita ✅
+- **Analisi dettaglio attuale:** `cardHTML()` (linee 1393-1497), `togglePendingDetail()` (1377-1383), `.panels` grid 2→1 colonna su mobile ⚠️
+- **7 criticità individuate:**
+  - C1: dettaglio lungo su mobile (stack verticale)
+  - C2: confronto poco gerarchico (nessuna evidenziazione differenze)
+  - C3: fonti non contestuali (nessuna fonte normativa nei label)
+  - C4: "Personalizza testo" sepolto nel dettaglio
+  - C5: lista appesantita con più dettagli aperti
+  - C6: gap mobile/desktop (1 colonna vs 2 colonne)
+  - C7: compatibilità bottom bar (già risolta)
+- **Opzioni valutate:** A (expand migliorato), B (pannello laterale), C (modal/drawer)
+- **Opzione selezionata: A — Dettaglio espandibile migliorato**
+  - Confronto con fonti specifiche (es. "DM 254/2012, Traguardo X.1")
+  - Differenze IN2012/IN2025 evidenziate visivamente
+  - "Personalizza testo" sempre nella riga azioni principale
+  - Mobile: scroll interno con max-height
+  - Desktop: 2 colonne preservato
+  - Card ok/decise invariate
+- **16 criteri accettazione CML-014B** definiti
+- **Problemi cosmetici CML-013G:** lasciati come debt non bloccante (separati da CML-014B)
+- Verdetto: `CML_014A_CONTEXTUAL_DETAIL_PANEL_DESIGN_AUDIT_READY`
