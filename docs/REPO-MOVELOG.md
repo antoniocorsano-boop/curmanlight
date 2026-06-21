@@ -539,3 +539,15 @@
 - Responsive PASS: 390, 768, 1280 px; console pulita
 - PDF, sw.js, _headers e asset invariati
 - Verdetto: CML_021A_DEPARTMENT_PROPOSAL_IMPORT_SMOKE_READY
+
+## 2026-06-22 — CML-022 — Department Outcome CML Export
+
+- 0434f0c — feat: department guided teacher proposal import (HEAD partenza)
+- Funzione `setDepartmentDecision()` aggiunta per registrare decisioni dipartimentali
+- Funzione `buildDepartmentOutcomeCmlModel()` aggiunta per costruire modello esito
+- Funzione `exportDepartmentOutcomeCml()` aggiunta per scaricare file esito dipartimento
+- Pulsante "Esporta esito dipartimento .cml" aggiunto nel pannello Validazione dipartimentale
+- Decisioni supportate: accolta, accolta_con_modifiche, rinviata, non_accolta
+- Schema department_outcome documentato in contract
+- Nessun Google API, nessun Apps Script, nessun deploy
+- Verdetto: CML_022_DEPARTMENT_OUTCOME_CML_EXPORT_READY

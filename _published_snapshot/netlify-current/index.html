@@ -78,14 +78,7 @@ main{flex:1;min-width:0}
 .department-file-row{background:#fff;border:1px solid #cfd8dc;border-radius:6px;padding:6px 8px}
 .department-file-row.invalid{border-left:3px solid #c62828}
 .department-file-row.valid{border-left:3px solid #2e7d32}
-.department-proposal-group{margin-top:10px}
-.department-proposal-group h3{font-size:12px;color:#1a237e;margin:8px 0 5px}
-.department-proposal-subhead{font-size:10px;font-weight:800;color:#607d8b;text-transform:uppercase;letter-spacing:.7px;margin:7px 0 4px}
-.department-proposal-card{background:#fff;border:1px solid #cfd8dc;border-left:3px solid #5c6bc0;border-radius:7px;padding:8px 10px;margin-bottom:6px}
-.department-proposal-meta{font-size:10px;color:#607d8b;margin-bottom:4px}
-.department-proposal-text{font-size:11px;color:#263238;margin:4px 0}
-.department-proposal-field{font-size:10px;color:#455a64;margin-top:3px}
-.department-check-chip{display:inline-block;background:#fff3e0;color:#e65100;border-radius:999px;padding:2px 7px;margin:4px 3px 0 0;font-size:9px;font-weight:700}
+.department-proposal-decision{margin-top:6px}
 @media(max-width:640px){.department-import-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.department-import-btn{width:100%}.department-import-controls{align-items:stretch}}
 .usage-notice{background:#fff8e1;border:1px solid #ffe082;border-left:3px solid #f9a825;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#5d4037;line-height:1.45;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .usage-notice strong{color:#3e2723}
@@ -2439,7 +2432,8 @@ function normalizeDepartmentProposal(proposal,model,fileName,duplicate){
     text:String(text),
     motivation:String(proposal?.motivazione||""),
     evidence:String(evidence),
-    issues
+    issues,
+    decision:null
   };
 }
 
@@ -2513,23 +2507,67 @@ function renderDepartmentImport(){
     grouped[proposal.discipline][proposal.status]??=[];
     grouped[proposal.discipline][proposal.status].push(proposal);
   }
-  for(const discipline of Object.keys(grouped).sort()){
-    html+='<section class="department-proposal-group"><h3>'+escapeHtml(discipline)+'</h3>';
-    for(const status of Object.keys(grouped[discipline]).sort()){
-      html+='<div class="department-proposal-subhead">'+escapeHtml(status)+'</div>';
-      html+=grouped[discipline][status].map(proposal=>{
-        const context=[proposal.section,proposal.type,proposal.classe].filter(Boolean).join(" · ");
-        const chips=proposal.issues.map(issue=>'<span class="department-check-chip">'+escapeHtml(issue)+'</span>').join("");
-        return '<article class="department-proposal-card"><div class="department-proposal-meta">'+escapeHtml(context||"Ambito non indicato")+'</div>'+
-          '<div class="department-proposal-text">'+escapeHtml(proposal.text||"Testo non indicato")+'</div>'+
-          '<div class="department-proposal-field"><strong>Motivazione:</strong> '+escapeHtml(proposal.motivation||"Non indicata")+'</div>'+
-          '<div class="department-proposal-field"><strong>Fonti/evidenze:</strong> '+escapeHtml(proposal.evidence||"Non indicate")+'</div>'+chips+'</article>';
-      }).join("");
-    }
-    html+='</section>';
+for(const discipline of Object.keys(grouped).sort()){
+     html+='<section class="department-proposal-group"><h3>'+escapeHtml(discipline)+'</h3>';
+     for(const status of Object.keys(grouped[discipline]).sort()){
+       html+='<div class="department-proposal-subhead">'+escapeHtml(status)+'</div>';
+       html+=grouped[discipline][status].map((proposal,idx)=>{
+         const context=[proposal.section,proposal.type,proposal.classe].filter(Boolean).join(" · ");
+         const chips=proposal.issues.map(issue=>'<span class="department-check-chip">'+escapeHtml(issue)+'</span>').join("");
+var decision=decisionIdx>=0?departmentImportState.proposals[decisionIdx].decision:null;
+          return '<article class="department-proposal-card" data-idx="'+decisionIdx+'"><div class="department-proposal-meta">'+escapeHtml(context||"Ambito non indicato")+'</div>'+
+            '<div class="department-proposal-text">'+escapeHtml(proposal.text||"Testo non indicato")+'</div>'+
+            '<div class="department-proposal-field"><strong>Motivazione:</strong> '+escapeHtml(proposal.motivation||"Non indicata")+'</div>'+
+            '<div class="department-proposal-field"><strong>Fonti/evidenze:</strong> '+escapeHtml(proposal.evidence||"Non indicate")+'</div>'+chips+
+            '<div class="department-proposal-decision" style="margin-top:6px"><strong>Esito del confronto:</strong> <select onchange="setDepartmentDecision('+decisionIdx+',this.value)" style="font-size:11px;padding:3px 6px;border-radius:4px;border:1px solid #90a4ae"><option value="">— Scegli esito —</option><option '+(decision==="confluita_nella_sintesi"?"selected":"")+'>Confluita nella sintesi</option><option '+(decision==="riformulata_dal_dipartimento"?"selected":"")+'>Riformulata dal dipartimento</option><option '+(decision==="assorbita_in_altra_proposta"?"selected":"")+'>Assorbita in altra proposta</option><option '+(decision==="da_chiarire"?"selected":"")+'>Da chiarire</option></select></div></article>';
+       }).join("");
+     }
+     html+='</section>';
+   }
+if(!departmentImportState.proposals.length) html+='<div class="department-import-warning">I file non validi sono stati esclusi dalla lista proposte.</div>';
+   html+='<div style="margin-top:12px;text-align:center"><button class="export-btn btn-cml" onclick="exportDepartmentOutcomeCml()" style="background:#004d40;color:#fff">⬇️ Esporta esito dipartimento .cml</button></div>';
+   host.innerHTML=html;
   }
-  if(!departmentImportState.proposals.length) html+='<div class="department-import-warning">I file non validi sono stati esclusi dalla lista proposte.</div>';
-  host.innerHTML=html;
+
+ function setDepartmentDecision(idx,decision){
+  if(idx<0||idx>=departmentImportState.proposals.length) return;
+  departmentImportState.proposals[idx].decision=decision||null;
+}
+
+function buildDepartmentOutcomeCmlModel(){
+   const now=new Date();
+   const proposals=departmentImportState.proposals||[];
+   const disciplines=[...new Set(proposals.map(p=>p.discipline).filter(Boolean))].sort();
+   const outcome={
+     schemaVersion:"1.0",
+     fileType:"department_outcome",
+     appName:"CurManLight",
+     createdAt:now.toISOString(),
+     role:"department",
+     disciplineWorkStatus:"completed",
+     disciplines:disciplines,
+     proposalHandling:proposals.map(p=>({
+       proposalId:p.id,
+       handling:p.decision,
+       note:""
+     })),
+     checks:{
+       hasProposals:proposals.length>0,
+       hasHandling:proposals.some(p=>p.decision),
+       hasDisciplines:disciplines.length>0
+     },
+     humanValidationRequired:true
+   };
+   return outcome;
+ }
+
+function exportDepartmentOutcomeCml(){
+  const model=buildDepartmentOutcomeCmlModel();
+  const json=JSON.stringify(model,null,2);
+  const blob=new Blob([json],{type:"application/json;charset=utf-8"});
+  const filename=`esito_dipartimento_${new Date().toISOString().slice(0,10)}.cml`;
+  downloadBlob(blob,filename);
+  showToast('✅ Esito dipartimento .cml generato correttamente');
 }
 // DEPARTMENT IMPORT END
 

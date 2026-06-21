@@ -92,6 +92,39 @@
 }
 ```
 
+## 4.2 Schema `department_outcome` (CML-022)
+
+```json
+{
+  "schemaVersion": "1.0",
+  "fileType": "department_outcome",
+  "appName": "CurManLight",
+  "createdAt": "ISO-8601 datetime",
+  "role": "department",
+  "disciplines": ["string"],
+  "proposals": [
+    {
+      "id": "string",
+      "discipline": "string",
+      "status": "string",
+      "decision": "accolta|accolta_con_modifiche|rinviata|non_accolta",
+      "section": "string",
+      "type": "string",
+      "classe": "string",
+      "text": "string",
+      "motivation": "string",
+      "evidence": "string"
+    }
+  ],
+  "checks": {
+    "hasProposals": true,
+    "hasDecisions": true,
+    "hasDisciplines": true
+  },
+  "humanValidationRequired": true
+}
+```
+
 ## 5. Invio automatico al Drive
 
 - La prima automazione riguarda solo il docente.
