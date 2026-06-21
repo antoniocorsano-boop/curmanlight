@@ -284,3 +284,24 @@
   - Nessuna regressione bloccante ✅
 - Nessuna modifica funzionale, nessun merge, nessun nuovo sito
 - Verdetto: `CML_013D_CONTROLLED_NETLIFY_PUBLICATION_GUIDED_HOME_CLOSED`
+
+## 2026-06-21 — CML-013E — Mobile Navigation Structure Audit
+
+- **1c8f3ef** — docs: record CML guided home controlled publication (HEAD invariato)
+- Analisi navigazione mobile attuale: 9 elementi, 7 criticità
+  - Tabbar sovraccarica (4 voci su 360px)
+  - Sidebar discipline sempre visibile (anche su Definitivo/Fonti)
+  - Nessuna bottom bar — azioni primarie solo in alto
+  - Cruscotto occupa >50% viewport mobile
+  - Esporta raggiungibile in 3 tap
+  - Fonti/Generali poco usati ma sempre esposti
+  - Breadcrumb inefficace su mobile
+- Opzioni valutate: A (bottom bar minima), B (menu a scomparsa), **C (sistema ibrido)**
+- Opzione selezionata: **C — Sistema ibrido**
+  - Bottom bar: ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰
+  - Menu ☰: Fonti, Generali, Azioni secondarie
+  - Discipline solo contestuali alla vista Revisione
+  - Desktop invariato (≥901px)
+- 11 criteri di accettazione per CML-013F
+- Nessuna modifica runtime, nessun deploy
+- Verdetto: `CML_013E_MOBILE_NAVIGATION_STRUCTURE_AUDIT_READY`
