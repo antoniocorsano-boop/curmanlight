@@ -240,6 +240,7 @@ img,svg,video{max-width:100%;height:auto}
   .toolbar{align-items:stretch;padding:10px;border-radius:10px;gap:7px}
   .toolbar>span:first-child{width:100%;font-size:12px!important}
   .filter-btn,.export-btn{min-height:40px;padding:8px 11px;font-size:12px;flex:1 1 auto;text-align:center;white-space:nowrap}
+  .toolbar-toggle{display:inline-block;padding:6px 8px;min-height:38px;font-size:12px}
   .toggle-lbl{margin-left:0;width:100%;justify-content:flex-start;min-height:38px;padding:7px 2px;font-size:12px}
   .toggle-lbl input{width:18px;height:18px}
 
@@ -454,6 +455,9 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
 .cruscotto .quick-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;padding-top:6px;border-top:1px solid rgba(26,35,126,.12)}
 .cruscotto-dismiss{background:transparent;border:none;color:#7986cb;cursor:pointer;font-size:16px;padding:0 4px;border-radius:50%;flex-shrink:0;line-height:1}
 .cruscotto-dismiss:hover{background:rgba(26,35,126,.12);color:#1a237e}
+.toolbar-toggle{background:none;border:none;cursor:pointer;font-size:11px;color:#1a237e;font-weight:700;padding:2px 0;display:inline;font-family:inherit;line-height:inherit}
+.toolbar-toggle:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:2px}
+button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:2px}
 @media(max-width:760px){
   .cruscotto{width:calc(100% - 16px);padding:10px 12px;margin:6px auto 0}
   .cruscotto-next{font-size:13px}
@@ -506,9 +510,9 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
       <div class="cruscotto-next">Prossima azione: controlla le 12 voci da validare</div>
     </div>
     <div class="cruscotto-btns">
-      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})">📋 Controlla voci</button>
+      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})">📋 Controlla voci</button>
       <button class="cruscotto-btn" type="button" onclick="setTab('riepilogo')">📖 Apri documento</button>
-      <button class="cruscotto-btn" type="button" onclick="var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})">📤 Esporta</button>
+      <button class="cruscotto-btn" type="button" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})">📤 Esporta</button>
     </div>
     <div class="cruscotto-bar">
       <span class="cruscotto-save">💾 Salvataggio locale</span>
@@ -540,7 +544,7 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
         <span style="font-weight:700;color:#333;font-size:12px">Filtro:</span>
         <button class="filter-btn active" onclick="setFilter('all',this)">Tutti</button>
         <button class="filter-btn" onclick="setFilter('pending',this)">⏳ Da decidere</button>
-        <span style="cursor:pointer;font-size:11px;color:#1a237e;font-weight:700" onclick="var e=document.getElementById('more-filters');e.hidden=!e.hidden;this.textContent=e.hidden?'⋯ Altri filtri':'⋯ Meno filtri'">⋯ Altri filtri</span>
+        <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('more-filters');e.hidden=!e.hidden;this.textContent=e.hidden?'⋯ Altri filtri':'⋯ Meno filtri'">⋯ Altri filtri</button>
         <span id="more-filters" hidden>
           <button class="filter-btn" onclick="setFilter('approvata',this)">✅ Approvati</button>
           <button class="filter-btn" onclick="setFilter('rifiutata',this)">❌ Rifiutati</button>
@@ -549,7 +553,7 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
           <label class="toggle-lbl"><input type="checkbox" id="hide-ok" onchange="render()"> Nascondi invariati</label>
         </span>
         <span style="color:#ccc">|</span>
-        <span style="cursor:pointer;font-size:11px;color:#1a237e;font-weight:700" onclick="var e=document.getElementById('toolbar-export');e.hidden=!e.hidden;this.textContent=e.hidden?'📄 Export ▾':'📄 Export ▴'">📄 Export ▾</span>
+        <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('toolbar-export');e.hidden=!e.hidden;this.textContent=e.hidden?'📄 Export ▾':'📄 Export ▴'">📄 Export ▾</button>
         <span id="toolbar-export" hidden>
           <button class="export-btn btn-word" onclick="exportWord()" title="Richiede connessione per la libreria Word avanzata">📄 Word</button>
           <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word</button>
@@ -565,10 +569,10 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
       <div class="local-save-bar" style="padding:5px 13px;margin-bottom:8px;gap:6px;border-left-width:2px">
         <strong>💾</strong>
         <span class="local-save-status" id="local-save-status">Ogni decisione viene conservata in questo browser. Usa Backup per portarla su altri dispositivi.</span>
-        <button class="local-save-btn" onclick="saveLocalState(false)" style="padding:2px 7px;font-size:10px">💾 Salva</button>
-        <button class="local-save-btn" onclick="exportLocalBackup()" style="padding:2px 7px;font-size:10px">⬇️ Backup</button>
-        <button class="local-save-btn" onclick="document.getElementById('local-backup-input').click()" style="padding:2px 7px;font-size:10px">⬆️ Importa</button>
-        <button class="local-save-btn danger" onclick="resetLocalState()" style="padding:2px 7px;font-size:10px">↺ Ripristina</button>
+        <button class="local-save-btn" onclick="saveLocalState(false)" style="padding:4px 9px;font-size:11px">💾 Salva</button>
+        <button class="local-save-btn" onclick="exportLocalBackup()" style="padding:4px 9px;font-size:11px">⬇️ Backup</button>
+        <button class="local-save-btn" onclick="document.getElementById('local-backup-input').click()" style="padding:4px 9px;font-size:11px">⬆️ Importa</button>
+        <button class="local-save-btn danger" onclick="resetLocalState()" style="padding:4px 9px;font-size:11px">↺ Ripristina</button>
         <input id="local-backup-input" type="file" accept="application/json,.json" onchange="importLocalBackup(event)" style="display:none">
       </div>
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">

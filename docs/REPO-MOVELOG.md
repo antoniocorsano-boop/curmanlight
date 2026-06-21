@@ -56,3 +56,13 @@
 - 3 problemi minori rilevati (P1: cruscotto visibile su tutti i tab, P2: touch target compatti, P3: toggle sono span)
 - Nessuno bloccante — pubblicabile
 - Verdetto: `CML_009C_USER_VIEW_TOP_AREA_RESPONSIVE_SMOKE_READY`
+
+## 2026-06-21 — CML-009D micro-fix context & accessibility
+
+- **636581a** → HEAD
+- **P1:** aggiunto `setTab('lavoro')` a "Controlla voci" ed "Esporta" nel cruscotto (coerenza cross-tab)
+- **P3:** convertiti toggle "⋯ Altri filtri" e "📄 Export ▾" da `<span>` a `<button>` con CSS `.toolbar-toggle`
+- **P3:** aggiunto `button:focus-visible{...}` globale
+- **P2:** aumentati touch target pulsanti salvataggio (`padding:4px 9px;font-size:11px`)
+- Nessun deploy, asset invariati, breakpoint passati
+- Verdetto: `CML_009D_TOP_DASHBOARD_CONTEXT_ACCESSIBILITY_READY`
