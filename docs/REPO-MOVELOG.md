@@ -312,7 +312,7 @@
 - Unico file modificato: `_published_snapshot/netlify-current/index.html`
 - **Bottom bar fissa (≤900px):** ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰ Menu
   - position:fixed, z-index:1000, touch target 44px
-  - padding-bottom 52px su main
+  - padding-bottom 52px su body
   - Tabbar nascosto a ≤900px
 - **Menu overlay ☰:** Fonti, Generali, Azioni secondarie, Salva/Backup/Importa/Ripristina
   - Creato dinamicamente da JS
@@ -326,3 +326,20 @@
 - Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current` — 1 file, 3.9s
 - Verifica post-deploy: https://curmanlight.netlify.app — passa ✅
 - Verdetto: `CML_013F_BOTTOM_BAR_MENU_OVERLAY_MOBILE_NAVIGATION_READY`
+
+## 2026-06-21 — CML-013G — Mobile Navigation Publication Smoke and Closure
+
+- **06cf3d4** — feat: mobile bottom bar + menu overlay navigation (pre-audit HEAD)
+- Solo audit e documentazione — nessuna modifica runtime, nessun deploy
+- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `06cf3d4`, tree pulita ✅
+- **Verifica pubblicata:** https://curmanlight.netlify.app — bottom bar live ✅
+- **Bottom bar:** 4 bottoni, touch target 52px, body padding-bottom 52px, nessun overlap ✅
+- **Menu overlay:** apertura/chiusura, tutte le voci (Fonti, Generali, Azioni, Salva, Backup, Importa, Ripristina, Installa, Impostazioni, PDF, Motto, Guida) — tutte funzionanti ✅
+- **Sidebar discipline:** contestuale (mostrata in Revisione/Definitivo su mobile, nascita in Fonti/Generali) ✅
+- **Breadcrumb dinamico:** aggiornato al cambio tab via setTab() ✅
+- **Desktop ≥901px:** invariato (tutto in media query max-width:900px) ✅
+- **Breakpoint:** 360/390/414/768/900/901/1280px verificati ✅
+- **Regressioni:** home, cards, dettaglio espandibile, touch target 44px, approvazione/rifiuto, conteggi, export, tecnologia panel, PDF, sw.js, _headers — tutte preservate ✅
+- **Problemi:** 2 cosmetici non bloccanti (CSS `.local-save-bar` morto, sintassi media query nidificata ridondante)
+- Asset invariati: sw.js, _headers, PDF (confermati da git diff)
+- Verdetto: `CML_013G_MOBILE_NAVIGATION_PUBLICATION_SMOKE_CLOSED`
