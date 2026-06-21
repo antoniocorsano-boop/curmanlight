@@ -139,3 +139,18 @@
   - Screenshot 360/414/768/1280px passati ✅
   - Nessun JS error ✅
 - Verdetto: `CML_010D_CONTROLLED_NETLIFY_PUBLICATION_COMPACT_CARDS_CLOSED`
+
+## 2026-06-21 — CML-010E — Real Mobile Acceptance Smoke
+
+- **ba4bd5e** — HEAD invariato (solo audit, nessuna modifica runtime)
+- Dispositivi simulati: iPhone 13 (390×844), Galaxy S21 (360×800), Pixel 5 (393×851)
+- Caricamento, cruscotto, card pending, dettaglio espandibile: ✅ tutti i dispositivi
+- 9 pending-detail nascoste, 8 badge modifica, 5 badge ok ✅
+- Gap-header unico per sezione (4 sezioni) ✅
+- Touch target: min-height 44+ per act, 34px per pending-action
+- 3 problemi non bloccanti rilevati:
+  - P1: touch target pending-action 34px (sotto HIG 44px)
+  - P2: icona 🔍 non auto-esplicativa su mobile
+  - P3: collapse indicator poco evidente
+- Nessun deploy, nessuna modifica runtime
+- Verdetto: `CML_010E_REAL_MOBILE_ACCEPTANCE_SMOKE_READY`
