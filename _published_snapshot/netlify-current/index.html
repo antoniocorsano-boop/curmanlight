@@ -54,9 +54,17 @@ main{flex:1;min-width:0}
 .btn-word{background:#1e5a96;color:#fff}
 .btn-copy{background:#00695c;color:#fff}
 .btn-md{background:#5e35b1;color:#fff}
+.tecnologia-export-panel{background:#f5f5f5;border:1px solid #e0e0e0;border-left:3px solid #5e35b1;border-radius:9px;padding:11px 14px;margin-bottom:10px;font-size:12px;color:#333;line-height:1.5;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.tecnologia-export-header{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.tecnologia-export-title{font-weight:700;color:#1a237e;font-size:13px}
+.tecnologia-export-badge{background:#ede7f6;color:#4527a0;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px}
+.tecnologia-export-desc{font-size:11px;color:#555;margin-bottom:8px}
+.tecnologia-export-actions{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.tecnologia-md-preview{display:block;width:100%;height:160px;font-family:Consolas,monospace;font-size:12px;padding:8px;border:1px solid #ccc;border-radius:5px;resize:vertical;background:#fafafa;color:#999;box-sizing:border-box}
+.tecnologia-md-preview:focus{color:#333}
 .usage-notice{background:#fff8e1;border:1px solid #ffe082;border-left:3px solid #f9a825;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#5d4037;line-height:1.45;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .usage-notice strong{color:#3e2723}
- .local-save-bar{background:#e8f5e9;border:1px solid #a5d6a7;border-left:3px solid #2e7d32;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#1b5e20;line-height:1.45;display:flex;gap:7px;align-items:center;flex-wrap:wrap;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.local-save-bar{background:#e8f5e9;border:1px solid #a5d6a7;border-left:3px solid #2e7d32;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#1b5e20;line-height:1.45;display:flex;gap:7px;align-items:center;flex-wrap:wrap;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .local-save-bar strong{color:#1b5e20}
 .local-save-status{font-size:10px;color:#2e7d32;margin-right:auto}
 .local-save-btn{padding:5px 10px;border-radius:7px;border:1px solid #81c784;background:#fff;color:#1b5e20;cursor:pointer;font-size:11px;font-weight:700}
@@ -413,6 +421,7 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
 @media(max-width:760px){.orientation-card{flex-wrap:wrap;padding:12px;margin:8px auto 0;width:calc(100% - 16px)}.orientation-steps{gap:5px}.orientation-step{font-size:9px;padding:3px 8px}}
 @media(max-width:560px){.tabbar{gap:3px}.tabbar button{font-size:10px;padding:7px 5px;white-space:nowrap}.tabbar button:before{content:none}}
 @media(max-width:400px){.tabbar button{font-size:9px;padding:6px 3px;min-width:0}}
+@media(max-width:640px){.tecnologia-export-panel .tecnologia-md-preview{height:100px}.tecnologia-export-actions .export-btn{flex:1 1 100%;margin:2px 0}}
 .tab-generali{max-width:1000px;margin:0 auto;padding:16px 12px}
 .tab-generali h2{font-size:15px;color:#1a237e;margin:0 0 6px}
 .tab-generali h3{font-size:13px;color:#283593;margin:16px 0 6px;padding-bottom:3px;border-bottom:1px solid #c5cae9}
@@ -428,7 +437,7 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
 .tab-generali li{margin:0 0 4px}
 
 @media print{
-  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali{display:none!important}
+  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali,.tecnologia-export-panel{display:none!important}
   .layout{padding:0;display:block}
   .panels{grid-template-columns:1fr 1fr}
 }
@@ -529,6 +538,19 @@ header.app-header{padding:0;background:linear-gradient(135deg,#1a237e,#283593);b
         <span style="font-size:11px;font-weight:700;color:#1a237e" id="prog-label">—</span>
         <div class="prog-bar-bg"><div class="prog-bar-fill" id="prog-fill" style="width:0%"></div></div>
         <span id="prog-pct" style="font-size:11px;color:#1a237e;font-weight:700">0%</span>
+      </div>
+      <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
+        <div class="tecnologia-export-header">
+          <span class="tecnologia-export-title">📤 Export del curricolo revisionato</span>
+          <span class="tecnologia-export-badge">Documento di lavoro — da validare</span>
+        </div>
+        <p class="tecnologia-export-desc">L'export produce una bozza Markdown della disciplina <strong>Tecnologia</strong>. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
+        <div class="tecnologia-export-actions">
+          <button class="export-btn btn-md" onclick="generateTecnologiaBozza()">📝 Genera bozza Tecnologia</button>
+          <button class="export-btn btn-copy" id="btn-copy-tec-md" onclick="copyTecnologiaMarkdown()" disabled style="opacity:0.5">📋 Copia Markdown</button>
+          <button class="export-btn btn-md" id="btn-dl-tec-md" onclick="downloadTecnologiaMarkdown()" disabled style="opacity:0.5">⬇ Scarica Markdown</button>
+        </div>
+        <textarea id="tecnologia-md-preview" class="tecnologia-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del Markdown..."></textarea>
       </div>
       <div id="cards-area"></div>
     </div>
@@ -1366,6 +1388,19 @@ function render(){
     <button class="add-btn add-o" onclick="addItem('obiettivi')">➕ Aggiungi obiettivo</button>
   </div>`;
   document.getElementById("cards-area").innerHTML=html;
+  const panel = document.getElementById('tecnologia-export-panel');
+  if(panel){
+    const isTec = selDisc === 'Tecnologia';
+    panel.style.display = isTec ? 'block' : 'none';
+    if(!isTec){
+      document.getElementById('tecnologia-md-preview').value = '';
+      document.getElementById('btn-copy-tec-md').disabled = true;
+      document.getElementById('btn-copy-tec-md').style.opacity = '0.5';
+      document.getElementById('btn-dl-tec-md').disabled = true;
+      document.getElementById('btn-dl-tec-md').style.opacity = '0.5';
+      _tecnologiaMarkdownCache = '';
+    }
+  }
 }
 
 // ================================================================
@@ -1559,7 +1594,7 @@ function setTab(t){
 // Formato narrativo professionale (non tabelle a confronto) —
 // pensato per essere il documento ufficiale da allegare al PTOF.
 // ================================================================
-function buildDocumentModel(onlyApproved){
+function buildDocumentModel(onlyApproved, opts = {}){
   const oggi = new Date().toLocaleDateString("it-IT", {year:"numeric", month:"long", day:"numeric"});
   const model = {
     titolo: "Curricolo Verticale di Istituto",
@@ -1575,7 +1610,11 @@ function buildDocumentModel(onlyApproved){
     discipline: []
   };
 
-  for(const disc of DISCIPLINE){
+  const disciplinesToExport = opts.disciplineFilter
+    ? (Array.isArray(opts.disciplineFilter) ? opts.disciplineFilter : [opts.disciplineFilter])
+    : DISCIPLINE;
+
+  for(const disc of disciplinesToExport){
     const d=DATA[disc];
     if(!d) continue;
     const all=[...d.traguardi,...d.obiettivi];
@@ -1615,14 +1654,84 @@ function buildDocumentModel(onlyApproved){
 // ================================================================
 // MARKDOWN — generato dalla sorgente unica
 // ================================================================
-function modelToMarkdown(model, onlyApproved){
-  let md = "";
-  md += `# ${model.titolo}\n\n`;
-  md += `**${model.istituto}**  \n${model.livelloScolastico} · ${model.comune} · Codice meccanografico: ${model.codMecc}  \n`;
-  md += `${model.sottotitolo} — ${model.data}  \n`;
-  md += `*${model.riferimenti}*\n\n---\n\n`;
+function modelToMarkdown(model, onlyApproved, opts = {}){
+  const {
+    introNote = false,
+    includeGeneraliRef = false,
+    includeDecisionSummary = false,
+    includeGapMarkers = false,
+    includeDisclaimer = false,
+    disciplineName = '',
+  } = opts;
 
-  if(!onlyApproved){
+  let md = "";
+
+  if(introNote){
+    md += `# ${model.titolo} — Export di lavoro
+
+**${model.istituto}**
+Livello scolastico: ${model.livelloScolastico} · Codice meccanografico: ${model.codMecc}${disciplineName ? `\nDisciplina: **${disciplineName}**` : ''}
+Data: ${model.data}
+
+> 📄 **Documento di lavoro — da validare.** Non sostituisce delibera del Collegio Docenti.
+
+---
+`;
+  } else {
+    md += `# ${model.titolo}\n\n`;
+    md += `**${model.istituto}**  \n${model.livelloScolastico} · ${model.comune} · Codice meccanografico: ${model.codMecc}  \n`;
+    md += `${model.sottotitolo} — ${model.data}  \n`;
+    md += `*${model.riferimenti}*\n\n---\n\n`;
+  }
+
+  if(includeGeneraliRef){
+    md += `## Riferimenti alle Sezioni generali
+
+Le seguenti sezioni generali del curricolo sono consultabili nell'app CurManLight (tab Sezioni generali) e costituiscono la cornice istituzionale del curricolo disciplinare:
+
+- Premessa
+- Nuove Indicazioni Nazionali 2025
+- Riferimenti normativi
+- Profilo dello studente
+- Competenze chiave al termine del primo ciclo
+- Livelli di competenza
+- Obiettivi generali del processo formativo
+- Raccordo verticale tra gli ordini di scuola
+
+---
+`;
+  }
+
+  if(includeDecisionSummary && model.discipline.length === 1){
+    const disc = model.discipline[0];
+    let totOk=0, totMod=0, totNew=0, totApproved=0, totRejected=0, totPending=0;
+    disc.ordini.forEach(ord => {
+      [...ord.traguardi, ...ord.obiettivi].forEach(item => {
+        if(item.status === 'ok') totOk++;
+        else if(item.status === 'nuovo') totNew++;
+        else totMod++;
+        if(item.decisione === 'approvata') totApproved++;
+        else if(item.decisione === 'rifiutata') totRejected++;
+        else totPending++;
+      });
+    });
+    md += `## Sintesi delle decisioni
+
+| Categoria | Conteggio |
+|---|---|
+| ✓ Invariati (IN 2012) | ${totOk} |
+| ✎ Modificati | ${totMod} |
+| ★ Nuovi IN 2025 | ${totNew} |
+| **Approvati** | **${totApproved}** |
+| **Rifiutati** | **${totRejected}** |
+| **Da decidere** | **${totPending}** |
+| **Totale voci** | **${totOk + totMod + totNew}** |
+
+---
+`;
+  }
+
+  if(!onlyApproved && !introNote){
     md += `## Legenda\n\n`;
     md += `- ✓ **Invariato** — la voce resta come nelle IN 2012\n`;
     md += `- ✎ **Da modificare → APPROVATO / RIFIUTATO / da decidere** — proposta delle IN 2025\n`;
@@ -1630,7 +1739,8 @@ function modelToMarkdown(model, onlyApproved){
   }
 
   model.discipline.forEach(disc=>{
-    md += `## ${disc.nome}\n`;
+    const discHeader = introNote ? `## ${disc.nome} — raccordo verticale` : `## ${disc.nome}`;
+    md += `${discHeader}\n`;
     md += `*Competenza chiave: ${disc.comp}*  \n*Nuclei: ${disc.nuclei}*\n\n`;
 
     disc.ordini.forEach(ord=>{
@@ -1643,7 +1753,8 @@ function modelToMarkdown(model, onlyApproved){
 
         if(onlyApproved){
           items.forEach(it=>{
-            const tag = it.isNew ? " *(★ nuovo IN 2025)*" : "";
+            const gapMarker = includeGapMarkers && it.isNew ? ' 🧩 Gap 2025 — nuova proposta' : '';
+            const tag = it.isNew ? ` *(★ nuovo IN 2025)${gapMarker}*` : "";
             const cl = it.classe ? `*${it.classe}:* ` : "";
             md += `- ${cl}${it.testo}${tag}\n`;
           });
@@ -1653,9 +1764,14 @@ function modelToMarkdown(model, onlyApproved){
             if(it.status==="ok"){
               md += `- ✓ ${cl}${it.testoAttuale}\n`;
             } else {
+              const gapMarker = includeGapMarkers && it.status === 'nuovo'
+                ? ' 🧩 Gap 2025 — nuova proposta'
+                : includeGapMarkers && it.status === 'modifica' && !it.decisione
+                  ? ' 🧩 Gap 2025 — proposta di modifica da validare'
+                  : '';
               const statusLbl = it.status==="nuovo" ? "★ Nuovo 2025" : "✎ Da modificare";
               const decLbl = it.decisione==="approvata" ? " → **APPROVATO**" : it.decisione==="rifiutata" ? " → **RIFIUTATO (mantenuto attuale)**" : " → *da decidere*";
-              md += `- **${statusLbl}${decLbl}** ${cl?("— "+it.classe):""}\n`;
+              md += `- **${statusLbl}${gapMarker}${decLbl}** ${cl?("— "+it.classe):""}\n`;
               if(it.status!=="nuovo") md += `  - Testo attuale (2012): ${it.testoAttuale||"— non presente —"}\n`;
               md += `  - Proposta IN 2025: ${it.decisione==="approvata"?(it.testoFinale||it.proposta):it.proposta}\n`;
             }
@@ -1666,6 +1782,60 @@ function modelToMarkdown(model, onlyApproved){
     });
     md += `---\n\n`;
   });
+
+  if(includeDecisionSummary && model.discipline.length === 1){
+    const disc = model.discipline[0];
+    let hasDetail = false;
+    let detailRows = '';
+    disc.ordini.forEach(ord => {
+      [["traguardi","Traguardi"],["obiettivi","Obiettivi"]].forEach(([key, typeLabel]) => {
+        const items = ord[key].filter(it => it.status !== 'ok');
+        if(!items.length) return;
+        hasDetail = true;
+        items.forEach(it => {
+          const ordLabel = ORDINE_LABEL[ord.nome].replace(/[🧸📘🎓]/g,'').trim();
+          const area = `${ordLabel} — ${typeLabel}${it.classe ? ` (${it.classe})` : ''}`;
+          const base = it.status === 'nuovo' ? '—' : (it.testoAttuale || 'Da completare in revisione');
+          const proposta = it.decisione === 'approvata' ? (it.testoFinale || it.proposta) : (it.proposta || 'Da completare in revisione');
+          let stato = '';
+          if(it.status === 'nuovo') stato = '★ Nuovo 2025';
+          else if(it.status === 'modifica') stato = '✎ Da modificare';
+          if(it.decisione === 'approvata') stato += ' → APPROVATO';
+          else if(it.decisione === 'rifiutata') stato += ' → RIFIUTATO';
+          else stato += ' → da decidere';
+          const safe = s => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' ');
+          detailRows += `| ${safe(area)} | ${safe(base)} | ${safe(proposta)} | ${stato} |\n`;
+        });
+      });
+    });
+    if(hasDetail){
+      md += `## Dettaglio delle proposte di revisione
+
+*Base vigente, proposta 2025 e decisione del gruppo di lavoro restano distinguibili fino alla validazione finale.*
+
+| Area | Base vigente / IN2012 | Proposta 2025 | Stato |
+| ---- | --------------------- | ------------- | ----- |
+${detailRows}
+---
+`;
+    } else {
+      md += `*Nessuna proposta di revisione in corso — tutte le voci sono state valutate.*\n\n---\n`;
+    }
+  }
+
+  if(includeDisclaimer){
+    md += `---
+**Questo documento NON sostituisce:**
+
+- la delibera del Collegio dei Docenti;
+- l'approvazione formale del Curricolo d'Istituto;
+- le Indicazioni Nazionali vigenti e gli eventuali aggiornamenti ministeriali formalmente adottati.
+
+*Utilizzare come supporto al lavoro della Commissione Curricolo e dei Dipartimenti disciplinari.*
+
+*Documento generato automaticamente dall'app CurManLight il ${model.data}.*
+`;
+  }
 
   return md;
 }
@@ -1763,14 +1933,74 @@ function copyForWord(onlyApproved=false){
     });
 }
 
-function exportMarkdown(onlyApproved=false){
+function exportMarkdown(onlyApproved = false, disciplineFilter = null){
   showToast("⏳ Sto generando il Markdown...");
-  const model = buildDocumentModel(onlyApproved);
-  const md = modelToMarkdown(model, onlyApproved);
+  const opts = disciplineFilter ? {
+    disciplineFilter,
+    disciplineName: disciplineFilter,
+    introNote: true,
+    includeGeneraliRef: true,
+    includeDecisionSummary: true,
+    includeGapMarkers: true,
+    includeDisclaimer: true,
+  } : {};
+  const model = buildDocumentModel(onlyApproved, opts);
+  const md = modelToMarkdown(model, onlyApproved, opts);
   const blob = new Blob([md], {type:"text/markdown;charset=utf-8"});
   const suffix = onlyApproved ? "_Definitivo" : "_Confronto2012-2025";
-  downloadBlob(blob, `CurricoloVerticale_IC_DonMilani${suffix}_${new Date().toISOString().slice(0,10)}.md`);
+  const discSuffix = disciplineFilter ? `_${String(disciplineFilter).replace(/\s+/g, '_')}` : "";
+  downloadBlob(blob, `CurricoloVerticale_IC_DonMilani${discSuffix}${suffix}_${new Date().toISOString().slice(0,10)}.md`);
   showToast("✅ Markdown scaricato!");
+}
+
+function downloadMarkdownString(content, filename){
+  downloadBlob(new Blob([content], {type:"text/markdown;charset=utf-8"}), filename);
+}
+
+function copyMarkdownToClipboard(content){
+  copyTextToClipboard(content)
+    .then(() => showToast("📋 Markdown copiato negli appunti!"))
+    .catch(() => {
+      const win = window.open("", "_blank");
+      if(!win){ showToast("⚠️ Impossibile copiare: apri il Markdown e copia manualmente."); return; }
+      win.document.write(`<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><title>Markdown Tecnologia</title><style>body{font-family:monospace;padding:20px;line-height:1.5;white-space:pre-wrap}textarea{width:100%;height:80vh;font-family:monospace;font-size:13px;padding:8px;border:1px solid #ccc;border-radius:4px}</style></head><body><h1>Markdown — Tecnologia</h1><p>Seleziona tutto, copia e incolla.</p><textarea readonly>${content.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</textarea></body></html>`);
+      win.document.close();
+    });
+}
+
+let _tecnologiaMarkdownCache = '';
+
+function generateTecnologiaBozza(){
+  const model = buildDocumentModel(false, { disciplineFilter: 'Tecnologia' });
+  const opts = {
+    disciplineName: 'Tecnologia',
+    introNote: true,
+    includeGeneraliRef: true,
+    includeDecisionSummary: true,
+    includeGapMarkers: true,
+    includeDisclaimer: true,
+  };
+  _tecnologiaMarkdownCache = modelToMarkdown(model, false, opts);
+  const preview = document.getElementById('tecnologia-md-preview');
+  preview.value = _tecnologiaMarkdownCache;
+  preview.style.background = '#fff';
+  document.getElementById('btn-copy-tec-md').disabled = false;
+  document.getElementById('btn-copy-tec-md').style.opacity = '1';
+  document.getElementById('btn-dl-tec-md').disabled = false;
+  document.getElementById('btn-dl-tec-md').style.opacity = '1';
+  showToast('✅ Bozza Tecnologia generata!');
+}
+
+function copyTecnologiaMarkdown(){
+  if(!_tecnologiaMarkdownCache){ showToast('⚠️ Genera prima la bozza.'); return; }
+  copyMarkdownToClipboard(_tecnologiaMarkdownCache);
+}
+
+function downloadTecnologiaMarkdown(){
+  if(!_tecnologiaMarkdownCache){ showToast('⚠️ Genera prima la bozza.'); return; }
+  const filename = `CurricoloVerticale_IC_DonMilani_Tecnologia_Bozza_${new Date().toISOString().slice(0,10)}.md`;
+  downloadMarkdownString(_tecnologiaMarkdownCache, filename);
+  showToast('⬇ File Markdown scaricato!');
 }
 
 // ================================================================
