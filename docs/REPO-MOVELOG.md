@@ -205,3 +205,13 @@
 - Deployato su Netlify: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
 - Solo microcopy, nessuna modifica logica/strutturale
 - Verdetto: `CML_011B_EXPORT_GUIDE_CLARITY_MICROCOPY_DEPLOYED`
+
+## 2026-06-21 — CML-011C — Export and Guide Clarity Real Task Smoke
+
+- **2da61ed** (CML-011B) → HEAD + nuovo commit docs
+- Solo audit/smoke test — nessuna modifica runtime, nessun deploy
+- Scenario utente simulato: controllo → confronto → definitivo → disclaimer → export
+- Esito: microcopy sufficiente, flusso chiaro, nessuna ambiguità sostanziale
+- Opzione B (strutturale) NON necessaria
+- Raccomandazione: chiudere ciclo CML-011
+- Verdetto: `CML_011C_EXPORT_GUIDE_REAL_TASK_SMOKE_READY`
