@@ -194,3 +194,14 @@
 - Selezionata: **Opzione A + fix C2** — microcopy export labels + disclaimer su Definitivo
 - Nessuna modifica runtime, nessun deploy
 - Verdetto: `CML_011A_EXPORT_GUIDE_CLARITY_SELECTION_AUDIT_READY`
+
+## 2026-06-21 — CML-011B — Export and Guide Clarity Microcopy
+
+- **6c97da4** → HEAD + uncommitted
+- Opzione A (microcopy) + fix C2 (disclaimer validazione) implementati
+- Toolbar export: `(confronto)` su Word, Copia, Markdown, PDF
+- Curricolo Definitivo: `(definitivo)` su Copia per Word e PDF (mancanti)
+- Disclaimer: "⚠️ Documento di lavoro — da validare. Non sostituisce delibera del Collegio Docenti."
+- Deployato su Netlify: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
+- Solo microcopy, nessuna modifica logica/strutturale
+- Verdetto: `CML_011B_EXPORT_GUIDE_CLARITY_MICROCOPY_DEPLOYED`

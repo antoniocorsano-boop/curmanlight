@@ -584,10 +584,10 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <span style="color:#ccc">|</span>
         <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('toolbar-export');e.hidden=!e.hidden;this.textContent=e.hidden?'📄 Export ▾':'📄 Export ▴'">📄 Export ▾</button>
         <span id="toolbar-export" hidden>
-          <button class="export-btn btn-word" onclick="exportWord()" title="Richiede connessione per la libreria Word avanzata">📄 Word</button>
-          <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word</button>
-          <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Markdown</button>
-          <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF</button>
+          <button class="export-btn btn-word" onclick="exportWord()" title="Richiede connessione per la libreria Word avanzata">📄 Word (confronto)</button>
+          <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word (confronto)</button>
+          <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Markdown (confronto)</button>
+          <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF (confronto)</button>
           <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: sicuri.</span>
         </span>
       </div>
@@ -625,10 +625,11 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <h2>📋 Curricolo Definitivo dopo Revisione</h2>
         <p style="font-size:12px;color:#555;margin-bottom:8px">Voci approvate + invariate. Esporta per il documento ufficiale da presentare al Collegio dei Docenti.</p>
         <button class="export-btn btn-word" onclick="exportWord(true)" style="margin-right:8px" title="Richiede connessione per la libreria Word avanzata">📄 Word (definitivo)</button>
-        <button class="export-btn btn-copy" onclick="copyForWord(true)" style="margin-right:8px" title="Funziona anche senza librerie esterne">📋 Copia per Word</button>
+        <button class="export-btn btn-copy" onclick="copyForWord(true)" style="margin-right:8px" title="Funziona anche senza librerie esterne">📋 Copia per Word (definitivo)</button>
         <button class="export-btn btn-md" onclick="exportMarkdown(true)" style="margin-right:8px" title="Funziona anche offline">📝 Markdown (definitivo)</button>
-        <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF</button>
+        <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF (definitivo)</button>
         <div class="usage-notice" style="margin-top:9px;margin-bottom:0"><strong>Per la condivisione con i colleghi:</strong> usare preferibilmente Copia per Word, Markdown o PDF. Il Word impaginato resta disponibile solo se il browser riesce a caricare la libreria esterna.</div>
+        <p style="font-size:11px;color:#e65100;margin:6px 0 0;line-height:1.4">⚠️ <strong>Documento di lavoro — da validare.</strong> Non sostituisce delibera del Collegio Docenti.</p>
       </div>
       <div id="riepilogo-body"></div>
     </div>
