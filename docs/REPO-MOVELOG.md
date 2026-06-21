@@ -412,3 +412,18 @@
 - Nessuna regressione ✅
 - Debiti non bloccanti CML-013G lasciati fuori dal ciclo
 - Verdetto: `CML_014D_ENHANCED_DETAIL_PANEL_CYCLE_CLOSED`
+
+## 2026-06-21 — CML-015A — Real User Micro-Test: Detail Panel Walkthrough
+
+- **077e221** — docs: close CML enhanced detail panel cycle (HEAD partenza)
+- Solo audit e documentazione — nessuna modifica runtime, nessun deploy
+- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `077e221`, tree pulita ✅
+- Test percorso utente: 9 step, 9/9 ✅ chiaro
+- Fonti (DM 254/2012 / DM 221/2025) riconoscibili ✅
+- Differenze evidenziate (bordo arancione/verde) comprensibili ✅
+- "Personalizza testo" individuabile in due punti ✅
+- Tre azioni (✅ ❌ ✏️) distinte e chiare ✅
+- Nessun ⚠️ dubbio, nessun ❌ bloccato
+- Nessuna regressione
+- Raccomandazione: chiudere fase UX dettaglio, aprire ciclo su qualità contenuti disciplinari
+- Verdetto: `CML_015A_REAL_USER_DETAIL_PANEL_MICRO_TEST_READY`
