@@ -1724,10 +1724,13 @@ Le seguenti sezioni generali del curricolo sono consultabili nell'app CurManLigh
 | ★ Nuovi IN 2025 | ${totNew} |
 | **Approvati** | **${totApproved}** |
 | **Rifiutati** | **${totRejected}** |
-| **Da decidere** | **${totPending}** |
+| **Voci da validare** | **${totOk + totMod + totNew}** |
 | **Totale voci** | **${totOk + totMod + totNew}** |
 
 ---
+
+*Nota: le voci invarianti richiedono conferma come mantenimento del curricolo vigente; le voci modificate richiedono valutazione della proposta 2025.*
+
 `;
   }
 
@@ -1809,17 +1812,39 @@ Le seguenti sezioni generali del curricolo sono consultabili nell'app CurManLigh
       });
     });
     if(hasDetail){
-      md += `## Dettaglio delle proposte di revisione
+      md += `## Dettaglio delle proposte di modifica / Gap 2025
 
-*Base vigente, proposta 2025 e decisione del gruppo di lavoro restano distinguibili fino alla validazione finale.*
+*Base vigente, mantenimenti, proposte 2025 e decisione del gruppo di lavoro restano distinguibili fino alla validazione finale.*
 
 | Area | Base vigente / IN2012 | Proposta 2025 | Stato |
 | ---- | --------------------- | ------------- | ----- |
 ${detailRows}
----
 `;
     } else {
       md += `*Nessuna proposta di revisione in corso — tutte le voci sono state valutate.*\n\n---\n`;
+    }
+    const discMant = model.discipline[0];
+    let mantRows = '';
+    discMant.ordini.forEach(ord => {
+      [["traguardi","Traguardi"],["obiettivi","Obiettivi"]].forEach(([key, typeLabel]) => {
+        const items = ord[key].filter(it => it.status === 'ok');
+        if(!items.length) return;
+        items.forEach(it => {
+          const ordLabel = ORDINE_LABEL[ord.nome].replace(/[🧸📘🎓]/g,'').trim();
+          const area = `${ordLabel} — ${typeLabel}${it.classe ? ` (${it.classe})` : ''}`;
+          const testo = it.testoAttuale || it.testo || 'Da completare in revisione';
+          const safe = s => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' ');
+          mantRows += `| ${safe(area)} | ${safe(testo)} | ✓ Da confermare |\n`;
+        });
+      });
+    });
+    if(mantRows){
+      md += `## Voci mantenute da validare
+
+| Area | Testo vigente mantenuto | Stato |
+| ---- | ----------------------- | ----- |
+${mantRows}
+`;
     }
   }
 
