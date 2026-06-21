@@ -1157,6 +1157,8 @@ function allItems(){return Object.values(DATA).flatMap(d=>[...d.traguardi,...d.o
 function discItems(disc){const d=DATA[disc];return d?[...d.traguardi,...d.obiettivi]:[];}
 function needsDecision(item){return (item.status==="modifica"||item.status==="nuovo")&&!item.decisione;}
 function escapeHtml(value){const div=document.createElement("div");div.textContent=String(value??"");return div.innerHTML;}
+function cleanInlineIn2025Marker(text){return String(text??"").replace(/\s*\[IN 2025(?::[^\]]*)?\]\s*$/i,"").trim();}
+function isPersonalizedItem(item){return Boolean(item?.testoFinale&&cleanInlineIn2025Marker(item.testoFinale)!==cleanInlineIn2025Marker(item.proposto));}
 function canEditOrder(ordine){return userProfile.ordine==="Tutti" || !userProfile.ordine || userProfile.ordine===ordine;}
 function selectedOrderLabel(){return ORDER_PROFILE_LABELS[userProfile.ordine]||"Ordine non impostato";}
 function profileDisplayName(){const name=[userProfile.nome,userProfile.cognome].filter(Boolean).join(" ").trim();return name||"utente non indicato";}
@@ -1716,7 +1718,7 @@ function showToast(msg){
 // ================================================================
 function renderRiepilogo(){
   let html="";
-  let totApprovate=0, totInvariate=0;
+  let totApprovate=0, totInvariate=0, hasPersonalized=false;
   for(const disc of DISCIPLINE){
     const d=DATA[disc];
     if(!d) continue;
@@ -1738,11 +1740,13 @@ function renderRiepilogo(){
         if(!items.length) continue;
         html+=`<div style="font-size:10px;font-weight:700;color:#607d8b;text-transform:uppercase;letter-spacing:1px;margin:8px 0 4px">${ORDINE_LABEL[ord]} — ${label}</div>`;
         html+=items.map(item=>{
-          const testo=item.status==="ok"?item.testo:(item.testoFinale||item.proposto);
+          const testo=cleanInlineIn2025Marker(item.status==="ok"?item.testo:(item.testoFinale||item.proposto));
           const isNew=item.status==="nuovo";
+          const personalized=isPersonalizedItem(item);
+          if(personalized) hasPersonalized=true;
           return `<div class="act-card ${isNew?"":"approvata"}" style="border-color:${isNew?"#42a5f5":"#66bb6a"};border-left-color:${isNew?"#42a5f5":"#66bb6a"}">
             ${item.classe?`<span class="dtag">${item.classe}</span>`:""}
-            <p>${testo}</p>
+            <p>${personalized?"<span class='personalization-indicator' title='Testo personalizzato: icona di modifica, non nuova approvazione'>✏️</span> ":""}${testo}</p>
             ${isNew?'<p class="finale" style="color:#1976d2">★ Nuova voce IN 2025</p>':''}
           </div>`;
         }).join("");
@@ -1750,10 +1754,13 @@ function renderRiepilogo(){
     }
     html+=`</div>`;
   }
+  const personalizationLegend = hasPersonalized
+    ? `<div class="sum-box personalization-legend" style="font-size:11px;color:#6a1b9a;padding:7px 10px;margin-bottom:8px">✏️ Testo personalizzato · non indica una nuova approvazione.</div>`
+    : "";
   const introMsg = (totApprovate+totInvariate===0)
     ? `<div class="sum-box" style="text-align:center;color:#90a4ae"><div style="font-size:32px;margin-bottom:8px">📝</div>Non hai ancora approvato nessuna proposta.<br>Vai alla scheda <strong>"Revisione per disciplina"</strong> per iniziare.</div>`
     : "";
-  document.getElementById("riepilogo-body").innerHTML=introMsg+html||`<div style="color:#bbb;text-align:center;padding:30px">Nessuna voce approvata ancora.</div>`;
+  document.getElementById("riepilogo-body").innerHTML=introMsg+personalizationLegend+html||`<div style="color:#bbb;text-align:center;padding:30px">Nessuna voce approvata ancora.</div>`;
 }
 
 function setTab(t){
@@ -1830,7 +1837,7 @@ function buildDocumentModel(onlyApproved, opts = {}){
         const items=(d[type]||[]).filter(x=>x.ordine===ord && (onlyApproved?(x.status==="ok"||x.decisione==="approvata"):true));
         items.forEach(item=>{
           if(onlyApproved){
-            const testo = item.status==="ok" ? item.testo : (item.testoFinale||item.proposto);
+            const testo = cleanInlineIn2025Marker(item.status==="ok" ? item.testo : (item.testoFinale||item.proposto));
             ordModel[key].push({ classe:item.classe||"", testo, isNew:item.status==="nuovo" });
           } else {
             ordModel[key].push({
@@ -1838,8 +1845,8 @@ function buildDocumentModel(onlyApproved, opts = {}){
               status:item.status,
               decisione:item.decisione,
               testoAttuale:item.testo,
-              proposta:item.proposto,
-              testoFinale:item.testoFinale
+              proposta:cleanInlineIn2025Marker(item.proposto),
+              testoFinale:cleanInlineIn2025Marker(item.testoFinale)
             });
           }
         });

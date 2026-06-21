@@ -442,3 +442,16 @@
 - C2: nessuna distinzione approvato/personalizzato nel Riepilogo — da indicare
 - Opzione D selezionata per CML-016B: cleanup marker + indicatore personalizzazione
 - Verdetto: `CML_016A_DISCIPLINARY_CONTENT_SOURCES_EXPORT_QUALITY_AUDIT_READY`
+
+
+## 2026-06-21 — CML-016B — Export Marker Cleanup and Personalization Indicator
+
+- d82fc3a — docs: audit CML disciplinary content and export quality (HEAD partenza)
+- Unico file runtime modificato: _published_snapshot/netlify-current/index.html
+- 61 marker [IN 2025: ...] preservati nei dati sorgente e rimossi dalla presentazione Riepilogo/export
+- Indicatore ✏️ mostrato solo sui testi realmente personalizzati, con legenda compatta
+- Conteggi invariati: 103 totali, 41 ok, 54 modifica, 8 nuovo
+- Logiche approvazione/rifiuto/personalizzazione ed export invariate
+- Responsive PASS: 360, 390, 414, 768, 900, 901, 1280 px
+- Asset invariati: PDF, sw.js, _headers, icone/assets; nessun deploy
+- Verdetto: CML_016B_EXPORT_MARKER_CLEANUP_PERSONALIZATION_INDICATOR_READY
