@@ -66,3 +66,28 @@
 - **P2:** aumentati touch target pulsanti salvataggio (`padding:4px 9px;font-size:11px`)
 - Nessun deploy, asset invariati, breakpoint passati
 - Verdetto: `CML_009D_TOP_DASHBOARD_CONTEXT_ACCESSIBILITY_READY`
+
+## 2026-06-21 — CML-009E — Controlled Netlify Publication
+
+- **d9b6cd8** — docs: CML-009E deploy report
+- Preflight ✅ (branch HEAD b8dece8, tree pulita, hash asset invariati)
+- Verifica locale 27/27 ✅ + 4 breakpoint (360/414/768/1280px)
+- Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
+  - 1 file index.html, 4s
+  - URL: https://curmanlight.netlify.app
+- Verifica post-deploy 14/14 ✅ + screenshot 360/768
+- Asset invariati: sw.js, _headers, PDF
+- Nessuna modifica runtime
+- Verdetto: `CML_009E_CONTROLLED_NETLIFY_PUBLICATION_TOP_VIEW_LIGHTENING_CLOSED`
+
+## 2026-06-21 — CML-010A — Compact Cards & Expandable Detail Design Audit
+
+- **d9b6cd8** — HEAD invariato (solo audit, nessuna modifica runtime)
+- Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
+- Analisi vista attuale: area cards (`cardHTML()`), gap-header ridondante, card pending troppo dense, lock-notice ripetuta, nessuna gerarchia
+- 7 problemi individuati (P1-P7)
+- Proposta: 4 sezioni collassabili nel tab Lavoro (Documento attuale, Voci da validare, Fonti, Esportazione)
+- Card pending compatta: badge + 1 riga + ✅/❌/🔍, confronto su richiesta
+- Card ok collassate per default
+- Nessun deploy, nessuna modifica runtime
+- Verdetto: `CML_010A_COMPACT_CARDS_EXPANDABLE_DETAIL_DESIGN_AUDIT_READY`
