@@ -386,3 +386,16 @@
 - Asset invariati: sw.js, _headers, PDF
 - Nessun deploy (previsto CML-014C smoke audit)
 - Verdetto: `CML_014B_ENHANCED_PENDING_DETAIL_PANEL_READY`
+
+## 2026-06-21 — CML-014C — Controlled Publication and Smoke Audit Enhanced Detail Panel
+
+- **7ab9276** — feat: enhance CML pending detail panel (pre-deploy HEAD)
+- Preflight: branch `cml-008r-fix-markdown-decision-summary`, tree pulita ✅
+- Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current` — 1 file (index.html), 3.8s
+- URL: https://curmanlight.netlify.app
+- Verifica post-deploy: 7/7 enhancement CML-014B verificati live ✅
+- Verifica post-deploy: 16/16 criteri CML-014A verificati live ✅
+- Asset invariati: sw.js, _headers, PDF (confermati da git diff) ✅
+- Nessuna regressione bloccante ✅
+- Nessuna modifica runtime, nessun nuovo deploy
+- Verdetto: `CML_014C_CONTROLLED_PUBLICATION_ENHANCED_DETAIL_PANEL_CLOSED`
