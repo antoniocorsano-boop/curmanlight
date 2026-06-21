@@ -95,11 +95,13 @@
 ## 5. Invio automatico al Drive
 
 - La prima automazione riguarda solo il docente.
-- Pulsante previsto: `Invia al Drive condiviso`.
+- Pulsante previsto: `Invia al Drive condivisto`.
 - Lo strumento genera il file `.cml`.
 - Lo strumento lo invia a un servizio di caricamento configurato.
 - Il servizio salva il file nella cartella Drive condivisa.
 - Lo strumento mostra conferma o errore comprensibile.
+- **Download manuale sempre disponibile**: il pulsante "Scarica proposta .cml" non è mai nascosto.
+- **Invio opzionale**: se l'endpoint non è configurato, lo strumento informa e offre il fallback.
 
 ## 6. Fallback manuale
 

@@ -501,3 +501,14 @@
 - Schema .cml documentato: teacher_proposal, discipline, counts, proposals
 - Nessun Google API, nessun Apps Script, nessun deploy
 - Verdetto: CML_019_TEACHER_PROPOSAL_CML_FILE_EXPORT_READY
+
+## 2026-06-22 — CML-020 — Teacher Proposal Drive Upload Handoff
+
+- 1cee756 — feat: add teacher proposal Drive upload handoff
+- Funzione `uploadTeacherCmlToDrive()` aggiunta per invio assistito
+- Pulsanti "Invia al Drive condiviso" aggiunti nel toolbar e tab Riepilogo
+- Configurazione endpoint via localStorage: `curmanlight.driveUploadEndpoint`
+- Nessun endpoint reale, token, ID o credenziale committato
+- Nessun Google API diretto, nessun Apps Script
+- Fallback manuale "Scarica proposta .cml" sempre disponibile
+- Verdetto: CML_020_TEACHER_PROPOSAL_DRIVE_UPLOAD_HANDOFF_READY_ENDPOINT_NOT_CONFIGURED

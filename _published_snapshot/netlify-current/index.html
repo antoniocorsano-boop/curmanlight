@@ -653,8 +653,9 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
           <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word (confronto)</button>
           <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Markdown (confronto)</button>
           <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF (confronto)</button>
-          <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
-          <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: sicuri. .cml: per Drive condiviso.</span>
+<button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
+           <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff" title="Invia al Drive condiviso (se configurato)">⬆️ Invia al Drive condiviso</button>
+           <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: sicuri. .cml: per Drive condiviso.</span>
         </span>
       </div>
       <details class="usage-notice" style="padding:6px 13px">
@@ -686,6 +687,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <button class="export-btn btn-md" onclick="exportMarkdown(true)" style="margin-right:8px" title="Funziona anche offline">📝 Markdown (definitivo)</button>
         <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF (definitivo)</button>
         <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="margin-left:8px;background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
+        <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="margin-left:8px;background:#00695c;color:#fff" title="Invia al Drive condiviso (se configurato)">⬆️ Invia al Drive condiviso</button>
         <div class="usage-notice" style="margin-top:9px;margin-bottom:0"><strong>Per la condivisione con i colleghi:</strong> usare preferibilmente Copia per Word, Markdown o PDF. Il Word impaginato resta disponibile solo se il browser riesce a caricare la libreria esterna.</div>
         <p style="font-size:11px;color:#e65100;margin:6px 0 0;line-height:1.4">⚠️ <strong>Documento di lavoro — da validare.</strong> Non sostituisce delibera del Collegio Docenti.</p>
       </div>
@@ -2302,6 +2304,47 @@ function exportTeacherCml(){
   const filename = `proposta_docente_${safeDisc}_${new Date().toISOString().slice(0,10)}.cml`;
   downloadBlob(blob, filename);
   showToast('✅ File proposta .cml generato correttamente');
+}
+
+function uploadTeacherCmlToDrive(){
+  const endpoint = getDriveUploadEndpoint();
+  if(!endpoint){
+    showToast('ℹ️ Invio al Drive non ancora configurato. Puoi scaricare il file proposta .cml e caricarlo manualmente nel Drive condiviso della scuola.');
+    return;
+  }
+  const btn = event?.target;
+  const originalText = btn?.textContent || '';
+  if(btn){ btn.disabled = true; btn.textContent = 'Invio in corso...'; }
+  const model = buildTeacherCmlModel();
+  const discName = model.discipline || "Curricolo";
+  const safeDisc = discName.replace(/\s+/g, '_').replace(/[^\w\-]/g, '');
+  const fileName = `proposta_docente_${safeDisc}_${new Date().toISOString().slice(0,10)}.cml`;
+  const payload = {
+    fileName: fileName,
+    fileType: "teacher_proposal",
+    mimeType: "application/json",
+    content: JSON.stringify(model),
+    createdAt: model.createdAt
+  };
+  fetch(endpoint, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(payload)
+  })
+  .then(r => {
+    if(!r.ok) throw new Error('Upload failed');
+    showToast('✅ Proposta inviata al Drive condiviso. Il dipartimento potrà acquisirla per la validazione.');
+  })
+  .catch(() => {
+    showToast('⚠️ Non è stato possibile inviare la proposta al Drive. Puoi scaricare il file .cml e caricarlo manualmente.');
+  })
+  .finally(() => {
+    if(btn){ btn.disabled = false; btn.textContent = originalText; }
+  });
+}
+
+function getDriveUploadEndpoint(){
+  return localStorage.getItem('curmanlight.driveUploadEndpoint') || '';
 }
 
 // ================================================================
