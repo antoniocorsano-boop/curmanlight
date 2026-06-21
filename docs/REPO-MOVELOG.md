@@ -455,3 +455,22 @@
 - Responsive PASS: 360, 390, 414, 768, 900, 901, 1280 px
 - Asset invariati: PDF, sw.js, _headers, icone/assets; nessun deploy
 - Verdetto: CML_016B_EXPORT_MARKER_CLEANUP_PERSONALIZATION_INDICATOR_READY
+
+
+## 2026-06-21 ó CML-016C ó Export Cleanup and Personalization Smoke Audit
+
+- a182347 ó docs: smoke audit CML export cleanup and personalization (HEAD partenza)
+- Smoke audit completa: marker sorgente 61, marker output 0, indicatore ?? PASS
+- Conteggi 103/41/54/8 confermati, logiche invariate
+- Responsive PASS a tutti i breakpoint richiesti
+- Nessun deploy, nessuna modifica runtime, PDF/sw.js/_headers/asset invariati
+- Verdetto: CML_016C_EXPORT_CLEANUP_PERSONALIZATION_SMOKE_READY
+
+## 2026-06-21 ‚Äî CML-016C ‚Äî Export Cleanup and Personalization Smoke Audit
+
+- a182347 ‚Äî docs: smoke audit CML export cleanup and personalization (HEAD partenza)
+- Smoke audit completa: marker sorgente 61, marker output 0, indicatore ‚úèÔ∏è PASS
+- Conteggi 103/41/54/8 confermati, logiche invariate
+- Responsive PASS a tutti i breakpoint richiesti
+- Nessun deploy, nessuna modifica runtime, PDF/sw.js/_headers/asset invariati
+- Verdetto: CML_016C_EXPORT_CLEANUP_PERSONALIZATION_SMOKE_READY
