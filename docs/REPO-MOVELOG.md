@@ -251,3 +251,36 @@
 - Nessuna logica modificata, nessuna funzione persa
 - Nessun deploy
 - Verdetto: `CML_013B_GUIDED_HOME_STATIC_PROTOTYPE_READY`
+
+## 2026-06-21 — CML-013C — Smoke Audit: Guided Home Prototype
+
+- **7249d66** — docs: audit CML-013B guided home smoke (nuovo commit)
+- Audit completo: primo impatto, 3 azioni, funzioni secondarie, gerarchia, responsive, regressioni
+- Esito: nessuna regressione, home risponde a "cosa devo fare?"
+- 3 raccomandazioni opzionali non bloccanti (breadcrumb dinamico, CSS morto, breakpoint <400px)
+- Nessuna modifica runtime, nessun deploy
+- Verdetto: `CML_013C_GUIDED_HOME_SMOKE_AUDIT_PASSED`
+
+## 2026-06-21 — CML-013D — Controlled Netlify Publication Guided Home
+
+- **7249d66** — docs: audit CML-013B guided home smoke (pre-deploy HEAD)
+- Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
+- Verifica locale (localhost:8089): cruscotto, 3 azioni, breadcrumb, sidebar, quick actions, tabs, normativa, riepilogo, generali ✅
+- Asset verificati: sw.js, _headers, PDF, icons, manifest, motto.html ✅
+- Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
+  - 1 file (index.html), 4.7s
+  - URL: https://curmanlight.netlify.app
+  - Deploy ID: 6a37daaf34af39a1d2db290f
+- Verifica post-deploy:
+  - Home guidata live: stato + prossima azione + 3 azioni ✅
+  - Breadcrumb sotto tabbar ✅
+  - Menu ⚙️ Azioni con tutte le funzioni secondarie ✅
+  - Sidebar discipline preservata ✅
+  - Toolbar + filtri + export preservati ✅
+  - Tab Riepilogo + disclaimer validazione preservati ✅
+  - Tab Normativa + tab Generali preservati ✅
+  - Tecnologia export panel preservato ✅
+  - Asset, sw.js, _headers, PDF invariati ✅
+  - Nessuna regressione bloccante ✅
+- Nessuna modifica funzionale, nessun merge, nessun nuovo sito
+- Verdetto: `CML_013D_CONTROLLED_NETLIFY_PUBLICATION_GUIDED_HOME_CLOSED`
