@@ -22,3 +22,9 @@
   - Export Markdown per disciplina Tecnologia con pannello UI dedicato
   - Confronto IN2012→IN2025, gap markers, dettaglio proposte
   - Verifica locale e produzione passate
+
+- **CML-009A** - User view lightening design audit (solo analisi, nessun codice)
+  - Problema: ~1300 parole prima del contenuto disciplinare, nessuna gerarchia
+  - Proposta: architettura a 3 livelli (cruscotto, schede, dettaglio espandibile)
+  - Nessuna modifica funzionale, nessun deploy
+  - Verdetto: `CML_009A_USER_VIEW_LIGHTENING_DESIGN_AUDIT_READY`
