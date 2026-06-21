@@ -483,3 +483,12 @@
 - Automazione solo invio proposta docente, import manuale per altri ruoli
 - Nessuna modifica runtime, PDF, sw.js, _headers, asset o deploy
 - Verdetto: CML_018_SIMPLE_DRIVE_HANDOFF_WORKFLOW_CONTRACT_READY
+
+## 2026-06-21 — CML-018A — School Workspace Drive Setup Contract
+
+- e5c9288 — docs: define school Workspace Drive setup (HEAD partenza)
+- Contratto operativo per Drive condiviso su Workspace della scuola
+- Account scolastici obbligatori, ruoli Contributor/Content manager
+- Drive: `Revisione Curricolo Istituto`, struttura semplice
+- Nessuna modifica runtime, PDF, sw.js, _headers, asset, deploy o credenziali
+- Verdetto: CML_018A_SCHOOL_WORKSPACE_DRIVE_SETUP_CONTRACT_READY
