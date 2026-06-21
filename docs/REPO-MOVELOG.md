@@ -560,3 +560,13 @@
   - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
   - Nessuna modifica runtime; nessun deploy; confermata presenza funzioni e nuovi semantici.
 
+
+## 2026-06-22 — CML-023 — Referent validation CML import
+
+- **aa891ae** — feat: add referent department outcome import
+  - Aggiunta funzione `importDepartmentOutcomeCmlFiles()` e funzioni di supporto
+  - Nuovo pannello "Verifica referente curricolo" nel tab Revisione
+  - Import locale degli esiti dipartimentali .cml con validazione schema
+  - Nessuna chiamata di rete, nessuna persistenza permanente, nessun endpoint reale
+  - Microcopy coerente con il processo scolastico, nessuna semantica rigida
+

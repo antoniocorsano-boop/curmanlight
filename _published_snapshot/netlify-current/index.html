@@ -680,7 +680,6 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <summary style="cursor:pointer;font-weight:700;font-size:12px;color:#5d4037">💡 Uso ibrido e requisiti</summary>
         <p style="margin-top:6px;font-size:11px;color:#5d4037;line-height:1.45">Lo strumento può essere aperto come file locale anche da telefono per consultare, revisionare, copiare il testo, scaricare Markdown e stampare/salvare in PDF. L'esportazione Word impaginata è un'opzione avanzata: funziona quando la libreria esterna è raggiungibile, preferibilmente da computer. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
       </details>
-      <details id="department-import-panel" class="department-import-panel">
         <summary>🏫 Validazione dipartimentale</summary>
         <p class="department-import-copy">Importa i file .cml ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
         <div class="department-import-controls">
@@ -690,6 +689,18 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         </div>
         <div id="department-import-feedback" class="department-import-feedback" aria-live="polite"></div>
         <div id="department-import-results"></div>
+      </details>
+      <!-- REFERENT VALIDATION PANEL -->
+      <details id="referent-validation-panel" class="referent-validation-panel">
+        <summary>📋 Verifica referente curricolo</summary>
+        <p class="referent-validation-copy">Importa gli esiti dipartimentali .cml per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
+        <div class="referent-validation-controls">
+          <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="importDepartmentOutcomeCmlFiles(this.files);this.value=''">
+          <button type="button" class="referent-validation-btn" onclick="document.getElementById('referent-cml-files').click()">Importa esiti dipartimentali .cml</button>
+          <span class="referent-validation-local">Nessun dato viene inviato online: l'importazione è locale.</span>
+        </div>
+        <div id="referent-validation-feedback" class="referent-validation-feedback" aria-live="polite"></div>
+        <div id="referent-validation-results"></div>
       </details>
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
         <div class="tecnologia-export-header">
@@ -1005,10 +1016,8 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 <footer>Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV) · AVIC849003 | IN 2012 → D.M. 221/2025 | DigComp 2.2 | Agenda 2030 | PTOF 2025-2028 | <a class='footer-motto-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Approfondisci il motto latino'>Non multa, sed multum</a></footer>
 <script>
 // ================================================================
-// DATI: Curricolo Verticale completo I.C. Calvario-Covotta «don Lorenzo Milani»
 // IN 2012 (testo) vs IN 2025 (proposto) — D.M. 221/2025
 // ================================================================
-const ORDINI = ["Infanzia","Primaria","Secondaria"];
 const ORDINE_LABEL = {Infanzia:"🧸 Scuola dell'Infanzia", Primaria:"📘 Scuola Primaria", Secondaria:"🎓 Scuola Secondaria I Grado"};
 const DISCIPLINE_META = {
   "Italiano":{icon:"📝", comp:"Competenza alfabetica funzionale", nuclei:"Ascolto e parlato · Lettura · Scrittura · Lessico · Grammatica"},
@@ -1178,9 +1187,7 @@ traguardi:[
 };
 
 // ================================================================
-// STATE
 // ================================================================
-let selDisc="Tecnologia", filterStatus="all", currentTab="lavoro";
 let editingId=null;
 const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:"Tecnologia",ordine:"Secondaria"};
 let userProfile={...DEFAULT_PROFILE};
@@ -1202,9 +1209,7 @@ function lockNoticeFor(item){if(canEditOrder(item.ordine))return "";return `<div
 function disabledFor(item){return canEditOrder(item.ordine)?"":" disabled aria-disabled=\"true\"";}
 
 // ================================================================
-// SALVATAGGIO LOCALE — nessun invio dati, nessun account, nessun server
 // ================================================================
-const LOCAL_SAVE_KEY = "curricoloVerticaleDonMilani.v3.ibrido.localState";
 const LOCAL_SAVE_VERSION = 1;
 const INITIAL_DATA_JSON = JSON.stringify(DATA);
 let localSaveAvailable = false;
@@ -1350,9 +1355,7 @@ function importLocalBackup(event){
 }
 
 // ================================================================
-// STATS & PROGRESS (globali, in header)
 // ================================================================
-function updateStats(){
   const all=allItems();
   const pend=all.filter(needsDecision).length;
   const app=all.filter(x=>x.decisione==="approvata").length;
@@ -1383,9 +1386,7 @@ function updateProgressBar(){
 }
 
 // ================================================================
-// SIDEBAR — raggruppata per area disciplinare con indicatori chiari
 // ================================================================
-function renderSidebar(){
   let html="";
   DISCIPLINE.forEach(d=>{
     const items=discItems(d);
@@ -1410,9 +1411,7 @@ function selectDisc(d){selDisc=d;editingId=null;renderSidebar();render();
 }
 
 // ================================================================
-// CARD RENDERING
 // ================================================================
-function truncate(txt, len) {
   if (!txt) return "";
   const s = String(txt).replace(/<[^>]*>/g, '');
   return s.length > len ? s.slice(0, len) + "…" : s;
@@ -1542,9 +1541,7 @@ function cardHTML(item, type) {
 }
 
 // ================================================================
-// FILTER & RENDER — raggruppato per ordine di scuola (Infanzia/Primaria/Secondaria)
 // ================================================================
-function setFilter(f,btn){
   filterStatus=f;
   document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
   if(btn) btn.classList.add("active");
@@ -1623,9 +1620,7 @@ function render(){
 }
 
 // ================================================================
-// ACTIONS
 // ================================================================
-function findItem(id){
   for(const d of Object.values(DATA)){
     for(const arr of [d.traguardi,d.obiettivi]){
       const f=arr.find(x=>x.id===id);
@@ -1731,9 +1726,7 @@ function addItem(type){
 }
 
 // ================================================================
-// TOAST — feedback visivo immediato e rassicurante
 // ================================================================
-function showToast(msg){
   let t=document.getElementById("app-toast");
   if(!t){
     t=document.createElement("div");
@@ -1748,9 +1741,7 @@ function showToast(msg){
 }
 
 // ================================================================
-// RIEPILOGO — raggruppato per ordine e disciplina
 // ================================================================
-function renderRiepilogo(){
   let html="";
   let totApprovate=0, totInvariate=0, hasPersonalized=false;
   for(const disc of DISCIPLINE){
@@ -1830,12 +1821,10 @@ function setTab(t){
 
 
 // ================================================================
-// SORGENTE UNICA: costruisce il contenuto testuale strutturato
 // usato sia per l'export Markdown che come base per Word e PDF.
 // Formato narrativo professionale (non tabelle a confronto) —
 // pensato per essere il documento ufficiale da allegare al PTOF.
 // ================================================================
-function buildDocumentModel(onlyApproved, opts = {}){
   const oggi = new Date().toLocaleDateString("it-IT", {year:"numeric", month:"long", day:"numeric"});
   const model = {
     titolo: "Curricolo Verticale di Istituto",
@@ -1893,9 +1882,7 @@ function buildDocumentModel(onlyApproved, opts = {}){
 }
 
 // ================================================================
-// MARKDOWN — generato dalla sorgente unica
 // ================================================================
-function modelToMarkdown(model, onlyApproved, opts = {}){
   const {
     introNote = false,
     includeGeneraliRef = false,
@@ -2107,9 +2094,7 @@ ${mantRows}
 }
 
 // ================================================================
-// DOWNLOAD E COPIA — funzioni interne, senza librerie esterne
 // ================================================================
-function downloadBlob(blob, filename){
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
@@ -2572,10 +2557,8 @@ function exportDepartmentOutcomeCml(){
 // DEPARTMENT IMPORT END
 
 // ================================================================
-// WORD — documento professionale in stile narrativo (no tabelle
 // a confronto: frontespizio, intestazioni, struttura per disciplina)
 // ================================================================
-async function exportWord(onlyApproved=false){
   if(typeof docx==="undefined"){
     alert("⚠️ La libreria per generare Word non è disponibile.\n\nVerifica di avere una connessione internet attiva e ricarica la pagina.");
     return;
@@ -2735,11 +2718,9 @@ async function exportWord(onlyApproved=false){
 }
 
 // ================================================================
-// PDF — vista di stampa dedicata, pulita, in stile documento
 // (genera un HTML formattato a partire dalla stessa sorgente dati
 // e apre la finestra di stampa del browser su quella vista)
 // ================================================================
-function exportPDF(onlyApproved=false){
   showToast("⏳ Preparo l'anteprima di stampa...");
   const model = buildDocumentModel(onlyApproved);
   const win = window.open("", "_blank");
@@ -2856,9 +2837,7 @@ function exportPDF(onlyApproved=false){
 
 
 // ================================================================
-// IMPOSTAZIONI / ONBOARDING — sempre disponibile
 // ================================================================
-function openSettingsModal(){
   const existing=document.getElementById("settings-overlay");
   if(existing) existing.remove();
   const overlay=document.createElement("div");
@@ -2924,9 +2903,7 @@ function saveSettingsProfile(){
 
 
 // ================================================================
-// INSTALLAZIONE COME APPLICAZIONE WEB — manifest + service worker
 // ================================================================
-let deferredInstallPrompt=null;
 window.addEventListener("beforeinstallprompt", event=>{
   event.preventDefault();
   deferredInstallPrompt=event;
@@ -3040,9 +3017,7 @@ function registerOfflineSupport(){
 }
 
 // ================================================================
-// MOBILE MENU OVERLAY
 // ================================================================
-function toggleMobileMenu(){
   const existing=document.getElementById("mobile-menu-overlay");
   if(existing){existing.remove();return}
   const overlay=document.createElement("div");
@@ -3071,9 +3046,7 @@ function toggleMobileMenu(){
 }
 
 // ================================================================
-// WELCOME MODAL — onboarding per il primo utilizzo
 // ================================================================
-function showWelcome(force=false){
   if(!force && sessionStorage.getItem("welcomeShown")) return;
   const overlay=document.createElement("div");
   overlay.id="welcome-overlay";
@@ -3103,7 +3076,135 @@ function showWelcome(force=false){
   sessionStorage.setItem("welcomeShown","1");
 }
 
-// ================================================================
+// REFERENT VALIDATION FUNCTIONS
+let referentOutcomeState={files:[],outcomes:[]};
+
+function validateDepartmentOutcomeCmlModel(model,fileName=""){
+  const name=String(fileName||"");
+  if(!name.toLowerCase().endsWith(".cml")) return {valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[]};
+  if(!model||typeof model!=="object"||Array.isArray(model)) return {valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[]};
+  if(model.fileType!=="department_outcome") return {valid:false,code:"wrong_type",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[]};
+  const missing=[];
+  if(typeof model.discipline!=="string"||!model.discipline.trim()) missing.push("discipline");
+  if(typeof model.disciplineWorkStatus!=="string"||!model.disciplineWorkStatus.trim()) missing.push("disciplineWorkStatus");
+  if(!Array.isArray(model.proposalHandling)) missing.push("proposalHandling");
+  if(!model.checks||typeof model.checks!="object"||Array.isArray(model.checks)) missing.push("checks");
+  if(model.humanValidationRequired!==true) missing.push("humanValidationRequired");
+  if(missing.length) return {valid:false,code:"missing_data",message:"Il file è leggibile, ma mancano alcune informazioni.",missing};
+  return {valid:true,code:"valid",message:"File importato correttamente.",missing:[]};
+}
+
+function parseDepartmentOutcomeCmlText(text,fileName=""){
+  try{
+    const model=JSON.parse(String(text||""));
+    return {...validateDepartmentOutcomeCmlModel(model,fileName),model};
+  }catch(_err){
+    return {valid:false,code:"invalid_json",message:"Il file contiene JSON non valido.",missing:[],model:null};
+  }
+}
+
+async function importDepartmentOutcomeCmlFiles(fileList){
+  const files=Array.from(fileList||[]);
+  const feedback=document.getElementById("referent-validation-feedback");
+  if(!files.length){
+    if(feedback) feedback.textContent="Seleziona almeno un file .cml.";
+    return;
+  }
+  const seen=new Set(),results=[],outcomes=[];
+  for(const file of files){
+    let parsed;
+    if(!String(file.name||"").toLowerCase().endsWith(".cml")){
+      parsed={valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[],model:null};
+    }else{
+      try{parsed=parseDepartmentOutcomeCmlText(await file.text(),file.name);}
+      catch(_err){parsed={valid:false,code:"invalid_json",message:"Il file contiene JSON non valido.",missing:[],model:null};}
+    }
+    let duplicate=false;
+    if(parsed.valid){
+      const model=parsed.model;
+      // Create a fingerprint based on discipline, createdAt, and proposalHandling ids
+      const rows=(model.proposalHandling||[]).map(p=>[p.proposalId||"",p.handling||""]);
+      const fingerprint=JSON.stringify([model.discipline||"",model.createdAt||"",rows]);
+      duplicate=seen.has(fingerprint);
+      seen.add(fingerprint);
+      outcomes.push(model);
+    }
+    results.push({name:String(file.name||"file senza nome"),valid:parsed.valid,code:parsed.code,message:parsed.message,missing:parsed.missing||[],duplicate});
+  }
+  referentOutcomeState={files:results,outcomes};
+  renderReferentValidation();
+  const summary=buildReferentValidationSummary();
+  if(feedback) feedback.textContent=summary.validOutcomeFiles?"Esiti dipartimentali importati. Il referente può ora controllare completezza, evidenze e punti da chiarire.":"Nessun esito dipartimentale valido importato.";
+  showToast(summary.validOutcomeFiles?"✅ Esiti dipartimentali importati localmente":"⚠️ Nessun file .cml valido importato");
+}
+
+function renderReferentValidation(){
+  const host=document.getElementById("referent-validation-results");
+  if(!host) return;
+  const summary=buildReferentValidationSummary();
+  if(!summary.imported){host.innerHTML="";return;}
+  let html='<div class="referent-validation-summary">'+
+    '<div class="referent-validation-stat"><strong>'+summary.imported+'</strong>File importati</div>'+
+    '<div class="referent-validation-stat"><strong>'+summary.validOutcomeFiles+'</strong>File validi</div>'+
+    '<div class="referent-validation-stat"><strong>'+summary.unrecognized+'</strong>Non riconoscibili</div>'+
+    '<div class="referent-validation-stat"><strong>'+summary.totalOutcomes+'</strong>Esiti totali</div>'+
+    '<div class="referent-validation-stat"><strong>'+summary.disciplines.length+'</strong>Discipline</div>'+
+    '<div class="referent-validation-stat"><strong>'+summary.proposalsDaChiarire+'</strong>Da chiarire</div>'+
+    '<div class="referent-validation-stat"><strong>'+summary.proposalsSenzaEsito+'</strong>Senza esito</div></div>';
+  if(summary.mixedDisciplines) html+='<div class="referent-validation-warning">ℹ️ Sono presenti discipline diverse: il dato è segnalato ma non blocca la lettura.</div>';
+  html+='<div class="referent-outcome-list">'+referentOutcomeState.outcomes.map(outcome=>{
+    const handlingCounts={confluita_nella_sintesi:0,riformulata_dal_dipartimento:0,assorbita_in_altra_proposta:0,da_chiarire:0,senza_esito:0};
+    outcome.proposalHandling.forEach(ph=>{
+      const h=ph.handling||"";
+      if(h==="confluita_nella_sintesi") handlingCounts.confluita_nella_sintesi++;
+      else if(h==="riformulata_dal_dipartimento") handlingCounts.riformulata_dal_dipartimento++;
+      else if(h==="assorbita_in_altra_proposta") handlingCounts.assorbita_in_altra_proposta++;
+      else if(h==="da_chiarire") handlingCounts.da_chiarire++;
+      else handlingCounts.senza_esito++;
+    });
+    return `<div class="referent-outcome-card">
+      <div class="referent-outcome-header">
+        <strong>${escapeHtml(outcome.discipline||"Disciplina non indicata")}</strong>
+        <span class="referent-outcome-status">${escapeHtml(outcome.disciplineWorkStatus||"Stato lavoro non indicato")}</span>
+      </div>
+      <div class="referent-outcome-details">
+        <div>Proposte totali: ${escapeHtml(outcome.proposalHandling.length)}</div>
+        <div>Confluita nella sintesi: ${escapeHtml(handlingCounts.confluita_nella_sintesi)}</div>
+        <div>Riformulata dal dipartimento: ${escapeHtml(handlingCounts.riformulata_dal_dipartimento)}</div>
+        <div>Assorbita in altra proposta: ${escapeHtml(handlingCounts.assorbita_in_altra_proposta)}</div>
+        <div>Da chiarire: ${escapeHtml(handlingCounts.da_chiarire)}</div>
+        <div>Senza esito: ${escapeHtml(handlingCounts.senza_esito)}</div>
+        ${outcome.note?`<div class="referent-outcome-note"><strong>Nota:</strong> ${escapeHtml(outcome.note)}</div>`:''}
+      </div>
+    </div>`;
+  }).join('')+'</div>';
+  host.innerHTML=html;
+}
+
+function buildReferentValidationSummary(state=referentOutcomeState){
+  const files=state.files||[],outcomes=state.outcomes||[];
+  const disciplines=[...new Set(outcomes.map(o=>o.discipline).filter(Boolean))].sort();
+  let totalOutcomes=0,proposalsDaChiarire=0,proposalsSenzaEsito=0;
+  outcomes.forEach(o=>{
+    totalOutcomes+=o.proposalHandling.length;
+    o.proposalHandling.forEach(ph=>{
+      const h=ph.handling||"";
+      if(h==="da_chiarire") proposalsDaChiarire++;
+      if(!h||h==="") proposalsSenzaEsito++;
+    });
+  });
+  return {
+    imported:files.length,
+    validOutcomeFiles:files.filter(f=>f.valid).length,
+    unrecognized:files.filter(f=>!f.valid).length,
+    filesToCheck:files.filter(f=>!f.valid||f.duplicate).length,
+    totalOutcomes,
+    disciplines,
+    proposalsDaChiarire,
+    proposalsSenzaEsito,
+    mixedDisciplines:disciplines.length>1
+  };
+}
 // INIT
 // ================================================================
 loadLocalState();
