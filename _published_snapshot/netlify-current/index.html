@@ -520,6 +520,40 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
   .layout{padding:0;display:block}
   .panels{grid-template-columns:1fr 1fr}
 }
+
+/* MOBILE BOTTOM BAR */
+.mobile-bottom-bar{display:none}
+@media(max-width:900px){
+  .mobile-bottom-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:80;background:#fff;border-top:1px solid #e0e0e0;box-shadow:0 -1px 6px rgba(0,0,0,.06);justify-content:space-around;align-items:stretch;padding:0;height:52px}
+  .mbb-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:none;background:transparent;color:#78909c;font-size:10px;font-weight:700;cursor:pointer;touch-action:manipulation;border-top:2px solid transparent;padding:4px 2px;min-height:52px;transition:.1s;font-family:inherit}
+  .mbb-btn.mbb-active{color:#1a237e;border-top-color:#1a237e;background:#f5f6ff}
+  .mbb-btn:focus-visible{outline:2px solid #1a237e;outline-offset:-2px;border-radius:2px}
+  body{padding-bottom:52px}
+  .tabbar{display:none!important}
+  aside{display:none!important}
+  aside.mbb-show{display:block!important}
+  .quick-info-bar{margin-bottom:52px}
+  .cruscotto-btns{display:none!important}
+  .cruscotto .quick-actions{margin-bottom:42px}
+  #tab-riepilogo .sum-box .export-btn{margin-bottom:52px!important}
+  .cruscotto-bar{border-top:none;padding-top:4px;margin-top:0}
+  .cruscotto-toggle{margin-left:auto}
+}
+@media(max-width:900px)and (max-width:380px){
+  .mbb-btn{font-size:8.5px}
+}
+/* MOBILE MENU OVERLAY */
+.mobile-menu-overlay{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.35);display:flex;align-items:flex-end;justify-content:center;animation:fadeIn .15s}
+.mobile-menu-panel{background:#fff;border-radius:14px 14px 0 0;width:100%;max-width:480px;max-height:70vh;overflow-y:auto;padding:12px 10px 24px;box-shadow:0 -4px 20px rgba(0,0,0,.12);animation:slideUp .2s}
+.mobile-menu-panel .mm-title{font-size:11px;font-weight:800;color:#78909c;text-transform:uppercase;letter-spacing:1px;padding:6px 6px 4px}
+.mobile-menu-panel .mm-item{display:flex;align-items:center;gap:8px;width:100%;padding:10px 8px;border:none;background:transparent;font-size:13px;font-weight:700;color:#333;cursor:pointer;border-radius:8px;text-decoration:none;min-height:44px;font-family:inherit;touch-action:manipulation}
+.mobile-menu-panel .mm-item:hover{background:#f5f5f5}
+.mobile-menu-panel .mm-item.mm-link{color:#1a237e}
+.mobile-menu-panel .mm-item:focus-visible{outline:2px solid #1a237e;outline-offset:2px}
+.mobile-menu-panel .mm-sep{height:1px;background:#e0e0e0;margin:4px 0}
+.mobile-menu-panel .mm-close{width:100%;padding:12px;border:none;background:#f5f5f5;border-radius:8px;font-size:13px;font-weight:700;color:#666;cursor:pointer;margin-top:6px;min-height:44px;font-family:inherit}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
 </style>
 </head>
 <body>
@@ -1723,6 +1757,23 @@ function setTab(t){
     const map=["lavoro","riepilogo","normativa","generali"];
     b.classList.toggle("active",map[i]===t);
   });
+  const mbbMap={lavoro:"mbb-rev",riepilogo:"mbb-def",normativa:"mbb-more",generali:"mbb-more"};
+  document.querySelectorAll(".mbb-btn").forEach(b=>{
+    b.classList.toggle("mbb-active",b.id===mbbMap[t]);
+  });
+  const asideEl=document.querySelector("aside");
+  if(asideEl){
+    if(window.innerWidth<=900){
+      asideEl.classList.toggle("mbb-show",t==="lavoro"||t==="riepilogo");
+    }else{
+      asideEl.classList.remove("mbb-show");
+    }
+  }
+  const breadcrumb=document.getElementById("breadcrumb");
+  if(breadcrumb){
+    const labels={lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali"};
+    breadcrumb.innerHTML='<span class="crumb-current">'+labels[t]+'</span>';
+  }
   if(t==="riepilogo") renderRiepilogo();
   window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -2637,6 +2688,37 @@ function registerOfflineSupport(){
 }
 
 // ================================================================
+// MOBILE MENU OVERLAY
+// ================================================================
+function toggleMobileMenu(){
+  const existing=document.getElementById("mobile-menu-overlay");
+  if(existing){existing.remove();return}
+  const overlay=document.createElement("div");
+  overlay.className="mobile-menu-overlay";
+  overlay.id="mobile-menu-overlay";
+  overlay.onclick=function(e){if(e.target===this)this.remove()};
+  overlay.innerHTML='<div class="mobile-menu-panel">\
+    <div class="mm-title">📖 Consultazione</div>\
+    <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Riferimenti normativi</button>\
+    <button class="mm-item" onclick="setTab(\'generali\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Sezioni generali</button>\
+    <div class="mm-sep"></div>\
+    <div class="mm-title">⚙️ Azioni</div>\
+    <button class="mm-item" onclick="saveLocalState(false);this.closest(\'.mobile-menu-overlay\').remove()">💾 Salva</button>\
+    <button class="mm-item" onclick="exportLocalBackup();this.closest(\'.mobile-menu-overlay\').remove()">⬇️ Backup</button>\
+    <button class="mm-item" onclick="document.getElementById(\'local-backup-input\').click();this.closest(\'.mobile-menu-overlay\').remove()">⬆️ Importa</button>\
+    <button class="mm-item" onclick="resetLocalState();this.closest(\'.mobile-menu-overlay\').remove();if(confirm(\'Ripristinare i dati cancellera tutte le decisioni prese. Continuare?\')){location.reload()}">↺ Ripristina</button>\
+    <div class="mm-sep"></div>\
+    <button class="mm-item" onclick="handleInstallApp();this.closest(\'.mobile-menu-overlay\').remove()">📲 Installa sul dispositivo</button>\
+    <button class="mm-item" onclick="openSettingsModal();this.closest(\'.mobile-menu-overlay\').remove()">👤 Impostazioni / onboarding</button>\
+    <a class="mm-item mm-link" href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" onclick="this.closest(\'.mobile-menu-overlay\').remove()">📘 Apri il corso in PDF</a>\
+    <a class="mm-item mm-link" href="/motto-non-multa-sed-multum" target="_blank" rel="noopener" onclick="this.closest(\'.mobile-menu-overlay\').remove()">🏛️ Motto e metodo</a>\
+    <button class="mm-item" onclick="showWelcome(true);this.closest(\'.mobile-menu-overlay\').remove()">❔ Guida rapida</button>\
+    <button class="mm-close" onclick="this.closest(\'.mobile-menu-overlay\').remove()">Chiudi</button>\
+  </div>';
+  document.body.appendChild(overlay);
+}
+
+// ================================================================
 // WELCOME MODAL — onboarding per il primo utilizzo
 // ================================================================
 function showWelcome(force=false){
@@ -2679,5 +2761,11 @@ render();
 registerOfflineSupport();
 showWelcome();
 </script>
+<nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
+  <button class="mbb-btn mbb-active" id="mbb-rev" onclick="setTab('lavoro')">✏️<br>Rev.</button>
+  <button class="mbb-btn" id="mbb-def" onclick="setTab('riepilogo')">📋<br>Def.</button>
+  <button class="mbb-btn" id="mbb-exp" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})">📤<br>Esp.</button>
+  <button class="mbb-btn" id="mbb-more" onclick="toggleMobileMenu()">☰<br>Menu</button>
+</nav>
 </body>
 </html>

@@ -305,3 +305,24 @@
 - 11 criteri di accettazione per CML-013F
 - Nessuna modifica runtime, nessun deploy
 - Verdetto: `CML_013E_MOBILE_NAVIGATION_STRUCTURE_AUDIT_READY`
+
+## 2026-06-21 — CML-013F — Bottom Bar + Menu Overlay Mobile Navigation
+
+- **a858374** — docs: audit CML mobile navigation structure (pre-deploy HEAD)
+- Unico file modificato: `_published_snapshot/netlify-current/index.html`
+- **Bottom bar fissa (≤900px):** ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰ Menu
+  - position:fixed, z-index:1000, touch target 44px
+  - padding-bottom 52px su main
+  - Tabbar nascosto a ≤900px
+- **Menu overlay ☰:** Fonti, Generali, Azioni secondarie, Salva/Backup/Importa/Ripristina
+  - Creato dinamicamente da JS
+  - Chiusura: X, click fuori, tap voce
+- **Sidebar discipline:** contestuale — visibile solo in Revisione/Definitivo
+- **Breadcrumb:** dinamico via updateBreadcrumb() in setTab()
+- **setTab() sincronizza:** bottom bar active state + sidebar visibilità
+- **11/11 criteri accettazione CML-013E** verificati
+- Desktop (≥901px) invariato ✅
+- Asset invariati: sw.js, _headers, PDF
+- Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current` — 1 file, 3.9s
+- Verifica post-deploy: https://curmanlight.netlify.app — passa ✅
+- Verdetto: `CML_013F_BOTTOM_BAR_MENU_OVERLAY_MOBILE_NAVIGATION_READY`
