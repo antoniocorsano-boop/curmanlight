@@ -474,3 +474,12 @@
 - Nessuna modifica runtime, PDF, sw.js, _headers o asset
 - Confini rispettati, nessun dato sensibile esposto
 - Verdetto: CML_017_CONTROLLED_NETLIFY_PUBLICATION_AFTER_EXPORT_QUALITY_CLOSURE_READY
+
+## 2026-06-21 — CML-018 — Simple Drive Handoff Workflow Contract
+
+- 537f70c — docs: define simple Drive handoff workflow (HEAD partenza)
+- Contratto operativo definito per flusso snello gestione proposte revisione curricolo
+- Cartella Drive singola, file `.cml` unico, tre ruoli (Docente, Dipartimento, Referente)
+- Automazione solo invio proposta docente, import manuale per altri ruoli
+- Nessuna modifica runtime, PDF, sw.js, _headers, asset o deploy
+- Verdetto: CML_018_SIMPLE_DRIVE_HANDOFF_WORKFLOW_CONTRACT_READY
