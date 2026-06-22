@@ -57,7 +57,7 @@ Importa gli esiti dipartimentali `.cml`, verifica completezza e coerenza, genera
 
 - Nel pannello "Revisione per disciplina", cliccare **"⬇️ Scarica proposta .cml"**
 - Viene scaricato un file con nome tipo `proposta_docente_Italiano_2026-06-22.cml`
-- Inviare il file al referente di dipartimento (via email, Drive condiviso, chiavetta USB)
+- Inviare il file al coordinatore di dipartimento (via email, Drive condiviso, chiavetta USB)
 
 ### 4. Il dipartimento importa le proposte
 
@@ -73,6 +73,7 @@ Importa gli esiti dipartimentali `.cml`, verifica completezza e coerenza, genera
   - *Assorbita in altra proposta* — la proposta confluisce in altra
   - *Da chiarire* — serve un chiarimento prima di decidere
 - Cliccare **"⬇️ Esporta esito dipartimento .cml"**
+- Viene scaricato un file con nome tipo `esito_dipartimento_2026-06-22.cml`
 - Inviare il file al referente curricolo
 
 ### 6. Il referente importa gli esiti
@@ -127,6 +128,11 @@ Importa gli esiti dipartimentali `.cml`, verifica completezza e coerenza, genera
 
 - Importare prima almeno un file `.cml` valido con esiti dipartimentali
 - Il pulsante "Scarica report gruppo di lavoro" genera il report solo se ci sono esiti importati
+
+### "Ho perso il file scaricato"
+
+- Riaprire CurManLight e riesportare: i dati sono ancora nello strumento (se non è stata cancellata la cache del browser)
+- Il file `.cml` può essere rigenerato in qualsiasi momento
 
 ### "La pagina non mostra gli ultimi aggiornamenti"
 

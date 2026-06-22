@@ -667,3 +667,21 @@
 - MEMORY.md presente come untracked — non committato
 - Nessuna modifica runtime; nessun deploy
 - Verdetto: `CML_027_USER_HANDOFF_GUIDE_LIVE_WORKFLOW_READY`
+
+## 2026-06-22 — CML-027A — User handoff guide real readability smoke
+
+- **ba175f8** — HEAD partenza: docs: add live workflow user handoff guide
+- Nuovo commit: docs: smoke user handoff guide readability
+  - Micro-correzioni a `docs/04_user/CML_GUIDA_RAPIDA_UTENTE.md` (3 modifiche)
+  - Creazione di `docs/03_execution/CML-027A.md`
+  - Creazione di `report/CML-027A_user_handoff_guide_real_readability_smoke.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Audit leggibilità: 10/10 criteri PASS ✅
+- Micro-test 3 profili: docente ✅, dipartimento ✅, referente ✅
+- Micro-correzioni:
+  1. "referente di dipartimento" → "coordinatore di dipartimento" (chiarezza ruoli)
+  2. Aggiunto filename esito dipartimentale (coerenza)
+  3. Aggiunto FAQ "Ho perso il file scaricato" (scenario reale)
+- MEMORY.md presente come untracked — non committato
+- Nessuna modifica runtime; nessun deploy
+- Verdetto: `CML_027A_USER_HANDOFF_GUIDE_REAL_READABILITY_SMOKE_READY`
