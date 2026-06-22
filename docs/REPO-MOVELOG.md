@@ -1081,3 +1081,17 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_047_SERVICE_WORKER_CACHE_BUMP_CYCLE_CLOSED`
 - Documentazione: `docs/03_execution/CML-047.md`, `report/CML-047_service_worker_cache_bump_cycle_closure_audit.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-048 — Next CML Functional Increment Selection Audit
+
+- HEAD partenza: `114cb59`, tree pulita, solo untracked non pertinenti ✅
+- Opzioni valutate: 6 (A — estensione esempi `.cml`, B — micro UX viewer, C — contenuti curricolo, D — export/stampa, E — release note, F — osservazioni reali)
+- **Opzione selezionata: E — Chiusura release / nota di rilascio (stato progetto)**
+- Motivazione: docs-only, rischio nullo, alto valore per DS/referente/coordinatori, prepara raccolta osservazioni reali
+- Docs-only, nessun runtime modificato, nessun deploy
+- Prossimo step: CML-049 — redazione nota di rilascio / scheda stato progetto
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_048_NEXT_CML_FUNCTIONAL_INCREMENT_SELECTION_AUDIT_READY`
+- Documentazione: `docs/03_execution/CML-048.md`, `report/CML-048_next_cml_functional_increment_selection_audit.md`, `docs/REPO-MOVELOG.md`
