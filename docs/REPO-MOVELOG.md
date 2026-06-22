@@ -1026,3 +1026,25 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Documentazione: `docs/03_execution/CML-044.md`, `report/CML-044_user_guide_update_after_department_flow_fix.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_044_USER_GUIDE_UPDATE_AFTER_DEPARTMENT_FLOW_FIX_READY`
+
+---
+
+## CML-045 — Service Worker Cache Version Alignment Audit
+
+- HEAD partenza: `934e395`, tree pulita, solo untracked non pertinenti ✅
+- Nessuna modifica runtime, nessun deploy, nessuna modifica schema `.cml` o persistenza
+- File ispezionato: `_published_snapshot/netlify-current/sw.js` (42 righe)
+- Cache name: `curmanlight-cache-v452b421`, invariato da `cd5996e`
+- `index.html` ha ricevuto 26 commit di modifiche dopo l'ultimo bump cache
+- **Rischio cache: MEDIO**
+  - Causa: cache name invariato, 26 commit non accompagnati da bump, strategy cache-first su `index.html`
+  - Impatto: utenti di ritorno vedono versione obsoleta dell'app
+  - Probabilità: MEDIA (solo utenti con cache preesistente)
+- Opzioni valutate: A ❌, B ✅ (bump versione cache), C ⚠️, D ❌, E ❌
+- **Opzione selezionata: B — Bump versione cache** (da eseguire in CML-046)
+  - Modifica minima: `v452b421` → `v452b422` alla riga 1 di `sw.js`
+  - `skipWaiting()`, `clients.claim()`, cleanup activate già presenti
+- Verdetto: `CML_045_SERVICE_WORKER_CACHE_BUMP_RECOMMENDED`
+- Prossimo step: CML-046 — eseguire bump cache, smoke test, deploy controllato
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Documentazione: `docs/03_execution/CML-045.md`, `report/CML-045_service_worker_cache_version_alignment_audit.md`, `docs/REPO-MOVELOG.md`
