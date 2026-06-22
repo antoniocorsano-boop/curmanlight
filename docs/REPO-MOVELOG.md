@@ -1270,3 +1270,13 @@
 - Nessuna modifica runtime
 - Nessun deploy
 - Verdetto: `CML_056C_ROLE_ACCESS_CODE_GATING_T07_T13_COMPLETION_READY`
+
+## 2026-06-22 — CML-057 — Role Access Code Gating Controlled Deploy
+
+- **e7d21bd** — HEAD partenza
+- Deploy richiede accesso Netlify UI (CLI non configurata)
+- Metodo: drag-drop cartella `_published_snapshot/netlify-current/`
+- Smoke live da verificare manualmente post-deploy
+- Nessuna modifica runtime
+- Nessun nuovo localStorage
+- Verdetto: `CML_057_ROLE_ACCESS_CODE_GATING_CONTROLLED_DEPLOY_READY`
