@@ -732,3 +732,19 @@
 - MEMORY.md presente come untracked — non committato
 - Nessuna modifica runtime; nessun deploy
 - Verdetto: `CML_029A_SCHOOL_HANDOFF_PACKAGE_READABILITY_AND_USE_SMOKE_READY`
+
+## 2026-06-22 — CML-030 — Next runtime or support block selection audit
+
+- **6db3cb8** — HEAD partenza: docs: smoke school handoff package usability
+- Nuovo commit: docs: select next CML support or runtime block
+  - Creazione di `docs/03_execution/CML-030.md`
+  - Creazione di `report/CML-030_next_runtime_or_support_block_selection_audit.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Audit di selezione, docs-only
+- Opzioni valutate: A (onboarding), B (guida contestuale), C (archivio file), **D (esempi dimostrativi)**, E (versione stampabile), F (miglioramento report), G (release notes)
+- Opzione selezionata: **D — Pacchetto esempi dimostrativi**
+  - Motivazione: alto valore per formazione e adozione, rischio nullo (docs-only), completa il pacchetto handoff
+- MEMORY.md presente come untracked — non committato
+- Nessuna implementazione; nessuna modifica runtime; nessun deploy
+- Verdetto: `CML_030_NEXT_RUNTIME_OR_SUPPORT_BLOCK_SELECTION_AUDIT_READY`
+- Prossimo step: CML-031 — Creazione esempi dimostrativi `.cml` e guida alla simulazione
