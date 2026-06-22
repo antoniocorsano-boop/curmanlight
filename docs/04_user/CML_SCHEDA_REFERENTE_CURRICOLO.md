@@ -16,16 +16,16 @@ Ogni coordinatore di dipartimento invia al referente il file `.cml` con l'esito 
 ## Passo 2 — Importare gli esiti in CurManLight
 
 1. Aprire [https://curmanlight.netlify.app](https://curmanlight.netlify.app) nel browser.
-2. Selezionare la modalità referente (pulsante "Modalità Referente").
-3. Usare il pulsante "Importa esiti dipartimenti" per caricare ciascun file `.cml` ricevuto.
-4. Verificare che tutti gli esiti siano visualizzati correttamente nella schermata di riepilogo.
+2. Nella scheda "Revisione", scorrere fino alla sezione **"Verifica referente curricolo"**.
+3. Usare il pulsante **"Importa esiti dipartimentali .cml"** per caricare ciascun file `.cml` ricevuto.
+4. Verificare che tutti gli esiti siano visualizzati correttamente nel riepilogo.
 
 Nella schermata di riepilogo è possibile vedere, per ciascuna proposta, l'esito assegnato dal dipartimento. Le voci contrassegnate con l'indicatore ✏️ sono proposte personalizzate (modificate dal docente).
 
 ## Passo 3 — Generare il report del gruppo di lavoro
 
-1. Usare il pulsante "Genera report gruppo di lavoro" in modalità referente.
-2. CurManLight produce un file Markdown con tutte le proposte, gli esiti dipartimentali e un riepilogo statistico.
+1. Usare il pulsante **"Scarica report gruppo di lavoro"**.
+2. CurManLight produce un file Markdown con: sintesi generale, quadro per disciplina, punti da chiarire, elementi senza esito, evidenze e traccia per la discussione.
 3. Scaricare il file sul computer.
 
 ## Passo 4 — Usare il report in riunione

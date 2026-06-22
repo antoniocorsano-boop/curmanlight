@@ -1002,3 +1002,27 @@
 - Note cache/service worker: nessuna modifica a sw.js
 - Documentazione: `docs/03_execution/CML-043.md`, `report/CML-043_controlled_deploy_and_live_smoke_department_cml_flow_fix.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_043_CONTROLLED_DEPLOY_AND_LIVE_SMOKE_DEPARTMENT_CML_FLOW_FIX_READY`
+
+---
+
+## CML-044 — User Guide Update After Department Flow Fix
+
+- HEAD partenza: `b6844af`, tree pulita, solo untracked non pertinenti ✅
+- Nessuna modifica runtime, nessun deploy, nessuna modifica schema `.cml` o persistenza
+- **Guida rapida utente** (`CML_GUIDA_RAPIDA_UTENTE.md`):
+  - Aggiunta sezione "Prima di iniziare: consultare il curricolo" con viewer, versioni, callout sezioni generali
+  - Estesa sezione "A cosa serve" con viewer e versioni
+- **Guida simulazione esempi** (`CML_GUIDA_SIMULAZIONE_ESEMPI.md`):
+  - Allineati nomi sezioni e pulsanti alla UI live ("Validazione dipartimentale", "Verifica referente curricolo")
+  - Rimossa sezione "Note tecniche" con note interne deploy
+  - Aggiunto riferimento verifica live
+- **Vademecum dipartimenti** (`CML_VADEMECUM_DIPARTIMENTI.md`):
+  - UI path corretto (da "Modalità Dipartimento" a sezione reale)
+  - Etichette esiti allineate al dropdown
+- **Scheda referente** (`CML_SCHEDA_REFERENTE_CURRICOLO.md`):
+  - UI path e pulsanti corretti
+  - Contenuto report aggiornato
+- Controlli: linguaggio non tecnico ✅, nessuna falsa approvazione ✅, coerenza live ✅
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Documentazione: `docs/03_execution/CML-044.md`, `report/CML-044_user_guide_update_after_department_flow_fix.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_044_USER_GUIDE_UPDATE_AFTER_DEPARTMENT_FLOW_FIX_READY`

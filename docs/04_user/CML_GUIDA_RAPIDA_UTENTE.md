@@ -8,7 +8,10 @@ CurManLight è uno strumento web che aiuta il collegio docenti a revisionare il 
 
 ## A cosa serve
 
-- Leggere il curricolo vigente (IN 2012) e le proposte di aggiornamento (IN 2025)
+- Consultare il **"Curricolo di istituto"** con le due versioni:
+  - `📖 IN 2012 (vigente)` — il curricolo attualmente in uso
+  - `📖 IN 2025 (bozza)` — la proposta di aggiornamento
+- Leggere le **sezioni generali** del curricolo (Premessa, Profilo dello studente, Valutazione, Inclusione, Continuità, Orientamento)
 - Personalizzare una proposta per la propria disciplina
 - Raccogliere le proposte dei docenti a livello di dipartimento
 - Valutare le proposte e decidere se accoglierle, modificarle o chiederne chiarimento
@@ -20,6 +23,22 @@ CurManLight è uno strumento web che aiuta il collegio docenti a revisionare il 
 - **Non** genera automaticamente un curricolo approvato
 - **Non** invia dati al Drive, al registro elettronico o a piattaforme esterne
 - **Non** richiede login, account o autenticazione
+
+---
+
+## Prima di iniziare: consultare il curricolo
+
+Prima di preparare una proposta, è utile leggere il curricolo attuale e la bozza di aggiornamento.
+
+1. Aprire https://curmanlight.netlify.app
+2. Cliccare sulla scheda **"Curricolo di istituto"** (in alto o in basso, secondo il dispositivo)
+3. Scegliere la versione da consultare:
+   - `📖 IN 2012 (vigente)` — il curricolo attualmente in vigore
+   - `📖 IN 2025 (bozza)` — la proposta di aggiornamento basata sulle nuove Indicazioni Nazionali
+4. Usare l'indice navigabile per saltare direttamente a una disciplina
+5. **Attenzione:** prima di leggere le discipline, lo strumento ricorda di consultare anche le **sezioni generali** del curricolo (Premessa, Profilo dello studente, Valutazione, Inclusione, Continuità, Orientamento). Le sezioni generali sono disponibili nella scheda "Sezioni generali".
+
+Le due versioni sono chiaramente distinte: la versione vigente è contrassegnata come **"Stato da verificare"**, la bozza come **"Bozza simulata"**. Non c'è il rischio di confondere un documento di lavoro con un curricolo approvato.
 
 ---
 

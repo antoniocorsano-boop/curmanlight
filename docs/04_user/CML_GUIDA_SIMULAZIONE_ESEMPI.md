@@ -9,6 +9,8 @@ Sono utili per:
 - presentazione del flusso a nuovi membri del dipartimento;
 - test del passaggio proposte → esiti → report senza rischiare dati sensibili.
 
+**Il flusso completo (docente → dipartimento → referente → report) è stato verificato sulla versione live dell'app**.
+
 **Importante:** questi file non rappresentano un curricolo approvato. Usano solo dati fittizi.
 
 ## Formato `.cml`
@@ -31,13 +33,13 @@ Apri l'app all'indirizzo:
 
 ## Flusso dipartimento
 
-1. Vai alla scheda **Dipartimento**.
+1. Nell'app, vai alla sezione **"Validazione dipartimentale"** (si trova nella scheda "Revisione").
 2. Usa il pulsante **"Importa proposte docenti .cml"** e carica uno dei file di esempio proposta docente.
 3. Esamina le proposte importate. Per ogni proposta, assegna un esito tra:
-   - **Confluita nella sintesi** — la proposta e accolta nel testo finale
-   - **Riformulata dal dipartimento** — la proposta e accolta ma va riformulata
-   - **Assorbita in altra proposta** — la proposta viene accorpata ad altra disciplina
-   - **Da chiarire** — la proposta necessita di chiarimenti
+   - **Confluita nella sintesi** — la proposta è stata assorbita nella sintesi finale
+   - **Riformulata dal dipartimento** — la proposta è stata modificata
+   - **Assorbita in altra proposta** — la proposta confluisce in altra
+   - **Da chiarire** — serve un chiarimento prima di decidere
 4. Usa il pulsante **"Esporta esito dipartimento .cml"** per generare l'esito.
 5. **In alternativa**, carica uno dei file di esempio già pronti:
    - `esempio_esito_dipartimento_tecnologia.cml`
@@ -45,14 +47,14 @@ Apri l'app all'indirizzo:
 
 ## Flusso referente
 
-1. Vai alla scheda **Referente**.
+1. Nell'app, vai alla sezione **"Verifica referente curricolo"** (si trova nella scheda "Revisione").
 2. Usa il pulsante **"Importa esiti dipartimentali .cml"** e carica uno o piu file di esito dipartimentale.
 3. Il referente puo ora:
    - **Controllare completezza**: quante proposte gestite, quante discipline rappresentate
    - **Esaminare le evidenze**: elementi confluiti, riformulati, assorbiti, da chiarire, senza esito
    - **Identificare punti critici**: elementi marcati come `da_chiarire`
    - **Verificare elementi senza esito**: proposte che non hanno ricevuto un handling valido
-4. Usa il pulsante **"Genera report referente"** per produrre un report di sintesi.
+4. Usa il pulsante **"Scarica report gruppo di lavoro"** per produrre un report di sintesi.
 
 ## Report finale atteso
 
@@ -90,9 +92,8 @@ Durante la formazione, usa sempre file di esempio, mai file con dati reali.
 | Proposta da chiarire | te_ob_sec3 | it_ob_sec1 |
 | Proposta senza esito | (nessuna) | (nessuna) |
 
-## Note tecniche
+## Note
 
 - I file `.cml` devono essere JSON validi.
-- La validazione richiede: `fileType`, `discipline` (o `discipline`), `proposals`/`proposalHandling`, `humanValidationRequired: true`.
+- La validazione richiede: `fileType`, `discipline`, `proposals`/`proposalHandling`, `humanValidationRequired: true`.
 - I file di esempio NON attivano il Drive condiviso (upload endpoint non configurato). Funzionano solo in modalita locale (download/import manuale).
-- Per i prossimi deploy, ricordare che `npx netlify deploy --prod` non e utilizzabile su piano free tier (errore Forbidden). Usare il workaround: deploy draft + API `restoreSiteDeploy`.

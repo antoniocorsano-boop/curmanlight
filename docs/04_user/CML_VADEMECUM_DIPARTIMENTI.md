@@ -11,8 +11,8 @@ Ogni docente del dipartimento prepara la propria proposta utilizzando CurManLigh
 ## Passo 2 — Importare le proposte in CurManLight
 
 1. Aprire [https://curmanlight.netlify.app](https://curmanlight.netlify.app) nel browser.
-2. Selezionare la modalità dipartimento (pulsante "Modalità Dipartimento").
-3. Usare il pulsante "Importa proposte docenti" per caricare ciascun file `.cml` ricevuto.
+2. Nella scheda "Revisione", scorrere fino alla sezione **"Validazione dipartimentale"**.
+3. Usare il pulsante **"Importa proposte docenti .cml"** per caricare ciascun file `.cml` ricevuto.
 4. Verificare che le proposte appaiano correttamente nell'elenco.
 
 ## Passo 3 — Discutere in riunione di dipartimento
@@ -20,17 +20,17 @@ Ogni docente del dipartimento prepara la propria proposta utilizzando CurManLigh
 Le proposte vanno discusse in riunione. Per ciascuna proposta il dipartimento decide uno dei seguenti esiti:
 
 | Esito | Significato |
-|---|---|
-| Approvata | La proposta è accolta così com'è |
-| Riformulata | La proposta è accolta con modifiche concordate in riunione |
-| Assorbita | La proposta è stata integrata in altra proposta |
+|---|---|---|
+| Confluita nella sintesi | La proposta è stata assorbita nella sintesi finale |
+| Riformulata dal dipartimento | La proposta è accolta con modifiche concordate in riunione |
+| Assorbita in altra proposta | La proposta confluisce in altra proposta |
 | Da chiarire | La proposta necessita di approfondimento e resta in sospeso |
 
 Nella schermata di CurManLight, per ogni proposta è presente un menu a tendina per selezionare l'esito. Per le proposte riformulate, è possibile inserire il testo modificato.
 
 ## Passo 4 — Scaricare l'esito dipartimentale
 
-Dopo aver registrato tutti gli esiti, usare il pulsante "Esporta esito dipartimento". CurManLight genera un file `.cml` con nome `esito_dipartimento_AAAA-MM-GG.cml`. Salvarlo sul proprio computer.
+Dopo aver registrato tutti gli esiti, usare il pulsante **"Esporta esito dipartimento .cml"**. CurManLight genera un file `.cml` con nome `esito_dipartimento_AAAA-MM-GG.cml`. Salvarlo sul proprio computer.
 
 ## Passo 5 — Inviare l'esito al referente curricolo
 
