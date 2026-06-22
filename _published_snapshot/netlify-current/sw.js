@@ -1,4 +1,4 @@
-const CACHE_NAME = "curmanlight-cache-v452b421";
+const CACHE_NAME = "curmanlight-cache-v452b422";
 const APP_SHELL = [
   "./",
   "./index.html",
