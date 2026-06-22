@@ -1111,3 +1111,17 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_049_RELEASE_NOTE_AND_PROJECT_STATUS_CARD_READY`
 - Documentazione: `docs/03_execution/CML-049.md`, `report/CML-049_release_note_and_project_status_card.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-050 — Release Handoff and Real Observation Selection Audit
+
+- HEAD partenza: `9aa1386`, tree pulita, solo untracked non pertinenti ✅
+- Opzioni valutate: 6 (A — raccolta osservazioni reali, B — estensione esempi `.cml`, C — micro UX, D — contenuti curricolo, E — incontro presentazione, F — fermarsi)
+- **Opzione selezionata: E — Preparazione incontro presentazione operativa**
+- Motivazione: docs-only, rischio nullo, produce protocollo concreto per passare da documentazione a uso reale
+- Docs-only, nessun runtime modificato, nessun deploy
+- Prossimo step: CML-051 — SCHOOL_HANDOFF_MEETING_SCRIPT_AND_OBSERVATION_PROTOCOL
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_050_RELEASE_HANDOFF_AND_REAL_OBSERVATION_SELECTION_AUDIT_READY`
+- Documentazione: `docs/03_execution/CML-050.md`, `report/CML-050_release_handoff_and_real_observation_selection_audit.md`, `docs/REPO-MOVELOG.md`
