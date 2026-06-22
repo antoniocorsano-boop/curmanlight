@@ -1381,3 +1381,22 @@
 - **File documentali creati**: `docs/03_execution/CML-064A.md`, `report/CML-064A_technology_pack_preview_live_deploy_smoke.md`
 - **Prossimo step**: `CML-063 — UX_QUALITY_AUDIT_FRAME_DETAIL_BALANCE`
 - **Verdetto**: `CML_064A_TECHNOLOGY_PACK_PREVIEW_LIVE_DEPLOY_SMOKE_READY`
+
+---
+
+## CML-063 — UX Quality Audit Frame Detail Balance
+
+- HEAD partenza: `f5c843f`, tree pulita, solo untracked non pertinenti ✅
+- Aree auditate: 13 (home, revisione, tecnologia, curricolo, normativa, generali, export, validazione, referente, mobile, role-access, salvataggio, dettaglio)
+- Metriche UI: 89 button, 96 onclick, 25 export-btn, 3 azioni protette, 5 tab, mobile bottom bar
+- **Problemi P0**: 0
+- **Problemi P1**: 3 (home/cruscotto assente, troppe azioni in revisione, export overload)
+- **Problemi P2**: 7 (tecnologia tab condizionato, curricolo indistinto, normative dense, generali senza break, validazione 2-step poco chiaro, label referente, nav mobile)
+- **Problemi P3**: 3 (salvataggio senza icona, dettaglio senza chevron, label role-access)
+- Role-access gating: verificato e conforme al contratto CML-055
+- Aree OK: viewer, proposta docente, guide, schema `.cml`, persistenza, footer
+- Docs-only, nessun runtime modificato, nessun deploy
+- Raccomandazione: aggiungere tab "Home" con cruscotto iniziale (CML-063A)
+- MEMORY.md/.kilo/CLAUDE.md: assenti come untracked
+- Verdetto: `CML_063_UX_QUALITY_AUDIT_FRAME_DETAIL_BALANCE_READY`
+- Documentazione: `docs/03_execution/CML-063.md`, `report/CML-063_ux_quality_audit_frame_detail_balance.md`, `docs/REPO-MOVELOG.md`
