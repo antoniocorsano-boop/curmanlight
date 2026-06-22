@@ -1329,3 +1329,18 @@
 - Nessuna modifica runtime, nessun deploy
 - Prossimo step: CML-064 - TECHNOLOGY_PACK_RUNTIME_READONLY_PREVIEW
 - Verdetto: CML_062_TECHNOLOGY_DISCIPLINE_FULL_PACK_READY
+
+---
+
+## CML-064 — TECHNOLOGY_PACK_RUNTIME_READONLY_PREVIEW
+
+- **index.html** — feat: add read-only Technology curriculum preview
+- Sezione tecnologia-norm aggiunta in #tab-curricolo
+- Dati normalizzati incorporati: costante TECNOLOGIA_NORM (13 unita)
+- Funzione renderTecnologiaNorm() read-only
+- Filtri ordine, dettaglio espandibile, microcopy obbligatoria
+- Nessuna modifica export/import/report/schema .cml/localStorage/role-access
+- Nessun deploy
+- Smoke locale: 13/13 controlli PASS
+- Prossimo step: CML-064A — deploy controllato + smoke live
+- Verdetto: CML_064_TECHNOLOGY_PACK_RUNTIME_READONLY_PREVIEW_READY
