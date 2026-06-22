@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-06-22T08:00:00.000Z",
+  "role": "teacher",
+  "discipline": "Tecnologia",
+  "sourceContext": {
+    "currentFramework": "D.M. 254/2012",
+    "revisionFramework": "D.M. 221/2025"
+  },
+  "counts": {
+    "total": 12,
+    "ok": 4,
+    "modifica": 8,
+    "nuovo": 0
+  },
+  "proposals": [
+    {
+      "id": "te_pri1",
+      "discipline": "Tecnologia",
+      "ordine": "Primaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "L'alunno si orienta tra i diversi mezzi di comunicazione ed è in grado di farne un uso adeguato.",
+      "proposta": "Si orienta tra i mezzi di comunicazione; usa gli strumenti digitali con consapevolezza, sviluppando competenze base di informatica (hardware, software, reti).",
+      "motivazione": "Le Nuove Indicazioni chiedono un presidio piu esplicito dell'alfabetizzazione informatica di base, che nella versione 2012 era solo implicita.",
+      "fonte": "D.M. 221/2025 — Tecnologia, ambito Informatica"
+    },
+    {
+      "id": "te_pri2",
+      "discipline": "Tecnologia",
+      "ordine": "Primaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Inizia a riconoscere in modo critico le caratteristiche, le funzioni e i limiti della tecnologia attuale.",
+      "proposta": "Riconosce criticamente caratteristiche e limiti della tecnologia, incluse le applicazioni dell'IA; valuta impatti ambientali e sociali delle tecnologie.",
+      "motivazione": "L'intelligenza artificiale e ormai pervasiva; il traguardo 2012 non la nominava. Le nuove Indicazioni richiedono un approccio critico esplicito all'IA.",
+      "fonte": "D.M. 221/2025 — Tecnologia, IA"
+    },
+    {
+      "id": "te_sec2",
+      "discipline": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Progetta e realizza rappresentazioni grafiche o infografiche, relative alla struttura e al funzionamento di sistemi.",
+      "proposta": "Progetta rappresentazioni grafiche con strumenti di disegno tecnico e applicazioni digitali (CAD, GeoGebra).",
+      "motivazione": "Le Nuove Indicazioni elevano il disegno tecnico a primo ambito della disciplina. Il CAD e esplicitamente menzionato come strumento.",
+      "fonte": "D.M. 221/2025 — Tecnologia, ambito Disegno tecnico"
+    },
+    {
+      "id": "te_sec3",
+      "discipline": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Sa utilizzare le tecnologie dell'informazione e della comunicazione per comunicare, calcolare, ricercare, archiviare dati.",
+      "proposta": "Usa le TIC per comunicare e archiviare dati; conosce hardware, software, reti; usa strumenti di grafica, coding, internet, AI ed elaborazione dati; valuta sicurezza e impatto sociale.",
+      "motivazione": "Il nuovo quarto ambito Informatica richiede competenze esplicite su AI, coding e sicurezza, assenti nella versione 2012.",
+      "fonte": "D.M. 221/2025 — Tecnologia, ambito Informatica"
+    },
+    {
+      "id": "te_ob_pri2",
+      "discipline": "Tecnologia",
+      "ordine": "Primaria",
+      "classe": "Cl. 4a-5a",
+      "type": "obiettivo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Usare software didattici e videoscrittura. Cercare informazioni su internet.",
+      "proposta": "Software didattici, videoscrittura, fogli di calcolo; valutazione critica delle informazioni online; algoritmi semplici; comportamenti sicuri in rete.",
+      "motivazione": "Serve anticipare all'ultimo biennio primaria le basi di informatica, foglio di calcolo e sicurezza online.",
+      "fonte": "D.M. 221/2025 — Tecnologia, Primaria"
+    },
+    {
+      "id": "te_ob_sec1",
+      "discipline": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "Cl. 1a",
+      "type": "obiettivo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Leggere e interpretare semplici disegni tecnici. Analizzare oggetti d'uso comune.",
+      "proposta": "Disegni tecnici; analisi di oggetti e materiali; elaborati grafici con strumenti tradizionali e CAD base; navigazione critica in internet.",
+      "motivazione": "L'introduzione del CAD nella classe 1a segue le indicazioni del D.M. 221/2025 sull'ambito Disegno tecnico.",
+      "fonte": "D.M. 221/2025 — Tecnologia, Disegno tecnico"
+    },
+    {
+      "id": "te_ob_sec2",
+      "discipline": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "Cl. 2a",
+      "type": "obiettivo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Realizzare elaborati grafici in scala. Descrivere processi produttivi locali.",
+      "proposta": "Elaborati grafici in scala con CAD; processi produttivi locali (ceramica arianese) in chiave tecnologica; reti informatiche; grafica digitale.",
+      "motivazione": "Il CAD in classe 2a prosegue il percorso del disegno tecnico; la ceramica arianese valorizza l'artigianato locale.",
+      "fonte": "D.M. 221/2025 — Tecnologia, Disegno tecnico"
+    },
+    {
+      "id": "te_ob_sec3",
+      "discipline": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "Cl. 3a",
+      "type": "obiettivo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Conoscere reti e internet. Programmare con linguaggi a blocchi.",
+      "proposta": "Internet e reti; programmazione a blocchi (Scratch) e Python base; uso critico dell'IA; elaborazione dati con fogli di calcolo; sicurezza informatica.",
+      "motivazione": "Le Nuove Indicazioni richiedono AI curricolare in Tecnologia classe 3a e programmazione Python, non solo Scratch.",
+      "fonte": "D.M. 221/2025 — Tecnologia, AI curricolare"
+    }
+  ],
+  "checks": {
+    "hasProposals": true,
+    "hasDiscipline": true,
+    "hasSources": true
+  },
+  "humanValidationRequired": true
+}

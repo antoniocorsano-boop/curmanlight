@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "department_outcome",
+  "appName": "CurManLight",
+  "createdAt": "2026-06-22T09:30:00.000Z",
+  "role": "department",
+  "discipline": "Italiano",
+  "disciplineWorkStatus": "completed",
+  "disciplines": ["Italiano"],
+  "proposalHandling": [
+    {
+      "proposalId": "it_inf1",
+      "handling": "confluita_nella_sintesi",
+      "note": "Ascolto attivo e narrazione all'Infanzia: recepito nel testo di sintesi."
+    },
+    {
+      "proposalId": "it_inf3",
+      "handling": "confluita_nella_sintesi",
+      "note": "Pregrafismo e corsivo all'Infanzia: confluito."
+    },
+    {
+      "proposalId": "it_pri2",
+      "handling": "confluita_nella_sintesi",
+      "note": "Obbligo di 3 libri/anno in lettura integrale: recepito."
+    },
+    {
+      "proposalId": "it_pri3",
+      "handling": "confluita_nella_sintesi",
+      "note": "Corsivo e riassunto nella primaria: confluiti nella sintesi."
+    },
+    {
+      "proposalId": "it_pri5",
+      "handling": "riformulata_dal_dipartimento",
+      "note": "Riformulare: 'Riconosce e applica le strutture morfosintattiche fondamentali, con attenzione alla riflessione sulla lingua come strumento di metacognizione.'"
+    },
+    {
+      "proposalId": "it_sec2",
+      "handling": "assorbita_in_altra_proposta",
+      "note": "La lettura di graphic novel e albi illustrati viene accorpata alla proposta di Arte e Immagine per un progetto interdisciplinare."
+    },
+    {
+      "proposalId": "it_sec3",
+      "handling": "confluita_nella_sintesi",
+      "note": "Riassunto e corsivo nella secondaria: confluiti."
+    },
+    {
+      "proposalId": "it_ob_inf2",
+      "handling": "confluita_nella_sintesi",
+      "note": "Memorizzazione di filastrocche: recepita."
+    },
+    {
+      "proposalId": "it_ob_pri1",
+      "handling": "confluita_nella_sintesi",
+      "note": "Corsivo dalla classe 1a: confluito."
+    },
+    {
+      "proposalId": "it_ob_pri2",
+      "handling": "confluita_nella_sintesi",
+      "note": "3 libri/anno e riassunto: confluiti."
+    },
+    {
+      "proposalId": "it_ob_sec1",
+      "handling": "da_chiarire",
+      "note": "Il dipartimento chiede: la memorizzazione e declamazione poetica va intesa come obbligatoria o opzionale? Servono criteri di scelta dei testi."
+    }
+  ],
+  "checks": {
+    "hasProposals": true,
+    "hasHandling": true,
+    "hasDisciplines": true
+  },
+  "humanValidationRequired": true
+}

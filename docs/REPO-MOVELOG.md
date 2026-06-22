@@ -927,3 +927,18 @@
 - Nessuna modifica runtime, nessun deploy
 - Documentazione: `docs/03_execution/CML-039.md`, `report/CML-039_curriculum_viewer_version_labels_cycle_closure_audit.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_039_CURRICULUM_VIEWER_VERSION_LABELS_CYCLE_CLOSED`
+
+---
+
+## CML-040 — DEMO EXAMPLE CML PACKAGE
+
+- Creazione pacchetto esempi dimostrativi `.cml` per formazione e simulazione (riprende blocco sospeso in CML-030)
+- 4 file `.cml` + guida simulazione
+- Proposte docente: Tecnologia (8 proposte), Italiano (11 proposte)
+- Esiti dipartimento: Tecnologia (8 esiti, 4 casi), Italiano (11 esiti, 4 casi)
+- Casi coperti: confluita nella sintesi, riformulata, assorbita, da chiarire
+- Schema `.cml` `1.0`, due `fileType`: `teacher_proposal`, `department_outcome`
+- Tutti i file validati: JSON valido, campi richiesti, dati fittizi
+- Nessuna modifica runtime, nessun deploy, nessuna modifica schema `.cml`
+- Documentazione: `docs/03_execution/CML-040.md`, `report/CML-040_demo_example_cml_package.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_040_DEMO_EXAMPLE_CML_PACKAGE_READY`

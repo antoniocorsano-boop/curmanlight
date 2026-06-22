@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-06-22T08:15:00.000Z",
+  "role": "teacher",
+  "discipline": "Italiano",
+  "sourceContext": {
+    "currentFramework": "D.M. 254/2012",
+    "revisionFramework": "D.M. 221/2025"
+  },
+  "counts": {
+    "total": 17,
+    "ok": 6,
+    "modifica": 11,
+    "nuovo": 0
+  },
+  "proposals": [
+    {
+      "id": "it_inf1",
+      "discipline": "Italiano",
+      "ordine": "Infanzia",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Il bambino usa la lingua italiana, arricchisce e precisa il proprio lessico, comprende parole e discorsi.",
+      "proposta": "Il bambino usa la lingua italiana con crescente consapevolezza, arricchisce il proprio lessico e comprende parole, discorsi e semplici testi, sviluppando la capacita di ascolto attivo e di narrazione.",
+      "motivazione": "Le Nuove Indicazioni potenziano l'ascolto attivo e la narrazione fin dall'Infanzia, non presenti nella versione 2012 per questo traguardo.",
+      "fonte": "D.M. 221/2025 — Italiano, Infanzia"
+    },
+    {
+      "id": "it_inf3",
+      "discipline": "Italiano",
+      "ordine": "Infanzia",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Si avvicina alla lingua scritta, esplora e sperimenta prime forme di comunicazione attraverso la scrittura.",
+      "proposta": "Si avvicina alla lingua scritta, esplora prime forme di comunicazione scritta; sviluppa un primo approccio al pregrafismo e al corsivo.",
+      "motivazione": "Le Nuove Indicazioni valorizzano il corsivo fin dall'Infanzia come strumento cognitivo e motorio.",
+      "fonte": "D.M. 221/2025 — Italiano, corsivo"
+    },
+    {
+      "id": "it_pri2",
+      "discipline": "Italiano",
+      "ordine": "Primaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Legge e comprende testi di vario tipo, individuandone le informazioni principali e lo scopo.",
+      "proposta": "Legge e comprende testi di vario tipo, continui e non continui, individuandone le informazioni principali; legge integralmente almeno tre libri all'anno discutendone in classe.",
+      "motivazione": "Le Nuove Indicazioni introducono la lettura integrale obbligatoria di almeno 3 libri all'anno, assente nel 2012.",
+      "fonte": "D.M. 221/2025 — Italiano, lettura integrale"
+    },
+    {
+      "id": "it_pri3",
+      "discipline": "Italiano",
+      "ordine": "Primaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Scrive testi corretti nell'ortografia, chiari e coerenti, legati all'esperienza e alle diverse occasioni di scrittura.",
+      "proposta": "Scrive testi corretti nell'ortografia, con cura della scrittura a mano in corsivo, chiari e coerenti; padroneggia le tecniche del riassunto e della riscrittura da testi-modello.",
+      "motivazione": "Le Nuove Indicazioni riabilitano il corsivo e il riassunto come competenze centrali, prima opzionali.",
+      "fonte": "D.M. 221/2025 — Italiano, corsivo e riassunto"
+    },
+    {
+      "id": "it_pri5",
+      "discipline": "Italiano",
+      "ordine": "Primaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Riconosce se una frase e o no completa, costituita dagli elementi essenziali.",
+      "proposta": "Riconosce e usa correttamente gli elementi della morfosintassi, con attenzione alla centralita della regola grammaticale.",
+      "motivazione": "Le Nuove Indicazioni sanciscono il ritorno alla centralita della norma grammaticale, che nel 2012 era solo implicita.",
+      "fonte": "D.M. 221/2025 — Italiano, grammatica"
+    },
+    {
+      "id": "it_sec2",
+      "discipline": "Italiano",
+      "ordine": "Secondaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Legge testi letterari di vario tipo e comincia a costruirne un'interpretazione.",
+      "proposta": "Legge testi letterari di vario tipo, incluse opere intere (almeno 3 libri l'anno), graphic novel, albi illustrati, autori italiani e stranieri, costruendone un'interpretazione personale.",
+      "motivazione": "Le Nuove Indicazioni rendono obbligatoria la lettura integrale, estendendo il canone a graphic novel e autori stranieri.",
+      "fonte": "D.M. 221/2025 — Italiano, lettura integrale obbligatoria"
+    },
+    {
+      "id": "it_sec3",
+      "discipline": "Italiano",
+      "ordine": "Secondaria",
+      "classe": "",
+      "type": "traguardo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Scrive correttamente testi di tipo diverso adeguati a situazione, argomento, scopo, destinatario.",
+      "proposta": "Scrive correttamente testi di tipo diverso; padroneggia riassunto e riscrittura da testi-modello; valorizza la scrittura a mano in corsivo come strumento cognitivo.",
+      "motivazione": "Come per la primaria, le Nuove Indicazioni riabilitano riassunto e corsivo come strumenti cognitivi anche nella secondaria.",
+      "fonte": "D.M. 221/2025 — Italiano, riassunto e corsivo"
+    },
+    {
+      "id": "it_ob_inf2",
+      "discipline": "Italiano",
+      "ordine": "Infanzia",
+      "classe": "5 anni",
+      "type": "obiettivo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Formulare frasi complete. Avvicinarsi alla scrittura spontanea di lettere e parole.",
+      "proposta": "Formulare frasi complete e corrette; avvicinarsi al pregrafismo e al corsivo; memorizzare brevi filastrocche e poesie.",
+      "motivazione": "Le Nuove Indicazioni valorizzano la memorizzazione (filastrocche e poesie) e il pregrafismo-corsivo anche all'Infanzia.",
+      "fonte": "D.M. 221/2025 — Italiano, memorizzazione"
+    },
+    {
+      "id": "it_ob_pri1",
+      "discipline": "Italiano",
+      "ordine": "Primaria",
+      "classe": "Cl. 1a-2a",
+      "type": "obiettivo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Prendere la parola rispettando i turni. Scrivere sotto dettatura curando l'ortografia.",
+      "proposta": "Prendere la parola rispettando i turni; scrivere sotto dettatura; acquisire la scrittura in corsivo come forma espressiva personale fin dalla classe 1a.",
+      "motivazione": "Le Nuove Indicazioni introducono il corsivo curricolare dalla classe 1a come elemento distintivo del curricolo.",
+      "fonte": "D.M. 221/2025 — Italiano, corsivo curricolare"
+    },
+    {
+      "id": "it_ob_pri2",
+      "discipline": "Italiano",
+      "ordine": "Primaria",
+      "classe": "Cl. 3a-4a-5a",
+      "type": "obiettivo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Produrre racconti scritti. Ricavare informazioni da testi espositivi.",
+      "proposta": "Produrre racconti scritti ed espositivi; saper riassumere e riscrivere da modello; leggere integralmente almeno un libro a quadrimestre e discuterne in classe.",
+      "motivazione": "Le Nuove Indicazioni rendono il riassunto centrale e fissano un minimo di 3 libri all'anno.",
+      "fonte": "D.M. 221/2025 — Italiano, 3 libri/anno"
+    },
+    {
+      "id": "it_ob_sec1",
+      "discipline": "Italiano",
+      "ordine": "Secondaria",
+      "classe": "Cl. 1a-2a-3a",
+      "type": "obiettivo",
+      "status": "modifica",
+      "decisione": null,
+      "testoAttuale": "Scrivere testi di forma diversa: cronaca, lettere formali, testi argomentativi.",
+      "proposta": "Scrivere cronaca, lettere formali, testi argomentativi; produrre riassunti e riscritture; confrontare opere italiane e straniere; memorizzare e recitare poesie.",
+      "motivazione": "Le Nuove Indicazioni rivalutano la memorizzazione e declamazione poetica, prima cadute in disuso.",
+      "fonte": "D.M. 221/2025 — Italiano, memorizzazione e declamazione"
+    }
+  ],
+  "checks": {
+    "hasProposals": true,
+    "hasDiscipline": true,
+    "hasSources": true
+  },
+  "humanValidationRequired": true
+}

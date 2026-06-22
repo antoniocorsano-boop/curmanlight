@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "department_outcome",
+  "appName": "CurManLight",
+  "createdAt": "2026-06-22T09:00:00.000Z",
+  "role": "department",
+  "discipline": "Tecnologia",
+  "disciplineWorkStatus": "completed",
+  "disciplines": ["Tecnologia"],
+  "proposalHandling": [
+    {
+      "proposalId": "te_pri1",
+      "handling": "confluita_nella_sintesi",
+      "note": "Il gruppo concorda: l'alfabetizzazione informatica di base deve rientrare nel testo di sintesi finale."
+    },
+    {
+      "proposalId": "te_pri2",
+      "handling": "riformulata_dal_dipartimento",
+      "note": "Riformulare: 'Valuta criticamente le tecnologie emergenti, inclusi impatti dell'IA, nei loro aspetti sociali e ambientali.'"
+    },
+    {
+      "proposalId": "te_sec2",
+      "handling": "confluita_nella_sintesi",
+      "note": "Il CAD come strumento obbligatorio viene assorbito nella sintesi finale."
+    },
+    {
+      "proposalId": "te_sec3",
+      "handling": "assorbita_in_altra_proposta",
+      "note": "La sicurezza informatica viene assorbita nell'ambito Educazione Civica (cittadinanza digitale)."
+    },
+    {
+      "proposalId": "te_ob_pri2",
+      "handling": "confluita_nella_sintesi",
+      "note": "Foglio di calcolo e algoritmi confluiscono nella sintesi della primaria."
+    },
+    {
+      "proposalId": "te_ob_sec1",
+      "handling": "confluita_nella_sintesi",
+      "note": "CAD base in classe 1a confermato e confluito."
+    },
+    {
+      "proposalId": "te_ob_sec2",
+      "handling": "riformulata_dal_dipartimento",
+      "note": "Aggiungere anche visita didattica a laboratorio ceramico locale come esperienza pratica."
+    },
+    {
+      "proposalId": "te_ob_sec3",
+      "handling": "da_chiarire",
+      "note": "Il dipartimento chiede: e possibile introdurre Python in classe 3a senza aver fatto Scratch nelle classi precedenti? Serve piano di continuita verticale."
+    }
+  ],
+  "checks": {
+    "hasProposals": true,
+    "hasHandling": true,
+    "hasDisciplines": true
+  },
+  "humanValidationRequired": true
+}
