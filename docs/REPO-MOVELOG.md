@@ -1291,3 +1291,14 @@
 - **Nessun deploy eseguito**: solo setup workflow
 - **Prossimo step**: impostare Settings → Pages → Source: GitHub Actions e eseguire workflow
 - **Verdetto**: `CML_059_GITHUB_PAGES_STATIC_DEPLOY_SETUP_READY`
+
+## 2026-06-22 — CML-060A — AUDIT_SCRIPT_HARDENING_AND_RESULT_RECORD
+
+- **Script modificato**: `tools/audit-cml-curriculum-coverage.mjs`
+- **Correzioni**: dedup `metaDisciplines`, aggiunto `statusTotal`/`statusMatchesTotal`, `consistencyWarnings`, fix refuso `conoscenzee abilità`, `countIn` robusto per regex non globali
+- **Esito audit**: 14 discipline, `metaDisciplineRawCount=28`, `metaDisciplineUniqueCount=14`, `duplicatedMetaDisciplines` valorizzato, `consistencyWarnings` con 1 warning (Religione Cattolica)
+- **Densità UI**: `buttonTags=88`, `inlineOnclick=94`, `exportButtons=25`, `protectedActions=5`, `tabs=27`, `mobileBottomBar=true`
+- **Nessun runtime modificato**: confermato
+- **Nessun deploy eseguito**
+- **Documentazione creata**: `docs/03_execution/CML-060A.md`, `report/CML-060A_audit_script_hardening_and_result_record.md`
+- **Verdetto**: `CML_060A_AUDIT_SCRIPT_HARDENING_AND_RESULT_RECORD_READY`
