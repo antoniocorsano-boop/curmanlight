@@ -847,3 +847,16 @@
 - File modificato: `_published_snapshot/netlify-current/index.html` (+1 linea, linea 3422)
 - Documentazione: `docs/03_execution/CML-035.md`, `report/CML-035_curriculum_viewer_general_sections_callout_runtime.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_035_CURRICULUM_VIEWER_GENERAL_SECTIONS_CALLOUT_READY`
+
+---
+
+## CML-035A — Controlled Deploy and Live Smoke Callout
+
+- Deploy callout su Netlify: draft + promozione a produzione via API REST
+- `--prod` CLI fallisce con Forbidden (free tier); workaround via `restoreSiteDeploy`
+- Deploy ID: `6a38d3308c3505e3f7bc8d16` — 1 file (index.html), 3.5s
+- URL live: https://curmanlight.netlify.app
+- Smoke live 10/10 PASS: callout visibile, testi corretti, version 2012/2025, stato documento, sezioni generali, nessuna falsa approvazione
+- Nessuna modifica runtime aggiuntiva, nessuna logica JS, nessuna persistenza
+- Documentazione: `docs/03_execution/CML-035A.md`, `report/CML-035A_controlled_deploy_and_live_smoke_callout.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_035A_CONTROLLED_DEPLOY_AND_LIVE_SMOKE_CALLOUT_READY`
