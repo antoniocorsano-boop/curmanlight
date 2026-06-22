@@ -1063,3 +1063,21 @@
 - Verdetto: `CML_046_SERVICE_WORKER_CACHE_VERSION_BUMP_DEPLOYED`
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Documentazione: `docs/03_execution/CML-046.md`, `report/CML-046_service_worker_cache_version_bump_and_deploy.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-047 — Service Worker Cache Bump Cycle Closure Audit
+
+- HEAD partenza: `7d5b443`, tree pulita, solo untracked non pertinenti ✅
+- Chiusura formale ciclo CML-045 → CML-046 (allineamento cache/service worker)
+- Cache precedente: `curmanlight-cache-v452b421`
+- Cache nuova: `curmanlight-cache-v452b422`
+- Deploy ID: `6a38ec60442f7ddc1a64271a`
+- Smoke live: 18/18 PASS
+- Runtime commit: `ffe6e9d`, docs commit: `7d5b443`
+- Nota Netlify: `--prod` Forbidden, workaround API `restoreSiteDeploy` operativo
+- Docs-only, nessun runtime modificato, nessun deploy
+- Prossimo step raccomandato: CML-048 — NEXT_CML_FUNCTIONAL_INCREMENT_SELECTION_AUDIT
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_047_SERVICE_WORKER_CACHE_BUMP_CYCLE_CLOSED`
+- Documentazione: `docs/03_execution/CML-047.md`, `report/CML-047_service_worker_cache_bump_cycle_closure_audit.md`, `docs/REPO-MOVELOG.md`
