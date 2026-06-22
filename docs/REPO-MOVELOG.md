@@ -685,3 +685,19 @@
 - MEMORY.md presente come untracked — non committato
 - Nessuna modifica runtime; nessun deploy
 - Verdetto: `CML_027A_USER_HANDOFF_GUIDE_REAL_READABILITY_SMOKE_READY`
+
+## 2026-06-22 — CML-028 — Next functional block selection audit
+
+- **351f2d9** — HEAD partenza: docs: smoke user handoff guide readability
+- Nuovo commit: docs: select next CML functional block
+  - Creazione di `docs/03_execution/CML-028.md`
+  - Creazione di `report/CML-028_next_functional_block_selection_audit.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Audit di selezione, docs-only
+- Opzioni valutate: A (onboarding), B (guida contestuale), C (handoff scuola), D (miglioramento report), E (archivio file), F (export stampabile)
+- Opzione selezionata: **C — Pacchetto handoff scuola**
+  - Motivazione: valore reale alto per adozione, rischio nullo (docs-only), tempismo ideale
+- MEMORY.md presente come untracked — non committato
+- Nessuna implementazione; nessuna modifica runtime; nessun deploy
+- Verdetto: `CML_028_NEXT_FUNCTIONAL_BLOCK_SELECTION_AUDIT_READY`
+- Prossimo step: CML-029 — Creazione pacchetto handoff scuola (presentazione DS, note collegio, vademecum dipartimenti)
