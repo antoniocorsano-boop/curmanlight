@@ -1190,3 +1190,21 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_054_ROLE_ACCESS_CODE_GATING_SELECTION_AUDIT_READY`
 - Documentazione: `docs/03_execution/CML-054.md`, `report/CML-054_role_access_code_gating_selection_audit.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-055 — Role Access Code Gating Contract
+
+- HEAD partenza: `1ef69a0`, tree pulita, solo untracked non pertinenti ✅
+- Contratto creato: `docs/02_system/ROLE-ACCESS-CODE-GATING-CONTRACT.md` — 10 sezioni (A–J) + appendice JS
+- Azioni protette confermate: `departmentOutcomeExport`, `referentOutcomeImport`, `referentReportGeneration`
+- Azioni libere confermate: viewer, proposta docente, sezioni generali, guide, esempi, validazione esiti
+- Persistenza: `sessionStorage`, chiave `roleAccessGranted`, nessun `localStorage`
+- Codice predefinito: `CML2025` (documentato, non segreto)
+- Limiti dichiarati: aggirabile (console browser), non autenticazione, non autorizzazione, non protezione dati
+- Smoke test definiti: 13 (T01–T13)
+- Docs-only, nessun runtime modificato, nessun deploy
+- Prossimo step: CML-056 — ROLE_ACCESS_CODE_GATING_IMPLEMENTATION (runtime: `index.html`)
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_055_ROLE_ACCESS_CODE_GATING_CONTRACT_READY`
+- Documentazione: `docs/02_system/ROLE-ACCESS-CODE-GATING-CONTRACT.md`, `docs/03_execution/CML-055.md`, `report/CML-055_role_access_code_gating_contract.md`, `docs/REPO-MOVELOG.md`
