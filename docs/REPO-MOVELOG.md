@@ -634,3 +634,21 @@
 - Post-deploy: pagina caricata, pannello referente raggiungibile, pulsante visibile ✅
 - Nessuna modifica runtime; asset invariati; nessuna modifica a .cml/persistenza
 - Verdetto: `CML_026_CONTROLLED_NETLIFY_PUBLICATION_AFTER_CML025_READY`
+
+## 2026-06-22 — CML-026A — Post-deploy referent panel smoke audit
+
+- **5997855** — HEAD partenza: docs: publish CML referent report flow
+- Nuovo commit: docs: smoke post-deploy referent panel
+  - Creazione di `docs/03_execution/CML-026A.md`
+  - Creazione di `report/CML-026A_post_deploy_referent_panel_smoke_audit.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- URL verificata: https://curmanlight.netlify.app
+- 28/28 controlli PASS ✅
+- Preflight repository: HEAD 5997855, tree pulita, MEMORY.md non committato ✅
+- URL: pagina caricata, manifest, sw.js, motto page ok ✅
+- Pannello referente: raggiungibile, import disponibile, pulsante report visibile ✅
+- Report: 9 sezioni Markdown, filename, disclaimer ok ✅
+- Regressione: docenti, dipartimento, navigazione, tecnologia, guida ok ✅
+- sw.js invariato (cache `curmanlight-cache-v452b421`), _headers invariato, PDF invariato
+- Nessuna modifica runtime; nessun deploy aggiuntivo; nessuna modifica a .cml/persistenza
+- Verdetto: `CML_026A_POST_DEPLOY_REFERENT_PANEL_SMOKE_READY`
