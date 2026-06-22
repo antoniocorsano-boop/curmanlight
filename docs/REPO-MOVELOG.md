@@ -765,3 +765,20 @@
 - Nessuna implementazione; nessuna modifica runtime; nessun deploy
 - Verdetto: `CML_031_CURRICULUM_REFERENCES_VIEWER_SELECTION_AUDIT_READY`
 - Prossimo step: CML-032 — Implementazione sezione "Fonti curricolari" in `index.html` + deploy + smoke
+
+## 2026-06-22 — CML-031A — Full curriculum references requirement contract
+
+- **0072e03** — HEAD partenza: docs: select curriculum references viewer approach
+- Nuovo commit: docs: define full curriculum references requirement
+  - Rettifica a `docs/03_execution/CML-031.md` (nota correttiva)
+  - Creazione di `docs/03_execution/CML-031A.md`
+  - Creazione di `report/CML-031A_full_curriculum_references_requirement_contract.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Correzione requisito: non "schede sintetiche + link", ma **visualizzazione completa e navigabile** dei documenti curricolari 2012 e 2025
+- Principi: completezza, navigabilità, fonte istituzionale, stato documento, distinzione fonte/lavoro, no falsa approvazione, no riduzione a link
+- Opzione tecnica preferita: **C — Soluzione mista forte** (viewer documento completo + indice navigabile + schede + stato + link MIM)
+- Rischi documentati: aggiornamento, fonte, confusione, peso, accessibilità, manutenzione
+- MEMORY.md presente come untracked — non committato
+- Nessuna implementazione; nessuna modifica runtime; nessun deploy
+- Verdetto: `CML_031A_FULL_CURRICULUM_REFERENCES_REQUIREMENT_CONTRACT_READY`
+- Prossimo step: CML-032 — Scelta formato tecnico (A/C) + implementazione sezione "Fonti curricolari" + deploy + smoke
