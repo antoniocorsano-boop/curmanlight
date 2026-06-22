@@ -718,3 +718,17 @@
 - MEMORY.md presente come untracked — non committato
 - Nessuna modifica runtime, nessun deploy
 - Verdetto: `CML_029_SCHOOL_HANDOFF_PACKAGE_READY`
+
+## 2026-06-22 — CML-029A — School handoff package readability and use smoke
+
+- **64f7c9c** — HEAD partenza: docs: add CML school handoff package
+- Nuovo commit: docs: smoke school handoff package usability
+  - Micro-correzione a `docs/04_user/CML_PRESENTAZIONE_DS.md` (refuso: Raccolglie → Raccoglie)
+  - Creazione di `docs/03_execution/CML-029A.md`
+  - Creazione di `report/CML-029A_school_handoff_package_readability_and_use_smoke.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Micro-test 4 profili reali: DS ✅, Docente ✅, Coordinatore ✅, Referente ✅
+- Controlli trasversali: 9/9 ✅
+- MEMORY.md presente come untracked — non committato
+- Nessuna modifica runtime; nessun deploy
+- Verdetto: `CML_029A_SCHOOL_HANDOFF_PACKAGE_READABILITY_AND_USE_SMOKE_READY`

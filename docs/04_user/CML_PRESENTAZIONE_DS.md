@@ -35,7 +35,7 @@ CurManLight non risolve questi problemi al posto delle persone: offre un formato
 | Ruolo | Cosa fa |
 |---|---|
 | Docente | Prepara la proposta di aggiornamento per la propria disciplina |
-| Coordinatore di dipartimento | Raccolglie le proposte, le discute in dipartimento, produce l'esito |
+| Coordinatore di dipartimento | Raccoglie le proposte, le discute in dipartimento, produce l'esito |
 | Referente curricolo | Importa gli esiti di tutti i dipartimenti, genera il report del gruppo di lavoro |
 
 ## Flusso di lavoro
