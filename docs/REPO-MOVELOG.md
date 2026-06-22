@@ -1141,3 +1141,19 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_051_SCHOOL_HANDOFF_MEETING_SCRIPT_AND_OBSERVATION_PROTOCOL_READY`
 - Documentazione: `docs/03_execution/CML-051.md`, `report/CML-051_school_handoff_meeting_script_and_observation_protocol.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-052 — Real User Observation Pilot Protocol
+
+- HEAD partenza: `f492084`, tree pulita, solo untracked non pertinenti ✅
+- Documenti creati:
+  - `docs/04_user/CML_PROTOCOLLO_OSSERVAZIONE_REALE.md` — protocollo 1-2 settimane, gruppo minimo, 7 aree di osservazione, criteri decisione
+  - `docs/04_user/CML_SCHEDA_OSSERVAZIONE_PER_RUOLO.md` — scheda strutturata per docente/coordinatore/referente/DS con attività, domande, campi
+  - `docs/04_user/CML_REGISTRO_SINTETICO_OSSERVAZIONI.md` — tabella leggera per raccolta centralizzata con priorità, azioni, decisioni
+- Relazione con CML-051: fornisce i materiali operativi per condurre la prova dopo l'incontro di presentazione
+- Controlli: linguaggio non tecnico ✅, falsa approvazione: nessuna ✅, coerenza live ✅
+- Docs-only, nessun runtime modificato, nessun deploy
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_052_REAL_USER_OBSERVATION_PILOT_PROTOCOL_READY`
+- Documentazione: `docs/03_execution/CML-052.md`, `report/CML-052_real_user_observation_pilot_protocol.md`, `docs/REPO-MOVELOG.md`
