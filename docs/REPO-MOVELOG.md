@@ -579,3 +579,26 @@
   - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
   - Nessuna modifica runtime; nessun deploy; confermata presenza funzioni e flusso end-to-end locale.
 
+## 2026-06-22 — CML-025 — Referent group work report export
+
+- **8237036** — feat: export referent group work report
+  - Aggiunto pulsante "Scarica report gruppo di lavoro" nel pannello verifica referente
+  - `buildReferentGroupWorkReportMarkdown()`: genera Markdown strutturato con 9 sezioni
+  - `downloadReferentGroupWorkReport()`: esporta come file Markdown locale
+  - Formato filename: `report_gruppo_curricolo_YYYY-MM-DD.md`
+  - Usa meccanismo `downloadBlob` esistente
+  - Nessuna rete, nessuna Drive API, nessuna nuova dipendenza
+
+## 2026-06-22 — CML-025A — Referent group work report export smoke audit
+
+- **8237036** — HEAD partenza: feat: export referent group work report
+- Nuovo commit: docs: smoke referent group work report export
+  - Creazione di `docs/03_execution/CML-025A.md`
+  - Creazione di `report/CML-025A_referent_group_work_report_export_smoke.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Smoke statico: pulsante singolo ✅, funzioni singole ✅, nessuna rete/persistenza ✅
+- Smoke semantico: 9/9 sezioni Markdown presenti ✅
+- Smoke comportamento: vuoto (toast), popolato (file), filename, downloadBlob ✅
+- MEMORY.md presente come untracked — non committato
+- Nessuna modifica runtime; nessun deploy; asset invariati
+- Verdetto: `CML_025A_REFERENT_GROUP_WORK_REPORT_EXPORT_SMOKE_READY`
