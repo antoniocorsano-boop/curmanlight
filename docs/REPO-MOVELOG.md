@@ -913,3 +913,17 @@
 - Nessuna modifica runtime aggiuntiva, nessuna logica JS
 - Documentazione: `docs/03_execution/CML-038A.md`, `report/CML-038A_controlled_deploy_and_live_smoke_version_labels.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_038A_CONTROLLED_DEPLOY_AND_LIVE_SMOKE_VERSION_LABELS_READY`
+
+---
+
+## CML-039 — Curriculum Viewer Version Labels Cycle Closure Audit
+
+- Chiusura formale del micro-ciclo "etichette selettore versioni" (CML-037 → CML-038A)
+- 3 CML completati: selezione, implementazione, deploy+smoke
+- Etichette live: `📖 IN 2012 (vigente)` / `📖 IN 2025 (bozza)`
+- Deploy ID: `6a38d9593270fa47779c678c`, smoke 9/9
+- Opzioni prossime valutate: A (esempi `.cml`) ✅, B (UX), C (guida), D (fermarsi)
+- Prossimo step: CML-040 — DEMO_EXAMPLE_CML_PACKAGE (riprendere esempi sospesi in CML-030)
+- Nessuna modifica runtime, nessun deploy
+- Documentazione: `docs/03_execution/CML-039.md`, `report/CML-039_curriculum_viewer_version_labels_cycle_closure_audit.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_039_CURRICULUM_VIEWER_VERSION_LABELS_CYCLE_CLOSED`
