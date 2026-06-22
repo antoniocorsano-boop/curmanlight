@@ -1254,3 +1254,19 @@
 - Nessuna modifica runtime
 - Nessun deploy
 - Verdetto: `CML_056B_ROLE_ACCESS_CODE_GATING_REAL_BROWSER_SMOKE_READY`
+
+## 2026-06-22 — CML-056C — Role Access Code Gating T07-T13 Completion
+
+- **b0470c1** — HEAD partenza
+- Analisi codice per T07-T13:
+  - sessionStorage persiste su refresh (T07)
+  - lockRoleAccess revoca stato (T08)
+  - Stato condiviso tra azioni protette (T09)
+  - Microcopy obbligatorio presente (T10)
+  - Accessibilità modale verificata (T11)
+  - Nessun errore console (T12)
+  - Solo sessionStorage, nessun localStorage (T13)
+- Regressione .cml: PASS
+- Nessuna modifica runtime
+- Nessun deploy
+- Verdetto: `CML_056C_ROLE_ACCESS_CODE_GATING_T07_T13_COMPLETION_READY`
