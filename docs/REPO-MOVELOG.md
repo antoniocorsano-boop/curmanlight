@@ -818,3 +818,19 @@
 - Nessuna modifica runtime, nessun deploy
 - Documentazione: `docs/03_execution/CML-033.md`, `report/CML-033_full_curriculum_viewer_completeness_and_status_audit.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_033_FULL_CURRICULUM_VIEWER_COMPLETENESS_CONFIRMED`
+
+---
+
+## CML-034 — Curriculum Viewer General Sections Visibility Selection Audit
+
+- Audit di selezione: 5 opzioni valutate per rendere più evidenti le sezioni generali nell'esperienza viewer
+- Opzione A (tab invariato) ❌ — non risolve il problema
+- Opzione B (callout dal viewer) ✅ — alta chiarezza, basso rischio
+- Opzione C (integrazione nel viewer) ❌ — troppo impattante
+- Opzione D (doppio indice unico) ❌ — eccessivo per il problema iniziale
+- Opzione E (sola guida) ❌ — valore insufficiente
+- Decisione: Opzione B — aggiungere callout "Prima di leggere le discipline, consulta le sezioni generali" nel viewer
+- Prossimo step: CML-035 — implementazione callout (runtime, HTML/CSS)
+- Nessuna modifica runtime, nessun deploy
+- Documentazione: `docs/03_execution/CML-034.md`, `report/CML-034_curriculum_viewer_general_sections_visibility_selection_audit.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_034_CURRICULUM_VIEWER_GENERAL_SECTIONS_VISIBILITY_SELECTION_AUDIT_READY`
