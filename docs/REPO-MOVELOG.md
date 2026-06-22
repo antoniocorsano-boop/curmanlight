@@ -875,3 +875,16 @@
 - Documentazione: `docs/03_execution/CML-036.md`, `report/CML-036_curriculum_viewer_release_cycle_closure_audit.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_036_CURRICULUM_VIEWER_RELEASE_CYCLE_CLOSED`
 - Prossimo step: CML-037 — Navigation and Curriculum Viewer UX Selection Audit
+
+---
+
+## CML-037 — Navigation and Curriculum Viewer UX Selection Audit
+
+- Audit di selezione UX: 7 opzioni valutate per migliorare navigazione e comprensione del viewer
+- Opzione A (nav viewer) ❌, B (breadcrumb) ❌, C (callout) ❌, D (selettore 2012/2025) ✅, E (bidirezionale) ❌, F (guida) ❌, G (nessun intervento) ❌
+- Decisione: Opzione D — aggiornare etichette version tabs da "Quadro 2012/2025" a "IN 2012 (vigente)" / "IN 2025 (bozza)"
+- Massima chiarezza per l'utente, rischio minimissimo
+- Nessuna modifica runtime, nessun deploy
+- Documentazione: `docs/03_execution/CML-037.md`, `report/CML-037_navigation_and_curriculum_viewer_ux_selection_audit.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_037_NAVIGATION_AND_CURRICULUM_VIEWER_UX_SELECTION_AUDIT_READY`
+- Prossimo step: CML-038 — implementazione label vigente/bozza
