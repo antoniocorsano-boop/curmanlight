@@ -1226,3 +1226,17 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_056A_RUNTIME_SYNTAX_RECOVERY_READY`
 - Documentazione: `docs/03_execution/CML-056A.md`, `report/CML-056A_runtime_syntax_recovery_before_role_access_gating_smoke.md`, `docs/REPO-MOVELOG.md`
+
+## 2026-06-22 — CML-056 — Role Access Code Gating Implementation
+
+- **7df3cb4** — feat: role access code gating implementation (già presente nel runtime)
+- Helper centralizzato `requireRoleAccess(actionId, callback)`
+- Codice operativo: `CML2025` (costante, mai salvata)
+- Storage in `sessionStorage.roleAccessGranted`
+- Azioni protette: `departmentOutcomeExport`, `referentOutcomeImport`, `referentReportGeneration`
+- Modale accessibile con microcopy "codice operativo, non password/login"
+- "Blocca di nuovo" revoca sessionStorage.roleAccessGranted
+- Refresh mantiene lo stato di sblocco
+- Nessun nuovo localStorage
+- Schema .cml invariato
+- Nessun deploy

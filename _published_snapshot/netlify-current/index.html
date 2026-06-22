@@ -110,6 +110,15 @@ main{flex:1;min-width:0}
 .card.readonly-order{opacity:.96}.card.readonly-order .panel.proposed{background:#f5f7fa}.card.readonly-order .panel-text{color:#455a64}
 button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.25)}
 .settings-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}.settings-field label{font-size:11px;font-weight:800;color:#37474f}.settings-field input,.settings-field select{border:1px solid #cfd8dc;border-radius:8px;padding:9px 10px;font-size:13px;font-family:inherit}.settings-school-box{background:#f5f7fa;border:1px solid #dfe3eb;border-radius:10px;padding:10px 12px;margin:10px 0 14px;font-size:12px;color:#37474f;line-height:1.55}.settings-actions{display:flex;gap:8px;flex-wrap:wrap}.settings-primary{background:#1a237e;color:#fff;border:none;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}.settings-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}
+.role-access-overlay{position:fixed;inset:0;background:rgba(26,35,126,.58);z-index:10002;display:flex;align-items:center;justify-content:center;padding:16px}
+.role-access-dialog{background:#fff;border-radius:14px;max-width:500px;width:100%;padding:22px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+.role-access-dialog h2{font-size:18px;color:#1a237e;margin-bottom:10px}.role-access-dialog p{font-size:12px;color:#455a64;line-height:1.55;margin-bottom:10px}
+.role-access-warning{background:#fff8e1;border-left:3px solid #f9a825;border-radius:7px;padding:9px 11px;color:#5d4037!important}
+.role-access-field{display:flex;flex-direction:column;gap:5px;margin:14px 0}.role-access-field label{font-size:11px;font-weight:800;color:#37474f}.role-access-field input{border:1px solid #b0bec5;border-radius:8px;padding:10px 11px;font-size:14px}
+.role-access-error{background:#ffebee;color:#b71c1c!important;border-radius:7px;padding:8px 10px;margin-bottom:10px!important;font-weight:700}
+.role-access-actions{display:flex;gap:8px;flex-wrap:wrap}.role-access-primary,.role-access-secondary,.role-access-lock-btn{border-radius:8px;padding:9px 12px;font-weight:800;cursor:pointer}
+.role-access-primary{background:#1a237e;color:#fff;border:none}.role-access-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc}.role-access-lock-btn{background:#fff;color:#6d4c41;border:1px solid #bcaaa4;font-size:11px}
+.role-access-lock-btn[hidden]{display:none}
 .export-note{font-size:10px;color:#6d4c41;margin-left:6px}
 .btn-pdf{background:#c0392b;color:#fff}
 .btn-cml{background:#3949ab;color:#fff}
@@ -725,14 +734,15 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <summary>📋 Verifica referente curricolo</summary>
         <p class="referent-validation-copy">Importa gli esiti dipartimentali .cml per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
         <div class="referent-validation-controls">
-          <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="importDepartmentOutcomeCmlFiles(this.files);this.value=''">
-          <button type="button" class="referent-validation-btn" onclick="document.getElementById('referent-cml-files').click()">Importa esiti dipartimentali .cml</button>
+          <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="handleReferentOutcomeFileSelection(this)">
+          <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Importa esiti dipartimentali .cml</button>
+          <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button>
           <span class="referent-validation-local">Nessun dato viene inviato online: l'importazione è locale.</span>
         </div>
         <div id="referent-validation-feedback" class="referent-validation-feedback" aria-live="polite"></div>
         <div id="referent-validation-results"></div>
         <div id="referent-validation-report" class="referent-validation-report" style="margin-top:12px;text-align:center">
-          <button class="export-btn btn-md" onclick="downloadReferentGroupWorkReport()" title="Scarica report gruppo di lavoro">📄 Scarica report gruppo di lavoro</button>
+          <button class="export-btn btn-md" onclick="requireRoleAccess('referentReportGeneration',downloadReferentGroupWorkReport)" title="Scarica report gruppo di lavoro">📄 Scarica report gruppo di lavoro</button>
         </div>
       </details>
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
@@ -2562,8 +2572,9 @@ var decision=decisionIdx>=0?departmentImportState.proposals[decisionIdx].decisio
      html+='</section>';
    }
 if(!departmentImportState.proposals.length) html+='<div class="department-import-warning">I file non validi sono stati esclusi dalla lista proposte.</div>';
-   html+='<div style="margin-top:12px;text-align:center"><button class="export-btn btn-cml" onclick="exportDepartmentOutcomeCml()" style="background:#004d40;color:#fff">⬇️ Esporta esito dipartimento .cml</button></div>';
+   html+='<div style="margin-top:12px;text-align:center"><button class="export-btn btn-cml" onclick="requireRoleAccess(\'departmentOutcomeExport\',exportDepartmentOutcomeCml)" style="background:#004d40;color:#fff">⬇️ Esporta esito dipartimento .cml</button> <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button></div>';
    host.innerHTML=html;
+   updateRoleAccessUi();
   }
 
  function setDepartmentDecision(idx,decision){
@@ -3137,6 +3148,105 @@ function showWelcome(force=false){
   sessionStorage.setItem("welcomeShown","1");
 }
 
+// ROLE ACCESS CODE GATING
+const ROLE_ACCESS_CODE="CML2025";
+const ROLE_ACCESS_STORAGE_KEY="roleAccessGranted";
+let roleAccessPendingCallback=null;
+
+function isRoleAccessGranted(){
+  try{return sessionStorage.getItem(ROLE_ACCESS_STORAGE_KEY)==="true";}
+  catch(_err){return false;}
+}
+
+function updateRoleAccessUi(){
+  const unlocked=isRoleAccessGranted();
+  document.querySelectorAll("[data-role-access-lock]").forEach(button=>{button.hidden=!unlocked;});
+}
+
+function closeRoleAccessModal(){
+  const overlay=document.getElementById("role-access-overlay");
+  if(overlay) overlay.remove();
+  roleAccessPendingCallback=null;
+}
+
+function showRoleAccessModal(actionId,callback){
+  const existing=document.getElementById("role-access-overlay");
+  if(existing) existing.remove();
+  roleAccessPendingCallback=callback;
+  const overlay=document.createElement("div");
+  overlay.id="role-access-overlay";
+  overlay.className="role-access-overlay";
+  overlay.dataset.actionId=actionId;
+  overlay.innerHTML=`
+    <section class="role-access-dialog" role="dialog" aria-modal="true" aria-labelledby="role-access-title">
+      <h2 id="role-access-title">Codice operativo richiesto</h2>
+      <p>Questa funzione è riservata al ruolo indicato nella prova controllata. Inserisci il codice operativo fornito dal referente.</p>
+      <p class="role-access-warning">Il codice evita usi accidentali dello strumento. Non è una password istituzionale e non sostituisce autorizzazioni, firme o delibere.</p>
+      <form id="role-access-form">
+        <div class="role-access-field">
+          <label for="role-access-code">Codice operativo</label>
+          <input id="role-access-code" type="password" autocomplete="off" placeholder="Inserisci il codice…" required>
+        </div>
+        <p id="role-access-error" class="role-access-error" role="alert" hidden>Codice non valido. Verifica il codice operativo ricevuto.</p>
+        <div class="role-access-actions">
+          <button type="submit" class="role-access-primary">Sblocca funzione</button>
+          <button type="button" class="role-access-secondary" id="role-access-cancel">Annulla</button>
+        </div>
+      </form>
+    </section>`;
+  document.body.appendChild(overlay);
+  const input=overlay.querySelector("#role-access-code");
+  const error=overlay.querySelector("#role-access-error");
+  overlay.querySelector("#role-access-form").addEventListener("submit",event=>{
+    event.preventDefault();
+    if(input.value!==ROLE_ACCESS_CODE){
+      error.hidden=false;
+      input.select();
+      input.focus();
+      return;
+    }
+    sessionStorage.setItem(ROLE_ACCESS_STORAGE_KEY,"true");
+    const pending=roleAccessPendingCallback;
+    closeRoleAccessModal();
+    updateRoleAccessUi();
+    if(typeof pending==="function") pending();
+  });
+  overlay.querySelector("#role-access-cancel").addEventListener("click",closeRoleAccessModal);
+  overlay.addEventListener("click",event=>{if(event.target===overlay) closeRoleAccessModal();});
+  overlay.addEventListener("keydown",event=>{if(event.key==="Escape") closeRoleAccessModal();});
+  input.focus();
+}
+
+function requireRoleAccess(actionId, callback){
+  if(typeof callback!=="function") return;
+  if(isRoleAccessGranted()){
+    callback();
+    return;
+  }
+  showRoleAccessModal(actionId,callback);
+}
+
+function lockRoleAccess(){
+  try{sessionStorage.removeItem(ROLE_ACCESS_STORAGE_KEY);}catch(_err){}
+  closeRoleAccessModal();
+  updateRoleAccessUi();
+  showToast("Funzioni operative bloccate di nuovo.");
+}
+
+function openReferentOutcomeFilePicker(){
+  const input=document.getElementById("referent-cml-files");
+  if(input) input.click();
+}
+
+function handleReferentOutcomeFileSelection(input){
+  const files=Array.from(input&&input.files||[]);
+  if(input) input.value="";
+  if(!files.length) return;
+  requireRoleAccess("referentOutcomeImport",()=>importDepartmentOutcomeCmlFiles(files));
+}
+
+document.addEventListener("DOMContentLoaded",updateRoleAccessUi);
+
 // REFERENT VALIDATION FUNCTIONS
 let referentOutcomeState={files:[],outcomes:[]};
 
@@ -3515,6 +3625,7 @@ loadLocalState();
 renderProfileSummary();
 renderSidebar();
 render();
+updateRoleAccessUi();
 registerOfflineSupport();
 showWelcome();
 </script>
