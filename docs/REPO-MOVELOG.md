@@ -860,3 +860,18 @@
 - Nessuna modifica runtime aggiuntiva, nessuna logica JS, nessuna persistenza
 - Documentazione: `docs/03_execution/CML-035A.md`, `report/CML-035A_controlled_deploy_and_live_smoke_callout.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_035A_CONTROLLED_DEPLOY_AND_LIVE_SMOKE_CALLOUT_READY`
+
+---
+
+## CML-036 — Curriculum Viewer Release Cycle Closure Audit
+
+- Chiusura formale del ciclo "Curricolo di istituto / viewer completo" (CML-031A → CML-035A)
+- 6 CML completati: requisito, viewer, audit, selezione callout, callout, deploy+smoke
+- Viewer pubblicato: 14/14 discipline, versioni 2012/2025, traguardi + obiettivi, 117 proposto, callout, stato documento
+- Smoke live 10/10 PASS
+- Deploy ID: `6a38d3308c3505e3f7bc8d16`
+- Deploy CLI `--prod` fallisce con Forbidden (free tier); workaround: API `restoreSiteDeploy`
+- Nessuna modifica runtime, nessun deploy
+- Documentazione: `docs/03_execution/CML-036.md`, `report/CML-036_curriculum_viewer_release_cycle_closure_audit.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_036_CURRICULUM_VIEWER_RELEASE_CYCLE_CLOSED`
+- Prossimo step: CML-037 — Navigation and Curriculum Viewer UX Selection Audit
