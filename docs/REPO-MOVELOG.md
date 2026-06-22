@@ -602,3 +602,20 @@
 - MEMORY.md presente come untracked — non committato
 - Nessuna modifica runtime; nessun deploy; asset invariati
 - Verdetto: `CML_025A_REFERENT_GROUP_WORK_REPORT_EXPORT_SMOKE_READY`
+
+## 2026-06-22 — CML-025B — Referent group work report real flow micro-test
+
+- **8f8251d** — HEAD partenza: docs: smoke referent group work report export
+- Nuovo commit: docs: test referent group work report flow
+  - Creazione di `docs/03_execution/CML-025B.md`
+  - Creazione di `report/CML-025B_referent_group_work_report_real_flow_micro_test.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Scenario: 2 esiti dipartimentali importati (Italiano, Matematica), 5 proposte totali, handling misto
+- Micro-test completato: 13/13 controlli PASS
+- Pulsante singolo, non interferente ✅
+- Report coerente, sezioni da_chiarire e senza_esito riconoscibili ✅
+- Nota prudente presente ✅
+- Nessuna rete/Drive/OAuth/backend/deploy ✅
+- MEMORY.md presente come untracked — non committato
+- Nessuna modifica runtime; nessun deploy; asset invariati
+- Verdetto: `CML_025B_REFERENT_GROUP_WORK_REPORT_REAL_FLOW_MICRO_TEST_READY`
