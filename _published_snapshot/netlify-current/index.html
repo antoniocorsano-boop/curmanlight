@@ -581,6 +581,34 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .mobile-menu-panel .mm-close{width:100%;padding:12px;border:none;background:#f5f5f5;border-radius:8px;font-size:13px;font-weight:700;color:#666;cursor:pointer;margin-top:6px;min-height:44px;font-family:inherit}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+/* CURRICOLO DI ISTITUTO */
+.curricolo-viewer{font-size:13px;line-height:1.6;color:#333}
+.curricolo-version-tabs{display:flex;gap:0;margin-bottom:12px;background:#fff;border-radius:9px;overflow:hidden;border:1px solid #e0e0e0}
+.curricolo-version-tab{flex:1;padding:10px 14px;border:none;background:#f5f5f5;cursor:pointer;font-weight:700;font-size:12px;color:#666;transition:.1s;text-align:center}
+.curricolo-version-tab.active{background:#1a237e;color:#fff}
+.curricolo-state{background:#fff8e1;border:1px solid #ffe082;border-left:4px solid #f9a825;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#5d4037;line-height:1.5}
+.curricolo-state strong{color:#e65100}
+.curricolo-index{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px;padding:10px 12px;background:#fff;border-radius:9px;border:1px solid #e0e0e0}
+.curricolo-index-pill{padding:5px 10px;border-radius:18px;border:1px solid #cfd8dc;background:#fff;cursor:pointer;font-size:11px;color:#455a64;transition:.1s;text-decoration:none}
+.curricolo-index-pill:hover{background:#e8eaf6;border-color:#9fa8da}
+.curricolo-ordine{margin-bottom:18px}
+.curricolo-ordine-title{background:linear-gradient(135deg,#37474f,#455a64);color:#fff;padding:9px 14px;border-radius:8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.curricolo-disc{margin-bottom:14px;background:#fff;border:1px solid #e0e0e0;border-radius:9px;overflow:hidden}
+.curricolo-disc-hd{background:#f5f7fa;padding:9px 14px;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;cursor:pointer}
+.curricolo-disc-hd:hover{background:#eef0f5}
+.curricolo-disc-icon{font-size:18px}
+.curricolo-disc-name{font-weight:700;font-size:13px;color:#1a237e}
+.curricolo-disc-comp{font-size:11px;color:#78909c}
+.curricolo-section-title{padding:8px 14px;font-weight:700;font-size:12px;color:#37474f;background:#fafafa;border-bottom:1px solid #eee}
+.curricolo-item{padding:7px 14px;border-bottom:1px solid #f0f0f0;font-size:12px;line-height:1.55}
+.curricolo-item:last-child{border-bottom:none}
+.curricolo-item-id{color:#bdbdbd;font-size:10px;font-family:Consolas,monospace;margin-right:5px}
+.curricolo-item-text{color:#333}
+.curricolo-item-text.modified{background:#fff8e1;padding:2px 4px;border-radius:3px}
+.curricolo-item-text.new{background:#e8f5e9;padding:2px 4px;border-radius:3px}
+.curricolo-note{background:#f5f5f5;border:1px solid #e0e0e0;border-radius:9px;padding:10px 14px;margin-top:14px;font-size:11px;color:#78909c;text-align:center}
+.curricolo-ref{background:#eef7f6;border:1px solid #b2dfdb;border-left:3px solid #00796b;border-radius:9px;padding:9px 13px;margin-top:14px;font-size:11px;color:#263238;line-height:1.5}
+.curricolo-ref a{color:#00695c;font-weight:700}
 </style>
 </head>
 <body>
@@ -608,6 +636,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
   <button onclick="setTab('riepilogo')">📋 Curricolo definitivo</button>
   <button onclick="setTab('normativa')">📜 Riferimenti normativi</button>
   <button onclick="setTab('generali')">📖 Sezioni generali</button>
+  <button onclick="setTab('curricolo')">🏫 Curricolo di istituto</button>
 </div>
 <div class="path-breadcrumb" id="breadcrumb"><span class="crumb-current">Revisione per disciplina</span></div>
 <div class="cruscotto" id="cruscotto">
@@ -1014,6 +1043,9 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <p style="margin-top:6px;font-size:11px;color:#78909c;text-align:center">Documento aggiornato al D.M. 221/2025 · G.U. 27/01/2026 · Vigore dal 01/09/2026</p>
       </div>
     </div>
+<div id="tab-curricolo" class="tab-panel" style="display:none">
+  <div id="curricolo-body" class="curricolo-viewer"></div>
+</div>
   </main>
 </div>
 <footer>Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV) · AVIC849003 | IN 2012 → D.M. 221/2025 | DigComp 2.2 | Agenda 2030 | PTOF 2025-2028 | <a class='footer-motto-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Approfondisci il motto latino'>Non multa, sed multum</a></footer>
@@ -1196,6 +1228,7 @@ const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:"Tecnologia",ordine:"Second
 let userProfile={...DEFAULT_PROFILE};
 const SCHOOL_PROFILE={istituto:"Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani»",comune:"Ariano Irpino (AV)",codice:"AVIC849003"};
 const ORDER_PROFILE_LABELS={Infanzia:"Scuola dell'Infanzia",Primaria:"Scuola Primaria",Secondaria:"Scuola Secondaria di I grado",Tutti:"Tutti gli ordini / Commissione curricolo"};
+let curricoloVersion = '2012';
 
 function allItems(){return Object.values(DATA).flatMap(d=>[...d.traguardi,...d.obiettivi]);}
 function discItems(disc){const d=DATA[disc];return d?[...d.traguardi,...d.obiettivi]:[];}
@@ -1797,11 +1830,12 @@ function setTab(t){
   document.getElementById("tab-riepilogo").style.display=t==="riepilogo"?"block":"none";
   document.getElementById("tab-normativa").style.display=t==="normativa"?"block":"none";
   document.getElementById("tab-generali").style.display=t==="generali"?"block":"none";
+  document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
   document.querySelectorAll(".tabbar button").forEach((b,i)=>{
-    const map=["lavoro","riepilogo","normativa","generali"];
+    const map=["lavoro","riepilogo","normativa","generali","curricolo"];
     b.classList.toggle("active",map[i]===t);
   });
-  const mbbMap={lavoro:"mbb-rev",riepilogo:"mbb-def",normativa:"mbb-more",generali:"mbb-more"};
+  const mbbMap={lavoro:"mbb-rev",riepilogo:"mbb-def",normativa:"mbb-more",generali:"mbb-more",curricolo:"mbb-cur"};
   document.querySelectorAll(".mbb-btn").forEach(b=>{
     b.classList.toggle("mbb-active",b.id===mbbMap[t]);
   });
@@ -1815,10 +1849,11 @@ function setTab(t){
   }
   const breadcrumb=document.getElementById("breadcrumb");
   if(breadcrumb){
-    const labels={lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali"};
+    const labels={lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali",curricolo:"Curricolo di istituto"};
     breadcrumb.innerHTML='<span class="crumb-current">'+labels[t]+'</span>';
   }
   if(t==="riepilogo") renderRiepilogo();
+  if(t==="curricolo") renderCurricoloIstituto();
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
@@ -3029,8 +3064,10 @@ function registerOfflineSupport(){
   overlay.onclick=function(e){if(e.target===this)this.remove()};
   overlay.innerHTML='<div class="mobile-menu-panel">\
     <div class="mm-title">📖 Consultazione</div>\
-    <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Riferimenti normativi</button>\
-    <button class="mm-item" onclick="setTab(\'generali\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Sezioni generali</button>\
+    <button class="mm-item" onclick="setTab('normativa');this.closest('.mobile-menu-overlay').remove()">📜 Riferimenti normativi</button>\
+    <button class="mm-item" onclick="setTab('generali');this.closest('.mobile-menu-overlay').remove()">📖 Sezioni generali</button>\
+    <button class="mm-item" onclick="setTab('curricolo');this.closest('.mobile-menu-overlay').remove()">🏫 Curricolo di istituto</button>\
+    <button class="mm-item" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'});this.closest('.mobile-menu-overlay').remove()">📤 Esporta</button>\
     <div class="mm-sep"></div>\
     <div class="mm-title">⚙️ Azioni</div>\
     <button class="mm-item" onclick="saveLocalState(false);this.closest(\'.mobile-menu-overlay\').remove()">💾 Salva</button>\
@@ -3346,6 +3383,109 @@ function downloadReferentGroupWorkReport() {
   downloadBlob(blob, filename);
   showToast('Report gruppo di lavoro generato correttamente.');
 }
+// CURRICOLO DI ISTITUTO
+// ================================================================
+function renderCurricoloIstituto(version) {
+  if (version) curricoloVersion = version;
+  const v = curricoloVersion;
+  const container = document.getElementById('curricolo-body');
+  if (!container) return;
+
+  const stateMsg = v === '2012'
+    ? '<strong>Stato da verificare</strong> — Curricolo basato sulle Indicazioni Nazionali 2012 (D.M. 254/2012). Lo stato di approvazione formale da parte degli organi collegiali non è documentato in questa versione.'
+    : '<strong>Bozza simulata</strong> — Versione completa generata per revisione interna, basata sulle Indicazioni Nazionali 2025 (D.M. 9 dicembre 2025, n. 221). Non ancora approvata dagli organi competenti.';
+
+  const refText = v === '2012'
+    ? 'Indicazioni Nazionali per il curricolo della scuola dell\'infanzia e del primo ciclo d\'istruzione — D.M. 254/2012'
+    : 'Indicazioni Nazionali per il curricolo della scuola dell\'infanzia e del primo ciclo d\'istruzione — D.M. 9 dicembre 2025, n. 221';
+
+  const refUrl = v === '2012'
+    ? 'https://www.mim.gov.it/documents/20182/51310/DM%2B254_2012.pdf'
+    : 'https://www.mim.gov.it/';
+
+  const ordinii = ['Infanzia', 'Primaria', 'Secondaria'];
+
+  const ordineDiscipline = {};
+  ordinii.forEach(o => { ordineDiscipline[o] = []; });
+
+  DISCIPLINE.forEach(disc => {
+    const items = discItems(disc);
+    const ordiniSet = new Set(items.map(i => i.ordine));
+    ordiniSet.forEach(o => {
+      if (!ordineDiscipline[o]) ordineDiscipline[o] = [];
+      if (!ordineDiscipline[o].includes(disc)) ordineDiscipline[o].push(disc);
+    });
+  });
+
+  let html = '<div class="curricolo-viewer">';
+
+  html += '<div class="curricolo-version-tabs">' +
+    '<button class="curricolo-version-tab' + (v === '2012' ? ' active' : '') + '" onclick="renderCurricoloIstituto(\'2012\')">📖 Quadro 2012</button>' +
+    '<button class="curricolo-version-tab' + (v === '2025' ? ' active' : '') + '" onclick="renderCurricoloIstituto(\'2025\')">📖 Quadro 2025</button>' +
+  '</div>';
+
+  html += '<div class="curricolo-state">' + stateMsg + '</div>';
+
+  html += '<div class="curricolo-index">';
+  ordinii.forEach(o => {
+    if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;
+    html += '<div style="font-weight:700;font-size:11px;color:#455a64;width:100%;margin-top:' + (o === 'Infanzia' ? '0' : '6') + 'px">' + ORDINE_LABEL[o] + '</div>';
+    ordineDiscipline[o].forEach(function(disc) {
+      const safeId = disc.replace(/[\s()]/g, '');
+      html += '<a class="curricolo-index-pill" href="#cur-' + safeId + '">' + DISCIPLINE_META[disc].icon + ' ' + disc + '</a>';
+    });
+  });
+  html += '</div>';
+
+  ordinii.forEach(function(o) {
+    if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;
+    html += '<div class="curricolo-ordine"><div class="curricolo-ordine-title">' + ORDINE_LABEL[o] + '</div>';
+
+    ordineDiscipline[o].forEach(function(disc) {
+      const meta = DISCIPLINE_META[disc];
+      const d = DATA[disc];
+      const safeId = disc.replace(/[\s()]/g, '');
+
+      html += '<div class="curricolo-disc" id="cur-' + safeId + '">' +
+        '<div class="curricolo-disc-hd" onclick="var n=this.nextElementSibling;n.style.display=n.style.display===\'none\'?\'block\':\'none\'">' +
+        '<span class="curricolo-disc-icon">' + meta.icon + '</span>' +
+        '<span class="curricolo-disc-name">' + disc + '</span>' +
+        '<span class="curricolo-disc-comp">' + meta.comp + '</span></div>' +
+        '<div style="display:block">';
+
+      const trag = d.traguardi.filter(function(i) { return i.ordine === o; });
+      if (trag.length > 0) {
+        html += '<div class="curricolo-section-title">🎯 Traguardi per lo sviluppo delle competenze</div>';
+        trag.forEach(function(item) {
+          const text = v === '2025' && item.proposto ? item.proposto : item.testo;
+          const cls = item.status === 'modifica' ? ' modified' : item.status === 'nuovo' ? ' new' : '';
+          html += '<div class="curricolo-item"><span class="curricolo-item-id">' + item.id + '</span><span class="curricolo-item-text' + cls + '">' + escapeHtml(text) + '</span></div>';
+        });
+      }
+
+      const ob = d.obiettivi.filter(function(i) { return i.ordine === o; });
+      if (ob.length > 0) {
+        html += '<div class="curricolo-section-title">📋 Obiettivi di apprendimento</div>';
+        ob.forEach(function(item) {
+          const text = v === '2025' && item.proposto ? item.proposto : item.testo;
+          const cls = item.status === 'modifica' ? ' modified' : item.status === 'nuovo' ? ' new' : '';
+          const extra = item.classe ? ' (' + item.classe + ')' : '';
+          html += '<div class="curricolo-item"><span class="curricolo-item-id">' + item.id + extra + '</span><span class="curricolo-item-text' + cls + '">' + escapeHtml(text) + '</span></div>';
+        });
+      }
+
+      html += '</div></div>';
+    });
+
+    html += '</div>';
+  });
+
+  html += '<div class="curricolo-ref"><strong>Fonti di riferimento:</strong><br>' + refText + '<br><a href="' + refUrl + '" target="_blank" rel="noopener">Consulta il documento ufficiale</a></div>';
+  html += '<div class="curricolo-note">Il presente curricolo di istituto è un documento di lavoro. Non sostituisce la delibera del Collegio Docenti e degli organi competenti.</div>';
+  html += '</div>';
+
+  container.innerHTML = html;
+}
 // INIT
 // ================================================================
 loadLocalState();
@@ -3358,7 +3498,7 @@ showWelcome();
 <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
   <button class="mbb-btn mbb-active" id="mbb-rev" onclick="setTab('lavoro')">✏️<br>Rev.</button>
   <button class="mbb-btn" id="mbb-def" onclick="setTab('riepilogo')">📋<br>Def.</button>
-  <button class="mbb-btn" id="mbb-exp" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})">📤<br>Esp.</button>
+  <button class="mbb-btn" id="mbb-cur" onclick="setTab('curricolo')">🏫<br>Curr.</button>
   <button class="mbb-btn" id="mbb-more" onclick="toggleMobileMenu()">☰<br>Menu</button>
 </nav>
 </body>
