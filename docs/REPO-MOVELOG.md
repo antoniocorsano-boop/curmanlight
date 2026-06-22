@@ -1173,3 +1173,20 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_053_REAL_USER_OBSERVATION_PILOT_START_READY`
 - Documentazione: `docs/03_execution/CML-053.md`, `report/CML-053_real_user_observation_pilot_start_readiness.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-054 — Role Access Code Gating Selection Audit
+
+- HEAD partenza: `f6f87a9`, tree pulita, solo untracked non pertinenti ✅
+- Opzioni valutate: 6 (A — nessun codice, B — solo dipartimento, C — dipartimento+referente, D — selettore ruolo, E — codice configurabile, F — login reali)
+- **Opzione selezionata: C — Codice operativo per dipartimento e referente**
+- Motivazione: riduce usi accidentali durante la prova, mantiene consultazione libera, impatto runtime minimo
+- Azioni da proteggere: export esito dipartimentale `.cml`, import esiti referente, report gruppo curricolo
+- Azioni libere: viewer, sezioni generali, guide, esempi, proposta docente, validazione esiti
+- Microcopy raccomandato: "Codice operativo richiesto" / "non è una password istituzionale"
+- Docs-only, nessun runtime modificato, nessun deploy
+- Prossimo step: CML-055 — ROLE_ACCESS_CODE_GATING_CONTRACT (docs-only, specifica implementativa)
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_054_ROLE_ACCESS_CODE_GATING_SELECTION_AUDIT_READY`
+- Documentazione: `docs/03_execution/CML-054.md`, `report/CML-054_role_access_code_gating_selection_audit.md`, `docs/REPO-MOVELOG.md`
