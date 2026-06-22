@@ -747,4 +747,21 @@
 - MEMORY.md presente come untracked — non committato
 - Nessuna implementazione; nessuna modifica runtime; nessun deploy
 - Verdetto: `CML_030_NEXT_RUNTIME_OR_SUPPORT_BLOCK_SELECTION_AUDIT_READY`
-- Prossimo step: CML-031 — Creazione esempi dimostrativi `.cml` e guida alla simulazione
+- Prossimo step originario: CML-031 — Creazione esempi dimostrativi `.cml` (poi sospeso e sostituito)
+
+## 2026-06-22 — CML-031 — Curriculum references viewer selection audit
+
+- **2e27114** — HEAD partenza: docs: select next CML support or runtime block
+- Nuovo commit: docs: select curriculum references viewer approach
+  - Creazione di `docs/03_execution/CML-031.md`
+  - Creazione di `report/CML-031_curriculum_references_viewer_selection_audit.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Pivot: sospeso CML-031 "esempi dimostrativi", priorità ridefinita verso fonti curricolari 2012/2025
+- Audit di selezione, docs-only
+- Opzioni valutate: A (link ufficiali), B (viewer PDF), C (indice navigabile), D (testo completo), **E (soluzione ibrida)**
+- Opzione selezionata: **E — Soluzione ibrida**
+  - Motivazione: link ai PDF ufficiali MIM + schede sintetiche + indice essenziale + avvertenza; nessuna riproduzione testi MIM
+- MEMORY.md presente come untracked — non committato
+- Nessuna implementazione; nessuna modifica runtime; nessun deploy
+- Verdetto: `CML_031_CURRICULUM_REFERENCES_VIEWER_SELECTION_AUDIT_READY`
+- Prossimo step: CML-032 — Implementazione sezione "Fonti curricolari" in `index.html` + deploy + smoke
