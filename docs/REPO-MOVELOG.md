@@ -1095,3 +1095,19 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_048_NEXT_CML_FUNCTIONAL_INCREMENT_SELECTION_AUDIT_READY`
 - Documentazione: `docs/03_execution/CML-048.md`, `report/CML-048_next_cml_functional_increment_selection_audit.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-049 — Release Note and Project Status Card
+
+- HEAD partenza: `3305884`, tree pulita, solo untracked non pertinenti ✅
+- Documenti creati:
+  - `docs/04_user/CML_NOTA_RILASCIO_STATO_ATTUALE.md` — nota di rilascio (cosa è pronto/simulato/materiale di lavoro, ruoli, avvertenze)
+  - `docs/04_user/CML_SCHEDA_STATO_PROGETTO.md` — scheda sintetica (funzioni, cosa resta fuori, uso prudente)
+  - `docs/04_user/CML_TRACCIA_RACCOLTA_OSSERVAZIONI.md` — traccia raccolta feedback per docente/coordinatore/referente/DS
+- Destinatari: DS, referente curricolo, coordinatori di dipartimento, docenti
+- Controlli: linguaggio non tecnico ✅, falsa approvazione: nessuna ✅, coerenza live ✅
+- Docs-only, nessun runtime modificato, nessun deploy
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_049_RELEASE_NOTE_AND_PROJECT_STATUS_CARD_READY`
+- Documentazione: `docs/03_execution/CML-049.md`, `report/CML-049_release_note_and_project_status_card.md`, `docs/REPO-MOVELOG.md`
