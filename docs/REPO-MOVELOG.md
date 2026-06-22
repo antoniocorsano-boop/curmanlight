@@ -83,7 +83,7 @@
 ## 2026-06-21 — CML-010A — Compact Cards & Expandable Detail Design Audit
 
 - **d9b6cd8** — HEAD invariato (solo audit, nessuna modifica runtime)
-- Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
+- Preflight: branch main, tree pulita ✅
 - Analisi vista attuale: area cards (`cardHTML()`), gap-header ridondante, card pending troppo dense, lock-notice ripetuta, nessuna gerarchia
 - 7 problemi individuati (P1-P7)
 - Proposta: 4 sezioni collassabili nel tab Lavoro (Documento attuale, Voci da validare, Fonti, Esportazione)
@@ -111,7 +111,7 @@
 ## 2026-06-21 — CML-010C — Compact Pending Cards Runtime Smoke Audit
 
 - **317222a** — HEAD invariato (solo audit, nessuna modifica runtime)
-- Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
+- Preflight: branch main, tree pulita ✅
 - Conteggi Tecnologia: 12 voci totali, 4 ok, 8 modifica ✅
 - Card pending compatte verificate: badge, 1 riga testo troncato, 4 emoji (✅ ❌ 🔝 🗑) ✅
 - Dettaglio espandibile: confronto testuale IN2012 vs IN2025 su richiesta ✅
@@ -125,7 +125,7 @@
 ## 2026-06-21 — CML-010D — Controlled Netlify Publication (Compact Cards)
 
 - **68ce101** — HEAD (deploy da working tree pulita, nessuna modifica runtime)
-- Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
+- Preflight: branch main, tree pulita ✅
 - Asset invariati: sw.js, _headers, PDF (hash verificati) ✅
 - Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
   - 1 file index.html, 4.2s
@@ -264,7 +264,7 @@
 ## 2026-06-21 — CML-013D — Controlled Netlify Publication Guided Home
 
 - **7249d66** — docs: audit CML-013B guided home smoke (pre-deploy HEAD)
-- Preflight: branch cml-008r-fix-markdown-decision-summary, tree pulita ✅
+- Preflight: branch main, tree pulita ✅
 - Verifica locale (localhost:8089): cruscotto, 3 azioni, breadcrumb, sidebar, quick actions, tabs, normativa, riepilogo, generali ✅
 - Asset verificati: sw.js, _headers, PDF, icons, manifest, motto.html ✅
 - Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
@@ -331,7 +331,7 @@
 
 - **06cf3d4** — feat: mobile bottom bar + menu overlay navigation (pre-audit HEAD)
 - Solo audit e documentazione — nessuna modifica runtime, nessun deploy
-- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `06cf3d4`, tree pulita ✅
+- Preflight: branch `main`, HEAD `06cf3d4`, tree pulita ✅
 - **Verifica pubblicata:** https://curmanlight.netlify.app — bottom bar live ✅
 - **Bottom bar:** 4 bottoni, touch target 52px, body padding-bottom 52px, nessun overlap ✅
 - **Menu overlay:** apertura/chiusura, tutte le voci (Fonti, Generali, Azioni, Salva, Backup, Importa, Ripristina, Installa, Impostazioni, PDF, Motto, Guida) — tutte funzionanti ✅
@@ -348,7 +348,7 @@
 
 - **b7d7f72** — docs: close CML mobile navigation publication smoke (pre-audit HEAD)
 - Solo audit e documentazione — nessuna modifica runtime, nessun deploy
-- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `b7d7f72`, tree pulita ✅
+- Preflight: branch `main`, HEAD `b7d7f72`, tree pulita ✅
 - **Analisi dettaglio attuale:** `cardHTML()` (linee 1393-1497), `togglePendingDetail()` (1377-1383), `.panels` grid 2→1 colonna su mobile ⚠︝
 - **7 criticità individuate:**
   - C1: dettaglio lungo su mobile (stack verticale)
@@ -390,7 +390,7 @@
 ## 2026-06-21 — CML-014C — Controlled Publication and Smoke Audit Enhanced Detail Panel
 
 - **7ab9276** — feat: enhance CML pending detail panel (pre-deploy HEAD)
-- Preflight: branch `cml-008r-fix-markdown-decision-summary`, tree pulita ✅
+- Preflight: branch `main`, tree pulita ✅
 - Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current` — 1 file (index.html), 3.8s
 - URL: https://curmanlight.netlify.app
 - Verifica post-deploy: 7/7 enhancement CML-014B verificati live ✅
@@ -404,7 +404,7 @@
 
 - **8a14dd6** — docs: record CML enhanced detail panel publication smoke (HEAD partenza)
 - Solo documentazione — nessuna modifica runtime, nessun deploy
-- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `8a14dd6`, tree pulita ✅
+- Preflight: branch `main`, HEAD `8a14dd6`, tree pulita ✅
 - Catena CML-014 completa: A (audit) → B (implementation) → C (publication + smoke) → D (closure)
 - 7/7 enhancement pubblicati su https://curmanlight.netlify.app ✅
 - 16/16 criteri CML-014A verificati live ✅
@@ -417,7 +417,7 @@
 
 - **077e221** — docs: close CML enhanced detail panel cycle (HEAD partenza)
 - Solo audit e documentazione — nessuna modifica runtime, nessun deploy
-- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `077e221`, tree pulita ✅
+- Preflight: branch `main`, HEAD `077e221`, tree pulita ✅
 - Test percorso utente: 9 step, 9/9 ✅ chiaro
 - Fonti (DM 254/2012 / DM 221/2025) riconoscibili ✅
 - Differenze evidenziate (bordo arancione/verde) comprensibili ✅
@@ -432,7 +432,7 @@
 
 - **9a6343f** — docs: record CML detail panel real user micro-test (HEAD partenza)
 - Solo audit e documentazione — nessuna modifica runtime, nessun deploy
-- Preflight: branch `cml-008r-fix-markdown-decision-summary`, HEAD `9a6343f`, tree pulita ✅
+- Preflight: branch `main`, HEAD `9a6343f`, tree pulita ✅
 - Audit completo: 14 discipline analizzate, 8 criticità individuate (2 media gravità)
 - Contenuti disciplinari: linguaggio adeguato, riferimenti territoriali, distinzione vigente/proposta ✅
 - Fonti: specifiche e contestuali, normativa completa ✅
@@ -1280,3 +1280,14 @@
 - Nessuna modifica runtime
 - Nessun nuovo localStorage
 - Verdetto: `CML_057_ROLE_ACCESS_CODE_GATING_CONTROLLED_DEPLOY_READY`
+
+## 2026-06-22 — CML-059 — GITHUB_PAGES_STATIC_DEPLOY_SELECTION_AND_SETUP
+
+- **Workflow creato**: `.github/workflows/pages.yml`
+- **Documentazione creata**: `docs/03_execution/CML-059.md`, `report/CML-059_github_pages_static_deploy_selection_and_setup.md`
+- **Repository GitHub configurato**: `https://github.com/antoniocorsano-boop/curmanlight`
+- **Branch configurata**: `main` (branch storico `cml-008r-fix-markdown-decision-summary` abbandonato, non più usato per il deploy)
+- **Nessun runtime modificato**: confermato da `git diff --name-only -- _published_snapshot/netlify-current` (output vuoto)
+- **Nessun deploy eseguito**: solo setup workflow
+- **Prossimo step**: impostare Settings → Pages → Source: GitHub Actions e eseguire workflow
+- **Verdetto**: `CML_059_GITHUB_PAGES_STATIC_DEPLOY_SETUP_READY`

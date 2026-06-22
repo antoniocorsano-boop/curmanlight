@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - cml-008r-fix-markdown-decision-summary
+      - main
     paths:
       - "_published_snapshot/netlify-current/**"
       - ".github/workflows/pages.yml"

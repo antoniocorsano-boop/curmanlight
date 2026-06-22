@@ -5,7 +5,7 @@ Il workflow GitHub Actions è definito in `.github/workflows/pages.yml` e ha le 
 
 - **Trigger**:
   - `workflow_dispatch`: permette l'esecuzione manuale dal tab Actions.
-  - `push`: si attiva quando si pushano commit sulla branch `cml-008r-fix-markdown-decision-summary` che modificano i file nella cartella `_published_snapshot/netlify-current` o il workflow stesso.
+  - `push`: si attiva quando si pushano commit sulla branch `main` che modificano i file nella cartella `_published_snapshot/netlify-current` o il workflow stesso.
 - **Permissions**:
   - `contents: read`: necessario per il checkout del repository.
   - `pages: write`: necessario per creare l'artifact e effettuare il deploy su GitHub Pages.
@@ -62,4 +62,4 @@ Dopo che il workflow ha eseguito correttamente il deploy su GitHub Pages, proced
 3. Documentare i risultati dello smoke test in un nuovo report o aggiornare la documentazione esistente.
 
 ## Note sui controlli eseguiti
-I controlli sono stati eseguiti su un repository locale con il remote impostato su `https://github.com/anton/CurManLight` (esempio dal report CML-058). Si raccomanda di verificare che l'URL del remote corrisponda al repository effettivo e di avere i diritti di push prima di eseguire il push della branch.
+I controlli sono stati eseguiti su un repository locale con il remote impostato su `https://github.com/antoniocorsano-boop/curmanlight`. Si raccomanda di verificare che l'URL del remote corrisponda al repository effettivo e di avere i diritti di push prima di eseguire il push della branch.
