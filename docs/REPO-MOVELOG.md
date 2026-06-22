@@ -1314,3 +1314,18 @@
 - **Nessun deploy eseguito**
 - **Documentazione creata**: `docs/03_execution/CML-061.md`, `report/CML-061_normalized_curriculum_data_contract.md`
 - **Verdetto**: `CML_061_NORMALIZED_CURRICULUM_DATA_CONTRACT_READY`
+
+---
+
+## CML-062 - TECHNOLOGY_DISCIPLINE_FULL_PACK
+
+- **32d08b9** - feat: add normalized Technology curriculum pack
+- File: content/curriculum/tecnologia.normalized.json (13 units)
+- File: tools/validate-cml-normalized-curriculum.mjs (validator)
+- File: docs/03_execution/CML-062.md
+- File: report/CML-062_technology_discipline_full_pack.md
+- Coverage: Infanzia (2 units), Primaria (5 units, I-V), Secondaria (6 units, 2 per class I-III)
+- Validation: PASS, totalUnits=13, missingRequiredFields=0, emptyFields=0, warnings=0, valid=true
+- Nessuna modifica runtime, nessun deploy
+- Prossimo step: CML-064 - TECHNOLOGY_PACK_RUNTIME_READONLY_PREVIEW
+- Verdetto: CML_062_TECHNOLOGY_DISCIPLINE_FULL_PACK_READY
