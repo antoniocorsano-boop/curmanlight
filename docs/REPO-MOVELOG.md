@@ -902,3 +902,14 @@
 - Documentazione: `docs/03_execution/CML-038.md`, `report/CML-038_curriculum_viewer_version_selector_labels_runtime.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_038_CURRICULUM_VIEWER_VERSION_SELECTOR_LABELS_READY`
 - Prossimo step: Deploy per rendere visibili le etichette aggiornate in produzione
+
+---
+
+## CML-038A — Controlled Deploy and Live Smoke Version Labels
+
+- Deploy etichette versione su Netlify: draft + API `restoreSiteDeploy`
+- Deploy ID: `6a38d9593270fa47779c678c` — 1 file (index.html), 3.4s
+- Smoke live 9/9 PASS: etichette "IN 2012 (vigente)", "IN 2025 (bozza)", stato documento, callout, sezioni generali
+- Nessuna modifica runtime aggiuntiva, nessuna logica JS
+- Documentazione: `docs/03_execution/CML-038A.md`, `report/CML-038A_controlled_deploy_and_live_smoke_version_labels.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_038A_CONTROLLED_DEPLOY_AND_LIVE_SMOKE_VERSION_LABELS_READY`
