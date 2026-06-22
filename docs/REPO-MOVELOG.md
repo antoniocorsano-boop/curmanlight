@@ -1125,3 +1125,19 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_050_RELEASE_HANDOFF_AND_REAL_OBSERVATION_SELECTION_AUDIT_READY`
 - Documentazione: `docs/03_execution/CML-050.md`, `report/CML-050_release_handoff_and_real_observation_selection_audit.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-051 — School Handoff Meeting Script and Observation Protocol
+
+- HEAD partenza: `4b599e3`, tree pulita, solo untracked non pertinenti ✅
+- Documenti creati:
+  - `docs/04_user/CML_TRACCIA_INCONTRO_PRESENTAZIONE_OPERATIVA.md` — scaletta incontro 30–45 min, messaggi chiave, demo viewer/flusso
+  - `docs/04_user/CML_PROTOCOLLO_PROVA_CONTROLLATA.md` — attività per ruolo (DS/referente/coordinatore/docente), cosa provare/non fare, esiti attesi
+  - `docs/04_user/CML_SCHEDA_CONDUZIONE_INCONTRO.md` — checklist, domande guida, rischi comunicativi, frasi sintetiche
+- Relazione con CML-049: operativizza nota rilascio, scheda stato e traccia osservazioni in protocollo d'incontro
+- Controlli: linguaggio non tecnico ✅, falsa approvazione: nessuna ✅, coerenza live ✅
+- Docs-only, nessun runtime modificato, nessun deploy
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_051_SCHOOL_HANDOFF_MEETING_SCRIPT_AND_OBSERVATION_PROTOCOL_READY`
+- Documentazione: `docs/03_execution/CML-051.md`, `report/CML-051_school_handoff_meeting_script_and_observation_protocol.md`, `docs/REPO-MOVELOG.md`
