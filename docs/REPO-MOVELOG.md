@@ -942,3 +942,19 @@
 - Nessuna modifica runtime, nessun deploy, nessuna modifica schema `.cml`
 - Documentazione: `docs/03_execution/CML-040.md`, `report/CML-040_demo_example_cml_package.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_040_DEMO_EXAMPLE_CML_PACKAGE_READY`
+
+---
+
+## CML-041 — Department CML Flow Runtime Gap Audit
+
+- Audit tecnico-funzionale del flusso dipartimento `.cml`: 23 funzioni mappate
+- Classificazione: PARZIALE — import docente e visualizzazione funzionano, export esito e compatibilità referente no
+- GAP 1 (CRITICO): `buildDepartmentOutcomeCmlModel` omette campo `discipline` (stringa) → esito non importabile dal referente
+- GAP 2 (MAGGIORE): handling values in formato display ("Confluita nella sintesi") non formato underscore (`confluita_nella_sintesi`) → referente conteggia tutto come `senza_esito`
+- GAP 3 (MINORE): pannello dipartimento senza `<details>`
+- GAP 4 (MINORE): manca opzione esplicita "senza esito"
+- Esempi CML-040: proposte docente importabili, esiti dipartimento NON importabili dal referente
+- Prossimo step: CML-042 — runtime fix dipartimento minimo (2 linee)
+- Nessuna modifica runtime, nessun deploy
+- Documentazione: `docs/03_execution/CML-041.md`, `report/CML-041_department_cml_flow_runtime_gap_audit.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_041_DEPARTMENT_CML_FLOW_RUNTIME_GAP_CONFIRMED`
