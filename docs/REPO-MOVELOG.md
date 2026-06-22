@@ -652,3 +652,18 @@
 - sw.js invariato (cache `curmanlight-cache-v452b421`), _headers invariato, PDF invariato
 - Nessuna modifica runtime; nessun deploy aggiuntivo; nessuna modifica a .cml/persistenza
 - Verdetto: `CML_026A_POST_DEPLOY_REFERENT_PANEL_SMOKE_READY`
+
+## 2026-06-22 — CML-027 — User handoff guide live workflow
+
+- **23ae219** — HEAD partenza: docs: smoke post-deploy referent panel
+- Nuovo commit: docs: add live workflow user handoff guide
+  - Creazione di `docs/04_user/CML_GUIDA_RAPIDA_UTENTE.md`
+  - Creazione di `docs/03_execution/CML-027.md`
+  - Creazione di `report/CML-027_user_handoff_guide_live_workflow.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Docs-only: guida breve, non tecnica, per utenti reali
+- 8 sezioni: cos'è, a cosa serve, ruoli (docente/dipartimento/referente), flusso operativo, file da scaricare, avvertenze istituzionali, problemi frequenti, collegamento live
+- Linguaggio non tecnico, nessuna falsa approvazione automatica, nessuna funzionalità inesistente
+- MEMORY.md presente come untracked — non committato
+- Nessuna modifica runtime; nessun deploy
+- Verdetto: `CML_027_USER_HANDOFF_GUIDE_LIVE_WORKFLOW_READY`
