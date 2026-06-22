@@ -808,3 +808,13 @@
 - Verdetto: `CML_032_FULL_SCHOOL_CURRICULUM_VIEWER_IMPLEMENTED_AND_PUBLISHED`
 - MEMORY.md presente come untracked — non committato
 - **Nota**: primo cambiamento runtime dopo il ciclo CML-025
+
+---
+
+## CML-033 — Full Curriculum Viewer Completeness and Status Audit
+
+- Audit di completezza e stato: il viewer ha contenuto disciplinare completo (14/14 discipline con traguardi + obiettivi) ma non integra le sezioni generali (disponibili in tab Generali)
+- Stato documento chiaro per entrambe le versioni: 2012 "Stato da verificare", 2025 "Bozza simulata" — nessuna falsa approvazione
+- Nessuna modifica runtime, nessun deploy
+- Documentazione: `docs/03_execution/CML-033.md`, `report/CML-033_full_curriculum_viewer_completeness_and_status_audit.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_033_FULL_CURRICULUM_VIEWER_COMPLETENESS_CONFIRMED`
