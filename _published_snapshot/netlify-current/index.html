@@ -709,6 +709,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <summary style="cursor:pointer;font-weight:700;font-size:12px;color:#5d4037">💡 Uso ibrido e requisiti</summary>
         <p style="margin-top:6px;font-size:11px;color:#5d4037;line-height:1.45">Lo strumento può essere aperto come file locale anche da telefono per consultare, revisionare, copiare il testo, scaricare Markdown e stampare/salvare in PDF. L'esportazione Word impaginata è un'opzione avanzata: funziona quando la libreria esterna è raggiungibile, preferibilmente da computer. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
       </details>
+      <details id="department-import-panel" class="department-import-panel">
         <summary>🏫 Validazione dipartimentale</summary>
         <p class="department-import-copy">Importa i file .cml ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
         <div class="department-import-controls">
@@ -1053,6 +1054,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 // ================================================================
 // IN 2012 (testo) vs IN 2025 (proposto) — D.M. 221/2025
 // ================================================================
+const ORDINI = ["Infanzia","Primaria","Secondaria"];
 const ORDINE_LABEL = {Infanzia:"🧸 Scuola dell'Infanzia", Primaria:"📘 Scuola Primaria", Secondaria:"🎓 Scuola Secondaria I Grado"};
 const DISCIPLINE_META = {
   "Italiano":{icon:"📝", comp:"Competenza alfabetica funzionale", nuclei:"Ascolto e parlato · Lettura · Scrittura · Lessico · Grammatica"},
@@ -1223,6 +1225,7 @@ traguardi:[
 
 // ================================================================
 // ================================================================
+let selDisc="Tecnologia", filterStatus="all", currentTab="lavoro";
 let editingId=null;
 const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:"Tecnologia",ordine:"Secondaria"};
 let userProfile={...DEFAULT_PROFILE};
@@ -1246,6 +1249,7 @@ function disabledFor(item){return canEditOrder(item.ordine)?"":" disabled aria-d
 
 // ================================================================
 // ================================================================
+const LOCAL_SAVE_KEY = "curricoloVerticaleDonMilani.v3.ibrido.localState";
 const LOCAL_SAVE_VERSION = 1;
 const INITIAL_DATA_JSON = JSON.stringify(DATA);
 let localSaveAvailable = false;
@@ -1392,6 +1396,7 @@ function importLocalBackup(event){
 
 // ================================================================
 // ================================================================
+function updateStats(){
   const all=allItems();
   const pend=all.filter(needsDecision).length;
   const app=all.filter(x=>x.decisione==="approvata").length;
@@ -1423,6 +1428,7 @@ function updateProgressBar(){
 
 // ================================================================
 // ================================================================
+function renderSidebar(){
   let html="";
   DISCIPLINE.forEach(d=>{
     const items=discItems(d);
@@ -1448,6 +1454,7 @@ function selectDisc(d){selDisc=d;editingId=null;renderSidebar();render();
 
 // ================================================================
 // ================================================================
+function truncate(txt,len){
   if (!txt) return "";
   const s = String(txt).replace(/<[^>]*>/g, '');
   return s.length > len ? s.slice(0, len) + "…" : s;
@@ -1578,6 +1585,7 @@ function cardHTML(item, type) {
 
 // ================================================================
 // ================================================================
+function setFilter(f,btn){
   filterStatus=f;
   document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
   if(btn) btn.classList.add("active");
@@ -1657,6 +1665,7 @@ function render(){
 
 // ================================================================
 // ================================================================
+function findItem(id){
   for(const d of Object.values(DATA)){
     for(const arr of [d.traguardi,d.obiettivi]){
       const f=arr.find(x=>x.id===id);
@@ -1763,6 +1772,7 @@ function addItem(type){
 
 // ================================================================
 // ================================================================
+function showToast(msg){
   let t=document.getElementById("app-toast");
   if(!t){
     t=document.createElement("div");
@@ -1778,6 +1788,7 @@ function addItem(type){
 
 // ================================================================
 // ================================================================
+function renderRiepilogo(){
   let html="";
   let totApprovate=0, totInvariate=0, hasPersonalized=false;
   for(const disc of DISCIPLINE){
@@ -1863,6 +1874,7 @@ function setTab(t){
 // Formato narrativo professionale (non tabelle a confronto) —
 // pensato per essere il documento ufficiale da allegare al PTOF.
 // ================================================================
+function buildDocumentModel(onlyApproved, opts = {}){
   const oggi = new Date().toLocaleDateString("it-IT", {year:"numeric", month:"long", day:"numeric"});
   const model = {
     titolo: "Curricolo Verticale di Istituto",
@@ -1921,6 +1933,7 @@ function setTab(t){
 
 // ================================================================
 // ================================================================
+function modelToMarkdown(model, onlyApproved, opts = {}){
   const {
     introNote = false,
     includeGeneraliRef = false,
@@ -2133,6 +2146,7 @@ ${mantRows}
 
 // ================================================================
 // ================================================================
+function downloadBlob(blob, filename){
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
@@ -2598,6 +2612,7 @@ function exportDepartmentOutcomeCml(){
 // ================================================================
 // a confronto: frontespizio, intestazioni, struttura per disciplina)
 // ================================================================
+async function exportWord(onlyApproved=false){
   if(typeof docx==="undefined"){
     alert("⚠️ La libreria per generare Word non è disponibile.\n\nVerifica di avere una connessione internet attiva e ricarica la pagina.");
     return;
@@ -2760,6 +2775,7 @@ function exportDepartmentOutcomeCml(){
 // (genera un HTML formattato a partire dalla stessa sorgente dati
 // e apre la finestra di stampa del browser su quella vista)
 // ================================================================
+function exportPDF(onlyApproved=false){
   showToast("⏳ Preparo l'anteprima di stampa...");
   const model = buildDocumentModel(onlyApproved);
   const win = window.open("", "_blank");
@@ -2877,6 +2893,7 @@ function exportDepartmentOutcomeCml(){
 
 // ================================================================
 // ================================================================
+function openSettingsModal(){
   const existing=document.getElementById("settings-overlay");
   if(existing) existing.remove();
   const overlay=document.createElement("div");
@@ -2943,6 +2960,7 @@ function saveSettingsProfile(){
 
 // ================================================================
 // ================================================================
+let deferredInstallPrompt=null;
 window.addEventListener("beforeinstallprompt", event=>{
   event.preventDefault();
   deferredInstallPrompt=event;
@@ -3057,6 +3075,7 @@ function registerOfflineSupport(){
 
 // ================================================================
 // ================================================================
+function toggleMobileMenu(){
   const existing=document.getElementById("mobile-menu-overlay");
   if(existing){existing.remove();return}
   const overlay=document.createElement("div");
@@ -3065,10 +3084,10 @@ function registerOfflineSupport(){
   overlay.onclick=function(e){if(e.target===this)this.remove()};
   overlay.innerHTML='<div class="mobile-menu-panel">\
     <div class="mm-title">📖 Consultazione</div>\
-    <button class="mm-item" onclick="setTab('normativa');this.closest('.mobile-menu-overlay').remove()">📜 Riferimenti normativi</button>\
-    <button class="mm-item" onclick="setTab('generali');this.closest('.mobile-menu-overlay').remove()">📖 Sezioni generali</button>\
-    <button class="mm-item" onclick="setTab('curricolo');this.closest('.mobile-menu-overlay').remove()">🏫 Curricolo di istituto</button>\
-    <button class="mm-item" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'});this.closest('.mobile-menu-overlay').remove()">📤 Esporta</button>\
+    <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Riferimenti normativi</button>\
+    <button class="mm-item" onclick="setTab(\'generali\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Sezioni generali</button>\
+    <button class="mm-item" onclick="setTab(\'curricolo\');this.closest(\'.mobile-menu-overlay\').remove()">🏫 Curricolo di istituto</button>\
+    <button class="mm-item" onclick="setTab(\'lavoro\');var t=document.querySelector(\'.toolbar\');if(t)t.scrollIntoView({behavior:\'smooth\'});this.closest(\'.mobile-menu-overlay\').remove()">📤 Esporta</button>\
     <div class="mm-sep"></div>\
     <div class="mm-title">⚙️ Azioni</div>\
     <button class="mm-item" onclick="saveLocalState(false);this.closest(\'.mobile-menu-overlay\').remove()">💾 Salva</button>\
@@ -3088,6 +3107,7 @@ function registerOfflineSupport(){
 
 // ================================================================
 // ================================================================
+function showWelcome(force=false){
   if(!force && sessionStorage.getItem("welcomeShown")) return;
   const overlay=document.createElement("div");
   overlay.id="welcome-overlay";

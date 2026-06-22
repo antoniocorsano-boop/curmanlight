@@ -1208,3 +1208,21 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_055_ROLE_ACCESS_CODE_GATING_CONTRACT_READY`
 - Documentazione: `docs/02_system/ROLE-ACCESS-CODE-GATING-CONTRACT.md`, `docs/03_execution/CML-055.md`, `report/CML-055_role_access_code_gating_contract.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-056A — Runtime Syntax Recovery Before Role Access Gating Smoke
+
+- HEAD partenza: `a124926`, modifica CML-056 preservata in stash dedicato ✅
+- Causa: righe runtime eliminate in `60d546e` e escape menu mobile rimossi in `c04d903`
+- Recupero selettivo: firme funzione, dichiarazioni globali, apertura pannello dipartimentale ed escape storici
+- Parser JavaScript inline: PASS
+- Smoke pagina: HTTP 200, documento completo, 12 card, viewer operativo, 0 errori console
+- Modelli `.cml` verificati: `teacher_proposal` e `department_outcome` invariati
+- Viewport 390/1280 px: PASS
+- Nessuna modifica a schema, export/import/report, persistenza, `sw.js`, `_headers` o asset
+- Nessun deploy
+- CML-056 non chiusa; prossimo step: riapplicare lo stash ed eseguire T01–T13 aggiornati
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_056A_RUNTIME_SYNTAX_RECOVERY_READY`
+- Documentazione: `docs/03_execution/CML-056A.md`, `report/CML-056A_runtime_syntax_recovery_before_role_access_gating_smoke.md`, `docs/REPO-MOVELOG.md`
