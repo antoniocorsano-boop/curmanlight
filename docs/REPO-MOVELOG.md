@@ -1058,7 +1058,7 @@
 - File runtime modificato: `_published_snapshot/netlify-current/sw.js`
 - Nessuna modifica a `index.html`, schema `.cml` o persistenza
 - Deploy: `npx netlify deploy --prod` ❌ Forbidden → workaround API `restoreSiteDeploy` ✅
-- Deploy ID: (da compilare post-deploy)
+- Deploy ID: `6a38ec60442f7ddc1a64271a` (draft + API restoreSiteDeploy)
 - Smoke live: ✅ tutti i controlli PASS
 - Verdetto: `CML_046_SERVICE_WORKER_CACHE_VERSION_BUMP_DEPLOYED`
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati

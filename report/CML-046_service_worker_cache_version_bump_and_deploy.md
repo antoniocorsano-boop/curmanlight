@@ -15,7 +15,7 @@ Bump cache name `curmanlight-cache-v452b421` → `curmanlight-cache-v452b422` in
 | `index.html` modificato | ❌ |
 | Schema `.cml` modificato | ❌ |
 | Persistenza modificata | ❌ |
-| Deploy ID | (da compilare post-deploy) |
+| Deploy ID | `6a38ec60442f7ddc1a64271a` |
 | URL live | https://curmanlight.netlify.app |
 | Smoke live | ✅ tutti i controlli PASS |
 
