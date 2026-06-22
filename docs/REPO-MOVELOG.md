@@ -701,3 +701,20 @@
 - Nessuna implementazione; nessuna modifica runtime; nessun deploy
 - Verdetto: `CML_028_NEXT_FUNCTIONAL_BLOCK_SELECTION_AUDIT_READY`
 - Prossimo step: CML-029 — Creazione pacchetto handoff scuola (presentazione DS, note collegio, vademecum dipartimenti)
+
+## 2026-06-22 — CML-029 — School handoff package
+
+- **e6b8560** — HEAD partenza: docs: select next CML functional block
+- Nuovo commit: docs: add CML school handoff package
+  - Creazione di `docs/04_user/CML_PRESENTAZIONE_DS.md`
+  - Creazione di `docs/04_user/CML_NOTA_COLLEGIO_DOCENTI.md`
+  - Creazione di `docs/04_user/CML_VADEMECUM_DIPARTIMENTI.md`
+  - Creazione di `docs/04_user/CML_SCHEDA_REFERENTE_CURRICOLO.md`
+  - Creazione di `docs/03_execution/CML-029.md`
+  - Creazione di `report/CML-029_school_handoff_package.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Docs-only, nessuna implementazione
+- Documenti per: DS, Collegio Docenti, coordinatori dipartimento, referente curricolo
+- MEMORY.md presente come untracked — non committato
+- Nessuna modifica runtime, nessun deploy
+- Verdetto: `CML_029_SCHOOL_HANDOFF_PACKAGE_READY`
