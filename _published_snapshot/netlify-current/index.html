@@ -656,6 +656,27 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .tecnologia-norm-source{font-size:11px;color:#546e7a;margin-top:4px}
 .tecnologia-norm-note{font-size:11px;color:#78909c;margin-top:4px;font-style:italic}
 @media(max-width:560px){
+/* HOME DASHBOARD */
+.home-dashboard{max-width:900px;margin:0 auto;padding:16px 12px}
+.home-title{font-size:20px;color:#1a237e;margin:0 0 4px;font-weight:800}
+.home-subtitle{font-size:12px;color:#546e7a;margin:0 0 20px;line-height:1.5}
+.home-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.home-cards{grid-template-columns:1fr}}
+.home-card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid #e0e0e0;border-top:3px solid #1a237e;display:flex;flex-direction:column}
+.home-card-didattica{border-top-color:#00897b}
+.home-card-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.home-card-icon{font-size:28px}
+.home-card-title{font-size:16px;font-weight:800;color:#1a237e;margin:0}
+.home-card-didattica .home-card-title{color:#00897b}
+.home-card-text{font-size:12px;color:#455a64;line-height:1.5;margin:0 0 12px;flex:1}
+.home-card-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.home-card-links a,.home-card-links span{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;border:1px solid #c5cae9;background:#fff;color:#1a237e;font-size:11px;font-weight:700;cursor:pointer;text-decoration:none;transition:.1s;white-space:nowrap}
+.home-card-links a:hover{background:#e8eaf6;border-color:#9fa8da}
+.home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
+.home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
+.home-card-note{font-size:10px;color:#90a4ae;margin:10px 0 0;font-style:italic;line-height:1.4}
+.home-footer{background:#f5f7fa;border:1px solid #e0e0e0;border-radius:9px;padding:10px 14px;margin-top:16px}
+.home-footer p{font-size:11px;color:#78909c;line-height:1.5;margin:0}
 </style>
 </head>
 <body>
@@ -679,14 +700,15 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
   </div>
 </header>
 <div class="tabbar">
-  <button class="active" onclick="setTab('lavoro')">✏️ Revisione per disciplina</button>
+  <button class="active" onclick="setTab('home')">🏠 Home</button>
+  <button onclick="setTab('lavoro')">✏️ Revisione per disciplina</button>
   <button onclick="setTab('riepilogo')">📋 Curricolo definitivo</button>
   <button onclick="setTab('normativa')">📜 Riferimenti normativi</button>
   <button onclick="setTab('generali')">📖 Sezioni generali</button>
   <button onclick="setTab('curricolo')">🏫 Curricolo di istituto</button>
 </div>
-<div class="path-breadcrumb" id="breadcrumb"><span class="crumb-current">Revisione per disciplina</span></div>
-<div class="cruscotto" id="cruscotto">
+<div class="path-breadcrumb" id="breadcrumb" hidden><span class="crumb-current">Home</span></div>
+<div class="cruscotto" id="cruscotto" hidden>
   <div class="cruscotto-main">
     <div>
       <span class="cruscotto-state">Stato: revisione avviata</span>
@@ -725,8 +747,48 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
     </div>
   </aside>
   <main id="main-content">
+    <!-- TAB HOME -->
+    <div id="tab-home" style="display:block">
+      <div class="home-dashboard">
+        <h2 class="home-title">Da dove vuoi iniziare?</h2>
+        <p class="home-subtitle">Scegli l'area di lavoro. Le funzioni restano separate per evitare confusione tra curricolo istituzionale e attività didattica.</p>
+        <div class="home-cards">
+          <div class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-icon">📚</span>
+              <h3 class="home-card-title">Curriculum</h3>
+            </div>
+            <p class="home-card-text">Consulta, revisiona ed esporta il curricolo di istituto. Qui trovi sezioni generali, discipline, riferimenti, proposte di revisione e pacchetti disciplinari normalizzati.</p>
+            <div class="home-card-links">
+              <a href="#" onclick="setTab('curricolo');return false">📖 Consulta</a>
+              <a href="#" onclick="setTab('lavoro');return false">✏️ Revisiona</a>
+              <a href="#" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'});return false">📤 Esporta</a>
+              <a href="#" onclick="setTab('curricolo');setTimeout(function(){var p=document.getElementById('tecnologia-norm-panel');if(p)p.scrollIntoView({behavior:'smooth'})},150);return false">⚙️ Tecnologia normalizzata</a>
+            </div>
+          </div>
+          <div class="home-card home-card-didattica">
+            <div class="home-card-header">
+              <span class="home-card-icon">🧑‍🏫</span>
+              <h3 class="home-card-title">Didattica</h3>
+            </div>
+            <p class="home-card-text">Trasforma il curricolo in lavoro didattico: UDA, attività, materiali, consegne, evidenze e valutazione.</p>
+            <div class="home-card-badge">Area in preparazione</div>
+            <div class="home-card-links home-card-links-dimmed">
+              <span>📋 Progetta UDA</span>
+              <span>🧪 Prepara attività</span>
+              <span>📊 Valuta evidenze</span>
+              <span>📁 Materiali per la classe</span>
+            </div>
+            <p class="home-card-note">Le funzioni didattiche sono in fase di definizione e saranno attivate nelle prossime versioni.</p>
+          </div>
+        </div>
+        <div class="home-footer">
+          <p>La Home non modifica i dati. Curriculum e Didattica restano separati: il primo riguarda il documento istituzionale, la seconda il lavoro operativo in classe. Le azioni protette restano sotto codice operativo. Il curricolo normalizzato richiede validazione umana.</p>
+        </div>
+      </div>
+    </div>
     <!-- TAB LAVORO -->
-    <div id="tab-lavoro">
+    <div id="tab-lavoro" style="display:none">
       <div class="install-hint" id="install-hint" style="display:none"><strong>Installazione:</strong> se lo strumento è aperto da un indirizzo web sicuro, puoi aggiungerlo alla schermata iniziale e usarlo come applicazione. Il lavoro resta salvato in locale nel browser del dispositivo.</div>
       <div class="toolbar">
         <span style="font-weight:700;color:#333;font-size:12px">Filtro:</span>
@@ -1274,7 +1336,7 @@ traguardi:[
 
 // ================================================================
 // ================================================================
-let selDisc="Tecnologia", filterStatus="all", currentTab="lavoro";
+let selDisc="Tecnologia", filterStatus="all", currentTab="home";
 let editingId=null;
 const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:"Tecnologia",ordine:"Secondaria"};
 let userProfile={...DEFAULT_PROFILE};
@@ -1886,16 +1948,21 @@ function renderRiepilogo(){
 
 function setTab(t){
   currentTab=t;
+  document.getElementById("tab-home").style.display=t==="home"?"block":"none";
   document.getElementById("tab-lavoro").style.display=t==="lavoro"?"block":"none";
   document.getElementById("tab-riepilogo").style.display=t==="riepilogo"?"block":"none";
   document.getElementById("tab-normativa").style.display=t==="normativa"?"block":"none";
   document.getElementById("tab-generali").style.display=t==="generali"?"block":"none";
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
+  const cruscotto=document.getElementById("cruscotto");
+  if(cruscotto) cruscotto.hidden=t==="home";
+  const breadcrumbEl=document.getElementById("breadcrumb");
+  if(breadcrumbEl) breadcrumbEl.hidden=t==="home";
   document.querySelectorAll(".tabbar button").forEach((b,i)=>{
-    const map=["lavoro","riepilogo","normativa","generali","curricolo"];
+    const map=["home","lavoro","riepilogo","normativa","generali","curricolo"];
     b.classList.toggle("active",map[i]===t);
   });
-  const mbbMap={lavoro:"mbb-rev",riepilogo:"mbb-def",normativa:"mbb-more",generali:"mbb-more",curricolo:"mbb-cur"};
+  const mbbMap={home:"mbb-home",lavoro:"mbb-rev",riepilogo:"mbb-def",normativa:"mbb-more",generali:"mbb-more",curricolo:"mbb-cur"};
   document.querySelectorAll(".mbb-btn").forEach(b=>{
     b.classList.toggle("mbb-active",b.id===mbbMap[t]);
   });
@@ -1907,10 +1974,9 @@ function setTab(t){
       asideEl.classList.remove("mbb-show");
     }
   }
-  const breadcrumb=document.getElementById("breadcrumb");
-  if(breadcrumb){
-    const labels={lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali",curricolo:"Curricolo di istituto"};
-    breadcrumb.innerHTML='<span class="crumb-current">'+labels[t]+'</span>';
+  if(breadcrumbEl){
+    const labels={home:"Home",lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali",curricolo:"Curricolo di istituto"};
+    breadcrumbEl.innerHTML='<span class="crumb-current">'+labels[t]+'</span>';
   }
   if(t==="riepilogo") renderRiepilogo();
   if(t==="curricolo"){renderCurricoloIstituto();renderTecnologiaNorm();}
@@ -3767,7 +3833,8 @@ registerOfflineSupport();
 showWelcome();
 </script>
 <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
-  <button class="mbb-btn mbb-active" id="mbb-rev" onclick="setTab('lavoro')">✏️<br>Rev.</button>
+  <button class="mbb-btn mbb-active" id="mbb-home" onclick="setTab('home')">🏠<br>Home</button>
+  <button class="mbb-btn" id="mbb-rev" onclick="setTab('lavoro')">✏️<br>Rev.</button>
   <button class="mbb-btn" id="mbb-def" onclick="setTab('riepilogo')">📋<br>Def.</button>
   <button class="mbb-btn" id="mbb-cur" onclick="setTab('curricolo')">🏫<br>Curr.</button>
   <button class="mbb-btn" id="mbb-more" onclick="toggleMobileMenu()">☰<br>Menu</button>

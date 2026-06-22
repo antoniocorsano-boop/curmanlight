@@ -1419,3 +1419,24 @@
 - MEMORY.md/.kilo/CLAUDE.md: assenti
 - Verdetto: `CML_065_PRODUCT_MODEL_AND_REPO_ALIGNMENT_CONTRACT_READY`
 - Documentazione: `docs/02_system/PRODUCT-MODEL-CURRICULUM-DIDATTICA-CONTRACT.md`, `docs/03_execution/CML-065.md`, `report/CML-065_product_model_and_repo_alignment_contract.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-065A — Home Dashboard Two Areas Runtime Increment
+
+- HEAD partenza: `24de80d`, tree pulita ✅
+- Modello applicato: CML-065 — Curriculum (istituzionale) + Didattica (operativa)
+- **Home aggiunta** come vista iniziale, con 2 card principali
+- Tabbar: "Home" in posizione 0 (attivo per default)
+- Card Curriculum: 4 link secondari (Consulta, Revisiona, Esporta, Tecnologia normalizzata)
+- Card Didattica: 4 link informativi disabilitati, badge "Area in preparazione"
+- Microcopy footer: Home non modifica dati, aree separate, codice operativo, validazione umana
+- Cruscotto e breadcrumb nascosti su Home
+- Mobile bottom bar: pulsante "Home" aggiunto (5 pulsanti)
+- `currentTab` iniziale: `"lavoro"` → `"home"`
+- Validazione Tecnologia: PASS (13 unità)
+- Nessuna modifica a export/import/report, schema `.cml`, role-access gating, persistenza
+- Nessun deploy
+- Prossimo step: CML-065B — HOME_DASHBOARD_LIVE_DEPLOY_SMOKE
+- Verdetto: `CML_065A_HOME_DASHBOARD_TWO_AREAS_RUNTIME_INCREMENT_READY`
+- Documentazione: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-065A.md`, `report/CML-065A_home_dashboard_two_areas_runtime_increment.md`, `docs/REPO-MOVELOG.md`
