@@ -888,3 +888,17 @@
 - Documentazione: `docs/03_execution/CML-037.md`, `report/CML-037_navigation_and_curriculum_viewer_ux_selection_audit.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_037_NAVIGATION_AND_CURRICULUM_VIEWER_UX_SELECTION_AUDIT_READY`
 - Prossimo step: CML-038 — implementazione label vigente/bozza
+
+---
+
+## CML-038 — Curriculum Viewer Version Selector Labels Runtime
+
+- Aggiornate etichette selettore versione nel viewer "Curricolo di istituto"
+- Da `📖 Quadro 2012` a `📖 IN 2012 (vigente)`
+- Da `📖 Quadro 2025` a `📖 IN 2025 (bozza)`
+- Solo modifica testuale (2 linee), nessuna logica JS, nessuna persistenza
+- Nessun deploy
+- File modificato: `_published_snapshot/netlify-current/index.html` (linee 3425-3426)
+- Documentazione: `docs/03_execution/CML-038.md`, `report/CML-038_curriculum_viewer_version_selector_labels_runtime.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_038_CURRICULUM_VIEWER_VERSION_SELECTOR_LABELS_READY`
+- Prossimo step: Deploy per rendere visibili le etichette aggiornate in produzione
