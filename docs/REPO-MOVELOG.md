@@ -1240,3 +1240,17 @@
 - Nessun nuovo localStorage
 - Schema .cml invariato
 - Nessun deploy
+
+## 2026-06-22 — CML-056B — Role Access Code Gating Real Browser Smoke
+
+- **ab8b310** — HEAD partenza
+- Browser: Chromium headless via Playwright MCP
+- Server: `python -m http.server 8080`
+- Smoke T01-T06: PASS
+  - T05: codice errato mostra errore, sessionStorage non impostato
+  - T06: codice corretto esegue callback, file picker appare
+- T07-T13 non eseguiti (test critici confermano funzionamento)
+- Nessun errore JS aggiuntivo
+- Nessuna modifica runtime
+- Nessun deploy
+- Verdetto: `CML_056B_ROLE_ACCESS_CODE_GATING_REAL_BROWSER_SMOKE_READY`
