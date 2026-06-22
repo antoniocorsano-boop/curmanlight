@@ -1302,3 +1302,15 @@
 - **Nessun deploy eseguito**
 - **Documentazione creata**: `docs/03_execution/CML-060A.md`, `report/CML-060A_audit_script_hardening_and_result_record.md`
 - **Verdetto**: `CML_060A_AUDIT_SCRIPT_HARDENING_AND_RESULT_RECORD_READY`
+
+## 2026-06-22 — CML-061 — NORMALIZED_CURRICULUM_DATA_CONTRACT
+
+- **Contratto definito**: `docs/02_system/NORMALIZED-CURRICULUM-DATA-CONTRACT.md`
+- **Campi obbligatori**: 16 (`id`, `disciplina`, `ordine`, `classe`/`fascia`, `ambito`/`nucleoFondante`, `competenza`, `traguardo`, `obiettivi`, `conoscenze`, `abilita`, `evidenze`, `criteriValutazione`, `fonte`, `stato`, `validazioneUmana`, `noteDipartimento`)
+- **Campi facoltativi**: 6 (`propostaIN2025`, `decisione`, `motivazione`, `dataCreazione`, `dataModifica`, `autore`)
+- **Disciplina pilota**: Tecnologia (CML-062)
+- **Audit futuri**: 8 indicatori (ambiti, competenze, conoscenze, abilità, evidenze/criteri, completezza, consistenza stati, validazione umana)
+- **Nessun runtime modificato**: confermato
+- **Nessun deploy eseguito**
+- **Documentazione creata**: `docs/03_execution/CML-061.md`, `report/CML-061_normalized_curriculum_data_contract.md`
+- **Verdetto**: `CML_061_NORMALIZED_CURRICULUM_DATA_CONTRACT_READY`
