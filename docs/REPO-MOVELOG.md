@@ -984,3 +984,21 @@
 - Prossimo step: CML-043 — deploy controllato + smoke live fix dipartimento
 - Documentazione: `docs/03_execution/CML-042A.md`, `report/CML-042A_department_cml_flow_end_to_end_smoke_with_examples.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_042A_DEPARTMENT_CML_FLOW_END_TO_END_SMOKE_READY`
+
+---
+
+## CML-043 — Controlled Deploy and Live Smoke Department CML Flow Fix
+
+- Preflight: HEAD `5605949`, tree pulita, `b303c33` presente, MEMORY.md/.kilo/CLAUDE.md untracked ✅
+- Deploy: draft + API `restoreSiteDeploy` (--prod Forbidden)
+- Deploy ID: `6a38e48de8a5ebb4a2066995` — 1 file (index.html), 3.5s
+- URL live: https://curmanlight.netlify.app
+- Smoke live 18/18 PASS
+- Runtime: nessuna modifica dopo CML-042
+- Schema `.cml`: nessuna modifica
+- Persistenza: nessuna modifica
+- Backend/Login/Drive API/OAuth: assenti
+- MEMORY.md, .kilo/, CLAUDE.md presenti come untracked, non committati
+- Note cache/service worker: nessuna modifica a sw.js
+- Documentazione: `docs/03_execution/CML-043.md`, `report/CML-043_controlled_deploy_and_live_smoke_department_cml_flow_fix.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_043_CONTROLLED_DEPLOY_AND_LIVE_SMOKE_DEPARTMENT_CML_FLOW_FIX_READY`
