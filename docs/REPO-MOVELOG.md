@@ -1290,7 +1290,7 @@
 - **Nessun runtime modificato**: confermato da `git diff --name-only -- _published_snapshot/netlify-current` (output vuoto)
 - **Nessun deploy eseguito**: solo setup workflow
 - **Prossimo step**: impostare Settings → Pages → Source: GitHub Actions e eseguire workflow
-- **Verdetto**: `CML_059_GITHUB_PAGES_STATIC_DEPLOY_SETUP_READY`
+ - **Verdetto**: `CML_059_GITHUB_PAGES_STATIC_DEPLOY_SETUP_READY`
 
 ## 2026-06-22 — CML-059A — GITHUB_PAGES_LIVE_DEPLOY_SMOKE
 
@@ -1306,3 +1306,56 @@
 - **Runtime modificato**: no
 - **CML-058 committato**: no
 - **Verdetto**: `CML_059A_GITHUB_PAGES_LIVE_DEPLOY_SMOKE_READY`
+
+## 2026-06-22 — CML-060A — AUDIT_SCRIPT_HARDENING_AND_RESULT_RECORD
+
+- **Script modificato**: `tools/audit-cml-curriculum-coverage.mjs`
+- **Correzioni**: dedup `metaDisciplines`, aggiunto `statusTotal`/`statusMatchesTotal`, `consistencyWarnings`, fix refuso `conoscenzee abilità`, `countIn` robusto per regex non globali
+- **Esito audit**: 14 discipline, `metaDisciplineRawCount=28`, `metaDisciplineUniqueCount=14`, `duplicatedMetaDisciplines` valorizzato, `consistencyWarnings` con 1 warning (Religione Cattolica)
+- **Densità UI**: `buttonTags=88`, `inlineOnclick=94`, `exportButtons=25`, `protectedActions=5`, `tabs=27`, `mobileBottomBar=true`
+- **Nessun runtime modificato**: confermato
+- **Nessun deploy eseguito**
+- **Documentazione creata**: `docs/03_execution/CML-060A.md`, `report/CML-060A_audit_script_hardening_and_result_record.md`
+- **Verdetto**: `CML_060A_AUDIT_SCRIPT_HARDENING_AND_RESULT_RECORD_READY`
+
+## 2026-06-22 — CML-061 — NORMALIZED_CURRICULUM_DATA_CONTRACT
+
+- **Contratto definito**: `docs/02_system/NORMALIZED-CURRICULUM-DATA-CONTRACT.md`
+- **Campi obbligatori**: 16 (`id`, `disciplina`, `ordine`, `classe`/`fascia`, `ambito`/`nucleoFondante`, `competenza`, `traguardo`, `obiettivi`, `conoscenze`, `abilita`, `evidenze`, `criteriValutazione`, `fonte`, `stato`, `validazioneUmana`, `noteDipartimento`)
+- **Campi facoltativi**: 6 (`propostaIN2025`, `decisione`, `motivazione`, `dataCreazione`, `dataModifica`, `autore`)
+- **Disciplina pilota**: Tecnologia (CML-062)
+- **Audit futuri**: 8 indicatori (ambiti, competenze, conoscenze, abilità, evidenze/criteri, completezza, consistenza stati, validazione umana)
+- **Nessun runtime modificato**: confermato
+- **Nessun deploy eseguito**
+- **Documentazione creata**: `docs/03_execution/CML-061.md`, `report/CML-061_normalized_curriculum_data_contract.md`
+- **Verdetto**: `CML_061_NORMALIZED_CURRICULUM_DATA_CONTRACT_READY`
+
+---
+
+## CML-062 - TECHNOLOGY_DISCIPLINE_FULL_PACK
+
+- **32d08b9** - feat: add normalized Technology curriculum pack
+- File: content/curriculum/tecnologia.normalized.json (13 units)
+- File: tools/validate-cml-normalized-curriculum.mjs (validator)
+- File: docs/03_execution/CML-062.md
+- File: report/CML-062_technology_discipline_full_pack.md
+- Coverage: Infanzia (2 units), Primaria (5 units, I-V), Secondaria (6 units, 2 per class I-III)
+- Validation: PASS, totalUnits=13, missingRequiredFields=0, emptyFields=0, warnings=0, valid=true
+- Nessuna modifica runtime, nessun deploy
+- Prossimo step: CML-064 - TECHNOLOGY_PACK_RUNTIME_READONLY_PREVIEW
+- Verdetto: CML_062_TECHNOLOGY_DISCIPLINE_FULL_PACK_READY
+
+---
+
+## CML-064 — TECHNOLOGY_PACK_RUNTIME_READONLY_PREVIEW
+
+- **index.html** — feat: add read-only Technology curriculum preview
+- Sezione tecnologia-norm aggiunta in #tab-curricolo
+- Dati normalizzati incorporati: costante TECNOLOGIA_NORM (13 unita)
+- Funzione renderTecnologiaNorm() read-only
+- Filtri ordine, dettaglio espandibile, microcopy obbligatoria
+- Nessuna modifica export/import/report/schema .cml/localStorage/role-access
+- Nessun deploy
+- Smoke locale: 13/13 controlli PASS
+- Prossimo step: CML-064A — deploy controllato + smoke live
+- Verdetto: CML_064_TECHNOLOGY_PACK_RUNTIME_READONLY_PREVIEW_READY

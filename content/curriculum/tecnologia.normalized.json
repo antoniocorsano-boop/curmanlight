@@ -1,0 +1,515 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Tecnologia",
+  "humanValidationRequired": true,
+  "source": "CML-061 normalized curriculum data contract",
+  "unitaApprendimento": [
+    {
+      "id": "tec_inf_3_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "3-4",
+      "ambito": "Osservazione e analisi di oggetti, strumenti e ambienti",
+      "competenza": "Esplora gli oggetti e i materiali dell'ambiente usando i sensi e le prime mani",
+      "traguardo": "Il bambino usa con familiarità le tecnologie a disposizione nell'ambiente, esplora materiali e oggetti riconoscendone funzione e proprietà",
+      "obiettivi": [
+        "Usare LIM e tablet in modo guidato",
+        "Esplorare materiali diversi con mani e sensi",
+        "Riconoscere oggetti tecnologici semplici"
+      ],
+      "conoscenze": [
+        "Concetto di materiale (duro, morbido, liscio, ruvido)",
+        "Oggetti tecnologici domestici (telefono, lampada)",
+        "Senso del tatto e vista per esplorare"
+      ],
+      "abilita": [
+        "Toccare e manipolare materiali diversi",
+        "Accendere e spegnere un oggetto tecnologico semplice",
+        "Indicare parti di un oggetto"
+      ],
+      "evidenze": [
+        "Il bambino riconosce materiali diversi al tatto",
+        "Il bambino usa tablet per disegnare con il dito",
+        "Il bambino accende la LIM quando richiesto"
+      ],
+      "criteriValutazione": [
+        "Curiosità nell'esplorazione",
+        "Capacità di discriminare materiali",
+        "Attenzione alle indicazioni"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia / Campi di esperienza: La conoscenza del mondo",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Infanzia 3-4 — Esplorazione sensoriale"
+    },
+    {
+      "id": "tec_inf_5_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "ambito": "Digitale, dati, procedure e sicurezza",
+      "competenza": "Utilizza semplici strumenti digitali in modo guidato per esplorare e rappresentare",
+      "traguardo": "Il bambino sa orientarsi tra i mezzi di comunicazione; conosce e utilizza strumenti digitali con consapevolezza, sviluppando le prime competenze digitali",
+      "obiettivi": [
+        "Usare tablet per scattare foto e fare video brevi",
+        "Seguire istruzioni sequenziali semplici (algoritmo)",
+        "Collaborare con pari tramite strumento digitale"
+      ],
+      "conoscenze": [
+        "Concetto di algoritmo come sequenza di passi",
+        "Funzioni base di tablet e fotocamera",
+        "Regole di sicurezza nell'uso di strumenti digitali"
+      ],
+      "abilita": [
+        "Scattare una foto e selezionarla",
+        "Eseguire sequenze di comandi semplici",
+        "Spegnere e riporre correttamente il dispositivo"
+      ],
+      "evidenze": [
+        "Il bambino produce 3 foto di oggetti della classe",
+        "Il bambino segue una sequenza a 3 passi",
+        "Il bambino condivide il tablet col compagno"
+      ],
+      "criteriValutazione": [
+        "Precisione nell'esecuzione",
+        "Rispetto delle regole",
+        "Collaborazione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Raccomandazioni digitali PTOF 2025-2028",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Infanzia 5 — Primi algoritmi e strumenti digitali"
+    },
+    {
+      "id": "tec_pri_1_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Osservazione e analisi di oggetti, strumenti e ambienti",
+      "competenza": "Osserva e descrive oggetti tecnologici riconoscendone funzione, materiali e funzionamento semplice",
+      "traguardo": "L'alunno si orienta tra i diversi mezzi di comunicazione e inizia a riconoscere in modo critico le caratteristiche, le funzioni e i limiti della tecnologia attuale",
+      "obiettivi": [
+        "Osservare e descrivere oggetti tecnologici",
+        "Riconoscere materiali diversi",
+        "Sperimentare il corretto utilizzo di strumenti"
+      ],
+      "conoscenze": [
+        "Materiali naturali e artificiali",
+        "Strumenti tecnologici domestici e scolastici",
+        "Categorie di oggetti per funzione"
+      ],
+      "abilita": [
+        "Descrivere un oggetto usando termini appropriati",
+        "Confrontare materiali per proprietà",
+        "Utilizzare correttamente un oggetto tecnologico semplice"
+      ],
+      "evidenze": [
+        "L'alunno classifica oggetti per funzione",
+        "L'alunno descrive materiali usando corretti aggettivi",
+        "L'alunno utilizza correttamente forbici e colla"
+      ],
+      "criteriValutazione": [
+        "Correttezza lessicale",
+        "Capacità di classificazione",
+        "Attenzione alla sicurezza"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 1 — Oggetti e materiali"
+    },
+    {
+      "id": "tec_pri_2_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Primaria",
+      "classe": "2",
+      "fascia": null,
+      "ambito": "Materiali e trasformazioni",
+      "competenza": "Riconosce proprietà di materiali e tecniche semplici di trasformazione",
+      "traguardo": "L'alunno inizia a riconoscere in modo critico le caratteristiche, le funzioni e i limiti della tecnologia attuale e conosce le proprietà di alcuni materiali",
+      "obiettivi": [
+        "Sperimentare trasformazioni di materiali",
+        "Riconoscere proprietà fisiche semplici",
+        "Collegare materiali a usi specifici"
+      ],
+      "conoscenze": [
+        "Proprietà dei materiali (durezza, flessibilità, trasparenza)",
+        "Trasformazioni semplici (tagliare, piegare, assemblare)",
+        "Materiali riciclati versus vergini"
+      ],
+      "abilita": [
+        "Eseguire tagli e piegature",
+        "Assemblare pezzi con colla e graffette",
+        "Scegliere materiale adatto allo scopo"
+      ],
+      "evidenze": [
+        "L'alunno produce un manufatto con 3 materiali diversi",
+        "L'alunno spiega perché ha scelto quel materiale",
+        "L'alunno riconosce materiale riciclato da vergine"
+      ],
+      "criteriValutazione": [
+        "Correttezza esecuzione",
+        "Consapevolezza delle scelte",
+        "Precisione nel lavoro"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 2 — Proprietà materiali"
+    },
+    {
+      "id": "tec_pri_3_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "ambito": "Disegno, rappresentazione e progettazione",
+      "competenza": "Realizza elaborati grafici e progettuali semplici, utilizzando strumenti tradizionali e digitali base",
+      "traguardo": "L'alunno sa rappresentare oggetti e spazi con il disegno tecnico e inizia a usare strumenti digitali per la comunicazione",
+      "obiettivi": [
+        "Eseguire disegni a mano libera con proporzioni",
+        "Usare righello, squadra e compasso base",
+        "Creare un semplice progetto grafico"
+      ],
+      "conoscenze": [
+        "Elementi del disegno tecnico (linee, forme, quote)",
+        "Strumenti da disegno e loro uso",
+        "Software di disegno base (Paint, Tux Paint)"
+      ],
+      "abilita": [
+        "Riprodurre una forma geometrica con strumenti",
+        "Misurare con righello in centimetri",
+        "Realizzare un disegno a colori al computer"
+      ],
+      "evidenze": [
+        "L'alunno produce un disegno tecnico con 3 quote",
+        "L'alunno usa righello senza errori di misura",
+        "L'alunno crea un disegno digitale su software"
+      ],
+      "criteriValutazione": [
+        "Pulizia del grafico",
+        "Precisione misure",
+        "Uso corretto degli strumenti"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 3 — Disegno tecnico"
+    },
+    {
+      "id": "tec_pri_4_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Primaria",
+      "classe": "4",
+      "fascia": null,
+      "ambito": "Energia, sostenibilità e ambiente",
+      "competenza": "Riconosce fonti di energia e semplici principi di sostenibilità ambientale",
+      "traguardo": "L'alunno conosce le fonti di energia rinnovabili e non, e i comportamenti sostenibili nella vita quotidiana",
+      "obiettivi": [
+        "Distinguere fonti rinnovabili e non rinnovabili",
+        "Calcolare il consumo energetico di un oggetto",
+        "Progettare un comportamento sostenibile"
+      ],
+      "conoscenze": [
+        "Fonti di energia (sole, vento, acqua, carbone, petrolio)",
+        "Concetto di kWh",
+        "Rifiuti: differenziata, recupero, riciclo"
+      ],
+      "abilita": [
+        "Leggere un'etichetta energetica",
+        "Calcolare il risparmio spegnendo luci inutili",
+        "Separare correttamente i rifiuti"
+      ],
+      "evidenze": [
+        "L'alunno classifica 5 fonti energetiche",
+        "L'alunno calcola il consumo settimanale della classe",
+        "L'alunno progetta una routine di risparmio"
+      ],
+      "criteriValutazione": [
+        "Correttezza concettuale",
+        "Applicazione pratica",
+        "Coinvolgimento personale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Curricolo di istituto — Agenda 2030",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 4 — Energia e sostenibilità"
+    },
+    {
+      "id": "tec_pri_5_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "ambito": "Cittadinanza tecnologica e uso responsabile",
+      "competenza": "Usa la rete internet e i dispositivi digitali in modo consapevole, sicuro e rispettoso delle regole",
+      "traguardo": "L'alunno sa orientarsi tra i mezzi di comunicazione digitale; utilizza strumenti digitali con consapevolezza dei rischi e delle regole",
+      "obiettivi": [
+        "Riconoscere rischi e opportunità di internet",
+        "Saper cercare informazioni valutando le fonti",
+        "Utilizzare comunicazione digitale rispettosa"
+      ],
+      "conoscenze": [
+        "Rischi della rete (fake news, cyberbullismo, privacy)",
+        "Criteri di attendibilità di una fonte",
+        "Regole di cittadinanza digitale"
+      ],
+      "abilita": [
+        "Verificare autore e data di una notizia",
+        "Configurare impostazioni privacy base",
+        "Scrivere un messaggio rispettoso"
+      ],
+      "evidenze": [
+        "L'alunno scheda 2 notizie distinguendo vere da false",
+        "L'alunno modifica impostazioni privacy di un account",
+        "L'alunno scrive un post rispettoso per il blog di classe"
+      ],
+      "criteriValutazione": [
+        "Capacità critica",
+        "Rispetto delle regole",
+        "Qualità della comunicazione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Educazione Civica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 5 — Cittadinanza digitale"
+    },
+    {
+      "id": "tec_sec_1_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Disegno, rappresentazione e progettazione",
+      "competenza": "Progetta e realizza rappresentazioni grafiche con strumenti di disegno tecnico e applicazioni digitali (CAD, GeoGebra)",
+      "traguardo": "L'alunno riconosce nell'ambiente i principali sistemi tecnologici e le molteplici relazioni che essi stabiliscono con gli esseri viventi",
+      "obiettivi": [
+        "Leggere e interpretare semplici disegni tecnici",
+        "Analizzare oggetti d'uso comune",
+        "Produrre elaborati grafici in scala con CAD base"
+      ],
+      "conoscenze": [
+        "Convenzioni del disegno tecnico (viste, scale, quotatura)",
+        "Strumenti da disegno e software CAD",
+        "Sistemi di rappresentazione (prospettiva, assonometria)"
+      ],
+      "abilita": [
+        "Eseguire un disegno tecnico a mano",
+        "Produrre un disegno CAD con quote",
+        "Calcolare scale di rappresentazione"
+      ],
+      "evidenze": [
+        "L'alunno produce un disegno con 3 viste",
+        "L'alunno calcola scala 1:100",
+        "L'alunno esegue un CAD semplice di una casa"
+      ],
+      "criteriValutazione": [
+        "Correttezza convenzioni",
+        "Precisione esecutiva",
+        "Uso autonomo del software"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 1a — Disegno e CAD"
+    },
+    {
+      "id": "tec_sec_1_002",
+      "disciplina": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Digitale, dati, procedure e sicurezza",
+      "competenza": "Utilizza le tecnologie dell'informazione e della comunicazione per comunicare, calcolare, ricercare e archiviare dati",
+      "traguardo": "L'alunno è consapevole delle potenzialità e dei limiti delle tecnologie digitali",
+      "obiettivi": [
+        "Conoscere componenti hardware di un computer",
+        "Usare software applicativi (videoscrittura, fogli di calcolo)",
+        "Navigare in rete in modo sicuro e crítico"
+      ],
+      "conoscenze": [
+        "Hardware: CPU, RAM, periferiche",
+        "Software: sistema operativo, applicativi",
+        "Netiquette e regole di sicurezza"
+      ],
+      "abilita": [
+        "Creare un documento di testo formattato",
+        "Realizzare un grafico con foglio di calcolo",
+        "Cercare informazioni valutando fonti"
+      ],
+      "evidenze": [
+        "L'alunno produce un documento di 1 pagina",
+        "L'alunno realizza un grafico a torta",
+        "L'alunno scheda 3 fonti attendibili"
+      ],
+      "criteriValutazione": [
+        "Correttezza formale",
+        "Capacità di organizzazione",
+        "Attenzione alla sicurezza"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 1a — TIC e sicurezza"
+    },
+    {
+      "id": "tec_sec_2_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "ambito": "Materiali e trasformazioni",
+      "competenza": "Analizza oggetti e materiali del contesto locale, comprendendone il ciclo produttivo e le trasformazioni",
+      "traguardo": "L'alunno conosce alcuni processi produttivi del territorio e riconosce le proprietà dei materiali impiegati",
+      "obiettivi": [
+        "Individuare materiali tipici del territorio",
+        "Ricostruire il ciclo produttivo di un oggetto",
+        "Collegare proprietà dei materiali a usi specifici"
+      ],
+      "conoscenze": [
+        "Materiali locali (pietra, legno, ceramica)",
+        "Processi produttivi tradizionali e industriali",
+        "Proprietà fisiche e chimiche base"
+      ],
+      "abilita": [
+        "Classificare materiali per provenienza",
+        "Descrivere il ciclo produttivo di un oggetto",
+        "Associare proprietà a destinazioni d'uso"
+      ],
+      "evidenze": [
+        "L'alunno descrive il ciclo produttivo di 2 oggetti",
+        "L'alunno classifica 5 materiali del territorio",
+        "L'alunno propone un materiale alternativo"
+      ],
+      "criteriValutazione": [
+        "Correttezza informazioni",
+        "Capacità di connessione",
+        "Qualità dell'analisi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 2a — Materiali e territorio"
+    },
+    {
+      "id": "tec_sec_2_002",
+      "disciplina": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "ambito": "Energia, sostenibilità e ambiente",
+      "competenza": "Valuta l'impatto ambientale di sistemi tecnologici e propone soluzioni sostenibili",
+      "traguardo": "L'alunno conosce le fonti di energia e comprende l'importanza di comportamenti sostenibili per l'ambiente",
+      "obiettivi": [
+        "Calcolare l'efficienza energetica di un sistema",
+        "Confrontare soluzioni di mobilità sostenibile",
+        "Progettare un impianto fotovoltaico semplice"
+      ],
+      "conoscenze": [
+        "Fonti rinnovabili e non rinnovabili",
+        "Efficienza energetica e bolletta",
+        "Mobilità sostenibile (bici, elettrico, sharing)"
+      ],
+      "abilita": [
+        "Analizzare un certificato energetico",
+        "Calcolare risparmio energetico annuale",
+        "Progettare un sistema fotovoltaico in scala"
+      ],
+      "evidenze": [
+        "L'alunno analizza un attestato di prestazione energetica",
+        "L'alunno calcola risparmio di una classe 1A",
+        "L'alunno disegna un impianto fotovoltaico"
+      ],
+      "criteriValutazione": [
+        "Correttezza calcoli",
+        "Qualità della proposta",
+        "Attendibilità delle fonti"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Curricolo di istituto — Agenda 2030 / Educazione Civica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 2a — Energia e mobilità sostenibile"
+    },
+    {
+      "id": "tec_sec_3_001",
+      "disciplina": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "ambito": "Digitale, dati, procedure e sicurezza",
+      "competenza": "Sviluppa semplici programmi e automazioni, applicando il pensiero computazionale",
+      "traguardo": "L'alunno utilizza le tecnologie digitali in modo critico e consapevole, risolvendo problemi con strumenti informatici",
+      "obiettivi": [
+        "Scrivere semplici algoritmi in Scratch o Python",
+        "Comprendere variabili, cicli e condizioni",
+        "Applicare la programmazione a problemi reali"
+      ],
+      "conoscenze": [
+        "Concetti base di programmazione (variabile, ciclo, condizione)",
+        "Linguaggi visuali (Scratch) e testuali (Python base)",
+        "Debugging e testing di codice"
+      ],
+      "abilita": [
+        "Scrivere un programma che risolve un problema",
+        "Eseguire debugging di un codice",
+        "Documentare il proprio codice"
+      ],
+      "evidenze": [
+        "L'alunno presenta un progetto Scratch funzionante",
+        "L'alunno documenta il codice con commenti",
+        "L'alunno risolve un problema in Python"
+      ],
+      "criteriValutazione": [
+        "Correttezza logica",
+        "Funzionalità del programma",
+        "Chiarezza della documentazione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Pensiero computazionale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 3a — Programmazione e automazione"
+    },
+    {
+      "id": "tec_sec_3_002",
+      "disciplina": "Tecnologia",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "ambito": "Cittadinanza tecnologica e uso responsabile",
+      "competenza": "Analizza dilemmi etici e impatti sociali delle tecnologie, formulando opinioni motivate",
+      "traguardo": "L'alunno è consapevole delle implicazioni etiche e sociali delle tecnologie e delle norme che le governano",
+      "obiettivi": [
+        "Analizzare casi di impatto tecnologico",
+        "Riconoscere diritti e doveri nel digitale",
+        "Proporre soluzioni etiche a problemi tecnologici"
+      ],
+      "conoscenze": [
+        "Privacy, dati personali e GDPR base",
+        "Diritti d'autore e licenze open",
+        "Impatto ambientale dei dispositivi elettronici"
+      ],
+      "abilita": [
+        "Analizzare un caso di privacy violation",
+        "Valutare licenze di utilizzo di contenuti",
+        "Proporre una policy aziendale per sostenibilità"
+      ],
+      "evidenze": [
+        "L'alunno redige un caso di studio su privacy",
+        "L'alunno presenta una relazione su diritti d'autore",
+        "L'alunno propone 3 azioni per ridurre e-waste"
+      ],
+      "criteriValutazione": [
+        "Approfondimento analisi",
+        "Correttezza giuridica",
+        "Qualità delle proposte"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Educazione Civica / Cittadinanza digitale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 3a — Cittadinanza tecnologica"
+    }
+  ]
+}
