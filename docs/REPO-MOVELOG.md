@@ -1291,3 +1291,18 @@
 - **Nessun deploy eseguito**: solo setup workflow
 - **Prossimo step**: impostare Settings → Pages → Source: GitHub Actions e eseguire workflow
 - **Verdetto**: `CML_059_GITHUB_PAGES_STATIC_DEPLOY_SETUP_READY`
+
+## 2026-06-22 — CML-059A — GITHUB_PAGES_LIVE_DEPLOY_SMOKE
+
+- **URL live**: https://antoniocorsano-boop.github.io/curmanlight/
+- **Branch**: main
+- **Remote**: https://github.com/antoniocorsano-boop/curmanlight
+- **Smoke live**: T01–T12 PASS
+- **Anomalia**: `favicon.ico` 404 non bloccante
+- **Role-access gating**: `sessionStorage.roleAccessGranted` solo in sessionStorage, comportamento corretto
+- **Codice operativo**: `CML2025` non salvato in localStorage/sessionStorage
+- **Mobile smoke**: PASS (viewport 375x812, nessun overflow)
+- **Regressione `.cml`**: PASS (nessun campo codice/accesso/autenticazione nei modelli)
+- **Runtime modificato**: no
+- **CML-058 committato**: no
+- **Verdetto**: `CML_059A_GITHUB_PAGES_LIVE_DEPLOY_SMOKE_READY`
