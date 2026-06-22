@@ -834,3 +834,16 @@
 - Nessuna modifica runtime, nessun deploy
 - Documentazione: `docs/03_execution/CML-034.md`, `report/CML-034_curriculum_viewer_general_sections_visibility_selection_audit.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_034_CURRICULUM_VIEWER_GENERAL_SECTIONS_VISIBILITY_SELECTION_AUDIT_READY`
+
+---
+
+## CML-035 — Curriculum Viewer General Sections Callout Runtime
+
+- Implementato callout informativo all'inizio del viewer "Curricolo di istituto"
+- Testo: "Prima di leggere le discipline: consulta anche le sezioni generali del curricolo: Premessa, Profilo dello studente, Valutazione, Inclusione, Continuità e Orientamento."
+- Classe `.usage-notice` esistente — nessun nuovo CSS
+- Nessuna nuova logica JS, nessun nuovo stato, nessuna persistenza
+- Nessun deploy
+- File modificato: `_published_snapshot/netlify-current/index.html` (+1 linea, linea 3422)
+- Documentazione: `docs/03_execution/CML-035.md`, `report/CML-035_curriculum_viewer_general_sections_callout_runtime.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_035_CURRICULUM_VIEWER_GENERAL_SECTIONS_CALLOUT_READY`
