@@ -1157,3 +1157,19 @@
 - MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
 - Verdetto: `CML_052_REAL_USER_OBSERVATION_PILOT_PROTOCOL_READY`
 - Documentazione: `docs/03_execution/CML-052.md`, `report/CML-052_real_user_observation_pilot_protocol.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-053 — Real User Observation Pilot Start Readiness
+
+- HEAD partenza: `e6d0aa9`, tree pulita, solo untracked non pertinenti ✅
+- Verifica pacchetto pilot: 9 documenti coprono destinatari, durata, ruoli, attività, divieti, raccolta, criteri, avvertenze ✅
+- Documenti creati:
+  - `docs/04_user/CML_CHECKLIST_AVVIO_PILOT_OSSERVAZIONI.md` — checklist pre/durante/dopo incontro, settimana prova, criteri chiusura
+  - `docs/04_user/CML_MESSAGGIO_INVITO_PROVA_CONTROLLATA.md` — testo riutilizzabile per invitare partecipanti
+  - `docs/04_user/CML_SCHEDA_DECISIONE_POST_PILOT.md` — scheda per decidere il passo successivo dopo la raccolta
+- Controlli: linguaggio ✅, falsa approvazione: nessuna ✅, coerenza live e CML precedenti ✅
+- Docs-only, nessun runtime modificato, nessun deploy
+- MEMORY.md/.kilo/CLAUDE.md presenti come untracked, non committati
+- Verdetto: `CML_053_REAL_USER_OBSERVATION_PILOT_START_READY`
+- Documentazione: `docs/03_execution/CML-053.md`, `report/CML-053_real_user_observation_pilot_start_readiness.md`, `docs/REPO-MOVELOG.md`
