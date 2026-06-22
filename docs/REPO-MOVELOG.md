@@ -1359,3 +1359,25 @@
 - Smoke locale: 13/13 controlli PASS
 - Prossimo step: CML-064A — deploy controllato + smoke live
 - Verdetto: CML_064_TECHNOLOGY_PACK_RUNTIME_READONLY_PREVIEW_READY
+
+## 2026-06-23 — CML-064A — TECHNOLOGY_PACK_PREVIEW_LIVE_DEPLOY_SMOKE
+
+- **URL live**: https://antoniocorsano-boop.github.io/curmanlight/
+- **Branch**: main
+- **Remote**: https://github.com/antoniocorsano-boop/curmanlight
+- **Commit runtime**: 2d0d851
+- **Merge commit**: 8aa4b6e
+- **Workflow GitHub Pages**: success
+- **Smoke live**: PASS (tutti i controlli)
+- **Conteggi**: 13 totale, 2 Infanzia, 5 Primaria, 6 Secondaria
+- **Microcopy**: presente ("Anteprima non modificabile", "Richiede validazione umana", "Non costituisce approvazione definitiva")
+- **Filtri ordine**: funzionanti (Tutti, Infanzia, Primaria, Secondaria)
+- **Dettaglio espandibile**: confermato
+- **Preview read-only**: confermato (nessun campo editabile, nessun salvataggio locale aggiuntivo)
+- **Export/import/report**: invariati
+- **Role-access gating**: invariato (`CML2025` sblocca, "Blocca di nuovo" riblocca)
+- **Regressione `.cml`**: PASS
+- **Runtime CML-064A**: non modificato
+- **File documentali creati**: `docs/03_execution/CML-064A.md`, `report/CML-064A_technology_pack_preview_live_deploy_smoke.md`
+- **Prossimo step**: `CML-063 — UX_QUALITY_AUDIT_FRAME_DETAIL_BALANCE`
+- **Verdetto**: `CML_064A_TECHNOLOGY_PACK_PREVIEW_LIVE_DEPLOY_SMOKE_READY`
