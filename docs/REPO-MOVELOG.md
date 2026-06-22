@@ -958,3 +958,16 @@
 - Nessuna modifica runtime, nessun deploy
 - Documentazione: `docs/03_execution/CML-041.md`, `report/CML-041_department_cml_flow_runtime_gap_audit.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_041_DEPARTMENT_CML_FLOW_RUNTIME_GAP_CONFIRMED`
+
+---
+
+## CML-042 — Department CML Flow Minimal Runtime Fix
+
+- Correzione 2 bug nel flusso dipartimento `.cml` (identificati in CML-041)
+- GAP 1 (CRITICO): aggiunto campo `discipline: disciplines[0] || ""` in `buildDepartmentOutcomeCmlModel`
+- GAP 2 (MAGGIORE): aggiunti attributi `value` con formato underscore-lowercase ai `<option>` del dropdown decisioni
+- 2 linee modificate (righe 2545, 2570) — `_published_snapshot/netlify-current/index.html`
+- Nessuna modifica schema `.cml`, nessuna persistenza, nessun backend
+- Prossimo step: CML-042A — smoke end-to-end con esempi CML-040
+- Documentazione: `docs/03_execution/CML-042.md`, `report/CML-042_department_cml_flow_minimal_runtime_fix.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_042_DEPARTMENT_CML_FLOW_MINIMAL_RUNTIME_FIX_READY`

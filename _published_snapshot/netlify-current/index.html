@@ -2542,7 +2542,7 @@ var decision=decisionIdx>=0?departmentImportState.proposals[decisionIdx].decisio
             '<div class="department-proposal-text">'+escapeHtml(proposal.text||"Testo non indicato")+'</div>'+
             '<div class="department-proposal-field"><strong>Motivazione:</strong> '+escapeHtml(proposal.motivation||"Non indicata")+'</div>'+
             '<div class="department-proposal-field"><strong>Fonti/evidenze:</strong> '+escapeHtml(proposal.evidence||"Non indicate")+'</div>'+chips+
-            '<div class="department-proposal-decision" style="margin-top:6px"><strong>Esito del confronto:</strong> <select onchange="setDepartmentDecision('+decisionIdx+',this.value)" style="font-size:11px;padding:3px 6px;border-radius:4px;border:1px solid #90a4ae"><option value="">— Scegli esito —</option><option '+(decision==="confluita_nella_sintesi"?"selected":"")+'>Confluita nella sintesi</option><option '+(decision==="riformulata_dal_dipartimento"?"selected":"")+'>Riformulata dal dipartimento</option><option '+(decision==="assorbita_in_altra_proposta"?"selected":"")+'>Assorbita in altra proposta</option><option '+(decision==="da_chiarire"?"selected":"")+'>Da chiarire</option></select></div></article>';
+            '<div class="department-proposal-decision" style="margin-top:6px"><strong>Esito del confronto:</strong> <select onchange="setDepartmentDecision('+decisionIdx+',this.value)" style="font-size:11px;padding:3px 6px;border-radius:4px;border:1px solid #90a4ae"><option value="">— Scegli esito —</option><option value="confluita_nella_sintesi" '+(decision==="confluita_nella_sintesi"?"selected":"")+'>Confluita nella sintesi</option><option value="riformulata_dal_dipartimento" '+(decision==="riformulata_dal_dipartimento"?"selected":"")+'>Riformulata dal dipartimento</option><option value="assorbita_in_altra_proposta" '+(decision==="assorbita_in_altra_proposta"?"selected":"")+'>Assorbita in altra proposta</option><option value="da_chiarire" '+(decision==="da_chiarire"?"selected":"")+'>Da chiarire</option></select></div></article>';
        }).join("");
      }
      html+='</section>';
@@ -2567,6 +2567,7 @@ function buildDepartmentOutcomeCmlModel(){
      appName:"CurManLight",
      createdAt:now.toISOString(),
      role:"department",
+     discipline: disciplines[0] || "",
      disciplineWorkStatus:"completed",
      disciplines:disciplines,
      proposalHandling:proposals.map(p=>({
