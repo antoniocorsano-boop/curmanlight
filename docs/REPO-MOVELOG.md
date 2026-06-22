@@ -782,3 +782,29 @@
 - Nessuna implementazione; nessuna modifica runtime; nessun deploy
 - Verdetto: `CML_031A_FULL_CURRICULUM_REFERENCES_REQUIREMENT_CONTRACT_READY`
 - Prossimo step: CML-032 — Scelta formato tecnico (A/C) + implementazione sezione "Fonti curricolari" + deploy + smoke
+
+## 2026-06-22 — CML-032 — Full school curriculum viewer (runtime commit + deploy + smoke)
+
+- **ac00834** — HEAD partenza: docs: define full curriculum references requirement
+- **c04d903** — feat: add full school curriculum viewer (runtime commit, pre-deploy)
+  - Unico file modificato: `_published_snapshot/netlify-current/index.html` (+146/−6)
+  - Nuova sezione "Curricolo di istituto" con tabbar button + `#tab-curricolo` container
+  - Funzione `renderCurricoloIstituto(version)` per rendering dinamico
+  - Version switcher: Quadro 2012 / Quadro 2025
+  - Stato documento: "Stato da verificare" (2012), "Bozza simulata" (2025)
+  - Indice navigabile: pill per disciplina + scroll fluido
+  - Contenuto reale per Infanzia, Primaria, Secondaria (traguardi + obiettivi)
+  - Fonti MIM linkate + avvertenza: "Non sostituisce la delibera del Collegio Docenti"
+  - Mobile bottom bar (`mbb-cur`) + menu overlay aggiornati
+  - Verifica contenimento: 17/17 controlli PASS (nessuna falsa approvazione, no .cml, no backend, no persistenza)
+- Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current`
+  - 1 file (index.html)
+  - URL: https://curmanlight.netlify.app
+- Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current` — 0 file (sincronizzato), 3.5s
+  - URL: https://curmanlight.netlify.app
+  - Deploy ID: 6a38c7066f569a514ab69dfc
+- Post-deploy smoke: 8/8 controlli PASS (tab, CSS, container, mobile bottom bar, breadcrumb, regressioni, sidebar) ✅
+- Documentazione finalizzata: `docs/03_execution/CML-032.md`, `report/CML-032_full_school_curriculum_viewer_implementation.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_032_FULL_SCHOOL_CURRICULUM_VIEWER_IMPLEMENTED_AND_PUBLISHED`
+- MEMORY.md presente come untracked — non committato
+- **Nota**: primo cambiamento runtime dopo il ciclo CML-025
