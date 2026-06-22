@@ -619,3 +619,18 @@
 - MEMORY.md presente come untracked — non committato
 - Nessuna modifica runtime; nessun deploy; asset invariati
 - Verdetto: `CML_025B_REFERENT_GROUP_WORK_REPORT_REAL_FLOW_MICRO_TEST_READY`
+
+## 2026-06-22 — CML-026 — Controlled Netlify publication after CML-025
+
+- **c5f3269** — HEAD partenza: docs: test referent group work report flow
+- Nuovo commit: docs: publish CML referent report flow
+  - Creazione di `docs/03_execution/CML-026.md`
+  - Creazione di `report/CML-026_controlled_netlify_publication_after_cml025.md`
+  - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
+- Preflight repository: HEAD c5f3269, tree pulita, MEMORY.md non committato ✅
+- Preflight app: pulsante report presente, funzioni singole, nessuna rete/Drive ✅
+- Deploy: `npx netlify deploy --prod --dir _published_snapshot/netlify-current` — 3.6s, 1 file
+- URL: https://curmanlight.netlify.app
+- Post-deploy: pagina caricata, pannello referente raggiungibile, pulsante visibile ✅
+- Nessuna modifica runtime; asset invariati; nessuna modifica a .cml/persistenza
+- Verdetto: `CML_026_CONTROLLED_NETLIFY_PUBLICATION_AFTER_CML025_READY`
