@@ -1400,3 +1400,22 @@
 - MEMORY.md/.kilo/CLAUDE.md: assenti come untracked
 - Verdetto: `CML_063_UX_QUALITY_AUDIT_FRAME_DETAIL_BALANCE_READY`
 - Documentazione: `docs/03_execution/CML-063.md`, `report/CML-063_ux_quality_audit_frame_detail_balance.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-065 — Product Model and Repository Alignment Contract
+
+- HEAD partenza: `f9df7af`, tree pulita ✅
+- Contratto creato: `docs/02_system/PRODUCT-MODEL-CURRICULUM-DIDATTICA-CONTRACT.md` — 16 sezioni
+- **Modello: Curriculum (istituzionale) + Didattica (operativa)**
+- Tecnologia normalizzata → Curriculum > Consultazione (non area, non card, non tab)
+- CML-063A (runtime Home) sospeso in attesa del modello → sostituito da CML-065A
+- Home target: 2 card principali (Curriculum, Didattica), 3-4 link secondari ciascuna
+- Funzioni attuali tutte in Curriculum (Consultazione, Revisione, Esportazione/Report)
+- Didattica: area definita, vuota, da popolare in slice successive
+- Regole UX: prima l'area poi l'azione, export non primario, niente etichette generiche
+- Docs-only, nessun runtime modificato, nessun deploy
+- Prossimo step: CML-065A — HOME_DASHBOARD_TWO_AREAS_RUNTIME_INCREMENT
+- MEMORY.md/.kilo/CLAUDE.md: assenti
+- Verdetto: `CML_065_PRODUCT_MODEL_AND_REPO_ALIGNMENT_CONTRACT_READY`
+- Documentazione: `docs/02_system/PRODUCT-MODEL-CURRICULUM-DIDATTICA-CONTRACT.md`, `docs/03_execution/CML-065.md`, `report/CML-065_product_model_and_repo_alignment_contract.md`, `docs/REPO-MOVELOG.md`
