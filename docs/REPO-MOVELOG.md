@@ -971,3 +971,16 @@
 - Prossimo step: CML-042A — smoke end-to-end con esempi CML-040
 - Documentazione: `docs/03_execution/CML-042.md`, `report/CML-042_department_cml_flow_minimal_runtime_fix.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_042_DEPARTMENT_CML_FLOW_MINIMAL_RUNTIME_FIX_READY`
+
+---
+
+## CML-042A — Department CML Flow End-to-End Smoke with Examples
+
+- Smoke end-to-end con esempi CML-040 dopo fix CML-042
+- 4 esempi `.cml` usati: 2 proposte docente, 2 esiti dipartimento
+- Smoke docente PASS, dipartimento PASS, referente PASS, report PASS
+- Classificazione finale: COMPLETO — flusso percorribile end-to-end
+- Nessuna modifica runtime, nessun deploy
+- Prossimo step: CML-043 — deploy controllato + smoke live fix dipartimento
+- Documentazione: `docs/03_execution/CML-042A.md`, `report/CML-042A_department_cml_flow_end_to_end_smoke_with_examples.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_042A_DEPARTMENT_CML_FLOW_END_TO_END_SMOKE_READY`
