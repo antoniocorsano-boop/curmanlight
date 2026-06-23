@@ -1482,3 +1482,20 @@
 - Verdetto: `CML_066A_CURRICULUM_ACTION_DENSITY_LIVE_DEPLOY_SMOKE_READY`
 - Prossimo step: CML-067 — DIDATTICA_MODULE_SELECTION_AUDIT
 - Documentazione: `docs/03_execution/CML-066A.md`, `report/CML-066A_curriculum_action_density_live_deploy_smoke.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-067 — Didattica Module Selection Audit
+
+- HEAD partenza: `fba483c`, tree pulita ✅
+- Tipo slice: audit/docs — nessuna modifica runtime, nessun deploy
+- Contesto: CML-065 ha definito Didattica come area operativa vuota, CML-065A/B hanno introdotto Home a due aree
+- Opzioni valutate: A (UDA), B (Attività), C (Materiali), D (Valutazione/evidenze), E (Programmazione annuale)
+- **Scelta: Opzione D — Valutazione / Evidenze**
+- Motivazione: dati già pronti (evidenze, criteriValutazione in tecnologia.normalized.json), rischio basso (read-only), alto valore per docente, confine pulito con Curriculum
+- Opzioni rinviate: UDA (CML-069), Attività (CML-070), Materiali (CML-071), Programmazione (CML-072)
+- Nessuna modifica a runtime, schema `.cml`, role-access gating, Curriculum
+- Nessun deploy
+- Verdetto: `CML_067_DIDATTICA_MODULE_SELECTION_AUDIT_READY`
+- Prossimo step: CML-068 — DIDATTICA_FIRST_READONLY_PROTOTYPE
+- Documentazione: `docs/03_execution/CML-067.md`, `report/CML-067_didattica_module_selection_audit.md`, `docs/REPO-MOVELOG.md`
