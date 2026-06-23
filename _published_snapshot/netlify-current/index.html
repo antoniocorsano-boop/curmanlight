@@ -751,6 +751,35 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .tool-group-inner{margin-top:8px}
 .tec-actions-secondary{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
 @media(max-width:640px){.export-group-primary .export-btn{flex:1 1 100%}.export-group-secondary .export-btn{flex:1 1 100%}}
+/* SUB-NAV BAR */
+.subnav-bar{background:#f5f7fa;border-bottom:1px solid #e0e0e0;display:flex;gap:0;padding:0 20px;overflow-x:auto}
+.subnav-btn{padding:7px 14px;border:none;background:none;cursor:pointer;font-weight:600;font-size:11px;border-bottom:2px solid transparent;color:#78909c;transition:.12s;white-space:nowrap}
+.subnav-btn.active{border-bottom-color:#1a237e;color:#1a237e}
+.subnav-btn:hover{color:#455a64}
+@media(max-width:900px){.subnav-bar{padding:0 10px}.subnav-btn{font-size:10px;padding:6px 10px}}
+/* ESPORTAZIONI TAB */
+.tab-esportazioni{max-width:960px;margin:0 auto;padding:16px 12px}
+.tab-esportazioni h2{font-size:16px;color:#1a237e;margin:0 0 4px}
+.tab-esportazioni .sub{font-size:11px;color:#78909c;margin:0 0 16px}
+.esport-group{background:#fff;border:1px solid #e0e0e0;border-radius:9px;padding:12px 14px;margin-bottom:10px}
+.esport-group h3{font-size:12px;color:#37474f;margin:0 0 8px;display:flex;align-items:center;gap:6px}
+.esport-actions{display:flex;gap:6px;flex-wrap:wrap}
+/* GUIDA TAB */
+.tab-guida{max-width:960px;margin:0 auto;padding:16px 12px}
+.tab-guida h2{font-size:16px;color:#1a237e;margin:0 0 4px}
+.tab-guida .sub{font-size:11px;color:#78909c;margin:0 0 16px}
+.guida-card{background:#fff;border:1px solid #e0e0e0;border-radius:9px;padding:12px 14px;margin-bottom:10px}
+.guida-card h3{font-size:13px;color:#1a237e;margin:0 0 6px}
+.guida-card p,.guida-card li{font-size:12px;color:#444;line-height:1.55}
+.guida-card ul{margin:4px 0 8px;padding-left:18px}
+.guida-card li{margin-bottom:3px}
+.guida-card .badge{display:inline-block;margin:0 2px}
+.guida-card code{background:#f5f5f5;padding:1px 5px;border-radius:3px;font-size:11px;color:#c62828}
+.guida-note{background:#fff8e1;border:1px solid #ffe082;border-radius:7px;padding:8px 11px;font-size:11px;color:#5d4037;line-height:1.45;margin:10px 0}
+/* DIM HOME LINK */
+.home-card-links .dimmed{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;border:1px solid #e0e0e0;background:#fff;color:#90a4ae;font-size:11px;font-weight:700;white-space:nowrap;cursor:default}
+.badge-preparing{display:inline-block;background:#eceff1;color:#90a4ae;font-size:9px;font-weight:700;padding:1px 6px;border-radius:999px;}
+@media(max-width:900px){.subnav-bar.subnav-curriculum{display:none!important}.subnav-bar.subnav-didattica{display:none!important}}
 </style>
 </head>
 <body>
@@ -773,14 +802,24 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
     <div class="stats" id="stats"></div>
   </div>
 </header>
-<div class="tabbar">
+<div class="tabbar" id="tabbar">
   <button class="active" onclick="setTab('home')">🏠 Home</button>
+  <button onclick="setTab('curricolo')">📚 Curriculum</button>
   <button onclick="setTab('didattica')">🧑‍🏫 Didattica</button>
-  <button onclick="setTab('lavoro')">✏️ Revisione per disciplina</button>
-  <button onclick="setTab('riepilogo')">📋 Curricolo definitivo</button>
-  <button onclick="setTab('normativa')">📜 Riferimenti normativi</button>
-  <button onclick="setTab('generali')">📖 Sezioni generali</button>
-  <button onclick="setTab('curricolo')">🏫 Curricolo di istituto</button>
+  <button onclick="setTab('esportazioni')">📤 Esportazioni</button>
+  <button onclick="setTab('guida')">❔ Guida</button>
+</div>
+<!-- SUB-NAV: CURRICULUM -->
+<div class="subnav-bar subnav-curriculum" id="subnav-curriculum" style="display:none">
+  <button class="subnav-btn active" onclick="setTab('curricolo')">📖 Consulta</button>
+  <button class="subnav-btn" onclick="setTab('lavoro')">✏️ Revisione</button>
+  <button class="subnav-btn" onclick="setTab('riepilogo')">📋 Definitivo</button>
+  <button class="subnav-btn" onclick="setTab('normativa')">📜 Fonti</button>
+</div>
+<!-- SUB-NAV: DIDATTICA -->
+<div class="subnav-bar subnav-didattica" id="subnav-didattica" style="display:none">
+  <button class="subnav-btn active" onclick="setTab('didattica')">📊 Valutazione / Evidenze</button>
+  <button class="subnav-btn" onclick="setTab('didattica_uda')">📋 UDA modello</button>
 </div>
 <div class="path-breadcrumb" id="breadcrumb" hidden><span class="crumb-current">Home</span></div>
 <div class="cruscotto" id="cruscotto" hidden>
@@ -837,7 +876,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
             <div class="home-card-links">
               <a href="#" onclick="setTab('curricolo');return false">📖 Consulta</a>
               <a href="#" onclick="setTab('lavoro');return false">✏️ Revisiona</a>
-              <a href="#" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'});return false">📤 Esporta</a>
+              <a href="#" onclick="setTab('esportazioni');return false">📤 Esporta</a>
               <a href="#" onclick="setTab('curricolo');setTimeout(function(){var p=document.getElementById('tecnologia-norm-panel');if(p)p.scrollIntoView({behavior:'smooth'})},150);return false">⚙️ Tecnologia normalizzata</a>
             </div>
           </div>
@@ -850,11 +889,11 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
             <div class="home-card-badge">Area in preparazione</div>
             <div class="home-card-links">
               <a href="#" onclick="setTab('didattica');return false">📊 Valuta evidenze</a>
-              <a href="#" onclick="setTab('didattica');setTimeout(function(){var u=document.getElementById('didattica-uda');if(u)u.scrollIntoView({behavior:'smooth'})},150);return false">📋 Progetta UDA</a>
-              <span>🧪 Prepara attività</span>
-              <span>📁 Materiali per la classe</span>
+              <a href="#" onclick="setTab('didattica_uda');return false">📋 Progetta UDA</a>
+              <span class="dimmed">🧪 Prepara attività <span class="badge-preparing">In preparazione</span></span>
+              <span class="dimmed">📁 Materiali per la classe <span class="badge-preparing">In preparazione</span></span>
             </div>
-            <p class="home-card-note">Il primo modulo è disponibile: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a>. Gli altri moduli sono in fase di definizione.</p>
+            <p class="home-card-note">Il primo modulo è disponibile: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a>. Gli altri moduli sono in fase di definizione.</p>
           </div>
         </div>
         <div class="home-footer">
@@ -1291,6 +1330,82 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 <div id="tab-curricolo" class="tab-panel" style="display:none">
   <div id="tecnologia-norm-panel" class="tecnologia-norm"></div>
   <div id="curricolo-body" class="curricolo-viewer"></div>
+</div>
+<!-- TAB ESPORTAZIONI -->
+<div id="tab-esportazioni" style="display:none">
+  <div class="tab-esportazioni">
+    <h2>📤 Esportazioni e consegne</h2>
+    <p class="sub">Tutti gli output in un unico punto: esporta, condividi, archivia.</p>
+    <div class="esport-group">
+      <h3>📄 Documento istituzionale</h3>
+      <div class="esport-actions">
+        <button class="export-btn btn-word" onclick="setTab('lavoro');setTimeout(function(){var b=document.querySelector('.btn-word');if(b)b.click()},200)">📤 Word confronto</button>
+        <button class="export-btn btn-word" onclick="exportRiepilogoWord()">📄 Word definitivo</button>
+        <button class="export-btn btn-md" onclick="exportMarkdownRiepilogo()">📝 Markdown</button>
+        <button class="export-btn btn-pdf" onclick="exportPDFRiepilogo()">📕 PDF</button>
+      </div>
+    </div>
+    <div class="esport-group">
+      <h3>💾 Backup e dati</h3>
+      <div class="esport-actions">
+        <button class="export-btn btn-cml" onclick="saveLocalState(false);exportLocalBackup()">⬇️ Backup locale</button>
+        <button class="export-btn btn-cml" onclick="document.getElementById('local-backup-input').click()">⬆️ Importa backup</button>
+      </div>
+    </div>
+    <div class="esport-group">
+      <h3>📋 Report gruppo curricolo</h3>
+      <div class="esport-actions">
+        <button class="export-btn btn-md" onclick="setTab('riepilogo');renderRiepilogo();setTimeout(function(){var r=document.querySelector('.sum-box .export-btn');if(r)r.click()},300)">📊 Report sintesi</button>
+      </div>
+    </div>
+    <div class="usage-notice" style="margin-top:10px">Documento di lavoro — da validare. Gli esportati non sostituiscono il documento istituzionale approvato dal Collegio Docenti.</div>
+  </div>
+</div>
+<!-- TAB GUIDA -->
+<div id="tab-guida" style="display:none">
+  <div class="tab-guida">
+    <h2>❔ Guida rapida</h2>
+    <p class="sub">Come usare lo strumento, cosa può fare, cosa non può fare.</p>
+    <div class="guida-card">
+      <h3>👋 Come iniziare</h3>
+      <p>Scegli un'area dalla barra in alto: <strong>Curriculum</strong> per il documento istituzionale, <strong>Didattica</strong> per la progettazione operativa. Usa la <strong>Home</strong> per orientarti.</p>
+    </div>
+    <div class="guida-card">
+      <h3>📚 Curriculum</h3>
+      <ul>
+        <li><strong>Consulta</strong> — visualizza il curricolo di istituto (2012 e proposte 2025)</li>
+        <li><strong>Revisione</strong> — confronta, approva o modifica le voci disciplina per disciplina</li>
+        <li><strong>Definitivo</strong> — riepilogo delle decisioni e versione definitiva</li>
+        <li><strong>Fonti</strong> — riferimenti normativi e sezioni generali</li>
+      </ul>
+    </div>
+    <div class="guida-card">
+      <h3>🧑‍🏫 Didattica</h3>
+      <ul>
+        <li><strong>Valutazione / Evidenze</strong> — collega le unità curricolari a evidenze osservabili</li>
+        <li><strong>UDA modello</strong> — trasforma una unità curricolare in unità di apprendimento</li>
+      </ul>
+    </div>
+    <div class="guida-card">
+      <h3>📤 Esportazioni</h3>
+      <p>Trovi tutti gli strumenti di export in un unico tab: Word, Markdown, PDF, backup e report.</p>
+    </div>
+    <div class="guida-card">
+      <h3>🔒 Cosa non può fare</h3>
+      <ul>
+        <li>Non sostituisce il documento istituzionale approvato dal Collegio Docenti</li>
+        <li>Non salva dati su server — tutto resta su questo dispositivo</li>
+        <li>Non invia email né condivide automaticamente</li>
+        <li>Non sostituisce la progettazione professionale del docente</li>
+        <li>Le UDA sono modelli — richiedono adattamento alla classe</li>
+      </ul>
+    </div>
+    <div class="guida-card">
+      <h3>💻 Installazione</h3>
+      <p>Puoi installare questo strumento sul telefono o computer come app: usa il pulsante "Installa" nel menu Azioni (icona ⚙️) o dal browser. I dati restano sul dispositivo.</p>
+    </div>
+    <div class="guida-note">Prototipo read-only — nessun dato viene salvato su server. Richiede validazione professionale del docente. Non costituisce documento istituzionale approvato.</div>
+  </div>
 </div>
   </main>
 </div>
@@ -2234,37 +2349,49 @@ function renderRiepilogo(){
 
 function setTab(t){
   currentTab=t;
+  const parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};
+  const p=parentMap[t]||"home";
   document.getElementById("tab-home").style.display=t==="home"?"block":"none";
-  document.getElementById("tab-didattica").style.display=t==="didattica"?"block":"none";
+  document.getElementById("tab-didattica").style.display=t==="didattica"||t==="didattica_uda"?"block":"none";
   document.getElementById("tab-lavoro").style.display=t==="lavoro"?"block":"none";
   document.getElementById("tab-riepilogo").style.display=t==="riepilogo"?"block":"none";
-  document.getElementById("tab-normativa").style.display=t==="normativa"?"block":"none";
-  document.getElementById("tab-generali").style.display=t==="generali"?"block":"none";
+  document.getElementById("tab-normativa").style.display=t==="normativa"||t==="generali"?"block":"none";
+  document.getElementById("tab-generali").style.display=t==="normativa"||t==="generali"?"block":"none";
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
-  if(t==="didattica"){renderDidattica();renderUdaModello();}
+  var te=document.getElementById("tab-esportazioni");if(te)te.style.display=t==="esportazioni"?"block":"none";
+  var tg=document.getElementById("tab-guida");if(tg)tg.style.display=t==="guida"?"block":"none";
+  if(t==="didattica"||t==="didattica_uda"){renderDidattica();renderUdaModello();}
+  var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
+  var sd=document.getElementById("subnav-didattica");if(sd)sd.style.display=p==="didattica"?"flex":"none";
+  var sci=document.querySelectorAll("#subnav-curriculum .subnav-btn");var csm=["curricolo","lavoro","riepilogo","normativa"];
+  sci.forEach(function(b,i){b.classList.toggle("active",csm[i]===t||(t==="generali"&&csm[i]==="normativa"));});
+  var sdi=document.querySelectorAll("#subnav-didattica .subnav-btn");
+  sdi.forEach(function(b,i){b.classList.toggle("active",(i===0&&(t==="didattica"))||(i===1&&t==="didattica_uda"));});
+  if(t==="didattica_uda"){setTimeout(function(){var u=document.getElementById("didattica-uda");if(u)u.scrollIntoView({behavior:"smooth"})},100);}
   const cruscotto=document.getElementById("cruscotto");
-  if(cruscotto) cruscotto.hidden=t==="home"||t==="didattica";
+  if(cruscotto) cruscotto.hidden=t==="home"||t==="didattica"||t==="didattica_uda"||t==="esportazioni"||t==="guida";
   const breadcrumbEl=document.getElementById("breadcrumb");
-  if(breadcrumbEl) breadcrumbEl.hidden=t==="home"||t==="didattica";
-  document.querySelectorAll(".tabbar button").forEach((b,i)=>{
-    const map=["home","didattica","lavoro","riepilogo","normativa","generali","curricolo"];
-    b.classList.toggle("active",map[i]===t);
+  if(breadcrumbEl) breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
+  document.querySelectorAll(".tabbar button").forEach(function(b,i){
+    var map=["home","curricolo","didattica","esportazioni","guida"];
+    b.classList.toggle("active",map[i]===p);
   });
-  const mbbMap={home:"mbb-home",didattica:"mbb-home",lavoro:"mbb-rev",riepilogo:"mbb-def",normativa:"mbb-more",generali:"mbb-more",curricolo:"mbb-cur"};
-  document.querySelectorAll(".mbb-btn").forEach(b=>{
+  const mbbMap={home:"mbb-home",curricolo:"mbb-curricolo",lavoro:"mbb-curricolo",riepilogo:"mbb-curricolo",normativa:"mbb-curricolo",generali:"mbb-curricolo",didattica:"mbb-didattica",didattica_uda:"mbb-didattica",esportazioni:"mbb-esportazioni",guida:"mbb-menu"};
+  document.querySelectorAll(".mbb-btn").forEach(function(b){
     b.classList.toggle("mbb-active",b.id===mbbMap[t]);
   });
   const asideEl=document.querySelector("aside");
   if(asideEl){
     if(window.innerWidth<=900){
-      asideEl.classList.toggle("mbb-show",t==="lavoro"||t==="riepilogo");
+      asideEl.classList.toggle("mbb-show",t==="lavoro"||t==="riepilogo"||t==="curricolo");
     }else{
       asideEl.classList.remove("mbb-show");
     }
   }
   if(breadcrumbEl){
-    const labels={home:"Home",didattica:"Didattica",lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali",curricolo:"Curricolo di istituto"};
-    breadcrumbEl.innerHTML='<span class="crumb-current">'+labels[t]+'</span>';
+    const labels={home:"Home",curricolo:"Curriculum — Consultazione",lavoro:"Curriculum — Revisione",riepilogo:"Curriculum — Definitivo",normativa:"Curriculum — Fonti",generali:"Curriculum — Fonti",didattica:"Didattica — Valutazione / Evidenze",didattica_uda:"Didattica — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+    breadcrumbEl.innerHTML='<span class="crumb-current">'+(labels[t]||"Home")+'</span>';
+    breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
   }
   if(t==="riepilogo") renderRiepilogo();
   if(t==="curricolo"){renderCurricoloIstituto();renderTecnologiaNorm();}
@@ -3487,26 +3614,22 @@ function toggleMobileMenu(){
   overlay.id="mobile-menu-overlay";
   overlay.onclick=function(e){if(e.target===this)this.remove()};
   overlay.innerHTML='<div class="mobile-menu-panel">\
-    <div class="mm-title">📖 Consultazione</div>\
-    <button class="mm-item" onclick="setTab(\'didattica\');this.closest(\'.mobile-menu-overlay\').remove()">🧑‍🏫 Didattica — Valutazione ed evidenze</button>\
-    <button class="mm-item" onclick="setTab(\'didattica\');setTimeout(function(){var u=document.getElementById(\'didattica-uda\');if(u)u.scrollIntoView({behavior:\'smooth\'})},150);this.closest(\'.mobile-menu-overlay\').remove()">📋 Didattica — UDA modello</button>\
-    <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Riferimenti normativi</button>\
-    <button class="mm-item" onclick="setTab(\'generali\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Sezioni generali</button>\
-    <button class="mm-item" onclick="setTab(\'curricolo\');this.closest(\'.mobile-menu-overlay\').remove()">🏫 Curricolo di istituto</button>\
-    <button class="mm-item" onclick="setTab(\'curricolo\');setTimeout(function(){var p=document.getElementById(\'tecnologia-norm-panel\');if(p)p.scrollIntoView({behavior:\'smooth\'})},150);this.closest(\'.mobile-menu-overlay\').remove()">⚙️ Tecnologia (pacchetto norm.)</button>\
-    <button class="mm-item" onclick="setTab(\'lavoro\');var t=document.querySelector(\'.toolbar\');if(t)t.scrollIntoView({behavior:\'smooth\'});this.closest(\'.mobile-menu-overlay\').remove()">📤 Esporta</button>\
+    <div class="mm-title">📚 Curriculum</div>\
+    <button class="mm-item" onclick="setTab(\'curricolo\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Consulta</button>\
+    <button class="mm-item" onclick="setTab(\'lavoro\');this.closest(\'.mobile-menu-overlay\').remove()">✏️ Revisione</button>\
+    <button class="mm-item" onclick="setTab(\'riepilogo\');this.closest(\'.mobile-menu-overlay\').remove()">📋 Definitivo</button>\
+    <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Fonti</button>\
     <div class="mm-sep"></div>\
-    <div class="mm-title">⚙️ Azioni</div>\
-    <button class="mm-item" onclick="saveLocalState(false);this.closest(\'.mobile-menu-overlay\').remove()">💾 Salva</button>\
-    <button class="mm-item" onclick="exportLocalBackup();this.closest(\'.mobile-menu-overlay\').remove()">⬇️ Backup</button>\
-    <button class="mm-item" onclick="document.getElementById(\'local-backup-input\').click();this.closest(\'.mobile-menu-overlay\').remove()">⬆️ Importa</button>\
-    <button class="mm-item" onclick="resetLocalState();this.closest(\'.mobile-menu-overlay\').remove();if(confirm(\'Ripristinare i dati cancellera tutte le decisioni prese. Continuare?\')){location.reload()}">↺ Ripristina</button>\
+    <div class="mm-title">🧑‍🏫 Didattica</div>\
+    <button class="mm-item" onclick="setTab(\'didattica\');this.closest(\'.mobile-menu-overlay\').remove()">📊 Valutazione / Evidenze</button>\
+    <button class="mm-item" onclick="setTab(\'didattica_uda\');this.closest(\'.mobile-menu-overlay\').remove()">📋 UDA modello</button>\
     <div class="mm-sep"></div>\
-    <button class="mm-item" onclick="handleInstallApp();this.closest(\'.mobile-menu-overlay\').remove()">📲 Installa sul dispositivo</button>\
+    <div class="mm-title">❔ Guida e strumenti</div>\
+    <button class="mm-item" onclick="setTab(\'guida\');this.closest(\'.mobile-menu-overlay\').remove()">❔ Guida</button>\
+    <button class="mm-item" onclick="setTab(\'esportazioni\');this.closest(\'.mobile-menu-overlay\').remove()">📤 Esportazioni</button>\
     <button class="mm-item" onclick="openSettingsModal();this.closest(\'.mobile-menu-overlay\').remove()">👤 Impostazioni / onboarding</button>\
+    <button class="mm-item" onclick="handleInstallApp();this.closest(\'.mobile-menu-overlay\').remove()">📲 Installa sul dispositivo</button>\
     <a class="mm-item mm-link" href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" onclick="this.closest(\'.mobile-menu-overlay\').remove()">📘 Apri il corso in PDF</a>\
-    <a class="mm-item mm-link" href="/motto-non-multa-sed-multum" target="_blank" rel="noopener" onclick="this.closest(\'.mobile-menu-overlay\').remove()">🏛️ Motto e metodo</a>\
-    <button class="mm-item" onclick="showWelcome(true);this.closest(\'.mobile-menu-overlay\').remove()">❔ Guida rapida</button>\
     <button class="mm-close" onclick="this.closest(\'.mobile-menu-overlay\').remove()">Chiudi</button>\
   </div>';
   document.body.appendChild(overlay);
@@ -4124,10 +4247,10 @@ showWelcome();
 </script>
 <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
   <button class="mbb-btn mbb-active" id="mbb-home" onclick="setTab('home')">🏠<br>Home</button>
-  <button class="mbb-btn" id="mbb-rev" onclick="setTab('lavoro')">✏️<br>Rev.</button>
-  <button class="mbb-btn" id="mbb-def" onclick="setTab('riepilogo')">📋<br>Def.</button>
-  <button class="mbb-btn" id="mbb-cur" onclick="setTab('curricolo')">🏫<br>Curr.</button>
-  <button class="mbb-btn" id="mbb-more" onclick="toggleMobileMenu()">☰<br>Menu</button>
+  <button class="mbb-btn" id="mbb-curricolo" onclick="setTab('curricolo')">📚<br>Curr.</button>
+  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')">🧑‍🏫<br>Did.</button>
+  <button class="mbb-btn" id="mbb-esportazioni" onclick="setTab('esportazioni')">📤<br>Esp.</button>
+  <button class="mbb-btn" id="mbb-menu" onclick="toggleMobileMenu()">☰<br>Menu</button>
 </nav>
 </body>
 </html>
