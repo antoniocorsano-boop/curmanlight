@@ -1646,3 +1646,45 @@
 - Verdetto: `CML_072_DESIGN_SYSTEM_AND_NAVIGATION_CONTRACT_READY`
 - Prossimo step: `CML-073 — NAVIGATION_AND_HOME_LINKS_RUNTIME_INCREMENT`
 - Documentazione: `docs/02_system/DESIGN-SYSTEM-AND-NAVIGATION-CONTRACT.md`, `docs/03_execution/CML-072.md`, `report/CML-072_design_system_and_navigation_contract.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-073 — NAVIGATION_AND_HOME_LINKS_RUNTIME_INCREMENT
+
+- **f5b12e2** — feat: apply CML-073 navigation runtime increment
+- Unico file modificato: `_published_snapshot/netlify-current/index.html` (+168/−45 righe)
+- **Tab bar: 7 → 5**: 🏠 Home, 📚 Curriculum, 🧑‍🏫 Didattica, 📤 Esportazioni, ❔ Guida
+- **Sub-nav Curriculum**: Consulta, Revisione, Definitivo, Fonti (parent-highlighting su Curriculum)
+- **Sub-nav Didattica**: Valutazione/Evidenze, UDA modello (parent-highlighting su Didattica)
+- **Home link corretti**: "Esporta" → Esportazioni, "Progetta UDA" → didattica_uda
+- **Badge "In preparazione"** su voci non attive (Prepara attività, Materiali)
+- **Nuovo tab Esportazioni**: export/backup/report raggruppati, 4 pulsanti primari
+- **Nuovo tab Guida**: aiuto, limiti, installazione, 6 card informative
+- **Mobile bottom bar**: 5 voci (Home, Curr., Did., Esp., ☰ Menu)
+- **Mobile menu raggruppato**: Curriculum, Didattica, Guida e strumenti (max 8 voci)
+- Tecnologia 13 unità `valid:true`, 14 discipline PASS
+- **Prossimo step:** CML-073A — NAVIGATION_AND_HOME_LINKS_LIVE_DEPLOY_SMOKE
+
+---
+
+## CML-073A — NAVIGATION_AND_HOME_LINKS_LIVE_DEPLOY_SMOKE
+
+- **HEAD partenza:** `f5b12e2`, tree pulita ✅
+- **Tipo slice:** deploy + smoke + documentazione
+- **Deploy GitHub Pages:** `gh run 28007685093` — `success` su `main`
+- **URL live:** `https://antoniocorsano-boop.github.io/curmanlight/`
+- **30 smoke checks:** tutti PASS ✅
+  - 5 tab desktop confermati
+  - 5 voci mobile bar confermate
+  - Link Home corretti (Esporta → Esportazioni, Progetta UDA → didattica_uda)
+  - Badge "In preparazione" su voci non attive
+  - Sub-nav Curriculum funzionante con parent-highlighting
+  - Sub-nav Didattica funzionante (UDA autonoma)
+  - Esportazioni raggiungibile, export/report invariati
+  - Guida raggiungibile, 6 card
+  - Role-access gating invariato (CML2025)
+  - Schema .cml invariato
+- Runtime non modificato in CML-073A ✅
+- Verdetto: `CML_073A_NAVIGATION_AND_HOME_LINKS_LIVE_DEPLOY_SMOKE_READY`
+- Prossimo step: `CML-074 — PROFESSIONAL_LAYOUT_VISUAL_SYSTEM_RUNTIME_INCREMENT`
+- Documentazione: `docs/03_execution/CML-073A.md`, `report/CML-073A_navigation_and_home_links_live_deploy_smoke.md`, `docs/REPO-MOVELOG.md`
