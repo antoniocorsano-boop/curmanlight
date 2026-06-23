@@ -1688,3 +1688,19 @@
 - Verdetto: `CML_073A_NAVIGATION_AND_HOME_LINKS_LIVE_DEPLOY_SMOKE_READY`
 - Prossimo step: `CML-074 — PROFESSIONAL_LAYOUT_VISUAL_SYSTEM_RUNTIME_INCREMENT`
 - Documentazione: `docs/03_execution/CML-073A.md`, `report/CML-073A_navigation_and_home_links_live_deploy_smoke.md`, `docs/REPO-MOVELOG.md`
+
+## 2026-06-23 — CML-074 Professional layout visual system refinements
+
+- **HEAD** — `feat: refine professional layout visual system`
+- Design system badge variants: `.badge--readonly`, `.badge--prototype`, `.badge--warning`, `.badge--success`, `.badge--info`
+- Badge contrast fix (P3 da CML-071): tutti i badge stati con colori più scuri (es. ok → `#388e3c`, modifica → `#ef6c00`)
+- Card unificazione: raggio 9px, bordo sinistro per stato, ombra leggera
+- Button hierarchy: `.btn-primary`, `.btn-secondary`, `.btn-tertiary`
+- Notice-box system: `.warning`, `.tip`, `.success`
+- Visual polish: bordi sinistro su `esport-group`, `guida-card`, `export-group`, `tool-group`
+- 10 elementi HTML aggiornati con classi design system
+- Mobile readability: font-size ridotti, padding più compatti
+- Focus-visible ring consistente su tutti gli elementi interattivi
+- Solo `index.html` modificato (+91, -10), nessuna funzione JS toccata
+- Validazione: Tecnologia 13 unit valid:true, 14 discipline, 35 exportButtons
+- Documentazione: `docs/03_execution/CML-074.md`, `report/CML-074_professional_layout_visual_system_runtime_increment.md`

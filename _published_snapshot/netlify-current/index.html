@@ -780,6 +780,87 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .home-card-links .dimmed{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;border:1px solid #e0e0e0;background:#fff;color:#90a4ae;font-size:11px;font-weight:700;white-space:nowrap;cursor:default}
 .badge-preparing{display:inline-block;background:#eceff1;color:#90a4ae;font-size:9px;font-weight:700;padding:1px 6px;border-radius:999px;}
 @media(max-width:900px){.subnav-bar.subnav-curriculum{display:none!important}.subnav-bar.subnav-didattica{display:none!important}}
+
+/* ================================================================
+   CML-074: PROFESSIONAL LAYOUT VISUAL SYSTEM REFINEMENTS
+   Unified design system: card/badge/button/notice consistency.
+   ================================================================ */
+
+/* Design System badge variants — semantic, border, no emoji dependency */
+.badge--readonly{background:#eceff1;color:#607d8b;border:1px solid #cfd8dc}
+.badge--prototype{background:#f3e5f5;color:#7b1fa2;border:1px solid #ce93d8}
+.badge--warning{background:#fff3e0;color:#e65100;border:1px solid #ffcc80}
+.badge--success{background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7}
+.badge--info{background:#e3f2fd;color:#1565c0;border:1px solid #90caf9}
+
+/* Unify card radius */
+.summary-card,.norm-card,.esport-group,.guida-card,
+.act-card,.tecnologia-export-panel,.tecnologia-norm-unit{border-radius:9px}
+
+/* Box notice system */
+.notice-box{border-radius:9px;padding:10px 14px;margin-bottom:10px;font-size:11px;line-height:1.5;border:1px solid;font-weight:600}
+.notice-box.info{background:#e3f2fd;border-color:#90caf9;color:#1565c0}
+.notice-box.warning{background:#fff8e1;border-color:#ffe082;color:#5d4037}
+.notice-box.success{background:#e8f5e9;border-color:#a5d6a7;color:#1b5e20}
+.notice-box.tip{background:#f3e5f5;border-color:#ce93d8;color:#4a148c}
+
+/* Section heading accent — colored left border */
+.section-heading-accent{border-left:3px solid #1a237e;padding-left:10px;margin-bottom:10px}
+.section-heading-accent h2{font-size:16px;color:#1a237e;margin:0}
+.section-heading-accent p{font-size:11px;color:#546e7a;margin:4px 0 0;line-height:1.45}
+
+/* Card visual refinements: left border by status, subtle shadow */
+.card{border-radius:9px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.card.ok{border-left:3px solid #81c784}
+.card.modifica{border-left:3px solid #ffb74d}
+.card.nuovo{border-left:3px solid #64b5f6}
+.card.eliminato{border-left:3px solid #ef9a9a}
+.card.approvata{border-left:3px solid #66bb6a}
+.card.rifiutata{border-left:3px solid #bdbdbd}
+
+/* Stronger badge contrast (P3 fix from CML-071) */
+.badge.ok{background:#388e3c}
+.badge.modifica{background:#ef6c00}
+.badge.nuovo{background:#1976d2}
+.badge.eliminato{background:#d32f2f}
+.badge.approvata{background:#2e7d32}
+.badge.rifiutata{background:#757575}
+
+/* Button hierarchy */
+.btn-primary{background:#1a237e;color:#fff;border:none;border-radius:8px;padding:9px 14px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-size:12px}
+.btn-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc;border-radius:8px;padding:9px 14px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-size:12px}
+.btn-tertiary{background:none;border:none;color:#1a237e;font-weight:700;cursor:pointer;padding:4px 6px;font-size:11px;display:inline-flex;align-items:center;gap:3px;font-family:inherit}
+.btn-primary:hover{background:#283593}
+.btn-secondary:hover{border-color:#9fa8da;color:#1a237e}
+.btn-tertiary:hover{text-decoration:underline}
+
+/* Esportazioni group visual polish */
+.esport-group{border-left:3px solid #1a237e}
+.esport-group.tech{border-left-color:#5e35b1}
+.esport-group.tool{border-left-color:#00695c}
+
+/* Guida card visual polish */
+.guida-card{border-left:3px solid #1a237e}
+.guida-card.tip{border-left-color:#7b1fa2}
+
+/* Export panel visual polish */
+.export-group{background:#fff;border:1px solid #e0e0e0;border-radius:9px;padding:10px 14px;margin-bottom:10px;border-left:3px solid #1a237e}
+.export-group.alt{border-left-color:#37474f}
+
+/* Tool group visual refinements */
+.tool-group{border-left:3px solid #78909c}
+.tool-group>summary{font-size:11px;color:#546e7a;letter-spacing:.3px}
+
+/* Mobile readability tweaks */
+@media(max-width:560px){
+  .home-title{font-size:18px}
+  .section-heading-accent h2{font-size:14px}
+  .tab-esportazioni h2,.tab-guida h2{font-size:14px}
+  .esport-group,.guida-card{padding:10px 11px}
+}
+
+/* Focus visible ring consistent */
+button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:2px}
 </style>
 </head>
 <body>
@@ -886,12 +967,12 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
               <h3 class="home-card-title">Didattica</h3>
             </div>
             <p class="home-card-text">Trasforma il curricolo in lavoro didattico: UDA, attività, materiali, consegne, evidenze e valutazione.</p>
-            <div class="home-card-badge">Area in preparazione</div>
+            <div class="home-card-badge badge--prototype">📋 Prototipo</div>
             <div class="home-card-links">
               <a href="#" onclick="setTab('didattica');return false">📊 Valuta evidenze</a>
               <a href="#" onclick="setTab('didattica_uda');return false">📋 Progetta UDA</a>
-              <span class="dimmed">🧪 Prepara attività <span class="badge-preparing">In preparazione</span></span>
-              <span class="dimmed">📁 Materiali per la classe <span class="badge-preparing">In preparazione</span></span>
+              <span class="dimmed">🧪 Prepara attività <span class="badge-preparing badge--prototype">In preparazione</span></span>
+              <span class="dimmed">📁 Materiali per la classe <span class="badge-preparing badge--prototype">In preparazione</span></span>
             </div>
             <p class="home-card-note">Il primo modulo è disponibile: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a>. Gli altri moduli sono in fase di definizione.</p>
           </div>
@@ -908,7 +989,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
           <h2>🧑‍🏫 Didattica — Valutazione ed evidenze</h2>
           <p>Primo prototipo read-only: collega le unità curricolari di Tecnologia a evidenze osservabili e criteri di valutazione. Da adattare alla classe e da validare dal docente.</p>
         </div>
-        <div class="didattica-evidence-box">
+        <div class="didattica-evidence-box notice-box warning">
           <strong>🔨 Area in costruzione</strong><br>
           • Nessun dato viene salvato<br>
           • Non sostituisce la valutazione professionale del docente<br>
@@ -930,7 +1011,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
           <h2>📋 Didattica — UDA modello</h2>
           <p>Prototipo read-only: mostra come una unità curricolare di Tecnologia può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
         </div>
-        <div class="didattica-uda-box">
+        <div class="didattica-uda-box notice-box tip">
           <strong>🔨 UDA modello — read-only</strong><br>
           • Nessun dato viene salvato<br>
           • Non sostituisce la progettazione professionale del docente<br>
@@ -1007,7 +1088,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
         <div class="tecnologia-export-header">
           <span class="tecnologia-export-title">📤 Export del curricolo revisionato</span>
-          <span class="tecnologia-export-badge">Documento di lavoro — da validare</span>
+          <span class="tecnologia-export-badge badge--warning">Documento di lavoro — da validare</span>
         </div>
         <p class="tecnologia-export-desc">L'export produce una bozza Markdown della disciplina <strong>Tecnologia</strong>. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
         <div class="tecnologia-export-actions">
@@ -1224,7 +1305,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
     <div id="tab-generali" style="display:none">
       <div class="tab-generali">
         <h2>Sezioni generali del curricolo</h2>
-        <span class="gen-badge">Consultazione — non modificabile</span>
+        <span class="gen-badge badge--readonly">Consultazione — non modificabile</span>
         <p>Questa area raccoglie le sezioni generali del curricolo d'istituto: principi, riferimenti, profilo dello studente, competenze chiave, obiettivi formativi e raccordi verticali. I contenuti hanno funzione di orientamento e non modificano il percorso operativo di revisione disciplinare.</p>
 
         <!-- PREMESSA -->
@@ -1404,7 +1485,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
       <h3>💻 Installazione</h3>
       <p>Puoi installare questo strumento sul telefono o computer come app: usa il pulsante "Installa" nel menu Azioni (icona ⚙️) o dal browser. I dati restano sul dispositivo.</p>
     </div>
-    <div class="guida-note">Prototipo read-only — nessun dato viene salvato su server. Richiede validazione professionale del docente. Non costituisce documento istituzionale approvato.</div>
+    <div class="guida-note"><span class="badge--prototype" style="display:inline-block;margin-right:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700">📋 Prototipo</span> <span class="badge--readonly" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700">🔒 Read-only</span><br>Nessun dato viene salvato su server. Richiede validazione professionale del docente. Non costituisce documento istituzionale approvato.</div>
   </div>
 </div>
   </main>
@@ -4215,7 +4296,7 @@ function renderTecnologiaNorm() {
         '<div>' +
           '<div class="tecnologia-norm-title">\u2699\uFE0F Tecnologia — pacchetto curricolare normalizzato</div>' +
           '<div class="tecnologia-norm-subtitle">Anteprima consultiva basata sul contratto dati CML-061. Contenuti da validare in sede dipartimentale.</div>' +
-          '<div class="tecnologia-norm-badges"><span class="tecnologia-norm-badge">Anteprima non modificabile</span><span class="tecnologia-norm-badge warn">Richiede validazione umana</span><span class="tecnologia-norm-badge">Non costituisce approvazione definitiva</span></div>' +
+          '<div class="tecnologia-norm-badges"><span class="tecnologia-norm-badge badge--readonly">Anteprima non modificabile</span><span class="tecnologia-norm-badge warn badge--warning">Richiede validazione umana</span><span class="tecnologia-norm-badge badge--prototype">Non costituisce approvazione definitiva</span></div>' +
         '</div>' +
       '</div>' +
       '<div class="tecnologia-norm-stats">' +
@@ -4225,7 +4306,7 @@ function renderTecnologiaNorm() {
         '<div class="tecnologia-norm-stat"><strong>' + sec + '</strong>Secondaria I</div>' +
       '</div>' +
       '<div class="tecnologia-norm-meta">Stato: <strong>da validare</strong> &middot; Fonte: CML-061 / CML-062</div>' +
-      '<div class="tecnologia-norm-notice">Serve per verificare struttura, completezza e leggibilit\u00E0 prima della replica sulle altre discipline.</div>' +
+      '<div class="tecnologia-norm-notice notice-box success">Serve per verificare struttura, completezza e leggibilit\u00E0 prima della replica sulle altre discipline.</div>' +
       filtersHtml +
       '<div class="tecnologia-norm-list" id="tecnologia-norm-list">' + renderList('Tutti') + '</div>' +
     '</div>';
