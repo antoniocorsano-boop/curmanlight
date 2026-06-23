@@ -1953,3 +1953,18 @@
 - Controlli: braces CSS bilanciate (969=969), `git diff --check` ✅, nessuna nuova dipendenza, dark mode solo `@media(prefers-color-scheme:dark)`, nessuna `@media` orfana
 - Verdetto: `CML_083_DESIGN_SYSTEM_DARK_MODE_CONTRAST_ALIGNMENT_READY`
 - Prossimo step: CML-083A — DESIGN_SYSTEM_DARK_MODE_CONTRAST_LIVE_SMOKE
+
+---
+
+## 2026-06-23 — CML-083A — DESIGN_SYSTEM_DARK_MODE_CONTRAST_LIVE_SMOKE
+
+- Tipo slice: deploy + smoke + documentazione
+- Deploy: `git push origin main` → workflow GitHub Pages success
+- URL verificato: `https://antoniocorsano-boop.github.io/curmanlight/`
+- Home light/dark ✅, Curriculum light/dark ✅, Didattica light/dark ✅, Esportazioni/Guida ✅
+- Dark mode CSS fix confermato live (riga 1055 `didattica-evidence-section ul` override)
+- Motto page HTTP 200, sw.js cache `v452b422`
+- Schema `.cml`, export/import, role-access invariati
+- Nessuna modifica runtime in CML-083A
+- Verdetto: `CML_083A_DESIGN_SYSTEM_DARK_MODE_CONTRAST_LIVE_SMOKE_READY`
+- Prossimo step: da definire
