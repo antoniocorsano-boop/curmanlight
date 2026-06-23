@@ -1728,3 +1728,16 @@
 - Verdetto: `CML_075_REFERENT_REPORT_READABILITY_NEXT_INCREMENT_SELECTED`
 - Prossimo step: CML-076 — REFERENT_REPORT_READABILITY_RUNTIME_INCREMENT
 - Documentazione: `docs/03_execution/CML-075.md`, `report/CML-075_referent_report_readability_and_decision_summary_selection_audit.md`
+
+## 2026-06-23 — CML-076 Referent report readability runtime increment
+
+- **372a314** — Riscritta `buildReferentGroupWorkReportMarkdown()` (linee 3980-4161)
+- 8 sezioni numerate: sintesi decisionale (tabelle), decisioni chiuse/aperte, quadro per disciplina (tabella), passaggi successivi (dipartimento vs collegio), evidenze, traccia discussione, chiusura
+- Sintesi con percentuale di completamento e separazione esplicita "cosa portare al dipartimento" / "cosa portare al collegio"
+- Domande guida contestuali (cambiano in base allo stato delle decisioni)
+- Solo `index.html` modificato (+161, -90)
+- Schema `.cml`, export/import, role-access, storage, navigazione: invariati
+- Validazione: Tecnologia 13 unit valid:true, 14 discipline, 35 exportButtons
+- Verdetto: `CML_076_REFERENT_REPORT_READABILITY_RUNTIME_INCREMENT_READY`
+- Prossimo step: CML-076A — referent report readability live deploy smoke
+- Documentazione: `docs/03_execution/CML-076.md`, `report/CML-076_referent_report_readability_runtime_increment.md`

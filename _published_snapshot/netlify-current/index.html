@@ -3986,119 +3986,190 @@ function buildReferentGroupWorkReportMarkdown() {
   const lines = [];
   lines.push('# Report di lavoro per il gruppo curricolo');
   lines.push('');
-  lines.push('> **Nota:** Questo documento è un **report di lavoro** utile al gruppo per vedere quali dipartimenti/discipline hanno restituito esiti, individuare elementi già confluiti nella sintesi, riformulati, assorbiti in altra proposta, evidenziare elementi `da_chiarire` e elementi senza esito del confronto, verificare completezza, evidenze e criticità, e preparare la discussione collegiale. Non sostituisce delibera del Collegio Docenti né approvazione formale del curricolo.');
+  lines.push('> **Nota:** Questo documento \u00E8 un **report di lavoro** utile al gruppo per vedere quali dipartimenti/discipline hanno restituito esiti, individuare le decisioni gi\u00E0 concluse e quelle ancora aperte, preparare la discussione collegiale e decidere cosa portare al Collegio Docenti. Non sostituisce delibera del Collegio Docenti n\u00E9 approvazione formale del curricolo.');
   lines.push('');
-  // Sintesi generale
+  // --- Calcoli aggregati ---
   const importedFiles = files.length;
-  const validFiles = files.filter(f => f.valid).length;
-  const unrecognized = files.filter(f => !f.valid).length;
-  const totalOutcomes = outcomes.reduce((sum, o) => sum + (o.proposalHandling?.length || 0), 0);
-  const totalDaChiarire = outcomes.reduce((sum, o) => sum + (o.proposalHandling?.filter(p => p.handling === 'da_chiarire').length || 0), 0);
-  const totalSenzaEsito = outcomes.reduce((sum, o) => sum + (o.proposalHandling?.filter(p => !p.handling || p.handling === '').length || 0), 0);
-  lines.push('## Sintesi generale');
-  lines.push(`- File dipartimentali importati: ${importedFiles}`);
-  lines.push(`  - File validi: ${validFiles}`);
-  lines.push(`  - File non riconoscibili: ${unrecognized}`);
-  lines.push(`- Esiti totali (proposte valutate): ${totalOutcomes}`);
-  lines.push(`- Elementi da chiarire: ${totalDaChiarire}`);
-  lines.push(`- Elementi senza esito del confronto: ${totalSenzaEsito}`);
+  const validFiles = files.filter(function(f) { return f.valid; }).length;
+  const unrecognized = files.filter(function(f) { return !f.valid; }).length;
+  const allHandling = outcomes.flatMap(function(o) { return o.proposalHandling || []; });
+  const totalOutcomes = allHandling.length;
+  const totalConfluita = allHandling.filter(function(p) { return p.handling === 'confluita_nella_sintesi'; }).length;
+  const totalRiformulata = allHandling.filter(function(p) { return p.handling === 'riformulata_dal_dipartimento'; }).length;
+  const totalAssorbita = allHandling.filter(function(p) { return p.handling === 'assorbita_in_altra_proposta'; }).length;
+  const totalDaChiarire = allHandling.filter(function(p) { return p.handling === 'da_chiarire'; }).length;
+  const totalSenzaEsito = allHandling.filter(function(p) { return !p.handling || p.handling === ''; }).length;
+  const totalClosed = totalConfluita + totalRiformulata + totalAssorbita;
+  const totalOpen = totalDaChiarire + totalSenzaEsito;
+  const disciplinesSet = new Set(outcomes.map(function(o) { return o.discipline; }).filter(Boolean));
+  const disciplineNames = Array.from(disciplinesSet).join(', ') || 'Nessuna';
+  // --- 1. Sintesi decisionale ---
+  lines.push('## 1. Sintesi decisionale');
   lines.push('');
-  // Quadro per disciplina
-  lines.push('## Quadro per disciplina');
-  outcomes.forEach(outcome => {
+  lines.push('| Indicatore | Valore |');
+  lines.push('|------------|-------:|');
+  lines.push('| Proposte esaminate | ' + totalOutcomes + ' |');
+  lines.push('| Decisioni concluse | ' + totalClosed + ' |');
+  lines.push('| Decisioni aperte | ' + totalOpen + ' |');
+  lines.push('| % concluse | ' + (totalOutcomes > 0 ? Math.round(totalClosed / totalOutcomes * 100) : 0) + '% |');
+  lines.push('');
+  lines.push('Dettaglio delle decisioni:');
+  lines.push('');
+  lines.push('| Esito | Conteggio |');
+  lines.push('|-------|----------:|');
+  lines.push('| ✅ Confluita nella sintesi | ' + totalConfluita + ' |');
+  lines.push('| ✅ Riformulata dal dipartimento | ' + totalRiformulata + ' |');
+  lines.push('| 🔄 Assorbita in altra proposta | ' + totalAssorbita + ' |');
+  lines.push('| ❓ Da chiarire | ' + totalDaChiarire + ' |');
+  lines.push('| ⏳ Senza esito del confronto | ' + totalSenzaEsito + ' |');
+  lines.push('');
+  // --- 2. Decisioni chiuse ---
+  lines.push('## 2. Decisioni chiuse');
+  lines.push('');
+  if (totalClosed === 0) {
+    lines.push('Nessuna decisione conclusa. Tutte le proposte sono ancora in fase di valutazione.');
+  } else {
+    if (totalConfluita > 0) {
+      lines.push('### Confluita nella sintesi (' + totalConfluita + ')');
+      lines.push('Proposte accettate e integrate nella sintesi del curricolo. Pronte per il passaggio in Collegio.');
+      lines.push('');
+    }
+    if (totalRiformulata > 0) {
+      lines.push('### Riformulata dal dipartimento (' + totalRiformulata + ')');
+      lines.push('Proposte modificate dal dipartimento e considerate pronte. Richiedono verifica di coerenza con il curricolo verticale.');
+      lines.push('');
+    }
+    if (totalAssorbita > 0) {
+      lines.push('### Assorbita in altra proposta (' + totalAssorbita + ')');
+      lines.push('Proposte confluite in altre voci del curricolo. Non richiedono azione separata ma vanno menzionate nella discussione.');
+      lines.push('');
+    }
+  }
+  // --- 3. Decisioni aperte ---
+  lines.push('## 3. Decisioni aperte');
+  lines.push('');
+  if (totalOpen === 0) {
+    lines.push('Tutte le decisioni sono concluse. Il report \u00E8 pronto per la discussione finale.');
+  } else {
+    if (totalDaChiarire > 0) {
+      lines.push('### Da chiarire (' + totalDaChiarire + ')');
+      lines.push('Queste proposte richiedono approfondimento prima di essere considerate concluse:');
+      lines.push('');
+      const daChiarireItems = allHandling.filter(function(p) { return p.handling === 'da_chiarire'; });
+      daChiarireItems.forEach(function(item, idx) {
+        const proposalId = item.proposalId || 'ID non disponibile';
+        const note = item.note || '';
+        lines.push((idx + 1) + '. Proposta ID: ' + proposalId + (note ? ' \u2013 Nota: ' + note : ''));
+      });
+      lines.push('');
+    }
+    if (totalSenzaEsito > 0) {
+      lines.push('### Senza esito del confronto (' + totalSenzaEsito + ')');
+      lines.push('Queste proposte non hanno ancora ricevuto un esito dal dipartimento. Devono essere discusse e assegnate:');
+      lines.push('');
+      const senzaEsitoItems = allHandling.filter(function(p) { return !p.handling || p.handling === ''; });
+      senzaEsitoItems.forEach(function(item, idx) {
+        const proposalId = item.proposalId || 'ID non disponibile';
+        const note = item.note || '';
+        lines.push((idx + 1) + '. Proposta ID: ' + proposalId + (note ? ' \u2013 Nota: ' + note : ''));
+      });
+      lines.push('');
+    }
+  }
+  // --- 4. Quadro per disciplina ---
+  lines.push('## 4. Quadro per disciplina');
+  lines.push('');
+  lines.push('| Disciplina | Stato lavoro | Proposte | Concluse | Aperte |');
+  lines.push('|------------|--------------|---------:|--------:|------:|');
+  outcomes.forEach(function(outcome) {
     const discipline = outcome.discipline || 'Disciplina non indicata';
-    const workStatus = outcome.disciplineWorkStatus || 'Stato lavoro non indicato';
+    const workStatus = outcome.disciplineWorkStatus || 'non indicato';
     const handling = outcome.proposalHandling || [];
     const total = handling.length;
-    const confluita = handling.filter(p => p.handling === 'confluita_nella_sintesi').length;
-    const riformulata = handling.filter(p => p.handling === 'riformulata_dal_dipartimento').length;
-    const assorbita = handling.filter(p => p.handling === 'assorbita_in_altra_proposta').length;
-    const daChiarire = handling.filter(p => p.handling === 'da_chiarire').length;
-    const senzaEsito = handling.filter(p => !p.handling || p.handling === '').length;
-    lines.push(`### ${discipline}`);
-    lines.push(`- Stato lavoro dipartimentale: ${workStatus}`);
-    lines.push(`- Numero proposte: ${total}`);
-    lines.push(`  - Confluita nella sintesi: ${confluita}`);
-    lines.push(`  - Riformulata dal dipartimento: ${riformulata}`);
-    lines.push(`  - Assorbita in altra proposta: ${assorbita}`);
-    lines.push(`  - Da chiarire: ${daChiarire}`);
-    lines.push(`  - Senza esito del confronto: ${senzaEsito}`);
+    const closed = handling.filter(function(p) { return p.handling && p.handling !== 'da_chiarire' && p.handling !== ''; }).length;
+    const open = total - closed;
+    lines.push('| ' + discipline + ' | ' + workStatus + ' | ' + total + ' | ' + closed + ' | ' + open + ' |');
   });
   lines.push('');
-  // Punti da chiarire
-  lines.push('## Punti da chiarire');
-  const daChiarireItems = outcomes.flatMap(o => o.proposalHandling || []).filter(p => p.handling === 'da_chiarire');
-  if (daChiarireItems.length === 0) {
-    lines.push('Nessun elemento da chiarire.');
-  } else {
-    lines.push('Elenco degli elementi marcati come `da_chiarire`:');
-    daChiarireItems.forEach((item, idx) => {
-      const proposalId = item.proposalId || 'ID non disponibile';
-      const note = item.note || '';
-      lines.push(`${idx + 1}. Proposta ID: ${proposalId}` + (note ? ` – Nota: ${note}` : ''));
-    });
-  }
+  // --- 5. Cosa portare in dipartimento, cosa al collegio ---
+  lines.push('## 5. Passaggi successivi');
   lines.push('');
-  // Elementi senza esito del confronto
-  lines.push('## Elementi senza esito del confronto');
-  const senzaEsitoItems = outcomes.flatMap(o => o.proposalHandling || []).filter(p => !p.handling || p.handling === '');
-  if (senzaEsitoItems.length === 0) {
-    lines.push('Nessun elemento senza esito del confronto.');
-  } else {
-    lines.push('Elenco degli elementi senza esito del confronto (handling mancante o vuoto):');
-    senzaEsitoItems.forEach((item, idx) => {
-      const proposalId = item.proposalId || 'ID non disponibile';
-      const note = item.note || '';
-      lines.push(`${idx + 1}. Proposta ID: ${proposalId}` + (note ? ` – Nota: ${note}` : ''));
-    });
+  if (totalDaChiarire > 0 || totalSenzaEsito > 0) {
+    lines.push('### Da rinviare al dipartimento');
+    lines.push('Le seguenti voci richiedono un passaggio preliminare in dipartimento prima di poter essere portate in Collegio:');
+    if (totalDaChiarire > 0) {
+      lines.push('- ' + totalDaChiarire + ' proposte **da chiarire** — il dipartimento deve motivare o riformulare');
+    }
+    if (totalSenzaEsito > 0) {
+      lines.push('- ' + totalSenzaEsito + ' proposte **senza esito** — il dipartimento deve esprimersi');
+    }
+    lines.push('');
   }
+  if (totalClosed > 0) {
+    lines.push('### Pronte per il Collegio Docenti');
+    lines.push('Le seguenti voci possono essere presentate al Collegio per la delibera formale:');
+    if (totalConfluita > 0) {
+      lines.push('- ' + totalConfluita + ' proposte **confluite nella sintesi**');
+    }
+    if (totalRiformulata > 0) {
+      lines.push('- ' + totalRiformulata + ' proposte **riformulate dal dipartimento**');
+    }
+    if (totalAssorbita > 0) {
+      lines.push('- ' + totalAssorbita + ' proposte **assorbite in altra proposta** (da menzionare)');
+    }
+    lines.push('');
+  }
+  // --- 6. Evidenze e controlli ---
+  lines.push('## 6. Evidenze e controlli');
   lines.push('');
-  // Evidenze e controlli
-  lines.push('## Evidenze e controlli');
-  lines.push(`- Controlli sui file importati:`);
-  lines.push(`  - File importati: ${importedFiles}`);
-  lines.push(`  - File validi: ${validFiles}`);
-  lines.push(`  - File non riconoscibili: ${unrecognized}`);
-  const disciplinesSet = new Set(outcomes.map(o => o.discipline).filter(Boolean));
-  const mixed = disciplinesSet.size > 1;
-  lines.push(`- Discipline presenti: ${Array.from(disciplinesSet).join(', ') || 'Nessuna'} (${mixed ? 'discipline miste' : 'singola disciplina'})`);
+  lines.push('### File importati');
+  lines.push('| Indicatore | Valore |');
+  lines.push('|------------|-------:|');
+  lines.push('| File importati | ' + importedFiles + ' |');
+  lines.push('| File validi | ' + validFiles + ' |');
+  lines.push('| File non riconoscibili | ' + unrecognized + ' |');
+  lines.push('| Discipline presenti | ' + disciplineNames + ' |');
+  lines.push('');
   // Note dagli esiti
-  const notes = outcomes.flatMap(o => o.note ? [o.note] : []).filter(Boolean);
+  const notes = outcomes.flatMap(function(o) { return o.note ? [o.note] : []; }).filter(Boolean);
   if (notes.length > 0) {
-    lines.push(`- Note presenti negli esiti:`);
-    notes.forEach((note, idx) => {
-      lines.push(`  ${idx + 1}. ${note}`);
+    lines.push('### Note presenti negli esiti');
+    notes.forEach(function(note, idx) {
+      lines.push((idx + 1) + '. ' + note);
     });
-  } else {
-    lines.push(`- Note presenti negli esiti: Nessuna`);
+    lines.push('');
   }
-  // Avvisi dai file importati (es. duplicati)
+  // Avvisi dai file importati
   const warnings = [];
-  files.forEach(f => {
-    if (f.duplicate) warnings.push(`File "${f.name}" segnato come possibile duplicato`);
-    if (f.missing && f.missing.length) warnings.push(`File "${f.name}" manca campi: ${f.missing.join(', ')}`);
+  files.forEach(function(f) {
+    if (f.duplicate) warnings.push('File "' + f.name + '" segnato come possibile duplicato');
+    if (f.missing && f.missing.length) warnings.push('File "' + f.name + '" manca campi: ' + f.missing.join(', '));
   });
   if (warnings.length > 0) {
-    lines.push(`- Avvisi dai file importati:`);
-    warnings.forEach((w, idx) => {
-      lines.push(`  ${idx + 1}. ${w}`);
+    lines.push('### Avvisi');
+    warnings.forEach(function(w, idx) {
+      lines.push((idx + 1) + '. ' + w);
     });
+    lines.push('');
+  }
+  // --- 7. Traccia per la discussione ---
+  lines.push('## 7. Traccia per la discussione del gruppo');
+  lines.push('');
+  if (totalDaChiarire > 0 || totalSenzaEsito > 0) {
+    lines.push('Domande guida per il gruppo di lavoro:');
+    lines.push('1. Gli elementi da chiarire sono sufficientemente motivati?');
+    lines.push('2. Le riformulazioni dipartimentali sono coerenti con il curricolo verticale?');
+    lines.push('3. Vi sono discipline o sezioni mancanti?');
+    lines.push('4. Le evidenze sono sufficienti?');
+    lines.push('5. Quali punti devono essere rinviati al dipartimento?');
   } else {
-    lines.push(`- Avvisi dai file importati: Nessun avviso particolare`);
+    lines.push('Tutte le decisioni sono concluse. Il gruppo pu\u00F2 procedere con la discussione finale e la preparazione della delibera per il Collegio Docenti.');
   }
   lines.push('');
-  // Traccia per la discussione del gruppo
-  lines.push('## Traccia per la discussione del gruppo');
-  lines.push('Domande guida per il gruppo di lavoro:');
-  lines.push('1. Gli elementi da chiarire sono sufficientemente motivati?');
-  lines.push('2. Le riformulazioni dipartimentali sono coerenti con il curricolo verticale?');
-  lines.push('3. Vi sono discipline o sezioni mancanti?');
-  lines.push('4. Le evidenze sono sufficienti?');
-  lines.push('5. Quali punti devono essere rinviati al dipartimento?');
+  // --- 8. Chiusura prudente ---
+  lines.push('## 8. Chiusura prudente');
   lines.push('');
-  // Chiusura prudente
-  lines.push('## Chiusura prudente');
-  lines.push('La validazione finale resta a cura del gruppo di lavoro e degli organi competenti.');
+  lines.push('La validazione finale resta a cura del gruppo di lavoro e degli organi competenti. Il presente report \u00E8 uno strumento di lavoro, non sostituisce la delibera formale del Collegio Docenti.');
   return lines.join('\n');
 }
 
