@@ -1052,6 +1052,13 @@ section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
 .referent-validation-summary{color:var(--cml-text)}
 .referent-outcome-card{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
 .referent-outcome-note{color:var(--cml-text-muted)}
+.didattica-evidence-section ul,.didattica-evidence-section p{color:var(--cml-text)}
+.didattica-uda-card-sub{color:#b39ddb}
+.didattica-evidence-section-title{color:#80cbc4}
+.didattica-uda-field-value ul{color:var(--cml-text)}
+.didattica-uda-box{background:#2a1a2a;border-color:#7b1fa2;color:#ce93d8}
+.didattica-uda-box strong{color:#e1bee7}
+.didattica-uda-field{border-bottom-color:var(--cml-divider)}
 }
 </style>
 </head>
@@ -1911,7 +1918,7 @@ function renderDidattica(){
     var u=filtered[i];
     var ordLabel=u.ordine==="Infanzia"?"\ud83e\uddf8":u.ordine==="Primaria"?"\ud83d\udcd8":"\ud83c\udf93";
     var classeLabel=u.fascia?"Fascia "+u.fascia:"Classe "+u.classe;
-    html+='<div class="didattica-evidence-unit"><div class="didattica-evidence-unit-hd" onclick="this.classList.toggle(\'open\');var b=this.nextElementSibling;b.classList.toggle(\'open\')"><div class="didattica-evidence-unit-left"><span class="didattica-evidence-tag">'+ordLabel+' '+u.ordine+'</span><div><div class="didattica-evidence-unit-ambito">'+escapeHtml(u.ambito)+'</div><div class="didattica-evidence-unit-sub">'+escapeHtml(classeLabel)+' \u00b7 '+escapeHtml(u.competenza)+'</div></div></div><span class="didattica-evidence-unit-arrow">\u25bc</span></div><div class="didattica-evidence-unit-body"><div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Traguardo</div><p style="font-size:12px;color:#333;line-height:1.5;margin:0 0 6px">'+escapeHtml(u.traguardo)+'</p></div>';
+    html+='<div class="didattica-evidence-unit"><div class="didattica-evidence-unit-hd" onclick="this.classList.toggle(\'open\');var b=this.nextElementSibling;b.classList.toggle(\'open\')"><div class="didattica-evidence-unit-left"><span class="didattica-evidence-tag">'+ordLabel+' '+u.ordine+'</span><div><div class="didattica-evidence-unit-ambito">'+escapeHtml(u.ambito)+'</div><div class="didattica-evidence-unit-sub">'+escapeHtml(classeLabel)+' \u00b7 '+escapeHtml(u.competenza)+'</div></div></div><span class="didattica-evidence-unit-arrow">\u25bc</span></div><div class="didattica-evidence-unit-body"><div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Traguardo</div><p style="font-size:12px;line-height:1.5;margin:0 0 6px">'+escapeHtml(u.traguardo)+'</p></div>';
     if(u.obiettivi&&u.obiettivi.length){
       html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Obiettivi</div><ul>';
       for(var j=0;j<u.obiettivi.length;j++) html+='<li>'+escapeHtml(u.obiettivi[j])+'</li>';

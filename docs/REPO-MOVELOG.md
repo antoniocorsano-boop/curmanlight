@@ -1939,3 +1939,17 @@
 - Nessuna modifica a `index.html`, schema `.cml`, export/import, role-access, `sw.js`, `_headers` o asset
 - URL atteso: `https://antoniocorsano-boop.github.io/curmanlight/motto-non-multa-sed-multum/`
 - Verdetto: `CML_MOTTO_PAGES_PUBLISH_READY`
+
+---
+
+## 2026-06-23 — CML-083 — DESIGN_SYSTEM_DARK_MODE_CONTRAST_ALIGNMENT_RUNTIME_FIX
+
+- Tipo slice: runtime fix (CSS + 1 inline style)
+- Causa: classi Didattica non incluse nel dark mode block; `color:#333` inline e in CSS rendeva il testo invisibile su sfondo scuro
+- Fix: rimosso `color:#333` inline in JS (linea 1914) + 7 nuove regole CSS nel dark mode block per `didattica-evidence-section`, `didattica-uda-card-sub`, `didattica-evidence-section-title`, `didattica-uda-field-value`, `didattica-uda-box`, `didattica-uda-field`
+- File modificati: `_published_snapshot/netlify-current/index.html` (+8/−1)
+- Documenti creati: `docs/03_execution/CML-083.md`, `report/CML-083_design_system_dark_mode_contrast_alignment_runtime_fix.md`, `docs/REPO-MOVELOG.md`
+- Vincoli rispettati: nessuna nuova funzione, nessuna modifica a schema `.cml`, export/import, role-access, storage, dipendenze esterne
+- Controlli: braces CSS bilanciate (969=969), `git diff --check` ✅, nessuna nuova dipendenza, dark mode solo `@media(prefers-color-scheme:dark)`, nessuna `@media` orfana
+- Verdetto: `CML_083_DESIGN_SYSTEM_DARK_MODE_CONTRAST_ALIGNMENT_READY`
+- Prossimo step: CML-083A — DESIGN_SYSTEM_DARK_MODE_CONTRAST_LIVE_SMOKE
