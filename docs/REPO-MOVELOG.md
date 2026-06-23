@@ -1882,4 +1882,36 @@
 - Nessuna dipendenza esterna, dark mode compatibile
 - File: `report/CML-081A_curriculum_area_completion_live_smoke.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_081A_CURRICULUM_AREA_COMPLETION_LIVE_SMOKE_READY`
+- Prossimo step: CML-082 — Didattica area completion runtime increment
+
+## 2026-06-23 — CML-082: Didattica Area Completion Runtime Increment
+
+- **8d7d384** — feat: complete CML didattica area guidance
+- Cosa è cambiato:
+  - Aggiunto `.didattica-path` (teal guidance box) in cima a `tab-didattica` con spiegazione operativa per l'utente
+  - Sostituito "🔨 Area in costruzione" con "🧑‍⚖️ Non sostituisce la valutazione professionale"
+  - Badge statistiche: "Prototipo" → "📋 Evidenze e criteri" in `renderDidattica()`
+  - UDA modello: "🔨 UDA modello — read-only" → "🧑‍🏫 UDA modello — guida operativa"
+  - Home card: descrizione aggiornata, badge "📋 Prototipo" → "📋 Area operativa"
+  - Dark mode overrides per `.didattica-path`
+- Nessuna modifica a Curriculum, export/import, schema `.cml`, role-access, storage
+- File: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-082.md`
+- Verdetto: `CML_082_DIDATTICA_AREA_COMPLETION_RUNTIME_INCREMENT_READY`
+- Prossimo step: CML-082A — Didattica area live smoke
+
+## 2026-06-23 — CML-082A: Didattica Area Completion Live Smoke
+
+- Verificato su localhost:8080 (Python HTTP server)
+- 8/8 smoke test PASS:
+  1. Guidance path box presente
+  2. Nessun "Area in costruzione"
+  3. Stats badge `📋 Evidenze e criteri`
+  4. UDA modello "guida operativa"
+  5. Home card testo aggiornato
+  6. Home card badge "Area operativa"
+  7. Curriculum tab integro (curricolo-path)
+  8. Role-access/export/.cml funzioni intatte
+- Nessuna regressione, nessuna nuova dipendenza
+- File: `report/CML-082A_didattica_area_completion_live_smoke.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_082A_DIDATTICA_AREA_COMPLETION_LIVE_SMOKE_PASS`
 - Prossimo step: da definire
