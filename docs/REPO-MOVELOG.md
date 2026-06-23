@@ -1535,3 +1535,18 @@
 - **Verdetto:** `CML_068A_DIDATTICA_READONLY_PROTOTYPE_LIVE_DEPLOY_SMOKE_READY`
 - **Prossimo step consigliato:** `CML-069 — DIDATTICA_UDA_MODULE_SELECTION_AUDIT` oppure `CML-068B — DIDATTICA_PROTOTYPE_UX_DENSITY_AUDIT`
 - Documentazione: `docs/03_execution/CML-068A.md`, `report/CML-068A_didattica_readonly_prototype_live_deploy_smoke.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-068B — Didattica Prototype UX Density Audit
+
+- HEAD partenza: `fb5750c`, tree pulita ✅
+- Tipo slice: audit/docs — nessuna modifica runtime, nessun deploy
+- 13 aree UX auditate sulla pagina live (`https://antoniocorsano-boop.github.io/curmanlight/`)
+- **Esito:** P0=0, P1=0, P2=3, P3=2 — nessun bloccante
+- **P2:** tre link dimessi Home card Didattica (non funzionanti), 13 card senza filtro classe/ambito, Didattica non in bottom bar mobile
+- **P3:** "Prototipo" come stat fuori posto, assenza `title` sui link dimessi
+- **Decisione:** procedere a CML-069 (UDA module selection) senza alleggerimento intermedio
+- Nessuna modifica runtime, nessun deploy
+- Verdetto: `CML_068B_DIDATTICA_PROTOTYPE_UX_DENSITY_AUDIT_READY`
+- Documentazione: `docs/03_execution/CML-068B.md`, `report/CML-068B_didattica_prototype_ux_density_audit.md`, `docs/REPO-MOVELOG.md`
