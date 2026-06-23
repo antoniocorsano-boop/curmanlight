@@ -630,6 +630,13 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .curricolo-path-body a{color:#1a237e}
 .curricolo-path-footer{margin-top:3px;font-size:11px}
 .curricolo-path-footer a{color:#3949ab}
+.didattica-path{background:#e0f2f1;border:1px solid #80cbc4;border-radius:9px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:#004d40;line-height:1.5}
+.didattica-path-title{font-weight:800;font-size:13px;margin-bottom:4px}
+.didattica-path-body{font-size:11px;margin-bottom:3px;color:#00695c}
+.didattica-path-actions{margin-top:4px;font-size:11px}
+.didattica-path-actions a{font-weight:700;color:#004d40;text-decoration:none}
+.didattica-path-actions a:hover{text-decoration:underline}
+.didattica-path-divider{display:inline-block;margin:0 4px;color:#80cbc4}
 .curricolo-copertura{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;padding:10px 14px;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:9px;font-size:12px;color:#1b5e20;line-height:1.4}
 .curricolo-copertura-item{display:flex;align-items:center;gap:4px}
 .curricolo-copertura-val{font-weight:800;font-size:15px;color:#1b5e20}
@@ -1040,6 +1047,9 @@ section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
 .curricolo-path{background:var(--cml-card-hover);border-color:var(--cml-border);color:var(--cml-text)}
 .curricolo-path-step a,.curricolo-path-body a,.curricolo-path-footer a{color:#90caf9}
 .curricolo-path-step--active{color:var(--cml-text)}
+.didattica-path{background:var(--cml-card-hover);border-color:var(--cml-border);color:var(--cml-text)}
+.didattica-path-body{color:var(--cml-text-secondary)}
+.didattica-path-actions a{color:#80cbc4}
 .referent-validation-summary{color:var(--cml-text)}
 .referent-outcome-card{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
 .referent-outcome-note{color:var(--cml-text-muted)}
@@ -1149,15 +1159,15 @@ section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
               <span class="home-card-icon">🧑‍🏫</span>
               <h3 class="home-card-title">Didattica</h3>
             </div>
-            <p class="home-card-text">Trasforma il curricolo in lavoro didattico: UDA, attività, materiali, consegne, evidenze e valutazione.</p>
-            <div class="home-card-badge badge--prototype">📋 Prototipo</div>
+            <p class="home-card-text">Evidenze, criteri di valutazione e UDA modello collegati al curricolo. Da adattare alla classe e da validare dal docente.</p>
+            <div class="home-card-badge badge--prototype">📋 Area operativa</div>
             <div class="home-card-links">
               <a href="#" onclick="setTab('didattica');return false">📊 Valuta evidenze</a>
               <a href="#" onclick="setTab('didattica_uda');return false">📋 Progetta UDA</a>
               <span class="dimmed">🧪 Prepara attività <span class="badge-preparing badge--prototype">In preparazione</span></span>
               <span class="dimmed">📁 Materiali per la classe <span class="badge-preparing badge--prototype">In preparazione</span></span>
             </div>
-            <p class="home-card-note">Il primo modulo è disponibile: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a>. Gli altri moduli sono in fase di definizione.</p>
+            <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a> (12 unità) e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione.</p>
           </div>
         </div>
         <div class="home-microguide">
@@ -1182,13 +1192,22 @@ section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
       <div class="didattica-evidence">
         <div class="didattica-evidence-header">
           <h2>🧑‍🏫 Didattica — Valutazione ed evidenze</h2>
-          <p>Primo prototipo read-only: collega le unità curricolari di Tecnologia a evidenze osservabili e criteri di valutazione. Da adattare alla classe e da validare dal docente.</p>
+          <p>Collega le unità curricolari di Tecnologia a evidenze osservabili e criteri di valutazione. Da adattare alla classe e da validare dal docente.</p>
+        </div>
+        <div class="didattica-path">
+          <div class="didattica-path-title">📖 Come usare questa sezione</div>
+          <div class="didattica-path-body">Qui trovi le <strong>evidenze osservabili</strong> e i <strong>criteri di valutazione</strong> collegati a ciascuna unità del curricolo di Tecnologia. Scegli un ordine (<em>Tutti / Infanzia / Primaria / Secondaria</em>) ed esplora le schede per vedere traguardi, obiettivi, conoscenze, abilità, evidenze e criteri.</div>
+          <div class="didattica-path-actions">
+            🟢 <strong>Dato curricolare</strong> — le evidenze e i criteri provengono dal pacchetto Tecnologia normalizzato
+            <span class="didattica-path-divider">·</span>
+            <a href="#" onclick="setTab('curricolo');return false">📖 Consulta il curricolo completo →</a>
+          </div>
         </div>
         <div class="didattica-evidence-box notice-box warning">
-          <strong>🔨 Area in costruzione</strong><br>
-          • Nessun dato viene salvato<br>
-          • Non sostituisce la valutazione professionale del docente<br>
-          • Contenuti collegati al pacchetto <strong>Tecnologia normalizzato</strong> (Curriculum → Consultazione)
+          <strong>🧑‍⚖️ Non sostituisce la valutazione professionale</strong><br>
+          • Le evidenze e i criteri sono indicativi e richiedono validazione del docente<br>
+          • I contenuti collegati al pacchetto <strong>Tecnologia normalizzato</strong> (Curriculum → Consultazione) servono come base di lavoro<br>
+          • Questa è un'area operativa per la <strong>didattica in classe</strong>, non per la revisione del documento curricolare
         </div>
         <div class="didattica-evidence-stats" id="didattica-evidence-stats"></div>
         <div class="didattica-evidence-filters" id="didattica-evidence-filters">
@@ -1198,24 +1217,23 @@ section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
           <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Secondaria',this)">🎓 Secondaria</button>
         </div>
         <div class="didattica-evidence-list" id="didattica-evidence-list"></div>
-        <div class="didattica-evidence-footer">Prototipo read-only · Nessun dato viene salvato · Richiede validazione professionale del docente · Non costituisce documento istituzionale approvato · Da adattare alla classe</div>
+        <div class="didattica-evidence-footer">Evidenze e criteri indicativi · Richiedono validazione professionale del docente · Non costituiscono documento istituzionale approvato · Da adattare alla classe</div>
       </div>
       <!-- UDA MODELLO -->
       <div class="didattica-uda" id="didattica-uda">
         <div class="didattica-uda-header">
           <h2>📋 Didattica — UDA modello</h2>
-          <p>Prototipo read-only: mostra come una unità curricolare di Tecnologia può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
+          <p>Mostra come un'unità curricolare di Tecnologia può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
         </div>
         <div class="didattica-uda-box notice-box tip">
-          <strong>🔨 UDA modello — read-only</strong><br>
-          • Nessun dato viene salvato<br>
-          • Non sostituisce la progettazione professionale del docente<br>
-          • Non costituisce documento istituzionale approvato<br>
-          • I campi contrassegnati con "🟢 Dato curricolare" provengono dal pacchetto Tecnologia normalizzato<br>
-          • I campi contrassegnati con "🟡 Esempio didattico" sono indicativi e da adattare alla classe
+          <strong>🧑‍🏫 UDA modello — guida operativa</strong><br>
+          • Mostra come un'unità curricolare può essere trasformata in una unità di apprendimento<br>
+          • I campi "🟢 Dato curricolare" provengono dal pacchetto Tecnologia normalizzato<br>
+          • I campi "🟡 Esempio didattico" sono indicativi e da adattare alla classe<br>
+          • Non sostituisce la progettazione professionale del docente
         </div>
         <div class="didattica-uda-list" id="didattica-uda-list"></div>
-        <div class="didattica-uda-footer">UDA modello · Read-only · Da adattare alla classe · Non sostituisce la progettazione del docente · Richiede validazione professionale · Non costituisce documento istituzionale approvato</div>
+        <div class="didattica-uda-footer">UDA modello · Da adattare alla classe · Non sostituisce la progettazione del docente · Richiede validazione professionale · Non costituisce documento istituzionale approvato</div>
       </div>
     </div>
     <!-- TAB LAVORO -->
@@ -1887,7 +1905,7 @@ function renderDidattica(){
   var inf=units.filter(function(u){return u.ordine==="Infanzia"}).length;
   var pri=units.filter(function(u){return u.ordine==="Primaria"}).length;
   var sec=units.filter(function(u){return u.ordine==="Secondaria"}).length;
-  statsEl.innerHTML='<div class="didattica-evidence-stat"><strong>'+total+'</strong>Unit\u00e0 totali</div><div class="didattica-evidence-stat"><strong>'+inf+'</strong>Infanzia</div><div class="didattica-evidence-stat"><strong>'+pri+'</strong>Primaria</div><div class="didattica-evidence-stat"><strong>'+sec+'</strong>Secondaria</div><div class="didattica-evidence-stat">Prototipo</div>';
+  statsEl.innerHTML='<div class="didattica-evidence-stat"><strong>'+total+'</strong>Unit\u00e0 totali</div><div class="didattica-evidence-stat"><strong>'+inf+'</strong>Infanzia</div><div class="didattica-evidence-stat"><strong>'+pri+'</strong>Primaria</div><div class="didattica-evidence-stat"><strong>'+sec+'</strong>Secondaria</div><div class="didattica-evidence-stat">\ud83d\udccb Evidenze e criteri</div>';
   var filtered=didatticaFilter==="all"?units:units.filter(function(u){return u.ordine===didatticaFilter});
   var html="";
   for(var i=0;i<filtered.length;i++){
