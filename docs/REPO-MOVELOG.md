@@ -1967,4 +1967,17 @@
 - Schema `.cml`, export/import, role-access invariati
 - Nessuna modifica runtime in CML-083A
 - Verdetto: `CML_083A_DESIGN_SYSTEM_DARK_MODE_CONTRAST_LIVE_SMOKE_READY`
-- Prossimo step: da definire
+- Prossimo step: CML-083B — LIGHT_MODE_ONLY_DESIGN_SYSTEM_RUNTIME_FIX
+
+---
+
+## 2026-06-23 — CML-083B — LIGHT_MODE_ONLY_DESIGN_SYSTEM_RUNTIME_FIX
+
+- Tipo slice: runtime fix (CSS-only)
+- Decisione progettuale: CurManLight torna a modalità chiara unica. Dark mode automatica disattivata.
+- Intervento: commentato blocco `@media(prefers-color-scheme:dark){...}` (159 righe, 151 regole) in `index.html`; aggiunto `color-scheme:light` su `:root`
+- File modificati: `_published_snapshot/netlify-current/index.html` (+163/−159)
+- Nessuna modifica a: schema `.cml`, export/import, role-access, JS, layout, dipendenze
+- Controlli: braces CSS 2088=2088 ✅, `git diff --check` ✅, nessuna nuova dipendenza, nessuna occorrenza attiva di `prefers-color-scheme`
+- Verdetto: `CML_083B_LIGHT_MODE_ONLY_DESIGN_SYSTEM_RUNTIME_FIX_READY`
+- Prossimo step: CML-083C — LIGHT_MODE_ONLY_LIVE_SMOKE

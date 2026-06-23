@@ -15,7 +15,7 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/docx.umd.min.js" title="Libreria opzionale per esportazione Word avanzata"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--cml-primary:#1a237e;--cml-primary-dark:#283593;--cml-accent:#00695c;--cml-bg:#f0f2f5;--cml-surface:#fff;--cml-card:#fff;--cml-card-hover:#f5f5f5;--cml-text:#333;--cml-text-secondary:#666;--cml-text-muted:#999;--cml-border:#e0e0e0;--cml-divider:#eee;--cml-header:linear-gradient(135deg,#1a237e,#283593);--cml-header-alt:linear-gradient(135deg,#0d1b5e,#1a237e);--cml-shadow-sm:0 1px 3px rgba(0,0,0,.05);--cml-shadow-md:0 2px 8px rgba(0,0,0,.06);--cml-radius-sm:6px;--cml-radius:9px;--cml-radius-lg:12px;--cml-radius-xl:14px;--cml-space-xs:4px;--cml-space-sm:8px;--cml-space-md:16px;--cml-space-lg:24px}
+:root{--cml-primary:#1a237e;--cml-primary-dark:#283593;--cml-accent:#00695c;--cml-bg:#f0f2f5;--cml-surface:#fff;--cml-card:#fff;--cml-card-hover:#f5f5f5;--cml-text:#333;--cml-text-secondary:#666;--cml-text-muted:#999;--cml-border:#e0e0e0;--cml-divider:#eee;--cml-header:linear-gradient(135deg,#1a237e,#283593);--cml-header-alt:linear-gradient(135deg,#0d1b5e,#1a237e);--cml-shadow-sm:0 1px 3px rgba(0,0,0,.05);--cml-shadow-md:0 2px 8px rgba(0,0,0,.06);--cml-radius-sm:6px;--cml-radius:9px;--cml-radius-lg:12px;--cml-radius-xl:14px;--cml-space-xs:4px;--cml-space-sm:8px;--cml-space-md:16px;--cml-space-lg:24px;color-scheme:light}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--cml-bg);min-height:100vh;display:flex;flex-direction:column;font-size:13px}
 /* HEADER */
 header{background:var(--cml-header);color:#fff;padding:12px 20px}
@@ -902,164 +902,168 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 /* Focus visible ring consistent */
 button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:2px}
 
-@media(prefers-color-scheme:dark){
-:root{--cml-bg:#121212;--cml-surface:#1e1e1e;--cml-card:#252525;--cml-card-hover:#2e2e2e;--cml-text:#e0e0e0;--cml-text-secondary:#b0b0b0;--cml-text-muted:#808080;--cml-border:#3a3a3a;--cml-divider:#333;--cml-shadow-sm:0 1px 3px rgba(0,0,0,.3);--cml-shadow-md:0 2px 8px rgba(0,0,0,.4)}
-a{color:#90caf9}
-header .sub,a.motto-link,nav a{color:rgba(255,255,255,.85)}
-footer{background:#1a1a1a;color:#78909c}
-.panel.current{background:#2a2a2a}.panel.proposed{background:#1a2a1a}
-.collapse-header:hover{opacity:.7}
-.collapse-summary{color:#b0b0b0}
-.card-acts{background:rgba(255,255,255,.03);border-top-color:var(--cml-divider)}
-.act-delete{color:#ef5350}
-.norm-intro,.norm-card,.sum-box,.esport-group,.guida-card,.home-card,.home-microguide,.export-group,
-.tecnologia-export-panel,.tecnologia-norm,.tecnologia-norm-unit,.didattica-evidence-unit,
-.didattica-uda-card,.tool-group,.department-import-panel,.quick-info-bar,.local-save-bar,
-.usage-notice,.tecnologia-norm-unit-body,.settings-school-box,.tab-generali .gen-card,
-.cruscotto,.orientation-card,
-.curricolo-viewer .curricolo-index,.curricolo-viewer .curricolo-disc,.curricolo-riepilogo,.curricolo-nextaction,
-.mobile-bottom-bar,.mobile-menu-panel,.role-access-dialog{background:var(--cml-card);border-color:var(--cml-border)}
-.didattica-evidence-unit-body,.didattica-uda-card-body{background:var(--cml-card)}
-.didattica-uda-footer,.didattica-evidence-footer{background:#2a1a2a;color:#b39ddb}
-.toolbar{background:var(--cml-surface);border-color:var(--cml-border);box-shadow:none}
-.aside-box{background:var(--cml-surface)}
-.subnav-bar{background:var(--cml-surface);border-color:var(--cml-border)}
-.curricolo-version-tabs,.curricolo-version-tab{background:var(--cml-surface);border-color:var(--cml-border)}
-.curricolo-version-tab.active{background:var(--cml-primary)}
-.curricolo-version-tab:not(.active){background:var(--cml-card);color:var(--cml-text-secondary)}
-.disc-btn:not(.active){color:var(--cml-text)}
-.disc-btn.active{background:var(--cml-primary);color:#fff}
-.disc-btn:hover:not(.active){background:var(--cml-card-hover)}
-.tecnologia-norm-unit-hd,.didattica-evidence-unit-hd,.didattica-uda-card-hd,.curricolo-disc-hd{background:var(--cml-card-hover)}
-.tecnologia-norm-unit-hd:hover,.didattica-evidence-unit-hd:hover,.didattica-uda-card-hd:hover,.curricolo-disc-hd:hover{background:#333}
-.tecnologia-norm-unit-sub,.didattica-evidence-unit-sub,.didattica-uda-note,.norm-meta,
-.curricolo-note,.curricolo-item-id,.tecnologia-norm-note,.didattica-evidence-note{color:var(--cml-text-muted)}
-.card-body,.panel-text,.curricolo-item-text,.norm-title,.norm-desc,.tecnologia-norm-unit-ambito,
-.didattica-evidence-unit-ambito,.didattica-uda-card-titolo,.didattica-uda-field-value,
-.guida-card p,.guida-card li,.tab-generali p,.tab-generali li,.tab-generali .gen-card h4,
-.home-card-text,.home-card-title{color:var(--cml-text)}
-.norm-card:hover{box-shadow:none}
-.guida-card code{background:var(--cml-card-hover);color:#ef9a9a}
-.tabbar button:not(.active){color:var(--cml-text-secondary)}
-.tabbar button.active{border-bottom-color:var(--cml-primary)}
-.toolbar-toggle{color:var(--cml-primary)}
-.filter-btn:not(.active){background:var(--cml-card);color:var(--cml-text-secondary);border-color:var(--cml-border)}
-.mbb-btn{color:var(--cml-text-muted)}
-.mbb-btn.mbb-active{color:var(--cml-primary);background:rgba(26,35,126,.1)}
-.mobile-menu-panel .mm-item{color:var(--cml-text)}
-.mobile-menu-panel .mm-item.mm-link{color:#90caf9}
-.mobile-menu-panel .mm-close{background:var(--cml-card-hover);color:var(--cml-text-secondary)}
-.role-access-overlay,#welcome-overlay{background:rgba(0,0,0,.7)}
-.role-access-dialog h2{color:var(--cml-primary)}
-.export-group,.esport-group{border-left-color:var(--cml-primary)}
-.export-group.alt{border-left-color:var(--cml-text-secondary)}
-.quick-info-bar .profile-summary{background:var(--cml-card-hover);color:var(--cml-text)}
-.save-chip{background:#1a2a1a;border-color:#2e7d32;color:#81c784}
-.local-save-bar{color:#81c784}
-.curso-tab{color:var(--cml-text)}
-.department-import-panel{background:#1a2a1a;border-color:#2e7d32}
-.referent-validation-panel{background:#1a2a1a;border-color:#2e7d32}
-.settings-field label{color:var(--cml-text)}
-.settings-field input,.settings-field select{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
-.export-note{color:#bcaaa4}
-.home-footer{background:var(--cml-card);border-color:var(--cml-border)}
-.home-footer p{color:var(--cml-text-muted)}
-.home-card-links a{background:var(--cml-card);border-color:var(--cml-border);color:#90caf9}
-.home-card-links a:hover{background:var(--cml-card-hover)}
-.export-group-row .btn-secondary{background:var(--cml-card);color:var(--cml-text);border-color:var(--cml-border)}
-.esport-group h3{color:var(--cml-text)}
-.badge--readonly{background:var(--cml-card-hover);color:var(--cml-text-muted)}
-.badge--warning{background:#3a2a1a;color:#ffcc80;border-color:#e65100}
-.badge--prototype{background:#2a1a2a;color:#ce93d8}
-.badge--success{background:#1a2a1a;color:#81c784}
-.badge--info{background:#1a2a3a;color:#90caf9}
-.ordine-hd.infanzia{background:#3a1a3a;color:#ce93d8}
-.ordine-hd.primaria{background:#1a2a3a;color:#90caf9}
-.ordine-hd.secondaria{background:#1a3a3a;color:#80cbc4}
-.gap-header,.gap-header-unique{background:#2a1a3a;color:#ce93d8}
-.readonly-order-note{background:var(--cml-card);color:var(--cml-text-muted)}
-.local-save-status{color:#81c784}
-.tecnologia-norm-unit-left .tecnologia-norm-tag{background:var(--cml-card-hover);color:#90caf9}
-.didattica-evidence-tag{background:#1a2a1a;color:#81c784}
-.didattica-uda-field-static{background:#3a2a1a;color:#ffcc80;border-color:#e65100}
-.didattica-uda-field-curricolo{background:#1a2a1a;color:#81c784;border-color:#2e7d32}
-.didattica-uda-field-label{color:#b39ddb}
-.norm-tag{background:var(--cml-card-hover);color:#90caf9}
-.norm-tag.red{background:#3a1a1a;color:#ef9a9a}
-.tab-generali .gen-card{border-left-color:#5c6bc0}
-.norm-warning{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
-.norm-inline-link{color:#90caf9}
-section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
-.curricolo-ref{background:#1a2a1a;border-color:#2e7d32}
-.settings-secondary{background:var(--cml-card);color:var(--cml-text);border-color:var(--cml-border)}
-#tec-secondary-actions .btn-secondary{background:var(--cml-card);color:var(--cml-text);border-color:var(--cml-border)}
-.tec-actions-secondary .export-btn.btn-copy{background:var(--cml-card);color:#90caf9;border:1px solid var(--cml-border)}
-.toggle-lbl{color:var(--cml-text)}
-.department-import-copy,.referent-validation-copy{color:var(--cml-text-secondary)}
-.department-import-local,.referent-validation-local{color:var(--cml-text-muted)}
-.department-import-stat{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
-.department-import-stat strong{color:#81c784}
-.department-import-warning{background:#3a2a1a;color:#ffcc80}
-.department-file-row{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
-.curricolo-index-pill{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
-.curricolo-index-pill:hover{background:var(--cml-card-hover)}
-.curricolo-section-title{background:var(--cml-card-hover);color:var(--cml-text);border-color:var(--cml-divider)}
-.curricolo-disc-hd{border-color:var(--cml-border)}
-.curricolo-item{border-color:var(--cml-divider)}
-.path-breadcrumb{color:var(--cml-text-muted)}
-.path-breadcrumb .crumb-current{color:var(--cml-text)}
-.notice-box{color:var(--cml-text)}
-.btn-secondary{background:var(--cml-card);color:var(--cml-text);border-color:var(--cml-border)}
-.btn-tertiary{color:#90caf9}
-.tecnologia-norm-badge{background:var(--cml-card-hover);color:#90caf9;border-color:var(--cml-border)}
-.tecnologia-norm-badge.warn{background:#3a2a1a;color:#ffcc80;border-color:#e65100}
-.tecnologia-norm-stat{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
-.tecnologia-norm-stat strong{color:#90caf9}
-.tecnologia-norm-filter:not(.active){background:var(--cml-card);color:var(--cml-text-secondary);border-color:var(--cml-border)}
-.tecnologia-norm-filter:not(.active):hover{background:var(--cml-card-hover)}
-.didattica-evidence-stat{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
-.didattica-evidence-stat strong{color:#81c784}
-.didattica-evidence-filter:not(.active){background:var(--cml-card);color:var(--cml-text-secondary);border-color:var(--cml-border)}
-.didattica-evidence-filter:not(.active):hover{background:var(--cml-card-hover);border-color:var(--cml-border)}
-.card.ok{background:#1a2a1a;border-color:#2e7d32}
-.card.modifica{background:#2a2a1a;border-color:#e65100}
-.card.nuovo{background:#1a2a3a;border-color:#1976d2}
-.card.eliminato{background:#2a1a1a;border-color:#c62828}
-.card.approvata{background:#1a2a1a;border-color:#2e7d32}
-.card.rifiutata{background:var(--cml-card);border-color:var(--cml-border)}
-.card.readonly-order{opacity:.85}
-.card.readonly-order .panel.proposed{background:#1a1a1a}
-.pending-card{background:var(--cml-card);border-color:#e65100}
-.pending-card.nuovo{border-color:#1976d2}
-.collapse-indicator{color:var(--cml-text-muted)}
-.tecnologia-norm-unit-arrow{color:var(--cml-text-muted)}
-.didattica-evidence-unit-arrow{color:var(--cml-text-muted)}
-.didattica-uda-card-arrow{color:#b39ddb}
-.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
-.curricolo-state strong{color:#ff8a65}
-.curricolo-copertura{background:#1a2a1a;border-color:#2e7d32;color:#a5d6a7}
-.curricolo-copertura .curricolo-copertura-val{color:#81c784}
-.curricolo-copertura .curricolo-copertura-label{color:#a5d6a7}
-.curricolo-riepilogo-item{background:var(--cml-card-hover);color:var(--cml-text-secondary)}
-.curricolo-riepilogo-item .riepilogo-total{color:var(--cml-text-muted)}
-.curricolo-riepilogo-item .riepilogo-changed{color:#ff8a65}
-.curricolo-path{background:var(--cml-card-hover);border-color:var(--cml-border);color:var(--cml-text)}
-.curricolo-path-step a,.curricolo-path-body a,.curricolo-path-footer a{color:#90caf9}
-.curricolo-path-step--active{color:var(--cml-text)}
-.didattica-path{background:var(--cml-card-hover);border-color:var(--cml-border);color:var(--cml-text)}
-.didattica-path-body{color:var(--cml-text-secondary)}
-.didattica-path-actions a{color:#80cbc4}
-.referent-validation-summary{color:var(--cml-text)}
-.referent-outcome-card{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
-.referent-outcome-note{color:var(--cml-text-muted)}
-.didattica-evidence-section ul,.didattica-evidence-section p{color:var(--cml-text)}
-.didattica-uda-card-sub{color:#b39ddb}
-.didattica-evidence-section-title{color:#80cbc4}
-.didattica-uda-field-value ul{color:var(--cml-text)}
-.didattica-uda-box{background:#2a1a2a;border-color:#7b1fa2;color:#ce93d8}
-.didattica-uda-box strong{color:#e1bee7}
-.didattica-uda-field{border-bottom-color:var(--cml-divider)}
-}
+/* DARK MODE BLOCK — NEUTRALIZED: CML light mode only (CML-083B)
+   @media(prefers-color-scheme:dark) removed. All dark rules preserved below
+   as reference but disabled. Toggle light/dark removed per user decision.
+   See docs/03_execution/CML-083B.md for context.
+*/
+/* :root{--cml-bg:#121212;--cml-surface:#1e1e1e;--cml-card:#252525;--cml-card-hover:#2e2e2e;--cml-text:#e0e0e0;--cml-text-secondary:#b0b0b0;--cml-text-muted:#808080;--cml-border:#3a3a3a;--cml-divider:#333;--cml-shadow-sm:0 1px 3px rgba(0,0,0,.3);--cml-shadow-md:0 2px 8px rgba(0,0,0,.4)} */
+/* a{color:#90caf9} */
+/* header .sub,a.motto-link,nav a{color:rgba(255,255,255,.85)} */
+/* footer{background:#1a1a1a;color:#78909c} */
+/* .panel.current{background:#2a2a2a}.panel.proposed{background:#1a2a1a} */
+/* .collapse-header:hover{opacity:.7} */
+/* .collapse-summary{color:#b0b0b0} */
+/* .card-acts{background:rgba(255,255,255,.03);border-top-color:var(--cml-divider)} */
+/* .act-delete{color:#ef5350} */
+/* .norm-intro,.norm-card,.sum-box,.esport-group,.guida-card,.home-card,.home-microguide,.export-group, */
+/* .tecnologia-export-panel,.tecnologia-norm,.tecnologia-norm-unit,.didattica-evidence-unit, */
+/* .didattica-uda-card,.tool-group,.department-import-panel,.quick-info-bar,.local-save-bar, */
+/* .usage-notice,.tecnologia-norm-unit-body,.settings-school-box,.tab-generali .gen-card, */
+/* .cruscotto,.orientation-card, */
+/* .curricolo-viewer .curricolo-index,.curricolo-viewer .curricolo-disc,.curricolo-riepilogo,.curricolo-nextaction, */
+/* .mobile-bottom-bar,.mobile-menu-panel,.role-access-dialog{background:var(--cml-card);border-color:var(--cml-border)} */
+/* .didattica-evidence-unit-body,.didattica-uda-card-body{background:var(--cml-card)} */
+/* .didattica-uda-footer,.didattica-evidence-footer{background:#2a1a2a;color:#b39ddb} */
+/* .toolbar{background:var(--cml-surface);border-color:var(--cml-border);box-shadow:none} */
+/* .aside-box{background:var(--cml-surface)} */
+/* .subnav-bar{background:var(--cml-surface);border-color:var(--cml-border)} */
+/* .curricolo-version-tabs,.curricolo-version-tab{background:var(--cml-surface);border-color:var(--cml-border)} */
+/* .curricolo-version-tab.active{background:var(--cml-primary)} */
+/* .curricolo-version-tab:not(.active){background:var(--cml-card);color:var(--cml-text-secondary)} */
+/* .disc-btn:not(.active){color:var(--cml-text)} */
+/* .disc-btn.active{background:var(--cml-primary);color:#fff} */
+/* .disc-btn:hover:not(.active){background:var(--cml-card-hover)} */
+/* .tecnologia-norm-unit-hd,.didattica-evidence-unit-hd,.didattica-uda-card-hd,.curricolo-disc-hd{background:var(--cml-card-hover)} */
+/* .tecnologia-norm-unit-hd:hover,.didattica-evidence-unit-hd:hover,.didattica-uda-card-hd:hover,.curricolo-disc-hd:hover{background:#333} */
+/* .tecnologia-norm-unit-sub,.didattica-evidence-unit-sub,.didattica-uda-note,.norm-meta, */
+/* .curricolo-note,.curricolo-item-id,.tecnologia-norm-note,.didattica-evidence-note{color:var(--cml-text-muted)} */
+/* .card-body,.panel-text,.curricolo-item-text,.norm-title,.norm-desc,.tecnologia-norm-unit-ambito, */
+/* .didattica-evidence-unit-ambito,.didattica-uda-card-titolo,.didattica-uda-field-value, */
+/* .guida-card p,.guida-card li,.tab-generali p,.tab-generali li,.tab-generali .gen-card h4, */
+/* .home-card-text,.home-card-title{color:var(--cml-text)} */
+/* .norm-card:hover{box-shadow:none} */
+/* .guida-card code{background:var(--cml-card-hover);color:#ef9a9a} */
+/* .tabbar button:not(.active){color:var(--cml-text-secondary)} */
+/* .tabbar button.active{border-bottom-color:var(--cml-primary)} */
+/* .toolbar-toggle{color:var(--cml-primary)} */
+/* .filter-btn:not(.active){background:var(--cml-card);color:var(--cml-text-secondary);border-color:var(--cml-border)} */
+/* .mbb-btn{color:var(--cml-text-muted)} */
+/* .mbb-btn.mbb-active{color:var(--cml-primary);background:rgba(26,35,126,.1)} */
+/* .mobile-menu-panel .mm-item{color:var(--cml-text)} */
+/* .mobile-menu-panel .mm-item.mm-link{color:#90caf9} */
+/* .mobile-menu-panel .mm-close{background:var(--cml-card-hover);color:var(--cml-text-secondary)} */
+/* .role-access-overlay,#welcome-overlay{background:rgba(0,0,0,.7)} */
+/* .role-access-dialog h2{color:var(--cml-primary)} */
+/* .export-group,.esport-group{border-left-color:var(--cml-primary)} */
+/* .export-group.alt{border-left-color:var(--cml-text-secondary)} */
+/* .quick-info-bar .profile-summary{background:var(--cml-card-hover);color:var(--cml-text)} */
+/* .save-chip{background:#1a2a1a;border-color:#2e7d32;color:#81c784} */
+/* .local-save-bar{color:#81c784} */
+/* .curso-tab{color:var(--cml-text)} */
+/* .department-import-panel{background:#1a2a1a;border-color:#2e7d32} */
+/* .referent-validation-panel{background:#1a2a1a;border-color:#2e7d32} */
+/* .settings-field label{color:var(--cml-text)} */
+/* .settings-field input,.settings-field select{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .export-note{color:#bcaaa4} */
+/* .home-footer{background:var(--cml-card);border-color:var(--cml-border)} */
+/* .home-footer p{color:var(--cml-text-muted)} */
+/* .home-card-links a{background:var(--cml-card);border-color:var(--cml-border);color:#90caf9} */
+/* .home-card-links a:hover{background:var(--cml-card-hover)} */
+/* .export-group-row .btn-secondary{background:var(--cml-card);color:var(--cml-text);border-color:var(--cml-border)} */
+/* .esport-group h3{color:var(--cml-text)} */
+/* .badge--readonly{background:var(--cml-card-hover);color:var(--cml-text-muted)} */
+/* .badge--warning{background:#3a2a1a;color:#ffcc80;border-color:#e65100} */
+/* .badge--prototype{background:#2a1a2a;color:#ce93d8} */
+/* .badge--success{background:#1a2a1a;color:#81c784} */
+/* .badge--info{background:#1a2a3a;color:#90caf9} */
+/* .ordine-hd.infanzia{background:#3a1a3a;color:#ce93d8} */
+/* .ordine-hd.primaria{background:#1a2a3a;color:#90caf9} */
+/* .ordine-hd.secondaria{background:#1a3a3a;color:#80cbc4} */
+/* .gap-header,.gap-header-unique{background:#2a1a3a;color:#ce93d8} */
+/* .readonly-order-note{background:var(--cml-card);color:var(--cml-text-muted)} */
+/* .local-save-status{color:#81c784} */
+/* .tecnologia-norm-unit-left .tecnologia-norm-tag{background:var(--cml-card-hover);color:#90caf9} */
+/* .didattica-evidence-tag{background:#1a2a1a;color:#81c784} */
+/* .didattica-uda-field-static{background:#3a2a1a;color:#ffcc80;border-color:#e65100} */
+/* .didattica-uda-field-curricolo{background:#1a2a1a;color:#81c784;border-color:#2e7d32} */
+/* .didattica-uda-field-label{color:#b39ddb} */
+/* .norm-tag{background:var(--cml-card-hover);color:#90caf9} */
+/* .norm-tag.red{background:#3a1a1a;color:#ef9a9a} */
+/* .tab-generali .gen-card{border-left-color:#5c6bc0} */
+/* .norm-warning{background:#3a2a1a;border-color:#e65100;color:#ffcc80} */
+/* .norm-inline-link{color:#90caf9} */
+/* section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80} */
+/* .curricolo-ref{background:#1a2a1a;border-color:#2e7d32} */
+/* .settings-secondary{background:var(--cml-card);color:var(--cml-text);border-color:var(--cml-border)} */
+/* #tec-secondary-actions .btn-secondary{background:var(--cml-card);color:var(--cml-text);border-color:var(--cml-border)} */
+/* .tec-actions-secondary .export-btn.btn-copy{background:var(--cml-card);color:#90caf9;border:1px solid var(--cml-border)} */
+/* .toggle-lbl{color:var(--cml-text)} */
+/* .department-import-copy,.referent-validation-copy{color:var(--cml-text-secondary)} */
+/* .department-import-local,.referent-validation-local{color:var(--cml-text-muted)} */
+/* .department-import-stat{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .department-import-stat strong{color:#81c784} */
+/* .department-import-warning{background:#3a2a1a;color:#ffcc80} */
+/* .department-file-row{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .curricolo-index-pill{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .curricolo-index-pill:hover{background:var(--cml-card-hover)} */
+/* .curricolo-section-title{background:var(--cml-card-hover);color:var(--cml-text);border-color:var(--cml-divider)} */
+/* .curricolo-disc-hd{border-color:var(--cml-border)} */
+/* .curricolo-item{border-color:var(--cml-divider)} */
+/* .path-breadcrumb{color:var(--cml-text-muted)} */
+/* .path-breadcrumb .crumb-current{color:var(--cml-text)} */
+/* .notice-box{color:var(--cml-text)} */
+/* .btn-secondary{background:var(--cml-card);color:var(--cml-text);border-color:var(--cml-border)} */
+/* .btn-tertiary{color:#90caf9} */
+/* .tecnologia-norm-badge{background:var(--cml-card-hover);color:#90caf9;border-color:var(--cml-border)} */
+/* .tecnologia-norm-badge.warn{background:#3a2a1a;color:#ffcc80;border-color:#e65100} */
+/* .tecnologia-norm-stat{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .tecnologia-norm-stat strong{color:#90caf9} */
+/* .tecnologia-norm-filter:not(.active){background:var(--cml-card);color:var(--cml-text-secondary);border-color:var(--cml-border)} */
+/* .tecnologia-norm-filter:not(.active):hover{background:var(--cml-card-hover)} */
+/* .didattica-evidence-stat{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .didattica-evidence-stat strong{color:#81c784} */
+/* .didattica-evidence-filter:not(.active){background:var(--cml-card);color:var(--cml-text-secondary);border-color:var(--cml-border)} */
+/* .didattica-evidence-filter:not(.active):hover{background:var(--cml-card-hover);border-color:var(--cml-border)} */
+/* .card.ok{background:#1a2a1a;border-color:#2e7d32} */
+/* .card.modifica{background:#2a2a1a;border-color:#e65100} */
+/* .card.nuovo{background:#1a2a3a;border-color:#1976d2} */
+/* .card.eliminato{background:#2a1a1a;border-color:#c62828} */
+/* .card.approvata{background:#1a2a1a;border-color:#2e7d32} */
+/* .card.rifiutata{background:var(--cml-card);border-color:var(--cml-border)} */
+/* .card.readonly-order{opacity:.85} */
+/* .card.readonly-order .panel.proposed{background:#1a1a1a} */
+/* .pending-card{background:var(--cml-card);border-color:#e65100} */
+/* .pending-card.nuovo{border-color:#1976d2} */
+/* .collapse-indicator{color:var(--cml-text-muted)} */
+/* .tecnologia-norm-unit-arrow{color:var(--cml-text-muted)} */
+/* .didattica-evidence-unit-arrow{color:var(--cml-text-muted)} */
+/* .didattica-uda-card-arrow{color:#b39ddb} */
+/* .curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80} */
+/* .curricolo-state strong{color:#ff8a65} */
+/* .curricolo-copertura{background:#1a2a1a;border-color:#2e7d32;color:#a5d6a7} */
+/* .curricolo-copertura .curricolo-copertura-val{color:#81c784} */
+/* .curricolo-copertura .curricolo-copertura-label{color:#a5d6a7} */
+/* .curricolo-riepilogo-item{background:var(--cml-card-hover);color:var(--cml-text-secondary)} */
+/* .curricolo-riepilogo-item .riepilogo-total{color:var(--cml-text-muted)} */
+/* .curricolo-riepilogo-item .riepilogo-changed{color:#ff8a65} */
+/* .curricolo-path{background:var(--cml-card-hover);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .curricolo-path-step a,.curricolo-path-body a,.curricolo-path-footer a{color:#90caf9} */
+/* .curricolo-path-step--active{color:var(--cml-text)} */
+/* .didattica-path{background:var(--cml-card-hover);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .didattica-path-body{color:var(--cml-text-secondary)} */
+/* .didattica-path-actions a{color:#80cbc4} */
+/* .referent-validation-summary{color:var(--cml-text)} */
+/* .referent-outcome-card{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)} */
+/* .referent-outcome-note{color:var(--cml-text-muted)} */
+/* .didattica-evidence-section ul,.didattica-evidence-section p{color:var(--cml-text)} */
+/* .didattica-uda-card-sub{color:#b39ddb} */
+/* .didattica-evidence-section-title{color:#80cbc4} */
+/* .didattica-uda-field-value ul{color:var(--cml-text)} */
+/* .didattica-uda-box{background:#2a1a2a;border-color:#7b1fa2;color:#ce93d8} */
+/* .didattica-uda-box strong{color:#e1bee7} */
+/* .didattica-uda-field{border-bottom-color:var(--cml-divider)} */
+/* END DARK MODE BLOCK — NEUTRALIZED */
 </style>
 </head>
 <body>
