@@ -1601,3 +1601,23 @@
 - Verdetto: `CML_070A_UDA_READONLY_PROTOTYPE_LIVE_DEPLOY_SMOKE_READY`
 - Prossimo step: `CML-071 — PROFESSIONAL_UI_UX_SYSTEM_AUDIT`
 - Documentazione: `docs/03_execution/CML-070A.md`, `report/CML-070A_uda_readonly_prototype_live_deploy_smoke.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-071 — Professional UI/UX System Audit
+
+- HEAD partenza: `9a6ae32`, tree pulita ✅
+- Tipo slice: audit/docs — nessuna modifica runtime, nessun deploy
+- **Audit eseguito** su `https://antoniocorsano-boop.github.io/curmanlight/` (322KB)
+- **Criteri:** architettura informativa, navigazione, gerarchia visiva, densità azioni, separazione Curriculum/Didattica, mobile usability, accessibilità base, microcopy, design system, sostenibilità
+- **Aree minime coperte:** 13 (Home, navigazione desktop, navigazione mobile, Curriculum, Revisione, Export/import/report, Validazione protetta, Tecnologia normalizzata, Didattica Valutazione/Evidenze, UDA read-only, microcopy, accessibilità, design system)
+- **18 problemi individuati:** P0=0, P1=4, P2=10, P3=6
+- **P1:** link Home Didattica inattivi fuorvianti, 7 tab (alta soglia cognitiva), UDA sotto Valutazione (scopribilità bassa), 27 exportButtons (densità percepita)
+- **P2:** tab Didattica senza dashboard, microcopy incoerente/inflazionata, breadcrumb Home assente, Tecnologia a 3 click, abbreviazioni mobile ambigue, menu overlay overload, microcopy footer lunga, nessuna struttura semantica HTML
+- **P3:** nessuna classe primario/secondario pulsanti, tab senza icone uniformi, scroll UDA assente, contrasto badge 🟡
+- **Decisione prossimo step:** CML-072 — DESIGN_SYSTEM_AND_NAVIGATION_CONTRACT (docs-only)
+- Runtime non modificato (`git diff --name-only -- _published_snapshot/netlify-current` vuoto) ✅
+- Nessun deploy ✅
+- Verdetto: `CML_071_PROFESSIONAL_UI_UX_SYSTEM_AUDIT_READY`
+- Prossimo step: `CML-072 — DESIGN_SYSTEM_AND_NAVIGATION_CONTRACT`
+- Documentazione: `docs/03_execution/CML-071.md`, `report/CML-071_professional_ui_ux_system_audit.md`, `docs/REPO-MOVELOG.md`
