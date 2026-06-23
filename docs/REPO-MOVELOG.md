@@ -1550,3 +1550,19 @@
 - Nessuna modifica runtime, nessun deploy
 - Verdetto: `CML_068B_DIDATTICA_PROTOTYPE_UX_DENSITY_AUDIT_READY`
 - Documentazione: `docs/03_execution/CML-068B.md`, `report/CML-068B_didattica_prototype_ux_density_audit.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-069 — Didattica UDA Module Selection Audit
+
+- HEAD partenza: `6a6c87f`, tree pulita ✅
+- Tipo slice: audit/docs — nessuna modifica runtime, nessun deploy
+- Opzioni valutate: A (UDA read-only), B (guidata senza salvataggio), C (esportabile), D (editor locale), E (generatore automatico)
+- **Scelta: Opzione A — UDA read-only da unità Tecnologia**
+- Motivazione: pattern già rodato (CML-068), dati sufficienti (13 unità), basso rischio, alto valore, confine pulito (Didattica > Progettazione), progressione naturale evidenze → UDA
+- Perimetro CML-070: 1–2 schede UDA modello, campi (18), layout espandibile, filtro ordine, microcopy prudente, nessun editor/salvataggio/export
+- Opzioni rinviate: B (dopo prototipo), C (dopo modello stabile), D/E (futuro)
+- Nessuna modifica runtime, nessun deploy, schema `.cml` invariato
+- Verdetto: `CML_069_DIDATTICA_UDA_MODULE_SELECTION_AUDIT_READY`
+- Prossimo step: CML-070 — UDA_READONLY_PROTOTYPE
+- Documentazione: `docs/03_execution/CML-069.md`, `report/CML-069_didattica_uda_module_selection_audit.md`, `docs/REPO-MOVELOG.md`
