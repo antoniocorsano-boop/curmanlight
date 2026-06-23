@@ -1440,3 +1440,24 @@
 - Prossimo step: CML-065B — HOME_DASHBOARD_LIVE_DEPLOY_SMOKE
 - Verdetto: `CML_065A_HOME_DASHBOARD_TWO_AREAS_RUNTIME_INCREMENT_READY`
 - Documentazione: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-065A.md`, `report/CML-065A_home_dashboard_two_areas_runtime_increment.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-066 — Curriculum Action Density Reduction
+
+- HEAD partenza: `b957a84`, tree pulita ✅
+- Obiettivo: ridurre densità percettiva azioni in Curriculum (P1 CML-063)
+- 4 modifiche runtime al file `_published_snapshot/netlify-current/index.html` (+63/−33 righe)
+  1. **CSS**: classi `.export-group`, `.tool-group`, `.tec-actions-secondary` per pannelli compatti
+  2. **Toolbar**: `📄 Export ▾` → `📄 Esportazioni ▾`
+  3. **Riepilogo export**: 1 bottone primario visibile (Word), resto sotto toggle "Altre esportazioni ▾"
+  4. **Strumenti di processo**: Validazione dipartimentale + Verifica referente raggruppate sotto toggle "🔧 Strumenti di processo"
+  5. **Tecnologia**: Copia/Scarica Markdown sotto toggle "Azioni di export ▾", Genera bozza resta visibile
+- Nessuna modifica a schema `.cml`, role-access gating, `CML2025`, contenuti curricolari, Didattica
+- Funzioni export/import/report invariate (solo riorganizzazione visiva)
+- Validazione Tecnologia: PASS (13 unità)
+- Audit densità: buttonTags 94 (+2 per toggle), exportButtons 27 (+2)
+- Test locale: nessun errore console, tutte le funzioni raggiungibili
+- Nessun deploy
+- Prossimo passo: CML-066A — CURRICULUM_ACTION_DENSITY_LIVE_DEPLOY_SMOKE
+- Documentazione: `docs/03_execution/CML-066.md`, `report/CML-066_curriculum_action_density_reduction.md`, `docs/REPO-MOVELOG.md`

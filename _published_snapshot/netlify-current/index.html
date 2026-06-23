@@ -677,6 +677,18 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .home-card-note{font-size:10px;color:#90a4ae;margin:10px 0 0;font-style:italic;line-height:1.4}
 .home-footer{background:#f5f7fa;border:1px solid #e0e0e0;border-radius:9px;padding:10px 14px;margin-top:16px}
 .home-footer p{font-size:11px;color:#78909c;line-height:1.5;margin:0}
+.export-group{background:#fff;border:1px solid #e0e0e0;border-radius:9px;padding:10px 14px;margin-bottom:10px}
+.export-group-primary{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.export-group-toggle{border:none;background:transparent;cursor:pointer;font-size:11px;font-weight:700;color:#1a237e;padding:4px 8px;font-family:inherit}
+.export-group-toggle:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:2px}
+.export-group-secondary{margin-top:8px}
+.export-group-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.export-group-row:last-child{margin-bottom:0}
+.tool-group{background:#f5f7fa;border:1px solid #dfe3eb;border-radius:9px;padding:8px 12px;margin-bottom:10px}
+.tool-group>summary{cursor:pointer;font-weight:700;font-size:12px;color:#37474f;padding:2px 0}
+.tool-group-inner{margin-top:8px}
+.tec-actions-secondary{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+@media(max-width:640px){.export-group-primary .export-btn{flex:1 1 100%}.export-group-secondary .export-btn{flex:1 1 100%}}
 </style>
 </head>
 <body>
@@ -803,7 +815,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
           <label class="toggle-lbl"><input type="checkbox" id="hide-ok" onchange="render()"> Nascondi invariati</label>
         </span>
         <span style="color:#ccc">|</span>
-        <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('toolbar-export');e.hidden=!e.hidden;this.textContent=e.hidden?'📄 Export ▾':'📄 Export ▴'">📄 Export ▾</button>
+        <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('toolbar-export');e.hidden=!e.hidden;this.textContent=e.hidden?'📄 Esportazioni ▾':'📄 Esportazioni ▴'">📄 Esportazioni ▾</button>
         <span id="toolbar-export" hidden>
           <button class="export-btn btn-word" onclick="exportWord()" title="Richiede connessione per la libreria Word avanzata">📄 Word (confronto)</button>
           <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word (confronto)</button>
@@ -818,31 +830,35 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <summary style="cursor:pointer;font-weight:700;font-size:12px;color:#5d4037">💡 Uso ibrido e requisiti</summary>
         <p style="margin-top:6px;font-size:11px;color:#5d4037;line-height:1.45">Lo strumento può essere aperto come file locale anche da telefono per consultare, revisionare, copiare il testo, scaricare Markdown e stampare/salvare in PDF. L'esportazione Word impaginata è un'opzione avanzata: funziona quando la libreria esterna è raggiungibile, preferibilmente da computer. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
       </details>
-      <details id="department-import-panel" class="department-import-panel">
-        <summary>🏫 Validazione dipartimentale</summary>
-        <p class="department-import-copy">Importa i file .cml ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
-        <div class="department-import-controls">
-          <input id="department-cml-files" type="file" accept=".cml" multiple hidden onchange="importTeacherCmlFiles(this.files);this.value=''">
-          <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Importa proposte docenti .cml</button>
-          <span class="department-import-local">Nessun dato viene inviato online: l'importazione è locale.</span>
-        </div>
-        <div id="department-import-feedback" class="department-import-feedback" aria-live="polite"></div>
-        <div id="department-import-results"></div>
-      </details>
-      <!-- REFERENT VALIDATION PANEL -->
-      <details id="referent-validation-panel" class="referent-validation-panel">
-        <summary>📋 Verifica referente curricolo</summary>
-        <p class="referent-validation-copy">Importa gli esiti dipartimentali .cml per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
-        <div class="referent-validation-controls">
-          <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="handleReferentOutcomeFileSelection(this)">
-          <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Importa esiti dipartimentali .cml</button>
-          <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button>
-          <span class="referent-validation-local">Nessun dato viene inviato online: l'importazione è locale.</span>
-        </div>
-        <div id="referent-validation-feedback" class="referent-validation-feedback" aria-live="polite"></div>
-        <div id="referent-validation-results"></div>
-        <div id="referent-validation-report" class="referent-validation-report" style="margin-top:12px;text-align:center">
-          <button class="export-btn btn-md" onclick="requireRoleAccess('referentReportGeneration',downloadReferentGroupWorkReport)" title="Scarica report gruppo di lavoro">📄 Scarica report gruppo di lavoro</button>
+      <details class="tool-group">
+        <summary>🔧 Strumenti di processo</summary>
+        <div class="tool-group-inner">
+          <details id="department-import-panel" class="department-import-panel" style="margin-bottom:8px">
+            <summary>🏫 Validazione dipartimentale</summary>
+            <p class="department-import-copy">Importa i file .cml ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
+            <div class="department-import-controls">
+              <input id="department-cml-files" type="file" accept=".cml" multiple hidden onchange="importTeacherCmlFiles(this.files);this.value=''">
+              <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Importa proposte docenti .cml</button>
+              <span class="department-import-local">Nessun dato viene inviato online: l'importazione è locale.</span>
+            </div>
+            <div id="department-import-feedback" class="department-import-feedback" aria-live="polite"></div>
+            <div id="department-import-results"></div>
+          </details>
+          <details id="referent-validation-panel" class="referent-validation-panel">
+            <summary>📋 Verifica referente curricolo</summary>
+            <p class="referent-validation-copy">Importa gli esiti dipartimentali .cml per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
+            <div class="referent-validation-controls">
+              <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="handleReferentOutcomeFileSelection(this)">
+              <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Importa esiti dipartimentali .cml</button>
+              <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button>
+              <span class="referent-validation-local">Nessun dato viene inviato online: l'importazione è locale.</span>
+            </div>
+            <div id="referent-validation-feedback" class="referent-validation-feedback" aria-live="polite"></div>
+            <div id="referent-validation-results"></div>
+            <div id="referent-validation-report" class="referent-validation-report" style="margin-top:12px;text-align:center">
+              <button class="export-btn btn-md" onclick="requireRoleAccess('referentReportGeneration',downloadReferentGroupWorkReport)" title="Scarica report gruppo di lavoro">📄 Scarica report gruppo di lavoro</button>
+            </div>
+          </details>
         </div>
       </details>
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
@@ -853,6 +869,9 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         <p class="tecnologia-export-desc">L'export produce una bozza Markdown della disciplina <strong>Tecnologia</strong>. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
         <div class="tecnologia-export-actions">
           <button class="export-btn btn-md" onclick="generateTecnologiaBozza()">📝 Genera bozza Tecnologia</button>
+          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('tec-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di export ▾':'⬇ Azioni di export ▴'">⬇ Azioni di export ▾</button>
+        </div>
+        <div id="tec-secondary-actions" class="tec-actions-secondary" hidden>
           <button class="export-btn btn-copy" id="btn-copy-tec-md" onclick="copyTecnologiaMarkdown()" disabled style="opacity:0.5">📋 Copia Markdown</button>
           <button class="export-btn btn-md" id="btn-dl-tec-md" onclick="downloadTecnologiaMarkdown()" disabled style="opacity:0.5">⬇ Scarica Markdown</button>
         </div>
@@ -865,13 +884,24 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
       <div class="sum-box">
         <h2>📋 Curricolo Definitivo dopo Revisione</h2>
         <p style="font-size:12px;color:#555;margin-bottom:8px">Voci approvate + invariate. Esporta per il documento ufficiale da presentare al Collegio dei Docenti.</p>
-        <button class="export-btn btn-word" onclick="exportWord(true)" style="margin-right:8px" title="Richiede connessione per la libreria Word avanzata">📄 Word (definitivo)</button>
-        <button class="export-btn btn-copy" onclick="copyForWord(true)" style="margin-right:8px" title="Funziona anche senza librerie esterne">📋 Copia per Word (definitivo)</button>
-        <button class="export-btn btn-md" onclick="exportMarkdown(true)" style="margin-right:8px" title="Funziona anche offline">📝 Markdown (definitivo)</button>
-        <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF (definitivo)</button>
-        <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="margin-left:8px;background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
-        <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="margin-left:8px;background:#00695c;color:#fff" title="Invia al Drive condiviso (se configurato)">⬆️ Invia al Drive condiviso</button>
-        <div class="usage-notice" style="margin-top:9px;margin-bottom:0"><strong>Per la condivisione con i colleghi:</strong> usare preferibilmente Copia per Word, Markdown o PDF. Il Word impaginato resta disponibile solo se il browser riesce a caricare la libreria esterna.</div>
+        <div class="export-group">
+          <div class="export-group-primary">
+            <button class="export-btn btn-word" onclick="exportWord(true)" title="Richiede connessione per la libreria Word avanzata">📄 Word (definitivo)</button>
+            <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('riepilogo-export-more');e.hidden=!e.hidden;this.textContent=e.hidden?'📄 Altre esportazioni ▾':'📄 Altre esportazioni ▴'">📄 Altre esportazioni ▾</button>
+          </div>
+          <div id="riepilogo-export-more" class="export-group-secondary" hidden>
+            <div class="export-group-row">
+              <button class="export-btn btn-copy" onclick="copyForWord(true)" title="Funziona anche senza librerie esterne">📋 Copia per Word (definitivo)</button>
+              <button class="export-btn btn-md" onclick="exportMarkdown(true)" title="Funziona anche offline">📝 Markdown (definitivo)</button>
+              <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF (definitivo)</button>
+            </div>
+            <div class="export-group-row">
+              <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
+              <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff" title="Invia al Drive condiviso (se configurato)">⬆️ Invia al Drive condiviso</button>
+            </div>
+            <div class="usage-notice" style="margin-top:8px;margin-bottom:0"><strong>Per la condivisione con i colleghi:</strong> usare preferibilmente Copia per Word, Markdown o PDF. Il Word impaginato resta disponibile solo se il browser riesce a caricare la libreria esterna.</div>
+          </div>
+        </div>
         <p style="font-size:11px;color:#e65100;margin:6px 0 0;line-height:1.4">⚠️ <strong>Documento di lavoro — da validare.</strong> Non sostituisce delibera del Collegio Docenti.</p>
       </div>
       <div id="riepilogo-body"></div>
