@@ -1793,3 +1793,21 @@
   - Files: `index.html` (modified), `docs/03_execution/CML-078.md`, `report/CML-078_*.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_078_VISUAL_AFFINITY_ICONOGRAPHY_DARK_MODE_RUNTIME_INCREMENT_READY`
 - Prossimo step: CML-078A — live smoke (15/15 PASS)
+
+## 2026-06-23 — CML-078A: Live Smoke
+
+- **81f3c8c** deployato su GitHub Pages (`https://antoniocorsano-boop.github.io/curmanlight/`)
+- **11/11 verifiche superate:**
+  1. ✅ URL pubblicato aggiornato
+  2. ✅ Icone coerenti e leggibili (🏠 📚 🧑‍🏫 📤 ❔)
+  3. ✅ Nessuna icona senza etichetta testuale essenziale
+  4. ✅ Layout desktop invariato ma più leggibile
+  5. ✅ Mobile senza overflow orizzontale (`overflow-x:hidden`)
+  6. ✅ Card e bottoni più ariosi (CSS variables spacing)
+  7. ✅ Modalità scura automatica funzionante (`@media prefers-color-scheme: dark`)
+  8. ✅ Contrasto adeguato in modalità chiara e scura
+  9. ✅ Nessuna dipendenza esterna introdotta (solo docx CDN pre-esistente)
+  10. ✅ Schema `.cml`, export/import e role-access invariati
+  11. ✅ CSS variables presenti live, header gradient via `var(--cml-header)`
+- Verdetto: `CML_078A_VISUAL_AFFINITY_ICONOGRAPHY_DARK_MODE_LIVE_SMOKE_READY`
+- Prossimo step: da definire
