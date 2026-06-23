@@ -11,7 +11,7 @@
 - **Esportazione come strumento secondario** — l'export è sempre collocato dopo la consultazione/revisione, mai come azione primaria.
 - **Badge chiaro e sobrio** — ogni stato ha un badge testuale (non solo colore) per accessibilità.
 - **Microcopy breve** — messaggi essenziali, nessun testo autocelebrativo.
-- **Mobile-first** — touch target >= 44px, overflow-x scrollabile, barra mobile persistente.
+- **Priorità alla fruizione da dispositivi mobili (mobile-first)** — touch target >= 44px, overflow-x scrollabile, barra mobile persistente.
 
 ---
 
@@ -21,7 +21,7 @@
 
 | Ruolo | Colore | Uso |
 |-------|--------|-----|
-| Primario istituzionale | `#1a237e` | Header gradiend start, tab active, link, bottoni primari, bordi sinistro sezioni |
+| Primario istituzionale | `#1a237e` | Inizio gradiente header, tab active, link, bottoni primari, bordi sinistro sezioni |
 | Secondario istituzionale | `#283593` | Header gradient end, disc header |
 | Accento chiaro | `#e8eaf6` (indigo 100) | Sidebar active, sfondi leggeri, badge ord-tag |
 
@@ -42,7 +42,7 @@
 
 | Stato | Badge bg | Badge text | Card bg | Card border |
 |-------|----------|------------|---------|-------------|
-| Invaliato (ok) | `#388e3c` | `#fff` | `#f1f8e9` | `#a5d6a7` |
+| Invariato / confermato (ok) | `#388e3c` | `#fff` | `#f1f8e9` | `#a5d6a7` |
 | Modifica proposta | `#ef6c00` | `#fff` | `#fff` | `#ffcc80` |
 | Nuovo | `#1976d2` | `#fff` | `#fff` | `#90caf9` |
 | Eliminato | `#d32f2f` | `#fff` | `#fff8f8` | `#ef9a9a` |
@@ -418,3 +418,23 @@ font-family: Consolas, monospace; /* solo code preview */
 │  🏠Home | 📚Curr. | 🧑‍🏫Did. | 📤Esp. | ☰Menu             │
 └────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 14. Vincoli funzionali non negoziabili
+
+- Non introdurre login reale, autenticazione o profili utente persistenti.
+- Non introdurre backend, cloud, database o API remote.
+- Non modificare lo schema `.cml` (validazione umana, nessun campo automatico).
+- Non modificare import/export `.cml` senza slice di integrazione dedicata.
+- Non simulare approvazione istituzionale, delibera o certificazione.
+- Non confondere proposta docente, validazione professionale e atto deliberativo.
+- Non rendere primaria l'esportazione rispetto alla consultazione/revisione.
+- Non modificare il codice operativo `CML2025` o la logica di role-access gating.
+- Non aggiungere persistenza oltre `sessionStorage` e `localStorage` esistenti.
+
+---
+
+## 15. Prompt operativo per Stitch
+
+Usa questo DESIGN.md per generare una proposta di interfaccia coerente con CurManLight. Mantieni tono istituzionale, leggibilità alta, azioni chiare e massimo tre azioni principali per schermata. Non introdurre nuove funzioni, login, backend, cloud, approvazione automatica o modifiche allo schema `.cml`. La validazione finale resta sempre umana e istituzionale. Le proposte vanno sempre riviste manualmente e integrate tramite slice controllata.

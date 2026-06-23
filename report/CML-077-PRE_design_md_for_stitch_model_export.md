@@ -16,7 +16,7 @@
 
 ### DESIGN.md Structure
 
-13 sections, ~300 lines:
+15 sections, ~440 lines:
 
 | # | Section | Description |
 |---|---------|-------------|
@@ -33,6 +33,8 @@
 | 11 | Convenzioni naming | Class naming patterns for badges, buttons, cards, notices, panels, didattica, normativa, tecnologia |
 | 12 | Microcopy pattern | 8 canonical copy phrases for disclaimers, warnings, status |
 | 13 | Schema navigazione | ASCII diagram of full navigation structure |
+| 14 | Vincoli funzionali | 9 non-negotiable runtime constraints |
+| 15 | Prompt operativo per Stitch | Ready-to-use prompt for Stitch agents |
 
 ### Key Design Decisions
 

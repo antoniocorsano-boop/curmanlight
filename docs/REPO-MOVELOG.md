@@ -1763,4 +1763,5 @@
 - Copertura: colori (istituzionale, neutro, stato, semantico, export, gradienti), tipografia (scala 9px-22px, pesi, letter-spacing), spaziatura, border radius, ombre, layout (6 breakpoint), componenti (card, pulsanti, badge, panel, notice, export, guida, tool), accessibilità, animazioni, naming, microcopy, schema navigazione
 - DESIGN.md progettato come fonte di verità del design per Stitch/agent — NON interpretato a runtime
 - File committati: `DESIGN.md`, `docs/03_execution/CML-077-PRE.md`, `report/CML-077-PRE_design_md_for_stitch_model_export.md`, `docs/REPO-MOVELOG.md`
+- **Refinements post-review:** fix "gradiend" → "inizio gradiente", "Invaliato" → "Invariato / confermato", mobile-first clarificato, aggiunte sezioni 14 (vincoli funzionali) e 15 (prompt Stitch)
 - Verdetto: `CML_077_PRE_DESIGN_MD_FOR_STITCH_MODEL_EXPORT_READY`

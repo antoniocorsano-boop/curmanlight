@@ -24,6 +24,7 @@ Created `DESIGN.md` at repository root — a comprehensive design system referen
 4. Write execution doc, report, update movelog
 5. Validate: `git status`, `git diff --check`, confirm `index.html` unchanged
 6. Commit only the 4 allowed files
+7. **Refinements post-review:** fix typo "gradiend" → "inizio gradiente", "Invaliato" → "Invariato / confermato", clarificato "Mobile-first" → "Priorità alla fruizione da dispositivi mobili (mobile-first)", aggiunte sezioni 14 (vincoli funzionali) e 15 (prompt Stitch)
 
 ## Validation
 
