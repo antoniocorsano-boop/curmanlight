@@ -1621,3 +1621,28 @@
 - Verdetto: `CML_071_PROFESSIONAL_UI_UX_SYSTEM_AUDIT_READY`
 - Prossimo step: `CML-072 — DESIGN_SYSTEM_AND_NAVIGATION_CONTRACT`
 - Documentazione: `docs/03_execution/CML-071.md`, `report/CML-071_professional_ui_ux_system_audit.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-072 — Design System and Navigation Contract
+
+- HEAD partenza: `536f519`, tree pulita ✅
+- Tipo slice: contract/docs — nessuna modifica runtime, nessun deploy
+- **Input:** CML-071 audit (P1=4, P2=10, P3=6)
+- **10 principi UI/UX** definiti: un compito per schermata, area prima dell'azione, separazione Curriculum/Didattica, export secondario, mobile-first, microcopy breve
+- **Architettura target:** Home, Curriculum, Didattica, Esportazioni, Guida — 5 aree principali
+- **Navigazione target:** 5 tab desktop, 5 bottom bar mobile + Menu (Guida, impostazioni, info, version, blocca)
+- **Regole Home:** max 3 azioni per area, link inattivi sostituiti con testo dimesso + badge "In preparazione", nessun `<a href="#">`
+- **Regole Curriculum:** 5 sotto-aree (Consultazione, Tecnologia, Revisione, Validazione, Esportazione/Report), nessuna funzione didattica
+- **Regole Didattica:** UDA separata da Valutazione/Evidenze, sotto-sezione autonoma, badge origine invariati, read-only fino a nuovo contratto
+- **Regole Esportazioni:** tab dedicato, max 3 pulsanti visibili per gruppo, raggruppate per scopo
+- **Design system leggero:** 9 categorie — pulsanti (6 classi), card (6), badge (7), toggle (3), box (5), tab (con icona), filtri, sezioni read-only, sezioni protette
+- **Microcopy unificata:** glossario 14 voci, eliminata variante "in costruzione" → solo "In preparazione", disclaimer compattati
+- **Accessibilità base:** contrasto, colore+testo, focus, touch 44px, bottoni vs link, landmark (rinviati a CML-074)
+- **18 problemi CML-071 mappati** a regole contratto: 14 coperti per CML-073, 2 rinviati a CML-074, 2 risolti dal contratto stesso
+- **Prossimo step:** CML-073 — NAVIGATION_AND_HOME_LINKS_RUNTIME_INCREMENT
+- Runtime non modificato (`git diff --name-only -- _published_snapshot/netlify-current` vuoto) ✅
+- Nessun deploy ✅
+- Verdetto: `CML_072_DESIGN_SYSTEM_AND_NAVIGATION_CONTRACT_READY`
+- Prossimo step: `CML-073 — NAVIGATION_AND_HOME_LINKS_RUNTIME_INCREMENT`
+- Documentazione: `docs/02_system/DESIGN-SYSTEM-AND-NAVIGATION-CONTRACT.md`, `docs/03_execution/CML-072.md`, `report/CML-072_design_system_and_navigation_contract.md`, `docs/REPO-MOVELOG.md`
