@@ -1717,3 +1717,14 @@
 - Nessuna modifica funzionale introdotta
 - Verdetto: `CML_074A_PROFESSIONAL_LAYOUT_VISUAL_SYSTEM_LIVE_DEPLOY_SMOKE_READY`
 - Documentazione: `docs/03_execution/CML-074A.md`, `report/CML-074A_professional_layout_visual_system_live_deploy_smoke.md`
+
+## 2026-06-23 — CML-075 Referent report readability next increment selection
+
+- Docs-only audit/selezione. Runtime non modificato.
+- 4 opzioni valutate: A (percorso docente), B (report referente), C (microguida), D (fermarsi)
+- Opzione selezionata: **B — Report referente più leggibile**
+- Motivazione: dopo CML-074 il valore più alto è rendere chiari gli esiti del lavoro per chi coordina
+- `buildReferentGroupWorkReportMarkdown()` (linee 3980-4103) da migliorare in CML-076
+- Verdetto: `CML_075_REFERENT_REPORT_READABILITY_NEXT_INCREMENT_SELECTED`
+- Prossimo step: CML-076 — REFERENT_REPORT_READABILITY_RUNTIME_INCREMENT
+- Documentazione: `docs/03_execution/CML-075.md`, `report/CML-075_referent_report_readability_and_decision_summary_selection_audit.md`
