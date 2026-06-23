@@ -1741,3 +1741,15 @@
 - Verdetto: `CML_076_REFERENT_REPORT_READABILITY_RUNTIME_INCREMENT_READY`
 - Prossimo step: CML-076A — referent report readability live deploy smoke
 - Documentazione: `docs/03_execution/CML-076.md`, `report/CML-076_referent_report_readability_runtime_increment.md`
+
+## 2026-06-23 — CML-076A Referent report readability live smoke
+
+- **2411e3a** — Push su `origin/main` → GitHub Pages deploy automatico
+- URL live verificato: `https://antoniocorsano-boop.github.io/curmanlight/`
+- 15 controlli smoke: PASS tutti
+  - Caricamento pagina, navigazione, sub-nav, mobile bar
+  - Pulsante "📄 Scarica report gruppo di lavoro" presente
+  - Funzione `buildReferentGroupWorkReportMarkdown()` review: sintassi corretta, chiamata invariata
+  - Nessuna regressione su export, import, schema, role-access, storage
+- Verdetto: `CML_076A_REFERENT_REPORT_READABILITY_LIVE_DEPLOY_SMOKE_READY`
+- Documentazione: `docs/03_execution/CML-076A.md`, `report/CML-076A_referent_report_readability_live_deploy_smoke.md`
