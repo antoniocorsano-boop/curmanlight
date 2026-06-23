@@ -1586,3 +1586,18 @@
 - Verdetto: `CML_070_UDA_READONLY_PROTOTYPE_READY`
 - Prossimo step: CML-070A — UDA_READONLY_PROTOTYPE_LIVE_DEPLOY_SMOKE
 - Documentazione: `docs/03_execution/CML-070.md`, `report/CML-070_uda_readonly_prototype.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-070A — UDA Read-Only Prototype Live Deploy Smoke
+
+- HEAD partenza: `b0003ba`, tree pulita ✅
+- Tipo slice: deploy/smoke/documentazione — nessuna modifica runtime
+- **Fase 0** — stato locale: branch `main`, HEAD `b0003ba`, validazione Tecnologia PASS (13 unità, valid:true) ✅, audit buttonTags 101, onclick 117, exportButtons 27 ✅
+- **Fase 1** — `git push origin main` (`8d74749..b0003ba`), workflow GitHub Pages **success** ✅
+- **Fase 2** — smoke live su `https://antoniocorsano-boop.github.io/curmanlight/` ✅
+- **25/25 controlli live passati:** 2 UDA modello visibili (Primaria "Cittadini digitali", Secondaria "Dal computer al documento"), 14 campi per UDA, badge curricolare/esempio, microcopy Read-only/validazione/non costituisce documento, sezione Didattica senza campi editabili, Valutazione/Evidenze invariata, Curriculum invariato, export/import/report invariati, role-access gating invariato, mobile OK
+- **Runtime non modificato in CML-070A** (`git diff --name-only -- _published_snapshot/netlify-current` vuoto)
+- Verdetto: `CML_070A_UDA_READONLY_PROTOTYPE_LIVE_DEPLOY_SMOKE_READY`
+- Prossimo step: `CML-071 — PROFESSIONAL_UI_UX_SYSTEM_AUDIT`
+- Documentazione: `docs/03_execution/CML-070A.md`, `report/CML-070A_uda_readonly_prototype_live_deploy_smoke.md`, `docs/REPO-MOVELOG.md`
