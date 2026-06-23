@@ -1461,3 +1461,24 @@
 - Nessun deploy
 - Prossimo passo: CML-066A — CURRICULUM_ACTION_DENSITY_LIVE_DEPLOY_SMOKE
 - Documentazione: `docs/03_execution/CML-066.md`, `report/CML-066_curriculum_action_density_reduction.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-066A — Curriculum Action Density Live Deploy Smoke
+
+- HEAD partenza: `2947309`, tree pulita ✅
+- Tipo slice: deploy/smoke/documentazione — nessuna modifica runtime
+- **Fase 0** — stato locale: branch `main`, HEAD `2947309`, validazione PASS ✅
+- **Fase 1** — `git push origin main` (`b957a84..2947309`), workflow **success** ✅
+- **Fase 2** — smoke live su `https://antoniocorsano-boop.github.io/curmanlight/` ✅
+- 19/19 controlli live passati:
+  - Home a due aree invariata, card Curriculum e Didattica presenti
+  - Azioni secondarie raggiungibili via toggle
+  - Export/import/report, role-access gating, Tecnologia invariati
+  - Nessuna regressione `.cml`, nessun nuovo salvataggio
+  - Mobile responsive OK
+- **Fase 3** — documentazione creata
+- Runtime non modificato in CML-066A
+- Verdetto: `CML_066A_CURRICULUM_ACTION_DENSITY_LIVE_DEPLOY_SMOKE_READY`
+- Prossimo step: CML-067 — DIDATTICA_MODULE_SELECTION_AUDIT
+- Documentazione: `docs/03_execution/CML-066A.md`, `report/CML-066A_curriculum_action_density_live_deploy_smoke.md`, `docs/REPO-MOVELOG.md`
