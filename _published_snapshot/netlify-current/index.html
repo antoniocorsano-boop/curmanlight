@@ -738,6 +738,15 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
 .home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
 .home-card-note{font-size:10px;color:#90a4ae;margin:10px 0 0;font-style:italic;line-height:1.4}
+.home-microguide{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:14px 16px;margin-top:14px;border-left:3px solid var(--cml-primary)}
+.home-microguide-title{font-size:14px;font-weight:800;color:var(--cml-primary);margin:0 0 2px;display:flex;align-items:center;gap:6px}
+.home-microguide-subtitle{font-size:11px;color:var(--cml-text-secondary);margin:0 0 10px;line-height:1.4}
+.home-microguide-steps{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none}
+.home-microguide-step{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--cml-text);line-height:1.45}
+.home-microguide-step-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--cml-primary);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.home-microguide-step-text{flex:1;min-width:0}
+.home-microguide-footer{font-size:10px;color:var(--cml-text-muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--cml-divider);line-height:1.4;font-style:italic}
+@media(max-width:700px){.home-microguide{padding:12px}.home-microguide-title{font-size:13px}.home-microguide-step{font-size:11px}}
 .home-footer{background:#f5f7fa;border:1px solid #e0e0e0;border-radius:9px;padding:10px 14px;margin-top:16px}
 .home-footer p{font-size:11px;color:#78909c;line-height:1.5;margin:0}
 .export-group{background:#fff;border:1px solid #e0e0e0;border-radius:9px;padding:10px 14px;margin-bottom:10px}
@@ -873,7 +882,7 @@ footer{background:#1a1a1a;color:#78909c}
 .collapse-summary{color:#b0b0b0}
 .card-acts{background:rgba(255,255,255,.03);border-top-color:var(--cml-divider)}
 .act-delete{color:#ef5350}
-.norm-intro,.norm-card,.sum-box,.esport-group,.guida-card,.home-card,.export-group,
+.norm-intro,.norm-card,.sum-box,.esport-group,.guida-card,.home-card,.home-microguide,.export-group,
 .tecnologia-export-panel,.tecnologia-norm,.tecnologia-norm-unit,.didattica-evidence-unit,
 .didattica-uda-card,.tool-group,.department-import-panel,.quick-info-bar,.local-save-bar,
 .usage-notice,.tecnologia-norm-unit-body,.settings-school-box,.tab-generali .gen-card,
@@ -1116,6 +1125,18 @@ section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
             </div>
             <p class="home-card-note">Il primo modulo è disponibile: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a>. Gli altri moduli sono in fase di definizione.</p>
           </div>
+        </div>
+        <div class="home-microguide">
+          <div class="home-microguide-title">⏱ Usa CurManLight in 5 minuti</div>
+          <div class="home-microguide-subtitle">Segui il percorso minimo: leggi, confronta, decidi, esporta e condividi l'esito.</div>
+          <ol class="home-microguide-steps">
+            <li class="home-microguide-step"><span class="home-microguide-step-num">1</span><span class="home-microguide-step-text">Scegli una proposta di curricolo.</span></li>
+            <li class="home-microguide-step"><span class="home-microguide-step-num">2</span><span class="home-microguide-step-text">Confronta testo vigente e proposta 2025.</span></li>
+            <li class="home-microguide-step"><span class="home-microguide-step-num">3</span><span class="home-microguide-step-text">Decidi se confermare, modificare o discutere.</span></li>
+            <li class="home-microguide-step"><span class="home-microguide-step-num">4</span><span class="home-microguide-step-text">Esporta il file <code>.cml</code> per il passaggio successivo.</span></li>
+            <li class="home-microguide-step"><span class="home-microguide-step-num">5</span><span class="home-microguide-step-text">Il referente importa gli esiti e prepara la sintesi finale.</span></li>
+          </ol>
+          <div class="home-microguide-footer">La validazione finale resta a cura del gruppo di lavoro e degli organi competenti.</div>
         </div>
         <div class="home-footer">
           <p>La Home non modifica i dati. Curriculum e Didattica restano separati: il primo riguarda il documento istituzionale, la seconda il lavoro operativo in classe. Le azioni protette restano sotto codice operativo. Il curricolo normalizzato richiede validazione umana.</p>

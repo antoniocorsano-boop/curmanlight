@@ -1810,4 +1810,16 @@
   10. ✅ Schema `.cml`, export/import e role-access invariati
   11. ✅ CSS variables presenti live, header gradient via `var(--cml-header)`
 - Verdetto: `CML_078A_VISUAL_AFFINITY_ICONOGRAPHY_DARK_MODE_LIVE_SMOKE_READY`
-- Prossimo step: da definire
+- Prossimo step: CML-079 — microguida operativa home
+
+## 2026-06-23 — CML-079: Microguida Operativa Home
+
+- **0895319** — feat: add CML operational microguide on home
+  - Card "Usa CurManLight in 5 minuti" inserita nella Home tra le card e il footer
+  - 5 passaggi numerati: scegli → confronta → decidi → esporta → sintesi
+  - CSS classi `.home-microguide-*` con variabili CML-078, copertura dark mode
+  - Nessuna nuova funzione, nessuna modifica funzionale a export/import/role-access
+  - Nessuna dipendenza esterna, nessuno storage
+  - File: `index.html` (modificato), `docs/03_execution/CML-079.md`, `report/CML-079_*.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_079_MICROGUIDA_OPERATIVA_HOME_RUNTIME_INCREMENT_READY`
+- Prossimo step: CML-079A — microguida operativa home live smoke
