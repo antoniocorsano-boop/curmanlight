@@ -1915,3 +1915,16 @@
 - File: `report/CML-082A_didattica_area_completion_live_smoke.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_082A_DIDATTICA_AREA_COMPLETION_LIVE_SMOKE_PASS`
 - Prossimo step: da definire
+
+---
+
+## 2026-06-23 — CML-079B — HOME_MICROGUIDE_RENDERING_FIX
+
+- Tipo slice: runtime fix + docs
+- Causa: `@media(max-width:560px){` orfana alla riga 690 di `index.html` non chiusa — tutto il CSS Home/Didattica/microguida era intrappolato, invisibile su viewport >560px
+- Fix: rimozione della riga orfana (1 linea, solo CSS)
+- File modificati: `_published_snapshot/netlify-current/index.html`
+- Documenti creati: `docs/03_execution/CML-079B.md`, `report/CML-079B_home_microguide_rendering_fix.md`, `docs/REPO-MOVELOG.md`
+- Vincoli rispettati: nessuna nuova funzione, nessuna modifica a schema `.cml`, export/import, role-access, storage, dipendenze esterne
+- Verdetto: `CML_079B_HOME_MICROGUIDE_RENDERING_FIX_READY`
+- Prossimo step: CML-079C — HOME_MICROGUIDE_RENDERING_LIVE_SMOKE
