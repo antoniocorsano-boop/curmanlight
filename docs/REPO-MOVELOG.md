@@ -1872,3 +1872,14 @@
 - File: `index.html` (modificato), `docs/03_execution/CML-081.md`, `report/CML-081_curriculum_area_completion_runtime_increment.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_081_CURRICULUM_AREA_COMPLETION_RUNTIME_INCREMENT_READY`
 - Prossimo step: CML-081A — curriculum area live smoke
+
+## 2026-06-23 — CML-081A: Curriculum Area Completion — Live Smoke su GitHub Pages
+
+- **1f95a99** — verificata su GitHub Pages
+- 11/11 verifiche superate: path guidance, coverage banner, per-discipline summary, next-action callout, ordine counts
+- Link a Revisione, Definitivo, Esporta, sezioni generali funzionanti
+- Nessuna modifica ad altri tab, schema `.cml`, export/import, role-access
+- Nessuna dipendenza esterna, dark mode compatibile
+- File: `report/CML-081A_curriculum_area_completion_live_smoke.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_081A_CURRICULUM_AREA_COMPLETION_LIVE_SMOKE_READY`
+- Prossimo step: da definire
