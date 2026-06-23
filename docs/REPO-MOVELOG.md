@@ -1843,4 +1843,15 @@
   11. ✅ Nessuna modifica funzionale (nessuna nuova funzione JS, nessun flusso alterato)
 - File: `report/CML-079A_microguida_operativa_home_live_smoke.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_079A_MICROGUIDA_OPERATIVA_HOME_LIVE_SMOKE_READY`
-- Prossimo step: da definire
+- Prossimo step: CML-080 — curriculum and didattica completion selection audit
+
+## 2026-06-23 — CML-080: Curriculum and Didattica Completion Selection Audit
+
+- Audit delle aree centrali: Curriculum (4 sub-tab funzionanti) e Didattica (2 prototipi, 2 non implementati)
+- Gap principale Curriculum: mancano indicazioni esplicite sul percorso consulta→revisione→decisione
+- Gap principale Didattica: prototipi read-only, manca valore operativo per il docente
+- Opzioni analizzate: A (Curriculum prima), B (Didattica prima), C (entrambe), D (audit poi separati)
+- Raccomandazione: **Option A** — completare Curriculum prima, poi Didattica
+- File: `docs/03_execution/CML-080.md`, `report/CML-080_curriculum_and_didattica_completion_selection_audit.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_080_CURRICULUM_AND_DIDATTICA_COMPLETION_SELECTION_AUDIT_READY`
+- Prossimo step: attendere conferma selezione, poi CML-081 (Curriculum runtime)
