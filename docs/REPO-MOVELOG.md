@@ -1499,3 +1499,24 @@
 - Verdetto: `CML_067_DIDATTICA_MODULE_SELECTION_AUDIT_READY`
 - Prossimo step: CML-068 — DIDATTICA_FIRST_READONLY_PROTOTYPE
 - Documentazione: `docs/03_execution/CML-067.md`, `report/CML-067_didattica_module_selection_audit.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-068 — Didattica First Read-Only Prototype (Valutazione/Evidenze)
+
+- HEAD partenza: `23656a6`, tree sporca (uncommitted modifiche runtime index.html) ✅
+- Tipo slice: runtime + docs — primo prototype read-only dell'area Didattica
+- **Unico file runtime modificato**: `_published_snapshot/netlify-current/index.html` (~+340/−3 righe)
+- **Modifiche apportate:**
+  1. CSS: classe `.didattica-evidence-*` per stats, filter, unit card, note
+  2. HTML: `#tab-didattica` con stats, filter bar, `#didattica-evidence-list`
+  3. Tabbar: pulsante "Didattica" tra Home e Lavoro
+  4. Home card Didattica: primo link attivo ("Valuta evidenze"), altri tre dimessi (`#`)
+  5. Mobile menu: voce "🧑‍🏫 Didattica — Valutazione ed evidenze"
+  6. `setTab()`: estesa per routing didattica, breadcrumb label, mbb-map
+  7. JS: variabile globale `TECNOLOGIA_NORM_DATA` (13 unità con evidenze, criteriValutazione) + `renderDidattica()` (filter, expandable cards) + `setDidatticaFilter()`
+- **Non modificato**: schema `.cml`, Curriculum (`DATA`, export/import/report), role-access (`CML2025`), CML2025 unlock/blocca, `localStorage`/`sessionStorage`, backend/API
+- **Validazione:** JS_PARSE_OK ✅, ALL_KYWD_CHECKS_OK ✅, Validazione Tecnologia: 13 unità/valid=true ✅, Audit: buttonTags 100, exportButtons 27 (invariati), CML2025 refs 1, locks presenti ✅
+- **Nessun deploy**
+- Verdetto: `CML_068_DIDATTICA_FIRST_READONLY_PROTOTYPE_READY`
+- Documentazione: `docs/03_execution/CML-068.md`, `report/CML-068_didattica_first_readonly_prototype.md`, `docs/REPO-MOVELOG.md`

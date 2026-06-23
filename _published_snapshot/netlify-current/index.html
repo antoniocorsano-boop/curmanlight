@@ -672,6 +672,40 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .home-card-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
 .home-card-links a,.home-card-links span{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;border:1px solid #c5cae9;background:#fff;color:#1a237e;font-size:11px;font-weight:700;cursor:pointer;text-decoration:none;transition:.1s;white-space:nowrap}
 .home-card-links a:hover{background:#e8eaf6;border-color:#9fa8da}
+/* DIDATTICA EVIDENCE */
+.didattica-evidence{max-width:960px;margin:0 auto}
+.didattica-evidence-header{background:linear-gradient(135deg,#00695c,#00897b);color:#fff;border-radius:9px 9px 0 0;padding:14px 18px}
+.didattica-evidence-header h2{font-size:16px;font-weight:800;margin:0 0 3px}
+.didattica-evidence-header p{font-size:11px;opacity:.85;line-height:1.5;margin:0}
+.didattica-evidence-box{background:#fff8e1;border:1px solid #ffe082;border-left:3px solid #f9a825;border-radius:9px;padding:10px 14px;margin:10px 0;font-size:11px;color:#5d4037;line-height:1.5}
+.didattica-evidence-box strong{color:#3e2723}
+.didattica-evidence-stats{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.didattica-evidence-stat{background:#f5f7fa;border:1px solid #e0e0e0;border-radius:8px;padding:7px 10px;font-size:12px;color:#37474f;min-width:72px;text-align:center}
+.didattica-evidence-stat strong{display:block;font-size:16px;color:#00897b}
+.didattica-evidence-filters{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 10px}
+.didattica-evidence-filter{border:1px solid #cfd8dc;background:#fff;color:#455a64;padding:5px 10px;border-radius:16px;font-size:11px;font-weight:700;cursor:pointer;transition:.12s}
+.didattica-evidence-filter:hover{background:#e0f2f1;border-color:#80cbc4}
+.didattica-evidence-filter.active{background:#00897b;color:#fff;border-color:#00897b}
+.didattica-evidence-list{margin-top:4px}
+.didattica-evidence-unit{background:#fff;border:1px solid #e0e0e0;border-radius:9px;margin-bottom:8px;overflow:hidden}
+.didattica-evidence-unit-hd{background:#f5f7fa;padding:9px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;border-bottom:1px solid transparent;transition:.12s}
+.didattica-evidence-unit-hd:hover{background:#eef0f5}
+.didattica-evidence-unit-hd.open{border-bottom-color:#e0e0e0}
+.didattica-evidence-unit-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.didattica-evidence-tag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;background:#e0f2f1;color:#00695c;white-space:nowrap;flex-shrink:0}
+.didattica-evidence-unit-ambito{font-size:12px;font-weight:700;color:#37474f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.didattica-evidence-unit-sub{font-size:11px;color:#546e7a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
+.didattica-evidence-unit-arrow{font-size:12px;color:#78909c;flex-shrink:0;transition:.15s}
+.didattica-evidence-unit-hd.open .didattica-evidence-unit-arrow{transform:rotate(180deg)}
+.didattica-evidence-unit-body{display:none;padding:10px 14px;background:#fff}
+.didattica-evidence-unit-body.open{display:block}
+.didattica-evidence-section{margin-bottom:10px}
+.didattica-evidence-section:last-child{margin-bottom:0}
+.didattica-evidence-section-title{font-size:11px;font-weight:800;color:#00695c;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.didattica-evidence-section ul{margin:0;padding-left:18px;font-size:12px;color:#333;line-height:1.5}
+.didattica-evidence-section ul li{margin-bottom:2px}
+.didattica-evidence-note{font-size:11px;color:#78909c;margin-top:4px;font-style:italic}
+.didattica-evidence-footer{background:#e0f2f1;border-radius:0 0 9px 9px;padding:10px 14px;font-size:10px;color:#00695c;line-height:1.45;text-align:center}
 .home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
 .home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
 .home-card-note{font-size:10px;color:#90a4ae;margin:10px 0 0;font-style:italic;line-height:1.4}
@@ -713,6 +747,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 </header>
 <div class="tabbar">
   <button class="active" onclick="setTab('home')">🏠 Home</button>
+  <button onclick="setTab('didattica')">🧑‍🏫 Didattica</button>
   <button onclick="setTab('lavoro')">✏️ Revisione per disciplina</button>
   <button onclick="setTab('riepilogo')">📋 Curricolo definitivo</button>
   <button onclick="setTab('normativa')">📜 Riferimenti normativi</button>
@@ -785,18 +820,42 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
             </div>
             <p class="home-card-text">Trasforma il curricolo in lavoro didattico: UDA, attività, materiali, consegne, evidenze e valutazione.</p>
             <div class="home-card-badge">Area in preparazione</div>
-            <div class="home-card-links home-card-links-dimmed">
+            <div class="home-card-links">
+              <a href="#" onclick="setTab('didattica');return false">📊 Valuta evidenze</a>
               <span>📋 Progetta UDA</span>
               <span>🧪 Prepara attività</span>
-              <span>📊 Valuta evidenze</span>
               <span>📁 Materiali per la classe</span>
             </div>
-            <p class="home-card-note">Le funzioni didattiche sono in fase di definizione e saranno attivate nelle prossime versioni.</p>
+            <p class="home-card-note">Il primo modulo è disponibile: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a>. Gli altri moduli sono in fase di definizione.</p>
           </div>
         </div>
         <div class="home-footer">
           <p>La Home non modifica i dati. Curriculum e Didattica restano separati: il primo riguarda il documento istituzionale, la seconda il lavoro operativo in classe. Le azioni protette restano sotto codice operativo. Il curricolo normalizzato richiede validazione umana.</p>
         </div>
+      </div>
+    </div>
+    <!-- TAB DIDATTICA -->
+    <div id="tab-didattica" style="display:none">
+      <div class="didattica-evidence">
+        <div class="didattica-evidence-header">
+          <h2>🧑‍🏫 Didattica — Valutazione ed evidenze</h2>
+          <p>Primo prototipo read-only: collega le unità curricolari di Tecnologia a evidenze osservabili e criteri di valutazione. Da adattare alla classe e da validare dal docente.</p>
+        </div>
+        <div class="didattica-evidence-box">
+          <strong>🔨 Area in costruzione</strong><br>
+          • Nessun dato viene salvato<br>
+          • Non sostituisce la valutazione professionale del docente<br>
+          • Contenuti collegati al pacchetto <strong>Tecnologia normalizzato</strong> (Curriculum → Consultazione)
+        </div>
+        <div class="didattica-evidence-stats" id="didattica-evidence-stats"></div>
+        <div class="didattica-evidence-filters" id="didattica-evidence-filters">
+          <button class="didattica-evidence-filter active" onclick="setDidatticaFilter('all',this)">Tutti</button>
+          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Infanzia',this)">🧸 Infanzia</button>
+          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Primaria',this)">📘 Primaria</button>
+          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Secondaria',this)">🎓 Secondaria</button>
+        </div>
+        <div class="didattica-evidence-list" id="didattica-evidence-list"></div>
+        <div class="didattica-evidence-footer">Prototipo read-only · Nessun dato viene salvato · Richiede validazione professionale del docente · Non costituisce documento istituzionale approvato · Da adattare alla classe</div>
       </div>
     </div>
     <!-- TAB LAVORO -->
@@ -1363,6 +1422,75 @@ traguardi:[
 {id:"rc_ob_sec1",ordine:"Secondaria",classe:"Cl. 1ª-2ª-3ª",testo:"Conoscere le religioni monoteiste. Riflettere sul senso della vita.",status:"modifica",proposto:"Religioni monoteiste e radici storiche; valori etici condivisi; dialogo interreligioso come valore civico. [IN 2025: dialogo interreligioso come dimensione civica]",decisione:null,testoFinale:null},
 ]},
 };
+
+// ================================================================
+// TECNOLOGIA NORMALIZED DATA — Didattica read-only prototype
+// ================================================================
+var TECNOLOGIA_NORM_DATA = {"schemaVersion":"cml-normalized-curriculum-v1","disciplina":"Tecnologia","humanValidationRequired":true,"unitaApprendimento":[
+{"id":"tec_inf_3_001","ordine":"Infanzia","classe":null,"fascia":"3-4","ambito":"Osservazione e analisi di oggetti, strumenti e ambienti","competenza":"Esplora gli oggetti e i materiali dell'ambiente usando i sensi e le prime mani","traguardo":"Il bambino usa con familiarità le tecnologie a disposizione nell'ambiente","obiettivi":["Usare LIM e tablet in modo guidato","Esplorare materiali diversi con mani e sensi","Riconoscere oggetti tecnologici semplici"],"conoscenze":["Concetto di materiale (duro, morbido, liscio, ruvido)","Oggetti tecnologici domestici (telefono, lampada)","Senso del tatto e vista per esplorare"],"abilita":["Toccare e manipolare materiali diversi","Accendere e spegnere un oggetto tecnologico semplice","Indicare parti di un oggetto"],"evidenze":["Il bambino riconosce materiali diversi al tatto","Il bambino usa tablet per disegnare con il dito","Il bambino accende la LIM quando richiesto"],"criteriValutazione":["Curiosit\u00e0 nell'esplorazione","Capacit\u00e0 di discriminare materiali","Attenzione alle indicazioni"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_inf_5_001","ordine":"Infanzia","classe":null,"fascia":"5","ambito":"Digitale, dati, procedure e sicurezza","competenza":"Utilizza semplici strumenti digitali in modo guidato per esplorare e rappresentare","traguardo":"Il bambino sa orientarsi tra i mezzi di comunicazione","obiettivi":["Usare tablet per scattare foto e fare video brevi","Seguire istruzioni sequenziali semplici (algoritmo)","Collaborare con pari tramite strumento digitale"],"conoscenze":["Concetto di algoritmo come sequenza di passi","Funzioni base di tablet e fotocamera","Regole di sicurezza nell'uso di strumenti digitali"],"abilita":["Scattare una foto e selezionarla","Eseguire sequenze di comandi semplici","Spegnere e riporre correttamente il dispositivo"],"evidenze":["Il bambino produce 3 foto di oggetti della classe","Il bambino segue una sequenza a 3 passi","Il bambino condivide il tablet col compagno"],"criteriValutazione":["Precisione nell'esecuzione","Rispetto delle regole","Collaborazione"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_pri_1_001","ordine":"Primaria","classe":"1","fascia":null,"ambito":"Osservazione e analisi di oggetti, strumenti e ambienti","competenza":"Osserva e descrive oggetti tecnologici riconoscendone funzione, materiali e funzionamento semplice","traguardo":"L'alunno si orienta tra i diversi mezzi di comunicazione","obiettivi":["Osservare e descrivere oggetti tecnologici","Riconoscere materiali diversi","Sperimentare il corretto utilizzo di strumenti"],"conoscenze":["Materiali naturali e artificiali","Strumenti tecnologici domestici e scolastici","Categorie di oggetti per funzione"],"abilita":["Descrivere un oggetto usando termini appropriati","Confrontare materiali per propriet\u00e0","Utilizzare correttamente un oggetto tecnologico semplice"],"evidenze":["L'alunno classifica oggetti per funzione","L'alunno descrive materiali usando corretti aggettivi","L'alunno utilizza correttamente forbici e colla"],"criteriValutazione":["Correttezza lessicale","Capacit\u00e0 di classificazione","Attenzione alla sicurezza"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_pri_2_001","ordine":"Primaria","classe":"2","fascia":null,"ambito":"Materiali e trasformazioni","competenza":"Riconosce propriet\u00e0 di materiali e tecniche semplici di trasformazione","traguardo":"L'alunno inizia a riconoscere in modo critico le caratteristiche della tecnologia","obiettivi":["Sperimentare trasformazioni di materiali","Riconoscere propriet\u00e0 fisiche semplici","Collegare materiali a usi specifici"],"conoscenze":["Propriet\u00e0 dei materiali (durezza, flessibilit\u00e0, trasparenza)","Trasformazioni semplici (tagliare, piegare, assemblare)","Materiali riciclati versus vergini"],"abilita":["Eseguire tagli e piegature","Assemblare pezzi con colla e graffette","Scegliere materiale adatto allo scopo"],"evidenze":["L'alunno produce un manufatto con 3 materiali diversi","L'alunno spiega perch\u00e9 ha scelto quel materiale","L'alunno riconosce materiale riciclato da vergine"],"criteriValutazione":["Correttezza esecuzione","Consapevolezza delle scelte","Precisione nel lavoro"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_pri_3_001","ordine":"Primaria","classe":"3","fascia":null,"ambito":"Disegno, rappresentazione e progettazione","competenza":"Realizza elaborati grafici e progettuali semplici","traguardo":"L'alunno sa rappresentare oggetti e spazi con il disegno tecnico","obiettivi":["Eseguire disegni a mano libera con proporzioni","Usare righello, squadra e compasso base","Creare un semplice progetto grafico"],"conoscenze":["Elementi del disegno tecnico (linee, forme, quote)","Strumenti da disegno e loro uso","Software di disegno base (Paint, Tux Paint)"],"abilita":["Riprodurre una forma geometrica con strumenti","Misurare con righello in centimetri","Realizzare un disegno a colori al computer"],"evidenze":["L'alunno produce un disegno tecnico con 3 quote","L'alunno usa righello senza errori di misura","L'alunno crea un disegno digitale su software"],"criteriValutazione":["Pulizia del grafico","Precisione misure","Uso corretto degli strumenti"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_pri_4_001","ordine":"Primaria","classe":"4","fascia":null,"ambito":"Energia, sostenibilit\u00e0 e ambiente","competenza":"Riconosce fonti di energia e semplici principi di sostenibilit\u00e0","traguardo":"L'alunno conosce le fonti di energia rinnovabili e non","obiettivi":["Distinguere fonti rinnovabili e non rinnovabili","Calcolare il consumo energetico di un oggetto","Progettare un comportamento sostenibile"],"conoscenze":["Fonti di energia (sole, vento, acqua, carbone, petrolio)","Concetto di kWh","Rifiuti: differenziata, recupero, riciclo"],"abilita":["Leggere un'etichetta energetica","Calcolare il risparmio spegnendo luci inutili","Separare correttamente i rifiuti"],"evidenze":["L'alunno classifica 5 fonti energetiche","L'alunno calcola il consumo settimanale della classe","L'alunno progetta una routine di risparmio"],"criteriValutazione":["Correttezza concettuale","Applicazione pratica","Coinvolgimento personale"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_pri_5_001","ordine":"Primaria","classe":"5","fascia":null,"ambito":"Cittadinanza tecnologica e uso responsabile","competenza":"Usa la rete internet e i dispositivi digitali in modo consapevole","traguardo":"L'alunno sa orientarsi tra i mezzi di comunicazione digitale","obiettivi":["Riconoscere rischi e opportunit\u00e0 di internet","Saper cercare informazioni valutando le fonti","Utilizzare comunicazione digitale rispettosa"],"conoscenze":["Rischi della rete (fake news, cyberbullismo, privacy)","Criteri di attendibilit\u00e0 di una fonte","Regole di cittadinanza digitale"],"abilita":["Verificare autore e data di una notizia","Configurare impostazioni privacy base","Scrivere un messaggio rispettoso"],"evidenze":["L'alunno scheda 2 notizie distinguendo vere da false","L'alunno modifica impostazioni privacy di un account","L'alunno scrive un post rispettoso per il blog di classe"],"criteriValutazione":["Capacit\u00e0 critica","Rispetto delle regole","Qualit\u00e0 della comunicazione"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_sec_1_001","ordine":"Secondaria","classe":"1","fascia":null,"ambito":"Disegno, rappresentazione e progettazione","competenza":"Progetta e realizza rappresentazioni grafiche con strumenti di disegno tecnico","traguardo":"L'alunno riconosce i principali sistemi tecnologici e le loro relazioni","obiettivi":["Leggere e interpretare semplici disegni tecnici","Analizzare oggetti d'uso comune","Produrre elaborati grafici in scala con CAD base"],"conoscenze":["Convenzioni del disegno tecnico (viste, scale, quotatura)","Strumenti da disegno e software CAD","Sistemi di rappresentazione (prospettiva, assonometria)"],"abilita":["Eseguire un disegno tecnico a mano","Produrre un disegno CAD con quote","Calcolare scale di rappresentazione"],"evidenze":["L'alunno produce un disegno con 3 viste","L'alunno calcola scala 1:100","L'alunno esegue un CAD semplice di una casa"],"criteriValutazione":["Correttezza convenzioni","Precisione esecutiva","Uso autonomo del software"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_sec_1_002","ordine":"Secondaria","classe":"1","fascia":null,"ambito":"Digitale, dati, procedure e sicurezza","competenza":"Utilizza le tecnologie dell'informazione per comunicare, calcolare, ricercare e archiviare dati","traguardo":"L'alunno \u00e8 consapevole delle potenzialit\u00e0 e dei limiti delle tecnologie digitali","obiettivi":["Conoscere componenti hardware di un computer","Usare software applicativi (videoscrittura, fogli di calcolo)","Navigare in rete in modo sicuro e critico"],"conoscenze":["Hardware: CPU, RAM, periferiche","Software: sistema operativo, applicativi","Netiquette e regole di sicurezza"],"abilita":["Creare un documento di testo formattato","Realizzare un grafico con foglio di calcolo","Cercare informazioni valutando fonti"],"evidenze":["L'alunno produce un documento di 1 pagina","L'alunno realizza un grafico a torta","L'alunno scheda 3 fonti attendibili"],"criteriValutazione":["Correttezza formale","Capacit\u00e0 di organizzazione","Attenzione alla sicurezza"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_sec_2_001","ordine":"Secondaria","classe":"2","fascia":null,"ambito":"Materiali e trasformazioni","competenza":"Analizza oggetti e materiali del contesto locale","traguardo":"L'alunno conosce i processi produttivi del territorio","obiettivi":["Individuare materiali tipici del territorio","Ricostruire il ciclo produttivo di un oggetto","Collegare propriet\u00e0 dei materiali a usi specifici"],"conoscenze":["Materiali locali (pietra, legno, ceramica)","Processi produttivi tradizionali e industriali","Propriet\u00e0 fisiche e chimiche base"],"abilita":["Classificare materiali per provenienza","Descrivere il ciclo produttivo di un oggetto","Associare propriet\u00e0 a destinazioni d'uso"],"evidenze":["L'alunno descrive il ciclo produttivo di 2 oggetti","L'alunno classifica 5 materiali del territorio","L'alunno propone un materiale alternativo"],"criteriValutazione":["Correttezza informazioni","Capacit\u00e0 di connessione","Qualit\u00e0 dell'analisi"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_sec_2_002","ordine":"Secondaria","classe":"2","fascia":null,"ambito":"Energia, sostenibilit\u00e0 e ambiente","competenza":"Valuta l'impatto ambientale di sistemi tecnologici","traguardo":"L'alunno conosce le fonti di energia e i comportamenti sostenibili","obiettivi":["Calcolare l'efficienza energetica di un sistema","Confrontare soluzioni di mobilit\u00e0 sostenibile","Progettare un impianto fotovoltaico semplice"],"conoscenze":["Fonti rinnovabili e non rinnovabili","Efficienza energetica e bolletta","Mobilit\u00e0 sostenibile (bici, elettrico, sharing)"],"abilita":["Analizzare un certificato energetico","Calcolare risparmio energetico annuale","Progettare un sistema fotovoltaico in scala"],"evidenze":["L'alunno analizza un attestato di prestazione energetica","L'alunno calcola risparmio di una classe 1A","L'alunno disegna un impianto fotovoltaico"],"criteriValutazione":["Correttezza calcoli","Qualit\u00e0 della proposta","Attendibilit\u00e0 delle fonti"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_sec_3_001","ordine":"Secondaria","classe":"3","fascia":null,"ambito":"Digitale, dati, procedure e sicurezza","competenza":"Sviluppa semplici programmi e automazioni con pensiero computazionale","traguardo":"L'alunno utilizza le tecnologie digitali in modo critico e consapevole","obiettivi":["Scrivere semplici algoritmi in Scratch o Python","Comprendere variabili, cicli e condizioni","Applicare la programmazione a problemi reali"],"conoscenze":["Concetti base di programmazione (variabile, ciclo, condizione)","Linguaggi visuali (Scratch) e testuali (Python base)","Debugging e testing di codice"],"abilita":["Scrivere un programma che risolve un problema","Eseguire debugging di un codice","Documentare il proprio codice"],"evidenze":["L'alunno presenta un progetto Scratch funzionante","L'alunno documenta il codice con commenti","L'alunno risolve un problema in Python"],"criteriValutazione":["Correttezza logica","Funzionalit\u00e0 del programma","Chiarezza della documentazione"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"},
+{"id":"tec_sec_3_002","ordine":"Secondaria","classe":"3","fascia":null,"ambito":"Cittadinanza tecnologica e uso responsabile","competenza":"Analizza dilemmi etici e impatti sociali delle tecnologie","traguardo":"L'alunno \u00e8 consapevole delle implicazioni etiche e sociali delle tecnologie","obiettivi":["Analizzare casi di impatto tecnologico","Riconoscere diritti e doveri nel digitale","Proporre soluzioni etiche a problemi tecnologici"],"conoscenze":["Privacy, dati personali e GDPR base","Diritti d'autore e licenze open","Impatto ambientale dei dispositivi elettronici"],"abilita":["Analizzare un caso di privacy violation","Valutare licenze di utilizzo di contenuti","Proporre una policy aziendale per sostenibilit\u00e0"],"evidenze":["L'alunno redige un caso di studio su privacy","L'alunno presenta una relazione su diritti d'autore","L'alunno propone 3 azioni per ridurre e-waste"],"criteriValutazione":["Approfondimento analisi","Correttezza giuridica","Qualit\u00e0 delle proposte"],"fonte":"Indicazioni Nazionali 2012, D.M. 254/2012"}
+]};
+var didatticaFilter="all";
+function renderDidattica(){
+  var container=document.getElementById("didattica-evidence-list");
+  if(!container)return;
+  var statsEl=document.getElementById("didattica-evidence-stats");
+  var units=TECNOLOGIA_NORM_DATA.unitaApprendimento;
+  var total=units.length;
+  var inf=units.filter(function(u){return u.ordine==="Infanzia"}).length;
+  var pri=units.filter(function(u){return u.ordine==="Primaria"}).length;
+  var sec=units.filter(function(u){return u.ordine==="Secondaria"}).length;
+  statsEl.innerHTML='<div class="didattica-evidence-stat"><strong>'+total+'</strong>Unit\u00e0 totali</div><div class="didattica-evidence-stat"><strong>'+inf+'</strong>Infanzia</div><div class="didattica-evidence-stat"><strong>'+pri+'</strong>Primaria</div><div class="didattica-evidence-stat"><strong>'+sec+'</strong>Secondaria</div><div class="didattica-evidence-stat">Prototipo</div>';
+  var filtered=didatticaFilter==="all"?units:units.filter(function(u){return u.ordine===didatticaFilter});
+  var html="";
+  for(var i=0;i<filtered.length;i++){
+    var u=filtered[i];
+    var ordLabel=u.ordine==="Infanzia"?"\ud83e\uddf8":u.ordine==="Primaria"?"\ud83d\udcd8":"\ud83c\udf93";
+    var classeLabel=u.fascia?"Fascia "+u.fascia:"Classe "+u.classe;
+    html+='<div class="didattica-evidence-unit"><div class="didattica-evidence-unit-hd" onclick="this.classList.toggle(\'open\');var b=this.nextElementSibling;b.classList.toggle(\'open\')"><div class="didattica-evidence-unit-left"><span class="didattica-evidence-tag">'+ordLabel+' '+u.ordine+'</span><div><div class="didattica-evidence-unit-ambito">'+escapeHtml(u.ambito)+'</div><div class="didattica-evidence-unit-sub">'+escapeHtml(classeLabel)+' \u00b7 '+escapeHtml(u.competenza)+'</div></div></div><span class="didattica-evidence-unit-arrow">\u25bc</span></div><div class="didattica-evidence-unit-body"><div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Traguardo</div><p style="font-size:12px;color:#333;line-height:1.5;margin:0 0 6px">'+escapeHtml(u.traguardo)+'</p></div>';
+    if(u.obiettivi&&u.obiettivi.length){
+      html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Obiettivi</div><ul>';
+      for(var j=0;j<u.obiettivi.length;j++) html+='<li>'+escapeHtml(u.obiettivi[j])+'</li>';
+      html+='</ul></div>';
+    }
+    if(u.conoscenze&&u.conoscenze.length){
+      html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Conoscenze</div><ul>';
+      for(var j=0;j<u.conoscenze.length;j++) html+='<li>'+escapeHtml(u.conoscenze[j])+'</li>';
+      html+='</ul></div>';
+    }
+    if(u.abilita&&u.abilita.length){
+      html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Abilit\u00e0</div><ul>';
+      for(var j=0;j<u.abilita.length;j++) html+='<li>'+escapeHtml(u.abilita[j])+'</li>';
+      html+='</ul></div>';
+    }
+    html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u2705 Evidenze osservabili</div><ul>';
+    for(var j=0;j<u.evidenze.length;j++) html+='<li>'+escapeHtml(u.evidenze[j])+'</li>';
+    html+='</ul></div>';
+    html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\ud83d\udccb Criteri di valutazione</div><ul>';
+    for(var j=0;j<u.criteriValutazione.length;j++) html+='<li>'+escapeHtml(u.criteriValutazione[j])+'</li>';
+    html+='</ul></div>';
+    html+='<div class="didattica-evidence-note">\ud83d\udca1 Da adattare alla classe. Le evidenze e i criteri sono indicativi e richiedono validazione professionale del docente.</div>';
+    html+='<div class="didattica-evidence-note" style="margin-top:2px">\ud83d\udcc4 Fonte: '+escapeHtml(u.fonte)+'</div>';
+    html+='</div></div>';
+  }
+  container.innerHTML=html||'<p style="color:#78909c;font-size:12px;text-align:center;padding:20px">Nessuna unit\u00e0 per questo ordine.</p>';
+}
+function setDidatticaFilter(f,btn){
+  didatticaFilter=f;
+  document.querySelectorAll(".didattica-evidence-filter").forEach(function(b){b.classList.toggle("active",b===btn)});
+  renderDidattica();
+}
 
 // ================================================================
 // ================================================================
@@ -1979,20 +2107,22 @@ function renderRiepilogo(){
 function setTab(t){
   currentTab=t;
   document.getElementById("tab-home").style.display=t==="home"?"block":"none";
+  document.getElementById("tab-didattica").style.display=t==="didattica"?"block":"none";
   document.getElementById("tab-lavoro").style.display=t==="lavoro"?"block":"none";
   document.getElementById("tab-riepilogo").style.display=t==="riepilogo"?"block":"none";
   document.getElementById("tab-normativa").style.display=t==="normativa"?"block":"none";
   document.getElementById("tab-generali").style.display=t==="generali"?"block":"none";
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
+  if(t==="didattica") renderDidattica();
   const cruscotto=document.getElementById("cruscotto");
-  if(cruscotto) cruscotto.hidden=t==="home";
+  if(cruscotto) cruscotto.hidden=t==="home"||t==="didattica";
   const breadcrumbEl=document.getElementById("breadcrumb");
-  if(breadcrumbEl) breadcrumbEl.hidden=t==="home";
+  if(breadcrumbEl) breadcrumbEl.hidden=t==="home"||t==="didattica";
   document.querySelectorAll(".tabbar button").forEach((b,i)=>{
-    const map=["home","lavoro","riepilogo","normativa","generali","curricolo"];
+    const map=["home","didattica","lavoro","riepilogo","normativa","generali","curricolo"];
     b.classList.toggle("active",map[i]===t);
   });
-  const mbbMap={home:"mbb-home",lavoro:"mbb-rev",riepilogo:"mbb-def",normativa:"mbb-more",generali:"mbb-more",curricolo:"mbb-cur"};
+  const mbbMap={home:"mbb-home",didattica:"mbb-home",lavoro:"mbb-rev",riepilogo:"mbb-def",normativa:"mbb-more",generali:"mbb-more",curricolo:"mbb-cur"};
   document.querySelectorAll(".mbb-btn").forEach(b=>{
     b.classList.toggle("mbb-active",b.id===mbbMap[t]);
   });
@@ -2005,7 +2135,7 @@ function setTab(t){
     }
   }
   if(breadcrumbEl){
-    const labels={home:"Home",lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali",curricolo:"Curricolo di istituto"};
+    const labels={home:"Home",didattica:"Didattica — Valutazione ed evidenze",lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali",curricolo:"Curricolo di istituto"};
     breadcrumbEl.innerHTML='<span class="crumb-current">'+labels[t]+'</span>';
   }
   if(t==="riepilogo") renderRiepilogo();
@@ -3230,6 +3360,7 @@ function toggleMobileMenu(){
   overlay.onclick=function(e){if(e.target===this)this.remove()};
   overlay.innerHTML='<div class="mobile-menu-panel">\
     <div class="mm-title">📖 Consultazione</div>\
+    <button class="mm-item" onclick="setTab(\'didattica\');this.closest(\'.mobile-menu-overlay\').remove()">🧑‍🏫 Didattica — Valutazione ed evidenze</button>\
     <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Riferimenti normativi</button>\
     <button class="mm-item" onclick="setTab(\'generali\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Sezioni generali</button>\
     <button class="mm-item" onclick="setTab(\'curricolo\');this.closest(\'.mobile-menu-overlay\').remove()">🏫 Curricolo di istituto</button>\
