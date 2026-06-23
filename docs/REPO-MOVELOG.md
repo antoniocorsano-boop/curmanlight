@@ -1823,3 +1823,24 @@
   - File: `index.html` (modificato), `docs/03_execution/CML-079.md`, `report/CML-079_*.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_079_MICROGUIDA_OPERATIVA_HOME_RUNTIME_INCREMENT_READY`
 - Prossimo step: CML-079A — microguida operativa home live smoke
+
+## 2026-06-23 — CML-079A: Microguida Operativa Home — Live Smoke su GitHub Pages
+
+- **9be3595** (stesso commit del CML-079) — verificata su GitHub Pages
+- Microguida visibile in Home, 5 passaggi leggibili, icona ⏱, responsive, dark mode copertura
+- Nessuna modifica funzionale, nessuna dipendenza esterna, schema `.cml`/export/import/role-access invariati
+- **11/11 verifiche superate:**
+  1. ✅ URL pubblico aggiornato
+  2. ✅ Microguida visibile in Home — card "⏱ Usa CurManLight in 5 minuti" presente
+  3. ✅ Titolo con ⏱ — icona a orologio visibile
+  4. ✅ 5 passaggi leggibili con badge numerato
+  5. ✅ Mobile compatibile (responsive con media query 700px)
+  6. ✅ Dark mode compatibile (CSS variables CML-078)
+  7. ✅ Nessun overflow orizzontale
+  8. ✅ Validazione umana esplicita: "La validazione finale resta a cura del gruppo di lavoro e degli organi competenti."
+  9. ✅ Schema `.cml`, export/import, role-access invariati
+  10. ✅ Nessuna dipendenza esterna introdotta
+  11. ✅ Nessuna modifica funzionale (nessuna nuova funzione JS, nessun flusso alterato)
+- File: `report/CML-079A_microguida_operativa_home_live_smoke.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_079A_MICROGUIDA_OPERATIVA_HOME_LIVE_SMOKE_READY`
+- Prossimo step: da definire
