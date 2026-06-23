@@ -1704,3 +1704,16 @@
 - Solo `index.html` modificato (+91, -10), nessuna funzione JS toccata
 - Validazione: Tecnologia 13 unit valid:true, 14 discipline, 35 exportButtons
 - Documentazione: `docs/03_execution/CML-074.md`, `report/CML-074_professional_layout_visual_system_runtime_increment.md`
+
+## 2026-06-23 — CML-074A Professional layout visual system live smoke
+
+- **ed8caa4** — Push su `origin/main` → GitHub Pages deploy automatico
+- URL live verificato: `https://antoniocorsano-boop.github.io/curmanlight/`
+- 15 controlli smoke: PASS tutti
+  - Caricamento pagina, layout visivo, navigazione, sub-nav, mobile bar
+  - Azioni libere accessibili, azioni protette gated (CML2025)
+  - Badge design system visibili (📋 Prototipo, 🔒 Read-only, In preparazione)
+  - Nessuna regressione su export, import, schema, role-access
+- Nessuna modifica funzionale introdotta
+- Verdetto: `CML_074A_PROFESSIONAL_LAYOUT_VISUAL_SYSTEM_LIVE_DEPLOY_SMOKE_READY`
+- Documentazione: `docs/03_execution/CML-074A.md`, `report/CML-074A_professional_layout_visual_system_live_deploy_smoke.md`
