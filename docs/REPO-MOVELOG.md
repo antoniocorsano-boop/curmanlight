@@ -1928,3 +1928,14 @@
 - Vincoli rispettati: nessuna nuova funzione, nessuna modifica a schema `.cml`, export/import, role-access, storage, dipendenze esterne
 - Verdetto: `CML_079B_HOME_MICROGUIDE_RENDERING_FIX_READY`
 - Prossimo step: CML-079C — HOME_MICROGUIDE_RENDERING_LIVE_SMOKE
+
+---
+
+## 2026-06-23 — CML-MOTTO-PAGES-PUBLISH — Pubblicazione motto page su GitHub Pages
+
+- Tipo slice: pubblicazione pagina statica
+- Operazione: copiato `motto-non-multa-sed-multum.html` → `motto-non-multa-sed-multum/index.html` per URL pulito
+- File creati: `_published_snapshot/netlify-current/motto-non-multa-sed-multum/index.html`, `docs/03_execution/CML-MOTTO-PAGES-PUBLISH.md`, `report/CML-MOTTO_pages_publish.md`
+- Nessuna modifica a `index.html`, schema `.cml`, export/import, role-access, `sw.js`, `_headers` o asset
+- URL atteso: `https://antoniocorsano-boop.github.io/curmanlight/motto-non-multa-sed-multum/`
+- Verdetto: `CML_MOTTO_PAGES_PUBLISH_READY`
