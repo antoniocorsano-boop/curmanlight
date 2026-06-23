@@ -1765,3 +1765,19 @@
 - File committati: `DESIGN.md`, `docs/03_execution/CML-077-PRE.md`, `report/CML-077-PRE_design_md_for_stitch_model_export.md`, `docs/REPO-MOVELOG.md`
 - **Refinements post-review:** fix "gradiend" → "inizio gradiente", "Invaliato" → "Invariato / confermato", mobile-first clarificato, aggiunte sezioni 14 (vincoli funzionali) e 15 (prompt Stitch)
 - Verdetto: `CML_077_PRE_DESIGN_MD_FOR_STITCH_MODEL_EXPORT_READY`
+
+## 2026-06-23 — CML-077B: Stitch Visual Affinity and Dark Mode Selection Audit
+
+- **0315bbe** — HEAD (CML-077-PRE refinements) tree pulita
+- **Proposta Stitch valutata:** "Terra — Organic Design" (esterna, palette verde/crema, stile organico)
+- **Elementi recuperabili:** ariosità card, separazione blocchi, dark mode concept
+- **Elementi scartati:** palette verde/crema, font remoti, Tailwind CDN, immagini remote, decorativismo eccessivo
+- **Desktop:** struttura invariata, migliorare spaziatura e gap sezioni
+- **Mobile:** 1 colonna confermata, touch target OK, aumentare padding card
+- **Dark mode:** automatica con `@media (prefers-color-scheme: dark)`, no toggle manuale
+- **Opzione selezionata: C** — affinità visiva leggera + modalità scura automatica (CSS variables + @media)
+- **Opzioni scartate:** A (solo review), B (solo visivo, no dark mode), D (cambio tema ampio)
+- **Nessuna modifica runtime:** `index.html`, `sw.js`, `_headers`, `.cml`, role-access, DESIGN.md ufficiale — tutti invariati
+- **File creati:** `docs/03_execution/CML-077B.md`, `report/CML-077B_stitch_visual_affinity_and_dark_mode_selection_audit.md`, `stitch/proposal-001-terra/README.md`, `docs/REPO-MOVELOG.md`
+- **Prossimo step raccomandato:** CML-078 — LIGHT_VISUAL_AFFINITY_AND_SYSTEM_DARK_MODE_RUNTIME_INCREMENT
+- Verdetto: `CML_077B_STITCH_VISUAL_AFFINITY_DARK_MODE_NEXT_INCREMENT_SELECTED`
