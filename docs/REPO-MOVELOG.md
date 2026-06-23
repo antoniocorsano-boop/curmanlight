@@ -1520,3 +1520,18 @@
 - **Nessun deploy**
 - Verdetto: `CML_068_DIDATTICA_FIRST_READONLY_PROTOTYPE_READY`
 - Documentazione: `docs/03_execution/CML-068.md`, `report/CML-068_didattica_first_readonly_prototype.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-068A — Didattica Read-Only Prototype Live Deploy Smoke
+
+- HEAD partenza: `8d74749`, tree pulita ✅
+- Tipo slice: deploy/smoke/documentazione — nessuna modifica runtime
+- **Fase 0** — stato locale: branch `main`, HEAD `8d74749`, validazione PASS ✅
+- **Fase 1** — `git push origin main` (`2947309..8d74749`), workflow **success** ✅
+- **Fase 2** — smoke live su `https://antoniocorsano-boop.github.io/curmanlight/` ✅
+- **25/25 controlli live passati:** Didattica prototype visibile, 13 unità, filtro ordine, card espandibili, evidenze e criteri visibili, nessun campo editabile, Curriculum invariato, export/import/report invariati, role-access gating invariato, regressione `.cml` PASS, mobile OK
+- **Audit live:** button tags 100, export-btn 27, onclick 114
+- **Verdetto:** `CML_068A_DIDATTICA_READONLY_PROTOTYPE_LIVE_DEPLOY_SMOKE_READY`
+- **Prossimo step consigliato:** `CML-069 — DIDATTICA_UDA_MODULE_SELECTION_AUDIT` oppure `CML-068B — DIDATTICA_PROTOTYPE_UX_DENSITY_AUDIT`
+- Documentazione: `docs/03_execution/CML-068A.md`, `report/CML-068A_didattica_readonly_prototype_live_deploy_smoke.md`, `docs/REPO-MOVELOG.md`
