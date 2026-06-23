@@ -706,6 +706,34 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .didattica-evidence-section ul li{margin-bottom:2px}
 .didattica-evidence-note{font-size:11px;color:#78909c;margin-top:4px;font-style:italic}
 .didattica-evidence-footer{background:#e0f2f1;border-radius:0 0 9px 9px;padding:10px 14px;font-size:10px;color:#00695c;line-height:1.45;text-align:center}
+/* DIDATTICA UDA */
+.didattica-uda{max-width:960px;margin:24px auto 0;border-top:2px dashed #b39ddb;padding-top:16px}
+.didattica-uda-header{background:linear-gradient(135deg,#4527a0,#7b1fa2);color:#fff;border-radius:9px 9px 0 0;padding:14px 18px}
+.didattica-uda-header h2{font-size:16px;font-weight:800;margin:0 0 3px}
+.didattica-uda-header p{font-size:11px;opacity:.85;line-height:1.5;margin:0}
+.didattica-uda-box{background:#f3e5f5;border:1px solid #ce93d8;border-left:3px solid #7b1fa2;border-radius:9px;padding:10px 14px;margin:10px 0;font-size:11px;color:#4a148c;line-height:1.5}
+.didattica-uda-box strong{color:#311b92}
+.didattica-uda-card{background:#fff;border:1px solid #d1c4e9;border-radius:9px;margin-bottom:12px;overflow:hidden}
+.didattica-uda-card-hd{background:#f4f0f9;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;border-bottom:1px solid transparent;transition:.12s}
+.didattica-uda-card-hd:hover{background:#ede7f6}
+.didattica-uda-card-hd.open{border-bottom-color:#d1c4e9}
+.didattica-uda-card-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.didattica-uda-card-titolo{font-size:14px;font-weight:800;color:#311b92}
+.didattica-uda-card-sub{font-size:11px;color:#5e35b1;margin-top:2px}
+.didattica-uda-card-arrow{font-size:14px;color:#7b1fa2;flex-shrink:0;transition:.15s}
+.didattica-uda-card-hd.open .didattica-uda-card-arrow{transform:rotate(180deg)}
+.didattica-uda-card-body{display:none;padding:12px 16px;background:#fff}
+.didattica-uda-card-body.open{display:block}
+.didattica-uda-field{border-bottom:1px solid #f0ecf4;padding:8px 0}
+.didattica-uda-field:last-child{border-bottom:none}
+.didattica-uda-field-label{font-size:10px;font-weight:800;color:#7b1fa2;text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
+.didattica-uda-field-value{font-size:12px;color:#333;line-height:1.45}
+.didattica-uda-field-value ul{margin:4px 0 0;padding-left:18px;font-size:12px;color:#333;line-height:1.5}
+.didattica-uda-field-value ul li{margin-bottom:2px}
+.didattica-uda-field-static{background:#fff8e1;border:1px solid #ffe082;border-radius:4px;padding:2px 7px;font-size:10px;color:#e65100;font-weight:700;display:inline-block;margin-bottom:3px}
+.didattica-uda-field-curricolo{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:4px;padding:2px 7px;font-size:10px;color:#2e7d32;font-weight:700;display:inline-block;margin-bottom:3px}
+.didattica-uda-note{font-size:11px;color:#78909c;margin-top:4px;font-style:italic}
+.didattica-uda-footer{background:#ede7f6;border-radius:0 0 9px 9px;padding:10px 14px;font-size:10px;color:#4527a0;line-height:1.45;text-align:center}
 .home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
 .home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
 .home-card-note{font-size:10px;color:#90a4ae;margin:10px 0 0;font-style:italic;line-height:1.4}
@@ -822,7 +850,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
             <div class="home-card-badge">Area in preparazione</div>
             <div class="home-card-links">
               <a href="#" onclick="setTab('didattica');return false">📊 Valuta evidenze</a>
-              <span>📋 Progetta UDA</span>
+              <a href="#" onclick="setTab('didattica');setTimeout(function(){var u=document.getElementById('didattica-uda');if(u)u.scrollIntoView({behavior:'smooth'})},150);return false">📋 Progetta UDA</a>
               <span>🧪 Prepara attività</span>
               <span>📁 Materiali per la classe</span>
             </div>
@@ -856,6 +884,23 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
         </div>
         <div class="didattica-evidence-list" id="didattica-evidence-list"></div>
         <div class="didattica-evidence-footer">Prototipo read-only · Nessun dato viene salvato · Richiede validazione professionale del docente · Non costituisce documento istituzionale approvato · Da adattare alla classe</div>
+      </div>
+      <!-- UDA MODELLO -->
+      <div class="didattica-uda" id="didattica-uda">
+        <div class="didattica-uda-header">
+          <h2>📋 Didattica — UDA modello</h2>
+          <p>Prototipo read-only: mostra come una unità curricolare di Tecnologia può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
+        </div>
+        <div class="didattica-uda-box">
+          <strong>🔨 UDA modello — read-only</strong><br>
+          • Nessun dato viene salvato<br>
+          • Non sostituisce la progettazione professionale del docente<br>
+          • Non costituisce documento istituzionale approvato<br>
+          • I campi contrassegnati con "🟢 Dato curricolare" provengono dal pacchetto Tecnologia normalizzato<br>
+          • I campi contrassegnati con "🟡 Esempio didattico" sono indicativi e da adattare alla classe
+        </div>
+        <div class="didattica-uda-list" id="didattica-uda-list"></div>
+        <div class="didattica-uda-footer">UDA modello · Read-only · Da adattare alla classe · Non sostituisce la progettazione del docente · Richiede validazione professionale · Non costituisce documento istituzionale approvato</div>
       </div>
     </div>
     <!-- TAB LAVORO -->
@@ -1493,6 +1538,89 @@ function setDidatticaFilter(f,btn){
 }
 
 // ================================================================
+// UDA MODELLO DATA
+// ================================================================
+var UDA_MODELI=[{
+  id:"uda_pri_5_digitale",
+  titolo:"Cittadini digitali responsabili",
+  disciplina:"Tecnologia",
+  ordine:"Primaria",
+  classe:"5",
+  fascia:null,
+  durataIndicativa:"8 ore (4 incontri da 2 ore)",
+  competenzaRiferimento:"Usa la rete internet e i dispositivi digitali in modo consapevole",
+  traguardo:"L'alunno sa orientarsi tra i mezzi di comunicazione digitale",
+  obiettivi:["Riconoscere rischi e opportunità di internet","Saper cercare informazioni valutando le fonti","Utilizzare comunicazione digitale rispettosa"],
+  conoscenze:["Rischi della rete (fake news, cyberbullismo, privacy)","Criteri di attendibilità di una fonte","Regole di cittadinanza digitale"],
+  abilita:["Verificare autore e data di una notizia","Configurare impostazioni privacy base","Scrivere un messaggio rispettoso"],
+  attivitaProposta:"Gli alunni, divisi in gruppi, analizzano 3 notizie online distinguendo fonti attendibili da fake news. Creano un decalogo della navigazione sicura e lo pubblicano come post sul blog di classe.",
+  metodologia:"Apprendimento cooperativo, dibattito guidato, laboratorio digitale",
+  materiali:"Tablet/PC, connessione internet, esempio di post, scheda valutazione fonti",
+  evidenzeOsservabili:["L'alunno scheda 2 notizie distinguendo vere da false","L'alunno modifica impostazioni privacy di un account","L'alunno scrive un post rispettoso per il blog di classe"],
+  criteriValutazione:["Capacità critica","Rispetto delle regole","Qualità della comunicazione"],
+  adattamentiInclusione:"Mappe visive per i passaggi di verifica; tutoraggio tra pari per la pubblicazione",
+  notaDocente:"Da adattare al livello della classe e alle risorse digitali disponibili. Può essere ridotto a 6 ore per classi meno esperte.",
+  fonteCurricolare:"Indicazioni Nazionali 2012, D.M. 254/2012, Tecnologia, Classe 5",
+  validazioneUmana:false
+},{
+  id:"uda_sec_1_informatica",
+  titolo:"Dal computer al documento",
+  disciplina:"Tecnologia",
+  ordine:"Secondaria",
+  classe:"1",
+  fascia:null,
+  durataIndicativa:"10 ore (5 incontri da 2 ore)",
+  competenzaRiferimento:"Utilizza le tecnologie dell'informazione per comunicare, calcolare, ricercare e archiviare dati",
+  traguardo:"L'alunno è consapevole delle potenzialità e dei limiti delle tecnologie digitali",
+  obiettivi:["Conoscere componenti hardware di un computer","Usare software applicativi (videoscrittura, fogli di calcolo)","Navigare in rete in modo sicuro e critico"],
+  conoscenze:["Hardware: CPU, RAM, periferiche","Software: sistema operativo, applicativi","Netiquette e regole di sicurezza"],
+  abilita:["Creare un documento di testo formattato","Realizzare un grafico con foglio di calcolo","Cercare informazioni valutando fonti"],
+  attivitaProposta:"Gli studenti esplorano un computer scolastico identificando le componenti hardware. Usano un foglio di calcolo per creare un grafico a torta delle preferenze della classe e scrivono una relazione strutturata in videoscrittura.",
+  metodologia:"Lezione interattiva, laboratorio assistito, compito autentico",
+  materiali:"Computer, foglio di calcolo (LibreOffice Calc o Google Fogli), schema guida per la relazione",
+  evidenzeOsservabili:["L'alunno produce un documento di 1 pagina","L'alunno realizza un grafico a torta","L'alunno scheda 3 fonti attendibili"],
+  criteriValutazione:["Correttezza formale","Capacità di organizzazione","Attenzione alla sicurezza"],
+  adattamentiInclusione:"Scheda operativa con icone per l'hardware; template precompilato per il grafico",
+  notaDocente:"Da adattare alla dotazione tecnologica della classe. Per classi con meno ore, ridurre a 6 ore concentrandosi su videoscrittura e ricerca.",
+  fonteCurricolare:"Indicazioni Nazionali 2012, D.M. 254/2012, Tecnologia, Classe 1",
+  validazioneUmana:false
+}];
+
+function renderUdaModello(){
+  var container=document.getElementById("didattica-uda-list");
+  if(!container)return;
+  var html="";
+  UDA_MODELI.forEach(function(u){
+    html+='<div class="didattica-uda-card">\
+      <div class="didattica-uda-card-hd" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'open\')">\
+        <div class="didattica-uda-card-left">\
+          <div class="didattica-uda-card-titolo">'+u.titolo+'</div>\
+          <div class="didattica-uda-card-sub">'+u.disciplina+' · '+u.ordine+(u.classe?' · Classe '+u.classe:'')+(u.fascia?' · Fascia '+u.fascia:'')+' · '+u.durataIndicativa+'</div>\
+        </div>\
+        <div class="didattica-uda-card-arrow">▾</div>\
+      </div>\
+      <div class="didattica-uda-card-body">\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">📌 Competenza di riferimento <span class="didattica-uda-field-curricolo">🟢 Dato curricolare</span></div><div class="didattica-uda-field-value">'+u.competenzaRiferimento+'</div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">🎯 Traguardo <span class="didattica-uda-field-curricolo">🟢 Dato curricolare</span></div><div class="didattica-uda-field-value">'+u.traguardo+'</div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">📝 Obiettivi <span class="didattica-uda-field-curricolo">🟢 Dato curricolare</span></div><div class="didattica-uda-field-value"><ul>'+u.obiettivi.map(function(o){return '<li>'+o+'</li>'}).join("")+'</ul></div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">📚 Conoscenze <span class="didattica-uda-field-curricolo">🟢 Dato curricolare</span></div><div class="didattica-uda-field-value"><ul>'+u.conoscenze.map(function(c){return '<li>'+c+'</li>'}).join("")+'</ul></div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">🔧 Abilità <span class="didattica-uda-field-curricolo">🟢 Dato curricolare</span></div><div class="didattica-uda-field-value"><ul>'+u.abilita.map(function(a){return '<li>'+a+'</li>'}).join("")+'</ul></div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">🏗️ Attività proposta <span class="didattica-uda-field-static">🟡 Esempio didattico</span></div><div class="didattica-uda-field-value">'+u.attivitaProposta+'</div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">🧪 Metodologia <span class="didattica-uda-field-static">🟡 Esempio didattico</span></div><div class="didattica-uda-field-value">'+u.metodologia+'</div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">📦 Materiali <span class="didattica-uda-field-static">🟡 Esempio didattico</span></div><div class="didattica-uda-field-value">'+u.materiali+'</div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">✅ Evidenze osservabili <span class="didattica-uda-field-curricolo">🟢 Dato curricolare</span></div><div class="didattica-uda-field-value"><ul>'+u.evidenzeOsservabili.map(function(e){return '<li>'+e+'</li>'}).join("")+'</ul></div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">📋 Criteri di valutazione <span class="didattica-uda-field-curricolo">🟢 Dato curricolare</span></div><div class="didattica-uda-field-value"><ul>'+u.criteriValutazione.map(function(c){return '<li>'+c+'</li>'}).join("")+'</ul></div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">♿ Adattamenti/inclusione <span class="didattica-uda-field-static">🟡 Esempio didattico</span></div><div class="didattica-uda-field-value">'+u.adattamentiInclusione+'</div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">📝 Nota docente <span class="didattica-uda-field-static">🟡 Esempio didattico</span></div><div class="didattica-uda-field-value">'+u.notaDocente+'</div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">📜 Fonte curricolare <span class="didattica-uda-field-curricolo">🟢 Dato curricolare</span></div><div class="didattica-uda-field-value">'+u.fonteCurricolare+'</div></div>\
+        <div class="didattica-uda-field"><div class="didattica-uda-field-label">👤 Validazione umana</div><div class="didattica-uda-field-value">'+(u.validazioneUmana?'✅ Validata':'⏳ Richiede validazione professionale del docente')+'</div></div>\
+      </div>\
+    </div>';
+  });
+  container.innerHTML=html||'<p style="font-size:12px;color:#78909c">Nessun UDA modello disponibile.</p>';
+}
+
+// ================================================================
 // ================================================================
 let selDisc="Tecnologia", filterStatus="all", currentTab="home";
 let editingId=null;
@@ -2113,7 +2241,7 @@ function setTab(t){
   document.getElementById("tab-normativa").style.display=t==="normativa"?"block":"none";
   document.getElementById("tab-generali").style.display=t==="generali"?"block":"none";
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
-  if(t==="didattica") renderDidattica();
+  if(t==="didattica"){renderDidattica();renderUdaModello();}
   const cruscotto=document.getElementById("cruscotto");
   if(cruscotto) cruscotto.hidden=t==="home"||t==="didattica";
   const breadcrumbEl=document.getElementById("breadcrumb");
@@ -2135,7 +2263,7 @@ function setTab(t){
     }
   }
   if(breadcrumbEl){
-    const labels={home:"Home",didattica:"Didattica — Valutazione ed evidenze",lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali",curricolo:"Curricolo di istituto"};
+    const labels={home:"Home",didattica:"Didattica",lavoro:"Revisione per disciplina",riepilogo:"Curricolo definitivo",normativa:"Riferimenti normativi",generali:"Sezioni generali",curricolo:"Curricolo di istituto"};
     breadcrumbEl.innerHTML='<span class="crumb-current">'+labels[t]+'</span>';
   }
   if(t==="riepilogo") renderRiepilogo();
@@ -3361,6 +3489,7 @@ function toggleMobileMenu(){
   overlay.innerHTML='<div class="mobile-menu-panel">\
     <div class="mm-title">📖 Consultazione</div>\
     <button class="mm-item" onclick="setTab(\'didattica\');this.closest(\'.mobile-menu-overlay\').remove()">🧑‍🏫 Didattica — Valutazione ed evidenze</button>\
+    <button class="mm-item" onclick="setTab(\'didattica\');setTimeout(function(){var u=document.getElementById(\'didattica-uda\');if(u)u.scrollIntoView({behavior:\'smooth\'})},150);this.closest(\'.mobile-menu-overlay\').remove()">📋 Didattica — UDA modello</button>\
     <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Riferimenti normativi</button>\
     <button class="mm-item" onclick="setTab(\'generali\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Sezioni generali</button>\
     <button class="mm-item" onclick="setTab(\'curricolo\');this.closest(\'.mobile-menu-overlay\').remove()">🏫 Curricolo di istituto</button>\

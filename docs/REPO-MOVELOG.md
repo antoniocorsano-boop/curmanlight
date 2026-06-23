@@ -1566,3 +1566,23 @@
 - Verdetto: `CML_069_DIDATTICA_UDA_MODULE_SELECTION_AUDIT_READY`
 - Prossimo step: CML-070 — UDA_READONLY_PROTOTYPE
 - Documentazione: `docs/03_execution/CML-069.md`, `report/CML-069_didattica_uda_module_selection_audit.md`, `docs/REPO-MOVELOG.md`
+
+---
+
+## CML-070 — UDA Read-Only Prototype
+
+- HEAD partenza: `c9a9b43`, tree pulita ✅
+- Tipo slice: runtime + docs — implementazione prototipo UDA read-only
+- **Unico file runtime modificato:** `_published_snapshot/netlify-current/index.html`
+- **Modifiche:** CSS `.didattica-uda-*`, HTML `#didattica-uda` section, Home card "Progetta UDA" attivo, `UDA_MODELI` array (2 model), `renderUdaModello()`, setTab() esteso, mobile menu UDA entry
+- **2 UDA modello:** Primaria Cl.5 "Cittadini digitali responsabili", Secondaria Cl.1 "Dal computer al documento"
+- **14 campi ciascuna:** 8 curricolari (🟢) + 6 esempio (🟡) + validazione umana
+- **Badge origine dati:** "🟢 Dato curricolare" / "🟡 Esempio didattico" per trasparenza
+- **Non modificato:** schema `.cml`, Curriculum, Valutazione/Evidenze, export/import/report, role-access, localStorage/sessionStorage
+- **Validazione:** 13 unità, valid:true, JS_PARSE_OK ✅
+- **Audit:** buttonTags 101, onclick 117, exportButtons 27, consistencyWarnings invariati
+- **Smoke locale:** 20/20 controlli PASS ✅
+- Nessun deploy
+- Verdetto: `CML_070_UDA_READONLY_PROTOTYPE_READY`
+- Prossimo step: CML-070A — UDA_READONLY_PROTOTYPE_LIVE_DEPLOY_SMOKE
+- Documentazione: `docs/03_execution/CML-070.md`, `report/CML-070_uda_readonly_prototype.md`, `docs/REPO-MOVELOG.md`
