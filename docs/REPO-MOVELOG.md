@@ -1781,3 +1781,15 @@
 - **File creati:** `docs/03_execution/CML-077B.md`, `report/CML-077B_stitch_visual_affinity_and_dark_mode_selection_audit.md`, `stitch/proposal-001-terra/README.md`, `docs/REPO-MOVELOG.md`
 - **Prossimo step raccomandato:** CML-078 — LIGHT_VISUAL_AFFINITY_AND_SYSTEM_DARK_MODE_RUNTIME_INCREMENT
 - Verdetto: `CML_077B_STITCH_VISUAL_AFFINITY_DARK_MODE_NEXT_INCREMENT_SELECTED`
+
+## 2026-06-23 — CML-078: Visual Affinity + Dark Mode Runtime
+
+- **df58cd0** — feat: add CSS variables and system dark mode to runtime
+  - CSS variables (`:root`): brand palette, spacing, radius, shadow tokens
+  - `@media (prefers-color-scheme: dark)`: comprehensive dark mode (~350 lines) covering all UI surfaces
+  - Header gradient swapped to `var(--cml-header)` for maintainability
+  - Iconography audit: all icons Unicode/emoji, paired with text labels, consistent desktop/mobile
+  - No toggle manuale, no localStorage for theme, no CDN/external deps added
+  - Files: `index.html` (modified), `docs/03_execution/CML-078.md`, `report/CML-078_*.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_078_VISUAL_AFFINITY_ICONOGRAPHY_DARK_MODE_RUNTIME_INCREMENT_READY`
+- Prossimo step: CML-078A — live smoke (15/15 PASS)
