@@ -1854,4 +1854,21 @@
 - Raccomandazione: **Option A** — completare Curriculum prima, poi Didattica
 - File: `docs/03_execution/CML-080.md`, `report/CML-080_curriculum_and_didattica_completion_selection_audit.md`, `docs/REPO-MOVELOG.md`
 - Verdetto: `CML_080_CURRICULUM_AND_DIDATTICA_COMPLETION_SELECTION_AUDIT_READY`
-- Prossimo step: attendere conferma selezione, poi CML-081 (Curriculum runtime)
+- Prossimo step: CML-081 — curriculum area completion runtime increment
+
+## 2026-06-23 — CML-081: Curriculum Area Completion Runtime Increment
+
+- **Opzione A** confermata: Curriculum prima, poi Didattica
+- Modifiche in `renderCurricoloIstituto()` in `index.html`:
+  1. **Path guidance** — box "Il percorso del curricolo": Consulta → Revisione → Definitivo → Esporta con link diretti
+  2. **Coverage banner** — "Copertura curricolo": N discipline, N voci totali, N con proposta 2025
+  3. **Per-discipline summary** — griglia dopo l'indice: icona, nome, totale, modifiche con dot colorato
+  4. **Next-action callout** — dopo ogni disciplina: link "Revisiona {disciplina}"
+  5. **Ordine counts** — nell'intestazione: "N discipline, M voci"
+- Nuovi CSS: `.curricolo-path`, `.curricolo-copertura`, `.curricolo-riepilogo`, `.curricolo-nextaction`, `.curricolo-ordine-count`
+- Solo dati già presenti in `DATA`/`DISCIPLINE_META`, nessun `localStorage`, nessuna nuova funzione
+- Nessuna modifica ad altri tab, schema `.cml`, export/import, role-access
+- Compatibile dark mode (CSS variables)
+- File: `index.html` (modificato), `docs/03_execution/CML-081.md`, `report/CML-081_curriculum_area_completion_runtime_increment.md`, `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_081_CURRICULUM_AREA_COMPLETION_RUNTIME_INCREMENT_READY`
+- Prossimo step: CML-081A — curriculum area live smoke

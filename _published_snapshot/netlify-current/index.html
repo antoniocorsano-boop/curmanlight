@@ -619,6 +619,30 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .curricolo-note{background:#f5f5f5;border:1px solid #e0e0e0;border-radius:9px;padding:10px 14px;margin-top:14px;font-size:11px;color:#78909c;text-align:center}
 .curricolo-ref{background:#eef7f6;border:1px solid #b2dfdb;border-left:3px solid #00796b;border-radius:9px;padding:9px 13px;margin-top:14px;font-size:11px;color:#263238;line-height:1.5}
 .curricolo-ref a{color:#00695c;font-weight:700}
+.curricolo-path{background:#e8eaf6;border:1px solid #c5cae9;border-radius:9px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:#283593;line-height:1.5}
+.curricolo-path-title{font-weight:800;font-size:13px;margin-bottom:4px}
+.curricolo-path-steps{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-bottom:4px}
+.curricolo-path-step a,.curricolo-path-body a,.curricolo-path-footer a{font-weight:700;color:#1a237e;text-decoration:none}
+.curricolo-path-step a:hover,.curricolo-path-body a:hover,.curricolo-path-footer a:hover{text-decoration:underline}
+.curricolo-path-step--active{font-weight:700;color:#1a237e}
+.curricolo-path-arrow{color:#9fa8da}
+.curricolo-path-body{font-size:11px;color:#5c6bc0}
+.curricolo-path-body a{color:#1a237e}
+.curricolo-path-footer{margin-top:3px;font-size:11px}
+.curricolo-path-footer a{color:#3949ab}
+.curricolo-copertura{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;padding:10px 14px;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:9px;font-size:12px;color:#1b5e20;line-height:1.4}
+.curricolo-copertura-item{display:flex;align-items:center;gap:4px}
+.curricolo-copertura-val{font-weight:800;font-size:15px;color:#1b5e20}
+.curricolo-copertura-label{color:#2e7d32}
+.curricolo-riepilogo{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px;padding:8px 10px;background:#fff;border:1px solid #e0e0e0;border-radius:9px;font-size:11px}
+.curricolo-riepilogo-item{padding:4px 8px;border-radius:6px;background:#f5f5f5;display:inline-flex;align-items:center;gap:3px;color:#455a64}
+.curricolo-riepilogo-item .riepilogo-dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:2px}
+.curricolo-riepilogo-item .riepilogo-changed{font-weight:700;color:#e65100}
+.curricolo-riepilogo-item .riepilogo-total{color:#78909c}
+.curricolo-nextaction{font-size:11px;padding:6px 14px;background:#f5f7fa;border-top:1px solid #eee;color:#546e7a;text-align:right}
+.curricolo-nextaction a{color:#1a237e;font-weight:700;text-decoration:none}
+.curricolo-nextaction a:hover{text-decoration:underline}
+.curricolo-ordine-count{font-size:10px;opacity:.8;font-weight:400;margin-left:6px}
 .tecnologia-norm{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:14px 16px;margin-bottom:16px}
 .tecnologia-norm-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
 .tecnologia-norm-title{font-size:15px;font-weight:800;color:#1a237e;margin:0}
@@ -886,7 +910,8 @@ footer{background:#1a1a1a;color:#78909c}
 .tecnologia-export-panel,.tecnologia-norm,.tecnologia-norm-unit,.didattica-evidence-unit,
 .didattica-uda-card,.tool-group,.department-import-panel,.quick-info-bar,.local-save-bar,
 .usage-notice,.tecnologia-norm-unit-body,.settings-school-box,.tab-generali .gen-card,
-.cruscotto,.orientation-card,.curricolo-viewer .curricolo-index,.curricolo-viewer .curricolo-disc,
+.cruscotto,.orientation-card,
+.curricolo-viewer .curricolo-index,.curricolo-viewer .curricolo-disc,.curricolo-riepilogo,.curricolo-nextaction,
 .mobile-bottom-bar,.mobile-menu-panel,.role-access-dialog{background:var(--cml-card);border-color:var(--cml-border)}
 .didattica-evidence-unit-body,.didattica-uda-card-body{background:var(--cml-card)}
 .didattica-uda-footer,.didattica-evidence-footer{background:#2a1a2a;color:#b39ddb}
@@ -1006,6 +1031,15 @@ section.curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
 .didattica-uda-card-arrow{color:#b39ddb}
 .curricolo-state{background:#3a2a1a;border-color:#e65100;color:#ffcc80}
 .curricolo-state strong{color:#ff8a65}
+.curricolo-copertura{background:#1a2a1a;border-color:#2e7d32;color:#a5d6a7}
+.curricolo-copertura .curricolo-copertura-val{color:#81c784}
+.curricolo-copertura .curricolo-copertura-label{color:#a5d6a7}
+.curricolo-riepilogo-item{background:var(--cml-card-hover);color:var(--cml-text-secondary)}
+.curricolo-riepilogo-item .riepilogo-total{color:var(--cml-text-muted)}
+.curricolo-riepilogo-item .riepilogo-changed{color:#ff8a65}
+.curricolo-path{background:var(--cml-card-hover);border-color:var(--cml-border);color:var(--cml-text)}
+.curricolo-path-step a,.curricolo-path-body a,.curricolo-path-footer a{color:#90caf9}
+.curricolo-path-step--active{color:var(--cml-text)}
 .referent-validation-summary{color:var(--cml-text)}
 .referent-outcome-card{background:var(--cml-card);border-color:var(--cml-border);color:var(--cml-text)}
 .referent-outcome-note{color:var(--cml-text-muted)}
@@ -4382,9 +4416,35 @@ function renderCurricoloIstituto(version) {
     });
   });
 
+  // compute summary data
+  let totalItems = 0, totalChanged = 0, ordineCounts = {};
+  const discSummary = {};
+  DISCIPLINE.forEach(function(disc) {
+    const d = DATA[disc];
+    const all = (d.traguardi||[]).concat(d.obiettivi||[]);
+    const changed = all.filter(function(i) { return i.status === 'modifica' || i.status === 'nuovo'; });
+    discSummary[disc] = { total: all.length, changed: changed.length };
+    totalItems += all.length;
+    totalChanged += changed.length;
+    all.forEach(function(i) {
+      const o = i.ordine;
+      ordineCounts[o] = (ordineCounts[o] || 0) + 1;
+    });
+  });
+
   let html = '<div class="curricolo-viewer">';
 
-  html += '<div class="usage-notice"><strong>Prima di leggere le discipline:</strong> consulta anche le <strong>sezioni generali</strong> del curricolo: Premessa, Profilo dello studente, Valutazione, Inclusione, Continuità e Orientamento. Le discipline vanno lette insieme al quadro generale del curricolo di istituto.</div>';
+  html += '<div class="curricolo-path">' +
+    '<div class="curricolo-path-title">📚 Il percorso del curricolo</div>' +
+    '<div class="curricolo-path-steps">' +
+      '<span class="curricolo-path-step curricolo-path-step--active">📖 Consulta</span><span class="curricolo-path-arrow">→</span>' +
+      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'lavoro\');return false">✏️ Revisione</a></span><span class="curricolo-path-arrow">→</span>' +
+      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'riepilogo\');return false">📋 Definitivo</a></span><span class="curricolo-path-arrow">→</span>' +
+      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'esportazioni\');return false">📤 Esporta</a></span>' +
+    '</div>' +
+    '<div class="curricolo-path-body">Confronta il testo vigente (IN 2012) con la proposta 2025. Nella scheda <a href="#" onclick="setTab(\'lavoro\');return false">Revisione</a> decidi per ogni voce se approvare, modificare o discutere. Il <strong>Definitivo</strong> è un documento di lavoro finale — non sostituisce la delibera del Collegio Docenti.</div>' +
+    '<div class="curricolo-path-footer">Leggi anche le <a href="#" onclick="setTab(\'generali\');return false">sezioni generali</a>: Premessa, Profilo dello studente, Valutazione, Competenze chiave, Raccordo verticale.</div>' +
+  '</div>';
 
   html += '<div class="curricolo-version-tabs">' +
     '<button class="curricolo-version-tab' + (v === '2012' ? ' active' : '') + '" onclick="renderCurricoloIstituto(\'2012\')">📖 IN 2012 (vigente)</button>' +
@@ -4392,6 +4452,8 @@ function renderCurricoloIstituto(version) {
   '</div>';
 
   html += '<div class="curricolo-state">' + stateMsg + '</div>';
+
+  html += '<div class="curricolo-copertura"><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + DISCIPLINE.length + '</span><span class="curricolo-copertura-label">discipline</span></span><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + totalItems + '</span><span class="curricolo-copertura-label">voci totali</span></span><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + totalChanged + '</span><span class="curricolo-copertura-label">voci con proposta 2025</span></span><span class="curricolo-copertura-item" style="font-size:11px;opacity:.8">Copertura curricolo</span></div>';
 
   html += '<div class="curricolo-index">';
   ordinii.forEach(o => {
@@ -4404,9 +4466,20 @@ function renderCurricoloIstituto(version) {
   });
   html += '</div>';
 
+  html += '<div class="curricolo-riepilogo">';
+  DISCIPLINE.forEach(function(disc) {
+    const meta = DISCIPLINE_META[disc];
+    const s = discSummary[disc];
+    const pct = s.total > 0 ? Math.round(s.changed / s.total * 100) : 0;
+    const cls = pct === 0 ? '#66bb6a' : pct > 50 ? '#ef5350' : '#fdd835';
+    html += '<span class="curricolo-riepilogo-item"><span class="riepilogo-dot" style="background:' + cls + '"></span>' + meta.icon + ' ' + disc + ' <span class="riepilogo-total">(' + s.total + ')</span>' + (s.changed > 0 ? ' <span class="riepilogo-changed">+' + s.changed + '</span>' : '') + '</span>';
+  });
+  html += '</div>';
+
   ordinii.forEach(function(o) {
     if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;
-    html += '<div class="curricolo-ordine"><div class="curricolo-ordine-title">' + ORDINE_LABEL[o] + '</div>';
+    const ordTotal = ordineCounts[o] || 0;
+    html += '<div class="curricolo-ordine"><div class="curricolo-ordine-title">' + ORDINE_LABEL[o] + ' <span class="curricolo-ordine-count">' + ordineDiscipline[o].length + ' discipline, ' + ordTotal + ' voci</span></div>';
 
     ordineDiscipline[o].forEach(function(disc) {
       const meta = DISCIPLINE_META[disc];
@@ -4442,6 +4515,7 @@ function renderCurricoloIstituto(version) {
       }
 
       html += '</div></div>';
+      html += '<div class="curricolo-nextaction">✏️ <a href="#" onclick="setTab(\'lavoro\');return false">Revisiona ' + disc + '</a> · valuta le voci e decidi</div>';
     });
 
     html += '</div>';
