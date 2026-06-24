@@ -2590,4 +2590,20 @@
 - Nessuna modifica runtime, nessuna approvazione, light mode only
 - File creati: docs/03_execution/CML-106A.md, report/CML-106A_*.md
 - Verdetto: CML_106A_GEOGRAFIA_COMPLETENESS_READINESS_LIVE_SMOKE_READY
-- Prossimo step: CML-106B (microfix contatore) o CML-107 (next normalization)
+- Prossimo step: CML-106B — READINESS_COUNTER_ALIGNMENT_MICROFIX
+
+---
+
+## 2026-06-24 - CML-106B - READINESS_COUNTER_ALIGNMENT_MICROFIX
+
+- Tipo slice: microfix runtime
+- Commit runtime: `ffcd8f3` (CML-106), validato live da CML-106A
+- **3 occorrenze corrette** in `index.html`: contatore completezza, contatore readiness, testo "Altre 8" → "Altre 7"
+- Value: `8` → `7` in tutti i punti "Sola consultazione"
+- Nessuna modifica a schema `.cml`, export/import, role access, service worker, contenuti disciplinari
+- Nessuna approvazione introdotta
+- Controlli: `git diff --check` OK, controverifica 7/7/0 coerente, Geografia invariata
+- File modificati: `_published_snapshot/netlify-current/index.html`
+- File creati: `docs/03_execution/CML-106B.md`, `report/CML-106B_*.md`
+- Verdetto: `CML_106B_READINESS_COUNTER_ALIGNMENT_MICROFIX_READY`
+- Prossimo step: CML-107 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
