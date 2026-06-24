@@ -2850,3 +2850,31 @@
 - INIT, selectDisc, hashchange, titolo dinamico, regressioni: ✅
 - Verdetto: `CML_112A_HASH_SELECTION_SMOKE_TEST_PASSED`
 - Next: prossimo ciclo di lavoro
+
+---
+
+## 2026-06-24 — CML-113 — VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT
+
+- Tipo slice: audit-only / docs-only
+- Commit partenza: `1804ac5`, HEAD `1804ac5`, working tree pulita ✅
+- Slice precedente chiusa: `CML_112A_HASH_SELECTION_SMOKE_TEST_PASSED`
+- Stato discipline: 14/14 complete, tutte "In revisione"
+- **Nessuna modifica runtime, nessun deploy, nessuna modifica a `index.html`/`sw.js`/`_headers`/asset/schema `.cml`/PDF/workflow Pages**
+- Oggetto: audit read-only del flusso attuale per aprire il ciclo "Validazione dipartimentale"
+- **10 domande guida** analizzate: stato discipline, rappresentazione stati, viste esistenti, azioni consentite/vietate, differenza validazione/approvazione, rischi istituzionali, evidenze tracciabili, primo incremento runtime
+- **Problemi individuati:**
+  - **P0**: nessuna distinzione tra validazione dipartimentale e approvazione formale
+  - **P1**: nessuna azione per validare una disciplina completa (solo azioni per-item)
+  - **P1**: pannello "Validazione dipartimentale" importa proposte docente, non valida discipline
+  - **P2**: contatori statici (14/0/0) invariati, nessuna interazione
+  - **P2**: nessuna vista unica validazione per coordinatore di dipartimento
+  - **P3**: pannelli lunghi senza collasso
+- **Stati consigliati:** bozza_generabile, in_revisione, validata_dipartimento, validata_con_note, pronto_approvazione, approvato_esternamente
+- **Azioni consentite:** selezionare disciplina, registrare esito (3 varianti), aggiungere note, data, reset
+- **Azioni vietate:** approvazione definitiva, modifica contenuti, automatismi, dati personali, autenticazione
+- **Posizione UI:** Curriculum > Consultazione, dopo pannelli completezza/readiness
+- **Primo incremento (CML-114):** pannello "Validazione dipartimentale" con struttura dati JS, persistenza localStorage, per-discipline esito/note/data/reset
+- **File da modificare in CML-114:** `_published_snapshot/netlify-current/index.html`
+- File creati: `docs/03_execution/CML-113.md`, `report/CML-113_validazione_dipartimentale_workflow_audit.md`
+- Verdetto: `CML_113_VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT_READY`
+- Prossimo step: CML-114 — VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT
