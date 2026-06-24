@@ -2081,15 +2081,19 @@
 
 ---
 
-## 2026-06-24 — CML-087A — ITALIANO_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT
+## 2026-06-24 — CML-087A — ITALIANO_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT (con headroom)
 
 - Tipo slice: docs-only quality audit
 - File sotto audit: `content/curriculum/italiano.normalized.json`
 - Benchmark: `content/curriculum/tecnologia.normalized.json`
+- Riferimenti: CML-084, CML-086, CML-087
+- Criterio aggiunto: headroom progettuale (margine di crescita ordinata)
 - Esito tecnico: ✅ PASS — JSON valido, struttura coerente, ID univoci, nessuna approvazione
 - Esito didattico: ✅ PASS — obiettivi osservabili, criteri descrittivi, progressione verticale leggibile
+- Headroom: ✅ PASS — media 13,5 unità/disciplina; 1.459 chars/unità; proiezione 203 unità (~300 KB) per 15 discipline; sistema scalabile senza modifiche architetturali
 - Decisione readiness: **A** — Italiano pronto come `bozza_generabile / in_revisione`
-- Criticità: nessuna bloccante; Lessico e Riflessione assenti in Infanzia (coerente con IN)
+- Criticità: nessuna bloccante; Italiano +266 chars/unità vs Tecnologia (da monitorare per discipline lessicalmente ricche)
+- Raccomandazioni headroom: mantenere unità ≤ 2.000 chars, ≤ 20 unità per disciplina, ≤ 5 stati unità
 - Runtime non modificato: ✅
 - `.cml`/export/import/role-access invariati: ✅
 - Verdetto: `CML_087A_ITALIANO_NORMALIZED_CURRICULUM_QUALITY_AUDIT_READY`
