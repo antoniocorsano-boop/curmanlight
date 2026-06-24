@@ -2156,3 +2156,22 @@
 - Schema `.cml`, export/import, role-access invariati ✅
 - Verdetto: `CML_089_DISCIPLINARY_APPROVAL_READINESS_STATE_MODEL_CONTRACT_READY`
 - Prossimo step: CML-090 — DISCIPLINARY_APPROVAL_READINESS_UI_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 — CML-090 — DISCIPLINARY_APPROVAL_READINESS_UI_SELECTION_AUDIT
+
+- Tipo slice: docs-only / selection audit
+- HEAD partenza: `7f78310`, tree pulita ✅
+- **3 opzioni valutate:**
+  - **A** — Badge readiness dentro sezione "Completezza" esistente ❌ (troppo debole)
+  - **B** — Pannello "Readiness approvazione" sotto "Completezza" ✅ (selezionata)
+  - **C** — Sezione dedicata "Approvazione"/"Stati approvazione" ❌ (prematura)
+- **Opzione selezionata: B** — Nuova card "Readiness per approvazione" dentro Curriculum > Consultazione
+- Motivazione: separa completezza da approvazione, non introduce nuovo tab, non sembra funzione approvativa, mantiene headroom
+- Microcopy proposta per CML-091: titolo, sottotitolo, contatori 2/13/0, righe per disciplina, nota approvazione esterna
+- Runtime non modificato ✅
+- Dati curricolari non modificati ✅
+- Schema `.cml`, export/import, role-access invariati ✅
+- Verdetto: `CML_090_DISCIPLINARY_APPROVAL_READINESS_UI_SELECTION_READY`
+- Prossimo step: CML-091 — DISCIPLINARY_APPROVAL_READINESS_PANEL_RUNTIME_INCREMENT
