@@ -2293,3 +2293,76 @@
 - `.cml`/export/import/role-access invariati: ✅
 - Verdetto: `CML_094_NEXT_DISCIPLINE_NORMALIZATION_SELECTED`
 - Prossimo step: `CML-095 — SCIENZE_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT`
+
+---
+
+## 2026-06-24 - CML-095 - SCIENZE_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+- Tipo slice: normalized curriculum draft
+- HEAD partenza: d470e71 (ripartenza da baseline aggiornata)
+- Commit: **31e4fdf** -- feat: add scienze.normalized.json
+- content/curriculum/scienze.normalized.json: 15 unita, 5 nuclei (Chimica, Biologia, Geologia, Fisica e astronomia, Fonti di energia)
+- Copertura: Infanzia (2 unita), Primaria (4 unita), Secondaria (9 unita)
+- Stato: bozza_generabile / in_revisione, humanValidationRequired: true
+- Benchmark: Tecnologia (12 unita), Italiano (14), Matematica (13)
+- Verdetto: CML_095_SCIENZE_NORMALIZED_CURRICULUM_DRAFT_READY
+
+## 2026-06-24 - CML-095A - Quality Audit Scienze
+
+- Tipo slice: quality audit
+- Commit: **9102d2a** -- docs: quality audit scienze normalized
+- Esito: **A** -- gap non bloccanti
+- GAP-1: Infanzia nuclei Chimica e Fonti di energia (mitigato: approccio esplorativo)
+- GAP-2: nucleo Geologia saltuario nella fascia 3-4 (mitigato: presente in fascia 5)
+- GAP-3: assenza educazione finanziaria in Scienze (non pertinente - gestito in Ed. Civica/Matematica)
+- Raccomandazione: procedere con contatori e smoke test (CML-096/CML-096A)
+- Verdetto: CML_095A_SCIENZE_QUALITY_AUDIT_A_READY
+
+## 2026-06-24 - CML-096 - UI Counters Update (4/11/0)
+
+- Tipo slice: runtime update (contatori UI)
+- Commit: **dc6d0cb** -- feat: update readiness counters to 4/11/0
+- Modifica: linee 4561-4563 in index.html: contatori da 3/12/0 a 4/11/0
+- Readiness rows aggiornate: Scienze aggiunta come 4a in revisione
+- Altre 12 diventa Altre 11
+- Nessuna modifica a .cml, export/import, role-access, schema, dati curricolari
+- Verdetto: CML_096_UI_COUNTERS_UPDATE_READY
+
+## 2026-06-24 - CML-096A - Live Smoke GitHub Pages (4/11/0)
+
+- Tipo slice: live smoke audit
+- Commit: **d470e71** -- HEAD invariato (solo audit)
+- URL: https://antoniocorsano-boop.github.io/curmanlight/
+- **26/26 controlli live passati:**
+  - Contatori: 4 bozze complete, 11 sola consultazione, 0 pronte OK
+  - Readiness: 4 in revisione, 11 sola consultazione, 0 pronte OK
+  - Tecnologia/Italiano/Matematica/Scienze: Bozza completa, in revisione OK
+  - Altre 11: Solo consultazione OK
+  - Nota approvazione esterna presente OK
+  - Nessun pulsante approvazione OK
+  - Nessuna disciplina pronta/approvata OK
+  - Light mode only, mobile OK, Motto page HTTP 200, GitHub Pages custom domain OK
+  - .cml/export/import/role-access invariati OK
+- File creati: docs/03_execution/CML-096A.md, report/CML-096A_live_smoke_github_pages.md
+- Nessuna modifica runtime in CML-096A
+- Verdetto: CML_096A_LIVE_SMOKE_GITHUB_PAGES_READY
+- Prossimo step: CML-097 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 - CML-097 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+- Tipo slice: docs-only audit / selection
+- HEAD partenza: d470e71 (baseline aggiornata)
+- Contatori attuali: 4/11/0 (Tecnologia, Italiano, Matematica, Scienze complete)
+- Disciplina selezionata: **Inglese**
+- Motivazione: continuita con raccomandazione CML-094, completa asse linguistico dopo Italiano, prima lingua straniera (test generalizzabilita modello), quadro normativo stabile (A2), basso rischio contenutistico, forte verticalita Inf/Pri/Sec
+- Alternative: Storia (2a scelta - nuova periodizzazione richiede attenzione), Ed. Civica (rinviata per trasversalita)
+- Rischi: soli 5 items DATA (4 traguardi + 1 obiettivo), prima normalizzazione su lingua non italiana
+- Raccomandazione CML-094 confermata: Inglese era indicata come quinta normalizzazione dopo completamento asse scientifico
+- File creati: docs/03_execution/CML-097.md, report/CML-097_next_discipline_normalization_selection_audit.md
+- Runtime non modificato: OK
+- Dati curricolari non modificati: OK
+- .cml/export/import/role-access invariati: OK
+- Verdetto: CML_097_NEXT_DISCIPLINE_NORMALIZATION_SELECTED
+- Prossimo step: CML-098 - INGLESE_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
