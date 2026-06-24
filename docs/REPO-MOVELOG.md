@@ -1981,3 +1981,19 @@
 - Controlli: braces CSS 2088=2088 ✅, `git diff --check` ✅, nessuna nuova dipendenza, nessuna occorrenza attiva di `prefers-color-scheme`
 - Verdetto: `CML_083B_LIGHT_MODE_ONLY_DESIGN_SYSTEM_RUNTIME_FIX_READY`
 - Prossimo step: CML-083C — LIGHT_MODE_ONLY_LIVE_SMOKE
+
+---
+
+## 2026-06-24 — CML-083C — LIGHT_MODE_ONLY_LIVE_SMOKE
+
+- Tipo slice: live smoke
+- Deploy: `git push origin main` → workflow GitHub Pages success (11s)
+- URL verificato: `https://antoniocorsano-boop.github.io/curmanlight/`
+- Home light mode ✅, Curriculum light mode ✅, Didattica light mode ✅, Esportazioni/Guida light mode ✅
+- `color-scheme:light` su `:root` (riga 18) ✅
+- `prefers-color-scheme` solo in commento (riga 906) — nessuna media query attiva
+- Dark colors (`#121212`, `#1e1e1e`, `#252525`, `#2a1a2a`) solo in commenti
+- Nessun effetto scuro anche con sistema operativo in dark mode
+- Schema `.cml`, export/import, role-access invariati
+- Motto page HTTP 200
+- Verdetto: `CML_083C_LIGHT_MODE_ONLY_LIVE_SMOKE_READY`
