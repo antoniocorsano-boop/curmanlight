@@ -1,5 +1,21 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-114 — VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT
+- **HEAD (main)** — audit read-only, docs-only
+- Branch: `main`, tree modificata su `index.html` (non toccata in questo commit)
+- Slice precedente: `CML_113_VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT_READY`
+- Commits audit:
+  - `docs: create CML-114 documentation`
+- File creati/modificati:
+  - `docs/03_execution/CML-114.md`
+  - `report/CML-114_validazione_dipartimentale_first_runtime_increment.md`
+- File aggiornati:
+  - `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_114_VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT_READY`
+- Next: CML-115 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
 ## 2026-06-24 — CML-113 — VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT
 
 - **HEAD (main)** — audit read-only, docs-only
