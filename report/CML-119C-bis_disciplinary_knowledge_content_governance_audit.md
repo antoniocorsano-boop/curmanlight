@@ -71,7 +71,7 @@ Audit governance completo prima della normalizzazione pilota CML-119D. Classific
 - **Validazione richiesta**: dipartimentale obbligatoria
 
 ### `nodiDisciplinari`
-- **Fonti disponibili**: 
+- **Fonti disponibili**:
   - Matematica: `nucleo` (Numeri, Spazio e figure, Relazioni e funzioni, Informatica, Dati e previsioni)
   - Italiano: `nucleo` (Ascolto, Parlato, Lettura, Scrittura, Riflessione sulla lingua, Acquisizione lessico)
   - Tecnologia: assenza di `nucleo`, derivabili solo da `ambito`

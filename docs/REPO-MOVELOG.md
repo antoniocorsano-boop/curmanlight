@@ -1,5 +1,30 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-123 — POST_CONSOLIDATION_WHITESPACE_AND_GIT_HYGIENE_FIX
+
+- **HEAD iniziale (main)**: `8b5488ca82d319c29e2d27a98745751f3cdd7c84`
+- Tipo slice: documentale minima / hygiene post-consolidamento
+- Obiettivo: rimuovere trailing whitespace residuo nel report CML-119C-bis senza modifiche funzionali.
+- Controlli iniziali:
+  - `git rev-parse HEAD` -> commit di partenza confermato
+  - `git status --short --branch` -> `main...origin/main [ahead 2]` + residui non core non tracciati
+  - `git diff --check` -> nessun errore nel working tree
+  - `git show --check --pretty=format: HEAD -- report/CML-119C-bis_disciplinary_knowledge_content_governance_audit.md` -> trailing whitespace rilevato
+- Correzione applicata:
+  - File: `report/CML-119C-bis_disciplinary_knowledge_content_governance_audit.md`
+  - Azione: rimozione soli spazi finali su riga markdown (`- **Fonti disponibili**:`)
+  - Nessuna variazione semantica o strutturale
+- Perimetro non toccato:
+  - runtime, JSON disciplinari, validator, schema `.cml`, import/export, UI/CSS/logica
+- Esclusi dal commit:
+  - `.agents/`, `Consultazione`, `skills-lock.json`
+- Artefatti slice:
+  - `docs/03_execution/CML-123.md`
+  - `report/CML-123_post_consolidation_whitespace_and_git_hygiene_fix.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_123_POST_CONSOLIDATION_WHITESPACE_HYGIENE_READY`
+- Next: CML-124 — decisione strutturale sui residui non core.
+
 ## 2026-06-24 — CML-122 — DIRTY_WORKTREE_SPLIT_AND_SELECTIVE_CONSOLIDATION
 
 - **HEAD iniziale (main)**: `7d840bf4ab22640c824a884f6417436637245852`
