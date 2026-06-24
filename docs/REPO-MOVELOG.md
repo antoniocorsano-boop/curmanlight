@@ -2839,3 +2839,14 @@
 - Nessun deploy
 - Verdetto: `CML_112_DISCIPLINARY_HASH_SELECTION_AND_TITLE_GENERALIZATION_FIX_READY`
 - Next: CML-112A — smoke test locale hash disciplinari
+
+---
+
+## 2026-06-24 - CML-112A - HASH_SELECTION_SMOKE_TEST
+
+- Commit: `fe91eef` (CML-112, nessuna modifica runtime)
+- Smoke test: 6 test (A1-A6), tutti PASS
+- 14/14 hash disciplinari verificati staticamente
+- INIT, selectDisc, hashchange, titolo dinamico, regressioni: ✅
+- Verdetto: `CML_112A_HASH_SELECTION_SMOKE_TEST_PASSED`
+- Next: prossimo ciclo di lavoro
