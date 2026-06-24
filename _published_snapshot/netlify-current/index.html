@@ -2296,9 +2296,20 @@ function renderSidebar(){
   });
   document.getElementById("sidebar").innerHTML=html;
 }
+function resolveDiscFromHash(){
+  var m=location.hash.match(/^#cur-(.+)$/);
+  if(!m) return null;
+  var slug=m[1];
+  return DISCIPLINE.find(function(d){return d.replace(/[\s()]/g,'')===slug;})||null;
+}
 function selectDisc(d){selDisc=d;editingId=null;renderSidebar();render();
   document.getElementById("main-content").scrollIntoView({behavior:"smooth",block:"start"});
+  location.hash='#cur-'+d.replace(/[\s()]/g,'');
 }
+window.addEventListener("hashchange",function(){
+  var d=resolveDiscFromHash();
+  if(d&&d!==selDisc) selectDisc(d);
+});
 
 // ================================================================
 // ================================================================
@@ -4715,7 +4726,7 @@ function renderTecnologiaNorm() {
     '<div class="tecnologia-norm-card">' +
       '<div class="tecnologia-norm-hd">' +
         '<div>' +
-          '<div class="tecnologia-norm-title">\u2699\uFE0F Tecnologia — pacchetto curricolare normalizzato</div>' +
+          '<div class="tecnologia-norm-title">\u2699\uFE0F ' + selDisc + ' — pacchetto curricolare normalizzato</div>' +
           '<div class="tecnologia-norm-subtitle">Anteprima consultiva basata sul contratto dati CML-061. Contenuti da validare in sede dipartimentale.</div>' +
           '<div class="tecnologia-norm-badges"><span class="tecnologia-norm-badge badge--readonly">Anteprima non modificabile</span><span class="tecnologia-norm-badge warn badge--warning">Richiede validazione umana</span><span class="tecnologia-norm-badge badge--prototype">Non costituisce approvazione definitiva</span></div>' +
         '</div>' +
@@ -4740,6 +4751,8 @@ function renderTecnologiaNorm() {
 // INIT
 // ================================================================
 loadLocalState();
+var initDisc=resolveDiscFromHash();
+if(initDisc) selDisc=initDisc;
 renderProfileSummary();
 renderSidebar();
 render();

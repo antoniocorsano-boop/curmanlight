@@ -2822,3 +2822,20 @@
 - **P3**: Badge "Sola consultazione" senza discipline (14/0/0)
 - Verdetto: `CML_111_DISCIPLINARY_VIEWS_CONTEXTUAL_NAV_COHERENCE_AUDIT_READY`
 - Next: CML-112 — sincronizzare hash/selDisc + generalizzare renderTecnologiaNorm()
+
+---
+
+## 2026-06-24 - CML-112 - DISCIPLINARY_HASH_SELECTION_AND_TITLE_GENERALIZATION_FIX
+
+- Commit: pendente
+- Runtime: `_published_snapshot/netlify-current/index.html` (14 insertions, 1 deletion)
+- **Bug P0 corretto**: hash `#cur-{disciplina}` ora sincronizzato con `selDisc`
+- Nuove funzioni: `resolveDiscFromHash()`, listener `hashchange`
+- `selectDisc()` aggiorna `location.hash`
+- INIT legge hash all'avvio
+- `renderTecnologiaNorm()` titolo dinamico (non più hardcoded su Tecnologia)
+- 14/14 hash disciplinari verificati
+- Nessuna modifica a contenuti disciplinari, schema .cml, export/import, role access, asset
+- Nessun deploy
+- Verdetto: `CML_112_DISCIPLINARY_HASH_SELECTION_AND_TITLE_GENERALIZATION_FIX_READY`
+- Next: CML-112A — smoke test locale hash disciplinari
