@@ -2768,3 +2768,22 @@
 - Discipline residue: 2 (Seconda Lingua, Latino)
 - Verdetto: `CML_116_RELIGIONE_NORMALIZATION_READY`
 - Next: CML-117 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 - CML-117 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT (4ª iterazione)
+
+- Commit: `1c5faa9`
+- Discipline residue analizzate: 2 (Seconda Lingua, Latino)
+- Disciplina selezionata: **Seconda Lingua Comunitaria** — voto 3/10
+- Verdetto: `CML_117_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
+
+---
+
+## 2026-06-24 - CML-118 - NORMALIZZAZIONE RUNTIME SECONDA LINGUA COMUNITARIA
+
+- Commit: `74ebcfe`
+- Stato: 13/1/0 (12 → 13 bozze complete, 2 → 1 sola consultazione)
+- 12 edit in `index.html`
+- Discipline residue: 1 (Latino LEL)
+- Next: CML-119 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
