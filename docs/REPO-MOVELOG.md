@@ -2702,3 +2702,16 @@
 - File creati: `docs/03_execution/CML-110B.md`, `report/CML-110B_*.md`
 - Verdetto: `CML_110B_MUSICA_NORMALIZATION_DEPLOY_LIVE_SMOKE_CLOSURE_READY`
 - Prossimo step: CML-111 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 - CML-111 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+- Tipo slice: audit-only (read-only)
+- Commit iniziale: `eac15e2` (CML-110B)
+- Discipline residue analizzate: 5 (Arte, Ed. Fisica, Religione, Seconda Lingua, Latino)
+- Disciplina selezionata: **Arte e Immagine** — voto 6/10
+- Motivazione: copertura tutti e 3 gli ordini, nuclei chiari, IN 2025 pronto, completa il blocco espressivo dopo Musica
+- File creati: `docs/03_execution/CML-111.md`, `report/CML-111_*.md`
+- Verdetto: `CML_111_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
+- Prossimo step: CML-112 — normalizzazione runtime Arte e Immagine
