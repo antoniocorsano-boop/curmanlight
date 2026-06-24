@@ -2514,3 +2514,20 @@
 - File creati: docs/03_execution/CML-104.md, report/CML-104_geografia_selection_audit.md
 - Verdetto: CML_104_NEXT_DISCIPLINE_NORMALIZATION_SELECTED
 - Prossimo step: CML-105 - GEOGRAFIA_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+---
+
+## 2026-06-24 - CML-105 - GEOGRAFIA_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+- Tipo slice: normalized curriculum draft
+- HEAD partenza: `d3143d9` (CML-104)
+- content/curriculum/geografia.normalized.json: 12 unita, 3 assi IN 2025, 3 ordini
+- Copertura: Infanzia (1, fascia 5), Primaria (5, cl.1-5), Secondaria (6, cl.1-3 x2 ciascuna)
+- Assi: Paesaggio (4 unita), Transcalarita (5 unita), Territorializzazione (3 unita)
+- Geovisualizzazione digitale, territorio locale irpino e campano, art. 9 Costituzione
+- Seconda disciplina dell'asse storico-sociale (Storia + Geografia = 2/3)
+- Stato: bozza_generabile / in_revisione, humanValidationRequired: true
+- Runtime non modificato: OK
+- .cml/export/import/role-access invariati: OK
+- Verdetto: CML_105_GEOGRAFIA_NORMALIZED_CURRICULUM_DRAFT_READY
+- Prossimo step: CML-105A - GEOGRAFIA_QUALITY_AUDIT

@@ -1,0 +1,510 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Geografia",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-105 normalized Geography curriculum draft — adapted from Storia benchmark, aligned with IN 2025 three axes (Paesaggio, Transcalarità, Territorializzazione) and D.M. 221/2025",
+  "metaDiscipline": "Storico-sociale",
+  "unitaApprendimento": [
+    {
+      "id": "geo_inf_5_001",
+      "disciplina": "Geografia",
+      "ordine": "Infanzia",
+      "fascia": "5",
+      "classe": "",
+      "ambito": "Orientamento spaziale: posizioni, percorsi e prime rappresentazioni",
+      "nucleo": "Paesaggio",
+      "competenza": "Il bambino si orienta nello spazio vissuto, utilizzando indicatori topologici e rappresentando percorsi ed esperienze spaziali.",
+      "traguardo": "Il bambino individua posizioni di oggetti e persone nello spazio usando termini topologici (sopra, sotto, dentro, fuori, vicino, lontano); rappresenta graficamente semplici percorsi.",
+      "obiettivi": [
+        "Utilizzare correttamente gli indicatori topologici per descrivere posizioni",
+        "Eseguire semplici percorsi su indicazione verbale",
+        "Rappresentare graficamente un percorso noto (casa-scuola, aula-giardino)"
+      ],
+      "conoscenze": [
+        "Indicatori topologici: sopra/sotto, dentro/fuori, vicino/lontano, destra/sinistra",
+        "Semplici percorsi: rettilinei, angolati, a ostacoli",
+        "Rappresentazioni grafiche elementari di spazi vissuti"
+      ],
+      "abilita": [
+        "Descrivere verbalmente la posizione di oggetti e persone usando indicatori topologici",
+        "Eseguire un percorso indicato dall'insegnante o da un compagno",
+        "Disegnare un percorso semplice su foglio"
+      ],
+      "evidenze": [
+        "Il bambino indica correttamente sopra/sotto, dentro/fuori in giochi di movimento",
+        "Il bambino esegue un percorso a tre tappe seguendo indicazioni orali",
+        "Il bambino disegna il percorso dall'aula al cortile con punti di riferimento"
+      ],
+      "criteriValutazione": [
+        "Uso corretto degli indicatori topologici in contesti di gioco",
+        "Esecuzione autonoma di percorsi semplici",
+        "Chiarezza nella rappresentazione grafica del percorso"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: La conoscenza del mondo",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Infanzia fascia 5, nucleo Paesaggio, orientamento spaziale come base per la geografia"
+    },
+    {
+      "id": "geo_pri_1_001",
+      "disciplina": "Geografia",
+      "ordine": "Primaria",
+      "fascia": "",
+      "classe": "1",
+      "ambito": "Spazio vissuto: orientamento, punti di riferimento e primi elementi del paesaggio",
+      "nucleo": "Paesaggio",
+      "competenza": "L'alunno si orienta nello spazio circostante utilizzando punti di riferimento e descrive gli elementi del paesaggio con linguaggio appropriato.",
+      "traguardo": "L'alunno si orienta nello spazio circostante e sulle carte geografiche, utilizzando riferimenti topologici e punti cardinali.",
+      "obiettivi": [
+        "Orientarsi nello spazio vissuto usando i punti di riferimento",
+        "Descrivere gli elementi fisici e antropici del paesaggio circostante",
+        "Rappresentare graficamente gli spazi vissuti (aula, scuola, cortile)"
+      ],
+      "conoscenze": [
+        "Punti di riferimento: naturali e artificiali",
+        "Elementi del paesaggio: collina, pianura, fiume, strada, casa",
+        "Rappresentazioni dello spazio: piante e mappe semplici"
+      ],
+      "abilita": [
+        "Muoversi nello spazio conosciuto usando punti di riferimento",
+        "Descrivere a parole gli elementi del paesaggio osservato",
+        "Disegnare una pianta semplice dell'aula o della scuola"
+      ],
+      "evidenze": [
+        "L'alunno indica il percorso dall'aula alla mensa usando punti di riferimento",
+        "L'alunno descrive il paesaggio visto dalla finestra distinguendo elementi naturali e artificiali",
+        "L'alunno disegna una pianta dell'aula con disposizione di banchi e arredi"
+      ],
+      "criteriValutazione": [
+        "Orientamento autonomo negli spazi scolastici",
+        "Completezza e pertinenza nella descrizione del paesaggio",
+        "Corrispondenza tra pianta disegnata e spazio reale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Traguardo: ge_pri1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Primaria classe 1, nucleo Paesaggio, orientamento e descrizione dello spazio vissuto"
+    },
+    {
+      "id": "geo_pri_2_001",
+      "disciplina": "Geografia",
+      "ordine": "Primaria",
+      "fascia": "",
+      "classe": "2",
+      "ambito": "Il paesaggio: elementi naturali e antropici, prime osservazioni sul territorio",
+      "nucleo": "Paesaggio",
+      "competenza": "L'alunno riconosce e denomina i principali oggetti geografici fisici, distinguendo elementi naturali e antropici.",
+      "traguardo": "Riconosce e denomina i principali oggetti geografici fisici (mare, montagna, fiume, pianura, collina).",
+      "obiettivi": [
+        "Riconoscere e denominare i principali elementi geografici fisici",
+        "Distinguere elementi naturali da elementi antropici nel paesaggio",
+        "Osservare e descrivere un paesaggio noto usando il lessico geografico"
+      ],
+      "conoscenze": [
+        "Elementi geografici fisici: mare, montagna, collina, pianura, fiume, lago",
+        "Elementi antropici: città, strada, ponte, diga, coltivazione",
+        "Lessico geografico di base: paesaggio, territorio, ambiente"
+      ],
+      "abilita": [
+        "Classificare elementi del paesaggio in naturali e antropici",
+        "Denominare correttamente gli oggetti geografici fisici in immagini e fotografie",
+        "Descrivere un paesaggio utilizzando il lessico specifico"
+      ],
+      "evidenze": [
+        "L'alunno classifica 10 immagini in naturali e antropiche con almeno 8 corrette",
+        "L'alunno denomina correttamente montagna, fiume, pianura, collina in una fotografia",
+        "L'alunno descrive il paesaggio del proprio paese usando aggettivi geografici"
+      ],
+      "criteriValutazione": [
+        "Correttezza nella classificazione degli elementi del paesaggio",
+        "Uso appropriato del lessico geografico",
+        "Completezza nella descrizione degli elementi osservati"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Traguardo: ge_pri2",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Primaria classe 2, nucleo Paesaggio, elementi fisici e antropici"
+    },
+    {
+      "id": "geo_pri_3_001",
+      "disciplina": "Geografia",
+      "ordine": "Primaria",
+      "fascia": "",
+      "classe": "3",
+      "ambito": "Carte geografiche e rappresentazioni: dalla pianta alla carta tematica",
+      "nucleo": "Transcalarità",
+      "competenza": "L'alunno utilizza diversi tipi di carte geografiche e rappresentazioni per orientarsi e descrivere il territorio.",
+      "traguardo": "L'alunno si orienta nello spazio circostante e sulle carte geografiche, utilizzando riferimenti topologici e punti cardinali.",
+      "obiettivi": [
+        "Leggere e interpretare diversi tipi di carte geografiche",
+        "Utilizzare i punti cardinali per orientarsi su una carta",
+        "Passare dalla rappresentazione dello spazio vissuto alla carta geografica"
+      ],
+      "conoscenze": [
+        "Tipi di carte: fisica, politica, tematica, muta",
+        "Punti cardinali: nord, sud, est, ovest",
+        "Elementi della carta: titolo, legenda, scala, simbologia",
+        "Riduzione in scala: dalla realtà alla carta"
+      ],
+      "abilita": [
+        "Leggere la legenda di una carta geografica e associare simboli agli elementi reali",
+        "Orientare una carta usando i punti cardinali",
+        "Confrontare una pianta con una carta a scala diversa"
+      ],
+      "evidenze": [
+        "L'alunno individua sulla carta d'Italia tre elementi fisici e tre antropici usando la legenda",
+        "L'alunno orienta correttamente la carta verso nord e indica le quattro direzioni cardinali",
+        "L'alunno confronta la pianta del paese con una carta regionale indicando differenze di scala"
+      ],
+      "criteriValutazione": [
+        "Uso corretto della legenda per leggere carte geografiche",
+        "Orientamento autonomo con punti cardinali",
+        "Comprensione del concetto di scala e riduzione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Traguardo: ge_pri1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Primaria classe 3, nucleo Transcalarità, carte e rappresentazioni"
+    },
+    {
+      "id": "geo_pri_4_001",
+      "disciplina": "Geografia",
+      "ordine": "Primaria",
+      "fascia": "",
+      "classe": "4",
+      "ambito": "Italia: territorio, regioni climatiche e paesaggi",
+      "nucleo": "Territorializzazione",
+      "competenza": "L'alunno conosce e descrive il territorio italiano, le sue regioni climatiche e i principali paesaggi, riconoscendo le interrelazioni tra ambiente e attività umane.",
+      "traguardo": "Riconosce e denomina i principali oggetti geografici fisici; studia l'Italia come metro di confronto con altre realtà europee e globali.",
+      "obiettivi": [
+        "Descrivere le caratteristiche fisiche del territorio italiano",
+        "Distinguere le regioni climatiche italiane",
+        "Riconoscere le principali attività economiche in relazione al territorio",
+        "Individuare analogie e differenze tra i paesaggi italiani"
+      ],
+      "conoscenze": [
+        "Geografia fisica dell'Italia: Alpi, Appennini, pianure, fiumi, laghi, coste, isole",
+        "Regioni climatiche: alpina, padana, mediterranea",
+        "Attività economiche: agricoltura, industria, turismo, artigianato",
+        "Paesaggi italiani: montano, collinare, pianeggiante, costiero, urbano"
+      ],
+      "abilita": [
+        "Localizzare su carta muta i principali elementi fisici dell'Italia",
+        "Correlare il clima di una regione alle sue attività economiche prevalenti",
+        "Confrontare due paesaggi italiani individuando elementi comuni e diversi"
+      ],
+      "evidenze": [
+        "L'alunno localizza correttamente Alpi, Appennini, Po, Tevere, Vesuvio su carta muta",
+        "L'alunno spiega perché in Pianura Padana si coltiva mais mentre in Liguria olivo",
+        "L'alunno confronta il paesaggio della propria regione con quello di una regione diversa"
+      ],
+      "criteriValutazione": [
+        "Correttezza nella localizzazione degli elementi fisici italiani",
+        "Capacità di correlare clima, territorio e attività umane",
+        "Uso del lessico geografico specifico (versante, bacino idrografico, altitudine)"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Traguardo: ge_pri2, Proposta IN 2025",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Primaria classe 4, nucleo Territorializzazione, Italia fisica, climi e attività"
+    },
+    {
+      "id": "geo_pri_5_001",
+      "disciplina": "Geografia",
+      "ordine": "Primaria",
+      "fascia": "",
+      "classe": "5",
+      "ambito": "Italia in Europa: confronto transcalare tra territorio nazionale e continentale",
+      "nucleo": "Transcalarità",
+      "competenza": "L'alunno colloca l'Italia in Europa e nel Mediterraneo, confrontando realtà territoriali a scale diverse e sviluppando pensiero transcalare.",
+      "traguardo": "Studia l'Italia come metro di confronto con altre realtà europee e globali; sviluppa pensiero spaziale e transcalarità.",
+      "obiettivi": [
+        "Collocare l'Italia sulla carta dell'Europa e del Mediterraneo",
+        "Confrontare il territorio italiano con quello di un paese europeo",
+        "Riconoscere le principali differenze tra le macroregioni europee",
+        "Comprendere le prime nozioni di transcalarità: locale, nazionale, continentale"
+      ],
+      "conoscenze": [
+        "Posizione dell'Italia in Europa e nel bacino del Mediterraneo",
+        "Paesi europei confinanti e principali stati dell'Unione Europea",
+        "Macroregioni europee: settentrionale, centrale, meridionale, orientale",
+        "Concetto di scala geografica: locale (Regione), nazionale (Italia), continentale (Europa)",
+        "Criteri di confronto: superficie, popolazione, clima, economia"
+      ],
+      "abilita": [
+        "Localizzare l'Italia sulla carta politica dell'Europa",
+        "Confrontare Italia e Francia/Germania/Spagna su indicatori geografici di base",
+        "Descrivere le differenze tra tre macroregioni europee"
+      ],
+      "evidenze": [
+        "L'alunno indica su carta muta dell'Europa Italia, stati confinanti e bacino del Mediterraneo",
+        "L'alunno compila una tabella di confronto Italia-Francia su superficie, clima, economia",
+        "L'alunno spiega cosa significa osservare un fenomeno a scala locale e a scala continentale"
+      ],
+      "criteriValutazione": [
+        "Correttezza nella localizzazione geografica su scala europea",
+        "Completezza e precisione nei confronti tra paesi",
+        "Comprensione del concetto di scala geografica e transcalarità"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Proposta IN 2025 (Italia come riferimento, pensiero spaziale)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Primaria classe 5, nucleo Transcalarità, Italia in Europa e confronto transcalare"
+    },
+    {
+      "id": "geo_sec_1_001",
+      "disciplina": "Geografia",
+      "ordine": "Secondaria",
+      "fascia": "",
+      "classe": "1",
+      "ambito": "Paesaggio: lettura, interpretazione e tutela del territorio (art. 9 Costituzione)",
+      "nucleo": "Paesaggio",
+      "competenza": "L'alunno osserva, legge e analizza sistemi territoriali vicini e lontani, utilizzando gli strumenti propri della geografia e riconoscendo il paesaggio come bene culturale.",
+      "traguardo": "Osserva, legge e analizza sistemi territoriali vicini e lontani nello spazio e nel tempo secondo tre assi: Paesaggio, Transcalarità, Territorializzazione.",
+      "obiettivi": [
+        "Descrivere un paesaggio utilizzando gli indicatori geografico-fisici (morfologia, idrografia, clima, vegetazione)",
+        "Interpretare gli elementi antropici del paesaggio come stratificazione storica",
+        "Riconoscere il paesaggio come bene culturale ai sensi dell'art. 9 della Costituzione",
+        "Utilizzare fotografie, immagini satellitari e carte per l'analisi del paesaggio"
+      ],
+      "conoscenze": [
+        "Elementi naturali del paesaggio: rilievo, acque, clima, vegetazione, suolo",
+        "Elementi antropici: insediamenti, infrastrutture, attività produttive, segni della storia",
+        "Art. 9 Costituzione: tutela del paesaggio e del patrimonio storico-artistico",
+        "Fonti per l'analisi: foto aeree, immagini satellitari, carte topografiche, documentari"
+      ],
+      "abilita": [
+        "Descrivere un paesaggio con lessico geografico appropriato distinguendo elementi naturali e antropici",
+        "Interpretare le tracce della storia nel paesaggio attuale",
+        "Argomentare l'importanza della tutela del paesaggio come bene comune"
+      ],
+      "evidenze": [
+        "L'alunno descrive un paesaggio italiano utilizzando almeno 8 termini geografici specifici",
+        "L'alunno identifica in una fotografia di un paesaggio italiano tre elementi di stratificazione storica",
+        "L'alunno spiega il significato dell'art. 9 Cost. applicato a un caso concreto"
+      ],
+      "criteriValutazione": [
+        "Ricchezza e precisione del lessico geografico nella descrizione",
+        "Capacità di lettura stratigrafica del paesaggio (naturale, storico, contemporaneo)",
+        "Comprensione del valore culturale e giuridico del paesaggio"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Traguardo: ge_sec1, Proposta IN 2025 (Paesaggio art. 9)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Secondaria classe 1, nucleo Paesaggio, lettura e tutela del paesaggio come bene culturale"
+    },
+    {
+      "id": "geo_sec_1_002",
+      "disciplina": "Geografia",
+      "ordine": "Secondaria",
+      "fascia": "",
+      "classe": "1",
+      "ambito": "Transcalarità: scale geografiche, fenomeni naturali e umani dal locale al globale",
+      "nucleo": "Transcalarità",
+      "competenza": "L'alunno analizza fenomeni geografici a diverse scale, utilizzando il pensiero transcalare per connettere il territorio locale con dinamiche globali.",
+      "traguardo": "Osserva, legge e analizza sistemi territoriali vicini e lontani nello spazio e nel tempo secondo l'asse della Transcalarità (locale-globale).",
+      "obiettivi": [
+        "Distinguere le scale geografiche: locale, regionale, nazionale, continentale, globale",
+        "Analizzare un fenomeno geografico a scale diverse",
+        "Rappresentare dati geografici utilizzando strumenti cartografici e digitali"
+      ],
+      "conoscenze": [
+        "Scale geografiche: locale (comune), regionale (Regione), nazionale (Italia), continentale (Europa), globale (mondo)",
+        "Fenomeni analizzabili a scale diverse: clima, popolazione, economia, trasporti",
+        "Strumenti cartografici: carte a diversa scala, carte tematiche, GIS elementari"
+      ],
+      "abilita": [
+        "Selezionare la scala appropriata per analizzare un fenomeno geografico",
+        "Confrontare un medesimo fenomeno (es. urbanizzazione) a scala locale e globale",
+        "Leggere carte tematiche a diversa scala ricavando informazioni geografiche"
+      ],
+      "evidenze": [
+        "L'alunno sceglie la carta appropriata per analizzare il clima della propria regione (regionale) e il clima mondiale (globale)",
+        "L'alunno confronta il fenomeno dell'inurbamento a scala locale (città vicina) e globale (megalopoli)",
+        "L'alunno legge due carte tematiche a scala diversa estraendone dati comparabili"
+      ],
+      "criteriValutazione": [
+        "Correttezza nella scelta della scala geografica appropriata",
+        "Capacità di confrontare fenomeni tra scale diverse",
+        "Competenza nella lettura di carte geografiche a diversa scala"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Traguardo: ge_sec1, Proposta IN 2025 (Transcalarità)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Secondaria classe 1, nucleo Transcalarità, scale geografiche e confronto locale-globale"
+    },
+    {
+      "id": "geo_sec_2_001",
+      "disciplina": "Geografia",
+      "ordine": "Secondaria",
+      "fascia": "",
+      "classe": "2",
+      "ambito": "Popolazione, mobilità e dinamiche economiche: transcalarità applicata",
+      "nucleo": "Transcalarità",
+      "competenza": "L'alunno analizza le interrelazioni tra fenomeni demografici, sociali ed economici a diverse scale geografiche.",
+      "traguardo": "Orientarsi su carte geografiche; analizzare interrelazioni tra fenomeni geografici demografici, sociali, economici e ambientali.",
+      "obiettivi": [
+        "Leggere e interpretare dati demografici a scale diverse",
+        "Analizzare le cause e le conseguenze dei flussi migratori",
+        "Descrivere le principali trasformazioni economiche e territoriali dell'Italia e dell'Europa",
+        "Utilizzare la geovisualizzazione digitale per rappresentare dati geografici"
+      ],
+      "conoscenze": [
+        "Indicatori demografici: natalità, mortalità, speranza di vita, densità, saldo migratorio",
+        "Flussi migratori: cause (push-pull), effetti sui territori di partenza e arrivo",
+        "Economia italiana: settori produttivi, distretti industriali, divario Nord-Sud",
+        "Economia europea: UE, mercato unico, politiche di coesione",
+        "Geovisualizzazione: mappe interattive, dati georeferenziati, grafici territoriali"
+      ],
+      "abilita": [
+        "Leggere e confrontare piramidi delle età e tabelle demografiche di paesi diversi",
+        "Correlare flussi migratori con cause economiche, sociali e ambientali",
+        "Utilizzare strumenti digitali di geovisualizzazione per creare semplici mappe tematiche"
+      ],
+      "evidenze": [
+        "L'alunno confronta le piramidi delle età di Italia e Nigeria spiegando le differenze",
+        "L'alunno analizza un flusso migratorio (es. dall'Africa all'Europa) identificando cause push-pull",
+        "L'alunno crea una mappa tematica digitale della distribuzione della popolazione in Italia"
+      ],
+      "criteriValutazione": [
+        "Capacità di leggere e confrontare dati demografici quantitativi",
+        "Completezza nell'analisi delle cause di un fenomeno geografico",
+        "Competenza nell'uso di strumenti digitali per la geovisualizzazione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Obiettivo: ge_ob_sec1, Proposta IN 2025 (geovisualizzazione)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Secondaria classe 2, nucleo Transcalarità, popolazione, migrazioni, economia, geovisualizzazione"
+    },
+    {
+      "id": "geo_sec_2_002",
+      "disciplina": "Geografia",
+      "ordine": "Secondaria",
+      "fascia": "",
+      "classe": "2",
+      "ambito": "Territorializzazione: comunità umane, ambiente e sviluppo sostenibile",
+      "nucleo": "Territorializzazione",
+      "competenza": "L'alunno analizza il rapporto tra comunità umane e ambiente, riconoscendo le trasformazioni del territorio e valutando criteri di sostenibilità.",
+      "traguardo": "Analizza sistemi territoriali secondo l'asse della Territorializzazione: comunità umane, pianeta, equilibrio tra sviluppo e tutela ambientale.",
+      "obiettivi": [
+        "Riconoscere le principali trasformazioni umane del territorio (agricoltura, industria, urbanizzazione, infrastrutture)",
+        "Valutare l'impatto ambientale delle attività umane",
+        "Distinguere modelli di sviluppo sostenibile da modelli insostenibili",
+        "Analizzare il rapporto tra comunità locali e risorse del territorio"
+      ],
+      "conoscenze": [
+        "Trasformazioni umane del territorio: bonifiche, urbanizzazione, industrializzazione, infrastrutture di trasporto",
+        "Impatto ambientale: inquinamento, consumo di suolo, deforestazione, emissioni CO2",
+        "Sviluppo sostenibile: SDGs Agenda 2030, economia circolare, energie rinnovabili",
+        "Risorse del territorio: acqua, suolo, foreste, minerali, energia"
+      ],
+      "abilita": [
+        "Descrivere l'evoluzione di un territorio in relazione alle attività umane",
+        "Valutare i punti di forza e debolezza di un modello di sviluppo territoriale",
+        "Proporre soluzioni sostenibili per problemi ambientali del proprio territorio"
+      ],
+      "evidenze": [
+        "L'alunno descrive le trasformazioni del proprio comune negli ultimi 50 anni usando foto e testimonianze",
+        "L'alunno analizza un caso di impatto ambientale (es. cementificazione costiera) valutandone gli effetti",
+        "L'alunno propone un'azione concreta per migliorare la sostenibilità del proprio territorio"
+      ],
+      "criteriValutazione": [
+        "Completezza nella descrizione dell'evoluzione territoriale",
+        "Capacità di analisi critica dell'impatto ambientale",
+        "Pertinenza e realismo nelle proposte di sostenibilità"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Traguardo: ge_sec1, Proposta IN 2025 (Territorializzazione)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Secondaria classe 2, nucleo Territorializzazione, comunità umane e ambiente"
+    },
+    {
+      "id": "geo_sec_3_001",
+      "disciplina": "Geografia",
+      "ordine": "Secondaria",
+      "fascia": "",
+      "classe": "3",
+      "ambito": "Geopolitica, globalizzazione e sfide globali: transcalarità e cittadinanza planetaria",
+      "nucleo": "Transcalarità",
+      "competenza": "L'alunno analizza le dinamiche geopolitiche e le sfide globali contemporanee, sviluppando un pensiero critico sulle interconnessioni planetarie.",
+      "traguardo": "Analizza sistemi territoriali secondo l'asse della Transcalarità: connettere fenomeni locali a dinamiche globali contemporanee.",
+      "obiettivi": [
+        "Descrivere le principali dinamiche geopolitiche mondiali (conflitti, alleanze, organizzazioni internazionali)",
+        "Analizzare le interconnessioni economiche, culturali e ambientali della globalizzazione",
+        "Valutare l'impatto dei cambiamenti climatici a scale diverse",
+        "Sviluppare un pensiero critico sulle disuguaglianze globali"
+      ],
+      "conoscenze": [
+        "Geopolitica: ONU, UE, NATO, BRICS, conflitti contemporanei, equilibrio di potere",
+        "Globalizzazione: scambi commerciali, flussi finanziari, migrazioni, omologazione culturale",
+        "Cambiamenti climatici: cause antropiche, effetti regionali, accordi internazionali (Accordo di Parigi)",
+        "Disuguaglianze globali: Nord e Sud del mondo, accesso a risorse, istruzione, salute"
+      ],
+      "abilita": [
+        "Analizzare un conflitto contemporaneo considerando fattori territoriali, economici e culturali",
+        "Valutare effetti positivi e negativi della globalizzazione su territori diversi",
+        "Argomentare l'urgenza dell'azione climatica con dati geografici"
+      ],
+      "evidenze": [
+        "L'alunno analizza le cause geografiche di un conflitto contemporaneo usando carte tematiche",
+        "L'alunno confronta l'impatto della globalizzazione su un paese del Nord e uno del Sud del mondo",
+        "L'alunno espone una mappa degli effetti dei cambiamenti climatici in Italia con dati e fonti"
+      ],
+      "criteriValutazione": [
+        "Completezza dell'analisi geopolitica con uso di fonti cartografiche",
+        "Equilibrio nella valutazione di effetti positivi e negativi della globalizzazione",
+        "Argomentazione critica basata su dati geografici"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Obiettivo: ge_ob_sec1, Proposta IN 2025 (geovisualizzazione digitale)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Secondaria classe 3, nucleo Transcalarità, geopolitica, globalizzazione e clima"
+    },
+    {
+      "id": "geo_sec_3_002",
+      "disciplina": "Geografia",
+      "ordine": "Secondaria",
+      "fascia": "",
+      "classe": "3",
+      "ambito": "Territorio locale: Irpinia e Campania come laboratorio geografico",
+      "nucleo": "Territorializzazione",
+      "competenza": "L'alunno applica gli strumenti e i metodi della geografia all'analisi del territorio locale (Irpinia, Campania), sviluppando un rapporto consapevole con il proprio ambiente di vita.",
+      "traguardo": "Orientarsi su carte geografiche; analizzare interrelazioni tra fenomeni geografici; uscite didattiche sul territorio (Irpinia, Campania); geovisualizzazione digitale.",
+      "obiettivi": [
+        "Analizzare gli elementi fisici e antropici del territorio irpino e campano",
+        "Condurre un'uscita didattica sul territorio raccogliendo dati geografici",
+        "Creare una mappa tematica del proprio territorio utilizzando strumenti digitali",
+        "Valutare le potenzialità e le criticità del territorio locale"
+      ],
+      "conoscenze": [
+        "Territorio irpino: morfologia appenninica, fiumi (Calore, Ofanto), aree interne, centri storici",
+        "Territorio campano: golfo, pianura, area vesuviana, costiera, aree interne",
+        "Elementi identitari del territorio: produzioni tipiche (olio, vino, castagne, tartufo), artigianato (ceramica arianese), beni culturali",
+        "Strumenti digitali: Google Earth, mappe interattive, GIS online, dati georeferenziati",
+        "Uscite didattiche: osservazione, raccolta dati, documentazione fotografica, restituzione"
+      ],
+      "abilita": [
+        "Leggere il paesaggio locale utilizzando gli strumenti dell'analisi geografica",
+        "Pianificare e condurre una semplice rilevazione geografica sul campo",
+        "Produrre una mappa tematica digitale del proprio territorio",
+        "Argomentare le opportunità di sviluppo sostenibile del territorio locale"
+      ],
+      "evidenze": [
+        "L'alunno descrive il paesaggio del proprio comune utilizzando gli indicatori studiati",
+        "L'alunno conduce una breve uscita sul territorio e ne redige una relazione geografica",
+        "L'alunno crea una mappa digitale interattiva del territorio con punti di interesse"
+      ],
+      "criteriValutazione": [
+        "Capacità di applicare i metodi geografici al contesto locale",
+        "Qualità della documentazione raccolta durante l'uscita didattica",
+        "Competenza nell'uso di strumenti digitali per la rappresentazione geografica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Obiettivo: ge_ob_sec1, Proposta IN 2025 (escursioni curricolari, geovisualizzazione)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-105 — Secondaria classe 3, nucleo Territorializzazione, territorio locale irpino e campano, uscite didattiche"
+    }
+  ]
+}
