@@ -2623,3 +2623,20 @@
 - Verdetto: `CML_107_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
 - Prossimo step: CML-108 — normalizzazione runtime Educazione Civica
 
+---
+
+## 2026-06-24 - CML-108 - EDUCAZIONE_CIVICA_NORMALIZATION_RUNTIME
+
+- Tipo slice: runtime — normalizzazione Educazione Civica su `index.html`
+- Commit iniziale: `c6e15ef` (CML-107 audit)
+- **10 modifiche puntuali** in `index.html`: contatori, elenchi, sottotitoli, righe completezza/readiness
+- Contatori: 7/7/0 → **8/6/0**
+- Educazione Civica aggiunta come 8a disciplina completa (Bozza completa / In revisione)
+- Educazione Civica rimossa dall'elenco "Sola consultazione" (6 nomi residui)
+- Discipline residue: Seconda Lingua, Arte, Musica, Ed. Fisica, Religione, Latino (LEL)
+- Nessuna modifica a schema `.cml`, export/import, role access, service worker, contenuti disciplinari, altre discipline complete
+- Controlli: `git diff --check` OK, contatori 8/6/0 coerenti su entrambi i pannelli
+- File modificati: `_published_snapshot/netlify-current/index.html`
+- File creati: `docs/03_execution/CML-108.md`, `report/CML-108_*.md`
+- Verdetto: `CML_108_EDUCAZIONE_CIVICA_NORMALIZATION_RUNTIME_READY`
+- Prossimo step: CML-108A — smoke locale
