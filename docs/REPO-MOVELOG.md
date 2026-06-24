@@ -2748,3 +2748,23 @@
 - Discipline residue: 3 (Seconda Lingua, Religione, Latino)
 - Verifica: Educazione Fisica già presente in DISCIPLINE_META/DATA
 - Next: CML-115 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 - CML-115 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT (3ª iterazione)
+
+- Commit: `b8a6e06`
+- Discipline residue analizzate: 3 (Religione, Seconda Lingua, Latino)
+- Disciplina selezionata: **Religione Cattolica** — voto 4/10
+- Verdetto: `CML_115_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
+
+---
+
+## 2026-06-24 - CML-116 - NORMALIZZAZIONE RUNTIME RELIGIONE CATTOLICA
+
+- Commit: `fbf55dc`
+- Stato: 12/2/0 (11 → 12 bozze complete, 3 → 2 sola consultazione)
+- 9 edit in `index.html`
+- Discipline residue: 2 (Seconda Lingua, Latino)
+- Verdetto: `CML_116_RELIGIONE_NORMALIZATION_READY`
+- Next: CML-117 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
