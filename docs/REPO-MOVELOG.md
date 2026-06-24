@@ -2078,3 +2078,19 @@
 - `.cml`/export/import/role-access invariati: ✅
 - Verdetto: `CML_087_ITALIANO_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT_READY`
 - Prossimo step raccomandato: CML-087A — ITALIANO_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT
+
+---
+
+## 2026-06-24 — CML-087A — ITALIANO_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT
+
+- Tipo slice: docs-only quality audit
+- File sotto audit: `content/curriculum/italiano.normalized.json`
+- Benchmark: `content/curriculum/tecnologia.normalized.json`
+- Esito tecnico: ✅ PASS — JSON valido, struttura coerente, ID univoci, nessuna approvazione
+- Esito didattico: ✅ PASS — obiettivi osservabili, criteri descrittivi, progressione verticale leggibile
+- Decisione readiness: **A** — Italiano pronto come `bozza_generabile / in_revisione`
+- Criticità: nessuna bloccante; Lessico e Riflessione assenti in Infanzia (coerente con IN)
+- Runtime non modificato: ✅
+- `.cml`/export/import/role-access invariati: ✅
+- Verdetto: `CML_087A_ITALIANO_NORMALIZED_CURRICULUM_QUALITY_AUDIT_READY`
+- Prossimo step: CML-088 — DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_ITALIANO_RUNTIME_INCREMENT
