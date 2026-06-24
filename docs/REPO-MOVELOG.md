@@ -1,5 +1,38 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-124 — LOCAL_NON_CORE_ARTIFACTS_IGNORE_POLICY
+
+- HEAD iniziale (main): 10e3732aec00b06f376456fc6012bc72afa35ab5
+- Tipo slice: hygiene locale / policy ignore non core
+- Obiettivo: chiudere il working tree post CML-121/122/123 escludendo artefatti locali non core senza toccare il prodotto.
+- Residui iniziali rilevati:
+  - .agents/
+  - Consultazione
+  - skills-lock.json
+- Verifica pre-policy:
+  - git diff --check -> nessun output
+  - git check-ignore -v .agents skills-lock.json Consultazione -> nessuna regola applicabile
+  - .gitignore esistente in root
+- Policy applicata su .gitignore:
+  - # Local agent/tooling artifacts - not part of CurManLight runtime
+  - /.agents/
+  - /skills-lock.json
+  - /Consultazione
+- Decisione per residuo:
+  - .agents/: ignorato
+  - skills-lock.json: ignorato
+  - Consultazione: ignorato
+- Garanzie:
+  - residui non committati
+  - nessuna cancellazione di file locali
+  - nessuna modifica runtime/JSON/validator/schema/import-export/UI-CSS-logica
+- Artefatti slice:
+  - docs/03_execution/CML-124.md
+  - report/CML-124_local_non_core_artifacts_ignore_policy.md
+  - aggiornamento docs/REPO-MOVELOG.md
+- Verdetto: CML_124_LOCAL_NON_CORE_ARTIFACTS_IGNORE_POLICY_READY
+- Next: push controllato dei commit CML-121/122/123/124.
+
 ## 2026-06-24 — CML-123 — POST_CONSOLIDATION_WHITESPACE_AND_GIT_HYGIENE_FIX
 
 - **HEAD iniziale (main)**: `8b5488ca82d319c29e2d27a98745751f3cdd7c84`
