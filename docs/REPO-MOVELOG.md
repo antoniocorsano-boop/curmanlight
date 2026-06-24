@@ -2607,3 +2607,19 @@
 - File creati: `docs/03_execution/CML-106B.md`, `report/CML-106B_*.md`
 - Verdetto: `CML_106B_READINESS_COUNTER_ALIGNMENT_MICROFIX_READY`
 - Prossimo step: CML-107 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 - CML-107 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+- Tipo slice: audit-only (read-only)
+- Commit iniziale: `bec8ae9` (CML-106B)
+- Nessuna modifica runtime
+- **Discipline residue analizzate:** 7 (Educazione Civica, Musica, Arte, Ed. Fisica, Religione, Seconda Lingua, Latino)
+- **Disciplina selezionata:** Educazione Civica — voto 9/10
+- Motivazione: dataset piu ricco (5 traguardi + 2 obiettivi), copertura tutti gli ordini, natura trasversale, urgenza normativa IN 2025 (D.M. 183/2024), pattern pronto
+- Valutazione completa con matrice criteri e voti per tutte le 7 discipline
+- File creati: `docs/03_execution/CML-107.md`, `report/CML-107_*.md`
+- Verdetto: `CML_107_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
+- Prossimo step: CML-108 — normalizzazione runtime Educazione Civica
+
