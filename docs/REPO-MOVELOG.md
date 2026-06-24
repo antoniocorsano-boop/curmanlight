@@ -1,5 +1,81 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-119A — DISCIPLINARY_KNOWLEDGE_MODEL_AUDIT
+- **HEAD (main)** — audit read-only, docs-only
+- Branch: `main`, nessuna modifica runtime
+- Slice precedente: `CML_118_COMPETENZE_E_PROGETTAZIONE_CONTENT_REFOCUS_AUDIT_READY`
+- Commits: nessuno (docs-only)
+- File creati/modificati:
+  - `docs/03_execution/CML-119A.md`
+  - `report/CML-119A_disciplinary_knowledge_model_audit.md`
+- File aggiornati:
+  - `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_119A_DISCIPLINARY_KNOWLEDGE_MODEL_AUDIT_READY`
+- Next: CML-119B — VALIDATORE_MULTI_DISCIPLINA
+
+---
+
+## 2026-06-24 — CML-118 — COMPETENZE_E_PROGETTAZIONE_CONTENT_REFOCUS_AUDIT
+- **HEAD (main)** — audit read-only, docs-only
+- Branch: `main`, nessuna modifica runtime
+- Slice precedente: `CML_117_POST_REFOCUS_RUNTIME_SMOKE_AND_NAV_COHERENCE_AUDIT_READY`
+- Commits: nessuno (docs-only)
+- File creati/modificati:
+  - `docs/03_execution/CML-118.md`
+  - `report/CML-118_competenze_e_progettazione_content_refocus_audit.md`
+- File aggiornati:
+  - `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_118_COMPETENZE_E_PROGETTAZIONE_CONTENT_REFOCUS_AUDIT_READY`
+- Next: CML-119 — COMPETENZE_CHIAVE_AGGREGATE_OVERVIEW
+
+---
+
+## 2026-06-24 — CML-117 — POST_REFOCUS_RUNTIME_SMOKE_AND_NAV_COHERENCE_AUDIT
+- **HEAD (main)** — audit/smoke, nessuna modifica runtime
+- Branch: `main`, nessuna modifica runtime
+- Slice precedente: `CML_116_HOME_CURRICULUM_PROCESS_REFOCUS_READY`
+- Commits: nessuno (audit-only)
+- File creati/modificati:
+  - `docs/03_execution/CML-117.md`
+  - `report/CML-117_post_refocus_runtime_smoke_and_nav_coherence_audit.md`
+- File aggiornati:
+  - `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_117_POST_REFOCUS_RUNTIME_SMOKE_AND_NAV_COHERENCE_AUDIT_READY`
+- Next: CML-118 (opzionale) — validazione mobile o arricchimento Competenze e progettazione
+
+---
+
+## 2026-06-24 — CML-116 — HOME_CURRICULUM_PROCESS_REFOCUS
+- **HEAD (main)** — lightweight Home refocus, single-file runtime increment
+- Branch: `main`, modificato `_published_snapshot/netlify-current/index.html`
+- Slice precedente: `CML_115_SYSTEM_REFOCUS_AFTER_DEPARTMENT_VALIDATION_AUDIT_READY`
+- Commits: nessuno (lavoro in corso)
+- File creati/modificati:
+  - `docs/03_execution/CML-116.md`
+  - `report/CML-116_home_curriculum_process_refocus.md`
+- File aggiornati:
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_116_HOME_CURRICULUM_PROCESS_REFOCUS_READY`
+- Next: CML-117 — POST_REFOCUS_RUNTIME_SMOKE_AND_NAV_COHERENCE_AUDIT
+
+---
+
+## 2026-06-24 — CML-115 — SYSTEM_REFOCUS_AFTER_DEPARTMENT_VALIDATION_AUDIT
+- **HEAD (main)** — audit read-only, docs-only
+- Branch: `main`, nessuna modifica runtime
+- Slice precedente: `CML_114_VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT_READY`
+- Commits audit: nessuno (docs-only)
+- File creati/modificati:
+  - `docs/03_execution/CML-115.md`
+  - `report/CML-115_system_refocus_after_department_validation_audit.md`
+- File aggiornati:
+  - `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_115_SYSTEM_REFOCUS_AFTER_DEPARTMENT_VALIDATION_AUDIT_READY`
+- Next: CML-116 — HOME_CURRICULUM_PROCESS_REFOCUS
+
+---
+
 ## 2026-06-24 — CML-114 — VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT
 - **HEAD (main)** — audit read-only, docs-only
 - Branch: `main`, tree modificata su `index.html` (non toccata in questo commit)

@@ -552,6 +552,12 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 }
 @media print{.cruscotto{display:none!important}}
 
+.home-process-path{background:#e8eaf6;border:1px solid #c5cae9;border-radius:9px;padding:10px 14px;margin-bottom:14px}
+.home-process-path-title{font-weight:800;font-size:13px;margin-bottom:6px;color:#1a237e}
+.home-process-path-steps{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.home-process-path-step{font-weight:600;font-size:12px;color:#37474f}
+.home-process-path-arrow{color:#9fa8da;font-size:12px}
+
 @media print{
   .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali,.tecnologia-export-panel,.department-import-panel{display:none!important}
   .layout{padding:0;display:block}
@@ -1204,7 +1210,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <div class="tabbar" id="tabbar">
   <button class="active" onclick="setTab('home')">🏠 Home</button>
   <button onclick="setTab('curricolo')">📚 Curriculum</button>
-  <button onclick="setTab('didattica')">🧑‍🏫 Didattica</button>
+  <button onclick="setTab('didattica')">🧑‍🏫 Competenze e progettazione</button>
   <button onclick="setTab('esportazioni')">📤 Esportazioni</button>
   <button onclick="setTab('guida')">❔ Guida</button>
 </div>
@@ -1215,7 +1221,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <button class="subnav-btn" onclick="setTab('riepilogo')">📋 Definitivo</button>
   <button class="subnav-btn" onclick="setTab('normativa')">📜 Fonti</button>
 </div>
-<!-- SUB-NAV: DIDATTICA -->
+<!-- SUB-NAV: COMPETENZE E PROGETTAZIONE -->
 <div class="subnav-bar subnav-didattica" id="subnav-didattica" style="display:none">
   <button class="subnav-btn active" onclick="setTab('didattica')">📊 Valutazione / Evidenze</button>
   <button class="subnav-btn" onclick="setTab('didattica_uda')">📋 UDA modello</button>
@@ -1225,7 +1231,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <div class="cruscotto-main">
     <div>
       <span class="cruscotto-state">Stato: revisione avviata</span>
-      <div class="cruscotto-next">Prossima azione: controlla le 12 voci da validare</div>
+      <div class="cruscotto-next">Prossima azione: avvia la consultazione e la revisione del curricolo</div>
     </div>
     <div class="cruscotto-btns">
       <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})">📋 Controlla voci</button>
@@ -1264,7 +1270,18 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div id="tab-home" style="display:block">
       <div class="home-dashboard">
         <h2 class="home-title">Da dove vuoi iniziare?</h2>
-        <p class="home-subtitle">Scegli l'area di lavoro. Le funzioni restano separate per evitare confusione tra curricolo istituzionale e attività didattica.</p>
+        <p class="home-subtitle">Il processo del curricolo: consulta, analizza, proponi, confronta, sintetizza ed esporta.</p>
+        <div class="home-process-path">
+          <div class="home-process-path-title">🔄 Percorso di governo del curricolo</div>
+          <div class="home-process-path-steps">
+            <span class="home-process-path-step">📖 Consulta</span><span class="home-process-path-arrow">→</span>
+            <span class="home-process-path-step">🔍 Analizza</span><span class="home-process-path-arrow">→</span>
+            <span class="home-process-path-step">✏️ Proponi</span><span class="home-process-path-arrow">→</span>
+            <span class="home-process-path-step">🤝 Confronta</span><span class="home-process-path-arrow">→</span>
+            <span class="home-process-path-step">📋 Sintetizza</span><span class="home-process-path-arrow">→</span>
+            <span class="home-process-path-step">📤 Esporta</span>
+          </div>
+        </div>
         <div class="home-cards">
           <div class="home-card">
             <div class="home-card-header">
@@ -1282,9 +1299,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div class="home-card home-card-didattica">
             <div class="home-card-header">
               <span class="home-card-icon">🧑‍🏫</span>
-              <h3 class="home-card-title">Didattica</h3>
+              <h3 class="home-card-title">Competenze e progettazione</h3>
             </div>
-            <p class="home-card-text">Evidenze, criteri di valutazione e UDA modello collegati al curricolo. Da adattare alla classe e da validare dal docente.</p>
+            <p class="home-card-text">Competenze chiave, progettazione per competenze, nodi disciplinari e collegamenti interdisciplinari per guidare la didattica.</p>
             <div class="home-card-badge badge--prototype">📋 Area operativa</div>
             <div class="home-card-links">
               <a href="#" onclick="setTab('didattica');return false">📊 Valuta evidenze</a>
@@ -1292,7 +1309,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
               <span class="dimmed">🧪 Prepara attività <span class="badge-preparing badge--prototype">In preparazione</span></span>
               <span class="dimmed">📁 Materiali per la classe <span class="badge-preparing badge--prototype">In preparazione</span></span>
             </div>
-            <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a> (12 unità) e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione.</p>
+            <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a> (13 unità) e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione.</p>
           </div>
         </div>
         <div class="home-microguide">
@@ -1308,15 +1325,15 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div class="home-microguide-footer">La validazione finale resta a cura del gruppo di lavoro e degli organi competenti.</div>
         </div>
         <div class="home-footer">
-          <p>La Home non modifica i dati. Curriculum e Didattica restano separati: il primo riguarda il documento istituzionale, la seconda il lavoro operativo in classe. Le azioni protette restano sotto codice operativo. Il curricolo normalizzato richiede validazione umana.</p>
+          <p>La Home non modifica i dati. Curriculum e Competenze e progettazione restano separati: il primo riguarda il documento istituzionale, la seconda la progettazione curricolare. Le azioni protette restano sotto codice operativo. Il curricolo normalizzato richiede validazione umana.</p>
         </div>
       </div>
     </div>
-    <!-- TAB DIDATTICA -->
+    <!-- TAB COMPETENZE E PROGETTAZIONE -->
     <div id="tab-didattica" style="display:none">
       <div class="didattica-evidence">
         <div class="didattica-evidence-header">
-          <h2>🧑‍🏫 Didattica — Valutazione ed evidenze</h2>
+          <h2>🧑‍🏫 Competenze e progettazione — Valutazione ed evidenze</h2>
           <p>Collega le unità curricolari di Tecnologia a evidenze osservabili e criteri di valutazione. Da adattare alla classe e da validare dal docente.</p>
         </div>
         <div class="didattica-path">
@@ -1347,7 +1364,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <!-- UDA MODELLO -->
       <div class="didattica-uda" id="didattica-uda">
         <div class="didattica-uda-header">
-          <h2>📋 Didattica — UDA modello</h2>
+          <h2>📋 Competenze e progettazione — UDA modello</h2>
           <p>Mostra come un'unità curricolare di Tecnologia può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
         </div>
         <div class="didattica-uda-box notice-box tip">
@@ -1787,7 +1804,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <p class="sub">Come usare lo strumento, cosa può fare, cosa non può fare.</p>
     <div class="guida-card">
       <h3>👋 Come iniziare</h3>
-      <p>Scegli un'area dalla barra in alto: <strong>Curriculum</strong> per il documento istituzionale, <strong>Didattica</strong> per la progettazione operativa. Usa la <strong>Home</strong> per orientarti.</p>
+      <p>Scegli un'area dalla barra in alto: <strong>Curriculum</strong> per il documento istituzionale, <strong>Competenze e progettazione</strong> per la progettazione operativa. Usa la <strong>Home</strong> per orientarti.</p>
     </div>
     <div class="guida-card">
       <h3>📚 Curriculum</h3>
@@ -1799,7 +1816,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </ul>
     </div>
     <div class="guida-card">
-      <h3>🧑‍🏫 Didattica</h3>
+      <h3>🧑‍🏫 Competenze e progettazione</h3>
       <ul>
         <li><strong>Valutazione / Evidenze</strong> — collega le unità curricolari a evidenze osservabili</li>
         <li><strong>UDA modello</strong> — trasforma una unità curricolare in unità di apprendimento</li>
@@ -2819,7 +2836,7 @@ function setTab(t){
     }
   }
   if(breadcrumbEl){
-    const labels={home:"Home",curricolo:"Curriculum — Consultazione",lavoro:"Curriculum — Revisione",riepilogo:"Curriculum — Definitivo",normativa:"Curriculum — Fonti",generali:"Curriculum — Fonti",didattica:"Didattica — Valutazione / Evidenze",didattica_uda:"Didattica — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+    const labels={home:"Home",curricolo:"Curriculum — Consultazione",lavoro:"Curriculum — Revisione",riepilogo:"Curriculum — Definitivo",normativa:"Curriculum — Fonti",generali:"Curriculum — Fonti",didattica:"Competenze e progettazione — Valutazione / Evidenze",didattica_uda:"Competenze e progettazione — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
     breadcrumbEl.innerHTML='<span class="crumb-current">'+(labels[t]||"Home")+'</span>';
     breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
   }
@@ -4050,7 +4067,7 @@ function toggleMobileMenu(){
     <button class="mm-item" onclick="setTab(\'riepilogo\');this.closest(\'.mobile-menu-overlay\').remove()">📋 Definitivo</button>\
     <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Fonti</button>\
     <div class="mm-sep"></div>\
-    <div class="mm-title">🧑‍🏫 Didattica</div>\
+    <div class="mm-title">🧑‍🏫 Competenze e progettazione</div>\
     <button class="mm-item" onclick="setTab(\'didattica\');this.closest(\'.mobile-menu-overlay\').remove()">📊 Valutazione / Evidenze</button>\
     <button class="mm-item" onclick="setTab(\'didattica_uda\');this.closest(\'.mobile-menu-overlay\').remove()">📋 UDA modello</button>\
     <div class="mm-sep"></div>\
@@ -4589,14 +4606,16 @@ function renderCurricoloIstituto(version) {
   let html = '<div class="curricolo-viewer">';
 
   html += '<div class="curricolo-path">' +
-    '<div class="curricolo-path-title">📚 Il percorso del curricolo</div>' +
+    '<div class="curricolo-path-title">📚 Il processo del curricolo</div>' +
     '<div class="curricolo-path-steps">' +
-      '<span class="curricolo-path-step curricolo-path-step--active">📖 Consulta</span><span class="curricolo-path-arrow">→</span>' +
-      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'lavoro\');return false">✏️ Revisione</a></span><span class="curricolo-path-arrow">→</span>' +
-      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'riepilogo\');return false">📋 Definitivo</a></span><span class="curricolo-path-arrow">→</span>' +
+      '<span class="curricolo-path-step">📖 Consulta</span><span class="curricolo-path-arrow">→</span>' +
+      '<span class="curricolo-path-step">🔍 Analizza</span><span class="curricolo-path-arrow">→</span>' +
+      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'lavoro\');return false">✏️ Proponi</a></span><span class="curricolo-path-arrow">→</span>' +
+      '<span class="curricolo-path-step">🤝 Confronta</span><span class="curricolo-path-arrow">→</span>' +
+      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'riepilogo\');return false">📋 Sintetizza</a></span><span class="curricolo-path-arrow">→</span>' +
       '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'esportazioni\');return false">📤 Esporta</a></span>' +
     '</div>' +
-    '<div class="curricolo-path-body">Confronta il testo vigente (IN 2012) con la proposta 2025. Nella scheda <a href="#" onclick="setTab(\'lavoro\');return false">Revisione</a> decidi per ogni voce se approvare, modificare o discutere. Il <strong>Definitivo</strong> è un documento di lavoro finale — non sostituisce la delibera del Collegio Docenti.</div>' +
+    '<div class="curricolo-path-body">Confronta il testo vigente (IN 2012) con la proposta 2025. Nella scheda <a href="#" onclick="setTab(\'lavoro\');return false">Proponi</a> decidi per ogni voce se approvare, modificare o discutere. Il <strong>Sintetizza</strong> riepiloga le decisioni — non sostituisce la delibera del Collegio Docenti.</div>' +
     '<div class="curricolo-path-footer">Leggi anche le <a href="#" onclick="setTab(\'generali\');return false">sezioni generali</a>: Premessa, Profilo dello studente, Valutazione, Competenze chiave, Raccordo verticale.</div>' +
   '</div>';
 
@@ -4867,7 +4886,7 @@ showWelcome();
 <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
   <button class="mbb-btn mbb-active" id="mbb-home" onclick="setTab('home')">🏠<br>Home</button>
   <button class="mbb-btn" id="mbb-curricolo" onclick="setTab('curricolo')">📚<br>Curr.</button>
-  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')">🧑‍🏫<br>Did.</button>
+  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')">🧑‍🏫<br>Comp.</button>
   <button class="mbb-btn" id="mbb-esportazioni" onclick="setTab('esportazioni')">📤<br>Esp.</button>
   <button class="mbb-btn" id="mbb-menu" onclick="toggleMobileMenu()">☰<br>Menu</button>
 </nav>
