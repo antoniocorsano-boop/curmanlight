@@ -1,5 +1,141 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-121 — REPO_TRACEABILITY_RECONCILIATION_AND_SLICE_BOUNDARY_AUDIT
+
+- **HEAD iniziale (main)**: `96f2173ef44979b583b15e8382575b8615149f87`
+- Tipo slice: documentale / reconciliation-only
+- Obiettivo: riallineare stato Git reale e narrativa CML senza introdurre nuove funzioni
+- Fotografia stato reale (inizio slice):
+  - Runtime applicativo: `_published_snapshot/netlify-current/index.html`
+  - JSON disciplinari: `content/curriculum/italiano.normalized.json`, `content/curriculum/matematica.normalized.json`, `content/curriculum/tecnologia.normalized.json`
+  - Validator/script: `tools/validate-cml-normalized-curriculum.mjs`
+  - Documentazione CML/movelog: `docs/03_execution/CML-119B.md`, `docs/03_execution/CML-120.md`, `docs/REPO-MOVELOG.md` (+ altri CML docs già presenti nel working tree)
+  - Report: `report/CML-119B_multi_discipline_normalized_curriculum_validator.md`, `report/CML-119C-bis_disciplinary_knowledge_content_governance_audit.md`, `report/CML-119C_disciplinary_knowledge_map_data_contract.md`, `report/CML-119D_disciplinary_knowledge_map_pilot_normalization.md`, `report/CML-120_disciplinary_knowledge_map_read_only_view.md`
+  - Rumore non funzionale/non core: `.agents/`, `skills-lock.json`, `Consultazione`
+- Correzioni documentali applicate:
+  - Refuso corretto: `tecnologica.normalized.json` → `tecnologia.normalized.json` in `docs/03_execution/CML-119B.md`
+  - Narrativa CML-120 resa fattuale rispetto al working tree reale in `docs/03_execution/CML-120.md`
+  - Aggiunta nota collisione numerazione CML-120 (vedi nota sotto)
+  - Tracciato hotfix runtime alias dataset (senza ulteriori modifiche runtime):
+    - `var units=TECNOLOGIA_NORM_DATA.unitaApprendimento;`
+    - `const TECNOLOGIA_NORM_DATA = TECNOLOGIA_NORM;`
+- Nota numerazione:
+  - Esistono due voci storiche con etichetta `CML-120`:
+    1) `CML-120 — DISCIPLINARY_KNOWLEDGE_MAP_READ_ONLY_VIEW` (blocco corrente in testa)
+    2) `CML-120 - NORMALIZZAZIONE RUNTIME LATINO (LEL)` (voce storica precedente)
+  - La voce precedente resta invariata per preservare la storia Git/documentale, ma va considerata **voce storica ambigua/deprecata** ai fini della tracciabilità corrente.
+- Verdetto: `CML_121_REPO_TRACEABILITY_RECONCILIATION_PARTIAL_NEEDS_SLICE_SPLIT`
+- Next: CML-122 — `RUNTIME_JSON_VALIDATOR_CHANGESET_CONSOLIDATION`
+
+---
+
+## 2026-06-24 — CML-120 — DISCIPLINARY_KNOWLEDGE_MAP_READ_ONLY_VIEW
+
+- **HEAD (main)** — runtime read-only + docs
+- Branch: `main`
+- Slice precedente: `CML_119D_DISCIPLINARY_KNOWLEDGE_MAP_PILOT_NORMALIZATION_READY`
+- Commits: nessuno (runtime + docs)
+- File creati/modificati:
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/03_execution/CML-120.md`
+  - `report/CML-120_disciplinary_knowledge_map_read_only_view.md`
+  - `docs/REPO-MOVELOG.md`
+- Modifiche runtime:
+  - Vista read-only "Mappa disciplinare" nella sezione "Competenze e progettazione"
+  - Dati inlineati: TECNOLOGIA_MAPPA_DATI, MATEMATICA_MAPPA_DATI, ITALIANO_MAPPA_DATI
+  - Selettore discipline, renderizzazione strutture/nodi/progressioni/decisioni
+  - Stato `da_validare`, avviso validazione umana, messaggio per discipline non mappate
+- Validazioni:
+  - `git diff --check` — pulito
+  - `node tools/validate-cml-normalized-curriculum.mjs` — 7 file, 94 unità, overallValid: true
+  - Nessuna nuova modifica a export/import, schema `.cml`, validatore nel perimetro CML-120
+  - Nota CML-121: nel working tree reale coesistono anche modifiche JSON del ciclo CML-119D e modifiche validator/documentali non consolidate
+  - Nessuna parola impropria
+- Verdetto: `CML_120_DISCIPLINARY_KNOWLEDGE_MAP_READ_ONLY_VIEW_READY`
+- Next: CML-121 — normalizzazione discipline rimanenti
+
+---
+
+## 2026-06-24 — CML-119D — DISCIPLINARY_KNOWLEDGE_MAP_PILOT_NORMALIZATION
+
+- **HEAD (main)** — normalizzazione dati pilota + docs, nessuna modifica runtime
+- Branch: `main`, nessuna modifica runtime
+- Slice precedente: `CML_119C_BIS_DISCIPLINARY_KNOWLEDGE_CONTENT_GOVERNANCE_AUDIT_READY`
+- Commits: nessuno (normalizzazione + docs)
+- File creati/modificati:
+  - `content/curriculum/tecnologia.normalized.json`
+  - `content/curriculum/matematica.normalized.json`
+  - `content/curriculum/italiano.normalized.json`
+  - `docs/03_execution/CML-119D.md`
+  - `report/CML-119D_disciplinary_knowledge_map_pilot_normalization.md`
+  - `docs/REPO-MOVELOG.md`
+- Normalizzazione:
+  - Tecnologia: 6 strutture, 10 progressioni, 2 decisioni
+  - Matematica: 5 nodi, 12 strutture, 6 progressioni, 4 decisioni
+  - Italiano: 6 nodi, 13 strutture, 12 progressioni, 4 decisioni
+- Contenuti non inventati: tutti derivati da dati esistenti con fonte documentata
+- Stato tutti nuovi elementi: `da_validare`
+- Validazioni:
+  - `node tools/validate-cml-normalized-curriculum.mjs` — 7 file, 94 unità, overallValid: true, 0 errori
+  - `git diff --check` — pulito
+  - Nessuna modifica runtime, UI, export/import, schema `.cml`, validatore
+  - Solo 3 JSON disciplinari modificati
+- Verdetto: `CML_119D_DISCIPLINARY_KNOWLEDGE_MAP_PILOT_NORMALIZATION_READY`
+- Next: CML-119E — estensione validatore per nuovi campi contratto
+
+---
+
+## 2026-06-24 — CML-119C-bis — DISCIPLINARY_KNOWLEDGE_CONTENT_GOVERNANCE_AUDIT
+
+- **HEAD (main)** — audit-only / governance-only, nessuna modifica runtime
+- Branch: `main`, nessuna modifica runtime
+- Slice precedente: `CML_119C_DISCIPLINARY_KNOWLEDGE_MAP_DATA_CONTRACT_READY`
+- Commits: nessuno (audit-only)
+- File creati/modificati:
+  - `docs/03_execution/CML-119C-bis.md`
+  - `report/CML-119C-bis_disciplinary_knowledge_content_governance_audit.md`
+  - `docs/REPO-MOVELOG.md`
+- Attività:
+  - Analizzati 3 file JSON pilota (Tecnologia, Matematica, Italiano)
+  - Classificati 10 campi contratto in categorie A/B/C di derivabilità
+  - Definita matrice finale e regole operative per CML-119D
+- Esito:
+  - Campi A (derivabili): `progressioneVerticale` (template)
+  - Campi B (parzialmente derivabili): `struttureSostanziali`, `saperiEssenziali`, `nodiDisciplinari`, `legamiInterdisciplinari`, `competenzeChiaveEuropee`, `decisioniCurricolari`
+  - Campi C (non derivabili): `statutoEpistemologico`, `naturaDisciplina`, `sintassiDisciplinare`
+- Regole CML-119D definite: zero invenzione, stato `da_validare` obbligatorio, fonti obbligatorie, validazioneUmana: true
+- Validazioni:
+  - `git diff --check` — pulito
+  - Audit-only confermata: nessuna modifica runtime, JSON, validatore, export/import, schema `.cml`, UI
+- Verdetto: `CML_119C_BIS_DISCIPLINARY_KNOWLEDGE_CONTENT_GOVERNANCE_AUDIT_READY`
+- Next: CML-119D — DISCIPLINARY_KNOWLEDGE_MAP_PILOT_NORMALIZATION
+
+---
+
+
+
+## 2026-06-24 — CML-119B — MULTI_DISCIPLINE_NORMALIZED_CURRICULUM_VALIDATOR
+
+- **HEAD (main)** — docs + tool, nessuna modifica runtime
+- Branch: `main`, nessuna modifica runtime
+- Slice precedente: `CML_119A_DISCIPLINARY_KNOWLEDGE_MODEL_AUDIT_READY`
+- Commits: nessuno (docs-only + tool update)
+- File creati/modificati:
+  - `tools/validate-cml-normalized-curriculum.mjs` (generalizzato da mono-disciplina a multi-disciplina)
+  - `docs/03_execution/CML-119B.md`
+  - `report/CML-119B_multi_discipline_normalized_curriculum_validator.md`
+- File aggiornati:
+  - `docs/REPO-MOVELOG.md`
+- Validazioni:
+  - `node tools/validate-cml-normalized-curriculum.mjs` — 7 file, 94 unità, overallValid: true
+  - `git diff --check` — pulito
+  - Nessuna modifica a `_published_snapshot/netlify-current/index.html`, runtime, export/import, schema `.cml`, contenuti disciplinari
+  - Warning `nucleo`/`nucleoFondante` documentato come retrocompatibile
+- Verdetto: `CML_119B_MULTI_DISCIPLINE_NORMALIZED_CURRICULUM_VALIDATOR_READY`
+- Next: CML-119C — CONTRATTO_DATI_MAPPA_DISCIPLINARE
+
+---
+
 ## 2026-06-24 — CML-119A — DISCIPLINARY_KNOWLEDGE_MODEL_AUDIT
 - **HEAD (main)** — audit read-only, docs-only
 - Branch: `main`, nessuna modifica runtime
