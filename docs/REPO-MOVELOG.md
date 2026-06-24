@@ -2027,3 +2027,20 @@
 - Controlli: braces 2104=2104 ✅, `git diff --check` ✅, nessuna nuova dipendenza
 - Verdetto: `CML_085_DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_RUNTIME_INCREMENT_READY`
 - Prossimo step: CML-085A — DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_LIVE_SMOKE
+
+---
+
+## 2026-06-24 — CML-085A — DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_LIVE_SMOKE
+
+- Tipo slice: live smoke
+- Deploy: `git push origin main` → workflow success (14s)
+- URL: `https://antoniocorsano-boop.github.io/curmanlight/`
+- Sezione completezza: visibile ✅
+- Tecnologia: "Bozza completa disponibile / In revisione" ✅
+- Altre 14: "Solo consultazione / Non pronta per approvazione" ✅
+- Contatori: 1 / 14 / 0 ✅
+- Nessun pulsante di approvazione ✅
+- Home, Didattica, Esportazioni, Guida integre ✅
+- Light mode confermata, `.cml`/export/role-access invariati ✅
+- Motto page HTTP 200 ✅
+- Verdetto: `CML_085A_DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_LIVE_SMOKE_READY`
