@@ -2098,3 +2098,21 @@
 - `.cml`/export/import/role-access invariati: ✅
 - Verdetto: `CML_087A_ITALIANO_NORMALIZED_CURRICULUM_QUALITY_AUDIT_READY`
 - Prossimo step: CML-088 — DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_ITALIANO_RUNTIME_INCREMENT
+
+---
+
+## 2026-06-24 — CML-088 — DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_ITALIANO_RUNTIME_INCREMENT
+
+- Tipo slice: runtime increment leggero
+- Fonte: CML-087A esito A
+- File runtime modificato: `_published_snapshot/netlify-current/index.html`
+- Contatori: 1→2 bozze complete, 14→13 sola consultazione, 0 pronte approvazione invariato
+- Italiano aggiunto come seconda disciplina "Bozza completa disponibile / In revisione"
+- Italiano rimosso dall'elenco "Solo consultazione"
+- Nota: "Tecnologia e Italiano sono i modelli strutturali di riferimento"
+- Braces CSS bilanciate: ✅ (2104/2104)
+- Nessuna nuova dipendenza: ✅
+- Nessuna approvazione introdotta: ✅
+- Dati/`.cml`/export/import/role-access invariati: ✅
+- Verdetto: `CML_088_DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_ITALIANO_READY`
+- Prossimo step: CML-088A — DISCIPLINARY_COMPLETENESS_STATUS_ITALIANO_LIVE_SMOKE
