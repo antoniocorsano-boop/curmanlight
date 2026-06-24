@@ -2044,3 +2044,17 @@
 - Light mode confermata, `.cml`/export/role-access invariati ✅
 - Motto page HTTP 200 ✅
 - Verdetto: `CML_085A_DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_LIVE_SMOKE_READY`
+
+---
+
+## 2026-06-24 — CML-086 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+- Tipo slice: docs-only audit / selection
+- Discipline candidate: 10 (multi-ordine)
+- Disciplina selezionata: **Italiano**
+- Motivazione: 17 items DATA, 6 nuclei, copertura completa Inf/Pri/Sec, altissima centralità curricolare, consente di validare adattabilità del modello Tecnologia a discipline linguistico-espressive
+- Criteri: centralità, utilità come secondo modello, dati base, copertura, articolabilità, valore approvazione, rischio, coerenza modello
+- Rischi: 6 nuclei ampi, allineamento IN 2012+D.M. 221/2025, overlap Ed. Civica
+- Mitigazioni: 10-14 unità iniziali, validazione umana, classificazione bozza_generabile/in_revisione
+- Verdetto: `CML_086_NEXT_DISCIPLINE_NORMALIZATION_SELECTED`
+- Prossimo step: CML-087 — ITALIANO_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
