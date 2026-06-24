@@ -1,0 +1,677 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Scienze",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-095 normalized Science curriculum draft — adapted from Tecnologia/Italiano/Matematica structural benchmark, aligned with D.M. 221/2025",
+  "unitaApprendimento": [
+    {
+      "id": "sci_inf_5_001",
+      "disciplina": "Scienze",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "nucleo": "Osservazione e metodo scientifico",
+      "ambito": "Esplorazione sensoriale e prime domande",
+      "competenza": "Osserva con curiosità il mondo circostante, formula domande e ipotesi elementari su fenomeni naturali",
+      "traguardo": "Il bambino osserva con curiosità il mondo circostante, fa domande e ipotesi su ciò che vede. Esplora elementi naturali utilizzando i sensi.",
+      "obiettivi": [
+        "Osservare elementi naturali con attenzione guidata",
+        "Porre domande su fenomeni naturali osservati",
+        "Formulare semplici ipotesi esplicative",
+        "Distinguere viventi e non viventi"
+      ],
+      "conoscenze": [
+        "Elementi naturali (acqua, terra, aria, piante, animali)",
+        "Caratteristiche di viventi e non viventi",
+        "Stagioni e cambiamenti ambientali osservabili"
+      ],
+      "abilita": [
+        "Descrivere con parole semplici un elemento naturale",
+        "Porre domande pertinenti su ciò che osserva",
+        "Classificare elementi in viventi e non viventi",
+        "Riconoscere le stagioni dai cambiamenti osservabili"
+      ],
+      "evidenze": [
+        "Il bambino descrive un elemento naturale scelto",
+        "Il bambino formula una domanda su un fenomeno osservato",
+        "Il bambino classifica 3 elementi in viventi e non viventi",
+        "Il bambino associa i cambiamenti del giardino alla stagione"
+      ],
+      "criteriValutazione": [
+        "Curiosità e interesse verso l'osservazione",
+        "Capacità di formulare domande pertinenti",
+        "Correttezza nella classificazione vivente/non vivente",
+        "Riconoscimento dei cambiamenti stagionali"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: La conoscenza del mondo",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Infanzia 5, nucleo Osservazione, esplorazione sensoriale e prime classificazioni"
+    },
+    {
+      "id": "sci_inf_5_002",
+      "disciplina": "Scienze",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "nucleo": "Viventi e ambiente",
+      "ambito": "Animali, piante e cicli naturali",
+      "competenza": "Riconosce le caratteristiche essenziali di animali e piante, comprende semplici relazioni tra viventi e ambiente",
+      "traguardo": "Il bambino osserva con curiosità il mondo circostante; riconosce animali e piante, ne osserva il comportamento e i cicli vitali elementari.",
+      "obiettivi": [
+        "Riconoscere animali e piante dell'ambiente vicino",
+        "Osservare il ciclo di vita di una pianta",
+        "Comprendere il concetto di cura dell'ambiente"
+      ],
+      "conoscenze": [
+        "Animali domestici e selvatici dell'ambiente locale",
+        "Piante dell'orto e del giardino scolastico",
+        "Semplici cicli vitali (seme-pianta, uovo-animale)"
+      ],
+      "abilita": [
+        "Nominare animali e piante noti",
+        "Descrivere le fasi di crescita di una pianta",
+        "Adottare comportamenti di cura verso l'ambiente"
+      ],
+      "evidenze": [
+        "Il bambino nomina 5 animali e 3 piante",
+        "Il bambino descrive la crescita di una pianta dal seme",
+        "Il bambino innaffia le piante e raccoglie i rifiuti"
+      ],
+      "criteriValutazione": [
+        "Riconoscimento di animali e piante",
+        "Comprensione dei cicli vitali elementari",
+        "Attenzione e cura verso l'ambiente"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: La conoscenza del mondo",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Infanzia 5, nucleo Viventi, animali e piante del territorio"
+    },
+    {
+      "id": "sci_pri_1_001",
+      "disciplina": "Scienze",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Osservazione e metodo scientifico",
+      "ambito": "Primi approcci all'osservazione scientifica",
+      "competenza": "Sviluppa atteggiamenti di curiosità verso il mondo naturale, osserva e descrive fenomeni utilizzando i sensi",
+      "traguardo": "L'alunno sviluppa atteggiamenti di curiosità e modi di guardare il mondo che lo stimolano a cercare spiegazioni su fenomeni naturali.",
+      "obiettivi": [
+        "Individuare proprietà di oggetti e materiali",
+        "Osservare e descrivere fenomeni naturali",
+        "Porre domande su ciò che osserva",
+        "Registrare semplici osservazioni con disegni e parole"
+      ],
+      "conoscenze": [
+        "Proprietà sensoriali degli oggetti (colore, forma, consistenza, odore)",
+        "Fenomeni naturali osservabili (pioggia, vento, luce, ombra)",
+        "Semplici strumenti di registrazione (disegno, tabella)"
+      ],
+      "abilita": [
+        "Descrivere un oggetto usando le proprietà sensoriali",
+        "Osservare un fenomeno e raccontarlo con parole proprie",
+        "Registrare un'osservazione in un disegno",
+        "Porre una domanda pertinente su un fenomeno"
+      ],
+      "evidenze": [
+        "L'alunno descrive un sasso usando 3 proprietà sensoriali",
+        "L'alunno racconta cosa succede quando piove",
+        "L'alunno disegna un albero nelle quattro stagioni",
+        "L'alunno chiede 'perché il cielo è blu?'"
+      ],
+      "criteriValutazione": [
+        "Capacità di osservazione e descrizione",
+        "Curiosità e formulazione di domande",
+        "Uso di strumenti di registrazione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Osservazione e sperimentazione",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Primaria 1, nucleo Osservazione, prime osservazioni e descrizioni"
+    },
+    {
+      "id": "sci_pri_2_001",
+      "disciplina": "Scienze",
+      "ordine": "Primaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Viventi e ambiente",
+      "ambito": "Esseri viventi e relazioni",
+      "competenza": "Riconosce le caratteristiche fondamentali degli esseri viventi e le relazioni con l'ambiente",
+      "traguardo": "L'alunno riconosce le caratteristiche di animali e piante, le loro esigenze vitali e le relazioni con l'ambiente circostante.",
+      "obiettivi": [
+        "Distinguere esseri viventi e non viventi",
+        "Riconoscere bisogni vitali di animali e piante",
+        "Osservare relazioni semplici tra viventi e ambiente"
+      ],
+      "conoscenze": [
+        "Caratteristiche dei viventi (nascita, crescita, respirazione, nutrimento)",
+        "Bisogni vitali: acqua, aria, cibo, luce",
+        "Catene alimentari semplici (chi mangia chi)"
+      ],
+      "abilita": [
+        "Classificare elementi in viventi e non viventi con motivazione",
+        "Descrivere i bisogni di una pianta o di un animale",
+        "Costruire una semplice catena alimentare"
+      ],
+      "evidenze": [
+        "L'alunno classifica 10 elementi motivando la scelta",
+        "L'alunno spiega cosa serve a una pianta per vivere",
+        "L'alunno disegna una catena alimentare a 3 anelli"
+      ],
+      "criteriValutazione": [
+        "Capacità di classificazione motivata",
+        "Comprensione dei bisogni vitali",
+        "Capacità di mettere in relazione viventi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Viventi",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Primaria 2, nucleo Viventi, bisogni vitali e catene alimentari"
+    },
+    {
+      "id": "sci_pri_3_001",
+      "disciplina": "Scienze",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Materia e trasformazioni",
+      "ambito": "Proprietà della materia e cambiamenti",
+      "competenza": "Osserva e descrive le proprietà della materia, riconoscendo trasformazioni fisiche e cambiamenti di stato",
+      "traguardo": "L'alunno esplora le proprietà di materiali e sostanze; riconosce gli stati della materia e le trasformazioni osservabili nella vita quotidiana.",
+      "obiettivi": [
+        "Distinguere gli stati della materia (solido, liquido, gassoso)",
+        "Osservare cambiamenti di stato (fusione, solidificazione, evaporazione)",
+        "Sperimentare miscugli e soluzioni semplici",
+        "Registrare osservazioni con tabelle e disegni"
+      ],
+      "conoscenze": [
+        "Stati della materia e loro proprietà",
+        "Cambiamenti di stato: temperatura e passaggi",
+        "Miscugli: omogenei e eterogenei",
+        "Strumenti di laboratorio base (lente, termometro, bilancia)"
+      ],
+      "abilita": [
+        "Classificare materiali per stato fisico",
+        "Descrivere un cambiamento di stato osservato",
+        "Realizzare un semplice miscuglio e separarlo",
+        "Leggere e registrare temperature con il termometro"
+      ],
+      "evidenze": [
+        "L'alunno classifica 6 oggetti per stato della materia",
+        "L'alunno descrive l'evaporazione dell'acqua",
+        "L'alunno separa sabbia e acqua con un filtro",
+        "L'alunno registra la temperatura di fusione del ghiaccio"
+      ],
+      "criteriValutazione": [
+        "Correttezza nella classificazione degli stati",
+        "Comprensione dei cambiamenti di stato",
+        "Capacità di eseguire semplici esperimenti",
+        "Precisione nella registrazione dei dati"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Materia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Primaria 3, nucleo Materia, stati e trasformazioni"
+    },
+    {
+      "id": "sci_pri_4_001",
+      "disciplina": "Scienze",
+      "ordine": "Primaria",
+      "classe": "4",
+      "fascia": null,
+      "nucleo": "Terra, ambiente e sostenibilità",
+      "ambito": "Suolo, ecosistemi e risorse naturali",
+      "competenza": "Conosce la struttura del suolo e il funzionamento degli ecosistemi, sviluppando comportamenti di rispetto ambientale",
+      "traguardo": "L'alunno conosce la struttura del suolo, riconosce il funzionamento degli ecosistemi e adotta comportamenti di cura verso l'ambiente naturale.",
+      "obiettivi": [
+        "Conoscere la struttura del suolo",
+        "Riconoscere il funzionamento degli ecosistemi",
+        "Comprendere l'importanza della biodiversità",
+        "Adottare comportamenti sostenibili nella vita quotidiana"
+      ],
+      "conoscenze": [
+        "Struttura del suolo (humus, sabbia, argilla, rocce)",
+        "Ecosistemi locali (bosco, fiume, ambiente scolastico)",
+        "Biodiversità e reti alimentari",
+        "Impatto umano sull'ambiente e rifiuti"
+      ],
+      "abilita": [
+        "Descrivere la composizione del suolo",
+        "Individuare elementi di un ecosistema locale",
+        "Classificare rifiuti per tipo di smaltimento",
+        "Proporre azioni di riduzione dell'impatto ambientale"
+      ],
+      "evidenze": [
+        "L'alunno descrive la struttura del suolo in 3 strati",
+        "L'alunno identifica 5 elementi di un ecosistema del bosco",
+        "L'alunno separa correttamente i rifiuti in classe",
+        "L'alunno propone 3 azioni per ridurre gli sprechi"
+      ],
+      "criteriValutazione": [
+        "Conoscenza della struttura del suolo",
+        "Capacità di analisi di un ecosistema",
+        "Atteggiamento responsabile verso l'ambiente",
+        "Propositività nelle azioni sostenibili"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Ambiente",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Primaria 4, nucleo Terra, suolo ed ecosistemi"
+    },
+    {
+      "id": "sci_pri_5_001",
+      "disciplina": "Scienze",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "nucleo": "Energia e fenomeni",
+      "ambito": "Fonti di energia e uso consapevole",
+      "competenza": "Conosce le diverse forme e fonti di energia, comprende l'importanza di un uso consapevole e sostenibile",
+      "traguardo": "L'alunno ha cura dell'ambiente; comprende la necessità di ottimizzare l'uso delle risorse in ottica di sviluppo sostenibile. Conosce le fonti di energia rinnovabili e non rinnovabili.",
+      "obiettivi": [
+        "Distinguere fonti di energia rinnovabili e non rinnovabili",
+        "Comprendere il concetto di spreco energetico",
+        "Assumere comportamenti sostenibili nell'uso dell'energia",
+        "Collegare l'uso dell'energia all'impatto ambientale"
+      ],
+      "conoscenze": [
+        "Forme di energia (termica, luminosa, cinetica, elettrica)",
+        "Fonti rinnovabili (sole, vento, acqua, biomasse)",
+        "Fonti non rinnovabili (carbone, petrolio, gas)",
+        "Concetto di spreco e risparmio energetico"
+      ],
+      "abilita": [
+        "Classificare le fonti energetiche in rinnovabili e non",
+        "Riconoscere situazioni di spreco energetico",
+        "Proporre comportamenti di risparmio quotidiani",
+        "Valutare l'impatto ambientale di diverse fonti"
+      ],
+      "evidenze": [
+        "L'alunno classifica 6 fonti energetiche",
+        "L'alunno identifica 3 sprechi energetici in classe",
+        "L'alunno propone un decalogo di risparmio",
+        "L'alunno spiega perché l'energia solare è pulita"
+      ],
+      "criteriValutazione": [
+        "Conoscenza delle diverse fonti energetiche",
+        "Capacità di distinguere rinnovabile e non",
+        "Sensibilità al risparmio energetico",
+        "Comprensione dell'impatto ambientale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Fonti di energia come nucleo scientifico (primaria)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Primaria 5, nucleo Energia, fonti e sostenibilità (taglio scientifico, non tecnologico)"
+    },
+    {
+      "id": "sci_sec_1_001",
+      "disciplina": "Scienze",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Osservazione e metodo scientifico",
+      "ambito": "Il metodo scientifico sperimentale",
+      "competenza": "Applica il metodo scientifico per osservare, formulare ipotesi, sperimentare e trarre conclusioni",
+      "traguardo": "L'alunno esplora e sperimenta lo svolgersi dei più comuni fenomeni; formula ipotesi e le verifica attraverso semplici esperimenti, registrando dati e traendo conclusioni.",
+      "obiettivi": [
+        "Formulare ipotesi su un fenomeno osservato",
+        "Progettare un semplice esperimento per verificare un'ipotesi",
+        "Registrare dati in tabelle e grafici",
+        "Trarre conclusioni basate sulle evidenze raccolte"
+      ],
+      "conoscenze": [
+        "Fasi del metodo scientifico: osservazione, domanda, ipotesi, esperimento, conclusione",
+        "Variabili dipendenti e indipendenti",
+        "Strumenti di misura (termometro, cronometro, bilancia, cilindro)",
+        "Registrazione e rappresentazione di dati"
+      ],
+      "abilita": [
+        "Formulare un'ipotesi verificabile",
+        "Disegnare un esperimento controllato",
+        "Utilizzare strumenti di misura in modo appropriato",
+        "Registrare dati in tabelle e costruire grafici",
+        "Confrontare risultati con l'ipotesi iniziale"
+      ],
+      "evidenze": [
+        "L'alunno formula un'ipotesi su un fenomeno e la verifica",
+        "L'alunno progetta un esperimento con variabile controllata",
+        "L'alunno misura la temperatura dell'acqua con il termometro",
+        "L'alunno registra dati in tabella e trae conclusioni"
+      ],
+      "criteriValutazione": [
+        "Capacità di formulare ipotesi pertinenti",
+        "Correttezza nella progettazione dell'esperimento",
+        "Precisione nella raccolta e registrazione dati",
+        "Coerenza tra conclusioni ed evidenze"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Metodo sperimentale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Secondaria 1, nucleo Metodo scientifico, sperimentazione di base"
+    },
+    {
+      "id": "sci_sec_1_002",
+      "disciplina": "Scienze",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Materia e trasformazioni",
+      "ambito": "Fenomeni fisici e chimici della materia",
+      "competenza": "Realizza esperienze sulle proprietà fisiche e chimiche della materia, riconoscendo trasformazioni e reazioni",
+      "traguardo": "L'alunno esplora e sperimenta fenomeni fisici e chimici; riconosce le proprietà della materia e le trasformazioni che la riguardano.",
+      "obiettivi": [
+        "Distinguere trasformazioni fisiche e chimiche",
+        "Realizzare esperienze su densità, solubilità e temperatura",
+        "Riconoscere elementi, composti e miscugli",
+        "Utilizzare la tavola periodica come strumento di consultazione"
+      ],
+      "conoscenze": [
+        "Differenza tra trasformazione fisica e chimica",
+        "Densità, solubilità, punto di fusione e di ebollizione",
+        "Elementi, composti, miscugli omogenei ed eterogenei",
+        "La tavola periodica: simboli e organizzazione"
+      ],
+      "abilita": [
+        "Classificare una trasformazione come fisica o chimica",
+        "Misurare densità di liquidi e solidi",
+        "Separare miscugli con tecniche appropriate",
+        "Leggere informazioni essenziali dalla tavola periodica"
+      ],
+      "evidenze": [
+        "L'alunno classifica 5 trasformazioni come fisiche o chimiche",
+        "L'alunno misura la densità di un liquido con densimetro",
+        "L'alunno separa un miscuglio di sabbia e sale",
+        "L'alunno individua ossigeno e carbonio sulla tavola periodica"
+      ],
+      "criteriValutazione": [
+        "Capacità di distinguere trasformazioni fisiche e chimiche",
+        "Abilità nell'uso di strumenti di misura",
+        "Correttezza nelle tecniche di separazione",
+        "Uso corretto della tavola periodica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Fisica e chimica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Secondaria 1, nucleo Materia, fisica e chimica di base"
+    },
+    {
+      "id": "sci_sec_1_003",
+      "disciplina": "Scienze",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Viventi e ambiente",
+      "ambito": "La cellula e la classificazione dei viventi",
+      "competenza": "Conosce la cellula come unità fondamentale dei viventi e utilizza criteri di classificazione scientifica",
+      "traguardo": "L'alunno conosce la cellula come unità fondamentale dei viventi, distingue organismi unicellulari e pluricellulari, utilizza i criteri di classificazione scientifica.",
+      "obiettivi": [
+        "Conoscere la struttura della cellula animale e vegetale",
+        "Distinguere organismi unicellulari e pluricellulari",
+        "Utilizzare semplici criteri di classificazione",
+        "Osservare cellule al microscopio"
+      ],
+      "conoscenze": [
+        "Cellula animale e vegetale: membrane, nucleo, organuli",
+        "Differenza tra unicellulari e pluricellulari",
+        "Regni della natura: animali, piante, funghi, protisti, monere",
+        "Uso del microscopio ottico"
+      ],
+      "abilita": [
+        "Disegnare e descrivere una cellula animale e vegetale",
+        "Classificare un organismo nel regno di appartenenza",
+        "Utilizzare il microscopio per osservare preparati",
+        "Distinguere cellule diverse per forma e funzione"
+      ],
+      "evidenze": [
+        "L'alunno disegna una cellula animale con 3 organuli",
+        "L'alunno classifica 5 organismi nei regni corrispondenti",
+        "L'alunno osserva cellule al microscopio e le disegna",
+        "L'alunno confronta cellula animale e vegetale"
+      ],
+      "criteriValutazione": [
+        "Conoscenza della struttura cellulare",
+        "Capacità di classificazione",
+        "Abilità nell'uso del microscopio",
+        "Capacità di confronto tra tipi cellulari"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Biologia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Secondaria 1, nucleo Viventi, cellula e classificazione"
+    },
+    {
+      "id": "sci_sec_2_001",
+      "disciplina": "Scienze",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Viventi e ambiente",
+      "ambito": "Il corpo umano: anatomia, fisiologia e salute",
+      "competenza": "Conosce l'anatomia e la fisiologia del corpo umano, sviluppando consapevolezza delle scelte per la salute",
+      "traguardo": "L'alunno conosce i principali apparati del corpo umano, le loro funzioni e le relazioni; sviluppa consapevolezza dell'importanza di corretti stili di vita.",
+      "obiettivi": [
+        "Descrivere i principali apparati del corpo umano",
+        "Comprendere le relazioni tra apparati",
+        "Riconoscere l'importanza di corretti stili di vita",
+        "Collegare alimentazione, attività fisica e salute"
+      ],
+      "conoscenze": [
+        "Apparati: digerente, respiratorio, circolatorio, scheletrico, muscolare, nervoso",
+        "Relazioni tra apparati (es. respirazione e circolazione)",
+        "Nutrienti e piramide alimentare",
+        "Educazione alla salute: prevenzione, igiene, movimento"
+      ],
+      "abilita": [
+        "Descrivere la funzione di un apparato con terminologia appropriata",
+        "Mettere in relazione due apparati per una funzione comune",
+        "Analizzare una dieta bilanciata",
+        "Valutare l'impatto di comportamenti sulla salute"
+      ],
+      "evidenze": [
+        "L'alunno descrive il percorso del cibo nell'apparato digerente",
+        "L'alunno spiega la relazione tra respirazione e circolazione",
+        "L'alunno analizza un menù quotidiano e lo valuta",
+        "L'alunno propone 3 comportamenti per uno stile di vita sano"
+      ],
+      "criteriValutazione": [
+        "Conoscenza dell'anatomia di base",
+        "Capacità di collegare struttura e funzione",
+        "Comprensione delle relazioni tra apparati",
+        "Consapevolezza delle scelte per la salute"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Corpo umano",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Secondaria 2, nucleo Viventi, corpo umano e salute"
+    },
+    {
+      "id": "sci_sec_2_002",
+      "disciplina": "Scienze",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Terra, ambiente e sostenibilità",
+      "ambito": "Il sistema Terra: geologia, atmosfera e idrosfera",
+      "competenza": "Conosce la struttura della Terra, i processi geologici e i fenomeni atmosferici, comprendendo l'interdipendenza tra geosfera, atmosfera e idrosfera",
+      "traguardo": "L'alunno conosce la struttura della Terra, i principali fenomeni geologici e vulcanici, il ciclo dell'acqua e i fenomeni atmosferici.",
+      "obiettivi": [
+        "Conoscere la struttura interna della Terra",
+        "Descrivere il ciclo dell'acqua",
+        "Comprendere fenomeni vulcanici e sismici",
+        "Collegare fenomeni atmosferici al clima"
+      ],
+      "conoscenze": [
+        "Struttura della Terra: crosta, mantello, nucleo",
+        "Ciclo dell'acqua: evaporazione, condensazione, precipitazione",
+        "Fenomeni geologici: vulcani, terremoti, erosione",
+        "Atmosfera: composizione, strati, fenomeni meteorologici"
+      ],
+      "abilita": [
+        "Descrivere i tre strati della Terra",
+        "Rappresentare il ciclo dell'acqua con uno schema",
+        "Spiegare la causa di un terremoto o di un'eruzione",
+        "Leggere una carta meteorologica semplice"
+      ],
+      "evidenze": [
+        "L'alunno disegna la struttura interna della Terra",
+        "L'alunno costruisce un modello del ciclo dell'acqua",
+        "L'alunno spiega la differenza tra magma e lava",
+        "L'alunno interpreta un bollettino meteorologico"
+      ],
+      "criteriValutazione": [
+        "Conoscenza della struttura terrestre",
+        "Comprensione dei processi geologici",
+        "Capacità di rappresentare processi naturali",
+        "Lettura e interpretazione di dati meteorologici"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Terra e ambiente",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Secondaria 2, nucleo Terra, geologia e ciclo dell'acqua"
+    },
+    {
+      "id": "sci_sec_3_001",
+      "disciplina": "Scienze",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Energia e fenomeni",
+      "ambito": "Fonti di energia e applicazioni scientifiche",
+      "competenza": "Conosce le diverse fonti di energia, le loro applicazioni e gli impatti ambientali, sviluppando un pensiero critico verso le scelte energetiche",
+      "traguardo": "L'alunno conosce le fonti di energia (rinnovabili e non rinnovabili), le applicazioni tecnologiche e gli impatti ambientali; sviluppa consapevolezza storica delle scoperte scientifiche, valorizzando il contributo delle figure femminili.",
+      "obiettivi": [
+        "Conoscere le principali fonti di energia fossili e rinnovabili",
+        "Comprendere i principi fisici della produzione energetica",
+        "Valutare l'impatto ambientale delle diverse fonti",
+        "Conoscere la storia delle principali scoperte scientifiche",
+        "Riconoscere il contributo delle scienziate nella storia"
+      ],
+      "conoscenze": [
+        "Fonti fossili: carbone, petrolio, gas naturale",
+        "Fonti rinnovabili: solare, eolica, idroelettrica, geotermica, biomasse",
+        "Principi fisici: conservazione dell'energia, trasformazioni",
+        "Impatto ambientale: emissioni, effetto serra, cambiamento climatico",
+        "Storia della scienza: figure femminili (Curie, Meitner, Franklin, Anning)"
+      ],
+      "abilita": [
+        "Classificare fonti energetiche per origine e impatto",
+        "Descrivere il principio di funzionamento di un pannello solare",
+        "Valutare pro e contro di una fonte energetica",
+        "Esporre il contributo di una scienziata alle scoperte",
+        "Argomentare una scelta energetica motivata"
+      ],
+      "evidenze": [
+        "L'alunno classifica 6 fonti con impatto ambientale",
+        "L'alunno spiega il funzionamento di un pannello fotovoltaico",
+        "L'alunno confronta carbone e solare in una tabella",
+        "L'alunno presenta il contributo di Marie Curie"
+      ],
+      "criteriValutazione": [
+        "Conoscenza delle fonti energetiche e del loro impatto",
+        "Capacità di argomentazione su scelte energetiche",
+        "Comprensione dei principi fisici dell'energia",
+        "Consapevolezza della storia della scienza",
+        "Valorizzazione delle figure femminili nella scienza"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Fonti di energia come nucleo scientifico, storia della scienza e prospettiva di genere",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Secondaria 3, nucleo Energia, fonti e storia della scienza (taglio scientifico, non tecnologico)"
+    },
+    {
+      "id": "sci_sec_3_002",
+      "disciplina": "Scienze",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Osservazione e metodo scientifico",
+      "ambito": "Errore scientifico, pensiero critico e decisioni informate",
+      "competenza": "Riconosce l'errore come parte del processo scientifico e sviluppa capacità di decisioni informate su temi globali",
+      "traguardo": "L'alunno riconosce l'errore come parte del processo scientifico; sviluppa capacità di decisioni informate su temi globali (clima, salute, biodiversità) basate su evidenze scientifiche.",
+      "obiettivi": [
+        "Riconoscere l'errore come parte del metodo scientifico",
+        "Valutare criticamente informazioni scientifiche dai media",
+        "Analizzare un problema globale (clima, salute, biodiversità)",
+        "Formulare una decisione informata basata su evidenze"
+      ],
+      "conoscenze": [
+        "Ruolo dell'errore nella scienza: falsificazione, revisione tra pari",
+        "Fonti di informazione scientifica: attendibilità e bias",
+        "Problemi globali: cambiamento climatico, pandemia, perdita di biodiversità",
+        "Evidenza scientifica vs opinione: come distinguere"
+      ],
+      "abilita": [
+        "Analizzare un caso storico di errore scientifico",
+        "Valutare l'attendibilità di una fonte scientifica",
+        "Argomentare una posizione su un tema globale usando dati",
+        "Distinguere tra evidenza scientifica e opinione personale"
+      ],
+      "evidenze": [
+        "L'alunno analizza un caso di errore scientifico storico",
+        "L'alunno valuta l'attendibilità di 3 fonti su un tema",
+        "L'alunno produce una breve argomentazione su un tema globale",
+        "L'alunno spiega la differenza tra dato scientifico e opinione"
+      ],
+      "criteriValutazione": [
+        "Comprensione del ruolo dell'errore nella scienza",
+        "Capacità di valutare fonti di informazione",
+        "Qualità dell'argomentazione basata su dati",
+        "Pensiero critico e capacità di analisi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — Valore dell'errore e decisioni informate su temi globali",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Secondaria 3, nucleo Metodo scientifico, pensiero critico su scienza e società"
+    },
+    {
+      "id": "sci_sec_3_003",
+      "disciplina": "Scienze",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Terra, ambiente e sostenibilità",
+      "ambito": "Biodiversità, evoluzione e sostenibilità globale",
+      "competenza": "Comprende i meccanismi dell'evoluzione biologica, valuta la crisi della biodiversità e propone azioni per la sostenibilità",
+      "traguardo": "L'alunno conosce i principi dell'evoluzione, comprende il valore della biodiversità e le minacce globali, sviluppa un atteggiamento consapevole verso la sostenibilità planetaria.",
+      "obiettivi": [
+        "Conoscere i principi dell'evoluzione delle specie",
+        "Comprendere il concetto di biodiversità",
+        "Valutare l'impatto umano sulla biodiversità",
+        "Proporre azioni per la sostenibilità globale"
+      ],
+      "conoscenze": [
+        "Teoria dell'evoluzione: selezione naturale, adattamento",
+        "Biodiversità: specie, ecosistemi, diversità genetica",
+        "Minacce globali: deforestazione, inquinamento, specie invasive",
+        "Sviluppo sostenibile: Agenda 2030, obiettivi ambientali"
+      ],
+      "abilita": [
+        "Spiegare il meccanismo della selezione naturale",
+        "Classificare minacce alla biodiversità per tipologia",
+        "Collegare un'azione umana a un impatto ambientale",
+        "Progettare una piccola azione di sostenibilità locale"
+      ],
+      "evidenze": [
+        "L'alunno spiega la selezione naturale con un esempio",
+        "L'alunno analizza un caso di perdita di biodiversità",
+        "L'alunno propone un'azione per la sostenibilità scolastica",
+        "L'alunno collega un Obiettivo ONU a un problema locale"
+      ],
+      "criteriValutazione": [
+        "Comprensione dei meccanismi evolutivi",
+        "Consapevolezza del valore della biodiversità",
+        "Capacità di analisi delle minacce globali",
+        "Propositività nelle azioni di sostenibilità"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Scienze — Evoluzione e biodiversità + Agenda 2030",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-095 — Secondaria 3, nucleo Terra, evoluzione e sostenibilità"
+    }
+  ]
+}
