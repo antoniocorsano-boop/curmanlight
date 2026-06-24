@@ -2688,3 +2688,17 @@
 - File creati: `docs/03_execution/CML-110.md`, `report/CML-110_*.md`
 - Verdetto: `CML_110_MUSICA_NORMALIZATION_RUNTIME_READY`
 - Prossimo step: CML-110A — smoke locale
+
+---
+
+## 2026-06-24 - CML-110B - MUSICA_NORMALIZATION_DEPLOY_LIVE_SMOKE_CLOSURE
+
+- Tipo slice: deploy + live smoke closure
+- Commit runtime: `f93a606` (CML-110) — pushato su `origin/main`, workflow Pages success (13s)
+- URL live: https://antoniocorsano-boop.github.io/curmanlight/ ✅
+- Stato live 9/5/0 confermato
+- Musica presente come 9a disciplina in revisione
+- 5 discipline residue: Seconda Lingua, Arte e Immagine, Ed. Fisica, Religione, Latino (LEL)
+- File creati: `docs/03_execution/CML-110B.md`, `report/CML-110B_*.md`
+- Verdetto: `CML_110B_MUSICA_NORMALIZATION_DEPLOY_LIVE_SMOKE_CLOSURE_READY`
+- Prossimo step: CML-111 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
