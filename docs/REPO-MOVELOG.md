@@ -2175,3 +2175,24 @@
 - Schema `.cml`, export/import, role-access invariati ✅
 - Verdetto: `CML_090_DISCIPLINARY_APPROVAL_READINESS_UI_SELECTION_READY`
 - Prossimo step: CML-091 — DISCIPLINARY_APPROVAL_READINESS_PANEL_RUNTIME_INCREMENT
+
+---
+
+## 2026-06-24 — CML-091 — DISCIPLINARY_APPROVAL_READINESS_PANEL_RUNTIME_INCREMENT
+
+- Tipo slice: runtime increment (CSS + JS)
+- HEAD partenza: `c50b4cb`, tree pulita ✅
+- File runtime modificato: `_published_snapshot/netlify-current/index.html` (+32 righe)
+- **Nuovo pannello "Readiness per approvazione"** aggiunto sotto "Stato di completezza" in Curriculum > Consultazione
+- 16 righe CSS nuove (classi `.curricolo-readiness-*`, `.readiness-counter-*`, `.readiness-badge-*`)
+- Contatori: 2 in revisione, 13 sola consultazione, 0 pronte per approvazione
+- Tecnologia: "Bozza completa, in revisione" / Italiano: "Bozza completa, in revisione"
+- Altre 13: "Struttura da completare prima della readiness"
+- Nota: approvazione esterna allo strumento
+- Nessun pulsante, nessuna azione, read-only
+- Braces CSS bilanciate: ✅ (2120=2120)
+- Nessuna nuova dipendenza: ✅
+- Nessuna modifica dati, `.cml`, export/import, role-access: ✅
+- Light mode only preservato, dark mode commentato: ✅
+- Verdetto: `CML_091_DISCIPLINARY_APPROVAL_READINESS_PANEL_RUNTIME_INCREMENT_READY`
+- Prossimo step: CML-091A — DISCIPLINARY_APPROVAL_READINESS_PANEL_LIVE_SMOKE

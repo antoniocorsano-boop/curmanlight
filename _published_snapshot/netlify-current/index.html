@@ -662,6 +662,22 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .completeness-badge--ready{background:#c8e6c9;color:#1b5e20}
 .completeness-badge--base{background:#fff9c4;color:#5d4037}
 .completeness-note{font-size:10px;color:#999;font-style:italic;margin-top:2px}
+.curricolo-readiness{background:#f8f9ff;border:1px solid #d1d9f0;border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:12px;line-height:1.5}
+.curricolo-readiness-title{font-weight:700;font-size:13px;color:#1a237e;margin-bottom:4px}
+.curricolo-readiness-subtitle{font-size:11px;color:#666;margin-bottom:12px}
+.curricolo-readiness-counters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.readiness-counter{flex:1;min-width:100px;padding:10px;border-radius:8px;text-align:center;border:1px solid}
+.readiness-counter-num{font-size:22px;font-weight:700;line-height:1.2}
+.readiness-counter-label{font-size:10px;margin-top:2px}
+.readiness-counter--revision{background:#e3f2fd;border-color:#90caf9;color:#0d47a1}
+.readiness-counter--consult{background:#fff8e1;border-color:#ffe082;color:#5d4037}
+.readiness-counter--none{background:#f5f5f5;border-color:#e0e0e0;color:#78909c}
+.curricolo-readiness-rows{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.readiness-row{font-size:11px;color:#455a64;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.readiness-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.readiness-badge--revision{background:#bbdefb;color:#0d47a1}
+.readiness-badge--consult{background:#fff9c4;color:#5d4037}
+.readiness-note{font-size:10px;color:#999;font-style:italic;margin-top:2px}
 .curricolo-nextaction{font-size:11px;padding:6px 14px;background:#f5f7fa;border-top:1px solid #eee;color:#546e7a;text-align:right}
 .curricolo-nextaction a{color:#1a237e;font-weight:700;text-decoration:none}
 .curricolo-nextaction a:hover{text-decoration:underline}
@@ -4534,6 +4550,22 @@ function renderCurricoloIstituto(version) {
       '<div class="completeness-row"><span class="completeness-badge completeness-badge--base">Solo consultazione</span> Matematica, Scienze, Storia, Geografia, Inglese, Seconda Lingua, Educazione Civica, Arte, Musica, Educazione Fisica, Religione, Latino (LEL) \u2014 presenti solo traguardi e obiettivi di base. Stato: <strong>Non pronta per approvazione</strong>. Azione: completare struttura disciplinare prima della sintesi.</div>' +
       '<div class="completeness-row completeness-note">L\'approvazione resta esterna allo strumento e di competenza degli organi scolastici. Tecnologia e Italiano sono i modelli strutturali di riferimento per le normalizzazioni successive.</div>' +
     '</div>' +
+  '</div>';
+
+  html += '<div class="curricolo-readiness">' +
+    '<div class="curricolo-readiness-title">Readiness per approvazione</div>' +
+    '<div class="curricolo-readiness-subtitle">La completezza della bozza non equivale ad approvazione.</div>' +
+    '<div class="curricolo-readiness-counters">' +
+      '<div class="readiness-counter readiness-counter--revision"><div class="readiness-counter-num">2</div><div class="readiness-counter-label">In revisione</div></div>' +
+      '<div class="readiness-counter readiness-counter--consult"><div class="readiness-counter-num">13</div><div class="readiness-counter-label">Sola consultazione</div></div>' +
+      '<div class="readiness-counter readiness-counter--none"><div class="readiness-counter-num">0</div><div class="readiness-counter-label">Pronte per approvazione</div></div>' +
+    '</div>' +
+    '<div class="curricolo-readiness-rows">' +
+      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Tecnologia \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
+      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Italiano \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
+      '<div class="readiness-row"><span class="readiness-badge readiness-badge--consult">Solo consultazione</span> Altre 13 discipline \u2014 Struttura da completare prima della readiness.</div>' +
+    '</div>' +
+    '<div class="readiness-note">L\'approvazione resta esterna allo strumento e richiede validazione degli organi competenti.</div>' +
   '</div>';
 
   ordinii.forEach(function(o) {
