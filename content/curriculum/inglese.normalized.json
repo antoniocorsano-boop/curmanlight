@@ -1,0 +1,550 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Inglese",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-098 normalized English curriculum draft — adapted from Scienze/Tecnologia/Matematica structural benchmark, aligned with QCER A1/A2 and D.M. 221/2025",
+  "unitaApprendimento": [
+    {
+      "id": "eng_inf_5_001",
+      "disciplina": "Inglese",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "nucleo": "Ascolto e prime parole",
+      "ambito": "Primo approccio alla lingua inglese attraverso suoni, ritmi e giochi",
+      "competenza": "Scopre la presenza di una lingua diversa dall'italiano, sperimenta suoni e ritmi attraverso il gioco e l'ascolto",
+      "traguardo": "Il bambino scopre la presenza di lingue diverse e sperimenta la pluralità dei linguaggi; riconosce e riproduce semplici parole e espressioni in inglese.",
+      "obiettivi": [
+        "Ascoltare e comprendere semplici parole in inglese",
+        "Riprodurre suoni e ritmi della lingua inglese",
+        "Eseguire semplici comandi in inglese (stand up, sit down, clap your hands)",
+        "Cantare brevi canzoni in inglese"
+      ],
+      "conoscenze": [
+        "Parole di uso quotidiano: colori, animali, numeri 1-10, parti del corpo",
+        "Semplici comandi e istruzioni in inglese",
+        "Canzoni e filastrocche inglesi per bambini (Head Shoulders, Old MacDonald)",
+        "Differenza tra suoni italiani e inglesi"
+      ],
+      "abilita": [
+        "Riconoscere e indicare oggetti nominati in inglese",
+        "Salutare e congedarsi in inglese (hello, goodbye)",
+        "Eseguire un comando semplice ascoltato",
+        "Cantare una breve canzone in inglese memorizzando le parole"
+      ],
+      "evidenze": [
+        "Il bambino indica l'immagine corretta quando sente la parola in inglese",
+        "Il bambino saluta in inglese all'inizio e alla fine dell'attività",
+        "Il bambino esegue stand up quando sente il comando",
+        "Il bambino canta Head Shoulders Knees and Toes con il gruppo"
+      ],
+      "criteriValutazione": [
+        "Attenzione all'ascolto",
+        "Capacità di riprodurre suoni della lingua inglese",
+        "Esecuzione corretta di comandi semplici",
+        "Partecipazione attiva al canto corale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: I discorsi e le parole",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Infanzia 5, nucleo Ascolto, primo approccio all'inglese attraverso gioco e musica"
+    },
+    {
+      "id": "eng_pri_1_001",
+      "disciplina": "Inglese",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Ascolto e produzione orale",
+      "ambito": "Parole e frasi per comunicare in classe",
+      "competenza": "Comprende parole e semplici espressioni familiari relative all'ambiente scolastico, le riproduce oralmente con pronuncia accettabile",
+      "traguardo": "L'alunno comprende brevi messaggi orali relativi ad ambiti familiari; interagisce scambiando semplici informazioni con compagni e insegnante.",
+      "obiettivi": [
+        "Comprendere semplici istruzioni e messaggi orali in inglese",
+        "Riprodurre parole e brevi frasi con pronuncia chiara",
+        "Nominare oggetti, persone e colori dell'ambiente scolastico",
+        "Presentarsi dicendo il proprio nome e chiedere quello altrui"
+      ],
+      "conoscenze": [
+        "Lessico di base: colori, numeri 1-20, materiali scolastici, giocattoli",
+        "Espressioni per la classe: open your book, listen, repeat",
+        "Saluti e presentazioni: Hello, I'm ..., What's your name?",
+        "Pronuncia di suoni caratteristici inglesi (th, h, r)"
+      ],
+      "abilita": [
+        "Eseguire istruzioni scolastiche in inglese",
+        "Riprodurre parole inglesi con pronuncia accettabile",
+        "Presentarsi e chiedere il nome a un compagno",
+        "Descrivere oralmente un oggetto usando colore e dimensione"
+      ],
+      "evidenze": [
+        "L'alunno esegue 3 comandi consecutivi in inglese",
+        "L'alunno dice il proprio nome e chiede What's your name?",
+        "L'alunno nomina 10 oggetti scolastici in inglese",
+        "L'alunno descrive un pupazzo dicendo colore e dimensione"
+      ],
+      "criteriValutazione": [
+        "Comprensione di messaggi orali semplici",
+        "Pronuncia chiara e comprensibile",
+        "Capacità di interazione in contesti guidati",
+        "Ampiezza del lessico di base"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Lingua Inglese — Primaria classe 1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Primaria 1, nucleo Ascolto e produzione orale, lessico di base per la classe"
+    },
+    {
+      "id": "eng_pri_2_001",
+      "disciplina": "Inglese",
+      "ordine": "Primaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Lettura e scrittura iniziale",
+      "ambito": "Prime parole scritte, lettura di immagini e brevi testi",
+      "competenza": "Legge e scrive parole e brevi frasi note, associando immagini e parole scritte in inglese",
+      "traguardo": "L'alunno comprende brevi messaggi orali e scritti relativi ad ambiti familiari; associa parole scritte a immagini e semplici contesti.",
+      "obiettivi": [
+        "Leggere parole note associate a immagini",
+        "Scrivere parole e brevi frasi sotto dettatura",
+        "Completare semplici frasi con parole mancanti",
+        "Leggere e comprendere un breve testo illustrato"
+      ],
+      "conoscenze": [
+        "Lessico: famiglia, animali domestici, cibo e bevande, parti del corpo",
+        "Lettera dell'alfabeto inglese e spelling semplice",
+        "Strutture: It is ..., I have ..., I like ...",
+        "Parole interrogative: What, Who, How many"
+      ],
+      "abilita": [
+        "Leggere ad alta voce parole note con pronuncia accettabile",
+        "Scrivere parole sotto dettatura",
+        "Completare una frase con una parola data",
+        "Leggere e comprendere le informazioni principali di un breve testo"
+      ],
+      "evidenze": [
+        "L'alunno legge 10 parole inglesi con pronuncia corretta",
+        "L'alunno scrive 5 parole inglesi sotto dettatura senza errori",
+        "L'alunno completa frasi del tipo I like ___ con la parola giusta",
+        "L'alunno risponde a 3 domande su un breve testo illustrato"
+      ],
+      "criteriValutazione": [
+        "Correttezza nella lettura di parole note",
+        "Correttezza ortografica nella scrittura",
+        "Comprensione di brevi testi scritti",
+        "Capacità di completare frasi in modo appropriato"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Lingua Inglese — Primaria classe 2",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Primaria 2, nucleo Lettura e scrittura, prime parole e frasi"
+    },
+    {
+      "id": "eng_pri_3_001",
+      "disciplina": "Inglese",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Interazione e produzione orale",
+      "ambito": "Dialoghi e conversazioni su argomenti familiari",
+      "competenza": "Interagisce in semplici scambi dialogici su argomenti noti, utilizzando espressioni e frasi memorizzate",
+      "traguardo": "L'alunno interagisce in semplici scambi comunicativi su argomenti familiari; descrive oralmente persone, animali e luoghi usando frasi semplici.",
+      "obiettivi": [
+        "Porre e rispondere a domande su argomenti familiari",
+        "Descrivere oralmente persone e animali usando aggettivi",
+        "Parlare delle proprie preferenze utilizzando like/don't like",
+        "Interagire in brevi dialoghi su cibo, giochi e attività"
+      ],
+      "conoscenze": [
+        "Lessico: vestiti, tempo atmosferico, giorni della settimana, mesi",
+        "Strutture: Do you like ...?, I like / I don't like, He/She is ...",
+        "Aggettivi: big, small, happy, sad, old, young, tall, short",
+        "Present simple: affermativa e negativa (to be, to have)"
+      ],
+      "abilita": [
+        "Chiedere e dire cosa piace e cosa non piace",
+        "Descrivere una persona usando 3 aggettivi",
+        "Rispondere a domande su argomenti familiari",
+        "Mantenere un breve dialogo di 3-4 scambi"
+      ],
+      "evidenze": [
+        "L'alunno dice cosa gli piace e non gli piace mangiare",
+        "L'alunno descrive un compagno usando 3 aggettivi",
+        "L'alunno risponde a What's the weather like? con la frase completa",
+        "L'alunno sostiene un dialogo di 4 battute su giochi preferiti"
+      ],
+      "criteriValutazione": [
+        "Capacità di rispondere a domande su argomenti noti",
+        "Uso di strutture grammaticali semplici",
+        "Pronuncia e intonazione comprensibili",
+        "Adeguatezza della risposta al contesto comunicativo"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Lingua Inglese — Primaria classe 3",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Primaria 3, nucleo Interazione, dialoghi e conversazioni su argomenti familiari"
+    },
+    {
+      "id": "eng_pri_4_001",
+      "disciplina": "Inglese",
+      "ordine": "Primaria",
+      "classe": "4",
+      "fascia": null,
+      "nucleo": "Lettura e scrittura",
+      "ambito": "Testi descrittivi e narrazioni semplici",
+      "competenza": "Legge e comprende testi descrittivi e narrativi semplici; produce brevi testi scritti su argomenti familiari",
+      "traguardo": "L'alunno legge e comprende brevi testi descrittivi e narrativi; produce brevi testi scritti (descrizioni, semplici storie) utilizzando strutture grammaticali elementari.",
+      "obiettivi": [
+        "Leggere e comprendere un breve testo descrittivo",
+        "Produrre una breve descrizione scritta di una persona o animale",
+        "Scrivere una semplice storia di 4-5 frasi seguendo traccia",
+        "Usare il Present simple e Present continuous in contesti noti"
+      ],
+      "conoscenze": [
+        "Lessico: routine quotidiana, casa, arredamento, materie scolastiche",
+        "Present simple: forma affermativa, negativa e interrogativa",
+        "Present continuous: forma e uso",
+        "Connettivi: and, but, then, because"
+      ],
+      "abilita": [
+        "Leggere un testo descrittivo e rispondere a domande di comprensione",
+        "Scrivere una descrizione di 5-6 frasi usando il lessico appropriato",
+        "Descrivere per iscritto la propria routine quotidiana",
+        "Distinguere Present simple da Present continuous in contesti guidati"
+      ],
+      "evidenze": [
+        "L'alunno risponde a 4 domande su un testo descrittivo",
+        "L'alunno scrive una descrizione del proprio animale domestico (5 frasi)",
+        "L'alunno descrive per iscritto la propria mattina usando il Present simple",
+        "L'alunno completa frasi scegliendo tra Present simple e continuous"
+      ],
+      "criteriValutazione": [
+        "Comprensione di testi descrittivi semplici",
+        "Capacità di produrre testi scritti coerenti",
+        "Correttezza grammaticale di base",
+        "Adeguatezza lessicale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Lingua Inglese — Primaria classi 4-5",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Primaria 4, nucleo Lettura e scrittura, testi descrittivi e Present simple/continuous"
+    },
+    {
+      "id": "eng_pri_5_001",
+      "disciplina": "Inglese",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "nucleo": "Interazione e cultura",
+      "ambito": "Interazione su temi di cittadinanza globale e culture anglofone",
+      "competenza": "Stabilisce relazioni tra lingua materna e inglese; usa l'inglese per parlare di cittadinanza globale e sostenibilità",
+      "traguardo": "L'alunno stabilisce relazioni tra elementi linguistico-comunicativi appartenenti alla lingua materna e alla lingua straniera; usa l'inglese per temi di cittadinanza globale e sostenibilità; conosce aspetti delle culture dei paesi anglofoni.",
+      "obiettivi": [
+        "Confrontare aspetti linguistici tra italiano e inglese",
+        "Parlare di temi di sostenibilità in inglese (riciclo, ambiente)",
+        "Conoscere festività e tradizioni di paesi anglofoni",
+        "Comprendere e usare espressioni per collaborare in gruppo"
+      ],
+      "conoscenze": [
+        "Lessico: ambiente, riciclo, festività (Christmas, Halloween, Easter, Thanksgiving)",
+        "Strutture: There is/are, must/mustn't, can/can't",
+        "Cultura anglofona: usi e costumi di UK e USA",
+        "Confronto L1-L2: falsi amici, prestiti linguistici, alfabeto fonetico di base"
+      ],
+      "abilita": [
+        "Confrontare parole simili tra italiano e inglese individuando differenze",
+        "Esprimere obblighi e divieti in inglese (must/mustn't)",
+        "Descrivere una tradizione natalizia inglese confrontandola con quella italiana",
+        "Collaborare in gruppo usando espressioni inglesi (I agree, Let's ...)"
+      ],
+      "evidenze": [
+        "L'alunno riconosce 5 parole inglesi simili all'italiano spiegandone la differenza",
+        "L'alunno produce 3 frasi con must/mustn't sulle regole della classe",
+        "L'alunno descrive il Thanksgiving confrontandolo con una festa italiana",
+        "L'alunno usa I agree e Let's in un'attività di gruppo"
+      ],
+      "criteriValutazione": [
+        "Capacità di confronto tra L1 e L2",
+        "Uso appropriato di must/mustn't e can/can't",
+        "Conoscenza di aspetti culturali anglofoni",
+        "Partecipazione collaborativa in inglese"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Interdisciplinarità: inglese per cittadinanza globale, pluralismo culturale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Primaria 5, nucleo Interazione e cultura, inglese per cittadinanza globale e confronto culturale"
+    },
+    {
+      "id": "eng_sec_1_001",
+      "disciplina": "Inglese",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Ascolto e lettura",
+      "ambito": "Comprensione orale e scritta: testi su argomenti familiari (livello A1/A2)",
+      "competenza": "Comprende oralmente e per iscritto i punti essenziali di testi semplici su argomenti familiari, quotidiani e di interesse personale",
+      "traguardo": "L'alunno comprende oralmente e per iscritto i punti essenziali di testi in lingua standard su argomenti familiari; individua informazioni specifiche in testi di vario tipo (descrizioni, dialoghi, brevi articoli).",
+      "obiettivi": [
+        "Comprendere dialoghi semplici su argomenti quotidiani",
+        "Leggere e comprendere brevi testi descrittivi e informativi",
+        "Individuare informazioni specifiche in un testo scritto",
+        "Ascoltare e comprendere annunci e istruzioni semplici"
+      ],
+      "conoscenze": [
+        "Lessico: hobby, sport, musica, tecnologia, vacanze",
+        "Simple present e present continuous: revisione e consolidamento",
+        "Simple past: to be, regular verbs, common irregular verbs",
+        "Strategie di ascolto: scanning, listening for gist"
+      ],
+      "abilita": [
+        "Comprendere il significato globale di un dialogo ascoltato",
+        "Estrarre informazioni specifiche da un testo scritto",
+        "Leggere ad alta voce con pronuncia e intonazione adeguate",
+        "Usare il Simple past per parlare di eventi passati"
+      ],
+      "evidenze": [
+        "L'alunno risponde a 5 domande su un dialogo ascoltato",
+        "L'alunno trova 3 informazioni specifiche in un testo di 100 parole",
+        "L'alunno legge un paragrafo con pronuncia chiara",
+        "L'alunno scrive 4 frasi al Simple past su ciò che ha fatto nel weekend"
+      ],
+      "criteriValutazione": [
+        "Comprensione globale e specifica di testi orali",
+        "Comprensione di testi scritti di livello A1/A2",
+        "Pronuncia e intonazione nella lettura",
+        "Correttezza nell'uso del Simple past"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Lingua Inglese — Secondaria, classe 1, livello A1/A2",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Secondaria 1, nucleo Ascolto e lettura, comprensione testi su argomenti familiari"
+    },
+    {
+      "id": "eng_sec_1_002",
+      "disciplina": "Inglese",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Produzione orale e scritta",
+      "ambito": "Descrivere, raccontare e interagire in contesti quotidiani",
+      "competenza": "Produce testi orali e scritti semplici su esperienze personali; interagisce in conversazioni brevi su argomenti noti",
+      "traguardo": "L'alunno produce oralmente e per iscritto brevi descrizioni e narrazioni su esperienze personali; interagisce in semplici scambi comunicativi su argomenti familiari, utilizzando un repertorio lessicale e grammaticale di base.",
+      "obiettivi": [
+        "Descrivere oralmente la propria routine quotidiana",
+        "Scrivere un breve testo autobiografico (presentazione, hobby, famiglia)",
+        "Interagire in un dialogo su attività del tempo libero",
+        "Raccontare per iscritto un evento passato semplice"
+      ],
+      "conoscenze": [
+        "Lessico: descrizione fisica e caratteriale, abbigliamento, tempo libero",
+        "Simple present vs present continuous: contrasto",
+        "Simple past: revisione e ampliamento (più verbi irregolari)",
+        "Strutture interrogative: Wh- questions, Do/Does/Did"
+      ],
+      "abilita": [
+        "Descrivere oralmente se stesso e la propria famiglia",
+        "Produrre un breve testo scritto autobiografico (80-100 parole)",
+        "Porre e rispondere a domande su hobby e tempo libero",
+        "Scrivere un breve racconto al past semplice su una gita"
+      ],
+      "evidenze": [
+        "L'alunno si descrive oralmente per 1 minuto",
+        "L'alunno scrive una presentazione di 80 parole su se stesso",
+        "L'alunno intervista un compagno sulle sue attività preferite",
+        "L'alunno scrive 6 frasi al past simple su una gita scolastica"
+      ],
+      "criteriValutazione": [
+        "Fluidità e chiarezza nella produzione orale",
+        "Coerenza e completezza del testo scritto",
+        "Correttezza grammaticale (Present simple/past)",
+        "Capacità di interazione e rispetto dei turni di parola"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Lingua Inglese — Secondaria, classe 1, livello A1/A2",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Secondaria 1, nucleo Produzione, descrizioni e narrazioni semplici"
+    },
+    {
+      "id": "eng_sec_2_001",
+      "disciplina": "Inglese",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Ascolto, lettura e produzione",
+      "ambito": "Testi narrativi, istruzioni e comunicazione su temi quotidiani (livello A2)",
+      "competenza": "Comprende testi orali e scritti di lunghezza e complessità crescenti; produce testi coerenti su esperienze e progetti",
+      "traguardo": "L'alunno comprende testi orali e scritti su vari argomenti; produce descrizioni e narrazioni più articolate; usa l'inglese come strumento interdisciplinare, confrontando culture italiana e anglofona.",
+      "obiettivi": [
+        "Leggere e comprendere una breve storia o un articolo semplice",
+        "Scrivere una lettera o email personale su esperienze vissute",
+        "Parlare di progetti futuri usando be going to",
+        "Confrontare aspetti culturali tra Italia e paesi anglofoni"
+      ],
+      "conoscenze": [
+        "Lessico: viaggi, acquisti, salute, emozioni",
+        "Simple past vs Present perfect (introduzione, ever/never)",
+        "Futuro: be going to, will (prima differenziazione)",
+        "Comparativi e superlativi di maggioranza"
+      ],
+      "abilita": [
+        "Leggere un breve racconto e riassumerlo oralmente",
+        "Scrivere una email di 80-100 parole su una vacanza passata",
+        "Descrivere un progetto futuro usando be going to",
+        "Confrontare usi e tradizioni italiane e inglesi"
+      ],
+      "evidenze": [
+        "L'alunno riassume oralmente una storia letta in 5 frasi",
+        "L'alunno scrive una email su una gita usando Simple past e Present perfect",
+        "L'alunno descrive i suoi progetti per l'estate con be going to",
+        "L'alunno confronta il Natale in Italia e nel Regno Unito in una tabella"
+      ],
+      "criteriValutazione": [
+        "Comprensione di testi narrativi di livello A2",
+        "Capacità di produrre testi scritti coerenti e articolati",
+        "Uso corretto di tempi verbali (past, present perfect, future)",
+        "Consapevolezza interculturale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Pluralismo culturale, confronto interculturale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Secondaria 2, nucleo Ascolto, lettura e produzione, livello A2 e confronto culturale"
+    },
+    {
+      "id": "eng_sec_2_002",
+      "disciplina": "Inglese",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Interazione e cittadinanza globale",
+      "ambito": "L'inglese come strumento per collaborare, argomentare e progettare",
+      "competenza": "Usa l'inglese per collaborare in attività di gruppo, esprimere opinioni e partecipare a progetti scolastici internazionali",
+      "traguardo": "L'alunno usa l'inglese come strumento interdisciplinare; partecipa a progetti scolastici internazionali (gemellaggi, eTwinning); esprime opinioni e argomenta semplici punti di vista.",
+      "obiettivi": [
+        "Esprimere opinioni personali usando In my opinion, I think",
+        "Partecipare a un'attività di gruppo in inglese (progetto, poster, presentazione)",
+        "Comprendere e produrre messaggi per uno scambio internazionale",
+        "Parlare di temi globali (climate change, diritti, sostenibilità)"
+      ],
+      "conoscenze": [
+        "Lessico: diritti umani, ambiente, globalizzazione, diversità culturale",
+        "Strutture per argomentare: I think, In my opinion, I agree, I don't agree, because",
+        "Present perfect: già, ancora, mai (already, yet, never)",
+        "Modali: can, must, should (dovere e consiglio)"
+      ],
+      "abilita": [
+        "Esprimere accordo e disaccordo motivato in inglese",
+        "Partecipare alla creazione di un poster o presentazione su un tema globale",
+        "Scrivere un breve messaggio per un partner di gemellaggio",
+        "Argomentare oralmente una posizione su un tema ambientale"
+      ],
+      "evidenze": [
+        "L'alunno partecipa a una discussione esprimendo 3 opinioni motivate",
+        "L'alunno contribuisce a un poster su un tema globale con 4 frasi in inglese",
+        "L'alunno scrive un messaggio di 60 parole per un gemellaggio",
+        "L'alunno espone oralmente la propria posizione su un tema ambientale"
+      ],
+      "criteriValutazione": [
+        "Capacità di esprimere e motivare opinioni",
+        "Partecipazione collaborativa in inglese",
+        "Uso appropriato dei modali",
+        "Consapevolezza di temi globali e interculturali"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Cittadinanza globale, eTwinning, CLIL, pluralismo culturale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Secondaria 2, nucleo Interazione, inglese per cittadinanza globale e collaborazione"
+    },
+    {
+      "id": "eng_sec_3_001",
+      "disciplina": "Inglese",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Produzione e autonomia linguistica",
+      "ambito": "Consolidamento A2 e preparazione al B1: produzione complessa e autonomia comunicativa",
+      "competenza": "Comprende e produce testi orali e scritti complessi (livello A2 superiore); usa l'inglese in modo autonomo per studio e comunicazione",
+      "traguardo": "L'alunno comprende oralmente e per iscritto i punti essenziali di testi in lingua standard su argomenti familiari (livello A2, superiore per classi con potenziamento); usa l'inglese come strumento interdisciplinare (cittadinanza globale, scienze, storia); confronta culture italiana e anglofona.",
+      "obiettivi": [
+        "Produrre un testo argomentativo semplice su un tema di attualità",
+        "Comprendere e sintetizzare un video o testo autentico breve",
+        "Usare l'inglese per ricerche interdisciplinari (scienze, storia, geografia)",
+        "Sostenere una conversazione su temi astratti (futuro, diritti, tecnologia)"
+      ],
+      "conoscenze": [
+        "Lessico: futuro, lavoro, tecnologia, diritti, cittadinanza",
+        "Periodo ipotetico di primo tipo (If + present, will)",
+        "Discorso indiretto semplice (He said that ...)",
+        "Connettivi avanzati: although, however, therefore, moreover"
+      ],
+      "abilita": [
+        "Scrivere un breve testo argomentativo (120 parole) con opinioni e ragioni",
+        "Sintetizzare oralmente il contenuto di un breve video in inglese",
+        "Cercare e comprendere informazioni in inglese per un progetto interdisciplinare",
+        "Partecipare a una discussione su un tema astratto con 4-5 scambi"
+      ],
+      "evidenze": [
+        "L'alunno scrive un testo di 120 parole pro/contro su un tema attuale",
+        "L'alunno riassume oralmente un video di 2 minuti in 5 frasi",
+        "L'alunno usa fonti in inglese per una ricerca su un tema scientifico",
+        "L'alunno partecipa a un dibattito in inglese su tecnologia e futuro"
+      ],
+      "criteriValutazione": [
+        "Capacità di produrre testi argomentativi coerenti",
+        "Comprensione di materiali autentici",
+        "Autonomia nell'uso dell'inglese per studio",
+        "Fluidità e appropriatezza nella discussione su temi complessi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Inglese come strumento interdisciplinare, consolidamento A2, orientamento B1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Secondaria 3, nucleo Produzione e autonomia, consolidamento A2 superiore e preparazione B1"
+    },
+    {
+      "id": "eng_sec_3_002",
+      "disciplina": "Inglese",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Interazione e cultura",
+      "ambito": "Cultura anglofona, letteratura giovanile e autovalutazione linguistica",
+      "competenza": "Conosce aspetti culturali, letterari e sociali dei paesi anglofoni; sviluppa autonomia nell'apprendimento e autovalutazione linguistica",
+      "traguardo": "L'alunno conosce aspetti della cultura dei paesi anglofoni; legge e comprende brevi testi letterari e autentici; riflette sul proprio apprendimento linguistico utilizzando strumenti di autovalutazione.",
+      "obiettivi": [
+        "Leggere e comprendere un breve racconto o poesia in inglese",
+        "Conoscere aspetti della cultura giovanile anglofona",
+        "Utilizzare strumenti di autovalutazione linguistica (QCER, portfolio)",
+        "Presentare un progetto culturale su un paese anglofono"
+      ],
+      "conoscenze": [
+        "Lessico: arte, musica, cinema, letteratura giovanile",
+        "Past perfect (riconoscimento, primi usi)",
+        "Forma passiva: Present simple e Simple past",
+        "Generi letterari giovani: graphic novel, song lyrics, short stories"
+      ],
+      "abilita": [
+        "Leggere un breve racconto in inglese e commentarlo oralmente",
+        "Analizzare il testo di una canzone in inglese cogliendone il significato",
+        "Compilare una scheda di autovalutazione sulle proprie competenze linguistiche",
+        "Presentare un progetto su un paese anglofono usando slide in inglese"
+      ],
+      "evidenze": [
+        "L'alunno commenta un racconto letto esprimendo una preferenza motivata",
+        "L'alunno analizza il testo di una canzone identificandone tema e messaggio",
+        "L'alunno compila il proprio portfolio linguistico con auto-valutazione",
+        "L'alunno presenta una breve ricerca su un paese anglofono in 5 slide"
+      ],
+      "criteriValutazione": [
+        "Comprensione di testi letterari e autentici semplici",
+        "Capacità di analisi e commento personale",
+        "Autonomia nella gestione del proprio apprendimento",
+        "Chiarezza e completezza nella presentazione orale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + QCER (Common European Framework of Reference) — autovalutazione e portfolio linguistico",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-098 — Secondaria 3, nucleo Interazione e cultura, letteratura giovanile, autovalutazione QCER"
+    }
+  ]
+}

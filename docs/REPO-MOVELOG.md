@@ -2366,3 +2366,19 @@
 - .cml/export/import/role-access invariati: OK
 - Verdetto: CML_097_NEXT_DISCIPLINE_NORMALIZATION_SELECTED
 - Prossimo step: CML-098 - INGLESE_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+---
+
+## 2026-06-24 - CML-098 - INGLESE_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+- Tipo slice: normalized curriculum draft
+- Commit: (current) -- feat: add inglese.normalized.json
+- content/curriculum/inglese.normalized.json: 12 unita, 4 nuclei (Ascolto, Lettura, Produzione orale e scritta, Interazione)
+- Copertura: Infanzia (1 unita), Primaria (5 unita), Secondaria (6 unita)
+- Livello: A1/A2 (QCER), con orientamento B1 in classe 3
+- Stati: tutte le unita in stato nuovo, bozza_generabile / in_revisione
+- humanValidationRequired: true su ogni unita
+- Benchmark: Scienze (15 unita), Tecnologia (12 unita), Matematica (13)
+- Prima disciplina non italiana normalizzata: test di generalizzabilita del modello superato
+- Verdetto: CML_098_INGLESE_NORMALIZED_CURRICULUM_DRAFT_READY
+- Prossimo step: CML-099 - UI COUNTERS UPDATE (5/10/0)
