@@ -646,6 +646,22 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .curricolo-riepilogo-item .riepilogo-dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:2px}
 .curricolo-riepilogo-item .riepilogo-changed{font-weight:700;color:#e65100}
 .curricolo-riepilogo-item .riepilogo-total{color:#78909c}
+.curricolo-completeness{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:12px;line-height:1.5}
+.curricolo-completeness-title{font-weight:700;font-size:13px;color:#1a237e;margin-bottom:4px}
+.curricolo-completeness-subtitle{font-size:11px;color:#666;margin-bottom:12px}
+.curricolo-completeness-counters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.completeness-counter{flex:1;min-width:100px;padding:10px;border-radius:8px;text-align:center;border:1px solid}
+.completeness-counter-num{font-size:22px;font-weight:700;line-height:1.2}
+.completeness-counter-label{font-size:10px;margin-top:2px}
+.completeness-counter--ready{background:#e8f5e9;border-color:#a5d6a7;color:#1b5e20}
+.completeness-counter--base{background:#fff8e1;border-color:#ffe082;color:#5d4037}
+.completeness-counter--none{background:#f5f5f5;border-color:#e0e0e0;color:#78909c}
+.curricolo-completeness-legend{display:flex;flex-direction:column;gap:4px}
+.completeness-row{font-size:11px;color:#455a64;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.completeness-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.completeness-badge--ready{background:#c8e6c9;color:#1b5e20}
+.completeness-badge--base{background:#fff9c4;color:#5d4037}
+.completeness-note{font-size:10px;color:#999;font-style:italic;margin-top:2px}
 .curricolo-nextaction{font-size:11px;padding:6px 14px;background:#f5f7fa;border-top:1px solid #eee;color:#546e7a;text-align:right}
 .curricolo-nextaction a{color:#1a237e;font-weight:700;text-decoration:none}
 .curricolo-nextaction a:hover{text-decoration:underline}
@@ -4503,6 +4519,21 @@ function renderCurricoloIstituto(version) {
     html += '<span class="curricolo-riepilogo-item"><span class="riepilogo-dot" style="background:' + cls + '"></span>' + meta.icon + ' ' + disc + ' <span class="riepilogo-total">(' + s.total + ')</span>' + (s.changed > 0 ? ' <span class="riepilogo-changed">+' + s.changed + '</span>' : '') + '</span>';
   });
   html += '</div>';
+
+  html += '<div class="curricolo-completeness">' +
+    '<div class="curricolo-completeness-title">\uD83D\uDCCA Stato di completezza dei curricoli disciplinari</div>' +
+    '<div class="curricolo-completeness-subtitle">Prima dell\'approvazione \u00E8 necessario verificare che ogni disciplina abbia una struttura completa. Al momento solo Tecnologia dispone di una bozza disciplinare completa e normalizzata.</div>' +
+    '<div class="curricolo-completeness-counters">' +
+      '<div class="completeness-counter completeness-counter--ready"><div class="completeness-counter-num">1</div><div class="completeness-counter-label">Bozza completa disponibile</div></div>' +
+      '<div class="completeness-counter completeness-counter--base"><div class="completeness-counter-num">14</div><div class="completeness-counter-label">Sola consultazione</div></div>' +
+      '<div class="completeness-counter completeness-counter--none"><div class="completeness-counter-num">0</div><div class="completeness-counter-label">Pronte per approvazione</div></div>' +
+    '</div>' +
+    '<div class="curricolo-completeness-legend">' +
+      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Tecnologia \u2014 struttura normalizzata con unit\u00E0, conoscenze, abilit\u00E0, evidenze e criteri. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
+      '<div class="completeness-row"><span class="completeness-badge completeness-badge--base">Solo consultazione</span> Italiano, Matematica, Scienze, Storia, Geografia, Inglese, Seconda Lingua, Educazione Civica, Arte, Musica, Educazione Fisica, Religione, Latino (LEL) \u2014 presenti solo traguardi e obiettivi di base. Stato: <strong>Non pronta per approvazione</strong>. Azione: completare struttura disciplinare prima della sintesi.</div>' +
+      '<div class="completeness-row completeness-note">L\'approvazione resta esterna allo strumento e di competenza degli organi scolastici. Tecnologia \u00E8 il modello strutturale di riferimento per le normalizzazioni successive.</div>' +
+    '</div>' +
+  '</div>';
 
   ordinii.forEach(function(o) {
     if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;

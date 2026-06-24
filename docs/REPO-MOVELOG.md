@@ -2012,3 +2012,18 @@
 - Decisione: CML-085 mostrerà stato completezza per disciplina; CML-086 introdurrà approvazione solo per discipline con livello normalizzato
 - Verdetto: `CML_084_DISCIPLINARY_CURRICULUM_COMPLETENESS_APPROVAL_READINESS_AUDIT_READY`
 - Prossimo step: CML-085 — DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_RUNTIME_INCREMENT
+
+---
+
+## 2026-06-24 — CML-085 — DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_RUNTIME_INCREMENT
+
+- Tipo slice: runtime increment (CSS + JS)
+- File modificato: `_published_snapshot/netlify-current/index.html` (+31 righe)
+- Sezione aggiunta: "Stato di completezza dei curricoli disciplinari" dopo il riepilogo in Curriculum > Consultazione
+- Contatori: 1 bozza completa (Tecnologia), 14 sola consultazione, 0 pronte per approvazione
+- Badge: verde per "Bozza completa disponibile", giallo per "Solo consultazione"
+- Messaggio prudente: "L'approvazione resta esterna allo strumento"
+- Read-only: nessun pulsante, nessuna persistenza, nessuna modifica dati
+- Controlli: braces 2104=2104 ✅, `git diff --check` ✅, nessuna nuova dipendenza
+- Verdetto: `CML_085_DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_RUNTIME_INCREMENT_READY`
+- Prossimo step: CML-085A — DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_LIVE_SMOKE
