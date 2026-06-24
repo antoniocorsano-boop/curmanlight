@@ -2715,3 +2715,25 @@
 - File creati: `docs/03_execution/CML-111.md`, `report/CML-111_*.md`
 - Verdetto: `CML_111_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
 - Prossimo step: CML-112 — normalizzazione runtime Arte e Immagine
+
+---
+
+## 2026-06-24 - CML-112 - NORMALIZZAZIONE RUNTIME ARTE E IMMAGINE
+
+- Commit: `3743e47`
+- Stato: 10/4/0 (9 → 10 bozze complete, 5 → 4 sola consultazione)
+- 9 edit in `index.html`: subtitle, contatori, righe completeness/readiness, notte
+- Discipline residue: 4 (Seconda Lingua, Ed. Fisica, Religione, Latino)
+- Next: CML-113 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT o test locale
+
+---
+
+## 2026-06-24 - CML-113 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT (2ª iterazione)
+
+- Commit: `3743e47`
+- Discipline residue analizzate: 4 (Ed. Fisica, Religione, Seconda Lingua, Latino)
+- Disciplina selezionata: **Educazione Fisica** — voto 5/10
+- Motivazione: copertura tutti e 3 gli ordini, 5 voci, completa blocco motorio
+- File: `docs/03_execution/CML-113.md`, `report/CML-113_*.md`
+- Verdetto: `CML_113_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
+- Prossimo step: CML-114 — normalizzazione runtime Educazione Fisica
