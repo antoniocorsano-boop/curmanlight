@@ -2196,3 +2196,81 @@
 - Light mode only preservato, dark mode commentato: ✅
 - Verdetto: `CML_091_DISCIPLINARY_APPROVAL_READINESS_PANEL_RUNTIME_INCREMENT_READY`
 - Prossimo step: CML-091A — DISCIPLINARY_APPROVAL_READINESS_PANEL_LIVE_SMOKE
+
+---
+
+## 2026-06-24 — CML-091A — DISCIPLINARY_APPROVAL_READINESS_LIVE_SMOKE (20/20)
+
+- Tipo slice: live smoke
+- HEAD partenza: `6280718`, tree pulita ✅
+- Deploy: `git push origin main` → workflow GitHub Pages success
+- URL verificato: `https://antoniocorsano-boop.github.io/curmanlight/`
+- 20/20 controlli live passati:
+  - Completezza e readiness panel visibili ✅
+  - Tecnologia+Italiano in revisione, 13 sola consultazione, 0 pronte ✅
+  - Contatori: 2/13/0 (completezza), 2/13/0 (readiness) ✅
+  - Nessun pulsante approvazione, nessuna disciplina pronta ✅
+  - Nota approvazione esterna presente ✅
+  - Didattica, Esportazioni, Guida, Motto page integre ✅
+- Verdetto: `CML_091A_DISCIPLINARY_APPROVAL_READINESS_PANEL_LIVE_SMOKE_READY`
+- Prossimo step: CML-092 — selezione prossima normalizzazione
+
+---
+
+## 2026-06-24 — CML-092 — MATEMATICA_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+- Tipo slice: data/content increment
+- Disciplina scelta: **Matematica** (seconda normalizzazione dopo Italiano)
+- Benchmark: `content/curriculum/italiano.normalized.json`, `content/curriculum/tecnologia.normalized.json`
+- File creati: `content/curriculum/matematica.normalized.json` (13 unità)
+- File runtime modificato: `_published_snapshot/netlify-current/index.html` (contatori 2→3, note aggiornate)
+- **13 unità:** Infanzia 1 (fascia 5), Primaria 5 (cl.1 x4, cl.5 x1), Secondaria 7 (cl.1 x5, cl.2 x1, cl.3 x1)
+- **Nuclei coperti:** Numeri (5), Spazio e figure (3), Relazioni e funzioni (2), Dati e previsioni (1), Informatica (2)
+- **D.M. 221/2025:** educazione finanziaria (Pri cl.5, Sec cl.3), informatica/pensiero computazionale (Pri cl.1, Sec cl.1, Sec cl.2)
+- Stato: `bozza_generabile, in_revisione, validazioneUmana:true` su tutte le unità
+- Commit: `bfa1d2a` — pushato su `main`
+- Dati/`.cml`/export/import/role-access invariati: ✅
+- Verdetto: `CML_092_MATEMATICA_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT_READY`
+- Prossimo step: CML-092A — MATEMATICA_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT
+
+---
+
+## 2026-06-24 — CML-092A — MATEMATICA_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT
+
+- Tipo slice: docs-only quality audit
+- File sotto audit: `content/curriculum/matematica.normalized.json`
+- Esito tecnico: ✅ PASS — JSON valido, struttura coerente con Italiano (18/18 campi), 13/13 ID univoci
+- Esito didattico: ✅ PASS — obiettivi osservabili, criteri descrittivi, progressione verticale su Numeri e Spazio e figure
+- Headroom: ~2.114 chars/unità (superiore a Italiano 1.588, da monitorare)
+- Gap non bloccanti: 1 sola unità Infanzia, classi Primaria 2-3-4 scoperte, Dati e previsioni sottorappresentato, disallineamento ambito/nucleo in mat_pri_1_003
+- Decisione readiness: **A** — Matematica pronto come `bozza_generabile / in_revisione`
+- Commit: `8d4ca39` — pushato su `main`
+- Runtime non modificato, `.cml`/export/import/role-access invariati: ✅
+- Verdetto: `CML_092A_MATEMATICA_NORMALIZED_CURRICULUM_QUALITY_AUDIT_READY`
+- Prossimo step: CML-093 — LIVE_SMOKE completezza e readiness Matematica
+
+---
+
+## 2026-06-24 — CML-093 — DISCIPLINARY_COMPLETENESS_AND_READINESS_MATEMATICA_LIVE_SMOKE
+
+- Tipo slice: live smoke/documentazione
+- HEAD partenza: `8d4ca39`, tree pulita ✅
+- Deploy Pages: `bfa1d2a` (CML-092) → workflow GitHub Pages success
+- Commit docs: `8d4ca39` (CML-092A) — docs-only, no runtime mod
+- URL live: `https://antoniocorsano-boop.github.io/curmanlight/`
+- **25/25 controlli live passati:**
+  - Contatori: 3 bozze complete, 12 sola consultazione, 0 pronte ✅
+  - Readiness: 3 in revisione, 12 sola consultazione, 0 pronte ✅
+  - Tecnologia: "Bozza completa, in revisione" ✅
+  - Italiano: "Bozza completa, in revisione" ✅
+  - Matematica: "Bozza completa, in revisione" ✅
+  - Altre 12: "Solo consultazione" ✅
+  - Nota approvazione esterna presente ✅
+  - Nessun pulsante approvazione ✅
+  - Nessuna disciplina pronta/approvata ✅
+  - Light mode only, mobile OK, Motto page HTTP 200 ✅
+  - `.cml`/export/import/role-access invariati ✅
+- File creati: `docs/03_execution/CML-093.md`, `report/CML-093_disciplinary_completeness_and_readiness_matematica_live_smoke.md`
+- Nessuna modifica runtime in CML-093
+- Verdetto: `CML_093_DISCIPLINARY_COMPLETENESS_READINESS_MATEMATICA_LIVE_SMOKE_READY`
+- Prossimo step: CML-094 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
