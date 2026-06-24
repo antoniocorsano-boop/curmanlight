@@ -2399,3 +2399,19 @@
 - Nessuna modifica a .cml, export/import, role-access, schema, dati curricolari
 - Verdetto: CML_099_UI_COUNTERS_UPDATE_READY
 - Prossimo step: CML-100 - INGLESE_QUALITY_AUDIT (esito readiness e gap)
+
+---
+
+## 2026-06-24 - CML-100 - INGLESE_QUALITY_AUDIT
+
+- Tipo slice: quality audit
+- Commit: **ee6c99d** -- docs: quality audit Inglese esito A (CML-100)
+- Esito: **A** -- gap non bloccanti
+- GAP-1: Infanzia solo fascia 5, assente fascia 3-4 (basso - esplorazione sonora non strutturata a 3-4 anni)
+- GAP-2: distribuzione nuclei non uniforme (Ascolto 5/12, Interazione 2/12 + trasversale) (basso)
+- GAP-3: assenza educazione finanziaria in Inglese (non pertinente)
+- GAP-4 (positivo): generalizzabilita del modello a 17 campi confermata su lingua non italiana
+- Raccomandazione: procedere con CML-101 - sesta normalizzazione
+- File creati: docs/03_execution/CML-100.md, report/CML-100_inglese_quality_audit.md
+- Verdetto: CML_100_INGLESE_QUALITY_AUDIT_A_READY
+- Prossimo step: CML-101 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
