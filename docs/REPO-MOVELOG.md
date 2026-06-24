@@ -2554,3 +2554,24 @@
 - File creati: docs/03_execution/CML-105A.md, report/CML-105A_geografia_normalized_curriculum_draft_quality_audit.md
 - Verdetto: CML_105A_GEOGRAFIA_NORMALIZED_CURRICULUM_QUALITY_AUDIT_READY
 - Prossimo step: CML-106 - DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_GEOGRAFIA_RUNTIME_INCREMENT (contatori 7/8/0)
+
+---
+
+## 2026-06-24 - CML-106 - UI COUNTERS UPDATE (7/8/0) FOR GEOGRAFIA
+
+- Tipo slice: runtime increment leggero
+- HEAD partenza: `b2c128e` (CML-105A)
+- Fonte: CML-105A esito A — Geografia pronta come bozza_generabile / in_revisione
+- File runtime modificato: `_published_snapshot/netlify-current/index.html`
+- **Completezza:** 6 -> 7 (aggiunta Geografia), 9 -> 8, 0 invariato
+- **Readiness:** 6 -> 7 (aggiunta Geografia), 9 -> 8, 0 invariato
+- Subtitle completezza: aggiornata con "e Geografia"
+- Nota modelli riferimento: aggiornata con "e Geografia"
+- Completezza row: Geografia aggiunta come 7a bozza completa in revisione (paesaggio, transcalarità, territorializzazione)
+- Readiness row: Geografia aggiunta come 7a in revisione
+- Geografia rimossa dalla lista "Solo consultazione" (entrambe le sezioni)
+- Altre 9 -> Altre 8 (entrambe le sezioni)
+- Nessuna modifica a .cml, export/import, role-access, schema, dati curricolari
+- Controlli: git diff --check PASS, braces CSS 2120=2120 PASS, dark mode commentato, nessuna nuova dipendenza
+- Verdetto: CML_106_DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_GEOGRAFIA_READY
+- Prossimo step raccomandato: CML-106A - GEOGRAFIA_COMPLETENESS_READINESS_LIVE_SMOKE
