@@ -1,0 +1,570 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Matematica",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-092 normalized Mathematics curriculum draft — adapted from Word doc + DATA traguardi/obiettivi + Tecnologia/Italiano structural benchmark",
+  "unitaApprendimento": [
+    {
+      "id": "mat_inf_5_001",
+      "disciplina": "Matematica",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "ambito": "Numeri e prime relazioni",
+      "nucleo": "Numeri",
+      "competenza": "Raggruppa, ordina e conta oggetti in contesti di gioco e di vita quotidiana, sviluppando le prime strategie logiche",
+      "traguardo": "Il bambino raggruppa e ordina oggetti secondo criteri diversi, confronta quantità, ha familiarità con le strategie del contare.",
+      "obiettivi": [
+        "Contare fino a 10 in senso progressivo e regressivo",
+        "Riconoscere forme geometriche semplici (cerchio, quadrato, triangolo)",
+        "Classificare e seriare oggetti in base a colore, forma e dimensione"
+      ],
+      "conoscenze": [
+        "Numeri da 1 a 10 (aspetto cardinale e ordinale)",
+        "Forme geometriche di base (cerchio, quadrato, triangolo, rettangolo)",
+        "Criteri di classificazione (colore, forma, dimensione)"
+      ],
+      "abilita": [
+        "Contare oggetti quotidiani fino a 10",
+        "Riconoscere e denominare le forme geometriche",
+        "Ordinare oggetti per grandezza crescente e decrescente"
+      ],
+      "evidenze": [
+        "Il bambino conta correttamente fino a 10 oggetti",
+        "Il bambino riconosce e nomina cerchio, quadrato e triangolo",
+        "Il bambino ordina 5 oggetti dal più piccolo al più grande"
+      ],
+      "criteriValutazione": [
+        "Capacità di contare in sequenza",
+        "Riconoscimento delle forme geometriche",
+        "Capacità di classificazione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: La conoscenza del mondo",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Infanzia 5, nucleo Numeri, avvio al pensiero logico-matematico"
+    },
+    {
+      "id": "mat_pri_1_001",
+      "disciplina": "Matematica",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Numeri e calcolo",
+      "nucleo": "Numeri",
+      "competenza": "Si muove con sicurezza nel calcolo scritto e mentale con i numeri naturali, comprendendo il valore posizionale delle cifre",
+      "traguardo": "L'alunno si muove con sicurezza nel calcolo scritto e mentale con i numeri naturali. Conta oggetti, legge e scrive i numeri riconoscendo il valore posizionale.",
+      "obiettivi": [
+        "Contare oggetti o eventi a voce e mentalmente, in modo progressivo e regressivo",
+        "Leggere e scrivere i numeri naturali riconoscendo i due aspetti cardinale e ordinale",
+        "Confrontare, ordinare e rappresentare i numeri naturali sulla retta",
+        "Eseguire semplici addizioni e sottrazioni, verbalizzando le procedure di calcolo"
+      ],
+      "conoscenze": [
+        "Il numero naturale nei tre aspetti cardinale, ordinale e ricorsivo",
+        "Notazione posizionale decimale e rappresentazione sulla retta",
+        "Sistemi di notazione dei numeri in uso in culture diverse",
+        "Operazioni aritmetiche (addizione, sottrazione)"
+      ],
+      "abilita": [
+        "Contare oggetti in senso progressivo e regressivo",
+        "Leggere e scrivere numeri naturali entro il 20",
+        "Confrontare e ordinare numeri sulla retta numerica",
+        "Eseguire addizioni e sottrazioni con oggetti e mentalmente"
+      ],
+      "evidenze": [
+        "L'alunno conta 20 oggetti senza errori",
+        "L'alunno scrive e confronta numeri entro il 20",
+        "L'alunno esegue addizioni e sottrazioni con materiali concreti"
+      ],
+      "criteriValutazione": [
+        "Padronanza del conteggio",
+        "Comprensione del valore posizionale",
+        "Correttezza del calcolo"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Matematica — Numeri",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Primaria 1, nucleo Numeri, calcolo e sistema di numerazione"
+    },
+    {
+      "id": "mat_pri_1_002",
+      "disciplina": "Matematica",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Geometria e orientamento spaziale",
+      "nucleo": "Spazio e figure",
+      "competenza": "Si orienta nello spazio, riconosce e descrive le principali figure geometriche, utilizzando un linguaggio appropriato",
+      "traguardo": "L'alunno riconosce, denomina e descrive le principali figure geometriche. Si orienta nello spazio e descrive semplici percorsi.",
+      "obiettivi": [
+        "Eseguire e descrivere un semplice percorso partendo dalla descrizione verbale o dal disegno",
+        "Riconoscere, denominare, descrivere e disegnare le principali figure geometriche",
+        "Fornire istruzioni per far compiere un percorso desiderato"
+      ],
+      "conoscenze": [
+        "Posizione di oggetti nello spazio e distanze a partire dal proprio corpo",
+        "Binomi topologici (sopra/sotto, davanti/dietro, destra/sinistra, dentro/fuori)",
+        "Punti di riferimento e descrizione di un percorso",
+        "Prime classificazioni e misurazioni di figure geometriche"
+      ],
+      "abilita": [
+        "Descrivere verbalmente un percorso semplice",
+        "Riconoscere le principali figure piane",
+        "Utilizzare correttamente i binomi topologici"
+      ],
+      "evidenze": [
+        "L'alunno descrive il percorso da casa all'aula",
+        "L'alunno disegna cerchio, quadrato e triangolo",
+        "L'alunno indica correttamente sopra/sotto, dentro/fuori"
+      ],
+      "criteriValutazione": [
+        "Orientamento spaziale",
+        "Riconoscimento delle figure geometriche",
+        "Uso del linguaggio topologico"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Matematica — Spazio e figure",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Primaria 1, nucleo Spazio e figure, orientamento e prime figure"
+    },
+    {
+      "id": "mat_pri_1_003",
+      "disciplina": "Matematica",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Relazioni, dati e previsioni",
+      "nucleo": "Relazioni e funzioni",
+      "competenza": "Classifica e mette in relazione oggetti e dati, utilizzando rappresentazioni opportune",
+      "traguardo": "L'alunno classifica numeri, figure e oggetti in base alle proprietà, ricorrendo a rappresentazioni opportune.",
+      "obiettivi": [
+        "Classificare numeri, figure e oggetti in base alle proprietà",
+        "Misurare grandezze utilizzando diversi strumenti",
+        "Rappresentare dati con diagrammi, schemi e tabelle"
+      ],
+      "conoscenze": [
+        "Criteri di classificazione e rappresentazione",
+        "Il piano cartesiano come strumento di rappresentazione",
+        "Diagrammi, schemi e tabelle per leggere dati e relazioni"
+      ],
+      "abilita": [
+        "Classificare oggetti secondo due criteri",
+        "Costruire semplici tabelle e grafici",
+        "Leggere e interpretare un semplice diagramma"
+      ],
+      "evidenze": [
+        "L'alunno classifica 10 oggetti in due categorie",
+        "L'alunno costruisce una tabella a doppia entrata",
+        "L'alunno legge un semplice istogramma"
+      ],
+      "criteriValutazione": [
+        "Capacità di classificazione",
+        "Uso corretto di tabelle e grafici",
+        "Lettura e interpretazione dei dati"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Matematica — Relazioni, dati e previsioni",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Primaria 1, nucleo Relazioni e dati, prime rappresentazioni"
+    },
+    {
+      "id": "mat_pri_1_004",
+      "disciplina": "Matematica",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Informatica e pensiero computazionale",
+      "nucleo": "Informatica",
+      "competenza": "Sviluppa il pensiero logico attraverso sequenze di istruzioni e rappresentazione di informazioni",
+      "traguardo": "L'alunno sceglie e utilizza oggetti o simboli per rappresentare informazioni. Descrive attività quotidiane tramite sequenze di passi precisi.",
+      "obiettivi": [
+        "Scegliere e utilizzare oggetti o simboli per rappresentare informazioni",
+        "Descrivere a parole attività della vita quotidiana tramite sequenze di passi",
+        "Eseguire semplici sequenze di istruzioni"
+      ],
+      "conoscenze": [
+        "Rappresentazione di dati e informazioni con simboli",
+        "Introduzione al concetto di algoritmo come sequenza ordinata",
+        "Esecuzione di istruzioni e procedure semplici"
+      ],
+      "abilita": [
+        "Rappresentare informazioni con simboli e icone",
+        "Descrivere una semplice procedura in ordine di passi",
+        "Eseguire una sequenza di istruzioni"
+      ],
+      "evidenze": [
+        "L'alunno rappresenta il tempo atmosferico con simboli",
+        "L'alunno descrive i passi per lavarsi le mani in sequenza",
+        "L'alunno segue una sequenza di 3 istruzioni"
+      ],
+      "criteriValutazione": [
+        "Capacità di rappresentazione simbolica",
+        "Organizzazione sequenziale",
+        "Esecuzione corretta di istruzioni"
+      ],
+      "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — Informatica come ambito di Matematica dalla primaria",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Primaria 1, nucleo Informatica, pensiero computazionale introduttivo"
+    },
+    {
+      "id": "mat_pri_5_001",
+      "disciplina": "Matematica",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "ambito": "Numeri razionali, dati e educazione finanziaria",
+      "nucleo": "Numeri",
+      "competenza": "Opera con i numeri decimali, sviluppa un pensiero critico verso l'uso del denaro e le decisioni economiche quotidiane",
+      "traguardo": "Sviluppa un pensiero matematico critico per interpretare la realtà; sviluppa le prime nozioni di educazione finanziaria (valore del denaro, scambio, risparmio).",
+      "obiettivi": [
+        "Leggere e scrivere numeri decimali",
+        "Calcolare aree e perimetri di figure piane",
+        "Costruire semplici algoritmi come sequenze di istruzioni",
+        "Comprendere il valore del denaro e il concetto di risparmio"
+      ],
+      "conoscenze": [
+        "Numeri decimali e loro rappresentazione",
+        "Formule di area e perimetro per figure piane",
+        "Concetto di algoritmo e sequenza di istruzioni",
+        "Uso del foglio di calcolo per organizzare dati",
+        "Nozioni di base di educazione finanziaria (denaro, scambio, risparmio)"
+      ],
+      "abilita": [
+        "Eseguire operazioni con numeri decimali",
+        "Calcolare aree e perimetri di figure note",
+        "Costruire un semplice algoritmo con istruzioni sequenziali",
+        "Usare un foglio di calcolo per semplici operazioni",
+        "Confrontare prezzi e gestire una semplice situazione di acquisto"
+      ],
+      "evidenze": [
+        "L'alunno calcola il perimetro di un quadrato e un rettangolo",
+        "L'alunno costruisce una sequenza di istruzioni per risolvere un problema",
+        "L'alunno simula un acquisto calcolando il resto",
+        "L'alunno compila una semplice tabella con un foglio di calcolo"
+      ],
+      "criteriValutazione": [
+        "Padronanza del calcolo con decimali",
+        "Capacità di costruire algoritmi",
+        "Comprensione dei concetti economici di base",
+        "Uso di strumenti digitali"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — educazione finanziaria e informatica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Primaria 5, nucleo Numeri, decimali e avvio all'educazione finanziaria"
+    },
+    {
+      "id": "mat_sec_1_001",
+      "disciplina": "Matematica",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Numeri e calcolo con razionali",
+      "nucleo": "Numeri",
+      "competenza": "Padroneggia il calcolo con i numeri naturali e decimali, comprende l'uso delle frazioni e delle proprietà delle operazioni",
+      "traguardo": "L'alunno si muove con sicurezza nel calcolo anche con i numeri razionali. Esegue le quattro operazioni, individua multipli e divisori, utilizza le frazioni.",
+      "obiettivi": [
+        "Eseguire le quattro operazioni con numeri naturali e decimali",
+        "Confrontare e ordinare numeri naturali e decimali",
+        "Utilizzare strategie di calcolo mentale e scritto",
+        "Individuare multipli e divisori di un numero",
+        "Utilizzare le frazioni come parte di un intero e come operatore",
+        "Applicare le proprietà delle operazioni per semplificare i calcoli"
+      ],
+      "conoscenze": [
+        "I numeri naturali entro il 20 e progressivamente entro il 100",
+        "Lettura, scrittura, rappresentazione, confronto e ordinamento dei numeri",
+        "Conteggio in senso progressivo e regressivo",
+        "Significato e utilizzo delle operazioni di addizione e sottrazione",
+        "Valore posizionale delle cifre",
+        "Frazioni come parte di un intero e frazioni equivalenti"
+      ],
+      "abilita": [
+        "Eseguire le quattro operazioni in colonna e mentalmente",
+        "Confrontare e ordinare numeri decimali",
+        "Calcolare multipli e divisori di un numero",
+        "Rappresentare frazioni e riconoscere frazioni equivalenti"
+      ],
+      "evidenze": [
+        "L'alunno esegue correttamente 10 operazioni con numeri naturali",
+        "L'alunno ordina 5 numeri decimali sulla retta",
+        "L'alunno rappresenta graficamente una frazione e ne trova l'equivalente"
+      ],
+      "criteriValutazione": [
+        "Padronanza del calcolo scritto e mentale",
+        "Comprensione del sistema di numerazione",
+        "Capacità di operare con frazioni"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Matematica — Numeri",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Secondaria 1, nucleo Numeri, calcolo e frazioni"
+    },
+    {
+      "id": "mat_sec_1_002",
+      "disciplina": "Matematica",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Geometria piana e disegno geometrico",
+      "nucleo": "Spazio e figure",
+      "competenza": "Utilizza correttamente gli strumenti per il disegno geometrico, classifica e rappresenta le principali figure piane",
+      "traguardo": "L'alunno riconosce e classifica triangoli e quadrilateri, calcola perimetri, utilizza il piano cartesiano per la rappresentazione.",
+      "obiettivi": [
+        "Utilizzare correttamente gli strumenti per il disegno geometrico",
+        "Costruire e riprodurre figure geometriche piane",
+        "Descrivere e classificare triangoli e quadrilateri",
+        "Calcolare perimetri delle principali figure piane",
+        "Rappresentare punti e segmenti nel piano cartesiano"
+      ],
+      "conoscenze": [
+        "Riconoscimento e rappresentazione di figure piane e solide",
+        "Individuazione di linee, regioni e confini",
+        "Riconoscimento di posizioni, relazioni spaziali e simmetrie",
+        "Caratteristiche di triangoli e quadrilateri",
+        "Piano cartesiano e coordinate"
+      ],
+      "abilita": [
+        "Usare riga, squadra e compasso in modo adeguato",
+        "Classificare triangoli in base a lati e angoli",
+        "Classificare quadrilateri",
+        "Calcolare il perimetro di figure piane",
+        "Rappresentare punti nel piano cartesiano"
+      ],
+      "evidenze": [
+        "L'alunno costruisce un triangolo con riga e compasso",
+        "L'alunno classifica 5 triangoli e 5 quadrilateri",
+        "L'alunno calcola il perimetro di 4 figure diverse",
+        "L'alunno rappresenta 3 punti nel piano cartesiano"
+      ],
+      "criteriValutazione": [
+        "Uso corretto degli strumenti geometrici",
+        "Conoscenza delle proprietà delle figure",
+        "Precisione nel disegno e nel calcolo"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Matematica — Spazio e figure",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Secondaria 1, nucleo Spazio e figure, geometria piana"
+    },
+    {
+      "id": "mat_sec_1_003",
+      "disciplina": "Matematica",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Relazioni e funzioni",
+      "nucleo": "Relazioni e funzioni",
+      "competenza": "Individua regolarità e relazioni in contesti numerici e geometrici, utilizzando rappresentazioni e linguaggi formali",
+      "traguardo": "L'alunno individua regolarità in sequenze numeriche e geometriche, rappresenta relazioni mediante tabelle e grafici, comprende il concetto di algoritmo.",
+      "obiettivi": [
+        "Individuare regolarità in sequenze numeriche e geometriche",
+        "Rappresentare relazioni mediante tabelle e grafici semplici",
+        "Interpretare relazioni tra grandezze in situazioni concrete",
+        "Comprendere il concetto di algoritmo come successione ordinata di istruzioni"
+      ],
+      "conoscenze": [
+        "Individuazione di relazioni, somiglianze, differenze e regolarità",
+        "Classificazione in base a una o più proprietà",
+        "Successioni e sequenze numeriche",
+        "Simboli e rappresentazioni per descrivere relazioni"
+      ],
+      "abilita": [
+        "Riconoscere pattern in sequenze numeriche",
+        "Completare e costruire successioni",
+        "Rappresentare dati in tabelle a doppia entrata",
+        "Descrivere una relazione con un linguaggio formale semplice"
+      ],
+      "evidenze": [
+        "L'alunno completa una sequenza numerica individuando la regola",
+        "L'alunno rappresenta in tabella la relazione tra due grandezze",
+        "L'alunno descrive l'algoritmo per risolvere un semplice problema"
+      ],
+      "criteriValutazione": [
+        "Capacità di individuare regolarità",
+        "Uso di rappresentazioni formali",
+        "Comprensione del concetto di relazione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Matematica — Relazioni e funzioni",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Secondaria 1, nucleo Relazioni e funzioni, pattern e rappresentazioni"
+    },
+    {
+      "id": "mat_sec_1_004",
+      "disciplina": "Matematica",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Dati, statistiche e probabilità",
+      "nucleo": "Dati e previsioni",
+      "competenza": "Raccoglie, organizza e analizza dati per ricavare informazioni, valutare situazioni di incertezza e prendere decisioni",
+      "traguardo": "L'alunno raccoglie, organizza e rappresenta dati, legge e interpreta tabelle e grafici, calcola moda, mediana e media aritmetica in situazioni semplici.",
+      "obiettivi": [
+        "Raccogliere, organizzare e rappresentare dati",
+        "Leggere e interpretare tabelle e grafici",
+        "Calcolare moda, mediana e media aritmetica in situazioni semplici",
+        "Confrontare dati per ricavare informazioni",
+        "Intuire il concetto di probabilità in semplici situazioni"
+      ],
+      "conoscenze": [
+        "Raccolta e organizzazione di dati in tabelle e grafici",
+        "Lettura e interpretazione di rappresentazioni grafiche",
+        "Confronto tra quantità e misure di tendenza centrale",
+        "Eventi certi, possibili e impossibili in contesti di esperienza"
+      ],
+      "abilita": [
+        "Raccogliere dati utilizzando semplici sondaggi",
+        "Costruire istogrammi e aerogrammi",
+        "Calcolare media, moda e mediana di un insieme di dati",
+        "Valutare la probabilità di eventi semplici"
+      ],
+      "evidenze": [
+        "L'alunno conduce un sondaggio in classe e rappresenta i dati in un grafico",
+        "L'alunno calcola la media dei voti della classe",
+        "L'alunno classifica eventi come certi, possibili o impossibili"
+      ],
+      "criteriValutazione": [
+        "Capacità di organizzare dati",
+        "Uso corretto degli indicatori statistici",
+        "Comprensione del concetto di probabilità"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Matematica — Dati e previsioni",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Secondaria 1, nucleo Dati e previsioni, statistica e probabilità"
+    },
+    {
+      "id": "mat_sec_1_005",
+      "disciplina": "Matematica",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Informatica e pensiero computazionale",
+      "nucleo": "Informatica",
+      "competenza": "Comprende e applica il concetto di algoritmo, rappresenta informazioni e sviluppa il pensiero computazionale",
+      "traguardo": "L'alunno comprende il concetto di algoritmo, descrive semplici procedure e analizza sequenze di istruzioni per prevederne il risultato.",
+      "obiettivi": [
+        "Comprendere il concetto di algoritmo",
+        "Descrivere e rappresentare semplici procedure",
+        "Analizzare sequenze di istruzioni per prevederne il risultato",
+        "Rappresentare informazioni in relazione al compito da svolgere"
+      ],
+      "conoscenze": [
+        "Concetto di algoritmo e sequenza di istruzioni",
+        "Procedura come insieme ordinato di passi",
+        "Variabile e strutture di controllo di base",
+        "Linguaggi di programmazione a scopi didattici"
+      ],
+      "abilita": [
+        "Descrivere un'attività quotidiana come sequenza di istruzioni",
+        "Identificare l'input, il processo e l'output di un algoritmo",
+        "Eseguire un semplice programma didattico"
+      ],
+      "evidenze": [
+        "L'alunno scrive l'algoritmo per preparare una ricetta",
+        "L'alunno segue un diagramma di flusso per eseguire un compito",
+        "L'alunno modifica un semplice programma in Scratch"
+      ],
+      "criteriValutazione": [
+        "Comprensione del concetto di algoritmo",
+        "Capacità di scomporre un problema in passi",
+        "Uso di linguaggi di programmazione didattici"
+      ],
+      "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — programmazione curricolare",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Secondaria 1, nucleo Informatica, algoritmi e pensiero computazionale"
+    },
+    {
+      "id": "mat_sec_2_001",
+      "disciplina": "Matematica",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "ambito": "Geometria, dati e pensiero computazionale",
+      "nucleo": "Spazio e figure",
+      "competenza": "Analizza dati e rappresentazioni, utilizza il pensiero computazionale e strumenti digitali per risolvere problemi",
+      "traguardo": "L'alunno analizza e interpreta rappresentazioni di dati per ricavarne misure di variabilità; sviluppa il pensiero computazionale con algoritmi, fogli di calcolo e software di geometria dinamica (GeoGebra).",
+      "obiettivi": [
+        "Analizzare e interpretare rappresentazioni di dati",
+        "Utilizzare fogli di calcolo per organizzare e analizzare dati",
+        "Usare software di geometria dinamica (GeoGebra) per esplorare proprietà",
+        "Costruire algoritmi per risolvere problemi"
+      ],
+      "conoscenze": [
+        "Misure di variabilità (campo di variazione, scarto semplice)",
+        "Strumenti digitali per l'elaborazione di dati",
+        "Geometria dinamica: proprietà invarianti e trasformazioni",
+        "Algoritmi di ordinamento e ricerca"
+      ],
+      "abilita": [
+        "Usare il foglio di calcolo per creare tabelle e grafici",
+        "Costruire figure con GeoGebra verificando proprietà",
+        "Progettare algoritmi per risolvere problemi concreti",
+        "Valutare la correttezza di un algoritmo"
+      ],
+      "evidenze": [
+        "L'alunno crea un foglio di calcolo con dati e grafico",
+        "L'alunno costruisce un triangolo con GeoGebra e ne verifica le proprietà",
+        "L'alunno scrive un algoritmo per ordinare una lista di numeri"
+      ],
+      "criteriValutazione": [
+        "Uso appropriato degli strumenti digitali",
+        "Capacità di modellizzare un problema",
+        "Correttezza logica degli algoritmi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — GeoGebra, fogli di calcolo e programmazione",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Secondaria 2, nucleo Spazio e figure + Informatica, strumenti digitali e pensiero computazionale"
+    },
+    {
+      "id": "mat_sec_3_001",
+      "disciplina": "Matematica",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "ambito": "Educazione finanziaria e matematica per la cittadinanza",
+      "nucleo": "Numeri",
+      "competenza": "Applica la matematica in contesti economici e decisionali, sviluppando un atteggiamento consapevole verso il denaro e le scelte finanziarie",
+      "traguardo": "L'alunno sviluppa competenze di educazione finanziaria: gestione del denaro, risparmio, investimento; riconosce l'uso della matematica nelle decisioni economiche quotidiane.",
+      "obiettivi": [
+        "Comprendere il valore del denaro e le dinamiche dello scambio economico",
+        "Applicare percentuali e proporzioni in contesti finanziari",
+        "Confrontare alternative economiche utilizzando indicatori matematici",
+        "Valutare rischi e opportunità in semplici scenari di investimento"
+      ],
+      "conoscenze": [
+        "Percentuali, proporzioni e interesse semplice",
+        "Budget, entrate e uscite, risparmio e investimento",
+        "Strumenti finanziari di base (conto corrente, deposito, prestito)",
+        "Educazione assicurativa e previdenziale di base"
+      ],
+      "abilita": [
+        "Calcolare percentuali di sconto e interesse",
+        "Gestire un bilancio familiare su scala ridotta",
+        "Confrontare offerte economiche utilizzando indicatori",
+        "Valutare rischi finanziari in scenari semplificati"
+      ],
+      "evidenze": [
+        "L'alunno calcola l'interesse su un deposito bancario",
+        "L'alunno prepara un budget mensile simulato",
+        "L'alunno confronta due offerte di finanziamento calcolando il TAEG"
+      ],
+      "criteriValutazione": [
+        "Capacità di applicare la matematica in contesti reali",
+        "Comprensione dei concetti finanziari di base",
+        "Valutazione critica delle informazioni economiche"
+      ],
+      "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — educazione finanziaria, assicurativa e previdenziale (Legge n. 92/2019, Educazione Civica)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-092 — Secondaria 3, nucleo Numeri, educazione finanziaria come ambito STEM"
+    }
+  ]
+}
