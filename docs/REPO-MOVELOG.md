@@ -2531,3 +2531,26 @@
 - .cml/export/import/role-access invariati: OK
 - Verdetto: CML_105_GEOGRAFIA_NORMALIZED_CURRICULUM_DRAFT_READY
 - Prossimo step: CML-105A - GEOGRAFIA_QUALITY_AUDIT
+
+---
+
+## 2026-06-24 - CML-105A - GEOGRAFIA_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT
+
+- Tipo slice: docs-only quality audit
+- HEAD partenza: `5c810d1` (CML-105)
+- Esito tecnico: PASS — JSON valido, struttura coerente, 12/12 ID univoci, validazioneUmana su tutte
+- Esito didattico: PASS — obiettivi osservabili, evidenze specifiche (>=30 chars), criteri descrittivi, progressione verticale leggibile su tutti e 3 gli assi
+- Copertura assi: Paesaggio 4, Transcalarita 5, Territorializzazione 3
+- Headroom: 1.559 chars/unità, 18.710 chars totali — sostenibile, disciplina più snella
+- GAP-1 (minore): Infanzia solo fascia 5
+- GAP-2 (minore): Territorializzazione solo 3 unità
+- GAP-3 (neutro): educazione finanziaria non pertinente
+- Identità geografica: chiara, distinta da Storia e Ed. Civica
+- Rischio sovrapposizione: BASSO su tutti i fronti
+- Decisione readiness: **A** — Geografia pronta come bozza_generabile / in_revisione
+- Runtime non modificato: OK
+- Dati non modificati: OK
+- .cml/export/import/role-access invariati: OK
+- File creati: docs/03_execution/CML-105A.md, report/CML-105A_geografia_normalized_curriculum_draft_quality_audit.md
+- Verdetto: CML_105A_GEOGRAFIA_NORMALIZED_CURRICULUM_QUALITY_AUDIT_READY
+- Prossimo step: CML-106 - DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_GEOGRAFIA_RUNTIME_INCREMENT (contatori 7/8/0)
