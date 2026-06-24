@@ -2453,3 +2453,26 @@
 - .cml/export/import/role-access invariati: OK
 - Verdetto: CML_102_STORIA_NORMALIZED_CURRICULUM_DRAFT_READY
 - Prossimo step: CML-102A - STORIA_QUALITY_AUDIT
+
+---
+
+## 2026-06-24 - CML-102A - STORIA_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT
+
+- Tipo slice: docs-only quality audit
+- HEAD partenza: `8b2b1aa` (CML-102)
+- Esito tecnico: PASS — JSON valido, struttura coerente, 15/15 ID univoci, validazioneUmana su tutte
+- Esito didattico: PASS — obiettivi osservabili, evidenze specifiche (>=30 chars), criteri descrittivi, progressione verticale leggibile
+- Copertura nuclei: 5 (Strumenti 4, Fonti 2, Organizzazione 5, Produzione 3, Fonti+Produzione 1)
+- Periodizzazione: conforme DM 221/2025 triennale
+- Headroom: 1.738 chars/unità, 26.072 chars totali — sostenibile
+- GAP-1 (minore): Infanzia solo fascia 5
+- GAP-2 (minore): Fonti solo 2 unità autonome
+- GAP-3 (migliorativo): 15 vs 14 unità pianificate
+- Rischio sovrapposizione Ed. Civica: MEDIO (Sec 3) — mitigato da focus storico
+- Decisione readiness: **A** — Storia pronta come bozza_generabile / in_revisione
+- Runtime non modificato: OK
+- Dati non modificati: OK
+- .cml/export/import/role-access invariati: OK
+- File creati: docs/03_execution/CML-102A.md, report/CML-102A_storia_normalized_curriculum_draft_quality_audit.md
+- Verdetto: CML_102A_STORIA_NORMALIZED_CURRICULUM_QUALITY_AUDIT_READY
+- Prossimo step: CML-103 - DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_STORIA_RUNTIME_INCREMENT (contatori 6/9/0)
