@@ -2116,3 +2116,43 @@
 - Dati/`.cml`/export/import/role-access invariati: ✅
 - Verdetto: `CML_088_DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_ITALIANO_READY`
 - Prossimo step: CML-088A — DISCIPLINARY_COMPLETENESS_STATUS_ITALIANO_LIVE_SMOKE
+
+---
+
+## 2026-06-24 — CML-088A — DISCIPLINARY_COMPLETENESS_STATUS_ITALIANO_LIVE_SMOKE
+
+- Tipo slice: deploy + smoke + documentazione
+- Deploy: `git push origin main` → workflow GitHub Pages success
+- URL verificato: `https://antoniocorsano-boop.github.io/curmanlight/`
+- Contatori: 2 (bozze complete) / 13 (sola consultazione) / 0 (pronte approvazione) ✅
+- Tecnologia + Italiano: entrambe "Bozza completa disponibile / In revisione" ✅
+- Note modelli: "Tecnologia e Italiano sono i modelli strutturali di riferimento" ✅
+- Nessun pulsante di approvazione ✅
+- Home, Didattica, Esportazioni, Guida integre ✅
+- Light mode confermata, Motto page HTTP 200 ✅
+- Schema `.cml`, export/import, role-access invariati ✅
+- Runtime non modificato in CML-088A
+- Verdetto: `CML_088A_DISCIPLINARY_COMPLETENESS_STATUS_ITALIANO_LIVE_SMOKE_READY`
+
+---
+
+## 2026-06-24 — CML-089 — DISCIPLINARY_APPROVAL_READINESS_STATE_MODEL_CONTRACT
+
+- Tipo slice: docs-only / contract / state model
+- HEAD partenza: `31dfc9d`, tree pulita ✅
+- Contratto creato: `docs/02_system/DISCIPLINARY_APPROVAL_READINESS_STATE_MODEL_CONTRACT.md`
+- **6 stati definiti:** `solo_consultazione`, `bozza_generabile`, `in_revisione`, `sintesi_pronta`, `pronto_approvazione`, `approvato_esternamente`
+- Ogni stato documenta: significato, attributore, condizioni, UI consentita/vietata, rischio, microcopy
+- Transizioni lineari e non automatiche — ogni passaggio richiede ruolo umano + evidenza
+- Microcopy consentita/vietata esplicitamente documentata
+- Headroom: 6 stati leggibili, scalabile da 2 a 15 discipline
+- Classificazione attuale confermata:
+  - Tecnologia: `bozza_generabile / in_revisione`
+  - Italiano: `bozza_generabile / in_revisione`
+  - Altre 13: `solo_consultazione`
+  - Pronte per approvazione: 0
+- Runtime non modificato ✅
+- Dati curricolari non modificati ✅
+- Schema `.cml`, export/import, role-access invariati ✅
+- Verdetto: `CML_089_DISCIPLINARY_APPROVAL_READINESS_STATE_MODEL_CONTRACT_READY`
+- Prossimo step: CML-090 — DISCIPLINARY_APPROVAL_READINESS_UI_SELECTION_AUDIT
