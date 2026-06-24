@@ -2787,3 +2787,23 @@
 - 12 edit in `index.html`
 - Discipline residue: 1 (Latino LEL)
 - Next: CML-119 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 - CML-119 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT (5ª e ultima iterazione)
+
+- Commit: `b750ac0`
+- Discipline residue analizzate: 1 (Latino LEL)
+- Disciplina selezionata: **Latino (LEL)** — automatica, unica rimasta
+- Verdetto: `CML_119_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
+
+---
+
+## 2026-06-24 - CML-120 - NORMALIZZAZIONE RUNTIME LATINO (LEL) — CICLO COMPLETATO
+
+- Commit: `37d2f10`
+- Stato: **14/0/0** (13 → 14 bozze complete, 1 → 0 sola consultazione) ✅
+- 9 edit in `index.html`
+- Discipline residue: 0 — **tutte le 14 discipline normalizzate**
+- Tutte le discipline (14/14) ora in "In revisione"
+- Prossimo step: definire prossimo ciclo di lavoro (validazione dipartimentale, sintesi, deploy)
