@@ -2737,3 +2737,14 @@
 - File: `docs/03_execution/CML-113.md`, `report/CML-113_*.md`
 - Verdetto: `CML_113_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
 - Prossimo step: CML-114 — normalizzazione runtime Educazione Fisica
+
+---
+
+## 2026-06-24 - CML-114 - NORMALIZZAZIONE RUNTIME EDUCAZIONE FISICA
+
+- Commit: `c454a83`
+- Stato: 11/3/0 (10 → 11 bozze complete, 4 → 3 sola consultazione)
+- 9 edit in `index.html`: subtitle, contatori, righe completeness/readiness, note
+- Discipline residue: 3 (Seconda Lingua, Religione, Latino)
+- Verifica: Educazione Fisica già presente in DISCIPLINE_META/DATA
+- Next: CML-115 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
