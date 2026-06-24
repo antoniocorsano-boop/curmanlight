@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-113 — VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT
+
+- **HEAD (main)** — audit read-only, docs-only
+- Branch: `main`, tree modificata su `index.html` (non toccata in questo commit)
+- Slice precedente: `CML_112A_HASH_SELECTION_SMOKE_TEST_PASSED`
+- Commits audit:
+  - `docs: audit CML departmental validation workflow`
+- File creati/modificati:
+  - `docs/03_execution/CML-113.md`
+  - `report/CML-113_validazione_dipartimentale_workflow_audit.md`
+- File aggiornati:
+  - `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_113_VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT_READY`
+- Next: CML-114 — VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT
+
 ## 2026-06-21 — CML-008R-FIX closure
 
 - **9179418** — fix: align tecnologia markdown decision summary
