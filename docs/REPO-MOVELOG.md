@@ -2495,3 +2495,22 @@
 - Nessuna modifica a .cml, export/import, role-access, schema, dati curricolari
 - Verdetto: CML_103_UI_COUNTERS_UPDATE_READY
 - Prossimo step: CML-103A - LIVE SMOKE GITHUB PAGES (6/9/0)
+
+---
+
+## 2026-06-24 - CML-104 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+- Tipo slice: docs-only audit / selection
+- HEAD partenza: `549c5c7` (CML-103)
+- Disciplina selezionata: **Geografia**
+- Motivazione: prosegue l'asse storico-sociale dopo Storia, complementarita spaziale, tre assi IN 2025 chiari (Paesaggio, Transcalarita, Territorializzazione), rischio basso
+- Alternative: Ed. Civica (rinviata), Arte/Musica/Ed.Fisica/Religione (asse espressivo differibile)
+- Raccomandazione CML-101 confermata: "Migliore normalizzare in coppia con Storia"
+- Contatori attuali: 6/9/0
+- Unita stimate per CML-105: 10-13
+- Runtime non modificato: OK
+- Dati curricolari non modificati: OK
+- .cml/export/import/role-access invariati: OK
+- File creati: docs/03_execution/CML-104.md, report/CML-104_geografia_selection_audit.md
+- Verdetto: CML_104_NEXT_DISCIPLINE_NORMALIZATION_SELECTED
+- Prossimo step: CML-105 - GEOGRAFIA_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
