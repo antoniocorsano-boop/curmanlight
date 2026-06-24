@@ -2655,3 +2655,18 @@
 - File creati: `docs/03_execution/CML-108B.md`, `report/CML-108B_*.md`
 - Verdetto: `CML_108B_EDUCAZIONE_CIVICA_NORMALIZATION_DEPLOY_LIVE_SMOKE_READY`
 - Prossimo step: CML-109 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 - CML-109 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+- Tipo slice: audit-only (read-only)
+- Commit iniziale: `03a00a4` (CML-108B)
+- Nessuna modifica runtime
+- **Discipline residue analizzate:** 6 (Musica, Arte, Ed. Fisica, Religione, Seconda Lingua, Latino)
+- **Disciplina selezionata:** Musica — voto 8/10
+- Motivazione: massima ricchezza dati tra le residue (6 voci, 3 traguardi + 3 obiettivi), copertura tutti gli ordini, nuclei chiari, IN 2025 pronto, rischio basso
+- Valutazione completa per tutte le 6 discipline
+- File creati: `docs/03_execution/CML-109.md`, `report/CML-109_*.md`
+- Verdetto: `CML_109_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
+- Prossimo step: CML-110 — normalizzazione runtime Musica
