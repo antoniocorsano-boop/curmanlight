@@ -1,5 +1,40 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-125 — LOCAL_SEQUENCE_CLOSURE_AUDIT_AND_CONTROLLED_PUSH
+
+- HEAD iniziale (main): 32ebb3f03c853c0612d16f998a9ad1a12b814831
+- Tipo slice: audit finale sequenza locale + push controllato
+- Obiettivo: chiudere e pubblicare la sequenza CML-121/CML-122/CML-123/CML-124 in modo coerente e tracciabile.
+- Audit pre-push eseguito:
+  - git rev-parse HEAD
+  - git status --short --branch
+  - git log --oneline origin/main..HEAD
+  - git diff --check
+  - git diff --stat origin/main..HEAD
+  - git diff --name-status origin/main..HEAD
+- Sequenza commit locali confermata (4):
+  - 7d840bf docs: reconcile CML traceability and slice boundaries
+  - 8b5488c chore: CML-122 selective consolidation of core runtime json validator and traceability docs
+  - 10e3732 docs: fix CML post-consolidation whitespace hygiene
+  - 32ebb3f chore: ignore local non-core CML artifacts
+- Residui locali ignorati verificati:
+  - .agents, skills-lock.json, Consultazione -> ignorati via .gitignore
+  - nessuno in staging/commit
+- Validazione tecnica:
+  - node tools/validate-cml-normalized-curriculum.mjs
+  - totalFiles: 7, totalUnits: 94, overallValid: true, invalidCount: 0
+- Artefatti slice:
+  - docs/03_execution/CML-125.md
+  - report/CML-125_local_sequence_closure_audit_and_controlled_push.md
+  - aggiornamento docs/REPO-MOVELOG.md
+- Commit slice:
+  - docs: close CML local sequence before controlled push
+- Push controllato:
+  - eseguito su origin/main dopo audit finale di coerenza
+  - allineamento post-push verificato con fetch + confronto HEAD/origin/main
+- Verdetto: CML_125_LOCAL_SEQUENCE_CLOSED_AND_PUSHED_REMOTE
+- Next: monitoraggio post-push e avvio prossimo ciclo CML solo su nuove richieste funzionali.
+
 ## 2026-06-24 — CML-124 — LOCAL_NON_CORE_ARTIFACTS_IGNORE_POLICY
 
 - HEAD iniziale (main): 10e3732aec00b06f376456fc6012bc72afa35ab5
