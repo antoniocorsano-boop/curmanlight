@@ -2382,3 +2382,20 @@
 - Prima disciplina non italiana normalizzata: test di generalizzabilita del modello superato
 - Verdetto: CML_098_INGLESE_NORMALIZED_CURRICULUM_DRAFT_READY
 - Prossimo step: CML-099 - UI COUNTERS UPDATE (5/10/0)
+
+---
+
+## 2026-06-24 - CML-099 - UI COUNTERS UPDATE (5/10/0)
+
+- Tipo slice: runtime update (contatori UI)
+- Commit: **7e15603** -- feat: update UI counters to 5/10/0 for Inglese (CML-099)
+- Completezza: 4 -> 5 (aggiunta Inglese), 11 -> 10, 0 invariato
+- Readiness: 4 -> 5 (aggiunta Inglese), 11 -> 10, 0 invariato
+- Subtitle completezza: aggiornata con e Inglese
+- Nota modelli riferimento: aggiornata con e Inglese
+- Inglese rimossa dalla lista Solo consultazione (completeness)
+- Readiness row: Inglese aggiunta come 5a in revisione
+- Altre 11 -> Altre 10 (entrambe le sezioni)
+- Nessuna modifica a .cml, export/import, role-access, schema, dati curricolari
+- Verdetto: CML_099_UI_COUNTERS_UPDATE_READY
+- Prossimo step: CML-100 - INGLESE_QUALITY_AUDIT (esito readiness e gap)
