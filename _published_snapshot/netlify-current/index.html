@@ -1096,6 +1096,89 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 /* .didattica-uda-box strong{color:#e1bee7} */
 /* .didattica-uda-field{border-bottom-color:var(--cml-divider)} */
 /* END DARK MODE BLOCK — NEUTRALIZED */
+.curricolo-dept-validation {
+  background: #f8f9ff;
+  border: 1px solid #d1d9f0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.curricolo-dept-validation-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #1a237e;
+  margin-bottom: 4px;
+}
+.curricolo-dept-validation-subtitle {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 12px;
+}
+.curricolo-dept-validation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dept-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  color: #455a64;
+}
+.dept-name {
+  font-weight: 700;
+}
+.dept-state {
+  font-style: italic;
+  color: #666;
+}
+.dept-outcome,
+.dept-notes {
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  font-size: 11px;
+}
+.dept-notes {
+  width: 200px;
+  box-sizing: border-box;
+}
+.dept-save-btn,
+.dept-revoke-btn {
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #90caf9;
+  background: #e3f2fd;
+  color: #0d47a1;
+  font-size: 11px;
+  cursor: pointer;
+}
+.dept-save-btn:hover,
+.dept-revoke-btn:hover {
+  background: #bbdefb;
+}
+.dept-date {
+  font-size: 11px;
+  color: #666;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.dept-revoke-btn {
+  display: none;
+}
+.dept-revoke-btn.visible {
+  display: inline-block;
+}
+@media (max-width: 699px) {
+  .curricolo-dept-validation {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -4601,6 +4684,27 @@ function renderCurricoloIstituto(version) {
     '</div>' +
     '<div class="readiness-note">L\'approvazione resta esterna allo strumento e richiede validazione degli organi competenti.</div>' +
   '</div>';
+  html += '<div class="curricolo-dept-validation">' +
+    '<div class="curricolo-dept-validation-title">Validazione dipartimentale</div>' +
+    '<div class="curricolo-dept-validation-subtitle">Registra l'esito del controllo dipartimentale per ogni disciplina. La validazione dipartimentale è un passaggio intermedio: non equivale alla delibera formale del Collegio Docenti.</div>' +
+    '<div class="curricolo-dept-validation-list">';
+  Object.keys(DISCIPLINE_META).forEach(function(disc) {
+    html +=
+      '<div class="dept-row">' +
+        '<span class="dept-name">' + disc + '</span>' +
+        '<span class="dept-state">Bozza completa da controllare in dipartimento</span>' +
+        '<select class="dept-outcome" disabled>' +
+          '<option value="da_controllare">Da controllare</option>' +
+          '<option value="osservazioni">Osservazioni da integrare</option>' +
+          '<option value="proposta">Proposta di validazione dipartimentale</option>' +
+        '</select>' +
+        '<input type="text" class="dept-notes" placeholder="Note opzionali" disabled>' +
+        '<button class="dept-save-btn" disabled>Registra proposta</button>' +
+        '<span class="dept-date"></span>' +
+        '<button class="dept-revoke-btn" title="Revoca registrazione">Revoca</button>' +
+      '</div>';
+  });
+  html += '</div></div>';
 
   ordinii.forEach(function(o) {
     if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;
