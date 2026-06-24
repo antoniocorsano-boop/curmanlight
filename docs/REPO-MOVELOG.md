@@ -2415,3 +2415,21 @@
 - File creati: docs/03_execution/CML-100.md, report/CML-100_inglese_quality_audit.md
 - Verdetto: CML_100_INGLESE_QUALITY_AUDIT_A_READY
 - Prossimo step: CML-101 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 - CML-101 - NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+- Tipo slice: docs-only audit / selection
+- HEAD partenza: 7d78ce8 (post CML-100)
+- Contatori attuali: 5/10/0 (Tecnologia, Italiano, Matematica, Scienze, Inglese)
+- Asse formativo: linguistico (2/2) e scientifico (3/3) completi -- storico-sociale da avviare
+- Disciplina selezionata: **Storia**
+- Motivazione: avvia asse storico-sociale, piu dati DATA tra le candidate (10 items, 5+5), seconda scelta in CML-094 e CML-097, nuova periodizzazione IN 2025 triennale definita, complementarita assoluta, 4 nuclei chiari
+- Alternative: Ed. Civica (rinviata per trasversalita), Geografia (differibile in coppia con Storia)
+- Rischi: nuova periodizzazione IN 2025, raccordo Primaria-Secondaria (VII sec.), densita contenutistica (12-14 unita stimate)
+- File creati: docs/03_execution/CML-101.md, report/CML-101_next_discipline_normalization_selection_audit.md
+- Runtime non modificato: OK
+- Dati curricolari non modificati: OK
+- Verdetto: CML_101_NEXT_DISCIPLINE_NORMALIZATION_SELECTED
+- Prossimo step: CML-102 - STORIA_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
