@@ -1997,3 +1997,18 @@
 - Schema `.cml`, export/import, role-access invariati
 - Motto page HTTP 200
 - Verdetto: `CML_083C_LIGHT_MODE_ONLY_LIVE_SMOKE_READY`
+
+---
+
+## 2026-06-24 — CML-084 — DISCIPLINARY_CURRICULUM_COMPLETENESS_AND_APPROVAL_READINESS_AUDIT
+
+- Tipo slice: docs-only audit
+- Scoperta chiave: solo Tecnologia ha struttura normalizzata completa (13 unità, 7 ambiti, conoscenze, abilità, evidenze, criteri, UDA, file JSON)
+- Le altre 14 discipline hanno solo traguardi e obiettivi (livello base)
+- Benchmark: `content/curriculum/tecnologia.normalized.json` + `TECNOLOGIA_NORM_DATA` inline + `UDA_MODELI`
+- Classificazione Tecnologia: `bozza_generabile` / `in_revisione`
+- Classificazione altre 14: `solo_consultazione`
+- Nessuna disciplina è `pronto_approvazione`
+- Decisione: CML-085 mostrerà stato completezza per disciplina; CML-086 introdurrà approvazione solo per discipline con livello normalizzato
+- Verdetto: `CML_084_DISCIPLINARY_CURRICULUM_COMPLETENESS_APPROVAL_READINESS_AUDIT_READY`
+- Prossimo step: CML-085 — DISCIPLINARY_CURRICULUM_COMPLETENESS_STATUS_RUNTIME_INCREMENT
