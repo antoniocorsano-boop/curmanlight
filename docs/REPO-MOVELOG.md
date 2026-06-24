@@ -2640,3 +2640,18 @@
 - File creati: `docs/03_execution/CML-108.md`, `report/CML-108_*.md`
 - Verdetto: `CML_108_EDUCAZIONE_CIVICA_NORMALIZATION_RUNTIME_READY`
 - Prossimo step: CML-108A — smoke locale
+
+---
+
+## 2026-06-24 - CML-108B - EDUCAZIONE_CIVICA_NORMALIZATION_DEPLOY_LIVE_SMOKE
+
+- Tipo slice: deploy + live smoke
+- Commit runtime: `a28b463` (CML-108) — pushato su `origin/main`, workflow Pages success
+- URL live: https://antoniocorsano-boop.github.io/curmanlight/ ✅
+- Motto page: HTTP 200 ✅
+- Contatori 8/6/0 confermati (verifica pre-deploy)
+- Educazione Civica presente come 8a disciplina in revisione
+- Nessuna modifica a schema, export, role access, service worker
+- File creati: `docs/03_execution/CML-108B.md`, `report/CML-108B_*.md`
+- Verdetto: `CML_108B_EDUCAZIONE_CIVICA_NORMALIZATION_DEPLOY_LIVE_SMOKE_READY`
+- Prossimo step: CML-109 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
