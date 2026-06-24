@@ -1,0 +1,705 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Storia",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-102 normalized History curriculum draft — adapted from Scienze/Inglese structural benchmark, aligned with D.M. 221/2025 periodizzazione triennale",
+  "unitaApprendimento": [
+    {
+      "id": "sto_inf_5_001",
+      "disciplina": "Storia",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "nucleo": "Strumenti concettuali e periodizzazione",
+      "ambito": "Esperienza del tempo: routine, memoria e prime sequenze",
+      "competenza": "Sviluppa la percezione del tempo attraverso esperienze quotidiane, routine e memoria personale",
+      "traguardo": "Il bambino si orienta nelle prime generalizzazioni di passato, presente, futuro; riconosce la successione degli eventi della giornata e della settimana.",
+      "obiettivi": [
+        "Ordinare eventi della giornata in successione (mattino, pomeriggio, sera)",
+        "Riconoscere la differenza tra prima e dopo in situazioni concrete",
+        "Ricostruire oralmente esperienze vissute usando indicatori temporali",
+        "Collocare eventi ricorrenti (feste, compleanni, stagioni) in un calendario semplice"
+      ],
+      "conoscenze": [
+        "Parole del tempo: prima, dopo, ieri, oggi, domani, giorno, notte",
+        "Routine quotidiana e scansione della settimana",
+        "Le stagioni e i loro cicli",
+        "Eventi personali e familiari come tracce di memoria"
+      ],
+      "abilita": [
+        "Descrivere oralmente la sequenza di un'attività quotidiana",
+        "Usare correttamente gli indicatori temporali (prima, dopo, ieri)",
+        "Raccontare un'esperienza vissuta rispettando l'ordine cronologico",
+        "Collocare il proprio compleanno nel calendario"
+      ],
+      "evidenze": [
+        "Il bambino descrive la sequenza della propria mattina usando prima e dopo",
+        "Il bambino dice cosa ha fatto ieri distogliendo da cosa farà domani",
+        "Il bambino racconta con ordine la gita della settimana scorsa",
+        "Il bambino indica la stagione corrente e descrive un cambiamento tipico"
+      ],
+      "criteriValutazione": [
+        "Capacità di orientarsi nel tempo quotidiano",
+        "Uso corretto degli indicatori temporali",
+        "Coerenza nella ricostruzione di esperienze vissute",
+        "Riconoscimento di cicli temporali (settimana, stagioni)"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: Il sé e l'altro / La conoscenza del mondo",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Infanzia 5, nucleo Strumenti concettuali, prima percezione del tempo"
+    },
+    {
+      "id": "sto_pri_1_001",
+      "disciplina": "Storia",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Strumenti concettuali e periodizzazione",
+      "ambito": "Successione, durata e contemporaneità",
+      "competenza": "Comprende i concetti di successione, durata e contemporaneità applicandoli a esperienze personali e fenomeni osservabili",
+      "traguardo": "L'alunno riconosce elementi significativi del passato del suo ambiente di vita; distingue e ordina eventi in successione, durata e contemporaneità.",
+      "obiettivi": [
+        "Ordinare eventi in successione cronologica",
+        "Confrontare durate di azioni e fenomeni (lungo, breve, contemporaneo)",
+        "Usare linee del tempo semplici per rappresentare sequenze",
+        "Riconoscere tracce del passato nell'ambiente vicino"
+      ],
+      "conoscenze": [
+        "Indicatori temporali: successione (prima, dopo, infine), durata (lungo, breve), contemporaneità (mentre, intanto)",
+        "La linea del tempo come rappresentazione grafica",
+        "Tracce del passato: oggetti, fotografie, racconti di famiglia",
+        "Cicli: giorno/notte, settimana, mesi, stagioni"
+      ],
+      "abilita": [
+        "Ordinare 3-4 eventi su una linea del tempo semplice",
+        "Confrontare la durata di due attività stabilendo quale è più lunga",
+        "Individuare tracce del passato in oggetti e racconti familiari",
+        "Rappresentare graficamente la successione di un processo semplice"
+      ],
+      "evidenze": [
+        "L'alunno ordina 4 immagini di una storia in sequenza cronologica",
+        "L'alunno dice se un'attività è durata poco o tanto motivando la risposta",
+        "L'alunno porta a scuola un oggetto del passato e ne spiega l'uso",
+        "L'alunno disegna la linea del tempo della propria giornata"
+      ],
+      "criteriValutazione": [
+        "Capacità di ordinare eventi in successione",
+        "Comprensione del concetto di durata",
+        "Riconoscimento di tracce del passato",
+        "Uso corretto della linea del tempo"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Storia — Primaria classe 1, Nucleo: Strumenti concettuali",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Primaria 1, nucleo Strumenti concettuali, tempo e successione"
+    },
+    {
+      "id": "sto_pri_2_001",
+      "disciplina": "Storia",
+      "ordine": "Primaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Uso delle fonti",
+      "ambito": "Fonti orali, materiali e scritte per conoscere il passato",
+      "competenza": "Utilizza diversi tipi di fonti (orali, materiali, scritte, iconografiche) per ricavare informazioni sul passato personale e familiare",
+      "traguardo": "L'alunno riconosce elementi significativi del passato del suo ambiente di vita; usa fonti diverse per ricostruire esperienze e storie del passato vicino.",
+      "obiettivi": [
+        "Distinguere diversi tipi di fonti (orali, materiali, scritte, visive)",
+        "Ricavare informazioni da fonti orali (interviste a familiari)",
+        "Ricavare informazioni da fonti materiali (oggetti, fotografie)",
+        "Confrontare informazioni provenienti da fonti diverse"
+      ],
+      "conoscenze": [
+        "Tipi di fonti: orale (testimonianza), materiale (oggetto, edificio), scritta (documento), iconografica (foto, disegno)",
+        "Il concetto di fonte come traccia del passato",
+        "La memoria familiare come fonte storica",
+        "Differenza tra fonte e opinione"
+      ],
+      "abilita": [
+        "Classificare una fonte per tipologia (orale, materiale, scritta, iconografica)",
+        "Porre domande semplici per intervistare un familiare",
+        "Descrivere un oggetto antico ricavandone informazioni sul passato",
+        "Confrontare due fonti sullo stesso argomento e trovare somiglianze/differenze"
+      ],
+      "evidenze": [
+        "L'alunno classifica 4 oggetti/foto come fonti materiali o iconografiche",
+        "L'alunno intervista un nonno e ricava 3 informazioni sulla sua infanzia",
+        "L'alunno descrive un oggetto di famiglia e spiega cosa racconta del passato",
+        "L'alunno confronta una foto di ieri e una di oggi dello stesso luogo"
+      ],
+      "criteriValutazione": [
+        "Capacità di riconoscere diversi tipi di fonte",
+        "Abilità nel ricavare informazioni da fonti orali",
+        "Abilità nel ricavare informazioni da fonti materiali",
+        "Capacità di confrontare fonti diverse"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Storia — Primaria classe 2, Nucleo: Uso delle fonti",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Primaria 2, nucleo Uso delle fonti, tipologie di fonti e intervista"
+    },
+    {
+      "id": "sto_pri_3_001",
+      "disciplina": "Storia",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Organizzazione delle informazioni",
+      "ambito": "Quadri di civiltà: dalla preistoria alle prime civiltà",
+      "competenza": "Organizza informazioni su quadri di civiltà, individuando indicatori (alimentazione, abitazione, tecnologia, organizzazione sociale, religione)",
+      "traguardo": "L'alunno riconosce elementi significativi del passato; organizza informazioni su quadri di civiltà utilizzando indicatori e linee del tempo.",
+      "obiettivi": [
+        "Riconoscere i principali indicatori per descrivere una civiltà (alimentazione, abitazione, tecnologia, società, religione)",
+        "Confrontare due civiltà utilizzando gli stessi indicatori",
+        "Collocare sulla linea del tempo le tappe fondamentali della preistoria e delle prime civiltà",
+        "Produrre semplici testi descrittivi su un quadro di civiltà"
+      ],
+      "conoscenze": [
+        "Tappe della preistoria: Paleolitico (nomadismo, caccia, fuoco), Neolitico (sedentarizzazione, agricoltura, allevamento), Età dei metalli",
+        "Prime civiltà: Mesopotamia, Egitto, Civiltà dell'Indo, Civiltà cinese",
+        "Indicatori di civiltà: alimentazione, abitazioni, tecnologia, organizzazione sociale, religione, scrittura",
+        "Linea del tempo: dalla Preistoria alla Storia (invenzione della scrittura)"
+      ],
+      "abilita": [
+        "Descrivere un quadro di civiltà usando almeno 3 indicatori",
+        "Confrontare due civiltà evidenziando somiglianze e differenze",
+        "Collocare eventi e periodi sulla linea del tempo",
+        "Produrre un breve testo descrittivo su una civiltà studiata"
+      ],
+      "evidenze": [
+        "L'alunno descrive la vita nel Neolitico usando 4 indicatori (abitazione, alimentazione, tecnologia, organizzazione)",
+        "L'alunno confronta Egizi e Sumeri in una tabella a 3 indicatori",
+        "L'alunno colloca Paleolitico, Neolitico e invenzione della scrittura su una linea del tempo",
+        "L'alunno scrive un breve testo su come vivevano gli antichi Egizi"
+      ],
+      "criteriValutazione": [
+        "Capacità di descrivere un quadro di civiltà con indicatori",
+        "Abilità nel confronto tra civiltà",
+        "Correttezza nella collocazione cronologica",
+        "Completezza e chiarezza del testo descrittivo"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Storia — Primaria classi 3-4, Nucleo: Organizzazione delle informazioni",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Primaria 3, nucleo Organizzazione informazioni, quadri di civiltà"
+    },
+    {
+      "id": "sto_pri_4_001",
+      "disciplina": "Storia",
+      "ordine": "Primaria",
+      "classe": "4",
+      "fascia": null,
+      "nucleo": "Produzione scritta e orale",
+      "ambito": "Civiltà antiche: Greci e Romani",
+      "competenza": "Produce testi storici (descrizioni, confronti, brevi narrazioni) sulle civiltà del mondo classico",
+      "traguardo": "L'alunno riconosce elementi significativi del passato del suo ambiente di vita; produce testi orali e scritti per descrivere e confrontare quadri di civiltà utilizzando le conoscenze acquisite.",
+      "obiettivi": [
+        "Descrivere oralmente e per iscritto la civiltà greca utilizzando indicatori",
+        "Descrivere oralmente e per iscritto la civiltà romana utilizzando indicatori",
+        "Confrontare Greci e Romani evidenziando continuità e differenze",
+        "Riconoscere l'eredità del mondo classico nella cultura e nel territorio italiano"
+      ],
+      "conoscenze": [
+        "Civiltà greca: poleis, democrazia ateniese, cultura, arte, colonizzazione",
+        "Civiltà romana: monarchia, repubblica, impero, diritto, infrastrutture",
+        "Confronto Greci-Romani: organizzazione politica, società, cultura, eredità",
+        "L'eredità classica: lingua latina, diritto, architettura, arte nel territorio italiano"
+      ],
+      "abilita": [
+        "Esporre oralmente le caratteristiche principali di una civiltà classica",
+        "Produrre un testo scritto di confronto tra Greci e Romani",
+        "Individuare elementi di continuità tra mondo classico e presente",
+        "Usare il lessico specifico della disciplina (polis, repubblica, impero, democrazia)"
+      ],
+      "evidenze": [
+        "L'alunno espone oralmente la civiltà greca in 5 minuti usando 3 indicatori",
+        "L'alunno scrive un testo di confronto Greci-Romani con 4 somiglianze e 4 differenze",
+        "L'alunno riconosce 3 elementi di eredità classica nella città in cui vive",
+        "L'alunno usa correttamente i termini polis, repubblica e impero in un contesto storico"
+      ],
+      "criteriValutazione": [
+        "Chiarezza e completezza dell'esposizione orale",
+        "Capacità di confronto tra civiltà",
+        "Riconoscimento dell'eredità classica",
+        "Uso appropriato del lessico storico"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Storia — Primaria classi 4-5, Nucleo: Produzione scritta e orale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Primaria 4, nucleo Produzione, civiltà classiche ed eredità culturale"
+    },
+    {
+      "id": "sto_pri_5_001",
+      "disciplina": "Storia",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "nucleo": "Organizzazione delle informazioni",
+      "ambito": "Dal tardo antico all'alto medioevo: raccordo con la Secondaria (fino al VII sec. d.C.)",
+      "competenza": "Organizza informazioni sul passaggio dal mondo antico al medioevo, collocando eventi e trasformazioni sulla linea del tempo fino al VII secolo d.C.",
+      "traguardo": "L'alunno individua le relazioni tra gruppi umani e contesti spaziali; al termine della Primaria conosce la storia dal Paleolitico alla fine dell'impero romano d'Occidente, estesa a regni romano-barbarici, monachesimo, Costantinopoli, Giustiniano, espansione islamica (VII sec.).",
+      "obiettivi": [
+        "Descrivere la crisi e la fine dell'impero romano d'Occidente",
+        "Conoscere i regni romano-barbarici e il loro insediamento in Europa",
+        "Comprendere il ruolo del monachesimo nella conservazione della cultura",
+        "Conoscere la figura di Giustiniano e l'impero romano d'Oriente",
+        "Descrivere l'espansione islamica del VII secolo"
+      ],
+      "conoscenze": [
+        "Crisi dell'impero romano: cause politiche, economiche, militari",
+        "Regni romano-barbarici: Ostrogoti, Visigoti, Franchi, Longobardi",
+        "Monachesimo: San Benedetto, Regola benedettina, copisti e amanuensi",
+        "Costantinopoli e Giustiniano: Corpus iuris, Santa Sofia, riconquista",
+        "Espansione islamica: Maometto, predicazione, conquiste, cultura islamica"
+      ],
+      "abilita": [
+        "Descrivere le cause della caduta dell'impero romano d'Occidente",
+        "Confrontare la situazione in Oriente e in Occidente dopo il 476",
+        "Spiegare il ruolo dei monasteri nella conservazione del sapere",
+        "Collocare sulla linea del tempo i principali eventi dal V al VII secolo",
+        "Individuare sulla carta geografica l'espansione islamica"
+      ],
+      "evidenze": [
+        "L'alunno descrive 3 cause della caduta dell'impero romano d'Occidente",
+        "L'alunno confronta in una tabella Oriente e Occidente dopo il 476",
+        "L'alunno spiega cosa facevano i monaci amanuensi nei monasteri",
+        "L'alunno colloca 5 eventi sulla linea del tempo dal 476 al 700 d.C."
+      ],
+      "criteriValutazione": [
+        "Comprensione delle cause della caduta dell'impero romano",
+        "Capacità di confronto tra contesti storici diversi",
+        "Conoscenza del ruolo del monachesimo",
+        "Correttezza nella collocazione cronologica",
+        "Orientamento geografico nella storia"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Raccordo Primaria-Secondaria, estensione al VII secolo d.C.",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Primaria 5, raccordo con Secondaria, dal tardo antico all'espansione islamica"
+    },
+    {
+      "id": "sto_sec_1_001",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Uso delle fonti",
+      "ambito": "Metodo storico: fonti, documenti e ricerca storica",
+      "competenza": "Utilizza fonti di diverso tipo per ricostruire eventi e processi storici, valutandone l'attendibilità",
+      "traguardo": "L'alunno si informa in modo autonomo su fatti e problemi storici anche mediante l'uso di risorse digitali; utilizza fonti diverse distinguendo tra fonti primarie e secondarie.",
+      "obiettivi": [
+        "Distinguere fonti primarie e secondarie",
+        "Valutare l'attendibilità di una fonte storica",
+        "Utilizzare archivi digitali e biblioteche online per la ricerca storica",
+        "Confrontare più fonti sullo stesso evento storico"
+      ],
+      "conoscenze": [
+        "Fonti primarie (documento originale, reperto, testimonianza diretta) e secondarie (libro di testo, saggio, documentario)",
+        "Criteri di attendibilità: autore, data, contesto, scopo",
+        "Archivi digitali e risorse online per la storia (archivi di stato, biblioteche digitali)",
+        "Il mestiere dello storico: selezione, interpretazione, comunicazione"
+      ],
+      "abilita": [
+        "Classificare una fonte come primaria o secondaria motivando la scelta",
+        "Valutare l'attendibilità di una fonte usando 3 criteri",
+        "Cercare informazioni storiche in archivi digitali guidati",
+        "Confrontare due fonti sullo stesso evento evidenziando differenze di prospettiva"
+      ],
+      "evidenze": [
+        "L'alunno classifica 5 fonti come primarie o secondarie",
+        "L'alunno valuta l'attendibilità di un documento storico con 3 criteri",
+        "L'alunno trova 2 fonti digitali su un evento storico e le cita correttamente",
+        "L'alunno confronta due resoconti diversi dello stesso evento storico"
+      ],
+      "criteriValutazione": [
+        "Capacità di distinguere fonti primarie e secondarie",
+        "Abilità nel valutare l'attendibilità delle fonti",
+        "Autonomia nella ricerca storica",
+        "Capacità di confronto critico tra fonti"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Storia — Secondaria, Nucleo: Uso delle fonti",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 1, nucleo Uso delle fonti, metodo storico e ricerca"
+    },
+    {
+      "id": "sto_sec_1_002",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Organizzazione delle informazioni",
+      "ambito": "Dai Longobardi ai Comuni: trasformazioni politiche e sociali dell'altomedioevo",
+      "competenza": "Organizza informazioni sulle trasformazioni politiche, sociali ed economiche dell'altomedioevo, collocando eventi e processi sulla linea del tempo",
+      "traguardo": "L'alunno si informa su fatti e problemi storici; conosce la periodizzazione dall'insediamento dei Longobardi all'affermazione dei Comuni.",
+      "obiettivi": [
+        "Descrivere l'insediamento dei Longobardi in Italia e le conseguenze",
+        "Comprendere il sistema feudale e i rapporti vassallatici",
+        "Conoscere l'impero carolingio e il ruolo di Carlo Magno",
+        "Descrivere la nascita e lo sviluppo dei Comuni italiani"
+      ],
+      "conoscenze": [
+        "Longobardi: migrazione, insediamento, organizzazione politica, Editto di Rotari",
+        "Feudalesimo: feudo, vassallaggio, beneficio, incastellamento",
+        "Impero carolingio: Carlo Magno, incoronazione (800), Sacro Romano Impero, rinascita carolingia",
+        "Comuni italiani: nascita, organizzazione politica, conflitti con l'impero, sviluppo economico"
+      ],
+      "abilita": [
+        "Descrivere l'organizzazione politica del regno longobardo",
+        "Spiegare i rapporti di vassallaggio nel sistema feudale",
+        "Esporre le principali riforme di Carlo Magno",
+        "Confrontare l'organizzazione del Comune con il sistema feudale"
+      ],
+      "evidenze": [
+        "L'alunno descrive l'organizzazione del regno longobardo con 3 elementi",
+        "L'alunno spiega il rapporto vassallatico con un esempio concreto",
+        "L'alunno presenta 3 innovazioni introdotte da Carlo Magno",
+        "L'alunno confronta in una tabella il potere del signore feudale e del podestà"
+      ],
+      "criteriValutazione": [
+        "Conoscenza delle principali trasformazioni altomedievali",
+        "Comprensione del sistema feudale",
+        "Capacità di confronto tra sistemi politici diversi",
+        "Uso del lessico specifico"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Classe 1, dai Longobardi ai Comuni",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 1, organizzazione informazioni, Longobardi, feudalesimo, Comuni"
+    },
+    {
+      "id": "sto_sec_1_003",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Strumenti concettuali e periodizzazione",
+      "ambito": "Basso medioevo, crisi del Trecento e nascita dell'Europa moderna",
+      "competenza": "Analizza cause ed effetti dei processi storici, distinguendo permanenze e cambiamenti tra basso medioevo e prima età moderna",
+      "traguardo": "L'alunno usa le conoscenze e le abilità per orientarsi nella complessità del presente; conosce le trasformazioni del basso medioevo, la crisi del Trecento e l'avvio dell'età moderna.",
+      "obiettivi": [
+        "Descrivere la crisi del Trecento (carestie, peste, rivolte)",
+        "Comprendere la nascita delle monarchie nazionali",
+        "Conoscere l'Umanesimo e il Rinascimento come movimenti culturali",
+        "Descrivere le scoperte geografiche e l'incontro con l'America"
+      ],
+      "conoscenze": [
+        "Crisi del Trecento: carestie, peste nera (1348), rivolte contadine e urbane",
+        "Monarchie nazionali: Francia, Inghilterra, Spagna (unificazione)",
+        "Umanesimo e Rinascimento: rinnovamento culturale, mecenatismo, stampa",
+        "Scoperte geografiche: Colombo, circumnavigazione dell'Africa, imperi coloniali"
+      ],
+      "abilita": [
+        "Analizzare le cause della crisi del Trecento e le sue conseguenze",
+        "Confrontare il modello delle monarchie nazionali con quello dei Comuni",
+        "Spiegare il significato culturale dell'Umanesimo",
+        "Valutare l'impatto delle scoperte geografiche sulle civiltà extraeuropee"
+      ],
+      "evidenze": [
+        "L'alunno analizza 3 cause della crisi del Trecento collegandole agli effetti",
+        "L'alunno confronta la monarchia francese con il sistema comunale italiano",
+        "L'alunno spiega perché il Rinascimento è iniziato in Italia",
+        "L'alunno discute l'impatto della scoperta dell'America sulle popolazioni indigene"
+      ],
+      "criteriValutazione": [
+        "Capacità di analisi causa-effetto",
+        "Comprensione del passaggio da medioevo a età moderna",
+        "Capacità di confronto tra sistemi politici",
+        "Pensiero critico sulle conseguenze delle scoperte geografiche"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Storia — Secondaria, classe 1, basso medioevo e inizio età moderna",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 1, strumenti concettuali, crisi Trecento e avvio età moderna"
+    },
+    {
+      "id": "sto_sec_1_004",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Produzione scritta e orale",
+      "ambito": "Riforma, Controriforma e Guerra dei Trent'anni",
+      "competenza": "Produce testi orali e scritti per esporre processi storici complessi, argomentando sulle trasformazioni religiose e politiche del Cinquecento",
+      "traguardo": "L'alunno conosce la Riforma protestante, la Controriforma cattolica e la Guerra dei Trent'anni come eventi che ridefiniscono l'assetto politico e religioso dell'Europa.",
+      "obiettivi": [
+        "Descrivere le cause della Riforma protestante e le tesi di Lutero",
+        "Conoscere la diffusione del protestantesimo in Europa",
+        "Descrivere la Controriforma cattolica e il Concilio di Trento",
+        "Esporre le cause e le conseguenze della Guerra dei Trent'anni",
+        "Riconoscere il contributo delle figure femminili nelle vicende del periodo"
+      ],
+      "conoscenze": [
+        "Riforma protestante: Lutero, 95 tesi, soluzione, stampa e diffusione",
+        "Diffusione: Calvinismo (Ginevra), Anglicanesimo (Inghilterra)",
+        "Controriforma: Concilio di Trento, Inquisizione, ordini religiosi (Gesuiti)",
+        "Guerra dei Trent'anni (1618-1648): cause, fasi, Pace di Westfalia e nascita del sistema europeo degli Stati",
+        "Figure femminili: Vittoria Colonna, Elisabetta I, Teresa d'Avila"
+      ],
+      "abilita": [
+        "Esporre oralmente le cause della Riforma e le conseguenze in Europa",
+        "Confrontare dottrina cattolica e protestante su punti chiave",
+        "Produrre un testo scritto che spieghi gli esiti della Guerra dei Trent'anni",
+        "Argomentare il ruolo di una figura femminile nel periodo"
+      ],
+      "evidenze": [
+        "L'alunno espone oralmente la Riforma protestante in 3 minuti",
+        "L'alunno confronta in tabella le posizioni di cattolici e protestanti su 3 punti",
+        "L'alunno scrive un testo di 100 parole sugli esiti della Pace di Westfalia",
+        "L'alunno presenta il contributo di Elisabetta I o Teresa d'Avila"
+      ],
+      "criteriValutazione": [
+        "Completezza dell'esposizione orale",
+        "Capacità di confronto tra dottrine religiose",
+        "Chiarezza e coerenza del testo scritto",
+        "Capacità di argomentare il ruolo di figure storiche"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Classe 1, Riforma, Controriforma, Guerra dei Trent'anni, contributo femminile",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 1, produzione scritta e orale, Riforma e Guerra dei Trent'anni"
+    },
+    {
+      "id": "sto_sec_2_001",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Strumenti concettuali e periodizzazione",
+      "ambito": "Assolutismo e Rivoluzione scientifica: nuove concezioni del potere e del sapere",
+      "competenza": "Analizza il concetto di assolutismo e la rivoluzione scientifica come cambiamenti di paradigma politico e culturale",
+      "traguardo": "L'alunno usa le conoscenze per orientarsi nella complessità del presente; conosce l'Assolutismo e la Rivoluzione scientifica del Seicento.",
+      "obiettivi": [
+        "Descrivere il modello dell'assolutismo monarchico (Luigi XIV)",
+        "Conoscere il modello inglese: dalla monarchia assoluta al parlamentarismo",
+        "Comprendere il significato della Rivoluzione scientifica (Galilei, Bacone, Newton)",
+        "Riconoscere il contributo delle figure femminili nella scienza e nella cultura del Seicento"
+      ],
+      "conoscenze": [
+        "Assolutismo: Luigi XIV e Versailles, accentramento del potere, mercantilismo",
+        "Modello inglese: guerre civili, Cromwell, Glorious Revolution, Bill of Rights",
+        "Rivoluzione scientifica: metodo scientifico, Galilei, Bacone, Newton, accademie",
+        "Figure femminili: Artemisia Gentileschi, Anna Maria van Schurman, Margaret Cavendish"
+      ],
+      "abilita": [
+        "Confrontare il modello assolutista francese con quello parlamentare inglese",
+        "Spiegare l'importanza del metodo scientifico nella storia del pensiero",
+        "Argomentare il ruolo delle accademie nella diffusione del sapere",
+        "Esporre il contributo di una figura femminile del Seicento"
+      ],
+      "evidenze": [
+        "L'alunno confronta in tabella assolutismo francese e parlamentarismo inglese (3 criteri)",
+        "L'alunno spiega perché Galilei è considerato il padre della scienza moderna",
+        "L'alunno presenta il contributo di Newton alla fisica",
+        "L'alunno descrive il ruolo di Artemisia Gentileschi nell'arte del Seicento"
+      ],
+      "criteriValutazione": [
+        "Comprensione del concetto di assolutismo",
+        "Capacità di confronto tra modelli politici",
+        "Comprensione della portata della rivoluzione scientifica",
+        "Consapevolezza del contributo femminile nella storia"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Classe 2, Assolutismo e Rivoluzione scientifica, contributo femminile",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 2, strumenti concettuali, assolutismo e rivoluzione scientifica"
+    },
+    {
+      "id": "sto_sec_2_002",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Organizzazione delle informazioni",
+      "ambito": "Illuminismo e rivoluzioni: trasformazioni politiche e sociali del Settecento",
+      "competenza": "Organizza informazioni sulle trasformazioni politiche e sociali del Settecento, collegando Illuminismo, rivoluzioni e nascita della cittadinanza moderna",
+      "traguardo": "L'alunno conosce l'Illuminismo, la Rivoluzione americana e la Rivoluzione francese come eventi che trasformano l'assetto politico e sociale del mondo occidentale.",
+      "obiettivi": [
+        "Descrivere i principi dell'Illuminismo e i suoi principali esponenti",
+        "Esporre le cause e gli esiti della Rivoluzione americana",
+        "Descrivere le fasi della Rivoluzione francese",
+        "Comprendere la Dichiarazione dei diritti dell'uomo e del cittadino",
+        "Riconoscere il ruolo delle donne nella Rivoluzione francese (Olympe de Gouges)"
+      ],
+      "conoscenze": [
+        "Illuminismo: Montesquieu, Voltaire, Rousseau, Diderot, enciclopedia",
+        "Rivoluzione americana: colonie, tassazione, dichiarazione di indipendenza, guerra, Costituzione",
+        "Rivoluzione francese: cause, Stati generali, presa della Bastiglia, Terrore, Direttorio",
+        "Dichiarazione dei diritti dell'uomo e del cittadino (1789) e Dichiarazione dei diritti della donna (de Gouges, 1791)",
+        "L'età napoleonica: ascesa, riforme, campagne, caduta"
+      ],
+      "abilita": [
+        "Esporre i principi fondamentali dell'Illuminismo con esempi",
+        "Confrontare la Rivoluzione americana e quella francese",
+        "Analizzare il testo della Dichiarazione dei diritti dell'uomo",
+        "Valutare l'impatto dell'età napoleonica sull'Europa"
+      ],
+      "evidenze": [
+        "L'alunno espone 3 principi illuministi collegandoli a un autore",
+        "L'alunno confronta le due rivoluzioni (americana e francese) in una tabella",
+        "L'alunno analizza 3 articoli della Dichiarazione dei diritti dell'uomo",
+        "L'alunno discute l'eredità napoleonica in Italia"
+      ],
+      "criteriValutazione": [
+        "Comprensione dei principi illuministi",
+        "Capacità di confronto tra processi rivoluzionari",
+        "Abilità nell'analisi di documenti storici",
+        "Valutazione critica dell'eredità napoleonica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Storia — Secondaria, classe 2, Illuminismo e rivoluzioni",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 2, organizzazione informazioni, Illuminismo e rivoluzioni"
+    },
+    {
+      "id": "sto_sec_2_003",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Produzione scritta e orale",
+      "ambito": "Ottocento: Restaurazione, Unificazioni e seconda Rivoluzione Industriale",
+      "competenza": "Produce testi storici per descrivere i processi di unificazione nazionale e le trasformazioni economiche e sociali dell'Ottocento",
+      "traguardo": "L'alunno usa le conoscenze per orientarsi nella complessità del presente; conosce la Restaurazione, i moti liberali, le unificazioni italiana e tedesca, la seconda Rivoluzione Industriale e l'imperialismo.",
+      "obiettivi": [
+        "Descrivere il Congresso di Vienna e la Restaurazione",
+        "Esporre le fasi del Risorgimento italiano e l'Unità d'Italia",
+        "Conoscere l'unificazione tedesca",
+        "Descrivere la seconda Rivoluzione Industriale e le trasformazioni sociali",
+        "Conoscere l'imperialismo e il colonialismo europeo"
+      ],
+      "conoscenze": [
+        "Congresso di Vienna (1815): Restaurazione, equilibrio europeo, Santa Alleanza",
+        "Risorgimento italiano: Mazzini, Cavour, Garibaldi, spedizione dei Mille, 1861, completamento (Veneto 1866, Roma 1870)",
+        "Unificazione tedesca: Bismarck, guerre, nascita dell'Impero (1871)",
+        "Seconda Rivoluzione Industriale: acciaio, chimica, elettricità, petrolio, Taylorismo",
+        "Imperialismo: Africa, Asia, conseguenze economiche e sociali",
+        "Questione sociale: movimenti operai, socialismo, dottrina sociale della Chiesa"
+      ],
+      "abilita": [
+        "Esporre le decisioni del Congresso di Vienna e le conseguenze",
+        "Produrre un testo scritto che descriva il processo di unificazione italiana",
+        "Confrontare i processi di unificazione italiano e tedesco",
+        "Descrivere l'impatto della seconda Rivoluzione Industriale sulla società",
+        "Argomentare le conseguenze dell'imperialismo"
+      ],
+      "evidenze": [
+        "L'alunno spiega 3 decisioni del Congresso di Vienna e le loro conseguenze",
+        "L'alunno produce un testo di 150 parole sul Risorgimento italiano",
+        "L'alunno confronta unificazione italiana e tedesca in una tabella",
+        "L'alunno descrive 3 innovazioni della seconda Rivoluzione Industriale e il loro impatto"
+      ],
+      "criteriValutazione": [
+        "Completezza e chiarezza del testo scritto",
+        "Capacità di confronto tra processi storici",
+        "Comprensione delle trasformazioni economiche e sociali",
+        "Argomentazione sulle conseguenze dell'imperialismo"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Storia — Secondaria, classe 2, Ottocento",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 2, produzione scritta e orale, Ottocento e unificazioni"
+    },
+    {
+      "id": "sto_sec_3_001",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Organizzazione delle informazioni",
+      "ambito": "Il Novecento: conflitti mondiali e trasformazioni sociali (fino al 1994)",
+      "competenza": "Organizza informazioni sui conflitti mondiali, i totalitarismi e le trasformazioni politiche e sociali del Novecento",
+      "traguardo": "L'alunno usa le conoscenze per orientarsi nella complessità del presente; conosce la periodizzazione dalla I Guerra Mondiale alle inchieste di Mani Pulite (1994).",
+      "obiettivi": [
+        "Descrivere le cause e le fasi della Prima Guerra Mondiale",
+        "Conoscere l'avvento dei totalitarismi (fascismo, nazismo, stalinismo)",
+        "Descrivere le cause e le fasi della Seconda Guerra Mondiale",
+        "Comprendere la Resistenza, la Liberazione e la nascita della Repubblica Italiana",
+        "Conoscere la Guerra Fredda e il bipolarismo"
+      ],
+      "conoscenze": [
+        "I Guerra Mondiale: cause, fronte, guerra di trincea, entrata USA, fine, Trattato di Versailles",
+        "Totalitarismi: fascismo (Italia), nazismo (Germania), stalinismo (URSS)",
+        "II Guerra Mondiale: cause, fasi, Shoah, Resistenza, Liberazione, bomba atomica",
+        "Italia repubblicana: Referendum 1946, Costituzione, ricostruzione, miracolo economico, crisi",
+        "Guerra Fredda: NATO, Patto di Varsavia, cortina di ferro, decolonizzazione, caduta del Muro (1989)"
+      ],
+      "abilita": [
+        "Analizzare le cause della I Guerra Mondiale collegandole agli effetti",
+        "Confrontare i regimi totalitari del Novecento",
+        "Esporre le fasi della II Guerra Mondiale",
+        "Descrivere la nascita della Repubblica Italiana e i suoi fondamenti costituzionali",
+        "Valutare le conseguenze della Guerra Fredda sull'assetto mondiale"
+      ],
+      "evidenze": [
+        "L'alunno analizza 4 cause della I Guerra Mondiale e le collega allo scoppio del conflitto",
+        "L'alunno confronta fascismo e nazismo in una tabella (4 criteri)",
+        "L'alunno espone oralmente le fasi della II Guerra Mondiale in 5 minuti",
+        "L'alunno descrive il passaggio dalla monarchia alla repubblica in Italia"
+      ],
+      "criteriValutazione": [
+        "Capacità di analisi causa-effetto su eventi complessi",
+        "Comprensione del fenomeno totalitario",
+        "Completezza dell'esposizione orale",
+        "Consapevolezza delle radici storiche della Costituzione repubblicana"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Classe 3, periodo I GM-1994",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 3, organizzazione informazioni, Novecento fino al 1994"
+    },
+    {
+      "id": "sto_sec_3_002",
+      "disciplina": "Storia",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Uso delle fonti e produzione",
+      "ambito": "Memoria, cittadinanza e interpretazione storica",
+      "competenza": "Utilizza fonti e testimonianze per comprendere la storia recente e sviluppa un pensiero critico sulla memoria storica e i valori di cittadinanza",
+      "traguardo": "L'alunno usa le conoscenze per orientarsi nella complessità del presente; sa confrontare interpretazioni storiche, riconosce il valore della memoria e della cittadinanza attiva.",
+      "obiettivi": [
+        "Analizzare testimonianze e fonti sulla storia locale del Novecento (Irpinia)",
+        "Comprendere il concetto di memoria storica e i luoghi della memoria",
+        "Conoscere gli eventi italiani dal dopoguerra a Mani Pulite (1994)",
+        "Confrontare diverse interpretazioni storiografiche sullo stesso evento",
+        "Riconoscere il contributo delle figure femminili nella storia del Novecento"
+      ],
+      "conoscenze": [
+        "Storia locale irpina nel Novecento: emigrazione, terremoto 1980,ricostruzione",
+        "Luoghi della memoria: musei, monumenti, giornate commemorative",
+        "Italia repubblicana: centrismo, centrosinistra, anni di piombo, tangentopoli, Mani Pulite (1994)",
+        "Interpretazioni storiografiche: diverse letture dello stesso evento",
+        "Figure femminili: Tina Anselmi, Nilde Iotti, Liliana Segre, Samanà"
+      ],
+      "abilita": [
+        "Analizzare una testimonianza orale sulla storia locale",
+        "Esporre il significato di un luogo della memoria visitato o studiato",
+        "Confrontare due interpretazioni storiografiche sullo stesso evento",
+        "Argomentare l'importanza del contributo femminile nella storia recente",
+        "Produrre un testo che colleghi storia locale e storia nazionale"
+      ],
+      "evidenze": [
+        "L'alunno analizza una testimonianza del terremoto del 1980 ricavandone 3 informazioni",
+        "L'alunno presenta un luogo della memoria e ne spiega il significato storico",
+        "L'alunno confronta due interpretazioni della Resistenza tratte da fonti diverse",
+        "L'alunno produce un testo sul contributo di Tina Anselmi alla storia italiana",
+        "L'alunno collega la storia locale irpina a un evento nazionale del Novecento"
+      ],
+      "criteriValutazione": [
+        "Capacità di analisi di testimonianze e fonti orali",
+        "Consapevolezza del valore della memoria storica",
+        "Pensiero critico nel confronto di interpretazioni storiche",
+        "Conoscenza della storia locale in relazione a quella nazionale",
+        "Valorizzazione del contributo femminile nella storia"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Classe 3, storia locale irpina, memoria, contributo femminile, interpretazione storiografica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-102 — Secondaria 3, uso delle fonti e produzione, memoria e cittadinanza"
+    }
+  ]
+}

@@ -2433,3 +2433,23 @@
 - Dati curricolari non modificati: OK
 - Verdetto: CML_101_NEXT_DISCIPLINE_NORMALIZATION_SELECTED
 - Prossimo step: CML-102 - STORIA_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+---
+
+## 2026-06-24 - CML-102 - STORIA_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+- Tipo slice: normalized curriculum draft
+- HEAD partenza: `2cb6869` (CML-101)
+- content/curriculum/storia.normalized.json: 15 unita, 5 nuclei, 3 ordini
+- Copertura: Infanzia (1 unita, fascia 5), Primaria (5 unita, cl. 1-5), Secondaria (9 unita: cl.1 x4, cl.2 x3, cl.3 x2)
+- Periodizzazione IN 2025: cl.1 Longobardi-Guerra Trent'anni; cl.2 Assolutismo-2a Riv.Ind.; cl.3 I GM-1994
+- Contributo femminile: Vittoria Colonna, Elisabetta I, Teresa d'Avila, Artemisia Gentileschi, Tina Anselmi, Nilde Iotti, Liliana Segre
+- Storia locale irpina: terremoto 1980, emigrazione, ricostruzione
+- Raccordo Primaria-Sec: estensione al VII sec. d.C.
+- Stato: bozza_generabile / in_revisione, humanValidationRequired: true
+- Prima disciplina dell'asse storico-sociale
+- Devi0: 15 unita vs 14 pianificate (migliorativa: nucleo combinato cl.3)
+- Runtime non modificato: OK
+- .cml/export/import/role-access invariati: OK
+- Verdetto: CML_102_STORIA_NORMALIZED_CURRICULUM_DRAFT_READY
+- Prossimo step: CML-102A - STORIA_QUALITY_AUDIT
