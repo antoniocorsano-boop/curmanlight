@@ -2274,3 +2274,22 @@
 - Nessuna modifica runtime in CML-093
 - Verdetto: `CML_093_DISCIPLINARY_COMPLETENESS_READINESS_MATEMATICA_LIVE_SMOKE_READY`
 - Prossimo step: CML-094 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+---
+
+## 2026-06-24 — CML-094 — NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT
+
+- Tipo slice: docs-only audit / selection
+- HEAD partenza: `6b95a0b`, tree pulita ✅
+- Chiarimento concettuale: **completezza** (presenza struttura normalizzata) ≠ **readiness** (stato nel processo). I due contatori oggi coincidono (3/12/0) ma misurano cose distinte.
+- Criterio SMART: i contatori non sono SMART in sé; sono derivati da dati e stati SMART-verificabili.
+- Discipline candidate valutate: 9 (escluse Seconda Lingua e Latino LEL per copertura ridotta)
+- Disciplina selezionata: **Scienze**
+- Motivazione: completa l'asse matematico-scientifico, forte copertura verticale, 5 nuclei chiari, dati DATA sufficienti, evidenze osservabili naturali, D.M. 221/2025 (Fonti di energia) già presente, complementarità con Tecnologia/Matematica
+- Alternative: Inglese (rinviata a quinta normalizzazione), Storia (rinviata), Educazione Civica (trasversalità eccessiva)
+- Rischi: overlap Fonti di energia con Tecnologia (confine chiaro ma da monitorare), densità contenutistica (12-14 unità iniziali), aggiornamento D.M. 221/2025
+- Runtime non modificato: ✅
+- Dati curricolari non modificati: ✅
+- `.cml`/export/import/role-access invariati: ✅
+- Verdetto: `CML_094_NEXT_DISCIPLINE_NORMALIZATION_SELECTED`
+- Prossimo step: `CML-095 — SCIENZE_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT`
