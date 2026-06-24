@@ -1,5 +1,31 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-126 — POST_PUSH_RUNTIME_AND_NAVIGATION_SMOKE
+
+- Baseline:
+  - branch main
+  - HEAD = origin/main = 425f1b962b4fbbe027934f8e2f62f6f899d1be06
+  - stato remoto allineato post CML-125
+- Controlli tecnici:
+  - git diff --check -> pulito
+  - node tools/validate-cml-normalized-curriculum.mjs -> totalFiles 7, totalUnits 94, overallValid true, invalidCount 0
+  - git check-ignore -v .agents skills-lock.json Consultazione -> residui ignorati confermati
+- Smoke runtime su snapshot locale (http://localhost:8080):
+  - apertura applicazione: OK
+  - navigazione principale/curriculum: KO
+  - selezione discipline mappa: KO
+  - errori runtime osservati:
+    - ReferenceError: setTab is not defined
+    - ReferenceError: setMappaDisciplina is not defined
+  - import/export e validazione dipartimentale: non verificabili in modo affidabile per blocco navigazione
+- Artefatti slice:
+  - docs/03_execution/CML-126.md
+  - report/CML-126_post_push_runtime_and_navigation_smoke.md
+  - aggiornamento docs/REPO-MOVELOG.md
+- Scope safety: nessuna modifica funzionale introdotta
+- Verdetto: CML_126_POST_PUSH_SMOKE_BLOCKED_BY_RUNTIME_REGRESSION
+- Next: aprire micro-slice di debugging mirata ai riferimenti mancanti setTab/setMappaDisciplina con fix minimale e nuovo smoke.
+
 ## 2026-06-24 — CML-125 — LOCAL_SEQUENCE_CLOSURE_AUDIT_AND_CONTROLLED_PUSH
 
 - HEAD iniziale (main): 32ebb3f03c853c0612d16f998a9ad1a12b814831
