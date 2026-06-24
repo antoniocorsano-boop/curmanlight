@@ -2670,3 +2670,21 @@
 - File creati: `docs/03_execution/CML-109.md`, `report/CML-109_*.md`
 - Verdetto: `CML_109_NEXT_DISCIPLINE_NORMALIZATION_SELECTION_AUDIT_READY`
 - Prossimo step: CML-110 — normalizzazione runtime Musica
+
+---
+
+## 2026-06-24 - CML-110 - MUSICA_NORMALIZATION_RUNTIME_INCREMENT
+
+- Tipo slice: runtime — normalizzazione Musica su `index.html`
+- Commit iniziale: `1354366` (CML-109 audit)
+- **9 modifiche puntuali** in `index.html`: contatori, elenchi, sottotitoli, righe completezza/readiness
+- Contatori: 8/6/0 → **9/5/0**
+- Musica aggiunta come 9a disciplina completa (Bozza completa / In revisione)
+- Musica rimossa dall'elenco "Sola consultazione" (5 nomi residui)
+- Discipline residue: Seconda Lingua, Arte, Ed. Fisica, Religione, Latino (LEL)
+- Nessuna modifica a schema `.cml`, export/import, role access, service worker, contenuti disciplinari, altre discipline complete
+- Controlli: `git diff --check` OK, contatori 9/5/0 coerenti su entrambi i pannelli
+- File modificati: `_published_snapshot/netlify-current/index.html`
+- File creati: `docs/03_execution/CML-110.md`, `report/CML-110_*.md`
+- Verdetto: `CML_110_MUSICA_NORMALIZATION_RUNTIME_READY`
+- Prossimo step: CML-110A — smoke locale
