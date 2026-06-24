@@ -2807,3 +2807,18 @@
 - Discipline residue: 0 — **tutte le 14 discipline normalizzate**
 - Tutte le discipline (14/14) ora in "In revisione"
 - Prossimo step: definire prossimo ciclo di lavoro (validazione dipartimentale, sintesi, deploy)
+
+---
+
+## 2026-06-24 - CML-111 - DISCIPLINARY_VIEWS_CONTEXTUAL_NAV_COHERENCE_AUDIT
+
+- Commit partenza: `02e8fa2`
+- Audit-only — nessuna modifica runtime
+- **Bug P0 confermato**: hash `#cur-Italiano` + `selDisc="Tecnologia"` → corpo mostra Tecnologia
+  - Causa: due sistemi indipendenti (sidebar/hash), nessuna sincronizzazione
+- **P1**: `renderTecnologiaNorm()` titolo hardcoded su Tecnologia (linea 4718)
+- **P1**: Sidebar invariata in tutti i subtab Curriculum
+- **P2**: Export panel solo per Tecnologia
+- **P3**: Badge "Sola consultazione" senza discipline (14/0/0)
+- Verdetto: `CML_111_DISCIPLINARY_VIEWS_CONTEXTUAL_NAV_COHERENCE_AUDIT_READY`
+- Next: CML-112 — sincronizzare hash/selDisc + generalizzare renderTecnologiaNorm()
