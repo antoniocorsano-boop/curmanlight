@@ -2575,3 +2575,19 @@
 - Controlli: git diff --check PASS, braces CSS 2120=2120 PASS, dark mode commentato, nessuna nuova dipendenza
 - Verdetto: CML_106_DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_GEOGRAFIA_READY
 - Prossimo step raccomandato: CML-106A - GEOGRAFIA_COMPLETENESS_READINESS_LIVE_SMOKE
+
+---
+
+## 2026-06-24 - CML-106A - GEOGRAFIA_COMPLETENESS_READINESS_LIVE_SMOKE
+
+- Tipo slice: live smoke + docs
+- Commit runtime: `ffcd8f3` (CML-106) — pushato su `origin/main`, workflow Pages success
+- URL verificati: https://antoniocorsano-boop.github.io/curmanlight/ ✓, motto page ✓
+- **23/23 controlli live** — 22 PASS, 1 NOTA sulla coerenza elenco restanti
+- Contatori 7/8/0 confermati sia per completezza che readiness ✅
+- Geografia presente come 7a disciplina in revisione ✅
+- **Nota elenco restanti:** il contatore "Sola consultazione" mostra 8 ma elenca 7 nomi. DISCIPLINE_META ha 14 discipline totali. Discrepanza pre-esistente da CML-085 (14 invece di 13 al primo commit). Non è regressione CML-106.
+- Nessuna modifica runtime, nessuna approvazione, light mode only
+- File creati: docs/03_execution/CML-106A.md, report/CML-106A_*.md
+- Verdetto: CML_106A_GEOGRAFIA_COMPLETENESS_READINESS_LIVE_SMOKE_READY
+- Prossimo step: CML-106B (microfix contatore) o CML-107 (next normalization)
