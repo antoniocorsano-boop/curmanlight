@@ -1,0 +1,570 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Italiano",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-087 normalized Italian curriculum draft — adapted from Tecnologia structural benchmark",
+  "unitaApprendimento": [
+    {
+      "id": "ita_inf_3_001",
+      "disciplina": "Italiano",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "3-4",
+      "ambito": "Ascolto e comunicazione orale",
+      "nucleo": "Ascolto",
+      "competenza": "Ascolta e comprende semplici messaggi orali, sviluppando attenzione e memorizzazione",
+      "traguardo": "Il bambino usa la lingua italiana, arricchisce e precisa il proprio lessico, comprende parole e discorsi. Ascolta e comprende narrazioni, racconta e inventa storie, chiede e offre spiegazioni.",
+      "obiettivi": [
+        "Ascoltare brevi narrazioni mantenendo l'attenzione",
+        "Comprendere il significato globale di un racconto",
+        "Memorizzare filastrocche e canzoncine"
+      ],
+      "conoscenze": [
+        "Regole della conversazione (ascoltare senza interrompere)",
+        "Lessico di base legato all'esperienza quotidiana",
+        "Struttura di una semplice narrazione (inizio, sviluppo, fine)"
+      ],
+      "abilita": [
+        "Mantenere l'attenzione per 5-10 minuti su un racconto",
+        "Riordinare le sequenze di una storia",
+        "Memorizzare e ripetere brevi testi poetici e filastrocche"
+      ],
+      "evidenze": [
+        "Il bambino ascolta un racconto senza interrompere",
+        "Il bambino rielabora oralmente le sequenze principali",
+        "Il bambino ripete una filastrocca memorizzata"
+      ],
+      "criteriValutazione": [
+        "Capacità di ascolto prolungato",
+        "Comprensione globale del messaggio",
+        "Memorizzazione di brevi testi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campi di esperienza: I discorsi e le parole",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Infanzia 3-4, nucleo Ascolto, primo approccio alla narrazione"
+    },
+    {
+      "id": "ita_inf_5_001",
+      "disciplina": "Italiano",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "ambito": "Produzione orale e interazione",
+      "nucleo": "Parlato",
+      "competenza": "Comunica esperienze, racconta storie e interagisce con adulti e coetanei usando la lingua orale",
+      "traguardo": "Ascolta e comprende narrazioni, racconta e inventa storie, chiede e offre spiegazioni. Il bambino usa la lingua italiana per comunicare bisogni, esperienze e sentimenti.",
+      "obiettivi": [
+        "Raccontare esperienze personali in modo comprensibile",
+        "Interagire in conversazioni di gruppo",
+        "Formulare domande e richieste appropriate"
+      ],
+      "conoscenze": [
+        "Lessico relativo alla vita quotidiana (giochi, emozioni, routine)",
+        "Formule di cortesia e turni di parola",
+        "Strategie di riformulazione per farsi comprendere"
+      ],
+      "abilita": [
+        "Descrivere una propria esperienza con frasi complete",
+        "Chiedere chiarimenti quando non comprende",
+        "Rispettare il turno di parola in una conversazione"
+      ],
+      "evidenze": [
+        "Il bambino racconta la sua giornata usando frasi complete",
+        "Il bambino chiede aiuto o spiegazioni all'insegnante",
+        "Il bambino attende il proprio turno in una conversazione"
+      ],
+      "criteriValutazione": [
+        "Chiarezza espositiva",
+        "Partecipazione alla conversazione",
+        "Rispetto dei turni di parola"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campi di esperienza: I discorsi e le parole",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Infanzia 5, nucleo Parlato, interazione e narrazione orale"
+    },
+    {
+      "id": "ita_inf_5_002",
+      "disciplina": "Italiano",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "ambito": "Avvicinamento alla lingua scritta e alla letto-scrittura",
+      "nucleo": "Lettura",
+      "competenza": "Si avvicina alla lingua scritta con curiosità, sperimentando prime forme di comunicazione scritta",
+      "traguardo": "Si avvicina alla lingua scritta, esplora e sperimenta prime forme di comunicazione attraverso la scrittura. Sviluppa un primo approccio al pregrafismo.",
+      "obiettivi": [
+        "Riconoscere lettere dell'alfabeto",
+        "Tracciare segni e forme (pregrafismo)",
+        "Associare immagini a parole scritte"
+      ],
+      "conoscenze": [
+        "Alfabeto (riconoscimento visivo delle lettere)",
+        "Direzionalità della scrittura (sinistra-destra, alto-basso)",
+        "Simboli associati a significati (cartelli, etichette)"
+      ],
+      "abilita": [
+        "Riprodurre lettere e forme semplici con lo strumento grafico",
+        "Riconoscere il proprio nome scritto",
+        "Associare parole a immagini corrispondenti"
+      ],
+      "evidenze": [
+        "Il bambino traccia cerchi, linee e forme pregrafiche",
+        "Il bambino riconosce il proprio cartellino nominale",
+        "Il bambino appunta correttamente l'etichetta sotto l'immagine"
+      ],
+      "criteriValutazione": [
+        "Curiosità verso la lingua scritta",
+        "Coordinazione oculo-manuale",
+        "Riconoscimento di simboli alfabetici"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — valorizzazione del corsivo fin dall'infanzia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Infanzia 5, nucleo Lettura, pregrafismo e approccio alla scrittura"
+    },
+    {
+      "id": "ita_pri_1_001",
+      "disciplina": "Italiano",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Ascolto e comprensione orale",
+      "nucleo": "Ascolto",
+      "competenza": "Ascolta messaggi orali cogliendone il senso globale e le informazioni principali",
+      "traguardo": "L'alunno partecipa a scambi comunicativi con compagni e insegnanti rispettando il turno e formulando messaggi chiari. Ascolta e comprende consegne e spiegazioni.",
+      "obiettivi": [
+        "Ascoltare consegne e istruzioni orali",
+        "Comprendere il contenuto di una breve spiegazione",
+        "Identificare informazioni principali in un messaggio orale"
+      ],
+      "conoscenze": [
+        "Segnali di ascolto attivo (sguardo, postura, silenzio)",
+        "Tipologie di messaggio orale (consegna, spiegazione, narrazione)",
+        "Connettivi temporali di base (prima, dopo, poi)"
+      ],
+      "abilita": [
+        "Mantenere l'attenzione su un messaggio orale",
+        "Eseguire una consegna verbale complessa",
+        "Individuare personaggi e luoghi in una narrazione orale"
+      ],
+      "evidenze": [
+        "L'alunno esegue correttamente una consegna in tre passaggi",
+        "L'alunno risponde a domande su un racconto ascoltato",
+        "L'alunno mantiene la posizione di ascolto senza distrarsi"
+      ],
+      "criteriValutazione": [
+        "Capacità di ascolto prolungato",
+        "Comprensione di messaggi orali",
+        "Esecuzione corretta di consegne"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Ascolto",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Primaria 1, nucleo Ascolto, comprensione orale"
+    },
+    {
+      "id": "ita_pri_2_001",
+      "disciplina": "Italiano",
+      "ordine": "Primaria",
+      "classe": "2",
+      "fascia": null,
+      "ambito": "Produzione orale e interazione comunicativa",
+      "nucleo": "Parlato",
+      "competenza": "Partecipa a scambi comunicativi rispettando regole e formulando messaggi chiari e pertinenti",
+      "traguardo": "L'alunno partecipa a scambi comunicativi con compagni e insegnanti rispettando il turno e formulando messaggi chiari.",
+      "obiettivi": [
+        "Intervenire in una conversazione rispettando il turno",
+        "Descrivere esperienze e oggetti con lessico appropriato",
+        "Esporre un'idea in modo organizzato"
+      ],
+      "conoscenze": [
+        "Regole della conversazione (turno, pertinenza, rispetto)",
+        "Lessico per descrivere persone, oggetti e situazioni",
+        "Struttura di base del discorso (argomento, sviluppo, conclusione)"
+      ],
+      "abilita": [
+        "Rispettare i turni di parola in un dialogo",
+        "Descrivere un'esperienza con sequenza cronologica",
+        "Chiedere e offrire spiegazioni in modo pertinente"
+      ],
+      "evidenze": [
+        "L'alunno interviene in una discussione rispettando il turno",
+        "L'alunno descrive la sua giornata in ordine cronologico",
+        "L'alunno spiega un gioco a un compagno"
+      ],
+      "criteriValutazione": [
+        "Chiarezza del messaggio",
+        "Rispetto dei turni",
+        "Pertinenza degli interventi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Parlato",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Primaria 2, nucleo Parlato, interazione comunicativa"
+    },
+    {
+      "id": "ita_pri_3_001",
+      "disciplina": "Italiano",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "ambito": "Lettura e comprensione di testi",
+      "nucleo": "Lettura",
+      "competenza": "Legge e comprende testi di vario tipo, individuandone informazioni principali, scopo e struttura",
+      "traguardo": "Legge e comprende testi di vario tipo — continui e non continui — individuandone le informazioni principali; legge integralmente almeno tre libri all'anno discutendone in classe.",
+      "obiettivi": [
+        "Leggere ad alta voce in modo scorrevole e comprensibile",
+        "Comprendere le informazioni principali di un testo",
+        "Distinguere tipologie testuali (narrativo, descrittivo, informativo)"
+      ],
+      "conoscenze": [
+        "Diverse tipologie testuali (narrativo, descrittivo, informativo, regolativo)",
+        "Elementi della narrazione (personaggi, ambientazione, trama)",
+        "Indicazioni per la lettura espressiva (pause, intonazione)"
+      ],
+      "abilita": [
+        "Leggere ad alta voce con corretta pronuncia e intonazione",
+        "Ricavare informazioni esplicite da un testo",
+        "Riconoscere la tipologia di un testo"
+      ],
+      "evidenze": [
+        "L'alunno legge un brano di 20 righe in modo scorrevole",
+        "L'alunno risponde a domande di comprensione sul testo letto",
+        "L'alunno classifica il testo letto per tipologia"
+      ],
+      "criteriValutazione": [
+        "Scorrevolezza della lettura a voce alta",
+        "Comprensione del testo",
+        "Riconoscimento della tipologia testuale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Lettura + Nuove Indicazioni D.M. 221/2025 lettura integrale di almeno 3 libri/anno",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Primaria 3, nucleo Lettura, comprensione dei testi"
+    },
+    {
+      "id": "ita_pri_4_001",
+      "disciplina": "Italiano",
+      "ordine": "Primaria",
+      "classe": "4",
+      "fascia": null,
+      "ambito": "Produzione scritta e ortografia",
+      "nucleo": "Scrittura",
+      "competenza": "Scrive testi corretti nell'ortografia, chiari e coerenti, legati all'esperienza e alle diverse occasioni di scrittura",
+      "traguardo": "Scrive testi corretti nell'ortografia — con cura della scrittura a mano in corsivo — chiari e coerenti; padroneggia le tecniche del riassunto e della riscrittura da testi-modello.",
+      "obiettivi": [
+        "Produrre testi narrativi coerenti e coesi",
+        "Applicare le regole ortografiche di base",
+        "Produrre un riassunto di un breve testo"
+      ],
+      "conoscenze": [
+        "Regole ortografiche (doppie, accenti, punteggiatura)",
+        "Struttura del testo narrativo e descrittivo",
+        "Tecnica del riassunto (selezionare le idee principali)"
+      ],
+      "abilita": [
+        "Scrivere sotto dettatura con ortografia corretta",
+        "Produrre un testo narrativo di 10-15 righe",
+        "Riassumere un brano in 5-6 righe"
+      ],
+      "evidenze": [
+        "L'alunno scrive un testo ortograficamente corretto",
+        "L'alunno produce un riassunto con le informazioni essenziali",
+        "L'alunno usa correttamente maiuscole, punteggiatura e accenti"
+      ],
+      "criteriValutazione": [
+        "Correttezza ortografica",
+        "Chiarezza espositiva",
+        "Capacità di sintesi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Scrittura + Nuove Indicazioni D.M. 221/2025 corsivo e riassunto",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Primaria 4, nucleo Scrittura, ortografia e produzione testuale"
+    },
+    {
+      "id": "ita_pri_4_002",
+      "disciplina": "Italiano",
+      "ordine": "Primaria",
+      "classe": "4",
+      "fascia": null,
+      "ambito": "Acquisizione ed espansione del lessico",
+      "nucleo": "Acquisizione ed espansione del lessico",
+      "competenza": "Comprende e utilizza il lessico di base e arricchisce progressivamente il proprio patrimonio lessicale",
+      "traguardo": "Capisce e utilizza nell'uso orale e scritto i vocaboli fondamentali e quelli di alto uso. Arricchisce il lessico attraverso la lettura di testi e l'ascolto di messaggi.",
+      "obiettivi": [
+        "Comprendere il significato di parole nuove dal contesto",
+        "Usare in modo appropriato i vocaboli appresi",
+        "Distinguere tra lessico specifico e generico"
+      ],
+      "conoscenze": [
+        "Vocabolario fondamentale e di alto uso",
+        "Famiglie di parole e derivazione",
+        "Sinonimi, contrari e campi semantici"
+      ],
+      "abilita": [
+        "Dedurre il significato di un termine dal contesto",
+        "Utilizzare sinonimi per evitare ripetizioni",
+        "Classificare parole per campo semantico"
+      ],
+      "evidenze": [
+        "L'alunno spiega il significato di 5 parole nuove incontrate in un testo",
+        "L'alunno sostituisce parole con sinonimi appropriati",
+        "L'alunno raggruppa parole per campo semantico"
+      ],
+      "criteriValutazione": [
+        "Ampiezza del lessico",
+        "Uso appropriato dei termini",
+        "Capacità di inferenza lessicale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Lessico",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Primaria 4, nucleo Lessico, espansione e uso del vocabolario"
+    },
+    {
+      "id": "ita_pri_5_001",
+      "disciplina": "Italiano",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "ambito": "Riflessione sulla lingua e grammatica esplicita",
+      "nucleo": "Riflessione sulla lingua",
+      "competenza": "Riconosce e usa correttamente gli elementi della morfosintassi, sviluppando consapevolezza della norma grammaticale",
+      "traguardo": "Riconosce e usa correttamente gli elementi della morfosintassi, con attenzione alla centralità della regola grammaticale. Riconosce se una frase è o no completa.",
+      "obiettivi": [
+        "Riconoscere le parti del discorso (nome, articolo, aggettivo, verbo)",
+        "Analizzare la struttura della frase minima",
+        "Applicare le regole grammaticali nella produzione scritta"
+      ],
+      "conoscenze": [
+        "Parti variabili e invariabili del discorso",
+        "Struttura della frase minima (soggetto, predicato)",
+        "Regole di concordanza (genere, numero, persona)"
+      ],
+      "abilita": [
+        "Classificare le parole in categorie grammaticali",
+        "Individuare soggetto e predicato in una frase",
+        "Correggere errori di concordanza in un testo"
+      ],
+      "evidenze": [
+        "L'alunno analizza 10 parole assegnandone la categoria grammaticale",
+        "L'alunno individua soggetto e predicato in 5 frasi",
+        "L'alunno corregge errori grammaticali in un breve testo"
+      ],
+      "criteriValutazione": [
+        "Conoscenza delle categorie grammaticali",
+        "Capacità di analisi sintattica",
+        "Correttezza nell'applicazione delle regole"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Riflessione sulla lingua + Nuove Indicazioni D.M. 221/2025 ritorno alla centralità della norma",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Primaria 5, nucleo Riflessione sulla lingua, morfosintassi e grammatica esplicita"
+    },
+    {
+      "id": "ita_sec_1_001",
+      "disciplina": "Italiano",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Ascolto e interazione comunicativa",
+      "nucleo": "Ascolto",
+      "competenza": "Interagisce in modo efficace in diverse situazioni comunicative, attraverso modalità dialogiche rispettose delle idee altrui",
+      "traguardo": "L'alunno interagisce in modo efficace in diverse situazioni comunicative, attraverso modalità dialogiche rispettose delle idee altrui. Ascolta e comprende messaggi complessi.",
+      "obiettivi": [
+        "Ascoltare messaggi orali di diverso tipo cogliendo scopo e informazioni",
+        "Prendere appunti durante l'ascolto di una spiegazione",
+        "Partecipare a discussioni con contributi pertinenti e argomentati"
+      ],
+      "conoscenze": [
+        "Tecniche di ascolto attivo (appunti, parole-chiave, mappe)",
+        "Tipologie di discorso orale (narrazione, esposizione, argomentazione)",
+        "Regole della discussione democratica"
+      ],
+      "abilita": [
+        "Prendere appunti selezionando le informazioni essenziali",
+        "Riconoscere la struttura di un discorso orale",
+        "Intervenire in una discussione con argomenti pertinenti"
+      ],
+      "evidenze": [
+        "L'alunno produce appunti strutturati su una spiegazione",
+        "L'alunno distingue tesi e argomenti in un dibattito",
+        "L'alunno interviene in una discussione con contributi pertinenti"
+      ],
+      "criteriValutazione": [
+        "Capacità di ascolto selettivo",
+        "Qualità degli appunti",
+        "Pertinenza e argomentazione degli interventi"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Ascolto e parlato",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Secondaria 1, nucleo Ascolto, interazione e discorso orale"
+    },
+    {
+      "id": "ita_sec_1_002",
+      "disciplina": "Italiano",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "ambito": "Lettura e interpretazione di testi",
+      "nucleo": "Lettura",
+      "competenza": "Legge testi letterari e informativi di vario tipo, costruendone un'interpretazione personale",
+      "traguardo": "Legge testi letterari di vario tipo — incluse opere intere (almeno 3 libri l'anno), graphic novel, albi illustrati, autori italiani e stranieri — costruendone un'interpretazione personale.",
+      "obiettivi": [
+        "Leggere testi narrativi completi (almeno un libro a quadrimestre)",
+        "Riconoscere le caratteristiche dei generi letterari",
+        "Esprimere un giudizio motivato sul testo letto"
+      ],
+      "conoscenze": [
+        "Generi letterari (fiaba, favola, mito, leggenda, racconto realistico)",
+        "Elementi del testo narrativo (fabula, intreccio, personaggi)",
+        "Lettura integrale: tecniche di lettura silenziosa e ad alta voce"
+      ],
+      "abilita": [
+        "Distinguere i generi letterari",
+        "Analizzare personaggi, luoghi e tempi di un racconto",
+        "Formulare un'interpretazione personale motivata"
+      ],
+      "evidenze": [
+        "L'alunno legge integralmente un libro e ne discute in classe",
+        "L'alunno analizza un personaggio citando passi del testo",
+        "L'alunno esprime un'opinione motivata sul testo letto"
+      ],
+      "criteriValutazione": [
+        "Capacità di lettura integrale e continuativa",
+        "Comprensione analitica del testo",
+        "Qualità dell'interpretazione personale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Lettura + Nuove Indicazioni D.M. 221/2025, lettura integrale obbligatoria",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Secondaria 1, nucleo Lettura, analisi e interpretazione dei testi"
+    },
+    {
+      "id": "ita_sec_2_001",
+      "disciplina": "Italiano",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "ambito": "Produzione scritta e riscrittura",
+      "nucleo": "Scrittura",
+      "competenza": "Scrive correttamente testi di tipo diverso, adeguati a situazione, argomento, scopo e destinatario",
+      "traguardo": "Scrive correttamente testi di tipo diverso; padroneggia riassunto e riscrittura da testi-modello; valorizza la scrittura a mano in corsivo come strumento cognitivo.",
+      "obiettivi": [
+        "Produrre testi di tipologia diversa (narrativo, descrittivo, espositivo, argomentativo)",
+        "Applicare le tecniche del riassunto e della riscrittura",
+        "Rivedere e correggere il proprio testo in modo autonomo"
+      ],
+      "conoscenze": [
+        "Caratteristiche delle diverse tipologie testuali",
+        "Tecniche di riassunto, parafrasi e riscrittura",
+        "Fasi del processo di scrittura (pianificazione, stesura, revisione)"
+      ],
+      "abilita": [
+        "Pianificare un testo scritto in base a scopo e destinatario",
+        "Riassumere un testo riducendolo a un terzo della lunghezza",
+        "Riscrivere un testo cambiandone il punto di vista o la tipologia"
+      ],
+      "evidenze": [
+        "L'alunno produce un testo argomentativo di 20 righe strutturato in tesi, argomenti, conclusione",
+        "L'alunno riassume un articolo di giornale in 10 righe",
+        "L'alunno riscrive un racconto dal punto di vista di un altro personaggio"
+      ],
+      "criteriValutazione": [
+        "Adeguatezza a scopo e destinatario",
+        "Organizzazione del contenuto",
+        "Correttezza morfosintattica e ortografica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Scrittura + Nuove Indicazioni D.M. 221/2025 riassunto e corsivo",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Secondaria 2, nucleo Scrittura, produzione e riscrittura"
+    },
+    {
+      "id": "ita_sec_2_002",
+      "disciplina": "Italiano",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "ambito": "Acquisizione ed espansione del lessico",
+      "nucleo": "Acquisizione ed espansione del lessico",
+      "competenza": "Padroneggia e applica le conoscenze relative al lessico, utilizzando strategie per arricchire il patrimonio lessicale",
+      "traguardo": "Padroneggia e applica in situazioni diverse le conoscenze fondamentali relative al lessico, alla morfologia e alla sintassi.",
+      "obiettivi": [
+        "Comprendere e usare termini specifici delle diverse discipline",
+        "Analizzare la struttura delle parole (radice, suffisso, prefisso)",
+        "Utilizzare dizionari cartacei e digitali in modo efficace"
+      ],
+      "conoscenze": [
+        "Meccanismi di formazione delle parole (derivazione, composizione, prestiti)",
+        "Rapporti di significato (sinonimia, antonimia, iponimia, polisemia)",
+        "Struttura e uso del dizionario"
+      ],
+      "abilita": [
+        "Analizzare la struttura morfemica di una parola",
+        "Usare sinonimi e registri linguistici in base al contesto",
+        "Consultare il dizionario per verificare significato e uso"
+      ],
+      "evidenze": [
+        "L'alunno scompone 5 parole in radice e suffisso/prefisso",
+        "L'alunno adatta il registro linguistico a situazione formale e informale",
+        "L'alunno usa il dizionario per risolvere dubbi lessicali"
+      ],
+      "criteriValutazione": [
+        "Ampiezza e precisione del lessico",
+        "Capacità di analisi lessicale",
+        "Uso corretto degli strumenti di consultazione"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Lessico",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Secondaria 2, nucleo Lessico, analisi e arricchimento lessicale"
+    },
+    {
+      "id": "ita_sec_3_001",
+      "disciplina": "Italiano",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "ambito": "Riflessione sulla lingua e grammatica esplicita",
+      "nucleo": "Riflessione sulla lingua",
+      "competenza": "Padroneggia e applica in situazioni diverse le conoscenze fondamentali relative alla morfologia e alla sintassi",
+      "traguardo": "Padroneggia e applica in situazioni diverse le conoscenze fondamentali relative al lessico, alla morfologia e alla sintassi. Riconosce le relazioni logico-sintattiche nella frase complessa.",
+      "obiettivi": [
+        "Riconoscere la struttura della frase complessa (principale, subordinate)",
+        "Analizzare le funzioni sintattiche nella frase semplice",
+        "Usare consapevolmente i modi e tempi verbali"
+      ],
+      "conoscenze": [
+        "Struttura della frase complessa (coordinazione e subordinazione)",
+        "Funzioni sintattiche nella frase semplice (soggetto, predicato, complementi)",
+        "Sistema verbale: modi finiti e indefiniti, tempi, valori d'uso"
+      ],
+      "abilita": [
+        "Distinguere frase principale, coordinata e subordinata",
+        "Analizzare sintatticamente una frase semplice",
+        "Coniugare correttamente i verbi nei modi e tempi appropriati"
+      ],
+      "evidenze": [
+        "L'alunno analizza il periodo di un brano individuando principali e subordinate",
+        "L'alunno svolge l'analisi logica di 10 frasi",
+        "L'alunno usa correttamente i modi verbali in un testo scritto"
+      ],
+      "criteriValutazione": [
+        "Conoscenza della morfologia verbale",
+        "Capacità di analisi sintattica e del periodo",
+        "Correttezza nell'uso della lingua scritta"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Italiano — Riflessione sulla lingua + Nuove Indicazioni D.M. 221/2025 centralità della regola grammaticale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-087 — Secondaria 3, nucleo Riflessione sulla lingua, sintassi e analisi del periodo"
+    }
+  ]
+}

@@ -2058,3 +2058,23 @@
 - Mitigazioni: 10-14 unità iniziali, validazione umana, classificazione bozza_generabile/in_revisione
 - Verdetto: `CML_086_NEXT_DISCIPLINE_NORMALIZATION_SELECTED`
 - Prossimo step: CML-087 — ITALIANO_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+---
+
+## 2026-06-24 — CML-087 — ITALIANO_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT
+
+- Tipo slice: data/content increment
+- Benchmark: `content/curriculum/tecnologia.normalized.json`
+- File creati: `content/curriculum/italiano.normalized.json`, `docs/03_execution/CML-087.md`, `report/CML-087_italiano_discipline_normalized_curriculum_draft.md`
+- File modificati: `docs/REPO-MOVELOG.md`
+- Unità create: **14**
+  - Infanzia: 3 (fasce 3-4, 5)
+  - Primaria: 6 (cl. 1, 2, 3, 4, 5)
+  - Secondaria: 5 (cl. 1, 2, 3)
+- Nuclei coperti: Ascolto, Parlato, Lettura, Scrittura, Lessico, Riflessione sulla lingua
+- Stato: `bozza_generabile` / `in_revisione`
+- Validazione umana: ✅ esplicita su ogni unità
+- Runtime non modificato: ✅
+- `.cml`/export/import/role-access invariati: ✅
+- Verdetto: `CML_087_ITALIANO_DISCIPLINE_NORMALIZED_CURRICULUM_DRAFT_READY`
+- Prossimo step raccomandato: CML-087A — ITALIANO_NORMALIZED_CURRICULUM_DRAFT_QUALITY_AUDIT
