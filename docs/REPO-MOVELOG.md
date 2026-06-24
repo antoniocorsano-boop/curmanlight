@@ -2476,3 +2476,22 @@
 - File creati: docs/03_execution/CML-102A.md, report/CML-102A_storia_normalized_curriculum_draft_quality_audit.md
 - Verdetto: CML_102A_STORIA_NORMALIZED_CURRICULUM_QUALITY_AUDIT_READY
 - Prossimo step: CML-103 - DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_STORIA_RUNTIME_INCREMENT (contatori 6/9/0)
+
+---
+
+## 2026-06-24 - CML-103 - UI COUNTERS UPDATE (6/9/0)
+
+- Tipo slice: runtime update (contatori UI)
+- HEAD partenza: `188abc5` (CML-102A)
+- Commit: (current) -- feat: update UI counters to 6/9/0 for Storia
+- Completezza: 5 -> 6 (aggiunta Storia), 10 -> 9, 0 invariato
+- Readiness: 5 -> 6 (aggiunta Storia), 10 -> 9, 0 invariato
+- Subtitle completezza: aggiornata con "e Storia"
+- Nota modelli riferimento: aggiornata con "e Storia"
+- Completezza row: Storia aggiunta come 6a bozza completa in revisione
+- Readiness row: Storia aggiunta come 6a in revisione
+- Storia rimossa dalla lista "Solo consultazione" (entrambe le sezioni)
+- Altre 10 -> Altre 9 (entrambe le sezioni)
+- Nessuna modifica a .cml, export/import, role-access, schema, dati curricolari
+- Verdetto: CML_103_UI_COUNTERS_UPDATE_READY
+- Prossimo step: CML-103A - LIVE SMOKE GITHUB PAGES (6/9/0)
