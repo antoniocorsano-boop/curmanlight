@@ -566,5 +566,209 @@
       "validazioneUmana": true,
       "noteDipartimento": "CML-092 — Secondaria 3, nucleo Numeri, educazione finanziaria come ambito STEM"
     }
+  ],
+  "nodiDisciplinari": [
+    {
+      "id": "nod_mat_001",
+      "etichetta": "Numeri",
+      "tipo": "sostanziale",
+      "descrizione": "Sistemi di numerazione, operazioni, relazioni quantitative e frazioni",
+      "fonte": "Derivato da nucleo 'Numeri' in mat_inf_5_001, mat_pri_1_001, mat_pri_5_001, mat_sec_1_001, mat_sec_3_001",
+      "legami": []
+    },
+    {
+      "id": "nod_mat_002",
+      "etichetta": "Spazio e figure",
+      "tipo": "sostanziale",
+      "descrizione": "Orientamento spaziale, figure geometriche, piano cartesiano e trasformazioni",
+      "fonte": "Derivato da nucleo 'Spazio e figure' in mat_pri_1_002, mat_sec_1_002, mat_sec_2_001",
+      "legami": []
+    },
+    {
+      "id": "nod_mat_003",
+      "etichetta": "Relazioni e funzioni",
+      "tipo": "sostanziale",
+      "descrizione": "Pattern, sequenze, rappresentazioni formali e algoritmi",
+      "fonte": "Derivato da nucleo 'Relazioni e funzioni' in mat_pri_1_003, mat_sec_1_003",
+      "legami": []
+    },
+    {
+      "id": "nod_mat_004",
+      "etichetta": "Informatica e pensiero computazionale",
+      "tipo": "sostanziale",
+      "descrizione": "Algoritmi, rappresentazione di informazioni, programmazione e strumenti digitali",
+      "fonte": "Derivato da nucleo 'Informatica' in mat_pri_1_004, mat_sec_1_005",
+      "legami": []
+    },
+    {
+      "id": "nod_mat_005",
+      "etichetta": "Dati e previsioni",
+      "tipo": "sostanziale",
+      "descrizione": "Raccolta, organizzazione e analisi di dati; statistica e probabilità",
+      "fonte": "Derivato da nucleo 'Dati e previsioni' in mat_sec_1_004",
+      "legami": []
+    }
+  ],
+  "struttureSostanziali": [
+    {
+      "id": "stru_mat_001",
+      "nome": "Numeri e prime relazioni",
+      "descrizione": "Conteggio, confronto e prime relazioni quantitative",
+      "fonte": "Derivato da ambito 'Numeri e prime relazioni' — unità mat_inf_5_001"
+    },
+    {
+      "id": "stru_mat_002",
+      "nome": "Numeri e calcolo",
+      "descrizione": "Sistema di numerazione decimale, operazioni e valore posizionale",
+      "fonte": "Derivato da ambito 'Numeri e calcolo' — unità mat_pri_1_001"
+    },
+    {
+      "id": "stru_mat_003",
+      "nome": "Geometria e orientamento spaziale",
+      "descrizione": "Posizione, binomi topologici, figure geometriche e percorsi",
+      "fonte": "Derivato da ambito 'Geometria e orientamento spaziale' — unità mat_pri_1_002"
+    },
+    {
+      "id": "stru_mat_004",
+      "nome": "Relazioni, dati e previsioni",
+      "descrizione": "Classificazione, tabelle, grafici e prime previsioni",
+      "fonte": "Derivato da ambito 'Relazioni, dati e previsioni' — unità mat_pri_1_003"
+    },
+    {
+      "id": "stru_mat_005",
+      "nome": "Informatica e pensiero computazionale",
+      "descrizione": "Algoritmi, sequenze di istruzioni e rappresentazione simbolica",
+      "fonte": "Derivato da ambito 'Informatica e pensiero computazionale' — unità mat_pri_1_004"
+    },
+    {
+      "id": "stru_mat_006",
+      "nome": "Numeri razionali, dati e educazione finanziaria",
+      "descrizione": "Numeri decimali, percentuali e prime nozioni di economia personale",
+      "fonte": "Derivato da ambito 'Numeri razionali, dati e educazione finanziaria' — unità mat_pri_5_001"
+    },
+    {
+      "id": "stru_mat_007",
+      "nome": "Numeri e calcolo con razionali",
+      "descrizione": "Operazioni con numeri naturali e decimali, frazioni e proprietà",
+      "fonte": "Derivato da ambito 'Numeri e calcolo con razionali' — unità mat_sec_1_001"
+    },
+    {
+      "id": "stru_mat_008",
+      "nome": "Geometria piana e disegno geometrico",
+      "descrizione": "Figure piane, strumenti di disegno e piano cartesiano",
+      "fonte": "Derivato da ambito 'Geometria piana e disegno geometrico' — unità mat_sec_1_002"
+    },
+    {
+      "id": "stru_mat_009",
+      "nome": "Relazioni e funzioni",
+      "descrizione": "Regolarità, sequenze, tabelle e concetto di algoritmo",
+      "fonte": "Derivato da ambito 'Relazioni e funzioni' — unità mat_sec_1_003"
+    },
+    {
+      "id": "stru_mat_010",
+      "nome": "Dati, statistiche e probabilità",
+      "descrizione": "Raccolta dati, rappresentazioni, misure di tendenza e probabilità",
+      "fonte": "Derivato da ambito 'Dati, statistiche e probabilità' — unità mat_sec_1_004"
+    },
+    {
+      "id": "stru_mat_011",
+      "nome": "Geometria, dati e pensiero computazionale",
+      "descrizione": "Strumenti digitali, geometria dinamica e algoritmi di ordinamento",
+      "fonte": "Derivato da ambito 'Geometria, dati e pensiero computazionale' — unità mat_sec_2_001"
+    },
+    {
+      "id": "stru_mat_012",
+      "nome": "Educazione finanziaria e matematica per la cittadinanza",
+      "descrizione": "Percentuali, budget, strumenti finanziari e assicurazioni",
+      "fonte": "Derivato da ambito 'Educazione finanziaria e matematica per la cittadinanza' — unità mat_sec_3_001"
+    }
+  ],
+  "progressioneVerticale": [
+    {
+      "id": "pve_mat_001",
+      "ordine": "Infanzia",
+      "fascia": "5",
+      "descrizioneProgressione": "Avvio al pensiero logico-matematico attraverso conteggio e classificazione",
+      "nodiRiferimento": ["nod_mat_001"],
+      "fonte": "Derivato da unità mat_inf_5_001"
+    },
+    {
+      "id": "pve_mat_002",
+      "ordine": "Primaria",
+      "classe": "1",
+      "descrizioneProgressione": "Sistema di numerazione decimale, calcolo e prime relazioni",
+      "nodiRiferimento": ["nod_mat_001", "nod_mat_002", "nod_mat_003", "nod_mat_004"],
+      "fonte": "Derivato da unità mat_pri_1_001, mat_pri_1_002, mat_pri_1_003, mat_pri_1_004"
+    },
+    {
+      "id": "pve_mat_003",
+      "ordine": "Primaria",
+      "classe": "5",
+      "descrizioneProgressione": "Numeri decimali, dati e educazione finanziaria",
+      "nodiRiferimento": ["nod_mat_001"],
+      "fonte": "Derivato da unità mat_pri_5_001"
+    },
+    {
+      "id": "pve_mat_004",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "descrizioneProgressione": "Approfondimento numeri, geometria, relazioni, dati e informatica",
+      "nodiRiferimento": ["nod_mat_001", "nod_mat_002", "nod_mat_003", "nod_mat_004", "nod_mat_005"],
+      "fonte": "Derivato da unità mat_sec_1_001, mat_sec_1_002, mat_sec_1_003, mat_sec_1_004, mat_sec_1_005"
+    },
+    {
+      "id": "pve_mat_005",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "descrizioneProgressione": "Geometria dinamica, dati e strumenti digitali",
+      "nodiRiferimento": ["nod_mat_002", "nod_mat_004"],
+      "fonte": "Derivato da unità mat_sec_2_001"
+    },
+    {
+      "id": "pve_mat_006",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "descrizioneProgressione": "Matematica finanziaria e assicurativa per la cittadinanza",
+      "nodiRiferimento": ["nod_mat_001"],
+      "fonte": "Derivato da unità mat_sec_3_001"
+    }
+  ],
+  "decisioniCurricolari": [
+    {
+      "id": "dec_mat_001",
+      "tipo": "inclusione",
+      "nodiRiferimento": ["nod_mat_004"],
+      "unitaRiferimento": ["mat_pri_1_004", "mat_sec_1_005", "mat_sec_2_001"],
+      "motivazione": "Inserimento del pensiero computazionale e degli strumenti digitali come ambito strutturante",
+      "stato": "da_validare",
+      "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — programmazione curricolare"
+    },
+    {
+      "id": "dec_mat_002",
+      "tipo": "inclusione",
+      "nodiRiferimento": ["nod_mat_001"],
+      "unitaRiferimento": ["mat_pri_5_001", "mat_sec_3_001"],
+      "motivazione": "Introduzione dell'educazione finanziaria, assicurativa e previdenziale in Primaria 5 e Secondaria 3",
+      "stato": "da_validare",
+      "fonte": "Nuove Indicazioni D.M. 221/2025 — educazione finanziaria; Legge n. 92/2019, Educazione Civica"
+    },
+    {
+      "id": "dec_mat_003",
+      "tipo": "estensione",
+      "nodiRiferimento": ["nod_mat_001"],
+      "unitaRiferimento": ["mat_pri_5_001"],
+      "motivazione": "Estensione del nucleo Numeri all'educazione finanziaria in Primaria 5",
+      "stato": "da_validare",
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025"
+    },
+    {
+      "id": "dec_mat_004",
+      "tipo": "integrazione",
+      "nodiRiferimento": ["nod_mat_002", "nod_mat_004"],
+      "unitaRiferimento": ["mat_sec_2_001"],
+      "motivazione": "Integrazione di geometria dinamica e algoritmi in Secondaria 2",
+      "stato": "da_validare",
+      "fonte": "Nuove Indicazioni D.M. 221/2025 — GeoGebra, fogli di calcolo e programmazione"
+    }
   ]
 }

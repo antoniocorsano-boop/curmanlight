@@ -1,5 +1,31 @@
 # Repo Movelog
 
+## 2026-06-24 — CML-122 — DIRTY_WORKTREE_SPLIT_AND_SELECTIVE_CONSOLIDATION
+
+- **HEAD iniziale (main)**: `7d840bf4ab22640c824a884f6417436637245852`
+- Tipo slice: consolidamento selettivo / split dirty worktree
+- Obiettivo: separare e consolidare blocco core (runtime + JSON + validator) mantenendo fuori rumore non core.
+- Classificazione eseguita:
+  - Runtime: `_published_snapshot/netlify-current/index.html`
+  - JSON disciplinari: `content/curriculum/italiano.normalized.json`, `content/curriculum/matematica.normalized.json`, `content/curriculum/tecnologia.normalized.json`
+  - Validator: `tools/validate-cml-normalized-curriculum.mjs`
+  - Documenti/report CML verificati: `docs/03_execution/CML-119C-bis.md`, `docs/03_execution/CML-119C.md`, `docs/03_execution/CML-119D.md`, `report/CML-119B_multi_discipline_normalized_curriculum_validator.md`, `report/CML-119C-bis_disciplinary_knowledge_content_governance_audit.md`, `report/CML-119C_disciplinary_knowledge_map_data_contract.md`, `report/CML-119D_disciplinary_knowledge_map_pilot_normalization.md`, `report/CML-120_disciplinary_knowledge_map_read_only_view.md`
+  - Rumore non core escluso: `.agents/`, `skills-lock.json`, `Consultazione`
+- Verifica tecnica blocco core:
+  - Runtime mappa disciplinare read-only coerente (Tecnologia/Matematica/Italiano)
+  - Hotfix alias confermato:
+    - `var units=TECNOLOGIA_NORM_DATA.unitaApprendimento;`
+    - `const TECNOLOGIA_NORM_DATA = TECNOLOGIA_NORM;`
+  - Validatore multi-disciplina eseguito:
+    - `node tools/validate-cml-normalized-curriculum.mjs`
+    - Esito: `overallValid: true`, `invalidCount: 0`, `totalFiles: 7`, `totalUnits: 94`
+- Artefatti slice:
+  - `docs/03_execution/CML-122.md`
+  - `report/CML-122_dirty_worktree_split_and_selective_consolidation.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- Verdetto: `CML_122_DIRTY_WORKTREE_SPLIT_AND_CORE_CHANGESET_CONSOLIDATED`
+- Next: micro-slice dedicata a repository hygiene per rumore non core escluso.
+
 ## 2026-06-24 — CML-121 — REPO_TRACEABILITY_RECONCILIATION_AND_SLICE_BOUNDARY_AUDIT
 
 - **HEAD iniziale (main)**: `96f2173ef44979b583b15e8382575b8615149f87`

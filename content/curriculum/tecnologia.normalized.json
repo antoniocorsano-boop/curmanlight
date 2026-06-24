@@ -511,5 +511,145 @@
       "validazioneUmana": true,
       "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 3a — Cittadinanza tecnologica"
     }
+  ],
+  "struttureSostanziali": [
+    {
+      "id": "stru_tec_001",
+      "nome": "Osservazione e analisi di oggetti, strumenti e ambienti",
+      "descrizione": "Esplorazione sensoriale e funzionale di oggetti tecnologici",
+      "fonte": "Derivato da ambito 'Osservazione e analisi di oggetti, strumenti e ambienti' — unità tec_inf_3_001, tec_pri_1_001"
+    },
+    {
+      "id": "stru_tec_002",
+      "nome": "Digitale, dati, procedure e sicurezza",
+      "descrizione": "Uso di strumenti digitali, algoritmi e regole di sicurezza",
+      "fonte": "Derivato da ambito 'Digitale, dati, procedure e sicurezza' — unità tec_inf_5_001, tec_sec_1_002, tec_sec_3_001"
+    },
+    {
+      "id": "stru_tec_003",
+      "nome": "Materiali e trasformazioni",
+      "descrizione": "Proprietà dei materiali e tecniche di trasformazione",
+      "fonte": "Derivato da ambito 'Materiali e trasformazioni' — unità tec_pri_2_001, tec_sec_2_001"
+    },
+    {
+      "id": "stru_tec_004",
+      "nome": "Disegno, rappresentazione e progettazione",
+      "descrizione": "Rappresentazione grafica e progettazione con strumenti tradizionali e digitali",
+      "fonte": "Derivato da ambito 'Disegno, rappresentazione e progettazione' — unità tec_pri_3_001, tec_sec_1_001"
+    },
+    {
+      "id": "stru_tec_005",
+      "nome": "Energia, sostenibilità e ambiente",
+      "descrizione": "Fonti energetiche, efficienza e comportamenti sostenibili",
+      "fonte": "Derivato da ambito 'Energia, sostenibilità e ambiente' — unità tec_pri_4_001, tec_sec_2_002"
+    },
+    {
+      "id": "stru_tec_006",
+      "nome": "Cittadinanza tecnologica e uso responsabile",
+      "descrizione": "Consapevolezza critica, etica e sicurezza nell'uso delle tecnologie",
+      "fonte": "Derivato da ambito 'Cittadinanza tecnologica e uso responsabile' — unità tec_pri_5_001, tec_sec_3_002"
+    }
+  ],
+  "progressioneVerticale": [
+    {
+      "id": "pve_tec_001",
+      "ordine": "Infanzia",
+      "fascia": "3-4",
+      "descrizioneProgressione": "Esplorazione sensoriale di oggetti e materiali",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_inf_3_001"
+    },
+    {
+      "id": "pve_tec_002",
+      "ordine": "Infanzia",
+      "fascia": "5",
+      "descrizioneProgressione": "Primi strumenti digitali e sequenze algoritmiche",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_inf_5_001"
+    },
+    {
+      "id": "pve_tec_003",
+      "ordine": "Primaria",
+      "classe": "1",
+      "descrizioneProgressione": "Orientamento tra oggetti tecnologici e materiali",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_pri_1_001"
+    },
+    {
+      "id": "pve_tec_004",
+      "ordine": "Primaria",
+      "classe": "2",
+      "descrizioneProgressione": "Proprietà e trasformazioni dei materiali",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_pri_2_001"
+    },
+    {
+      "id": "pve_tec_005",
+      "ordine": "Primaria",
+      "classe": "3",
+      "descrizioneProgressione": "Disegno tecnico e rappresentazione grafica",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_pri_3_001"
+    },
+    {
+      "id": "pve_tec_006",
+      "ordine": "Primaria",
+      "classe": "4",
+      "descrizioneProgressione": "Energia, sostenibilità e ambiente",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_pri_4_001"
+    },
+    {
+      "id": "pve_tec_007",
+      "ordine": "Primaria",
+      "classe": "5",
+      "descrizioneProgressione": "Cittadinanza digitale e uso responsabile della rete",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_pri_5_001"
+    },
+    {
+      "id": "pve_tec_008",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "descrizioneProgressione": "Disegno tecnico CAD e sistemi tecnologici",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_sec_1_001, tec_sec_1_002"
+    },
+    {
+      "id": "pve_tec_009",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "descrizioneProgressione": "Analisi dei materiali del territorio e impatto ambientale",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_sec_2_001, tec_sec_2_002"
+    },
+    {
+      "id": "pve_tec_010",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "descrizioneProgressione": "Programmazione, automazione e cittadinanza tecnologica",
+      "nodiRiferimento": [],
+      "fonte": "Derivato da unità tec_sec_3_001, tec_sec_3_002"
+    }
+  ],
+  "decisioniCurricolari": [
+    {
+      "id": "dec_tec_001",
+      "tipo": "inclusione",
+      "nodiRiferimento": [],
+      "unitaRiferimento": ["tec_pri_4_001", "tec_sec_2_002"],
+      "motivazione": "Inserimento dell'Agenda 2030 e dell'Educazione Civica nel curricolo di Tecnologia",
+      "stato": "da_validare",
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Curricolo di istituto — Agenda 2030 / Nuove Indicazioni D.M. 221/2025 — Educazione Civica"
+    },
+    {
+      "id": "dec_tec_002",
+      "tipo": "inclusione",
+      "nodiRiferimento": [],
+      "unitaRiferimento": ["tec_sec_3_001"],
+      "motivazione": "Inserimento del pensiero computazionale e della programmazione in Secondaria",
+      "stato": "da_validare",
+      "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — Pensiero computazionale"
+    }
   ]
 }
