@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-135B — NORMALIZZATO_TO_STRUTTURATO_SMOKE_CLOSURE_AND_CONTROLLED_PUSH
+
+- **HEAD partenza**: `1159af0` (CML-135A)
+- **Tipo slice**: smoke + closure + push controllato
+- **5/5 sostituzioni** `normalizzato` → `strutturato` confermate ✅
+- **0 occorrenze user-facing** di `normalizzato` residue ✅
+- **1 residuo tecnico**: commento JS linea 4848 (mantenuto) ✅
+- **Validatore**: 7/94, `overallValid: true` ✅
+- **Commit CML-135B**: `docs: close CML normalizzato to strutturato smoke`
+- **Push**: eseguito su origin/main
+- **Allineamento post-push**: HEAD == origin/main
+- Verdetto: `CML_135B_NORMALIZZATO_TO_STRUTTURATO_CYCLE_CLOSED_REMOTE`
+
 ## 2026-06-25 — CML-134A — POST_MICROCOPY_SMOKE_CLOSURE_AND_CONTROLLED_PUSH
 
 - **HEAD partenza (pre-push)**: `e32b56f6a9f29c9dc10d977e36e872b83825a198` (CML-134)
