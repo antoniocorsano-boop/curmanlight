@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-158 — UI_UX_3D_LANDING_STUDY_ARCHIVE
+
+- **Commit iniziale**: `c854562` (sync con `origin/main`)
+- **Tipo slice**: docs-only / study archive
+- **Studio archiviato**: proposta landing 3D con Three.js/React/Vite/Lenis valutata e archiviata come riferimento concettuale.
+- **Decisione progettuale**: la proposta 3D NON è una specifica implementativa. Non autorizza React, Three.js, Vite, Lenis, nuove dipendenze, nuova landing autonoma o cambio architetturale.
+- **Trasformazione consigliata**: eventuale futura sezione statica HTML/CSS nella Home tab con due riquadri (curricolo vigente + quadro 2025) e processo umano in 5 passaggi.
+- **Artefatti creati**:
+  - `docs/02_system/UI-UX-3D-LANDING-STUDY.md`
+  - `docs/03_execution/CML-158.md`
+  - `report/CML-158_ui_ux_3d_landing_study_archive.md`
+  - aggiornamento `docs/REPO-MOVELOG.md` (questa voce)
+- **Verdetto**: `CML_158_UI_UX_3D_LANDING_STUDY_ARCHIVE_READY`
+
 ## 2026-06-25 — CML-156 — P1_RUNTIME_STRUCTURE_MICROFIX
 
 - **Commit iniziale**: `b4104bb` (sync con `origin/main`)
