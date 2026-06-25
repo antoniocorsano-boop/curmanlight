@@ -1,5 +1,14 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-137A — BACKUP_LABEL_CYCLE_CLOSURE_AND_CONTROLLED_PUSH
+
+- **HEAD partenza (pre-push)**: `d8e3ff6` (CML-137)
+- **Tipo slice**: closure audit + push controllato — nessuna modifica runtime
+- **Commit pushati**: `15b0cbc` (CML-136 audit), `d8e3ff6` (CML-137 runtime)
+- **Audit pre-push**: passato — `git diff --check` pulito, validatore 7/94 OK
+- **Allineamento post-push**: HEAD == origin/main == `d8e3ff6` ✅
+- Verdetto: `CML_137A_BACKUP_LABEL_CYCLE_CLOSED_REMOTE`
+
 ## 2026-06-25 — CML-137 — BACKUP_LABEL_RUNTIME_MICROCOPY_ALIGNMENT
 
 - **HEAD iniziale**: `15b0cbc` (CML-136 audit)
