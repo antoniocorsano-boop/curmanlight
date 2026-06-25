@@ -3335,3 +3335,31 @@
   - aggiornamento `docs/REPO-MOVELOG.md` (questa voce)
 - **Verdetto:** `CML_128_CURRENT_ICON_SYSTEM_USAGE_AUDIT_READY`
 - **Prossimo step:** CML-129 — CURRENT_ICON_SYSTEM_RUNTIME_ALIGNMENT (6 sostituzioni emoji puntuali)
+
+---
+
+## 2026-06-25 — CML-129 — CURRENT_ICON_SYSTEM_RUNTIME_ALIGNMENT
+
+- **Tipo slice:** runtime increment minimo
+- **HEAD partenza:** `56ca4ab` (CML-128), branch `main`, origin/main `1e876be`, ahead 1
+- **Ciclo precedente chiuso:** `CML_128_CURRENT_ICON_SYSTEM_USAGE_AUDIT_READY`
+- **Obiettivo:** applicare le 5 sostituzioni emoji puntuali da CML-128 Opzione B
+- **File modificato:** `_published_snapshot/netlify-current/index.html` (5 linee, 7+/7-)
+- **Sostituzioni applicate:**
+  - Linea 1411: `📄 Esportazioni` → `📤 Esportazioni` (toggle toolbar, 3 occorrenze)
+  - Linea 1452: `📄 Scarica report gruppo` → `📝 Scarica report gruppo` (btn-md)
+  - Linea 1468: `📋 Copia Markdown` → `📝 Copia Markdown` (btn-copy)
+  - Linea 1469: `⬇ Scarica Markdown` → `📝 Scarica Markdown` (btn-md)
+  - Linea 1792: `📤 Word confronto` → `📄 Word confronto` (btn-word)
+- **Nota:** la 6ª sostituzione prevista (`⚙️→📝` a linea 1464) era già allineata nel runtime
+- **Non modificate:** JSON disciplinari, validator, schema .cml, import/export, validazione dipartimentale, classi CSS inutilizzate
+- **Verifiche:**
+  - `git diff --check`: pulito ✅
+  - Validatore: 7/94, `overallValid: true` ✅
+  - Smoke: tutte le 5 sostituzioni confermate via grep, vecchie emoji assenti ✅
+- **Artefatti creati:**
+  - `docs/03_execution/CML-129.md`
+  - `report/CML-129_current_icon_system_runtime_alignment.md`
+  - aggiornamento `docs/REPO-MOVELOG.md` (questa voce)
+- **Verdetto:** `CML_129_CURRENT_ICON_SYSTEM_RUNTIME_ALIGNMENT_READY`
+- **Prossimo passo:** eventuale push su origin/main (non richiesto in questa slice)
