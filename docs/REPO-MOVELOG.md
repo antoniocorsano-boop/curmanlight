@@ -1,5 +1,14 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-152 — LIVE_DEPLOY_REFRESH_AND_CONTENT_RECHECK
+
+- **Commit iniziale**: `f845211` (sync)
+- **URL live**: https://antoniocorsano-boop.github.io/curmanlight/?v=cml152
+- **Cache-busting**: nessun effetto
+- **TECNOLOGIA_MAPPA_DATI nel live**: assente
+- **Causa**: Deploy non ancora aggiornato (class B)
+- - Verdetto: `CML_152_LIVE_DEPLOY_REFRESH_AND_CONTENT_RECHECK_READY`
+
 ## 2026-06-25 — CML-151 — LIVE_DEPLOY_ALIGNMENT_AFTER_TECNOLOGIA_CONTENT_GAP
 
 - **Commit iniziale**: `d69ea5a` (sync)
