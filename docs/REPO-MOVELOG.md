@@ -3266,12 +3266,9 @@
 - File creati: `docs/03_execution/CML-113.md`, `report/CML-113_validazione_dipartimentale_workflow_audit.md`
 - Verdetto: `CML_113_VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT_READY`
 - Prossimo step: CML-114 — VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT
-- **CML-127:** Fix runtime navigation handler references (setTab, setMappaDisciplina) by exposing them on window
-- **CML-127:** Fix runtime navigation handler references (setTab, setMappaDisciplina) by exposing them on window
-- File modificato: `_published_snapshot/netlify-current/index.html`
-- Verdetto atteso: `CML_127_RUNTIME_NAVIGATION_HANDLER_REFERENCE_FIX_READY`
-
 ---
+
+
 
 ## 2026-06-25 — CML-126B — POST_FIX_RUNTIME_SMOKE_CONFIRMATION
 
@@ -3295,3 +3292,46 @@
   - aggiornamento `docs/REPO-MOVELOG.md` (questa voce)
 - **Verdetto:** `CML_126B_POST_FIX_RUNTIME_SMOKE_CONFIRMATION_READY`
 - **Prossimo passo:** push cumulativo di CML-126 (storico smoke bloccante), CML-127 (fix) e CML-126B (questa conferma)
+
+---
+
+
+## 2026-06-25 — CML-126_CONTROLLED_PUSH (3 commit cumulativi)
+
+- Push eseguito su `origin/main`: 3 commit spinti
+  - `6b0327e` — docs: CML-126 POST_PUSH_RUNTIME_AND_NAVIGATION_SMOKE
+  - `2c9c0b8` — fix: CML-127 runtime navigation handler reference fix (setTab/setMappaDisciplina)
+  - `1e876be` — docs: CML-126B post-fix runtime smoke confirmation
+- Verifica post-push: `git rev-parse HEAD` == `origin/main` == `1e876be` ✅
+- Verdetto: `CML_126_POST_PUSH_SMOKE_FIX_CONFIRMATION_CLOSED_REMOTE`
+- Next: CML-128 — CURRENT_ICON_SYSTEM_USAGE_AUDIT
+
+---
+
+
+## 2026-06-25 — CML-128 — CURRENT_ICON_SYSTEM_USAGE_AUDIT
+
+- **Tipo slice:** audit docs-only
+- **HEAD partenza:** `1e876be`, branch `main`, origin/main allineato, working tree pulito ✅
+- **Ciclo precedente chiuso:** `CML_RUNTIME_NAVIGATION_FIX_CYCLE_CLOSED_REMOTE`
+- **Obiettivo:** audit dell'uso di icone/emoji/simboli nel runtime, verificando dove sostituire testi/icone "markdown" con icone o stili già disponibili
+- **Vincoli rispettati:** nessuna modifica runtime, JSON, validator, schema .cml, import/export, validazione dipartimentale
+- **Attività:**
+  - Fotografia stato iniziale (HEAD, working tree, validatore)
+  - Inventario completo emoji (50+ emoji, 7 aree navigazione)
+  - Inventario classi CSS badge/icona (30+ classi)
+  - Mappatura aree con disallineamenti (6 categorie: A-F)
+  - Valutazione 4 opzioni: A status quo, B allineamento puntuale ✅, C refactoring strutturale, D badge-only
+- **Principali disallineamenti trovati:**
+  - **📄 overload**: 15 occorrenze, 5 ruoli semantici diversi (toggle, export, link, heading, disclaimer)
+  - **📝 Markdown incoerente**: 3 emoji diverse (📄, 📋, ⬇️) usate in pulsanti markdown oltre a 📝 standard
+  - **Word emoji mismatch**: 📄 (1413) vs 📤 (1792) per stessa azione
+  - **CSS morto**: 3 classi definite mai usate (`.badge--success`, `.badge--info`, `.completeness-badge--base`)
+  - **btn-cml** usato per backup/import (nessuna relazione con .cml)
+- **Raccomandazione: Opzione B** — 6 sostituzioni emoji puntuali in CML-129 runtime
+- **Artefatti creati:**
+  - `docs/03_execution/CML-128.md`
+  - `report/CML-128_current_icon_system_usage_audit.md`
+  - aggiornamento `docs/REPO-MOVELOG.md` (questa voce)
+- **Verdetto:** `CML_128_CURRENT_ICON_SYSTEM_USAGE_AUDIT_READY`
+- **Prossimo step:** CML-129 — CURRENT_ICON_SYSTEM_RUNTIME_ALIGNMENT (6 sostituzioni emoji puntuali)
