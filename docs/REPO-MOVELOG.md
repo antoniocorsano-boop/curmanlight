@@ -1,5 +1,15 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-145 — TECHNOLOGIA_RUNTIME_INTEGRATION_PILOT_SELECTION_AUDIT
+
+- **Commit iniziale**: `810ae84` (HEAD == origin/main)
+- **Audit**: confronto generato vs hardcoded completato su tutte le aree (S/N/P/D)
+- **Opzione selezionata**: C — Generatore statico JS/JSON
+- **Differenze chiave**: 6 nuovi nodiDisciplinari (hardcoded ne ha 0), ordinamento diverso, descrizioni autogenerate
+- **Artefatti**: `docs/03_execution/CML-145.md`, `report/CML-145_tecnologia_runtime_integration_pilot_selection_audit.md`
+- Verdetto: `CML_145_TECHNOLOGIA_RUNTIME_INTEGRATION_PILOT_SELECTION_READY`
+- Prossimo: CML-146 — TECHNOLOGIA_STATIC_MAPPA_DATI_GENERATION_TOOL
+
 ## 2026-06-25 — CML-144A — CORE_DATA_LAYER_SEQUENCE_CLOSURE_AND_CONTROLLED_PUSH
 
 - **Commit iniziale**: `a228683` (9 ahead of origin)
