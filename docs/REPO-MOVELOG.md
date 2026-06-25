@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## 2026-06-25 - CML-153 - CONTROLLED_PAGES_DEPLOY_FORCE_AND_LIVE_CONTENT_SMOKE
+
+- **Commit iniziale**: `eb6729f` (sync con `origin/main`)
+- **Push**: non necessario; `eb6729f` gia' presente su `origin/main`
+- **Workflow Pages**: `.github/workflows/pages.yml`, pubblica `_published_snapshot/netlify-current`
+- **Deploy forzato**: `workflow_dispatch` run `28166929195`, `success`, headSha `eb6729f`
+- **URL live**: https://antoniocorsano-boop.github.io/curmanlight/?v=cml153
+- **HTTP live**: `200`
+- **TECNOLOGIA_MAPPA_DATI nel live**: presente
+- **GENERATA nel live**: presente
+- **Messaggio empty state**: presente nel markup, non visibile nel browser smoke
+- **Smoke browser**: render mappa non popolato; console `SyntaxError: Unexpected identifier 'esito'`
+- **Service worker/cache**: `curmanlight-cache-v452b422` ancora presente; non causa primaria con `?v=cml153`, ma rischio cache-first residuo
+- **Causa/classificazione**: E - live aggiornato ma rendering Tecnologia ancora incompleto
+- **Runtime**: invariato in CML-153; microfix raccomandato per CML-154
+- **Verdetto**: `CML_153_CONTROLLED_PAGES_DEPLOY_FORCE_AND_LIVE_CONTENT_SMOKE_READY`
+
 ## 2026-06-25 — CML-152 — LIVE_DEPLOY_REFRESH_AND_CONTENT_RECHECK
 
 - **Commit iniziale**: `f845211` (sync)
