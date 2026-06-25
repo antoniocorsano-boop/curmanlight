@@ -3363,3 +3363,21 @@
   - aggiornamento `docs/REPO-MOVELOG.md` (questa voce)
 - **Verdetto:** `CML_129_CURRENT_ICON_SYSTEM_RUNTIME_ALIGNMENT_READY`
 - **Prossimo passo:** eventuale push su origin/main (non richiesto in questa slice)
+
+---
+
+## 2026-06-25 — CML-129A — ICON_ALIGNMENT_CLOSURE_AUDIT_AND_CONTROLLED_PUSH
+
+- **Tipo slice:** closure/push
+- **HEAD partenza:** `02fa05f` (CML-129), branch `main`, origin/main `1e876be`, ahead 2
+- **Ciclo precedente chiuso:** `CML_129_CURRENT_ICON_SYSTEM_RUNTIME_ALIGNMENT_READY`
+- **Audit pre-push:** tutti i controlli passati (HEAD, origin/main, log, diff --check, validatore 7/94 overallValid, residui ignorati)
+- **Verifica CML-129:** 5/5 sostituzioni emoji confermate, 6ª pre-allineata, vecchie emoji assenti
+- **Commit:** `git commit -m "docs: close CML icon alignment cycle"`
+- **Push:** `git push origin main` eseguito
+- **Verifica post-push:** HEAD == origin/main, working tree pulito
+- **Artefatti creati:**
+  - `docs/03_execution/CML-129A.md`
+  - `report/CML-129A_icon_alignment_closure_audit_and_controlled_push.md`
+  - aggiornamento `docs/REPO-MOVELOG.md` (questa voce)
+- **Verdetto:** `CML_129A_ICON_ALIGNMENT_CYCLE_CLOSED_REMOTE`
