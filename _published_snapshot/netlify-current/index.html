@@ -1414,9 +1414,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word (confronto)</button>
           <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Testo (confronto)</button>
           <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF (confronto)</button>
-<button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
+<button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta</button>
            <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff" title="Invia al Drive condiviso (se configurato)">⬆️ Invia al Drive condiviso</button>
-           <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: sicuri. .cml: per Drive condiviso.</span>
+           <span class="export-note">Word avanzato: richiede rete. Copia/Markdown/PDF: sicuri. File proposta: per Drive condiviso.</span>
         </span>
       </div>
       <details class="usage-notice" style="padding:6px 13px">
@@ -1428,10 +1428,10 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <div class="tool-group-inner">
           <details id="department-import-panel" class="department-import-panel" style="margin-bottom:8px">
             <summary>🏫 Validazione dipartimentale</summary>
-            <p class="department-import-copy">Importa i file .cml ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
+            <p class="department-import-copy">Importa i file proposta ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
             <div class="department-import-controls">
               <input id="department-cml-files" type="file" accept=".cml" multiple hidden onchange="importTeacherCmlFiles(this.files);this.value=''">
-              <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Importa proposte docenti .cml</button>
+              <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Importa proposte docenti</button>
               <span class="department-import-local">Nessun dato viene inviato online: l'importazione è locale.</span>
             </div>
             <div id="department-import-feedback" class="department-import-feedback" aria-live="polite"></div>
@@ -1439,10 +1439,10 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           </details>
           <details id="referent-validation-panel" class="referent-validation-panel">
             <summary>📋 Verifica referente curricolo</summary>
-            <p class="referent-validation-copy">Importa gli esiti dipartimentali .cml per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
+            <p class="referent-validation-copy">Importa gli esiti dipartimentali per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
             <div class="referent-validation-controls">
               <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="handleReferentOutcomeFileSelection(this)">
-              <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Importa esiti dipartimentali .cml</button>
+              <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Importa esiti dipartimentali</button>
               <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button>
               <span class="referent-validation-local">Nessun dato viene inviato online: l'importazione è locale.</span>
             </div>
@@ -1489,7 +1489,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
               <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF (definitivo)</button>
             </div>
             <div class="export-group-row">
-              <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
+              <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta</button>
               <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff" title="Invia al Drive condiviso (se configurato)">⬆️ Invia al Drive condiviso</button>
             </div>
             <div class="usage-notice" style="margin-top:8px;margin-bottom:0"><strong>Per la condivisione con i colleghi:</strong> usare preferibilmente Copia per Word, Markdown o PDF. Il Word impaginato resta disponibile solo se il browser riesce a caricare la libreria esterna.</div>
@@ -3604,7 +3604,7 @@ var decision=decisionIdx>=0?departmentImportState.proposals[decisionIdx].decisio
      html+='</section>';
    }
 if(!departmentImportState.proposals.length) html+='<div class="department-import-warning">I file non validi sono stati esclusi dalla lista proposte.</div>';
-   html+='<div style="margin-top:12px;text-align:center"><button class="export-btn btn-cml" onclick="requireRoleAccess(\'departmentOutcomeExport\',exportDepartmentOutcomeCml)" style="background:#004d40;color:#fff">⬇️ Esporta esito dipartimento .cml</button> <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button></div>';
+   html+='<div style="margin-top:12px;text-align:center"><button class="export-btn btn-cml" onclick="requireRoleAccess(\'departmentOutcomeExport\',exportDepartmentOutcomeCml)" style="background:#004d40;color:#fff">⬇️ Esporta esito dipartimento</button> <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button></div>';
    host.innerHTML=html;
    updateRoleAccessUi();
   }

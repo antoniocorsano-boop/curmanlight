@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-133 — CML_FILE_LABELS_RUNTIME_MICROCOPY_ALIGNMENT
+
+- **HEAD iniziale**: `dad4fcd80b61acaff74bf5ee6cfa92028189aabd` (CML-132)
+- **Tipo slice**: runtime alignment — solo testo (8 sostituzioni)
+- **Audit di riferimento**: CML-132 (Opzione C — pulizia pulsanti + descrizioni brevi)
+- **8 sostituzioni applicate** in `_published_snapshot/netlify-current/index.html`:
+  - `⬇️ Scarica proposta .cml` → `⬇️ Scarica proposta` (2×)
+  - `.cml: per Drive condiviso.` → `File proposta: per Drive condiviso.`
+  - `Importa i file .cml ricevuti dai docenti` → `Importa i file proposta ricevuti dai docenti`
+  - `Importa proposte docenti .cml` → `Importa proposte docenti`
+  - `Importa gli esiti dipartimentali .cml` → `Importa gli esiti dipartimentali`
+  - `Importa esiti dipartimentali .cml` → `Importa esiti dipartimentali`
+  - `Esporta esito dipartimento .cml` → `Esporta esito dipartimento`
+- **Nessuna modifica** a schema `.cml`, JSON, validatore, import/export, CSS, icone, classi
+- **Occorrenze `.cml` residue**: 17 (tutte tecniche/didattiche, nessuna in pulsanti/label)
+- Validatore: 7 file, 94 unità, `overallValid: true`, 0 errori ✅
+- Smoke: HTTP 200 ✅
+- Verdetto: `CML_133_CML_FILE_LABELS_RUNTIME_MICROCOPY_ALIGNMENT_READY`
+
 ## 2026-06-25 — CML-132 — CML_FILE_LABELS_USER_FACING_CLARITY_AUDIT
 
 - **HEAD partenza**: `8b9da1384e8a0242bafa3c519f0fd4d3fbe977eb`
