@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-134A — POST_MICROCOPY_SMOKE_CLOSURE_AND_CONTROLLED_PUSH
+
+- **HEAD partenza (pre-push)**: `e32b56f6a9f29c9dc10d977e36e872b83825a198` (CML-134)
+- **Tipo slice**: closure audit + push controllato — nessuna modifica runtime
+- **Audit pre-push**: passato — 1 commit ahead, `git diff --check` pulito, validatore 7/94 OK
+- **Smoke CML-134**: 16/16 etichette presenti, 0/13 vecchie residue, HTTP 200, navigazione OK ✅
+- **CML-134 docs-only**: nessuna modifica runtime, JSON, validator, schema `.cml`, import/export, CSS, JS ✅
+- **Residui ignorati**: `.agents`, `skills-lock.json`, `Consultazione` ✅
+- **Commit CML-134A**: `docs: close CML post-microcopy smoke`
+- **Push**: `git push origin main` → eseguito
+- **Allineamento post-push**: HEAD == origin/main verificato
+- Verdetto: `CML_134A_POST_MICROCOPY_SMOKE_CLOSED_REMOTE`
+
 ## 2026-06-25 — CML-134 — POST_MICROCOPY_RUNTIME_READABILITY_SMOKE
 
 - **HEAD**: `1e4d25471adc3666d2db92ee6677b3aab2b0b6cf`
