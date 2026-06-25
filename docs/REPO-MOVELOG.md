@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-139 — DISCIPLINARY_DATA_LAYER_MAPPING_AUDIT
+
+- **HEAD**: `85bbab4` (allineato a origin/main)
+- **Tipo slice**: audit-only — nessuna modifica runtime/JSON
+- **Validatore**: 7/94, `overallValid: true` ✅
+- **Mappatura completata**: JSON unità ↔ MAPPA_DATI ↔ TECNOLOGIA_NORM ↔ rendering
+- **Scoperta chiave**: mapping non è 1:1 — serve aggregazione per ambito/nucleo/ordine
+- **Sezioni aggregate**: solo 3/7 JSON le hanno (Tecnologia, Italiano, Matematica)
+- **4/7 JSON** hanno solo unità grezze (Scienze, Storia, Geografia, Inglese)
+- **`decisioniCurricolari`**: non derivabili automaticamente (dati manuali)
+- **Opzione selezionata**: B+D — adapter JSON→MAPPA_DATI per 1 pilota
+- **Artefatti**: `docs/03_execution/CML-139.md`, `report/CML-139_disciplinary_data_layer_mapping_audit.md`
+- Verdetto: `CML_139_DISCIPLINARY_DATA_LAYER_MAPPING_AUDIT_READY`
+- Next: CML-140 — JSON_TO_MAPPA_DATI_ADAPTER_DESIGN_AUDIT
+
 ## 2026-06-25 — CML-138 — CORE_DISCIPLINARY_SYSTEM_RECOVERY_AUDIT
 
 - **HEAD**: `37152be` (allineato a origin/main)
