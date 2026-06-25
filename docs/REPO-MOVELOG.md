@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-133A — CML_FILE_LABELS_CLARITY_CYCLE_CLOSURE_AND_PUSH
+
+- **HEAD partenza (pre-push)**: `ebf406df0660f5141ab710c44f450087d040b18c` (CML-133)
+- **Tipo slice**: closure audit + push controllato
+- **Audit pre-push**: passato — 2 commit ahead, `git diff --check` pulito, validatore 7/94 OK
+- **Sostituzioni CML-133 verificate**: 8/8 confermate, 0 vecchi pattern residui ✅
+- **Residui ignorati**: `.agents`, `skills-lock.json`, `Consultazione` ✅
+- **Commit CML-133A**: `docs: close CML file label clarity cycle`
+- **Push**: `git push origin main` → eseguito
+- **Allineamento post-push**: HEAD == origin/main verificato
+- Verdetto: `CML_133A_CML_FILE_LABELS_CLARITY_CYCLE_CLOSED_REMOTE`
+
 ## 2026-06-25 — CML-133 — CML_FILE_LABELS_RUNTIME_MICROCOPY_ALIGNMENT
 
 - **HEAD iniziale**: `dad4fcd80b61acaff74bf5ee6cfa92028189aabd` (CML-132)
