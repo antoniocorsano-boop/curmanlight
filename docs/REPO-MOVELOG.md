@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-131A — MICROCOPY_RUNTIME_ALIGNMENT_CLOSURE_AND_PUSH
+
+- **HEAD partenza (pre-push)**: `699d9f3c284a5d96523243b3bddd3b55b09c9c76`
+- **Tipo slice**: closure audit + push controllato
+- **Audit pre-push**: passato — 1 commit ahead, `git diff --check` pulito, validatore 7/94 OK
+- **Sostituzioni CML-131 verificate**: 10/10 confermate nel runtime ✅
+- **Residui ignorati**: `.agents`, `skills-lock.json`, `Consultazione` ✅
+- **Commit CML-131A**: `docs: close CML microcopy alignment cycle`
+- **Push**: `git push origin main` → eseguito
+- **Allineamento post-push**: HEAD == origin/main verificato
+- Verdetto: `CML_131A_MICROCOPY_ALIGNMENT_CYCLE_CLOSED_REMOTE`
+
 ## 2026-06-25 — CML-131 — USER_FACING_MICROCOPY_RUNTIME_ALIGNMENT
 
 - **HEAD partenza**: `5462a814819f768cd7b3372f7cc38abc3b919c69`
