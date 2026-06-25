@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-25 - CML-155 - POST_PARSE_FIX_RUNTIME_STRUCTURE_AUDIT
+
+- **Commit iniziale**: `6885fab` (sync con `origin/main`)
+- **Tipo slice**: audit-only / docs-only
+- **Sintassi runtime**: inline script PASS; parse error `l'esito` risolto da CML-154
+- **Mappa disciplinare**: P1, `#didattica-mappa` risulta figlia diretta di `main`, resta visibile fuori dal tab Competenze
+- **Inizializzazione mappa**: P2, `renderMappaDisciplinare()` non chiamata all'avvio o ingresso in Competenze; contenitore inizialmente vuoto
+- **Coerenza mappe**: Tecnologia, Matematica, Italiano renderizzano dopo click; nessun token tecnico visibile
+- **Validazione dipartimentale**: P1, `decisionIdx` non definito in `renderDepartmentImport()`, riprodotto `ReferenceError`
+- **Pannello TecnologiaNorm**: P2, titolo usa `selDisc` ma contenuto resta Tecnologia
+- **Smoke browser**: Home/Curriculum/Competenze/Mappe/Esportazioni/Guida senza console error nel flusso ordinario
+- **Runtime**: invariato in CML-155; nessun fix applicato
+- **Verdetto**: `CML_155_POST_PARSE_FIX_RUNTIME_STRUCTURE_AUDIT_READY`
 ## 2026-06-25 - CML-154 - TECNOLOGIA_LIVE_RUNTIME_PARSE_ERROR_MICROFIX
 
 - **Commit iniziale**: `da0c0e3` (locale, `main...origin/main [ahead 1]`)
