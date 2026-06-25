@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-25 - CML-154 - TECNOLOGIA_LIVE_RUNTIME_PARSE_ERROR_MICROFIX
+
+- **Commit iniziale**: `da0c0e3` (locale, `main...origin/main [ahead 1]`)
+- **origin/main iniziale**: `eb6729f`
+- **File runtime modificato**: `_published_snapshot/netlify-current/index.html`
+- **Causa**: stringa JS interrotta da apostrofo non escapato in `l'esito`
+- **Microfix**: `l'esito` -> `l’esito` nel testo della validazione dipartimentale
+- **Parsing runtime**: inline script syntax PASS, `SyntaxError: Unexpected identifier 'esito'` risolto localmente
+- **Validatore**: 7 file / 94 unita' / `overallValid: true` / `invalidCount: 0`
+- **Harness mappa**: 7 discipline PASS, 0 failed
+- **Smoke locale**: Tecnologia, Matematica e Italiano renderizzati; nessun token tecnico visibile
+- **Vincoli**: generator/adapter/transformer/validator/JSON/schema `.cml` invariati; service worker/cache invariati; nessun refactoring
+- **Verdetto**: `CML_154_TECNOLOGIA_LIVE_RUNTIME_PARSE_ERROR_MICROFIX_READY`
 ## 2026-06-25 - CML-153 - CONTROLLED_PAGES_DEPLOY_FORCE_AND_LIVE_CONTENT_SMOKE
 
 - **Commit iniziale**: `eb6729f` (sync con `origin/main`)
