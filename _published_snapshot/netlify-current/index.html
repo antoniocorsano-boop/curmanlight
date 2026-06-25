@@ -1375,10 +1375,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           • Non sostituisce la progettazione professionale del docente
         </div>
         <div class="didattica-uda-list" id="didattica-uda-list"></div>
-        <div class="didattica-uda-footer">UDA modello · Da adattare alla classe · Non sostituisce la progettazione del docente · Richiede validazione professionale · Non costituisce documento istituzionale approvato</div>
-      </div>
-    </div>
-      <details class="didattica-mappa" id="didattica-mappa">
+<div class="didattica-uda-footer">UDA modello · Da adattare alla classe · Non sostituisce la progettazione del docente · Richiede validazione professionale · Non costituisce documento istituzionale approvato</div>
+       </div>
+       <details class="didattica-mappa" id="didattica-mappa" style="display:none;padding:6px 13px">
         <summary style="cursor:pointer;font-weight:700;font-size:13px;color:#1a237e;margin-top:10px">🗺️ Mappa disciplinare</summary>
         <div class="didattica-mappa-notice" style="background:#e8f5e9;border:1px solid #a5d6a7;border-left:3px solid #2e7d32;border-radius:9px;padding:9px 13px;margin:8px 0;font-size:11px;color:#1b5e20;line-height:1.45">
           <strong>🧑‍🏫 Mappa disciplinare</strong> — Questa sezione mostra come una disciplina organizza saperi, nodi e progressione verticale. È una base di lavoro per il confronto dipartimentale e non sostituisce la validazione professionale.<br>
@@ -1391,7 +1390,8 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
         <div id="mappa-disciplinare-content"></div>
         <div id="mappa-disciplinare-empty" style="display:none;color:#78909c;font-size:12px;text-align:center;padding:15px">Mappa disciplinare non ancora predisposta per questa disciplina.</div>
-      </details>
+</details>
+    </div>
     <!-- TAB LAVORO -->
     <div id="tab-lavoro" style="display:none">
       <div class="install-hint" id="install-hint" style="display:none"><strong>Installazione:</strong> se lo strumento è aperto da un indirizzo web sicuro, puoi aggiungerlo alla schermata iniziale e usarlo come applicazione. Il lavoro resta salvato in locale nel browser del dispositivo.</div>
@@ -3034,7 +3034,8 @@ function setTab(t){
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
   var te=document.getElementById("tab-esportazioni");if(te)te.style.display=t==="esportazioni"?"block":"none";
   var tg=document.getElementById("tab-guida");if(tg)tg.style.display=t==="guida"?"block":"none";
-  if(t==="didattica"||t==="didattica_uda"){renderDidattica();renderUdaModello();}
+  if(t==="didattica"||t==="didattica_uda"){renderDidattica();renderUdaModello();renderMappaDisciplinare();}
+   var sm=document.getElementById("didattica-mappa");if(sm)sm.style.display=t==="didattica"?"block":"none";
   var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
   var sd=document.getElementById("subnav-didattica");if(sd)sd.style.display=p==="didattica"?"flex":"none";
   var sci=document.querySelectorAll("#subnav-curriculum .subnav-btn");var csm=["curricolo","lavoro","riepilogo","normativa"];
@@ -3749,18 +3750,19 @@ function renderDepartmentImport(){
     grouped[proposal.discipline][proposal.status].push(proposal);
   }
 for(const discipline of Object.keys(grouped).sort()){
-     html+='<section class="department-proposal-group"><h3>'+escapeHtml(discipline)+'</h3>';
-     for(const status of Object.keys(grouped[discipline]).sort()){
-       html+='<div class="department-proposal-subhead">'+escapeHtml(status)+'</div>';
-       html+=grouped[discipline][status].map((proposal,idx)=>{
-         const context=[proposal.section,proposal.type,proposal.classe].filter(Boolean).join(" · ");
-         const chips=proposal.issues.map(issue=>'<span class="department-check-chip">'+escapeHtml(issue)+'</span>').join("");
-var decision=decisionIdx>=0?departmentImportState.proposals[decisionIdx].decision:null;
-          return '<article class="department-proposal-card" data-idx="'+decisionIdx+'"><div class="department-proposal-meta">'+escapeHtml(context||"Ambito non indicato")+'</div>'+
-            '<div class="department-proposal-text">'+escapeHtml(proposal.text||"Testo non indicato")+'</div>'+
-            '<div class="department-proposal-field"><strong>Motivazione:</strong> '+escapeHtml(proposal.motivation||"Non indicata")+'</div>'+
-            '<div class="department-proposal-field"><strong>Fonti/evidenze:</strong> '+escapeHtml(proposal.evidence||"Non indicate")+'</div>'+chips+
-            '<div class="department-proposal-decision" style="margin-top:6px"><strong>Esito del confronto:</strong> <select onchange="setDepartmentDecision('+decisionIdx+',this.value)" style="font-size:11px;padding:3px 6px;border-radius:4px;border:1px solid #90a4ae"><option value="">— Scegli esito —</option><option value="confluita_nella_sintesi" '+(decision==="confluita_nella_sintesi"?"selected":"")+'>Confluita nella sintesi</option><option value="riformulata_dal_dipartimento" '+(decision==="riformulata_dal_dipartimento"?"selected":"")+'>Riformulata dal dipartimento</option><option value="assorbita_in_altra_proposta" '+(decision==="assorbita_in_altra_proposta"?"selected":"")+'>Assorbita in altra proposta</option><option value="da_chiarire" '+(decision==="da_chiarire"?"selected":"")+'>Da chiarire</option></select></div></article>';
+      html+='<section class="department-proposal-group"><h3>'+escapeHtml(discipline)+'</h3>';
+      for(const status of Object.keys(grouped[discipline]).sort()){
+        html+='<div class="department-proposal-subhead">'+escapeHtml(status)+'</div>';
+        html+=grouped[discipline][status].map((proposal,localIdx)=>{
+          const globalIdx=departmentImportState.proposals.findIndex(p=>p===proposal);
+          const context=[proposal.section,proposal.type,proposal.classe].filter(Boolean).join(" · ");
+          const chips=proposal.issues.map(issue=>'<span class="department-check-chip">'+escapeHtml(issue)+'</span>').join("");
+          var decision=globalIdx>=0?departmentImportState.proposals[globalIdx].decision:null;
+return '<article class="department-proposal-card" data-idx="'+globalIdx+'"><div class="department-proposal-meta">'+escapeHtml(context||"Ambito non indicato")+'</div>'+
+             '<div class="department-proposal-text">'+escapeHtml(proposal.text||"Testo non indicato")+'</div>'+
+             '<div class="department-proposal-field"><strong>Motivazione:</strong> '+escapeHtml(proposal.motivation||"Non indicata")+'</div>'+
+             '<div class="department-proposal-field"><strong>Fonti/evidenze:</strong> '+escapeHtml(proposal.evidence||"Non indicate")+'</div>'+chips+
+             '<div class="department-proposal-decision" style="margin-top:6px"><strong>Esito del confronto:</strong> <select onchange="setDepartmentDecision('+globalIdx+',this.value)" style="font-size:11px;padding:3px 6px;border-radius:4px;border:1px solid #90a4ae"><option value="">— Scegli esito —</option><option value="confluita_nella_sintesi" '+(decision==="confluita_nella_sintesi"?"selected":"")+'>Confluita nella sintesi</option><option value="riformulata_dal_dipartimento" '+(decision==="riformulata_dal_dipartimento"?"selected":"")+'>Riformulata dal dipartimento</option><option value="assorbita_in_altra_proposta" '+(decision==="assorbita_in_altra_proposta"?"selected":"")+'>Assorbita in altra proposta</option><option value="da_chiarire" '+(decision==="da_chiarire"?"selected":"")+'>Da chiarire</option></select></div></article>';
        }).join("");
      }
      html+='</section>';
