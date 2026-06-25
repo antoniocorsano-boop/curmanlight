@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-143A — RUNTIME_SHAPE_TRANSFORMER_OUTPUT_SMOKE
+
+- **HEAD**: `384530f` (7 ahead of origin)
+- **Smoke**: output flat transformer confrontato con campi letti da `renderMappaDisciplinare()`
+- **Esito**: tutti i campi presenti per Tecnologia, Italiano, Matematica, Scienze ✅
+- **Decisione CML-144**: Opzione C — test harness automatico (non integrazione runtime)
+- **Runtime, JSON, adapter, transformer, validator**: non toccati ✅
+- **Temp files**: rimossi ✅
+- **Artefatti**: `docs/03_execution/CML-143A.md`, `report/CML-143A_runtime_shape_transformer_output_smoke.md`
+- Verdetto: `CML_143A_RUNTIME_SHAPE_TRANSFORMER_OUTPUT_SMOKE_READY`
+- Next: CML-144 — RUNTIME_MAPPA_DATI_SHAPE_TEST_HARNESS
+
 ## 2026-06-25 — CML-143 — TO_RUNTIME_MAPPA_DATI_TRANSFORMER
 
 - **HEAD**: `b55cda1` (6 ahead of origin)
