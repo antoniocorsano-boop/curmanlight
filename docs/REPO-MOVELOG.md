@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-140A — TECNOLOGIA_NUCLEO_FIELD_READINESS_FIX
+
+- **HEAD**: `266490e` (2 ahead of origin)
+- **JSON modificato**: `content/curriculum/tecnologia.normalized.json`
+- **Intervento**: aggiunto `nucleo` a 13/13 unità (era l'unica disciplina senza)
+- **Criterio**: ogni nucleo derivato dal corrispondente `ambito`
+- **Nuclei assegnati**: 6 (Osservazione e analisi, Digitale e informatica, Materiali e trasformazioni, Disegno e rappresentazione, Energia e sostenibilità, Cittadinanza tecnologica)
+- **Validatore**: 7/94, `overallValid: true` ✅ — Tecnologia ora ha warning "retrocompatibile" come altre 6 discipline
+- **Artefatti**: `docs/03_execution/CML-140A.md`, `report/CML-140A_tecnologia_nucleo_field_readiness_fix.md`
+- Verdetto: `CML_140A_TECNOLOGIA_NUCLEO_FIELD_READINESS_READY`
+- Next: CML-141 — JSON_TO_MAPPA_DATI_ADAPTER_IMPLEMENTATION
+
 ## 2026-06-25 — CML-140 — JSON_TO_MAPPA_DATI_ADAPTER_DESIGN_AUDIT
 
 - **HEAD**: `6b7ced5` (1 ahead of origin — slice precedente non pushato)

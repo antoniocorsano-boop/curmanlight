@@ -41,7 +41,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia / Campi di esperienza: La conoscenza del mondo",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Infanzia 3-4 — Esplorazione sensoriale"
+      "noteDipartimento": "Pacchetto pilota CML-062, Infanzia 3-4 — Esplorazione sensoriale",
+      "nucleo": "Osservazione e analisi"
     },
     {
       "id": "tec_inf_5_001",
@@ -80,7 +81,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Raccomandazioni digitali PTOF 2025-2028",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Infanzia 5 — Primi algoritmi e strumenti digitali"
+      "noteDipartimento": "Pacchetto pilota CML-062, Infanzia 5 — Primi algoritmi e strumenti digitali",
+      "nucleo": "Digitale e informatica"
     },
     {
       "id": "tec_pri_1_001",
@@ -119,7 +121,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 1 — Oggetti e materiali"
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 1 — Oggetti e materiali",
+      "nucleo": "Osservazione e analisi"
     },
     {
       "id": "tec_pri_2_001",
@@ -158,7 +161,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 2 — Proprietà materiali"
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 2 — Proprietà materiali",
+      "nucleo": "Materiali e trasformazioni"
     },
     {
       "id": "tec_pri_3_001",
@@ -197,7 +201,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 3 — Disegno tecnico"
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 3 — Disegno tecnico",
+      "nucleo": "Disegno e rappresentazione"
     },
     {
       "id": "tec_pri_4_001",
@@ -236,7 +241,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Curricolo di istituto — Agenda 2030",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 4 — Energia e sostenibilità"
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 4 — Energia e sostenibilità",
+      "nucleo": "Energia e sostenibilità"
     },
     {
       "id": "tec_pri_5_001",
@@ -275,7 +281,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Educazione Civica",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 5 — Cittadinanza digitale"
+      "noteDipartimento": "Pacchetto pilota CML-062, Primaria 5 — Cittadinanza digitale",
+      "nucleo": "Cittadinanza tecnologica"
     },
     {
       "id": "tec_sec_1_001",
@@ -314,7 +321,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 1a — Disegno e CAD"
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 1a — Disegno e CAD",
+      "nucleo": "Disegno e rappresentazione"
     },
     {
       "id": "tec_sec_1_002",
@@ -353,7 +361,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 1a — TIC e sicurezza"
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 1a — TIC e sicurezza",
+      "nucleo": "Digitale e informatica"
     },
     {
       "id": "tec_sec_2_001",
@@ -392,7 +401,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Tecnologia",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 2a — Materiali e territorio"
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 2a — Materiali e territorio",
+      "nucleo": "Materiali e trasformazioni"
     },
     {
       "id": "tec_sec_2_002",
@@ -431,7 +441,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Curricolo di istituto — Agenda 2030 / Educazione Civica",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 2a — Energia e mobilità sostenibile"
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 2a — Energia e mobilità sostenibile",
+      "nucleo": "Energia e sostenibilità"
     },
     {
       "id": "tec_sec_3_001",
@@ -470,7 +481,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Pensiero computazionale",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 3a — Programmazione e automazione"
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 3a — Programmazione e automazione",
+      "nucleo": "Digitale e informatica"
     },
     {
       "id": "tec_sec_3_002",
@@ -509,7 +521,8 @@
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Educazione Civica / Cittadinanza digitale",
       "stato": "nuovo",
       "validazioneUmana": true,
-      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 3a — Cittadinanza tecnologica"
+      "noteDipartimento": "Pacchetto pilota CML-062, Secondaria 3a — Cittadinanza tecnologica",
+      "nucleo": "Cittadinanza tecnologica"
     }
   ],
   "struttureSostanziali": [
@@ -637,7 +650,10 @@
       "id": "dec_tec_001",
       "tipo": "inclusione",
       "nodiRiferimento": [],
-      "unitaRiferimento": ["tec_pri_4_001", "tec_sec_2_002"],
+      "unitaRiferimento": [
+        "tec_pri_4_001",
+        "tec_sec_2_002"
+      ],
       "motivazione": "Inserimento dell'Agenda 2030 e dell'Educazione Civica nel curricolo di Tecnologia",
       "stato": "da_validare",
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Curricolo di istituto — Agenda 2030 / Nuove Indicazioni D.M. 221/2025 — Educazione Civica"
@@ -646,7 +662,9 @@
       "id": "dec_tec_002",
       "tipo": "inclusione",
       "nodiRiferimento": [],
-      "unitaRiferimento": ["tec_sec_3_001"],
+      "unitaRiferimento": [
+        "tec_sec_3_001"
+      ],
       "motivazione": "Inserimento del pensiero computazionale e della programmazione in Secondaria",
       "stato": "da_validare",
       "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — Pensiero computazionale"
