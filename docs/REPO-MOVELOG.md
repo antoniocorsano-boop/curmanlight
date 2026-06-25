@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-143 — TO_RUNTIME_MAPPA_DATI_TRANSFORMER
+
+- **HEAD**: `b55cda1` (6 ahead of origin)
+- **Tool creato**: `tools/to-runtime-mappa-dati-transformer.mjs`
+- **Shape input**: `{nome, unita[]}` con riferimenti strutturati
+- **Shape output**: `{nome, descrizione, fonte}` flat per runtime
+- **Discipline testate**: Tecnologia, Italiano, Matematica — tutte OK ✅
+- **Runtime, JSON, adapter, validator**: non toccati ✅
+- **Temp files**: rimossi ✅
+- **Artefatti**: `tools/to-runtime-mappa-dati-transformer.mjs`, `docs/03_execution/CML-143.md`, `report/CML-143_to_runtime_mappa_dati_transformer_design_and_tool.md`
+- Verdetto: `CML_143_TO_RUNTIME_MAPPA_DATI_TRANSFORMER_READY`
+- Next: CML-143A — Runtime Shape Transformer Output Smoke
+
 ## 2026-06-25 — CML-142 — ADAPTER_TO_RUNTIME_INTEGRATION_CONTRACT
 
 - **HEAD**: `31ef98e` (5 ahead of origin)
