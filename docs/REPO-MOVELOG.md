@@ -1,5 +1,14 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-147 — CONTROLLED_TECNOLOGIA_RUNTIME_INTEGRATION_WITH_FALLBACK
+
+- **Commit iniziale**: `8fb49a0` (3 ahead of origin)
+- **Integrazione**: TECNOLOGIA_MAPPA_DATI_GENERATA || TECNOLOGIA_MAPPA_DATI_FALLBACK
+- **Discipline modificate**: solo Tecnologia
+- **Runtime invariato**: renderMappaDisciplinare() non modificata
+- - Verdetto: `CML_147_CONTROLLED_TECNOLOGIA_RUNTIME_INTEGRATION_READY`
+- - Prossimo: CML-147A — Runtime Smoke
+
 ## 2026-06-25 — CML-146A — STATIC_BLOCK_INSPECTION_SMOKE
 
 - **Commit iniziale**: `ec9d64b` (2 ahead of origin)
