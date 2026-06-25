@@ -1,5 +1,14 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-151 — LIVE_DEPLOY_ALIGNMENT_AFTER_TECNOLOGIA_CONTENT_GAP
+
+- **Commit iniziale**: `d69ea5a` (sync)
+- **URL live**: https://antoniocorsano-boop.github.io/curmanlight/
+- **Gap**: TECNOLOGIA_MAPPA_DATI non presente nel live
+- **Causa**: Deploy non aggiornato (class A)
+- **Workflow**: _published_snapshot/netlify-current/ corretto, deploy in attesa
+- - Verdetto: `CML_151_LIVE_DEPLOY_ALIGNMENT_AFTER_TECNOLOGIA_CONTENT_GAP_READY`
+
 ## 2026-06-25 — CML-150 — TECNOLOGIA_LIVE_CONTENT_VISIBILITY_AUDIT
 
 - **Commit iniziale**: `b3fb181` (sync)
