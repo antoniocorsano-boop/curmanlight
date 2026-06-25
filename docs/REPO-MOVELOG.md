@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-146 — TECHNOLOGIA_STATIC_MAPPA_DATI_GENERATION_TOOL
+
+- **Commit iniziale**: `260b4ae` (ahead 1 di origin/main)
+- **Tool creato**: `tools/generate-static-mappa-dati.mjs`
+- **Comando d'uso**: `node tools/generate-static-mappa-dati.mjs content/curriculum/tecnologia.normalized.json`
+- **Path JSON**: `content/curriculum/tecnologia.normalized.json`
+- **Output generato**: `const TECNOLOGIA_MAPPA_DATI = { ... }` (JS valido)
+- **Esito node --check**: ✅ PASS
+- **Esito validatore**: 7 file / 94 unità / `overallValid: true` ✅
+- **Esito shape harness**: ⚠️ FAIL su PowerShell (BOM issue), pipeline OK
+- **Runtime**: non modificato ✅
+- **JSON/adapter/transformer/harness**: non modificati ✅
+- **Temporanei**: rimossi ✅
+- **Limiti note**: ordinamento alfabetico, descrizioni autogenerate
+- - Verdetto: `CML_146_STATIC_MAPPA_DATI_GENERATION_TOOL_READY`
+- - Prossimo: CML-146A — Static Block Inspection Smoke
+
 ## 2026-06-25 — CML-145 — TECHNOLOGIA_RUNTIME_INTEGRATION_PILOT_SELECTION_AUDIT
 
 - **Commit iniziale**: `810ae84` (HEAD == origin/main)
