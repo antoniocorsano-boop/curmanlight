@@ -1247,7 +1247,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   </div>
   <div class="quick-actions" id="quick-actions" hidden>
     <button class="quick-btn" onclick="saveLocalState(false)" style="gap:4px">💾 Salva</button>
-    <button class="quick-btn" onclick="exportLocalBackup()" style="gap:4px">⬇️ Backup</button>
+    <button class="quick-btn" onclick="exportLocalBackup()" style="gap:4px">⬇️ Salva copia</button>
     <button class="quick-btn" onclick="document.getElementById('local-backup-input').click()" style="gap:4px">⬆️ Importa</button>
     <button class="quick-btn" onclick="resetLocalState()" style="gap:4px;color:#b71c1c">↺ Ripristina</button>
     <input id="local-backup-input" type="file" accept="application/json,.json" onchange="importLocalBackup(event)" style="display:none">
@@ -1796,10 +1796,10 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </div>
     </div>
     <div class="esport-group">
-      <h3>💾 Backup e dati</h3>
+      <h3>💾 Copia di sicurezza e dati</h3>
       <div class="esport-actions">
-        <button class="export-btn btn-cml" onclick="saveLocalState(false);exportLocalBackup()">⬇️ Backup locale</button>
-        <button class="export-btn btn-cml" onclick="document.getElementById('local-backup-input').click()">⬆️ Importa backup</button>
+        <button class="export-btn btn-cml" onclick="saveLocalState(false);exportLocalBackup()">⬇️ Copia di sicurezza</button>
+        <button class="export-btn btn-cml" onclick="document.getElementById('local-backup-input').click()">⬆️ Importa copia</button>
       </div>
     </div>
     <div class="esport-group">
@@ -1838,7 +1838,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     </div>
     <div class="guida-card">
       <h3>📤 Esportazioni</h3>
-      <p>Trovi tutti gli strumenti di esportazione in un unico tab: Word, Markdown, PDF, backup e report.</p>
+      <p>Trovi tutti gli strumenti di esportazione in un unico tab: Word, Markdown, PDF, copia di sicurezza e resoconto.</p>
     </div>
     <div class="guida-card">
       <h3>🔒 Cosa non può fare</h3>
@@ -2290,7 +2290,7 @@ function setLocalSaveStatus(message, isWarning=false){
 function saveLocalState(silent=true){
   if(!localSaveAvailable && !checkLocalSaveAvailable()){
     setLocalSaveStatus("Salvataggio locale non disponibile in questo browser.", true);
-    if(!silent) alert("Il browser non consente il salvataggio locale. Usa Backup o Markdown per conservare il lavoro.");
+    if(!silent) alert("Il browser non consente il salvataggio locale. Usa Copia di sicurezza o Testo per conservare il lavoro.");
     return false;
   }
   const payload={
@@ -2312,7 +2312,7 @@ function saveLocalState(silent=true){
     return true;
   }catch(err){
     setLocalSaveStatus("Spazio locale insufficiente o salvataggio bloccato.", true);
-    if(!silent) alert("Non è stato possibile salvare localmente. Esporta un Backup o un Markdown.");
+    if(!silent) alert("Non è stato possibile salvare localmente. Esporta una Copia di sicurezza o un Testo.");
     return false;
   }
 }
@@ -2329,7 +2329,7 @@ function loadLocalState(){
     }
     const payload=JSON.parse(raw);
     if(!payload || !payload.data){
-      setLocalSaveStatus("Salvataggio locale non leggibile. Usa un backup se disponibile.", true);
+      setLocalSaveStatus("Salvataggio locale non leggibile. Usa una copia di sicurezza se disponibile.", true);
       return false;
     }
     DATA=payload.data;
@@ -2342,13 +2342,13 @@ function loadLocalState(){
     renderProfileSummary();
     return true;
   }catch(err){
-    setLocalSaveStatus("Salvataggio locale non leggibile. Usa un backup se disponibile.", true);
+    setLocalSaveStatus("Salvataggio locale non leggibile. Usa una copia di sicurezza se disponibile.", true);
     return false;
   }
 }
 
 function resetLocalState(){
-  if(!confirm("Vuoi ripristinare lo strumento allo stato iniziale?\n\nLe decisioni e le modifiche salvate su questo dispositivo saranno eliminate. Prima di procedere, puoi usare Backup.")) return;
+  if(!confirm("Vuoi ripristinare lo strumento allo stato iniziale?\n\nLe decisioni e le modifiche salvate su questo dispositivo saranno eliminate. Prima di procedere, puoi usare Copia di sicurezza.")) return;
   try{ if(localSaveAvailable) localStorage.removeItem(LOCAL_SAVE_KEY); }catch(err){}
   DATA=JSON.parse(INITIAL_DATA_JSON);
   userProfile={...DEFAULT_PROFILE};
@@ -2375,7 +2375,7 @@ function exportLocalBackup(){
   const blob=new Blob([JSON.stringify(payload,null,2)], {type:"application/json;charset=utf-8"});
   const date=new Date().toISOString().slice(0,10);
   downloadBlob(blob, `Backup_CurricoloVerticale_IC_DonMilani_${date}.json`);
-  showToast("⬇️ Backup locale scaricato");
+  showToast("⬇️ Copia di sicurezza scaricata");
 }
 
 function importLocalBackup(event){
@@ -2387,7 +2387,7 @@ function importLocalBackup(event){
     try{
       const payload=JSON.parse(String(reader.result||""));
       if(!payload || !payload.data) throw new Error("Formato non valido");
-      if(!confirm("Importare questo backup?\n\nIl lavoro attualmente aperto sarà sostituito dal contenuto del file.")) return;
+      if(!confirm("Importare questa copia di sicurezza?\n\nIl lavoro attualmente aperto sarà sostituito dal contenuto del file.")) return;
       DATA=payload.data;
       if(payload.profile) userProfile={...DEFAULT_PROFILE,...payload.profile};
       if(userProfile.disciplina && DATA[userProfile.disciplina]) selDisc=userProfile.disciplina;
@@ -2397,9 +2397,9 @@ function importLocalBackup(event){
       renderProfileSummary();
       renderSidebar();
       render();
-      showToast("⬆️ Backup importato e salvato");
+      showToast("⬆️ Copia di sicurezza importata e salvata");
     }catch(err){
-      alert("Il file selezionato non è un backup valido dello strumento.");
+      alert("Il file selezionato non è una copia di sicurezza valida dello strumento.");
     }finally{
       input.value="";
     }
@@ -3966,7 +3966,7 @@ function openSettingsModal(){
       </select></div>
       <div class="settings-school-box" id="settings-school-preview"></div>
       <div style="background:#e8f5e9;border-left:4px solid #2e7d32;border-radius:8px;padding:9px 11px;font-size:11px;color:#1b5e20;line-height:1.45;margin-bottom:12px">
-        <strong>Salvataggio locale:</strong> queste impostazioni, insieme alle decisioni sulle voci di curricolo, vengono salvate nel browser di questo dispositivo. Per spostarle su un altro dispositivo usare <strong>Backup</strong>.
+        <strong>Salvataggio locale:</strong> queste impostazioni, insieme alle decisioni sulle voci di curricolo, vengono salvate nel browser di questo dispositivo. Per spostarle su un altro dispositivo usare <strong>Copia di sicurezza</strong>.
       </div>
       <div class="settings-actions">
         <button class="settings-primary" onclick="saveSettingsProfile()">Salva impostazioni</button>
@@ -4016,7 +4016,7 @@ function updateInstallHint(type,msg){
   const hint=document.getElementById("install-hint");
   if(!hint) return;
   const cls=type==="ok"?"pwa-status-ok":"pwa-status-warn";
-  hint.innerHTML=`<strong>Installazione:</strong> <span class="${cls}">${msg}</span> Le decisioni restano salvate in locale; usa Backup per spostarle su altri dispositivi.`;
+  hint.innerHTML=`<strong>Installazione:</strong> <span class="${cls}">${msg}</span> Le decisioni restano salvate in locale; usa Copia di sicurezza per spostarle su altri dispositivi.`;
 }
 
 function currentInstallContext(){
@@ -4060,7 +4060,7 @@ function showInstallGuide(){
       </div>
       <p style="font-size:13px;color:#37474f;line-height:1.55;margin-bottom:12px">L’installazione non richiede negozi digitali: lo strumento viene aggiunto alla schermata iniziale dal browser. Dopo il primo caricamento, le parti essenziali restano disponibili anche senza rete.</p>
       <div style="background:#f5f7fa;border-radius:10px;padding:12px 14px;font-size:13px;color:#37474f;margin-bottom:12px">${steps}</div>
-      <div style="background:#e8f5e9;border-left:4px solid #2e7d32;border-radius:8px;padding:9px 11px;font-size:12px;color:#1b5e20;line-height:1.45;margin-bottom:12px"><strong>Dati e salvataggio:</strong> decisioni, modifiche e profilo restano nel browser del dispositivo. Per trasferirli su altro dispositivo usare <strong>Backup</strong> e poi <strong>Importa</strong>.</div>
+      <div style="background:#e8f5e9;border-left:4px solid #2e7d32;border-radius:8px;padding:9px 11px;font-size:12px;color:#1b5e20;line-height:1.45;margin-bottom:12px"><strong>Dati e salvataggio:</strong> decisioni, modifiche e profilo restano nel browser del dispositivo. Per trasferirli su altro dispositivo usare <strong>Copia di sicurezza</strong> e poi <strong>Importa</strong>.</div>
       <button onclick="document.getElementById('install-guide-overlay').remove()" style="width:100%;padding:11px;background:#1a237e;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Ho capito</button>
     </div>`;
   document.body.appendChild(overlay);
@@ -4167,7 +4167,7 @@ function showWelcome(force=false){
         <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">2️⃣</span><span style="font-size:12px;color:#555">Per ogni voce evidenziata, <strong>Approva</strong>, <strong>Modifica</strong> o <strong>Mantieni il testo attuale</strong></span></div>
         <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:16px">3️⃣</span><span style="font-size:12px;color:#555">Quando hai finito, vai su <strong>"Curricolo definitivo"</strong> ed esporta in Word</span></div>
       </div>
-      <p style="font-size:11px;color:#1b5e20;background:#e8f5e9;border-radius:8px;padding:8px 10px;margin-bottom:8px"><strong>Salvataggio locale:</strong> le decisioni, le modifiche e le impostazioni personali vengono salvate automaticamente su questo dispositivo. Per lavorare su un altro telefono o computer, usa il pulsante Backup.</p>
+      <p style="font-size:11px;color:#1b5e20;background:#e8f5e9;border-radius:8px;padding:8px 10px;margin-bottom:8px"><strong>Salvataggio locale:</strong> le decisioni, le modifiche e le impostazioni personali vengono salvate automaticamente su questo dispositivo. Per lavorare su un altro telefono o computer, usa il pulsante Copia di sicurezza.</p>
       <p style="font-size:11px;color:#6d4c41;background:#fff8e1;border-radius:8px;padding:8px 10px;margin-bottom:10px"><strong>Nota sull’esportazione:</strong> Copia per Word, Markdown e PDF sono i percorsi più sicuri. Il Word impaginato richiede una libreria online e funziona meglio da computer.</p>
       <p style="font-size:11px;color:#1a237e;background:#e8eaf6;border-radius:8px;padding:8px 10px;margin-bottom:16px"><strong>Corso operativo:</strong> il link al materiale di presentazione è disponibile in alto come PDF, accanto alle impostazioni.</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap">

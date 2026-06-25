@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-137 — BACKUP_LABEL_RUNTIME_MICROCOPY_ALIGNMENT
+
+- **HEAD iniziale**: `15b0cbc` (CML-136 audit)
+- **HEAD**: `15b0cbc`
+- **origin/main**: `1342ec5`
+- **Tipo slice**: runtime alignment — solo testo (17 sostituzioni, 18 occorrenze fisiche)
+- **Audit di riferimento**: CML-136 (Opzione C — sostituzione differenziata)
+- **File modificato**: `_published_snapshot/netlify-current/index.html`
+- **17 sostituzioni applicate**:
+  - `⬇️ Backup` → `⬇️ Salva copia` (1)
+  - `⬇️ Backup locale` → `⬇️ Copia di sicurezza` (1)
+  - `⬆️ Importa backup` → `⬆️ Importa copia` (1)
+  - `💾 Backup e dati` → `💾 Copia di sicurezza e dati` (1)
+  - `backup`/`Backup` → `copia di sicurezza`/`Copia di sicurezza` (14 in alert, status, toast, confirm, guide, descrizione)
+  - `Markdown` → `Testo` in 2 alert (allineamento con CML-131)
+- **Residui `backup`**: 4 tecnici (id input, 2 nomi funzione, nome file) — non visibili all'utente
+- **Nessuna modifica** a JSON, validator, schema `.cml`, import/export, CSS, JS funzioni/variabili
+- **Validatore**: 7/94, `overallValid: true`, 0 errori ✅
+- Verdetto: `CML_137_BACKUP_LABEL_RUNTIME_MICROCOPY_ALIGNMENT_READY`
+- Next: CML-137A — closure + push controllato (opzionale, se si vuole remote)
+
 ## 2026-06-25 — CML-136 — BACKUP_LABEL_USER_FACING_CLARITY_AUDIT
 
 - **HEAD**: `1342ec5`
