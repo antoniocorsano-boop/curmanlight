@@ -3266,3 +3266,7 @@
 - File creati: `docs/03_execution/CML-113.md`, `report/CML-113_validazione_dipartimentale_workflow_audit.md`
 - Verdetto: `CML_113_VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT_READY`
 - Prossimo step: CML-114 — VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT
+- **CML-127:** Fix runtime navigation handler references (setTab, setMappaDisciplina) by exposing them on window
+- **CML-127:** Fix runtime navigation handler references (setTab, setMappaDisciplina) by exposing them on window
+- File modificato: `_published_snapshot/netlify-current/index.html`
+- Verdetto atteso: `CML_127_RUNTIME_NAVIGATION_HANDLER_REFERENCE_FIX_READY`
