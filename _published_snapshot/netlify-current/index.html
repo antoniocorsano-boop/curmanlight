@@ -1412,7 +1412,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <span id="toolbar-export" hidden>
           <button class="export-btn btn-word" onclick="exportWord()" title="Richiede connessione per la libreria Word avanzata">📄 Word (confronto)</button>
           <button class="export-btn btn-copy" onclick="copyForWord()" title="Funziona anche senza librerie esterne">📋 Copia per Word (confronto)</button>
-          <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Markdown (confronto)</button>
+          <button class="export-btn btn-md" onclick="exportMarkdown()" title="Funziona anche offline">📝 Testo (confronto)</button>
           <button class="export-btn btn-pdf" onclick="exportPDF()" title="Usa la stampa del browser">🖨 PDF (confronto)</button>
 <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta .cml</button>
            <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff" title="Invia al Drive condiviso (se configurato)">⬆️ Invia al Drive condiviso</button>
@@ -1449,24 +1449,24 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <div id="referent-validation-feedback" class="referent-validation-feedback" aria-live="polite"></div>
             <div id="referent-validation-results"></div>
             <div id="referent-validation-report" class="referent-validation-report" style="margin-top:12px;text-align:center">
-              <button class="export-btn btn-md" onclick="requireRoleAccess('referentReportGeneration',downloadReferentGroupWorkReport)" title="Scarica report gruppo di lavoro">📝 Scarica report gruppo di lavoro</button>
+              <button class="export-btn btn-md" onclick="requireRoleAccess('referentReportGeneration',downloadReferentGroupWorkReport)" title="Scarica resoconto gruppo di lavoro">📝 Scarica resoconto gruppo di lavoro</button>
             </div>
           </details>
         </div>
       </details>
       <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
         <div class="tecnologia-export-header">
-          <span class="tecnologia-export-title">📤 Export del curricolo revisionato</span>
+          <span class="tecnologia-export-title">📤 Esportazione del curricolo revisionato</span>
           <span class="tecnologia-export-badge badge--warning">Documento di lavoro — da validare</span>
         </div>
         <p class="tecnologia-export-desc">L'export produce una bozza Markdown della disciplina <strong>Tecnologia</strong>. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
         <div class="tecnologia-export-actions">
           <button class="export-btn btn-md" onclick="generateTecnologiaBozza()">📝 Genera bozza Tecnologia</button>
-          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('tec-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di export ▾':'⬇ Azioni di export ▴'">⬇ Azioni di export ▾</button>
+          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('tec-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di esportazione ▾':'⬇ Azioni di esportazione ▴'">⬇ Azioni di esportazione ▾</button>
         </div>
         <div id="tec-secondary-actions" class="tec-actions-secondary" hidden>
-          <button class="export-btn btn-copy" id="btn-copy-tec-md" onclick="copyTecnologiaMarkdown()" disabled style="opacity:0.5">📝 Copia Markdown</button>
-          <button class="export-btn btn-md" id="btn-dl-tec-md" onclick="downloadTecnologiaMarkdown()" disabled style="opacity:0.5">📝 Scarica Markdown</button>
+          <button class="export-btn btn-copy" id="btn-copy-tec-md" onclick="copyTecnologiaMarkdown()" disabled style="opacity:0.5">📝 Copia testo</button>
+          <button class="export-btn btn-md" id="btn-dl-tec-md" onclick="downloadTecnologiaMarkdown()" disabled style="opacity:0.5">📝 Scarica testo</button>
         </div>
         <textarea id="tecnologia-md-preview" class="tecnologia-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del Markdown..."></textarea>
       </div>
@@ -1485,7 +1485,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div id="riepilogo-export-more" class="export-group-secondary" hidden>
             <div class="export-group-row">
               <button class="export-btn btn-copy" onclick="copyForWord(true)" title="Funziona anche senza librerie esterne">📋 Copia per Word (definitivo)</button>
-              <button class="export-btn btn-md" onclick="exportMarkdown(true)" title="Funziona anche offline">📝 Markdown (definitivo)</button>
+              <button class="export-btn btn-md" onclick="exportMarkdown(true)" title="Funziona anche offline">📝 Testo (definitivo)</button>
               <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF (definitivo)</button>
             </div>
             <div class="export-group-row">
@@ -1791,7 +1791,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="esport-actions">
         <button class="export-btn btn-word" onclick="setTab('lavoro');setTimeout(function(){var b=document.querySelector('.btn-word');if(b)b.click()},200)">📄 Word confronto</button>
         <button class="export-btn btn-word" onclick="exportRiepilogoWord()">📄 Word definitivo</button>
-        <button class="export-btn btn-md" onclick="exportMarkdownRiepilogo()">📝 Markdown</button>
+        <button class="export-btn btn-md" onclick="exportMarkdownRiepilogo()">📝 Testo</button>
         <button class="export-btn btn-pdf" onclick="exportPDFRiepilogo()">📕 PDF</button>
       </div>
     </div>
@@ -1805,7 +1805,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div class="esport-group">
       <h3>📋 Report gruppo curricolo</h3>
       <div class="esport-actions">
-        <button class="export-btn btn-md" onclick="setTab('riepilogo');renderRiepilogo();setTimeout(function(){var r=document.querySelector('.sum-box .export-btn');if(r)r.click()},300)">📊 Report sintesi</button>
+        <button class="export-btn btn-md" onclick="setTab('riepilogo');renderRiepilogo();setTimeout(function(){var r=document.querySelector('.sum-box .export-btn');if(r)r.click()},300)">📊 Resoconto sintesi</button>
       </div>
     </div>
     <div class="usage-notice" style="margin-top:10px">Documento di lavoro — da validare. Gli esportati non sostituiscono il documento istituzionale approvato dal Collegio Docenti.</div>
@@ -1838,7 +1838,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     </div>
     <div class="guida-card">
       <h3>📤 Esportazioni</h3>
-      <p>Trovi tutti gli strumenti di export in un unico tab: Word, Markdown, PDF, backup e report.</p>
+      <p>Trovi tutti gli strumenti di esportazione in un unico tab: Word, Markdown, PDF, backup e report.</p>
     </div>
     <div class="guida-card">
       <h3>🔒 Cosa non può fare</h3>

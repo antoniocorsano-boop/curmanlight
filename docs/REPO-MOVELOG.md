@@ -1,5 +1,40 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-131 — USER_FACING_MICROCOPY_RUNTIME_ALIGNMENT
+
+- **HEAD partenza**: `5462a814819f768cd7b3372f7cc38abc3b919c69`
+- **Tipo slice**: runtime alignment — solo testo (10 sostituzioni puntuali)
+- **Audit di riferimento**: CML-130 (verdetto: `CML_130_USER_FACING_MICROCOPY_AUDIT_READY`)
+- **10 sostituzioni applicate** in `_published_snapshot/netlify-current/index.html`:
+  - `📝 Markdown (confronto)` → `📝 Testo (confronto)` (linea 1415)
+  - `📝 Markdown (definitivo)` → `📝 Testo (definitivo)` (linea 1488)
+  - `📝 Markdown` → `📝 Testo` (linea 1794, Riepilogo)
+  - `📝 Copia Markdown` → `📝 Copia testo` (linea 1468)
+  - `📝 Scarica Markdown` → `📝 Scarica testo` (linea 1469)
+  - `📤 Export del curricolo revisionato` → `📤 Esportazione del curricolo revisionato` (linea 1459)
+  - `⬇ Azioni di export ▾` → `⬇ Azioni di esportazione ▾` ×3 (linea 1465)
+  - `📊 Report sintesi` → `📊 Resoconto sintesi` (linea 1808)
+  - `Scarica report gruppo di lavoro` → `Scarica resoconto gruppo di lavoro` (linea 1452, title + label)
+  - `Trovi tutti gli strumenti di export` → `Trovi tutti gli strumenti di esportazione` (linea 1841)
+- **Nessuna modifica** a JSON, CSS, JS funzioni, icone, layout, classi
+- Validatore: 7 file, 94 unità, `overallValid: true`, 0 errori ✅
+- Verdetto: `CML_131_USER_FACING_MICROCOPY_RUNTIME_ALIGNMENT_READY`
+
+## 2026-06-25 — CML-130 — USER_FACING_MICROCOPY_AND_TECHNICAL_LANGUAGE_AUDIT
+
+- **HEAD partenza**: `5462a814819f768cd7b3372f7cc38abc3b919c69`
+- **HEAD fine**: `5462a814819f768cd7b3372f7cc38abc3b919c69` (audit-only)
+- **Tipo slice**: audit-only — nessuna modifica runtime
+- **40+ termini scrutinati** in 11 aree UI di `_published_snapshot/netlify-current/index.html`
+- **Classificazione**: 2 P1, 6 P2, 1 P3
+  - P1: "Markdown" in 5 pulsanti esportazione → `Testo`
+  - P2: anglicismi `export`/`report` + `.cml` + `normalizzato`
+  - P3: `backup` → `copia di sicurezza` (opzionale)
+- **Opzione selezionata**: B — riscrittura puntuale (10 sostituzioni testuali)
+- **Artefatti**: `docs/03_execution/CML-130.md`, `report/CML-130_user_facing_microcopy_and_technical_language_audit.md`
+- Verdetto: `CML_130_USER_FACING_MICROCOPY_AUDIT_READY`
+- Next: CML-131 — USER_FACING_MICROCOPY_RUNTIME_ALIGNMENT
+
 ## 2026-06-24 — CML-126 — POST_PUSH_RUNTIME_AND_NAVIGATION_SMOKE
 
 - Baseline:
