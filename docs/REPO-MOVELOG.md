@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-132 — CML_FILE_LABELS_USER_FACING_CLARITY_AUDIT
+
+- **HEAD partenza**: `8b9da1384e8a0242bafa3c519f0fd4d3fbe977eb`
+- **HEAD fine**: `8b9da1384e8a0242bafa3c519f0fd4d3fbe977eb` (audit-only)
+- **Tipo slice**: audit-only — nessuna modifica runtime
+- **File analizzato**: `_published_snapshot/netlify-current/index.html`
+- **27 occorrenze** `.cml` totali; **9 utente-facing**
+- **Classificazione**: 5 P1 (pulsanti), 3 P2 (descrizioni), 1 P3 (microguida Home, mantenuto)
+- **Opzione selezionata**: C — pulizia pulsanti + descrizioni brevi
+- **Perimetro raccomandato per CML-133**: 8 sostituzioni testuali
+- **Artefatti**: `docs/03_execution/CML-132.md`, `report/CML-132_cml_file_labels_user_facing_clarity_audit.md`
+- Verdetto: `CML_132_CML_FILE_LABELS_CLARITY_AUDIT_READY`
+- Next: CML-133 — CML_FILE_LABELS_USER_FACING_RUNTIME_ALIGNMENT
+
 ## 2026-06-25 — CML-131A — MICROCOPY_RUNTIME_ALIGNMENT_CLOSURE_AND_PUSH
 
 - **HEAD partenza (pre-push)**: `699d9f3c284a5d96523243b3bddd3b55b09c9c76`
