@@ -1,5 +1,13 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-156 — P1_RUNTIME_STRUCTURE_MICROFIX
+
+- **Commit iniziale**: `b4104bb` (sync con `origin/main`)
+- **Tipo slice**: fix P1 runtime structure
+- **Posizione di `#didattica-mappa`**: spostato dentro `#tab-didattica` per limitare la visibilità alla scheda "Competenze e progettazione → Valutazione ed evidenze".
+- **Variabile `decisionIdx`**: definita correttamente come `globalIdx` prima dell'uso in `renderDepartmentImport()`, eliminando il ReferenceError.
+- **Verdetto**: `CML_156_P1_RUNTIME_STRUCTURE_MICROFIX_READY`
+
 ## 2026-06-25 - CML-155 - POST_PARSE_FIX_RUNTIME_STRUCTURE_AUDIT
 
 - **Commit iniziale**: `6885fab` (sync con `origin/main`)
