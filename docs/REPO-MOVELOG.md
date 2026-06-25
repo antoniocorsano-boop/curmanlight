@@ -1,5 +1,16 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-144 — RUNTIME_MAPPA_DATI_SHAPE_TEST_HARNESS
+
+- **HEAD**: `558ca5f` (8 ahead of origin)
+- **Tool creato**: `tools/test-runtime-mappa-dati-shape.mjs`
+- **Copertura**: 7/7 discipline validat — tutte PASS ✅
+- **Campi verificati**: disciplina, struttureSostanziali.{nome,descrizione,fonte}, nodiDisciplinari.{etichetta,tipo,descrizione,fonte}, progressioneVerticale.{ordine,fascia/classe,descrizioneProgressione,fonte}, decisioniCurricolari array con {tipo,motivazione,fonte}
+- **Runtime, JSON, adapter, transformer, validator**: non toccati ✅
+- **Artefatti**: `tools/test-runtime-mappa-dati-shape.mjs`, `docs/03_execution/CML-144.md`, `report/CML-144_runtime_mappa_dati_shape_test_harness.md`
+- Verdetto: `CML_144_RUNTIME_MAPPA_DATI_SHAPE_TEST_HARNESS_READY`
+- Next: CML-145 — integrazione pilota Tecnologia, oppure closure/push CML-138→144
+
 ## 2026-06-25 — CML-143A — RUNTIME_SHAPE_TRANSFORMER_OUTPUT_SMOKE
 
 - **HEAD**: `384530f` (7 ahead of origin)
