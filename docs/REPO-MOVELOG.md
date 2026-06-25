@@ -1,5 +1,13 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-148 — GOVERNANCE_DECISION_AFTER_TECNOLOGIA_RUNTIME_INTEGRATION
+
+- **Commit iniziale**: `5f83ecc` (sync)
+- **Sequence pushed**: CML-145→CML-147A
+- **Opzione selezionata**: C — smoke live/post-deploy
+- **Prossimo**: CML-149 — LIVE_POST_DEPLOY_SMOKE_AFTER_TECNOLOGIA_INTEGRATION
+- - Verdetto: `CML_148_GOVERNANCE_DECISION_AFTER_TECNOLOGIA_RUNTIME_INTEGRATION_READY`
+
 ## 2026-06-25 — CML-147A — TECNOLOGIA_RUNTIME_INTEGRATION_SMOKE
 
 - **Commit iniziale**: `6dd82be` (4 ahead of origin)
