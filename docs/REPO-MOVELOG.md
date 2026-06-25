@@ -1,5 +1,14 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-146A — STATIC_BLOCK_INSPECTION_SMOKE
+
+- **Commit iniziale**: `ec9d64b` (2 ahead of origin)
+- **Confronto generato vs hardcoded**: struttureSostanziali compatibili (6/6), nodiDisciplinari nuovo (hardcoded ne ha 0), progressioneVerticale compatibili (10/10), decisioniCurricolari identiche (2/2)
+- **BOM issue**: PowerShell only — non bloccante, gestito dal tool
+- **Opzione selezionata per CML-147**: B — integrazione con fallback hardcoded
+- - Verdetto: `CML_146A_STATIC_BLOCK_INSPECTION_SMOKE_READY`
+- - Prossimo: CML-147 — Controlled Tecnologia Runtime Integration
+
 ## 2026-06-25 — CML-146 — TECHNOLOGIA_STATIC_MAPPA_DATI_GENERATION_TOOL
 
 - **Commit iniziale**: `260b4ae` (ahead 1 di origin/main)
