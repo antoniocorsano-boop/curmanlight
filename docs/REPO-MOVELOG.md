@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-141 — JSON_TO_MAPPA_DATI_ADAPTER_STANDALONE_TOOL
+
+- **HEAD**: `ac4c724` (3 ahead of origin)
+- **Tool creato**: `tools/json-to-mappa-dati-adapter.mjs`
+- **Aggregazioni**: ambito→struttureSostanziali, nucleo→nodiDisciplinari, {ordine,classe,fascia}→progressioneVerticale, decisioniCurricolari→pass-through
+- **Test**: Tecnologia, Italiano, Matematica, Scienze — tutti OK, 0 warning
+- **Limitazione**: non è 1:1 con MAPPA_DATI hardcoded (mancano descrizioni testuali)
+- **Runtime, JSON, validatore**: non toccati ✅
+- **Artefatti**: `docs/03_execution/CML-141.md`, `report/CML-141_json_to_mappa_dati_adapter_standalone_tool.md`
+- Verdetto: `CML_141_JSON_TO_MAPPA_DATI_ADAPTER_TOOL_READY`
+- Next: CML-141A — Adapter Output Shape Smoke
+
 ## 2026-06-25 — CML-140A — TECNOLOGIA_NUCLEO_FIELD_READINESS_FIX
 
 - **HEAD**: `266490e` (2 ahead of origin)
