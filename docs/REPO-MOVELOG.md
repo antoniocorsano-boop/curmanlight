@@ -1,5 +1,13 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-147A — TECNOLOGIA_RUNTIME_INTEGRATION_SMOKE
+
+- **Commit iniziale**: `6dd82be` (4 ahead of origin)
+- **Smoke**: documentare (HTTP non disponibile)
+- **Controlli statici**: tutti PASS
+- - Verdetto: `CML_147A_TECNOLOGIA_RUNTIME_INTEGRATION_SMOKE_READY`
+- - Prossimo: push o CML-148
+
 ## 2026-06-25 — CML-147 — CONTROLLED_TECNOLOGIA_RUNTIME_INTEGRATION_WITH_FALLBACK
 
 - **Commit iniziale**: `8fb49a0` (3 ahead of origin)
