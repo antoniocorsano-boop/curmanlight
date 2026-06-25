@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-159 — SCIENZE_RUNTIME_MAPPA_DATI_INTEGRATION
+
+- **Commit iniziale**: `31b2243` (sync con `origin/main`)
+- **Tipo slice**: runtime increment — integrazione mappa disciplinare Scienze
+- **File modificato**: `_published_snapshot/netlify-current/index.html` (+4 righe)
+- **Integrazione**: aggiunto pulsante selettore Scienze, variabile `SCIENZE_MAPPA_DATI` (5 strutture, 5 nodi, 9 progressioni, 3 decisioni) e switch in `renderMappaDisciplinare()`
+- **Discipline modificate**: solo Scienze (nuova); Tecnologia/Matematica/Italiano invariati
+- **Validatore**: 7 file / 94 unità / `overallValid: true` / 0 errori ✅
+- **Harness mappa**: 7/7 discipline PASS (Scienze: S=15 N=5 P=9 D=0) ✅
+- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, CSS, altre funzioni JS — invariati
+- **Artefatti**: `docs/03_execution/CML-159.md`, `report/CML-159_scienze_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_159_SCIENZE_RUNTIME_MAPPA_DATI_INTEGRATION_READY`
+
 ## 2026-06-25 — CML-158 — UI_UX_3D_LANDING_STUDY_ARCHIVE
 
 - **Commit iniziale**: `c854562` (sync con `origin/main`)
