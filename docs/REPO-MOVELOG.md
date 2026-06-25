@@ -1,5 +1,14 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-144A — CORE_DATA_LAYER_SEQUENCE_CLOSURE_AND_CONTROLLED_PUSH
+
+- **Commit iniziale**: `a228683` (9 ahead of origin)
+- **Commit CML-144A**: (da creare)
+- **Audit**: validatore 7/94 ✅, harness 7/7 PASS ✅, working tree pulito, runtime non toccato
+- **Artefatti**: `docs/03_execution/CML-144A.md`, `report/CML-144A_core_data_layer_sequence_closure_and_controlled_push.md`
+- Verdetto: da determinare dopo push
+- Prossimo: CML-145 — Tecnologia runtime integration selection audit
+
 ## 2026-06-25 — CML-144 — RUNTIME_MAPPA_DATI_SHAPE_TEST_HARNESS
 
 - **HEAD**: `558ca5f` (8 ahead of origin)
