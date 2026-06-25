@@ -1,5 +1,16 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-140 — JSON_TO_MAPPA_DATI_ADAPTER_DESIGN_AUDIT
+
+- **HEAD**: `6b7ced5` (1 ahead of origin — slice precedente non pushato)
+- **Tipo slice**: design audit — nessuna modifica runtime/JSON
+- **Adapter progettato**: `toMappaDati(json)` con 3 logiche di aggregazione (ambito→struttureSostanziali, nucleo→nodiDisciplinari, {ordine,classe,fascia}→progressioneVerticale)
+- **Rischio principale**: Tecnologia ha `nucleoFondante:""` e `nucleo:""` — raggruppamento per nucleo non possibile
+- **4/7 discipline** non hanno `decisioniCurricolari` — sezione non generabile
+- **Artefatti**: `docs/03_execution/CML-140.md`, `report/CML-140_json_to_mappa_dati_adapter_design_audit.md`
+- Verdetto: `CML_140_JSON_TO_MAPPA_DATI_ADAPTER_DESIGN_AUDIT_READY`
+- Next: CML-141 — JSON_TO_MAPPA_DATI_ADAPTER_IMPLEMENTATION
+
 ## 2026-06-25 — CML-139 — DISCIPLINARY_DATA_LAYER_MAPPING_AUDIT
 
 - **HEAD**: `85bbab4` (allineato a origin/main)
