@@ -1,5 +1,15 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-141A — ADAPTER_OUTPUT_SHAPE_CONFRONTATION
+
+- **HEAD**: `0fc1366` (5 ahead of origin, worktree sporco pre-commit)
+- **Confronto**: output adapter `scripts/adapter-mappa-dati.js` vs MAPPA_DATI hardcoded in `index.html`
+- **Esito**: compatibilità solo parziale — adapter produce `unita[]` invece di flat `{descrizione, fonte}`; `nodiDisciplinari` colmato per Tecnologia (mancante); `decisioniCurricolari` compatibile
+- **Runtime, JSON, validatore**: non toccati ✅
+- **Artefatti**: `docs/03_execution/CML-141A.md`, `report/CML-141A_adapter_confronto_output.md`
+- Verdetto: `CML_141A_ADAPTER_OUTPUT_SHAPE_SMOKE_READY`
+- Next: CML-142 — Adapter to Runtime Integration Contract
+
 ## 2026-06-25 — CML-141 — JSON_TO_MAPPA_DATI_ADAPTER_STANDALONE_TOOL
 
 - **HEAD**: `ac4c724` (3 ahead of origin)
