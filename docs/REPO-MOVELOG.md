@@ -1,5 +1,25 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-136 — BACKUP_LABEL_USER_FACING_CLARITY_AUDIT
+
+- **HEAD**: `1342ec5`
+- **origin/main**: `1342ec5`
+- **Tipo slice**: audit-only — nessuna modifica runtime
+- **File analizzato**: `_published_snapshot/netlify-current/index.html`
+- **24 occorrenze** `backup`/`Backup` totali; **18 user-facing**
+- **Classificazione**: 7 P1 (pulsanti + alert/error bloccanti), 11 P2 (guide, toast, confirm, status)
+- **Opzione selezionata**: C — Sostituzione differenziata
+  - `⬇️ Backup` → `⬇️ Salva copia` (pulsante breve)
+  - `⬇️ Backup locale` → `⬇️ Copia di sicurezza` (pulsante largo)
+  - `⬆️ Importa backup` → `⬆️ Importa copia`
+  - `💾 Backup e dati` → `💾 Copia di sicurezza e dati`
+  - Tutte le altre → `copia di sicurezza` in contesto
+- **Perimetro raccomandato per CML-137**: 17 sostituzioni testuali
+- **Validatore**: 7/94, `overallValid: true` ✅
+- **Artefatti**: `docs/03_execution/CML-136.md`, `report/CML-136_backup_label_user_facing_clarity_audit.md`
+- Verdetto: `CML_136_BACKUP_LABEL_CLARITY_AUDIT_READY`
+- Next: CML-137 — BACKUP_LABEL_USER_FACING_RUNTIME_ALIGNMENT
+
 ## 2026-06-25 — CML-135B — NORMALIZZATO_TO_STRUTTURATO_SMOKE_CLOSURE_AND_CONTROLLED_PUSH
 
 - **HEAD partenza**: `1159af0` (CML-135A)
