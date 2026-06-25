@@ -1,5 +1,15 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-142 — ADAPTER_TO_RUNTIME_INTEGRATION_CONTRACT
+
+- **HEAD**: `31ef98e` (5 ahead of origin)
+- **Scoperta**: shape gap `unita[]` vs flat documentato in matrice gap
+- **Opzione scelta**: B + D — `toRuntimeMappaDati()` intermedio, pilota Tecnologia
+- **Runtime, JSON, adapter, validator**: non toccati ✅
+- **Artefatti**: `docs/03_execution/CML-142.md`, `report/CML-142_adapter_to_runtime_integration_contract.md`
+- Verdetto: `CML_142_ADAPTER_TO_RUNTIME_INTEGRATION_CONTRACT_READY`
+- Next: CML-143 — TO_RUNTIME_MAPPA_DATI_TRANSFORMER_DESIGN_AND_TOOL
+
 ## 2026-06-25 — CML-141A — ADAPTER_OUTPUT_SHAPE_CONFRONTATION
 
 - **HEAD**: `0fc1366` (5 ahead of origin, worktree sporco pre-commit)
