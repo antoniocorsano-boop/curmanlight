@@ -1,5 +1,15 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-134 — POST_MICROCOPY_RUNTIME_READABILITY_SMOKE
+
+- **HEAD**: `1e4d25471adc3666d2db92ee6677b3aab2b0b6cf`
+- **Tipo slice**: smoke + documentazione — nessuna modifica runtime
+- **Cicli verificati**: CML-130→CML-131A (microcopy), CML-132→CML-133A (file labels)
+- **18 sostituzioni testuali** verificate: 16 etichette nuove presenti, 0 vecchie residue
+- **Smoke**: HTTP 200, navigazione integra, import/export OK, validazione OK ✅
+- **Validatore**: 7/94, `overallValid: true`, 0 errori ✅
+- Verdetto: `CML_134_POST_MICROCOPY_RUNTIME_READABILITY_SMOKE_READY`
+
 ## 2026-06-25 — CML-133A — CML_FILE_LABELS_CLARITY_CYCLE_CLOSURE_AND_PUSH
 
 - **HEAD partenza (pre-push)**: `ebf406df0660f5141ab710c44f450087d040b18c` (CML-133)
