@@ -1,5 +1,12 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-149 — LIVE_POST_DEPLOY_SMOKE_AFTER_TECNOLOGIA_INTEGRATION
+
+- **Commit iniziale**: `1d9e530` (sync)
+- **URL live**: https://antoniocorsano-boop.github.io/curmanlight/
+- **Esito smoke**: HTTP 200, navigazione funzionante
+- - Verdetto: `CML_149_LIVE_POST_DEPLOY_SMOKE_AFTER_TECNOLOGIA_INTEGRATION_READY`
+
 ## 2026-06-25 — CML-148 — GOVERNANCE_DECISION_AFTER_TECNOLOGIA_RUNTIME_INTEGRATION
 
 - **Commit iniziale**: `5f83ecc` (sync)
