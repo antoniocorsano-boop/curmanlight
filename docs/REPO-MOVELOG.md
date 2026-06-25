@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-25 — CML-138 — CORE_DISCIPLINARY_SYSTEM_RECOVERY_AUDIT
+
+- **HEAD**: `37152be` (allineato a origin/main)
+- **Tipo slice**: audit-only — nessuna modifica runtime
+- **Inventario**: 7 file JSON normalizzati (Tecnologia, Italiano, Matematica, Scienze, Storia, Geografia, Inglese)
+- **Disallineamento principale**: runtime usa dati hardcoded (`MAPPA_DATI`, `TECNOLOGIA_NORM`) anziché i 7 JSON validati
+- **Solo 3/7 discipline** hanno mappa; solo **1/7** ha vista strutturata
+- **Matematica**: gap classi 2-4 Primaria
+- **Opzione selezionata**: B — Selezione fonte dati canonica (agganciare runtime ai JSON)
+- **Validatore**: 7/94, `overallValid: true` ✅
+- **Artefatti**: `docs/03_execution/CML-138.md`, `report/CML-138_core_disciplinary_system_recovery_audit.md`
+- Verdetto: `CML_138_CORE_DISCIPLINARY_SYSTEM_RECOVERY_AUDIT_READY`
+- Next: CML-139 — AUDIT_LAYER_DATI_CORE
+
 ## 2026-06-25 — CML-137A — BACKUP_LABEL_CYCLE_CLOSURE_AND_CONTROLLED_PUSH
 
 - **HEAD partenza (pre-push)**: `d8e3ff6` (CML-137)
