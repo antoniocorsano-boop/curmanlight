@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-166 — EDUCAZIONE_CIVICA_NORMALIZED_DATA_PREPARATION
+
+- **Commit iniziale**: `39c066d` (sync con `origin/main`)
+- **Tipo slice**: data preparation — creazione file `.normalized.json`
+- **Oggetto**: creazione di `content/curriculum/educazione-civica.normalized.json`
+- **Esito**: 11 unità su 4 nuclei (Costituzione, Sviluppo sostenibile, Cittadinanza digitale, Educazione finanziaria), copertura Inf/Pri/Sec
+- **Validatore**: 8 file / 105 unità / `overallValid: true` / 0 errori
+- **Asse Storico-sociale**: completato (Storia + Geografia + Educazione Civica)
+- **Runtime**: invariato
+- **Artefatti**: `content/curriculum/educazione-civica.normalized.json`, `docs/03_execution/CML-166.md`, `report/CML-166_educazione_civica_normalized_data_preparation.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_166_EDUCAZIONE_CIVICA_NORMALIZED_DATA_PREPARATION_READY`
+
 ## 2026-06-26 — CML-165 — NORMALIZED_DATA_PREPARATION_SELECTION
 
 - **Commit iniziale**: `903e651` (sync con `origin/main`)
