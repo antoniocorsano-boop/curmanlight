@@ -1,35 +1,5 @@
 # Repo Movelog
 
-## 2026-06-26 — CML-167 — EDUCAZIONE_CIVICA_RUNTIME_MAPPA_DATI_INTEGRATION
-
-- **Commit iniziale**: `967ab28` (sync con `origin/main`)
-- **Tipo slice**: runtime increment — integrazione mappa disciplinare Educazione Civica
-- **File modificati**: `_published_snapshot/netlify-current/index.html`, aggiornamento `docs/REPO-MOVELOG.md`, `docs/03_execution/CML-167.md`, `report/CML-167_educazione_civica_runtime_mappa_dati_integration.md`
-- **Integrazione**: aggiunto pulsante selettore Educazione Civica, variabile `EDUCAZIONE_CIVICA_MAPPA_DATI` (11 strutture, 4 nodi, 9 progressioni, 0 decisioni) e switch in `setMappaDisciplina()`
-- **Discipline modificate**: solo Educazione Civica (nuova); Tecnologia/Matematica/Italiano/Scienze/Storia/Geografia/Inglese invariati
-- **Decisioni curricolari**: D=0 deliberato — Educazione Civica non ha audit preparatorio
-- **Validatore**: 8 file / 105 unità / `overallValid: true` / 0 errori
-- **Shape runtime**: 7/7 discipline PASS (7 tool pre-CML-166); Educazione Civica verificata ad-hoc
-- **Copertura runtime**: 8/14 discipline ✅
-- **Asse Storico-sociale**: completato (Storia + Geografia + Educazione Civica)
-- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
-- **Deploy**: non eseguito
-- **Push**: non eseguito
-- **Artefatti**: `docs/03_execution/CML-167.md`, `report/CML-167_educazione_civica_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
-- **Verdetto**: `CML_167_EDUCAZIONE_CIVICA_RUNTIME_MAPPA_DATI_READY`
-
-## 2026-06-26 — CML-166 — EDUCAZIONE_CIVICA_NORMALIZED_DATA_PREPARATION
-
-- **Commit iniziale**: `39c066d` (sync con `origin/main`)
-- **Tipo slice**: data preparation — creazione file `.normalized.json`
-- **Oggetto**: creazione di `content/curriculum/educazione-civica.normalized.json`
-- **Esito**: 11 unità su 4 nuclei (Costituzione, Sviluppo sostenibile, Cittadinanza digitale, Educazione finanziaria), copertura Inf/Pri/Sec
-- **Validatore**: 8 file / 105 unità / `overallValid: true` / 0 errori
-- **Asse Storico-sociale**: completato (Storia + Geografia + Educazione Civica)
-- **Runtime**: invariato
-- **Artefatti**: `content/curriculum/educazione-civica.normalized.json`, `docs/03_execution/CML-166.md`, `report/CML-166_educazione_civica_normalized_data_preparation.md`, aggiornamento `docs/REPO-MOVELOG.md`
-- **Verdetto**: `CML_166_EDUCAZIONE_CIVICA_NORMALIZED_DATA_PREPARATION_READY`
-
 ## 2026-06-26 — CML-165 — NORMALIZED_DATA_PREPARATION_SELECTION
 
 - **Commit iniziale**: `903e651` (sync con `origin/main`)
@@ -3971,3 +3941,72 @@
   - `report/CML-129A_icon_alignment_closure_audit_and_controlled_push.md`
   - aggiornamento `docs/REPO-MOVELOG.md` (questa voce)
 - **Verdetto:** `CML_129A_ICON_ALIGNMENT_CYCLE_CLOSED_REMOTE`
+
+---
+
+## 2026-06-26 — CML-166 — EDUCAZIONE_CIVICA_NORMALIZED_DATA_PREPARATION
+
+- **Commit iniziale**: `967ab28`
+- **Branch**: `main`, sync `origin/main` `a83c66e`
+- **Tipo slice**: data preparation — creazione file `.normalized.json`
+- **Oggetto**: creazione di `content/curriculum/educazione-civica.normalized.json`
+- **Esito**: 11 unità su 4 nuclei (Costituzione, Sviluppo sostenibile, Cittadinanza digitale, Educazione finanziaria), copertura Inf/Pri/Sec
+- **Validatore**: 8 file / 105 unità / `overallValid: true` / 0 errori
+- **Asse Storico-sociale**: completato (Storia + Geografia + Educazione Civica)
+- **Runtime**: invariato
+- **Artefatti**: `content/curriculum/educazione-civica.normalized.json`, `docs/03_execution/CML-166.md`, `report/CML-166_educazione_civica_normalized_data_preparation.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_166_EDUCAZIONE_CIVICA_NORMALIZED_DATA_PREPARATION_READY`
+
+## 2026-06-26 — CML-166-SYNC — EDUCAZIONE_CIVICA_NORMALIZED_PUSH_SYNC
+
+- **Commit base**: `967ab28`
+- **Push**: eseguito su origin/main
+- **Verifica**: HEAD == origin/main
+- **Verdetto**: `CML_166_SYNC_CLOSED_REMOTE`
+
+## 2026-06-26 — CML-167 — EDUCAZIONE_CIVICA_RUNTIME_MAPPA_DATI_INTEGRATION
+
+- **Commit iniziale**: `967ab28` (sync con `origin/main`)
+- **Tipo slice**: runtime increment — integrazione mappa disciplinare Educazione Civica
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, aggiornamento `docs/REPO-MOVELOG.md`, `docs/03_execution/CML-167.md`, `report/CML-167_educazione_civica_runtime_mappa_dati_integration.md`
+- **Integrazione**: aggiunto pulsante selettore Educazione Civica, variabile `EDUCAZIONE_CIVICA_MAPPA_DATI` (11 strutture, 4 nodi, 9 progressioni, 0 decisioni) e switch in `setMappaDisciplina()`
+- **Discipline modificate**: solo Educazione Civica (nuova); Tecnologia/Italiano/Matematica/Scienze/Storia/Geografia/Inglese invariati
+- **Decisioni curricolari**: D=0 — nessun audit preparatorio per Educazione Civica
+- **Validatore**: 8 file / 105 unità / `overallValid: true` / 0 errori
+- **Shape runtime**: 7/7 discipline PASS (tool pre-CML-166); Educazione Civica verificata ad-hoc
+- **Copertura runtime**: 8/14 discipline
+- **Asse Storico-sociale**: completato (Storia + Geografia + Educazione Civica)
+- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-167.md`, `report/CML-167_educazione_civica_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_167_EDUCAZIONE_CIVICA_RUNTIME_MAPPA_DATI_READY`
+
+## 2026-06-26 — CML-167-SYNC — EDUCAZIONE_CIVICA_RUNTIME_PUSH_SYNC
+
+- **Commit base**: `a83c66e`
+- **Push**: eseguito su origin/main
+- **Verifica**: HEAD == origin/main
+- **Verdetto**: `CML_167_SYNC_CLOSED_REMOTE`
+
+## 2026-06-26 — CML-168 — RUNTIME_SHAPE_TEST_ALIGNMENT_8_DISCIPLINES
+
+- **Commit iniziale**: `a83c66e` (sync con `origin/main`)
+- **Tipo slice**: tool alignment — allineamento test shape a 8 discipline
+- **File modificato**: `tools/test-runtime-mappa-dati-shape.mjs` (+1 riga)
+- **Modifica**: aggiunta `'educazione-civica.normalized.json'` alla lista FILES (7 → 8 discipline)
+- **Validatore**: 8 file / 105 unità / `overallValid: true` / 0 errori
+- **Shape runtime**: **8/8 PASS**
+  - Tecnologia: S=6 N=6 P=10 D=2
+  - Italiano: S=12 N=6 P=10 D=4
+  - Matematica: S=12 N=5 P=6 D=4
+  - Scienze: S=15 N=5 P=9 D=0
+  - Storia: S=15 N=5 P=9 D=0
+  - Geografia: S=12 N=3 P=9 D=0
+  - Inglese: S=12 N=11 P=9 D=0
+  - Educazione Civica: S=11 N=4 P=9 D=0
+- **Invarianti**: runtime, `content/curriculum/`, schema `.cml`, export/import, service worker — invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-168.md`, `report/CML-168_runtime_shape_test_alignment_8_disciplines.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_168_RUNTIME_SHAPE_TEST_ALIGNMENT_8_DISCIPLINES_READY`
