@@ -4064,3 +4064,22 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-171.md`, `report/CML-171_runtime_shape_test_alignment_9_disciplines.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_171_RUNTIME_SHAPE_TEST_ALIGNMENT_9_DISCIPLINES_READY`
+
+## 2026-06-26 - CML-172 - REMAINING_DISCIPLINES_GOALS_AND_COMPLETION_SEQUENCE
+
+- **Commit iniziale**: `0da08a8` (sync con `origin/main`)
+- **Tipo slice**: docs-only / audit-only / planning-only
+- **Oggetto**: piano controllato di completamento per Musica, Educazione Fisica, Religione Cattolica, Seconda Lingua Comunitaria e Latino LEL
+- **Baseline consolidata**: dati normalizzati 9/14, runtime mappa 9/14, shape runtime test 9/9 PASS
+- **Sequenza consigliata**: Musica -> Educazione Fisica -> Seconda Lingua Comunitaria -> Religione Cattolica -> Latino LEL
+- **Fasi standard**: readiness/data audit, normalized data preparation, sync dati, runtime integration, sync runtime, shape test alignment, sync test, closure audit
+- **Prossima slice consigliata**: `CML-173 - MUSICA_READINESS_DATA_AUDIT`
+- **Runtime**: invariato
+- **content/curriculum/**: invariato; nessun file `.normalized.json` creato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-172.md`, `report/CML-172_remaining_disciplines_goals_and_completion_sequence.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_172_REMAINING_DISCIPLINES_GOALS_AND_COMPLETION_SEQUENCE_READY`
