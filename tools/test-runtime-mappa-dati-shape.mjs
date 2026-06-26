@@ -17,19 +17,30 @@ const FILES = [
   'geografia.normalized.json',
   'inglese.normalized.json',
   'educazione-civica.normalized.json',
-  'arte-immagine.normalized.json'
+  'arte-immagine.normalized.json',
+  'musica.normalized.json'
 ];
+
+const EXPECTED_COUNTS = {
+  'musica.normalized.json': { s: 7, n: 3, p: 7, d: 0 }
+};
 
 function check(condition, label, errors) {
   if (!condition) errors.push(label);
 }
 
+function normalizeJsonText(raw, label) {
+  if (raw.includes('\u0000')) {
+    throw new Error(`${label}: byte nulli rilevati nell'output JSON (possibile UTF-16 o encoding non valido)`);
+  }
+  return raw.replace(/^\uFEFF/, '').trim();
+}
 function testPipeline(filepath) {
   const adapterPath = resolve(TOOLS_DIR, 'json-to-mappa-dati-adapter.mjs');
   const transformerPath = resolve(TOOLS_DIR, 'to-runtime-mappa-dati-transformer.mjs');
   const cmd = `node "${adapterPath}" "${filepath}" | node "${transformerPath}"`;
   const raw = execSync(cmd, { encoding: 'utf8', shell: 'powershell', maxBuffer: 10 * 1024 * 1024 });
-  const data = JSON.parse(raw.trim());
+  const data = JSON.parse(normalizeJsonText(raw, filepath));
   const errors = [];
   const discipline = data.disciplina || 'unknown';
 
@@ -69,6 +80,13 @@ function testPipeline(filepath) {
     check(d[i].fonte, `decisioniCurricolari[${i}].fonte mancante`, errors);
   }
 
+  const expected = EXPECTED_COUNTS[filepath.split(/[\\/]/).pop()];
+  if (expected) {
+    check(s.length === expected.s, `struttureSostanziali attese ${expected.s}, trovate ${s.length}`, errors);
+    check(n.length === expected.n, `nodiDisciplinari attesi ${expected.n}, trovati ${n.length}`, errors);
+    check(p.length === expected.p, `progressioneVerticale attesa ${expected.p}, trovata ${p.length}`, errors);
+    check(d.length === expected.d, `decisioniCurricolari attese ${expected.d}, trovate ${d.length}`, errors);
+  }
   return { discipline, errors, counts: `S=${s.length} N=${n.length} P=${p.length} D=${d.length}` };
 }
 

@@ -4154,3 +4154,24 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/02_system/SCHOOLKB-DRIVE-CONNECTOR-CONTRACT.md`, `docs/03_execution/SKB-001.md`, `report/SKB-001_schoolkb_drive_connector_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `SKB_001_SCHOOLKB_DRIVE_CONNECTOR_CONTRACT_READY`
+
+## 2026-06-26 - CML-176 - RUNTIME_SHAPE_TEST_BOM_DIAGNOSTIC_AND_10_DISCIPLINES_ALIGNMENT
+
+- **Commit iniziale**: `472f0da` (sync con `origin/main`)
+- **Tipo slice**: test/tool alignment controllato + diagnostic-first
+- **Oggetto**: diagnosi BOM/encoding e allineamento test shape runtime da 9/9 a 10/10 includendo Musica
+- **Diagnosi**: validatore curriculum PASS 10 file / 118 unita / overallValid true / 0 errori; runtime Musica presente; `content/curriculum/*.normalized.json` senza BOM UTF-8 e senza byte nulli; problema riproducibile nel test = Musica non inclusa nella lista `FILES`
+- **Modifica test**: aggiunto `musica.normalized.json` a `tools/test-runtime-mappa-dati-shape.mjs`; aggiunta normalizzazione minima `normalizeJsonText()` per rimuovere eventuale BOM UTF-8 iniziale dall'output JSON e segnalare byte nulli
+- **Shape runtime**: 10/10 PASS
+- **Musica**: S=7, N=3, P=7, D=0
+- **Runtime**: invariato; `_published_snapshot/netlify-current/index.html` non modificato
+- **Root `index.html`**: invariato
+- **content/curriculum/**: invariato; nessun file `.normalized.json` modificato
+- **Tools/test**: modificato solo `tools/test-runtime-mappa-dati-shape.mjs`
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `tools/test-runtime-mappa-dati-shape.mjs`, `docs/03_execution/CML-176.md`, `report/CML-176_runtime_shape_test_bom_diagnostic_and_10_disciplines_alignment.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_176_RUNTIME_SHAPE_TEST_BOM_DIAGNOSTIC_AND_10_DISCIPLINES_ALIGNMENT_READY`
