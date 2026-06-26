@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-167 — EDUCAZIONE_CIVICA_RUNTIME_MAPPA_DATI_INTEGRATION
+
+- **Commit iniziale**: `967ab28` (sync con `origin/main`)
+- **Tipo slice**: runtime increment — integrazione mappa disciplinare Educazione Civica
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, aggiornamento `docs/REPO-MOVELOG.md`, `docs/03_execution/CML-167.md`, `report/CML-167_educazione_civica_runtime_mappa_dati_integration.md`
+- **Integrazione**: aggiunto pulsante selettore Educazione Civica, variabile `EDUCAZIONE_CIVICA_MAPPA_DATI` (11 strutture, 4 nodi, 9 progressioni, 0 decisioni) e switch in `setMappaDisciplina()`
+- **Discipline modificate**: solo Educazione Civica (nuova); Tecnologia/Matematica/Italiano/Scienze/Storia/Geografia/Inglese invariati
+- **Decisioni curricolari**: D=0 deliberato — Educazione Civica non ha audit preparatorio
+- **Validatore**: 8 file / 105 unità / `overallValid: true` / 0 errori
+- **Shape runtime**: 7/7 discipline PASS (7 tool pre-CML-166); Educazione Civica verificata ad-hoc
+- **Copertura runtime**: 8/14 discipline ✅
+- **Asse Storico-sociale**: completato (Storia + Geografia + Educazione Civica)
+- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-167.md`, `report/CML-167_educazione_civica_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_167_EDUCAZIONE_CIVICA_RUNTIME_MAPPA_DATI_READY`
+
 ## 2026-06-26 — CML-166 — EDUCAZIONE_CIVICA_NORMALIZED_DATA_PREPARATION
 
 - **Commit iniziale**: `39c066d` (sync con `origin/main`)
