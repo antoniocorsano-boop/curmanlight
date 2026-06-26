@@ -4133,3 +4133,24 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-175.md`, `report/CML-175_musica_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_175_MUSICA_RUNTIME_MAPPA_DATI_READY`
+
+## 2026-06-26 - SKB-001 - SCHOOLKB_DRIVE_CONNECTOR_CONTRACT
+
+- **Commit iniziale**: `fd5c952` (branch `main`, working tree pulito, ahead 1 rispetto a `origin/main`)
+- **Tipo slice**: docs-only / architecture-contract / privacy-contract
+- **Oggetto**: contratto tecnico, privacy, UX e architetturale per futura estensione opzionale Google Drive / SchoolKB
+- **Decisione architetturale**: SchoolKB ammessa solo come estensione parallela, disattivata di default, reversibile e protetta da feature flag
+- **Scope OAuth consentito futuro**: solo `https://www.googleapis.com/auth/drive.file`; vietato scope Drive completo
+- **Modulo futuro previsto**: `driveConnector.js` con metodi `initGapiClient`, `requestAccessToken`, `restoreSessionToken`, `checkAndCreateRootFolder`, `createSubFolder`, `uploadConfigTemplate`, `disconnect`
+- **Struttura proposta**: `schoolkb/` con `00_CONFIG`, `01_CURRICOLO_ISTITUTO`, `02_FONTI_NORMATIVE`, `03_DISCIPLINE`, `04_DIPARTIMENTI`, `05_REVISIONI`, `99_EXPORT`
+- **Roadmap proposta**: SKB-002 prototipo locale isolato, SKB-003 schema cartelle, SKB-004 smoke UI, SKB-005 privacy/workspace audit, SKB-006 eventuale integrazione controllata
+- **Runtime**: invariato; nessun OAuth implementato
+- **Credenziali/client ID reali**: nessuno inserito
+- **content/curriculum/**: invariato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/02_system/SCHOOLKB-DRIVE-CONNECTOR-CONTRACT.md`, `docs/03_execution/SKB-001.md`, `report/SKB-001_schoolkb_drive_connector_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `SKB_001_SCHOOLKB_DRIVE_CONNECTOR_CONTRACT_READY`
