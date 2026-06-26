@@ -4101,3 +4101,18 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-173.md`, `report/CML-173_musica_readiness_data_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_173_MUSICA_READINESS_DATA_AUDIT_READY`
+
+## 2026-06-26 — CML-174 — MUSICA_NORMALIZED_DATA_PREPARATION
+
+- **Commit iniziale**: `84902b5` (sync con `origin/main`)
+- **Tipo slice**: data preparation — creazione file `.normalized.json`
+- **Oggetto**: creazione di `content/curriculum/musica.normalized.json`
+- **Esito**: 7 unità su 3 nuclei (Ascolto, Espressione vocale e strumentale, Linguaggi sonori), copertura Inf/Pri/Sec, D=0
+- **Validatore**: 10 file / 118 unità / `overallValid: true` / 0 errori
+- **Generazione statica**: `node tools/generate-static-mappa-dati.mjs` — S=7 N=3 P=7 D=0 ✅
+- **Shape runtime**: 9/9 PASS invariato (Musica non integrata)
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `content/curriculum/musica.normalized.json`, `docs/03_execution/CML-174.md`, `report/CML-174_musica_normalized_data_preparation.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_174_MUSICA_NORMALIZED_DATA_PREPARATION_READY`

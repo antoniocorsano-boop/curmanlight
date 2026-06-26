@@ -1,0 +1,326 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Musica",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-174 — normalized Music curriculum. Reconstructed from CML-109 audit (6 items: 3 traguardi + 3 obiettivi, 3 nuclei: Ascolto, Espressione vocale e strumentale, Linguaggi sonori), CML-173 readiness audit, and IN 2025 references (notazione musicale curricolare, canto corale, musica d'insieme, tecnologie digitali). Built conservatively from documented sources — no invented content.",
+  "metaDiscipline": "Espressivo",
+  "unitaApprendimento": [
+    {
+      "id": "mus_inf_5_001",
+      "disciplina": "Musica",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "nucleo": "Ascolto",
+      "ambito": "Esplorazione sonora e ascolto attivo: suoni, rumori e silenzi",
+      "competenza": "Il bambino esplora i suoni dell'ambiente, li discrimina e li riproduce con la voce e il corpo",
+      "traguardo": "Il bambino esplora i suoni e i rumori dell'ambiente; ascolta e discrimina fonti sonore; produce suoni con la voce, il corpo e semplici oggetti sonori.",
+      "obiettivi": [
+        "Riconoscere e discriminare suoni e rumori dell'ambiente quotidiano",
+        "Produrre suoni con la voce, con il corpo e con oggetti sonori",
+        "Partecipare a giochi vocali e sonori in gruppo",
+        "Ascoltare brani musicali brevi con attenzione"
+      ],
+      "conoscenze": [
+        "Suoni dell'ambiente: casa, scuola, natura, città",
+        "Rumori e silenzi: caratteristiche fondamentali",
+        "Giochi vocali: eco, Onomatopee, filastrocche sonore",
+        "Semplici strumenti sonori: sonagli, maracas, tamburelli"
+      ],
+      "abilita": [
+        "Distinguere suoni forti/deboli, vicini/lontani, acuti/gravi",
+        "Riprodurre ritmi semplici con battito di mani o strumenti",
+        "Imitare suoni vocali su proposta dell'insegnante",
+        "Mantenere l'attenzione su un ascolto musicale guidato"
+      ],
+      "evidenze": [
+        "Il bambino riconosce e nomina almeno 3 suoni dell'ambiente",
+        "Il bambino batte le mani a ritmo su una filastrocca",
+        "Il bambino partecipa a un gioco vocale di gruppo",
+        "Il bambino resta in ascolto per 2-3 minuti di un brano musicale"
+      ],
+      "criteriValutazione": [
+        "Curiosità nell'esplorazione sonora",
+        "Capacità di discriminazione uditiva",
+        "Partecipazione attiva ai giochi sonori",
+        "Attenzione durante l'ascolto guidato"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: Immagini, suoni, colori",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-174 — Infanzia fascia 5, nucleo Ascolto, esplorazione sonora e discriminazione uditiva"
+    },
+    {
+      "id": "mus_pri_1_001",
+      "disciplina": "Musica",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Linguaggi sonori",
+      "ambito": "Primi elementi del linguaggio musicale: suono, ritmo, timbro e intensità",
+      "competenza": "L'alunno riconosce gli elementi fondamentali del linguaggio musicale e li utilizza in semplici attività sonore e ritmiche",
+      "traguardo": "L'alunno riconosce gli elementi del linguaggio musicale e li utilizza in semplici produzioni sonore e ritmiche; ascolta brani musicali con progressiva attenzione.",
+      "obiettivi": [
+        "Riconoscere le caratteristiche del suono (altezza, intensità, durata, timbro)",
+        "Riprodurre semplici ritmi con la voce e con strumenti",
+        "Cantare in gruppo canzoni adatte all'età",
+        "Ascoltare brani musicali e descriverne il carattere"
+      ],
+      "conoscenze": [
+        "Parametri del suono: acuto/grave, forte/piano, lungo/corto",
+        "Ritmo: pulsazione, accento, battuta semplice",
+        "Strumenti musicali scolastici: xilofono, triangolo, tamburo",
+        "Canzoni del repertorio infantile e tradizionale"
+      ],
+      "abilita": [
+        "Distinguere suoni acuti e gravi",
+        "Eseguire un ritmo semplice con lo strumentario",
+        "Cantare in coro mantenendo l'intonazione di base",
+        "Riconoscere il carattere di un brano musicale (allegro, triste)"
+      ],
+      "evidenze": [
+        "L'alunno riconosce se un suono è acuto o grave",
+        "L'alunno esegue un ritmo binario con lo strumentario",
+        "L'alunno canta una canzone in coro con intonazione accettabile",
+        "L'alunno descrive il carattere di un brano ascoltato"
+      ],
+      "criteriValutazione": [
+        "Capacità di discriminazione dei parametri del suono",
+        "Coordinazione ritmica e rispetto del tempo",
+        "Partecipazione all'attività corale",
+        "Attenzione e ascolto attivo"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Musica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-174 — Primaria classe 1, nucleo Linguaggi sonori, elementi base del linguaggio musicale"
+    },
+    {
+      "id": "mus_pri_3_001",
+      "disciplina": "Musica",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Linguaggi sonori",
+      "ambito": "Notazione musicale e canto corale: lettura ritmica e intonazione",
+      "competenza": "L'alunno utilizza la notazione musicale di base e partecipa al canto corale con intonazione e ritmo",
+      "traguardo": "L'alunno legge e scrive semplici sequenze ritmiche e melodiche con la notazione tradizionale; partecipa al canto corale curando intonazione, respiro ed espressività.",
+      "obiettivi": [
+        "Leggere e scrivere semplici sequenze ritmiche con notazione tradizionale",
+        "Intonare melodie per gradi congiunti e semplici intervalli",
+        "Cantare in coro rispettando l'intonazione e le indicazioni dinamiche",
+        "Riconoscere elementi di notazione (pentagramma, chiave di violino, note)"
+      ],
+      "conoscenze": [
+        "Pentagramma, chiave di violino, nome delle note in chiave",
+        "Figure ritmiche: semibreve, minima, semiminima, croma",
+        "Tecniche vocali di base: respirazione, emissione, risonanza",
+        "Repertorio corale: canzoni tradizionali, d'autore, popolari"
+      ],
+      "abilita": [
+        "Leggere una semplice sequenza di note in chiave di violino",
+        "Battere il ritmo di una figurazione semplice con precisione",
+        "Cantare in coro una melodia di 8 battute con intonazione stabile",
+        "Scrivere una breve sequenza melodica sotto dettatura"
+      ],
+      "evidenze": [
+        "L'alunno legge e intona una sequenza di 4 note",
+        "L'alunno mantiene il tempo battendo le figure ritmiche",
+        "L'alunno canta in coro rispettando l'intonazione di gruppo",
+        "L'alunno scrive una breve sequenza melodica su pentagramma"
+      ],
+      "criteriValutazione": [
+        "Correttezza nella lettura ritmica e melodica",
+        "Precisione ritmica nell'esecuzione",
+        "Intonazione e partecipazione nel canto corale",
+        "Capacità di scrittura musicale di base"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Musica — Proposta IN 2025: notazione musicale curricolare, canto corale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-174 — Primaria classe 3, nucleo Linguaggi sonori, notazione musicale e canto corale"
+    },
+    {
+      "id": "mus_pri_5_001",
+      "disciplina": "Musica",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "nucleo": "Espressione vocale e strumentale",
+      "ambito": "Produzione musicale d'insieme: canto, strumentario e prime forme di espressione sonora",
+      "competenza": "L'alunno utilizza la voce e lo strumentario per produrre musica d'insieme con progressiva padronanza tecnica ed espressiva",
+      "traguardo": "L'alunno utilizza voce e strumenti in modo consapevole, producendo musica d'insieme; legge e interpreta semplici partiture; valuta criticamente produzioni sonore proprie e altrui.",
+      "obiettivi": [
+        "Eseguire brani vocali e strumentali curando espressività e dinamica",
+        "Utilizzare lo strumentario didattico in modo coordinato nel gruppo",
+        "Produrre semplici accompagnamenti ritmici e melodici",
+        "Valutare criticamente l'esecuzione propria e del gruppo"
+      ],
+      "conoscenze": [
+        "Strumentario didattico: flauto dolce, metallofono, percussioni",
+        "Dinamiche musicali: piano, forte, crescendo, diminuendo",
+        "Forme musicali semplici: canzone, rondò, tema e variazioni",
+        "Repertorio strumentale didattico progressivo"
+      ],
+      "abilita": [
+        "Eseguire un brano al flauto dolce con diteggiatura corretta",
+        "Mantenere la propria parte in un insieme strumentale",
+        "Adeguare l'intensità dell'esecuzione alle indicazioni dinamiche",
+        "Autovalutare l'esecuzione individuale e di gruppo"
+      ],
+      "evidenze": [
+        "L'alunno esegue un semplice brano al flauto dolce",
+        "L'alunno mantiene la parte strumentale in un insieme di 3 parti",
+        "L'alunno applica variazioni dinamiche all'esecuzione",
+        "L'alunno esprime un giudizio motivato sulla propria esecuzione"
+      ],
+      "criteriValutazione": [
+        "Padronanza tecnica dello strumento didattico",
+        "Capacità di ascolto e sincronizzazione nel gruppo",
+        "Espressività e controllo dinamico",
+        "Capacità di autovalutazione critica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Musica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-174 — Primaria classe 5, nucleo Espressione vocale e strumentale, produzione d'insieme"
+    },
+    {
+      "id": "mus_sec_1_001",
+      "disciplina": "Musica",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Espressione vocale e strumentale",
+      "ambito": "Musica d'insieme: pratica vocale e strumentale, interpretazione e repertorio",
+      "competenza": "L'alunno partecipa alla produzione musicale d'insieme con consapevolezza tecnica, interpretativa e relazionale",
+      "traguardo": "L'alunno esegue brani vocali e strumentali di diversi generi e stili, curando l'interpretazione espressiva e la resa d'insieme; utilizza strumenti didattici e digitali in modo appropriato.",
+      "obiettivi": [
+        "Eseguire brani vocali e strumentali rispettando l'agogica e la dinamica",
+        "Leggere e interpretare partiture di media difficoltà",
+        "Collaborare nel gruppo mantenendo la propria parte con autonomia",
+        "Sperimentare tecniche vocali e strumentali diversificate"
+      ],
+      "conoscenze": [
+        "Tecniche vocali: emissione, articolazione, fraseggio",
+        "Tecniche strumentali: flauto dolce, tastiera, percussioni",
+        "Elementi diagogica e dinamica musicale",
+        "Repertorio: musica classica, tradizionale, moderna, d'insieme"
+      ],
+      "abilita": [
+        "Eseguire un brano strumentale rispettando le indicazioni espressive",
+        "Leggere una partitura con simboli di dinamica e agogica",
+        "Mantenere la propria parte in un brano a 2-3 voci",
+        "Adattare l'esecuzione al contesto d'insieme"
+      ],
+      "evidenze": [
+        "L'alunno esegue un brano strumentale con dinamiche",
+        "L'alunno legge e interpreta una partitura di 8 battute",
+        "L'alunno mantiene la parte in un insieme vocale/strumentale",
+        "L'alunno adatta volume e tempo all'esecuzione di gruppo"
+      ],
+      "criteriValutazione": [
+        "Padronanza esecutiva e tecnica",
+        "Capacità di lettura e interpretazione della partitura",
+        "Collaborazione e ascolto nel gruppo",
+        "Espressività e aderenza alle indicazioni musicali"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Musica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-174 — Secondaria classe 1, nucleo Espressione vocale e strumentale, musica d'insieme"
+    },
+    {
+      "id": "mus_sec_2_001",
+      "disciplina": "Musica",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Ascolto",
+      "ambito": "Analisi e contestualizzazione del linguaggio musicale: ascolto critico e cultura musicale",
+      "competenza": "L'alunno ascolta e analizza brani musicali di diversi generi, epoche e culture, sviluppando capacità critica e consapevolezza culturale",
+      "traguardo": "L'alunno ascolta, analizza e contestualizza brani musicali di epoche, generi e culture diverse; riconosce elementi formali, stilistici e storici della musica.",
+      "obiettivi": [
+        "Riconoscere gli elementi formali e stilistici di un brano musicale",
+        "Collocare un brano musicale nel suo contesto storico e culturale",
+        "Confrontare generi musicali diversi con terminologia appropriata",
+        "Esprimere un'opinione critica motivata su un ascolto"
+      ],
+      "conoscenze": [
+        "Forme musicali: suite, sonata, sinfonia, concerto, opera",
+        "Periodi storico-musicali: Medioevo, Rinascimento, Barocco, Classico, Romantico, Novecento",
+        "Generi musicali: classica, jazz, pop, rock, musica etnica",
+        "Terminologia specifica: melodia, armonia, ritmo, timbro, forma"
+      ],
+      "abilita": [
+        "Individuare la struttura formale di un brano ascoltato",
+        "Riconoscere lo stile di un compositore o periodo storico",
+        "Confrontare due brani individuando somiglianze e differenze",
+        "Argomentare una preferenza musicale con termini appropriati"
+      ],
+      "evidenze": [
+        "L'alunno identifica la forma di un brano (ABA, rondò, tema con variazioni)",
+        "L'alunno colloca un brano ascoltato in un periodo storico",
+        "L'alunno confronta due brani evidenziando 3 differenze",
+        "L'alunno esprime un giudizio critico motivato sull'ascolto"
+      ],
+      "criteriValutazione": [
+        "Capacità di analisi formale all'ascolto",
+        "Conoscenza dei periodi storico-musicali",
+        "Uso appropriato della terminologia specifica",
+        "Capacità di argomentazione critica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Musica",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-174 — Secondaria classe 2, nucleo Ascolto, analisi critica e cultura musicale"
+    },
+    {
+      "id": "mus_sec_3_001",
+      "disciplina": "Musica",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Linguaggi sonori",
+      "ambito": "Creatività sonora, tecnologie digitali e patrimonio musicale: produzione, composizione e cittadinanza culturale",
+      "competenza": "L'alunno utilizza tecnologie digitali e linguaggi sonori per produrre, comporre e diffondere musica, con consapevolezza del patrimonio culturale musicale",
+      "traguardo": "L'alunno utilizza strumenti digitali e tradizionali per comporre, arrangiare e produrre musica; conosce il patrimonio musicale italiano e internazionale e lo valorizza come bene culturale.",
+      "obiettivi": [
+        "Produrre e arrangiare brani musicali con strumenti digitali",
+        "Comporre semplici sequenze sonore con software dedicati",
+        "Conoscere e valorizzare il patrimonio musicale italiano e internazionale",
+        "Utilizzare la musica come linguaggio per l'espressione personale e la cittadinanza culturale"
+      ],
+      "conoscenze": [
+        "Software musicali: sequencer, DAW di base, editor di partitura",
+        "Tecniche di composizione: melodia, accompagnamento, loop, campionamento",
+        "Patrimonio musicale: autori, opere, istituzioni culturali italiane",
+        "Musica e cittadinanza: diritti d'autore, tutela del patrimonio, produzione culturale"
+      ],
+      "abilita": [
+        "Registrare e montare una breve sequenza sonora con software",
+        "Comporre una melodia semplice con accompagnamento digitale",
+        "Ricercare e presentare un elemento del patrimonio musicale locale",
+        "Produrre un contenuto musicale per un evento scolastico o comunitario"
+      ],
+      "evidenze": [
+        "L'alunno realizza una breve composizione digitale",
+        "L'alunno arrangia un brano esistente con strumenti digitali",
+        "L'alunno presenta una ricerca sul patrimonio musicale locale",
+        "L'alunno produce un contributo musicale per un evento della scuola"
+      ],
+      "criteriValutazione": [
+        "Creatività nell'uso di strumenti digitali musicali",
+        "Capacità compositiva e di arrangiamento",
+        "Consapevolezza del patrimonio culturale musicale",
+        "Impegno e collaborazione nella produzione finale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Musica — Proposta IN 2025: tecnologie digitali musicali",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-174 — Secondaria classe 3, nucleo Linguaggi sonori, produzione digitale e patrimonio culturale"
+    }
+  ]
+}
