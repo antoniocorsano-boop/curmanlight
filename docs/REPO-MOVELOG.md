@@ -4010,3 +4010,18 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-168.md`, `report/CML-168_runtime_shape_test_alignment_8_disciplines.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_168_RUNTIME_SHAPE_TEST_ALIGNMENT_8_DISCIPLINES_READY`
+
+## 2026-06-26 — CML-169 — ARTE_IMMAGINE_NORMALIZED_DATA_PREPARATION
+
+- **Commit iniziale**: `0674dde` (sync con `origin/main`)
+- **Tipo slice**: data preparation — creazione file `.normalized.json`
+- **Oggetto**: creazione di `content/curriculum/arte-immagine.normalized.json`
+- **Esito**: 6 unità su 3 nuclei (Esprimersi e comunicare, Osservare, Comprendere le opere d'arte), copertura Inf/Pri/Sec, D=0
+- **Validatore**: 9 file / 111 unità / `overallValid: true` / 0 errori
+- **Generazione statica**: `node tools/generate-static-mappa-dati.mjs` — S=6 N=3 P=6 D=0 ✅
+- **Shape runtime**: 8/8 PASS invariato (Arte e Immagine non integrata)
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `content/curriculum/arte-immagine.normalized.json`, `docs/03_execution/CML-169.md`, `report/CML-169_arte_immagine_normalized_data_preparation.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_169_ARTE_IMMAGINE_NORMALIZED_DATA_PREPARATION_READY`

@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Arte e Immagine",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-169 — normalized Art and Image curriculum. Reconstructed from runtime DATA object (3 traguardi, 1 obiettivo), DISCIPLINE_META nuclei (Esprimersi e comunicare, Osservare, Comprendere le opere d'arte), and IN 2025 proposals (interdisciplinarità STEM-arte, figure femminili nell'arte, ceramica arianese). Limited source data — content derived conservatively from existing curriculum documentation.",
+  "metaDiscipline": "Espressivo",
+  "unitaApprendimento": [
+    {
+      "id": "art_inf_5_001",
+      "disciplina": "Arte e Immagine",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "nucleo": "Esprimersi e comunicare",
+      "ambito": "Esplorazione creativa di materiali, colori e tecniche espressive",
+      "competenza": "Il bambino esplora materiali e strumenti espressivi, li utilizza con creatività e comunica attraverso il linguaggio visivo",
+      "traguardo": "Il bambino esplora i materiali e li utilizza con creatività; sperimenta colori, forme e texture; esprime emozioni e sensazioni attraverso il disegno e la manipolazione.",
+      "obiettivi": [
+        "Sperimentare materiali diversi (carta, argilla, tempera, pastelli, materiali naturali)",
+        "Rappresentare graficamente persone, animali e ambienti noti",
+        "Utilizzare il colore per esprimere emozioni e stati d'animo",
+        "Manipolare materiali plastici per creare forme tridimensionali"
+      ],
+      "conoscenze": [
+        "Materiali e tecniche: pastelli, tempere, acquerelli, argilla, carta, collage",
+        "Colori primari e secondari",
+        "Forme geometriche e naturali",
+        "Semplici strumenti espressivi: pennelli, forbici, punzoni, rulli"
+      ],
+      "abilita": [
+        "Sperimentare liberamente materiali e tecniche espressive",
+        "Disegnare figure umane con elementi essenziali",
+        "Mescolare colori primari per ottenere tonalità derivate",
+        "Realizzare un semplice collage tematico"
+      ],
+      "evidenze": [
+        "Il bambino utilizza almeno 3 materiali diversi in un'attività espressiva",
+        "Il bambino disegna la figura umana con testa, tronco e arti",
+        "Il bambino mescola due colori primari per ottenere il secondario",
+        "Il bambino realizza un collage descrivendo la propria opera"
+      ],
+      "criteriValutazione": [
+        "Curiosità e interesse nell'esplorazione dei materiali",
+        "Capacità di rappresentare graficamente elementi noti",
+        "Creatività e originalità nell'uso dei materiali",
+        "Partecipazione attiva alle attività espressive"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: Immagini, suoni, colori",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-169 — Infanzia fascia 5, nucleo Esprimersi e comunicare, esplorazione creativa di materiali e linguaggi visivi"
+    },
+    {
+      "id": "art_pri_1_001",
+      "disciplina": "Arte e Immagine",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Esprimersi e comunicare",
+      "ambito": "Primi elementi del linguaggio visivo: segno, colore, composizione",
+      "competenza": "L'alunno utilizza gli elementi del linguaggio visivo per produrre immagini e comunicare esperienze personali attraverso tecniche grafiche e pittoriche",
+      "traguardo": "L'alunno utilizza le conoscenze relative al linguaggio visivo per produrre testi visivi e rielaborare immagini; esplora tecniche e materiali con progressiva padronanza.",
+      "obiettivi": [
+        "Riconoscere e utilizzare gli elementi del linguaggio visivo (linea, colore, forma, spazio)",
+        "Produrre immagini utilizzando tecniche grafiche e pittoriche",
+        "Rielaborare immagini esistenti con elementi creativi personali",
+        "Descrivere verbalmente il contenuto di un'immagine"
+      ],
+      "conoscenze": [
+        "Elementi del linguaggio visivo: punto, linea, superficie, colore, texture",
+        "Colori caldi e freddi, gradazioni tonali",
+        "Tecniche: matita, pastello, tempera, collage, frottage",
+        "Semplici regole di composizione e inquadratura"
+      ],
+      "abilita": [
+        "Disegnare utilizzando linee di diverso tipo (dritte, curve, spezzate)",
+        "Applicare tecniche pittoriche per riempire superfici con colore uniforme",
+        "Rielaborare un'immagine aggiungendo elementi personali",
+        "Descrivere oralmente un'immagine indicandone soggetto e colori"
+      ],
+      "evidenze": [
+        "L'alunno produce un disegno utilizzando almeno 3 tipi di linee",
+        "L'alunno colora rispettando i contorni su una superficie di media grandezza",
+        "L'alunno rielabora un'immagine data aggiungendo 2 particolari originali",
+        "L'alunno descrive un'immagine dicendo cosa rappresenta e quali colori ha usato"
+      ],
+      "criteriValutazione": [
+        "Padronanza degli elementi base del linguaggio visivo",
+        "Capacità di produrre immagini coerenti con l'intenzione espressiva",
+        "Creatività nella rielaborazione personale",
+        "Adeguatezza del lessico nella descrizione di immagini"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Arte e Immagine — Primaria classe 1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-169 — Primaria classe 1, nucleo Esprimersi e comunicare, primi elementi del linguaggio visivo"
+    },
+    {
+      "id": "art_pri_3_001",
+      "disciplina": "Arte e Immagine",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Osservare",
+      "ambito": "Osservazione, lettura e comprensione di immagini e opere d'arte",
+      "competenza": "L'alunno osserva e legge immagini, opere d'arte e manufatti, riconoscendone gli elementi costitutivi e il valore comunicativo",
+      "traguardo": "L'alunno osserva, esplora e descrive immagini e opere d'arte utilizzando un lessico appropriato; riconosce i principali beni artistici e culturali del proprio territorio.",
+      "obiettivi": [
+        "Osservare e descrivere un'immagine o un'opera d'arte",
+        "Riconoscere in un'opera d'arte gli elementi del linguaggio visivo",
+        "Individuare le caratteristiche principali di un bene culturale locale",
+        "Confrontare immagini di epoche e stili diversi"
+      ],
+      "conoscenze": [
+        "Generi artistici: ritratto, paesaggio, natura morta, scena di genere",
+        "Elementi di lettura dell'opera: soggetto, composizione, colore, luce",
+        "Beni culturali e artistici del territorio: monumenti, chiese, musei locali",
+        "Prime nozioni di storia dell'arte: arte preistorica, egizia, greca, romana"
+      ],
+      "abilita": [
+        "Osservare un'immagine guidato da domande stimolo",
+        "Descrivere un'opera d'arte usando termini specifici (sfondo, primo piano, simmetria)",
+        "Riconoscere un monumento o bene culturale del proprio territorio",
+        "Confrontare due immagini individuando somiglianze e differenze"
+      ],
+      "evidenze": [
+        "L'alunno descrive un dipinto indicando soggetto, colori e composizione",
+        "L'alunno identifica 3 elementi del linguaggio visivo in un'opera d'arte",
+        "L'alunno nomina un monumento locale e ne spiega l'importanza",
+        "L'alunno confronta due opere di epoche diverse trovando 2 differenze"
+      ],
+      "criteriValutazione": [
+        "Capacità di osservazione analitica di immagini e opere",
+        "Uso appropriato del lessico specifico nella descrizione",
+        "Conoscenza del patrimonio artistico e culturale locale",
+        "Capacità di confronto tra opere di epoche diverse"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Arte e Immagine — Primaria classi 3-4-5",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-169 — Primaria classi 3-5, nucleo Osservare, lettura di immagini e beni culturali del territorio"
+    },
+    {
+      "id": "art_sec_1_001",
+      "disciplina": "Arte e Immagine",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Esprimersi e comunicare",
+      "ambito": "Produzione creativa: progettazione, ideazione e realizzazione di elaborati visivi",
+      "competenza": "L'alunno realizza elaborati personali e creativi sulla base di un'ideazione e progettazione originale, utilizzando tecniche tradizionali e digitali",
+      "traguardo": "Realizza elaborati personali e creativi sulla base di un'ideazione e progettazione originale, applicando le conoscenze del linguaggio visivo e delle tecniche espressive.",
+      "obiettivi": [
+        "Ideare e progettare un elaborato visivo seguendo un percorso creativo",
+        "Utilizzare tecniche grafiche, pittoriche e plastiche in modo personale",
+        "Sperimentare l'integrazione di strumenti digitali (grafica, fotografia) nella produzione artistica",
+        "Valorizzare elementi del patrimonio artigianale locale (ceramica arianese) nella produzione personale"
+      ],
+      "conoscenze": [
+        "Tecniche grafiche: matita, carboncino, pastello, inchiostro",
+        "Tecniche pittoriche: tempera, acrilico, acquerello",
+        "Tecniche plastiche: argilla, cartapesta, materiali di recupero",
+        "Strumenti digitali di base: fotoritocco, grafica vettoriale elementare",
+        "Elementi di artigianato locale: ceramica arianese, decorazione tradizionale"
+      ],
+      "abilita": [
+        "Progettare un elaborato visivo partendo da un'idea o tema assegnato",
+        "Realizzare un prodotto pittorico o plastico utilizzando tecniche miste",
+        "Utilizzare un software semplice di fotoritocco o grafica",
+        "Ispirarsi a motivi decorativi dell'artigianato locale per una produzione personale"
+      ],
+      "evidenze": [
+        "L'alunno presenta un bozzetto preparatorio prima dell'elaborato finale",
+        "L'alunno realizza un elaborato utilizzando almeno 2 tecniche diverse",
+        "L'alunno produce un'immagine digitale semplice (fotoritocco o grafica)",
+        "L'alunno realizza un decoro ispirato alla ceramica tradizionale"
+      ],
+      "criteriValutazione": [
+        "Capacità di ideazione e progettazione originale",
+        "Padronanza delle tecniche espressive utilizzate",
+        "Integrazione creativa di strumenti tradizionali e digitali",
+        "Valorizzazione del patrimonio artigianale e culturale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Arte e Immagine — Secondaria, classe 1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-169 — Secondaria classe 1, nucleo Esprimersi e comunicare, produzione creativa e artigianato locale"
+    },
+    {
+      "id": "art_sec_2_001",
+      "disciplina": "Arte e Immagine",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Comprendere le opere d'arte",
+      "ambito": "Lettura critica dell'opera d'arte, beni culturali e prospettiva storica",
+      "competenza": "L'alunno legge e interpreta opere d'arte in prospettiva storica, riconosce i beni culturali del territorio e usa strumenti multimediali per la fruizione artistica",
+      "traguardo": "Legge opere d'arte in prospettiva storica, riconoscendone il contributo di artisti e artiste; riconosce e valorizza i beni culturali del territorio irpino; utilizza strumenti multimediali per approfondire la conoscenza del patrimonio artistico.",
+      "obiettivi": [
+        "Leggere e interpretare un'opera d'arte collocandola nel contesto storico e culturale",
+        "Riconoscere il contributo delle artiste femminili nella storia dell'arte",
+        "Valorizzare i beni culturali del territorio irpino (ceramica, centri storici, musei)",
+        "Utilizzare strumenti multimediali per ricerche e presentazioni artistiche"
+      ],
+      "conoscenze": [
+        "Arte dal Medioevo al Novecento: periodi, autori, opere significative",
+        "Artiste femminili nella storia dell'arte (Artemisia Gentileschi, Frida Kahlo, altre figure)",
+        "Beni culturali del territorio irpino: ceramica arianese, centri storici, musei",
+        "Strumenti multimediali: visite virtuali, archivi digitali, presentazioni"
+      ],
+      "abilita": [
+        "Analizzare un'opera d'arte descrivendone stile, tecnica e contesto",
+        "Confrontare opere di artisti e artiste dello stesso periodo storico",
+        "Documentare un bene culturale del proprio territorio con supporto digitale",
+        "Produrre una presentazione multimediale su un tema artistico"
+      ],
+      "evidenze": [
+        "L'alunno analizza un dipinto indicandone periodo, stile e tecnica",
+        "L'alunno confronta un'opera maschile e una femminile dello stesso periodo",
+        "L'alunno realizza una scheda descrittiva di un monumento locale",
+        "L'alunno produce una presentazione digitale su un artista o movimento"
+      ],
+      "criteriValutazione": [
+        "Capacità di lettura critica e contestualizzazione dell'opera d'arte",
+        "Conoscenza del contributo femminile nella storia dell'arte",
+        "Valorizzazione del patrimonio culturale locale",
+        "Competenza nell'uso di strumenti multimediali per la fruizione artistica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + D.M. 221/2025 — Interdisciplinarità: storia dell'arte, territorio, figure femminili",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-169 — Secondaria classe 2, nucleo Comprendere le opere d'arte, lettura critica e patrimonio territoriale"
+    },
+    {
+      "id": "art_sec_3_001",
+      "disciplina": "Arte e Immagine",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Osservare",
+      "ambito": "Arte, scienza e cittadinanza: osservazione interdisciplinare e comunicazione visiva",
+      "competenza": "L'alunno integra conoscenze artistiche e scientifiche nell'osservazione del mondo, utilizzando il linguaggio visivo come strumento di comunicazione e cittadinanza attiva",
+      "traguardo": "L'alunno integra conoscenze artistiche e scientifiche (STEM-arte) nell'osservazione e rappresentazione del mondo; utilizza il linguaggio visivo per comunicare temi di cittadinanza, sostenibilità e diritti; sviluppa consapevolezza estetica e pensiero critico.",
+      "obiettivi": [
+        "Integrare osservazione artistica e metodo scientifico nella lettura del paesaggio e dell'ambiente",
+        "Utilizzare il linguaggio visivo per comunicare temi di cittadinanza e sostenibilità",
+        "Produrre elaborati che combinino competenze artistiche, digitali e scientifiche",
+        "Sviluppare consapevolezza estetica e pensiero critico attraverso l'analisi dell'arte contemporanea"
+      ],
+      "conoscenze": [
+        "Arte contemporanea: linguaggi, installazioni, arte pubblica, street art",
+        "STEM-arte: rappresentazione scientifica, data visualization, arte e tecnologia",
+        "Arte e cittadinanza: comunicazione visiva per diritti umani, ambiente, inclusione",
+        "Strumenti digitali avanzati: grafica vettoriale, fotoritocco, animazione base, IA generativa"
+      ],
+      "abilita": [
+        "Osservare un fenomeno naturale o scientifico e rappresentarlo artisticamente",
+        "Realizzare un elaborato visivo su un tema di cittadinanza (ambiente, diritti, inclusione)",
+        "Combinare tecniche artistiche tradizionali e digitali in un progetto interdisciplinare",
+        "Analizzare criticamente un'opera d'arte contemporanea esprimendo un giudizio motivato"
+      ],
+      "evidenze": [
+        "L'alunno realizza un elaborato che unisce rappresentazione artistica e dati scientifici",
+        "L'alunno produce un'immagine o poster su un tema di cittadinanza attiva",
+        "L'alunno presenta un progetto interdisciplinare che integra arte, scienza e tecnologia",
+        "L'alunno commenta un'opera contemporanea esprimendo un'opinione critica motivata"
+      ],
+      "criteriValutazione": [
+        "Capacità di integrazione tra linguaggio artistico e scientifico",
+        "Consapevolezza del ruolo dell'arte nella comunicazione di temi civici",
+        "Creatività nell'uso combinato di tecniche tradizionali e digitali",
+        "Capacità di analisi critica e giudizio estetico motivato"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + D.M. 221/2025 — Interdisciplinarità: STEM-arte, cittadinanza, arte contemporanea",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-169 — Secondaria classe 3, nucleo Osservare, integrazione STEM-arte e comunicazione visiva per la cittadinanza"
+    }
+  ]
+}
