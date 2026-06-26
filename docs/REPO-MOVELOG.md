@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-OPS-001 — CLAUDE_CODE_SKILLS_AND_HOOKS_CONTRACT
+
+- **Commit iniziale**: `6485fa2` (sync con `origin/main`)
+- **Tipo slice**: docs-only / contratto operativo
+- **Oggetto**: definire contratto operativo per Claude Code nel progetto CurManLight
+- **Esito**: contratto completo con 20 sezioni; decisione: usare subito CLAUDE.md minimale, skill P0 e hook P0; rinviare subagent, MCP e plugin
+- **Skill proposte**: 8 (cml-sync, cml-docs-only-slice, cml-readiness-audit, cml-normalized-data-prep, cml-runtime-integration, cml-shape-test-alignment, skb-contract, skb-local-prototype)
+- **Hook proposti**: 8 (guard-scope, guard-secrets, guard-push, guard-runtime-docs, guard-curriculum-data, post-edit-check, post-data-validate, post-shape-validate)
+- **Roadmap OPS**: 7 step (CML-OPS-001→CML-OPS-007)
+- **Runtime**: invariato
+- **`.claude/`**: non creata
+- **`CLAUDE.md`**: non creato (specificato nel contratto, creazione in OPS-002)
+- **Artefatti**: `docs/02_system/CLAUDE-CODE-LOCAL-WORKFLOW-CONTRACT.md`, `docs/03_execution/CML-OPS-001.md`, `report/CML-OPS-001_claude_code_skills_and_hooks_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_OPS_001_CLAUDE_CODE_SKILLS_AND_HOOKS_CONTRACT_READY`
+
 ## 2026-06-26 — CML-177 — EDUCAZIONE_FISICA_READINESS_DATA_AUDIT
 
 - **Commit iniziale**: `d3bd4a2` (sync con `origin/main`)
