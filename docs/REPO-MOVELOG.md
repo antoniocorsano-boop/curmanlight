@@ -4025,3 +4025,19 @@
 - **Push**: non eseguito
 - **Artefatti**: `content/curriculum/arte-immagine.normalized.json`, `docs/03_execution/CML-169.md`, `report/CML-169_arte_immagine_normalized_data_preparation.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_169_ARTE_IMMAGINE_NORMALIZED_DATA_PREPARATION_READY`
+
+## 2026-06-26 — CML-170 — ARTE_IMMAGINE_RUNTIME_MAPPA_DATI_INTEGRATION
+
+- **Commit iniziale**: `b237cb2` (sync con `origin/main`)
+- **Tipo slice**: runtime increment — integrazione mappa disciplinare Arte e Immagine
+- **File modificati**: `_published_snapshot/netlify-current/index.html` (+4 righe), `docs/03_execution/CML-170.md`, `report/CML-170_arte_immagine_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Integrazione**: aggiunto pulsante selettore Arte e Immagine, variabile `ARTE_IMMAGINE_MAPPA_DATI` (S=6, N=3, P=6, D=0) e branch `arte-immagine` in `renderMappaDisciplinare()`
+- **Discipline modificate**: solo Arte e Immagine (nuova); Tecnologia/Italiano/Matematica/Scienze/Storia/Geografia/Inglese/Educazione Civica invariati
+- **Decisioni curricolari**: D=0 deliberato
+- **Validatore**: 9 file / 111 unità / `overallValid: true` / 0 errori
+- **Shape runtime**: 8/8 PASS invariato (Arte e Immagine non ancora nel test)
+- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-170.md`, `report/CML-170_arte_immagine_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_170_ARTE_IMMAGINE_RUNTIME_MAPPA_DATI_READY`
