@@ -4116,3 +4116,20 @@
 - **Push**: non eseguito
 - **Artefatti**: `content/curriculum/musica.normalized.json`, `docs/03_execution/CML-174.md`, `report/CML-174_musica_normalized_data_preparation.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_174_MUSICA_NORMALIZED_DATA_PREPARATION_READY`
+
+## 2026-06-26 — CML-175 — MUSICA_RUNTIME_MAPPA_DATI_INTEGRATION
+
+- **Commit iniziale**: `90ab240` (sync con `origin/main`)
+- **Tipo slice**: runtime increment — integrazione mappa disciplinare Musica
+- **File modificati**: `_published_snapshot/netlify-current/index.html` (+2 righe nette), `docs/03_execution/CML-175.md`, `report/CML-175_musica_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Integrazione**: aggiunto pulsante selettore Musica, variabile `MUSICA_MAPPA_DATI` (S=7, N=3, P=7, D=0) e branch `musica` in `renderMappaDisciplinare()`
+- **Discipline modificate**: solo Musica (nuova); Tecnologia/Italiano/Matematica/Scienze/Storia/Geografia/Inglese/Educazione Civica/Arte e Immagine invariati
+- **Decisioni curricolari**: D=0 deliberato
+- **Validatore**: 10 file / 118 unità / `overallValid: true` / 0 errori
+- **Shape runtime**: 9/9 PASS invariato (Musica non ancora nel test)
+- **Copertura runtime**: 10/14 discipline
+- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-175.md`, `report/CML-175_musica_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_175_MUSICA_RUNTIME_MAPPA_DATI_READY`
