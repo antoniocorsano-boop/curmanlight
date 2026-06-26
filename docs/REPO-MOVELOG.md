@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-OPS-004 - CML_DOCS_ONLY_AND_READINESS_SKILLS
+
+- **Commit iniziale**: `d79956e` (sync con `origin/main`)
+- **Tipo slice**: docs-only / OPS
+- **Oggetto**: creazione delle skill `cml-docs-only-slice` e `cml-readiness-audit`
+- **Esito**: skill operative create per slice documentali e audit readiness disciplinare
+- **Modifiche**: `CLAUDE.md` aggiornato minimamente per riflettere le tre skill create
+- **Runtime**: invariato
+- **Dati curriculum**: invariati
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **`.claude/`**: aggiunte solo le due skill autorizzate; nessun hook creato
+- **Artefatti**: `.claude/skills/cml-docs-only-slice/SKILL.md`, `.claude/skills/cml-readiness-audit/SKILL.md`, `docs/03_execution/CML-OPS-004.md`, `report/CML-OPS-004_docs_only_and_readiness_skills.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_OPS_004_DOCS_ONLY_AND_READINESS_SKILLS_READY`
+
 ## 2026-06-26 — CML-OPS-003 — CML_SYNC_SKILL
 
 - **Commit iniziale**: `8b1dee3` (sync con `origin/main`)

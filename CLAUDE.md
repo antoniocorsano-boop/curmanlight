@@ -14,7 +14,7 @@ Conservative integration (CML-001R): add, do not replace.
 - Shape test: 10/10 PASS
 - Next discipline: Educazione Fisica — requires detailed gap model (CML-178) before normalization
 - SchoolKB: optional, parallel, disabled by default, SKB-001 closed
-- OPS: contract defined (OPS-001), CLAUDE.md created (OPS-002), `cml-sync` skill created; hooks and other skills not yet created
+- OPS: contract defined (OPS-001), CLAUDE.md created (OPS-002), skills `cml-sync`, `cml-docs-only-slice`, and `cml-readiness-audit` created; hooks not yet created
 
 ## 3. Operating Rules
 
