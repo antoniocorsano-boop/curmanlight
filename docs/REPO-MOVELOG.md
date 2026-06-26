@@ -4083,3 +4083,21 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-172.md`, `report/CML-172_remaining_disciplines_goals_and_completion_sequence.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_172_REMAINING_DISCIPLINES_GOALS_AND_COMPLETION_SEQUENCE_READY`
+
+## 2026-06-26 — CML-173 — MUSICA_READINESS_DATA_AUDIT
+
+- **Commit iniziale**: `d806172` (sync con `origin/main`)
+- **Tipo slice**: docs-only / audit-only / readiness-only
+- **Oggetto**: audit documentale di readiness per Musica prima della data preparation
+- **Esito**: Musica è pronta con cautele — readiness media, rischio basso, dati ricostruibili, 3 nuclei documentati
+- **Raccomandazione**: CML-174 — MUSICA_NORMALIZED_DATA_PREPARATION
+- **Stato Musica**: nessun `.normalized.json` creato
+- **Runtime**: invariato
+- **`content/curriculum/`**: invariato; nessun file normalizzato creato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-173.md`, `report/CML-173_musica_readiness_data_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_173_MUSICA_READINESS_DATA_AUDIT_READY`
