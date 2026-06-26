@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-OPS-002 — CLAUDE_MD_MINIMAL_PROJECT_MEMORY
+
+- **Commit iniziale**: `28b697e` (sync con `origin/main`)
+- **Tipo slice**: docs-only / OPS
+- **Oggetto**: creare `CLAUDE.md` minimale alla radice come memoria operativa per Claude Code
+- **Esito**: `CLAUDE.md` creato con 8 sezioni operative (~75 righe): identity, stato consolidato, regole operative, tipi slice, validazioni, report format, confine SchoolKB, prossime slice
+- **Contenuto escluso**: cronologia, log, credenziali, deploy automatico, push automatico
+- **`.claude/`**: non creata
+- **Skill/hook**: non creati
+- **Runtime**: invariato
+- **Artefatti**: `CLAUDE.md`, `docs/03_execution/CML-OPS-002.md`, `report/CML-OPS-002_claude_md_minimal_project_memory.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_OPS_002_CLAUDE_MD_MINIMAL_PROJECT_MEMORY_READY`
+
 ## 2026-06-26 — CML-OPS-001 — CLAUDE_CODE_SKILLS_AND_HOOKS_CONTRACT
 
 - **Commit iniziale**: `6485fa2` (sync con `origin/main`)
