@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-OPS-003 — CML_SYNC_SKILL
+
+- **Commit iniziale**: `8b1dee3` (sync con `origin/main`)
+- **Tipo slice**: docs-only / OPS
+- **Oggetto**: creazione della prima skill operativa `cml-sync` per la sincronizzazione remota controllata
+- **Esito**: skill creata in `.claude/skills/cml-sync/SKILL.md`; definisce preflight, regole di blocco, push controllato e formato output standard
+- **Modifiche**: `CLAUDE.md` aggiornato per riflettere lo stato OPS
+- **Runtime**: invariato
+- **`.claude/`**: creata directory skills/cml-sync/ (nessun hook creato)
+- **Artefatti**: `.claude/skills/cml-sync/SKILL.md`, `docs/03_execution/CML-OPS-003.md`, `report/CML-OPS-003_cml_sync_skill.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_OPS_003_CML_SYNC_SKILL_READY`
+
 ## 2026-06-26 — CML-OPS-002 — CLAUDE_MD_MINIMAL_PROJECT_MEMORY
 
 - **Commit iniziale**: `28b697e` (sync con `origin/main`)
