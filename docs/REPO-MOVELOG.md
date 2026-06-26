@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-164 — NEXT_DISCIPLINE_RUNTIME_MAPPA_SELECTION_AUDIT
+
+- **Commit iniziale**: `e089958` (sync con `origin/main`)
+- **Tipo slice**: docs-only / audit-only
+- **Oggetto**: audit documentale per selezionare prossima disciplina da integrare nella mappa runtime
+- **Esito**: nessuna disciplina candidata ha file `.normalized.json` disponibile; 7/14 discipline integrate, 7 senza dati normalizzati
+- **Copertura runtime attuale**: Tecnologia, Matematica, Italiano, Scienze, Storia, Geografia, Inglese
+- **Raccomandazione**: CML-165 come task di data preparation, non runtime integration
+- **Runtime**: invariato
+- **Artefatti**: `docs/03_execution/CML-164.md`, `report/CML-164_next_discipline_runtime_mappa_selection_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_164_NEXT_DISCIPLINE_RUNTIME_MAPPA_SELECTION_AUDIT_READY`
+
 ## 2026-06-26 - CML-163 - INGLESE_CONTROLLED_RUNTIME_MAPPA_DATI_INTEGRATION
 
 - **Commit iniziale**: `0dd411d` (sync con `origin/main`)
