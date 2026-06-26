@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-177 — EDUCAZIONE_FISICA_READINESS_DATA_AUDIT
+
+- **Commit iniziale**: `d3bd4a2` (sync con `origin/main`)
+- **Tipo slice**: docs-only / audit-only
+- **Oggetto**: audit documentale per Educazione Fisica seconda disciplina della sequenza residua
+- **Esito**: readiness bassa, dati non sufficienti per data preparation; Educazione Fisica non è pronta
+- **Motivazione**: 4 nuclei indicati in report generici (CML-104) ma nessuna formalizzazione strutturata; progressione verticale non ricostruibile; rischio istituzionale medio
+- **Raccomandazione**: CML-178 come audit dettagliato obbligatorio prima di qualsiasi normalizzazione
+- **Runtime**: invariato
+- **Shape runtime test**: 10/10 (invariato)
+- **Artefatti**: `docs/03_execution/CML-177.md`, `report/CML-177_educazione_fisica_readiness_data_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_177_EDUCAZIONE_FISICA_READINESS_DATA_AUDIT_READY`
+
 ## 2026-06-26 — CML-165 — NORMALIZED_DATA_PREPARATION_SELECTION
 
 - **Commit iniziale**: `903e651` (sync con `origin/main`)
