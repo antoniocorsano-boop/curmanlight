@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## 2026-06-26 - CML-162 - GEOGRAFIA_RUNTIME_MAPPA_DATI_INTEGRATION
+
+- **Commit iniziale**: `c5c827a` (sync con `origin/main` `0bffd68`)
+- **Commit finale**: `a770982` (amend con docs)
+- **Tipo slice**: runtime increment — integrazione mappa disciplinare Geografia
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, aggiornamento `docs/REPO-MOVELOG.md`, `docs/03_execution/CML-162.md`, `report/CML-162_geografia_runtime_mappa_dati_integration.md`
+- **Integrazione**: aggiunto pulsante selettore Geografia, variabile `GEOGRAFIA_MAPPA_DATI` (12 strutture, 3 nodi, 9 progressioni, 0 decisioni) e switch in `setMappaDisciplina()`
+- **Discipline modificate**: solo Geografia (nuova); Tecnologia/Matematica/Italiano/Scienze/Storia invariati
+- **Decisioni curricolari**: D=0 deliberato — Geografia non ha audit preparatorio
+- **Validatore**: 7 file / 94 unità / `overallValid: true` / 0 errori
+- **Harness mappa**: 7/7 discipline PASS (Geografia: S=12 N=3 P=9 D=0)
+- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito ancora
+- **Artefatti**: `docs/03_execution/CML-162.md`, `report/CML-162_geografia_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_162_GEOGRAFIA_LOCAL_FINAL_AUDIT_READY`
+
 ## 2026-06-26 - CML-161 - DIDATTICA_COVERAGE_GAP_AUDIT
 
 - **Commit iniziale**: `7498682` (sync con `origin/main`)
