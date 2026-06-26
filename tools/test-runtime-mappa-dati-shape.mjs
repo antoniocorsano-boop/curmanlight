@@ -16,7 +16,8 @@ const FILES = [
   'storia.normalized.json',
   'geografia.normalized.json',
   'inglese.normalized.json',
-  'educazione-civica.normalized.json'
+  'educazione-civica.normalized.json',
+  'arte-immagine.normalized.json'
 ];
 
 function check(condition, label, errors) {

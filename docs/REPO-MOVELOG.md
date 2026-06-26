@@ -4041,3 +4041,26 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-170.md`, `report/CML-170_arte_immagine_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_170_ARTE_IMMAGINE_RUNTIME_MAPPA_DATI_READY`
+
+## 2026-06-26 — CML-171 — RUNTIME_SHAPE_TEST_ALIGNMENT_9_DISCIPLINES
+
+- **Commit iniziale**: `d565c7b` (sync con `origin/main`)
+- **Tipo slice**: tool alignment — allineamento test shape a 9 discipline
+- **File modificati**: `tools/test-runtime-mappa-dati-shape.mjs` (+1 riga), `docs/03_execution/CML-171.md`, `report/CML-171_runtime_shape_test_alignment_9_disciplines.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Modifica**: aggiunta `'arte-immagine.normalized.json'` alla lista FILES (8 → 9 discipline)
+- **Validatore**: 9 file / 111 unità / `overallValid: true` / 0 errori
+- **Shape runtime**: **9/9 PASS**
+  - Tecnologia: S=6 N=6 P=10 D=2
+  - Italiano: S=12 N=6 P=10 D=4
+  - Matematica: S=12 N=5 P=6 D=4
+  - Scienze: S=15 N=5 P=9 D=0
+  - Storia: S=15 N=5 P=9 D=0
+  - Geografia: S=12 N=3 P=9 D=0
+  - Inglese: S=12 N=11 P=9 D=0
+  - Educazione Civica: S=11 N=4 P=9 D=0
+  - **Arte e Immagine: S=6 N=3 P=6 D=0**
+- **Invarianti**: runtime, `content/curriculum/`, schema `.cml`, export/import, service worker — invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-171.md`, `report/CML-171_runtime_shape_test_alignment_9_disciplines.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_171_RUNTIME_SHAPE_TEST_ALIGNMENT_9_DISCIPLINES_READY`
