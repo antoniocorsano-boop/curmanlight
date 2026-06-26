@@ -1,5 +1,16 @@
 # Repo Movelog
 
+## 2026-06-26 - CML-161 - DIDATTICA_COVERAGE_GAP_AUDIT
+
+- **Commit iniziale**: `7498682` (sync con `origin/main`)
+- **Tipo slice**: docs-only / audit-only
+- **Oggetto**: audit del gap tra copertura Curriculum e funzioni operative Didattica
+- **Esito Curriculum**: modello effettivo a 14 discipline; copertura dichiarata 14/14 con traguardi e obiettivi
+- **Esito Didattica**: evidenze/UDA ancora concentrate su Tecnologia; mappa disciplinare progressiva su Tecnologia, Matematica, Italiano, Scienze e Storia
+- **Gap classificato**: non curricolare generale; gap operativo didattico
+- **Runtime**: invariato
+- **Artefatti**: `docs/03_execution/CML-161.md`, `report/CML-161_didattica_coverage_gap_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_161_DIDATTICA_COVERAGE_GAP_AUDIT_READY`
 ## 2026-06-26 - CML-160 - STORIA_CONTROLLED_RUNTIME_MAPPA_DATI_INTEGRATION
 
 - **Commit iniziale**: `90163cf` (sync con `origin/main`)
