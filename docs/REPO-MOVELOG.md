@@ -1,5 +1,21 @@
 # Repo Movelog
 
+## 2026-06-26 - CML-163 - INGLESE_CONTROLLED_RUNTIME_MAPPA_DATI_INTEGRATION
+
+- **Commit iniziale**: `0dd411d` (sync con `origin/main`)
+- **Tipo slice**: runtime increment — integrazione mappa disciplinare Inglese
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, aggiornamento `docs/REPO-MOVELOG.md`, `docs/03_execution/CML-163.md`, `report/CML-163_inglese_runtime_mappa_dati_integration.md`
+- **Integrazione**: aggiunto pulsante selettore Inglese, variabile `INGLESE_MAPPA_DATI` (12 strutture, 11 nodi, 9 progressioni, 0 decisioni) e switch in `setMappaDisciplina()`
+- **Discipline modificate**: solo Inglese (nuova); Tecnologia/Matematica/Italiano/Scienze/Storia/Geografia invariati
+- **Decisioni curricolari**: D=0 deliberato — Inglese non ha audit preparatorio
+- **Validatore**: 7 file / 94 unità / `overallValid: true` / 0 errori
+- **Harness mappa**: 7/7 discipline PASS (Inglese: S=12 N=11 P=9 D=0)
+- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-163.md`, `report/CML-163_inglese_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_163_INGLESE_CONTROLLED_RUNTIME_MAPPA_DATI_READY`
+
 ## 2026-06-26 - CML-162 - GEOGRAFIA_RUNTIME_MAPPA_DATI_INTEGRATION
 
 - **Commit iniziale**: `c5c827a` (sync con `origin/main` `0bffd68`)
