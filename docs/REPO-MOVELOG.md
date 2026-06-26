@@ -1,5 +1,16 @@
 # Repo Movelog
 
+## 2026-06-26 — CML-165 — NORMALIZED_DATA_PREPARATION_SELECTION
+
+- **Commit iniziale**: `903e651` (sync con `origin/main`)
+- **Tipo slice**: docs-only / audit-only
+- **Oggetto**: selezione disciplina per data preparation (CML-166)
+- **Esito**: nessuna disciplina ha file `.normalized.json`; selezionata **Educazione Civica** come prima da normalizzare
+- **Motivazione**: maggiore base documentale (8 item storici, 4 nuclei), completezza asse Storico-sociale, raccordo con Cittadinanza
+- **Runtime**: invariato
+- **Artefatti**: `docs/03_execution/CML-165.md`, `report/CML-165_normalized_data_preparation_selection.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_165_NORMALIZED_DATA_PREPARATION_SELECTION_READY`
+
 ## 2026-06-26 — CML-164 — NEXT_DISCIPLINE_RUNTIME_MAPPA_SELECTION_AUDIT
 
 - **Commit iniziale**: `e089958` (sync con `origin/main`)
