@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-26 - CML-160 - STORIA_CONTROLLED_RUNTIME_MAPPA_DATI_INTEGRATION
+
+- **Commit iniziale**: `90163cf` (sync con `origin/main`)
+- **Tipo slice**: runtime increment - integrazione mappa disciplinare Storia
+- **File modificato**: `_published_snapshot/netlify-current/index.html` (+3 righe)
+- **Integrazione**: aggiunto pulsante selettore Storia, variabile `STORIA_MAPPA_DATI` (5 strutture, 5 nodi, 9 progressioni, 5 decisioni) e switch in `renderMappaDisciplinare()`
+- **Discipline modificate**: solo Storia (nuova); Tecnologia/Matematica/Italiano/Scienze invariati
+- **Validatore**: 7 file / 94 unità / `overallValid: true` / 0 errori
+- **Harness mappa**: 7/7 discipline PASS, 0 failed; verifica runtime `STORIA_MAPPA_DATI` S=5 N=5 P=9 D=5
+- **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
+- **Artefatti**: `docs/03_execution/CML-160.md`, `report/CML-160_storia_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_160_STORIA_CONTROLLED_RUNTIME_MAPPA_DATI_READY`
 ## 2026-06-26 — CML-159 — SCIENZE_RUNTIME_MAPPA_DATI_INTEGRATION
 
 - **Commit iniziale**: `31b2243` (sync con `origin/main`)
