@@ -4884,3 +4884,28 @@
 - **Deploy**: non eseguito
 - **Artefatti**: aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_204S_CONTROLLED_REBASE_AND_PUSH_EDUCAZIONE_FISICA_GAP_MODEL_READY`
+
+## 2026-06-27 - CML-210 - EDUCAZIONE_FISICA_REFINEMENT_PLAN_AFTER_HUMAN_VALIDATION
+
+- **Commit**: `4d10229`
+- **Tipo slice**: docs-only / refinement plan
+- **Oggetto**: piano di raffinamento contenutistico EF dopo CML-204; decisione mantenimento 4 nuclei fino a validazione umana
+- **Stato iniziale**: `main...origin/main`, working tree pulito
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Decisione**: Opzione A — mantenere 4 nuclei (Corpo e percezione, Abilità motorie, Gioco e sport, Espressione e inclusione)
+- **CML-204 considerato**: modello di rischio contenutistico, non autorizzazione automatica a correggere
+- **Trigger per azione futura**: validazione umana, richiesta nucleo Salute e benessere, piano UDA approvato, scadenza
+- **Prossima slice condizionata**: CML-210A — controlled JSON content polish (solo dopo validazione umana)
+- **Runtime**: invariato
+- **content/curriculum/**: invariato; nessun `.normalized.json` modificato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-210.md`, `report/CML-210_educazione_fisica_refinement_plan.md`, `docs/03_execution/CML-210S.md`, `report/CML-210S_controlled_push.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_210_EDUCAZIONE_FISICA_REFINEMENT_PLAN_AFTER_HUMAN_VALIDATION_READY`
