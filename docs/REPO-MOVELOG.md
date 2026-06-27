@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-198 - CML_SCHEMA_AND_EXPORT_IMPORT_AUDIT
+
+- **Commit base**: `1b533c1` (CML-197, main/origin aligned)
+- **Tipo slice**: audit docs-only
+- **Oggetto**: audit dello schema `.cml` e del flusso export/import prima dell'hardening
+- **Runtime ispezionato**: `_published_snapshot/netlify-current/index.html`
+- **Funzioni mappate**: `buildTeacherCmlModel`, `exportTeacherCml`, `validateTeacherCmlModel`, `parseTeacherCmlText`, `importTeacherCmlFiles`, `buildDepartmentOutcomeCmlModel`, `exportDepartmentOutcomeCml`, `validateDepartmentOutcomeCmlModel`, `parseDepartmentOutcomeCmlText`, `importDepartmentOutcomeCmlFiles`, `downloadReferentGroupWorkReport`
+- **Schema corrente**: `schemaVersion: "1.0"` presente ma non imposto; file type `teacher_proposal` e `department_outcome`
+- **Rischi principali**: versioning non enforced, validazione item-level debole, duplicati warn-only, possibile divergenza `discipline`/`disciplines`, messaggi UX generici
+- **CML-199 raccomandato**: contratto `.cml` v1.0 con campi required/optional/advisory, policy versioni, policy duplicati, matrice ruolo/file-type, tassonomia errori e privacy guidance
+- **Artefatti**: `docs/03_execution/CML-198.md`, `report/CML-198_cml_schema_and_export_import_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, schema, export/import, contenuti, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_198_CML_SCHEMA_AND_EXPORT_IMPORT_AUDIT_READY`
+
 ## 2026-06-27 - CML-197 — NEXT_CYCLE_SELECTION_AFTER_PUBLIC_RUNTIME_14_14
 
 - **Commit**: `660f2e1` + docs → commit finale CML-197
