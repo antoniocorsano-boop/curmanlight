@@ -22,17 +22,27 @@ Rigenerare la mappa runtime statica di Educazione Fisica in `_published_snapshot
 | git diff --check | Pulito |
 | Secret scan | Pulito |
 | Manual deploy | Nessuno |
-| Push | `git push origin main` |
+| Push | `53013df` |
 
 ## 4. Esito pubblico
 
-URL: https://antoniocorsano-boop.github.io/curmanlight/
+URL: https://antoniocorsano-boop.github.io/curmanlight/#cur-EducazioneFisica
 
 - HTTP 200 OK
 - App carica
+- Hash `#cur-EducazioneFisica` confermato
+- `benessere` presente nel DOM (CML-210A wording visibile)
 - Educazione Fisica selezionabile
 - Contenuto CML-210A visibile
 
 ## 5. Verdetto
 
 `CML_210BS_EDUCAZIONE_FISICA_RUNTIME_STATIC_MAP_REGENERATION_COMPLETE`
+
+## 6. Commits
+
+| Step | Commit |
+|---|---|
+| Start | `39c4f4a` |
+| CML-210BS | `53013df` |
+| Pushed | `53013df` |

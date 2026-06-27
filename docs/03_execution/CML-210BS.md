@@ -88,14 +88,17 @@ Verificato che le righe `var TECNOLOGIA_MAPPA_DATI`, `var MATEMATICA_MAPPA_DATI`
 
 ### 4.8 Public GitHub Pages smoke
 
-URL: https://antoniocorsano-boop.github.io/curmanlight/
+URL: https://antoniocorsano-boop.github.io/curmanlight/#cur-EducazioneFisica
 
 | Check | Esito |
 |---|---|
 | HTTP status | 200 OK |
 | App load | OK |
-| Educazione Fisica selectable | Sì |
-| Updated CML-210A content visible | Sì — confermato dopo push |
+| Hash navigation | `#cur-EducazioneFisica` — confermato |
+| CML-210A content visible | Sì — `benessere` presente nel DOM della pagina |
+| Educazione Fisica selectable | Sì (dati statici aggiornati) |
+
+Nota: i nuclei (`Abilità motorie`, `Corpo e percezione`, `Gioco e sport`, `Espressione e inclusione`) sono renderizzati dinamicamente dal runtime JS; la loro presenza è confermata dalla struttura S=7,N=4,P=7,D=0 verificata nello step 4.5.
 
 ### 4.9 git diff --check
 
@@ -130,8 +133,8 @@ Nessun deploy manuale eseguito. Aggiornamento GitHub Pages avvenuto automaticame
 | Step | Commit |
 |---|---|
 | Start | `39c4f4a` |
-| CML-210BS | `8a64a09` |
-| Pushed | `8a64a09` |
+| CML-210BS | `53013df` |
+| Pushed | `53013df` |
 
 ## 7. File modificati
 
