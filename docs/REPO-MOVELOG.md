@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-203 - BOM_SHAPE_TEST_REMEDIATION
+
+- **Commit base**: `8dc1f96` (CML-202, aligned)
+- **Commit finale**: `d7a1845`
+- **Tipo slice**: test remediation
+- **Oggetto**: ripristino runtime shape test da 0/14 a 14/14 PASS rimuovendo BOM introdotto da PowerShell nella pipe
+- **Root cause**: PowerShell aggiunge UTF-8 BOM (`U+FEFF`) allo stream stdout quando `execSync` usa `shell: 'powershell'`; i file JSON su disco NON contengono BOM (verificato byte-level)
+- **Fix**: BOM strip in `tools/to-runtime-mappa-dati-transformer.mjs` prima di `JSON.parse` (`raw.replace(/^\uFEFF/, '')`)
+- **Files modificati**: 1 (`tools/to-runtime-mappa-dati-transformer.mjs`, +2/-1)
+- **Contenuto curricolo**: invariato (nessun file `content/curriculum/*.normalized.json` modificato)
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS (ripristinato)
+- **Hash/navigation smoke**: 4/4 PASS (Tecnologia, Seconda Lingua Comunitaria, Religione Cattolica, Latino LEL)
+- **Artefatti**: `docs/03_execution/CML-203.md`, `report/CML-203_bom_shape_test_remediation.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessun cambiamento contenuti curricolo, nessuna modifica runtime mappa, nessun export/import behavior, nessuno schema cambio, nessun service-worker, nessun manifest, nessuna dipendenza, nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_203_BOM_SHAPE_TEST_REMEDIATION_READY`
+
 ## 2026-06-27 - CML-202 - CML_HARDENING_READINESS_GATE_AND_CONTROLLED_PUSH
 
 - **Commit base**: `356534d` (CML-201, main ahead origin/main di 2)
