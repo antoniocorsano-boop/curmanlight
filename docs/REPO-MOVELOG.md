@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-195 - RUNTIME_14_14_CLOSURE_SMOKE_AND_CONTROLLED_PUSH_GATE
+
+- **Commit**: `6e60fb2` (CML-194, 3 ahead origin/main) + docs → commit finale CML-195
+- **Tipo slice**: closure smoke + controlled push
+- **Oggetto**: smoke finale 14/14 e push controllato dopo completamento runtime
+- **Hash smoke**: 14/14 PASS (tutte le discipline verificabili via hash)
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS
+- **Push**: `git push origin main` — origin/main allineato
+- **Runtime mappa**: 14/14
+- **Deploy manuale**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-195.md`, `report/CML-195_runtime_14_14_closure_smoke_and_controlled_push_gate.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_195_RUNTIME_14_14_CLOSURE_SMOKE_AND_CONTROLLED_PUSH_GATE_COMPLETE`
+
 ## 2026-06-27 - CML-194 - LATINO_LEL_RUNTIME_MAPPA_INTEGRATION
 
 - **Commit**: `aa1a27f` (CML-193, 2 ahead origin/main) + working tree → commit finale CML-194
