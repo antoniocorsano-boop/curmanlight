@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-202 - CML_HARDENING_READINESS_GATE_AND_CONTROLLED_PUSH
+
+- **Commit base**: `356534d` (CML-201, main ahead origin/main di 2)
+- **Tipo slice**: readiness gate + controlled push
+- **Oggetto**: readiness gate finale, push controllato CML-200 + CML-201, verifica GitHub Pages pubblica
+- **Pre-push checks**: git status pulito, 2 commit attesi confermati, JSON validator 14/14 PASS, CML-200 smoke 12/12 PASS, CML-201 E2E 33/33 PASS, examples 4/4 PASS, shape test pre-existing BOM failure documentata, diff-check PASS, secret scan pulito, no manual deploy
+- **Push**: `git push origin main` completato con successo
+- **Post-push public checks**: GitHub Pages https://antoniocorsano-boop.github.io/curmanlight/ HTTP 200 OK, app carica, 14/14 discipline visibili, hardened validation behavior reflected (unsupported schema blocked, missing schemaVersion legacy warning, malformed JSON blocked, wrong fileType blocked)
+- **Final origin/main HEAD**: `356534d`
+- **Artefatti**: `docs/03_execution/CML-202.md`, `report/CML-202_cml_hardening_readiness_gate_and_controlled_push.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna nuova feature runtime, nessun schema cambio, nessun contenuto curricolo, nessuna modifica validator design, nessuna remediation BOM, nessun service-worker, nessun manifest, nessuna dipendenza, nessun manual deploy, nessun secret, nessun history rewrite
+- **Verdetto**: `CML_202_CML_HARDENING_READINESS_GATE_AND_CONTROLLED_PUSH_READY`
+
 ## 2026-06-27 - CML-201 - TEACHER_DEPARTMENT_REFERENT_CML_END_TO_END_SMOKE
 
 - **Commit base**: `3e83d83` (CML-200, main ahead origin/main di 1)
