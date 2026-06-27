@@ -1,0 +1,330 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Religione Cattolica",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-187 — limited draft for Religione Cattolica (IRC). Four nuclei from DPR 175/2012 (Dio e l'uomo, La Bibbia e le altre fonti, Il linguaggio religioso, I valori etici e religiosi). Coverage across Infanzia, Primaria, Secondaria. Content based on Indicazioni IRC (DPR 175/2012) and D.M. 254/2012 — institutional, school-appropriate language. Limited draft authorized by CML-182B (LIMITED_DRAFT_DATA_PREP_ALLOWED).",
+  "metaDiscipline": "Religione",
+  "unitaApprendimento": [
+    {
+      "id": "rc_inf_5_001",
+      "disciplina": "Religione Cattolica",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "nucleo": "Dio e l'uomo",
+      "ambito": "Prime scoperte sulla dimensione religiosa: racconti, simboli, festività e domande di senso",
+      "competenza": "Il bambino scopre la dimensione religiosa attraverso racconti, simboli e festività, sviluppando le prime domande sul mondo e su di sé",
+      "traguardo": "Il bambino scopre nei racconti biblici e nelle festività cristiane elementi di significato; pone domande su Dio, sul mondo e sulla vita; riconosce alcuni simboli religiosi nell'ambiente.",
+      "obiettivi": [
+        "Ascoltare racconti biblici semplici e individuarne i personaggi principali",
+        "Riconoscere Natale e Pasqua come festività cristiane",
+        "Porre domande su Dio e sul mondo circostante",
+        "Riconoscere alcuni simboli religiosi (croce, chiesa, presepio)"
+      ],
+      "conoscenze": [
+        "Racconti biblici: Creazione, Noè, Natale, Pasqua",
+        "Gesù come personaggio dei Vangeli",
+        "Festività cristiane: significato di Natale e Pasqua",
+        "Simboli religiosi: croce, chiesa, campana, presepio"
+      ],
+      "abilita": [
+        "Ascoltare e ricordare i personaggi principali di un racconto biblico",
+        "Associare Natale e Pasqua agli eventi narrati nei Vangeli",
+        "Formulare domande su Dio, la vita e il mondo",
+        "Indicare e nominare simboli religiosi presenti nell'ambiente"
+      ],
+      "evidenze": [
+        "Il bambino racconta con parole proprie un episodio biblico ascoltato",
+        "Il bambino dice cosa si ricorda a Natale e a Pasqua",
+        "Il bambino fa una domanda su Dio o sulla creazione",
+        "Il bambino riconosce la croce e indica una chiesa"
+      ],
+      "criteriValutazione": [
+        "Attenzione all'ascolto dei racconti biblici",
+        "Riconoscimento delle principali festività cristiane",
+        "Curiosità e formulazione di domande di senso",
+        "Riconoscimento di simboli religiosi di base"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: Il sé e l'altro — DPR 175/2012, Indicazioni IRC Infanzia",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-187 — Infanzia fascia 5, nucleo Dio e l'uomo, prime scoperte sulla dimensione religiosa. Limited draft: contenuti da validare con dipartimento IRC."
+    },
+    {
+      "id": "rc_pri_1_001",
+      "disciplina": "Religione Cattolica",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Dio e l'uomo",
+      "ambito": "Dio Creatore, la Bibbia come libro sacro e il mondo come dono",
+      "competenza": "L'alunno conosce la Bibbia come libro sacro per i cristiani e conosce i racconti della creazione, sviluppando stupore e rispetto per il mondo",
+      "traguardo": "L'alunno conosce la Bibbia come libro sacro per ebrei e cristiani; conosce i racconti della creazione e li confronta con l'osservazione della realtà; riconosce il mondo come dono da rispettare.",
+      "obiettivi": [
+        "Conoscere la Bibbia come libro sacro dei cristiani",
+        "Conoscere i racconti della creazione nella Genesi",
+        "Riconoscere nel mondo e nella natura elementi di bellezza e bontà",
+        "Conoscere la figura di Gesù come presentata nei Vangeli"
+      ],
+      "conoscenze": [
+        "La Bibbia: struttura, composizione, significato per i cristiani",
+        "La Genesi: racconti della creazione del mondo e dell'uomo",
+        "La natura come creazione: rispetto e cura dell'ambiente",
+        "Gesù di Nazaret: la sua vita raccontata nei Vangeli"
+      ],
+      "abilita": [
+        "Riconoscere la Bibbia come libro sacro",
+        "Narrare i racconti della creazione con parole proprie",
+        "Individuare nella natura elementi di bellezza e armonia",
+        "Riconoscere Gesù come personaggio centrale dei Vangeli"
+      ],
+      "evidenze": [
+        "L'alunno dice cos'è la Bibbia e a cosa serve",
+        "L'alunno narra il racconto della creazione in 3 frasi",
+        "L'alunno esprime apprezzamento per un elemento naturale osservato",
+        "L'alunno racconta un episodio della vita di Gesù"
+      ],
+      "criteriValutazione": [
+        "Conoscenza della Bibbia come libro sacro",
+        "Capacità di narrare i racconti della creazione",
+        "Atteggiamento di rispetto verso la natura",
+        "Conoscenza della figura di Gesù nei Vangeli"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Religione Cattolica — Primaria — DPR 175/2012 (nuovo IRC)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-187 — Primaria classe 1, nucleo Dio e l'uomo, creazione e Bibbia. Limited draft: da validare con dipartimento IRC."
+    },
+    {
+      "id": "rc_pri_3_001",
+      "disciplina": "Religione Cattolica",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "La Bibbia e le altre fonti",
+      "ambito": "Gesù di Nazaret: il suo messaggio, i Vangeli, la vita della prima comunità cristiana",
+      "competenza": "L'alunno conosce la figura di Gesù attraverso i Vangeli e il messaggio del Regno di Dio, riconoscendone il valore per la comunità cristiana",
+      "traguardo": "L'alunno conosce la figura di Gesù attraverso la lettura dei Vangeli; comprende il messaggio del Regno di Dio (parabole, beatitudini); conosce la vita della prima comunità cristiana narrata negli Atti degli Apostoli.",
+      "obiettivi": [
+        "Conoscere la struttura dei Vangeli e il loro significato",
+        "Conoscere le parabole evangeliche e il loro insegnamento",
+        "Comprendere il significato della Pasqua cristiana",
+        "Conoscere le origini della Chiesa e la prima comunità cristiana"
+      ],
+      "conoscenze": [
+        "I Vangeli: struttura, autori, destinatari",
+        "Parabole: seminatore, pastore, figliol prodigo, buon samaritano",
+        "Beatitudini e insegnamenti di Gesù",
+        "Pasqua: passione, morte e risurrezione di Gesù",
+        "Atti degli Apostoli: la prima comunità cristiana"
+      ],
+      "abilita": [
+        "Leggere e comprendere un brano evangelico semplice",
+        "Individuare l'insegnamento di una parabola",
+        "Spiegare il significato della Pasqua per i cristiani",
+        "Descrivere la vita della prima comunità cristiana"
+      ],
+      "evidenze": [
+        "L'alunno legge un brano di Vangelo e ne spiega il significato",
+        "L'alunno racconta una parabola e dice cosa insegna",
+        "L'alunno spiega cosa celebrano i cristiani a Pasqua",
+        "L'alunno descrive come vivevano i primi cristiani"
+      ],
+      "criteriValutazione": [
+        "Comprensione dei Vangeli come fonte",
+        "Capacità di interpretare il messaggio delle parabole",
+        "Conoscenza del significato della Pasqua",
+        "Conoscenza delle origini della Chiesa"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Religione Cattolica — Primaria — DPR 175/2012 (nuovo IRC)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-187 — Primaria classe 3, nucleo La Bibbia e le altre fonti, Vangeli e parabola. Limited draft: da validare con dipartimento IRC."
+    },
+    {
+      "id": "rc_pri_5_001",
+      "disciplina": "Religione Cattolica",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "nucleo": "I valori etici e religiosi",
+      "ambito": "Valori cristiani, regole di vita, dialogo tra religioni e rispetto delle differenze",
+      "competenza": "L'alunno riconosce i valori etici proposti dal cristianesimo e li confronta con quelli di altre tradizioni religiose, sviluppando atteggiamenti di rispetto e dialogo",
+      "traguardo": "L'alunno riconosce i valori etici e religiosi proposti dal cristianesimo (pace, giustizia, solidarietà, perdono); li confronta con quelli di altre tradizioni religiose; sviluppa atteggiamenti di rispetto, dialogo e accoglienza.",
+      "obiettivi": [
+        "Conoscere i dieci comandamenti e le beatitudini come regole di vita",
+        "Riconoscere il valore del perdono e della riconciliazione",
+        "Conoscere elementi fondamentali di ebraismo e islam",
+        "Sviluppare atteggiamenti di rispetto e dialogo con chi ha credenze diverse"
+      ],
+      "conoscenze": [
+        "I dieci comandamenti: significato e attualità",
+        "Le beatitudini: valori del Regno di Dio",
+        "Elementi di ebraismo: Torah, festività, luoghi di culto",
+        "Elementi di islam: Corano, cinque pilastri, moschea",
+        "Dialogo interreligioso: rispetto, conoscenza, convivenza"
+      ],
+      "abilita": [
+        "Applicare i principi del decalogo a situazioni di vita quotidiana",
+        "Riconoscere il perdono come valore cristiano",
+        "Distinguere elementi caratteristici di ebraismo, cristianesimo e islam",
+        "Adottare comportamenti di rispetto verso credenze diverse"
+      ],
+      "evidenze": [
+        "L'alunno collega un comandamento a una situazione concreta",
+        "L'alunno racconta un episodio in cui il perdono ha avuto un ruolo",
+        "L'alunno elenca 3 elementi comuni a cristianesimo e ebraismo",
+        "L'alunno mostra atteggiamento rispettoso verso compagni di altra fede"
+      ],
+      "criteriValutazione": [
+        "Comprensione del valore dei comandamenti e delle beatitudini",
+        "Capacità di riconoscere il valore del perdono",
+        "Conoscenza di elementi di ebraismo e islam",
+        "Atteggiamento di apertura e rispetto interreligioso"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Religione Cattolica — Primaria — DPR 175/2012 (nuovo IRC) — D.M. 221/2025: pluralismo culturale e religioso",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-187 — Primaria classe 5, nucleo I valori etici e religiosi, dialogo interreligioso. Limited draft: contenuti da validare con dipartimento IRC."
+    },
+    {
+      "id": "rc_sec_1_001",
+      "disciplina": "Religione Cattolica",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Dio e l'uomo",
+      "ambito": "La rivelazione di Dio nella storia di Israele: Antico Testamento, alleanza, profeti",
+      "competenza": "L'alunno conosce le grandi tappe della rivelazione di Dio nella storia di Israele come narrata nell'Antico Testamento",
+      "traguardo": "L'alunno conosce le tappe fondamentali della storia della salvezza nell'Antico Testamento (patriarchi, esodo, alleanza, profeti); comprende il valore dei testi profetici e sapienziali; riconosce l'evoluzione dell'immagine di Dio dall'Antico al Nuovo Testamento.",
+      "obiettivi": [
+        "Conoscere i patriarchi: Abramo, Isacco, Giacobbe, Giuseppe",
+        "Conoscere la figura di Mosè e l'esodo dall'Egitto",
+        "Comprendere il significato dell'alleanza tra Dio e Israele",
+        "Conoscere il messaggio dei profeti principali"
+      ],
+      "conoscenze": [
+        "I patriarchi: chiamata di Abramo, promessa, discendenza",
+        "Mosè e l'esodo: schiavitù in Egitto, pasqua ebraica, passaggio del mare",
+        "L'alleanza: dieci comandamenti, deserto, terra promessa",
+        "I profeti: Elia, Isaia, Geremia — messaggio di giustizia e speranza"
+      ],
+      "abilita": [
+        "Narrare le vicende dei patriarchi con terminologia appropriata",
+        "Ricostruire le tappe dell'esodo e dell'alleanza",
+        "Spiegare il significato dell'alleanza tra Dio e il popolo di Israele",
+        "Individuare il messaggio di un profeta nel suo contesto storico"
+      ],
+      "evidenze": [
+        "L'alunno ricostruisce la storia di Abramo in 4 punti",
+        "L'alunno spiega il significato della pasqua ebraica",
+        "L'alunno descrive i termini dell'alleanza sinaitica",
+        "L'alunno spiega il messaggio di un profeta in relazione al suo tempo"
+      ],
+      "criteriValutazione": [
+        "Conoscenza delle tappe della storia di Israele",
+        "Comprensione del significato dell'alleanza",
+        "Capacità di contestualizzazione storica dei testi biblici",
+        "Uso appropriato della terminologia biblica di base"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Religione Cattolica — Secondaria di I grado — DPR 175/2012 (nuovo IRC)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-187 — Secondaria classe 1, nucleo Dio e l'uomo, Antico Testamento e alleanza. Limited draft: da validare con dipartimento IRC."
+    },
+    {
+      "id": "rc_sec_2_001",
+      "disciplina": "Religione Cattolica",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "La Bibbia e le altre fonti",
+      "ambito": "Nuovo Testamento: la figura di Gesù nei Vangeli, il suo insegnamento e le prime comunità cristiane",
+      "competenza": "L'alunno conosce la figura di Gesù attraverso lo studio dei Vangeli e comprende la nascita e lo sviluppo del cristianesimo nelle prime comunità",
+      "traguardo": "L'alunno conosce la figura storica di Gesù attraverso i Vangeli canonici; comprende il messaggio del Regno di Dio; conosce la vita delle prime comunità cristiane e l'azione di Paolo; riconosce i Vangeli come fonte storica e teologica.",
+      "obiettivi": [
+        "Conoscere il contesto storico e geografico della Palestina del I secolo",
+        "Conoscere la vita di Gesù attraverso i Vangeli sinottici",
+        "Comprendere il messaggio del Regno di Dio nelle parabole e nei miracoli",
+        "Conoscere la figura di Paolo e la diffusione del cristianesimo"
+      ],
+      "conoscenze": [
+        "Palestina del I secolo: contesto storico, sociale, religioso",
+        "Vangeli sinottici: composizione, caratteristiche, destinatari",
+        "Regno di Dio: parabole, miracoli, discorso della montagna",
+        "Paolo di Tarso: conversione, viaggi missionari, lettere",
+        "Prime comunità cristiane: organizzazione, culto, persecuzioni"
+      ],
+      "abilita": [
+        "Collocare Gesù nel suo contesto storico e geografico",
+        "Confrontare brani dei Vangeli sinottici su uno stesso episodio",
+        "Spiegare il significato del Regno di Dio nel messaggio di Gesù",
+        "Descrivere la diffusione del cristianesimo nel I secolo"
+      ],
+      "evidenze": [
+        "L'alunno descrive la società palestinese del I secolo",
+        "L'alunno confronta due Vangeli su uno stesso episodio",
+        "L'alunno spiega una parabola collegandola al messaggio del Regno",
+        "L'alunno ricostruisce il percorso missionario di Paolo"
+      ],
+      "criteriValutazione": [
+        "Conoscenza del contesto storico di Gesù",
+        "Capacità di analisi e confronto dei testi evangelici",
+        "Comprensione del messaggio del Regno di Dio",
+        "Conoscenza delle origini e della diffusione del cristianesimo"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Religione Cattolica — Secondaria di I grado — DPR 175/2012 (nuovo IRC)",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-187 — Secondaria classe 2, nucleo La Bibbia e le altre fonti, Nuovo Testamento e Vangeli. Limited draft: da validare con dipartimento IRC."
+    },
+    {
+      "id": "rc_sec_3_001",
+      "disciplina": "Religione Cattolica",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "I valori etici e religiosi",
+      "ambito": "Etica cristiana, dialogo interreligioso, cittadinanza globale e confronto con le grandi religioni",
+      "competenza": "L'alunno conosce i principi dell'etica cristiana e li confronta con quelli delle grandi religioni, sviluppando competenze di cittadinanza globale e dialogo interculturale",
+      "traguardo": "L'alunno conosce i principi dell'etica cristiana in relazione ai grandi temi della cittadinanza globale; confronta il cristianesimo con le altre religioni monoteiste e con le tradizioni orientali; sviluppa un pensiero critico e rispettoso verso il pluralismo religioso e culturale contemporaneo.",
+      "obiettivi": [
+        "Conoscere i principi della dottrina sociale della Chiesa",
+        "Confrontare cristianesimo, ebraismo e islam su temi etici fondamentali",
+        "Conoscere elementi essenziali di induismo e buddismo",
+        "Riconoscere il contributo delle religioni alla pace e al dialogo interculturale"
+      ],
+      "conoscenze": [
+        "Dottrina sociale della Chiesa: persona, bene comune, solidarietà, sussidiarietà",
+        "Ebraismo e cristianesimo: radici comuni, divergenze, dialogo",
+        "Islam: caratteristiche, cinque pilastri, dialogo cristiano-islamico",
+        "Induismo e buddismo: elementi essenziali, visione dell'uomo e del divino",
+        "Religioni e pace: dichiarazioni interreligiose, leader religiosi per la pace"
+      ],
+      "abilita": [
+        "Applicare i principi della dottrina sociale a temi di attualità",
+        "Confrontare la posizione di cristianesimo, ebraismo e islam su un tema etico",
+        "Individuare elementi distintivi di induismo e buddismo",
+        "Argomentare l'importanza del dialogo interreligioso per la convivenza civile"
+      ],
+      "evidenze": [
+        "L'alunno collega un principio di dottrina sociale a un tema di attualità",
+        "L'alunno confronta le tre religioni monoteiste su un tema comune",
+        "L'alunno descrive 3 elementi distintivi di una religione orientale",
+        "L'alunno spiega perché il dialogo interreligioso è importante oggi"
+      ],
+      "criteriValutazione": [
+        "Conoscenza dei principi della dottrina sociale della Chiesa",
+        "Capacità di confronto tra le religioni monoteiste",
+        "Conoscenza degli elementi fondamentali delle religioni orientali",
+        "Atteggiamento critico e rispettoso verso il pluralismo religioso"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Religione Cattolica — Secondaria di I grado — DPR 175/2012 (nuovo IRC) — D.M. 221/2025: cittadinanza globale, pluralismo culturale e religioso",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-187 — Secondaria classe 3, nucleo I valori etici e religiosi, etica cristiana e dialogo interreligioso. Limited draft: da validare con dipartimento IRC."
+    }
+  ]
+}

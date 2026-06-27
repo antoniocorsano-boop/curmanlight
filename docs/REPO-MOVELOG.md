@@ -24,6 +24,30 @@
 - **Residuo runtime**: 2/14 (Religione Cattolica, Latino LEL)
 - **Verdetto**: `CML_186_SECONDA_LINGUA_COMUNITARIA_LIMITED_DRAFT_DATA_PREP_READY`
 
+## 2026-06-27 - CML-187 - RELIGIONE_CATTOLICA_LIMITED_DRAFT_DATA_PREP
+
+- **Commit iniziale**: `22c48af` (CML-186 committato, 1 ahead origin/main)
+- **Tipo slice**: data-prep limitata / limited draft
+- **Oggetto**: creazione bozza normalizzata Religione Cattolica (IRC) come draft prudente e istituzionale
+- **Decisione autorizzativa**: sequenza CML-172 + CML-182B (`LIMITED_DRAFT_DATA_PREP_ALLOWED`)
+- **File creato**: `content/curriculum/religione-cattolica.normalized.json`
+- **Dati normalizzati**: 13/14 (era 12/14)
+- **Runtime mappa**: invariato (11/14) — nessuna integrazione runtime
+- **Shape test**: 11/11 PASS (invariato)
+- **Unita**: 7 (Infanzia 1, Primaria 3, Secondaria 3)
+- **Nuclei**: 4 (Dio e l'uomo, La Bibbia e le altre fonti, Il linguaggio religioso, I valori etici e religiosi — DPR 175/2012)
+- **Vincoli specifici**: linguaggio istituzionale e scolastico (non catechetico), 4 nuclei DPR 175/2012, copertura completa 3 ordini
+- **Marcatori draft**: `humanValidationRequired: true`, `validazioneUmana: true` su ogni unita, `stato: bozza_generabile`, note dipartimento su ogni unita
+- **Prossima slice consigliata**: CML-188 — Latino LEL limited draft data prep (ultima disciplina residua) o sync CML-186 + CML-187
+- **Runtime**: invariato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `content/curriculum/religione-cattolica.normalized.json`, `docs/03_execution/CML-187.md`, `report/CML-187_religione_cattolica_limited_draft_data_prep.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Residuo runtime**: 1/14 (Latino LEL)
+- **Verdetto**: `CML_187_RELIGIONE_CATTOLICA_LIMITED_DRAFT_DATA_PREP_READY`
+
 ## 2026-06-27 - CML-185 - RESIDUAL_DISCIPLINE_SELECTION_AUDIT
 
 - **Commit iniziale**: `8a8351a` (allineato con `origin/main`)
