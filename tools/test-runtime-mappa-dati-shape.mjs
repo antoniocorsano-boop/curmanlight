@@ -20,7 +20,8 @@ const FILES = [
   'educazione-fisica.normalized.json',
   'arte-immagine.normalized.json',
   'musica.normalized.json',
-  'seconda-lingua-comunitaria.normalized.json'
+  'seconda-lingua-comunitaria.normalized.json',
+  'religione-cattolica.normalized.json'
 ];
 
 const EXPECTED_COUNTS = {

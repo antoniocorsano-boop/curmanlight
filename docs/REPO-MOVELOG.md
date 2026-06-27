@@ -1,8 +1,26 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-193 - RELIGIONE_CATTOLICA_RUNTIME_MAPPA_INTEGRATION
+
+- **Commit**: `d1513d1` (CML-192, 1 ahead origin/main) + working tree → commit finale CML-193
+- **Tipo slice**: runtime integration controllata
+- **Oggetto**: integrazione runtime mappa per Religione Cattolica (7 unità, 3 ordini, 4 nuclei DPR 175/2012)
+- **Modifiche**: `_published_snapshot/netlify-current/index.html` + `tools/test-runtime-mappa-dati-shape.mjs` (FILES 12→13)
+- **Runtime mappa pre**: 12/14
+- **Runtime mappa post**: 13/14
+- **Dati normalizzati**: 14/14 (invariato)
+- **Shape test**: 13/13 PASS
+- **Validatore**: 14/14 PASS
+- **CML-192 SLC integration**: intatta
+- **Latino LEL**: non integrato
+- **Residuo runtime**: 1/14 (Latino LEL)
+- **No push**: commit locale
+- **Artefatti**: `docs/03_execution/CML-193.md`, `report/CML-193_religione_cattolica_runtime_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_193_RELIGIONE_CATTOLICA_RUNTIME_MAPPA_INTEGRATION_READY`
+
 ## 2026-06-27 - CML-192 - SECONDA_LINGUA_COMUNITARIA_RUNTIME_MAPPA_INTEGRATION
 
-- **Commit**: working tree (CML-192, 2 ahead origin/main) — attuale su `d711872`
+- **Commit**: `d1513d1` (CML-192, 1 ahead origin/main)
 - **Tipo slice**: runtime integration controllata
 - **Oggetto**: integrazione runtime mappa per Seconda Lingua Comunitaria (6 unità, Secondaria 1-3, QCER A1/A2)
 - **Modifiche**: `_published_snapshot/netlify-current/index.html` + `tools/test-runtime-mappa-dati-shape.mjs` (FILES 11→12)
