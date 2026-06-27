@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-200 - CML_IMPORT_EXPORT_VALIDATION_HARDENING
+
+- **Commit base**: `eb3e36f` (CML-199, main/origin aligned)
+- **Commit finale**: `64f25d6`
+- **Tipo slice**: runtime validation hardening
+- **Oggetto**: implementazione hardening minimale validazione import/export `.cml` secondo contratto CML-199
+- **File modificato**: `_published_snapshot/netlify-current/index.html` (+131, -39)
+- **Regole implementate**: enforcement `schemaVersion` (missing=legacy warning, unsupported=block, malformed=block), codici validazione strutturati con `warnings`, item-level checks `id`/`proposta`/`motivazione`/`fonte`, duplicate detection con fingerprint, size limits (5MB warn/20MB block, 500 warn/2000 block), duplicate handling ID block, discipline/disciplines consistency warning, preservazione campi sconosciuti, messaggi utente migliorati
+- **Funzioni modificate**: `validateTeacherCmlModel`, `parseTeacherCmlText`, `departmentProposalIssues`, `normalizeDepartmentProposal`, `importTeacherCmlFiles`, `renderDepartmentImport`, `validateDepartmentOutcomeCmlModel`, `importDepartmentOutcomeCmlFiles`, `renderReferentValidation`
+- **Regole differite**: allowlist Drive endpoint, multi-discipline package format, migrazione schema v2, backend-backed import, audit trail strutturato
+- **Validatore**: 14/14 PASS
+- **Shape test**: pre-existing BOM failure non causato da CML-200 (verificato stash)
+- **Smoke test**: 18/18 PASS (valid teacher_proposal, missing schemaVersion legacy warning, unsupported schemaVersion block, malformed JSON block, wrong fileType block, partial proposal item warnings, duplicate fingerprint, valid department_outcome, discipline/disciplines match, size/array thresholds)
+- **Esempi `.cml`**: tutti e 4 gli esempi in `docs/04_user/esempi_cml/` passano come valid input senza modifiche
+- **Compatibilità backward**: file v1.0 esistenti accettati senza warnings; file senza schemaVersion accettati con legacy warning; export invariato; nessun campo rimosso
+- **Artefatti**: `docs/03_execution/CML-200.md`, `report/CML-200_cml_import_export_validation_hardening.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessun bump schema, nessuna migrazione, nessuna feature multi-disciplina, nessuna allowlist Drive, nessun SchoolKB, nessun Evidenze/UDA, nessun contenuto curricolo, nessuna modifica runtime mappa, nessun service-worker, nessun manifest, nessuna dipendenza, nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_200_CML_IMPORT_EXPORT_VALIDATION_HARDENING_READY`
+
 ## 2026-06-27 - CML-199 - CML_V1_SCHEMA_VERSIONING_AND_COMPATIBILITY_CONTRACT
 
 - **Commit base**: `32a724e` (CML-198, main/origin aligned)

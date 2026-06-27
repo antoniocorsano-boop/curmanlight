@@ -3664,16 +3664,22 @@ let departmentImportState={files:[],proposals:[]};
 
 function validateTeacherCmlModel(model,fileName=""){
   const name=String(fileName||"");
-  if(!name.toLowerCase().endsWith(".cml")) return {valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[]};
-  if(!model||typeof model!=="object"||Array.isArray(model)) return {valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[]};
-  if(model.fileType!=="teacher_proposal") return {valid:false,code:"wrong_type",message:"Questo file non è una proposta docente CurManLight.",missing:[]};
-  const missing=[];
+  if(!name.toLowerCase().endsWith(".cml")) return {valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[],warnings:[]};
+  if(!model||typeof model!=="object"||Array.isArray(model)) return {valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[],warnings:[]};
+  if(model.fileType!=="teacher_proposal") return {valid:false,code:"wrong_type",message:"Questo file non è una proposta docente CurManLight.",missing:[],warnings:[]};
+  if(model.schemaVersion!==undefined){
+    if(typeof model.schemaVersion!=="string" || model.schemaVersion!=="1.0"){
+      return {valid:false,code:"unsupported_schema",message:"Versione schema non supportata. Aggiorna CurManLight o esporta di nuovo il file.",missing:[],warnings:[]};
+    }
+  }
+  const missing=[],warnings=[];
   if(typeof model.discipline!=="string"||!model.discipline.trim()) missing.push("discipline");
   if(!model.counts||typeof model.counts!=="object"||Array.isArray(model.counts)) missing.push("counts");
   if(!Array.isArray(model.proposals)) missing.push("proposals");
   if(model.humanValidationRequired!==true) missing.push("humanValidationRequired");
-  if(missing.length) return {valid:false,code:"missing_data",message:"Il file è leggibile, ma mancano alcune informazioni.",missing};
-  return {valid:true,code:"valid",message:"File importato correttamente.",missing:[]};
+  if(missing.length) return {valid:false,code:"missing_data",message:"Il file è leggibile, ma mancano alcune informazioni.",missing,warnings};
+  if(model.schemaVersion===undefined) warnings.push("Versione schema non indicata; accettato come compatibile.");
+  return {valid:true,code:"valid",message:"File importato correttamente.",missing:[],warnings};
 }
 
 function parseTeacherCmlText(text,fileName=""){
@@ -3687,10 +3693,18 @@ function parseTeacherCmlText(text,fileName=""){
 
 function departmentProposalIssues(proposal){
   const issues=[];
-  const text=proposal?.proposta||proposal?.testo||proposal?.sintesi||"";
-  if(!String(text).trim()) issues.push("Senza testo");
-  if(!String(proposal?.motivazione||"").trim()) issues.push("Senza motivazione");
-  if(!String(proposal?.fonte||proposal?.fonti||proposal?.evidenze||"").trim()) issues.push("Senza fonte");
+  const rawId=proposal?.id;
+  if(!String(rawId||"").trim()) issues.push("Senza id");
+  const rawText=proposal?.proposta||proposal?.testo||proposal?.sintesi||"";
+  const text=String(rawText);
+  if(text.length>100000) issues.push("Testo troncato ("+text.length+" caratteri)");
+  if(!text.trim()) issues.push("Senza testo");
+  const rawMot=String(proposal?.motivazione||"");
+  if(rawMot.length>100000) issues.push("Motivazione troncata ("+rawMot.length+" caratteri)");
+  if(!rawMot.trim()) issues.push("Senza motivazione");
+  const rawFonte=String(proposal?.fonte||proposal?.fonti||proposal?.evidenze||"");
+  if(rawFonte.length>100000) issues.push("Fonte troncata ("+rawFonte.length+" caratteri)");
+  if(!rawFonte.trim()) issues.push("Senza fonte");
   return issues;
 }
 
@@ -3700,8 +3714,10 @@ function departmentCmlFingerprint(model){
 }
 
 function normalizeDepartmentProposal(proposal,model,fileName,duplicate){
-  const text=proposal?.proposta||proposal?.testo||proposal?.sintesi||"";
-  const evidence=proposal?.fonte||proposal?.fonti||proposal?.evidenze||"";
+  const rawText=String(proposal?.proposta||proposal?.testo||proposal?.sintesi||"");
+  const text=rawText.length>100000?rawText.substring(0,100000):rawText;
+  const rawEvidence=String(proposal?.fonte||proposal?.fonti||proposal?.evidenze||"");
+  const evidence=rawEvidence.length>100000?rawEvidence.substring(0,100000):rawEvidence;
   const issues=departmentProposalIssues(proposal);
   if(duplicate) issues.push("Duplicato probabile");
   return {
@@ -3712,9 +3728,9 @@ function normalizeDepartmentProposal(proposal,model,fileName,duplicate){
     section:String(proposal?.ordine||proposal?.sezione||proposal?.ambito||""),
     type:String(proposal?.type||""),
     classe:String(proposal?.classe||""),
-    text:String(text),
+    text:text,
     motivation:String(proposal?.motivazione||""),
-    evidence:String(evidence),
+    evidence:evidence,
     issues,
     decision:null
   };
@@ -3742,23 +3758,44 @@ async function importTeacherCmlFiles(fileList){
     if(feedback) feedback.textContent="Seleziona almeno un file .cml.";
     return;
   }
+  const MAX_FILE_SIZE=20*1024*1024;
+  const WARN_FILE_SIZE=5*1024*1024;
+  const MAX_ARRAY_SIZE=2000;
+  const WARN_ARRAY_SIZE=500;
   const seen=new Set(),results=[],proposals=[];
   for(const file of files){
     let parsed;
+    const fileSize=file.size||0;
     if(!String(file.name||"").toLowerCase().endsWith(".cml")){
-      parsed={valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[],model:null};
+      parsed={valid:false,code:"not_recognizable",message:"Questo file non è una proposta docente CurManLight.",missing:[],warnings:[]};
+    }else if(fileSize>MAX_FILE_SIZE){
+      parsed={valid:false,code:"too_large",message:"File troppo grande per l'importazione locale. (max "+MAX_FILE_SIZE/1024/1024+" MB)",missing:[],warnings:[]};
     }else{
       try{parsed=parseTeacherCmlText(await file.text(),file.name);}
-      catch(_err){parsed={valid:false,code:"invalid_json",message:"Il file contiene JSON non valido.",missing:[],model:null};}
+      catch(_err){parsed={valid:false,code:"invalid_json",message:"Il file contiene JSON non valido.",missing:[],warnings:[]};}
     }
     let duplicate=false;
-    if(parsed.valid){
-      const fingerprint=departmentCmlFingerprint(parsed.model);
-      duplicate=seen.has(fingerprint);
-      seen.add(fingerprint);
-      for(const proposal of parsed.model.proposals) proposals.push(normalizeDepartmentProposal(proposal,parsed.model,file.name,duplicate));
+    if(parsed.valid && parsed.model){
+      if(fileSize>WARN_FILE_SIZE && fileSize<=MAX_FILE_SIZE){
+        if(!parsed.warnings) parsed.warnings=[];
+        parsed.warnings.push("File di dimensioni elevate ("+Math.round(fileSize/1024)+" KB); la lettura potrebbe essere lenta.");
+      }
+      const model=parsed.model;
+      const proposalsArr=model.proposals||[];
+      if(proposalsArr.length>MAX_ARRAY_SIZE){
+        parsed={valid:false,code:"too_large",message:"File troppo grande: troppe proposte (max "+MAX_ARRAY_SIZE+").",missing:[],warnings:parsed.warnings||[]};
+      }else if(proposalsArr.length>WARN_ARRAY_SIZE){
+        if(!parsed.warnings) parsed.warnings=[];
+        parsed.warnings.push("Numero elevato di proposte ("+proposalsArr.length+"); la lettura potrebbe essere lenta.");
+      }
+      if(parsed.valid){
+        const fingerprint=departmentCmlFingerprint(model);
+        duplicate=seen.has(fingerprint);
+        seen.add(fingerprint);
+        for(const proposal of model.proposals) proposals.push(normalizeDepartmentProposal(proposal,model,file.name,duplicate));
+      }
     }
-    results.push({name:String(file.name||"file senza nome"),valid:parsed.valid,code:parsed.code,message:parsed.message,missing:parsed.missing||[],duplicate});
+    results.push({name:String(file.name||"file senza nome"),valid:!!parsed.valid,code:parsed.code||"",message:parsed.message||"",missing:parsed.missing||[],warnings:parsed.warnings||[],duplicate});
   }
   departmentImportState={files:results,proposals};
   renderDepartmentImport();
@@ -3781,7 +3818,11 @@ function renderDepartmentImport(){
     '<div class="department-import-stat"><strong>'+summary.proposalsToCheck+'</strong>Proposte da controllare</div></div>';
   if(summary.mixedDisciplines) html+='<div class="department-import-warning">ℹ️ Sono presenti discipline diverse: il dato è segnalato ma non blocca la lettura.</div>';
   html+='<div class="department-file-list">'+departmentImportState.files.map(file=>{
-    const extra=file.duplicate?" · Duplicato probabile":file.missing.length?" · Mancano: "+file.missing.join(", "):"";
+    const extraParts=[];
+    if(file.duplicate) extraParts.push("Duplicato probabile");
+    if(file.warnings?.length) extraParts.push(file.warnings.join("; "));
+    if(file.missing.length) extraParts.push("Mancano: "+file.missing.join(", "));
+    const extra=extraParts.length?" · "+extraParts.join("; "):"";
     return '<div class="department-file-row '+(file.valid?"valid":"invalid")+'"><strong>'+escapeHtml(file.name)+'</strong><br>'+escapeHtml(file.message+extra)+'</div>';
   }).join("")+'</div>';
   const grouped={};
@@ -4488,17 +4529,23 @@ let referentOutcomeState={files:[],outcomes:[]};
 
 function validateDepartmentOutcomeCmlModel(model,fileName=""){
   const name=String(fileName||"");
-  if(!name.toLowerCase().endsWith(".cml")) return {valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[]};
-  if(!model||typeof model!=="object"||Array.isArray(model)) return {valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[]};
-  if(model.fileType!=="department_outcome") return {valid:false,code:"wrong_type",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[]};
-  const missing=[];
+  if(!name.toLowerCase().endsWith(".cml")) return {valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[],warnings:[]};
+  if(!model||typeof model!=="object"||Array.isArray(model)) return {valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[],warnings:[]};
+  if(model.fileType!=="department_outcome") return {valid:false,code:"wrong_type",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[],warnings:[]};
+  if(model.schemaVersion!==undefined){
+    if(typeof model.schemaVersion!=="string" || model.schemaVersion!=="1.0"){
+      return {valid:false,code:"unsupported_schema",message:"Versione schema non supportata. Aggiorna CurManLight o esporta di nuovo il file.",missing:[],warnings:[]};
+    }
+  }
+  const missing=[],warnings=[];
   if(typeof model.discipline!=="string"||!model.discipline.trim()) missing.push("discipline");
   if(typeof model.disciplineWorkStatus!=="string"||!model.disciplineWorkStatus.trim()) missing.push("disciplineWorkStatus");
   if(!Array.isArray(model.proposalHandling)) missing.push("proposalHandling");
   if(!model.checks||typeof model.checks!="object"||Array.isArray(model.checks)) missing.push("checks");
   if(model.humanValidationRequired!==true) missing.push("humanValidationRequired");
-  if(missing.length) return {valid:false,code:"missing_data",message:"Il file è leggibile, ma mancano alcune informazioni.",missing};
-  return {valid:true,code:"valid",message:"File importato correttamente.",missing:[]};
+  if(missing.length) return {valid:false,code:"missing_data",message:"Il file è leggibile, ma mancano alcune informazioni.",missing,warnings};
+  if(model.schemaVersion===undefined) warnings.push("Versione schema non indicata; accettato come compatibile.");
+  return {valid:true,code:"valid",message:"File importato correttamente.",missing:[],warnings};
 }
 
 function parseDepartmentOutcomeCmlText(text,fileName=""){
@@ -4517,26 +4564,63 @@ async function importDepartmentOutcomeCmlFiles(fileList){
     if(feedback) feedback.textContent="Seleziona almeno un file .cml.";
     return;
   }
+  const MAX_FILE_SIZE=20*1024*1024;
+  const WARN_FILE_SIZE=5*1024*1024;
+  const MAX_ARRAY_SIZE=2000;
+  const WARN_ARRAY_SIZE=500;
   const seen=new Set(),results=[],outcomes=[];
   for(const file of files){
     let parsed;
+    const fileSize=file.size||0;
     if(!String(file.name||"").toLowerCase().endsWith(".cml")){
-      parsed={valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[],model:null};
+      parsed={valid:false,code:"not_recognizable",message:"Questo file non è un esito dipartimentale CurManLight.",missing:[],warnings:[]};
+    }else if(fileSize>MAX_FILE_SIZE){
+      parsed={valid:false,code:"too_large",message:"File troppo grande per l'importazione locale. (max "+MAX_FILE_SIZE/1024/1024+" MB)",missing:[],warnings:[]};
     }else{
       try{parsed=parseDepartmentOutcomeCmlText(await file.text(),file.name);}
-      catch(_err){parsed={valid:false,code:"invalid_json",message:"Il file contiene JSON non valido.",missing:[],model:null};}
+      catch(_err){parsed={valid:false,code:"invalid_json",message:"Il file contiene JSON non valido.",missing:[],warnings:[]};}
     }
     let duplicate=false;
-    if(parsed.valid){
+    if(parsed.valid && parsed.model){
+      if(fileSize>WARN_FILE_SIZE && fileSize<=MAX_FILE_SIZE){
+        if(!parsed.warnings) parsed.warnings=[];
+        parsed.warnings.push("File di dimensioni elevate ("+Math.round(fileSize/1024)+" KB); la lettura potrebbe essere lenta.");
+      }
       const model=parsed.model;
-      // Create a fingerprint based on discipline, createdAt, and proposalHandling ids
-      const rows=(model.proposalHandling||[]).map(p=>[p.proposalId||"",p.handling||""]);
-      const fingerprint=JSON.stringify([model.discipline||"",model.createdAt||"",rows]);
-      duplicate=seen.has(fingerprint);
-      seen.add(fingerprint);
-      outcomes.push(model);
+      const phArr=model.proposalHandling||[];
+      if(phArr.length>MAX_ARRAY_SIZE){
+        parsed={valid:false,code:"too_large",message:"File troppo grande: troppe assegnazioni (max "+MAX_ARRAY_SIZE+").",missing:[],warnings:parsed.warnings||[]};
+      }else if(phArr.length>WARN_ARRAY_SIZE){
+        if(!parsed.warnings) parsed.warnings=[];
+        parsed.warnings.push("Numero elevato di assegnazioni ("+phArr.length+"); la lettura potrebbe essere lenta.");
+      }
+      if(parsed.valid){
+        const seenIds=new Set();
+        let dupHandling=false;
+        phArr.forEach(ph=>{
+          const pid=String(ph?.proposalId||"").trim();
+          if(pid && seenIds.has(pid)) dupHandling=true;
+          seenIds.add(pid);
+        });
+        if(dupHandling){
+          parsed={valid:false,code:"duplicate_handling",message:"Assegnazioni duplicate per la stessa proposta nello stesso file.",missing:[],warnings:parsed.warnings||[]};
+        }
+      }
+      if(parsed.valid){
+        const disc=String(model.discipline||"").trim();
+        const disciplines=(Array.isArray(model.disciplines)?model.disciplines:[]).filter(Boolean).sort();
+        if(disciplines.length>0 && disc && disciplines[0]!==disc){
+          if(!parsed.warnings) parsed.warnings=[];
+          parsed.warnings.push("Discipline del file e della lista Discipline non corrispondono.");
+        }
+        const rows=phArr.map(p=>[p.proposalId||"",p.handling||""]);
+        const fingerprint=JSON.stringify([model.discipline||"",model.createdAt||"",rows]);
+        duplicate=seen.has(fingerprint);
+        seen.add(fingerprint);
+        outcomes.push(model);
+      }
     }
-    results.push({name:String(file.name||"file senza nome"),valid:parsed.valid,code:parsed.code,message:parsed.message,missing:parsed.missing||[],duplicate});
+    results.push({name:String(file.name||"file senza nome"),valid:!!parsed.valid,code:parsed.code||"",message:parsed.message||"",missing:parsed.missing||[],warnings:parsed.warnings||[],duplicate});
   }
   referentOutcomeState={files:results,outcomes};
   renderReferentValidation();
@@ -4559,6 +4643,14 @@ function renderReferentValidation(){
     '<div class="referent-validation-stat"><strong>'+summary.proposalsDaChiarire+'</strong>Da chiarire</div>'+
     '<div class="referent-validation-stat"><strong>'+summary.proposalsSenzaEsito+'</strong>Senza esito</div></div>';
   if(summary.mixedDisciplines) html+='<div class="referent-validation-warning">ℹ️ Sono presenti discipline diverse: il dato è segnalato ma non blocca la lettura.</div>';
+  html+='<div class="referent-file-list" style="margin-bottom:12px">'+referentOutcomeState.files.map(file=>{
+    const extraParts=[];
+    if(file.duplicate) extraParts.push("Duplicato probabile");
+    if(file.warnings?.length) extraParts.push(file.warnings.join("; "));
+    if(file.missing.length) extraParts.push("Mancano: "+file.missing.join(", "));
+    const extra=extraParts.length?" · "+extraParts.join("; "):"";
+    return '<div class="referent-file-row '+(file.valid?"valid":"invalid")+'" style="padding:6px 8px;border-bottom:1px solid #eee"><strong>'+escapeHtml(file.name)+'</strong><br>'+escapeHtml(file.message+extra)+'</div>';
+  }).join("")+'</div>';
   html+='<div class="referent-outcome-list">'+referentOutcomeState.outcomes.map(outcome=>{
     const handlingCounts={confluita_nella_sintesi:0,riformulata_dal_dipartimento:0,assorbita_in_altra_proposta:0,da_chiarire:0,senza_esito:0};
     outcome.proposalHandling.forEach(ph=>{
