@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-181 - EDUCAZIONE_FISICA_HUMAN_VALIDATION_CHECKLIST
+
+- **Commit iniziale**: `761622d` (allineato con `origin/main`)
+- **Tipo slice**: docs-only / human validation checklist
+- **Oggetto**: checklist di validazione umana/dipartimentale per Educazione Fisica dopo CML-180
+- **Esito**: checklist completa e pronta per compilazione; disciplina non ancora normalizzata
+- **Struttura checklist**: 21 tabelle su 10 aree (identita, nuclei, progressione, obiettivi, traguardi, conoscenze/abilita/atteggiamenti, valutazione, inclusione/sicurezza, compatibilita CML, decisione finale)
+- **Esiti previsti**: sufficiente / parziale / insufficiente per data-prep
+- **Prossima slice consigliata**: CML-182 - EDUCAZIONE_FISICA_VALIDATION_OUTCOME_DECISION
+- **Runtime**: invariato
+- **Dati curriculum**: invariati; nessun file `.normalized.json` creato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-181.md`, `report/CML-181_educazione_fisica_human_validation_checklist.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_181_EDUCAZIONE_FISICA_HUMAN_VALIDATION_CHECKLIST_READY`
+
 ## 2026-06-27 - CML-180 - EDUCAZIONE_FISICA_CONTROLLED_DATA_PREP_READINESS_DECISION
 
 - **Commit iniziale**: `1923fed` (sync con `origin/main`)
