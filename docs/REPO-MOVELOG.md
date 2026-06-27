@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-180 - EDUCAZIONE_FISICA_CONTROLLED_DATA_PREP_READINESS_DECISION
+
+- **Commit iniziale**: `1923fed` (sync con `origin/main`)
+- **Tipo slice**: docs-only / readiness decision
+- **Oggetto**: decisione controllata su data preparation Educazione Fisica dopo CML-178 e CML-179
+- **Decisione principale**: `HUMAN_VALIDATION_REQUIRED_BEFORE_DATA_PREP`
+- **Esito**: gap-fill utile ma non sufficiente per creare `educazione-fisica.normalized.json` senza validazione docente/dipartimentale
+- **Rischio dati residuo**: medio
+- **Rischio istituzionale residuo**: medio
+- **Prossima slice consigliata**: `CML-181 - EDUCAZIONE_FISICA_HUMAN_VALIDATION_CHECKLIST`
+- **Runtime**: invariato
+- **Dati curriculum**: invariati; nessun file `.normalized.json` creato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-180.md`, `report/CML-180_educazione_fisica_controlled_data_prep_readiness_decision.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_180_EDUCAZIONE_FISICA_CONTROLLED_DATA_PREP_READINESS_DECISION_READY`
+
 ## 2026-06-27 - CML-179 - EDUCAZIONE_FISICA_GAP_FILL_DOCUMENTALE_MANUALE
 
 - **Commit iniziale**: `d457261` (locale ahead 1; `origin/main` a `129a816`)
