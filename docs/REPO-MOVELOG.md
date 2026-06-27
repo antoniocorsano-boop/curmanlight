@@ -2,9 +2,9 @@
 
 ## 2026-06-27 - CML-189 - CONTROLLED_SYNC_BATCH_AFTER_14_14_DATA_COMPLETION
 
-- **Commit locale**: `3470f65` (pre-push)
-- **origin/main pre-push**: `ba051ff`
-- **origin/main post-push**: allineato con locale
+- **Commit locale pre-push**: `3470f65`
+- **origin/main pre-push**: `ba051ff` (remote aveva `aff6f09` PR#3, rebasato)
+- **origin/main post-push**: `a81fdf0` — allineato ✅
 - **Tipo slice**: sync — push controllato batch 14/14
 - **Oggetto**: push dei tre commit CML-186, CML-187, CML-188 verso origin/main dopo completamento 14/14
 - **Commits pushati**:

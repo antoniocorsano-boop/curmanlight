@@ -43,10 +43,10 @@ Eseguire un push controllato dei tre commit di data-normalization (CML-186, CML-
 
 | Risultato | Valore |
 |---|---|
-| Commit locale finale | |
-| origin/main finale | |
-| Allineamento | |
-| Working tree | |
+| Commit locale finale | `a81fdf0` |
+| origin/main finale | `a81fdf0` |
+| Allineamento | Allineato ✅ |
+| Working tree | Pulito |
 
 ## 6. Stato finale consolidato
 
@@ -67,4 +67,4 @@ Audit di completamento 14/14 (CML-190) oppure avvio nuovo ciclo: design/UML, evi
 
 ## 8. Verdict
 
-Da confermare dopo push.
+`CML_189_CONTROLLED_SYNC_BATCH_AFTER_14_14_DATA_COMPLETION_READY`
