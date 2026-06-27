@@ -1,5 +1,28 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-184 - EDUCAZIONE_FISICA_RUNTIME_MAPPA_INTEGRATION
+
+- **Commit iniziale**: `ed4fd48` (CML-183 committato e sincronizzato con origin/main)
+- **Tipo slice**: runtime integration
+- **Oggetto**: integrazione Educazione Fisica nella mappa dati disciplinare runtime
+- **Decisione autorizzativa**: `LIMITED_DRAFT_DATA_PREP_ALLOWED` (CML-182B) + CML-183 (draft normalizzato)
+- **File modificato**: `_published_snapshot/netlify-current/index.html` (3 edits: MAPPA_DATI var, render branch, selector button)
+- **Dati normalizzati**: invariato (11/14)
+- **Runtime mappa**: 11/14 (era 10/14)
+- **Shape test**: 10/10 PASS (invariato — tools/ non modificati)
+- **Unità integrate**: 7 (Infanzia 1, Primaria 3, Secondaria 3)
+- **Nodi disciplinari**: 4 (Abilita motorie, Corpo e percezione, Espressione e inclusione, Gioco e sport)
+- **Stato EF**: limited draft — `humanValidationRequired: true` preservato nei dati normalizzati
+- **Prossima slice consigliata**: CML-185 — altra disciplina residua o prossimo incremento funzionale
+- **Runtime**: aggiornato (11/14)
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-184.md`, `report/CML-184_educazione_fisica_runtime_mappa_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Residuo runtime**: 3/14 (Seconda Lingua Comunitaria, Religione Cattolica, Latino LEL)
+- **Verdetto**: `CML_184_EDUCAZIONE_FISICA_RUNTIME_MAPPA_INTEGRATION_READY`
+
 ## 2026-06-27 - CML-183 - EDUCAZIONE_FISICA_LIMITED_DRAFT_DATA_PREP
 
 - **Commit iniziale**: `bbd41c0` (allineato con `origin/main`)
