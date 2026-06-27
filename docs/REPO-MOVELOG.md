@@ -1,5 +1,21 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-199 - CML_V1_SCHEMA_VERSIONING_AND_COMPATIBILITY_CONTRACT
+
+- **Commit base**: `32a724e` (CML-198, main/origin aligned)
+- **Tipo slice**: contract docs-only
+- **Oggetto**: definizione contratto formale `.cml` v1.0 per versionamento, compatibilità, validazione, privacy e tassonomia errori
+- **Runtime ispezionato**: `_published_snapshot/netlify-current/index.html` (funzioni export/import per accuratezza contratto)
+- **Schema family**: `schemaVersion: "1.0"` è l'unica versione supportata
+- **File types accettati**: `teacher_proposal`, `department_outcome`
+- **Matrice ruolo/file-type**: docente esporta proposal, dipartimento importa proposal ed esporta outcome, referente importa outcome ed esporta Markdown
+- **Contratti definiti**: campi required/optional/advisory per entrambi i file type, policy versioni, backward compatibility, duplicate policy, mixed-discipline policy, discipline/disciplines consistency, item-level validation, malformed/wrong-type handling, size limits, privacy/security guidance, error taxonomy
+- **CML-200 scope**: enforcement `schemaVersion`, item-level checks, duplicate detection, size limits, discipline consistency, messaggi utente con recovery guidance, preservazione campi sconosciuti, `code` strutturati
+- **CML-201 scope**: smoke E2E su tutti e tre i ruoli con tutti i casi di errore e tutti gli esempi `.cml` esistenti
+- **Artefatti**: `docs/02_system/CML-SCHEMA-V1-CONTRACT.md`, `docs/03_execution/CML-199.md`, `report/CML-199_cml_v1_schema_versioning_and_compatibility_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, schema, export/import, contenuti, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_199_CML_V1_SCHEMA_VERSIONING_AND_COMPATIBILITY_CONTRACT_READY`
+
 ## 2026-06-27 - CML-198 - CML_SCHEMA_AND_EXPORT_IMPORT_AUDIT
 
 - **Commit base**: `1b533c1` (CML-197, main/origin aligned)
