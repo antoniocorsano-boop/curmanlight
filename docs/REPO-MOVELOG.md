@@ -1,5 +1,25 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-189 - CONTROLLED_SYNC_BATCH_AFTER_14_14_DATA_COMPLETION
+
+- **Commit locale**: `3470f65` (pre-push)
+- **origin/main pre-push**: `ba051ff`
+- **origin/main post-push**: allineato con locale
+- **Tipo slice**: sync — push controllato batch 14/14
+- **Oggetto**: push dei tre commit CML-186, CML-187, CML-188 verso origin/main dopo completamento 14/14
+- **Commits pushati**:
+  - `22c48af` CML-186 — Seconda Lingua Comunitaria limited draft
+  - `a8bd394` CML-187 — Religione Cattolica limited draft
+  - `3470f65` CML-188 — Latino LEL limited draft (14/14)
+- **Pre-push checks**: validatore 14/14 PASS, shape 11/11 PASS, diff-check PASS, credential scan OK
+- **Runtime**: invariato (11/14) — nessuna modifica runtime
+- **Dati normalizzati post-sync**: 14/14 ✅
+- **Deploy manuale**: non eseguito
+- **Push**: eseguito
+- **Artefatti**: `docs/03_execution/CML-189.md`, `report/CML-189_controlled_sync_batch_after_14_14_data_completion.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Prossima slice consigliata**: audit di completamento 14/14 (CML-190) o nuovo ciclo funzionale
+- **Verdetto**: `CML_189_CONTROLLED_SYNC_BATCH_AFTER_14_14_DATA_COMPLETION_READY`
+
 ## 2026-06-27 - CML-186 - SECONDA_LINGUA_COMUNITARIA_LIMITED_DRAFT_DATA_PREP
 
 - **Commit iniziale**: `ba051ff` (allineato con `origin/main`)
