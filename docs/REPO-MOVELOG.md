@@ -1,5 +1,21 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-201 - TEACHER_DEPARTMENT_REFERENT_CML_END_TO_END_SMOKE
+
+- **Commit base**: `3e83d83` (CML-200, main ahead origin/main di 1)
+- **Tipo slice**: docs-only smoke verification
+- **Oggetto**: verifica end-to-end flusso `.cml` tra docente, dipartimento e referente con validatori CML-200
+- **Script smoke**: `tools/cml201-smoke.mjs` (temporaneo, rimosso dopo esecuzione)
+- **CML-200 re-run**: 12/12 PASS (valid teacher_proposal, legacy warning, unsupported block, malformed JSON block, wrong type block, partial item warnings, duplicate fingerprint, valid department_outcome, handling ids)
+- **E2E smoke**: 33/33 PASS (teacher export, department import, department export, referent import, referent report, examples compatibility)
+- **Validator**: 14/14 PASS
+- **Shape test**: pre-existing BOM failure su `content/curriculum/*.normalized.json` (non causato da CML-200/CML-201)
+- **Esempi `.cml`**: tutti e 4 gli esempi in `docs/04_user/esempi_cml/` passano come valid input senza modifiche
+- **Regressioni bloccanti**: nessuna
+- **Artefatti**: `docs/03_execution/CML-201.md`, `report/CML-201_teacher_department_referent_cml_end_to_end_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, schema, export/import, contenuti, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_201_TEACHER_DEPARTMENT_REFERENT_CML_END_TO_END_SMOKE_READY`
+
 ## 2026-06-27 - CML-200 - CML_IMPORT_EXPORT_VALIDATION_HARDENING
 
 - **Commit base**: `eb3e36f` (CML-199, main/origin aligned)
