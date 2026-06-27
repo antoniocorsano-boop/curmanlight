@@ -78,9 +78,10 @@ function toRuntimeMappaDati(data) {
 
 async function main() {
   const raw = await readStdin();
+  const cleaned = raw.replace(/^\uFEFF/, '').trim();
   let data;
   try {
-    data = JSON.parse(raw);
+    data = JSON.parse(cleaned);
   } catch (e) {
     console.error('[WARNING] Input non è JSON valido:', e.message);
     process.exit(1);
