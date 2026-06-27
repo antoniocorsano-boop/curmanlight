@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-184A - RUNTIME_SHAPE_TEST_ALIGNMENT
+
+- **Commit iniziale**: `12e698d` (CML-184 sincronizzato con origin/main)
+- **Tipo slice**: test alignment / shape
+- **Oggetto**: allineamento copertura shape test a 11/11 dopo integrazione EF (CML-184)
+- **Decisione autorizzativa**: shape scope note in CML-184-SYNC
+- **File modificato**: `tools/test-runtime-mappa-dati-shape.mjs`
+- **Modifica**: aggiunto `'educazione-fisica.normalized.json'` a FILES array + expected counts `{ s: 7, n: 4, p: 7, d: 0 }`
+- **Shape test prima**: 10/10 PASS
+- **Shape test dopo**: 11/11 PASS
+- **Runtime mappa**: invariato (11/14)
+- **Dati normalizzati**: invariato (11/14)
+- **Prossima slice consigliata**: CML-185 — disciplina residua o prossimo incremento funzionale
+- **Runtime**: invariato
+- **Tools**: solo shape test aggiornato
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `tools/test-runtime-mappa-dati-shape.mjs`, `docs/03_execution/CML-184A.md`, `report/CML-184A_runtime_shape_test_alignment.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_184A_RUNTIME_SHAPE_TEST_ALIGNMENT_READY`
+
 ## 2026-06-27 - CML-184 - EDUCAZIONE_FISICA_RUNTIME_MAPPA_INTEGRATION
 
 - **Commit iniziale**: `ed4fd48` (CML-183 committato e sincronizzato con origin/main)

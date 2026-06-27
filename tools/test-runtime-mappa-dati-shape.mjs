@@ -17,11 +17,13 @@ const FILES = [
   'geografia.normalized.json',
   'inglese.normalized.json',
   'educazione-civica.normalized.json',
+  'educazione-fisica.normalized.json',
   'arte-immagine.normalized.json',
   'musica.normalized.json'
 ];
 
 const EXPECTED_COUNTS = {
+  'educazione-fisica.normalized.json': { s: 7, n: 4, p: 7, d: 0 },
   'musica.normalized.json': { s: 7, n: 3, p: 7, d: 0 }
 };
 
