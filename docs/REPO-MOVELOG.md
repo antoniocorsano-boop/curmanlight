@@ -4936,3 +4936,38 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-211.md`, `report/CML-211_educazione_fisica_human_validation_package.md`, `docs/04_user/educazione_fisica_validazione_dipartimentale.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_211_EDUCAZIONE_FISICA_HUMAN_VALIDATION_PACKAGE_READY`
+
+## 2026-06-27 - CML-210A - EDUCAZIONE_FISICA_CONTROLLED_JSON_CONTENT_POLISH_PROVISIONAL
+
+- **Commit**: `e216633` (locale)
+- **Tipo slice**: controlled JSON content polish (provisional)
+- **Oggetto**: polish contenutistico controllato e provvisorio di `educazione-fisica.normalized.json` mantenendo 4 nuclei, senza quinto nucleo autonomo
+- **Decisione**: Opzione C provvisoria — mantenere 4 nuclei, autorizzare polish limitato
+- **Stato iniziale**: `main...origin/main` aligned at `e216633`, working tree pulito
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Struttura EF before/after**: 7 unità, 4 nuclei, 3 ordini — invariata
+- **Nuclei**: Corpo e percezione, Abilità motorie, Gioco e sport, Espressione e inclusione — preservati
+- **Quinto nucleo**: NON introdotto (Salute e benessere rimane trasversale)
+- **Modifiche JSON**: 41 righe modificate in `content/curriculum/educazione-fisica.normalized.json`
+- **Miglioramenti**:
+  - rafforzata dimensione trasversale salute/benessere in tutti i nuclei;
+  - aggiunti ponti verticali Infanzia→Primaria→Secondaria in obiettivi e traguardi;
+  - rafforzato nucleo Abilità motorie (Primaria 3) con progressione da Primaria 1 e evidenze calibrate;
+  - migliorato wording obiettivi/traguardi (più specifico, osservabile, meno generico);
+  - soglie evidenze rafforzate con quantificazioni;
+  - aggiornato campo `source` con riferimento a CML-210A;
+  - aggiornate `noteDipartimento` di tutte le 7 unità.
+- **Non modificato**: nessuna unità aggiunta/rimossa, nessun nucleo aggiunto/rimosso, ID/ordini/classi preservati
+- **Runtime**: invariato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `content/curriculum/educazione-fisica.normalized.json`, `docs/03_execution/CML-210A.md`, `report/CML-210A_educazione_fisica_controlled_json_content_polish_provisional.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_210A_EDUCAZIONE_FISICA_CONTROLLED_JSON_CONTENT_POLISH_PROVISIONAL_READY`
+
