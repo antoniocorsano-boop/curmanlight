@@ -4909,3 +4909,30 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-210.md`, `report/CML-210_educazione_fisica_refinement_plan.md`, `docs/03_execution/CML-210S.md`, `report/CML-210S_controlled_push.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_210_EDUCAZIONE_FISICA_REFINEMENT_PLAN_AFTER_HUMAN_VALIDATION_READY`
+
+## 2026-06-27 - CML-211 - EDUCAZIONE_FISICA_HUMAN_VALIDATION_PACKAGE
+
+- **Commit**: `4d10229` (locale)
+- **Tipo slice**: docs-only / human validation package
+- **Oggetto**: prepara pacchetto di validazione dipartimentale per Educazione Fisica; traduce CML-204 e CML-210 in documento school-facing
+- **Stato iniziale**: `main...origin/main` aligned at `72e5901`, working tree pulito
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Struttura EF**: 7 unita, 4 nuclei (Corpo e percezione, Abilita motorie, Gioco e sport, Espressione e inclusione)
+- **Gap model riferimento**: CML-204 (0 P0, 4 P1, 6 P2, 4 P3)
+- **Decisione riferimento**: CML-210 Opzione A — mantenere 4 nuclei fino a validazione umana
+- **Domande dipartimento**: 4 (Salute e benessere autonomo, progressione Primaria, distribuzione Abilita motorie, ponte verticale Infanzia-Primaria-Secondaria)
+- **Opzioni valutate**: A (mantenere), B (5 nuclei), C (perfezionare progressione), D (rinviare a UDA)
+- **CML-210A bloccata**: si, fino a validazione esplicita docente/dipartimento
+- **Runtime**: invariato
+- **content/curriculum/**: invariato; nessun `.normalized.json` modificato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-211.md`, `report/CML-211_educazione_fisica_human_validation_package.md`, `docs/04_user/educazione_fisica_validazione_dipartimentale.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_211_EDUCAZIONE_FISICA_HUMAN_VALIDATION_PACKAGE_READY`
