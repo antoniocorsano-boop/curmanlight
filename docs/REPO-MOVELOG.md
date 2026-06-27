@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-206 - MULTI_DISCIPLINE_PACKAGE_FORMAT_SELECTION_AUDIT
+
+- **Commit base**: `f0f9817` (CML-205S, aligned)
+- **Tipo slice**: audit docs-only
+- **Oggetto**: audit e selezione strategia formato `.cml` multi-disciplina; raccomandata Opzione A (mantieni batch import attuale)
+- **Opzioni valutated**: A (keep batch), B (lightweight package in v1.0), C (new `multi_discipline_package` fileType), D (defer to v1.1/v2.0), E (UX guidance only)
+- **Selezione**: Opzione A — nessun nuovo formato package; batch import esistente già soddisfa il bisogno multi-disciplina
+- **Motivazione**: backward compatibilità 100%, zero rischio schema, nessuna complessità aggiuntiva, nessun evidence di bisogno forte da scuole
+- **Alternative rigettate**: B (ambiguità semantica), C (3-way matrix + nuovo validatore/export/import), D (eccessivamente conservativo), E (UX improvement separato, non risolve questione package)
+- **Batch import behavior mappato**: multi-file, dedup fingerprint, mixed-discipline warning, grouping per disciplina, fallback item-level discipline
+- **Artefatti**: `docs/03_execution/CML-206.md`, `report/CML-206_multi_discipline_package_format_selection_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, schema, export/import, contenuti, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_206_MULTI_DISCIPLINE_PACKAGE_FORMAT_SELECTION_AUDIT_READY`
+
 ## 2026-06-27 - CML-205 - DRIVE_ENDPOINT_ALLOWLIST_SECURITY_HARDENING
 
 - **Commit base**: `a21838a` (CML-203, aligned)
