@@ -4971,3 +4971,34 @@
 - **Artefatti**: `content/curriculum/educazione-fisica.normalized.json`, `docs/03_execution/CML-210A.md`, `report/CML-210A_educazione_fisica_controlled_json_content_polish_provisional.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_210A_EDUCAZIONE_FISICA_CONTROLLED_JSON_CONTENT_POLISH_PROVISIONAL_READY`
 
+## 2026-06-28 - CML-210B - EDUCAZIONE_FISICA_CONTROLLED_RUNTIME_PUBLIC_SMOKE
+
+- **Commit**: `318c2d5` (locale)
+- **Tipo slice**: docs-only / smoke verification
+- **Oggetto**: verifica riflessione polish CML-210A in runtime e GitHub Pages pubbliche
+- **Stato iniziale**: `main...origin/main` aligned at `318c2d5`, working tree pulito
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Struttura EF**: 7 unità, 4 nuclei, 3 ordini — confermata
+- **Nuclei**: Corpo e percezione, Abilità motorie, Gioco e sport, Espressione e inclusione — preservati
+- **Quinto nucleo**: NON introdotto
+- **Runtime structure**: 7 strutture, 4 nodi, 7 progressioni, D=0 — confermato
+- **CML-210A wording in runtime**: NON RIFLESSO — runtime HTML statico non rigenerato
+- **Public GitHub Pages**: https://antoniocorsano-boop.github.io/curmanlight/ — HTTP 200, app carica, EF selezionabile, contenuto non aggiornato
+- **No manual deploy**: confermato
+- **Secret scan**: negativo
+- **git diff --check**: pulito
+- **Raccomandazione**: CML-210BS — rigenerazione statica mappa runtime e deploy controllato; CML-211B — department validation follow-up
+- **Runtime**: invariato
+- **content/curriculum/**: invariato (solo lettura)
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-210B.md`, `report/CML-210B_educazione_fisica_controlled_runtime_public_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_210B_EDUCAZIONE_FISICA_CONTROLLED_RUNTIME_PUBLIC_SMOKE_READY`
+
