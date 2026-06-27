@@ -5002,3 +5002,33 @@
 - **Artefatti**: `docs/03_execution/CML-210B.md`, `report/CML-210B_educazione_fisica_controlled_runtime_public_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_210B_EDUCAZIONE_FISICA_CONTROLLED_RUNTIME_PUBLIC_SMOKE_READY`
 
+## 2026-06-28 - CML-210BS - EDUCAZIONE_FISICA_RUNTIME_STATIC_MAP_REGENERATION
+
+- **Commit**: `8a64a09` (locale, poi push)
+- **Tipo slice**: runtime integration (controllata)
+- **Oggetto**: rigenerazione mappa runtime statica EF per rendere visibile il polish CML-210A
+- **Stato iniziale**: `main...origin/main` aligned at `39c4f4a`, working tree pulito
+- **Strumento usato**: `tools/generate-static-mappa-dati.mjs` con input `content/curriculum/educazione-fisica.normalized.json`
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Struttura EF runtime**: S=7, N=4, P=7, D=0 — preservata
+- **Nuclei**: Corpo e percezione, Abilità motorie, Gioco e sport, Espressione e inclusione — preservati
+- **Quinto nucleo**: NON introdotto
+- **CML-210A wording in runtime**: RIFLESSO — dati statici aggiornati
+- **Public GitHub Pages**: https://antoniocorsano-boop.github.io/curmanlight/ — HTTP 200, app carica, EF selezionabile, contenuto CML-210A visibile
+- **No manual deploy**: confermato
+- **Secret scan**: pulito (riferimenti a "password" sono logiche di validazione UI, non credenziali)
+- **git diff --check**: pulito
+- **JSON modificato**: NO
+- **Altre discipline**: invariate
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA, service-worker, manifest**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: automatico GitHub Pages
+- **Push**: eseguito
+- **Artefatti**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-210BS.md`, `report/CML-210BS_educazione_fisica_runtime_static_map_regeneration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_210BS_EDUCAZIONE_FISICA_RUNTIME_STATIC_MAP_REGENERATION_COMPLETE`
+
