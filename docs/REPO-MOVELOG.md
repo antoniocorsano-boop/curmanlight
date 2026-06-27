@@ -1,5 +1,29 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-185 - RESIDUAL_DISCIPLINE_SELECTION_AUDIT
+
+- **Commit iniziale**: `8a8351a` (allineato con `origin/main`)
+- **Tipo slice**: docs-only / selection audit
+- **Oggetto**: selezione formale della prossima disciplina residua dopo chiusura Educazione Fisica
+- **Decisione principale**: `NEXT_DISCIPLINE_SELECTED: Seconda Lingua Comunitaria`
+- **Prossima slice**: `CML-186 — SECONDA_LINGUA_COMUNITARIA_LIMITED_DRAFT_DATA_PREP`
+- **Dati normalizzati**: invariato (11/14)
+- **Runtime mappa**: invariato (11/14)
+- **Shape test**: 11/11 PASS (invariato)
+- **Discipline residue valutate**: Seconda Lingua Comunitaria, Religione Cattolica, Latino LEL
+- **Disciplina selezionata**: Seconda Lingua Comunitaria
+- **Criteri**: continuità con CML-172, readiness dati, rischio contenuto inventato, rischio istituzionale, compatibilità schema, limited draft coerenza
+- **Motivazione**: è la prossima nella sequenza residua CML-172; Musica e Educazione Fisica completate; può riusare pattern linguistico Inglese; rischio medio-basso; Religione Cattolica e Latino LEL posticipati per rischi maggiori
+- **Prossima slice consigliata**: CML-186 — SECONDA_LINGUA_COMUNITARIA_LIMITED_DRAFT_DATA_PREP
+- **Runtime**: invariato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-185.md`, `report/CML-185_residual_discipline_selection_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Residuo runtime**: 3/14 (Seconda Lingua Comunitaria, Religione Cattolica, Latino LEL)
+- **Verdetto**: `CML_185_RESIDUAL_DISCIPLINE_SELECTION_AUDIT_READY`
+
 ## 2026-06-27 - CML-184A - RUNTIME_SHAPE_TEST_ALIGNMENT
 
 - **Commit iniziale**: `12e698d` (CML-184 sincronizzato con origin/main)
