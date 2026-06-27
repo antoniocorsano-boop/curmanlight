@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-179 - EDUCAZIONE_FISICA_GAP_FILL_DOCUMENTALE_MANUALE
+
+- **Commit iniziale**: `d457261` (locale ahead 1; `origin/main` a `129a816`)
+- **Tipo slice**: docs-only / manual gap-fill
+- **Oggetto**: base documentale manuale per Educazione Fisica dopo CML-178
+- **Esito**: gap-fill documentale pronto; disciplina ancora non pronta per data preparation senza revisione umana
+- **Readiness**: non pronta / gap-fill documentale pronto
+- **Raccomandazione**: revisione umana docente/dipartimentale; data preparation solo dopo validazione
+- **Runtime**: invariato
+- **Dati curriculum**: invariati; nessun file `.normalized.json` creato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-179.md`, `report/CML-179_educazione_fisica_gap_fill_documentale_manuale.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_179_EDUCAZIONE_FISICA_GAP_FILL_DOCUMENTALE_MANUALE_READY`
+
 ## 2026-06-27 - CML-178 - EDUCAZIONE_FISICA_DETAILED_GAP_MODEL
 
 - **Commit iniziale**: `129a816` (sync con `origin/main`)
