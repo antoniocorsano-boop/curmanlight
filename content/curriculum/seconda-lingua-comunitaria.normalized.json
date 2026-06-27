@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Seconda Lingua Comunitaria",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-185 selection audit — limited draft for Seconda Lingua Comunitaria (Secondaria only). Structural benchmark: Inglese normalized JSON (CML-098). Language-neutral: no single L2 specified. Content provisional — department must select target language and validate. Limited draft authorized by CML-182B (LIMITED_DRAFT_DATA_PREP_ALLOWED).",
+  "unitaApprendimento": [
+    {
+      "id": "slc_sec_1_001",
+      "disciplina": "Seconda Lingua Comunitaria",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Ascolto e comprensione orale",
+      "ambito": "Prime parole ed espressioni della L2: suoni, ritmi, saluti, lessico di base per la classe",
+      "competenza": "Comprende parole familiari ed espressioni semplici nella L2 relative all'ambiente scolastico e a se stesso, pronunciate lentamente e chiaramente",
+      "traguardo": "L'alunno comprende parole e brevi espressioni orali nella L2 relative ad ambiti familiari; riconosce suoni caratteristici della L2; esegue semplici istruzioni.",
+      "obiettivi": [
+        "Comprendere saluti e formule di cortesia nella L2",
+        "Riconoscere e riprodurre suoni caratteristici della L2",
+        "Comprendere semplici istruzioni in L2 (ascolta, ripeti, alzati, siediti)",
+        "Identificare parole familiari in brevi ascolti"
+      ],
+      "conoscenze": [
+        "Saluti e presentazioni: buongiorno, arrivederci, grazie, per favore",
+        "Lessico di base: numeri 1-20, colori, oggetti scolastici",
+        "Suoni caratteristici della L2: alfabeto, fonemi specifici",
+        "Semplici istruzioni per la classe"
+      ],
+      "abilita": [
+        "Salutare e congedarsi nella L2",
+        "Eseguire semplici istruzioni in L2",
+        "Riconoscere suoni della L2 distinguendoli dall'italiano",
+        "Indicare oggetti nominati nella L2"
+      ],
+      "evidenze": [
+        "L'alunno saluta e si congeda nella L2 in modo appropriato",
+        "L'alunno esegue 3 comandi in L2 senza esitazione",
+        "L'alunno riconosce e riproduce 5 suoni caratteristici della L2",
+        "L'alunno indica 5 oggetti scolastici nominati nella L2"
+      ],
+      "criteriValutazione": [
+        "Comprensione di parole ed espressioni familiari",
+        "Pronuncia chiara e comprensibile",
+        "Capacità di eseguire istruzioni nella L2",
+        "Attenzione all'ascolto"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 — Seconda Lingua Comunitaria, Secondaria di I grado, classe 1, livello QCER A1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-186 — Secondaria 1, nucleo Ascolto e comprensione orale. Limited draft: lingua target non specificata, dipartimento deve scegliere L2 e adattare lessico."
+    },
+    {
+      "id": "slc_sec_1_002",
+      "disciplina": "Seconda Lingua Comunitaria",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Produzione orale e interazione",
+      "ambito": "Presentarsi, descriversi e interagire in contesti guidati nella L2",
+      "competenza": "Interagisce in semplici scambi dialogici nella L2, presentandosi, formulando domande e rispondendo su argomenti familiari",
+      "traguardo": "L'alunno produce oralmente parole e brevi frasi nella L2 per presentarsi, descriversi e interagire in contesti guidati; risponde a domande semplici su di sé e sul proprio ambiente.",
+      "obiettivi": [
+        "Presentarsi dicendo nome, età e provenienza nella L2",
+        "Porre e rispondere a domande semplici (Chi sei? Quanti anni hai? Da dove vieni?)",
+        "Descrivere oralmente un compagno usando aggettivi semplici",
+        "Recitare una breve filastrocca o canzone nella L2"
+      ],
+      "conoscenze": [
+        "Presentazioni: nome, età, provenienza",
+        "Aggettivi semplici: grande/piccolo, alto/basso, felice/triste",
+        "Strutture base: Io sono..., Tu sei..., Lui/Lei è...",
+        "Filastrocche e canzoni nella L2 per bambini/ragazzi"
+      ],
+      "abilita": [
+        "Dire il proprio nome, età e provenienza nella L2",
+        "Chiedere a un compagno nome, età e provenienza",
+        "Descrivere un compagno usando 2-3 aggettivi",
+        "Recitare una breve filastrocca nella L2"
+      ],
+      "evidenze": [
+        "L'alunno si presenta in 3 frasi complete nella L2",
+        "L'alunno intervista un compagno con 3 domande nella L2",
+        "L'alunno descrive un compagno con 3 aggettivi nella L2",
+        "L'alunno recita una filastrocca nella L2 con buona pronuncia"
+      ],
+      "criteriValutazione": [
+        "Capacità di presentarsi nella L2",
+        "Pronuncia e intonazione adeguate",
+        "Capacità di porre domande semplici",
+        "Partecipazione attiva alle attività orali"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 — Seconda Lingua Comunitaria, Secondaria di I grado, classe 1, livello QCER A1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-186 — Secondaria 1, nucleo Produzione orale e interazione. Limited draft: contenuti linguistici non validati, da adattare alla L2 scelta dal dipartimento."
+    },
+    {
+      "id": "slc_sec_2_001",
+      "disciplina": "Seconda Lingua Comunitaria",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Lettura e comprensione scritta",
+      "ambito": "Prime letture: parole, didascalie, brevi testi illustrati nella L2",
+      "competenza": "Legge e comprende parole, brevi frasi e semplici testi illustrati nella L2, cogliendo informazioni specifiche",
+      "traguardo": "L'alunno legge e comprende parole e brevi testi nella L2 su argomenti familiari; associa parole scritte a immagini e contesti noti; individua informazioni specifiche in testi semplici.",
+      "obiettivi": [
+        "Leggere parole familiari nella L2 associate a immagini",
+        "Comprendere il significato globale di un breve testo illustrato",
+        "Individuare informazioni specifiche in semplici didascalie",
+        "Associare parole e immagini in attività di abbinamento"
+      ],
+      "conoscenze": [
+        "Lessico: animali, cibo, famiglia, vestiti",
+        "L'alfabeto della L2 e la corrispondenza suono-grafia",
+        "Parole interrogative: Chi? Che cosa? Dove? Quanto?",
+        "Semplici testi illustrati: fumetti, brevi storie, cartoline"
+      ],
+      "abilita": [
+        "Leggere ad alta voce parole familiari nella L2 con pronuncia accettabile",
+        "Comprendere il senso globale di un breve testo illustrato",
+        "Trovare 2-3 informazioni specifiche in un semplice testo",
+        "Abbinare parole della L2 a immagini corrispondenti"
+      ],
+      "evidenze": [
+        "L'alunno legge 10 parole nella L2 con pronuncia corretta",
+        "L'alunno racconta in italiano il contenuto di un breve testo illustrato nella L2",
+        "L'alunno trova 3 informazioni specifiche in un testo di 50 parole nella L2",
+        "L'alunno abbina correttamente 8 parole della L2 alle immagini corrispondenti"
+      ],
+      "criteriValutazione": [
+        "Pronuncia nella lettura ad alta voce",
+        "Comprensione globale di brevi testi",
+        "Capacità di individuare informazioni specifiche",
+        "Associazione parola-immagine"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 — Seconda Lingua Comunitaria, Secondaria di I grado, classe 2, livello QCER A1/A1+",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-186 — Secondaria 2, nucleo Lettura e comprensione scritta. Limited draft: lessico e testi da adattare alla L2 scelta dal dipartimento."
+    },
+    {
+      "id": "slc_sec_2_002",
+      "disciplina": "Seconda Lingua Comunitaria",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Produzione scritta",
+      "ambito": "Scrivere parole, frasi e brevi testi nella L2 su argomenti familiari",
+      "competenza": "Produce brevi testi scritti nella L2 su argomenti familiari, utilizzando lessico e strutture di base",
+      "traguardo": "L'alunno scrive parole, brevi frasi e semplici testi nella L2 su argomenti familiari (descrizioni, saluti, semplici messaggi) utilizzando il lessico e le strutture grammaticali di base apprese.",
+      "obiettivi": [
+        "Scrivere parole e brevi frasi sotto dettatura nella L2",
+        "Completare semplici frasi con parole mancanti nella L2",
+        "Scrivere un breve messaggio o una cartolina nella L2",
+        "Descrivere per iscritto la propria famiglia o un animale"
+      ],
+      "conoscenze": [
+        "Lessico: casa, famiglia, hobby, routine quotidiana",
+        "Strutture: Io ho..., Mi piace..., Oggi è...",
+        "Aggettivi possessivi: mio, tuo, suo",
+        "Ortografia di base della L2"
+      ],
+      "abilita": [
+        "Scrivere parole della L2 sotto dettatura senza errori",
+        "Completare una frase della L2 con la parola appropriata",
+        "Scrivere una cartolina o messaggio di 3-4 frasi nella L2",
+        "Descrivere per iscritto un membro della famiglia in 3 frasi"
+      ],
+      "evidenze": [
+        "L'alunno scrive 8 parole della L2 sotto dettatura senza errori",
+        "L'alunno completa 5 frasi nella L2 scegliendo tra 2 opzioni",
+        "L'alunno scrive una cartolina di 4 frasi nella L2",
+        "L'alunno descrive un familiare in 3 frasi complete nella L2"
+      ],
+      "criteriValutazione": [
+        "Correttezza ortografica nella scrittura",
+        "Capacità di completare frasi in modo appropriato",
+        "Coerenza nella produzione di brevi testi",
+        "Uso del lessico appropriato"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 — Seconda Lingua Comunitaria, Secondaria di I grado, classe 2, livello QCER A1/A1+",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-186 — Secondaria 2, nucleo Produzione scritta. Limited draft: strutture linguistiche da adattare alla L2 scelta dal dipartimento; ortografia variabile per lingua target."
+    },
+    {
+      "id": "slc_sec_3_001",
+      "disciplina": "Seconda Lingua Comunitaria",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Interazione e produzione orale",
+      "ambito": "Conversazioni guidate, descrizioni e dialoghi su temi quotidiani nella L2 (livello A1+/A2)",
+      "competenza": "Interagisce in brevi conversazioni nella L2 su argomenti quotidiani; descrive oralmente persone, luoghi e attività con frasi semplici ma complete",
+      "traguardo": "L'alunno interagisce in brevi conversazioni nella L2 su argomenti quotidiani; descrive oralmente persone, luoghi e attività; esprime preferenze e opinioni semplici; usa la L2 per parlare del proprio tempo libero e dei propri interessi.",
+      "obiettivi": [
+        "Sostenere una breve conversazione su un argomento quotidiano nella L2",
+        "Descrivere oralmente un luogo o un'attività preferita",
+        "Esprimere preferenze e gusti personali nella L2",
+        "Raccontare brevemente un evento passato semplice"
+      ],
+      "conoscenze": [
+        "Lessico: tempo libero, sport, musica, tecnologia, vacanze",
+        "Tempi verbali: presente, passato semplice introduttivo",
+        "Espressioni di opinione: Penso che..., Secondo me..., Mi piace/Non mi piace",
+        "Connettivi semplici: e, ma, poi, perché"
+      ],
+      "abilita": [
+        "Partecipare a una conversazione di 4-5 scambi nella L2",
+        "Descrivere oralmente il proprio tempo libero nella L2",
+        "Dire cosa piace e non piace motivando brevemente",
+        "Raccontare un evento passato con frasi semplici"
+      ],
+      "evidenze": [
+        "L'alunno sostiene una conversazione di 5 battute nella L2 su hobby",
+        "L'alunno descrive in 4 frasi la sua attività preferita nella L2",
+        "L'alunno dice 2 cose che gli piacciono e 2 che non gli piacciono motivando",
+        "L'alunno racconta in 3 frasi cosa ha fatto nel fine settimana nella L2"
+      ],
+      "criteriValutazione": [
+        "Fluidità nella conversazione",
+        "Adeguatezza della risposta al contesto comunicativo",
+        "Uso corretto delle strutture grammaticali di base",
+        "Pronuncia e intonazione comprensibili"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 — Seconda Lingua Comunitaria, Secondaria di I grado, classe 3, livello QCER A1+/A2",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-186 — Secondaria 3, nucleo Interazione e produzione orale. Limited draft: livello atteso variabile in base alla L2 scelta e al monte ore effettivo."
+    },
+    {
+      "id": "slc_sec_3_002",
+      "disciplina": "Seconda Lingua Comunitaria",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Cultura e confronto interculturale",
+      "ambito": "Paesi e culture in cui si parla la L2: tradizioni, vita quotidiana, confronto con l'Italia",
+      "competenza": "Conosce aspetti culturali e di vita quotidiana dei paesi in cui si parla la L2; stabilisce confronti con la propria cultura",
+      "traguardo": "L'alunno conosce alcuni aspetti della vita quotidiana, delle tradizioni e della cultura dei paesi in cui si parla la L2; stabilisce semplici confronti tra la propria cultura e quella dei paesi della L2; sviluppa un atteggiamento di apertura e curiosità verso altre culture.",
+      "obiettivi": [
+        "Conoscere tradizioni e festività dei paesi della L2",
+        "Confrontare aspetti della vita quotidiana tra Italia e paesi della L2",
+        "Descrivere somiglianze e differenze tra culture",
+        "Utilizzare la L2 per parlare di sé e del proprio contesto culturale"
+      ],
+      "conoscenze": [
+        "Paesi in cui si parla la L2: geografia, simboli, tradizioni principali",
+        "Vita quotidiana: scuola, famiglia, pasti, orari",
+        "Festività: tradizioni tipiche, confronto con festività italiane",
+        "Intercultura: curiosità, rispetto delle diversità, somiglianze"
+      ],
+      "abilita": [
+        "Descrivere una tradizione tipica dei paesi della L2",
+        "Confrontare la giornata scolastica in Italia e nei paesi della L2",
+        "Riconoscere elementi culturali comuni tra Italia e paesi della L2",
+        "Presentare una breve ricerca su un aspetto culturale della L2"
+      ],
+      "evidenze": [
+        "L'alunno descrive in 3 frasi una festività dei paesi della L2",
+        "L'alunno confronta l'orario scolastico italiano con quello di un paese della L2",
+        "L'alunno identifica 3 elementi culturali comuni tra Italia e paesi della L2",
+        "L'alunno presenta una breve ricerca su una tradizione in 4 slide"
+      ],
+      "criteriValutazione": [
+        "Conoscenza di aspetti culturali dei paesi della L2",
+        "Capacità di confronto interculturale",
+        "Atteggiamento di apertura e curiosità",
+        "Chiarezza nella presentazione orale"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Pluralismo linguistico e culturale, apertura interculturale",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-186 — Secondaria 3, nucleo Cultura e confronto interculturale. Limited draft: contenuti culturali generici; dipartimento deve specificare paesi e tradizioni in base alla L2 scelta."
+    }
+  ]
+}

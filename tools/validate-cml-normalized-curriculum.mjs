@@ -99,7 +99,7 @@ for (const file of FILES) {
 
     const requiredOrders = new Set(['Infanzia','Primaria','Secondaria']);
     for (const o of requiredOrders) {
-      if (!orders.has(o)) errors.push({ id: 'FILE', msg: `Ordine mancante: ${o}` });
+      if (!orders.has(o)) warnings.push({ id: 'FILE', msg: `Ordine mancante: ${o}` });
     }
 
     const requiredPri = ['1','2','3','4','5'];

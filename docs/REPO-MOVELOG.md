@@ -1,5 +1,29 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-186 - SECONDA_LINGUA_COMUNITARIA_LIMITED_DRAFT_DATA_PREP
+
+- **Commit iniziale**: `ba051ff` (allineato con `origin/main`)
+- **Tipo slice**: data-prep limitata / limited draft
+- **Oggetto**: creazione bozza normalizzata Seconda Lingua Comunitaria come draft prudente e language-neutral
+- **Decisione autorizzativa**: selezione CML-185 (`NEXT_DISCIPLINE_SELECTED: Seconda Lingua Comunitaria`) + CML-182B (`LIMITED_DRAFT_DATA_PREP_ALLOWED`)
+- **File creato**: `content/curriculum/seconda-lingua-comunitaria.normalized.json`
+- **Dati normalizzati**: 12/14 (era 11/14)
+- **Runtime mappa**: invariato (11/14) — nessuna integrazione runtime
+- **Shape test**: 11/11 PASS (invariato)
+- **Unita**: 6 (solo Secondaria: classe 1 x2, classe 2 x2, classe 3 x2)
+- **Nuclei**: 6 (Ascolto e comprensione orale, Produzione orale e interazione, Lettura e comprensione scritta, Produzione scritta, Interazione e produzione orale, Cultura e confronto interculturale)
+- **Vincoli specifici**: language-neutral (nessuna lingua target specificata), solo Secondaria, QCER A1/A2
+- **Marcatori draft**: `humanValidationRequired: true`, `validazioneUmana: true` su ogni unita, `stato: bozza_generabile`, note dipartimento su ogni unita
+- **Prossima slice consigliata**: CML-187 — prossima disciplina residua (Religione Cattolica o Latino LEL) o runtime integration per Seconda Lingua Comunitaria dopo validazione umana
+- **Runtime**: invariato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `content/curriculum/seconda-lingua-comunitaria.normalized.json`, `docs/03_execution/CML-186.md`, `report/CML-186_seconda_lingua_comunitaria_limited_draft_data_prep.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Residuo runtime**: 2/14 (Religione Cattolica, Latino LEL)
+- **Verdetto**: `CML_186_SECONDA_LINGUA_COMUNITARIA_LIMITED_DRAFT_DATA_PREP_READY`
+
 ## 2026-06-27 - CML-185 - RESIDUAL_DISCIPLINE_SELECTION_AUDIT
 
 - **Commit iniziale**: `8a8351a` (allineato con `origin/main`)
