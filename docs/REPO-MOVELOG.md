@@ -1,5 +1,17 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-191 - NEXT_CYCLE_SELECTION_AFTER_14_14_DATA_COMPLETION
+
+- **Commit**: `215bfeb` (CML-190, 1 ahead origin/main)
+- **Tipo slice**: docs-only / selection audit
+- **Oggetto**: selezione formale del prossimo ciclo CurManLight dopo completamento 14/14
+- **Opzione selezionata**: **A — Runtime integration** per le 3 discipline residue (Seconda Lingua Comunitaria, Religione Cattolica, Latino LEL)
+- **Micro-slice**: CML-192 (Sec. Lingua), CML-193 (Religione), CML-194 (LEL), CML-195 (14/14 closure)
+- **Opzioni respinte**: B (UML/docs: nessun impatto), C (evidenze/UDA: troppo presto), D (export/import: maturità insufficiente), E (SchoolKB: non completa gap funzionali)
+- **No push**: commit locale
+- **Artefatti**: `docs/03_execution/CML-191.md`, `report/CML-191_next_cycle_selection_after_14_14_data_completion.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_191_NEXT_CYCLE_SELECTION_AFTER_14_14_DATA_COMPLETION_READY`
+
 ## 2026-06-27 - CML-190 - NORMALIZED_DATA_14_14_COMPLETION_AUDIT
 
 - **Commit**: `67c313f` (HEAD = origin/main)
