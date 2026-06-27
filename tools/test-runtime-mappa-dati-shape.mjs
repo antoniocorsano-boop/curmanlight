@@ -21,7 +21,8 @@ const FILES = [
   'arte-immagine.normalized.json',
   'musica.normalized.json',
   'seconda-lingua-comunitaria.normalized.json',
-  'religione-cattolica.normalized.json'
+  'religione-cattolica.normalized.json',
+  'latino-lel.normalized.json'
 ];
 
 const EXPECTED_COUNTS = {

@@ -1,8 +1,25 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-194 - LATINO_LEL_RUNTIME_MAPPA_INTEGRATION
+
+- **Commit**: `aa1a27f` (CML-193, 2 ahead origin/main) + working tree → commit finale CML-194
+- **Tipo slice**: runtime integration controllata
+- **Oggetto**: integrazione runtime mappa per Latino LEL (4 unità, Secondaria 2-3, 1h/sett, LEL esplorazione linguistica)
+- **Modifiche**: `_published_snapshot/netlify-current/index.html` + `tools/test-runtime-mappa-dati-shape.mjs` (FILES 13→14)
+- **Runtime mappa pre**: 13/14
+- **Runtime mappa post**: **14/14 — COMPLETATA**
+- **Dati normalizzati**: 14/14 (invariato)
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS
+- **CML-192 SLC e CML-193 RC integration**: intatte
+- **Residuo runtime**: nessuno
+- **No push**: commit locale
+- **Artefatti**: `docs/03_execution/CML-194.md`, `report/CML-194_latino_lel_runtime_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_194_LATINO_LEL_RUNTIME_MAPPA_INTEGRATION_READY`
+
 ## 2026-06-27 - CML-193 - RELIGIONE_CATTOLICA_RUNTIME_MAPPA_INTEGRATION
 
-- **Commit**: `d1513d1` (CML-192, 1 ahead origin/main) + working tree → commit finale CML-193
+- **Commit**: `aa1a27f` (CML-193, origin/main a `d711872`)
 - **Tipo slice**: runtime integration controllata
 - **Oggetto**: integrazione runtime mappa per Religione Cattolica (7 unità, 3 ordini, 4 nuclei DPR 175/2012)
 - **Modifiche**: `_published_snapshot/netlify-current/index.html` + `tools/test-runtime-mappa-dati-shape.mjs` (FILES 12→13)
