@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Latino (LEL)",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-188 — limited draft for Latino LEL (Secondaria classi 2-3 only). LEL (Esplorazione Linguistica) is a new optional discipline introduced by IN 2025 (DM 221/2025), 1h/week, experimental/project-based. Content reflects the exploratory linguistic approach, not full classical Latin. Limited draft authorized by CML-182B (LIMITED_DRAFT_DATA_PREP_ALLOWED).",
+  "unitaApprendimento": [
+    {
+      "id": "lat_sec_2_001",
+      "disciplina": "Latino (LEL)",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Lessico e morfologia di base",
+      "ambito": "Prime parole latine: alfabeto, pronuncia, forme nominali e verbali elementari, confronto con l'italiano",
+      "competenza": "Riconosce le strutture elementari del latino (alfabeto, pronuncia, forme nominali e verbali di base) e le confronta con l'italiano",
+      "traguardo": "L'alunno riconosce l'alfabeto latino e la pronuncia classica; distingue le principali declinazioni e le prime coniugazioni verbali; confronta le strutture morfologiche latine con quelle italiane.",
+      "obiettivi": [
+        "Leggere e pronunciare parole latine secondo la pronuncia classica",
+        "Riconoscere le desinenze delle prime tre declinazioni",
+        "Distinguere la prima coniugazione verbale (tema del presente)",
+        "Confrontare la struttura nome-aggettivo latina con l'italiano"
+      ],
+      "conoscenze": [
+        "Alfabeto latino e regole di pronuncia (classica e scolastica)",
+        "Prime tre declinazioni: nominativo, genitivo singolare e plurale",
+        "Prima coniugazione: indicativo presente attivo",
+        "Lessico di base: famiglia, scuola, natura, corpo umano (25-30 parole)"
+      ],
+      "abilita": [
+        "Leggere ad alta voce parole latine con pronuncia corretta",
+        "Classificare parole latine per declinazione e coniugazione",
+        "Tradurre semplici sintagmi nome-aggettivo",
+        "Individuare la radice e la desinenza di parole latine"
+      ],
+      "evidenze": [
+        "L'alunno legge 10 parole latine con pronuncia corretta",
+        "L'alunno classifica 8 parole nelle corrette declinazioni",
+        "L'alunno traduce 5 sintagmi nome-aggettivo dal latino all'italiano",
+        "L'alunno individua radice e desinenza in 6 parole latine"
+      ],
+      "criteriValutazione": [
+        "Pronuncia e lettura corrette",
+        "Riconoscimento delle strutture morfologiche di base",
+        "Capacità di confronto latino-italiano",
+        "Precisione nell'analisi morfologica elementare"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Latino LEL, Secondaria di I grado, classe 2, 1h/sett",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-188 — Secondaria 2, nucleo Lessico e morfologia di base. Limited draft: lessico e strutture da validare in dipartimento; LEL e disciplina sperimentale, i contenuti possono variare in base all'orientamento linguistico prescelto."
+    },
+    {
+      "id": "lat_sec_2_002",
+      "disciplina": "Latino (LEL)",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Rapporto latino-italiano",
+      "ambito": "Radici latine dell'italiano: derivazione, etimologia, parole trasparenti e opache, confronto lessicale",
+      "competenza": "Comprende il rapporto di derivazione tra latino e italiano, riconoscendo radici, prefissi e suffissi di origine latina nella lingua italiana",
+      "traguardo": "L'alunno riconosce le radici latine dell'italiano; individua parole italiane derivate dal latino; comprende il meccanismo della derivazione lessicale; usa consapevolmente l'etimologia per ampliare il lessico italiano.",
+      "obiettivi": [
+        "Riconoscere parole italiane di diretta derivazione latina",
+        "Individuare radici, prefissi e suffissi di origine latina",
+        "Usare dizionari etimologici semplici",
+        "Comprendere il significato di parole italiane sconosciute attraverso l'etimologia"
+      ],
+      "conoscenze": [
+        "Radici latine: 15 radici produttive in italiano (dic-, fac-, leg-, scrib-, vid-, aud-, curr-, fer-, mitt-, duc-)",
+        "Prefissi latini: ad-, con-, de-, ex-, in-, per-, pro-, sub-, trans-",
+        "Suffissi latini: -zione, -mento, -tore, -tura, -anza",
+        "Semplici meccanismi di cambiamento fonetico: caduta consonante finale, palatalizzazione, sonorizzazione"
+      ],
+      "abilita": [
+        "Abbozzare l'etimologia di 10 parole italiane comuni",
+        "Classificare 15 parole secondo radice/prefisso/suffisso",
+        "Usare un dizionario etimologico per una parola data",
+        "Dedurre il significato di una parola italiana sconosciuta dalla radice latina"
+      ],
+      "evidenze": [
+        "L'alunno spiega l'origine latina di 8 parole italiane",
+        "L'alunno scompone 10 parole in radice, prefisso, suffisso",
+        "L'alunno usa il dizionario etimologico per 3 parole",
+        "L'alunno deduce correttamente il significato di 5 parole sconosciute dalla radice latina"
+      ],
+      "criteriValutazione": [
+        "Capacità di individuare relazioni etimologiche",
+        "Precisione nell'analisi della derivazione lessicale",
+        "Uso corretto del dizionario etimologico",
+        "Consapevolezza del rapporto latino-italiano"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Latino LEL, Secondaria di I grado, classe 2, 1h/sett",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-188 — Secondaria 2, nucleo Rapporto latino-italiano. Limited draft: radici e etimologie da validare in dipartimento; i riferimenti etimologici possono variare in base alle scelte didattiche del dipartimento di lettere."
+    },
+    {
+      "id": "lat_sec_3_001",
+      "disciplina": "Latino (LEL)",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Cultura classica e civiltà romana",
+      "ambito": "Elementi di civiltà romana: vita quotidiana, istituzioni, mitologia, espressioni latine nella lingua e nella cultura italiana ed europea",
+      "competenza": "Conosce elementi fondamentali della civiltà romana e riconosce la presenza del latino nella cultura, nelle discipline e nelle espressioni dell'uso quotidiano",
+      "traguardo": "L'alunno conosce aspetti della vita quotidiana e delle istituzioni romane; riconosce espressioni latine ancora in uso; collega elementi della civiltà classica alla cultura moderna; apprezza il valore culturale del latino nella civiltà italiana ed europea.",
+      "obiettivi": [
+        "Conoscere aspetti della vita quotidiana nell'antica Roma",
+        "Riconoscere istituzioni romane e il loro influsso sul mondo moderno",
+        "Individuare espressioni latine in uso nell'italiano contemporaneo",
+        "Apprezzare il valore culturale del latino come radice della civiltà europea"
+      ],
+      "conoscenze": [
+        "Vita quotidiana: famiglia, scuola, abbigliamento, alimentazione, giochi",
+        "Istituzioni: Senato, comizi, magistrature, diritto romano",
+        "Espressioni latine: 10-15 locuzioni (in primis, grosso modo, curriculum vitae, status quo, ad honorem, vice versa, ecc.)",
+        "Mitologia: principali divinità, miti fondativi, influenza su arte e letteratura"
+      ],
+      "abilita": [
+        "Descrivere un aspetto della vita quotidiana romana",
+        "Confrontare un'istituzione romana con una moderna",
+        "Usare correttamente 5 locuzioni latine in contesto",
+        "Riconoscere riferimenti mitologici in testi e immagini contemporanee"
+      ],
+      "evidenze": [
+        "L'alunno descrive 3 aspetti della vita quotidiana romana",
+        "L'alunno confronta un'istituzione romana con l'equivalente moderno",
+        "L'alunno usa 5 locuzioni latine in frasi di senso compiuto",
+        "L'alunno riconosce 3 riferimenti mitologici in opere contemporanee"
+      ],
+      "criteriValutazione": [
+        "Conoscenza degli aspetti fondamentali della civiltà romana",
+        "Capacità di confronto tra passato e presente",
+        "Uso appropriato delle espressioni latine",
+        "Interesse e partecipazione alle attività culturali"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Latino LEL, Secondaria di I grado, classe 3, 1h/sett",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-188 — Secondaria 3, nucleo Cultura classica e civiltà romana. Limited draft: contenuti culturali generali; dipartimento deve specificare approfondimenti e scegliere espressioni latine e riferimenti mitologici in base alla programmazione."
+    },
+    {
+      "id": "lat_sec_3_002",
+      "disciplina": "Latino (LEL)",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Metodo linguistico e lessico settoriale",
+      "ambito": "Approccio comparativo: lessico delle discipline (scientifico, giuridico, letterario), elementi di analisi linguistica, autonomia nell'esplorazione lessicale",
+      "competenza": "Applica un metodo linguistico comparativo per analizzare il lessico delle discipline e sviluppa autonomia nell'esplorazione etimologica",
+      "traguardo": "L'alunno utilizza il metodo comparativo per analizzare parole del lessico disciplinare; riconosce l'origine latina di termini scientifici, giuridici e letterari; sviluppa autonomia nell'uso di strumenti linguistici per l'analisi del lessico.",
+      "obiettivi": [
+        "Analizzare termini scientifici di origine latina (biologia, geografia, astronomia)",
+        "Riconoscere termini giuridici e istituzionali di derivazione latina",
+        "Usare strumenti linguistici (dizionari, corpora) per l'analisi etimologica",
+        "Produrre una breve ricerca etimologica su un termine o una famiglia di parole"
+      ],
+      "conoscenze": [
+        "Lessico scientifico: 15 termini latini nelle scienze (specie, genus, area, alveo, orbita, ecc.)",
+        "Lessico giuridico: 10 termini (legge, decreto, sentenza, contratto, testamento, ecc.)",
+        "Strumenti: dizionario etimologico online, vocabolario latino-italiano di base",
+        "Famiglie di parole: da una radice latina alla rete lessicale italiana"
+      ],
+      "abilita": [
+        "Classificare termini disciplinari per origine latina",
+        "Spiegare l'etimologia di 5 termini scientifici e 5 giuridici",
+        "Usare strumenti lessicografici per la ricerca etimologica",
+        "Produrre una semplice mappa etimologica di una famiglia di parole"
+      ],
+      "evidenze": [
+        "L'alunno classifica 10 termini in base all'origine latina",
+        "L'alunno spiega l'etimologia di 3 termini scientifici e 3 giuridici",
+        "L'alunno consulta autonomamente un dizionario etimologico per 2 parole",
+        "L'alunno produce una mappa etimologica con almeno 8 parole collegate"
+      ],
+      "criteriValutazione": [
+        "Capacità di analisi etimologica di termini disciplinari",
+        "Uso autonomo di strumenti lessicografici",
+        "Comprensione della stratificazione linguistica del lessico italiano",
+        "Completezza nella ricerca etimologica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Nuove Indicazioni D.M. 221/2025 — Latino LEL, Secondaria di I grado, classe 3, 1h/sett",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-188 — Secondaria 3, nucleo Metodo linguistico e lessico settoriale. Limited draft: termini scientifici e giuridici da validare in dipartimento; l'approccio lessicale è indicativo e può essere adattato alle discipline effettivamente trattate."
+    }
+  ]
+}

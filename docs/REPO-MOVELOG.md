@@ -48,6 +48,30 @@
 - **Residuo runtime**: 1/14 (Latino LEL)
 - **Verdetto**: `CML_187_RELIGIONE_CATTOLICA_LIMITED_DRAFT_DATA_PREP_READY`
 
+## 2026-06-27 - CML-188 - LATINO_LEL_LIMITED_DRAFT_DATA_PREP
+
+- **Commit iniziale**: `a8bd394` (CML-187 committato, 2 ahead origin/main)
+- **Tipo slice**: data-prep limitata / limited draft
+- **Oggetto**: creazione bozza normalizzata Latino (LEL) come draft conservativo per l'ultima disciplina residua
+- **Decisione autorizzativa**: sequenza CML-172 + CML-182B (`LIMITED_DRAFT_DATA_PREP_ALLOWED`)
+- **File creato**: `content/curriculum/latino-lel.normalized.json`
+- **Dati normalizzati**: **14/14** (era 13/14) — **tutte le 14 discipline completate** ✅
+- **Runtime mappa**: invariato (11/14) — nessuna integrazione runtime
+- **Shape test**: 11/11 PASS (invariato)
+- **Unita**: 4 (solo Secondaria: classe 2 x2, classe 3 x2)
+- **Nuclei**: 4 (Lessico e morfologia di base, Rapporto latino-italiano, Cultura classica e civiltà romana, Metodo linguistico e lessico settoriale)
+- **Vincoli specifici**: LEL = Esplorazione Linguistica (non Latino classico), solo Secondaria classi 2-3, disciplina nuova IN 2025 (DM 221/2025), 1h/sett, approccio comparativo
+- **Marcatori draft**: `humanValidationRequired: true`, `validazioneUmana: true` su ogni unita, `stato: bozza_generabile`, note dipartimento su ogni unita
+- **Prossima slice consigliata**: sync batch controllato (CML-186 + CML-187 + CML-188) per allineare origin/main
+- **Runtime**: invariato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `content/curriculum/latino-lel.normalized.json`, `docs/03_execution/CML-188.md`, `report/CML-188_latino_lel_limited_draft_data_prep.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Residuo runtime**: 1/14 (Latino LEL — non ancora integrato in mappa)
+- **Verdetto**: `CML_188_LATINO_LEL_LIMITED_DRAFT_DATA_PREP_READY`
+
 ## 2026-06-27 - CML-185 - RESIDUAL_DISCIPLINE_SELECTION_AUDIT
 
 - **Commit iniziale**: `8a8351a` (allineato con `origin/main`)
