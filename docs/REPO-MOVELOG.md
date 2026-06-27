@@ -4935,7 +4935,9 @@
 - **Deploy**: non eseguito
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-211.md`, `report/CML-211_educazione_fisica_human_validation_package.md`, `docs/04_user/educazione_fisica_validazione_dipartimentale.md`, aggiornamento `docs/REPO-MOVELOG.md`
-- **Verdetto**: `CML_211_EDUCAZIONE_FISICA_HUMAN_VALIDATION_PACKAGE_READY`
+- **Verdetto**: `CML_211_EDUCAZIONE_FISICA_HUMAN_VALIDATION_PACKAGE_ACCEPTED`
+
+- **Aggiornamento 2026-06-28**: dipartimento ha accettato il modello a 4 nuclei con polish CML-210A. Chiusura ciclo polish provvisorio EF autorizzata.
 
 ## 2026-06-27 - CML-210A - EDUCAZIONE_FISICA_CONTROLLED_JSON_CONTENT_POLISH_PROVISIONAL
 

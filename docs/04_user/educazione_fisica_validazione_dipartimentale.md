@@ -1,10 +1,19 @@
 # Validazione dipartimentale — Educazione Fisica
 
 Data: 2026-06-27
+Stato: ACCETTATO dal dipartimento il 2026-06-28
 
 ## Riferimento
 
 Pacchetto di validazione umana CML-211 per Educazione Fisica.
+
+## Decisione del dipartimento
+
+Il dipartimento ha accettato il modello a 4 nuclei con il polish contenutistico CML-210A.
+
+- Struttura confermata: 4 nuclei (Corpo e percezione, Abilità motorie, Gioco e sport, Espressione e inclusione)
+- Wording CML-210A confermato (salute/benessere trasversale, progressione verticale, Abilità motorie rafforzate)
+- Nessun quinto nucleo autonomo introdotto
 
 ## Stato attuale
 
@@ -43,3 +52,17 @@ Il curricolo di Educazione Fisica è attualmente composto da **4 nuclei** e **7 
 **Firma referente:** ________________________
 
 **Note collegio docenti:**
+
+---
+
+## 10. Accettazione
+
+- **Opzione scelta:** C — Mantenere 4 nuclei, perfezionare progressione e linguaggio
+- **Motivazione:** accettato il polish CML-210A, mantenuta la struttura a 4 nuclei
+- **Data accettazione:** 2026-06-28
+- **Firma referente:** ________________________
+
+## Esito finale
+
+Ciclo polish provvisorio Educazione Fisica: CHIUSO
+CML-210BS completata e pushata: commit `53013df`

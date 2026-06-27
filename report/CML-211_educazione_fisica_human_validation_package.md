@@ -1,6 +1,8 @@
 # CML-211 — Pacchetto di validazione umana — Educazione Fisica
 
 Data: 2026-06-27
+Stato: ACCETTATO dal dipartimento il 2026-06-28
+Decisione: Opzione C perfezionata e confermata (4 nuclei + polish CML-210A)
 
 ## 1. Destinatari
 
@@ -155,3 +157,17 @@ Da compilare a cura del dipartimento o del docente referente:
 ## 9. Contatti
 
 Per informazioni sul sistema o sulle modalità di aggiornamento, riferirsi al referente di dipartimento o al coordinatore di progetto.
+
+## 10. Accettazione dipartimentale
+
+Data: 2026-06-28
+
+Il dipartimento di Educazione Fisica ha accettato il modello a 4 nuclei con il polish contenutistico CML-210A.
+
+- Struttura confermata: 4 nuclei (Corpo e percezione, Abilità motorie, Gioco e sport, Espressione e inclusione)
+- Wording CML-210A confermato (salute/benessere trasversale, progressione verticale, Abilità motorie rafforzate)
+- Nessun quinto nucleo autonomo introdotto
+- Ciclo polish provvisorio EF: CHIUSO
+
+Slice successive autorizzate e completate:
+- CML-210BS — rigenerazione runtime static map (completata, commit `53013df`)
