@@ -4861,3 +4861,26 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-204.md`, `report/CML-204_educazione_fisica_detailed_gap_model.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_204_EDUCAZIONE_FISICA_DETAILED_GAP_MODEL_POST_14_14_READY`
+
+## 2026-06-27 - CML-204S - CONTROLLED_REBASE_AND_PUSH_EDUCAZIONE_FISICA_GAP_MODEL
+
+- **Commit**: `7d43467` (CML-204 push)
+- **Tipo slice**: sync + controlled push (after rebase check)
+- **Oggetto**: verifica allineamento origin/main, push CML-204 senza rebase
+- **HEAD pre-push**: `7d43467`
+- **origin/main pre-push**: `aff4981`
+- **HEAD..origin/main**: vuoto (nessun commit remoto non in HEAD)
+- **origin/main..HEAD**: `7d43467` (solo CML-204)
+- **Rebase necessario**: NO — storia lineare, HEAD cleanly ahead
+- **Validazioni pre-push**: validator 14/14 PASS, shape test 14/14 PASS, diff-check pulito
+- **Push**: `git push origin main` — eseguito con successo
+- **Post-push**: `main...origin/main` pulito, entrambi a `7d43467`
+- **Runtime**: invariato
+- **content/curriculum/**: invariato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Artefatti**: aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_204S_CONTROLLED_REBASE_AND_PUSH_EDUCAZIONE_FISICA_GAP_MODEL_READY`
