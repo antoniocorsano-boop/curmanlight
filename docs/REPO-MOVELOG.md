@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-196 - PUBLIC_LIVE_SMOKE_GITHUB_PAGES_AFTER_RUNTIME_14_14
+
+- **Commit**: `6ec65ec` (CML-195) + docs → commit finale CML-196
+- **Tipo slice**: public live smoke (docs-only)
+- **Oggetto**: verifica GitHub Pages build con runtime 14/14
+- **URL**: https://antoniocorsano-boop.github.io/curmanlight/
+- **HTTP**: 200 OK
+- **DISCIPLINE_META**: 14/14 discipline presenti
+- **Seconda Lingua Comunitaria**: OK via hash #cur-SecondaLinguaComunitaria
+- **Religione Cattolica**: OK via hash #cur-ReligioneCattolica
+- **Latino (LEL)**: OK via hash #cur-LatinoLEL
+- **Cache/service-worker**: build automatica GitHub Pages, nessun deploy manuale
+- **Deploy manuale**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-196.md`, `report/CML-196_public_live_smoke_github_pages_after_runtime_14_14.md`, aggiornamento `docs/REPO-MOVELOG.md`
+
 ## 2026-06-27 - CML-195 - RUNTIME_14_14_CLOSURE_SMOKE_AND_CONTROLLED_PUSH_GATE
 
 - **Commit**: `6e60fb2` (CML-194, 3 ahead origin/main) + docs → commit finale CML-195
