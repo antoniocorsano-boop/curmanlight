@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-190 - NORMALIZED_DATA_14_14_COMPLETION_AUDIT
+
+- **Commit**: `67c313f` (HEAD = origin/main)
+- **Tipo slice**: docs-only / completion audit
+- **Oggetto**: audit finale del completamento 14/14 dei dati normalizzati del curriculum CurManLight
+- **Verifiche**: validatore 14/14 PASS, shape 11/11 PASS, no secrets, no runtime changes
+- **Commits di normalizzazione**: `a190af8` (CML-186), `fcef611` (CML-187), `cb5ffc9` (CML-188)
+- **Rebase**: hash modificati per effetto del rebase su `aff6f09` (PR#3 ecc-tools) durante CML-189
+- **Runtime**: invariato (11/14)
+- **Dati normalizzati**: 14/14 ✅
+- **Prossima decisione**: CML-191 sceglierà il prossimo ciclo tra A (runtime integration), B (design/UML), C (evidenze/UDA), D (export/import/.cml), E (SchoolKB)
+- **No push**: commit locale
+- **Artefatti**: `docs/03_execution/CML-190.md`, `report/CML-190_normalized_data_14_14_completion_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_190_NORMALIZED_DATA_14_14_COMPLETION_AUDIT_READY`
+
 ## 2026-06-27 - CML-189 - CONTROLLED_SYNC_BATCH_AFTER_14_14_DATA_COMPLETION
 
 - **Commit locale pre-push**: `3470f65`
