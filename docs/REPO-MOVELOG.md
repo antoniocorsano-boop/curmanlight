@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-178 - EDUCAZIONE_FISICA_DETAILED_GAP_MODEL
+
+- **Commit iniziale**: `129a816` (sync con `origin/main`)
+- **Tipo slice**: docs-only / readiness-audit
+- **Oggetto**: detailed gap model per Educazione Fisica dopo CML-177
+- **Esito**: readiness confermata **non pronta**; dati insufficienti per data preparation senza gap-fill
+- **Rischio dati**: medio
+- **Rischio istituzionale**: medio
+- **Raccomandazione**: prossima slice di gap-fill documentale/manuale prima di creare `educazione-fisica.normalized.json`
+- **Runtime**: invariato
+- **Dati curriculum**: invariati; nessun file `.normalized.json` creato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-178.md`, `report/CML-178_educazione_fisica_detailed_gap_model.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_178_EDUCAZIONE_FISICA_DETAILED_GAP_MODEL_READY`
+
 ## 2026-06-27 - CML-OPS-004 - CML_DOCS_ONLY_AND_READINESS_SKILLS
 
 - **Commit iniziale**: `d79956e` (sync con `origin/main`)
