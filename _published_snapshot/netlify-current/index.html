@@ -1444,6 +1444,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
               <input id="department-cml-files" type="file" accept=".cml" multiple hidden onchange="importTeacherCmlFiles(this.files);this.value=''">
               <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Importa proposte docenti</button>
               <span class="department-import-local">Nessun dato viene inviato online: l'importazione è locale.</span>
+              <span class="department-import-helper" style="display:block;margin-top:4px;font-size:11px;color:#666">Puoi selezionare uno o più file .cml contemporaneamente.</span>
             </div>
             <div id="department-import-feedback" class="department-import-feedback" aria-live="polite"></div>
             <div id="department-import-results"></div>
@@ -1456,6 +1457,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
               <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Importa esiti dipartimentali</button>
               <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button>
               <span class="referent-validation-local">Nessun dato viene inviato online: l'importazione è locale.</span>
+              <span class="referent-validation-helper" style="display:block;margin-top:4px;font-size:11px;color:#666">Puoi selezionare uno o più file .cml contemporaneamente.</span>
             </div>
             <div id="referent-validation-feedback" class="referent-validation-feedback" aria-live="polite"></div>
             <div id="referent-validation-results"></div>
@@ -3864,7 +3866,7 @@ function renderDepartmentImport(){
     '<div class="department-import-stat"><strong>'+summary.totalProposals+'</strong>Proposte totali</div>'+
     '<div class="department-import-stat"><strong>'+summary.disciplines.length+'</strong>Discipline</div>'+
     '<div class="department-import-stat"><strong>'+summary.proposalsToCheck+'</strong>Proposte da controllare</div></div>';
-  if(summary.mixedDisciplines) html+='<div class="department-import-warning">ℹ️ Sono presenti discipline diverse: il dato è segnalato ma non blocca la lettura.</div>';
+  if(summary.mixedDisciplines) html+='<div class="department-import-warning">ℹ️ Sono presenti discipline diverse: '+escapeHtml(summary.disciplines.join(", "))+'. Il dato è segnalato ma non blocca la lettura.</div>';
   html+='<div class="department-file-list">'+departmentImportState.files.map(file=>{
     const extraParts=[];
     if(file.duplicate) extraParts.push("Duplicato probabile");
@@ -3873,6 +3875,7 @@ function renderDepartmentImport(){
     const extra=extraParts.length?" · "+extraParts.join("; "):"";
     return '<div class="department-file-row '+(file.valid?"valid":"invalid")+'"><strong>'+escapeHtml(file.name)+'</strong><br>'+escapeHtml(file.message+extra)+'</div>';
   }).join("")+'</div>';
+  html+='<div class="department-import-banner" style="margin-top:8px;padding:8px 12px;background:#e8f5e9;border-radius:6px;font-size:12px">Importati <strong>'+summary.imported+'</strong> file: <strong>'+summary.validFiles+'</strong> validi, <strong>'+summary.unrecognized+'</strong> non riconoscibili, <strong>'+summary.totalProposals+'</strong> proposte totali, <strong>'+summary.disciplines.length+'</strong> discipline.</div>';
   const grouped={};
   for(const proposal of departmentImportState.proposals){
     grouped[proposal.discipline]??={};
@@ -4690,15 +4693,15 @@ function renderReferentValidation(){
     '<div class="referent-validation-stat"><strong>'+summary.disciplines.length+'</strong>Discipline</div>'+
     '<div class="referent-validation-stat"><strong>'+summary.proposalsDaChiarire+'</strong>Da chiarire</div>'+
     '<div class="referent-validation-stat"><strong>'+summary.proposalsSenzaEsito+'</strong>Senza esito</div></div>';
-  if(summary.mixedDisciplines) html+='<div class="referent-validation-warning">ℹ️ Sono presenti discipline diverse: il dato è segnalato ma non blocca la lettura.</div>';
+  if(summary.mixedDisciplines) html+='<div class="referent-validation-warning">ℹ️ Sono presenti discipline diverse: '+escapeHtml(summary.disciplines.join(", "))+'. Il dato è segnalato ma non blocca la lettura.</div>';
   html+='<div class="referent-file-list" style="margin-bottom:12px">'+referentOutcomeState.files.map(file=>{
-    const extraParts=[];
-    if(file.duplicate) extraParts.push("Duplicato probabile");
-    if(file.warnings?.length) extraParts.push(file.warnings.join("; "));
-    if(file.missing.length) extraParts.push("Mancano: "+file.missing.join(", "));
-    const extra=extraParts.length?" · "+extraParts.join("; "):"";
-    return '<div class="referent-file-row '+(file.valid?"valid":"invalid")+'" style="padding:6px 8px;border-bottom:1px solid #eee"><strong>'+escapeHtml(file.name)+'</strong><br>'+escapeHtml(file.message+extra)+'</div>';
+    const chips=[];
+    if(file.duplicate) chips.push('<span class="department-check-chip" style="background:#fff3e0;color:#e65100">Duplicato probabile</span>');
+    if(file.warnings?.length) file.warnings.forEach(w=>chips.push('<span class="department-check-chip" style="background:#e3f2fd;color:#1565c0">'+escapeHtml(w)+'</span>'));
+    if(file.missing.length) file.missing.forEach(m=>chips.push('<span class="department-check-chip" style="background:#fce4ec;color:#c62828">Manca: '+escapeHtml(m)+'</span>'));
+    return '<div class="referent-file-row '+(file.valid?"valid":"invalid")+'" style="padding:6px 8px;border-bottom:1px solid #eee"><strong>'+escapeHtml(file.name)+'</strong><br>'+escapeHtml(file.message)+(chips.length?' <span style="margin-left:6px">'+chips.join(" ")+'</span>':'')+'</div>';
   }).join("")+'</div>';
+  html+='<div class="referent-import-banner" style="margin-top:8px;padding:8px 12px;background:#e8f5e9;border-radius:6px;font-size:12px">Importati <strong>'+summary.imported+'</strong> file: <strong>'+summary.validOutcomeFiles+'</strong> validi, <strong>'+summary.unrecognized+'</strong> non riconoscibili, <strong>'+summary.totalOutcomes+'</strong> esiti totali, <strong>'+summary.disciplines.length+'</strong> discipline.</div>';
   html+='<div class="referent-outcome-list">'+referentOutcomeState.outcomes.map(outcome=>{
     const handlingCounts={confluita_nella_sintesi:0,riformulata_dal_dipartimento:0,assorbita_in_altra_proposta:0,da_chiarire:0,senza_esito:0};
     outcome.proposalHandling.forEach(ph=>{

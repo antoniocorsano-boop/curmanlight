@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-208 - BATCH_IMPORT_UX_CLARITY_RUNTIME_MICRO_INCREMENT
+
+- **Commit base**: `c1b0479` (CML-207S, aligned)
+- **Tipo slice**: runtime UX micro-increment
+- **Oggetto**: implementazione delle 4 modifiche UX minimali definite in CML-207
+- **Cambiamenti**: helper text multi-file (department + referent), mixed-discipline warning con lista discipline, duplicate chip in referent file list, compact import summary banner
+- **Files modificati**: `_published_snapshot/netlify-current/index.html` (+17 lines)
+- **Schema/validator/export-import**: invariati
+- **Smoke**: department multi-file PASS, mixed-discipline list PASS, duplicate chip PASS, summary banner PASS, CML-200 quick 4/4 PASS
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Artefatti**: `docs/03_execution/CML-208.md`, `report/CML-208_batch_import_ux_clarity_runtime_micro_increment.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessun schema cambio, nessun validator change, nessun export/import behavior change, nessun Drive change, nessun contenuto curricolo, nessun service-worker, nessun manifest, nessuna dipendenza, nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_208_BATCH_IMPORT_UX_CLARITY_RUNTIME_MICRO_INCREMENT_READY`
+
 ## 2026-06-27 - CML-207 - BATCH_IMPORT_UX_CLARITY_AUDIT_CONTRACT
 
 - **Commit base**: `a3481e4` (CML-206S, aligned)
