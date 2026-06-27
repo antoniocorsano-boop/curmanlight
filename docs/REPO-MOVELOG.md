@@ -1,5 +1,21 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-192 - SECONDA_LINGUA_COMUNITARIA_RUNTIME_MAPPA_INTEGRATION
+
+- **Commit**: working tree (CML-192, 2 ahead origin/main) — attuale su `d711872`
+- **Tipo slice**: runtime integration controllata
+- **Oggetto**: integrazione runtime mappa per Seconda Lingua Comunitaria (6 unità, Secondaria 1-3, QCER A1/A2)
+- **Modifiche**: `_published_snapshot/netlify-current/index.html` + `tools/test-runtime-mappa-dati-shape.mjs` (FILES 11→12)
+- **Runtime mappa pre**: 11/14
+- **Runtime mappa post**: 12/14
+- **Dati normalizzati**: 14/14 (invariato)
+- **Shape test**: 12/12 PASS
+- **Validatore**: 14/14 PASS
+- **Residuo runtime**: 2/14 (Religione Cattolica, Latino LEL)
+- **No push**: commit locale
+- **Artefatti**: `docs/03_execution/CML-192.md`, `report/CML-192_seconda_lingua_comunitaria_runtime_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_192_SECONDA_LINGUA_COMUNITARIA_RUNTIME_MAPPA_INTEGRATION_READY`
+
 ## 2026-06-27 - CML-191 - NEXT_CYCLE_SELECTION_AFTER_14_14_DATA_COMPLETION
 
 - **Commit**: `215bfeb` (CML-190, 1 ahead origin/main)
