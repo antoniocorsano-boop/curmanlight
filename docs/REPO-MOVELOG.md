@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-182 - EDUCAZIONE_FISICA_VALIDATION_OUTCOME_DECISION
+
+- **Commit iniziale**: `7a6a98b` (allineato con `origin/main`)
+- **Tipo slice**: docs-only / validation outcome decision
+- **Oggetto**: registrazione esito validazione umana per Educazione Fisica dopo CML-181
+- **Decisione principale**: `VALIDATION_OUTCOME_PENDING`
+- **Esito**: checklist CML-181 creata ma non compilata; nessuna validazione umana disponibile; data-prep non autorizzata
+- **Rischio dati residuo**: medio (invariato)
+- **Rischio istituzionale residuo**: medio (invariato)
+- **Prossima slice consigliata**: CML-183 — EDUCAZIONE_FISICA_VALIDATION_COLLECTION_TEMPLATE
+- **Runtime**: invariato
+- **Dati curriculum**: invariati; nessun file `.normalized.json` creato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-182.md`, `report/CML-182_educazione_fisica_validation_outcome_decision.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_182_EDUCAZIONE_FISICA_VALIDATION_OUTCOME_DECISION_READY`
+
 ## 2026-06-27 - CML-181 - EDUCAZIONE_FISICA_HUMAN_VALIDATION_CHECKLIST
 
 - **Commit iniziale**: `761622d` (allineato con `origin/main`)
