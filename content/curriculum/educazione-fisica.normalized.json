@@ -1,0 +1,330 @@
+{
+  "schemaVersion": "cml-normalized-curriculum-v1",
+  "disciplina": "Educazione Fisica",
+  "stato": "bozza_generabile",
+  "readiness": "in_revisione",
+  "humanValidationRequired": true,
+  "source": "CML-179 — manual gap-fill document for Educazione Fisica. Five nuclei proposed, Secondaria I/II/III progression based on manual draft. Content provisional, not validated by human/department review. Limited draft authorized by CML-182B (LIMITED_DRAFT_DATA_PREP_ALLOWED).",
+  "metaDiscipline": "Motoria",
+  "unitaApprendimento": [
+    {
+      "id": "ef_inf_5_001",
+      "disciplina": "Educazione Fisica",
+      "ordine": "Infanzia",
+      "classe": null,
+      "fascia": "5",
+      "nucleo": "Corpo e percezione",
+      "ambito": "Scoperta del corpo in movimento, percezione sensoriale e gioco motorio",
+      "competenza": "Il bambino scopre il proprio corpo in movimento, ne percepisce le potenzialità espressive e motorie e partecipa a giochi motori in gruppo",
+      "traguardo": "Il bambino riconosce il proprio corpo e le sue parti; si muove con crescente coordinazione in spazi noti; partecipa a giochi motori rispettando semplici regole e compagni.",
+      "obiettivi": [
+        "Riconoscere e denominare le parti del corpo",
+        "Muoversi in modo coordinato in spazi e percorsi semplici",
+        "Partecipare a giochi motori di gruppo rispettando le regole",
+        "Esprimere emozioni e sensazioni attraverso il movimento"
+      ],
+      "conoscenze": [
+        "Parti del corpo e schema corporeo",
+        "Concetti spaziali: dentro/fuori, sopra/sotto, davanti/dietro",
+        "Semplici percorsi motori: strisciare, rotolare, camminare, correre",
+        "Giochi di gruppo: imitazione, gioco simbolico motorio"
+      ],
+      "abilita": [
+        "Indicare e denominare le principali parti del corpo",
+        "Eseguire semplici percorsi motori in successione",
+        "Partecipare a giochi di imitazione e movimento in gruppo",
+        "Esprimere attraverso il corpo uno stato d'animo o emozione"
+      ],
+      "evidenze": [
+        "Il bambino indica e nomina almeno 5 parti del corpo",
+        "Il bambino percorre un semplice tragitto rispettando direzioni",
+        "Il bambino partecipa a un gioco motorio di gruppo per almeno 5 minuti",
+        "Il bambino rappresenta con il corpo un'emozione (gioia, tristezza, paura)"
+      ],
+      "criteriValutazione": [
+        "Conoscenza dello schema corporeo",
+        "Coordinazione motoria in percorsi semplici",
+        "Partecipazione attiva ai giochi di gruppo",
+        "Capacitá espressiva attraverso il movimento"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, Campo di esperienza: Il corpo e il movimento",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-179, CML-183 — Infanzia fascia 5, nucleo Corpo e percezione. Draft da validare: copertura Infanzia minimale, da integrare con indicazioni di plesso."
+    },
+    {
+      "id": "ef_pri_1_001",
+      "disciplina": "Educazione Fisica",
+      "ordine": "Primaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Corpo e percezione",
+      "ambito": "Corpo, spazio e movimento: percezione corporea e schemi motori di base",
+      "competenza": "L'alunno riconosce il proprio corpo, le sue parti e le sue potenzialità motorie; utilizza schemi motori di base in situazioni guidate",
+      "traguardo": "L'alunno riconosce e denomina le parti del corpo; utilizza schemi motori di base (camminare, correre, saltare, rotolare) in situazioni guidate; si orienta nello spazio scolastico.",
+      "obiettivi": [
+        "Riconoscere e denominare le parti del corpo su di sé e sugli altri",
+        "Eseguire schemi motori di base (camminare, correre, saltare, strisciare)",
+        "Orientarsi nello spazio rispetto a punti di riferimento",
+        "Coordinare movimenti in semplici sequenze motorie"
+      ],
+      "conoscenze": [
+        "Schema corporeo: parti del corpo, lateralitá",
+        "Schemi motori di base: camminare, correre, saltare, rotolare, strisciare",
+        "Concetti spaziali: destra/sinistra, avanti/indietro, sopra/sotto",
+        "Semplici sequenze motorie: imitazione e ripetizione"
+      ],
+      "abilita": [
+        "Indicare e nominare le parti del corpo su di sé",
+        "Eseguire schemi motori di base su indicazione",
+        "Spostarsi nello spazio seguendo indicazioni direzionali",
+        "Riprodurre una breve sequenza motoria dimostrata"
+      ],
+      "evidenze": [
+        "L'alunno indica su di sé le parti del corpo nominate dall'insegnante",
+        "L'alunno esegue correttamente 3 schemi motori di base diversi",
+        "L'alunno si posiziona correttamente rispetto a un punto di riferimento",
+        "L'alunno ripete una sequenza motoria di 3 passaggi"
+      ],
+      "criteriValutazione": [
+        "Consapevolezza dello schema corporeo",
+        "Padronanza degli schemi motori di base",
+        "Orientamento spaziale in contesti guidati",
+        "Coordinazione in sequenze motorie semplici"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Educazione Fisica — Primaria classe 1",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-179, CML-183 — Primaria classe 1, nucleo Corpo e percezione. Draft da validare: copertura Primaria generica, da integrare con indicazioni di classe."
+    },
+    {
+      "id": "ef_pri_3_001",
+      "disciplina": "Educazione Fisica",
+      "ordine": "Primaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Abilita motorie",
+      "ambito": "Coordinazione, equilibrio e controllo motorio in contesti variati",
+      "competenza": "L'alunno coordina schemi motori in contesti variati, controlla equilibrio e postura in situazioni dinamiche e statiche",
+      "traguardo": "L'alunno coordina schemi motori in contesti variati; controlla l'equilibrio in situazioni statiche e dinamiche; utilizza la coordinazione oculo-manuale e segmentaria in attivitá motorie strutturate.",
+      "obiettivi": [
+        "Coordinare schemi motori in sequenze di media complessitá",
+        "Mantenere l'equilibrio in situazioni statiche e dinamiche",
+        "Coordinare movimenti di arti superiori e inferiori in azioni combinate",
+        "Adattare il movimento a spazi, ritmi e consegne variabili"
+      ],
+      "conoscenze": [
+        "Coordinazione dinamica generale: correre e saltare, lanciare e afferrare",
+        "Equilibrio statico e dinamico: posizioni, appoggi, spostamenti",
+        "Coordinazione oculo-manuale: lanci, prese, rimbalzi",
+        "Adattamento motorio a ritmi e strutture spaziali variabili"
+      ],
+      "abilita": [
+        "Eseguire una sequenza motoria combinando corsa, salto e lancio",
+        "Mantenere l'equilibrio su una superficie ridotta o instabile",
+        "Lanciare e afferrare oggetti con coordinazione oculo-manuale",
+        "Adattare il movimento a variazioni di ritmo e direzione"
+      ],
+      "evidenze": [
+        "L'alunno esegue una sequenza motoria di 4 passaggi in autonomia",
+        "L'alunno mantiene l'equilibrio in posizione statica per almeno 10 secondi",
+        "L'alunno lancia e afferra una palla da fermo con buona precisione",
+        "L'alunno adatta il passo a variazioni ritmiche indicate"
+      ],
+      "criteriValutazione": [
+        "Coordinazione in sequenze motorie combinate",
+        "Controllo dell'equilibrio in situazioni statiche e dinamiche",
+        "Coordinazione oculo-manuale in attivitá di lancio e presa",
+        "Capacitá di adattamento motorio a stimoli variabili"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Educazione Fisica — Primaria classi 3-4-5",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-179, CML-183 — Primaria classe 3, nucleo Abilita motorie. Draft da validare: copertura Primaria generica, da integrare con progressione di classe."
+    },
+    {
+      "id": "ef_pri_5_001",
+      "disciplina": "Educazione Fisica",
+      "ordine": "Primaria",
+      "classe": "5",
+      "fascia": null,
+      "nucleo": "Gioco e sport",
+      "ambito": "Giochi di squadra, regole, ruoli e rispetto reciproco",
+      "competenza": "L'alunno partecipa a giochi e attivitá sportive scolastiche rispettando regole, ruoli, compagni e avversari",
+      "traguardo": "L'alunno partecipa a giochi di squadra e attivitá sportive scolastiche rispettando regole e ruoli; collabora con compagni e avversari con fair play; utilizza abilitá motorie in contesti di gioco strutturato.",
+      "obiettivi": [
+        "Partecipare a giochi di squadra rispettando regole e ruoli",
+        "Collaborare con i compagni per raggiungere un obiettivo comune",
+        "Applicare comportamenti di fair play durante il gioco",
+        "Conoscere e rispettare le regole di sicurezza nelle attivitá motorie"
+      ],
+      "conoscenze": [
+        "Giochi di squadra: regole essenziali, ruoli, spazi di gioco",
+        "Fair play: rispetto di compagni, avversari e arbitraggio",
+        "Sicurezza nelle attivitá motorie: comportamenti, spazi, materiali",
+        "Collaborazione: comunicazione, aiuto reciproco, turni"
+      ],
+      "abilita": [
+        "Applicare le regole di un gioco di squadra in situazione reale",
+        "Assumere ruoli diversi all'interno del gruppo",
+        "Riconoscere e correggere comportamenti non corretti nel gioco",
+        "Rispettare le indicazioni di sicurezza durante le attivitá"
+      ],
+      "evidenze": [
+        "L'alunno partecipa a un gioco di squadra rispettando le regole principali",
+        "L'alunno alterna ruoli diversi (attaccante, difensore, portiere) su richiesta",
+        "L'alunno riconosce un comportamento di fair play in una situazione di gioco",
+        "L'alunno mantiene comportamenti sicuri durante tutta l'attivitá"
+      ],
+      "criteriValutazione": [
+        "Rispetto delle regole nei giochi di squadra",
+        "Capacitá di collaborazione e assunzione di ruoli",
+        "Atteggiamento di fair play verso compagni e avversari",
+        "Consapevolezza delle norme di sicurezza"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Educazione Fisica — Primaria classi 3-4-5",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-179, CML-183 — Primaria classe 5, nucleo Gioco e sport. Draft da validare: attivitá sportive non specificate, da definire con dipartimento."
+    },
+    {
+      "id": "ef_sec_1_001",
+      "disciplina": "Educazione Fisica",
+      "ordine": "Secondaria",
+      "classe": "1",
+      "fascia": null,
+      "nucleo": "Corpo e percezione",
+      "ambito": "Conoscenza di sé, schemi motori, coordinazione di base e sicurezza negli spazi",
+      "competenza": "L'alunno conosce il proprio corpo, controlla schemi motori di base e si muove in sicurezza negli spazi scolastici",
+      "traguardo": "L'alunno partecipa ad attivitá motorie scolastiche rispettando regole, spazi e compagni; controlla schemi motori di base in situazioni guidate; riconosce comportamenti sicuri durante le attivitá.",
+      "obiettivi": [
+        "Riconoscere e rispettare regole, spazi e consegne nelle attivitá motorie scolastiche",
+        "Eseguire schemi motori di base con attenzione a controllo, equilibrio e coordinazione",
+        "Partecipare a giochi motori collaborando con il gruppo",
+        "Riconoscere comportamenti sicuri durante attivitá e spostamenti"
+      ],
+      "conoscenze": [
+        "Schema corporeo: segmenti, posture, assi e piani del corpo",
+        "Schemi motori di base e combinati: corsa, salto, lancio, presa",
+        "Equilibrio statico e dinamico: esercizi e attivitá",
+        "Sicurezza negli spazi: palestra, cortile, spogliatoio"
+      ],
+      "abilita": [
+        "Rispettare consegne e spazi durante le attivitá motorie",
+        "Eseguire schemi motori combinati con controllo e coordinazione",
+        "Collaborare in giochi motori di gruppo",
+        "Applicare comportamenti sicuri durante gli spostamenti e le attivitá"
+      ],
+      "evidenze": [
+        "L'alunno segue le consegne motorie senza bisogno di richiami",
+        "L'alunno esegue una sequenza di schemi motori combinati con controllo",
+        "L'alunno collabora attivamente in un gioco motorio di gruppo",
+        "L'alunno adotta comportamenti sicuri in palestra e negli spazi aperti"
+      ],
+      "criteriValutazione": [
+        "Rispetto di regole, spazi e consegne",
+        "Controllo e coordinazione negli schemi motori",
+        "Partecipazione e collaborazione nei giochi di gruppo",
+        "Consapevolezza e applicazione delle norme di sicurezza"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Educazione Fisica — Secondaria di I grado",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-179, CML-183 — Secondaria classe 1, nucleo Corpo e percezione. Draft da validare: contenuti basati su CML-179 gap-fill manuale."
+    },
+    {
+      "id": "ef_sec_2_001",
+      "disciplina": "Educazione Fisica",
+      "ordine": "Secondaria",
+      "classe": "2",
+      "fascia": null,
+      "nucleo": "Gioco e sport",
+      "ambito": "Consolidamento motorio, collaborazione, ruoli, giochi di squadra e fair play",
+      "competenza": "L'alunno utilizza abilitá motorie e collaborative in giochi e attivitá strutturate, riconoscendo ruoli, regole e comportamenti corretti",
+      "traguardo": "L'alunno utilizza abilitá motorie e collaborative in giochi e attivitá strutturate, riconoscendo ruoli, regole e comportamenti sicuri; applica il fair play nelle situazioni di gioco.",
+      "obiettivi": [
+        "Consolidare coordinazione, equilibrio, ritmo e adattamento motorio in contesti variati",
+        "Applicare regole e ruoli in giochi e attivitá sportive scolastiche",
+        "Collaborare con compagni assumendo responsabilitá semplici nel gruppo",
+        "Riflettere su comportamenti corretti per sicurezza, benessere e rispetto reciproco"
+      ],
+      "conoscenze": [
+        "Coordinazione dinamica avanzata: percorsi, circuito, staffette",
+        "Giochi sportivi scolastici: regole, ruoli, spazi di gioco",
+        "Fair play: gestione del conflitto, rispetto dell'avversario, arbitraggio",
+        "Benessere scolastico: igiene, abbigliamento, riscaldamento, recupero"
+      ],
+      "abilita": [
+        "Eseguire percorsi motori combinati con precisione e velocitá",
+        "Applicare le regole di un gioco sportivo in autonomia",
+        "Assumere responsabilitá nel gruppo (capitano, arbitro, organizzatore)",
+        "Riconoscere l'importanza del riscaldamento e del recupero"
+      ],
+      "evidenze": [
+        "L'alunno completa un percorso motorio a staffetta con precisione",
+        "L'alunno spiega le regole di un gioco sportivo ai compagni",
+        "L'alunno assume un ruolo organizzativo senza sollecitazione",
+        "L'alunno esegue il riscaldamento autonomamente prima dell'attivitá"
+      ],
+      "criteriValutazione": [
+        "Coordinazione in percorsi e circuiti motori",
+        "Conoscenza e applicazione delle regole di gioco",
+        "Capacitá di assumere responsabilitá nel gruppo",
+        "Consapevolezza del benessere e della sicurezza scolastica"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Educazione Fisica — Secondaria di I grado",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-179, CML-183 — Secondaria classe 2, nucleo Gioco e sport. Draft da validare: attivitá sportive non specificate, da definire con dipartimento."
+    },
+    {
+      "id": "ef_sec_3_001",
+      "disciplina": "Educazione Fisica",
+      "ordine": "Secondaria",
+      "classe": "3",
+      "fascia": null,
+      "nucleo": "Espressione e inclusione",
+      "ambito": "Autonomia, responsabilitá, espressione corporea, benessere e inclusione",
+      "competenza": "L'alunno agisce con autonomia e responsabilitá in attivitá motorie, sportive ed espressive, valorizzando fair play, benessere scolastico e inclusione",
+      "traguardo": "L'alunno agisce con autonomia e responsabilitá in attivitá motorie, sportive ed espressive, valorizzando fair play, benessere scolastico e inclusione; riconosce il rapporto tra attivitá motoria, benessere personale e vita scolastica.",
+      "obiettivi": [
+        "Organizzare in modo autonomo sequenze motorie o attivitá semplici rispettando obiettivo, spazio e regole",
+        "Partecipare a giochi e sport scolastici con fair play e responsabilitá",
+        "Riconoscere il rapporto tra attivitá motoria, benessere personale e vita scolastica",
+        "Usare movimento ed espressione corporea per comunicare, collaborare e includere"
+      ],
+      "conoscenze": [
+        "Progettazione di attivitá motorie: obiettivo, spazio, regole, materiali",
+        "Sport scolastici: tecniche di base, regolamenti, ruoli di squadra",
+        "Benessere e salute in ambito scolastico: movimento, postura, pause attive",
+        "Espressione corporea: linguaggio non verbale, comunicazione, drammatizzazione",
+        "Inclusione: adattamenti per partecipazione di tutti"
+      ],
+      "abilita": [
+        "Organizzare un'attivitá motoria per il gruppo definendo obiettivi e regole",
+        "Partecipare a sport scolastici con fair play e responsabilitá",
+        "Riconoscere il valore del movimento per il benessere scolastico",
+        "Comunicare attraverso il corpo e il movimento in contesti espressivi",
+        "Includere compagni con diversi livelli di abilitá nelle attivitá"
+      ],
+      "evidenze": [
+        "L'alunno propone e organizza un gioco motorio per la classe",
+        "L'alunno partecipa a una competizione sportiva scolastica con fair play",
+        "L'alunno spiega come il movimento influisce sul benessere scolastico",
+        "L'alunno utilizza gesti e movimenti per comunicare un messaggio",
+        "L'alunno adatta l'attivitá per consentire la partecipazione di tutti"
+      ],
+      "criteriValutazione": [
+        "Autonomia nell'organizzazione di attivitá motorie",
+        "Fair play e responsabilitá nella partecipazione sportiva",
+        "Consapevolezza del rapporto tra movimento e benessere",
+        "Capacitá espressiva e comunicativa attraverso il corpo",
+        "Atteggiamento inclusivo verso compagni con diverse abilitá"
+      ],
+      "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012, sezione Educazione Fisica — Secondaria di I grado",
+      "stato": "nuovo",
+      "validazioneUmana": true,
+      "noteDipartimento": "CML-179, CML-183 — Secondaria classe 3, nucleo Espressione e inclusione. Draft da validare: contenuti basati su CML-179; inclusione e adattamenti da validare con dipartimento."
+    }
+  ]
+}

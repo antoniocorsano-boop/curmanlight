@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-183 - EDUCAZIONE_FISICA_LIMITED_DRAFT_DATA_PREP
+
+- **Commit iniziale**: `bbd41c0` (allineato con `origin/main`)
+- **Tipo slice**: data-prep limitata / limited draft
+- **Oggetto**: creazione bozza normalizzata Educazione Fisica come draft prudente
+- **Decisione autorizzativa**: `LIMITED_DRAFT_DATA_PREP_ALLOWED` (CML-182B)
+- **File creato**: `content/curriculum/educazione-fisica.normalized.json`
+- **Dati normalizzati**: 11/14 (era 10/14)
+- **Runtime mappa**: invariato (10/14) — nessuna integrazione runtime
+- **Shape test**: 10/10 PASS (invariato)
+- **Unita**: 7 (Infanzia 1, Primaria 3, Secondaria 3)
+- **Nuclei**: 5 (Corpo e percezione, Abilita motorie, Gioco e sport, Salute e benessere, Espressione e inclusione)
+- **Marcatori draft**: `humanValidationRequired: true`, `validazioneUmana: true`, `stato: bozza_generabile`, note dipartimento su ogni unita
+- **Prossima slice consigliata**: CML-184 — EDUCAZIONE_FISICA_RUNTIME_MAPPA_INTEGRATION o altra disciplina residua
+- **Runtime**: invariato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `content/curriculum/educazione-fisica.normalized.json`, `docs/03_execution/CML-183.md`, `report/CML-183_educazione_fisica_limited_draft_data_prep.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_183_EDUCAZIONE_FISICA_LIMITED_DRAFT_DATA_PREP_READY`
+
 ## 2026-06-27 - CML-182B - EDUCAZIONE_FISICA_DATA_PREP_DECISION_CORRECTION
 
 - **Commit iniziale**: `cf2c607` (allineato con `origin/main`)
