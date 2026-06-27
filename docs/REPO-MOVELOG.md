@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-207 - BATCH_IMPORT_UX_CLARITY_AUDIT_CONTRACT
+
+- **Commit base**: `a3481e4` (CML-206S, aligned)
+- **Tipo slice**: audit docs-only
+- **Oggetto**: audit UX clarity per batch import `.cml` esistente; definito contratto minimale per CML-208
+- **UX gaps mappati**: P1 (nessuna preview, duplicate rendering inconsistency, mixed-discipline generic message), P2 (mancanza summary banner, recovery guidance, size warnings), P3 (no drag-and-drop, no count limit, no reset)
+- **Selezione CML-208**: helper text multi-file, mixed-discipline list warning, duplicate chip in referent, compact summary banner
+- **Rifiutati**: drag-and-drop, preview panel, file count limit, reset button (deferred as P3 or out-of-scope)
+- **Scope CML-208**: UI-only in `index.html`, no schema/validator/export/import behavior changes
+- **Compatibilità**: 100% backward, nessun impatto su validatori o export
+- **Artefatti**: `docs/03_execution/CML-207.md`, `report/CML-207_batch_import_ux_clarity_audit_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime behavior, schema, export/import, contenuti, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_207_BATCH_IMPORT_UX_CLARITY_AUDIT_CONTRACT_READY`
+
 ## 2026-06-27 - CML-206 - MULTI_DISCIPLINE_PACKAGE_FORMAT_SELECTION_AUDIT
 
 - **Commit base**: `f0f9817` (CML-205S, aligned)
