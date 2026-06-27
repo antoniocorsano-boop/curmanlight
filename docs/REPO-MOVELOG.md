@@ -1,5 +1,16 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-197 — NEXT_CYCLE_SELECTION_AFTER_PUBLIC_RUNTIME_14_14
+
+- **Commit**: `660f2e1` + docs → commit finale CML-197
+- **Tipo slice**: cycle selection (docs-only)
+- **Oggetto**: selezione del prossimo ciclo funzionale dopo runtime 14/14 pubblico
+- **Opzione selezionata**: B — export/import e schema .cml hardening
+- **Opzioni rinviate**: C (evidenze/UDA), D (SchoolKB), E (design/UML)
+- **Proposta sequenza**: CML-198 (.cml audit) → CML-199 (versioning) → CML-200 (validazione) → CML-201 (smoke E2E) → CML-202 (readiness gate)
+- **Artefatti**: `docs/03_execution/CML-197.md`, `report/CML-197_next_cycle_selection_after_public_runtime_14_14.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_197_NEXT_CYCLE_SELECTION_AFTER_PUBLIC_RUNTIME_14_14_SELECTED_B`
+
 ## 2026-06-27 - CML-196 - PUBLIC_LIVE_SMOKE_GITHUB_PAGES_AFTER_RUNTIME_14_14
 
 - **Commit**: `6ec65ec` (CML-195) + docs → commit finale CML-196
