@@ -3618,15 +3618,61 @@ function exportTeacherCml(){
   showToast('✅ File proposta .cml generato correttamente');
 }
 
+const ALLOWED_ENDPOINT_HOSTS = [
+  'drive.google.com',
+  'docs.google.com'
+];
+
+function isAllowedHost(hostname, allowedHosts) {
+  const lower = hostname.toLowerCase();
+  if (allowedHosts.includes(lower)) return true;
+  for (const allowed of allowedHosts) {
+    if (lower === allowed || lower.endsWith('.' + allowed)) return true;
+  }
+  return false;
+}
+
+function validateDriveEndpoint(endpoint) {
+  const raw = String(endpoint || '').trim();
+  if (!raw) return { valid: false, reason: 'empty' };
+  const lower = raw.toLowerCase();
+  if (lower.startsWith('javascript:') || lower.startsWith('data:') || lower.startsWith('file:')) return { valid: false, reason: 'protocol' };
+  if (!lower.startsWith('https://')) return { valid: false, reason: 'https' };
+  try {
+    const url = new URL(raw);
+    if (url.username || url.password) return { valid: false, reason: 'credentials' };
+    const host = url.hostname;
+    if (/^localhost$/i.test(host) || /^127\.\d+\.\d+\.\d+$/i.test(host) || /^192\.168\.\d+\.\d+$/i.test(host) || /^10\.\d+\.\d+\.\d+$/i.test(host) || /^172\.(1[6-9]|2\d|3[01])\.\d+\.\d+$/i.test(host) || /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/i.test(host)) return { valid: false, reason: 'localhost' };
+    if (!isAllowedHost(host, ALLOWED_ENDPOINT_HOSTS)) return { valid: false, reason: 'host' };
+  } catch (e) {
+    return { valid: false, reason: 'malformed' };
+  }
+  return { valid: true, reason: '' };
+}
+
 function uploadTeacherCmlToDrive(){
   const endpoint = getDriveUploadEndpoint();
-  if(!endpoint){
+  if (!endpoint) {
     showToast('ℹ️ Invio al Drive non ancora configurato. Puoi scaricare il file proposta .cml e caricarlo manualmente nel Drive condiviso della scuola.');
+    return;
+  }
+  const validation = validateDriveEndpoint(endpoint);
+  if (!validation.valid) {
+    const messages = {
+      empty: 'Endpoint Drive non configurato.',
+      protocol: 'Protocollo non consentito. Usa solo HTTPS.',
+      https: 'Protocollo non consentito. Usa solo HTTPS.',
+      credentials: 'URL contiene credenziali. Rimuovi nome utente e password dall\'endpoint.',
+      localhost: 'Endpoint locale non consentito per sicurezza.',
+      host: 'Host non consentito. Verifica l\'endpoint Drive configurato.',
+      malformed: 'Endpoint non valido. Verifica l\'URL configurato.'
+    };
+    showToast('⚠️ ' + (messages[validation.reason] || messages.malformed) + ' Il file .cml resterà disponibile per il caricamento manuale.');
     return;
   }
   const btn = event?.target;
   const originalText = btn?.textContent || '';
-  if(btn){ btn.disabled = true; btn.textContent = 'Invio in corso...'; }
+  if (btn) { btn.disabled = true; btn.textContent = 'Invio in corso...'; }
   const model = buildTeacherCmlModel();
   const discName = model.discipline || "Curricolo";
   const safeDisc = discName.replace(/\s+/g, '_').replace(/[^\w\-]/g, '');
@@ -3640,23 +3686,25 @@ function uploadTeacherCmlToDrive(){
   };
   fetch(endpoint, {
     method: 'POST',
-    headers: {'Content-Type': 'application/json'},
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
   })
   .then(r => {
-    if(!r.ok) throw new Error('Upload failed');
+    if (!r.ok) throw new Error('Upload failed');
     showToast('✅ Proposta inviata al Drive condiviso. Il dipartimento potrà acquisirla per la validazione.');
   })
   .catch(() => {
     showToast('⚠️ Non è stato possibile inviare la proposta al Drive. Puoi scaricare il file .cml e caricarlo manualmente.');
   })
   .finally(() => {
-    if(btn){ btn.disabled = false; btn.textContent = originalText; }
+    if (btn) { btn.disabled = false; btn.textContent = originalText; }
   });
 }
 
 function getDriveUploadEndpoint(){
-  return localStorage.getItem('curmanlight.driveUploadEndpoint') || '';
+  const endpoint = localStorage.getItem('curmanlight.driveUploadEndpoint') || '';
+  const validation = validateDriveEndpoint(endpoint);
+  return validation.valid ? endpoint : '';
 }
 
 // DEPARTMENT IMPORT START

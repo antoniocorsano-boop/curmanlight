@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-205 - DRIVE_ENDPOINT_ALLOWLIST_SECURITY_HARDENING
+
+- **Commit base**: `a21838a` (CML-203, aligned)
+- **Tipo slice**: runtime security hardening
+- **Oggetto**: implementazione allowlist client-side per endpoint Drive upload, hardening del boundary documentato in CML-199
+- **Root cause precedente**: `uploadTeacherCmlToDrive()` usava endpoint da `localStorage` senza validazione, rischio P2 CML-198
+- **Fix**: `validateDriveEndpoint()` + `isAllowedHost()` con host espliciti (`drive.google.com`, `docs.google.com`), check HTTPS only, reject localhost/IP/credentials/malformed/protocol pericolosi
+- **Messaggi utente**: specifici per ogni rejection reason (empty, protocol, credentials, localhost, host, malformed)
+- **Fallback**: manual download `.cml` preservato in tutti gli scenari di rigetto
+- **Files modificati**: `_published_snapshot/netlify-current/index.html` (Drive endpoint validation)
+- **Smoke test**: 21/21 PASS (empty, HTTP, javascript:, data:, file:, localhost, IPs, credentials, unsupported hosts, allowed hosts)
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Workflow preservato**: teacher export, download manuale `.cml`, payload invariato
+- **Limitations**: client-side only, allowlist statica, no TLS cert verification, no encrypted storage, manual fallback recommended
+- **Artefatti**: `docs/03_execution/CML-205.md`, `report/CML-205_drive_endpoint_allowlist_security_hardening.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessun bump schema, nessun export/import change, nessun contenuto curricolo, nessun service-worker, nessun manifest, nessuna dipendenza, nessun backend, nessuna credenziale, nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_205_DRIVE_ENDPOINT_ALLOWLIST_SECURITY_HARDENING_READY`
+
 ## 2026-06-27 - CML-203 - BOM_SHAPE_TEST_REMEDIATION
 
 - **Commit base**: `8dc1f96` (CML-202, aligned)
