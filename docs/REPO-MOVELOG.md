@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## 2026-06-27 - CML-182B - EDUCAZIONE_FISICA_DATA_PREP_DECISION_CORRECTION
+
+- **Commit iniziale**: `cf2c607` (allineato con `origin/main`)
+- **Tipo slice**: docs-only / decision correction
+- **Oggetto**: correzione decisione CML-182: distinzione tra approvazione finale umana e bozza draft prudente
+- **Decisione principale**: `LIMITED_DRAFT_DATA_PREP_ALLOWED`
+- **Esito**: bozza normalizzata autorizzata con vincoli (`humanValidationRequired: true`, nessuna runtime integration automatica); approvazione finale resta umana
+- **Prossima slice consigliata**: CML-183 — EDUCAZIONE_FISICA_LIMITED_DRAFT_DATA_PREP
+- **Runtime**: invariato
+- **Dati curriculum**: invariati; nessun file `.normalized.json` creato
+- **Tools**: invariati
+- **SchoolKB**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-182B.md`, `report/CML-182B_educazione_fisica_data_prep_decision_correction.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_182B_EDUCAZIONE_FISICA_DATA_PREP_DECISION_CORRECTION_READY`
+
 ## 2026-06-27 - CML-182 - EDUCAZIONE_FISICA_VALIDATION_OUTCOME_DECISION
 
 - **Commit iniziale**: `7a6a98b` (allineato con `origin/main`)
