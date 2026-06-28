@@ -1,6 +1,19 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-232 — NEXT CYCLE SELECTION AFTER ACCESSIBILITY/RESPONSIVE CLOSURE
+
+- **Commit base**: `4eb8229` (CML-231S, aligned)
+- **Tipo slice**: docs-only / decision
+- **Selezione**: **C — OPS guardrails** (skills, slice-template audit, guard hooks)
+- **Opzioni obsolete**: A (gap model EF) e B (nuova disciplina) — 14/14 già completo
+- **Opzioni rimandate**: D (polish), E (freeze), F (SchoolKB), G (stop)
+- **Sequenza proposta**: CML-OPS-004 → CML-OPS-005 → CML-OPS-006
+- **Validator**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Artefatti**: `docs/03_execution/CML-232.md`, `report/CML-232_next_cycle_selection_after_accessibility_responsive_closure.md`, `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_232_NEXT_CYCLE_SELECTION_C_OPS_GUARDRAILS`
+
 ## 2026-06-28 — CML-231 — ACCESSIBILITY/RESPONSIVE CLOSURE GATE
 
 - **Commit base**: `10d2bd0` (CML-230S, aligned)
