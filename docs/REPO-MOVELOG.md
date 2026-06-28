@@ -5114,3 +5114,30 @@
 - **Artefatti**: `docs/03_execution/CML-213.md`, `report/CML-213_evidenze_uda_workflow_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_213_EVIDENZE_UDA_WORKFLOW_AUDIT_READY`
 
+## 2026-06-28 - CML-214 - EVIDENZE_UDA_WORKFLOW_AND_DATA_CONTRACT
+
+- **Commit**: (in preparazione)
+- **Tipo slice**: docs-only / contract
+- **Oggetto**: definire contratto dati e workflow Evidenze/UDA prima di implementazione runtime
+- **Stato iniziale**: `main...origin/main` aligned at `e479617`, working tree pulito
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Evidence coverage**: 130/130 unità (100%) su 14 discipline
+- **Campi esistenti**: `evidenze`, `traguardo`, `obiettivi`, `conoscenze`, `abilita`, `criteriValutazione`, `noteDipartimento`, `validazioneUmana`
+- **Contratto creato**: `docs/02_system/EVIDENZE-UDA-WORKFLOW-CONTRACT.md`
+- **Decisioni**: contract prima di runtime; evidenze da dati esistenti; UDA come draft locale; no `.cml` change; no SchoolKB; privacy-first; CML-215 read-only prima; CML-216 export markdown
+- **Alternative rigettate**: B (data model senza contratto), C (panel-only senza linking), D (UDA export senza linking), E (defer)
+- **Prossima sequenza**: CML-214 → CML-215 → CML-216 → CML-217
+- **Runtime**: invariato
+- **content/curriculum/**: invariato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, validator, shape-test, service-worker, manifest**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/02_system/EVIDENZE-UDA-WORKFLOW-CONTRACT.md`, `docs/03_execution/CML-214.md`, `report/CML-214_evidenze_uda_workflow_and_data_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_214_EVIDENZE_UDA_WORKFLOW_AND_DATA_CONTRACT_READY`
+
