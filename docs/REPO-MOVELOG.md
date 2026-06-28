@@ -1,6 +1,24 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-230 — TARGETED_ACCESSIBILITY_RESPONSIVE_MICROFIX
+
+- **Commit base**: `56243bb` (CML-229S, aligned)
+- **Tipo slice**: runtime increment
+- **Oggetto**: 6 microfix accessibilità/responsività da raccomandazione CML-229
+- **Fix applicati**: tabbar touch target a 400px (P1, CSS padding), focus outline motto-link (P2, CSS), aria-label textarea (P2, HTML), aria-pressed mappa-disc-btn (P2, JS), aria-current subnav (P2, JS), aria-current tabbar (P2, JS)
+- **Issue CML-229 non affrontate**: viewport 360px (degradation P2), badge colore (P3), grassetto screenshot (P3)
+- **File modificato**: `_published_snapshot/netlify-current/index.html` (6 modifiche puntuali)
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Hash smoke**: 14/14 PASS
+- **Viewport smoke**: 360/390/768/1024/desktop — OK
+- **Workflow smoke**: 5 discipline — OK
+- **Evidenze/UDA/Markdown/.cml**: OK
+- **Curriculum JSON**: nessuna modifica
+- **Artefatti**: `docs/03_execution/CML-230.md`, `report/CML-230_targeted_accessibility_responsive_microfix.md`, `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_230_TARGETED_ACCESSIBILITY_RESPONSIVE_MICROFIX_COMPLETE`
+
 ## 2026-06-28 — CML-229 — ACCESSIBILITY_RESPONSIVE_QA_AUDIT
 
 - **Commit base**: `432a3e8` (CML-228S, aligned)

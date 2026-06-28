@@ -23,7 +23,7 @@ header .sub{font-size:10px;opacity:.7;letter-spacing:2px;text-transform:uppercas
 header h1{font-size:17px;font-weight:700}
 .norm-badge{background:rgba(255,255,255,.15);border-radius:5px;padding:2px 8px;font-size:10px;margin-top:5px;display:inline-block}
 .motto-link{color:#fff;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.75);font-weight:700}
-.motto-link:hover,.motto-link:focus{text-decoration:underline;outline:none}
+.motto-link:hover{text-decoration:underline}.motto-link:focus{text-decoration:underline;outline:2px solid #fff;outline-offset:2px}
 .footer-motto-link{color:#cfd8dc;text-decoration:none;border-bottom:1px dotted #90a4ae}
 .footer-motto-link:hover,.footer-motto-link:focus{text-decoration:underline}
 .norm-inline-link{color:#1a237e;font-weight:800;text-decoration:none;border-bottom:1px dotted #1a237e}
@@ -503,7 +503,7 @@ header.app-header{padding:0;background:var(--cml-header);box-shadow:0 2px 8px rg
 .orientation-dismiss:hover{background:rgba(26,35,126,.12);color:#1a237e}
 @media(max-width:760px){.orientation-card{flex-wrap:wrap;padding:12px;margin:8px auto 0;width:calc(100% - 16px)}.orientation-steps{gap:5px}.orientation-step{font-size:9px;padding:3px 8px}}
 @media(max-width:560px){.tabbar{gap:3px}.tabbar button{font-size:10px;padding:7px 5px;white-space:nowrap}.tabbar button:before{content:none}}
-@media(max-width:400px){.tabbar button{font-size:9px;padding:6px 3px;min-width:0}}
+@media(max-width:400px){.tabbar button{font-size:9px;padding:8px 6px}}
 @media(max-width:640px){.disc-export-panel .disc-md-preview{height:100px}.disc-export-actions .export-btn{flex:1 1 100%;margin:2px 0}}
 .tab-generali{max-width:1000px;margin:0 auto;padding:16px 12px}
 .tab-generali h2{font-size:15px;color:#1a237e;margin:0 0 6px}
@@ -1542,7 +1542,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <button class="export-btn btn-copy" id="btn-copy-disc-md" onclick="copyDiscMarkdown()" disabled style="opacity:0.5">📝 Copia testo</button>
           <button class="export-btn btn-md" id="btn-dl-disc-md" onclick="downloadDiscMarkdown()" disabled style="opacity:0.5">📝 Scarica testo</button>
         </div>
-        <textarea id="disc-md-preview" class="disc-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del Markdown..."></textarea>
+        <textarea id="disc-md-preview" class="disc-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del Markdown..." aria-label="Anteprima Markdown"></textarea>
       </div>
       <div id="cards-area"></div>
     </div>
@@ -2416,6 +2416,7 @@ function setMappaDisciplina(d, btn) {
     b.style.background = b === btn ? '#1a237e' : '#fff';
     b.style.color = b === btn ? '#fff' : '#1a237e';
     b.style.borderColor = b === btn ? '#1a237e' : '#c5cae9';
+    b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
   });
   renderMappaDisciplinare();
 }
@@ -3549,17 +3550,17 @@ function setTab(t){
   var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
   var sd=document.getElementById("subnav-didattica");if(sd)sd.style.display=p==="didattica"?"flex":"none";
   var sci=document.querySelectorAll("#subnav-curriculum .subnav-btn");var csm=["curricolo","lavoro","riepilogo","normativa"];
-  sci.forEach(function(b,i){b.classList.toggle("active",csm[i]===t||(t==="generali"&&csm[i]==="normativa"));});
+  sci.forEach(function(b,i){var a=csm[i]===t||(t==="generali"&&csm[i]==="normativa");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   var sdi=document.querySelectorAll("#subnav-didattica .subnav-btn");
-  sdi.forEach(function(b,i){b.classList.toggle("active",(i===0&&(t==="didattica"))||(i===1&&t==="didattica_uda"));});
+  sdi.forEach(function(b,i){var a=(i===0&&(t==="didattica"))||(i===1&&t==="didattica_uda");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   if(t==="didattica_uda"){setTimeout(function(){var u=document.getElementById("didattica-uda");if(u)u.scrollIntoView({behavior:"smooth"})},100);}
   const cruscotto=document.getElementById("cruscotto");
   if(cruscotto) cruscotto.hidden=t==="home"||t==="didattica"||t==="didattica_uda"||t==="esportazioni"||t==="guida";
   const breadcrumbEl=document.getElementById("breadcrumb");
   if(breadcrumbEl) breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
   document.querySelectorAll(".tabbar button").forEach(function(b,i){
-    var map=["home","curricolo","didattica","esportazioni","guida"];
-    b.classList.toggle("active",map[i]===p);
+    var map=["home","curricolo","didattica","esportazioni","guida"];var a=map[i]===p;
+    b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");
   });
   const mbbMap={home:"mbb-home",curricolo:"mbb-curricolo",lavoro:"mbb-curricolo",riepilogo:"mbb-curricolo",normativa:"mbb-curricolo",generali:"mbb-curricolo",didattica:"mbb-didattica",didattica_uda:"mbb-didattica",esportazioni:"mbb-esportazioni",guida:"mbb-menu"};
   document.querySelectorAll(".mbb-btn").forEach(function(b){
