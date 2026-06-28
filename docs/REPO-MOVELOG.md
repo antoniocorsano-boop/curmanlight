@@ -5086,3 +5086,31 @@
 - **Artefatti**: `docs/03_execution/CML-212.md`, `report/CML-212_next_cycle_selection_after_ef_validation_closure.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_212_NEXT_CYCLE_SELECTION_AFTER_EF_VALIDATION_CLOSURE_READY`
 
+## 2026-06-28 - CML-213 - EVIDENZE_UDA_WORKFLOW_AUDIT
+
+- **Commit**: (in preparazione)
+- **Tipo slice**: docs-only / audit
+- **Oggetto**: audit stato progetto per definire punto di partenza sicuro per workflow Evidenze/UDA
+- **Stato iniziale**: `main...origin/main` aligned at `b61e67a`, working tree pulito
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Evidence coverage**: 130/130 unità (100%) su 14 discipline
+- **Campi esistenti**: `evidenze`, `traguardo`, `obiettivi`, `conoscenze`, `abilita`, `criteriValutazione`, `noteDipartimento`, `validazioneUmana`
+- **Runtime stato attuale**: pannello evidenze e UDA disponibili solo per Tecnologia (prototipo read-only)
+- **Gap principali**: G1 (panello limitato a Tecnologia), G2 (UDA solo Tecnologia), G3 (nessun linking evidenza→UDA), G4 (nessun modello dati persistente), G5 (dati non esposti nel runtime per 13 discipline)
+- **Raccomandazione**: Opzione A — Docs-only Evidenze/UDA contract (CML-214)
+- **Alternative rigettate**: B (data model senza contratto — troppo presto), C (panel-only senza linking — falsa completezza), D (UDA export senza linking — scollegato), E (defer — spreca opportunità)
+- **Prossima sequenza**: CML-214 → CML-215 → CML-216 → CML-217
+- **Runtime**: invariato
+- **content/curriculum/**: invariato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, validator, shape-test, service-worker, manifest**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-213.md`, `report/CML-213_evidenze_uda_workflow_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_213_EVIDENZE_UDA_WORKFLOW_AUDIT_READY`
+
