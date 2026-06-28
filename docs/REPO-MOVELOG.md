@@ -27,6 +27,19 @@
 - **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
 - **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
 
+## 2026-06-28 — CML-220 — EVIDENZE_UDA_WORDING_MICROFIX
+
+- **Commit base**: `c072af2` (CML-219S, aligned)
+- **Tipo slice**: runtime increment — wording-only microfix
+- **Oggetto**: correzione 3 righe in `index.html` per i due findings CML-218
+- **Modifiche**: riga 2706 `'❌ Esclusa'` → `'❌ Non applicabile'`; riga 2878 regex aggiornato; riga 2891 status message corretto
+- **Comportamento preservato**: localStorage retrocompatibile `non_applicabile`, marcatura evidenze invariata, UDA draft invariata, Markdown invariato, hash navigation invariato
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Artefatti**: `docs/03_execution/CML-220.md`, `report/CML-220_evidenze_uda_wording_microfix.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica curriculum JSON, .cml/export/import, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_220_EVIDENZE_UDA_WORDING_MICROFIX_READY`
+
 ## 2026-06-28 — CML-219 — NEXT_CYCLE_SELECTION_AFTER_EVIDENZE_UDA_CLOSURE
 
 - **Commit base**: `a223915` (CML-218S, aligned)

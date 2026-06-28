@@ -2703,7 +2703,7 @@ function getUdaDisciplineUnits() {
 function getStateLabel(state) {
   if (state === 'adottata') return '✅ Adottata';
   if (state === 'adattata') return '✏ Adattata';
-  if (state === 'non_applicabile') return '❌ Esclusa';
+  if (state === 'non_applicabile') return '❌ Non applicabile';
   return '💡 Proposta';
 }
 function renderUdaDraftPanel() {
@@ -2875,7 +2875,7 @@ function generateUdaDraft() {
   preview.style.background = '#fff';
   var adoptedCount = (md.match(/\[✅ Adottata\]/g) || []).length;
   var adaptedCount = (md.match(/\[✏ Adattata\]/g) || []).length;
-  var excludedCount = (md.match(/\[❌ Esclusa\]/g) || []).length;
+  var excludedCount = (md.match(/\[❌ Non applicabile\]/g) || []).length;
   var hasAnyMarked = adoptedCount > 0 || adaptedCount > 0;
   if (hasAnyMarked) {
     status.className = 'didattica-uda-draft-status didattica-uda-draft-status--ok';
@@ -2888,7 +2888,7 @@ function generateUdaDraft() {
     var noMark = md.indexOf('_Nessuna evidenza selezionata._') !== -1;
     if (noMark) {
       status.className = 'didattica-uda-draft-status didattica-uda-draft-status--empty';
-      status.textContent = '\ud83d\udca1 Nessuna evidenza marcata. Le evidenze in stato "proposta" non vengono incluse. Vai al pannello Evidenze curricolari per marcarle.';
+      status.textContent = '\ud83d\udca1 Nessuna evidenza marcata. Le evidenze escluse non sono incluse nella bozza UDA. Vai al pannello Evidenze curricolari per marcarle.';
     } else {
       status.className = 'didattica-uda-draft-status didattica-uda-draft-status--ok';
       status.textContent = '✅ Bozza generata.';
