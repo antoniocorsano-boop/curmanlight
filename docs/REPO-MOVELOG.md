@@ -5155,3 +5155,20 @@
 - **Artefatti**: `docs/02_system/EVIDENZE-UDA-WORKFLOW-CONTRACT.md`, `docs/03_execution/CML-214.md`, `report/CML-214_evidenze_uda_workflow_and_data_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_214_EVIDENZE_UDA_WORKFLOW_AND_DATA_CONTRACT_READY`
 
+## 2026-06-28 — CML-216 - UDA_DRAFT_EXPORT_READINESS_AUDIT
+
+- **Commit base**: `28a0c3c` (CML-215, aligned)
+- **Tipo slice**: readiness audit docs-only
+- **Oggetto**: audit readiness per UDA draft/export dopo CML-215 evidence panel 14/14
+- **File ispezionati**: CML-214 contract, index.html (CML-215), 5 normalized JSON (Tecnologia, Italiano, Matematica, EF, SLC), export functions, UI structure
+- **Findings**: evidence marking in localStorage `cml_evidenze_state` con 3 stati; export functions già pronte (downloadBlob, copyMarkdownToClipboard); UI ha sezione `didattica_uda` per pannello futuro; nessun rischio privacy aggiuntivo
+- **Opzioni analizzate**: A (preview only), B (preview + markdown), C (localStorage persistence), D (.cml export), E (defer)
+- **Raccomandazione**: **Option B** — UDA draft preview + markdown copy/download
+- **Criteri accettazione CML-217**: 12 criteri definiti (da preview a smoke)
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Secret scan**: clean
+- **Artefatti**: `docs/03_execution/CML-216.md`, `report/CML-216_uda_draft_export_readiness_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: docs-only, nessuna modifica runtime, nessuna modifica curriculum JSON, nessuna implementazione UDA, nessuna modifica `.cml`/export/import/validator/shape-test/service-worker/manifest, nessuna dipendenza, nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_216_UDA_DRAFT_EXPORT_READINESS_AUDIT_COMPLETE`
+
