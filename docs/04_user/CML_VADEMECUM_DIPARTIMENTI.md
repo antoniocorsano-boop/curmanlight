@@ -10,7 +10,7 @@ Ogni docente del dipartimento prepara la propria proposta utilizzando CurManLigh
 
 ## Passo 2 — Importare le proposte in CurManLight
 
-1. Aprire [https://curmanlight.netlify.app](https://curmanlight.netlify.app) nel browser.
+1. Aprire [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight) nel browser.
 2. Nella scheda "Revisione", scorrere fino alla sezione **"Validazione dipartimentale"**.
 3. Usare il pulsante **"Importa proposte docenti .cml"** per caricare ciascun file `.cml` ricevuto.
 4. Verificare che le proposte appaiano correttamente nell'elenco.
@@ -52,5 +52,5 @@ Il file `.cml` con l'esito va inviato al referente curricolo, insieme a un event
 
 ## Riferimenti
 
-- URL: [https://curmanlight.netlify.app](https://curmanlight.netlify.app)
+- URL: [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 - Guida rapida utente completa: `docs/04_user/CML_GUIDA_RAPIDA_UTENTE.md`

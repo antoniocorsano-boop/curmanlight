@@ -2,7 +2,7 @@
 
 ## Stato sintetico
 
-CurManLight è uno strumento web che supporta la revisione del curricolo disciplinare d'istituto, dalla consultazione alla proposta, fino alla sintesi di gruppo. È disponibile all'indirizzo [https://curmanlight.netlify.app](https://curmanlight.netlify.app) e funziona su qualsiasi dispositivo con browser (computer, tablet, smartphone).
+CurManLight è uno strumento web che supporta la revisione del curricolo disciplinare d'istituto, dalla consultazione alla proposta, fino alla sintesi di gruppo. È disponibile all'indirizzo [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight) e funziona su qualsiasi dispositivo con browser (computer, tablet, smartphone).
 
 ## Funzioni disponibili
 

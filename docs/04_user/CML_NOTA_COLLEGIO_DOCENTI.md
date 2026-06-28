@@ -16,7 +16,7 @@ CurManLight aiuta a:
 
 **Ciascun docente** è invitato a:
 
-1. Aprire CurManLight all'indirizzo [https://curmanlight.netlify.app](https://curmanlight.netlify.app).
+1. Aprire CurManLight all'indirizzo [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight).
 2. Selezionare la propria disciplina.
 3. Per ogni anno di corso, indicare le modifiche proposte (contenuti, obiettivi, metodologie) utilizzando il formato proposta.
 4. Scaricare il file `.cml` della propria proposta.
@@ -45,4 +45,4 @@ CurManLight **non sostituisce** la discussione in dipartimento, la validazione d
 
 Nessuna installazione necessaria. Aprire il browser e collegarsi a:
 
-[https://curmanlight.netlify.app](https://curmanlight.netlify.app)
+[https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)

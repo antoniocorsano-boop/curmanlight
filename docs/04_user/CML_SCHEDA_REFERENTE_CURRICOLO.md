@@ -15,7 +15,7 @@ Ogni coordinatore di dipartimento invia al referente il file `.cml` con l'esito 
 
 ## Passo 2 — Importare gli esiti in CurManLight
 
-1. Aprire [https://curmanlight.netlify.app](https://curmanlight.netlify.app) nel browser.
+1. Aprire [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight) nel browser.
 2. Nella scheda "Revisione", scorrere fino alla sezione **"Verifica referente curricolo"**.
 3. Usare il pulsante **"Importa esiti dipartimentali .cml"** per caricare ciascun file `.cml` ricevuto.
 4. Verificare che tutti gli esiti siano visualizzati correttamente nel riepilogo.
@@ -55,6 +55,6 @@ Prestare particolare attenzione alle proposte contrassegnate come "da chiarire".
 
 ## Riferimenti
 
-- URL: [https://curmanlight.netlify.app](https://curmanlight.netlify.app)
+- URL: [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 - Guida rapida utente: `docs/04_user/CML_GUIDA_RAPIDA_UTENTE.md`
 - Vademecum dipartimenti: `docs/04_user/CML_VADEMECUM_DIPARTIMENTI.md`

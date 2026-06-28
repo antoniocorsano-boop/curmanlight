@@ -8,7 +8,7 @@
 
 ## Materiali da avere aperti durante l'incontro
 
-- URL live: [https://curmanlight.netlify.app](https://curmanlight.netlify.app)
+- URL live: [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 - Nota di rilascio: `CML_NOTA_RILASCIO_STATO_ATTUALE.md`
 - Scheda stato progetto: `CML_SCHEDA_STATO_PROGETTO.md`
 - Guida rapida utente: `CML_GUIDA_RAPIDA_UTENTE.md`

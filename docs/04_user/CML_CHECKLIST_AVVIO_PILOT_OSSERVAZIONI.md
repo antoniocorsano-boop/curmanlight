@@ -2,7 +2,7 @@
 
 ## Prima dell'incontro
 
-- [ ] Verificare che l'app sia raggiungibile: [https://curmanlight.netlify.app](https://curmanlight.netlify.app)
+- [ ] Verificare che l'app sia raggiungibile: [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 - [ ] Preparare i materiali per i partecipanti:
   - [ ] Nota di rilascio
   - [ ] Scheda stato progetto

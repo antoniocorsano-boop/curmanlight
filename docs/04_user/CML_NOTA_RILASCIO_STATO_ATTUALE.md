@@ -1,6 +1,6 @@
 # CurManLight — Nota di rilascio e stato attuale
 
-**App:** [https://curmanlight.netlify.app](https://curmanlight.netlify.app)  
+**App:** [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 **Versione riferimento:** giugno 2026  
 
 Questa nota descrive cosa CurManLight offre oggi, cosa è ancora in fase di lavoro e come usare lo strumento in modo consapevole.

@@ -27,6 +27,19 @@
 - **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
 - **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
 
+## 2026-06-28 — CML-223 — README_AND_USER_DOCUMENTATION_POLISH
+
+- **Commit base**: `9d14357` (CML-222S, aligned)
+- **Tipo slice**: docs-only documentation polish
+- **Oggetto**: colmare gap documentali CML-222: root README.md + aggiornamento 18 riferimenti Netlify → GitHub Pages
+- **README.md**: creato con descrizione, feature inventory, principi, limitazioni, comandi validazione
+- **Netlify references**: 18 occorrenze in 12 file `docs/04_user/` aggiornate a `antoniocorsano-boop.github.io/curmanlight`
+- **Favicon**: deferrato (bassa priorità, gap #3 CML-222)
+- **Verifiche**: validatore 14/14 PASS, shape test 14/14 PASS, diff-check clean
+- **Artefatti**: `README.md`, `docs/03_execution/CML-223.md`, `report/CML-223_readme_and_user_documentation_polish.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, curriculum JSON, .cml/export/import, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_223_README_AND_USER_DOCUMENTATION_POLISH_READY`
+
 ## 2026-06-28 — CML-222 — PUBLIC_RELEASE_READINESS_AUDIT
 
 - **Commit base**: `6b8e7ad` (CML-221S, aligned)

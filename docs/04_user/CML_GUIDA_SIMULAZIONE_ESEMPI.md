@@ -20,7 +20,7 @@ I file `.cml` sono JSON con `fileType` che identifica il ruolo (`teacher_proposa
 ## URL app
 
 Apri l'app all'indirizzo:
-`https://curmanlight.netlify.app`
+`https://antoniocorsano-boop.github.io/curmanlight`
 
 ## Flusso docente
 

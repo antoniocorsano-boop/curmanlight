@@ -57,6 +57,6 @@ CurManLight non risolve questi problemi al posto delle persone: offre un formato
 
 ## URL
 
-[https://curmanlight.netlify.app](https://curmanlight.netlify.app)
+[https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 
 Nessuna installazione richiesta: funziona con qualsiasi browser moderno (Chrome, Firefox, Edge, Safari).

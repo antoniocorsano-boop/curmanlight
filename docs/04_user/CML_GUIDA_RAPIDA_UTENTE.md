@@ -4,7 +4,7 @@
 
 CurManLight è uno strumento web che aiuta il collegio docenti a revisionare il curricolo verticale d'istituto, passaggio per passaggio. Funziona interamente nel browser: non servono installazioni, non servono account, non vengono inviati dati online.
 
-**Versione pubblicata:** https://curmanlight.netlify.app
+**Versione pubblicata:** https://antoniocorsano-boop.github.io/curmanlight
 
 ## A cosa serve
 
@@ -30,7 +30,7 @@ CurManLight è uno strumento web che aiuta il collegio docenti a revisionare il 
 
 Prima di preparare una proposta, è utile leggere il curricolo attuale e la bozza di aggiornamento.
 
-1. Aprire https://curmanlight.netlify.app
+1. Aprire https://antoniocorsano-boop.github.io/curmanlight
 2. Cliccare sulla scheda **"Curricolo di istituto"** (in alto o in basso, secondo il dispositivo)
 3. Scegliere la versione da consultare:
    - `📖 IN 2012 (vigente)` — il curricolo attualmente in vigore
@@ -62,7 +62,7 @@ Importa gli esiti dipartimentali `.cml`, verifica completezza e coerenza, genera
 
 ### 1. Il docente apre la proposta
 
-- Aprire https://curmanlight.netlify.app
+- Aprire https://antoniocorsano-boop.github.io/curmanlight
 - Selezionare la propria disciplina nel pannello "Revisione per disciplina"
 - Leggere ogni voce: accanto al testo vigente (IN 2012) compare la proposta IN 2025
 
@@ -162,6 +162,6 @@ Importa gli esiti dipartimentali `.cml`, verifica completezza e coerenza, genera
 
 ## Collegamento
 
-**Versione pubblica:** https://curmanlight.netlify.app
+**Versione pubblica:** https://antoniocorsano-boop.github.io/curmanlight
 
 *Documento aggiornato al 22/06/2026. Lo strumento è in fase di sviluppo collaborativo: le funzionalità descritte corrispondono alla versione corrente.*

@@ -2,7 +2,7 @@
 
 ## Checklist prima dell'incontro
 
-- [ ] Verificare che l'app sia raggiungibile: [https://curmanlight.netlify.app](https://curmanlight.netlify.app)
+- [ ] Verificare che l'app sia raggiungibile: [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 - [ ] Aprire e controllare la nota di rilascio, la scheda stato e la traccia osservazioni.
 - [ ] Preparare i materiali per i partecipanti (stampe o link).
 - [ ] Predisporre un computer e un proiettore/schermo per la demo.

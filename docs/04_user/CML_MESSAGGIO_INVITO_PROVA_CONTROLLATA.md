@@ -7,7 +7,7 @@ ti invito a partecipare alla prova controllata di CurManLight, l'applicazione we
 **Cos'è CurManLight**
 CurManLight è uno strumento che permette di consultare il curricolo nelle versioni IN 2012 (vigente) e IN 2025 (bozza) e di sperimentare il flusso di proposta, validazione e sintesi tramite file `.cml`. È disponibile all'indirizzo:
 
-[https://curmanlight.netlify.app](https://curmanlight.netlify.app)
+[https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 
 **Cosa ti chiediamo**
 Ti chiediamo di dedicare circa 30–45 minuti a esplorare l'app e le funzioni indicate nel foglio di prova che riceverai. Dopo la prova, ti chiediamo di condividere le tue osservazioni compilando la scheda allegata o rispondendo liberamente.
