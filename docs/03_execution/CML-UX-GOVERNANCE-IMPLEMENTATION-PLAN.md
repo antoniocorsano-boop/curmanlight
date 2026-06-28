@@ -498,23 +498,7 @@ Se una slice fallisce:
 
 ### Tracking progresso
 Aggiornare questo file con lo stato di ogni slice dopo il completamento:
-- CML-225: [ ] / [X]
-- CML-226: [ ] / [X]
-- CML-226S: [ ] / [X]
-- CML-227: [ ] / [X]
-- CML-227S: [ ] / [X]
-- CML-228: [ ] / [X]
-- CML-228S: [ ] / [X]
-- CML-229: [ ] / [X]
-- CML-229S: [ ] / [X]
-- CML-230: [ ] / [X]
-- CML-230S: [ ] / [X]
-
----
-
-## Tracking progresso
-
-- CML-225: [ ]
+- CML-225: [X]
 - CML-226: [ ]
 - CML-226S: [ ]
 - CML-227: [ ]
