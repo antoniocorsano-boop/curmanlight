@@ -1,6 +1,22 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-231 — ACCESSIBILITY/RESPONSIVE CLOSURE GATE
+
+- **Commit base**: `10d2bd0` (CML-230S, aligned)
+- **Tipo slice**: docs-only / closure gate
+- **Oggetto**: chiudere ciclo E (accessibilità/responsività) dopo audit, microfix e push
+- **Decisione**: **B — Closed with documented P2/P3 limitations**
+- **Ciclo**: CML-228 (selezione) → CML-229 (audit) → CML-230 (microfix) → CML-230S (push) → CML-231 (closure)
+- **Issue risolte**: 6/9 (1 P1 + 5 P2), tutte verificate in public runtime
+- **Limitazioni residue**: viewport 360px (P2), badge colore (P3), grassetto screenshot (P3)
+- **Validator**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Public GH Pages**: HTTP 200, app OK
+- **Nessun P0/P1 residuo**
+- **Artefatti**: `docs/03_execution/CML-231.md`, `report/CML-231_accessibility_responsive_closure_gate.md`, `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_231_ACCESSIBILITY_RESPONSIVE_CLOSURE_GATE_COMPLETE`
+
 ## 2026-06-28 — CML-230 — TARGETED_ACCESSIBILITY_RESPONSIVE_MICROFIX
 
 - **Commit base**: `56243bb` (CML-229S, aligned)
