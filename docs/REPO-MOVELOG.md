@@ -42,6 +42,19 @@
 - **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
 - **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
 
+## 2026-06-28 — CML-227 — SCHOOLKB_SCOPE_AUDIT_AFTER_PUBLIC_RELEASE
+
+- **Commit base**: `26bb195` (CML-226S, aligned)
+- **Tipo slice**: docs-only / scope audit
+- **Oggetto**: valutare se SchoolKB debba diventare il prossimo ciclo di sviluppo
+- **Bisogni SchoolKB coperti dallo stato attuale**: tab Fonti (12+ schede), campo `fonte` in 142/142 unità, workflow evidenze/UDA/`.cml` autonomi
+- **Raccomandazione**: **E — Rinviare SchoolKB** — nessun bisogno reale non coperto, complessità OAuth/Drive ingiustificata
+- **SKB-001 confermato**: SchoolKB resta opzionale, parallelo, disattivato di default
+- **Prossima azione**: CML-228 — decidere ciclo successivo (manutenzione, UX menu action, chiusura)
+- **Artefatti**: `docs/03_execution/CML-227.md`, `report/CML-227_schoolkb_scope_audit_after_public_release.md`, `docs/REPO-MOVELOG.md`
+- **Vincoli**: docs-only, nessun runtime/JSON/.cml/SchoolKB implementazione/deploy/push/secrets
+- **Verdetto**: `CML_227_SCHOOLKB_DEFERRED_CONFIRMED`
+
 ## 2026-06-28 — CML-226 — MULTI_DISCIPLINE_GENERALIZATION_HARDCODED_TECNOLOGIA
 
 - **Commit base**: `c8ceb8e` (CML-225S, aligned)
