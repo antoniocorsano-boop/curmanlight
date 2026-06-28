@@ -817,6 +817,29 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .didattica-uda-field-curricolo{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:4px;padding:2px 7px;font-size:10px;color:#2e7d32;font-weight:700;display:inline-block;margin-bottom:3px}
 .didattica-uda-note{font-size:11px;color:#78909c;margin-top:4px;font-style:italic}
 .didattica-uda-footer{background:#ede7f6;border-radius:0 0 9px 9px;padding:10px 14px;font-size:10px;color:#4527a0;line-height:1.45;text-align:center}
+/* UDA DRAFT */
+.didattica-uda-draft-section{background:#fff;border:2px solid #7b1fa2;border-radius:9px;padding:14px;margin:10px 0}
+.didattica-uda-draft-section h3{font-size:14px;font-weight:800;color:#311b92;margin:0 0 8px}
+.didattica-uda-draft-selectors{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.didattica-uda-draft-selectors select{flex:1;min-width:140px;padding:7px 10px;border:1px solid #d1c4e9;border-radius:8px;font-size:11px;font-family:inherit;background:#fafafa;color:#333}
+.didattica-uda-draft-selectors select:focus{outline:2px solid #7b1fa2;outline-offset:-1px}
+.didattica-uda-draft-actions{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.didattica-uda-draft-btn{padding:8px 16px;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:.12s;font-family:inherit}
+.didattica-uda-draft-btn-primary{background:#7b1fa2;color:#fff}
+.didattica-uda-draft-btn-primary:hover{background:#5e1680}
+.didattica-uda-draft-btn-primary:disabled{background:#d1c4e9;cursor:default}
+.didattica-uda-draft-btn-secondary{background:#f4f0f9;color:#311b92;border:1px solid #d1c4e9}
+.didattica-uda-draft-btn-secondary:hover{background:#ede7f6}
+.didattica-uda-draft-btn-secondary:disabled{background:#f5f5f5;color:#bbb;border-color:#e0e0e0;cursor:default}
+.didattica-uda-draft-preview{margin-top:6px}
+.didattica-uda-draft-preview textarea{width:100%;min-height:180px;border:1px solid #d1c4e9;border-radius:8px;padding:10px;font-family:monospace;font-size:11px;line-height:1.5;resize:vertical;background:#fafafa;color:#333}
+.didattica-uda-draft-preview textarea:focus{outline:2px solid #7b1fa2}
+.didattica-uda-draft-empty{text-align:center;padding:20px;color:#78909c;font-size:12px;line-height:1.5}
+.didattica-uda-draft-empty strong{color:#455a64}
+.didattica-uda-draft-notice{background:#f3e5f5;border:1px solid #ce93d8;border-radius:6px;padding:8px 10px;font-size:10px;color:#4a148c;line-height:1.45;margin-top:6px}
+.didattica-uda-draft-status{padding:6px 10px;border-radius:6px;font-size:11px;font-weight:600;display:none;margin-bottom:4px}
+.didattica-uda-draft-status--ok{display:block;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7}
+.didattica-uda-draft-status--empty{display:block;background:#fff3e0;color:#e65100;border:1px solid #ffcc80}
 .home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
 .home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
 .home-card-note{font-size:10px;color:#90a4ae;margin:10px 0 0;font-style:italic;line-height:1.4}
@@ -1387,6 +1410,30 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           • I campi "🟢 Dato curricolare" provengono dal pacchetto Tecnologia strutturato<br>
           • I campi "🟡 Esempio didattico" sono indicativi e da adattare alla classe<br>
           • Non sostituisce la progettazione professionale del docente
+        </div>
+        <div class="didattica-uda-draft-section" id="didattica-uda-draft-section">
+          <h3>📝 Genera bozza UDA</h3>
+          <p style="font-size:11px;color:#5e35b1;margin:0 0 10px;line-height:1.4">Genera una bozza di Unità di Apprendimento a partire dalle evidenze marcate. I dati provengono dal curricolo; la bozza è locale e non sostituisce la progettazione professionale del docente.</p>
+          <div class="didattica-uda-draft-selectors">
+            <select id="uda-draft-disc" onchange="updateUdaUnitSelector()"></select>
+            <select id="uda-draft-unit"></select>
+          </div>
+          <div class="didattica-uda-draft-actions">
+            <button class="didattica-uda-draft-btn didattica-uda-draft-btn-primary" id="btn-gen-uda" onclick="generateUdaDraft()">⚡ Genera bozza UDA</button>
+            <button class="didattica-uda-draft-btn didattica-uda-draft-btn-secondary" id="btn-copy-uda" onclick="copyUdaMarkdown()" disabled>📋 Copia Markdown</button>
+            <button class="didattica-uda-draft-btn didattica-uda-draft-btn-secondary" id="btn-dl-uda" onclick="downloadUdaMarkdown()" disabled>⬇️ Scarica Markdown</button>
+          </div>
+          <div class="didattica-uda-draft-status" id="uda-draft-status"></div>
+          <div class="didattica-uda-draft-preview" id="uda-draft-preview">
+            <textarea id="uda-md-preview" placeholder="Genera una bozza per vedere l'anteprima Markdown..." readonly></textarea>
+          </div>
+          <div class="didattica-uda-draft-notice">
+            <strong>🔒 Bozza locale — nessun dato personale studente</strong><br>
+            • Il contenuto è generato dal curricolo di istituto e dalle tue marcature evidenze<br>
+            • Non inserire nomi, cognomi, voti o dati sensibili di studenti<br>
+            • La bozza non è persistita: rigenerala quando serve<br>
+            • Non sostituisce la progettazione didattica professionale
+          </div>
         </div>
         <div class="didattica-uda-list" id="didattica-uda-list"></div>
 <div class="didattica-uda-footer">UDA modello · Da adattare alla classe · Non sostituisce la progettazione del docente · Richiede validazione professionale · Non costituisce documento istituzionale approvato</div>
@@ -2616,6 +2663,255 @@ function renderUdaModello(){
 }
 
 // ================================================================
+// UDA DRAFT GENERATOR
+// ================================================================
+var UDA_DRAFT_CACHE = '';
+function discKeyFromName(name) {
+  var map = {
+    "Arte e Immagine": "arte-immagine",
+    "Educazione Civica": "educazione-civica",
+    "Educazione Fisica": "educazione-fisica",
+    "Geografia": "geografia",
+    "Inglese": "inglese",
+    "Italiano": "italiano",
+    "Latino (LEL)": "latino-lel",
+    "Matematica": "matematica",
+    "Musica": "musica",
+    "Religione Cattolica": "religione-cattolica",
+    "Scienze": "scienze",
+    "Seconda Lingua Comunitaria": "seconda-lingua-comunitaria",
+    "Storia": "storia",
+    "Tecnologia": "tecnologia"
+  };
+  return map[name] || null;
+}
+function getUdaDisciplineUnits() {
+  var discSelect = document.getElementById('uda-draft-disc');
+  if (!discSelect) return [];
+  var discName = discSelect.value;
+  if (!discName) return [];
+  var key = discKeyFromName(discName);
+  if (!key) return [];
+  if (key === 'tecnologia' && typeof TECNOLOGIA_NORM_DATA !== 'undefined') {
+    return TECNOLOGIA_NORM_DATA.unitaApprendimento || [];
+  }
+  if (typeof ALL_CURRICULUM_DATA !== 'undefined' && ALL_CURRICULUM_DATA[key]) {
+    return ALL_CURRICULUM_DATA[key].unitaApprendimento || [];
+  }
+  return [];
+}
+function getStateLabel(state) {
+  if (state === 'adottata') return '✅ Adottata';
+  if (state === 'adattata') return '✏ Adattata';
+  if (state === 'non_applicabile') return '❌ Esclusa';
+  return '💡 Proposta';
+}
+function renderUdaDraftPanel() {
+  var discSelect = document.getElementById('uda-draft-disc');
+  if (!discSelect) return;
+  var current = discSelect.value;
+  discSelect.innerHTML = '';
+  DISCIPLINE.forEach(function(d) {
+    var opt = document.createElement('option');
+    opt.value = d;
+    opt.textContent = d;
+    if (d === current) opt.selected = true;
+    discSelect.appendChild(opt);
+  });
+  if (!current && DISCIPLINE.length) {
+    discSelect.value = DISCIPLINE[0];
+  }
+  updateUdaUnitSelector();
+}
+function updateUdaUnitSelector() {
+  var unitSelect = document.getElementById('uda-draft-unit');
+  if (!unitSelect) return;
+  var units = getUdaDisciplineUnits();
+  var current = unitSelect.value;
+  unitSelect.innerHTML = '';
+  units.forEach(function(u) {
+    var opt = document.createElement('option');
+    opt.value = u.id;
+    var ordLabel = u.ordine === 'Infanzia' ? '\ud83e\uddf8' : u.ordine === 'Primaria' ? '\ud83d\udcd8' : '\ud83c\udf93';
+    var classeLabel = u.fascia ? 'Fascia ' + u.fascia : 'Classe ' + u.classe;
+    var ambitoPreview = u.ambito ? u.ambito.substring(0, 55) + (u.ambito.length > 55 ? '\u2026' : '') : '';
+    opt.textContent = ordLabel + ' ' + u.ordine + ' \u00b7 ' + classeLabel + ' \u2014 ' + ambitoPreview;
+    if (u.id === current) opt.selected = true;
+    unitSelect.appendChild(opt);
+  });
+  var btn = document.getElementById('btn-gen-uda');
+  if (btn) btn.disabled = units.length === 0;
+}
+function buildUdaDraftMarkdown() {
+  var discSelect = document.getElementById('uda-draft-disc');
+  var unitSelect = document.getElementById('uda-draft-unit');
+  if (!discSelect || !unitSelect) return null;
+  var discName = discSelect.value;
+  var unitId = unitSelect.value;
+  if (!discName || !unitId) return null;
+  var units = getUdaDisciplineUnits();
+  var unit = null;
+  for (var i = 0; i < units.length; i++) {
+    if (units[i].id === unitId) { unit = units[i]; break; }
+  }
+  if (!unit) return null;
+  var lines = [];
+  var meta = DISCIPLINE_META[discName] || { icon: '\ud83d\udcd8', comp: '', nuclei: '' };
+  var ordLabel = unit.ordine === 'Infanzia' ? 'Scuola dell\'Infanzia' : unit.ordine === 'Primaria' ? 'Scuola Primaria' : 'Scuola Secondaria di I grado';
+  var classeLabel = unit.fascia ? 'Fascia ' + unit.fascia : 'Classe ' + unit.classe;
+  lines.push('# Bozza UDA \u2014 ' + discName);
+  lines.push('');
+  lines.push('**Disciplina:** ' + meta.icon + ' ' + discName);
+  lines.push('**Competenza chiave:** ' + meta.comp);
+  lines.push('**Ordine:** ' + ordLabel + ' \u00b7 ' + classeLabel);
+  if (meta.nuclei) lines.push('**Nuclei:** ' + meta.nuclei);
+  lines.push('**Stato:** \ud83d\udfe0 Bozza generata localmente \u2014 non validata');
+  lines.push('**Data generazione:** ' + new Date().toISOString().slice(0, 10));
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push('## 1. Riferimenti curricolari');
+  lines.push('');
+  lines.push('### Unit\u00e0 di riferimento');
+  lines.push('');
+  lines.push('**Ambito:** ' + unit.ambito);
+  lines.push('**Competenza:** ' + unit.competenza);
+  lines.push('**Traguardo:** ' + unit.traguardo);
+  lines.push('');
+  if (unit.obiettivi && unit.obiettivi.length) {
+    lines.push('### Obiettivi di apprendimento');
+    lines.push('');
+    unit.obiettivi.forEach(function(o) { lines.push('- ' + o); });
+    lines.push('');
+  }
+  if (unit.conoscenze && unit.conoscenze.length) {
+    lines.push('### Conoscenze');
+    lines.push('');
+    unit.conoscenze.forEach(function(c) { lines.push('- ' + c); });
+    lines.push('');
+  }
+  if (unit.abilita && unit.abilita.length) {
+    lines.push('### Abilit\u00e0');
+    lines.push('');
+    unit.abilita.forEach(function(a) { lines.push('- ' + a); });
+    lines.push('');
+  }
+  lines.push('## 2. Evidenze selezionate');
+  lines.push('');
+  var selectedEvidences = [];
+  var hasMarked = false;
+  if (unit.evidenze && unit.evidenze.length) {
+    unit.evidenze.forEach(function(ev, idx) {
+      var evId = unit.id + '_ev_' + idx;
+      var state = getEvidenceState(evId);
+      if (state !== 'proposta') hasMarked = true;
+      if (state !== 'non_applicabile') {
+        selectedEvidences.push({ text: ev, state: state });
+      }
+    });
+  }
+  if (selectedEvidences.length === 0) {
+    lines.push('_Nessuna evidenza selezionata._');
+    if (!hasMarked) {
+      lines.push('');
+      lines.push('_\ud83d\udca1 Vai al pannello "Evidenze curricolari", marca le evidenze come Adottata/Adattata, poi rigenera la bozza._');
+    }
+  } else {
+    selectedEvidences.forEach(function(ev) {
+      lines.push('- [' + getStateLabel(ev.state) + '] ' + ev.text);
+    });
+  }
+  lines.push('');
+  lines.push('## 3. Criteri di osservazione/valutazione');
+  lines.push('');
+  if (unit.criteriValutazione && unit.criteriValutazione.length) {
+    unit.criteriValutazione.forEach(function(c) { lines.push('- ' + c); });
+  } else {
+    lines.push('_Criteri da definire._');
+  }
+  lines.push('');
+  lines.push('## 4. Attivit\u00e0 didattica proposta');
+  lines.push('');
+  lines.push('_Descrivi qui l\'attivit\u00e0: obiettivi specifici, tempi, metodologie, materiali._');
+  lines.push('');
+  lines.push('**Durata indicativa:** _ore da definire_');
+  lines.push('**Metodologia:** _da definire_');
+  lines.push('**Materiali/strumenti:** _da definire_');
+  lines.push('');
+  lines.push('## 5. Adattamenti/inclusione');
+  lines.push('');
+  lines.push('_Descrivi qui eventuali adattamenti per BES, DSA, o inclusione._');
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push('## Nota privacy');
+  lines.push('');
+  lines.push('> \ud83d\udd12 Questa bozza UDA \u00e8 generata dal curricolo di istituto e dalle marcature evidenze locali.');
+  lines.push('> Non inserire nomi, cognomi, voti o dati sensibili di studenti.');
+  lines.push('> La bozza non \u00e8 persistita automaticamente. Conservala secondo le policy della scuola.');
+  lines.push('> Non sostituisce la progettazione didattica professionale.');
+  lines.push('');
+  lines.push('**Fonte curricolare:** ' + (unit.fonte || 'Indicazioni Nazionali 2012'));
+  lines.push('**Stato:** \ud83d\udfe0 Bozza locale \u2014 non validata dal dipartimento');
+  return lines.join('\n');
+}
+function generateUdaDraft() {
+  var md = buildUdaDraftMarkdown();
+  var preview = document.getElementById('uda-md-preview');
+  var status = document.getElementById('uda-draft-status');
+  var btnCopy = document.getElementById('btn-copy-uda');
+  var btnDl = document.getElementById('btn-dl-uda');
+  if (!md) {
+    preview.value = '';
+    UDA_DRAFT_CACHE = '';
+    status.className = 'didattica-uda-draft-status didattica-uda-draft-status--empty';
+    status.textContent = '\u26a0\ufe0f Seleziona una disciplina e un\'unit\u00e0, poi marca almeno un\'evidenza come Adottata o Adattata nel pannello Evidenze curricolari.';
+    btnCopy.disabled = true; btnDl.disabled = true;
+    showToast('\u26a0\ufe0f Seleziona disciplina e unit\u00e0 per generare la bozza.');
+    return;
+  }
+  UDA_DRAFT_CACHE = md;
+  preview.value = md;
+  preview.style.background = '#fff';
+  var adoptedCount = (md.match(/\[✅ Adottata\]/g) || []).length;
+  var adaptedCount = (md.match(/\[✏ Adattata\]/g) || []).length;
+  var excludedCount = (md.match(/\[❌ Esclusa\]/g) || []).length;
+  var hasAnyMarked = adoptedCount > 0 || adaptedCount > 0;
+  if (hasAnyMarked) {
+    status.className = 'didattica-uda-draft-status didattica-uda-draft-status--ok';
+    var parts = [];
+    if (adoptedCount > 0) parts.push(adoptedCount + ' adottate');
+    if (adaptedCount > 0) parts.push(adaptedCount + ' adattate');
+    if (excludedCount > 0) parts.push(excludedCount + ' escluse');
+    status.textContent = '✅ Bozza generata con ' + parts.join(', ') + '.';
+  } else {
+    var noMark = md.indexOf('_Nessuna evidenza selezionata._') !== -1;
+    if (noMark) {
+      status.className = 'didattica-uda-draft-status didattica-uda-draft-status--empty';
+      status.textContent = '\ud83d\udca1 Nessuna evidenza marcata. Le evidenze in stato "proposta" non vengono incluse. Vai al pannello Evidenze curricolari per marcarle.';
+    } else {
+      status.className = 'didattica-uda-draft-status didattica-uda-draft-status--ok';
+      status.textContent = '✅ Bozza generata.';
+    }
+  }
+  btnCopy.disabled = false; btnDl.disabled = false;
+  showToast('✅ Bozza UDA generata!');
+}
+function copyUdaMarkdown() {
+  if (!UDA_DRAFT_CACHE) { showToast('\u26a0\ufe0f Genera prima la bozza.'); return; }
+  copyMarkdownToClipboard(UDA_DRAFT_CACHE);
+}
+function downloadUdaMarkdown() {
+  if (!UDA_DRAFT_CACHE) { showToast('\u26a0\ufe0f Genera prima la bozza.'); return; }
+  var discSelect = document.getElementById('uda-draft-disc');
+  var discName = discSelect ? discSelect.value : 'UDA';
+  var safeName = discName.replace(/\s+/g, '_').replace(/[^\w\-]/g, '');
+  var filename = 'Bozza_UDA_' + safeName + '_' + new Date().toISOString().slice(0, 10) + '.md';
+  downloadMarkdownString(UDA_DRAFT_CACHE, filename);
+  showToast('\u2b07\ufe0f Bozza UDA scaricata!');
+}
+
+// ================================================================
 // ================================================================
 let selDisc="Tecnologia", filterStatus="all", currentTab="home";
 let editingId=null;
@@ -3251,7 +3547,7 @@ function setTab(t){
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
   var te=document.getElementById("tab-esportazioni");if(te)te.style.display=t==="esportazioni"?"block":"none";
   var tg=document.getElementById("tab-guida");if(tg)tg.style.display=t==="guida"?"block":"none";
-  if(t==="didattica"||t==="didattica_uda"){renderDidattica();renderUdaModello();renderMappaDisciplinare();}
+   if(t==="didattica"||t==="didattica_uda"){renderDidattica();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();}
    var sm=document.getElementById("didattica-mappa");if(sm)sm.style.display=t==="didattica"?"block":"none";
   var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
   var sd=document.getElementById("subnav-didattica");if(sd)sd.style.display=p==="didattica"?"flex":"none";

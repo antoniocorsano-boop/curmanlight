@@ -1,5 +1,44 @@
 # Repo Movelog
 
+## 2026-06-28 — CML-217 — MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT
+
+- **Commit base**: `3056195` (CML-216S, aligned)
+- **Tipo slice**: runtime increment — UDA draft preview + markdown export
+- **Oggetto**: pannello UDA draft con preview Markdown generata on demand dai dati curricolari esistenti e marcature evidenze (`cml_evidenze_state`)
+- **File modificato**: `_published_snapshot/netlify-current/index.html` (+297/-1)
+- **Componenti aggiunte**: CSS (`didattica-uda-draft-section`, 11 classi), HTML (selectors disciplina/unità, pulsanti genera/copia/download, textarea preview, status bar, privacy notice), JS (9 funzioni: `discKeyFromName`, `getUdaDisciplineUnits`, `getStateLabel`, `renderUdaDraftPanel`, `updateUdaUnitSelector`, `buildUdaDraftMarkdown`, `generateUdaDraft`, `copyUdaMarkdown`, `downloadUdaUdaMarkdown`)
+- **Sezioni markdown generate**: intestazione, riferimenti curricolari, evidenze (da stato locale), criteri valutazione, attività proposta (placeholder), adattamenti/inclusione (placeholder), nota privacy
+- **Pattern riutilizzati**: `downloadBlob()`, `downloadMarkdownString()`, `copyMarkdownToClipboard()`, `getEvidenceState()`, `escapeHtml()`, `DISCIPLINE_META`
+- **Cosa non fatto**: nessuna modifica JSON, .cml, export/import, UDA persistence, localStorage, service-worker, manifest, dependencies, student data, grades
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Artefatti**: `docs/03_execution/CML-217.md`, `report/CML-217_minimal_uda_draft_preview_markdown_export.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica curriculum JSON, nessuna modifica `.cml`/export/import, nessuna UDA persistence, nessun dato studente, no push, no deploy, no secrets
+- **Verdetto**: `CML_217_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_COMPLETE`
+
+## 2026-06-28 — CML-216S — UDA_DRAFT_EXPORT_READINESS_AUDIT_CONTROLLED_PUSH
+
+- **Commit base**: `28a0c3c` (CML-216, aligned)
+- **Tipo slice**: sync — controlled push
+- **Oggetto**: push CML-216 docs-only audit verso origin/main
+- **Pre-push checks**: git status clean, 1 commit ahead, diff-check PASS, secret scan clean, validator 14/14 PASS, shape test 14/14 PASS
+- **Push**: `git push origin main` completato
+- **Post-push**: HEAD e origin/main allineati a `3056195`
+- **Verdetto**: `CML_216S_UDA_DRAFT_EXPORT_READINESS_AUDIT_PUSHED`
+
+## 2026-06-28 — CML-216 — UDA_DRAFT_EXPORT_READINESS_AUDIT
+
+- **Commit base**: `d79956e` (CML-OPS-004, aligned)
+- **Tipo slice**: docs-only readiness audit
+- **Oggetto**: audit completezza e rischi per UDA draft/export; confronto 5 opzioni di implementazione
+- **Opzioni valutate**: A (solo export), B (preview + copia/download), C (persistenza bozza), D (SchoolKB), E (backend)
+- **Opzione selezionata**: B — preview Markdown + copia/download, nessuna persistenza
+- **12 acceptance criteria** definiti per CML-217
+- **Rischio privacy**: basso (nessun dato studente nel curricolo, ma tracciato nei criteri)
+- **CML-215 e CML-214**: rispettati da Opzione B
+- **Artefatti**: `docs/03_execution/CML-216.md`, `report/CML-216_uda_draft_export_readiness_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, curriculum JSON, .cml, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_216_UDA_DRAFT_EXPORT_READINESS_AUDIT_READY`
 
 ## 2026-06-27 — CML-UX-FLOW-AUDIT
 
@@ -8,8 +47,6 @@
 - Output: mappa sezioni, matrice compatibilità, casi d'uso, wireframe testuale.
 - Prossima slice: CML-UX-MENU-ACTION-CONTRACT.
 - Zero modifiche runtime.
-
-# Repo Movelog
 
 ## 2026-06-27 - CML-209 - CML_WORKFLOW_UX_HARDENING_CLOSURE_AUDIT
 
