@@ -27,6 +27,18 @@
 - **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
 - **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
 
+## 2026-06-28 — CML-224 — PUBLIC_RELEASE_WORKFLOW_SMOKE_AND_RELEASE_GATE
+
+- **Commit base**: `731cb8b` (CML-223S, aligned)
+- **Tipo slice**: docs-only release gate
+- **Oggetto**: determinare se GitHub Pages version è candidata pubblica stabile dopo CML-223
+- **Release gate**: **A — Public stable candidate, ready**
+- **Smoke**: validatore 14/14 PASS, shape test 14/14 PASS, 14 hash routes HTTP 200, GitHub Pages HTTP 200, README/docs OK, privacy OK, localStorage solo evidenze, secret scan clean
+- **Unico gap**: favicon assente (deferrato, bassa priorità)
+- **Artefatti**: `docs/03_execution/CML-224.md`, `report/CML-224_public_release_workflow_smoke_and_release_gate.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, curriculum JSON, .cml/export/import, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_224_PUBLIC_RELEASE_WORKFLOW_SMOKE_AND_RELEASE_GATE_READY`
+
 ## 2026-06-28 — CML-223 — README_AND_USER_DOCUMENTATION_POLISH
 
 - **Commit base**: `9d14357` (CML-222S, aligned)
