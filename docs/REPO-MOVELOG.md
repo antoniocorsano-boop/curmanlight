@@ -5034,3 +5034,55 @@
 - **Artefatti**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-210BS.md`, `report/CML-210BS_educazione_fisica_runtime_static_map_regeneration.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_210BS_EDUCAZIONE_FISICA_RUNTIME_STATIC_MAP_REGENERATION_COMPLETE`
 
+## 2026-06-28 - CML-211S - CONTROLLED_PUSH_EF_DEPARTMENT_ACCEPTANCE
+
+- **Commit**: `4f77824` (pushato)
+- **Tipo slice**: controlled push
+- **Oggetto**: push accettazione dipartimentale EF dopo CML-210BS
+- **Stato iniziale**: `main...origin/main` aligned at `53013df` (dopo CML-210BS push), working tree pulito
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Struttura EF**: 7 unità, 4 nuclei, 3 ordini — confermata
+- **Accettazione dipartimento**: confermata il 2026-06-28
+- **No manual deploy**: confermato
+- **Secret scan**: pulito
+- **git diff --check**: pulito
+- **JSON modificato**: NO
+- **Runtime**: invariato dopo CML-210BS
+- **content/curriculum/**: invariato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, funzioni evidenze/UDA, service-worker, manifest**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: eseguito
+- **Artefatti**: `docs/03_execution/CML-211.md`, `report/CML-211_educazione_fisica_human_validation_package.md`, `docs/04_user/educazione_fisica_validazione_dipartimentale.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_211S_EF_DEPARTMENT_ACCEPTANCE_PUSH_READY`
+
+## 2026-06-28 - CML-212 - NEXT_CYCLE_SELECTION_AFTER_EF_VALIDATION_CLOSURE
+
+- **Commit**: (in preparazione)
+- **Tipo slice**: docs-only / cycle selection
+- **Oggetto**: selezionare prossimo ciclo funzionale dopo chiusura validazione EF e hardening `.cml` workflow
+- **Stato iniziale**: `main...origin/main` aligned at `4f77824`, working tree pulito
+- **Dati normalizzati**: 14/14
+- **Runtime mappa**: 14/14
+- **Shape test**: 14/14 PASS
+- **Validatore**: 14/14 PASS, 0 errori
+- **Decisione**: Opzione A — Evidenze/UDA workflow
+- **Alternative valutate**: B (SchoolKB — rinviata), C (architecture/UML — rinviata), D (polish disciplinare — rinviata)
+- **Motivazione**: layer curricolo completo, workflow `.cml` consolidato, EF validata; prossimo layer naturale è connessione curricolo-evidenze-attività-UDA
+- **Prossima sequenza**: CML-213 → CML-214 → CML-215 → CML-216 → CML-217
+- **Runtime**: invariato
+- **content/curriculum/**: invariato
+- **Tools/test**: invariati
+- **Schema `.cml`, export/import, validator, shape-test, service-worker, manifest**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-212.md`, `report/CML-212_next_cycle_selection_after_ef_validation_closure.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_212_NEXT_CYCLE_SELECTION_AFTER_EF_VALIDATION_CLOSURE_READY`
+
