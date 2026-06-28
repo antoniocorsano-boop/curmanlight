@@ -27,6 +27,18 @@
 - **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
 - **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
 
+## 2026-06-28 — CML-219 — NEXT_CYCLE_SELECTION_AFTER_EVIDENZE_UDA_CLOSURE
+
+- **Commit base**: `a223915` (CML-218S, aligned)
+- **Tipo slice**: docs-only cycle selection
+- **Oggetto**: selezione prossimo ciclo dopo chiusura Evidenze/UDA
+- **Opzione selezionata**: A — Microfix Evidenze/UDA wording (label e status message)
+- **Opzioni respinte**: B (SchoolKB — rimandato), C (Release audit — rimandato), D (Design/UML — rimandato), E (Content polish — nessuna necessità)
+- **Prossima sequenza**: CML-220 (microfix) → CML-220S (push) → CML-221 (next larger cycle)
+- **Artefatti**: `docs/03_execution/CML-219.md`, `report/CML-219_next_cycle_selection_after_evidenze_uda_closure.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, curriculum JSON, .cml/export/import, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_219_NEXT_CYCLE_SELECTION_AFTER_EVIDENZE_UDA_CLOSURE_READY`
+
 ## 2026-06-28 — CML-218 — EVIDENZE_UDA_WORKFLOW_SMOKE_AND_CLOSURE_GATE
 
 - **Commit base**: `5a5f65f` (CML-217S, aligned)
