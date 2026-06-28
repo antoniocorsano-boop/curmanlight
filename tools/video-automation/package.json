@@ -1,0 +1,28 @@
+{
+  "name": "curmanlight-video-automation",
+  "version": "1.0.0",
+  "description": "Automated video guide generation for CurManLight with Italian TTS",
+  "main": "generate-video-guide.js",
+  "scripts": {
+    "start": "node generate-video-guide.js",
+    "install-deps": "npm install",
+    "test": "node generate-video-guide.js --dry-run"
+  },
+  "keywords": [
+    "video",
+    "automation",
+    "tts",
+    "playwright",
+    "curmanlight"
+  ],
+  "author": "CurManLight Team",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "edge-tts": "^3.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
