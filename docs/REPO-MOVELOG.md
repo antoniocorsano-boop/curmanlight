@@ -16,6 +16,31 @@
 - **Vincoli**: nessuna modifica curriculum JSON, nessuna modifica `.cml`/export/import, nessuna UDA persistence, nessun dato studente, no push, no deploy, no secrets
 - **Verdetto**: `CML_217_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_COMPLETE`
 
+## 2026-06-28 — CML-217S — MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_CONTROLLED_PUSH
+
+- **Commit base**: `5a5f65f` (CML-217, aligned)
+- **Tipo slice**: sync — controlled push
+- **Oggetto**: push CML-217 runtime increment verso origin/main
+- **Pre-push checks**: git status clean, 1 commit ahead, diff-check PASS, secret scan clean, validator 14/14 PASS, shape test 14/14 PASS
+- **Push**: `git push origin main` completato
+- **Post-push**: HEAD e origin/main allineati a `5a5f65f`
+- **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
+- **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
+
+## 2026-06-28 — CML-218 — EVIDENZE_UDA_WORKFLOW_SMOKE_AND_CLOSURE_GATE
+
+- **Commit base**: `5a5f65f` (CML-217S, aligned)
+- **Tipo slice**: docs-only closure gate
+- **Oggetto**: smoke end-to-end e closure gate per il ciclo Evidenze/UDA (CML-214 → CML-217)
+- **Pre-flight**: working tree pulito, HEAD = origin/main = `5a5f65f`, validatore 14/14 PASS, shape test 14/14 PASS, diff-check PASS, secret scan clean
+- **Static code analysis (5 punti)**: localStorage solo `cml_evidenze_state` ✅, Markdown 6/6 sezioni ✅, privacy notice ✅, esclusa non trattata come selezionata ⚠️ (logica corretta, label inconsistenti minori), `.cml` workflow invariato ✅
+- **GitHub Pages**: HTTP 200, app caricata, entrambi i pannelli visibili e funzionanti
+- **Findings minori**: label `non_applicabile` → `❌ Esclusa` vs `❌ Non applicabile` (righe 2706/2563); status message "proposta non vengono incluse" fuorviante (riga 2891) — non bloccanti
+- **Known limits documentati**: UDA non persistito, non importabile `.cml`, validazione umana, SchoolKB non integrato, nessun dato studente
+- **Artefatti**: `docs/03_execution/CML-218.md`, `report/CML-218_evidenze_uda_workflow_smoke_and_closure_gate.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, curriculum JSON, .cml/export/import, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_218_EVIDENZE_UDA_WORKFLOW_SMOKE_AND_CLOSURE_GATE_READY`
+
 ## 2026-06-28 — CML-216S — UDA_DRAFT_EXPORT_READINESS_AUDIT_CONTROLLED_PUSH
 
 - **Commit base**: `28a0c3c` (CML-216, aligned)
