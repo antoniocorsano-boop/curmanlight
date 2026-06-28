@@ -27,6 +27,20 @@
 - **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
 - **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
 
+## 2026-06-28 — CML-222 — PUBLIC_RELEASE_READINESS_AUDIT
+
+- **Commit base**: `6b8e7ad` (CML-221S, aligned)
+- **Tipo slice**: docs-only audit
+- **Oggetto**: audit readiness rilascio pubblico dopo completamento curriculum, .cml, EF, Evidenze/UDA, wording
+- **Classificazione**: Ready after documentation polish — nessun bloccante runtime
+- **Feature inventory**: curriculum 14/14, .cml workflow, evidence panel 14/14, UDA draft, import/export, guida in-app, privacy — ✅
+- **Gap trovati**: root README.md mancante, 18 riferimenti Netlify in 12 doc utente, favicon.ico assente (bassa priorità)
+- **Fix raccomandati per CML-223**: creare README.md, aggiornare URL Netlify → GitHub Pages, favicon opzionale
+- **Technical checks**: validatore 14/14 PASS, shape test 14/14 PASS, GitHub Pages HTTP 200, hash 14/14, secret scan clean
+- **Artefatti**: `docs/03_execution/CML-222.md`, `report/CML-222_public_release_readiness_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, curriculum JSON, .cml/export/import, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_222_PUBLIC_RELEASE_READINESS_AUDIT_READY`
+
 ## 2026-06-28 — CML-221 — NEXT_LARGER_CYCLE_SELECTION_AFTER_EVIDENZE_UDA_AND_WORDING_CLOSURE
 
 - **Commit base**: `85a66e6` (CML-220S, aligned)
