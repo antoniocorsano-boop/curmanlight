@@ -1,6 +1,17 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-OPS-004 — OPERATIONAL SKILLS AND SLICE TEMPLATE AUDIT
+
+- **Commit base**: `fe7b59c` (CML-232S, aligned)
+- **Tipo slice**: docs-only / audit (OPS guardrails, ciclo C)
+- **Oggetto**: audit workflow operativo, rischi drift, gap template, stato OPS
+- **Rischi trovati**: OR-01 CLAUDE.md stale P1, OR-02 contratto OPS stale P2, OR-03 no template P2, OR-04 no guard hooks P2, OR-05/06/07 P3; 3 punti OK
+- **Punti di forza**: validatore/shape test automatizzati, movelog, skill OPS, GH Pages auto-deploy
+- **Raccomandazione OPS-005**: preflight policy contract + slice template standard
+- **File modificati**: `docs/03_execution/CML-OPS-004.md`, `report/CML-OPS-004_operational_skills_and_slice_template_audit.md`, `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_OPS_004_OPERATIONAL_SKILLS_AND_SLICE_TEMPLATE_AUDIT_COMPLETE`
+
 ## 2026-06-28 — CML-232 — NEXT CYCLE SELECTION AFTER ACCESSIBILITY/RESPONSIVE CLOSURE
 
 - **Commit base**: `4eb8229` (CML-231S, aligned)
