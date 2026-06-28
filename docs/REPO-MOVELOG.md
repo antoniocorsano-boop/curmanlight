@@ -1,5 +1,20 @@
 # Repo Movelog
 
+
+## 2026-06-28 — CML-225 — UX-MENU-ACTION-CONTRACT
+
+- **Commit base**: 8fb01ca (CML-UX-GOVERNANCE-IMPLEMENTATION-PLAN, aligned)
+- **Tipo slice**: docs-only contract
+- **Oggetto**: definire contratto per nuova architettura informativa prima di modifiche runtime
+- **Contratto creato**: docs/02_system/UX-MENU-ACTION-CONTRACT.md`n- **Sezioni contratto**: nuova struttura tabbar, stati versione, collegamenti curricolo, rimozione ridondanze, superamento centratura Tecnologia, mappatura azioni/ruoli, correzione istituzionale, matrice compatibilità, rischi regressione
+- **Decisioni**: 6 stati versione definiti, matrice azioni/ruoli per 4 ruoli, 6 mitigazioni rischi, 11 criteri accettazione
+- **Coerenza**: verificata con CML-UX-FLOW-AUDIT e CML-UX-GOVERNANCE-IMPLEMENTATION-PLAN
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Artefatti**: docs/02_system/UX-MENU-ACTION-CONTRACT.md, docs/03_execution/CML-225.md, eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- **Vincoli**: docs-only, nessuna modifica runtime, curriculum JSON, .cml/export/import, validator/shape-test, service-worker/manifest; nessun deploy, nessun push
+- **Verdetto**: CML_225_UX_MENU_ACTION_CONTRACT_READY`n
+# Repo Movelog
+
 ## 2026-06-28 — CML-217 — MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT
 
 - **Commit base**: `3056195` (CML-216S, aligned)
