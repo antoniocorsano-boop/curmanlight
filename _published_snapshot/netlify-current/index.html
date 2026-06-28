@@ -55,14 +55,14 @@ main{flex:1;min-width:0}
 .btn-word{background:#1e5a96;color:#fff}
 .btn-copy{background:#00695c;color:#fff}
 .btn-md{background:#5e35b1;color:#fff}
-.tecnologia-export-panel{background:#f5f5f5;border:1px solid #e0e0e0;border-left:3px solid #5e35b1;border-radius:9px;padding:11px 14px;margin-bottom:10px;font-size:12px;color:#333;line-height:1.5;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.tecnologia-export-header{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
-.tecnologia-export-title{font-weight:700;color:#1a237e;font-size:13px}
-.tecnologia-export-badge{background:#ede7f6;color:#4527a0;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px}
-.tecnologia-export-desc{font-size:11px;color:#555;margin-bottom:8px}
-.tecnologia-export-actions{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
-.tecnologia-md-preview{display:block;width:100%;height:160px;font-family:Consolas,monospace;font-size:12px;padding:8px;border:1px solid #ccc;border-radius:5px;resize:vertical;background:#fafafa;color:#999;box-sizing:border-box}
-.tecnologia-md-preview:focus{color:#333}
+.disc-export-panel{background:#f5f5f5;border:1px solid #e0e0e0;border-left:3px solid #5e35b1;border-radius:9px;padding:11px 14px;margin-bottom:10px;font-size:12px;color:#333;line-height:1.5;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.disc-export-header{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.disc-export-title{font-weight:700;color:#1a237e;font-size:13px}
+.disc-export-badge{background:#ede7f6;color:#4527a0;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px}
+.disc-export-desc{font-size:11px;color:#555;margin-bottom:8px}
+.disc-export-actions{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.disc-md-preview{display:block;width:100%;height:160px;font-family:Consolas,monospace;font-size:12px;padding:8px;border:1px solid #ccc;border-radius:5px;resize:vertical;background:#fafafa;color:#999;box-sizing:border-box}
+.disc-md-preview:focus{color:#333}
 /* DEPARTMENT IMPORT */
 .department-import-panel{background:#eef7f6;border:1px solid #b2dfdb;border-left:3px solid #00796b;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#263238;line-height:1.45;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .department-import-panel>summary{cursor:pointer;font-weight:800;font-size:12px;color:#00695c}
@@ -504,7 +504,7 @@ header.app-header{padding:0;background:var(--cml-header);box-shadow:0 2px 8px rg
 @media(max-width:760px){.orientation-card{flex-wrap:wrap;padding:12px;margin:8px auto 0;width:calc(100% - 16px)}.orientation-steps{gap:5px}.orientation-step{font-size:9px;padding:3px 8px}}
 @media(max-width:560px){.tabbar{gap:3px}.tabbar button{font-size:10px;padding:7px 5px;white-space:nowrap}.tabbar button:before{content:none}}
 @media(max-width:400px){.tabbar button{font-size:9px;padding:6px 3px;min-width:0}}
-@media(max-width:640px){.tecnologia-export-panel .tecnologia-md-preview{height:100px}.tecnologia-export-actions .export-btn{flex:1 1 100%;margin:2px 0}}
+@media(max-width:640px){.disc-export-panel .disc-md-preview{height:100px}.disc-export-actions .export-btn{flex:1 1 100%;margin:2px 0}}
 .tab-generali{max-width:1000px;margin:0 auto;padding:16px 12px}
 .tab-generali h2{font-size:15px;color:#1a237e;margin:0 0 6px}
 .tab-generali h3{font-size:13px;color:#283593;margin:16px 0 6px;padding-bottom:3px;border-bottom:1px solid #c5cae9}
@@ -559,7 +559,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .home-process-path-arrow{color:#9fa8da;font-size:12px}
 
 @media print{
-  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali,.tecnologia-export-panel,.department-import-panel{display:none!important}
+  .tabbar,.toolbar,.aside-box,.disc-btn,.add-row,.card-acts,.export-btn,.toggle-lbl,.progress-wrap,.norm-link,aside,.orientation-card,#tab-generali,.disc-export-panel,.department-import-panel{display:none!important}
   .layout{padding:0;display:block}
   .panels{grid-template-columns:1fr 1fr}
 }
@@ -910,7 +910,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 
 /* Unify card radius */
 .summary-card,.norm-card,.esport-group,.guida-card,
-.act-card,.tecnologia-export-panel,.tecnologia-norm-unit{border-radius:9px}
+.act-card,.disc-export-panel,.tecnologia-norm-unit{border-radius:9px}
 
 /* Box notice system */
 .notice-box{border-radius:9px;padding:10px 14px;margin-bottom:10px;font-size:11px;line-height:1.5;border:1px solid;font-weight:600}
@@ -992,7 +992,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 /* .card-acts{background:rgba(255,255,255,.03);border-top-color:var(--cml-divider)} */
 /* .act-delete{color:#ef5350} */
 /* .norm-intro,.norm-card,.sum-box,.esport-group,.guida-card,.home-card,.home-microguide,.export-group, */
-/* .tecnologia-export-panel,.tecnologia-norm,.tecnologia-norm-unit,.didattica-evidence-unit, */
+/* .disc-export-panel,.tecnologia-norm,.tecnologia-norm-unit,.didattica-evidence-unit, */
 /* .didattica-uda-card,.tool-group,.department-import-panel,.quick-info-bar,.local-save-bar, */
 /* .usage-notice,.tecnologia-norm-unit-body,.settings-school-box,.tab-generali .gen-card, */
 /* .cruscotto,.orientation-card, */
@@ -1346,7 +1346,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
               <span class="dimmed">🧪 Prepara attività <span class="badge-preparing badge--prototype">In preparazione</span></span>
               <span class="dimmed">📁 Materiali per la classe <span class="badge-preparing badge--prototype">In preparazione</span></span>
             </div>
-            <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze da Tecnologia</a> (13 unità) e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione.</p>
+            <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione. Seleziona una disciplina nella sezione Competenze e progettazione per iniziare.</p>
           </div>
         </div>
         <div class="home-microguide">
@@ -1377,7 +1377,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div class="didattica-path-title">📖 Come usare questa sezione</div>
           <div class="didattica-path-body">Qui trovi le <strong>evidenze osservabili</strong> e i <strong>criteri di valutazione</strong> collegati a ciascuna unità del curricolo. Scegli un ordine (<em>Tutti / Infanzia / Primaria / Secondaria</em>) ed esplora le schede per vedere traguardi, obiettivi, conoscenze, abilità, evidenze e criteri.</div>
           <div class="didattica-path-actions">
-            🟢 <strong>Dato curricolare</strong> — le evidenze e i criteri provengono dal pacchetto Tecnologia strutturato
+            🟢 <strong>Dato curricolare</strong> — le evidenze e i criteri provengono dal curricolo strutturato
             <span class="didattica-path-divider">·</span>
             <a href="#" onclick="setTab('curricolo');return false">📖 Consulta il curricolo completo →</a>
           </div>
@@ -1402,12 +1402,12 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="didattica-uda" id="didattica-uda">
         <div class="didattica-uda-header">
           <h2>📋 Competenze e progettazione — UDA modello</h2>
-          <p>Mostra come un'unità curricolare di Tecnologia può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
+          <p>Mostra come un'unità curricolare del curricolo può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
         </div>
         <div class="didattica-uda-box notice-box tip">
           <strong>🧑‍🏫 UDA modello — guida operativa</strong><br>
           • Mostra come un'unità curricolare può essere trasformata in una unità di apprendimento<br>
-          • I campi "🟢 Dato curricolare" provengono dal pacchetto Tecnologia strutturato<br>
+          • I campi "🟢 Dato curricolare" provengono dal curricolo strutturato<br>
           • I campi "🟡 Esempio didattico" sono indicativi e da adattare alla classe<br>
           • Non sostituisce la progettazione professionale del docente
         </div>
@@ -1528,21 +1528,21 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           </details>
         </div>
       </details>
-      <div id="tecnologia-export-panel" class="tecnologia-export-panel" style="display:none">
-        <div class="tecnologia-export-header">
-          <span class="tecnologia-export-title">📤 Esportazione del curricolo revisionato</span>
-          <span class="tecnologia-export-badge badge--warning">Documento di lavoro — da validare</span>
+      <div id="disc-export-panel" class="disc-export-panel" style="display:none">
+        <div class="disc-export-header">
+          <span class="disc-export-title">📤 Esportazione del curricolo revisionato</span>
+          <span class="disc-export-badge badge--warning">Documento di lavoro — da validare</span>
         </div>
-        <p class="tecnologia-export-desc">L'export produce una bozza Markdown della disciplina <strong>Tecnologia</strong>. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
-        <div class="tecnologia-export-actions">
-          <button class="export-btn btn-md" onclick="generateTecnologiaBozza()">📝 Genera bozza Tecnologia</button>
-          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('tec-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di esportazione ▾':'⬇ Azioni di esportazione ▴'">⬇ Azioni di esportazione ▾</button>
+        <p class="disc-export-desc" id="disc-export-desc">L'export produce una bozza Markdown della disciplina. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
+        <div class="disc-export-actions">
+          <button class="export-btn btn-md" id="btn-generate-disc-bozza" onclick="generateDiscBozza()">📝 Genera bozza</button>
+          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('disc-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di esportazione ▾':'⬇ Azioni di esportazione ▴'">⬇ Azioni di esportazione ▾</button>
         </div>
-        <div id="tec-secondary-actions" class="tec-actions-secondary" hidden>
-          <button class="export-btn btn-copy" id="btn-copy-tec-md" onclick="copyTecnologiaMarkdown()" disabled style="opacity:0.5">📝 Copia testo</button>
-          <button class="export-btn btn-md" id="btn-dl-tec-md" onclick="downloadTecnologiaMarkdown()" disabled style="opacity:0.5">📝 Scarica testo</button>
+        <div id="disc-secondary-actions" class="disc-actions-secondary" hidden>
+          <button class="export-btn btn-copy" id="btn-copy-disc-md" onclick="copyDiscMarkdown()" disabled style="opacity:0.5">📝 Copia testo</button>
+          <button class="export-btn btn-md" id="btn-dl-disc-md" onclick="downloadDiscMarkdown()" disabled style="opacity:0.5">📝 Scarica testo</button>
         </div>
-        <textarea id="tecnologia-md-preview" class="tecnologia-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del Markdown..."></textarea>
+        <textarea id="disc-md-preview" class="disc-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del Markdown..."></textarea>
       </div>
       <div id="cards-area"></div>
     </div>
@@ -2913,9 +2913,9 @@ function downloadUdaMarkdown() {
 
 // ================================================================
 // ================================================================
-let selDisc="Tecnologia", filterStatus="all", currentTab="home";
+let selDisc=DISCIPLINE[0]||"Tecnologia", filterStatus="all", currentTab="home";
 let editingId=null;
-const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:"Tecnologia",ordine:"Secondaria"};
+const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:DISCIPLINE[0]||"Tecnologia",ordine:"Secondaria"};
 let userProfile={...DEFAULT_PROFILE};
 const SCHOOL_PROFILE={istituto:"Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani»",comune:"Ariano Irpino (AV)",codice:"AVIC849003"};
 const ORDER_PROFILE_LABELS={Infanzia:"Scuola dell'Infanzia",Primaria:"Scuola Primaria",Secondaria:"Scuola Secondaria di I grado",Tutti:"Tutti gli ordini / Commissione curricolo"};
@@ -3347,18 +3347,15 @@ function render(){
     <button class="add-btn add-o" onclick="addItem('obiettivi')">➕ Aggiungi obiettivo</button>
   </div>`;
   document.getElementById("cards-area").innerHTML=html;
-  const panel = document.getElementById('tecnologia-export-panel');
+  const panel = document.getElementById('disc-export-panel');
   if(panel){
-    const isTec = selDisc === 'Tecnologia';
-    panel.style.display = isTec ? 'block' : 'none';
-    if(!isTec){
-      document.getElementById('tecnologia-md-preview').value = '';
-      document.getElementById('btn-copy-tec-md').disabled = true;
-      document.getElementById('btn-copy-tec-md').style.opacity = '0.5';
-      document.getElementById('btn-dl-tec-md').disabled = true;
-      document.getElementById('btn-dl-tec-md').style.opacity = '0.5';
-      _tecnologiaMarkdownCache = '';
-    }
+    panel.style.display = 'block';
+    document.getElementById('disc-md-preview').value = '';
+    document.getElementById('btn-copy-disc-md').disabled = true;
+    document.getElementById('btn-copy-disc-md').style.opacity = '0.5';
+    document.getElementById('btn-dl-disc-md').disabled = true;
+    document.getElementById('btn-dl-disc-md').style.opacity = '0.5';
+    _discMarkdownCache = '';
   }
 }
 
@@ -3984,43 +3981,45 @@ function copyMarkdownToClipboard(content){
     .catch(() => {
       const win = window.open("", "_blank");
       if(!win){ showToast("⚠️ Impossibile copiare: apri il Markdown e copia manualmente."); return; }
-      win.document.write(`<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><title>Markdown Tecnologia</title><style>body{font-family:monospace;padding:20px;line-height:1.5;white-space:pre-wrap}textarea{width:100%;height:80vh;font-family:monospace;font-size:13px;padding:8px;border:1px solid #ccc;border-radius:4px}</style></head><body><h1>Markdown — Tecnologia</h1><p>Seleziona tutto, copia e incolla.</p><textarea readonly>${content.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</textarea></body></html>`);
+      win.document.write(`<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><title>Markdown curricolo</title><style>body{font-family:monospace;padding:20px;line-height:1.5;white-space:pre-wrap}textarea{width:100%;height:80vh;font-family:monospace;font-size:13px;padding:8px;border:1px solid #ccc;border-radius:4px}</style></head><body><h1>Markdown — Curricolo</h1><p>Seleziona tutto, copia e incolla.</p><textarea readonly>${content.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</textarea></body></html>`);
       win.document.close();
     });
 }
 
-let _tecnologiaMarkdownCache = '';
+let _discMarkdownCache = '';
 
-function generateTecnologiaBozza(){
-  const model = buildDocumentModel(false, { disciplineFilter: 'Tecnologia' });
+function generateDiscBozza(){
+  const discName = selDisc;
+  const model = buildDocumentModel(false, { disciplineFilter: discName });
   const opts = {
-    disciplineName: 'Tecnologia',
+    disciplineName: discName,
     introNote: true,
     includeGeneraliRef: true,
     includeDecisionSummary: true,
     includeGapMarkers: true,
     includeDisclaimer: true,
   };
-  _tecnologiaMarkdownCache = modelToMarkdown(model, false, opts);
-  const preview = document.getElementById('tecnologia-md-preview');
-  preview.value = _tecnologiaMarkdownCache;
+  _discMarkdownCache = modelToMarkdown(model, false, opts);
+  const preview = document.getElementById('disc-md-preview');
+  preview.value = _discMarkdownCache;
   preview.style.background = '#fff';
-  document.getElementById('btn-copy-tec-md').disabled = false;
-  document.getElementById('btn-copy-tec-md').style.opacity = '1';
-  document.getElementById('btn-dl-tec-md').disabled = false;
-  document.getElementById('btn-dl-tec-md').style.opacity = '1';
-  showToast('✅ Bozza Tecnologia generata!');
+  document.getElementById('btn-copy-disc-md').disabled = false;
+  document.getElementById('btn-copy-disc-md').style.opacity = '1';
+  document.getElementById('btn-dl-disc-md').disabled = false;
+  document.getElementById('btn-dl-disc-md').style.opacity = '1';
+  showToast('✅ Bozza generata!');
 }
 
-function copyTecnologiaMarkdown(){
-  if(!_tecnologiaMarkdownCache){ showToast('⚠️ Genera prima la bozza.'); return; }
-  copyMarkdownToClipboard(_tecnologiaMarkdownCache);
+function copyDiscMarkdown(){
+  if(!_discMarkdownCache){ showToast('⚠️ Genera prima la bozza.'); return; }
+  copyMarkdownToClipboard(_discMarkdownCache);
 }
 
-function downloadTecnologiaMarkdown(){
-  if(!_tecnologiaMarkdownCache){ showToast('⚠️ Genera prima la bozza.'); return; }
-  const filename = `CurricoloVerticale_IC_DonMilani_Tecnologia_Bozza_${new Date().toISOString().slice(0,10)}.md`;
-  downloadMarkdownString(_tecnologiaMarkdownCache, filename);
+function downloadDiscMarkdown(){
+  if(!_discMarkdownCache){ showToast('⚠️ Genera prima la bozza.'); return; }
+  const safeName = selDisc.replace(/[^a-zA-Z0-9]/g, '_');
+  const filename = `CurricoloVerticale_IC_DonMilani_${safeName}_Bozza_${new Date().toISOString().slice(0,10)}.md`;
+  downloadMarkdownString(_discMarkdownCache, filename);
   showToast('⬇ File Markdown scaricato!');
 }
 

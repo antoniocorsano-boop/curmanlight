@@ -42,6 +42,18 @@
 - **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
 - **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
 
+## 2026-06-28 — CML-226 — MULTI_DISCIPLINE_GENERALIZATION_HARDCODED_TECNOLOGIA
+
+- **Commit base**: `c8ceb8e` (CML-225S, aligned)
+- **Tipo slice**: runtime increment + docs
+- **Oggetto**: generalizzare funzioni runtime hardcodate a Tecnologia per tutte 14 discipline
+- **Generalizzato**: export panel (CSS/HTML/JS), home page text, didattica/UDA text, default discipline
+- **Preservato**: norm panel (legacy CML-062), mappa dati per-disciplina, curriculum data
+- **Verifiche**: validatore 14/14 PASS, shape test 14/14 PASS, hash 14/14 PASS, diff-check clean
+- **Artefatti**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-226.md`, `report/CML-226_multi_discipline_generalization_hardcoded_tecnologia.md`, `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessun JSON, `.cml`, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_226_MULTI_DISCIPLINE_GENERALIZATION_READY`
+
 ## 2026-06-28 — CML-224 — PUBLIC_RELEASE_WORKFLOW_SMOKE_AND_RELEASE_GATE
 
 - **Commit base**: `731cb8b` (CML-223S, aligned)
