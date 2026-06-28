@@ -2562,7 +2562,7 @@ function renderDidattica(){
       if(evState==='adottata') stateBadge='<span class="evidence-badge evidence-badge--adopted">✅ Adottata</span>';
       else if(evState==='adattata') stateBadge='<span class="evidence-badge evidence-badge--adapted">✏ Adattata</span>';
       else if(evState==='non_applicabile') stateBadge='<span class="evidence-badge evidence-badge--excluded">❌ Non applicabile</span>';
-      html+='<li>'+escapeHtml(u.evidenze[j])+'<div class="evidence-actions">'+stateBadge+'<button class="evidence-btn evidence-btn--adopt" onclick="event.stopPropagation();setEvidenceState(''+evId+'','adottata')">Adotta</button><button class="evidence-btn evidence-btn--adapt" onclick="event.stopPropagation();setEvidenceState(''+evId+'','adattata')">Adatta</button><button class="evidence-btn evidence-btn--exclude" onclick="event.stopPropagation();setEvidenceState(''+evId+'','non_applicabile')">Escludi</button></div></li>';
+      html+='<li>'+escapeHtml(u.evidenze[j])+'<div class="evidence-actions">'+stateBadge+'<button class="evidence-btn evidence-btn--adopt" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'adottata\')">Adotta</button><button class="evidence-btn evidence-btn--adapt" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'adattata\')">Adatta</button><button class="evidence-btn evidence-btn--exclude" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'non_applicabile\')">Escludi</button></div></li>';
     }
     html+='</ul></div>';
     html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\ud83d\udccb Criteri di valutazione</div><ul>';
