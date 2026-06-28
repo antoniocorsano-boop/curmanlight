@@ -1,6 +1,19 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-228 — NEXT_CYCLE_SELECTION_AFTER_SCHOOLKB_DEFERRAL
+
+- **Commit base**: `2567c99` (CML-227S, aligned)
+- **Tipo slice**: docs-only / decision
+- **Oggetto**: selezionare il prossimo ciclo di sviluppo dopo SchoolKB deferral
+- **Opzioni valutate**: A (public polish), B (freeze/stabilization), C (`.cml v1.1`), D (onboarding/help), **E (accessibility/responsive QA)**, F (stop)
+- **Selezione**: **E — Accessibility/responsive QA audit** prima dell'uso da parte dei colleghi
+- **Alternative rigettate**: A (favicon utile ma priorità minore), B (puramente documentale), C (troppo presto), D (guida già presente), F (progetto attivo)
+- **Sequenza proposta**: CML-229 audit → CML-230 microfix → CML-231 closure
+- **Artefatti**: `docs/03_execution/CML-228.md`, `report/CML-228_next_cycle_selection_after_schoolkb_deferral.md`, `docs/REPO-MOVELOG.md`
+- **Vincoli**: docs-only, nessun runtime/JSON/.cml/SchoolKB/deploy/push/secrets
+- **Verdetto**: `CML_228_NEXT_CYCLE_SELECTION_E_ACCESSIBILITY_QA`
+
 ## 2026-06-28 — CML-225 — UX-MENU-ACTION-CONTRACT
 
 - **Commit base**: 8fb01ca (CML-UX-GOVERNANCE-IMPLEMENTATION-PLAN, aligned)
