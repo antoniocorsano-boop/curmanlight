@@ -17,6 +17,39 @@ L'audit CML-UX-FLOW-AUDIT ha identificato gap critici non ancora risolti:
 
 Le slice successive (CML-213 → CML-224) hanno seguito un percorso diverso (Evidenze/UDA + Release), lasciando questi gap aperti.
 
+## Esecuzione effettiva
+
+Il piano è stato **parzialmente eseguito** e poi **deviato** verso altri obiettivi:
+
+- **CML-225**: ✅ Completato (UX-MENU-ACTION-CONTRACT)
+- **CML-226**: ✅ Completato (MULTI_DISCIPLINE_GENERALIZATION_HARDCODED_TECNOLOGIA)
+- **CML-227**: ⚠️ Deviato (SCHOOLKB_SCOPE_AUDIT_AFTER_PUBLIC_RELEASE, non CURRICULUM-VERSION-STATES)
+- **CML-228**: ⚠️ Deviato (NEXT_CYCLE_SELECTION_AFTER_SCHOOLKB_DEFERRAL, non UI-REDUNDANCY-REDUCTION)
+- **CML-229**: ⚠️ Deviato (ACCESSIBILITY_RESPONSIVE_QA_AUDIT, non PROGETTAZIONE-CURRICOLO-LINKING)
+- **CML-230**: ⚠️ Deviato (TARGETED_ACCESSIBILITY_RESPONSIVE_MICROFIX, non UX-GOVERNANCE-CLOSURE-AUDIT)
+
+Le slice successive hanno seguito percorsi diversi:
+- CML-231: ACCESSIBILITY_RESPONSIVE_CLOSURE_GATE
+- CML-232: NEXT_CYCLE_SELECTION_AFTER_ACCESSIBILITY_RESPONSIVE_CLOSURE
+- CML-OPS-004/005/006: OPS guardrails
+- CML-233: NEXT_CYCLE_SELECTION_AFTER_OPS_GUARDRAILS_CLOSURE
+- CML-236/237/238: STABLE CANDIDATE FREEZE
+
+## Gap rimanenti
+
+I gap identificati in CML-UX-FLOW-AUDIT rimangono **parzialmente aperti**:
+- Governance curricolare: ❌ Non implementata (stati versione, validazione/approvazione)
+- Gestione transizione IN2025: ❌ Non strutturata
+- Collegamento progettazione-curricolo: ❌ Non implementato
+- Ridondanze UI: ⚠️ Parzialmente ridotte (CML-226 ha generalizzato export panel)
+- Centratura su Tecnologia: ✅ Superata (CML-226 ha generalizzato funzioni)
+
+## Stato piano
+
+**Verdetto**: `CML_UX_GOVERNANCE_IMPLEMENTATION_PLAN_DEVIATED`
+
+Il piano è stato deviato verso altri obiettivi (SchoolKB, accessibility, OPS guardrails, freeze). I gap di governance curricolare rimangono aperti e potrebbero essere affrontati in cicli futuri.
+
 ## Strategia di implementazione
 
 Il piano è diviso in **4 fasi sequenziali**, ciascuna con slice atomiche e riprendibili:
@@ -496,22 +529,22 @@ Se una slice fallisce:
 3. Aggiornare il piano con le modifiche necessarie
 4. Riprovare con correzioni
 
-### Tracking progresso
-Aggiornare questo file con lo stato di ogni slice dopo il completamento:
-- CML-225: [X]
-- CML-226: [ ]
-- CML-226S: [ ]
-- CML-227: [ ]
-- CML-227S: [ ]
-- CML-228: [ ]
-- CML-228S: [ ]
-- CML-229: [ ]
-- CML-229S: [ ]
-- CML-230: [ ]
-- CML-230S: [ ]
+### Tracking progresso (esecuzione effettiva)
+- CML-225: [X] Completato
+- CML-226: [X] Completato
+- CML-226S: [X] Completato
+- CML-227: [X] Deviato (SCHOOLKB_SCOPE_AUDIT)
+- CML-228: [X] Deviato (NEXT_CYCLE_SELECTION)
+- CML-229: [X] Deviato (ACCESSIBILITY_QA_AUDIT)
+- CML-230: [X] Deviato (ACCESSIBILITY_MICROFIX)
+- CML-231: [X] Deviato (ACCESSIBILITY_CLOSURE)
+- CML-232: [X] Deviato (NEXT_CYCLE_SELECTION)
+- CML-OPS-004/005/006: [X] Deviato (OPS_GUARDRAILS)
+- CML-233: [X] Deviato (NEXT_CYCLE_SELECTION)
+- CML-236/237/238: [X] Deviato (STABLE_CANDIDATE_FREEZE)
 
 ---
 
 ## Verdetto finale piano
 
-`CML_UX_GOVERNANCE_IMPLEMENTATION_PLAN_READY`
+`CML_UX_GOVERNANCE_IMPLEMENTATION_PLAN_DEVIATED`
