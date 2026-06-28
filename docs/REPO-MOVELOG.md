@@ -27,6 +27,18 @@
 - **GitHub Pages**: HTTP 200, app caricata, evidence panel e UDA draft panel visibili
 - **Verdetto**: `CML_217S_MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT_PUSHED`
 
+## 2026-06-28 — CML-221 — NEXT_LARGER_CYCLE_SELECTION_AFTER_EVIDENZE_UDA_AND_WORDING_CLOSURE
+
+- **Commit base**: `85a66e6` (CML-220S, aligned)
+- **Tipo slice**: docs-only cycle selection
+- **Oggetto**: selezione prossimo ciclo più grande dopo chiusura Evidenze/UDA e wording microfix
+- **Opzione selezionata**: A — Release readiness and public documentation polish
+- **Opzioni respinte**: B (SchoolKB — rimandato), C (Design/UML — rimandato), D (`.cml` v1.1 — rimandato), E (UX polish — nessuna necessità), F (Content polish — nessuna necessità)
+- **Prossima sequenza**: CML-222 (public release readiness audit) → CML-223 (README/user docs) → CML-224 (release gate) → CML-225 (next cycle, likely SchoolKB)
+- **Artefatti**: `docs/03_execution/CML-221.md`, `report/CML-221_next_larger_cycle_selection_after_evidenze_uda_and_wording_closure.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli**: nessuna modifica runtime, curriculum JSON, .cml/export/import, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
+- **Verdetto**: `CML_221_NEXT_LARGER_CYCLE_SELECTION_AFTER_EVIDENZE_UDA_AND_WORDING_CLOSURE_READY`
+
 ## 2026-06-28 — CML-220 — EVIDENZE_UDA_WORDING_MICROFIX
 
 - **Commit base**: `c072af2` (CML-219S, aligned)
