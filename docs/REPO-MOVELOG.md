@@ -1,6 +1,18 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-229 — ACCESSIBILITY_RESPONSIVE_QA_AUDIT
+
+- **Commit base**: `432a3e8` (CML-228S, aligned)
+- **Tipo slice**: docs-only / audit
+- **Oggetto**: audit accessibilità e responsività dopo stable candidate
+- **Issue trovate**: 1 P1 (tabbar touch target a 400px), 6 P2 (aria-current, aria-pressed, label textarea, focus outline, viewport 360px), 2 P3
+- **Flussi verificati**: curriculum, evidenze, UDA, `.cml`, dipartimento, referente, fonti — OK
+- **Raccomandazione CML-230**: microfix mirati per P1 + top P2 (6 modifiche puntuali)
+- **Artefatti**: `docs/03_execution/CML-229.md`, `report/CML-229_accessibility_responsive_qa_audit.md`, `docs/REPO-MOVELOG.md`
+- **Vincoli**: docs-only, nessun runtime/JSON/.cml/SchoolKB/deploy/push/secrets
+- **Verdetto**: `CML_229_ACCESSIBILITY_RESPONSIVE_QA_AUDIT_COMPLETE`
+
 ## 2026-06-28 — CML-228 — NEXT_CYCLE_SELECTION_AFTER_SCHOOLKB_DEFERRAL
 
 - **Commit base**: `2567c99` (CML-227S, aligned)
