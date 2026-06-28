@@ -1,6 +1,16 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-233 — NEXT CYCLE SELECTION AFTER OPS GUARDRAILS CLOSURE
+
+- **Commit base**: `1beeef8` (CML-OPS-006S, aligned)
+- **Tipo slice**: docs-only / decision
+- **Selezione**: **A — CLAUDE.md update** (fix P1 obsolete state)
+- **Opzioni rimandate**: B (polish), C (freeze), D (SchoolKB), E (.cml v1.1), F (onboarding); G (stop) rigettato
+- **Sequenza proposta**: CML-234 → CML-234S → CML-235
+- **Artefatti**: `docs/03_execution/CML-233.md`, `report/CML-233_next_cycle_selection_after_ops_guardrails_closure.md`, `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_233_NEXT_CYCLE_SELECTION_A_CLAUDE_MD_ALIGNMENT`
+
 ## 2026-06-28 — CML-OPS-006 — OPS SMOKE AND CLOSURE GATE
 
 - **Commit base**: `a3753fb` (CML-OPS-005S, aligned)
