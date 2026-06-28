@@ -1,6 +1,20 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-OPS-006 — OPS SMOKE AND CLOSURE GATE
+
+- **Commit base**: `a3753fb` (CML-OPS-005S, aligned)
+- **Tipo slice**: docs-only / closure gate (ciclo C)
+- **Decisione**: **B — Closed with documented P2/P3 limitations**
+- **Ciclo**: CML-232 (selezione) → OPS-004 (audit) → OPS-005 (contract) → OPS-005S (push) → OPS-006 (closure)
+- **Deliverable**: 3 skill OPS, 14-sezione policy contract, 4 template slice, 10 rischi classificati
+- **Limitazioni residue**: hook eseguibili rinviati, CLAUDE.md obsoleto, contratto OPS stale, hash smoke non automatizzato
+- **Validator**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **GH Pages**: HTTP 200
+- **Artefatti**: `docs/03_execution/CML-OPS-006.md`, `report/CML-OPS-006_ops_smoke_and_closure_gate.md`, `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_OPS_006_OPS_SMOKE_AND_CLOSURE_GATE_COMPLETE`
+
 ## 2026-06-28 — CML-OPS-005 — PREFLIGHT POLICY CONTRACT AND SLICE TEMPLATES
 
 - **Commit base**: `93a216e` (CML-OPS-004S, aligned)
