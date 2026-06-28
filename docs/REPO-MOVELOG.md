@@ -1,6 +1,16 @@
 # Repo Movelog
 
 
+## 2026-06-28 — CML-OPS-005 — PREFLIGHT POLICY CONTRACT AND SLICE TEMPLATES
+
+- **Commit base**: `93a216e` (CML-OPS-004S, aligned)
+- **Tipo slice**: docs-only / OPS contract (ciclo C)
+- **Oggetto**: contratto preflight policy + 4 template slice + 14 sezioni policy
+- **Contratto creato**: `docs/02_system/OPS-PREFLIGHT-POLICY-CONTRACT.md`
+- **Non implementato**: hook eseguibili, script validazione, modifiche CLAUDE.md
+- **Raccomandazione OPS-006**: OPS smoke e closure gate
+- **Verdetto**: `CML_OPS_005_PREFLIGHT_POLICY_CONTRACT_AND_SLICE_TEMPLATES_COMPLETE`
+
 ## 2026-06-28 — CML-OPS-004 — OPERATIONAL SKILLS AND SLICE TEMPLATE AUDIT
 
 - **Commit base**: `fe7b59c` (CML-232S, aligned)
