@@ -1,6 +1,20 @@
 # Repo Movelog
-
-
+ 
+ 
+## 2026-06-28 — CML-236 — STABLE CANDIDATE FREEZE CONTRACT
+ 
+- **Commit base**: `ebcc29a` (CML-234S, aligned)
+- **Tipo slice**: docs-only / contract
+- **Oggetto**: definire il contratto di freeze per il candidato stabile pubblico
+- **Artefatti creati**: `docs/02_system/STABLE-CANDIDATE-FREEZE-CONTRACT.md`, `docs/03_execution/CML-236.md`, `report/CML-236_stable_candidate_freeze_contract.md`
+- **Stato congelato**: normalized 14/14, runtime 14/14, evidence panel 14/14, UDA draft, `.cml v1.0`, OPS guardrails
+- **Cambiamenti consentiti post-freeze**: correzione documentazione, typo/microcopy, smoke reports, known-limits updates
+- **Cambiamenti richiedenti nuovo ciclo**: runtime feature, curriculum JSON, `.cml` schema, SchoolKB, UDA persistence, dipendenze, service-worker/manifest, deploy workflow
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Push**: non eseguito (commit locale)
+- **Verdetto**: `CML_236_STABLE_CANDIDATE_FREEZE_CONTRACT_COMPLETE`
+ 
 ## 2026-06-28 — CML-233 — NEXT CYCLE SELECTION AFTER OPS GUARDRAILS CLOSURE
 
 - **Commit base**: `1beeef8` (CML-OPS-006S, aligned)
