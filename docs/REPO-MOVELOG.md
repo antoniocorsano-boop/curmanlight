@@ -15,6 +15,21 @@
 - **Push**: non eseguito (commit locale)
 - **Verdetto**: `CML_236_STABLE_CANDIDATE_FREEZE_CONTRACT_COMPLETE`
  
+## 2026-06-28 — CML-237 — MAINTENANCE POLICY AND KNOWN-LIMITS REGISTER
+ 
+- **Commit base**: `1b23f5f` (CML-236S, aligned)
+- **Tipo slice**: docs-only / policy
+- **Oggetto**: definire politica manutenzione e registro limitazioni note
+- **Artefatti creati**: `docs/02_system/MAINTENANCE-POLICY-AND-KNOWN-LIMITS.md`, `docs/03_execution/CML-237.md`, `report/CML-237_maintenance_policy_and_known_limits_register.md`
+- **Maintenance modes**: documentation-only, smoke/verification, microcopy correction, defect triage, deferred feature review
+- **Known-limits seeded**: 8 items (SchoolKB, UDA package, persistent UDA, favicon, backend/OAuth, student data, auto approval, AI Act claim)
+- **Severity model**: P0 blocker, P1 high risk, P2 maintenance risk, P3 polish/deferred
+- **Reopening triggers**: legal/regulatory, school workflow, P0/P1 blocker, curriculum correction, public availability, validator regression
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Push**: non eseguito (docs-only)
+- **Verdetto**: `CML_237_MAINTENANCE_POLICY_COMPLETE`
+ 
 ## 2026-06-28 — CML-233 — NEXT CYCLE SELECTION AFTER OPS GUARDRAILS CLOSURE
 
 - **Commit base**: `1beeef8` (CML-OPS-006S, aligned)
