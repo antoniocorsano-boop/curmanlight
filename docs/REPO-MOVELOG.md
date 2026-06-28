@@ -183,6 +183,20 @@
 - **Vincoli**: nessuna modifica runtime, schema, export/import, contenuti, validator, shape-test, service-worker, manifest, dipendenze; nessun deploy, nessun push, nessun secret
 - **Verdetto**: `CML_198_CML_SCHEMA_AND_EXPORT_IMPORT_AUDIT_READY`
 
+## 2026-06-27 - CML-215 - MINIMAL_EVIDENCE_PANEL_RUNTIME_INCREMENT
+
+- **Commit**: da `bd5fb02` (CML-214S) + modifiche runtime + docs
+- **Tipo slice**: runtime increment (Didattica Evidenze/UDA panel)
+- **Oggetto**: generalizzare pannello evidenze da Tecnologia-only a 14/14
+- **File modificati**: `_published_snapshot/netlify-current/index.html` (+93/-27)
+- **Dati introdotti**: `ALL_CURRICULUM_DATA` con dati curricolari 14 discipline
+- **Nuove funzioni**: `getEvidenceState`, `setEvidenceState`, `resetEvidenceStates`, `getDisciplineEvidenceData`
+- **Marcatura locale**: Adotta/Adatta/Escludi in localStorage (`cml_evidenze_state`), nessun dato studente
+- **Correzioni**: chiavi `arte-e-immagine` → `arte-immagine`, `latino--lel-` → `latino-lel`
+- **Non modificato**: JSON, .cml, export/import, UDA generator, validator, shape-test, service-worker, secrets
+- **Artefatti**: `docs/03_execution/CML-215.md`, `report/CML-215_minimal_evidence_panel_runtime_increment.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_215_MINIMAL_EVIDENCE_PANEL_RUNTIME_INCREMENT_COMPLETE`
+
 ## 2026-06-27 - CML-197 — NEXT_CYCLE_SELECTION_AFTER_PUBLIC_RUNTIME_14_14
 
 - **Commit**: `660f2e1` + docs → commit finale CML-197
