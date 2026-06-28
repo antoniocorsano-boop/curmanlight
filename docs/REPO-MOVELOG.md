@@ -30,6 +30,18 @@
 - **Push**: non eseguito (docs-only)
 - **Verdetto**: `CML_237_MAINTENANCE_POLICY_COMPLETE`
  
+## 2026-06-28 — CML-238 — FREEZE CLOSURE GATE AND PUBLIC SMOKE
+ 
+- **Commit base**: `b329ffa` (CML-237S, aligned)
+- **Tipo slice**: docs-only / closure gate
+- **Oggetto**: chiusura ciclo freeze candidato stabile con verifica finale
+- **Gate superati**: HEAD/origin allineato, working tree pulito, freeze contract presente, maintenance register presente, known limits 8/8 documentate, JSON validator 14/14, shape test 14/14, GH Pages HTTP 200
+- **Freeze verdetto**: `CML_STABLE_CANDIDATE_FREEZE_CLOSED_LOCAL_READY`
+- **Limitazioni confermate**: SchoolKB, `.cml` UDA package, UDA persistence, favicon, backend/OAuth, student data, auto approval, AI Act claim
+- **Nessun blocker**: nessuna modifica runtime/JSON/.cml necessaria
+- **Push**: non eseguito (CML-238S separato)
+- **Verdetto**: `CML_238_FREEZE_CLOSURE_GATE_AND_PUBLIC_SMOKE_COMPLETE`
+ 
 ## 2026-06-28 — CML-233 — NEXT CYCLE SELECTION AFTER OPS GUARDRAILS CLOSURE
 
 - **Commit base**: `1beeef8` (CML-OPS-006S, aligned)
