@@ -1,5 +1,10 @@
 # Repo Movelog
 
+## 2026-06-29 — CML_UX_EXPORT_CENTER_DEDUPLICATION_PLAN
+
+- Definita architettura target Export Center: centralizzare e deduplicare tutte le esportazioni in unico punto, 6 gruppi, 9 regole, 5 slice future
+- **Verdetto**: `CML_UX_EXPORT_CENTER_DEDUPLICATION_PLAN_READY`
+
 ## 2026-06-29 — CML_UX_REVISIONE_COMPACT_RUNTIME
 
 - Vista Revisione compattata: export confronto rimosso, notice compattata, export disciplina richiamabile da toggle, strumenti processo in tab separato
