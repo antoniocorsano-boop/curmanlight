@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## 2026-06-29 - CML-UX-ACCESSIBILITY-SCORE-REFRESH - Accessibility score refresh
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH`
+- **Data**: 2026-06-29
+- **Commit base locale**: `c175b2c`
+- **Tipo slice**: docs-only / score refresh
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCORE-REFRESH.md`, `report/CML-UX-ACCESSIBILITY-SCORE-REFRESH.md`, `docs/REPO-MOVELOG.md`
+- **Runtime modificato**: no
+- **Punteggio precedente accessibilita'**: 48/100
+- **Punteggio aggiornato**: 60/100
+- **Delta**: +12
+- **P0 residui**: 0
+- **P1 residui**: 2
+- **Prossima slice**: `CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS`
+- **Untracked esclusi**: `.env`, `antigravity.config.json`, `test-results/`, `tools/smoke-hash-nav.mjs`
+- **Push**: no
+- **Verdetto**: `CML_UX_ACCESSIBILITY_SCORE_REFRESH_READY`
+
 ## 2026-06-29 - CML-UX-ARIA-ACCORDION-SYNTAX-HOTFIX - Syntax regression hotfix
 
 - **Nome slice**: `CML-UX-ARIA-ACCORDION-SYNTAX-HOTFIX`
@@ -5734,4 +5752,3 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - **Artefatti**: `docs/03_execution/CML-216.md`, `report/CML-216_uda_draft_export_readiness_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Vincoli**: docs-only, nessuna modifica runtime, nessuna modifica curriculum JSON, nessuna implementazione UDA, nessuna modifica `.cml`/export/import/validator/shape-test/service-worker/manifest, nessuna dipendenza, nessun deploy, nessun push, nessun secret
 - **Verdetto**: `CML_216_UDA_DRAFT_EXPORT_READINESS_AUDIT_COMPLETE`
-
