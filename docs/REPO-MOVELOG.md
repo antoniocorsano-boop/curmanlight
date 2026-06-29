@@ -1,5 +1,10 @@
 # Repo Movelog
 
+## 2026-06-29 — CML_UX_DECLUTTER_AND_ERGONOMICS_IMPLEMENTATION_PLAN
+
+- Piano operativo UX per riduzione caos visivo, scroll e sovrapposizione consultazione/revisione/export; nessuna modifica runtime
+- **Verdetto**: `CML_UX_DECLUTTER_AND_ERGONOMICS_IMPLEMENTATION_PLAN_READY`
+
 ## 2026-06-29 — CML-UX-ERGONOMICS-AUDIT — Markdown normalization
 
 - Normalizzati i Markdown dell’audit UX ergonomics senza modifiche runtime o variazioni sostanziali di contenuto
