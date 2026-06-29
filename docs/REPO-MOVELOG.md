@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## 2026-06-29 - CML-UX-ARIA-ACCORDION-SYNTAX-HOTFIX - Syntax regression hotfix
+
+- **Nome slice**: `CML-UX-ARIA-ACCORDION-SYNTAX-HOTFIX`
+- **Data**: 2026-06-29
+- **Commit base locale**: `c5ac7d0`
+- **Commit runtime remoto verificato**: `48ce346`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-ARIA-ACCORDION-SYNTAX-HOTFIX.md`, `report/CML-UX-ARIA-ACCORDION-SYNTAX-HOTFIX.md`, `docs/REPO-MOVELOG.md`
+- **Scope**: hotfix runtime mirata + documentazione di chiusura
+- **Causa**: apici singoli non escapati negli handler inline generati da `renderDidattica()` e graffa extra nel blocco Obiettivi
+- **SyntaxError**: risolto
+- **setTab**: definita
+- **Accordion Evidenze ARIA**: preservati e funzionanti da tastiera
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Errori JavaScript reali nello smoke locale**: 0
+- **Untracked esclusi**: `.tmp/`, `test-results/`, `tools/smoke-hash-nav.mjs`, `.tmp-curmanlight-hotfix-script-check.js`
+- **Push**: no
+- **Verdetto**: `CML_UX_ARIA_ACCORDION_SYNTAX_HOTFIX_READY`
 ## 2026-06-29 - CML-UX-ACCESSIBILITY-ARIA-ACCORDION-LIVE-SMOKE — Live smoke post-push GitHub Pages
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-ARIA-ACCORDION`
