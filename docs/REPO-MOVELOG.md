@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## 2026-06-29 - CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS - Skip link and focus handling
+
+- **Commit base**: `1ba184b` (HEAD == origin/main)
+- **Tipo slice**: runtime accessibility microfix
+- **Oggetto**: aggiungere skip link al contenuto principale e migliorare gestione focus su cambio tab/disciplina
+- **Runtime modificato**: `_published_snapshot/netlify-current/index.html`
+- **Skip link**: PASS, primo Tab intercetta `Salta al contenuto principale` e Invio porta a `#main-content`
+- **Focus setTab**: PASS, cambio tab da menu principale porta il focus a `main-content`
+- **Focus selectDisc**: PASS, cambio disciplina mantiene titolo, breadcrumb e hash coerenti
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Smoke tastiera/focus**: `SMOKE_PASS_WITH_NON_BLOCKING_RESOURCE_WARNINGS`
+- **Resource warning non bloccanti**: 3
+- **Untracked esclusi**: `.tmp/`, `test-results/`, `tools/smoke-hash-nav.mjs`
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS.md`, `report/CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_UX_ACCESSIBILITY_SKIP_LINK_FOCUS_READY`
 ## 2026-06-29 — CML-UX-ACCESSIBILITY-BASELINE-AUDIT — Accessibility baseline audit
 
 - **Commit verificato**: `dab7748` (HEAD == origin/main, hash navigation syncing pushed)

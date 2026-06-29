@@ -984,6 +984,9 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 
 /* Focus visible ring consistent */
 button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:2px}
+/* Skip link: hidden off-screen, visible on focus */
+.skip-link{position:absolute;top:-999px;left:8px;z-index:10001;background:#1a237e;color:#fff;padding:8px 16px;border-radius:0 0 6px 6px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.skip-link:focus{top:0;outline:2px solid #fff;outline-offset:2px}
 
 /* DARK MODE BLOCK — NEUTRALIZED: CML light mode only (CML-083B)
    @media(prefers-color-scheme:dark) removed. All dark rules preserved below
@@ -1233,6 +1236,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Salta al contenuto principale</a>
 <header class="app-header" id="app-header">
   <div class="app-header-min">
     <div class="app-title-wrap">
@@ -3201,7 +3205,7 @@ function selectDisc(d,opts){
   refreshCurrentDisciplineViews();
   if(opts.scroll!==false){
     var main=document.getElementById("main-content");
-    if(main) main.scrollIntoView({behavior:"smooth",block:"start"});
+    if(main){main.scrollIntoView({behavior:"smooth",block:"start"});main.setAttribute("tabindex","-1");main.focus({preventScroll:true});}
   }
   if(opts.updateHash!==false){
     var nextHash='#cur-'+discHashSlug(d);
@@ -3652,7 +3656,16 @@ function setTab(t,opts){
   if(t==="riepilogo") renderRiepilogo();
   if(t==="curricolo"){renderCurricoloIstituto();renderTecnologiaNorm();}
   if(t==="home"&&opts.updateHash!==false&&location.hash!=="#home") location.hash="#home";
-  if(opts.scroll!==false) window.scrollTo({top:0,behavior:"smooth"});
+  if(opts.scroll!==false){
+  window.scrollTo({top:0,behavior:"smooth"});
+  if(opts.focus!==false&&document.activeElement&&document.activeElement!==document.body){
+    var main=document.getElementById("main-content");
+    if(main){
+      main.setAttribute("tabindex","-1");
+      main.focus({preventScroll:true});
+    }
+  }
+}
 }
 
 
