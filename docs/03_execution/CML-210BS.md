@@ -18,16 +18,16 @@ Rigenerata la mappa statica da content/curriculum/educazione-fisica.normalized.j
 
 ## 3. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `39c4f4a` |
-| origin/main iniziale | `39c4f4a` |
-| Working tree iniziale | pulito |
-| Dati normalizzati | 14/14 |
-| Runtime mappa | 14/14 |
-| Shape test pre-esistente | 14/14 PASS |
+| Parametro                | Valore                       |
+| ------------------------ | ---------------------------- |
+| Root Git                 | `C:\Users\anton\CurManLight` |
+| Branch                   | `main`                       |
+| Commit iniziale          | `39c4f4a`                    |
+| origin/main iniziale     | `39c4f4a`                    |
+| Working tree iniziale    | pulito                       |
+| Dati normalizzati        | 14/14                        |
+| Runtime mappa            | 14/14                        |
+| Shape test pre-esistente | 14/14 PASS                   |
 
 ## 4. Controlli eseguiti
 
@@ -59,11 +59,11 @@ Sostituito il blocco `var EDUCAZIONE_FISICA_MAPPA_DATI = ...` in `_published_sna
 
 ### 4.4 Validator e shape test
 
-| Check | Esito |
-|---|---|
-| JSON validator | 14/14 PASS, 0 errori |
-| Shape test | 14/14 PASS |
-| Educazione Fisica | S=7, N=4, P=7, D=0 |
+| Check             | Esito                |
+| ----------------- | -------------------- |
+| JSON validator    | 14/14 PASS, 0 errori |
+| Shape test        | 14/14 PASS           |
+| Educazione Fisica | S=7, N=4, P=7, D=0   |
 
 ### 4.5 Hash/navigation smoke
 
@@ -78,6 +78,7 @@ Nuclei: Abilita motorie, Corpo e percezione, Espressione e inclusione, Gioco e s
 ### 4.6 CML-210A wording nel runtime
 
 Verificata presenza nel nuovo blocco runtime HTML di:
+
 - `benessere` in `Autonomia, responsabilità, espressione corporea, benessere e inclusione`
 - progressione verticale con ponti Infanzia → Primaria → Secondaria
 - nucleo `Abilità motorie` rafforzato
@@ -90,13 +91,13 @@ Verificato che le righe `var TECNOLOGIA_MAPPA_DATI`, `var MATEMATICA_MAPPA_DATI`
 
 URL: https://antoniocorsano-boop.github.io/curmanlight/#cur-EducazioneFisica
 
-| Check | Esito |
-|---|---|
-| HTTP status | 200 OK |
-| App load | OK |
-| Hash navigation | `#cur-EducazioneFisica` — confermato |
-| CML-210A content visible | Sì — `benessere` presente nel DOM della pagina |
-| Educazione Fisica selectable | Sì (dati statici aggiornati) |
+| Check                        | Esito                                          |
+| ---------------------------- | ---------------------------------------------- |
+| HTTP status                  | 200 OK                                         |
+| App load                     | OK                                             |
+| Hash navigation              | `#cur-EducazioneFisica` — confermato           |
+| CML-210A content visible     | Sì — `benessere` presente nel DOM della pagina |
+| Educazione Fisica selectable | Sì (dati statici aggiornati)                   |
 
 Nota: i nuclei (`Abilità motorie`, `Corpo e percezione`, `Gioco e sport`, `Espressione e inclusione`) sono renderizzati dinamicamente dal runtime JS; la loro presenza è confermata dalla struttura S=7,N=4,P=7,D=0 verificata nello step 4.5.
 
@@ -117,24 +118,24 @@ Nessun deploy manuale eseguito. Aggiornamento GitHub Pages avvenuto automaticame
 
 ## 5. Esito
 
-| Dimensione | Esito | Note |
-|---|---|---|
-| Struttura JSON | PASS | 7 unità, 4 nuclei |
-| Validator | PASS | 14/14, 0 errori |
-| Shape test | PASS | S=7, N=4, P=7, D=0 |
-| Runtime structure | PASS | 7 strutture, 4 nodi, 7 progressioni, D=0 |
-| CML-210A wording in runtime | RIFLESSO | Dati statici aggiornati |
-| Public GitHub Pages | PASS | HTTP 200, contenuto aggiornato visibile |
-| No manual deploy | CONFERMATO | Auto-deploy da GitHub Pages |
-| No secrets | CONFERMATO | Scan pulito |
+| Dimensione                  | Esito      | Note                                     |
+| --------------------------- | ---------- | ---------------------------------------- |
+| Struttura JSON              | PASS       | 7 unità, 4 nuclei                        |
+| Validator                   | PASS       | 14/14, 0 errori                          |
+| Shape test                  | PASS       | S=7, N=4, P=7, D=0                       |
+| Runtime structure           | PASS       | 7 strutture, 4 nodi, 7 progressioni, D=0 |
+| CML-210A wording in runtime | RIFLESSO   | Dati statici aggiornati                  |
+| Public GitHub Pages         | PASS       | HTTP 200, contenuto aggiornato visibile  |
+| No manual deploy            | CONFERMATO | Auto-deploy da GitHub Pages              |
+| No secrets                  | CONFERMATO | Scan pulito                              |
 
 ## 6. Commits
 
-| Step | Commit |
-|---|---|
-| Start | `39c4f4a` |
+| Step      | Commit    |
+| --------- | --------- |
+| Start     | `39c4f4a` |
 | CML-210BS | `53013df` |
-| Pushed | `53013df` |
+| Pushed    | `53013df` |
 
 ## 7. File modificati
 

@@ -8,26 +8,27 @@ Valutare la readiness documentale di Educazione Fisica per la creazione del file
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `d3bd4a2` |
-| origin/main | `d3bd4a2` |
-| Working tree iniziale | Pulito, sync con origin/main |
-| `git diff --check` preflight | PASS |
-| Collisione `docs/03_execution/CML-177.md` | Assente |
-| Collisione report CML-177 | Assente |
+| Parametro                                 | Valore                       |
+| ----------------------------------------- | ---------------------------- |
+| Root Git                                  | `C:\Users\anton\CurManLight` |
+| Branch                                    | `main`                       |
+| Commit iniziale                           | `d3bd4a2`                    |
+| origin/main                               | `d3bd4a2`                    |
+| Working tree iniziale                     | Pulito, sync con origin/main |
+| `git diff --check` preflight              | PASS                         |
+| Collisione `docs/03_execution/CML-177.md` | Assente                      |
+| Collisione report CML-177                 | Assente                      |
 
 ## 3. Stato consolidato 10/14
 
-| Area | Stato |
-|------|-------|
-| Dati normalizzati | 10/14 file `.normalized.json` presenti |
-| Runtime mappa | 10/14 discipline integrate |
-| Shape runtime test | 10/10 PASS |
+| Area               | Stato                                  |
+| ------------------ | -------------------------------------- |
+| Dati normalizzati  | 10/14 file `.normalized.json` presenti |
+| Runtime mappa      | 10/14 discipline integrate             |
+| Shape runtime test | 10/10 PASS                             |
 
 ### Discipline completate
+
 1. Tecnologia
 2. Matematica
 3. Italiano
@@ -45,6 +46,7 @@ CML-172 ha approvato la sequenza:
 **Musica → Educazione Fisica → Seconda Lingua Comunitaria → Religione Cattolica → Latino LEL**
 
 Educazione Fisica è la seconda candidata con raccomandazione esplicita:
+
 > "utile per completare l'area corpo/movimento, ma richiede audit specifico per evitare normalizzazioni premature"
 
 ## 5. Richiamo CML-157I
@@ -52,6 +54,7 @@ Educazione Fisica è la seconda candidata con raccomandazione esplicita:
 CML-157I (non trovato come file separato, ma riferito in CML-172) classificava Educazione Fisica come "non pronta".
 
 Strutture proposte (da CML-157I):
+
 1. Corpo e percezione
 2. Abilità motorie
 3. Gioco e sport
@@ -59,13 +62,14 @@ Strutture proposte (da CML-157I):
 5. Espressionione e inclusione
 
 **Classificazione attuale**:
-| Struttura | Classificazione | Note |
-|-----------|-----------------|------|
-| Corpo e percezione | Non supportata | Non formalizzata, solo indicata in report genrici |
-| Abilità motorie | Ipotesi prudente | Non documentata in unità specifiche |
-| Gioco e sport | Ipotesi prudente | Implicito in report, non strutturato |
-| Salute e benessere | Ipotesi prudente | Temi sensibili, non formalizzati |
-| Espressione e inclusione | Ipotesi prudente | Non specificato nella documentazione |
+
+| Struttura                | Classificazione  | Note                                              |
+| ------------------------ | ---------------- | ------------------------------------------------- |
+| Corpo e percezione       | Non supportata   | Non formalizzata, solo indicata in report genrici |
+| Abilità motorie          | Ipotesi prudente | Non documentata in unità specifiche               |
+| Gioco e sport            | Ipotesi prudente | Implicito in report, non strutturato              |
+| Salute e benessere       | Ipotesi prudente | Temi sensibili, non formalizzati                  |
+| Espressione e inclusione | Ipotesi prudente | Non specificato nella documentazione              |
 
 ## 6. Verifica presenza/assenza di `educazione-fisica.normalized.json`
 
@@ -85,15 +89,19 @@ Strutture proposte (da CML-157I):
 ## 8. Evidenze disponibili per Educazione Fisica
 
 ### Copertura ordini
+
 **Completa** — Infanzia, Primaria, Secondaria. Confermata da CML-097, CML-104.
 
 ### Riferimenti a strutture/nuclei
+
 CML-104: "4 nuclei chiari, evidenze comportamentali osservabili"
 
 CML-172 goal:
+
 > "Modello su corpo, movimento, gioco/sport, salute/benessere, espressione e inclusione"
 
 ### Riferimenti a conteggi
+
 CML-113: "5 voci" (senza dettaglio specifico)
 
 CML-016A: non presente (Educazione Fisica non elencata nei contatori)
@@ -112,32 +120,32 @@ CML-016A: non presente (Educazione Fisica non elencata nei contatori)
 
 Classificate con prudenza:
 
-| Struttura | Classificazione | Note |
-|-----------|-----------------|------|
-| Corpo, movimento e schema corporeo | Ipotesi prudente | Non documentata in dettaglio |
-| Gioco, regole e collaborazione sportiva | Ipotesi prudente | Evidenze comportamentali osservabili |
-| Salute, benessere e stili di vita attivi | Ipotesi prudente | Rischio istituzionale medio |
-| Espressione corporea e comunicazione non verbale | Ipotesi prudente | Non documentata specificamente |
-| Sicurezza e prevenzione | Ipotesi prudente | Tema ricorrente, non formalizzato |
-| Inclusione e adattamento motorio | Ipotesi prudente | Non supportata da fonti |
+| Struttura                                        | Classificazione  | Note                                 |
+| ------------------------------------------------ | ---------------- | ------------------------------------ |
+| Corpo, movimento e schema corporeo               | Ipotesi prudente | Non documentata in dettaglio         |
+| Gioco, regole e collaborazione sportiva          | Ipotesi prudente | Evidenze comportamentali osservabili |
+| Salute, benessere e stili di vita attivi         | Ipotesi prudente | Rischio istituzionale medio          |
+| Espressione corporea e comunicazione non verbale | Ipotesi prudente | Non documentata specificamente       |
+| Sicurezza e prevenzione                          | Ipotesi prudente | Tema ricorrente, non formalizzato    |
+| Inclusione e adattamento motorio                 | Ipotesi prudente | Non supportata da fonti              |
 
 ## 11. Possibili nodi disciplinari
 
-| Nodo | Classificazione |
-|------|-----------------|
-| Movimento e equilibrio | Ipotesi prudente |
-| Coordinazione motoria | Ipotesi prudente |
-| Gioco collaborativo | Ipotesi prudente |
-| Attività sportiva | Ipotesi prudente |
-| Salute e stili di vita | Ipotesi prudente |
+| Nodo                    | Classificazione  |
+| ----------------------- | ---------------- |
+| Movimento e equilibrio  | Ipotesi prudente |
+| Coordinazione motoria   | Ipotesi prudente |
+| Gioco collaborativo     | Ipotesi prudente |
+| Attività sportiva       | Ipotesi prudente |
+| Salute e stili di vita  | Ipotesi prudente |
 | Espressione non verbale | Ipotesi prudente |
 
 ## 12. Possibile progressione verticale
 
-| Ordine | Disponibilità |
-|--------|---------------|
-| Infanzia | Da audit ulteriore |
-| Primaria | Da audit ulteriore |
+| Ordine     | Disponibilità      |
+| ---------- | ------------------ |
+| Infanzia   | Da audit ulteriore |
+| Primaria   | Da audit ulteriore |
 | Secondaria | Da audit ulteriore |
 
 **Gap critico**: Non esiste traccia strutturata di evidenze per classe/fascia.
@@ -150,27 +158,27 @@ Raccomandazione: `decisioniCurricolari: []`
 
 ## 14. Tabella readiness
 
-| Criterio | Valutazione |
-|----------|-------------|
-| Readiness documentale | Bassa |
-| Disponibilità dati | Bassa (solo report generi, nessun `.normalized.json`) |
-| Rischio dati | Medio |
-| Rischio istituzionale | Medio |
-| Complessità normalizzazione | Alta |
-| Rischio invenzione contenuti | Alto |
-| Compatibilità contratto normalizzato | Piena (a livello formale) |
-| **Raccomandazione** | **Richiede audit aggiuntivo** |
+| Criterio                             | Valutazione                                           |
+| ------------------------------------ | ----------------------------------------------------- |
+| Readiness documentale                | Bassa                                                 |
+| Disponibilità dati                   | Bassa (solo report generi, nessun `.normalized.json`) |
+| Rischio dati                         | Medio                                                 |
+| Rischio istituzionale                | Medio                                                 |
+| Complessità normalizzazione          | Alta                                                  |
+| Rischio invenzione contenuti         | Alto                                                  |
+| Compatibilità contratto normalizzato | Piena (a livello formale)                             |
+| **Raccomandazione**                  | **Richiede audit aggiuntivo**                         |
 
 ## 15. Confronto con Musica
 
-| Aspetto | Musica | Educazione Fisica |
-|---------|--------|-------------------|
-| Items documentati | 6 (CML-109) | 5 indicati (CML-113) ma non dettagliati |
-| Nuclei formalizzati | 3 | 4 indicati ma non formalizzati |
-| Progressione verticale | Ricostruibile | Non ricostruibile |
-| IN 2025 references | Espliciti (notazione, canto) | Assenti |
-| Rischio istituzionale | Basso | Medio |
-| Pronta per data preparation | Sì (con cautele) | No |
+| Aspetto                     | Musica                       | Educazione Fisica                       |
+| --------------------------- | ---------------------------- | --------------------------------------- |
+| Items documentati           | 6 (CML-109)                  | 5 indicati (CML-113) ma non dettagliati |
+| Nuclei formalizzati         | 3                            | 4 indicati ma non formalizzati          |
+| Progressione verticale      | Ricostruibile                | Non ricostruibile                       |
+| IN 2025 references          | Espliciti (notazione, canto) | Assenti                                 |
+| Rischio istituzionale       | Basso                        | Medio                                   |
+| Pronta per data preparation | Sì (con cautele)             | No                                      |
 
 Musica era pronta perché aveva nuclei e traguardi ricostruibili. Educazione Fisica non ha dati sufficienti per una ricostruzione sicura.
 
@@ -190,6 +198,7 @@ Non procedere con CML-178 `EDUCAZIONE_FISICA_NORMALIZED_DATA_PREPARATION` perch�
 `CML-178 — EDUCAZIONE_FISICA_DETAILED_AUDIT_REQUIRED`
 
 Audit richiesto per:
+
 - Estrarre nuclei formali dal DOCX o documentazione ufficiale
 - Definire la progressione verticale classe per classe
 - Classificare evidenze osservabili

@@ -23,6 +23,7 @@ Map the published runtime folder `_published_snapshot/netlify-current/`, recover
 ### 1. Runtime is a functional superset of prototypes
 
 The published single-file SPA contains:
+
 - Production data for **all 14 disciplines** across 3 school orders (Infanzia, Primaria, Secondaria)
 - **Side-by-side IN2012 → IN2025 comparison** with per-item status tracking
 - **Full approve/reject/edit decision workflow**
@@ -34,6 +35,7 @@ The published single-file SPA contains:
 ### 2. Prototypes are concept models only
 
 Both cml001 and cml002 contain:
+
 - Only **3 sample disciplines** with placeholder or excerpt content
 - **No comparison UI** (no side-by-side panels)
 - A **revision-proposal metadata model** (revisions array with priority/status)
@@ -44,22 +46,24 @@ Both cml001 and cml002 contain:
 ### 3. Zero code lineage
 
 The runtime and prototypes share no code. They were built independently:
+
 - Runtime: single-file SPA with inline data
 - Prototypes: modular architecture (app.js + content.js + styles.css) with `window.CURMANLIGHT_DATA` global
 
 ### 4. localStorage model mismatch
 
-| Aspect | Runtime | Prototypes |
-|--------|---------|------------|
-| Key | `curricoloVerticaleDonMilani.v3.ibrido.localState` | `curmanlight.cml00{1,2}.revisions.v1` |
-| Content | Entire DATA + profile + UI state | revisions array only |
-| Granularity | Per-item decisions | Per-proposal metadata |
+| Aspect      | Runtime                                            | Prototypes                            |
+| ----------- | -------------------------------------------------- | ------------------------------------- |
+| Key         | `curricoloVerticaleDonMilani.v3.ibrido.localState` | `curmanlight.cml00{1,2}.revisions.v1` |
+| Content     | Entire DATA + profile + UI state                   | revisions array only                  |
+| Granularity | Per-item decisions                                 | Per-proposal metadata                 |
 
 ## Critical Conclusion
 
 **Do not copy CML-001/CML-002 prototype code into the runtime for CML-003R.**
 
 Prototypes may be used only as **conceptual reference** for:
+
 - Guided-view clarity and orientation
 - Read-only institutional/general sections
 - Separation between official content and revision workflow
@@ -68,6 +72,7 @@ Prototypes may be used only as **conceptual reference** for:
 ## CML-003R Recommendation
 
 Start from the published runtime and perform **conservative integration**:
+
 - Improve orientation (navigation clarity, user pathway)
 - Add or expose guided read-only institutional/general sections
 - Preserve all 14-discipline dataset
@@ -81,6 +86,7 @@ Start from the published runtime and perform **conservative integration**:
 ## Files Changed
 
 This recovery slice touches only:
+
 - `docs/03_execution/CML-002R.md`
 - `report/CML-002R_published_runtime_recovery.md`
 

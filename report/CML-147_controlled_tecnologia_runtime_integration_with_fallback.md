@@ -2,12 +2,12 @@
 
 ## Fotografia iniziale
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD | `8fb49a0` |
-| origin/main | `810ae84` |
-| Commit locali ahead | 3 |
+| Parametro           | Valore    |
+| ------------------- | --------- |
+| Branch              | `main`    |
+| HEAD                | `8fb49a0` |
+| origin/main         | `810ae84` |
+| Commit locali ahead | 3         |
 
 ## Riferimenti
 
@@ -26,6 +26,7 @@ node tools/generate-static-mappa-dati.mjs content/curriculum/tecnologia.normaliz
 File: `_published_snapshot/netlify-current/index.html`
 
 Linee 2039-2201:
+
 1. Rinominato `TECNOLOGIA_MAPPA_DATI` → `TECNOLOGIA_MAPPA_DATI_FALLBACK`
 2. Aggiunto `TECNOLOGIA_MAPPA_DATI_GENERATA` (blocco pipeline)
 3. Fallback: `TECNOLOGIA_MAPPA_DATI = TECNOLOGIA_MAPPA_DATI_GENERATA || TECNOLOGIA_MAPPA_DATI_FALLBACK`
@@ -37,12 +38,12 @@ Linee 2039-2201:
 
 ## Controlli statici
 
-| Verifica | Esito |
-|----------|-------|
-| Struttura JS valida | ✅ |
-| Solo Tecnologia modificata | ✅ |
-| MATEMATICA_MAPPA_DATI non toccato | ✅ |
-| ITALIANO_MAPPA_DATI non toccato | ✅ |
+| Verifica                          | Esito |
+| --------------------------------- | ----- |
+| Struttura JS valida               | ✅    |
+| Solo Tecnologia modificata        | ✅    |
+| MATEMATICA_MAPPA_DATI non toccato | ✅    |
+| ITALIANO_MAPPA_DATI non toccato   | ✅    |
 
 ## Conferme
 

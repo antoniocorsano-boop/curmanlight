@@ -87,10 +87,10 @@ Importa gli esiti dipartimentali `.cml`, verifica completezza e coerenza, genera
 ### 5. Il dipartimento formula l'esito
 
 - Per ogni proposta, indicare un esito:
-  - *Confluita nella sintesi* — la proposta è stata assorbita nella sintesi finale
-  - *Riformulata dal dipartimento* — la proposta è stata modificata
-  - *Assorbita in altra proposta* — la proposta confluisce in altra
-  - *Da chiarire* — serve un chiarimento prima di decidere
+  - _Confluita nella sintesi_ — la proposta è stata assorbita nella sintesi finale
+  - _Riformulata dal dipartimento_ — la proposta è stata modificata
+  - _Assorbita in altra proposta_ — la proposta confluisce in altra
+  - _Da chiarire_ — serve un chiarimento prima di decidere
 - Cliccare **"⬇️ Esporta esito dipartimento .cml"**
 - Viene scaricato un file con nome tipo `esito_dipartimento_2026-06-22.cml`
 - Inviare il file al referente curricolo
@@ -111,12 +111,12 @@ Importa gli esiti dipartimentali `.cml`, verifica completezza e coerenza, genera
 
 ## Cosa scaricare e quando
 
-| Documento | Ruolo | Quando |
-|---|---|---|
-| Proposta docente `.cml` | Docente | Dopo aver revisionato la propria disciplina |
-| Esito dipartimentale `.cml` | Dipartimento | Dopo aver valutato le proposte dei docenti |
-| Report gruppo di lavoro `.md` | Referente | Dopo aver importato tutti gli esiti dipartimentali |
-| Curricolo definitivo (Word/Markdown/PDF) | Chiunque | Dalla scheda "Curricolo Definitivo", solo dopo che le voci sono state approvate |
+| Documento                                | Ruolo        | Quando                                                                          |
+| ---------------------------------------- | ------------ | ------------------------------------------------------------------------------- |
+| Proposta docente `.cml`                  | Docente      | Dopo aver revisionato la propria disciplina                                     |
+| Esito dipartimentale `.cml`              | Dipartimento | Dopo aver valutato le proposte dei docenti                                      |
+| Report gruppo di lavoro `.md`            | Referente    | Dopo aver importato tutti gli esiti dipartimentali                              |
+| Curricolo definitivo (Word/Markdown/PDF) | Chiunque     | Dalla scheda "Curricolo Definitivo", solo dopo che le voci sono state approvate |
 
 ---
 
@@ -164,4 +164,4 @@ Importa gli esiti dipartimentali `.cml`, verifica completezza e coerenza, genera
 
 **Versione pubblica:** https://antoniocorsano-boop.github.io/curmanlight
 
-*Documento aggiornato al 22/06/2026. Lo strumento è in fase di sviluppo collaborativo: le funzionalità descritte corrispondono alla versione corrente.*
+_Documento aggiornato al 22/06/2026. Lo strumento è in fase di sviluppo collaborativo: le funzionalità descritte corrispondono alla versione corrente._

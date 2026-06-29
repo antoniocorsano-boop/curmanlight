@@ -24,14 +24,14 @@ Una schermata, un compito, una decisione principale.
 
 54 inserzioni, 65 rimozioni. Tutte le modifiche sono limitate alla vista Revisione e alla navigazione.
 
-| Intervento | Azione | Dettaglio |
-|---|---|---|
-| **Esportazioni confronto rimosse** | Rimossa `toolbar-export` (toggle + 6 pulsanti Word/Copia/Markdown/PDF/CML) dalla toolbar Revisione | Le funzioni JS (exportWord, copyForWord, exportMarkdown, exportPDF, exportTeacherCml, uploadTeacherCmlToDrive) sono preservate per Riepilogo ed Esportazioni |
-| **Usage notice compattata** | Sostituito `<details>` con `<p>` singola riga | Da 5 righe a 1 riga: "Area Revisione: scegli, adatta o registra le decisioni..." |
-| **Strumenti processo spostati** | Rimosso `<details class="tool-group">` da `#tab-lavoro`; creato `#tab-processo` con import/validazione | Nuovo tab nella subnav Curriculum: `🔧 Processo` |
-| **Export disciplina richiamabile** | Rimosso `panel.style.display = 'block'` da `render()`; aggiunto pulsante `📝 Bozza disciplina` nella toolbar | Export disciplina visibile solo su click, non più automatico |
-| **Subnav aggiornata** | Aggiunto pulsante `🔧 Processo` in `#subnav-curriculum` e `mobile-menu` | 5 voci: Consulta, Revisione, Processo, Definitivo, Fonti |
-| **setTab() aggiornata** | Aggiunto `processo` a parentMap, display toggle, csm array, mbbMap, sidebar show, breadcrumb, cruscotto hide | Tab processo isolato ma sotto parent "curricolo" |
+| Intervento                         | Azione                                                                                                       | Dettaglio                                                                                                                                                    |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Esportazioni confronto rimosse** | Rimossa `toolbar-export` (toggle + 6 pulsanti Word/Copia/Markdown/PDF/CML) dalla toolbar Revisione           | Le funzioni JS (exportWord, copyForWord, exportMarkdown, exportPDF, exportTeacherCml, uploadTeacherCmlToDrive) sono preservate per Riepilogo ed Esportazioni |
+| **Usage notice compattata**        | Sostituito `<details>` con `<p>` singola riga                                                                | Da 5 righe a 1 riga: "Area Revisione: scegli, adatta o registra le decisioni..."                                                                             |
+| **Strumenti processo spostati**    | Rimosso `<details class="tool-group">` da `#tab-lavoro`; creato `#tab-processo` con import/validazione       | Nuovo tab nella subnav Curriculum: `🔧 Processo`                                                                                                             |
+| **Export disciplina richiamabile** | Rimosso `panel.style.display = 'block'` da `render()`; aggiunto pulsante `📝 Bozza disciplina` nella toolbar | Export disciplina visibile solo su click, non più automatico                                                                                                 |
+| **Subnav aggiornata**              | Aggiunto pulsante `🔧 Processo` in `#subnav-curriculum` e `mobile-menu`                                      | 5 voci: Consulta, Revisione, Processo, Definitivo, Fonti                                                                                                     |
+| **setTab() aggiornata**            | Aggiunto `processo` a parentMap, display toggle, csm array, mbbMap, sidebar show, breadcrumb, cruscotto hide | Tab processo isolato ma sotto parent "curricolo"                                                                                                             |
 
 ### `_published_snapshot/netlify-current/sw.js`
 

@@ -17,17 +17,17 @@ Selezionare la prossima disciplina da integrare nella mappa dati runtime CurManL
 
 ## Stato runtime attuale
 
-| Area | Valore |
-| --- | --- |
-| Discipline integrate | 7 / 14 |
-| Tecnologia | ✅ integrata |
-| Matematica | ✅ integrata |
-| Italiano | ✅ integrato |
-| Scienze | ✅ integrato |
-| Storia | ✅ integrata |
-| Geografia | ✅ integrata |
-| Inglese | ✅ integrato |
-| Discipline non coperte | 7 |
+| Area                   | Valore       |
+| ---------------------- | ------------ |
+| Discipline integrate   | 7 / 14       |
+| Tecnologia             | ✅ integrata |
+| Matematica             | ✅ integrata |
+| Italiano               | ✅ integrato |
+| Scienze                | ✅ integrato |
+| Storia                 | ✅ integrata |
+| Geografia              | ✅ integrata |
+| Inglese                | ✅ integrato |
+| Discipline non coperte | 7            |
 
 ## Discipline candidate
 
@@ -57,19 +57,20 @@ Directory `content/curriculum/` — file `*.normalized.json` presenti:
 
 ## Tabella readiness candidate
 
-| Disciplina | File normalizzato | Strutture | Nodi | Progressione | Decisioni | Readiness | Rischio dati | Rischio runtime | Raccomandazione |
-|---|---|---|---|---|---|---|---|---|---|
-| Educazione Civica | NON DISPONIBILE | N/A | N/A | N/A | N/A | non pronta | alto | alto | richiede data preparation |
-| Musica | NON DISPONIBILE | N/A | N/A | N/A | N/A | non pronta | alto | alto | richiede data preparation |
-| Arte e Immagine | NON DISPONIBILE | N/A | N/A | N/A | N/A | non pronta | alto | alto | richiede data preparation |
-| Educazione Fisica | NON DISPONIBILE | N/A | N/A | N/A | N/A | non pronta | alto | alto | richiede data preparation |
-| Religione Cattolica | NON DISPONIBILE | N/A | N/A | N/A | N/A | non pronta | alto | alto | richiede data preparation |
-| Seconda Lingua Comunitaria | NON DISPONIBILE | N/A | N/A | N/A | N/A | non pronta | alto | alto | richiede data preparation |
-| Latino LEL | NON DISPONIBILE | N/A | N/A | N/A | N/A | non pronta | alto | alto | richiede data preparation |
+| Disciplina                 | File normalizzato | Strutture | Nodi | Progressione | Decisioni | Readiness  | Rischio dati | Rischio runtime | Raccomandazione           |
+| -------------------------- | ----------------- | --------- | ---- | ------------ | --------- | ---------- | ------------ | --------------- | ------------------------- |
+| Educazione Civica          | NON DISPONIBILE   | N/A       | N/A  | N/A          | N/A       | non pronta | alto         | alto            | richiede data preparation |
+| Musica                     | NON DISPONIBILE   | N/A       | N/A  | N/A          | N/A       | non pronta | alto         | alto            | richiede data preparation |
+| Arte e Immagine            | NON DISPONIBILE   | N/A       | N/A  | N/A          | N/A       | non pronta | alto         | alto            | richiede data preparation |
+| Educazione Fisica          | NON DISPONIBILE   | N/A       | N/A  | N/A          | N/A       | non pronta | alto         | alto            | richiede data preparation |
+| Religione Cattolica        | NON DISPONIBILE   | N/A       | N/A  | N/A          | N/A       | non pronta | alto         | alto            | richiede data preparation |
+| Seconda Lingua Comunitaria | NON DISPONIBILE   | N/A       | N/A  | N/A          | N/A       | non pronta | alto         | alto            | richiede data preparation |
+| Latino LEL                 | NON DISPONIBILE   | N/A       | N/A  | N/A          | N/A       | non pronta | alto         | alto            | richiede data preparation |
 
 ## Validatore curriculum
 
 `node tools/validate-cml-normalized-curriculum.mjs`: PASS
+
 - 7 file / 94 unità / `overallValid: true` / 0 errori
 - Tutti i file validati corrispondono alle 7 discipline già integrate
 - Nessun file candidato disponibile per la validazione
@@ -89,6 +90,7 @@ Tutte le 7 discipline non ancora integrate mancano del file `.normalized.json` n
 ## Scope consigliato per CML-165
 
 CML-165 dovrebbe essere un task di **data preparation**: creazione del file `.normalized.json` per una disciplina ancora non coperta. La scelta della disciplina per la data preparation può basarsi su:
+
 - disponibilità di fonti (Indicazioni Nazionali 2012, proposte 2025)
 - completezza dei traguardi dichiarati nel modello 14/14
 - priorità didattica (es. Educazione Civica per raccordo con Cittadinanza)

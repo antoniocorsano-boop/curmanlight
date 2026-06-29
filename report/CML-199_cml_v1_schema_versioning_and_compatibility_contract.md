@@ -2,17 +2,17 @@
 
 ## 1. Baseline
 
-| Item | Value |
-|---|---|
-| Repo | `curmanlight` |
-| Branch | `main` |
-| Start commit | `32a724e` |
-| `origin/main` at start | `32a724e` |
-| Working tree at start | Clean |
-| Slice type | Docs-only contract definition |
-| Deploy | None |
-| Push | None |
-| Secrets | None |
+| Item                   | Value                         |
+| ---------------------- | ----------------------------- |
+| Repo                   | `curmanlight`                 |
+| Branch                 | `main`                        |
+| Start commit           | `32a724e`                     |
+| `origin/main` at start | `32a724e`                     |
+| Working tree at start  | Clean                         |
+| Slice type             | Docs-only contract definition |
+| Deploy                 | None                          |
+| Push                   | None                          |
+| Secrets                | None                          |
 
 ## 2. Files Inspected
 
@@ -52,32 +52,32 @@ It covers:
 
 ## 4. Decisions Made
 
-| # | Decision | Rationale |
-|---|---|---|
-| 1 | `.cml v1.0` is the current and only supported schema family | Keeps contract simple; future versions require explicit bump |
-| 2 | Two file types only: `teacher_proposal` and `department_outcome` | Matches current runtime and historical workflow |
-| 3 | Referent exports Markdown, not `.cml` | Matches current runtime (`downloadReferentGroupWorkReport`) |
-| 4 | `schemaVersion` required but missing is legacy warning, not block | Preserves compatibility with pre-audit files |
-| 5 | Unsupported/malformed version is blocking | Prevents silent drift into incompatible formats |
-| 6 | Item-level semantic gaps (`proposta`, `motivazione`, `fonte`) are warnings, not blocks | Allows workflows to proceed when partial data exists |
-| 7 | Duplicate imports are warning-only, still enter state | User decides whether to remove; throughput prioritized |
-| 8 | Mixed-discipline batches allowed with warning | Supports multi-discipline teachers and cross-discipline departments |
-| 9 | `discipline` is primary; `disciplines[]` is derived | Clear single source of truth without breaking existing exports |
-| 10 | Size limits defined to protect browser memory | No backend; local-first constraint |
-| 11 | Drive endpoint is untrusted boundary without allowlist | Security-first default until IT configures explicit trust |
-| 12 | Unknown fields must be preserved, not stripped | Forward-compatible import behavior |
-| 13 | Advisory fields (`role`, `checks`) may evolve without version bump | Reduces friction for minor metadata changes |
+| #   | Decision                                                                               | Rationale                                                           |
+| --- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 1   | `.cml v1.0` is the current and only supported schema family                            | Keeps contract simple; future versions require explicit bump        |
+| 2   | Two file types only: `teacher_proposal` and `department_outcome`                       | Matches current runtime and historical workflow                     |
+| 3   | Referent exports Markdown, not `.cml`                                                  | Matches current runtime (`downloadReferentGroupWorkReport`)         |
+| 4   | `schemaVersion` required but missing is legacy warning, not block                      | Preserves compatibility with pre-audit files                        |
+| 5   | Unsupported/malformed version is blocking                                              | Prevents silent drift into incompatible formats                     |
+| 6   | Item-level semantic gaps (`proposta`, `motivazione`, `fonte`) are warnings, not blocks | Allows workflows to proceed when partial data exists                |
+| 7   | Duplicate imports are warning-only, still enter state                                  | User decides whether to remove; throughput prioritized              |
+| 8   | Mixed-discipline batches allowed with warning                                          | Supports multi-discipline teachers and cross-discipline departments |
+| 9   | `discipline` is primary; `disciplines[]` is derived                                    | Clear single source of truth without breaking existing exports      |
+| 10  | Size limits defined to protect browser memory                                          | No backend; local-first constraint                                  |
+| 11  | Drive endpoint is untrusted boundary without allowlist                                 | Security-first default until IT configures explicit trust           |
+| 12  | Unknown fields must be preserved, not stripped                                         | Forward-compatible import behavior                                  |
+| 13  | Advisory fields (`role`, `checks`) may evolve without version bump                     | Reduces friction for minor metadata changes                         |
 
 ## 5. Rejected Alternatives
 
-| Alternative | Reason Rejected |
-|---|---|
-| Block missing `schemaVersion` | Too aggressive; would break existing v1.0 files without version field |
-| Block duplicate proposals entirely | Would prevent legitimate re-submissions; warning with user decision is safer |
-| Enforce `role` field strictly with `fileType` | Redundant with `fileType`; adds validation burden with no incremental safety |
-| Require `checks` booleans to be true on import | `checks` are advisory snapshots; recomputation is the importer's job, not the file's |
-| Define multi-discipline package format in v1.0 | Scope creep; defer to v2.0 or a separate extension contract |
-| Make `fonte` / `motivazione` blocking | Would block valid partial drafts; sematic expectations, not structural requirements |
+| Alternative                                      | Reason Rejected                                                                      |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| Block missing `schemaVersion`                    | Too aggressive; would break existing v1.0 files without version field                |
+| Block duplicate proposals entirely               | Would prevent legitimate re-submissions; warning with user decision is safer         |
+| Enforce `role` field strictly with `fileType`    | Redundant with `fileType`; adds validation burden with no incremental safety         |
+| Require `checks` booleans to be true on import   | `checks` are advisory snapshots; recomputation is the importer's job, not the file's |
+| Define multi-discipline package format in v1.0   | Scope creep; defer to v2.0 or a separate extension contract                          |
+| Make `fonte` / `motivazione` blocking            | Would block valid partial drafts; sematic expectations, not structural requirements  |
 | Add allowlist to Drive endpoint in this contract | Implementation detail; belongs in runtime hardening (future slice), not the contract |
 
 ## 6. CML-200 Implementation Scope
@@ -98,10 +98,12 @@ CML-200 will harden the import validators and error handling based on this contr
 CML-201 will run an end-to-end smoke test across all three roles:
 
 ### Teacher Role
+
 - Export `teacher_proposal` for single discipline → valid file.
 - Export `teacher_proposal` for multiple disciplines → valid file with mixed scope.
 
 ### Department Role
+
 - Import single valid teacher proposal → accepted.
 - Import batch with mixed disciplines → accepted with mixed-discipline warning.
 - Import malformed JSON → blocked (`invalid_json`).
@@ -113,6 +115,7 @@ CML-201 will run an end-to-end smoke test across all three roles:
 - Export `department_outcome` from imported proposals → valid file.
 
 ### Referent Role
+
 - Import valid `department_outcome` → accepted.
 - Import outcome with empty handling → accepted, mapped to `senza_esito`.
 - Import outcome with discipline mismatch → accepted with `discipline_mismatch` warning.
@@ -120,9 +123,11 @@ CML-201 will run an end-to-end smoke test across all three roles:
 - Export Markdown report from imported outcomes → non-empty report produced.
 
 ### Example Files
+
 All examples in `docs/04_user/esempi_cml/` must pass as valid input without modification.
 
 ### Pass Criteria
+
 - All blocking errors from Section 13.1 detected and reported.
 - All warnings from Section 13.2 detected and surfaced.
 - No example file is unexpectedly blocked or warned.
@@ -138,8 +143,8 @@ All examples in `docs/04_user/esempi_cml/` must pass as valid input without modi
 
 ## 9. Meta
 
-| Property | Value |
-|---|---|
-| Start commit | `32a724e` |
-| Final commit | `bb9d0f5` |
-| Verdict | `CML_199_CML_V1_SCHEMA_VERSIONING_AND_COMPATIBILITY_CONTRACT_READY` |
+| Property     | Value                                                               |
+| ------------ | ------------------------------------------------------------------- |
+| Start commit | `32a724e`                                                           |
+| Final commit | `bb9d0f5`                                                           |
+| Verdict      | `CML_199_CML_V1_SCHEMA_VERSIONING_AND_COMPATIBILITY_CONTRACT_READY` |

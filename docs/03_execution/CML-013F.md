@@ -7,12 +7,12 @@ Modifica runtime su `index.html`.
 
 ## Preflight
 
-| Campo | Valore |
-|---|---|
-| Branch | `cml-008r-fix-markdown-decision-summary` |
-| HEAD | `a858374` |
-| Working tree | Pulita ✅ |
-| CML-013E criteri | 11 criteri di accettazione |
+| Campo            | Valore                                   |
+| ---------------- | ---------------------------------------- |
+| Branch           | `cml-008r-fix-markdown-decision-summary` |
+| HEAD             | `a858374`                                |
+| Working tree     | Pulita ✅                                |
+| CML-013E criteri | 11 criteri di accettazione               |
 
 ## 1. Modifiche
 
@@ -49,19 +49,19 @@ Unico file: `_published_snapshot/netlify-current/index.html`
 
 ## 2. Criteri di accettazione CML-013E verificati
 
-| # | Criterio | Esito |
-|---|---|---|
-| 1 | Max 3 destinazioni principali visibili su mobile | ✅ Rev, Def, Esp in bottom bar |
-| 2 | Discipline solo nel contesto Revisione | ✅ Sidebar nascosta in Fonti/Generali |
-| 3 | Azioni secondarie in menu ☰ | ✅ Tutte le funzioni ⚙️ Azioni + altre |
-| 4 | Esporta in ≤2 tap | ✅ Bottom bar → tap Esp |
-| 5 | Nessuna perdita funzionale | ✅ Ogni funzione preservata |
-| 6 | Nessuna modifica dati | ✅ Local storage inalterato |
-| 7 | Logica approvazione/rifiuto intatta | ✅ Card, dettaglio, decisioni invariati |
-| 8 | Nessuna regressione desktop (≥901px) | ✅ Breakpoint verificato |
-| 9 | Touch target ≥44px | ✅ Bottom bar 44px, voci menu 44px |
-| 10 | Padding-bottom contenuto | ✅ 52px su main |
-| 11 | Breadcrumb visibile su mobile | ✅ Dinamico, sotto header |
+| #   | Criterio                                         | Esito                                   |
+| --- | ------------------------------------------------ | --------------------------------------- |
+| 1   | Max 3 destinazioni principali visibili su mobile | ✅ Rev, Def, Esp in bottom bar          |
+| 2   | Discipline solo nel contesto Revisione           | ✅ Sidebar nascosta in Fonti/Generali   |
+| 3   | Azioni secondarie in menu ☰                     | ✅ Tutte le funzioni ⚙️ Azioni + altre  |
+| 4   | Esporta in ≤2 tap                                | ✅ Bottom bar → tap Esp                 |
+| 5   | Nessuna perdita funzionale                       | ✅ Ogni funzione preservata             |
+| 6   | Nessuna modifica dati                            | ✅ Local storage inalterato             |
+| 7   | Logica approvazione/rifiuto intatta              | ✅ Card, dettaglio, decisioni invariati |
+| 8   | Nessuna regressione desktop (≥901px)             | ✅ Breakpoint verificato                |
+| 9   | Touch target ≥44px                               | ✅ Bottom bar 44px, voci menu 44px      |
+| 10  | Padding-bottom contenuto                         | ✅ 52px su main                         |
+| 11  | Breadcrumb visibile su mobile                    | ✅ Dinamico, sotto header               |
 
 ## 3. Cosa NON è stato toccato
 
@@ -82,18 +82,18 @@ CML_013F_BOTTOM_BAR_MENU_OVERLAY_MOBILE_NAVIGATION_READY
 
 ## Output finale
 
-| Campo | Valore |
-|---|---|
-| Verdetto | `CML_013F_BOTTOM_BAR_MENU_OVERLAY_MOBILE_NAVIGATION_READY` |
-| Branch | `cml-008r-fix-markdown-decision-summary` |
-| HEAD | `a858374` + modifiche runtime |
-| File modificato | `_published_snapshot/netlify-current/index.html` |
-| Breakpoint mobile | ≤900px |
-| Bottom bar | ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰ Menu |
-| Menu ☰ | Fonti, Generali, Azioni, Salva/Backup/Importa/Ripristina |
-| Sidebar discipline | Contestuale (solo Revisione/Definitivo) |
-| Breadcrumb | Dinamico via updateBreadcrumb() |
-| Deploy | `https://curmanlight.netlify.app` |
+| Campo              | Valore                                                     |
+| ------------------ | ---------------------------------------------------------- |
+| Verdetto           | `CML_013F_BOTTOM_BAR_MENU_OVERLAY_MOBILE_NAVIGATION_READY` |
+| Branch             | `cml-008r-fix-markdown-decision-summary`                   |
+| HEAD               | `a858374` + modifiche runtime                              |
+| File modificato    | `_published_snapshot/netlify-current/index.html`           |
+| Breakpoint mobile  | ≤900px                                                     |
+| Bottom bar         | ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰ Menu                      |
+| Menu ☰            | Fonti, Generali, Azioni, Salva/Backup/Importa/Ripristina   |
+| Sidebar discipline | Contestuale (solo Revisione/Definitivo)                    |
+| Breadcrumb         | Dinamico via updateBreadcrumb()                            |
+| Deploy             | `https://curmanlight.netlify.app`                          |
 
 ## Prossimo step
 

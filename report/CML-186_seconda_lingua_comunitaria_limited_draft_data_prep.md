@@ -8,18 +8,18 @@ Creare il file normalizzato di Seconda Lingua Comunitaria come bozza limitata, l
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `ba051ff` (allineato con `origin/main`) |
-| Working tree iniziale | pulito |
-| Dati normalizzati prima | 11/14 |
-| Runtime mappa | 11/14 |
-| Shape test | 11/11 PASS |
-| Discipline completate | Tecnologia, Italiano, Matematica, Scienze, Storia, Geografia, Inglese, Educazione Civica, Arte e Immagine, Musica, Educazione Fisica |
-| Discipline residue dopo | Religione Cattolica, Latino LEL |
-| Skill usate | `cml-readiness-audit` |
+| Parametro               | Valore                                                                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Root Git                | `C:\Users\anton\CurManLight`                                                                                                         |
+| Branch                  | `main`                                                                                                                               |
+| Commit iniziale         | `ba051ff` (allineato con `origin/main`)                                                                                              |
+| Working tree iniziale   | pulito                                                                                                                               |
+| Dati normalizzati prima | 11/14                                                                                                                                |
+| Runtime mappa           | 11/14                                                                                                                                |
+| Shape test              | 11/11 PASS                                                                                                                           |
+| Discipline completate   | Tecnologia, Italiano, Matematica, Scienze, Storia, Geografia, Inglese, Educazione Civica, Arte e Immagine, Musica, Educazione Fisica |
+| Discipline residue dopo | Religione Cattolica, Latino LEL                                                                                                      |
+| Skill usate             | `cml-readiness-audit`                                                                                                                |
 
 ## 3. Collegamento con CML-172, CML-185
 
@@ -59,24 +59,24 @@ Creare il file normalizzato di Seconda Lingua Comunitaria come bozza limitata, l
 
 ## 8. Sintesi contenuti
 
-| ID | Classe | Nucleo | Livello QCER |
-|---|---|---|---|
-| slc_sec_1_001 | 1 | Ascolto e comprensione orale | A1 |
-| slc_sec_1_002 | 1 | Produzione orale e interazione | A1 |
-| slc_sec_2_001 | 2 | Lettura e comprensione scritta | A1/A1+ |
-| slc_sec_2_002 | 2 | Produzione scritta | A1/A1+ |
-| slc_sec_3_001 | 3 | Interazione e produzione orale | A1+/A2 |
-| slc_sec_3_002 | 3 | Cultura e confronto interculturale | A1+/A2 |
+| ID            | Classe | Nucleo                             | Livello QCER |
+| ------------- | ------ | ---------------------------------- | ------------ |
+| slc_sec_1_001 | 1      | Ascolto e comprensione orale       | A1           |
+| slc_sec_1_002 | 1      | Produzione orale e interazione     | A1           |
+| slc_sec_2_001 | 2      | Lettura e comprensione scritta     | A1/A1+       |
+| slc_sec_2_002 | 2      | Produzione scritta                 | A1/A1+       |
+| slc_sec_3_001 | 3      | Interazione e produzione orale     | A1+/A2       |
+| slc_sec_3_002 | 3      | Cultura e confronto interculturale | A1+/A2       |
 
 ## 9. Marcatori limited draft
 
-| Marcatore | Valore |
-|---|---|
-| `humanValidationRequired` | `true` |
-| `validazioneUmana` | `true` (ogni unita) |
-| `stato` livello file | `bozza_generabile` |
-| `stato` unita | `nuovo` |
-| note dipartimento | Rinviano a CML-186, lingua target non specificata |
+| Marcatore                 | Valore                                            |
+| ------------------------- | ------------------------------------------------- |
+| `humanValidationRequired` | `true`                                            |
+| `validazioneUmana`        | `true` (ogni unita)                               |
+| `stato` livello file      | `bozza_generabile`                                |
+| `stato` unita             | `nuovo`                                           |
+| note dipartimento         | Rinviano a CML-186, lingua target non specificata |
 
 ## 10. Validazioni eseguite
 
@@ -87,20 +87,20 @@ Creare il file normalizzato di Seconda Lingua Comunitaria come bozza limitata, l
 
 ## 11. Verifica invarianti e limiti
 
-| Invariante | Risultato |
-|---|---|
-| Runtime invariato (11/14) | OK |
-| Shape test invariato (11/11 PASS) | OK |
-| `tools/` non modificati | OK |
-| Root `index.html` non modificato | OK |
-| `.claude/` non modificato | OK |
-| SchoolKB non modificato | OK |
-| No deploy | OK |
-| No push | OK |
-| `humanValidationRequired: true` | OK |
-| Language-neutral | OK |
-| Solo Secondaria | OK |
-| Nessuna credenziale/secret/token | OK |
+| Invariante                        | Risultato |
+| --------------------------------- | --------- |
+| Runtime invariato (11/14)         | OK        |
+| Shape test invariato (11/11 PASS) | OK        |
+| `tools/` non modificati           | OK        |
+| Root `index.html` non modificato  | OK        |
+| `.claude/` non modificato         | OK        |
+| SchoolKB non modificato           | OK        |
+| No deploy                         | OK        |
+| No push                           | OK        |
+| `humanValidationRequired: true`   | OK        |
+| Language-neutral                  | OK        |
+| Solo Secondaria                   | OK        |
+| Nessuna credenziale/secret/token  | OK        |
 
 ## 12. Decisioni chiave
 

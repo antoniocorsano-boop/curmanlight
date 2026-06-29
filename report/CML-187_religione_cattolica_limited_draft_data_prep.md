@@ -8,19 +8,19 @@ Creare il file normalizzato di Religione Cattolica (IRC) come bozza limitata e i
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `22c48af` (HEAD locale, 1 ahead origin/main) |
-| origin/main | `ba051ff` (CML-185-SYNC) |
-| Working tree iniziale | pulito |
-| Dati normalizzati prima | 12/14 |
-| Runtime mappa | 11/14 |
-| Shape test | 11/11 PASS |
-| Discipline completate | Tecnologia, Italiano, Matematica, Scienze, Storia, Geografia, Inglese, Educazione Civica, Arte e Immagine, Musica, Educazione Fisica, Seconda Lingua Comunitaria |
-| Discipline residue dopo | Latino LEL (ultima) |
-| Skill usate | `cml-readiness-audit` |
+| Parametro               | Valore                                                                                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Root Git                | `C:\Users\anton\CurManLight`                                                                                                                                     |
+| Branch                  | `main`                                                                                                                                                           |
+| Commit iniziale         | `22c48af` (HEAD locale, 1 ahead origin/main)                                                                                                                     |
+| origin/main             | `ba051ff` (CML-185-SYNC)                                                                                                                                         |
+| Working tree iniziale   | pulito                                                                                                                                                           |
+| Dati normalizzati prima | 12/14                                                                                                                                                            |
+| Runtime mappa           | 11/14                                                                                                                                                            |
+| Shape test              | 11/11 PASS                                                                                                                                                       |
+| Discipline completate   | Tecnologia, Italiano, Matematica, Scienze, Storia, Geografia, Inglese, Educazione Civica, Arte e Immagine, Musica, Educazione Fisica, Seconda Lingua Comunitaria |
+| Discipline residue dopo | Latino LEL (ultima)                                                                                                                                              |
+| Skill usate             | `cml-readiness-audit`                                                                                                                                            |
 
 ## 3. Collegamento con CML-172, CML-185
 
@@ -68,25 +68,25 @@ Creare il file normalizzato di Religione Cattolica (IRC) come bozza limitata e i
 
 ## 9. Sintesi contenuti
 
-| ID | Ordine | Classe | Nucleo | Contenuto |
-|---|---|---|---|---|
-| rc_inf_5_001 | Infanzia | fascia 5 | Dio e l'uomo | Prime scoperte religiose, racconti biblici, festivita, simboli |
-| rc_pri_1_001 | Primaria | 1 | Dio e l'uomo | Bibbia, creazione, mondo come dono |
-| rc_pri_3_001 | Primaria | 3 | La Bibbia e le altre fonti | Vangeli, parabola, Pasqua, prime comunita cristiane |
-| rc_pri_5_001 | Primaria | 5 | I valori etici e religiosi | Comandamenti, beatitudini, dialogo interreligioso |
-| rc_sec_1_001 | Secondaria | 1 | Dio e l'uomo | Antico Testamento, patriarchi, esodo, alleanza, profeti |
-| rc_sec_2_001 | Secondaria | 2 | La Bibbia e le altre fonti | Nuovo Testamento, Gesu storico, Vangeli, Paolo |
-| rc_sec_3_001 | Secondaria | 3 | I valori etici e religiosi | Etica cristiana, dottrina sociale, religioni monoteiste, orientali, dialogo |
+| ID           | Ordine     | Classe   | Nucleo                     | Contenuto                                                                   |
+| ------------ | ---------- | -------- | -------------------------- | --------------------------------------------------------------------------- |
+| rc_inf_5_001 | Infanzia   | fascia 5 | Dio e l'uomo               | Prime scoperte religiose, racconti biblici, festivita, simboli              |
+| rc_pri_1_001 | Primaria   | 1        | Dio e l'uomo               | Bibbia, creazione, mondo come dono                                          |
+| rc_pri_3_001 | Primaria   | 3        | La Bibbia e le altre fonti | Vangeli, parabola, Pasqua, prime comunita cristiane                         |
+| rc_pri_5_001 | Primaria   | 5        | I valori etici e religiosi | Comandamenti, beatitudini, dialogo interreligioso                           |
+| rc_sec_1_001 | Secondaria | 1        | Dio e l'uomo               | Antico Testamento, patriarchi, esodo, alleanza, profeti                     |
+| rc_sec_2_001 | Secondaria | 2        | La Bibbia e le altre fonti | Nuovo Testamento, Gesu storico, Vangeli, Paolo                              |
+| rc_sec_3_001 | Secondaria | 3        | I valori etici e religiosi | Etica cristiana, dottrina sociale, religioni monoteiste, orientali, dialogo |
 
 ## 10. Marcatori limited draft
 
-| Marcatore | Valore |
-|---|---|
-| `humanValidationRequired` | `true` |
-| `validazioneUmana` | `true` (ogni unita) |
-| `stato` livello file | `bozza_generabile` |
-| `stato` unita | `nuovo` |
-| note dipartimento | Rinviano a CML-187, specificano natura di draft |
+| Marcatore                 | Valore                                          |
+| ------------------------- | ----------------------------------------------- |
+| `humanValidationRequired` | `true`                                          |
+| `validazioneUmana`        | `true` (ogni unita)                             |
+| `stato` livello file      | `bozza_generabile`                              |
+| `stato` unita             | `nuovo`                                         |
+| note dipartimento         | Rinviano a CML-187, specificano natura di draft |
 
 ## 11. Validazioni eseguite
 
@@ -97,20 +97,20 @@ Creare il file normalizzato di Religione Cattolica (IRC) come bozza limitata e i
 
 ## 12. Verifica invarianti e limiti
 
-| Invariante | Risultato |
-|---|---|
-| Runtime invariato (11/14) | OK |
-| Shape test invariato (11/11 PASS) | OK |
-| `tools/` non modificati | OK |
-| Root `index.html` non modificato | OK |
-| `.claude/` non modificato | OK |
-| SchoolKB non modificato | OK |
-| No deploy | OK |
-| No push | OK |
-| `humanValidationRequired: true` | OK |
-| Nessuna credenziale/secret/token | OK |
-| Contenuti basati su fonti ufficiali | OK |
-| Nessuna invenzione curricolare | OK |
+| Invariante                          | Risultato |
+| ----------------------------------- | --------- |
+| Runtime invariato (11/14)           | OK        |
+| Shape test invariato (11/11 PASS)   | OK        |
+| `tools/` non modificati             | OK        |
+| Root `index.html` non modificato    | OK        |
+| `.claude/` non modificato           | OK        |
+| SchoolKB non modificato             | OK        |
+| No deploy                           | OK        |
+| No push                             | OK        |
+| `humanValidationRequired: true`     | OK        |
+| Nessuna credenziale/secret/token    | OK        |
+| Contenuti basati su fonti ufficiali | OK        |
+| Nessuna invenzione curricolare      | OK        |
 
 ## 13. Decisioni chiave
 

@@ -79,16 +79,17 @@ CML-077-PRE ha creato `DESIGN.md` come fonte di verità progettuale. Stitch ha g
 
 ## Options comparison
 
-| Opzione | Descrizione | Rischio | Sforzo | Valore | Raccomandata |
-|---------|-------------|---------|--------|--------|--------------|
-| **A** | Solo review, nessun runtime | Nullo | Nullo | Basso | ❌ |
-| **B** | Affinità visiva leggera, no dark mode | Basso | Medio | Medio | ❌ |
-| **C** | Affinità visiva leggera + dark mode automatica | Medio-basso | Medio-alto | Alto | ✅ |
-| **D** | Cambio tema ampio ispirato a Terra | Alto | Alto | Basso | ❌ |
+| Opzione | Descrizione                                    | Rischio     | Sforzo     | Valore | Raccomandata |
+| ------- | ---------------------------------------------- | ----------- | ---------- | ------ | ------------ |
+| **A**   | Solo review, nessun runtime                    | Nullo       | Nullo      | Basso  | ❌           |
+| **B**   | Affinità visiva leggera, no dark mode          | Basso       | Medio      | Medio  | ❌           |
+| **C**   | Affinità visiva leggera + dark mode automatica | Medio-basso | Medio-alto | Alto   | ✅           |
+| **D**   | Cambio tema ampio ispirato a Terra             | Alto        | Alto       | Basso  | ❌           |
 
 ### Selected option: C — Light visual affinity + automatic system dark mode
 
 **Motivazione:**
+
 - Valorizza le proposte Stitch senza snaturare CurManLight
 - La modalità scura automatica migliora accessibilità e comfort visivo
 - Nessuna dipendenza esterna (solo CSS variables + `@media`)

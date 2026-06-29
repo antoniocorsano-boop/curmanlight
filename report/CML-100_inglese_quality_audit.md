@@ -2,17 +2,17 @@
 
 ## Esito: **A** — gap non bloccanti
 
-| Campo | Valore |
-|---|---|
-| Audit ID | CML-100 |
-| Disciplina | Inglese |
-| Baseline | `f007ad2` |
-| Unità totali | 12 |
-| Copertura | Infanzia 1, Primaria 5, Secondaria 6 |
-| Nuclei | Ascolto, Lettura, Produzione orale e scritta, Interazione |
-| Livello QCER | A1/A2, orientamento B1 in classe 3ª |
-| humanValidationRequired | ✅ su tutte le 12 unità |
-| Modello 17 campi | ✅ adeguato per lingua non italiana |
+| Campo                   | Valore                                                    |
+| ----------------------- | --------------------------------------------------------- |
+| Audit ID                | CML-100                                                   |
+| Disciplina              | Inglese                                                   |
+| Baseline                | `f007ad2`                                                 |
+| Unità totali            | 12                                                        |
+| Copertura               | Infanzia 1, Primaria 5, Secondaria 6                      |
+| Nuclei                  | Ascolto, Lettura, Produzione orale e scritta, Interazione |
+| Livello QCER            | A1/A2, orientamento B1 in classe 3ª                       |
+| humanValidationRequired | ✅ su tutte le 12 unità                                   |
+| Modello 17 campi        | ✅ adeguato per lingua non italiana                       |
 
 ## Gap
 

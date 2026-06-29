@@ -6,19 +6,19 @@ Refresh docs-only del punteggio ergonomico dopo la slice CML-UX-NAVIGATION-AND-O
 
 ## Punteggi
 
-| Aspetto | Valore |
-|---------|--------|
-| Punteggio precedente | 72/100 |
+| Aspetto              | Valore     |
+| -------------------- | ---------- |
+| Punteggio precedente | 72/100     |
 | Punteggio aggiornato | **76/100** |
-| Delta complessivo | **+4** |
+| Delta complessivo    | **+4**     |
 
 ## Delta per area
 
-| Area | Pre | Post | Delta |
-|------|-----|------|-------|
-| Navigazione e orientamento | 6 | 8 | +2 |
-| Densità visiva e carico cognitivo | 10 | 12 | +2 |
-| Altre 7 aree | — | — | 0 |
+| Area                              | Pre | Post | Delta |
+| --------------------------------- | --- | ---- | ----- |
+| Navigazione e orientamento        | 6   | 8    | +2    |
+| Densità visiva e carico cognitivo | 10  | 12   | +2    |
+| Altre 7 aree                      | —   | —    | 0     |
 
 ## Miglioramenti confermati
 
@@ -31,24 +31,24 @@ Refresh docs-only del punteggio ergonomico dopo la slice CML-UX-NAVIGATION-AND-O
 
 ## Aree ancora sotto soglia (score < 70%)
 
-| Area | Score | Gap |
-|------|-------|-----|
-| Accessibilità e leggibilità | 6/10 (60%) | 4 |
-| Mobile/touch ergonomia | 7/10 (70%) | 3 |
-| Navigazione e orientamento | 8/10 (80%) | 2 |
-| Export Center | 8/10 (80%) | 2 |
+| Area                        | Score      | Gap |
+| --------------------------- | ---------- | --- |
+| Accessibilità e leggibilità | 6/10 (60%) | 4   |
+| Mobile/touch ergonomia      | 7/10 (70%) | 3   |
+| Navigazione e orientamento  | 8/10 (80%) | 2   |
+| Export Center               | 8/10 (80%) | 2   |
 
 Accessibilità è l'area più distante dal target, seguita da mobile.
 
 ## Tabella "per arrivare a 100"
 
-| Priorità | Area | Punti | Sforzo | Slice suggerita |
-|----------|------|-------|--------|-----------------|
-| 1 | Navigazione (hash sync) | +2 | Basso | CML-UX-HASH-SYNC |
-| 2 | Accessibilità (skip link, ARIA, alt-text) | +4 | Medio | CML-UX-ACCESSIBILITY-V2 |
-| 3 | Microcopy (tablabel compatta) | +1 | Basso | CML-UX-MICROCOPY-POLISH |
-| 4 | Architettura (default disciplina neutrale) | +1-2 | Basso | CML-UX-DEFAULT-DISCIPLINA |
-| 5 | Flusso (onboarding guidato) | +2-3 | Medio | CML-UX-ONBOARDING |
+| Priorità | Area                                       | Punti | Sforzo | Slice suggerita           |
+| -------- | ------------------------------------------ | ----- | ------ | ------------------------- |
+| 1        | Navigazione (hash sync)                    | +2    | Basso  | CML-UX-HASH-SYNC          |
+| 2        | Accessibilità (skip link, ARIA, alt-text)  | +4    | Medio  | CML-UX-ACCESSIBILITY-V2   |
+| 3        | Microcopy (tablabel compatta)              | +1    | Basso  | CML-UX-MICROCOPY-POLISH   |
+| 4        | Architettura (default disciplina neutrale) | +1-2  | Basso  | CML-UX-DEFAULT-DISCIPLINA |
+| 5        | Flusso (onboarding guidato)                | +2-3  | Medio  | CML-UX-ONBOARDING         |
 
 ## Prossima slice consigliata
 

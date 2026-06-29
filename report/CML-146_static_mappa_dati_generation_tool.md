@@ -2,13 +2,13 @@
 
 ## Fotografia iniziale
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD | `260b4aea0107c241a217e770cedaba53d0c7d0a6` |
-| origin/main | `810ae8440a9c63daf15bb1160bdf10508f9f5a77` |
-| Commit locali ahead | `260b4ae docs: select Tecnologia runtime integration pilot` |
-| Working tree | Con `tools/generate-static-mappa-dati.mjs` (esistente ma con bug) + `tmp-tecnologia-static-mappa.js` |
+| Parametro           | Valore                                                                                               |
+| ------------------- | ---------------------------------------------------------------------------------------------------- |
+| Branch              | `main`                                                                                               |
+| HEAD                | `260b4aea0107c241a217e770cedaba53d0c7d0a6`                                                           |
+| origin/main         | `810ae8440a9c63daf15bb1160bdf10508f9f5a77`                                                           |
+| Commit locali ahead | `260b4ae docs: select Tecnologia runtime integration pilot`                                          |
+| Working tree        | Con `tools/generate-static-mappa-dati.mjs` (esistente ma con bug) + `tmp-tecnologia-static-mappa.js` |
 
 ## Riferimento CML-145
 
@@ -90,12 +90,12 @@ const TECNOLOGIA_MAPPA_DATI = {
 
 ## Esiti verifica
 
-| Verifica | Esito |
-|----------|-------|
-| `node --check tmp-tecnologia-static-mappa.js` | ✅ PASS |
-| `rg -n "const TECNOLOGIA_MAPPA_DATI\|struttureSostanziali\|nodiDisciplinari\|progressioneVerticale\|decisioniCurricolari\|descrizioneProgressione"` | ✅ 15 matches |
-| `node tools/validate-cml-normalized-curriculum.mjs` | ✅ overallValid: true |
-| `node tools/test-runtime-mappa-dati-shape.mjs` | ⚠️ FAIL su PowerShell (BOM issue) |
+| Verifica                                                                                                                                            | Esito                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| `node --check tmp-tecnologia-static-mappa.js`                                                                                                       | ✅ PASS                           |
+| `rg -n "const TECNOLOGIA_MAPPA_DATI\|struttureSostanziali\|nodiDisciplinari\|progressioneVerticale\|decisioniCurricolari\|descrizioneProgressione"` | ✅ 15 matches                     |
+| `node tools/validate-cml-normalized-curriculum.mjs`                                                                                                 | ✅ overallValid: true             |
+| `node tools/test-runtime-mappa-dati-shape.mjs`                                                                                                      | ⚠️ FAIL su PowerShell (BOM issue) |
 
 ## Conferme
 

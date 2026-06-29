@@ -19,6 +19,7 @@ CML-018 ha definito il flusso operativo `.cml` e i ruoli. CML-018A prepara il su
 ## Razionale dell'uso di Workspace scolastico
 
 I Drive condivisi su Workspace della scuola garantiscono:
+
 - Proprietà collettiva dei file (non legati a singoli account)
 - Controllo centralizzato sui permessi
 - Accesso tramite account istituzionali
@@ -26,14 +27,14 @@ I Drive condivisi su Workspace della scuola garantiscono:
 
 ## Decisioni progettuali approvate
 
-| # | Decisione |
-|---|-----------|
-| 1 | Drive condiviso: `Revisione Curricolo Istituto` |
-| 2 | Account scolastici obbligatori |
-| 3 | Ruolo Contributor per docenti (caricamento file) |
-| 4 | Ruolo Content manager per coordinatori e referente |
-| 5 | Struttura cartelle semplice o assente |
-| 6 | Condivisione esterna disattivata o limitata |
+| #   | Decisione                                          |
+| --- | -------------------------------------------------- |
+| 1   | Drive condiviso: `Revisione Curricolo Istituto`    |
+| 2   | Account scolastici obbligatori                     |
+| 3   | Ruolo Contributor per docenti (caricamento file)   |
+| 4   | Ruolo Content manager per coordinatori e referente |
+| 5   | Struttura cartelle semplice o assente              |
+| 6   | Condivisione esterna disattivata o limitata        |
 
 ## Confini della slice
 

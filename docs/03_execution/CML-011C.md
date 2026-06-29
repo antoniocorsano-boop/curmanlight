@@ -28,21 +28,21 @@ Verifica se la microcopy risolve il problema di comprensione del flusso export/g
 
 ## Chiarezza export
 
-| Domanda | Esito | Note |
-|---|---|---|
-| Capisce cosa esporta? | ✅ Chiaro | (confronto) vs (definitivo) sono autoesplicativi |
-| Capisce confronto vs definitivo? | ✅ Chiaro | Sezioni separate, heading e labels distinti |
-| Capisce che serve validazione umana? | ✅ Chiaro | Disclaimer presente in entrambe le sezioni |
-| Capisce quale formato usare? | ✅ Chiaro | Note tecniche embeddate (rete, offline) |
-| Capisce quando esportare? | ✅ Chiaro | Toolbar per confronto in fase di revisione; Definitivo dopo approvazione |
+| Domanda                              | Esito     | Note                                                                     |
+| ------------------------------------ | --------- | ------------------------------------------------------------------------ |
+| Capisce cosa esporta?                | ✅ Chiaro | (confronto) vs (definitivo) sono autoesplicativi                         |
+| Capisce confronto vs definitivo?     | ✅ Chiaro | Sezioni separate, heading e labels distinti                              |
+| Capisce che serve validazione umana? | ✅ Chiaro | Disclaimer presente in entrambe le sezioni                               |
+| Capisce quale formato usare?         | ✅ Chiaro | Note tecniche embeddate (rete, offline)                                  |
+| Capisce quando esportare?            | ✅ Chiaro | Toolbar per confronto in fase di revisione; Definitivo dopo approvazione |
 
 ## Chiarezza guida
 
-| Domanda | Esito | Note |
-|---|---|---|
-| Guida vicina al punto operativo? | ✅ Sì | Note embeddate nella toolbar e nelle sezioni export |
-| Disclaimer visibile ma non invasivo? | ✅ Sì | 11px, #e65100, posizionato dopo la sezione |
-| Etichette comprensibili a docente non tecnico? | ✅ Sì | Italiano semplice (confronto, definitivo, validare) |
+| Domanda                                        | Esito | Note                                                                        |
+| ---------------------------------------------- | ----- | --------------------------------------------------------------------------- |
+| Guida vicina al punto operativo?               | ✅ Sì | Note embeddate nella toolbar e nelle sezioni export                         |
+| Disclaimer visibile ma non invasivo?           | ✅ Sì | 11px, #e65100, posizionato dopo la sezione                                  |
+| Etichette comprensibili a docente non tecnico? | ✅ Sì | Italiano semplice (confronto, definitivo, validare)                         |
 | Ambiguità bozza/proposta/confronto/definitivo? | ✅ No | Bozza="Documento di lavoro", Confronto=toolbar, Definitivo=sezione separata |
 
 ## Regressioni
@@ -56,12 +56,12 @@ Verifica se la microcopy risolve il problema di comprensione del flusso export/g
 
 ## Responsive
 
-| Breakpoint | Comportamento | Esito |
-|---|---|---|
-| 360px | Pulsanti export in colonna, wrap naturale | ✅ Accettabile |
-| 414px | Idem | ✅ Accettabile |
-| 768px | Toolbar a larghezza piena, bottoni flex wrap | ✅ Accettabile |
-| 1280px | Layout normale, bottoni inline | ✅ Ottimale |
+| Breakpoint | Comportamento                                | Esito          |
+| ---------- | -------------------------------------------- | -------------- |
+| 360px      | Pulsanti export in colonna, wrap naturale    | ✅ Accettabile |
+| 414px      | Idem                                         | ✅ Accettabile |
+| 768px      | Toolbar a larghezza piena, bottoni flex wrap | ✅ Accettabile |
+| 1280px     | Layout normale, bottoni inline               | ✅ Ottimale    |
 
 L'etichetta più lunga ("📋 Copia per Word (confronto)", ~24 caratteri a 12px) può occupare una riga intera a ≤360px, ma il wrapping è gestito naturalmente dal flex container del toolbar.
 

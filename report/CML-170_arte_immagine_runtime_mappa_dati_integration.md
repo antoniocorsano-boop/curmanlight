@@ -8,16 +8,16 @@ Integrare Arte e Immagine nella mappa disciplinare runtime del frontend (`_publi
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| Commit iniziale | `b237cb2` |
-| origin/main | `b237cb2` |
-| Working tree | Pulito (sync) |
-| Shape runtime | 8/8 PASS |
+| Parametro             | Valore                                         |
+| --------------------- | ---------------------------------------------- |
+| Branch                | `main`                                         |
+| Commit iniziale       | `b237cb2`                                      |
+| origin/main           | `b237cb2`                                      |
+| Working tree          | Pulito (sync)                                  |
+| Shape runtime         | 8/8 PASS                                       |
 | Validatore curriculum | 9 file, 111 unità, overallValid true, 0 errori |
-| Push | Non eseguito |
-| Deploy | Non eseguito |
+| Push                  | Non eseguito                                   |
+| Deploy                | Non eseguito                                   |
 
 ## 3. Esito CML-169
 
@@ -48,7 +48,13 @@ Tre edit puntuali in `_published_snapshot/netlify-current/index.html`:
 Inserito dopo il pulsante Educazione Civica nella barra selettore:
 
 ```html
-<button class="mappa-disc-btn" onclick="setMappaDisciplina('arte-immagine',this)" ...>Arte e Immagine</button>
+<button
+  class="mappa-disc-btn"
+  onclick="setMappaDisciplina('arte-immagine',this)"
+  ...
+>
+  Arte e Immagine
+</button>
 ```
 
 ### Variabile
@@ -69,12 +75,12 @@ else if (mappaDisciplinaCorrente === 'arte-immagine' && typeof ARTE_IMMAGINE_MAP
 
 ## 7. Conteggi Arte e Immagine
 
-| Proprietà | Valore |
-|-----------|--------|
-| S (strutture sostanziali) | 6 |
-| N (nodi disciplinari) | 3 |
-| P (progressione verticale) | 6 |
-| D (decisioni curricolari) | 0 |
+| Proprietà                  | Valore |
+| -------------------------- | ------ |
+| S (strutture sostanziali)  | 6      |
+| N (nodi disciplinari)      | 3      |
+| P (progressione verticale) | 6      |
+| D (decisioni curricolari)  | 0      |
 
 ## 8. Validatore curriculum
 
@@ -119,14 +125,14 @@ Le 8 discipline già integrate (Tecnologia, Italiano, Matematica, Scienze, Stori
 
 ## 12. Verifica invarianti
 
-| Invariante | Esito |
-|------------|-------|
+| Invariante            | Esito     |
+| --------------------- | --------- |
 | `content/curriculum/` | Invariato |
-| `tools/` | Invariati |
-| Schema `.cml` | Invariato |
-| Export/import | Invariati |
+| `tools/`              | Invariati |
+| Schema `.cml`         | Invariato |
+| Export/import         | Invariati |
 | Funzioni evidenze/UDA | Invariate |
-| Nessuna dipendenza | ✅ |
+| Nessuna dipendenza    | ✅        |
 
 ## 13. Rischi residui
 

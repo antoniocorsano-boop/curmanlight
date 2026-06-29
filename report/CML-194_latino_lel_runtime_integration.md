@@ -8,15 +8,15 @@ Integrare la disciplina Latino (LEL) nella mappa dati disciplinare del runtime (
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `aa1a27f` (CML-193; origin/main a `d711872`, 2 behind) |
-| Working tree iniziale | pulito |
-| Dati normalizzati prima | 14/14 |
-| Runtime mappa prima | 13/14 (Latino LEL NON integrata) |
-| Shape test | 13/13 PASS |
+| Parametro               | Valore                                                 |
+| ----------------------- | ------------------------------------------------------ |
+| Root Git                | `C:\Users\anton\CurManLight`                           |
+| Branch                  | `main`                                                 |
+| Commit iniziale         | `aa1a27f` (CML-193; origin/main a `d711872`, 2 behind) |
+| Working tree iniziale   | pulito                                                 |
+| Dati normalizzati prima | 14/14                                                  |
+| Runtime mappa prima     | 13/14 (Latino LEL NON integrata)                       |
+| Shape test              | 13/13 PASS                                             |
 
 ## 3. Decisioni autorizzative
 
@@ -49,18 +49,18 @@ Aggiunto `'latino-lel.normalized.json'` all'array `FILES` in `tools/test-runtime
 
 ## 5. Dati integrati
 
-| Sezione | Quantità |
-|---|---|
-| Strutture sostanziali | 4 (da 4 unità di apprendimento) |
-| Nodi disciplinari | 4 (Lessico e morfologia, Rapporto latino-italiano, Cultura classica, Metodo linguistico) |
-| Progressioni verticali | 2 (Secondaria 2, Secondaria 3) |
-| Decisioni curricolari | 0 |
+| Sezione                | Quantità                                                                                 |
+| ---------------------- | ---------------------------------------------------------------------------------------- |
+| Strutture sostanziali  | 4 (da 4 unità di apprendimento)                                                          |
+| Nodi disciplinari      | 4 (Lessico e morfologia, Rapporto latino-italiano, Cultura classica, Metodo linguistico) |
+| Progressioni verticali | 2 (Secondaria 2, Secondaria 3)                                                           |
+| Decisioni curricolari  | 0                                                                                        |
 
 ## 6. Copertura per ordine
 
-| Ordine | Classi | Unità | Strutture |
-|---|---|---|---|
-| Secondaria | 2, 3 | 4 | 4 |
+| Ordine     | Classi | Unità | Strutture |
+| ---------- | ------ | ----- | --------- |
+| Secondaria | 2, 3   | 4     | 4         |
 
 Nota: Latino LEL è solo Secondaria classi 2-3 (2 unità per classe), 1h/sett, approccio comparativo/esplorativo.
 
@@ -77,22 +77,22 @@ Nota: Latino LEL è solo Secondaria classi 2-3 (2 unità per classe), 1h/sett, a
 
 ## 8. Copertura runtime completa
 
-| Disciplina | Stato |
-|---|---|
-| Tecnologia | ✅ Integrata (CML-001R) |
-| Matematica | ✅ Integrata |
-| Italiano | ✅ Integrata |
-| Scienze | ✅ Integrata |
-| Storia | ✅ Integrata |
-| Geografia | ✅ Integrata |
-| Inglese | ✅ Integrata |
-| Educazione Civica | ✅ Integrata |
-| Arte e Immagine | ✅ Integrata |
-| Musica | ✅ Integrata |
-| Educazione Fisica | ✅ Integrata (CML-184) |
-| Seconda Lingua Comunitaria | ✅ Integrata (CML-192) |
-| Religione Cattolica | ✅ Integrata (CML-193) |
-| **Latino (LEL)** | **✅ Integrata (CML-194)** |
+| Disciplina                 | Stato                      |
+| -------------------------- | -------------------------- |
+| Tecnologia                 | ✅ Integrata (CML-001R)    |
+| Matematica                 | ✅ Integrata               |
+| Italiano                   | ✅ Integrata               |
+| Scienze                    | ✅ Integrata               |
+| Storia                     | ✅ Integrata               |
+| Geografia                  | ✅ Integrata               |
+| Inglese                    | ✅ Integrata               |
+| Educazione Civica          | ✅ Integrata               |
+| Arte e Immagine            | ✅ Integrata               |
+| Musica                     | ✅ Integrata               |
+| Educazione Fisica          | ✅ Integrata (CML-184)     |
+| Seconda Lingua Comunitaria | ✅ Integrata (CML-192)     |
+| Religione Cattolica        | ✅ Integrata (CML-193)     |
+| **Latino (LEL)**           | **✅ Integrata (CML-194)** |
 
 **Runtime mappa: 14/14 — COMPLETATA**
 

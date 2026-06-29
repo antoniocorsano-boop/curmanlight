@@ -8,17 +8,17 @@ Allineare il test shape runtime `tools/test-runtime-mappa-dati-shape.mjs` alla c
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| Commit iniziale | `d565c7b` |
-| origin/main | `d565c7b` |
-| Working tree | Pulito (sync) |
-| Runtime | 9/14 discipline integrate |
+| Parametro             | Valore                                         |
+| --------------------- | ---------------------------------------------- |
+| Branch                | `main`                                         |
+| Commit iniziale       | `d565c7b`                                      |
+| origin/main           | `d565c7b`                                      |
+| Working tree          | Pulito (sync)                                  |
+| Runtime               | 9/14 discipline integrate                      |
 | Validatore curriculum | 9 file, 111 unità, overallValid true, 0 errori |
-| Shape runtime prima | 8/8 PASS |
-| Push | Non eseguito |
-| Deploy | Non eseguito |
+| Shape runtime prima   | 8/8 PASS                                       |
+| Push                  | Non eseguito                                   |
+| Deploy                | Non eseguito                                   |
 
 ## 3. Esito CML-170
 
@@ -42,8 +42,8 @@ const FILES = [
   'geografia.normalized.json',
   'inglese.normalized.json',
   'educazione-civica.normalized.json',
-  'arte-immagine.normalized.json'       // <-- aggiunta
-];
+  'arte-immagine.normalized.json', // <-- aggiunta
+]
 ```
 
 Il resto del test è invariato. Il test rimane rigoroso: fallisce se una disciplina non è presente o se la shape non è coerente.
@@ -89,24 +89,24 @@ overall: PASS — 9 passed, 0 failed
 
 ## 9. Conteggi Arte e Immagine
 
-| Proprietà | Valore |
-|-----------|--------|
-| S (strutture sostanziali) | 6 |
-| N (nodi disciplinari) | 3 |
-| P (progressione verticale) | 6 |
-| D (decisioni curricolari) | 0 |
+| Proprietà                  | Valore |
+| -------------------------- | ------ |
+| S (strutture sostanziali)  | 6      |
+| N (nodi disciplinari)      | 3      |
+| P (progressione verticale) | 6      |
+| D (decisioni curricolari)  | 0      |
 
 ## 10. Verifica invarianti
 
-| Invariante | Esito |
-|------------|-------|
+| Invariante                                                 | Esito     |
+| ---------------------------------------------------------- | --------- |
 | Runtime (`_published_snapshot/netlify-current/index.html`) | Invariato |
-| `content/curriculum/` | Invariato |
-| Schema `.cml` | Invariato |
-| Export/import | Invariati |
-| Funzioni evidenze/UDA | Invariate |
-| Service worker | Invariato |
-| Nessuna dipendenza | ✅ |
+| `content/curriculum/`                                      | Invariato |
+| Schema `.cml`                                              | Invariato |
+| Export/import                                              | Invariati |
+| Funzioni evidenze/UDA                                      | Invariate |
+| Service worker                                             | Invariato |
+| Nessuna dipendenza                                         | ✅        |
 
 ## 11. Rischi residui
 

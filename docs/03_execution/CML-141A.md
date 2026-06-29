@@ -10,13 +10,13 @@ Confrontare l'output dello strumento `scripts/adapter-mappa-dati.js` con la stru
 
 ## Risultati principali
 
-| Chiave | Compatibilità | Dettaglio |
-|---|---|---|
-| `disciplina` | ✅ Diretta | Stringa, identica |
-| `struttureSostanziali` | ⚠️ Parziale | Adapter usa `unita[]` invece di flat `{descrizione, fonte}` |
-| `nodiDisciplinari` | ✅ Gap colmato | Tecnologia mancava — adesso generato |
-| `progressioneVerticale` | ⚠️ Parziale | Adapter raggruppa unità, manca `descrizioneProgressione` |
-| `decisioniCurricolari` | ✅ Diretta | Pass-through identico |
+| Chiave                  | Compatibilità  | Dettaglio                                                   |
+| ----------------------- | -------------- | ----------------------------------------------------------- |
+| `disciplina`            | ✅ Diretta     | Stringa, identica                                           |
+| `struttureSostanziali`  | ⚠️ Parziale    | Adapter usa `unita[]` invece di flat `{descrizione, fonte}` |
+| `nodiDisciplinari`      | ✅ Gap colmato | Tecnologia mancava — adesso generato                        |
+| `progressioneVerticale` | ⚠️ Parziale    | Adapter raggruppa unità, manca `descrizioneProgressione`    |
+| `decisioniCurricolari`  | ✅ Diretta     | Pass-through identico                                       |
 
 ## Impatto
 

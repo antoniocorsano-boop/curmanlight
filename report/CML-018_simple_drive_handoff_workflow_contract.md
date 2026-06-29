@@ -2,11 +2,11 @@
 
 ## Stato git iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | cml-008r-fix-markdown-decision-summary |
-| HEAD | 537f70cfb1c9911ad7e428d458ddb8f6dfc086d6 |
-| Working tree | Pulita |
+| Campo        | Valore                                   |
+| ------------ | ---------------------------------------- |
+| Branch       | cml-008r-fix-markdown-decision-summary   |
+| HEAD         | 537f70cfb1c9911ad7e428d458ddb8f6dfc086d6 |
+| Working tree | Pulita                                   |
 
 ## Confirma docs-only
 
@@ -33,27 +33,27 @@
 
 ## Sintesi decisioni progettuali
 
-| # | Decisione | Rationale |
-|---|-----------|-----------|
-| 1 | Cartella Drive singola | Evita complessità organizzativa |
-| 2 | File `.cml` unico | Formato di scambio semplice e riconoscibile |
-| 3 | Tre ruoli distinti | Docente, Dipartimento, Referente curricolo |
-| 4 | Automazione solo docente | Prima implementazione mirata |
-| 5 | Import manuale Dipartimento/Referente | Evita integrazione Drive bidirezionale |
-| 6 | Fallback manuale | Affidabilità operativa garantita |
-| 7 | Validazione umana esplicita | Controllo qualità necessario |
-| 8 | Nessuna dashboard cloud | Mantiene focus su semplicità |
+| #   | Decisione                             | Rationale                                   |
+| --- | ------------------------------------- | ------------------------------------------- |
+| 1   | Cartella Drive singola                | Evita complessità organizzativa             |
+| 2   | File `.cml` unico                     | Formato di scambio semplice e riconoscibile |
+| 3   | Tre ruoli distinti                    | Docente, Dipartimento, Referente curricolo  |
+| 4   | Automazione solo docente              | Prima implementazione mirata                |
+| 5   | Import manuale Dipartimento/Referente | Evita integrazione Drive bidirezionale      |
+| 6   | Fallback manuale                      | Affidabilità operativa garantita            |
+| 7   | Validazione umana esplicita           | Controllo qualità necessario                |
+| 8   | Nessuna dashboard cloud               | Mantiene focus su semplicità                |
 
 ## Tabella rischi/mitigazioni
 
-| Rischio | Mitigazione |
-|---|---|
-| Drive non configurato | Fallback manuale "Scarica proposta" sempre disponibile |
-| Caricamento automatico non disponibile | Pulsante separato con messaggio errore comprensibile |
-| File errato caricato | Controlli minimi di riconoscimento e separazione file |
-| Import dipartimento incompleto | Segnalazione file non riconoscibili e duplicati |
-| Referente con esiti mancanti | Controlli completezza dipartimenti ricevuti/mancanti |
-| Procedura troppo complessa | Flusso minimo in 3 passi per ruolo, linguaggio chiaro |
+| Rischio                                | Mitigazione                                            |
+| -------------------------------------- | ------------------------------------------------------ |
+| Drive non configurato                  | Fallback manuale "Scarica proposta" sempre disponibile |
+| Caricamento automatico non disponibile | Pulsante separato con messaggio errore comprensibile   |
+| File errato caricato                   | Controlli minimi di riconoscimento e separazione file  |
+| Import dipartimento incompleto         | Segnalazione file non riconoscibili e duplicati        |
+| Referente con esiti mancanti           | Controlli completezza dipartimenti ricevuti/mancanti   |
+| Procedura troppo complessa             | Flusso minimo in 3 passi per ruolo, linguaggio chiaro  |
 
 ## Verdetto finale
 

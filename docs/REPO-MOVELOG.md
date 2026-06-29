@@ -23,6 +23,7 @@
 - **Untracked esclusi**: `.env`, `antigravity.config.json`, `.tmp/`, `test-results/`, `tools/smoke-hash-nav.mjs`, `tmp-cml-mobile-progettazione.spec.mjs`
 - **Push**: no
 - **Verdetto**: `CML_UX_MOBILE_PROGETTAZIONE_HOTFIX_READY`
+
 ## 2026-06-29 - CML-UX-ACCESSIBILITY-SCORE-REFRESH - Accessibility score refresh
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH`
@@ -62,6 +63,7 @@
 - **Untracked esclusi**: `.tmp/`, `test-results/`, `tools/smoke-hash-nav.mjs`, `.tmp-curmanlight-hotfix-script-check.js`
 - **Push**: no
 - **Verdetto**: `CML_UX_ARIA_ACCORDION_SYNTAX_HOTFIX_READY`
+
 ## 2026-06-29 - CML-UX-ACCESSIBILITY-ARIA-ACCORDION-LIVE-SMOKE — Live smoke post-push GitHub Pages
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-ARIA-ACCORDION`
@@ -95,7 +97,6 @@
 - **Push**: no
 - **Deploy**: no
 - **Verdetto**: `CML_UX_ACCESSIBILITY_ARIA_ACCORDION_READY`
-
 
 ## 2026-06-29 - CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS - Skip link and focus handling
 
@@ -272,7 +273,7 @@
 - **Verdetto**: `CML_REMOVE_VIDEO_AUTOMATION_TOOLING_COMPLETE`
 
 ## 2026-06-28 â€” CML-236 â€” STABLE CANDIDATE FREEZE CONTRACT
- 
+
 - **Commit base**: `ebcc29a` (CML-234S, aligned)
 - **Tipo slice**: docs-only / contract
 - **Oggetto**: definire il contratto di freeze per il candidato stabile pubblico
@@ -284,9 +285,9 @@
 - **Shape test**: 14/14 PASS
 - **Push**: non eseguito (commit locale)
 - **Verdetto**: `CML_236_STABLE_CANDIDATE_FREEZE_CONTRACT_COMPLETE`
- 
+
 ## 2026-06-28 â€” CML-237 â€” MAINTENANCE POLICY AND KNOWN-LIMITS REGISTER
- 
+
 - **Commit base**: `1b23f5f` (CML-236S, aligned)
 - **Tipo slice**: docs-only / policy
 - **Oggetto**: definire politica manutenzione e registro limitazioni note
@@ -299,9 +300,9 @@
 - **Shape test**: 14/14 PASS
 - **Push**: non eseguito (docs-only)
 - **Verdetto**: `CML_237_MAINTENANCE_POLICY_COMPLETE`
- 
+
 ## 2026-06-28 â€” CML-238 â€” FREEZE CLOSURE GATE AND PUBLIC SMOKE
- 
+
 - **Commit base**: `b329ffa` (CML-237S, aligned)
 - **Tipo slice**: docs-only / closure gate
 - **Oggetto**: chiusura ciclo freeze candidato stabile con verifica finale
@@ -311,7 +312,7 @@
 - **Nessun blocker**: nessuna modifica runtime/JSON/.cml necessaria
 - **Push**: non eseguito (CML-238S separato)
 - **Verdetto**: `CML_238_FREEZE_CLOSURE_GATE_AND_PUBLIC_SMOKE_COMPLETE`
- 
+
 ## 2026-06-28 â€” CML-233 â€” NEXT CYCLE SELECTION AFTER OPS GUARDRAILS CLOSURE
 
 - **Commit base**: `1beeef8` (CML-OPS-006S, aligned)
@@ -440,8 +441,9 @@
 - **Validatore**: 14/14 PASS
 - **Shape test**: 14/14 PASS
 - **Artefatti**: docs/02_system/UX-MENU-ACTION-CONTRACT.md, docs/03_execution/CML-225.md,
-eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- **Vincoli**: docs-only, nessuna modifica runtime, curriculum JSON, .cml/export/import, validator/shape-test, service-worker/manifest; nessun deploy, nessun push
+  eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- **Vincoli**: docs-only, nessuna modifica runtime, curriculum JSON, .cml/export/import, validator/shape-test, service-worker/manifest; nessun deploy, nessun push
 - **Verdetto**: CML_225_UX_MENU_ACTION_CONTRACT_READY`n
+
 # Repo Movelog
 
 ## 2026-06-28 â€” CML-217 â€” MINIMAL_UDA_DRAFT_PREVIEW_MARKDOWN_EXPORT
@@ -1347,6 +1349,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - **Runtime**: invariato
 - **Artefatti**: `docs/03_execution/CML-161.md`, `report/CML-161_didattica_coverage_gap_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_161_DIDATTICA_COVERAGE_GAP_AUDIT_READY`
+
 ## 2026-06-26 - CML-160 - STORIA_CONTROLLED_RUNTIME_MAPPA_DATI_INTEGRATION
 
 - **Commit iniziale**: `90163cf` (sync con `origin/main`)
@@ -1359,6 +1362,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - **Vincoli**: JSON, schema `.cml`, import/export, service worker/cache, workflow, dipendenze, root `index.html` e landing UI/UX invariati
 - **Artefatti**: `docs/03_execution/CML-160.md`, `report/CML-160_storia_runtime_mappa_dati_integration.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_160_STORIA_CONTROLLED_RUNTIME_MAPPA_DATI_READY`
+
 ## 2026-06-26 â€” CML-159 â€” SCIENZE_RUNTIME_MAPPA_DATI_INTEGRATION
 
 - **Commit iniziale**: `31b2243` (sync con `origin/main`)
@@ -1407,6 +1411,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - **Smoke browser**: Home/Curriculum/Competenze/Mappe/Esportazioni/Guida senza console error nel flusso ordinario
 - **Runtime**: invariato in CML-155; nessun fix applicato
 - **Verdetto**: `CML_155_POST_PARSE_FIX_RUNTIME_STRUCTURE_AUDIT_READY`
+
 ## 2026-06-25 - CML-154 - TECNOLOGIA_LIVE_RUNTIME_PARSE_ERROR_MICROFIX
 
 - **Commit iniziale**: `da0c0e3` (locale, `main...origin/main [ahead 1]`)
@@ -1420,6 +1425,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - **Smoke locale**: Tecnologia, Matematica e Italiano renderizzati; nessun token tecnico visibile
 - **Vincoli**: generator/adapter/transformer/validator/JSON/schema `.cml` invariati; service worker/cache invariati; nessun refactoring
 - **Verdetto**: `CML_154_TECNOLOGIA_LIVE_RUNTIME_PARSE_ERROR_MICROFIX_READY`
+
 ## 2026-06-25 - CML-153 - CONTROLLED_PAGES_DEPLOY_FORCE_AND_LIVE_CONTENT_SMOKE
 
 - **Commit iniziale**: `eb6729f` (sync con `origin/main`)
@@ -2006,8 +2012,8 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
     - `const TECNOLOGIA_NORM_DATA = TECNOLOGIA_NORM;`
 - Nota numerazione:
   - Esistono due voci storiche con etichetta `CML-120`:
-    1) `CML-120 â€” DISCIPLINARY_KNOWLEDGE_MAP_READ_ONLY_VIEW` (blocco corrente in testa)
-    2) `CML-120 - NORMALIZZAZIONE RUNTIME LATINO (LEL)` (voce storica precedente)
+    1. `CML-120 â€” DISCIPLINARY_KNOWLEDGE_MAP_READ_ONLY_VIEW` (blocco corrente in testa)
+    2. `CML-120 - NORMALIZZAZIONE RUNTIME LATINO (LEL)` (voce storica precedente)
   - La voce precedente resta invariata per preservare la storia Git/documentale, ma va considerata **voce storica ambigua/deprecata** ai fini della tracciabilitÃ  corrente.
 - Verdetto: `CML_121_REPO_TRACEABILITY_RECONCILIATION_PARTIAL_NEEDS_SLICE_SPLIT`
 - Next: CML-122 â€” `RUNTIME_JSON_VALIDATOR_CHANGESET_CONSOLIDATION`
@@ -2097,8 +2103,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 
 ---
 
-
-
 ## 2026-06-24 â€” CML-119B â€” MULTI_DISCIPLINE_NORMALIZED_CURRICULUM_VALIDATOR
 
 - **HEAD (main)** â€” docs + tool, nessuna modifica runtime
@@ -2122,6 +2126,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 ---
 
 ## 2026-06-24 â€” CML-119A â€” DISCIPLINARY_KNOWLEDGE_MODEL_AUDIT
+
 - **HEAD (main)** â€” audit read-only, docs-only
 - Branch: `main`, nessuna modifica runtime
 - Slice precedente: `CML_118_COMPETENZE_E_PROGETTAZIONE_CONTENT_REFOCUS_AUDIT_READY`
@@ -2137,6 +2142,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 ---
 
 ## 2026-06-24 â€” CML-118 â€” COMPETENZE_E_PROGETTAZIONE_CONTENT_REFOCUS_AUDIT
+
 - **HEAD (main)** â€” audit read-only, docs-only
 - Branch: `main`, nessuna modifica runtime
 - Slice precedente: `CML_117_POST_REFOCUS_RUNTIME_SMOKE_AND_NAV_COHERENCE_AUDIT_READY`
@@ -2152,6 +2158,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 ---
 
 ## 2026-06-24 â€” CML-117 â€” POST_REFOCUS_RUNTIME_SMOKE_AND_NAV_COHERENCE_AUDIT
+
 - **HEAD (main)** â€” audit/smoke, nessuna modifica runtime
 - Branch: `main`, nessuna modifica runtime
 - Slice precedente: `CML_116_HOME_CURRICULUM_PROCESS_REFOCUS_READY`
@@ -2167,6 +2174,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 ---
 
 ## 2026-06-24 â€” CML-116 â€” HOME_CURRICULUM_PROCESS_REFOCUS
+
 - **HEAD (main)** â€” lightweight Home refocus, single-file runtime increment
 - Branch: `main`, modificato `_published_snapshot/netlify-current/index.html`
 - Slice precedente: `CML_115_SYSTEM_REFOCUS_AFTER_DEPARTMENT_VALIDATION_AUDIT_READY`
@@ -2183,6 +2191,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 ---
 
 ## 2026-06-24 â€” CML-115 â€” SYSTEM_REFOCUS_AFTER_DEPARTMENT_VALIDATION_AUDIT
+
 - **HEAD (main)** â€” audit read-only, docs-only
 - Branch: `main`, nessuna modifica runtime
 - Slice precedente: `CML_114_VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT_READY`
@@ -2198,6 +2207,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 ---
 
 ## 2026-06-24 â€” CML-114 â€” VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT
+
 - **HEAD (main)** â€” audit read-only, docs-only
 - Branch: `main`, tree modificata su `index.html` (non toccata in questo commit)
 - Slice precedente: `CML_113_VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT_READY`
@@ -2405,7 +2415,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 
 - **4c8978b** â€” fix: normalize CML mobile pending actions touch target (pre-deploy)
 - Count 12/8/4 vs 54/41/9 chiarito: scope diverso (Tecnologia vs tutte le discipline)
-- **npx netlify deploy --prod --dir _published_snapshot/netlify-current** â€” 1 file (index.html)
+- **npx netlify deploy --prod --dir \_published_snapshot/netlify-current** â€” 1 file (index.html)
 - URL pubblicato: https://curmanlight.netlify.app
 - Pending-action mobile a 44px confermato su tutti i breakpoint
 - Card compatte, pulsanti âœ…âŒðŸ”ðŸ—‘, dettaglio espandibile preservati
@@ -2671,7 +2681,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - Opzione D selezionata per CML-016B: cleanup marker + indicatore personalizzazione
 - Verdetto: `CML_016A_DISCIPLINARY_CONTENT_SOURCES_EXPORT_QUALITY_AUDIT_READY`
 
-
 ## 2026-06-21 â€” CML-016B â€” Export Marker Cleanup and Personalization Indicator
 
 - d82fc3a â€” docs: audit CML disciplinary content and export quality (HEAD partenza)
@@ -2683,7 +2692,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - Responsive PASS: 360, 390, 414, 768, 900, 901, 1280 px
 - Asset invariati: PDF, sw.js, _headers, icone/assets; nessun deploy
 - Verdetto: CML_016B_EXPORT_MARKER_CLEANUP_PERSONALIZATION_INDICATOR_READY
-
 
 ## 2026-06-21 ï¿½ CML-016C ï¿½ Export Cleanup and Personalization Smoke Audit
 
@@ -2741,7 +2749,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - Fallback manuale "Scarica proposta .cml" sempre disponibile
 - Verdetto: CML_020_TEACHER_PROPOSAL_DRIVE_UPLOAD_HANDOFF_READY_ENDPOINT_NOT_CONFIGURED
 
-
 ## 2026-06-21 â€” CML-021 â€” Department Guided Teacher Proposal Import
 
 - bcc505f â€” feat: add teacher proposal Drive upload handoff (HEAD partenza)
@@ -2754,7 +2761,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - Regressioni download docente e fallback upload: PASS
 - PDF, sw.js, _headers e asset invariati; nessun deploy
 - Verdetto: CML_021_DEPARTMENT_GUIDED_TEACHER_PROPOSAL_IMPORT_READY
-
 
 ## 2026-06-21 â€” CML-021A â€” Department Proposal Import Smoke Audit
 
@@ -2788,7 +2794,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
   - Aggiornamento di `docs/REPO-MOVELOG.md` (questa voce)
   - Nessuna modifica runtime; nessun deploy; confermata presenza funzioni e nuovi semantici.
 
-
 ## 2026-06-22 â€” CML-023 â€” Referent validation CML import
 
 - **aa891ae** â€” feat: add referent department outcome import
@@ -2797,7 +2802,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
   - Import locale degli esiti dipartimentali .cml con validazione schema
   - Nessuna chiamata di rete, nessuna persistenza permanente, nessun endpoint reale
   - Microcopy coerente con il processo scolastico, nessuna semantica rigida
-
 
 ## 2026-06-22 â€” CML-024 â€” CML workflow end-to-end smoke and closure
 
@@ -3518,7 +3522,7 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - **Nessun runtime modificato**: confermato da `git diff --name-only -- _published_snapshot/netlify-current` (output vuoto)
 - **Nessun deploy eseguito**: solo setup workflow
 - **Prossimo step**: impostare Settings â†’ Pages â†’ Source: GitHub Actions e eseguire workflow
- - **Verdetto**: `CML_059_GITHUB_PAGES_STATIC_DEPLOY_SETUP_READY`
+- **Verdetto**: `CML_059_GITHUB_PAGES_STATIC_DEPLOY_SETUP_READY`
 
 ## 2026-06-22 â€” CML-059A â€” GITHUB_PAGES_LIVE_DEPLOY_SMOKE
 
@@ -5106,9 +5110,8 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - File creati: `docs/03_execution/CML-113.md`, `report/CML-113_validazione_dipartimentale_workflow_audit.md`
 - Verdetto: `CML_113_VALIDAZIONE_DIPARTIMENTALE_WORKFLOW_AUDIT_READY`
 - Prossimo step: CML-114 â€” VALIDAZIONE_DIPARTIMENTALE_FIRST_RUNTIME_INCREMENT
+
 ---
-
-
 
 ## 2026-06-25 â€” CML-126B â€” POST_FIX_RUNTIME_SMOKE_CONFIRMATION
 
@@ -5135,7 +5138,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 
 ---
 
-
 ## 2026-06-25 â€” CML-126_CONTROLLED_PUSH (3 commit cumulativi)
 
 - Push eseguito su `origin/main`: 3 commit spinti
@@ -5147,7 +5149,6 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - Next: CML-128 â€” CURRENT_ICON_SYSTEM_USAGE_AUDIT
 
 ---
-
 
 ## 2026-06-25 â€” CML-128 â€” CURRENT_ICON_SYSTEM_USAGE_AUDIT
 

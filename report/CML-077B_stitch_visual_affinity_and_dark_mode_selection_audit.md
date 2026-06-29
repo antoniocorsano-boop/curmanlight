@@ -4,37 +4,37 @@
 
 ### Overview
 
-| Field | Value |
-|-------|-------|
-| Type | Docs-only review/selezione |
-| Branch | `main` |
-| Base commit | `0315bbe` |
-| Runtime modified | None |
-| Deploy | None |
+| Field             | Value                              |
+| ----------------- | ---------------------------------- |
+| Type              | Docs-only review/selezione         |
+| Branch            | `main`                             |
+| Base commit       | `0315bbe`                          |
+| Runtime modified  | None                               |
+| Deploy            | None                               |
 | Proposal reviewed | "Terra — Organic Design" by Stitch |
 
 ### Proposal Review Summary
 
-| Aspect | Evaluation |
-|--------|-----------|
-| Proposal name | Terra — Organic Design (001) |
-| Generator | Stitch, based on DESIGN.md |
-| Palette | Green/cream — too distant from institutional `#1a237e` |
-| Style | Organic/decorative — partially compatible, not fully appropriate for school tool |
-| Typography | Remote decorative fonts — excluded |
-| Dependencies | Tailwind CDN, Google Fonts, remote images — all excluded |
-| Dark mode | Concept valid — to implement with `prefers-color-scheme` |
-| Card spacing | Inspiration useful — more breathing room adoptable |
+| Aspect        | Evaluation                                                                       |
+| ------------- | -------------------------------------------------------------------------------- |
+| Proposal name | Terra — Organic Design (001)                                                     |
+| Generator     | Stitch, based on DESIGN.md                                                       |
+| Palette       | Green/cream — too distant from institutional `#1a237e`                           |
+| Style         | Organic/decorative — partially compatible, not fully appropriate for school tool |
+| Typography    | Remote decorative fonts — excluded                                               |
+| Dependencies  | Tailwind CDN, Google Fonts, remote images — all excluded                         |
+| Dark mode     | Concept valid — to implement with `prefers-color-scheme`                         |
+| Card spacing  | Inspiration useful — more breathing room adoptable                               |
 
 ### Design Decisions
 
-| Area | Decisione |
-|------|-----------|
-| Desktop | Mantenere struttura, migliorare spaziatura card e gap sezioni |
-| Mobile | 1 colonna confermata, touch target OK, aumentare padding card |
-| Dark mode | Automatica con `@media (prefers-color-scheme: dark)`, no toggle |
-| Palette blu | Confermata `#1a237e` come primario istituzionale |
-| Dipendenze | Zero — solo CSS locale |
+| Area        | Decisione                                                       |
+| ----------- | --------------------------------------------------------------- |
+| Desktop     | Mantenere struttura, migliorare spaziatura card e gap sezioni   |
+| Mobile      | 1 colonna confermata, touch target OK, aumentare padding card   |
+| Dark mode   | Automatica con `@media (prefers-color-scheme: dark)`, no toggle |
+| Palette blu | Confermata `#1a237e` come primario istituzionale                |
+| Dipendenze  | Zero — solo CSS locale                                          |
 
 ### Selected Option
 

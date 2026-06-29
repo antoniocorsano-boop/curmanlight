@@ -6,19 +6,19 @@ Applicata l'Opzione D con una micro-fix nel solo index.html: i marker editoriali
 
 ## Risultati
 
-| Verifica | Esito |
-|---|---|
-| Marker sorgente | 61, invariati |
-| Marker nel Riepilogo | 0 |
-| Marker nel modello export/Markdown | 0 |
-| Indicatore su testo personalizzato | PASS |
-| Legenda “non indica nuova approvazione” | PASS |
-| Conteggi | 103 / 41 ok / 54 modifica / 8 nuovo, invariati |
-| Logiche decisionali | Invariate |
-| Responsive | PASS a 360/390/414/768/900/901/1280 px |
-| Errori JavaScript applicativi | 0 |
-| Asset protetti | Invariati |
-| Deploy | Nessuno |
+| Verifica                                | Esito                                          |
+| --------------------------------------- | ---------------------------------------------- |
+| Marker sorgente                         | 61, invariati                                  |
+| Marker nel Riepilogo                    | 0                                              |
+| Marker nel modello export/Markdown      | 0                                              |
+| Indicatore su testo personalizzato      | PASS                                           |
+| Legenda “non indica nuova approvazione” | PASS                                           |
+| Conteggi                                | 103 / 41 ok / 54 modifica / 8 nuovo, invariati |
+| Logiche decisionali                     | Invariate                                      |
+| Responsive                              | PASS a 360/390/414/768/900/901/1280 px         |
+| Errori JavaScript applicativi           | 0                                              |
+| Asset protetti                          | Invariati                                      |
+| Deploy                                  | Nessuno                                        |
 
 ## QA responsive
 

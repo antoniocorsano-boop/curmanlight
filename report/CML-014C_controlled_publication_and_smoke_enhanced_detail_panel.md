@@ -23,15 +23,15 @@ npx netlify deploy --prod --dir _published_snapshot/netlify-current
 
 ## Verifica live — 7 enhancement CML-014B
 
-| Enhancement | Esito |
-|---|---|
-| `DM 254/2012 (vigente)` | ✅ |
-| `✏️ DM 221/2025 — proposta di aggiornamento` | ✅ |
-| Bordo arancione (`#f57f17`) su pannello corrente | ✅ |
-| Bordo verde (`#43a047`) su pannello proposta | ✅ |
-| Pulsante ✏️ viola (`#7b1fa2`) in pending-actions | ✅ |
-| Pulsante ✏️ viola in dettaglio espandibile | ✅ |
-| Scroll mobile 200px (150px ≤760px) | ✅ |
+| Enhancement                                      | Esito |
+| ------------------------------------------------ | ----- |
+| `DM 254/2012 (vigente)`                          | ✅    |
+| `✏️ DM 221/2025 — proposta di aggiornamento`     | ✅    |
+| Bordo arancione (`#f57f17`) su pannello corrente | ✅    |
+| Bordo verde (`#43a047`) su pannello proposta     | ✅    |
+| Pulsante ✏️ viola (`#7b1fa2`) in pending-actions | ✅    |
+| Pulsante ✏️ viola in dettaglio espandibile       | ✅    |
+| Scroll mobile 200px (150px ≤760px)               | ✅    |
 
 ## Verifica live — 16 criteri CML-014A
 
@@ -53,18 +53,18 @@ CML_014C_CONTROLLED_PUBLICATION_ENHANCED_DETAIL_PANEL_CLOSED
 
 ## Output
 
-| Campo | Valore |
-|---|---|
-| URL | https://curmanlight.netlify.app |
-| Comando deploy | `npx netlify deploy --prod --dir _published_snapshot/netlify-current` |
-| Commit pre-deploy | `7ab9276` |
-| File deployato | index.html |
-| Enhancement | 7/7 ✅ |
-| Criteri CML-014A | 16/16 ✅ |
-| Asset | Invariati ✅ |
-| Regressioni | Nessuna ✅ |
-| Modifiche runtime | ❌ Nessuna |
-| Nuovo deploy | ❌ Nessuno |
+| Campo             | Valore                                                                |
+| ----------------- | --------------------------------------------------------------------- |
+| URL               | https://curmanlight.netlify.app                                       |
+| Comando deploy    | `npx netlify deploy --prod --dir _published_snapshot/netlify-current` |
+| Commit pre-deploy | `7ab9276`                                                             |
+| File deployato    | index.html                                                            |
+| Enhancement       | 7/7 ✅                                                                |
+| Criteri CML-014A  | 16/16 ✅                                                              |
+| Asset             | Invariati ✅                                                          |
+| Regressioni       | Nessuna ✅                                                            |
+| Modifiche runtime | ❌ Nessuna                                                            |
+| Nuovo deploy      | ❌ Nessuno                                                            |
 
 ## Prossimo step
 

@@ -10,16 +10,16 @@ La slice e docs-only / validation outcome decision. Non produce file `.normalize
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `7a6a98b` (allineato con `origin/main`) |
-| Working tree iniziale | pulito |
-| Dati normalizzati | 10/14 |
-| Runtime mappa | 10/14 |
-| Shape test | 10/10 PASS |
-| Skill usate | `cml-readiness-audit`, `cml-docs-only-slice` |
+| Parametro             | Valore                                       |
+| --------------------- | -------------------------------------------- |
+| Root Git              | `C:\Users\anton\CurManLight`                 |
+| Branch                | `main`                                       |
+| Commit iniziale       | `7a6a98b` (allineato con `origin/main`)      |
+| Working tree iniziale | pulito                                       |
+| Dati normalizzati     | 10/14                                        |
+| Runtime mappa         | 10/14                                        |
+| Shape test            | 10/10 PASS                                   |
+| Skill usate           | `cml-readiness-audit`, `cml-docs-only-slice` |
 
 ## 3. Collegamento con CML-178, CML-179, CML-180 e CML-181
 
@@ -49,15 +49,15 @@ Ha prodotto la checklist di validazione umana: 21 tabelle su 10 aree, 3 esiti po
 
 ## 5. Stato della checklist CML-181
 
-| Dimensione | Stato |
-|---|---|
-| Checklist creata | Si (CML-181, 405 righe, 21 tabelle) |
-| Compilata da docente/dipartimento | No |
-| Risposte umane presenti | No |
-| Note o integrazioni | No |
-| Firma o autorizzazione | No |
-| Evidenze di validazione tracciabile | Nessuna |
-| Stato complessivo | Strumento pronto, esito non pervenuto |
+| Dimensione                          | Stato                                 |
+| ----------------------------------- | ------------------------------------- |
+| Checklist creata                    | Si (CML-181, 405 righe, 21 tabelle)   |
+| Compilata da docente/dipartimento   | No                                    |
+| Risposte umane presenti             | No                                    |
+| Note o integrazioni                 | No                                    |
+| Firma o autorizzazione              | No                                    |
+| Evidenze di validazione tracciabile | Nessuna                               |
+| Stato complessivo                   | Strumento pronto, esito non pervenuto |
 
 ## 6. Evidenze disponibili
 
@@ -78,18 +78,18 @@ Ha prodotto la checklist di validazione umana: 21 tabelle su 10 aree, 3 esiti po
 
 Le 10 condizioni minime definite in CML-181 per autorizzare data-prep:
 
-| # | Condizione | Stato |
-|---|---|---|
-| 1 | Identita disciplinare confermata | Non verificata |
-| 2 | Nuclei disciplinari confermati | Non verificata |
-| 3 | Progressione Secondaria I/II/III confermata | Non verificata |
-| 4 | Decisione su Infanzia e Primaria | Non disponibile |
-| 5 | Obiettivi osservabili confermati | Non verificata |
-| 6 | Traguardi coerenti | Non verificati |
-| 7 | Lessico salute/sicurezza/inclusione approvato | Non verificato |
-| 8 | Criteri di valutazione definiti | Non definiti |
-| 9 | Assenza formulazioni sanitarie/performative/discriminatorie | Non verificata |
-| 10 | Autorizzazione formale dipartimento | Non disponibile |
+| #   | Condizione                                                  | Stato           |
+| --- | ----------------------------------------------------------- | --------------- |
+| 1   | Identita disciplinare confermata                            | Non verificata  |
+| 2   | Nuclei disciplinari confermati                              | Non verificata  |
+| 3   | Progressione Secondaria I/II/III confermata                 | Non verificata  |
+| 4   | Decisione su Infanzia e Primaria                            | Non disponibile |
+| 5   | Obiettivi osservabili confermati                            | Non verificata  |
+| 6   | Traguardi coerenti                                          | Non verificati  |
+| 7   | Lessico salute/sicurezza/inclusione approvato               | Non verificato  |
+| 8   | Criteri di valutazione definiti                             | Non definiti    |
+| 9   | Assenza formulazioni sanitarie/performative/discriminatorie | Non verificata  |
+| 10  | Autorizzazione formale dipartimento                         | Non disponibile |
 
 Esito: **0/10 condizioni soddisfatte**.
 
@@ -152,12 +152,12 @@ Risposte alle domande decisionali obbligatorie:
 
 ## 19. Opzioni scartate
 
-| Opzione | Motivo scarto |
-|---|---|
-| `VALIDATION_SUFFICIENT_FOR_CONTROLLED_DATA_PREP` | Nessuna validazione umana presente |
-| `VALIDATION_PARTIAL_NEEDS_INTEGRATION` | Non c'e compilazione parziale, non c'e compilazione alcuna |
-| `VALIDATION_INSUFFICIENT_DATA_PREP_BLOCKED` | E troppo forte: la checklist non e stata usata, non ha prodotto esito negativo |
-| `DATA_PREP_AUTHORIZED` | Violerebbe il principio di prudenza e la decisione CML-180 |
+| Opzione                                          | Motivo scarto                                                                  |
+| ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `VALIDATION_SUFFICIENT_FOR_CONTROLLED_DATA_PREP` | Nessuna validazione umana presente                                             |
+| `VALIDATION_PARTIAL_NEEDS_INTEGRATION`           | Non c'e compilazione parziale, non c'e compilazione alcuna                     |
+| `VALIDATION_INSUFFICIENT_DATA_PREP_BLOCKED`      | E troppo forte: la checklist non e stata usata, non ha prodotto esito negativo |
+| `DATA_PREP_AUTHORIZED`                           | Violerebbe il principio di prudenza e la decisione CML-180                     |
 
 ## 20. Condizioni per sbloccare data-prep
 

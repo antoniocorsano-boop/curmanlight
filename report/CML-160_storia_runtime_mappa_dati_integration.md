@@ -42,17 +42,17 @@ La mappa Storia segue la forma già validata dal runtime:
 
 ## Matrice Storia
 
-| Area | Esito |
-| --- | --- |
-| Disciplina | Storia |
-| Strutture sostanziali | 5 |
-| Nodi disciplinari | 5 |
-| Progressione verticale | 9 passaggi |
-| Decisioni curricolari | 5 |
-| Stato decisioni | `da_validare` |
-| Ordini coperti | Infanzia, Primaria, Secondaria |
-| Fonte base | Curriculum normalizzato Storia |
-| Audit preparatorio | CML-157C |
+| Area                   | Esito                          |
+| ---------------------- | ------------------------------ |
+| Disciplina             | Storia                         |
+| Strutture sostanziali  | 5                              |
+| Nodi disciplinari      | 5                              |
+| Progressione verticale | 9 passaggi                     |
+| Decisioni curricolari  | 5                              |
+| Stato decisioni        | `da_validare`                  |
+| Ordini coperti         | Infanzia, Primaria, Secondaria |
+| Fonte base             | Curriculum normalizzato Storia |
+| Audit preparatorio     | CML-157C                       |
 
 ## Strutture sostanziali
 

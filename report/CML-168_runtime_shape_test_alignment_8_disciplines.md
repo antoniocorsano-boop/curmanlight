@@ -48,26 +48,26 @@ Aggiunta di `'educazione-civica.normalized.json'` alla lista `FILES` in `tools/t
 
 ## 8. Esito shape runtime 8/8
 
-| Disciplina | Esito |
-|------------|:-----:|
-| Tecnologia | PASS — S=6 N=6 P=10 D=2 |
-| Italiano | PASS — S=12 N=6 P=10 D=4 |
-| Matematica | PASS — S=12 N=5 P=6 D=4 |
-| Scienze | PASS — S=15 N=5 P=9 D=0 |
-| Storia | PASS — S=15 N=5 P=9 D=0 |
-| Geografia | PASS — S=12 N=3 P=9 D=0 |
-| Inglese | PASS — S=12 N=11 P=9 D=0 |
+| Disciplina            |            Esito            |
+| --------------------- | :-------------------------: |
+| Tecnologia            |   PASS — S=6 N=6 P=10 D=2   |
+| Italiano              |  PASS — S=12 N=6 P=10 D=4   |
+| Matematica            |   PASS — S=12 N=5 P=6 D=4   |
+| Scienze               |   PASS — S=15 N=5 P=9 D=0   |
+| Storia                |   PASS — S=15 N=5 P=9 D=0   |
+| Geografia             |   PASS — S=12 N=3 P=9 D=0   |
+| Inglese               |  PASS — S=12 N=11 P=9 D=0   |
 | **Educazione Civica** | **PASS — S=11 N=4 P=9 D=0** |
-| **Totale** | **8/8 PASS** ✅ |
+| **Totale**            |       **8/8 PASS** ✅       |
 
 ## 9. Conteggi Educazione Civica
 
-| Campo | Valore |
-|-------|:------:|
-| struttureSostanziali | 11 |
-| nodiDisciplinari | 4 |
-| progressioneVerticale | 9 |
-| decisioniCurricolari | 0 |
+| Campo                 | Valore |
+| --------------------- | :----: |
+| struttureSostanziali  |   11   |
+| nodiDisciplinari      |   4    |
+| progressioneVerticale |   9    |
+| decisioniCurricolari  |   0    |
 
 ## 10. Verifica invarianti
 

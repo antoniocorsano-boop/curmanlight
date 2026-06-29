@@ -59,10 +59,10 @@ Non sono stati modificati contenuti curricolari, schema `.cml`, service worker, 
 ## Test mobile post-fix
 
 | Viewport | Esito |
-|----------|-------|
-| 390x844 | PASS |
-| 430x932 | PASS |
-| 360x740 | PASS |
+| -------- | ----- |
+| 390x844  | PASS  |
+| 430x932  | PASS  |
+| 360x740  | PASS  |
 
 Evidenza chiave post-fix su Italiano:
 
@@ -75,13 +75,13 @@ Evidenza chiave post-fix su Italiano:
 
 ## Discipline testate
 
-| Disciplina | Evidenze | UDA draft | Mappa | Esito |
-|------------|----------|-----------|-------|-------|
-| Tecnologia | 13 unita | 13 unita | Tecnologia | PASS |
-| Italiano | 14 unita | 14 unita | Italiano | PASS |
-| Matematica | 13 unita | 13 unita | Matematica | PASS |
-| Storia | 15 unita | 15 unita | Storia | PASS |
-| Inglese | 12 unita | 12 unita | Inglese | PASS |
+| Disciplina | Evidenze | UDA draft | Mappa      | Esito |
+| ---------- | -------- | --------- | ---------- | ----- |
+| Tecnologia | 13 unita | 13 unita  | Tecnologia | PASS  |
+| Italiano   | 14 unita | 14 unita  | Italiano   | PASS  |
+| Matematica | 13 unita | 13 unita  | Matematica | PASS  |
+| Storia     | 15 unita | 15 unita  | Storia     | PASS  |
+| Inglese    | 12 unita | 12 unita  | Inglese    | PASS  |
 
 ## Regressioni escluse
 
@@ -99,14 +99,14 @@ Evidenza chiave post-fix su Italiano:
 
 ## Verifiche
 
-| Check | Esito |
-|-------|-------|
-| Inline script `node --check` | PASS |
-| Validatore curriculum | 14/14 PASS |
-| Shape test runtime MAPPA_DATI | 14/14 PASS |
-| Smoke mobile CDP HTTP | PASS |
-| Errori JavaScript reali | 0 |
-| Warning/404 non bloccanti | 1 risorsa statica 404 per viewport, non bloccante |
+| Check                         | Esito                                             |
+| ----------------------------- | ------------------------------------------------- |
+| Inline script `node --check`  | PASS                                              |
+| Validatore curriculum         | 14/14 PASS                                        |
+| Shape test runtime MAPPA_DATI | 14/14 PASS                                        |
+| Smoke mobile CDP HTTP         | PASS                                              |
+| Errori JavaScript reali       | 0                                                 |
+| Warning/404 non bloccanti     | 1 risorsa statica 404 per viewport, non bloccante |
 
 ## Stato commit docs-only precedente
 

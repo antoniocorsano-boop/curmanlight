@@ -7,25 +7,25 @@ Nessuna modifica runtime — solo audit e documentazione.
 
 ## Preflight
 
-| Controllo | Esito |
-|---|---|
-| Branch | `cml-008r-fix-markdown-decision-summary` ✅ |
-| HEAD partenza | `077e221` — docs: close CML enhanced detail panel cycle ✅ |
-| Working tree | Pulita ✅ |
-| URL live | https://curmanlight.netlify.app ✅ |
-| Modifiche runtime | ❌ Nessuna |
-| Deploy | ❌ Nessuno |
-| Asset | Invariati (sw.js, _headers, PDF) |
+| Controllo         | Esito                                                      |
+| ----------------- | ---------------------------------------------------------- |
+| Branch            | `cml-008r-fix-markdown-decision-summary` ✅                |
+| HEAD partenza     | `077e221` — docs: close CML enhanced detail panel cycle ✅ |
+| Working tree      | Pulita ✅                                                  |
+| URL live          | https://curmanlight.netlify.app ✅                         |
+| Modifiche runtime | ❌ Nessuna                                                 |
+| Deploy            | ❌ Nessuno                                                 |
+| Asset             | Invariati (sw.js, _headers, PDF)                           |
 
 ## 1. Protocollo
 
-| Campo | Valore |
-|---|---|
-| Durata test | ~5 minuti |
-| Tester | Simulazione documentata (analisi JS/CSS live) |
-| Dispositivi | Desktop (viewport 1280px); mobile simulato (360px) |
-| Percorso | Voce → dettaglio → confronto → fonti → decisione |
-| Scala valutazione | ✅ chiaro / ⚠️ dubbio / ❌ bloccato |
+| Campo             | Valore                                             |
+| ----------------- | -------------------------------------------------- |
+| Durata test       | ~5 minuti                                          |
+| Tester            | Simulazione documentata (analisi JS/CSS live)      |
+| Dispositivi       | Desktop (viewport 1280px); mobile simulato (360px) |
+| Percorso          | Voce → dettaglio → confronto → fonti → decisione   |
+| Scala valutazione | ✅ chiaro / ⚠️ dubbio / ❌ bloccato                |
 
 ## 2. Percorso — 9 step
 
@@ -66,6 +66,7 @@ Esito: ✅ chiaro — l'icona 🔍 è esplorativa; il dettaglio si apre immediat
 Azione: leggere le etichette dei pannelli.
 
 Osservazione:
+
 - Pannello sinistro (corrente): `📄 DM 254/2012 (vigente)` oppure `🆕 DM 254/2012 — assente nel curricolo attuale`
 - Pannello destro (proposta): `✏️ DM 221/2025 — proposta di aggiornamento`
 
@@ -100,6 +101,7 @@ Esito: ✅ chiaro — visibile in due punti, sempre accessibile, colore viola lo
 Azione: decidere l'azione successiva.
 
 Osservazione:
+
 - ✅ (title "Approva") → `approve(id)` imposta `decisione="approvata"` e mostra toast "✅ Proposta approvata!"
 - ❌ (title "Mantieni testo attuale") → `reject(id)` imposta `decisione="rifiutata"` e mostra toast "❌ Mantenuto il testo attuale"
 - ✏️ (title "Personalizza testo") → `startEdit(id)` attiva la modalità edit con textarea precompilata e pulsanti "✅ Salva e Approva" / "Annulla"
@@ -108,34 +110,34 @@ Esito: ✅ chiaro — tre azioni distinte, title esplicativi, feedback toast dop
 
 ## 3. Risultati
 
-| Step | Azione | Esito |
-|---|---|---|
-| 1 | Aprire lo strumento | ✅ chiaro |
-| 2 | Entrare nella revisione | ✅ chiaro |
-| 3 | Individuare voce da controllare | ✅ chiaro |
-| 4 | Aprire il dettaglio | ✅ chiaro |
-| 5 | Riconoscere fonti e riferimenti | ✅ chiaro |
-| 6 | Distinguere testo vigente/proposta | ✅ chiaro |
-| 7 | Capire differenze evidenziate | ✅ chiaro |
-| 8 | Individuare "Personalizza testo" | ✅ chiaro |
-| 9 | Validare/respingere/personalizzare | ✅ chiaro |
+| Step | Azione                             | Esito     |
+| ---- | ---------------------------------- | --------- |
+| 1    | Aprire lo strumento                | ✅ chiaro |
+| 2    | Entrare nella revisione            | ✅ chiaro |
+| 3    | Individuare voce da controllare    | ✅ chiaro |
+| 4    | Aprire il dettaglio                | ✅ chiaro |
+| 5    | Riconoscere fonti e riferimenti    | ✅ chiaro |
+| 6    | Distinguere testo vigente/proposta | ✅ chiaro |
+| 7    | Capire differenze evidenziate      | ✅ chiaro |
+| 8    | Individuare "Personalizza testo"   | ✅ chiaro |
+| 9    | Validare/respingere/personalizzare | ✅ chiaro |
 
 9/9 ✅ chiaro. Nessun ⚠️ dubbio. Nessun ❌ bloccato.
 
 ## 4. Verifica regressioni durante il test
 
-| Area | Esito |
-|---|---|
-| Home guidata (cruscotto) | ✅ Preservata |
-| Bottom bar mobile | ✅ Preservata |
-| Menu overlay ☰ | ✅ Preservato |
-| Breadcrumb dinamico | ✅ Preservato |
-| Card compatte (ok/decise) | ✅ Preservate |
-| Dettaglio espandibile | ✅ Enhancement verificati |
-| Approvazione/rifiuto | ✅ Invariati |
-| Personalizza testo | ✅ In due punti |
-| Export e Markdown | ✅ Preservati |
-| Asset (sw.js, _headers, PDF) | ✅ Invariati |
+| Area                         | Esito                     |
+| ---------------------------- | ------------------------- |
+| Home guidata (cruscotto)     | ✅ Preservata             |
+| Bottom bar mobile            | ✅ Preservata             |
+| Menu overlay ☰              | ✅ Preservato             |
+| Breadcrumb dinamico          | ✅ Preservato             |
+| Card compatte (ok/decise)    | ✅ Preservate             |
+| Dettaglio espandibile        | ✅ Enhancement verificati |
+| Approvazione/rifiuto         | ✅ Invariati              |
+| Personalizza testo           | ✅ In due punti           |
+| Export e Markdown            | ✅ Preservati             |
+| Asset (sw.js, _headers, PDF) | ✅ Invariati              |
 
 Nessuna regressione.
 
@@ -174,25 +176,25 @@ CML_015A_REAL_USER_DETAIL_PANEL_MICRO_TEST_READY
 
 ## Output finale
 
-| Campo | Valore |
-|---|---|
-| Verdetto | `CML_015A_REAL_USER_DETAIL_PANEL_MICRO_TEST_READY` |
-| Branch | `cml-008r-fix-markdown-decision-summary` |
-| Commit partenza | `077e221` — docs: close CML enhanced detail panel cycle |
-| Nuovo commit | `HEAD` (dopo commit docs) |
-| File modificati | `docs/03_execution/CML-015A.md` (nuovo), `report/CML-015A_real_user_micro_test_detail_panel_walkthrough.md` (nuovo), `docs/REPO-MOVELOG.md` (modificato) |
-| Modalità test | Simulazione documentata su sorgente live |
-| Dispositivo/viewport | Desktop 1280px + mobile simulato 360px |
-| Apertura dettaglio | ✅ chiaro |
-| Comprensione fonti | ✅ chiaro |
-| Comprensione differenze | ✅ chiaro |
-| "Personalizza testo" trovato | ✅ chiaro |
-| Decisione utente | ✅ chiara (3 opzioni distinte) |
-| Problemi rilevati | Nessuno |
-| Raccomandazione | Chiudere fase UX dettaglio, aprire ciclo su qualità contenuti disciplinari |
-| Modifica runtime | ❌ Nessuna |
-| Deploy | ❌ Nessuno |
-| Git finale | Working tree pulita ✅ |
+| Campo                        | Valore                                                                                                                                                   |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Verdetto                     | `CML_015A_REAL_USER_DETAIL_PANEL_MICRO_TEST_READY`                                                                                                       |
+| Branch                       | `cml-008r-fix-markdown-decision-summary`                                                                                                                 |
+| Commit partenza              | `077e221` — docs: close CML enhanced detail panel cycle                                                                                                  |
+| Nuovo commit                 | `HEAD` (dopo commit docs)                                                                                                                                |
+| File modificati              | `docs/03_execution/CML-015A.md` (nuovo), `report/CML-015A_real_user_micro_test_detail_panel_walkthrough.md` (nuovo), `docs/REPO-MOVELOG.md` (modificato) |
+| Modalità test                | Simulazione documentata su sorgente live                                                                                                                 |
+| Dispositivo/viewport         | Desktop 1280px + mobile simulato 360px                                                                                                                   |
+| Apertura dettaglio           | ✅ chiaro                                                                                                                                                |
+| Comprensione fonti           | ✅ chiaro                                                                                                                                                |
+| Comprensione differenze      | ✅ chiaro                                                                                                                                                |
+| "Personalizza testo" trovato | ✅ chiaro                                                                                                                                                |
+| Decisione utente             | ✅ chiara (3 opzioni distinte)                                                                                                                           |
+| Problemi rilevati            | Nessuno                                                                                                                                                  |
+| Raccomandazione              | Chiudere fase UX dettaglio, aprire ciclo su qualità contenuti disciplinari                                                                               |
+| Modifica runtime             | ❌ Nessuna                                                                                                                                               |
+| Deploy                       | ❌ Nessuno                                                                                                                                               |
+| Git finale                   | Working tree pulita ✅                                                                                                                                   |
 
 ## Prossimo ciclo consigliato
 

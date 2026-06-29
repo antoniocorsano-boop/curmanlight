@@ -13,13 +13,13 @@ Pubblicazione controllata su Netlify della versione corrente. 1 file deployato i
 
 ## Controlli
 
-| Area | Esito |
-|---|---|
-| Preflight repository | ✅ PASS |
-| Preflight app locale | ✅ PASS |
-| Deploy | ✅ PASS (3.6s, 1 file) |
-| Post-deploy smoke | ✅ PASS |
-| MEMORY.md non committato | ✅ PASS |
+| Area                     | Esito                  |
+| ------------------------ | ---------------------- |
+| Preflight repository     | ✅ PASS                |
+| Preflight app locale     | ✅ PASS                |
+| Deploy                   | ✅ PASS (3.6s, 1 file) |
+| Post-deploy smoke        | ✅ PASS                |
+| MEMORY.md non committato | ✅ PASS                |
 
 ## Verdetto
 

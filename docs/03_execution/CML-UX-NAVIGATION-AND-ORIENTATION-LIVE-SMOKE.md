@@ -21,17 +21,17 @@
 
 ## Live smoke
 
-| Area | Verdetto | Dettaglio |
-|------|----------|-----------|
-| Caricamento pagina | PASS | HTTP 200, 754990 byte, `<!DOCTYPE html>` presente |
-| Breadcrumb disciplina | PASS | `discLabel` presente in JS: `discLabel=selDisc&&(t==="curricolo"||t==="lavoro"||t==="riepilogo")?' - '+selDisc:''` — etichette Consultazione/Revisione/Definitivo con suffisso disciplina |
-| Sidebar Fonti nascosta | PASS | `.aside-hidden{display:none!important}` CSS presente + `aside-hidden` toggle in `setTab()` |
-| Evidenze raggruppate ordine | PASS | `ordGroups` presente in JS; rendering con 3 gruppi (Infanzia/Primaria/Secondaria), primo aperto di default |
-| Curriculum dati | PASS | `ALL_CURRICULUM_DATA` presente con tutte 14 discipline |
-| Esportazioni | PASS | `export` riferimenti presenti nel JS |
-| Mobile bar | PASS | `mobile-bottom-bar` con 5 pulsanti (Home/Curr./Comp./Esp./Menu) |
-| Sidebar Fonti tab | PASS | `ordinamento-tab` e `fonti` riferimenti presenti |
-| Console error shadow | PASS | Nessun pattern `console.error`/`console.warn`/`Uncaught` evidente |
+| Area                        | Verdetto | Dettaglio                                                                                                  |
+| --------------------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
+| Caricamento pagina          | PASS     | HTTP 200, 754990 byte, `<!DOCTYPE html>` presente                                                          |
+| Breadcrumb disciplina       | PASS     | `discLabel` presente in JS: `discLabel=selDisc&&(t==="curricolo"                                           |     | t==="lavoro" |     | t==="riepilogo")?' - '+selDisc:''` — etichette Consultazione/Revisione/Definitivo con suffisso disciplina |
+| Sidebar Fonti nascosta      | PASS     | `.aside-hidden{display:none!important}` CSS presente + `aside-hidden` toggle in `setTab()`                 |
+| Evidenze raggruppate ordine | PASS     | `ordGroups` presente in JS; rendering con 3 gruppi (Infanzia/Primaria/Secondaria), primo aperto di default |
+| Curriculum dati             | PASS     | `ALL_CURRICULUM_DATA` presente con tutte 14 discipline                                                     |
+| Esportazioni                | PASS     | `export` riferimenti presenti nel JS                                                                       |
+| Mobile bar                  | PASS     | `mobile-bottom-bar` con 5 pulsanti (Home/Curr./Comp./Esp./Menu)                                            |
+| Sidebar Fonti tab           | PASS     | `ordinamento-tab` e `fonti` riferimenti presenti                                                           |
+| Console error shadow        | PASS     | Nessun pattern `console.error`/`console.warn`/`Uncaught` evidente                                          |
 
 ## Verdetto
 

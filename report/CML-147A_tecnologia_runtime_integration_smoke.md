@@ -2,12 +2,12 @@
 
 ## Fotografia iniziale
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD | `6dd82be` |
-| origin/main | `810ae84` |
-| Commit ahead | 4 |
+| Parametro    | Valore    |
+| ------------ | --------- |
+| Branch       | `main`    |
+| HEAD         | `6dd82be` |
+| origin/main  | `810ae84` |
+| Commit ahead | 4         |
 
 ## Controlli statici
 

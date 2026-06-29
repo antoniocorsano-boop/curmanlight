@@ -62,10 +62,12 @@ Il file `CLAUDE.md` alla radice del repository deve essere minimale e contenere 
 # CurManLight — Claude Code Project Memory
 
 ## Identity
+
 CurManLight: vertical curriculum static web app for I.C. Calvario-Covotta.
 Source of truth: `_published_snapshot/netlify-current/`.
 
 ## Key Rules
+
 - Edit only in `_published_snapshot/netlify-current/` for runtime changes.
 - Never push or deploy without explicit slice authorization.
 - Never commit credentials, client IDs, tokens, or secrets.
@@ -76,6 +78,7 @@ Source of truth: `_published_snapshot/netlify-current/`.
 - Run `node tools/test-runtime-mappa-dati-shape.mjs` after runtime/test changes.
 
 ## Current State
+
 - Normalized data: 10/14 disciplines
 - Runtime mappa: 10/14 disciplines
 - Shape test: 10/10 PASS
@@ -83,6 +86,7 @@ Source of truth: `_published_snapshot/netlify-current/`.
 - SchoolKB: optional parallel extension, disabled by default
 
 ## Scope Model
+
 - docs-only slices: no runtime, no data, no .claude/ changes
 - data-prep slices: content/curriculum/*.normalized.json only
 - runtime slices: _published_snapshot/netlify-current/ only
@@ -110,16 +114,16 @@ Nota: questo e' il contenuto proposto. La creazione effettiva del file avviene i
 
 ### 7.2 Skill prioritarie — dettaglio
 
-| # | Skill | Priorita' | Descrizione | Dipendenza |
-|---|-------|-----------|-------------|------------|
-| 1 | `cml-sync` | P0 — immediata | Sincronizza repo locale con origin/main; verifica HEAD, branch, working tree | Nessuna |
-| 2 | `cml-docs-only-slice` | P0 — immediata | Crea slice documentale: contratto, execution doc, report, movelog | `cml-sync` |
-| 3 | `cml-readiness-audit` | P1 — dopo P0 | Audit readiness disciplina: verifica disponibilita' dati, rischi, gap | `cml-sync` |
-| 4 | `cml-normalized-data-prep` | P2 — dopo P1 | Preparazione dati normalizzati: genera .normalized.json da sorgenti | `cml-readiness-audit` |
-| 5 | `cml-runtime-integration` | P3 — dopo P2 | Integrazione mappa runtime: aggiunge disciplina a setMappaDisciplina() | `cml-normalized-data-prep` |
-| 6 | `cml-shape-test-alignment` | P3 — dopo P3 | Allinea shape test dopo modifica runtime o test | `cml-runtime-integration` |
-| 7 | `skb-contract` | P4 — estensione | Gestione contratto SchoolKB (solo documentale, no runtime) | `cml-sync` |
-| 8 | `skb-local-prototype` | P5 — estensione | Prototipazione locale SchoolKB (solo se SKB autorizzato) | `skb-contract` |
+| #   | Skill                      | Priorita'       | Descrizione                                                                  | Dipendenza                 |
+| --- | -------------------------- | --------------- | ---------------------------------------------------------------------------- | -------------------------- |
+| 1   | `cml-sync`                 | P0 — immediata  | Sincronizza repo locale con origin/main; verifica HEAD, branch, working tree | Nessuna                    |
+| 2   | `cml-docs-only-slice`      | P0 — immediata  | Crea slice documentale: contratto, execution doc, report, movelog            | `cml-sync`                 |
+| 3   | `cml-readiness-audit`      | P1 — dopo P0    | Audit readiness disciplina: verifica disponibilita' dati, rischi, gap        | `cml-sync`                 |
+| 4   | `cml-normalized-data-prep` | P2 — dopo P1    | Preparazione dati normalizzati: genera .normalized.json da sorgenti          | `cml-readiness-audit`      |
+| 5   | `cml-runtime-integration`  | P3 — dopo P2    | Integrazione mappa runtime: aggiunge disciplina a setMappaDisciplina()       | `cml-normalized-data-prep` |
+| 6   | `cml-shape-test-alignment` | P3 — dopo P3    | Allinea shape test dopo modifica runtime o test                              | `cml-runtime-integration`  |
+| 7   | `skb-contract`             | P4 — estensione | Gestione contratto SchoolKB (solo documentale, no runtime)                   | `cml-sync`                 |
+| 8   | `skb-local-prototype`      | P5 — estensione | Prototipazione locale SchoolKB (solo se SKB autorizzato)                     | `skb-contract`             |
 
 ### 7.3 Contenuto minimo di ogni skill
 
@@ -152,16 +156,16 @@ Ogni file `.claude/skills/<name>.md` deve contenere:
 
 ### 8.2 Hook prioritari — dettaglio
 
-| # | Hook | Tipo | Priorita' | Condizione di attivazione |
-|---|------|------|-----------|--------------------------|
-| 1 | `guard-scope` | Pre-commit | P0 | Verifica che i file modificati siano nello scope autorizzato della slice |
-| 2 | `guard-secrets` | Pre-commit | P0 | Cerca pattern di credenziali, client ID, token, API key |
-| 3 | `guard-push` | Pre-push | P0 | Blocca push salvo slice esplicitamente autorizzata |
-| 4 | `guard-runtime-docs` | Pre-commit | P1 | Blocca modifiche a `_published_snapshot/` in slice docs-only |
-| 5 | `guard-curriculum-data` | Pre-commit | P1 | Blocca modifiche a `content/curriculum/` fuori data-prep |
-| 6 | `post-edit-check` | Post-edit | P1 | Esegue `git diff --check` dopo modifica file |
-| 7 | `post-data-validate` | Post-commit | P2 | Esegue validatore curriculum dopo commit su `content/curriculum/` |
-| 8 | `post-shape-validate` | Post-commit | P2 | Esegue shape test dopo commit su runtime o test |
+| #   | Hook                    | Tipo        | Priorita' | Condizione di attivazione                                                |
+| --- | ----------------------- | ----------- | --------- | ------------------------------------------------------------------------ |
+| 1   | `guard-scope`           | Pre-commit  | P0        | Verifica che i file modificati siano nello scope autorizzato della slice |
+| 2   | `guard-secrets`         | Pre-commit  | P0        | Cerca pattern di credenziali, client ID, token, API key                  |
+| 3   | `guard-push`            | Pre-push    | P0        | Blocca push salvo slice esplicitamente autorizzata                       |
+| 4   | `guard-runtime-docs`    | Pre-commit  | P1        | Blocca modifiche a `_published_snapshot/` in slice docs-only             |
+| 5   | `guard-curriculum-data` | Pre-commit  | P1        | Blocca modifiche a `content/curriculum/` fuori data-prep                 |
+| 6   | `post-edit-check`       | Post-edit   | P1        | Esegue `git diff --check` dopo modifica file                             |
+| 7   | `post-data-validate`    | Post-commit | P2        | Esegue validatore curriculum dopo commit su `content/curriculum/`        |
+| 8   | `post-shape-validate`   | Post-commit | P2        | Esegue shape test dopo commit su runtime o test                          |
 
 ### 8.3 Pattern di blocco per `guard-secrets`
 
@@ -185,6 +189,7 @@ I subagent sono rinviati a CML-OPS-006. Uso potenziale:
 3. **cml-reporter**: subagent per generazione report da dati di audit.
 
 Condizioni per l'attivazione:
+
 - Almeno 3 skill P0–P1 implementate e collaudate.
 - Almeno 2 hook P0 implementati e collaudati.
 - Contratto CLAUDE.md in produzione.
@@ -269,15 +274,15 @@ Decisione: rinviare plugin a CML-OPS-007, solo se le skill e gli hook dimostrano
 
 ## 18. Roadmap OPS
 
-| Step | Slice | Oggetto | Tipo | Prerequisiti |
-|------|-------|---------|------|-------------|
-| 1 | CML-OPS-001 | Contratto Claude Code locale | docs-only | Nessuno |
-| 2 | CML-OPS-002 | CLAUDE.md minimale project memory | docs + `.claude/` | OPS-001 |
-| 3 | CML-OPS-003 | Skill `cml-sync` | `.claude/skills/` | OPS-002 |
-| 4 | CML-OPS-004 | Skill `cml-docs-only-slice` e `cml-readiness-audit` | `.claude/skills/` | OPS-003 |
-| 5 | CML-OPS-005 | Hook `guard-scope`, `guard-secrets`, `guard-push` | `.claude/hooks/` | OPS-002 |
-| 6 | CML-OPS-006 | Subagent audit (se giustificato) | `.claude/` config | OPS-004, OPS-005 |
-| 7 | CML-OPS-007 | Plugin CurManLight Ops (se giustificato) | Esterno | OPS-006 |
+| Step | Slice       | Oggetto                                             | Tipo              | Prerequisiti     |
+| ---- | ----------- | --------------------------------------------------- | ----------------- | ---------------- |
+| 1    | CML-OPS-001 | Contratto Claude Code locale                        | docs-only         | Nessuno          |
+| 2    | CML-OPS-002 | CLAUDE.md minimale project memory                   | docs + `.claude/` | OPS-001          |
+| 3    | CML-OPS-003 | Skill `cml-sync`                                    | `.claude/skills/` | OPS-002          |
+| 4    | CML-OPS-004 | Skill `cml-docs-only-slice` e `cml-readiness-audit` | `.claude/skills/` | OPS-003          |
+| 5    | CML-OPS-005 | Hook `guard-scope`, `guard-secrets`, `guard-push`   | `.claude/hooks/`  | OPS-002          |
+| 6    | CML-OPS-006 | Subagent audit (se giustificato)                    | `.claude/` config | OPS-004, OPS-005 |
+| 7    | CML-OPS-007 | Plugin CurManLight Ops (se giustificato)            | Esterno           | OPS-006          |
 
 ### Criteri per avanzare nella roadmap
 
@@ -287,18 +292,18 @@ Decisione: rinviare plugin a CML-OPS-007, solo se le skill e gli hook dimostrano
 
 ## 19. Rischi residui
 
-| # | Rischio | Impatto | Mitigazione |
-|---|--------|---------|-------------|
-| 1 | Automazioni troppo invasive | Hook bloccano lavoro legittimo, falso positivo | Iniziare con hook P0, monitorare falsi positivi, aggiungere eccezioni documentate |
-| 2 | Falsi positivi hook | Sviluppo rallentato da blocchi ingiustificati | Ogni hook P1+ ha modalita' bypass documentata; hook P0 non hanno bypass |
-| 3 | Modifica accidentale runtime | Slice docs-only tocca index.html per errore | `guard-runtime-docs` pre-commit hook |
-| 4 | Push fuori ciclo | Modifiche non verificate raggiungono origin/main | `guard-push` pre-push hook |
-| 5 | Credenziali in repo | Segreti committati per errore | `guard-secrets` pre-commit hook |
-| 6 | Confusione CML/SKB | Skill OPS contaminano contratto SKB | Regole SKB esplicite; skill SKB separate |
-| 7 | Sovrascrittura workflow funzionanti | Nuove skill/hook rompono processi collaudati | Principio conservative integration; test su branch prima di main |
-| 8 | CLAUDE.md troppo verbose | Memoria di progetto sovraccarica il contesto | CLAUDE.md rimane minimale; dettagli nei contratti e report |
-| 9 | Dipendenza da Claude Code | Il team non puo' lavorare senza Claude Code | Le skill sono documentazione, non runtime; il repo e' autonomo senza di esse |
-| 10 | Rinvio indefinito MCP/plugin | Caso d'uso emerge e non c'e' infrastruttura | OPS-006/007 sono predisposti; la roadmap e' estensibile |
+| #   | Rischio                             | Impatto                                          | Mitigazione                                                                       |
+| --- | ----------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------- |
+| 1   | Automazioni troppo invasive         | Hook bloccano lavoro legittimo, falso positivo   | Iniziare con hook P0, monitorare falsi positivi, aggiungere eccezioni documentate |
+| 2   | Falsi positivi hook                 | Sviluppo rallentato da blocchi ingiustificati    | Ogni hook P1+ ha modalita' bypass documentata; hook P0 non hanno bypass           |
+| 3   | Modifica accidentale runtime        | Slice docs-only tocca index.html per errore      | `guard-runtime-docs` pre-commit hook                                              |
+| 4   | Push fuori ciclo                    | Modifiche non verificate raggiungono origin/main | `guard-push` pre-push hook                                                        |
+| 5   | Credenziali in repo                 | Segreti committati per errore                    | `guard-secrets` pre-commit hook                                                   |
+| 6   | Confusione CML/SKB                  | Skill OPS contaminano contratto SKB              | Regole SKB esplicite; skill SKB separate                                          |
+| 7   | Sovrascrittura workflow funzionanti | Nuove skill/hook rompono processi collaudati     | Principio conservative integration; test su branch prima di main                  |
+| 8   | CLAUDE.md troppo verbose            | Memoria di progetto sovraccarica il contesto     | CLAUDE.md rimane minimale; dettagli nei contratti e report                        |
+| 9   | Dipendenza da Claude Code           | Il team non puo' lavorare senza Claude Code      | Le skill sono documentazione, non runtime; il repo e' autonomo senza di esse      |
+| 10  | Rinvio indefinito MCP/plugin        | Caso d'uso emerge e non c'e' infrastruttura      | OPS-006/007 sono predisposti; la roadmap e' estensibile                           |
 
 ## 20. Criteri per procedere a CML-OPS-002
 
@@ -314,6 +319,7 @@ CML-OPS-002 (CLAUDE_MD_MINIMAL_PROJECT_MEMORY) puo' procedere quando:
 8. Educazione Fisica non e' stata aperta, modificata o anticipata.
 
 CML-OPS-002 creera':
+
 - `CLAUDE.md` alla radice del repository (contenuto minimale come da specifica sezione 6).
 - `.claude/settings.json` se necessario per permessi locali.
 - Documentazione slice in `docs/03_execution/CML-OPS-002.md` e `report/`.

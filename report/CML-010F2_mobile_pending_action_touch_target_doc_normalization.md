@@ -9,9 +9,9 @@
 Micro-fix su `.pending-action` mobile per raggiungere 44px in tutti i breakpoint:
 
 | Breakpoint | CML-010F | CML-010F2 |
-|---|---|---|
-| ≤900px | 42px | 44px |
-| ≤560px | 40px | 44px |
+| ---------- | -------- | --------- |
+| ≤900px     | 42px     | 44px      |
+| ≤560px     | 40px     | 44px      |
 
 Documentazione normalizzata: `docs/03_execution/CML-010F2.md`, `report/`, `docs/REPO-MOVELOG.md`.
 

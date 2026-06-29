@@ -9,22 +9,22 @@ Il precedente CML-031 (esempi dimostrativi) è sospeso: priorità ridefinita ver
 
 ## Preflight
 
-| Controllo | Esito |
-|---|---|
-| HEAD partenza | `2e27114` ✅ |
-| Working tree | Pulita ✅ |
+| Controllo          | Esito             |
+| ------------------ | ----------------- |
+| HEAD partenza      | `2e27114` ✅      |
+| Working tree       | Pulita ✅         |
 | MEMORY.md presente | ✅ non committato |
-| Runtime modificato | ❌ Nessuno |
+| Runtime modificato | ❌ Nessuno        |
 
 ## Opzioni valutate
 
-| # | Opzione | Valore docente | Rischio tecnico | Rischio istituzionale | Raccomandazione |
-|---|---|---|---|---|---|
-| A | Link ufficiali MIM | Basso | Nullo | Nullo | Base minima |
-| B | Viewer PDF incorporato | Alto | Medio | Basso | Buona, ma peso |
-| C | Indice navigabile | Alto | Medio | Medio | Utile ma rischiosa |
-| D | Testo completo nell'app | Alto | Alto | Alto | **Sconsigliata** |
-| **E** | **Soluzione ibrida** | **Alto** | **Basso** | **Basso** | **Consigliata** |
+| #     | Opzione                 | Valore docente | Rischio tecnico | Rischio istituzionale | Raccomandazione    |
+| ----- | ----------------------- | -------------- | --------------- | --------------------- | ------------------ |
+| A     | Link ufficiali MIM      | Basso          | Nullo           | Nullo                 | Base minima        |
+| B     | Viewer PDF incorporato  | Alto           | Medio           | Basso                 | Buona, ma peso     |
+| C     | Indice navigabile       | Alto           | Medio           | Medio                 | Utile ma rischiosa |
+| D     | Testo completo nell'app | Alto           | Alto            | Alto                  | **Sconsigliata**   |
+| **E** | **Soluzione ibrida**    | **Alto**       | **Basso**       | **Basso**             | **Consigliata**    |
 
 ## Dettaglio opzione E
 

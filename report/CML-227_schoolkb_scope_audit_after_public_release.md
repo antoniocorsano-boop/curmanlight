@@ -36,28 +36,29 @@ SchoolKB was framed as a Google Drive-based knowledge base for norms, curricular
 
 ## Existing source/doc readiness
 
-| Source type | Status |
-|---|---|
-| Tab Fonti (normativa) | 12+ reference cards including IN 2012, PTOF, RAV, EU framework, DigComp, Agenda 2030 |
-| Fonte field per unit | 142/142 units across 14 disciplines (100% coverage) |
-| User documentation (04_user) | 20 files covering pilot, observation, department, roles; none mention SchoolKB |
-| SKB-001 contract | Complete technical/UX/privacy contract for Drive connector (210 lines) |
+| Source type                  | Status                                                                               |
+| ---------------------------- | ------------------------------------------------------------------------------------ |
+| Tab Fonti (normativa)        | 12+ reference cards including IN 2012, PTOF, RAV, EU framework, DigComp, Agenda 2030 |
+| Fonte field per unit         | 142/142 units across 14 disciplines (100% coverage)                                  |
+| User documentation (04_user) | 20 files covering pilot, observation, department, roles; none mention SchoolKB       |
+| SKB-001 contract             | Complete technical/UX/privacy contract for Drive connector (210 lines)               |
 
 ## Options compared
 
-| Option | Effort | Value vs current state | Risk |
-|---|---|---|---|
-| A — Static source index | Low | Low (already exists as Fonti tab) | Minimal |
-| B — Discipline-linked panel | Medium | Medium (data exists, no user request) | Minimal |
-| C — Evidence/UDA layer | Medium-high | Low (workflow already works) | Medium (overlap) |
-| D — `.cml` workflow help | Low | Low (already documented) | Minimal |
-| **E — Defer SchoolKB** | **None** | **None needed** | **None** |
+| Option                      | Effort      | Value vs current state                | Risk             |
+| --------------------------- | ----------- | ------------------------------------- | ---------------- |
+| A — Static source index     | Low         | Low (already exists as Fonti tab)     | Minimal          |
+| B — Discipline-linked panel | Medium      | Medium (data exists, no user request) | Minimal          |
+| C — Evidence/UDA layer      | Medium-high | Low (workflow already works)          | Medium (overlap) |
+| D — `.cml` workflow help    | Low         | Low (already documented)              | Minimal          |
+| **E — Defer SchoolKB**      | **None**    | **None needed**                       | **None**         |
 
 ## Recommendation
 
 **E — Defer SchoolKB indefinitely.**
 
 Rationale:
+
 - The Fonti tab already provides a comprehensive static knowledge base
 - 142/142 units carry source references embedded in curriculum data
 - Evidence/UDA/`.cml` workflows operate independently and are complete
@@ -67,25 +68,25 @@ Rationale:
 
 ## Rejected alternatives
 
-| Alternative | Rationale |
-|---|---|
-| A (Static source index) | Fonti tab already sufficient |
+| Alternative                 | Rationale                                      |
+| --------------------------- | ---------------------------------------------- |
+| A (Static source index)     | Fonti tab already sufficient                   |
 | B (Discipline-linked panel) | Creates runtime code without demonstrated need |
-| C (Evidence/UDA support) | Would couple independent workflows |
-| D (`.cml` help layer) | Already covered by user guides |
+| C (Evidence/UDA support)    | Would couple independent workflows             |
+| D (`.cml` help layer)       | Already covered by user guides                 |
 
 ## Finale
 
-| Field | Value |
-|---|---|
-| Start commit | `26bb195` |
-| Final commit | da definire |
-| Scope | docs-only |
-| No runtime | Confirmed |
-| No JSON | Confirmed |
-| No SchoolKB implementation | Confirmed |
-| No deploy | Confirmed |
-| No push | Confirmed |
-| No secrets | Confirmed |
-| Verdict | `CML_227_SCHOOLKB_DEFERRED_CONFIRMED` |
-| Next recommendation | CML-228 — decide next cycle (release maintenance, UX menu action, or close functional cycle) |
+| Field                      | Value                                                                                        |
+| -------------------------- | -------------------------------------------------------------------------------------------- |
+| Start commit               | `26bb195`                                                                                    |
+| Final commit               | da definire                                                                                  |
+| Scope                      | docs-only                                                                                    |
+| No runtime                 | Confirmed                                                                                    |
+| No JSON                    | Confirmed                                                                                    |
+| No SchoolKB implementation | Confirmed                                                                                    |
+| No deploy                  | Confirmed                                                                                    |
+| No push                    | Confirmed                                                                                    |
+| No secrets                 | Confirmed                                                                                    |
+| Verdict                    | `CML_227_SCHOOLKB_DEFERRED_CONFIRMED`                                                        |
+| Next recommendation        | CML-228 — decide next cycle (release maintenance, UX menu action, or close functional cycle) |

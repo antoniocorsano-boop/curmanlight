@@ -697,7 +697,12 @@
       "ordine": "Primaria",
       "classe": "1",
       "descrizioneProgressione": "Sistema di numerazione decimale, calcolo e prime relazioni",
-      "nodiRiferimento": ["nod_mat_001", "nod_mat_002", "nod_mat_003", "nod_mat_004"],
+      "nodiRiferimento": [
+        "nod_mat_001",
+        "nod_mat_002",
+        "nod_mat_003",
+        "nod_mat_004"
+      ],
       "fonte": "Derivato da unità mat_pri_1_001, mat_pri_1_002, mat_pri_1_003, mat_pri_1_004"
     },
     {
@@ -713,7 +718,13 @@
       "ordine": "Secondaria",
       "classe": "1",
       "descrizioneProgressione": "Approfondimento numeri, geometria, relazioni, dati e informatica",
-      "nodiRiferimento": ["nod_mat_001", "nod_mat_002", "nod_mat_003", "nod_mat_004", "nod_mat_005"],
+      "nodiRiferimento": [
+        "nod_mat_001",
+        "nod_mat_002",
+        "nod_mat_003",
+        "nod_mat_004",
+        "nod_mat_005"
+      ],
       "fonte": "Derivato da unità mat_sec_1_001, mat_sec_1_002, mat_sec_1_003, mat_sec_1_004, mat_sec_1_005"
     },
     {

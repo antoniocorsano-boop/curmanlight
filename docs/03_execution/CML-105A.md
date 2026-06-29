@@ -32,11 +32,11 @@ Verificare la qualità tecnica, didattica, geografica, verticale e progettuale d
 
 ## Matrice assi/ordini
 
-| Asse | Infanzia | Primaria | Secondaria | Totale |
-|------|----------|----------|------------|--------|
-| **Paesaggio** | 1 (fas.5) | 2 (cl.1, cl.2) | 1 (cl.1) | 4 |
-| **Transcalarità** | — | 2 (cl.3, cl.5) | 3 (cl.1, cl.2, cl.3) | 5 |
-| **Territorializzazione** | — | 1 (cl.4) | 2 (cl.2, cl.3) | 3 |
+| Asse                     | Infanzia  | Primaria       | Secondaria           | Totale |
+| ------------------------ | --------- | -------------- | -------------------- | ------ |
+| **Paesaggio**            | 1 (fas.5) | 2 (cl.1, cl.2) | 1 (cl.1)             | 4      |
+| **Transcalarità**        | —         | 2 (cl.3, cl.5) | 3 (cl.1, cl.2, cl.3) | 5      |
+| **Territorializzazione** | —         | 1 (cl.4)       | 2 (cl.2, cl.3)       | 3      |
 
 ## Valutazione identità geografica
 
@@ -71,11 +71,11 @@ Verificare la qualità tecnica, didattica, geografica, verticale e progettuale d
 
 ## Valutazione headroom
 
-| Metrica | Geografia | Storia | Tecnologia | Italiano | Matematica | Scienze | Inglese |
-|---------|-----------|--------|------------|----------|------------|---------|---------|
-| Unità | 12 | 15 | 13 | 14 | 13 | 15 | 12 |
-| Chars/unità | 1.559 | 1.738 | — | 1.588 | 2.114 | — | — |
-| Totale chars | 18.710 | 26.072 | — | 22.233 | 27.483 | — | — |
+| Metrica      | Geografia | Storia | Tecnologia | Italiano | Matematica | Scienze | Inglese |
+| ------------ | --------- | ------ | ---------- | -------- | ---------- | ------- | ------- |
+| Unità        | 12        | 15     | 13         | 14       | 13         | 15      | 12      |
+| Chars/unità  | 1.559     | 1.738  | —          | 1.588    | 2.114      | —       | —       |
+| Totale chars | 18.710    | 26.072 | —          | 22.233   | 27.483     | —       | —       |
 
 Headroom: sostenibile. 12 unità, 1.559 chars/unità — ben al di sotto della media complessiva. Ottima compatibilità con futuro contatore 7/8/0.
 

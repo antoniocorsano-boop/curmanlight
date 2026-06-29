@@ -9,6 +9,7 @@ https://curmanlight.netlify.app
 ## Cosa è cambiato rispetto alla versione precedente
 
 Prima:
+
 - quick-info-bar (save chip, profilo, azioni)
 - orientation-card (5 passi, nota metodologica)
 - toolbar con 6 filtri + 5 pulsanti export sempre visibili
@@ -20,6 +21,7 @@ Prima:
 - pulsanti cruscotto non cambiavano tab
 
 Dopo:
+
 - **Cruscotto minimo**: stato + prossima azione + 3 pulsanti + barra progresso/salvataggio
 - **Toolbar compatta**: 2 filtri primari (Tutti/Da decidere), "⋯ Altri filtri" toggle, Export collassato
 - **Usage-notice**: collassato in `<details>`
@@ -30,13 +32,13 @@ Dopo:
 
 ## Dettaglio deploy
 
-| Parametro | Valore |
-|---|---|
-| Comando | `npx netlify deploy --prod --dir _published_snapshot/netlify-current` |
-| File deployati | 1 (index.html) |
-| Durata | 4s |
-| URL produzione | https://curmanlight.netlify.app |
-| Unique deploy | https://6a378c2be64a2ac4b706115a--curmanlight.netlify.app |
+| Parametro      | Valore                                                                |
+| -------------- | --------------------------------------------------------------------- |
+| Comando        | `npx netlify deploy --prod --dir _published_snapshot/netlify-current` |
+| File deployati | 1 (index.html)                                                        |
+| Durata         | 4s                                                                    |
+| URL produzione | https://curmanlight.netlify.app                                       |
+| Unique deploy  | https://6a378c2be64a2ac4b706115a--curmanlight.netlify.app             |
 
 ## Verifiche
 

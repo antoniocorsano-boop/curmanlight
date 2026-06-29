@@ -1,28 +1,35 @@
 # CML-079B — HOME_MICROGUIDE_RENDERING_FIX
 
 ## Contesto
+
 Ultimo step completato: CML-082A — Didattica area live smoke.
 CML-079/079A hanno introdotto la microguida "Usa CurManLight in 5 minuti" su Home.
 In fase di verifica successiva su desktop (viewport >560px) la microguida risultava degradata, con rendering di testo grezzo/incompleto.
 
 ## Problema rilevato
+
 Home non renderizzata correttamente: la microguida appariva come testo grezzo su viewport >560px. Anche le sezioni Home dashboard, Didattica e UDA risultavano compromesse.
 
 ## Causa individuata
+
 Una `@media(max-width:560px){` orfana alla riga 690 (inserita in CML-078 o precedente) non era mai stata chiusa con `}`. Tutto il CSS successivo (Home dashboard, Home cards, Didattica, microguida, UDA) era intrappolato dentro questo media query, risultando invisibile su schermi con larghezza >560px.
 
 ## Fix applicato
+
 Rimozione della riga `@media(max-width:560px){` orfana alla riga 690 di `_published_snapshot/netlify-current/index.html`. Le parentesi graffe risultano ora bilanciate (962 `{` = 962 `}`).
 
 ## Perimetro
+
 - Solo CSS: rimozione 1 riga di media query
 - Nessuna modifica a markup HTML, JavaScript, o contenuti
 - Nessuna nuova funzione
 
 ## File modificati
+
 - `_published_snapshot/netlify-current/index.html` (1 riga rimossa)
 
 ## Vincoli rispettati
+
 - ✅ Nessuna nuova funzione
 - ✅ Nessuna modifica schema `.cml`
 - ✅ Nessuna modifica export/import docente, dipartimento o referente
@@ -36,6 +43,7 @@ Rimozione della riga `@media(max-width:560px){` orfana alla riga 690 di `_publis
 - ✅ Aree Curriculum e Didattica non alterate
 
 ## Controlli eseguiti
+
 - ✅ `git diff --check`: nessun whitespace error
 - ✅ `git diff`: solo 1 riga rimossa (nessuna modifica non pertinente)
 - ✅ Nessuna nuova dipendenza CDN/esterna introdotta
@@ -51,9 +59,12 @@ Rimozione della riga `@media(max-width:560px){` orfana alla riga 690 di `_publis
 - ✅ Validazione umana esplicita preservata
 
 ## Esito
+
 `CML_079B_HOME_MICROGUIDE_RENDERING_FIX_READY`
 
 ## Prossimo step raccomandato
+
 CML-079C — HOME_MICROGUIDE_RENDERING_LIVE_SMOKE:
+
 - Verifica live su `https://antoniocorsano-boop.github.io/curmanlight/`
 - Controllare Home, microguida, Curriculum, Didattica, mobile, dark mode

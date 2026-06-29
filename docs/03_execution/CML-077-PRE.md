@@ -28,12 +28,12 @@ Created `DESIGN.md` at repository root — a comprehensive design system referen
 
 ## Validation
 
-| Check | Result |
-|-------|--------|
-| `git diff --name-only -- _published_snapshot/netlify-current` | Empty |
-| `git status` | Only 4 expected files |
-| DESIGN.md readable | Yes |
-| `index.html` unchanged | Confirmed |
+| Check                                                         | Result                |
+| ------------------------------------------------------------- | --------------------- |
+| `git diff --name-only -- _published_snapshot/netlify-current` | Empty                 |
+| `git status`                                                  | Only 4 expected files |
+| DESIGN.md readable                                            | Yes                   |
+| `index.html` unchanged                                        | Confirmed             |
 
 ## Verdict
 

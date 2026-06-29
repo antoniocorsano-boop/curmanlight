@@ -4,12 +4,12 @@
 
 Il file `_published_snapshot/netlify-current/Corso_CurricoloDonMilani_IN2025.pdf` è stato corretto mantenendo invariato il nome finale `Corso_CurricoloDonMilani_IN2025.pdf`.
 
-| Controllo | Esito |
-|---|---:|
-| `ariana` prima, parola intera e case-insensitive | 5 |
-| `ariana` dopo, parola intera e case-insensitive | 0 |
-| `arianese` dopo, parola intera e case-insensitive | 6 |
-| Pagine modificate | 4, 5, 8, 12 |
+| Controllo                                         |       Esito |
+| ------------------------------------------------- | ----------: |
+| `ariana` prima, parola intera e case-insensitive  |           5 |
+| `ariana` dopo, parola intera e case-insensitive   |           0 |
+| `arianese` dopo, parola intera e case-insensitive |           6 |
+| Pagine modificate                                 | 4, 5, 8, 12 |
 
 Le 6 occorrenze finali di `arianese` comprendono le 5 sostituzioni richieste e 1 occorrenza già presente nel documento originale.
 

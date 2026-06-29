@@ -2,11 +2,11 @@
 
 ## Stato git iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | cml-008r-fix-markdown-decision-summary |
-| HEAD | e7d21bd |
-| Working tree | Pulita |
+| Campo        | Valore                                 |
+| ------------ | -------------------------------------- |
+| Branch       | cml-008r-fix-markdown-decision-summary |
+| HEAD         | e7d21bd                                |
+| Working tree | Pulita                                 |
 
 ## Metodo deploy
 

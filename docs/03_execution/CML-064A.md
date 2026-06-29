@@ -28,20 +28,20 @@
 
 ### Verifiche
 
-| # | Controllo | Esito |
-|---|-----------|-------|
-| 1 | Pagina live caricata | PASS |
-| 2 | Console senza errori JS bloccanti | PASS |
-| 3 | Sezione/pannello Tecnologia normalizzata visibile | PASS |
-| 4 | Microcopy obbligatoria presente | PASS |
-| 5 | Conteggi corretti (13, 2, 5, 6) | PASS |
-| 6 | Filtri ordine funzionanti (Tutti/Infanzia/Primaria/Secondaria) | PASS |
-| 7 | Dettaglio unità espandibile | PASS |
-| 8 | Nessun campo editabile nella preview | PASS |
-| 9 | Nessun salvataggio locale aggiuntivo | PASS |
-| 10 | Export/import/report invariati | PASS |
-| 11 | Role-access gating invariato | PASS |
-| 12 | Mobile smoke | PASS |
+| #   | Controllo                                                      | Esito |
+| --- | -------------------------------------------------------------- | ----- |
+| 1   | Pagina live caricata                                           | PASS  |
+| 2   | Console senza errori JS bloccanti                              | PASS  |
+| 3   | Sezione/pannello Tecnologia normalizzata visibile              | PASS  |
+| 4   | Microcopy obbligatoria presente                                | PASS  |
+| 5   | Conteggi corretti (13, 2, 5, 6)                                | PASS  |
+| 6   | Filtri ordine funzionanti (Tutti/Infanzia/Primaria/Secondaria) | PASS  |
+| 7   | Dettaglio unità espandibile                                    | PASS  |
+| 8   | Nessun campo editabile nella preview                           | PASS  |
+| 9   | Nessun salvataggio locale aggiuntivo                           | PASS  |
+| 10  | Export/import/report invariati                                 | PASS  |
+| 11  | Role-access gating invariato                                   | PASS  |
+| 12  | Mobile smoke                                                   | PASS  |
 
 ### Microcopy verificata
 

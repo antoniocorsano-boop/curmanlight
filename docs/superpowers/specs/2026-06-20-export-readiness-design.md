@@ -18,6 +18,7 @@ Produrre un export Markdown strutturato della **sola disciplina Tecnologia** com
 L'app CurManLight è una SPA single-file (`index.html`, 2288 righe). Esiste già una funzione `exportMarkdown(onlyApproved=false)` che esporta tutte le discipline in Markdown, con modalità confronto e definitivo.
 
 Tuttavia:
+
 - L'export full-discipline è troppo dispersivo per il gruppo di lavoro che deve valutare una disciplina alla volta
 - Non esiste un export focalizzato su una singola disciplina
 - Non esiste un output che espliciti lo stato "documento di lavoro — da validare"
@@ -49,6 +50,7 @@ Questa slice implementativa è **perimetrata**:
 Il file `.md` generato deve contenere:
 
 ### 1. Intestazione documento
+
 - Nome istituto, livello scolastico, codice meccanografico
 - Titolo: "Curricolo Verticale di Istituto — Export di lavoro"
 - Disciplina: **Tecnologia**
@@ -56,16 +58,20 @@ Il file `.md` generato deve contenere:
 - Nota in evidenza: **"📄 Documento di lavoro — da validare. Non sostituisce delibera del Collegio Docenti."**
 
 ### 2. Riferimenti alle Sezioni generali
+
 - Elenco puntato con i titoli delle 8 sezioni generali
 - Nota: "Le sezioni generali sono consultabili nell'app CurManLight — tab Sezioni generali"
 
 ### 3. Sintesi decisioni
+
 - Totale traguardi + obiettivi per Tecnologia
 - Conteggio: ✓ Invariati, ✎ Modificati, ★ Nuovi 2025
 - Di cui APPROVATI, RIFIUTATI, DA DECIDERE
 
 ### 4. Confronto 2012 → 2025
+
 Per ogni item (traguardo/obiettivo) di Tecnologia:
+
 - Stato: `✓ Invariato` / `✎ Da modificare` / `★ Nuovo 2025` / `🗑 Eliminato`
 - Decisione: `APPROVATO` / `RIFIUTATO` / `DA DECIDERE`
 - Se `status === "ok"`: solo testo IN2012
@@ -75,11 +81,13 @@ Per ogni item (traguardo/obiettivo) di Tecnologia:
 - Classe/grado indicato dove presente
 
 ### 5. Gap 2025
+
 - Le voci con `status === "nuovo"` sono marcate come **"🧩 Gap 2025 — nuova proposta"**
 - Le voci con `status === "modifica"` e decisione pendente sono marcate come **"🧩 Gap 2025 — proposta di modifica da validare"**
 - Le voci approvate/rifiutate indicano l'esito con testo chiaro
 
 ### 6. Avvertenza finale
+
 ```
 ---
 *Documento generato automaticamente dall'app CurManLight il ${data}.*
@@ -122,6 +130,7 @@ function buildDocumentModel(onlyApproved=false, { disciplineFilter=null }={})
 ### Modifiche a modelToMarkdown()
 
 Potenziata per accettare una configurazione di export che include:
+
 - `introNote`: booleano — aggiunge "Documento di lavoro — da validare"
 - `includeGeneraliRef`: booleano — aggiunge riferimenti sezioni generali
 - `includeDecisionSummary`: booleano — aggiunge sintesi decisioni
@@ -136,7 +145,7 @@ Wrapper di `exportMarkdown()` per uso dai bottoni UI:
 
 ```js
 function exportSingleDisciplineMarkdown(discipline) {
-  exportMarkdown(true, discipline);
+  exportMarkdown(true, discipline)
 }
 ```
 
@@ -205,6 +214,7 @@ Poi segue la struttura completa: riferimenti sezioni generali, sintesi decisioni
 ## Test
 
 ### Smoke locale
+
 ```
 [ ] exportMarkdown(true, "Tecnologia") → file .md scaricato
 [ ] Il file .md contiene "Documento di lavoro — da validare"
@@ -223,9 +233,9 @@ Poi segue la struttura completa: riferimenti sezioni generali, sintesi decisioni
 ```
 
 ### Verifica produzione (solo dopo merge)
+
 ```
 [ ] Produzione caricata
 [ ] exportMarkdown(true, "Tecnologia") funzionante
 [ ] Nessuna regressione nei tab/funzioni esistenti
 ```
-

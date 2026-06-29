@@ -8,15 +8,15 @@ Integrare la disciplina Religione Cattolica nella mappa dati disciplinare del ru
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `d1513d1` (CML-192; origin/main a `d711872`, 1 behind) |
-| Working tree iniziale | pulito |
-| Dati normalizzati prima | 14/14 |
-| Runtime mappa prima | 12/14 (Religione Cattolica NON integrata) |
-| Shape test | 12/12 PASS |
+| Parametro               | Valore                                                 |
+| ----------------------- | ------------------------------------------------------ |
+| Root Git                | `C:\Users\anton\CurManLight`                           |
+| Branch                  | `main`                                                 |
+| Commit iniziale         | `d1513d1` (CML-192; origin/main a `d711872`, 1 behind) |
+| Working tree iniziale   | pulito                                                 |
+| Dati normalizzati prima | 14/14                                                  |
+| Runtime mappa prima     | 12/14 (Religione Cattolica NON integrata)              |
+| Shape test              | 12/12 PASS                                             |
 
 ## 3. Decisioni autorizzative
 
@@ -48,20 +48,20 @@ Aggiunto `'religione-cattolica.normalized.json'` all'array `FILES` in `tools/tes
 
 ## 5. Dati integrati
 
-| Sezione | Quantità |
-|---|---|
-| Strutture sostanziali | 7 (da 7 unità di apprendimento) |
-| Nodi disciplinari | 3 (Dio e l'uomo, La Bibbia e le altre fonti, I valori etici e religiosi) |
-| Progressioni verticali | 7 (Infanzia f5, Primaria 1/3/5, Secondaria 1/2/3) |
-| Decisioni curricolari | 0 |
+| Sezione                | Quantità                                                                 |
+| ---------------------- | ------------------------------------------------------------------------ |
+| Strutture sostanziali  | 7 (da 7 unità di apprendimento)                                          |
+| Nodi disciplinari      | 3 (Dio e l'uomo, La Bibbia e le altre fonti, I valori etici e religiosi) |
+| Progressioni verticali | 7 (Infanzia f5, Primaria 1/3/5, Secondaria 1/2/3)                        |
+| Decisioni curricolari  | 0                                                                        |
 
 ## 6. Copertura per ordine
 
-| Ordine | Classi/Fasce | Unità | Strutture |
-|---|---|---|---|
-| Infanzia | fascia 5 | 1 | 1 |
-| Primaria | 1, 3, 5 | 3 | 3 |
-| Secondaria | 1, 2, 3 | 3 | 3 |
+| Ordine     | Classi/Fasce | Unità | Strutture |
+| ---------- | ------------ | ----- | --------- |
+| Infanzia   | fascia 5     | 1     | 1         |
+| Primaria   | 1, 3, 5      | 3     | 3         |
+| Secondaria | 1, 2, 3      | 3     | 3         |
 
 ## 7. Validazioni
 
@@ -76,8 +76,8 @@ Aggiunto `'religione-cattolica.normalized.json'` all'array `FILES` in `tools/tes
 
 ## 8. Discipline residue nel runtime (1/14)
 
-| Disciplina | Stato |
-|---|---|
+| Disciplina | Stato         |
+| ---------- | ------------- |
 | Latino LEL | Non integrata |
 
 ## 9. Verdict

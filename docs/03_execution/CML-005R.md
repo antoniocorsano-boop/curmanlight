@@ -2,12 +2,12 @@
 
 ## Stato iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | `cml-005r-gap-2025-operational-review` |
-| HEAD partenza | `5019c6a` (CML-005R-SELECT) |
-| Working tree | pulita |
-| Master contiene CML-005R-SELECT | sì, commit `5019c6a` |
+| Campo                           | Valore                                 |
+| ------------------------------- | -------------------------------------- |
+| Branch                          | `cml-005r-gap-2025-operational-review` |
+| HEAD partenza                   | `5019c6a` (CML-005R-SELECT)            |
+| Working tree                    | pulita                                 |
+| Master contiene CML-005R-SELECT | sì, commit `5019c6a`                   |
 
 ## Opzione selezionata
 
@@ -22,6 +22,7 @@ Opzione B da CML-005R-SELECT: indicatore "🧩 Gap 2025 della disciplina" dentro
 ### 1. Card Riferimenti normativi (riga 710)
 
 Sostituito `norm-desc` con microcopy che include link cliccabile `setTab('lavoro')`:
+
 - "I gap 2025 non modificano automaticamente il curricolo."
 - Link: "Apri Revisione per disciplina"
 - Istruzione chiara: valutare, confrontare, decidere
@@ -31,11 +32,13 @@ Sostituito `norm-desc` con microcopy che include link cliccabile `setTab('lavoro
 Aggiunto `<div class="gap-header">` prima del `card-hd` nelle card da decidere (`modifica`/`nuovo` senza decisione).
 
 **Contenuto:**
+
 - Label: "🧩 Gap 2025 della disciplina"
 - Spiegazione: "Questa proposta evidenzia una possibile integrazione rispetto al curricolo vigente. Deve essere valutata dal gruppo di lavoro prima di entrare nel curricolo definitivo."
 - Nota: "Base 2012, evidenze d'istituto e proposta 2025 restano distinguibili fino alla validazione."
 
 **CSS aggiunto:**
+
 - `.gap-header` — sfondo viola chiaro `#f3e5f5`, bordo sinistro `#7b1fa2`
 - `.gap-header .gap-label` — grassetto, 12px
 - `.gap-header .gap-note` — 10px, opacità ridotta

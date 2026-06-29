@@ -8,15 +8,15 @@ Selezionare formalmente il prossimo ciclo funzionale dopo il completamento del r
 
 ## 2. Stato attuale
 
-| Indicatore | Valore |
-|---|---|
-| HEAD / origin/main | `660f2e1` |
-| Working tree | Pulito |
-| Normalizzati | 14/14 |
-| Runtime mappa | 14/14 |
-| Validatore | 14/14 PASS |
-| Shape test | 14/14 PASS |
-| GitHub Pages | Live — HTTP 200, 14/14 discipline visibili |
+| Indicatore         | Valore                                     |
+| ------------------ | ------------------------------------------ |
+| HEAD / origin/main | `660f2e1`                                  |
+| Working tree       | Pulito                                     |
+| Normalizzati       | 14/14                                      |
+| Runtime mappa      | 14/14                                      |
+| Validatore         | 14/14 PASS                                 |
+| Shape test         | 14/14 PASS                                 |
+| GitHub Pages       | Live — HTTP 200, 14/14 discipline visibili |
 
 ## 3. Opzioni valutate
 
@@ -38,13 +38,13 @@ Rinviata. Utile ma secondaria rispetto alla tenuta funzionale.
 
 ## 4. Sequenza proposta CML-198 → CML-202
 
-| Slice | Titolo |
-|---|---|
-| CML-198 | .cml schema and export/import audit |
+| Slice   | Titolo                                            |
+| ------- | ------------------------------------------------- |
+| CML-198 | .cml schema and export/import audit               |
 | CML-199 | .cml schema versioning and compatibility contract |
-| CML-200 | Import validation/error handling hardening |
+| CML-200 | Import validation/error handling hardening        |
 | CML-201 | Teacher/department/referent end-to-end .cml smoke |
-| CML-202 | Public workflow readiness gate |
+| CML-202 | Public workflow readiness gate                    |
 
 ## 5. Perimetro
 

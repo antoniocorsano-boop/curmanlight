@@ -18,22 +18,22 @@ All `.cml` files exchanged within the CurManLight workflow must carry an explici
 
 Only two `fileType` values are accepted:
 
-| fileType | Description |
-|---|---|
-| `teacher_proposal` | Exported by a teacher; imported by a department |
+| fileType             | Description                                      |
+| -------------------- | ------------------------------------------------ |
+| `teacher_proposal`   | Exported by a teacher; imported by a department  |
 | `department_outcome` | Exported by a department; imported by a referent |
 
 No other `fileType` is valid under this contract. Referents do not export `.cml`; they export Markdown reports.
 
 ## 3. Role / File-Type Matrix
 
-| Actor | Action | Accepted fileType | Output |
-|---|---|---|---|
-| Teacher | Export | `teacher_proposal` | `.cml` JSON file |
-| Department | Import | `teacher_proposal` | Local state only |
-| Department | Export | `department_outcome` | `.cml` JSON file |
-| Referent | Import | `department_outcome` | Local state only |
-| Referent | Export | N/A | Markdown report (not `.cml`) |
+| Actor      | Action | Accepted fileType    | Output                       |
+| ---------- | ------ | -------------------- | ---------------------------- |
+| Teacher    | Export | `teacher_proposal`   | `.cml` JSON file             |
+| Department | Import | `teacher_proposal`   | Local state only             |
+| Department | Export | `department_outcome` | `.cml` JSON file             |
+| Referent   | Import | `department_outcome` | Local state only             |
+| Referent   | Export | N/A                  | Markdown report (not `.cml`) |
 
 Mixed-role files are rejected at the `fileType` gate. A department `.cml` cannot be imported as a teacher proposal, and vice versa.
 
@@ -41,68 +41,68 @@ Mixed-role files are rejected at the `fileType` gate. A department `.cml` cannot
 
 ### 4.1 General Definitions
 
-| Classification | Meaning |
-|---|---|
-| Required | Must be present and structurally valid; otherwise the file is blocked |
-| Optional | May be absent; absence is informational, not blocking |
-| Derived | Computed by the importer from other fields; may be absent or ignored on export |
-| Advisory | Informational only; not validated and not required for processing |
+| Classification | Meaning                                                                        |
+| -------------- | ------------------------------------------------------------------------------ |
+| Required       | Must be present and structurally valid; otherwise the file is blocked          |
+| Optional       | May be absent; absence is informational, not blocking                          |
+| Derived        | Computed by the importer from other fields; may be absent or ignored on export |
+| Advisory       | Informational only; not validated and not required for processing              |
 
 ### 4.2 Top-Level Fields — teacher_proposal
 
-| Field | Type | Classification | Notes |
-|---|---|---|---|
-| `schemaVersion` | string | Required | Must be exact `"1.0"` |
-| `fileType` | string | Required | Must be exact `"teacher_proposal"` |
-| `appName` | string | Optional | Informational identity |
-| `createdAt` | ISO 8601 string | Optional | Used in duplicate fingerprinting |
-| `role` | string | Advisory | Must be `"teacher"` if present; otherwise ignored |
-| `discipline` | string | Required | Non-empty discipline key |
-| `sourceContext` | object | Optional | Framework labels |
-| `counts` | object | Required | Must be a non-null object with `total`, `ok`, `modifica`, `nuovo` as numbers |
-| `proposals` | array | Required | Must be a non-null array of proposal objects |
-| `checks` | object | Advisory | Exported booleans; not validated on import |
-| `humanValidationRequired` | boolean | Required | Must be `true` |
+| Field                     | Type            | Classification | Notes                                                                        |
+| ------------------------- | --------------- | -------------- | ---------------------------------------------------------------------------- |
+| `schemaVersion`           | string          | Required       | Must be exact `"1.0"`                                                        |
+| `fileType`                | string          | Required       | Must be exact `"teacher_proposal"`                                           |
+| `appName`                 | string          | Optional       | Informational identity                                                       |
+| `createdAt`               | ISO 8601 string | Optional       | Used in duplicate fingerprinting                                             |
+| `role`                    | string          | Advisory       | Must be `"teacher"` if present; otherwise ignored                            |
+| `discipline`              | string          | Required       | Non-empty discipline key                                                     |
+| `sourceContext`           | object          | Optional       | Framework labels                                                             |
+| `counts`                  | object          | Required       | Must be a non-null object with `total`, `ok`, `modifica`, `nuovo` as numbers |
+| `proposals`               | array           | Required       | Must be a non-null array of proposal objects                                 |
+| `checks`                  | object          | Advisory       | Exported booleans; not validated on import                                   |
+| `humanValidationRequired` | boolean         | Required       | Must be `true`                                                               |
 
 ### 4.3 Proposal Item Fields — teacher_proposal.proposals[]
 
-| Field | Type | Classification | Notes |
-|---|---|---|---|
-| `id` | string | Required | Non-empty; links to department outcome |
-| `discipline` | string | Required | Non-empty; falls back to top-level `discipline` if absent |
-| `ordine` | string | Optional | Order/section label |
-| `classe` | string | Optional | Class label or empty |
-| `type` | string | Optional | `"traguardo"` or `"obiettivo"` |
-| `status` | string | Optional | `"modifica"` or `"nuovo"` |
-| `decisione` | string \| null | Optional | Exported teacher decision; not consumed by department |
-| `testoAttuale` | string | Optional | Current text |
-| `proposta` | string | Required | Non-empty proposed text |
-| `motivazione` | string | Optional | Motivation or explanation |
-| `fonte` | string | Optional | Source/evidence string |
+| Field          | Type           | Classification | Notes                                                     |
+| -------------- | -------------- | -------------- | --------------------------------------------------------- |
+| `id`           | string         | Required       | Non-empty; links to department outcome                    |
+| `discipline`   | string         | Required       | Non-empty; falls back to top-level `discipline` if absent |
+| `ordine`       | string         | Optional       | Order/section label                                       |
+| `classe`       | string         | Optional       | Class label or empty                                      |
+| `type`         | string         | Optional       | `"traguardo"` or `"obiettivo"`                            |
+| `status`       | string         | Optional       | `"modifica"` or `"nuovo"`                                 |
+| `decisione`    | string \| null | Optional       | Exported teacher decision; not consumed by department     |
+| `testoAttuale` | string         | Optional       | Current text                                              |
+| `proposta`     | string         | Required       | Non-empty proposed text                                   |
+| `motivazione`  | string         | Optional       | Motivation or explanation                                 |
+| `fonte`        | string         | Optional       | Source/evidence string                                    |
 
 ### 4.4 Top-Level Fields — department_outcome
 
-| Field | Type | Classification | Notes |
-|---|---|---|---|
-| `schemaVersion` | string | Required | Must be exact `"1.0"` |
-| `fileType` | string | Required | Must be exact `"department_outcome"` |
-| `appName` | string | Optional | Informational identity |
-| `createdAt` | ISO 8601 string | Optional | Used in duplicate fingerprinting |
-| `role` | string | Advisory | Must be `"department"` if present; otherwise ignored |
-| `discipline` | string | Required | Non-empty; primary discipline of the outcome |
-| `disciplineWorkStatus` | string | Required | Non-empty; expected `"completed"` |
-| `disciplines` | array | Optional | Array of unique discipline keys present in the outcome |
-| `proposalHandling` | array | Required | Must be a non-null array of handling objects |
-| `checks` | object | Advisory | Exported booleans; not validated on import |
-| `humanValidationRequired` | boolean | Required | Must be `true` |
+| Field                     | Type            | Classification | Notes                                                  |
+| ------------------------- | --------------- | -------------- | ------------------------------------------------------ |
+| `schemaVersion`           | string          | Required       | Must be exact `"1.0"`                                  |
+| `fileType`                | string          | Required       | Must be exact `"department_outcome"`                   |
+| `appName`                 | string          | Optional       | Informational identity                                 |
+| `createdAt`               | ISO 8601 string | Optional       | Used in duplicate fingerprinting                       |
+| `role`                    | string          | Advisory       | Must be `"department"` if present; otherwise ignored   |
+| `discipline`              | string          | Required       | Non-empty; primary discipline of the outcome           |
+| `disciplineWorkStatus`    | string          | Required       | Non-empty; expected `"completed"`                      |
+| `disciplines`             | array           | Optional       | Array of unique discipline keys present in the outcome |
+| `proposalHandling`        | array           | Required       | Must be a non-null array of handling objects           |
+| `checks`                  | object          | Advisory       | Exported booleans; not validated on import             |
+| `humanValidationRequired` | boolean         | Required       | Must be `true`                                         |
 
 ### 4.5 Proposal Handling Item Fields — department_outcome.proposalHandling[]
 
-| Field | Type | Classification | Notes |
-|---|---|---|---|
-| `proposalId` | string | Required | Non-empty; must link to an imported `teacher_proposal` `id` |
-| `handling` | string \| null | Optional | One of the accepted handling values, or empty/null |
-| `note` | string | Optional | Outcome notes |
+| Field        | Type           | Classification | Notes                                                       |
+| ------------ | -------------- | -------------- | ----------------------------------------------------------- |
+| `proposalId` | string         | Required       | Non-empty; must link to an imported `teacher_proposal` `id` |
+| `handling`   | string \| null | Optional       | One of the accepted handling values, or empty/null          |
+| `note`       | string         | Optional       | Outcome notes                                               |
 
 Accepted `handling` enum values:
 
@@ -198,23 +198,23 @@ Mismatches between `discipline` and `disciplines[0]` when `disciplines` is prese
 
 ### 9.1 Proposal Item Validation (teacher_proposal.proposals[])
 
-| Field | Block on absence/invalid? | Notes |
-|---|---|---|
-| `id` | Warning | Missing `id` breaks outcome linkage but does not block import |
-| `proposta` | Warning | Missing text makes the proposal semantically empty but still enters state |
-| `motivazione` | Warning | Missing motivation is flagged as a chip issue |
-| `fonte` | Warning | Missing source/evidence is flagged as a chip issue |
-| `discipline` | Warning per item | Falls back to top-level `discipline` |
+| Field         | Block on absence/invalid? | Notes                                                                     |
+| ------------- | ------------------------- | ------------------------------------------------------------------------- |
+| `id`          | Warning                   | Missing `id` breaks outcome linkage but does not block import             |
+| `proposta`    | Warning                   | Missing text makes the proposal semantically empty but still enters state |
+| `motivazione` | Warning                   | Missing motivation is flagged as a chip issue                             |
+| `fonte`       | Warning                   | Missing source/evidence is flagged as a chip issue                        |
+| `discipline`  | Warning per item          | Falls back to top-level `discipline`                                      |
 
 Item-level validation failures do **not** block the entire file if the top-level schema is valid. They produce per-item issue chips in the department UI.
 
 ### 9.2 Handling Item Validation (department_outcome.proposalHandling[])
 
-| Field | Block on absence/invalid? | Notes |
-|---|---|---|
-| `proposalId` | Warning | Missing `proposalId` loses traceability but does not block |
-| `handling` | Warning | Empty/null is treated as `senza_esito` |
-| `note` | Not validated | Optional and advisory |
+| Field        | Block on absence/invalid? | Notes                                                      |
+| ------------ | ------------------------- | ---------------------------------------------------------- |
+| `proposalId` | Warning                   | Missing `proposalId` loses traceability but does not block |
+| `handling`   | Warning                   | Empty/null is treated as `senza_esito`                     |
+| `note`       | Not validated             | Optional and advisory                                      |
 
 ### 9.3 Status/Decision Fields
 
@@ -228,13 +228,13 @@ Item-level validation failures do **not** block the entire file if the top-level
 
 ### 10.1 File-Level Classification Codes
 
-| Code | Condition | Treatment |
-|---|---|---|
-| `not_recognizable` | Extension not `.cml`, or top-level is array/null/not-object | Blocked; not counted as valid |
-| `invalid_json` | `JSON.parse` throws | Blocked; not counted as valid |
-| `wrong_type` | `fileType` does not match expected type for importer | Blocked; not counted as valid |
-| `missing_data` | Required top-level fields absent or structurally invalid | Blocked; missing fields listed |
-| `valid` | Passes all structural checks | Accepted; item-level issues may produce warnings |
+| Code               | Condition                                                   | Treatment                                        |
+| ------------------ | ----------------------------------------------------------- | ------------------------------------------------ |
+| `not_recognizable` | Extension not `.cml`, or top-level is array/null/not-object | Blocked; not counted as valid                    |
+| `invalid_json`     | `JSON.parse` throws                                         | Blocked; not counted as valid                    |
+| `wrong_type`       | `fileType` does not match expected type for importer        | Blocked; not counted as valid                    |
+| `missing_data`     | Required top-level fields absent or structurally invalid    | Blocked; missing fields listed                   |
+| `valid`            | Passes all structural checks                                | Accepted; item-level issues may produce warnings |
 
 ### 10.2 Malformed JSON Details
 
@@ -293,36 +293,36 @@ If the Drive endpoint is absent, misconfigured, or untrusted, the workflow falls
 
 A blocking error prevents the file from entering import state. The user sees the file row marked invalid and the file excluded from proposal aggregation.
 
-| Code | Condition | User-facing Message |
-|---|---|---|
-| `not_recognizable` | Not `.cml`, not object, or top-level array/null | `"Questo file non è una [tipo] CurManLight."` |
-| `invalid_json` | Malformed JSON | `"Il file contiene JSON non valido."` |
-| `wrong_type` | `fileType` mismatch | `"Questo file non è una [tipo] CurManLight."` |
-| `missing_data` | Required top-level fields absent or structurally invalid | `"Il file è leggibile, ma mancano alcune informazioni."` + missing field list |
-| `unsupported_schema` | `schemaVersion` present and not `"1.0"` | `"Versione schema non supportata."` |
-| `too_large` | File or array exceeds documented limits | `"File troppo grande per l'importazione locale."` |
+| Code                 | Condition                                                | User-facing Message                                                           |
+| -------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `not_recognizable`   | Not `.cml`, not object, or top-level array/null          | `"Questo file non è una [tipo] CurManLight."`                                 |
+| `invalid_json`       | Malformed JSON                                           | `"Il file contiene JSON non valido."`                                         |
+| `wrong_type`         | `fileType` mismatch                                      | `"Questo file non è una [tipo] CurManLight."`                                 |
+| `missing_data`       | Required top-level fields absent or structurally invalid | `"Il file è leggibile, ma mancano alcune informazioni."` + missing field list |
+| `unsupported_schema` | `schemaVersion` present and not `"1.0"`                  | `"Versione schema non supportata."`                                           |
+| `too_large`          | File or array exceeds documented limits                  | `"File troppo grande per l'importazione locale."`                             |
 
 ### 13.2 Warnings
 
 A warning marks the file or item as needing attention but allows processing to continue.
 
-| Code | Condition | User-facing Indication |
-|---|---|---|
-| `legacy_version` | `schemaVersion` missing | Chips or summary note: `"Versione schema non indicata; accettato come compatibile."` |
-| `missing_semantic_field` | `proposta`, `motivazione`, or `fonte` empty in an item | Per-item issue chip: `"Senza testo"`, `"Senza motivazione"`, `"Senza fonte"` |
-| `discipline_mismatch` | `discipline` and `disciplines[0]` diverge | Summary warning: mixed discipline noted |
-| `duplicate` | File or proposal fingerprint matches a prior file | Chip: `"Duplicato probabile"` |
-| `mixed_discipline` | Batch contains multiple disciplines | Summary warning: `"Sono presenti discipline diverse: il dato è segnalato ma non blocca la lettura."` |
-| `unknown_fields` | Extra top-level or item-level fields present | Not surfaced; preserved for forward compatibility |
+| Code                     | Condition                                              | User-facing Indication                                                                               |
+| ------------------------ | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| `legacy_version`         | `schemaVersion` missing                                | Chips or summary note: `"Versione schema non indicata; accettato come compatibile."`                 |
+| `missing_semantic_field` | `proposta`, `motivazione`, or `fonte` empty in an item | Per-item issue chip: `"Senza testo"`, `"Senza motivazione"`, `"Senza fonte"`                         |
+| `discipline_mismatch`    | `discipline` and `disciplines[0]` diverge              | Summary warning: mixed discipline noted                                                              |
+| `duplicate`              | File or proposal fingerprint matches a prior file      | Chip: `"Duplicato probabile"`                                                                        |
+| `mixed_discipline`       | Batch contains multiple disciplines                    | Summary warning: `"Sono presenti discipline diverse: il dato è segnalato ma non blocca la lettura."` |
+| `unknown_fields`         | Extra top-level or item-level fields present           | Not surfaced; preserved for forward compatibility                                                    |
 
 ### 13.3 Informational Notices
 
 Informational notices do not block or warn; they provide context.
 
-| Condition | Example |
-|---|---|
-| Successful import | `"Proposte importate. Il dipartimento può ora leggerle e valutarle."` |
-| No valid files | `"Nessun file .cml valido importato"` |
+| Condition             | Example                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Successful import     | `"Proposte importate. Il dipartimento può ora leggerle e valutarle."`                                      |
+| No valid files        | `"Nessun file .cml valido importato"`                                                                      |
 | Drive endpoint absent | `"Invio al Drive non ancora configurato. Puoi scaricare il file proposta .cml e caricarlo manualmente..."` |
 
 ### 13.4 Recovery Guidance
@@ -372,22 +372,22 @@ CML-201 is the end-to-end smoke test that verifies the complete `.cml` workflow 
 
 ### 16.1 Roles Under Test
 
-| Role | Action | Expected Outcome |
-|---|---|---|
-| Teacher | Export `teacher_proposal` for single discipline | Valid `.cml` produced |
-| Teacher | Export `teacher_proposal` for multiple disciplines (multi-role teacher) | Valid `.cml` produced per discipline or mixed-discipline file with warning |
-| Department | Import single valid teacher proposal | Accepted, no warnings |
-| Department | Import batch with mixed disciplines | Accepted, mixed-discipline warning shown |
-| Department | Import malformed JSON | Blocked with `invalid_json` |
-| Department | Import wrong file type | Blocked with `wrong_type` |
-| Department | Import missing `schemaVersion` | Accepted with `legacy_version` warning |
-| Department | Import unsupported `schemaVersion` | Blocked with `unsupported_schema` |
-| Department | Import duplicate file | Accepted with `duplicate` warning |
-| Department | Export `department_outcome` | Valid `.cml` produced |
-| Referent | Import single valid department outcome | Accepted, no warnings |
-| Referent | Import file with empty `handling` | Accepted, mapped to `senza_esito` |
-| Referent | Import file with discipline mismatch | Accepted with `discipline_mismatch` warning |
-| Referent | Export Markdown report | Produced from imported outcomes |
+| Role       | Action                                                                  | Expected Outcome                                                           |
+| ---------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Teacher    | Export `teacher_proposal` for single discipline                         | Valid `.cml` produced                                                      |
+| Teacher    | Export `teacher_proposal` for multiple disciplines (multi-role teacher) | Valid `.cml` produced per discipline or mixed-discipline file with warning |
+| Department | Import single valid teacher proposal                                    | Accepted, no warnings                                                      |
+| Department | Import batch with mixed disciplines                                     | Accepted, mixed-discipline warning shown                                   |
+| Department | Import malformed JSON                                                   | Blocked with `invalid_json`                                                |
+| Department | Import wrong file type                                                  | Blocked with `wrong_type`                                                  |
+| Department | Import missing `schemaVersion`                                          | Accepted with `legacy_version` warning                                     |
+| Department | Import unsupported `schemaVersion`                                      | Blocked with `unsupported_schema`                                          |
+| Department | Import duplicate file                                                   | Accepted with `duplicate` warning                                          |
+| Department | Export `department_outcome`                                             | Valid `.cml` produced                                                      |
+| Referent   | Import single valid department outcome                                  | Accepted, no warnings                                                      |
+| Referent   | Import file with empty `handling`                                       | Accepted, mapped to `senza_esito`                                          |
+| Referent   | Import file with discipline mismatch                                    | Accepted with `discipline_mismatch` warning                                |
+| Referent   | Export Markdown report                                                  | Produced from imported outcomes                                            |
 
 ### 16.2 Example Files
 

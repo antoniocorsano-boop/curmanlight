@@ -14,14 +14,14 @@ La proposta è stata valutata esclusivamente come riferimento visivo. Nessun cod
 
 ## Elementi valutati
 
-| Elemento | Decisione CML-077B |
-|----------|--------------------|
-| Palette verde/crema | Scartata — troppo distante dal tono istituzionale |
-| Mobilità orizzontale card | Recuperabile — ispirazione per maggiore ariosità |
-| Gerarchia a sezioni chiare | Recuperabile — allineata con DESIGN.md |
-| Decorativismo eccessivo | Scartato — CurManLight non è un prodotto consumer |
-| Dark mode | Recuperabile — da implementare con CSS variables + `prefers-color-scheme` |
-| Font decorativi (remoti) | Scartato — nessuna dipendenza remota |
+| Elemento                   | Decisione CML-077B                                                        |
+| -------------------------- | ------------------------------------------------------------------------- |
+| Palette verde/crema        | Scartata — troppo distante dal tono istituzionale                         |
+| Mobilità orizzontale card  | Recuperabile — ispirazione per maggiore ariosità                          |
+| Gerarchia a sezioni chiare | Recuperabile — allineata con DESIGN.md                                    |
+| Decorativismo eccessivo    | Scartato — CurManLight non è un prodotto consumer                         |
+| Dark mode                  | Recuperabile — da implementare con CSS variables + `prefers-color-scheme` |
+| Font decorativi (remoti)   | Scartato — nessuna dipendenza remota                                      |
 
 ## Documenti originali
 

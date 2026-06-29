@@ -8,20 +8,21 @@ Integrare Musica nel runtime CurManLight, portando la copertura della mappa disc
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| Commit iniziale | `90ab240` |
-| origin/main | `90ab240` |
-| Working tree | Pulito (sync) |
-| Shape runtime | 9/9 PASS |
+| Parametro             | Valore                                          |
+| --------------------- | ----------------------------------------------- |
+| Branch                | `main`                                          |
+| Commit iniziale       | `90ab240`                                       |
+| origin/main           | `90ab240`                                       |
+| Working tree          | Pulito (sync)                                   |
+| Shape runtime         | 9/9 PASS                                        |
 | Validatore curriculum | 10 file, 118 unità, overallValid true, 0 errori |
-| Deploy | Non eseguito |
-| Push | Non eseguito |
+| Deploy                | Non eseguito                                    |
+| Push                  | Non eseguito                                    |
 
 ## 3. Esito CML-174
 
 CML-174 ha creato e validato `content/curriculum/musica.normalized.json` con:
+
 - 7 unità
 - 3 nuclei (Ascolto, Espressione vocale e strumentale, Linguaggi sonori)
 - 3 ordini (Infanzia, Primaria, Secondaria)
@@ -44,27 +45,37 @@ CML-174 ha creato e validato `content/curriculum/musica.normalized.json` con:
 ## 6. Punto di integrazione runtime
 
 ### Pulsante
+
 Inserito dopo il pulsante "Arte e Immagine" (linea 1396):
+
 ```html
-<button class="mappa-disc-btn" onclick="setMappaDisciplina('musica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Musica</button>
+<button
+  class="mappa-disc-btn"
+  onclick="setMappaDisciplina('musica',this)"
+  style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700"
+>
+  Musica
+</button>
 ```
 
 ### Variabile
+
 Dichiarata dopo `ARTE_IMMAGINE_MAPPA_DATI` con la mappa completa Musica.
 
 ### Branch di selezione
+
 ```javascript
 else if (mappaDisciplinaCorrente === 'musica' && typeof MUSICA_MAPPA_DATI !== 'undefined') dati = MUSICA_MAPPA_DATI;
 ```
 
 ## 7. Conteggi Musica
 
-| Campo | Conteggio |
-|-------|:---------:|
-| struttureSostanziali (S) | 7 |
-| nodiDisciplinari (N) | 3 |
-| progressioneVerticale (P) | 7 |
-| decisioniCurricolari (D) | 0 |
+| Campo                     | Conteggio |
+| ------------------------- | :-------: |
+| struttureSostanziali (S)  |     7     |
+| nodiDisciplinari (N)      |     3     |
+| progressioneVerticale (P) |     7     |
+| decisioniCurricolari (D)  |     0     |
 
 ## 8. Validatore curriculum
 
@@ -85,45 +96,45 @@ Il test shape runtime continua a coprire 9/9 discipline (Tecnologia, Italiano, M
 
 ## 10. Verifica codifica MUSICA_MAPPA_DATI
 
-| Controllo | Esito |
-|-----------|:-----:|
-| JSON estraibile e valido | ✅ |
-| Nessun U+FFFD | ✅ |
-| Nessun `???` | ✅ |
-| Nessun byte nullo | ✅ |
-| Lettere accentate italiane conservate | ✅ |
-| Disciplina | `Musica` ✅ |
-| struttureSostanziali | 7 elementi ✅ |
-| nodiDisciplinari | 3 elementi ✅ |
-| progressioneVerticale | 7 elementi ✅ |
-| decisioniCurricolari | 0 elementi (vuoto) ✅ |
+| Controllo                             |         Esito         |
+| ------------------------------------- | :-------------------: |
+| JSON estraibile e valido              |          ✅           |
+| Nessun U+FFFD                         |          ✅           |
+| Nessun `???`                          |          ✅           |
+| Nessun byte nullo                     |          ✅           |
+| Lettere accentate italiane conservate |          ✅           |
+| Disciplina                            |      `Musica` ✅      |
+| struttureSostanziali                  |     7 elementi ✅     |
+| nodiDisciplinari                      |     3 elementi ✅     |
+| progressioneVerticale                 |     7 elementi ✅     |
+| decisioniCurricolari                  | 0 elementi (vuoto) ✅ |
 
 ## 11. Discipline invarianti
 
-| Disciplina | Stato |
-|------------|:-----:|
-| Tecnologia | Invariata ✅ |
-| Italiano | Invariata ✅ |
-| Matematica | Invariata ✅ |
-| Scienze | Invariata ✅ |
-| Storia | Invariata ✅ |
-| Geografia | Invariata ✅ |
-| Inglese | Invariata ✅ |
+| Disciplina        |    Stato     |
+| ----------------- | :----------: |
+| Tecnologia        | Invariata ✅ |
+| Italiano          | Invariata ✅ |
+| Matematica        | Invariata ✅ |
+| Scienze           | Invariata ✅ |
+| Storia            | Invariata ✅ |
+| Geografia         | Invariata ✅ |
+| Inglese           | Invariata ✅ |
 | Educazione Civica | Invariata ✅ |
-| Arte e Immagine | Invariata ✅ |
+| Arte e Immagine   | Invariata ✅ |
 
 ## 12. Verifica invarianti
 
-| Componente | Stato |
-|------------|:-----:|
-| `content/curriculum/` | Invariato ✅ |
-| `tools/` | Invariati ✅ |
-| Schema `.cml` | Invariato ✅ |
-| Export/import | Invariati ✅ |
-| Funzioni evidenze/UDA | Invariate ✅ |
-| Service worker | Invariato ✅ |
-| Navigazione globale / Home | Invariata ✅ |
-| Dipendenze | Nessuna introdotta ✅ |
+| Componente                 |         Stato         |
+| -------------------------- | :-------------------: |
+| `content/curriculum/`      |     Invariato ✅      |
+| `tools/`                   |     Invariati ✅      |
+| Schema `.cml`              |     Invariato ✅      |
+| Export/import              |     Invariati ✅      |
+| Funzioni evidenze/UDA      |     Invariate ✅      |
+| Service worker             |     Invariato ✅      |
+| Navigazione globale / Home |     Invariata ✅      |
+| Dipendenze                 | Nessuna introdotta ✅ |
 
 ## 13. Rischi residui
 

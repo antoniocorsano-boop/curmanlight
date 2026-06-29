@@ -2,49 +2,49 @@
 
 ## Deploy Status
 
-| Check | Value |
-|---|---|
-| Pages workflow | ✅ `success` |
-| Commit deployed | `bfa1d2a` (CML-092) |
-| Deploy time | 2026-06-24T02:50:15Z |
-| Live URL | https://antoniocorsano-boop.github.io/curmanlight/ |
+| Check           | Value                                              |
+| --------------- | -------------------------------------------------- |
+| Pages workflow  | ✅ `success`                                       |
+| Commit deployed | `bfa1d2a` (CML-092)                                |
+| Deploy time     | 2026-06-24T02:50:15Z                               |
+| Live URL        | https://antoniocorsano-boop.github.io/curmanlight/ |
 
 ## Completeness Counters
 
-| Counter | Expected | Result |
-|---|---|---|
-| Bozze complete / In revisione | 3 | ✅ |
-| Sola consultazione | 12 | ✅ |
-| Pronte per approvazione | 0 | ✅ |
+| Counter                       | Expected | Result |
+| ----------------------------- | -------- | ------ |
+| Bozze complete / In revisione | 3        | ✅     |
+| Sola consultazione            | 12       | ✅     |
+| Pronte per approvazione       | 0        | ✅     |
 
 ## Readiness Counters
 
-| Counter | Expected | Result |
-|---|---|---|
-| In revisione | 3 | ✅ |
-| Sola consultazione | 12 | ✅ |
-| Pronte per approvazione | 0 | ✅ |
+| Counter                 | Expected | Result |
+| ----------------------- | -------- | ------ |
+| In revisione            | 3        | ✅     |
+| Sola consultazione      | 12       | ✅     |
+| Pronte per approvazione | 0        | ✅     |
 
 ## Discipline Status in Readiness Panel
 
-| Disciplina | Stato | Esito |
-|---|---|---|
-| Tecnologia | Bozza completa, in revisione | ✅ |
-| Italiano | Bozza completa, in revisione | ✅ |
-| Matematica | Bozza completa, in revisione | ✅ |
-| Altre 12 discipline | Solo consultazione | ✅ |
+| Disciplina          | Stato                        | Esito |
+| ------------------- | ---------------------------- | ----- |
+| Tecnologia          | Bozza completa, in revisione | ✅    |
+| Italiano            | Bozza completa, in revisione | ✅    |
+| Matematica          | Bozza completa, in revisione | ✅    |
+| Altre 12 discipline | Solo consultazione           | ✅    |
 
 ## Control Checks
 
-| Check | Result |
-|---|---|
-| Nessun pulsante di approvazione | ✅ |
-| Nessuna disciplina approvata | ✅ |
-| Nessuna disciplina pronta per approvazione | ✅ |
-| Nota approvazione esterna visibile | ✅ |
-| Light mode only | ✅ |
-| Nessuna modifica runtime | ✅ |
-| `.cml`, export/import, role-access invariati | ✅ |
+| Check                                        | Result |
+| -------------------------------------------- | ------ |
+| Nessun pulsante di approvazione              | ✅     |
+| Nessuna disciplina approvata                 | ✅     |
+| Nessuna disciplina pronta per approvazione   | ✅     |
+| Nota approvazione esterna visibile           | ✅     |
+| Light mode only                              | ✅     |
+| Nessuna modifica runtime                     | ✅     |
+| `.cml`, export/import, role-access invariati | ✅     |
 
 ## Rischio residuo
 

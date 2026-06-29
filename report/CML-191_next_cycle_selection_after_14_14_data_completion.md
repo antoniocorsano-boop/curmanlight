@@ -8,24 +8,24 @@ Selezionare formalmente il prossimo ciclo di lavoro CurManLight dopo il completa
 
 ## 2. Baseline
 
-| Parametro | Valore |
-|---|---|
-| Commit | `215bfeb` (CML-190, 1 ahead origin/main) |
-| Dati normalizzati | 14/14 |
-| Runtime mappa | 11/14 |
-| Validatore | 14/14 PASS, 0 errori |
-| Shape test | 11/11 PASS |
-| Working tree | Pulito |
+| Parametro         | Valore                                   |
+| ----------------- | ---------------------------------------- |
+| Commit            | `215bfeb` (CML-190, 1 ahead origin/main) |
+| Dati normalizzati | 14/14                                    |
+| Runtime mappa     | 11/14                                    |
+| Validatore        | 14/14 PASS, 0 errori                     |
+| Shape test        | 11/11 PASS                               |
+| Working tree      | Pulito                                   |
 
 ## 3. Opzioni disponibili
 
-| Opzione | Descrizione | Impatto utente | Rischio | Dipendenze |
-|---|---|---|---|---|
-| **A** — Runtime integration | Completa mappa 3 discipline residue | Alto (14/14 UI) | Basso | Dati normalizzati (✅) |
-| B — Design/UML docs | Architettura, flussi, componenti | Nessuno | Basso | Nessuna |
-| C — Evidenze/UDA | Workflow validazione/approvazione | Alto | Alto | Mappa runtime completa |
-| D — Export/import + .cml | Esportazione dati, schema hardening | Medio | Medio | Schema maturo |
-| E — SchoolKB | Knowledge base documentale | Medio | Alto | OAuth/API esterne |
+| Opzione                     | Descrizione                         | Impatto utente  | Rischio | Dipendenze             |
+| --------------------------- | ----------------------------------- | --------------- | ------- | ---------------------- |
+| **A** — Runtime integration | Completa mappa 3 discipline residue | Alto (14/14 UI) | Basso   | Dati normalizzati (✅) |
+| B — Design/UML docs         | Architettura, flussi, componenti    | Nessuno         | Basso   | Nessuna                |
+| C — Evidenze/UDA            | Workflow validazione/approvazione   | Alto            | Alto    | Mappa runtime completa |
+| D — Export/import + .cml    | Esportazione dati, schema hardening | Medio           | Medio   | Schema maturo          |
+| E — SchoolKB                | Knowledge base documentale          | Medio           | Alto    | OAuth/API esterne      |
 
 ## 4. Opzione selezionata: A — Runtime integration
 
@@ -39,21 +39,21 @@ Selezionare formalmente il prossimo ciclo di lavoro CurManLight dopo il completa
 
 ### Opzioni respinte
 
-| Opzione | Motivo |
-|---|---|
-| B (UML/docs) | Nessun impatto utente; utile dopo aver completato funzionalità concrete |
-| C (evidenze/UDA) | Troppo presto: richiede mappa runtime completa come base |
-| D (export/import) | Rischio di toccare componenti non ancora maturi; export parziale se mappa incompleta |
-| E (SchoolKB) | Progetto parallelo, non completa gap funzionali; aggiunge dipendenze OAuth non necessarie ora |
+| Opzione           | Motivo                                                                                        |
+| ----------------- | --------------------------------------------------------------------------------------------- |
+| B (UML/docs)      | Nessun impatto utente; utile dopo aver completato funzionalità concrete                       |
+| C (evidenze/UDA)  | Troppo presto: richiede mappa runtime completa come base                                      |
+| D (export/import) | Rischio di toccare componenti non ancora maturi; export parziale se mappa incompleta          |
+| E (SchoolKB)      | Progetto parallelo, non completa gap funzionali; aggiunge dipendenze OAuth non necessarie ora |
 
 ## 5. Micro-slice proposte
 
-| Slice | Disciplina | Commit previsto | Action |
-|---|---|---|---|
+| Slice   | Disciplina                 | Commit previsto                                           | Action              |
+| ------- | -------------------------- | --------------------------------------------------------- | ------------------- |
 | CML-192 | Seconda Lingua Comunitaria | .html + variabile + pulsante + branch + contatori ⬆ 12/14 | Runtime integration |
-| CML-193 | Religione Cattolica | .html + variabile + pulsante + branch + contatori ⬆ 13/14 | Runtime integration |
-| CML-194 | Latino LEL | .html + variabile + pulsante + branch + contatori ⬆ 14/14 | Runtime integration |
-| CML-195 | 14/14 closure | shape test alignment + smoke | Shape + test |
+| CML-193 | Religione Cattolica        | .html + variabile + pulsante + branch + contatori ⬆ 13/14 | Runtime integration |
+| CML-194 | Latino LEL                 | .html + variabile + pulsante + branch + contatori ⬆ 14/14 | Runtime integration |
+| CML-195 | 14/14 closure              | shape test alignment + smoke                              | Shape + test        |
 
 ## 6. Verdetto
 

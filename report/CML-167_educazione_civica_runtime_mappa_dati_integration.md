@@ -35,21 +35,21 @@ Runtime increment controllato: tre modifiche puntuali in `_published_snapshot/ne
 
 ## 6. Punto di integrazione runtime
 
-| Elemento | Dettaglio |
-|----------|-----------|
-| Pulsante | `setMappaDisciplina('educazione-civica', this)` |
-| Variabile | `EDUCAZIONE_CIVICA_MAPPA_DATI` |
-| Branch | `mappaDisciplinaCorrente === 'educazione-civica'` |
+| Elemento  | Dettaglio                                         |
+| --------- | ------------------------------------------------- |
+| Pulsante  | `setMappaDisciplina('educazione-civica', this)`   |
+| Variabile | `EDUCAZIONE_CIVICA_MAPPA_DATI`                    |
+| Branch    | `mappaDisciplinaCorrente === 'educazione-civica'` |
 
 ## 7. Conteggi Educazione Civica
 
-| Campo | Valore |
-|-------|:------:|
-| struttureSostanziali | 11 |
-| nodiDisciplinari | 4 |
-| progressioneVerticale | 9 |
-| decisioniCurricolari | 0 |
-| Stato decisioni | D=0 (deliberato) |
+| Campo                 |      Valore      |
+| --------------------- | :--------------: |
+| struttureSostanziali  |        11        |
+| nodiDisciplinari      |        4         |
+| progressioneVerticale |        9         |
+| decisioniCurricolari  |        0         |
+| Stato decisioni       | D=0 (deliberato) |
 
 ## 8. Validatore curriculum
 
@@ -71,25 +71,25 @@ Runtime increment controllato: tre modifiche puntuali in `_published_snapshot/ne
 
 ## 10. Verifica codifica
 
-| Controllo | Esito |
-|-----------|:-----:|
-| JSON valido | ✅ |
-| Nessun \\uFFFD | ✅ |
-| Nessun `???` | ✅ |
-| Nessun `??` | ✅ |
-| Accenti italiani (\\u00e0) | ✅ |
+| Controllo                  | Esito |
+| -------------------------- | :---: |
+| JSON valido                |  ✅   |
+| Nessun \\uFFFD             |  ✅   |
+| Nessun `???`               |  ✅   |
+| Nessun `??`                |  ✅   |
+| Accenti italiani (\\u00e0) |  ✅   |
 
 ## 11. Discipline invarianti
 
-| Disciplina | Stato |
-|------------|:-----:|
+| Disciplina |    Stato     |
+| ---------- | :----------: |
 | Tecnologia | ✅ invariata |
 | Matematica | ✅ invariata |
-| Italiano | ✅ invariato |
-| Scienze | ✅ invariate |
-| Storia | ✅ invariata |
-| Geografia | ✅ invariata |
-| Inglese | ✅ invariato |
+| Italiano   | ✅ invariato |
+| Scienze    | ✅ invariate |
+| Storia     | ✅ invariata |
+| Geografia  | ✅ invariata |
+| Inglese    | ✅ invariato |
 
 ## 12. Verifica invarianti
 
@@ -109,6 +109,7 @@ Runtime increment controllato: tre modifiche puntuali in `_published_snapshot/ne
 ## 14. Raccomandazione per CML-168
 
 La prossima slice dovrebbe dedicarsi a:
+
 - Audit delle decisioni curricolari per Educazione Civica (D>0)
 - Oppure normalizzazione della prossima disciplina (Musica, Arte e Immagine, Educazione Fisica)
 - Oppure integrazione evidenze/UDA per le discipline già normalizzate

@@ -14,19 +14,23 @@ CML_008R_EXPORT_READINESS_TECNOLOGIA_MARKDOWN_READY
 ## Modifiche
 
 ### Funzioni modificate (comportamento legacy preservato)
+
 - `buildDocumentModel(onlyApproved, opts)` — filtro `disciplineFilter`
 - `modelToMarkdown(model, onlyApproved, opts)` — flag strutturati (introNote, generliRef, decisionSummary, gapMarkers, disclaimer)
 - `exportMarkdown(onlyApproved, disciplineFilter)` — filtro per singola disciplina
 
 ### Funzioni aggiunte
+
 - `downloadMarkdownString()`, `copyMarkdownToClipboard()` — helper
 - `generateTecnologiaBozza()`, `copyTecnologiaMarkdown()`, `downloadTecnologiaMarkdown()` — handler UI
 - `_tecnologiaMarkdownCache` — cache bozza
 
 ### UI aggiunta
+
 - Pannello export visibile solo per Tecnologia con: Genera bozza, Copia Markdown, Scarica Markdown, preview textarea
 
 ## Output Markdown
+
 - Intestazione + nota "Documento di lavoro — da validare"
 - Riferimenti 8 sezioni generali
 - Sintesi decisioni
@@ -34,6 +38,7 @@ CML_008R_EXPORT_READINESS_TECNOLOGIA_MARKDOWN_READY
 - Avvertenza non deliberativa
 
 ## Conferme
+
 - ✅ Export limitato a Tecnologia
 - ✅ Nessun DOCX
 - ✅ Approve/reject/edit preservati
@@ -48,6 +53,7 @@ CML_008R_EXPORT_READINESS_TECNOLOGIA_MARKDOWN_READY
 ## Refinement post-audit
 
 Dopo lo smoke iniziale:
+
 - ✅ Aggiunta sezione "Dettaglio delle proposte di revisione" con tabella Area/Base/Proposta/Stato
 - ✅ Rinominata disciplina in "Tecnologia — raccordo verticale"
 - ✅ Aggiunta nota metodologica nel dettaglio proposte

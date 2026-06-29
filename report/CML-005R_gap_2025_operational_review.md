@@ -11,13 +11,14 @@ Rendere operativo il "Gap 2025" nel workflow di Revisione per disciplina, connet
 ## Opzione selezionata
 
 Opzione B da CML-005R-SELECT:
+
 - **Indicatore** "🧩 Gap 2025 della disciplina" nelle card da decidere
 - **Microcopy/link** nella card Riferimenti normativi
 
 ## File modificati
 
-| File | Cambiamento |
-|---|---|
+| File                                             | Cambiamento          |
+| ------------------------------------------------ | -------------------- |
 | `_published_snapshot/netlify-current/index.html` | +5 righe, 1 modifica |
 
 ### Microcopy — Riferimenti normativi

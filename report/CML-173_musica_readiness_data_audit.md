@@ -8,25 +8,25 @@ Valutare la readiness documentale di Musica per la creazione del file normalizza
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| Commit iniziale | `d806172` |
-| origin/main | `d806172` |
-| Working tree | Pulito, sync con origin/main |
-| Dati normalizzati | 9/14 |
-| Runtime mappa | 9/14 |
-| Shape runtime test | 9/9 PASS |
-| Push | Non eseguito |
-| Deploy | Non eseguito |
+| Parametro          | Valore                       |
+| ------------------ | ---------------------------- |
+| Branch             | `main`                       |
+| Commit iniziale    | `d806172`                    |
+| origin/main        | `d806172`                    |
+| Working tree       | Pulito, sync con origin/main |
+| Dati normalizzati  | 9/14                         |
+| Runtime mappa      | 9/14                         |
+| Shape runtime test | 9/9 PASS                     |
+| Push               | Non eseguito                 |
+| Deploy             | Non eseguito                 |
 
 ## 3. Stato consolidato 9/14
 
-| Area | Stato |
-|------|-------|
-| Dati normalizzati | 9 file `.normalized.json` presenti |
-| Runtime mappa | 9 discipline integrate |
-| Shape runtime test | 9/9 PASS |
+| Area               | Stato                              |
+| ------------------ | ---------------------------------- |
+| Dati normalizzati  | 9 file `.normalized.json` presenti |
+| Runtime mappa      | 9 discipline integrate             |
+| Shape runtime test | 9/9 PASS                           |
 
 Discipline completate: Tecnologia, Matematica, Italiano, Scienze, Storia, Geografia, Inglese, Educazione Civica, Arte e Immagine.
 
@@ -58,10 +58,13 @@ Musica è la prima candidata con raccomandazione di audit prima della data prepa
 ## 7. Evidenze disponibili per Musica
 
 ### Copertura ordini
+
 **Completa** — Infanzia, Primaria, Secondaria. Confermata da CML-016A, CML-104, CML-107, CML-109.
 
 ### Traguardi e obiettivi storici
+
 CML-109 documenta 6 item:
+
 - mu_inf1 (Infanzia, traguardo)
 - mu_pri1 (Primaria, traguardo)
 - mu_ob_pri1, mu_ob_pri2 (Primaria, obiettivi)
@@ -71,7 +74,9 @@ CML-109 documenta 6 item:
 CML-016A documenta 5 item (4 traguardi + 1 obiettivo). Discrepanza probabilmente dovuta a diversa fase storica.
 
 ### Nuclei storici
+
 3 nuclei identificati in CML-109 (da IN 2025 e documentazione interna):
+
 1. **Linguaggi sonori** — comprensione, ascolto, produzione di suoni e messaggi musicali
 2. **Espressione vocale e strumentale** — canto, esecuzione, produzione corale e d'insieme
 3. **Ascolto** — percezione, analisi, comprensione critica dei fenomeni sonori
@@ -79,6 +84,7 @@ CML-016A documenta 5 item (4 traguardi + 1 obiettivo). Discrepanza probabilmente
 Il goal di CML-172 amplia prudentemente in: ascolto, produzione, linguaggio musicale, creatività sonora, patrimonio culturale — come ipotesi di lavoro.
 
 ### IN 2025
+
 CML-109 segnala prontezza per: notazione musicale curricolare, canto corale, musica d'insieme, tecnologie digitali. Non esistono proposte IN 2025 strutturate come campo dedicato.
 
 ## 8. Gap documentali rilevati
@@ -93,32 +99,32 @@ CML-109 segnala prontezza per: notazione musicale curricolare, canto corale, mus
 
 Basate sui 3 nuclei storici e sul goal CML-172, classificate per livello di prudenza:
 
-| Struttura | Classificazione | Note |
-|-----------|-----------------|------|
-| Ascolto, percezione e comprensione dei fenomeni sonori e musicali | Ricostruibile | Nucleo "Ascolto" documentato in CML-109 e CML-104 |
-| Produzione vocale, strumentale e ritmica | Ricostruibile | Nucleo "Espressione vocale e strumentale" documentato |
-| Linguaggio musicale e notazione | Ipotesi prudente | Implicito dal nucleo "Linguaggi sonori" e IN 2025 (notazione cl. 3ª) |
-| Creatività sonora e rielaborazione | Ipotesi prudente | Non documentato esplicitamente ma coerente con la disciplina espressiva |
-| Musica come patrimonio culturale | Ipotesi prudente | Non documentato ma compatibile con IN 2025 |
-| Tecnologie digitali musicali | Ipotesi prudente | Citato in CML-109 come IN 2025, non come struttura autonoma |
+| Struttura                                                         | Classificazione  | Note                                                                    |
+| ----------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------- |
+| Ascolto, percezione e comprensione dei fenomeni sonori e musicali | Ricostruibile    | Nucleo "Ascolto" documentato in CML-109 e CML-104                       |
+| Produzione vocale, strumentale e ritmica                          | Ricostruibile    | Nucleo "Espressione vocale e strumentale" documentato                   |
+| Linguaggio musicale e notazione                                   | Ipotesi prudente | Implicito dal nucleo "Linguaggi sonori" e IN 2025 (notazione cl. 3ª)    |
+| Creatività sonora e rielaborazione                                | Ipotesi prudente | Non documentato esplicitamente ma coerente con la disciplina espressiva |
+| Musica come patrimonio culturale                                  | Ipotesi prudente | Non documentato ma compatibile con IN 2025                              |
+| Tecnologie digitali musicali                                      | Ipotesi prudente | Citato in CML-109 come IN 2025, non come struttura autonoma             |
 
 ## 10. Possibili nodi disciplinari
 
-| Nodo | Classificazione |
-|------|-----------------|
-| Ascoltare e comprendere fenomeni sonori e musicali | Ricostruibile |
-| Esprimersi vocalmente e strumentalmente | Ricostruibile |
-| Usare il linguaggio musicale e la notazione | Ipotesi prudente |
-| Creare e rielaborare sonoramente | Ipotesi prudente |
-| Conoscere e valorizzare il patrimonio musicale | Ipotesi prudente |
+| Nodo                                               | Classificazione  |
+| -------------------------------------------------- | ---------------- |
+| Ascoltare e comprendere fenomeni sonori e musicali | Ricostruibile    |
+| Esprimersi vocalmente e strumentalmente            | Ricostruibile    |
+| Usare il linguaggio musicale e la notazione        | Ipotesi prudente |
+| Creare e rielaborare sonoramente                   | Ipotesi prudente |
+| Conoscere e valorizzare il patrimonio musicale     | Ipotesi prudente |
 
 ## 11. Possibile progressione verticale
 
-| Ordine | Disponibilità |
-|--------|---------------|
-| Infanzia | Ricostruibile (mu_inf1) — esplorazione sonora, giochi vocali, ascolto |
-| Primaria | Ricostruibile (mu_pri1, mu_ob_pri1, mu_ob_pri2) — notazione cl. 3ª, canto corale, produzione |
-| Secondaria | Ricostruibile (mu_sec1, mu_ob_sec1) — produzione digitale, musica d'insieme, analisi |
+| Ordine     | Disponibilità                                                                                |
+| ---------- | -------------------------------------------------------------------------------------------- |
+| Infanzia   | Ricostruibile (mu_inf1) — esplorazione sonora, giochi vocali, ascolto                        |
+| Primaria   | Ricostruibile (mu_pri1, mu_ob_pri1, mu_ob_pri2) — notazione cl. 3ª, canto corale, produzione |
+| Secondaria | Ricostruibile (mu_sec1, mu_ob_sec1) — produzione digitale, musica d'insieme, analisi         |
 
 ## 12. Decisioni curricolari
 
@@ -126,16 +132,16 @@ Nessuna decisione curricolare documentata per Musica. Raccomandazione: `decision
 
 ## 13. Tabella readiness
 
-| Criterio | Valutazione |
-|----------|-------------|
-| Readiness documentale | Media |
-| Disponibilità dati | Bassa (solo report storici, nessun `.normalized.json`) |
-| Rischio dati | Basso |
-| Rischio istituzionale | Basso |
-| Complessità normalizzazione | Media |
-| Rischio invenzione contenuti | Medio-basso (con cautele) |
-| Compatibilità contratto normalizzato | Piena |
-| **Raccomandazione** | **Pronta con cautele** |
+| Criterio                             | Valutazione                                            |
+| ------------------------------------ | ------------------------------------------------------ |
+| Readiness documentale                | Media                                                  |
+| Disponibilità dati                   | Bassa (solo report storici, nessun `.normalized.json`) |
+| Rischio dati                         | Basso                                                  |
+| Rischio istituzionale                | Basso                                                  |
+| Complessità normalizzazione          | Media                                                  |
+| Rischio invenzione contenuti         | Medio-basso (con cautele)                              |
+| Compatibilità contratto normalizzato | Piena                                                  |
+| **Raccomandazione**                  | **Pronta con cautele**                                 |
 
 ## 14. Raccomandazione per CML-174
 

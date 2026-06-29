@@ -7,19 +7,19 @@
 
 ## Risultati
 
-| Punto | Esito |
-|---|---|
-| Preflight | ✅ Branch/HEAD/tree/URL confermati |
-| Bottom bar mobile | ✅ Live: ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰ Menu |
-| Menu overlay | ✅ Live: Fonti, Generali, Azioni, Install, Settings, PDF, Motto, Guida |
-| Sidebar contestuale | ✅ Solo Revisione/Definitivo su mobile |
-| Breadcrumb dinamico | ✅ Aggiornato da setTab() |
-| Desktop ≥901px | ✅ Invariato |
-| Breakpoint | ✅ 360/390/414/768/900/901/1280px |
-| Regressioni | ✅ Nessuna — asset, export, cards, approvazione/rifiuto intatti |
-| Problemi | 2 cosmetici (CSS morto `.local-save-bar`, sintassi media query ridondante) — non bloccanti |
-| Modifica runtime | ❌ Nessuna |
-| Deploy | ❌ Nessuno |
+| Punto               | Esito                                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| Preflight           | ✅ Branch/HEAD/tree/URL confermati                                                         |
+| Bottom bar mobile   | ✅ Live: ✏️ Rev. / 📋 Def. / 📤 Esp. / ☰ Menu                                             |
+| Menu overlay        | ✅ Live: Fonti, Generali, Azioni, Install, Settings, PDF, Motto, Guida                     |
+| Sidebar contestuale | ✅ Solo Revisione/Definitivo su mobile                                                     |
+| Breadcrumb dinamico | ✅ Aggiornato da setTab()                                                                  |
+| Desktop ≥901px      | ✅ Invariato                                                                               |
+| Breakpoint          | ✅ 360/390/414/768/900/901/1280px                                                          |
+| Regressioni         | ✅ Nessuna — asset, export, cards, approvazione/rifiuto intatti                            |
+| Problemi            | 2 cosmetici (CSS morto `.local-save-bar`, sintassi media query ridondante) — non bloccanti |
+| Modifica runtime    | ❌ Nessuna                                                                                 |
+| Deploy              | ❌ Nessuno                                                                                 |
 
 ## Verdetto
 

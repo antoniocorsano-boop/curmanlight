@@ -31,25 +31,25 @@ Implement a new consultative read-only tab "Sezioni generali" in the published C
 
 ## Confirmation Checklist
 
-| Check | Status |
-|-------|--------|
-| New tab "Sezioni generali" visible | ✓ |
-| Tab is read-only (no inputs, no edit buttons) | ✓ |
-| 14 disciplines preserved | ✓ |
-| IN2012→IN2025 comparison preserved | ✓ |
-| approve/reject/edit workflow preserved | ✓ |
-| Progress tracking preserved | ✓ |
-| PDF cache-safe link preserved | ✓ |
-| No old PDF referenced as user link | ✓ |
-| No prototype code copied | ✓ |
-| No sw.js modified | ✓ |
-| No _headers modified | ✓ |
-| No PDF modified | ✓ |
-| No localStorage keys added | ✓ |
-| No backend/API/auth/Netlify Forms | ✓ |
-| No deploy | ✓ |
-| `git diff --check` clean | ✓ |
-| Only intended file modified (`git diff --stat`) | ✓ |
+| Check                                           | Status |
+| ----------------------------------------------- | ------ |
+| New tab "Sezioni generali" visible              | ✓      |
+| Tab is read-only (no inputs, no edit buttons)   | ✓      |
+| 14 disciplines preserved                        | ✓      |
+| IN2012→IN2025 comparison preserved              | ✓      |
+| approve/reject/edit workflow preserved          | ✓      |
+| Progress tracking preserved                     | ✓      |
+| PDF cache-safe link preserved                   | ✓      |
+| No old PDF referenced as user link              | ✓      |
+| No prototype code copied                        | ✓      |
+| No sw.js modified                               | ✓      |
+| No _headers modified                            | ✓      |
+| No PDF modified                                 | ✓      |
+| No localStorage keys added                      | ✓      |
+| No backend/API/auth/Netlify Forms               | ✓      |
+| No deploy                                       | ✓      |
+| `git diff --check` clean                        | ✓      |
+| Only intended file modified (`git diff --stat`) | ✓      |
 
 ## Residual Risks
 

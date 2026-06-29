@@ -25,6 +25,7 @@ Micro-fix completata. Tre interventi minimi su `index.html`.
 ### P2 — Touch target salvataggio
 
 Pulsanti local-save-bar:
+
 - `padding:2px 7px;font-size:10px` → `padding:4px 9px;font-size:11px`
 - Incremento minimo, nessun impatto su layout (verificato a 360px)
 

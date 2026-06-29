@@ -2,17 +2,17 @@
 
 ## Stato iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | `cml-008r-export-readiness-tecnologia-markdown-clean` |
-| HEAD partenza | `40957ea` (master con CML-007R chiuso) |
-| Working tree | pulita |
-| File toccati | `_published_snapshot/netlify-current/index.html` |
-| File creati | `docs/03_execution/CML-008R.md`, `report/CML-008R_export_readiness.md` |
-| Riferimento audit | `dde523c` (branch CML-008R originale — non cherry-piccato) |
-| Spec | `docs/superpowers/specs/2026-06-20-export-readiness-design.md` |
-| Piano | `docs/superpowers/plans/2026-06-20-export-readiness-tecnologia-markdown.md` |
-| SELECT | `docs/03_execution/CML-008R-SELECT.md` |
+| Campo             | Valore                                                                      |
+| ----------------- | --------------------------------------------------------------------------- |
+| Branch            | `cml-008r-export-readiness-tecnologia-markdown-clean`                       |
+| HEAD partenza     | `40957ea` (master con CML-007R chiuso)                                      |
+| Working tree      | pulita                                                                      |
+| File toccati      | `_published_snapshot/netlify-current/index.html`                            |
+| File creati       | `docs/03_execution/CML-008R.md`, `report/CML-008R_export_readiness.md`      |
+| Riferimento audit | `dde523c` (branch CML-008R originale — non cherry-piccato)                  |
+| Spec              | `docs/superpowers/specs/2026-06-20-export-readiness-design.md`              |
+| Piano             | `docs/superpowers/plans/2026-06-20-export-readiness-tecnologia-markdown.md` |
+| SELECT            | `docs/03_execution/CML-008R-SELECT.md`                                      |
 
 ## Ricostruzione pulita
 
@@ -30,36 +30,37 @@ Dopo lo smoke iniziale, l'export Markdown è stato rifinito:
 
 ## File modificati
 
-| File | Modifica | Rischio |
-|---|---|---|
+| File                                             | Modifica                     | Rischio                   |
+| ------------------------------------------------ | ---------------------------- | ------------------------- |
 | `_published_snapshot/netlify-current/index.html` | 202 ins, 16 del (~218 righe) | Basso — legacy preservato |
 
 ## Funzioni modificate/aggiunte
 
 ### Modificate (comportamento legacy preservato)
 
-| Funzione | Modifica |
-|---|---|
-| `buildDocumentModel(onlyApproved, opts)` | Nuovo parametro `opts.disciplineFilter` per filtrare discipline |
-| `modelToMarkdown(model, onlyApproved, opts)` | Nuovo parametro `opts` con flag: `introNote`, `includeGeneraliRef`, `includeDecisionSummary`, `includeGapMarkers`, `includeDisclaimer`, `disciplineName` |
-| `exportMarkdown(onlyApproved, disciplineFilter)` | Nuovo parametro `disciplineFilter`; senza filtro → output identico |
+| Funzione                                         | Modifica                                                                                                                                                 |
+| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `buildDocumentModel(onlyApproved, opts)`         | Nuovo parametro `opts.disciplineFilter` per filtrare discipline                                                                                          |
+| `modelToMarkdown(model, onlyApproved, opts)`     | Nuovo parametro `opts` con flag: `introNote`, `includeGeneraliRef`, `includeDecisionSummary`, `includeGapMarkers`, `includeDisclaimer`, `disciplineName` |
+| `exportMarkdown(onlyApproved, disciplineFilter)` | Nuovo parametro `disciplineFilter`; senza filtro → output identico                                                                                       |
 
 ### Aggiunte
 
-| Funzione | Scopo |
-|---|---|
-| `downloadMarkdownString(content, filename)` | Wrapper download Blob per Markdown |
-| `copyMarkdownToClipboard(content)` | Copia Markdown negli appunti con fallback finestra |
-| `generateTecnologiaBozza()` | Genera bozza Markdown di Tecnologia e mostra preview |
-| `copyTecnologiaMarkdown()` | Copia la bozza generata negli appunti |
-| `downloadTecnologiaMarkdown()` | Scarica la bozza come file `.md` |
-| `_tecnologiaMarkdownCache` | Cache della bozza generata |
+| Funzione                                    | Scopo                                                |
+| ------------------------------------------- | ---------------------------------------------------- |
+| `downloadMarkdownString(content, filename)` | Wrapper download Blob per Markdown                   |
+| `copyMarkdownToClipboard(content)`          | Copia Markdown negli appunti con fallback finestra   |
+| `generateTecnologiaBozza()`                 | Genera bozza Markdown di Tecnologia e mostra preview |
+| `copyTecnologiaMarkdown()`                  | Copia la bozza generata negli appunti                |
+| `downloadTecnologiaMarkdown()`              | Scarica la bozza come file `.md`                     |
+| `_tecnologiaMarkdownCache`                  | Cache della bozza generata                           |
 
 ## UI export aggiunta
 
 Pannello `#tecnologia-export-panel` nel tab Revisione, visibile solo quando la disciplina selezionata è **Tecnologia**.
 
 **Contenuto:**
+
 - Intestazione: "📤 Export del curricolo revisionato"
 - Badge: "Documento di lavoro — da validare"
 - Descrizione: "L'export produce una bozza Markdown della disciplina Tecnologia. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti."
@@ -88,7 +89,7 @@ Pannello `#tecnologia-export-panel` nel tab Revisione, visibile solo quando la d
 - [x] **Nessuna nuova chiave localStorage**: nessuna modifica a save/load/reset
 - [x] **PDF cache-safe preservato**: `Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf` ancora linkato
 - [x] **Vecchio PDF non referenziato**: nessun link a `Corso_CurricoloDonMilani_IN2025.pdf`
-- [x] **sw.js/_headers/manifest non modificati**
+- [x] **sw.js/\_headers/manifest non modificati**
 - [x] **Nessun backend/API/auth/Netlify Forms**
 - [x] **Comportamento legacy preservato**: `exportMarkdown(true)` senza filtro → output identico
 - [x] **Nessun deploy**
@@ -101,38 +102,38 @@ Server attivo su `http://localhost:5000`.
 
 ### Verifiche statiche (file diretto UTF-8)
 
-| Verifica | Esito |
-|---|---|
-| Pannello export panel presente | ✅ |
-| Pulsante "Genera bozza Tecnologia" presente | ✅ |
-| Pulsante "Copia Markdown" presente | ✅ |
-| Pulsante "Scarica Markdown" presente | ✅ |
-| Preview textarea presente | ✅ |
-| Cache `_tecnologiaMarkdownCache` definita | ✅ |
-| `introNote` in modelToMarkdown | ✅ |
-| `includeDisclaimer` presente | ✅ |
-| `includeGapMarkers` presente | ✅ |
-| `includeGeneraliRef` presente | ✅ |
-| `includeDecisionSummary` presente | ✅ |
-| "Documento di lavoro — da validare" presente | ✅ |
-| "Non sostituisce delibera del Collegio Docenti" presente | ✅ |
-| `disciplineFilter` in buildDocumentModel | ✅ |
-| `exportWord(onlyApproved` invariato | ✅ |
-| 4 tab (lavoro, riepilogo, normativa, generali) | ✅ |
-| PDF cache-safe linkato | ✅ |
-| Vecchio PDF non referenziato | ✅ |
-| Approve/reject/edit funzioni presenti | ✅ |
-| Git diff --check pulito | ✅ |
-| Soli 3 file modificati/creati | ✅ |
+| Verifica                                                 | Esito |
+| -------------------------------------------------------- | ----- |
+| Pannello export panel presente                           | ✅    |
+| Pulsante "Genera bozza Tecnologia" presente              | ✅    |
+| Pulsante "Copia Markdown" presente                       | ✅    |
+| Pulsante "Scarica Markdown" presente                     | ✅    |
+| Preview textarea presente                                | ✅    |
+| Cache `_tecnologiaMarkdownCache` definita                | ✅    |
+| `introNote` in modelToMarkdown                           | ✅    |
+| `includeDisclaimer` presente                             | ✅    |
+| `includeGapMarkers` presente                             | ✅    |
+| `includeGeneraliRef` presente                            | ✅    |
+| `includeDecisionSummary` presente                        | ✅    |
+| "Documento di lavoro — da validare" presente             | ✅    |
+| "Non sostituisce delibera del Collegio Docenti" presente | ✅    |
+| `disciplineFilter` in buildDocumentModel                 | ✅    |
+| `exportWord(onlyApproved` invariato                      | ✅    |
+| 4 tab (lavoro, riepilogo, normativa, generali)           | ✅    |
+| PDF cache-safe linkato                                   | ✅    |
+| Vecchio PDF non referenziato                             | ✅    |
+| Approve/reject/edit funzioni presenti                    | ✅    |
+| Git diff --check pulito                                  | ✅    |
+| Soli 3 file modificati/creati                            | ✅    |
 
 ## Rischi residui
 
-| Rischio | Mitigazione |
-|---|---|
-| Preview non aggiornata dopo approve/reject | Il pulsante "Genera bozza" rigenera sempre da zero |
+| Rischio                                             | Mitigazione                                                             |
+| --------------------------------------------------- | ----------------------------------------------------------------------- |
+| Preview non aggiornata dopo approve/reject          | Il pulsante "Genera bozza" rigenera sempre da zero                      |
 | Utente copia Markdown e lo presenta come definitivo | Avvertenza esplicita nell'output + badge "Documento di lavoro" nella UI |
-| Pannello visibile su schermi molto stretti | Media query 640px compatta; print CSS lo nasconde |
-| Dipendenza dal nome esatto "Tecnologia" | Coerente con DISCIPLINE_META — se rinominata, va aggiornato |
+| Pannello visibile su schermi molto stretti          | Media query 640px compatta; print CSS lo nasconde                       |
+| Dipendenza dal nome esatto "Tecnologia"             | Coerente con DISCIPLINE_META — se rinominata, va aggiornato             |
 
 ## Prossimo passo
 

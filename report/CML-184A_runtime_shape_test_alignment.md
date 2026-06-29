@@ -8,27 +8,27 @@ Allineare lo shape test `tools/test-runtime-mappa-dati-shape.mjs` alla copertura
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `12e698d` (allineato con `origin/main`) |
-| Working tree iniziale | pulito |
-| Verdict precedente | `CML_184_SYNC_CLOSED_REMOTE_WITH_SHAPE_SCOPE_NOTE` |
-| Dati normalizzati | 11/14 |
-| Runtime mappa | 11/14 |
-| Shape test prima | 10/10 PASS |
-| Skill usate | `cml-sync`, `cml-docs-only-slice`, `cml-readiness-audit` |
+| Parametro             | Valore                                                   |
+| --------------------- | -------------------------------------------------------- |
+| Root Git              | `C:\Users\anton\CurManLight`                             |
+| Branch                | `main`                                                   |
+| Commit iniziale       | `12e698d` (allineato con `origin/main`)                  |
+| Working tree iniziale | pulito                                                   |
+| Verdict precedente    | `CML_184_SYNC_CLOSED_REMOTE_WITH_SHAPE_SCOPE_NOTE`       |
+| Dati normalizzati     | 11/14                                                    |
+| Runtime mappa         | 11/14                                                    |
+| Shape test prima      | 10/10 PASS                                               |
+| Skill usate           | `cml-sync`, `cml-docs-only-slice`, `cml-readiness-audit` |
 
 ## 3. Collegamento con CML-184
 
-| Aspetto | CML-184 | CML-184A |
-|---|---|---|
-| Runtime HTML | Modificato (EF integrato) | NON modificato |
-| Shape test | NON modificato (scope vietato) | Modificato (EF aggiunto) |
-| Copertura shape | 10/10 | 11/11 |
-| Asimmetria runtime/shape | Si (11/14 vs 10/10) | No (11/14 vs 11/11) |
-| Tools/ | Invariato | Solo shape test aggiornato |
+| Aspetto                  | CML-184                        | CML-184A                   |
+| ------------------------ | ------------------------------ | -------------------------- |
+| Runtime HTML             | Modificato (EF integrato)      | NON modificato             |
+| Shape test               | NON modificato (scope vietato) | Modificato (EF aggiunto)   |
+| Copertura shape          | 10/10                          | 11/11                      |
+| Asimmetria runtime/shape | Si (11/14 vs 10/10)            | No (11/14 vs 11/11)        |
+| Tools/                   | Invariato                      | Solo shape test aggiornato |
 
 ## 4. Anomalia di copertura test
 
@@ -37,6 +37,7 @@ Dopo CML-184, il runtime includeva Educazione Fisica (11/14) ma lo shape test ve
 ## 5. Pattern shape test osservato
 
 Il test `test-runtime-mappa-dati-shape.mjs`:
+
 - Definisce un array `FILES` con i nomi dei JSON normalizzati da testare.
 - Definisce un oggetto `EXPECTED_COUNTS` per conteggi esatti (opzionale).
 - Esegue per ogni file il pipeline adapter → transformer, validando la struttura.
@@ -49,18 +50,19 @@ File: `tools/test-runtime-mappa-dati-shape.mjs`
 **FILES array**: aggiunto `'educazione-fisica.normalized.json'` dopo `'educazione-civica.normalized.json'`.
 
 **EXPECTED_COUNTS**: aggiunto:
+
 ```
 'educazione-fisica.normalized.json': { s: 7, n: 4, p: 7, d: 0 }
 ```
 
 ## 7. Educazione Fisica aggiunta alla copertura
 
-| Misura | Valore |
-|---|---|
-| struttureSostanziali (S) | 7 |
-| nodiDisciplinari (N) | 4 |
-| progressioneVerticale (P) | 7 |
-| decisioniCurricolari (D) | 0 |
+| Misura                    | Valore |
+| ------------------------- | ------ |
+| struttureSostanziali (S)  | 7      |
+| nodiDisciplinari (N)      | 4      |
+| progressioneVerticale (P) | 7      |
+| decisioniCurricolari (D)  | 0      |
 
 ## 8. Validatore JSON
 
@@ -73,6 +75,7 @@ File: `tools/test-runtime-mappa-dati-shape.mjs`
 ```
 Educazione Fisica: PASS — S=7 N=4 P=7 D=0
 ```
+
 Tutte le altre 10 discipline: PASS invariato.
 
 ## 10. Runtime mappa confermata

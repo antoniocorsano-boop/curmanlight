@@ -2,41 +2,41 @@
 
 ## 1. Baseline
 
-| Item | Value |
-|---|---|
-| Repo | `curmanlight` |
-| Branch | `main` |
-| Start commit | `356534d` |
-| `origin/main` at start | `eb3e36f` |
-| Local commits ahead | 2 (CML-200 `3e83d83`, CML-201 `356534d`) |
-| Working tree | Clean |
-| Slice type | Readiness gate + controlled push |
-| Deploy | None (automatic GitHub Pages only) |
-| Push | Controlled push of CML-200 + CML-201 |
-| Secrets | None |
+| Item                   | Value                                    |
+| ---------------------- | ---------------------------------------- |
+| Repo                   | `curmanlight`                            |
+| Branch                 | `main`                                   |
+| Start commit           | `356534d`                                |
+| `origin/main` at start | `eb3e36f`                                |
+| Local commits ahead    | 2 (CML-200 `3e83d83`, CML-201 `356534d`) |
+| Working tree           | Clean                                    |
+| Slice type             | Readiness gate + controlled push         |
+| Deploy                 | None (automatic GitHub Pages only)       |
+| Push                   | Controlled push of CML-200 + CML-201     |
+| Secrets                | None                                     |
 
 ## 2. Pre-Push Checks
 
-| Check | Result |
-|---|---|
-| `git status` — clean working tree | PASS |
-| `git log --oneline origin/main..HEAD` — exactly 2 commits: CML-200, CML-201 | PASS |
-| JSON validator 14/14 PASS | PASS |
-| CML-200 targeted smoke 12/12 PASS | PASS |
-| CML-201 E2E smoke 33/33 PASS | PASS |
-| Existing `.cml` examples: 4/4 PASS | PASS |
-| Runtime shape test: pre-existing BOM failure (0/14) | Documented |
-| BOM failure verified as pre-existing (not caused by CML-200/CML-201) | PASS |
-| `git diff --check` — no whitespace errors | PASS |
-| Secret-pattern scan — no actual secrets | PASS |
-| No manual deploy | PASS |
+| Check                                                                       | Result     |
+| --------------------------------------------------------------------------- | ---------- |
+| `git status` — clean working tree                                           | PASS       |
+| `git log --oneline origin/main..HEAD` — exactly 2 commits: CML-200, CML-201 | PASS       |
+| JSON validator 14/14 PASS                                                   | PASS       |
+| CML-200 targeted smoke 12/12 PASS                                           | PASS       |
+| CML-201 E2E smoke 33/33 PASS                                                | PASS       |
+| Existing `.cml` examples: 4/4 PASS                                          | PASS       |
+| Runtime shape test: pre-existing BOM failure (0/14)                         | Documented |
+| BOM failure verified as pre-existing (not caused by CML-200/CML-201)        | PASS       |
+| `git diff --check` — no whitespace errors                                   | PASS       |
+| Secret-pattern scan — no actual secrets                                     | PASS       |
+| No manual deploy                                                            | PASS       |
 
 ## 3. Commit List
 
-| # | Commit | Description |
-|---|---|---|
-| 1 | `3e83d83` | `runtime: harden cml import export validation` (CML-200) |
-| 2 | `356534d` | `docs: smoke teacher department referent cml workflow` (CML-201) |
+| #   | Commit    | Description                                                      |
+| --- | --------- | ---------------------------------------------------------------- |
+| 1   | `3e83d83` | `runtime: harden cml import export validation` (CML-200)         |
+| 2   | `356534d` | `docs: smoke teacher department referent cml workflow` (CML-201) |
 
 ## 4. Push
 
@@ -63,22 +63,28 @@ Push completed successfully. Local `main` and `origin/main` are now aligned.
 ## 6. Validation Results
 
 ### JSON Validator
+
 ```
 node tools/validate-cml-normalized-curriculum.mjs
 overallValid: true
 totalFiles: 14
 invalidCount: 0
 ```
+
 **Result: 14/14 PASS**
 
 ### CML-200 Targeted Smoke
+
 **Result: 12/12 PASS**
 
 ### CML-201 E2E Smoke
+
 **Result: 33/33 PASS**
 
 ### Existing `.cml` Examples Compatibility
+
 All 4 example files pass unchanged:
+
 - `esempio_proposta_docente_tecnologia.cml`
 - `esempio_proposta_docente_italiano.cml`
 - `esempio_esito_dipartimento_tecnologia.cml`
@@ -102,22 +108,22 @@ disciplines: 0 passed, 14 failed
 
 ## 9. Files Changed in This Slice
 
-| File | Change |
-|---|---|
-| `docs/03_execution/CML-202.md` | New readiness gate documentation |
-| `report/CML-202_cml_hardening_readiness_gate_and_controlled_push.md` | New readiness report |
-| `docs/REPO-MOVELOG.md` | Updated entry |
-| `tools/cml202-readiness.mjs` | Temporary smoke script (removed after execution) |
+| File                                                                 | Change                                           |
+| -------------------------------------------------------------------- | ------------------------------------------------ |
+| `docs/03_execution/CML-202.md`                                       | New readiness gate documentation                 |
+| `report/CML-202_cml_hardening_readiness_gate_and_controlled_push.md` | New readiness report                             |
+| `docs/REPO-MOVELOG.md`                                               | Updated entry                                    |
+| `tools/cml202-readiness.mjs`                                         | Temporary smoke script (removed after execution) |
 
 ## 10. Meta
 
-| Property | Value |
-|---|---|
-| Start commit | `356534d` |
-| CML-200 commit | `3e83d83` |
-| CML-201 commit | `356534d` |
-| Final origin/main HEAD | `356534d` |
-| Verdict | `CML_202_CML_HARDENING_READINESS_GATE_AND_CONTROLLED_PUSH_READY` |
+| Property               | Value                                                            |
+| ---------------------- | ---------------------------------------------------------------- |
+| Start commit           | `356534d`                                                        |
+| CML-200 commit         | `3e83d83`                                                        |
+| CML-201 commit         | `356534d`                                                        |
+| Final origin/main HEAD | `356534d`                                                        |
+| Verdict                | `CML_202_CML_HARDENING_READINESS_GATE_AND_CONTROLLED_PUSH_READY` |
 
 ## 11. Recommended Next Cycle
 

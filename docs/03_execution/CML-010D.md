@@ -26,24 +26,24 @@ Eseguita durante CML-010C (smoke audit). Nessuna modifica runtime interposta.
 
 ## Verifica post-deploy
 
-| Check | Esito |
-|---|---|
-| HTTP 200 | ✅ |
-| pending-card presente | ✅ |
-| collapse-header presente | ✅ |
-| gap-header-unique presente | ✅ |
-| badge modifica presente | ✅ |
-| cruscotto conservato | ✅ |
-| usage-notice conservato | ✅ |
-| tecnologia-export conservato | ✅ |
-| .act-approve (old) assente | ✅ |
-| Vecchio gap-header assente | ✅ |
-| CML-009D preservato | ✅ |
-| Nessun JS error | ✅ |
-| 360px screenshot | ✅ (56494 bytes) |
-| 414px screenshot | ✅ (68698 bytes) |
-| 768px screenshot | ✅ (148829 bytes) |
-| 1280px screenshot | ✅ (184876 bytes) |
+| Check                        | Esito             |
+| ---------------------------- | ----------------- |
+| HTTP 200                     | ✅                |
+| pending-card presente        | ✅                |
+| collapse-header presente     | ✅                |
+| gap-header-unique presente   | ✅                |
+| badge modifica presente      | ✅                |
+| cruscotto conservato         | ✅                |
+| usage-notice conservato      | ✅                |
+| tecnologia-export conservato | ✅                |
+| .act-approve (old) assente   | ✅                |
+| Vecchio gap-header assente   | ✅                |
+| CML-009D preservato          | ✅                |
+| Nessun JS error              | ✅                |
+| 360px screenshot             | ✅ (56494 bytes)  |
+| 414px screenshot             | ✅ (68698 bytes)  |
+| 768px screenshot             | ✅ (148829 bytes) |
+| 1280px screenshot            | ✅ (184876 bytes) |
 
 ## Cose NON fatte
 

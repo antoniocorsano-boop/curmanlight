@@ -35,19 +35,19 @@ La vista Consulta deve diventare:
 
 Solo la funzione `renderCurricoloIstituto()` è stata modificata (+8/-95 righe).
 
-| Blocco rimosso/compattato | Azione |
-|---|---|
-| **Process path** (`curricolo-path`, 13 righe) | Sostituito con header descrittivo 1-riga (nessuna azione cliccabile in Consulta) |
-| **State message** (`curricolo-state`) | Compattato da 2 righe a etichetta singola |
+| Blocco rimosso/compattato                                                                 | Azione                                                                                                                  |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Process path** (`curricolo-path`, 13 righe)                                             | Sostituito con header descrittivo 1-riga (nessuna azione cliccabile in Consulta)                                        |
+| **State message** (`curricolo-state`)                                                     | Compattato da 2 righe a etichetta singola                                                                               |
 | **Completeness block** (`curricolo-completeness`, 14 righe di card + 14 righe di legenda) | Rimosso dal rendering. Sostituito con CTA: "Validazione dipartimentale e stato di completezza disponibili in Revisione" |
-| **Readiness block** (`curricolo-readiness`, 14 righe di card + 14 righe di legenda) | Rimosso dal rendering |
-| **Dept validation block** (`curricolo-dept-validation`, form con 14 discipline × 5 campi) | Rimosso dal rendering. La funzionalità non era disponibile altrove; rimosso solo il rendering in Consulta |
-| **Discipline accordion** | Convertito da `onclick` JS (`display:block/none`) a `<details><summary>` nativo, chiuso di default |
-| **Coverage counters** | Mantenuto invariato |
-| **Index pills** | Mantenuto invariato |
-| **Summary dots** | Mantenuto invariato |
-| **Next action** (link a Revisione) | Mantenuto invariato |
-| **References / note** | Mantenuto invariato |
+| **Readiness block** (`curricolo-readiness`, 14 righe di card + 14 righe di legenda)       | Rimosso dal rendering                                                                                                   |
+| **Dept validation block** (`curricolo-dept-validation`, form con 14 discipline × 5 campi) | Rimosso dal rendering. La funzionalità non era disponibile altrove; rimosso solo il rendering in Consulta               |
+| **Discipline accordion**                                                                  | Convertito da `onclick` JS (`display:block/none`) a `<details><summary>` nativo, chiuso di default                      |
+| **Coverage counters**                                                                     | Mantenuto invariato                                                                                                     |
+| **Index pills**                                                                           | Mantenuto invariato                                                                                                     |
+| **Summary dots**                                                                          | Mantenuto invariato                                                                                                     |
+| **Next action** (link a Revisione)                                                        | Mantenuto invariato                                                                                                     |
+| **References / note**                                                                     | Mantenuto invariato                                                                                                     |
 
 ### `_published_snapshot/netlify-current/sw.js`
 

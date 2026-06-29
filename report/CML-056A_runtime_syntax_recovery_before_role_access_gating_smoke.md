@@ -2,15 +2,15 @@
 
 ## Sintesi
 
-| Voce | Esito |
-|---|---|
-| Branch | `cml-008r-fix-markdown-decision-summary` |
-| Commit iniziale | `a12492682adc9c758f0cf384cf21f8677b8c1914` |
-| Runtime | `_published_snapshot/netlify-current/index.html` |
-| Parser inline | PASS |
-| Caricamento pagina | PASS |
-| Errori console | 0 |
-| Deploy | Non eseguito |
+| Voce               | Esito                                            |
+| ------------------ | ------------------------------------------------ |
+| Branch             | `cml-008r-fix-markdown-decision-summary`         |
+| Commit iniziale    | `a12492682adc9c758f0cf384cf21f8677b8c1914`       |
+| Runtime            | `_published_snapshot/netlify-current/index.html` |
+| Parser inline      | PASS                                             |
+| Caricamento pagina | PASS                                             |
+| Errori console     | 0                                                |
+| Deploy             | Non eseguito                                     |
 
 ## Evidenza iniziale
 
@@ -39,18 +39,18 @@ Righe recuperate:
 
 ## Smoke minimo
 
-| Controllo | Esito |
-|---|---|
-| Titolo e URL locale corretti | PASS |
-| Documento completo | PASS |
-| 20 funzioni principali disponibili | PASS |
-| 12 card iniziali renderizzate | PASS |
-| Viewer curricolo visibile | PASS |
-| Pannello referente presente | PASS |
-| `buildTeacherCmlModel().fileType` | `teacher_proposal` |
+| Controllo                                   | Esito                |
+| ------------------------------------------- | -------------------- |
+| Titolo e URL locale corretti                | PASS                 |
+| Documento completo                          | PASS                 |
+| 20 funzioni principali disponibili          | PASS                 |
+| 12 card iniziali renderizzate               | PASS                 |
+| Viewer curricolo visibile                   | PASS                 |
+| Pannello referente presente                 | PASS                 |
+| `buildTeacherCmlModel().fileType`           | `teacher_proposal`   |
 | `buildDepartmentOutcomeCmlModel().fileType` | `department_outcome` |
-| Console/runtime errors | 0 |
-| Viewport 390/1280 px | PASS |
+| Console/runtime errors                      | 0                    |
+| Viewport 390/1280 px                        | PASS                 |
 
 Il Browser integrato non era utilizzabile per assenza del campo sandbox `sandboxPolicy`; il fallback è stato Chrome headless locale via CDP, senza nuove dipendenze. Le immagini QA sono rimaste in `.cache` e non vengono committate.
 

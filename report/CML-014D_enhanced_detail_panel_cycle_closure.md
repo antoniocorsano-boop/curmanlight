@@ -14,12 +14,12 @@ Chiusura formale del ciclo CML-014. Solo documentazione — nessuna modifica run
 
 ## Catena CML-014
 
-| Blocco | Documento | Report | Verdetto |
-|---|---|---|---|
-| CML-014A | ✅ | ✅ | `CML_014A_CONTEXTUAL_DETAIL_PANEL_DESIGN_AUDIT_READY` |
-| CML-014B | ✅ | ✅ | `CML_014B_ENHANCED_PENDING_DETAIL_PANEL_READY` |
-| CML-014C | ✅ | ✅ | `CML_014C_CONTROLLED_PUBLICATION_ENHANCED_DETAIL_PANEL_CLOSED` |
-| CML-014D | ✅ | ✅ | `CML_014D_ENHANCED_DETAIL_PANEL_CYCLE_CLOSED` |
+| Blocco   | Documento | Report | Verdetto                                                       |
+| -------- | --------- | ------ | -------------------------------------------------------------- |
+| CML-014A | ✅        | ✅     | `CML_014A_CONTEXTUAL_DETAIL_PANEL_DESIGN_AUDIT_READY`          |
+| CML-014B | ✅        | ✅     | `CML_014B_ENHANCED_PENDING_DETAIL_PANEL_READY`                 |
+| CML-014C | ✅        | ✅     | `CML_014C_CONTROLLED_PUBLICATION_ENHANCED_DETAIL_PANEL_CLOSED` |
+| CML-014D | ✅        | ✅     | `CML_014D_ENHANCED_DETAIL_PANEL_CYCLE_CLOSED`                  |
 
 ## Risultati
 

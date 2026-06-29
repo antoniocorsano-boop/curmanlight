@@ -2,13 +2,13 @@
 
 ## Stato iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | `cml-008r-fix-markdown-decision-summary` |
-| HEAD partenza | `dc179ce` (master con CML-008R pubblicato) |
-| Working tree | pulita |
-| File modificato | `_published_snapshot/netlify-current/index.html` |
-| File creati | `docs/03_execution/CML-008R-FIX.md`, `report/CML-008R_fix_markdown_decision_summary.md` |
+| Campo           | Valore                                                                                  |
+| --------------- | --------------------------------------------------------------------------------------- |
+| Branch          | `cml-008r-fix-markdown-decision-summary`                                                |
+| HEAD partenza   | `dc179ce` (master con CML-008R pubblicato)                                              |
+| Working tree    | pulita                                                                                  |
+| File modificato | `_published_snapshot/netlify-current/index.html`                                        |
+| File creati     | `docs/03_execution/CML-008R-FIX.md`, `report/CML-008R_fix_markdown_decision_summary.md` |
 
 ## Problema
 
@@ -34,12 +34,12 @@ Causa: le 4 voci invarianti (status="ok") non venivano incluse nel dettaglio pro
 
 ### Coerenza dati
 
-| Elemento | Conteggio |
-|---|---|
-| Voci modificate / Gap 2025 (dettaglio) | 8 |
-| Voci mantenute da validare | 4 |
-| Voci da validare (sintesi) | 12 |
-| Totale voci (sintesi) | 12 |
+| Elemento                               | Conteggio |
+| -------------------------------------- | --------- |
+| Voci modificate / Gap 2025 (dettaglio) | 8         |
+| Voci mantenute da validare             | 4         |
+| Voci da validare (sintesi)             | 12        |
+| Totale voci (sintesi)                  | 12        |
 
 ### File non modificati
 

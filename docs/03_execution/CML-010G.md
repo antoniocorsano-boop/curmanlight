@@ -14,10 +14,10 @@ Pubblicazione controllata su Netlify della micro-fix mobile CML-010F2.
 
 ## Chiarimento conteggi
 
-| Riferimento | Conteggio | Scope |
-|---|---|---|
-| CML-010C/D | 12 voci, 8 modifica, 4 ok | Solo disciplina **Tecnologia** (6 traguardi + 6 obiettivi) |
-| CML-010F2 | 54 modifica, 41 ok, 9 nuovo | **Tutte le discipline** del dataset completo |
+| Riferimento | Conteggio                   | Scope                                                      |
+| ----------- | --------------------------- | ---------------------------------------------------------- |
+| CML-010C/D  | 12 voci, 8 modifica, 4 ok   | Solo disciplina **Tecnologia** (6 traguardi + 6 obiettivi) |
+| CML-010F2   | 54 modifica, 41 ok, 9 nuovo | **Tutte le discipline** del dataset completo               |
 
 Non è una regressione. Il dataset completo contiene 104 voci distribuite su 17 discipline. Tecnologia ne rappresenta 12 (11.5%). I due conteggi sono coerenti: 12 Tecnologia + 92 altre discipline = 104 totali.
 

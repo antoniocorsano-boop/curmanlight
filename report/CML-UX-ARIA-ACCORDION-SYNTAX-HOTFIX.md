@@ -4,15 +4,15 @@
 
 Hotfix runtime mirata per correggere la regressione di sintassi introdotta nella generazione degli accordion ARIA della sezione Evidenze. Il problema impediva il completamento dello script inline e produceva a cascata `setTab is not defined`.
 
-| Aspetto | Valore |
-|---------|--------|
-| Branch | `main` |
-| Commit iniziale | `c5ac7d0` |
-| Runtime remoto verificato | `48ce346` |
-| Runtime modificato | si |
-| File runtime | `_published_snapshot/netlify-current/index.html` |
-| Push eseguito | no |
-| Verdict | `CML_UX_ARIA_ACCORDION_SYNTAX_HOTFIX_READY` |
+| Aspetto                   | Valore                                           |
+| ------------------------- | ------------------------------------------------ |
+| Branch                    | `main`                                           |
+| Commit iniziale           | `c5ac7d0`                                        |
+| Runtime remoto verificato | `48ce346`                                        |
+| Runtime modificato        | si                                               |
+| File runtime              | `_published_snapshot/netlify-current/index.html` |
+| Push eseguito             | no                                               |
+| Verdict                   | `CML_UX_ARIA_ACCORDION_SYNTAX_HOTFIX_READY`      |
 
 ## Diagnosi
 
@@ -34,22 +34,22 @@ Dopo l'escape degli apici, il controllo sintattico ha evidenziato anche una graf
 
 ## Verifiche eseguite
 
-| Verifica | Esito |
-|----------|-------|
-| `node --check` sugli script estratti | PASS |
-| Validatore curriculum | 14/14 PASS |
-| Shape test | 14/14 PASS |
-| Smoke locale via CDP | PASS |
-| Errori JavaScript reali | 0 |
-| `setTab` | `function` |
-| `selectDisc` | `function` |
-| Accordion gruppi ordine | PASS |
-| Accordion unita' interne | PASS |
-| `aria-expanded` dinamico | PASS con Enter/Space |
-| `aria-controls` | PASS, target presenti |
-| Filtri Evidenze | PASS |
-| Export Center | presente |
-| Mobile bottom bar | presente |
+| Verifica                             | Esito                 |
+| ------------------------------------ | --------------------- |
+| `node --check` sugli script estratti | PASS                  |
+| Validatore curriculum                | 14/14 PASS            |
+| Shape test                           | 14/14 PASS            |
+| Smoke locale via CDP                 | PASS                  |
+| Errori JavaScript reali              | 0                     |
+| `setTab`                             | `function`            |
+| `selectDisc`                         | `function`            |
+| Accordion gruppi ordine              | PASS                  |
+| Accordion unita' interne             | PASS                  |
+| `aria-expanded` dinamico             | PASS con Enter/Space  |
+| `aria-controls`                      | PASS, target presenti |
+| Filtri Evidenze                      | PASS                  |
+| Export Center                        | presente              |
+| Mobile bottom bar                    | presente              |
 
 ## Evidenza smoke locale
 

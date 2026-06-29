@@ -22,43 +22,43 @@
 
 ## Field checks
 
-| Campo | Presente | Note |
-|-------|----------|------|
-| id | ✅ 15/15 | Unici |
-| disciplina | ✅ 15/15 | "Storia" |
-| ordine | ✅ 15/15 | Inf/Pri/Sec |
-| classe/fascia | ✅ 15/15 | |
-| nucleo | ✅ 15/15 | 5 nuclei |
-| ambito | ✅ 15/15 | Specifici |
-| competenza | ✅ 15/15 | |
-| traguardo | ✅ 15/15 | |
-| obiettivi | ✅ 15/15 | Max 5 per unità |
-| conoscenze | ✅ 15/15 | |
-| abilità | ✅ 15/15 | |
-| evidenze | ✅ 15/15 | ≥30 chars |
-| criteriValutazione | ✅ 15/15 | Descrittivi |
-| fonte | ✅ 15/15 | |
-| stato | ✅ 15/15 | Tutti "nuovo" |
-| validazioneUmana | ✅ 15/15 | true |
-| noteDipartimento | ✅ 15/15 | |
+| Campo              | Presente | Note            |
+| ------------------ | -------- | --------------- |
+| id                 | ✅ 15/15 | Unici           |
+| disciplina         | ✅ 15/15 | "Storia"        |
+| ordine             | ✅ 15/15 | Inf/Pri/Sec     |
+| classe/fascia      | ✅ 15/15 |                 |
+| nucleo             | ✅ 15/15 | 5 nuclei        |
+| ambito             | ✅ 15/15 | Specifici       |
+| competenza         | ✅ 15/15 |                 |
+| traguardo          | ✅ 15/15 |                 |
+| obiettivi          | ✅ 15/15 | Max 5 per unità |
+| conoscenze         | ✅ 15/15 |                 |
+| abilità            | ✅ 15/15 |                 |
+| evidenze           | ✅ 15/15 | ≥30 chars       |
+| criteriValutazione | ✅ 15/15 | Descrittivi     |
+| fonte              | ✅ 15/15 |                 |
+| stato              | ✅ 15/15 | Tutti "nuovo"   |
+| validazioneUmana   | ✅ 15/15 | true            |
+| noteDipartimento   | ✅ 15/15 |                 |
 
 ## Nuclei coverage
 
-| Nucleo | Unit | Progressione |
-|--------|------|-------------|
-| Strumenti concettuali e periodizzazione | 4 | Inf(5) → Pri(1) → Sec(1) → Sec(2) |
-| Uso delle fonti | 2 | Pri(2) → Sec(1) |
-| Organizzazione delle informazioni | 5 | Pri(3) → Pri(5) → Sec(1) → Sec(2) → Sec(3) |
-| Produzione scritta e orale | 3 | Pri(4) → Sec(1) → Sec(2) |
-| Uso delle fonti e produzione (comb.) | 1 | Sec(3) |
+| Nucleo                                  | Unit | Progressione                               |
+| --------------------------------------- | ---- | ------------------------------------------ |
+| Strumenti concettuali e periodizzazione | 4    | Inf(5) → Pri(1) → Sec(1) → Sec(2)          |
+| Uso delle fonti                         | 2    | Pri(2) → Sec(1)                            |
+| Organizzazione delle informazioni       | 5    | Pri(3) → Pri(5) → Sec(1) → Sec(2) → Sec(3) |
+| Produzione scritta e orale              | 3    | Pri(4) → Sec(1) → Sec(2)                   |
+| Uso delle fonti e produzione (comb.)    | 1    | Sec(3)                                     |
 
 ## Ordini/classi coverage
 
-| Ordine | Unità | Classi coperte |
-|--------|-------|---------------|
-| Infanzia | 1 | Fascia 5 |
-| Primaria | 5 | Cl.1, 2, 3, 4, 5 |
-| Secondaria | 9 | Cl.1 (4), Cl.2 (3), Cl.3 (2) |
+| Ordine     | Unità | Classi coperte               |
+| ---------- | ----- | ---------------------------- |
+| Infanzia   | 1     | Fascia 5                     |
+| Primaria   | 5     | Cl.1, 2, 3, 4, 5             |
+| Secondaria | 9     | Cl.1 (4), Cl.2 (3), Cl.3 (2) |
 
 ## Periodizzazione checks
 
@@ -77,12 +77,12 @@
 
 ## Structural comparison with benchmarks
 
-| Metrica | Storia | Tecnol. | Italiano | Matem. | Scienze | Inglese |
-|---------|--------|---------|----------|--------|---------|---------|
-| Unità | 15 | 13 | 14 | 13 | 15 | 12 |
-| Nuclei | 5 | 0* | 6 | 5 | 5 | 11* |
-| Ordini | 3 | 3 | 3 | 3 | 3 | 3 |
-| Chars/unità | 1.738 | — | 1.588 | 2.114 | — | — |
+| Metrica     | Storia | Tecnol. | Italiano | Matem. | Scienze | Inglese |
+| ----------- | ------ | ------- | -------- | ------ | ------- | ------- |
+| Unità       | 15     | 13      | 14       | 13     | 15      | 12      |
+| Nuclei      | 5      | 0*      | 6        | 5      | 5       | 11*     |
+| Ordini      | 3      | 3       | 3        | 3      | 3       | 3       |
+| Chars/unità | 1.738  | —       | 1.588    | 2.114  | —       | —       |
 
 *Tecnologia: nucleo non differenziato (tutti "Tecnologia"). Inglese: nuclei granulari (per competenza linguistica).
 
@@ -95,14 +95,14 @@
 
 ## Risk assessment
 
-| Rischio | Livello | Note |
-|---------|---------|------|
-| Enciclopedismo | BASSO | Max 5 obiettivi/unità |
-| Sovrapposizione Geografia | BASSO | Focus cronologico, non geografico |
-| Sovrapposizione Ed. Civica | MEDIO | Sec 3 su cittadinanza — mitigato da focus storico |
-| Periodizzazione rigida | BASSO | Unità per competenze, non elenchi |
-| Criteri vaghi | BASSO | Criteri descrittivi osservabili |
-| Progressione debole | BASSO | Verticalità su tutti i nuclei |
+| Rischio                    | Livello | Note                                              |
+| -------------------------- | ------- | ------------------------------------------------- |
+| Enciclopedismo             | BASSO   | Max 5 obiettivi/unità                             |
+| Sovrapposizione Geografia  | BASSO   | Focus cronologico, non geografico                 |
+| Sovrapposizione Ed. Civica | MEDIO   | Sec 3 su cittadinanza — mitigato da focus storico |
+| Periodizzazione rigida     | BASSO   | Unità per competenze, non elenchi                 |
+| Criteri vaghi              | BASSO   | Criteri descrittivi osservabili                   |
+| Progressione debole        | BASSO   | Verticalità su tutti i nuclei                     |
 
 ## Gaps identified
 

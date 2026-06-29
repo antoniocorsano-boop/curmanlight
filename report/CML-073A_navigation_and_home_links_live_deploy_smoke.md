@@ -3,7 +3,7 @@
 **Generated:** 2026-06-23T06:46:00Z  
 **Runtime URL:** https://antoniocorsano-boop.github.io/curmanlight/  
 **Runtime commit:** f5b12e2  
-**Workflow status:** success (run 28007685093)  
+**Workflow status:** success (run 28007685093)
 
 ---
 
@@ -22,26 +22,26 @@ CML-073 runtime increment deployed to GitHub Pages and smoke-tested live. All 30
 
 ### 2. Desktop Navigation (≥901px)
 
-| Tab | Button text | onclick | Sub-nav | Status |
-|-----|------------|---------|---------|--------|
-| 0 | 🏠 Home | setTab('home') | — | ✅ |
-| 1 | 📚 Curriculum | setTab('curricolo') | Consulta, Revisione, Definitivo, Fonti | ✅ |
-| 2 | 🧑‍🏫 Didattica | setTab('didattica') | Valutazione/Evidenze, UDA modello | ✅ |
-| 3 | 📤 Esportazioni | setTab('esportazioni') | — | ✅ |
-| 4 | ❔ Guida | setTab('guida') | — | ✅ |
+| Tab | Button text     | onclick                | Sub-nav                                | Status |
+| --- | --------------- | ---------------------- | -------------------------------------- | ------ |
+| 0   | 🏠 Home         | setTab('home')         | —                                      | ✅     |
+| 1   | 📚 Curriculum   | setTab('curricolo')    | Consulta, Revisione, Definitivo, Fonti | ✅     |
+| 2   | 🧑‍🏫 Didattica    | setTab('didattica')    | Valutazione/Evidenze, UDA modello      | ✅     |
+| 3   | 📤 Esportazioni | setTab('esportazioni') | —                                      | ✅     |
+| 4   | ❔ Guida        | setTab('guida')        | —                                      | ✅     |
 
 ### 3. Home Links
 
-| Link text | Target | Status |
-|-----------|--------|--------|
-| 📖 Consulta | Curriculum | ✅ |
-| ✏️ Revisiona | Revisione | ✅ |
-| 📤 Esporta | Esportazioni | ✅ |
-| ⚙️ Tecnologia normalizzata | Curriculum (scroll) | ✅ |
-| 📊 Valuta evidenze | Didattica | ✅ |
-| 📋 Progetta UDA | Didattica / UDA modello | ✅ |
-| 🧪 Prepara attività | badge "In preparazione" | ✅ |
-| 📁 Materiali per la classe | badge "In preparazione" | ✅ |
+| Link text                  | Target                  | Status |
+| -------------------------- | ----------------------- | ------ |
+| 📖 Consulta                | Curriculum              | ✅     |
+| ✏️ Revisiona               | Revisione               | ✅     |
+| 📤 Esporta                 | Esportazioni            | ✅     |
+| ⚙️ Tecnologia normalizzata | Curriculum (scroll)     | ✅     |
+| 📊 Valuta evidenze         | Didattica               | ✅     |
+| 📋 Progetta UDA            | Didattica / UDA modello | ✅     |
+| 🧪 Prepara attività        | badge "In preparazione" | ✅     |
+| 📁 Materiali per la classe | badge "In preparazione" | ✅     |
 
 ### 4. Sub-nav System
 

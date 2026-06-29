@@ -10,16 +10,16 @@ Questa slice e' docs-only, audit-only e planning-only. Non produce dati normaliz
 
 ## 2. Baseline tecnica
 
-| Controllo | Esito |
-|-----------|-------|
-| Root Git | `C:/Users/anton/CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `0da08a8` |
-| origin/main | `0da08a8` |
-| Working tree iniziale | Pulito, sync con origin/main |
-| `git diff --check` preflight | PASS |
-| Collisione `docs/03_execution/CML-172.md` | Assente |
-| Collisione report CML-172 | Assente |
+| Controllo                                 | Esito                        |
+| ----------------------------------------- | ---------------------------- |
+| Root Git                                  | `C:/Users/anton/CurManLight` |
+| Branch                                    | `main`                       |
+| Commit iniziale                           | `0da08a8`                    |
+| origin/main                               | `0da08a8`                    |
+| Working tree iniziale                     | Pulito, sync con origin/main |
+| `git diff --check` preflight              | PASS                         |
+| Collisione `docs/03_execution/CML-172.md` | Assente                      |
+| Collisione report CML-172                 | Assente                      |
 
 Ultimi commit rilevanti:
 
@@ -36,11 +36,11 @@ a83c66e feat: integrate educazione civica runtime mappa dati
 
 ## 3. Stato consolidato 9/14
 
-| Area | Stato |
-|------|-------|
-| Dati normalizzati | 9/14 file `.normalized.json` presenti |
-| Runtime mappa | 9/14 discipline integrate |
-| Shape runtime test | 9/9 PASS |
+| Area               | Stato                                 |
+| ------------------ | ------------------------------------- |
+| Dati normalizzati  | 9/14 file `.normalized.json` presenti |
+| Runtime mappa      | 9/14 discipline integrate             |
+| Shape runtime test | 9/9 PASS                              |
 
 File normalizzati presenti:
 
@@ -80,13 +80,13 @@ Nota di controllo: alcuni report storici CML-109/CML-110 e seguenti registrano a
 
 ## 6. Tabella comparativa discipline restanti
 
-| Disciplina | Goal finale | Readiness documentale | Disponibilita' dati | Rischio dati | Rischio istituzionale | Complessita' normalizzazione | Complessita' runtime | Fasi necessarie | Raccomandazione |
-|------------|-------------|-----------------------|---------------------|--------------|-----------------------|------------------------------|--------------------|----------------|-----------------|
-| Musica | Modello su ascolto, produzione, linguaggio musicale, creativita' sonora e patrimonio culturale | Media | Bassa nella pipeline corrente; storicamente 6 voci e 3 nuclei/assi | Basso-medio | Basso | Media | Bassa-media | A-H | Prima candidata |
-| Educazione Fisica | Modello su corpo, movimento, gioco/sport, salute, espressione e inclusione | Medio-bassa | Bassa; storicamente 5 voci ma audit specifico richiesto | Medio | Medio | Medio-alta | Media | A-H | Seconda, dopo audit |
-| Seconda Lingua Comunitaria | Modello trasversale alle lingue comunitarie, comunicativo, culturale e plurilingue | Media | Bassa; pattern Inglese utile ma non sufficiente | Medio | Medio | Media | Media | A-H | Terza, con vincolo anti-monolingua |
-| Religione Cattolica | Modello IRC prudente, culturale, antropologico, storico-religioso e valoriale | Medio-bassa | Bassa; warning storici e specificita' contenutistica | Medio-alto | Alto | Alta | Media | A-H | Quarta, dopo discipline a rischio minore |
-| Latino LEL | Modello solo dopo chiarimento perimetro LEL e rapporto con Italiano | Bassa | Assente/bassa; solo Secondaria | Medio | Medio | Alta per perimetro | Medio-bassa | A-H | Quinta, chiusura ciclo |
+| Disciplina                 | Goal finale                                                                                    | Readiness documentale | Disponibilita' dati                                                | Rischio dati | Rischio istituzionale | Complessita' normalizzazione | Complessita' runtime | Fasi necessarie | Raccomandazione                          |
+| -------------------------- | ---------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------ | ------------ | --------------------- | ---------------------------- | -------------------- | --------------- | ---------------------------------------- |
+| Musica                     | Modello su ascolto, produzione, linguaggio musicale, creativita' sonora e patrimonio culturale | Media                 | Bassa nella pipeline corrente; storicamente 6 voci e 3 nuclei/assi | Basso-medio  | Basso                 | Media                        | Bassa-media          | A-H             | Prima candidata                          |
+| Educazione Fisica          | Modello su corpo, movimento, gioco/sport, salute, espressione e inclusione                     | Medio-bassa           | Bassa; storicamente 5 voci ma audit specifico richiesto            | Medio        | Medio                 | Medio-alta                   | Media                | A-H             | Seconda, dopo audit                      |
+| Seconda Lingua Comunitaria | Modello trasversale alle lingue comunitarie, comunicativo, culturale e plurilingue             | Media                 | Bassa; pattern Inglese utile ma non sufficiente                    | Medio        | Medio                 | Media                        | Media                | A-H             | Terza, con vincolo anti-monolingua       |
+| Religione Cattolica        | Modello IRC prudente, culturale, antropologico, storico-religioso e valoriale                  | Medio-bassa           | Bassa; warning storici e specificita' contenutistica               | Medio-alto   | Alto                  | Alta                         | Media                | A-H             | Quarta, dopo discipline a rischio minore |
+| Latino LEL                 | Modello solo dopo chiarimento perimetro LEL e rapporto con Italiano                            | Bassa                 | Assente/bassa; solo Secondaria                                     | Medio        | Medio                 | Alta per perimetro           | Medio-bassa          | A-H             | Quinta, chiusura ciclo                   |
 
 ## 7. Sequenza consigliata di completamento
 
@@ -98,26 +98,26 @@ Nota di controllo: alcuni report storici CML-109/CML-110 e seguenti registrano a
 
 ## 8. Piano fasi standard per ciascuna disciplina
 
-| Fase | Nome | Scopo | Criterio di passaggio |
-|------|------|-------|-----------------------|
-| A | Readiness/data audit | Verificare fonti interne, nuclei, ordini/classi, rischi e perimetro | Report audit approvabile senza dati inventati |
-| B | Normalized data preparation | Creare il file `.normalized.json` della sola disciplina | Validatore curriculum PASS; file UTF-8; `decisioniCurricolari` vuoto se non documentato |
-| C | Sync normalized data | Allineare commit dati con remoto | HEAD locale == origin/main dopo push richiesto in slice dedicata |
-| D | Runtime mappa integration | Integrare il dato normalizzato nel runtime mappa | Solo dopo B/C; runtime modificato puntualmente |
-| E | Sync runtime integration | Allineare commit runtime con remoto | HEAD locale == origin/main |
-| F | Runtime shape test alignment | Aggiungere la disciplina al test shape | Shape test PASS con copertura incrementata di 1 |
-| G | Sync test alignment | Allineare commit test con remoto | HEAD locale == origin/main |
-| H | Closure audit | Certificare coerenza dati/runtime/test e rischi residui | Report finale, nessun deploy salvo richiesta |
+| Fase | Nome                         | Scopo                                                               | Criterio di passaggio                                                                   |
+| ---- | ---------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| A    | Readiness/data audit         | Verificare fonti interne, nuclei, ordini/classi, rischi e perimetro | Report audit approvabile senza dati inventati                                           |
+| B    | Normalized data preparation  | Creare il file `.normalized.json` della sola disciplina             | Validatore curriculum PASS; file UTF-8; `decisioniCurricolari` vuoto se non documentato |
+| C    | Sync normalized data         | Allineare commit dati con remoto                                    | HEAD locale == origin/main dopo push richiesto in slice dedicata                        |
+| D    | Runtime mappa integration    | Integrare il dato normalizzato nel runtime mappa                    | Solo dopo B/C; runtime modificato puntualmente                                          |
+| E    | Sync runtime integration     | Allineare commit runtime con remoto                                 | HEAD locale == origin/main                                                              |
+| F    | Runtime shape test alignment | Aggiungere la disciplina al test shape                              | Shape test PASS con copertura incrementata di 1                                         |
+| G    | Sync test alignment          | Allineare commit test con remoto                                    | HEAD locale == origin/main                                                              |
+| H    | Closure audit                | Certificare coerenza dati/runtime/test e rischi residui             | Report finale, nessun deploy salvo richiesta                                            |
 
 Le slice previste per ogni disciplina sono quindi:
 
-| Disciplina | Slice previste |
-|------------|----------------|
-| Musica | CML-173 audit, CML-174 data, CML-174-SYNC, CML-175 runtime, CML-175-SYNC, CML-176 shape, CML-176-SYNC, CML-177 closure |
-| Educazione Fisica | CML-178 audit, CML-179 data, CML-179-SYNC, CML-180 runtime, CML-180-SYNC, CML-181 shape, CML-181-SYNC, CML-182 closure |
+| Disciplina                 | Slice previste                                                                                                         |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Musica                     | CML-173 audit, CML-174 data, CML-174-SYNC, CML-175 runtime, CML-175-SYNC, CML-176 shape, CML-176-SYNC, CML-177 closure |
+| Educazione Fisica          | CML-178 audit, CML-179 data, CML-179-SYNC, CML-180 runtime, CML-180-SYNC, CML-181 shape, CML-181-SYNC, CML-182 closure |
 | Seconda Lingua Comunitaria | CML-183 audit, CML-184 data, CML-184-SYNC, CML-185 runtime, CML-185-SYNC, CML-186 shape, CML-186-SYNC, CML-187 closure |
-| Religione Cattolica | CML-188 audit, CML-189 data, CML-189-SYNC, CML-190 runtime, CML-190-SYNC, CML-191 shape, CML-191-SYNC, CML-192 closure |
-| Latino LEL | CML-193 audit, CML-194 data, CML-194-SYNC, CML-195 runtime, CML-195-SYNC, CML-196 shape, CML-196-SYNC, CML-197 closure |
+| Religione Cattolica        | CML-188 audit, CML-189 data, CML-189-SYNC, CML-190 runtime, CML-190-SYNC, CML-191 shape, CML-191-SYNC, CML-192 closure |
+| Latino LEL                 | CML-193 audit, CML-194 data, CML-194-SYNC, CML-195 runtime, CML-195-SYNC, CML-196 shape, CML-196-SYNC, CML-197 closure |
 
 La numerazione e' una proposta operativa: puo' essere rinumerata se emergono collisioni o slice intermedie.
 

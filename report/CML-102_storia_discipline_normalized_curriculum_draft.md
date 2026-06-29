@@ -12,17 +12,17 @@
 
 ## Unit distribution
 
-| Ordine | Classe/Fascia | Unità | Nucleo |
-|--------|---------------|-------|--------|
-| Infanzia | 5 | 1 | Strumenti concettuali e periodizzazione |
-| Primaria | 1 | 1 | Strumenti concettuali e periodizzazione |
-| Primaria | 2 | 1 | Uso delle fonti |
-| Primaria | 3 | 1 | Organizzazione delle informazioni |
-| Primaria | 4 | 1 | Produzione scritta e orale |
-| Primaria | 5 | 1 | Organizzazione delle informazioni |
-| Secondaria | 1 | 4 | Uso fonti, Organizzazione, Strumenti, Produzione |
-| Secondaria | 2 | 3 | Strumenti, Organizzazione, Produzione |
-| Secondaria | 3 | 2 | Organizzazione, Uso fonti e produzione |
+| Ordine     | Classe/Fascia | Unità | Nucleo                                           |
+| ---------- | ------------- | ----- | ------------------------------------------------ |
+| Infanzia   | 5             | 1     | Strumenti concettuali e periodizzazione          |
+| Primaria   | 1             | 1     | Strumenti concettuali e periodizzazione          |
+| Primaria   | 2             | 1     | Uso delle fonti                                  |
+| Primaria   | 3             | 1     | Organizzazione delle informazioni                |
+| Primaria   | 4             | 1     | Produzione scritta e orale                       |
+| Primaria   | 5             | 1     | Organizzazione delle informazioni                |
+| Secondaria | 1             | 4     | Uso fonti, Organizzazione, Strumenti, Produzione |
+| Secondaria | 2             | 3     | Strumenti, Organizzazione, Produzione            |
+| Secondaria | 3             | 2     | Organizzazione, Uso fonti e produzione           |
 
 ## Periodizzazione IN 2025 (triennale)
 

@@ -2,26 +2,26 @@
 
 ## Stato iniziale
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD | `a228683` |
-| origin/main | `85bbab4` |
-| Local ahead | 9 |
-| Working tree | Pulito |
+| Parametro    | Valore    |
+| ------------ | --------- |
+| Branch       | `main`    |
+| HEAD         | `a228683` |
+| origin/main  | `85bbab4` |
+| Local ahead  | 9         |
+| Working tree | Pulito    |
 
 ## Audit pre-push
 
 ### Validatori
 
-| Verifica | Esito |
-|----------|:-----:|
-| `git status --short --branch` | `## main...origin/main [ahead 9]` ✅ |
-| `git rev-parse HEAD` | `a22868300aa430e1392ae1b6dfd0109c399a040e` ✅ |
-| `git diff --check` | Nessun warning whitespace ✅ |
-| `validate-cml-normalized-curriculum.mjs` | 7 file / 94 unità / `overallValid: true` ✅ |
-| `test-runtime-mappa-dati-shape.mjs` | 7 PASS, 0 FAIL ✅ |
-| `.agents`, `skills-lock.json`, `Consultazione` ignorati | ✅ |
+| Verifica                                                |                     Esito                     |
+| ------------------------------------------------------- | :-------------------------------------------: |
+| `git status --short --branch`                           |     `## main...origin/main [ahead 9]` ✅      |
+| `git rev-parse HEAD`                                    | `a22868300aa430e1392ae1b6dfd0109c399a040e` ✅ |
+| `git diff --check`                                      |         Nessun warning whitespace ✅          |
+| `validate-cml-normalized-curriculum.mjs`                |  7 file / 94 unità / `overallValid: true` ✅  |
+| `test-runtime-mappa-dati-shape.mjs`                     |               7 PASS, 0 FAIL ✅               |
+| `.agents`, `skills-lock.json`, `Consultazione` ignorati |                      ✅                       |
 
 ### File modificati vs origin/main
 
@@ -55,14 +55,14 @@ A  tools/to-runtime-mappa-dati-transformer.mjs
 
 ### Modifiche per categoria
 
-| Categoria | File | Note |
-|-----------|------|------|
-| JSON disciplina | 1 | `tecnologia.normalized.json`: fix nucleo fields |
-| Tools | 3 | adapter + transformer + harness |
-| Execution docs | 10 | CML-139 → CML-144 |
-| Reports | 8 | Reports corrispondenti |
-| Movelog | 1 | `docs/REPO-MOVELOG.md` |
-| **Runtime index.html** | **0** | **Non toccato** ✅ |
+| Categoria              | File  | Note                                            |
+| ---------------------- | ----- | ----------------------------------------------- |
+| JSON disciplina        | 1     | `tecnologia.normalized.json`: fix nucleo fields |
+| Tools                  | 3     | adapter + transformer + harness                 |
+| Execution docs         | 10    | CML-139 → CML-144                               |
+| Reports                | 8     | Reports corrispondenti                          |
+| Movelog                | 1     | `docs/REPO-MOVELOG.md`                          |
+| **Runtime index.html** | **0** | **Non toccato** ✅                              |
 
 ## Commit CML-144A
 
@@ -80,11 +80,11 @@ git push origin main
 
 ## Stato finale
 
-| Campo | Valore |
-|-------|--------|
-| HEAD | `<after push>` |
-| origin/main | `<after push>` |
-| HEAD == origin/main | sì ✅ |
+| Campo               | Valore         |
+| ------------------- | -------------- |
+| HEAD                | `<after push>` |
+| origin/main         | `<after push>` |
+| HEAD == origin/main | sì ✅          |
 
 ## Verdetto
 

@@ -10,14 +10,14 @@ Slice docs-only + controlled push. Non modifica JSON, runtime, tool o SchoolKB.
 
 ## Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Branch | `main` |
-| Commit CML-210 | `4d10229` |
-| origin/main prima del push | `048a199` |
-| HEAD prima del push | `4d10229` |
-| HEAD..origin/main | vuoto (nessun commit remoto non presente in HEAD) |
-| origin/main..HEAD | `4d10229` (solo CML-210) |
+| Parametro                  | Valore                                            |
+| -------------------------- | ------------------------------------------------- |
+| Branch                     | `main`                                            |
+| Commit CML-210             | `4d10229`                                         |
+| origin/main prima del push | `048a199`                                         |
+| HEAD prima del push        | `4d10229`                                         |
+| HEAD..origin/main          | vuoto (nessun commit remoto non presente in HEAD) |
+| origin/main..HEAD          | `4d10229` (solo CML-210)                          |
 
 ## 1. Verifica stato
 
@@ -65,9 +65,9 @@ git log --oneline -1 origin/main
 
 ## 6. Contenuto sincronizzato
 
-| File | Status |
-|---|---|
-| `docs/03_execution/CML-210.md` | pushato |
+| File                                                  | Status  |
+| ----------------------------------------------------- | ------- |
+| `docs/03_execution/CML-210.md`                        | pushato |
 | `report/CML-210_educazione_fisica_refinement_plan.md` | pushato |
 
 ## 7. Decisione contenutistica

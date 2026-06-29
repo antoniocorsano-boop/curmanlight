@@ -17,6 +17,7 @@ Nessuna modifica runtime. Nessun deploy.
 ### 1. Pagina pubblicata
 
 URL: https://curmanlight.netlify.app
+
 - Toolbar export labels (confronto): ✅ visibili
 - Tab Riepilogo labels (definitivo): ✅ visibili
 - Disclaimer validazione: ✅ visibile

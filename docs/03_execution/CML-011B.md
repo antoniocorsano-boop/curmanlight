@@ -15,19 +15,19 @@ Implementazione Opzione A (microcopy export labels) + fix C2 (disclaimer validaz
 
 ### Toolbar export — aggiunto `(confronto)`
 
-| Pulsante | Prima | Dopo |
-|---|---|---|
-| Word | 📄 Word | 📄 Word (confronto) |
+| Pulsante       | Prima             | Dopo                          |
+| -------------- | ----------------- | ----------------------------- |
+| Word           | 📄 Word           | 📄 Word (confronto)           |
 | Copia per Word | 📋 Copia per Word | 📋 Copia per Word (confronto) |
-| Markdown | 📝 Markdown | 📝 Markdown (confronto) |
-| PDF | 🖨 PDF | 🖨 PDF (confronto) |
+| Markdown       | 📝 Markdown       | 📝 Markdown (confronto)       |
+| PDF            | 🖨 PDF             | 🖨 PDF (confronto)             |
 
 ### Curricolo Definitivo — aggiunto `(definitivo)`
 
-| Pulsante | Prima | Dopo |
-|---|---|---|
+| Pulsante       | Prima             | Dopo                           |
+| -------------- | ----------------- | ------------------------------ |
 | Copia per Word | 📋 Copia per Word | 📋 Copia per Word (definitivo) |
-| PDF | 🖨 PDF | 🖨 PDF (definitivo) |
+| PDF            | 🖨 PDF             | 🖨 PDF (definitivo)             |
 
 Word (definitivo) e Markdown (definitivo) avevano già l'etichetta.
 

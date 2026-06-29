@@ -17,21 +17,21 @@ Da definire dopo commit.
 
 ## Wording modificato
 
-| Prima | Dopo | Riga |
-|---|---|---|
-| `'❌ Esclusa'` | `'❌ Non applicabile'` | 2706 |
-| `\[❌ Esclusa\]` | `\[❌ Non applicabile\]` | 2878 |
+| Prima                            | Dopo                                       | Riga |
+| -------------------------------- | ------------------------------------------ | ---- |
+| `'❌ Esclusa'`                   | `'❌ Non applicabile'`                     | 2706 |
+| `\[❌ Esclusa\]`                 | `\[❌ Non applicabile\]`                   | 2878 |
 | `"proposta" non vengono incluse` | `escluse non sono incluse nella bozza UDA` | 2891 |
 
 ## Comportamento preservato
 
-- Marcatura evidenze:  ✅
-- UDA draft generation:  ✅
-- Markdown copy/download:  ✅
-- localStorage `cml_evidenze_state` con valore `non_applicabile`:  ✅
-- Hash navigation 14/14:  ✅
-- Validatore 14/14:  ✅
-- Shape test 14/14:  ✅
+- Marcatura evidenze: ✅
+- UDA draft generation: ✅
+- Markdown copy/download: ✅
+- localStorage `cml_evidenze_state` con valore `non_applicabile`: ✅
+- Hash navigation 14/14: ✅
+- Validatore 14/14: ✅
+- Shape test 14/14: ✅
 - Nessuna modifica JSON/.cml/export-import/validator/shape-test/dipendenze: ✅
 
 ## Verdetto

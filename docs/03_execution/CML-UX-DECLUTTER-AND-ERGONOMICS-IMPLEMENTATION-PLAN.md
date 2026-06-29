@@ -33,13 +33,13 @@ Applicato a CurManLight significa:
 
 ## Utenti e compiti principali
 
-| Utente | Compito principale | Bisogno UX | Rischio attuale |
-|---|---|---|---|
-| **Docente** | Consultare il curricolo della propria disciplina | Lettura chiara, trovare i contenuti senza rumore | Sidebar, badge e azioni editoriali distraggono dalla lettura |
-| **Dipartimento** | Revisionare e validare il curricolo | Confronto voci, decisione su modifiche, esportazione sintetica | Scroll 4–6 schermate, export duplicati confondono il flusso |
-| **Referente** | Aggregare e produrre documento finale ordinato | Raccolta dati multi-disciplina, report unico | Azioni frammentate tra Revisione, Definitivo, Esportazioni |
-| **Dirigente / staff** | Visione d'insieme e verifica conformità | Dashboard chiara, accesso rapido ai documenti istituzionali | Navigazione 5+1 voci, nessuna vista orientativa per accesso rapido |
-| **Gruppo curricolo / consultatore esterno** | Esplorare il curricolo per confronto o ricerca | Navigazione semplice, fonti collegate, nessuna azione editoriale | Sidebar e tool operativi confondono chi non conosce lo strumento |
+| Utente                                      | Compito principale                               | Bisogno UX                                                       | Rischio attuale                                                    |
+| ------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Docente**                                 | Consultare il curricolo della propria disciplina | Lettura chiara, trovare i contenuti senza rumore                 | Sidebar, badge e azioni editoriali distraggono dalla lettura       |
+| **Dipartimento**                            | Revisionare e validare il curricolo              | Confronto voci, decisione su modifiche, esportazione sintetica   | Scroll 4–6 schermate, export duplicati confondono il flusso        |
+| **Referente**                               | Aggregare e produrre documento finale ordinato   | Raccolta dati multi-disciplina, report unico                     | Azioni frammentate tra Revisione, Definitivo, Esportazioni         |
+| **Dirigente / staff**                       | Visione d'insieme e verifica conformità          | Dashboard chiara, accesso rapido ai documenti istituzionali      | Navigazione 5+1 voci, nessuna vista orientativa per accesso rapido |
+| **Gruppo curricolo / consultatore esterno** | Esplorare il curricolo per confronto o ricerca   | Navigazione semplice, fonti collegate, nessuna azione editoriale | Sidebar e tool operativi confondono chi non conosce lo strumento   |
 
 ## Architettura UX target
 
@@ -73,45 +73,45 @@ Deve spiegare il processo senza invadere il lavoro. Struttura attuale invariata.
 
 ## Regole di decluttering
 
-| Regola | Applicazione | Motivazione |
-|---|---|---|
-| **Azione primaria unica** | Ogni vista ha un solo pulsante/azione principale evidente | L'utente sa sempre cosa fare per primo |
-| **Export fuori dalle viste lunghe** | Export rimosso da Revisione e Definitivo; unico punto in Esportazioni | Elimina duplicazione, riduce scelte concorrenti |
-| **Fonti separate** | Sidebar rimossa da Fonti; filtro per tipologia | Fonti sono consultazione, non revisione |
-| **Revisione separata dalla consultazione** | Sidebar, badge, azioni visibili solo in Revisione | Leggere e decidere sono compiti diversi |
-| **Contenuti lunghi chiusi in dettaglio** | Sezioni oltre 3 schermate comprimibili con accordion o toggle | Riduce scroll senza nascondere informazioni |
-| **Badge e avvisi solo se decisivi** | Badge stato visibili solo in Revisione; notice max 2 righe | Warning fatigue reale, badge non decisionali tolgono attenzione |
-| **Massimo due livelli di navigazione visibili** | Tabbar + subnav corrente; breadcrumb per profondità | Soglia cognitiva rispettata |
-| **Nessuna duplicazione di azioni** | Ogni azione appare in un solo punto dello strumento | Chiarezza e prevedibilità |
-| **Titolo, hash, menu e contenuto sempre coerenti** | Hash URL, titolo vista, voce menu attiva e contenuto sincronizzati | L'utente sa sempre dove si trova |
+| Regola                                             | Applicazione                                                          | Motivazione                                                     |
+| -------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------- |
+| **Azione primaria unica**                          | Ogni vista ha un solo pulsante/azione principale evidente             | L'utente sa sempre cosa fare per primo                          |
+| **Export fuori dalle viste lunghe**                | Export rimosso da Revisione e Definitivo; unico punto in Esportazioni | Elimina duplicazione, riduce scelte concorrenti                 |
+| **Fonti separate**                                 | Sidebar rimossa da Fonti; filtro per tipologia                        | Fonti sono consultazione, non revisione                         |
+| **Revisione separata dalla consultazione**         | Sidebar, badge, azioni visibili solo in Revisione                     | Leggere e decidere sono compiti diversi                         |
+| **Contenuti lunghi chiusi in dettaglio**           | Sezioni oltre 3 schermate comprimibili con accordion o toggle         | Riduce scroll senza nascondere informazioni                     |
+| **Badge e avvisi solo se decisivi**                | Badge stato visibili solo in Revisione; notice max 2 righe            | Warning fatigue reale, badge non decisionali tolgono attenzione |
+| **Massimo due livelli di navigazione visibili**    | Tabbar + subnav corrente; breadcrumb per profondità                   | Soglia cognitiva rispettata                                     |
+| **Nessuna duplicazione di azioni**                 | Ogni azione appare in un solo punto dello strumento                   | Chiarezza e prevedibilità                                       |
+| **Titolo, hash, menu e contenuto sempre coerenti** | Hash URL, titolo vista, voce menu attiva e contenuto sincronizzati    | L'utente sa sempre dove si trova                                |
 
 ## Metriche UX e soglie
 
-| Metrica | Soglia | Metodo di verifica |
-|---|---|---|
-| Scroll massimo vista consultazione | ≤ 2 schermate (viewport 768px) | Ispezione visiva + screenshot |
-| Clic per consultare una disciplina | ≤ 2 da Home | Percorso minimo |
-| Clic per arrivare alla revisione | ≤ 3 da Home | Percorso minimo con cambio ruolo |
-| Numero di pulsanti primari visibili | ≤ 1 per vista | Ispezione DOM |
-| Blocchi informativi nella prima schermata | ≤ 5 | Screenshot viewport 768px |
-| Coerenza hash/menu/titolo/contenuto | 100% viste | Smoke test manuale |
-| Leggibilità etichette | Nessuna abbreviazione ambigua | Review collegiale |
-| Separazione consultazione/revisione/export | Nessuna azione export in consulta/revisione | Ispezione DOM + smoke |
+| Metrica                                    | Soglia                                      | Metodo di verifica               |
+| ------------------------------------------ | ------------------------------------------- | -------------------------------- |
+| Scroll massimo vista consultazione         | ≤ 2 schermate (viewport 768px)              | Ispezione visiva + screenshot    |
+| Clic per consultare una disciplina         | ≤ 2 da Home                                 | Percorso minimo                  |
+| Clic per arrivare alla revisione           | ≤ 3 da Home                                 | Percorso minimo con cambio ruolo |
+| Numero di pulsanti primari visibili        | ≤ 1 per vista                               | Ispezione DOM                    |
+| Blocchi informativi nella prima schermata  | ≤ 5                                         | Screenshot viewport 768px        |
+| Coerenza hash/menu/titolo/contenuto        | 100% viste                                  | Smoke test manuale               |
+| Leggibilità etichette                      | Nessuna abbreviazione ambigua               | Review collegiale                |
+| Separazione consultazione/revisione/export | Nessuna azione export in consulta/revisione | Ispezione DOM + smoke            |
 
 ## Backlog ordinato delle slice future
 
-| Ordine | Slice | Tipo | Obiettivo | File attesi |
-|---:|---|---|---|---|
-| 1 | **CML_UX_CURRICULUM_CONSULTA_COMPACT_RUNTIME** | Runtime | Ridurre scroll vista disciplina, sintesi iniziale, sezioni compatte/accordion, export/revisione fuori dalla vista | `index.html` |
-| 2 | **CML_UX_REVISIONE_SEPARATION_PLAN** | Docs-only | Definire contratto per vista revisione separata da consulta: cards confronto, export toggle, import/validazione sezione | Execution doc, report |
-| 3 | **CML_UX_REVISIONE_COMPACT_RUNTIME** | Runtime | Implementare vista revisione compatta: riepilogo iniziale, pannello export toggle, sidebar presente | `index.html` |
-| 4 | **CML_UX_EXPORT_CENTER_DEDUPLICATION_PLAN** | Docs-only | Definire contratto per centralizzazione export: raggruppamento destinazione, rimozione da Revisione/Definitivo | Execution doc, report |
-| 5 | **CML_UX_EXPORT_CENTER_DEDUPLICATION_RUNTIME** | Runtime | Implementare export center unico, rimuovere pulsanti duplicati | `index.html` |
-| 6 | **CML_UX_FONTI_SEPARATION_RUNTIME** | Runtime | Rimuovere sidebar da Fonti, aggiungere filtro per tipologia | `index.html` |
-| 7 | **CML_UX_EVIDENZE_UDA_SPLIT_PLAN** | Docs-only | Definire contratto per separazione Evidenze/UDA in due sottoview | Execution doc, report |
-| 8 | **CML_UX_EVIDENZE_UDA_SPLIT_RUNTIME** | Runtime | Implementare navigazione esplicita Evidenze/UDA, accordion mappa disciplinare | `index.html` |
-| 9 | **CML_UX_HOME_ORIENTATION_RUNTIME** | Runtime | Spostare stats tecniche, microguida per primo accesso | `index.html` |
-| 10 | **CML_UX_ERGONOMICS_REGRESSION_GATE** | Docs-only + smoke | Verificare metriche UX, scroll, azione unica, coerenza hash/menu/titolo | Execution doc, report |
+| Ordine | Slice                                          | Tipo              | Obiettivo                                                                                                               | File attesi           |
+| -----: | ---------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------- |
+|      1 | **CML_UX_CURRICULUM_CONSULTA_COMPACT_RUNTIME** | Runtime           | Ridurre scroll vista disciplina, sintesi iniziale, sezioni compatte/accordion, export/revisione fuori dalla vista       | `index.html`          |
+|      2 | **CML_UX_REVISIONE_SEPARATION_PLAN**           | Docs-only         | Definire contratto per vista revisione separata da consulta: cards confronto, export toggle, import/validazione sezione | Execution doc, report |
+|      3 | **CML_UX_REVISIONE_COMPACT_RUNTIME**           | Runtime           | Implementare vista revisione compatta: riepilogo iniziale, pannello export toggle, sidebar presente                     | `index.html`          |
+|      4 | **CML_UX_EXPORT_CENTER_DEDUPLICATION_PLAN**    | Docs-only         | Definire contratto per centralizzazione export: raggruppamento destinazione, rimozione da Revisione/Definitivo          | Execution doc, report |
+|      5 | **CML_UX_EXPORT_CENTER_DEDUPLICATION_RUNTIME** | Runtime           | Implementare export center unico, rimuovere pulsanti duplicati                                                          | `index.html`          |
+|      6 | **CML_UX_FONTI_SEPARATION_RUNTIME**            | Runtime           | Rimuovere sidebar da Fonti, aggiungere filtro per tipologia                                                             | `index.html`          |
+|      7 | **CML_UX_EVIDENZE_UDA_SPLIT_PLAN**             | Docs-only         | Definire contratto per separazione Evidenze/UDA in due sottoview                                                        | Execution doc, report |
+|      8 | **CML_UX_EVIDENZE_UDA_SPLIT_RUNTIME**          | Runtime           | Implementare navigazione esplicita Evidenze/UDA, accordion mappa disciplinare                                           | `index.html`          |
+|      9 | **CML_UX_HOME_ORIENTATION_RUNTIME**            | Runtime           | Spostare stats tecniche, microguida per primo accesso                                                                   | `index.html`          |
+|     10 | **CML_UX_ERGONOMICS_REGRESSION_GATE**          | Docs-only + smoke | Verificare metriche UX, scroll, azione unica, coerenza hash/menu/titolo                                                 | Execution doc, report |
 
 ## Prima slice runtime raccomandata
 

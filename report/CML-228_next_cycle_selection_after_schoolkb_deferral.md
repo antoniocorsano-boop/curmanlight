@@ -21,6 +21,7 @@
 **E — Accessibility/responsive QA audit**
 
 Chosen over:
+
 - A (Public polish): useful but lower priority than accessibility
 - B (Freeze): purely documentary, not needed yet
 - C (`.cml v1.1`): too early, schema not yet adopted
@@ -35,15 +36,15 @@ Chosen over:
 
 ## Finale
 
-| Field | Value |
-|---|---|
-| Start commit | `2567c99` |
-| Final commit | da definire |
-| Scope | docs-only |
-| No runtime | Confirmed (this slice) |
-| No JSON | Confirmed |
-| No SchoolKB | Confirmed |
-| No deploy | Confirmed |
-| No push | Confirmed (this slice) |
-| No secrets | Confirmed |
-| Verdict | `CML_228_NEXT_CYCLE_SELECTION_E_ACCESSIBILITY_QA` |
+| Field        | Value                                             |
+| ------------ | ------------------------------------------------- |
+| Start commit | `2567c99`                                         |
+| Final commit | da definire                                       |
+| Scope        | docs-only                                         |
+| No runtime   | Confirmed (this slice)                            |
+| No JSON      | Confirmed                                         |
+| No SchoolKB  | Confirmed                                         |
+| No deploy    | Confirmed                                         |
+| No push      | Confirmed (this slice)                            |
+| No secrets   | Confirmed                                         |
+| Verdict      | `CML_228_NEXT_CYCLE_SELECTION_E_ACCESSIBILITY_QA` |

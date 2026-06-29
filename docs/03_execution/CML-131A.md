@@ -1,15 +1,18 @@
 # CML-131A — MICROCOPY_RUNTIME_ALIGNMENT_CLOSURE_AND_PUSH
 
 ## Obiettivo
+
 Chiudere e pushare in modo controllato CML-131, verificando che le sostituzioni testuali siano coerenti, limitate al perimetro microcopy e prive di regressioni.
 
 ## Stato di partenza
+
 - Branch: `main`
 - HEAD locale: `699d9f3` (CML-130 + CML-131)
 - origin/main: `5462a81`
 - Ahead: 1 commit
 
 ## Audit pre-push (Step 1)
+
 - `git status`: `main...origin/main [ahead 1]`
 - `git rev-parse HEAD`: `699d9f3`
 - `git rev-parse origin/main`: `5462a81`
@@ -21,7 +24,9 @@ Chiudere e pushare in modo controllato CML-131, verificando che le sostituzioni 
 - Residui ignorati: `.agents`, `skills-lock.json`, `Consultazione` — tutti ignorati via `.gitignore`
 
 ## Verifica sostituzioni CML-131 (Step 2)
+
 10/10 sostituzioni testuali confermate nel runtime:
+
 1. `📝 Testo (confronto)` — linea 1415
 2. `📝 Testo (definitivo)` — linea 1488
 3. `📝 Testo` — linea 1794
@@ -36,6 +41,7 @@ Chiudere e pushare in modo controllato CML-131, verificando che le sostituzioni 
 Nessuna modifica a funzioni, attributi, dati, schema, import/export o validazione. Solo testo UI.
 
 ## Output
+
 - Commit CML-131A: `docs: close CML microcopy alignment cycle`
 - Push su origin/main
 - Verdetto: `CML_131A_MICROCOPY_ALIGNMENT_CYCLE_CLOSED_REMOTE`

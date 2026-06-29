@@ -2,12 +2,12 @@
 
 ## Stato iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | `cml-006r-visual-lightening-css` |
-| HEAD partenza | `2ce8e24` (CML-006R-SELECT) |
-| Working tree | pulita |
-| Master contiene CML-006R-SELECT | sì, commit `2ce8e24` |
+| Campo                           | Valore                           |
+| ------------------------------- | -------------------------------- |
+| Branch                          | `cml-006r-visual-lightening-css` |
+| HEAD partenza                   | `2ce8e24` (CML-006R-SELECT)      |
+| Working tree                    | pulita                           |
+| Master contiene CML-006R-SELECT | sì, commit `2ce8e24`             |
 
 ## Opzione selezionata
 
@@ -15,26 +15,26 @@ Opzione A da CML-006R-SELECT: micro-alleggerimento CSS conservativo.
 
 ## File modificati
 
-| File | Modifiche |
-|---|---|
+| File                                             | Modifiche                         |
+| ------------------------------------------------ | --------------------------------- |
 | `_published_snapshot/netlify-current/index.html` | 38 righe CSS modificate (+38/-38) |
 
 ## Proprietà CSS toccate
 
-| Area | Modifiche | Dettaglio |
-|---|---|---|
-| **Ombre** (10 selettori) | `box-shadow` attenuato | `rgba(0,0,0,.1)` → `.05` / `.08` → `.04` / `.06` → `.04` |
-| **Card border** (6 varianti) | `1.5px` → `1px`, saturazione -20% | `#81c784` → `#a5d6a7`, `#ffa726` → `#ffcc80`, `#42a5f5` → `#90caf9` |
-| **Badge** (6 varianti) | Saturazione -15% | `#66bb6a` → `#81c784`, `#ffa726` → `#ffb74d`, `#42a5f5` → `#64b5f6` |
-| **Footer** | Colore più neutro | `background:#263238` → `#37474f`, `color:#90a4ae` → `#b0bec5` |
-| **Warning/notice** (7 selettori) | `border-left` 4px → 3px | usage-notice, local-save-bar, install-hint, readonly-order-note, gap-header, norm-card, act-card |
-| **Pannelli confronto** | Sfondo più neutro | `#fffde7` → `#fffef5`, `#e8f5e9` → `#f1f8f0` |
-| **Filtri** | Bordo più sottile | `1.5px solid #ccc` → `1px solid #d0d0d0` |
-| **Pulsanti azione** | Bordo 1px | `1.5px solid` → `1px solid` |
-| **Tab bar** | Bordo inferiore più sottile | `2px` → `1px` |
-| **Tab bar shadow** (responsive + sticky) | Attenuata | `0 2px 8px rgba(0,0,0,.08)` → `0 1px 3px rgba(0,0,0,.04)` |
-| **Norm-card hover** | Rimossa enhancement ombra | Uguale allo stato normale |
-| **Norm-card border-left** | Attenuato | 4px → 3px, colori leggermente meno saturi |
+| Area                                     | Modifiche                         | Dettaglio                                                                                        |
+| ---------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Ombre** (10 selettori)                 | `box-shadow` attenuato            | `rgba(0,0,0,.1)` → `.05` / `.08` → `.04` / `.06` → `.04`                                         |
+| **Card border** (6 varianti)             | `1.5px` → `1px`, saturazione -20% | `#81c784` → `#a5d6a7`, `#ffa726` → `#ffcc80`, `#42a5f5` → `#90caf9`                              |
+| **Badge** (6 varianti)                   | Saturazione -15%                  | `#66bb6a` → `#81c784`, `#ffa726` → `#ffb74d`, `#42a5f5` → `#64b5f6`                              |
+| **Footer**                               | Colore più neutro                 | `background:#263238` → `#37474f`, `color:#90a4ae` → `#b0bec5`                                    |
+| **Warning/notice** (7 selettori)         | `border-left` 4px → 3px           | usage-notice, local-save-bar, install-hint, readonly-order-note, gap-header, norm-card, act-card |
+| **Pannelli confronto**                   | Sfondo più neutro                 | `#fffde7` → `#fffef5`, `#e8f5e9` → `#f1f8f0`                                                     |
+| **Filtri**                               | Bordo più sottile                 | `1.5px solid #ccc` → `1px solid #d0d0d0`                                                         |
+| **Pulsanti azione**                      | Bordo 1px                         | `1.5px solid` → `1px solid`                                                                      |
+| **Tab bar**                              | Bordo inferiore più sottile       | `2px` → `1px`                                                                                    |
+| **Tab bar shadow** (responsive + sticky) | Attenuata                         | `0 2px 8px rgba(0,0,0,.08)` → `0 1px 3px rgba(0,0,0,.04)`                                        |
+| **Norm-card hover**                      | Rimossa enhancement ombra         | Uguale allo stato normale                                                                        |
+| **Norm-card border-left**                | Attenuato                         | 4px → 3px, colori leggermente meno saturi                                                        |
 
 ## Elementi preservati
 
@@ -69,6 +69,7 @@ npx serve _published_snapshot/netlify-current
 ```
 
 Checklist:
+
 - [ ] Grafica più leggera (ombre meno marcate)
 - [ ] Card ancora distinguibili per stato
 - [ ] Badge leggibili ma meno aggressivi

@@ -8,13 +8,13 @@ Esito locale: parse error eliminato; mappe Tecnologia, Matematica e Italiano ren
 
 ## Stato iniziale
 
-| Campo | Valore |
-|-------|--------|
-| Branch | `main` |
-| HEAD iniziale | `da0c0e3` |
-| origin/main iniziale | `eb6729f` |
-| Stato | ahead 1 per CML-153 |
-| Push pre-fix | non eseguito |
+| Campo                | Valore              |
+| -------------------- | ------------------- |
+| Branch               | `main`              |
+| HEAD iniziale        | `da0c0e3`           |
+| origin/main iniziale | `eb6729f`           |
+| Stato                | ahead 1 per CML-153 |
+| Push pre-fix         | non eseguito        |
 
 ## Causa corretta
 
@@ -44,15 +44,15 @@ Il significato del testo non cambia. Non sono state modificate logiche di render
 
 ## Verifiche
 
-| Verifica | Risultato |
-|----------|-----------|
-| Inline script syntax check | PASS |
-| Pattern rotto residuo in JS | assente |
-| Pattern analoghi rilevati | nessuno |
-| `TECNOLOGIA_MAPPA_DATI = GENERATA || FALLBACK` | presente |
-| Validatore normalized curriculum | PASS, 7 file, 94 unita', `overallValid: true` |
-| Harness runtime mappa dati | PASS, 7 discipline |
-| `git diff --check` | PASS |
+| Verifica                          | Risultato                                     |
+| --------------------------------- | --------------------------------------------- |
+| Inline script syntax check        | PASS                                          |
+| Pattern rotto residuo in JS       | assente                                       |
+| Pattern analoghi rilevati         | nessuno                                       |
+| `TECNOLOGIA_MAPPA_DATI = GENERATA |                                               | FALLBACK` | presente |
+| Validatore normalized curriculum  | PASS, 7 file, 94 unita', `overallValid: true` |
+| Harness runtime mappa dati        | PASS, 7 discipline                            |
+| `git diff --check`                | PASS                                          |
 
 ## Smoke locale browser
 

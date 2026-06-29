@@ -6,8 +6,8 @@ on:
     branches:
       - main
     paths:
-      - "_published_snapshot/netlify-current/**"
-      - ".github/workflows/pages.yml"
+      - '_published_snapshot/netlify-current/**'
+      - '.github/workflows/pages.yml'
 
 permissions:
   contents: read
@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "curmanlight-pages"
+  group: 'curmanlight-pages'
   cancel-in-progress: false
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
       - name: Upload static artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "_published_snapshot/netlify-current"
+          path: '_published_snapshot/netlify-current'
 
       - name: Deploy to GitHub Pages
         id: deployment

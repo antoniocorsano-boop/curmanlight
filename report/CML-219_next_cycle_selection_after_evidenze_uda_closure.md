@@ -14,12 +14,12 @@ I due findings minori di CML-218 sono l'unico debito tecnico UI aperto. Una micr
 
 ## Opzioni respinte
 
-| Opzione | Motivo rifiuto |
-|---|---|
-| B — SchoolKB | Troppo presto: findings aperti vanno chiusi prima di un ciclo grande |
-| C — Release audit | Meglio dopo microfix: stato completamente pulito |
-| D — Design/UML | Nessuna urgenza, zero valore utente diretto |
-| E — Content polish | Nessuna nuova validazione emersa |
+| Opzione            | Motivo rifiuto                                                       |
+| ------------------ | -------------------------------------------------------------------- |
+| B — SchoolKB       | Troppo presto: findings aperti vanno chiusi prima di un ciclo grande |
+| C — Release audit  | Meglio dopo microfix: stato completamente pulito                     |
+| D — Design/UML     | Nessuna urgenza, zero valore utente diretto                          |
+| E — Content polish | Nessuna nuova validazione emersa                                     |
 
 ## Prossima sequenza
 

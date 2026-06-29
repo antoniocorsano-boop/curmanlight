@@ -20,6 +20,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
 Lo script:
+
 - crea le cartelle documentali mancanti;
 - inizializza Git solo se `.git` non esiste;
 - aggiunge un `.gitignore` prudente se assente;

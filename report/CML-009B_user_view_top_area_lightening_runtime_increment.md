@@ -39,13 +39,13 @@ Sostituita l'intera area pre-cards con un **cruscotto minimo** a tre livelli di 
 
 ## Metriche di miglioramento
 
-| Aspetto | Prima | Dopo |
-|---|---|---|
-| Righe pre-cards | ~50 | ~12 |
-| Parole prima della prima azione | ~1300 | ~30 |
-| Blocchi informativi simultanei | 7+ | 3 (cruscotto, toolbar, save bar) |
-| Pulsanti visibili di default | ~15 | 6 |
-| Azione primaria identificabile | No | Sì "Prossima azione" |
+| Aspetto                         | Prima | Dopo                             |
+| ------------------------------- | ----- | -------------------------------- |
+| Righe pre-cards                 | ~50   | ~12                              |
+| Parole prima della prima azione | ~1300 | ~30                              |
+| Blocchi informativi simultanei  | 7+    | 3 (cruscotto, toolbar, save bar) |
+| Pulsanti visibili di default    | ~15   | 6                                |
+| Azione primaria identificabile  | No    | Sì "Prossima azione"             |
 
 ## Architettura preservata
 

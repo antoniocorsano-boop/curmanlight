@@ -8,11 +8,11 @@ CML_006R_SELECT_VISUAL_LIGHTENING_READY
 
 ## Stato iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch partenza | `master` (`c5ffa0a`, CML-005R) |
-| Branch lavoro | `cml-006r-select-visual-lightening` |
-| Working tree | pulita |
+| Campo           | Valore                              |
+| --------------- | ----------------------------------- |
+| Branch partenza | `master` (`c5ffa0a`, CML-005R)      |
+| Branch lavoro   | `cml-006r-select-visual-lightening` |
+| Working tree    | pulita                              |
 
 ## Runtime analizzato
 
@@ -41,11 +41,11 @@ Componenti con maggiore densità visiva: card/badge (~55 righe CSS), responsive 
 
 ## Opzioni valutate
 
-| Opzione | Vantaggi | Rischi | Stima |
-|---|---|---|---|
-| **A — Micro-alleggerimento CSS** | Sicuro, immediato, regressione bassa | Miglioramento non radicale | 30-45 min |
-| **B — Densità layout** | Più informazioni visibili | Può peggiorare leggibilità mobile | 20-30 min |
-| **C — Redesign ampio** | Nuova interfaccia pulita | Regressione alta, richiede più test | 2-3 ore |
+| Opzione                          | Vantaggi                             | Rischi                              | Stima     |
+| -------------------------------- | ------------------------------------ | ----------------------------------- | --------- |
+| **A — Micro-alleggerimento CSS** | Sicuro, immediato, regressione bassa | Miglioramento non radicale          | 30-45 min |
+| **B — Densità layout**           | Più informazioni visibili            | Può peggiorare leggibilità mobile   | 20-30 min |
+| **C — Redesign ampio**           | Nuova interfaccia pulita             | Regressione alta, richiede più test | 2-3 ore   |
 
 ## Opzione selezionata: **A (con micro-integrazioni da B)**
 
@@ -60,27 +60,32 @@ Componenti con maggiore densità visiva: card/badge (~55 righe CSS), responsive 
 ## Perimetro CML-006R implementativo
 
 ### File ammessi
+
 - `_published_snapshot/netlify-current/index.html`
 
 ### File vietati
+
 - HTML strutturale, funzioni JS, dati discipline
 - sw.js, _headers, manifest.webmanifest, PDF, assets
 
 ### Interventi previsti
-| Elemento | Da | A |
-|---|---|---|
-| `box-shadow` contenitori | `rgba(0,0,0,.1)` / `.08` / `.06` | `rgba(0,0,0,.05)` |
-| `border-color` card | `#81c784`, `#ffa726`, `#42a5f5` | Saturazione -15/20% |
-| `border-width` card | `1.5px solid` | `1px solid` |
-| `background` badge | Saturazione piena | Saturazione -15/20%, testo `#333` |
-| `background` footer | `#263238` | Grigio più neutro |
-| `border-left` warning | `4px` | `3px` |
-| `background` panels | `#fffde7` / `#e8f5e9` | Sfondo più neutro |
+
+| Elemento                 | Da                               | A                                 |
+| ------------------------ | -------------------------------- | --------------------------------- |
+| `box-shadow` contenitori | `rgba(0,0,0,.1)` / `.08` / `.06` | `rgba(0,0,0,.05)`                 |
+| `border-color` card      | `#81c784`, `#ffa726`, `#42a5f5`  | Saturazione -15/20%               |
+| `border-width` card      | `1.5px solid`                    | `1px solid`                       |
+| `background` badge       | Saturazione piena                | Saturazione -15/20%, testo `#333` |
+| `background` footer      | `#263238`                        | Grigio più neutro                 |
+| `border-left` warning    | `4px`                            | `3px`                             |
+| `background` panels      | `#fffde7` / `#e8f5e9`            | Sfondo più neutro                 |
 
 ### Elementi NON toccati
+
 - Colori istituzionali, semantica cromatica pulsanti, status badge base, spaziature touch, font-size, layout grid, animation
 
 ### Criteri di accettazione
+
 1. Contenitori mantengono posizione/dimensione
 2. Badge restano distinguibili
 3. Pulsanti mantengono semantica cromatica
@@ -88,6 +93,7 @@ Componenti con maggiore densità visiva: card/badge (~55 righe CSS), responsive 
 5. Stampa funzionante
 
 ## Rischi residui
+
 1. Saturazione ridotta → meno contrasto per utenti con problemi di visione (mitigato: riduzione 15-20%)
 2. Footer più chiaro → potrebbe sembrare staccato (mitigato: contrasto sufficiente)
 3. Ombre ridotte → effetto piatto (mitigato: non rimosse, solo attenuate)

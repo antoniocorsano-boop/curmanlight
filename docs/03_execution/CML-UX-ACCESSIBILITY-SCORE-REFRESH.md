@@ -16,23 +16,23 @@ La slice non introduce modifiche runtime. Formalizza soltanto il passaggio dalla
 
 ## Punteggio aggiornato
 
-| Aspetto | Valore |
-|---------|--------|
-| Punteggio precedente accessibilita' | 48/100 |
-| Punteggio aggiornato | 60/100 |
-| Delta | +12 |
-| P0 residui | 0 |
-| P1 residui | 2 |
-| Prossima slice | `CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS` |
+| Aspetto                             | Valore                                   |
+| ----------------------------------- | ---------------------------------------- |
+| Punteggio precedente accessibilita' | 48/100                                   |
+| Punteggio aggiornato                | 60/100                                   |
+| Delta                               | +12                                      |
+| P0 residui                          | 0                                        |
+| P1 residui                          | 2                                        |
+| Prossima slice                      | `CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS` |
 
 ## Delta per area consolidata
 
-| Area | Prima | Dopo | Delta |
-|------|-------|------|-------|
-| Skip link e accesso rapido al contenuto | 0 | 5 | +5 |
-| Focus visibile e ordine di tabulazione | 6 | 7 | +1 |
-| ARIA e stati dinamici | 7 | 13 | +6 |
-| **Totale delta** |  |  | **+12** |
+| Area                                    | Prima | Dopo | Delta   |
+| --------------------------------------- | ----- | ---- | ------- |
+| Skip link e accesso rapido al contenuto | 0     | 5    | +5      |
+| Focus visibile e ordine di tabulazione  | 6     | 7    | +1      |
+| ARIA e stati dinamici                   | 7     | 13   | +6      |
+| **Totale delta**                        |       |      | **+12** |
 
 ## Razionale del delta
 
@@ -53,10 +53,10 @@ La baseline aggiornata mantiene P0 residui pari a 0. Restano 2 P1 da trattare ne
 
 ## P1 residui
 
-| P1 residuo | Stato |
-|------------|-------|
-| Emoji decorative senza `aria-hidden` | da risolvere sistematicamente |
-| Annunci `aria-live` mancanti su cambio disciplina/tab | da progettare e implementare |
+| P1 residuo                                            | Stato                         |
+| ----------------------------------------------------- | ----------------------------- |
+| Emoji decorative senza `aria-hidden`                  | da risolvere sistematicamente |
+| Annunci `aria-live` mancanti su cambio disciplina/tab | da progettare e implementare  |
 
 ## Prossima slice consigliata
 

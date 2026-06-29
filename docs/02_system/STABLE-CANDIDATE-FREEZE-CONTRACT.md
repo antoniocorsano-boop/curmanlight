@@ -11,16 +11,16 @@
 
 ## 2. Current Feature Inventory
 
-| Feature | Status | Reference |
-|---------|--------|-----------|
-| Curriculum 14/14 discipline | ✅ | validated/shaped |
-| `.cml` teacher proposal workflow | ✅ | v1.0 hardened |
-| Department import/validation workflow | ✅ | validated |
-| Referent import/report workflow | ✅ | validated |
-| Evidence panel (marcatura evidenze) | ✅ | 14/14 coverage |
-| UDA draft Markdown preview/copia/download | ✅ | localized, non-persistent |
-| PWA / installabile su dispositivo | ✅ | manifest, sw.js present |
-| Guida rapida in-app | ✅ | operational |
+| Feature                                   | Status | Reference                 |
+| ----------------------------------------- | ------ | ------------------------- |
+| Curriculum 14/14 discipline               | ✅     | validated/shaped          |
+| `.cml` teacher proposal workflow          | ✅     | v1.0 hardened             |
+| Department import/validation workflow     | ✅     | validated                 |
+| Referent import/report workflow           | ✅     | validated                 |
+| Evidence panel (marcatura evidenze)       | ✅     | 14/14 coverage            |
+| UDA draft Markdown preview/copia/download | ✅     | localized, non-persistent |
+| PWA / installabile su dispositivo         | ✅     | manifest, sw.js present   |
+| Guida rapida in-app                       | ✅     | operational               |
 
 ## 3. Validation Baseline
 
@@ -81,7 +81,7 @@ Every slice must pass:
 
 ## 8. Known Limitations
 
-*(Deferred gaps and non-goals)*
+_(Deferred gaps and non-goals)_
 
 - SchoolKB deferred (CML-227)
 - No `.cml` UDA package format

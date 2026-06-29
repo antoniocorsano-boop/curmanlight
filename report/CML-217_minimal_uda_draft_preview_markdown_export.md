@@ -6,13 +6,13 @@ UDA draft Markdown preview panel with on-demand generation, copy-to-clipboard, a
 
 ## What was done
 
-| Area | Detail |
-|------|--------|
-| CSS | `.didattica-uda-draft-section` and related classes (purple theme) |
-| HTML | Selectors (discipline, unit), generate/copy/download buttons, textarea preview, status bar, privacy notice |
-| JS | `renderUdaDraftPanel()`, `updateUdaUnitSelector()`, `buildUdaDraftMarkdown()`, `generateUdaDraft()`, `copyUdaMarkdown()`, `downloadUdaMarkdown()`, `discKeyFromName()`, `getUdaDisciplineUnits()`, `getStateLabel()` |
-| Integration | `renderUdaDraftPanel()` called in `setTab` for `didattica` and `didattica_uda` tabs |
-| Validation | 14/14 PASS (validator), 14/14 PASS (shape test) |
+| Area        | Detail                                                                                                                                                                                                               |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CSS         | `.didattica-uda-draft-section` and related classes (purple theme)                                                                                                                                                    |
+| HTML        | Selectors (discipline, unit), generate/copy/download buttons, textarea preview, status bar, privacy notice                                                                                                           |
+| JS          | `renderUdaDraftPanel()`, `updateUdaUnitSelector()`, `buildUdaDraftMarkdown()`, `generateUdaDraft()`, `copyUdaMarkdown()`, `downloadUdaMarkdown()`, `discKeyFromName()`, `getUdaDisciplineUnits()`, `getStateLabel()` |
+| Integration | `renderUdaDraftPanel()` called in `setTab` for `didattica` and `didattica_uda` tabs                                                                                                                                  |
+| Validation  | 14/14 PASS (validator), 14/14 PASS (shape test)                                                                                                                                                                      |
 
 ## Files changed
 

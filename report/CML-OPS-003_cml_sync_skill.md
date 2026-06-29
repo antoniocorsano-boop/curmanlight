@@ -6,13 +6,13 @@ Implementare la prima skill operativa di Claude Code per CurManLight: `cml-sync`
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Repository | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| HEAD | `8b1dee3` |
-| origin/main | `8b1dee3` |
-| Stato OPS | `CLAUDE.md` sincronizzato |
+| Parametro   | Valore                       |
+| ----------- | ---------------------------- |
+| Repository  | `C:\Users\anton\CurManLight` |
+| Branch      | `main`                       |
+| HEAD        | `8b1dee3`                    |
+| origin/main | `8b1dee3`                    |
+| Stato OPS   | `CLAUDE.md` sincronizzato    |
 
 ## 3. Collegamento con CML-OPS-001 e CML-OPS-002
 
@@ -21,6 +21,7 @@ CML-OPS-001 ha definito la `cml-sync` come skill P0 (priorità massima). CML-OPS
 ## 4. Perche' creare prima `cml-sync`
 
 La sincronizzazione remota e' l'azione piu' critica del workflow. Automatizzare il preflight e standardizzare l'output riduce il rischio di:
+
 - Push di file fuori scope.
 - Commit con whitespace errati.
 - Push di credenziali accidentali.
@@ -33,6 +34,7 @@ La sincronizzazione remota e' l'azione piu' critica del workflow. Automatizzare 
 ## 6. Struttura della skill
 
 La skill e' organizzata in 13 sezioni operative:
+
 - Inquadramento (Nome, Scopo, Quando usarla/non usarla).
 - Input e Preflight (Comandi standard e dati attesi).
 - Guardrail (Regole di blocco esplicite).
@@ -45,6 +47,7 @@ La skill e' organizzata in 13 sezioni operative:
 ## 7. Regole di preflight
 
 La skill impone l'esecuzione di:
+
 - `git status --short --branch`
 - `git rev-parse --short HEAD` & `origin/main`
 - `git log --oneline -8`
@@ -55,6 +58,7 @@ La skill impone l'esecuzione di:
 ## 8. Regole di blocco
 
 Il push viene bloccato se:
+
 - HEAD locale o origin/main differiscono dagli attesi.
 - Branch diverso da `main` o non esattamente `ahead 1`.
 - Working tree sporco.
@@ -65,6 +69,7 @@ Il push viene bloccato se:
 ## 9. Validazioni per tipo slice
 
 La skill differenzia i controlli finali:
+
 - **Data Prep**: richiedere `validate-cml-normalized-curriculum.mjs`.
 - **Runtime**: richiedere `test-runtime-mappa-dati-shape.mjs`.
 - **Docs**: verifica rigorosa di scope.
@@ -87,6 +92,7 @@ Il file `CLAUDE.md` e' stato aggiornato nella sezione "Current Consolidated Stat
 ## 13. Skill/hook non creati
 
 Conforme allo scope:
+
 - Altre skill (docs-only, readiness, ecc.) rinviate a OPS-004.
 - Hook (guard-scope, ecc.) rinviati a OPS-005.
 

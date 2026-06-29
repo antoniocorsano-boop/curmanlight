@@ -37,25 +37,25 @@ A dismissible card at the top of the page containing:
 
 ## Confirmation Checklist
 
-| Check | Status |
-|-------|--------|
-| Runtime is the reference (no prototype code copied) | ✓ |
-| Data for 14 disciplines preserved | ✓ |
-| IN2012→IN2025 comparison preserved | ✓ |
-| approve/reject/edit workflow preserved | ✓ |
-| Progress tracking preserved | ✓ |
-| PDF cache-safe link preserved | ✓ |
+| Check                                                                      | Status                                                          |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Runtime is the reference (no prototype code copied)                        | ✓                                                               |
+| Data for 14 disciplines preserved                                          | ✓                                                               |
+| IN2012→IN2025 comparison preserved                                         | ✓                                                               |
+| approve/reject/edit workflow preserved                                     | ✓                                                               |
+| Progress tracking preserved                                                | ✓                                                               |
+| PDF cache-safe link preserved                                              | ✓                                                               |
 | No old PDF (`Corso_CurricoloDonMilani_IN2025.pdf`) referenced as user link | ✓ — only in `_headers` as cache rule for the file still on disk |
-| PWA/service worker preserved | ✓ |
-| _headers preserved | ✓ |
-| No new views added | ✓ |
-| No new global JavaScript functions | ✓ |
-| No new localStorage keys | ✓ |
-| No backend/API/auth/Netlify Forms | ✓ |
-| No deploy | ✓ |
-| Only intended files modified (`git diff --stat`) | ✓ |
-| `git diff --check` clean | ✓ |
-| `git status` clean | ✓ |
+| PWA/service worker preserved                                               | ✓                                                               |
+| _headers preserved                                                         | ✓                                                               |
+| No new views added                                                         | ✓                                                               |
+| No new global JavaScript functions                                         | ✓                                                               |
+| No new localStorage keys                                                   | ✓                                                               |
+| No backend/API/auth/Netlify Forms                                          | ✓                                                               |
+| No deploy                                                                  | ✓                                                               |
+| Only intended files modified (`git diff --stat`)                           | ✓                                                               |
+| `git diff --check` clean                                                   | ✓                                                               |
+| `git status` clean                                                         | ✓                                                               |
 
 ## Residual Risks
 
@@ -65,6 +65,7 @@ A dismissible card at the top of the page containing:
 ## Suggested Next Step
 
 Local visual inspection with a static server, then deploy preview:
+
 ```powershell
 cd C:\Users\anton\CurManLight\_published_snapshot\netlify-current
 npx serve .

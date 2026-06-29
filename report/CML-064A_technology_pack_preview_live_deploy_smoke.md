@@ -19,29 +19,29 @@ Smoke live del deploy GitHub Pages per la preview read-only del pacchetto Tecnol
 
 ### Funzionalità preview Tecnologia
 
-| Controllo | Esito | Note |
-|-----------|-------|------|
-| Pagina caricata | PASS | |
-| Console JS pulita | PASS | Nessun errore bloccante |
-| Pannello `#tecnologia-norm-panel` visibile | PASS | |
-| Microcopy presente | PASS | Anteprima non modificabile, Richiede validazione umana, Non costituisce approvazione definitiva |
-| Totale unità: 13 | PASS | |
-| Infanzia: 2 | PASS | |
-| Primaria: 5 | PASS | |
-| Secondaria I grado: 6 | PASS | |
-| Filtri ordine: Tutti/Infanzia/Primaria/Secondaria | PASS | |
-| Dettaglio espandibile | PASS | |
-| Nessun campo editabile | PASS | |
-| Nessun salvataggio locale aggiuntivo | PASS | |
+| Controllo                                         | Esito | Note                                                                                            |
+| ------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------------- |
+| Pagina caricata                                   | PASS  |                                                                                                 |
+| Console JS pulita                                 | PASS  | Nessun errore bloccante                                                                         |
+| Pannello `#tecnologia-norm-panel` visibile        | PASS  |                                                                                                 |
+| Microcopy presente                                | PASS  | Anteprima non modificabile, Richiede validazione umana, Non costituisce approvazione definitiva |
+| Totale unità: 13                                  | PASS  |                                                                                                 |
+| Infanzia: 2                                       | PASS  |                                                                                                 |
+| Primaria: 5                                       | PASS  |                                                                                                 |
+| Secondaria I grado: 6                             | PASS  |                                                                                                 |
+| Filtri ordine: Tutti/Infanzia/Primaria/Secondaria | PASS  |                                                                                                 |
+| Dettaglio espandibile                             | PASS  |                                                                                                 |
+| Nessun campo editabile                            | PASS  |                                                                                                 |
+| Nessun salvataggio locale aggiuntivo              | PASS  |                                                                                                 |
 
 ### Regressioni
 
-| Area | Esito | Note |
-|------|-------|------|
-| Export/import/report | PASS | Invariati |
-| Role-access gating | PASS | `CML2025` sblocca, "Blocca di nuovo" riblocca |
-| Schema `.cml` | PASS | Nessuna modifica |
-| Runtime CML-064A | PASS | Nessuna modifica |
+| Area                 | Esito | Note                                          |
+| -------------------- | ----- | --------------------------------------------- |
+| Export/import/report | PASS  | Invariati                                     |
+| Role-access gating   | PASS  | `CML2025` sblocca, "Blocca di nuovo" riblocca |
+| Schema `.cml`        | PASS  | Nessuna modifica                              |
+| Runtime CML-064A     | PASS  | Nessuna modifica                              |
 
 ## File documentali creati
 

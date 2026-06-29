@@ -1,15 +1,18 @@
 # CML-OPS-005 — PREFLIGHT POLICY CONTRACT AND SLICE TEMPLATES
 
 ## Dati slice
+
 - **Commit base**: `93a216e` (CML-OPS-004S, aligned)
 - **HEAD/origin/main**: `93a216e`
 - **Tipo slice**: docs-only / OPS contract (ciclo C)
 - **Oggetto**: definire contratto preflight policy, template slice, checklist by tipo
 
 ## Contratto creato
+
 `docs/02_system/OPS-PREFLIGHT-POLICY-CONTRACT.md`
 
 ## Sezioni contratto
+
 1. Slice lifecycle states (selection → closure)
 2. Slice types (8 tipi con scope e validation gates)
 3. Mandatory preflight checks
@@ -26,6 +29,7 @@
 14. CML-OPS-006 scope
 
 ## Non implementato
+
 - Hooks eseguibili (rinviati a slice futura dopo OPS-006)
 - Script di validazione automatizzati (rinviati)
 - Modifiche a `CLAUDE.md` (non in scope)

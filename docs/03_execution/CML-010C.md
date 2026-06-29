@@ -19,12 +19,12 @@ Audit runtime completato. Nessuna regressione bloccante. Pronto per CML-010D.
 
 ### 1. Conteggi (Tecnologia — profilo Secondaria)
 
-| Tipo | Atteso | Trovato |
-|------|--------|---------|
-| Voci totali (Tecnologia) | 12 | 12 ✅ |
-| ok (invariate) | 4 | 4 ✅ |
-| modifica (Gap 2025) | 8 | 8 ✅ |
-| nuovo | 0 | 0 ✅ |
+| Tipo                     | Atteso | Trovato |
+| ------------------------ | ------ | ------- |
+| Voci totali (Tecnologia) | 12     | 12 ✅   |
+| ok (invariate)           | 4      | 4 ✅    |
+| modifica (Gap 2025)      | 8      | 8 ✅    |
+| nuovo                    | 0      | 0 ✅    |
 
 ### 2. Card pending
 
@@ -63,16 +63,16 @@ Audit runtime completato. Nessuna regressione bloccante. Pronto per CML-010D.
 
 ### 7. Sezioni non toccate (non regressione)
 
-| Componente | Stato |
-|---|---|
-| usage-notice | Invariato ✅ |
-| local-save-bar | Invariato ✅ |
-| tecnologia-export-panel | Invariato ✅ |
-| Tabs (Lavoro, Riepilogo, Normativa, Generali) | Invariati ✅ |
-| Cruscotto / toolbar / filtri | Invariati ✅ |
-| Markdown generation | Non toccata ✅ |
-| PDF / sw.js / _headers | Hash invariati ✅ |
-| assets/ | Non toccati ✅ |
+| Componente                                    | Stato             |
+| --------------------------------------------- | ----------------- |
+| usage-notice                                  | Invariato ✅      |
+| local-save-bar                                | Invariato ✅      |
+| tecnologia-export-panel                       | Invariato ✅      |
+| Tabs (Lavoro, Riepilogo, Normativa, Generali) | Invariati ✅      |
+| Cruscotto / toolbar / filtri                  | Invariati ✅      |
+| Markdown generation                           | Non toccata ✅    |
+| PDF / sw.js / _headers                        | Hash invariati ✅ |
+| assets/                                       | Non toccati ✅    |
 
 ### 8. Console / Errori
 
@@ -84,12 +84,12 @@ Audit runtime completato. Nessuna regressione bloccante. Pronto per CML-010D.
 
 Breakpoint testati con Chrome headless screenshot (pre-evidenza raccolta durante CML-010B):
 
-| Breakpoint | File screenshot | Esito |
-|---|---|---|
-| 360px | cml-010b-360.png (56494 bytes) | Passato ✅ |
-| 414px | cml-010b-414.png (68698 bytes) | Passato ✅ |
-| 768px | cml-010b-768.png (149156 bytes) | Passato ✅ |
-| 1280px | cml-010b-1280.png (184876 bytes) | Passato ✅ |
+| Breakpoint | File screenshot                  | Esito      |
+| ---------- | -------------------------------- | ---------- |
+| 360px      | cml-010b-360.png (56494 bytes)   | Passato ✅ |
+| 414px      | cml-010b-414.png (68698 bytes)   | Passato ✅ |
+| 768px      | cml-010b-768.png (149156 bytes)  | Passato ✅ |
+| 1280px     | cml-010b-1280.png (184876 bytes) | Passato ✅ |
 
 ### 10. CML-009D preserved
 

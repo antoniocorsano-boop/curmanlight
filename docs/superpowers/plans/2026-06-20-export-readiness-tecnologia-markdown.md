@@ -12,21 +12,21 @@
 
 ## File Structure
 
-| File | Role | Change |
-|---|---|---|
+| File                                             | Role                | Change                              |
+| ------------------------------------------------ | ------------------- | ----------------------------------- |
 | `_published_snapshot/netlify-current/index.html` | Single runtime file | Modify ~80-100 lines across 5 areas |
-| `docs/03_execution/CML-008R.md` | Execution report | Create (post-implementation) |
-| `report/CML-008R_export_readiness.md` | Summary report | Create (post-implementation) |
+| `docs/03_execution/CML-008R.md`                  | Execution report    | Create (post-implementation)        |
+| `report/CML-008R_export_readiness.md`            | Summary report      | Create (post-implementation)        |
 
 **Areas touched in index.html:**
 
-| Area | Lines | Change |
-|---|---|---|
-| `buildDocumentModel()` | ~1562 | Add `opts.disciplineFilter` param |
-| `modelToMarkdown()` | ~1618 | Add `opts` flags for structured content |
-| `exportMarkdown()` | ~1766 | Add `disciplineFilter` param |
-| HTML near `#tab-lavoro` | ~500-550 | Add export panel for Tecnologia |
-| JS in render/event area | ~1300-1480 | Add handler and helper functions |
+| Area                    | Lines      | Change                                  |
+| ----------------------- | ---------- | --------------------------------------- |
+| `buildDocumentModel()`  | ~1562      | Add `opts.disciplineFilter` param       |
+| `modelToMarkdown()`     | ~1618      | Add `opts` flags for structured content |
+| `exportMarkdown()`      | ~1766      | Add `disciplineFilter` param            |
+| HTML near `#tab-lavoro` | ~500-550   | Add export panel for Tecnologia         |
+| JS in render/event area | ~1300-1480 | Add handler and helper functions        |
 
 ## Scope Check
 
@@ -45,10 +45,13 @@ Read lines 1562-1613 of index.html to understand the current signature and itera
 - [ ] **Step 2: Add `opts` parameter to the function signature**
 
 Change:
+
 ```js
 function buildDocumentModel(onlyApproved){
 ```
+
 To:
+
 ```js
 function buildDocumentModel(onlyApproved, opts = {}){
 ```
@@ -56,10 +59,13 @@ function buildDocumentModel(onlyApproved, opts = {}){
 - [ ] **Step 3: Add discipline filter logic in the DISCIPLINE iteration loop**
 
 Before the existing loop:
+
 ```js
 const disciplinesToExport = opts.disciplineFilter
-  ? (Array.isArray(opts.disciplineFilter) ? opts.disciplineFilter : [opts.disciplineFilter])
-  : DISCIPLINE;
+  ? Array.isArray(opts.disciplineFilter)
+    ? opts.disciplineFilter
+    : [opts.disciplineFilter]
+  : DISCIPLINE
 ```
 
 Then change `for(const disc of DISCIPLINE){` to `for(const disc of disciplinesToExport){`
@@ -85,15 +91,19 @@ Read lines 1618-1671. The function currently takes `(model, onlyApproved)` and g
 - [ ] **Step 2: Add `opts` parameter**
 
 Change:
+
 ```js
 function modelToMarkdown(model, onlyApproved){
 ```
+
 To:
+
 ```js
 function modelToMarkdown(model, onlyApproved, opts = {}){
 ```
 
 With defaults:
+
 ```js
 const {
   introNote = false,
@@ -101,12 +111,13 @@ const {
   includeDecisionSummary = false,
   includeGapMarkers = false,
   includeDisclaimer = false,
-} = opts;
+} = opts
 ```
 
 - [ ] **Step 3: Prepend intro note when `introNote` is true**
 
 At the top of the function, before the existing content:
+
 ```js
 if (introNote) {
   md = `# ${model.titolo} — Export di lavoro
@@ -119,13 +130,14 @@ Data: ${model.data}
 > 📄 **Documento di lavoro — da validare.** Non sostituisce delibera del Collegio Docenti.
 
 ---
-`;
+`
 }
 ```
 
 - [ ] **Step 4: Add reference to general sections when `includeGeneraliRef` is true**
 
 After the intro, before the discipline content:
+
 ```js
 if (includeGeneraliRef) {
   md += `## Riferimenti alle Sezioni generali
@@ -142,27 +154,33 @@ Le seguenti sezioni generali del curricolo sono consultabili nell'app CurManLigh
 - Raccordo verticale tra gli ordini di scuola
 
 ---
-`;
+`
 }
 ```
 
 - [ ] **Step 5: Add decision summary when `includeDecisionSummary` is true**
 
 Before the discipline iteration (or after intro + generali ref), iterate the data to compute counts:
+
 ```js
 if (includeDecisionSummary && model.discipline.length === 1) {
-  const disc = model.discipline[0];
-  let totOk = 0, totMod = 0, totNew = 0, totApproved = 0, totRejected = 0, totPending = 0;
-  disc.ordini.forEach(ord => {
-    [...ord.traguardi, ...ord.obiettivi].forEach(item => {
-      if (item.status === 'ok') totOk++;
-      else if (item.status === 'nuovo') totNew++;
-      else totMod++;
-      if (item.decisione === 'approvata') totApproved++;
-      else if (item.decisione === 'rifiutata') totRejected++;
-      else totPending++;
-    });
-  });
+  const disc = model.discipline[0]
+  let totOk = 0,
+    totMod = 0,
+    totNew = 0,
+    totApproved = 0,
+    totRejected = 0,
+    totPending = 0
+  disc.ordini.forEach((ord) => {
+    ;[...ord.traguardi, ...ord.obiettivi].forEach((item) => {
+      if (item.status === 'ok') totOk++
+      else if (item.status === 'nuovo') totNew++
+      else totMod++
+      if (item.decisione === 'approvata') totApproved++
+      else if (item.decisione === 'rifiutata') totRejected++
+      else totPending++
+    })
+  })
   md += `## Sintesi delle decisioni
 
 | Categoria | Conteggio |
@@ -175,19 +193,23 @@ if (includeDecisionSummary && model.discipline.length === 1) {
 | **Da decidere** | **${totPending}** |
 
 ---
-`;
+`
 }
 ```
 
 - [ ] **Step 6: Add Gap 2025 markers in the item rendering**
 
 During discipline item output (the existing `md += ...` per item), when `includeGapMarkers` is true and `item.status !== 'ok'`:
+
 ```js
-const gapMarker = (includeGapMarkers && item.status !== 'ok')
-  ? (item.status === 'nuovo'
-    ? ' 🧩 Gap 2025 — nuova proposta'
-    : (item.decisione ? '' : ' 🧩 Gap 2025 — proposta di modifica da validare'))
-  : '';
+const gapMarker =
+  includeGapMarkers && item.status !== 'ok'
+    ? item.status === 'nuovo'
+      ? ' 🧩 Gap 2025 — nuova proposta'
+      : item.decisione
+        ? ''
+        : ' 🧩 Gap 2025 — proposta di modifica da validare'
+    : ''
 ```
 
 Append `gapMarker` to the item status line.
@@ -195,6 +217,7 @@ Append `gapMarker` to the item status line.
 - [ ] **Step 7: Add disclaimer when `includeDisclaimer` is true**
 
 At the very end of the generated Markdown:
+
 ```js
 if (includeDisclaimer) {
   md += `---
@@ -204,7 +227,7 @@ if (includeDisclaimer) {
 *- L'approvazione formale del Curricolo d'Istituto*
 *- Le Indicazioni Nazionali D.M. 254/2012 e D.M. 221/2025*
 *Utilizzare come supporto al lavoro della Commissione Curricolo e dei Dipartimenti disciplinari.*
-`;
+`
 }
 ```
 
@@ -221,12 +244,16 @@ if (includeDisclaimer) {
 - [ ] **Step 1: Read the function body**
 
 Read lines 1766-1774. The function currently:
+
 ```js
-function exportMarkdown(onlyApproved){
-  const model = buildDocumentModel(onlyApproved);
-  const md = modelToMarkdown(model, onlyApproved);
-  const suffix = onlyApproved?"_Definitivo":"_Confronto2012-2025";
-  downloadBlob(new Blob([md],{type:"text/markdown;charset=utf-8"}), `CurricoloVerticale_IC_DonMilani${suffix}_${new Date().toISOString().slice(0,10)}.md`);
+function exportMarkdown(onlyApproved) {
+  const model = buildDocumentModel(onlyApproved)
+  const md = modelToMarkdown(model, onlyApproved)
+  const suffix = onlyApproved ? '_Definitivo' : '_Confronto2012-2025'
+  downloadBlob(
+    new Blob([md], { type: 'text/markdown;charset=utf-8' }),
+    `CurricoloVerticale_IC_DonMilani${suffix}_${new Date().toISOString().slice(0, 10)}.md`
+  )
 }
 ```
 
@@ -239,26 +266,31 @@ function exportMarkdown(onlyApproved = false, disciplineFilter = null){
 - [ ] **Step 3: Pass filter to buildDocumentModel and enable opts**
 
 ```js
-const opts = disciplineFilter ? {
-  disciplineFilter,
-  disciplineName: disciplineFilter,
-  introNote: true,
-  includeGeneraliRef: true,
-  includeDecisionSummary: true,
-  includeGapMarkers: true,
-  includeDisclaimer: true,
-} : {};
-const model = buildDocumentModel(onlyApproved, opts);
-const md = modelToMarkdown(model, onlyApproved, opts);
+const opts = disciplineFilter
+  ? {
+      disciplineFilter,
+      disciplineName: disciplineFilter,
+      introNote: true,
+      includeGeneraliRef: true,
+      includeDecisionSummary: true,
+      includeGapMarkers: true,
+      includeDisclaimer: true,
+    }
+  : {}
+const model = buildDocumentModel(onlyApproved, opts)
+const md = modelToMarkdown(model, onlyApproved, opts)
 ```
 
 - [ ] **Step 4: Adjust filename for single-discipline export**
 
 After the existing filename logic, when `disciplineFilter`:
+
 ```js
-const suffix = onlyApproved ? "_Definitivo" : "_Confronto2012-2025";
-const discSuffix = disciplineFilter ? `_${disciplineFilter.replace(/\s+/g, '_')}` : "";
-const filename = `CurricoloVerticale_IC_DonMilani${discSuffix}${suffix}_${new Date().toISOString().slice(0,10)}.md`;
+const suffix = onlyApproved ? '_Definitivo' : '_Confronto2012-2025'
+const discSuffix = disciplineFilter
+  ? `_${disciplineFilter.replace(/\s+/g, '_')}`
+  : ''
+const filename = `CurricoloVerticale_IC_DonMilani${discSuffix}${suffix}_${new Date().toISOString().slice(0, 10)}.md`
 ```
 
 - [ ] **Step 5: Verify behavioral invariant**
@@ -274,19 +306,24 @@ const filename = `CurricoloVerticale_IC_DonMilani${discSuffix}${suffix}_${new Da
 - [ ] **Step 1: Add `downloadMarkdownString()` helper**
 
 Reuse the existing `downloadBlob()` pattern. Add a small wrapper:
+
 ```js
 function downloadMarkdownString(content, filename) {
-  downloadBlob(new Blob([content], {type: "text/markdown;charset=utf-8"}), filename);
+  downloadBlob(
+    new Blob([content], { type: 'text/markdown;charset=utf-8' }),
+    filename
+  )
 }
 ```
 
 - [ ] **Step 2: Add `copyMarkdownToClipboard()` helper**
 
 Reuse existing `copyTextToClipboard()` (lines 1730-1751). Add a wrapper for the specific case:
+
 ```js
 function copyMarkdownToClipboard(content) {
-  copyTextToClipboard(content);
-  showToast("📋 Markdown copiato negli appunti!");
+  copyTextToClipboard(content)
+  showToast('📋 Markdown copiato negli appunti!')
 }
 ```
 
@@ -303,16 +340,48 @@ Read lines ~490-550 to understand where the discipline title is rendered and how
 - [ ] **Step 2: Add export panel HTML container**
 
 Add a hidden container in the `#tab-lavoro` area (near the toolbar or discipline header):
+
 ```html
-<div id="tecnologia-export-panel" class="export-panel" style="display:none;margin: 8px 0;padding:10px 14px;background:#f5f5f5;border-radius:8px;border:1px solid #e0e0e0">
-  <div style="font-size:12px;font-weight:700;color:#1a237e;margin-bottom:8px">📤 Export Tecnologia — Documento di lavoro</div>
-  <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap">
-    <button class="export-btn btn-md" onclick="generateTecnologiaBozza()" style="flex:1">📝 Genera bozza Tecnologia</button>
+<div
+  id="tecnologia-export-panel"
+  class="export-panel"
+  style="display:none;margin: 8px 0;padding:10px 14px;background:#f5f5f5;border-radius:8px;border:1px solid #e0e0e0"
+>
+  <div style="font-size:12px;font-weight:700;color:#1a237e;margin-bottom:8px">
+    📤 Export Tecnologia — Documento di lavoro
   </div>
-  <textarea id="tecnologia-md-preview" readonly style="display:none;width:100%;height:180px;font-family:monospace;font-size:12px;padding:8px;border:1px solid #ccc;border-radius:4px;resize:vertical;margin-bottom:6px;background:#fff"></textarea>
-  <div id="tecnologia-export-actions" style="display:none;display:flex;gap:6px;flex-wrap:wrap">
-    <button class="export-btn btn-copy" onclick="copyTecnologiaMarkdown()" style="flex:1">📋 Copia Markdown</button>
-    <button class="export-btn btn-md" onclick="downloadTecnologiaMarkdown()" style="flex:1">⬇ Scarica Markdown</button>
+  <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap">
+    <button
+      class="export-btn btn-md"
+      onclick="generateTecnologiaBozza()"
+      style="flex:1"
+    >
+      📝 Genera bozza Tecnologia
+    </button>
+  </div>
+  <textarea
+    id="tecnologia-md-preview"
+    readonly
+    style="display:none;width:100%;height:180px;font-family:monospace;font-size:12px;padding:8px;border:1px solid #ccc;border-radius:4px;resize:vertical;margin-bottom:6px;background:#fff"
+  ></textarea>
+  <div
+    id="tecnologia-export-actions"
+    style="display:none;display:flex;gap:6px;flex-wrap:wrap"
+  >
+    <button
+      class="export-btn btn-copy"
+      onclick="copyTecnologiaMarkdown()"
+      style="flex:1"
+    >
+      📋 Copia Markdown
+    </button>
+    <button
+      class="export-btn btn-md"
+      onclick="downloadTecnologiaMarkdown()"
+      style="flex:1"
+    >
+      ⬇ Scarica Markdown
+    </button>
   </div>
 </div>
 ```
@@ -320,26 +389,43 @@ Add a hidden container in the `#tab-lavoro` area (near the toolbar or discipline
 - [ ] **Step 3: Add CSS for the export panel**
 
 Add near the existing CSS (around line ~400-430):
+
 ```css
-.export-panel{font-size:13px;line-height:1.5}
-.export-panel button{cursor:pointer;padding:7px 14px;font-size:12px;border-radius:5px;border:1px solid #ccc;background:#fff;transition:.15s}
-.export-panel button:hover{background:#e8eaf6;border-color:#5c6bc0}
+.export-panel {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.export-panel button {
+  cursor: pointer;
+  padding: 7px 14px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: 0.15s;
+}
+.export-panel button:hover {
+  background: #e8eaf6;
+  border-color: #5c6bc0;
+}
 ```
 
 - [ ] **Step 4: Update render/select discipline logic to show/hide the panel**
 
 In the `selectDisc()` function (or equivalent render handler), after setting `currentDisc`:
+
 ```js
-const panel = document.getElementById('tecnologia-export-panel');
+const panel = document.getElementById('tecnologia-export-panel')
 if (panel) {
-  panel.style.display = (currentDisc === 'Tecnologia') ? 'block' : 'none';
+  panel.style.display = currentDisc === 'Tecnologia' ? 'block' : 'none'
 }
 ```
 
 Also reset the panel state when switching away:
+
 ```js
-document.getElementById('tecnologia-md-preview').style.display = 'none';
-document.getElementById('tecnologia-export-actions').style.display = 'none';
+document.getElementById('tecnologia-md-preview').style.display = 'none'
+document.getElementById('tecnologia-export-actions').style.display = 'none'
 ```
 
 ---
@@ -351,21 +437,25 @@ document.getElementById('tecnologia-export-actions').style.display = 'none';
 - [ ] **Step 1: Add `generateTecnologiaBozza()` function**
 
 ```js
-let _tecnologiaMarkdownCache = '';
+let _tecnologiaMarkdownCache = ''
 
 function generateTecnologiaBozza() {
-  const model = buildDocumentModel(true, { disciplineFilter: 'Tecnologia' });
+  const model = buildDocumentModel(true, { disciplineFilter: 'Tecnologia' })
   const opts = {
-    disciplineFilter: 'Tecnologia', disciplineName: 'Tecnologia',
-    introNote: true, includeGeneraliRef: true,
-    includeDecisionSummary: true, includeGapMarkers: true,
+    disciplineFilter: 'Tecnologia',
+    disciplineName: 'Tecnologia',
+    introNote: true,
+    includeGeneraliRef: true,
+    includeDecisionSummary: true,
+    includeGapMarkers: true,
     includeDisclaimer: true,
-  };
-  _tecnologiaMarkdownCache = modelToMarkdown(model, true, opts);
-  document.getElementById('tecnologia-md-preview').value = _tecnologiaMarkdownCache;
-  document.getElementById('tecnologia-md-preview').style.display = 'block';
-  document.getElementById('tecnologia-export-actions').style.display = 'flex';
-  showToast('✅ Bozza Tecnologia generata!');
+  }
+  _tecnologiaMarkdownCache = modelToMarkdown(model, true, opts)
+  document.getElementById('tecnologia-md-preview').value =
+    _tecnologiaMarkdownCache
+  document.getElementById('tecnologia-md-preview').style.display = 'block'
+  document.getElementById('tecnologia-export-actions').style.display = 'flex'
+  showToast('✅ Bozza Tecnologia generata!')
 }
 ```
 
@@ -373,8 +463,11 @@ function generateTecnologiaBozza() {
 
 ```js
 function copyTecnologiaMarkdown() {
-  if (!_tecnologiaMarkdownCache) { showToast('⚠️ Genera prima la bozza.'); return; }
-  copyMarkdownToClipboard(_tecnologiaMarkdownCache);
+  if (!_tecnologiaMarkdownCache) {
+    showToast('⚠️ Genera prima la bozza.')
+    return
+  }
+  copyMarkdownToClipboard(_tecnologiaMarkdownCache)
 }
 ```
 
@@ -382,10 +475,13 @@ function copyTecnologiaMarkdown() {
 
 ```js
 function downloadTecnologiaMarkdown() {
-  if (!_tecnologiaMarkdownCache) { showToast('⚠️ Genera prima la bozza.'); return; }
-  const filename = `CurricoloVerticale_IC_DonMilani_Tecnologia_Bozza_${new Date().toISOString().slice(0,10)}.md`;
-  downloadMarkdownString(_tecnologiaMarkdownCache, filename);
-  showToast('⬇ File Markdown scaricato!');
+  if (!_tecnologiaMarkdownCache) {
+    showToast('⚠️ Genera prima la bozza.')
+    return
+  }
+  const filename = `CurricoloVerticale_IC_DonMilani_Tecnologia_Bozza_${new Date().toISOString().slice(0, 10)}.md`
+  downloadMarkdownString(_tecnologiaMarkdownCache, filename)
+  showToast('⬇ File Markdown scaricato!')
 }
 ```
 
@@ -444,13 +540,13 @@ git diff --stat _published_snapshot/netlify-current/index.html
 
 ## Rischi residui
 
-| Rischio | Mitigazione |
-|---|---|
-| `modelToMarkdown()` con opts modifica anche il flusso legacy | Test obbligatorio: `exportMarkdown(true)` senza filtro produce output identico al master |
+| Rischio                                                       | Mitigazione                                                                                           |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `modelToMarkdown()` con opts modifica anche il flusso legacy  | Test obbligatorio: `exportMarkdown(true)` senza filtro produce output identico al master              |
 | Preview textarea potrebbe non aggiornarsi dopo approve/reject | Il pulsante "Genera bozza" rigenera sempre da zero il contenuto — lo stato corrente è sempre riflesso |
-| Nome file download con spazi | Uso di `replace(/\s+/g, '_')` nel filename |
-| Utente copia Markdown e lo presenta come documento definitivo | Avvertenza esplicita nell'output + nota "documento di lavoro" nell'intestazione |
-| Troppe righe modificate in un unico file | Stima: ~80-100 righe totali in index.html (~4% del file) |
+| Nome file download con spazi                                  | Uso di `replace(/\s+/g, '_')` nel filename                                                            |
+| Utente copia Markdown e lo presenta come documento definitivo | Avvertenza esplicita nell'output + nota "documento di lavoro" nell'intestazione                       |
+| Troppe righe modificate in un unico file                      | Stima: ~80-100 righe totali in index.html (~4% del file)                                              |
 
 ## Criteri di accettazione
 

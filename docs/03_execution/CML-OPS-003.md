@@ -45,6 +45,7 @@ Creare la prima skill locale Claude Code per CurManLight: `cml-sync`. La skill s
 ## Sintesi contenuto skill
 
 La skill `cml-sync` definisce un processo rigoroso in 5 fasi:
+
 1. **Input**: Definizione di task, hash attesi e scope.
 2. **Preflight**: Esecuzione di 7 comandi Git per verificare l'allineamento.
 3. **Regole di Blocco**: Criteri stringenti per impedire il push (es. commit fuori scope, segreti rilevati).
@@ -54,6 +55,7 @@ La skill `cml-sync` definisce un processo rigoroso in 5 fasi:
 ## Modifica a `CLAUDE.md`
 
 Aggiornata la sezione "Current Consolidated State":
+
 - OPS: `CLAUDE.md` created; `cml-sync` skill created; hooks and other skills not yet created.
 
 ## Eventuale uso di `git add -f`

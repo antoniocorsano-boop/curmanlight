@@ -6,15 +6,15 @@ Creare il file `CLAUDE.md` alla radice del repository come memoria operativa min
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Repository | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| HEAD | `28b697e` |
-| origin/main | `28b697e` |
-| Normalized data | 10/14 |
-| Runtime mappa | 10/14 |
-| Shape test | 10/10 PASS |
+| Parametro       | Valore                       |
+| --------------- | ---------------------------- |
+| Repository      | `C:\Users\anton\CurManLight` |
+| Branch          | `main`                       |
+| HEAD            | `28b697e`                    |
+| origin/main     | `28b697e`                    |
+| Normalized data | 10/14                        |
+| Runtime mappa   | 10/14                        |
+| Shape test      | 10/10 PASS                   |
 
 ## 3. Collegamento con CML-OPS-001
 
@@ -95,11 +95,11 @@ Conforme al contratto: la creazione di skill e hook avviene in CML-OPS-003 e CML
 
 ## 14. Rischi residui
 
-| Rischio | Mitigazione |
-|---------|-------------|
-| `CLAUDE.md` drift (stato non aggiornato) | Aggiornare ad ogni slice significativa |
-| `CLAUDE.md` troppo lungo (over time) | Rigido controllo di soglia 80 righe |
-| Regole ignorate da Claude Code | Le regole sono dichiarative e ricorsivamente leggibili |
+| Rischio                                    | Mitigazione                                                                                 |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| `CLAUDE.md` drift (stato non aggiornato)   | Aggiornare ad ogni slice significativa                                                      |
+| `CLAUDE.md` troppo lungo (over time)       | Rigido controllo di soglia 80 righe                                                         |
+| Regole ignorate da Claude Code             | Le regole sono dichiarative e ricorsivamente leggibili                                      |
 | Confusione `CLAUDE.md` globale vs progetto | Questo e' il `CLAUDE.md` di progetto; esiste anche un file globale in `~/.claude/CLAUDE.md` |
 
 ## 15. Raccomandazione per CML-OPS-003

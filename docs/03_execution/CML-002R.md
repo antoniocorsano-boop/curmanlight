@@ -12,19 +12,19 @@ Map the published runtime folder `_published_snapshot/netlify-current/`, compare
 
 ## Files Mapped
 
-| Path | Type | Notes |
-|------|------|-------|
-| `index.html` | Single-file SPA (~2135 lines) | All inline: CSS, HTML, JS, curriculum data for 14 disciplines |
-| `sw.js` | Service worker | cache name `curmanlight-cache-v452b421`, skipWaiting + clients.claim |
-| `_headers` | Netlify headers | Cache-Control: no-store for PDFs, sw.js, `/*` |
-| `Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf` | PDF — cache-safe copy | SHA256 DD9E1961... — replaces old PDF via URL change |
-| `Corso_CurricoloDonMilani_IN2025_arianese.pdf` | PDF — old copy | Still on disk, no longer linked from user-facing HTML |
-| `manifest.webmanifest` | PWA manifest | PWA install supported |
-| `motto-non-multa-sed-multum/index.html` | Motto page | External link target |
-| `riferimenti_istituzionali_normativa.json` | JSON | Institutional references |
-| `docs_distribuzione/` | Directory | Distribution docs |
-| `icons/` | Directory | PWA app icons |
-| `assets/external/` | Directory | External assets |
+| Path                                                    | Type                          | Notes                                                                |
+| ------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------- |
+| `index.html`                                            | Single-file SPA (~2135 lines) | All inline: CSS, HTML, JS, curriculum data for 14 disciplines        |
+| `sw.js`                                                 | Service worker                | cache name `curmanlight-cache-v452b421`, skipWaiting + clients.claim |
+| `_headers`                                              | Netlify headers               | Cache-Control: no-store for PDFs, sw.js, `/*`                        |
+| `Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf` | PDF — cache-safe copy         | SHA256 DD9E1961... — replaces old PDF via URL change                 |
+| `Corso_CurricoloDonMilani_IN2025_arianese.pdf`          | PDF — old copy                | Still on disk, no longer linked from user-facing HTML                |
+| `manifest.webmanifest`                                  | PWA manifest                  | PWA install supported                                                |
+| `motto-non-multa-sed-multum/index.html`                 | Motto page                    | External link target                                                 |
+| `riferimenti_istituzionali_normativa.json`              | JSON                          | Institutional references                                             |
+| `docs_distribuzione/`                                   | Directory                     | Distribution docs                                                    |
+| `icons/`                                                | Directory                     | PWA app icons                                                        |
+| `assets/external/`                                      | Directory                     | External assets                                                      |
 
 ## Runtime Architecture (netlify-current/index.html)
 
@@ -38,13 +38,13 @@ Map the published runtime folder `_published_snapshot/netlify-current/`, compare
 
 ## Prototype Comparison
 
-| Feature | Runtime | cml001 | cml002 |
-|---------|---------|--------|--------|
-| Disciplines | 14 full curriculum | 3 sample | 3 sample |
-| Comparison UI | Side-by-side panels | None | None |
-| Decision model | approve/reject/edit per item | Revision proposals (metadata only) | Same |
-| localStorage | Full DATA + profile | revisions array only | Same |
-| Code lineage | Independent | Concept model | Concept model |
+| Feature        | Runtime                      | cml001                             | cml002        |
+| -------------- | ---------------------------- | ---------------------------------- | ------------- |
+| Disciplines    | 14 full curriculum           | 3 sample                           | 3 sample      |
+| Comparison UI  | Side-by-side panels          | None                               | None          |
+| Decision model | approve/reject/edit per item | Revision proposals (metadata only) | Same          |
+| localStorage   | Full DATA + profile          | revisions array only               | Same          |
+| Code lineage   | Independent                  | Concept model                      | Concept model |
 
 **Critical finding**: The runtime is a **functional superset** of both prototypes. They share **zero code lineage**.
 

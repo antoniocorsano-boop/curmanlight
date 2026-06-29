@@ -15,13 +15,13 @@
 
 ## 3. Ruoli Workspace consigliati
 
-| Ruolo | Descrizione | Permessi richiesti |
-|-------|-------------|-------------------|
-| **Docenti** | Caricano proposte `.cml` | Contributor |
-| **Coordinatori dipartimento** | Leggono, scaricano, gestiscono file di lavoro | Content manager |
-| **Referente curricolo** | Accede agli esiti dipartimentali | Content manager o Manager |
-| **Dirigente/staff** | Visualizza o governa il processo | Viewer, Content manager o Manager |
-| **Amministratore Workspace** | Abilita Drive condivisi e impostazioni | Manager (intero Workspace) |
+| Ruolo                         | Descrizione                                   | Permessi richiesti                |
+| ----------------------------- | --------------------------------------------- | --------------------------------- |
+| **Docenti**                   | Caricano proposte `.cml`                      | Contributor                       |
+| **Coordinatori dipartimento** | Leggono, scaricano, gestiscono file di lavoro | Content manager                   |
+| **Referente curricolo**       | Accede agli esiti dipartimentali              | Content manager o Manager         |
+| **Dirigente/staff**           | Visualizza o governa il processo              | Viewer, Content manager o Manager |
+| **Amministratore Workspace**  | Abilita Drive condivisi e impostazioni        | Manager (intero Workspace)        |
 
 ## 4. Regole di sicurezza minime
 

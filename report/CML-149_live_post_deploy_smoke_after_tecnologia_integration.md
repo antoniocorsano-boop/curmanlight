@@ -2,10 +2,10 @@
 
 ## Stato iniziale
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD | `1d9e530` (sync) |
+| Parametro | Valore           |
+| --------- | ---------------- |
+| Branch    | `main`           |
+| HEAD      | `1d9e530` (sync) |
 
 ## URL live
 

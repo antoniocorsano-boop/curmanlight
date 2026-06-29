@@ -44,10 +44,10 @@ CML_007R_POST_CONSOLIDATION_SMOKE_READY
 
 ## Problemi rilevati
 
-| ID | Tipo | Class. | Dettaglio |
-|---|---|---|---|
-| P2-01 | File legacy | P2 | Vecchio PDF `Corso_CurricoloDonMilani_IN2025.pdf` presente su disco (~2.5MB), non linkato |
-| P3-01 | Polish | P3 | Nessun errore console, nessuna regressione funzionale |
+| ID    | Tipo        | Class. | Dettaglio                                                                                 |
+| ----- | ----------- | ------ | ----------------------------------------------------------------------------------------- |
+| P2-01 | File legacy | P2     | Vecchio PDF `Corso_CurricoloDonMilani_IN2025.pdf` presente su disco (~2.5MB), non linkato |
+| P3-01 | Polish      | P3     | Nessun errore console, nessuna regressione funzionale                                     |
 
 **Nessun problema P0/P1.**
 

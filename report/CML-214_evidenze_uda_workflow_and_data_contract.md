@@ -35,11 +35,11 @@ Deve referenziare almeno un `unitaCollegata` valida
 
 ### 3.4 Ruoli
 
-| Ruolo | Azioni principali |
-|---|---|
-| Docente | Marca evidenze, crea/modifica bozze UDA, esporta |
-| Dipartimento | Valida UDA, marca evidenze |
-| Referente | Import/export `.cml`, coordina pacchetti |
+| Ruolo        | Azioni principali                                |
+| ------------ | ------------------------------------------------ |
+| Docente      | Marca evidenze, crea/modifica bozze UDA, esporta |
+| Dipartimento | Valida UDA, marca evidenze                       |
+| Referente    | Import/export `.cml`, coordina pacchetti         |
 
 ### 3.5 Workflow states
 

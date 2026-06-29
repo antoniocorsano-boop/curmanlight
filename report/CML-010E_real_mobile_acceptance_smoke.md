@@ -8,11 +8,11 @@ Smoke test su versioni simulate di iPhone 13, Galaxy S21 e Pixel 5, utilizzando 
 
 ### Dispositivi
 
-| Dispositivo | Viewport | User Agent | DOM | Screenshot |
-|---|---|---|---|---|
-| iPhone 13 Pro | 390×844 | Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 | 228629 bytes | 63797 bytes |
-| Galaxy S21 | 360×800 | Mozilla/5.0 (Linux; Android 14; SM-G991B) | 228629 bytes | 56494 bytes |
-| Pixel 5 | 393×851 | Mozilla/5.0 (Linux; Android 14; Pixel 5) | 228629 bytes | 64548 bytes |
+| Dispositivo   | Viewport | User Agent                                                                  | DOM          | Screenshot  |
+| ------------- | -------- | --------------------------------------------------------------------------- | ------------ | ----------- |
+| iPhone 13 Pro | 390×844  | Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 | 228629 bytes | 63797 bytes |
+| Galaxy S21    | 360×800  | Mozilla/5.0 (Linux; Android 14; SM-G991B)                                   | 228629 bytes | 56494 bytes |
+| Pixel 5       | 393×851  | Mozilla/5.0 (Linux; Android 14; Pixel 5)                                    | 228629 bytes | 64548 bytes |
 
 ### Rendered cards (iPhone 13, 390×844)
 
@@ -24,14 +24,14 @@ Smoke test su versioni simulate di iPhone 13, Galaxy S21 e Pixel 5, utilizzando 
 
 ### Layout structure per sezione
 
-| Sezione | Ordine | Tipo | Gap-header | Readonly note |
-|---|---|---|---|---|
-| Infanzia | Traguardi | Tutti ok | No | Sì |
-| Infanzia | Obiettivi | Tutti ok | No | Sì |
-| Primaria | Traguardi | 2 pending | Sì | Sì |
-| Primaria | Obiettivi | 1 pending | Sì | Sì |
-| Secondaria | Traguardi | 2 pending + 1 ok | Sì | No |
-| Secondaria | Obiettivi | 3 pending | Sì | No |
+| Sezione    | Ordine    | Tipo             | Gap-header | Readonly note |
+| ---------- | --------- | ---------------- | ---------- | ------------- |
+| Infanzia   | Traguardi | Tutti ok         | No         | Sì            |
+| Infanzia   | Obiettivi | Tutti ok         | No         | Sì            |
+| Primaria   | Traguardi | 2 pending        | Sì         | Sì            |
+| Primaria   | Obiettivi | 1 pending        | Sì         | Sì            |
+| Secondaria | Traguardi | 2 pending + 1 ok | Sì         | No            |
+| Secondaria | Obiettivi | 3 pending        | Sì         | No            |
 
 ### Problemi rilevati
 
@@ -57,16 +57,16 @@ Le card ok/decise hanno indicatori ▸/▾ e `cursor:pointer`, ma su mobile non 
 
 ### Non regressioni confermate
 
-| Componente | Stato |
-|---|---|
-| usage-notice | ✅ |
-| local-save-bar | ✅ |
-| tecnologia-export-panel | ✅ |
-| Cruscotto | ✅ |
-| Toolbar / filtri | ✅ |
-| Tabs (Lavoro, Riepilogo, Normativa, Generali) | ✅ |
-| sw.js / _headers / PDF | ✅ Hash invariati |
-| CML-009D (padding save, setTab, focus-visible) | ✅ |
+| Componente                                     | Stato             |
+| ---------------------------------------------- | ----------------- |
+| usage-notice                                   | ✅                |
+| local-save-bar                                 | ✅                |
+| tecnologia-export-panel                        | ✅                |
+| Cruscotto                                      | ✅                |
+| Toolbar / filtri                               | ✅                |
+| Tabs (Lavoro, Riepilogo, Normativa, Generali)  | ✅                |
+| sw.js / _headers / PDF                         | ✅ Hash invariati |
+| CML-009D (padding save, setTab, focus-visible) | ✅                |
 
 ## Verdetto
 

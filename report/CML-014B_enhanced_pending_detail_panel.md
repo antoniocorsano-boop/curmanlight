@@ -7,15 +7,15 @@
 
 ## Modifiche
 
-| Modifica | Prima | Dopo |
-|---|---|---|
-| Label fonte attuale | 📄 IN 2012 (attuale) | 📄 DM 254/2012 (vigente) |
-| Label fonte proposta | ✨ Proposta IN 2025 | ✏️ DM 221/2025 — proposta di aggiornamento |
-| Label assente | 🆕 Non presente nel curricolo attuale | 🆕 DM 254/2012 — assente nel curricolo attuale |
-| Evidenziazione diff | Nessuna | Colored left borders (arancione/verde) |
-| "Personalizza testo" | Solo nel dettaglio 🔍 | Sempre visibile nella riga azioni |
-| Scroll dettaglio | Nessuno | max-height 200px (150px mobile) |
-| Truncation proposta | 90 caratteri | 120 caratteri |
+| Modifica             | Prima                                 | Dopo                                           |
+| -------------------- | ------------------------------------- | ---------------------------------------------- |
+| Label fonte attuale  | 📄 IN 2012 (attuale)                  | 📄 DM 254/2012 (vigente)                       |
+| Label fonte proposta | ✨ Proposta IN 2025                   | ✏️ DM 221/2025 — proposta di aggiornamento     |
+| Label assente        | 🆕 Non presente nel curricolo attuale | 🆕 DM 254/2012 — assente nel curricolo attuale |
+| Evidenziazione diff  | Nessuna                               | Colored left borders (arancione/verde)         |
+| "Personalizza testo" | Solo nel dettaglio 🔍                 | Sempre visibile nella riga azioni              |
+| Scroll dettaglio     | Nessuno                               | max-height 200px (150px mobile)                |
+| Truncation proposta  | 90 caratteri                          | 120 caratteri                                  |
 
 ## Verdetto
 

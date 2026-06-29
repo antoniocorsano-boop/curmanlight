@@ -8,6 +8,7 @@
 ## 1. Obiettivo
 
 Definire il contratto per la nuova architettura informativa di CurManLight, includendo:
+
 - Nuova struttura tabbar e sotto-tab
 - Modello stati versione curricolare
 - Collegamento progettazione-curricolo
@@ -49,6 +50,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 ## 3. Sezione "Versioni" (nuovo sotto-tab Curriculum)
 
 ### 3.1 Posizione
+
 - Tab: Curriculum
 - Sotto-tab: Versioni
 - ID: `tab-versioni`
@@ -56,20 +58,21 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 ### 3.2 Layout
 
 **Tabella versioni curricolari**:
+
 - Colonne: versione, stato, data, atto, note, azioni
 - Filtro per stato
 - Storico transizioni
 
 ### 3.3 Stati versione
 
-| Stato | Descrizione | Transizioni da |
-|-------|-------------|----------------|
-| vigente | Versione attualmente in uso | adottata |
-| in_revisione | Versione in fase di revisione | proposta, vigente |
-| proposta | Versione proposta ma non ancora valutata | in_revisione |
-| approvata | Versione approvata dagli organi competenti | proposta, in_revisione |
-| adottata | Versione adottata ufficialmente dall'istituto | approvata |
-| superata | Versione non più in uso | adottata, vigente |
+| Stato        | Descrizione                                   | Transizioni da         |
+| ------------ | --------------------------------------------- | ---------------------- |
+| vigente      | Versione attualmente in uso                   | adottata               |
+| in_revisione | Versione in fase di revisione                 | proposta, vigente      |
+| proposta     | Versione proposta ma non ancora valutata      | in_revisione           |
+| approvata    | Versione approvata dagli organi competenti    | proposta, in_revisione |
+| adottata     | Versione adottata ufficialmente dall'istituto | approvata              |
+| superata     | Versione non più in uso                       | adottata, vigente      |
 
 ### 3.4 Azioni per versione
 
@@ -95,6 +98,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 ## 4. Sezione "Collegamenti curricolo" (nuovo sotto-tab Progettazione)
 
 ### 4.1 Posizione
+
 - Tab: Progettazione didattica
 - Sotto-tab: Collegamenti curricolo
 - ID: `tab-collegamenti-curricolo`
@@ -102,6 +106,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 ### 4.2 Layout
 
 **Lista progettazioni didattiche**:
+
 - Per ogni progettazione: titolo, versione curricolare di riferimento, stato versione, data creazione, azioni
 - Filtro per versione curricolare
 - Filtro per stato versione
@@ -176,40 +181,41 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 
 ### 7.1 Dirigente / Referente
 
-| Azione | Sezione | Descrizione |
-|--------|---------|-------------|
-| Consultare stato avanzamento curricolo | Versioni | Visualizza tabella versioni con stati |
-| Visualizzare completezza disciplinare | Consulta | Visualizza contatori completezza |
-| Importare esiti dipartimentali | Revisione | Importa file .cml department_outcome |
-| Preparare report organi collegiali | Versioni | Esporta report versione |
-| Registrare stato avanzamento | Versioni | Registra avanzamento (non approva) |
+| Azione                                 | Sezione   | Descrizione                           |
+| -------------------------------------- | --------- | ------------------------------------- |
+| Consultare stato avanzamento curricolo | Versioni  | Visualizza tabella versioni con stati |
+| Visualizzare completezza disciplinare  | Consulta  | Visualizza contatori completezza      |
+| Importare esiti dipartimentali         | Revisione | Importa file .cml department_outcome  |
+| Preparare report organi collegiali     | Versioni  | Esporta report versione               |
+| Registrare stato avanzamento           | Versioni  | Registra avanzamento (non approva)    |
 
 ### 7.2 Dipartimento
 
-| Azione | Sezione | Descrizione |
-|--------|---------|-------------|
-| Importare proposte docenti | Revisione | Importa file .cml teacher_proposal |
-| Valutare proposte disciplina | Revisione | Valuta proposte per disciplina |
+| Azione                       | Sezione   | Descrizione                        |
+| ---------------------------- | --------- | ---------------------------------- |
+| Importare proposte docenti   | Revisione | Importa file .cml teacher_proposal |
+| Valutare proposte disciplina | Revisione | Valuta proposte per disciplina     |
+
 - Registrare esiti validazione | Revisione | Registra esito (validata, validata_con_note, rinviata) |
-| Esportare esiti dipartimentali | Revisione | Esporta file .cml department_outcome |
+  | Esportare esiti dipartimentali | Revisione | Esporta file .cml department_outcome |
 
 ### 7.3 Docente
 
-| Azione | Sezione | Descrizione |
-|--------|---------|-------------|
-| Consultare curricolo vigente | Consulta | Visualizza curricolo 2012 |
-| Consultare proposte | Revisione | Visualizza confronto 2012/2025 |
-| Proporre modifiche disciplinari | Revisione | Propone modifiche in Revisione |
-| Esportare proposta dipartimento | Revisione | Esporta file .cml teacher_proposal |
+| Azione                                  | Sezione                | Descrizione                                 |
+| --------------------------------------- | ---------------------- | ------------------------------------------- |
+| Consultare curricolo vigente            | Consulta               | Visualizza curricolo 2012                   |
+| Consultare proposte                     | Revisione              | Visualizza confronto 2012/2025              |
+| Proporre modifiche disciplinari         | Revisione              | Propone modifiche in Revisione              |
+| Esportare proposta dipartimento         | Revisione              | Esporta file .cml teacher_proposal          |
 | Progettare didattica versione specifica | Collegamenti curricolo | Crea progettazione con versione riferimento |
-| Riallineare progettazioni | Collegamenti curricolo | Riallinea progettazione a nuova versione |
+| Riallineare progettazioni               | Collegamenti curricolo | Riallinea progettazione a nuova versione    |
 
 ### 7.4 Organi collegiali
 
-| Azione | Sezione | Descrizione |
-|--------|---------|-------------|
-| Consultare report referente | Versioni | Visualizza report preparati |
-| Deliberare approvazione/adozione | Esterno | Atto formale fuori dall'app (registro ufficiale) |
+| Azione                           | Sezione  | Descrizione                                      |
+| -------------------------------- | -------- | ------------------------------------------------ |
+| Consultare report referente      | Versioni | Visualizza report preparati                      |
+| Deliberare approvazione/adozione | Esterno  | Atto formale fuori dall'app (registro ufficiale) |
 
 ## 8. Correzione istituzionale obbligatoria
 
@@ -257,6 +263,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 **Rischio**: Utenti non trovano più funzionalità
 
 **Mitigazione**:
+
 - Mantenere export in posizione prominente
 - Testare con utenti reali
 - Guida rapida aggiornata
@@ -266,6 +273,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 **Rischio**: Nuova struttura confonde utenti abituali
 
 **Mitigazione**:
+
 - Guida rapida aggiornata
 - Tooltip in-context
 - Onboarding per nuovi utenti
@@ -276,6 +284,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 **Rischio**: Modifiche rompono flussi esistenti
 
 **Mitigazione**:
+
 - Smoke test end-to-end
 - Mantenere compatibilità .cml v1.0
 - Test con file .cml esistenti
@@ -286,6 +295,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 **Rischio**: Utenti non distinguono validazione da approvazione
 
 **Mitigazione**:
+
 - Microcopy chiaro
 - Separazione UI pannelli
 - Guida dedicata
@@ -296,6 +306,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 **Rischio**: Troppi stati confondono utenti
 
 **Mitigazione**:
+
 - Semplificare a stati essenziali
 - Nascondere dettagli avanzati
 - Progress disclosure
@@ -306,6 +317,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 **Rischio**: Utenti pensano che l'app decida per loro
 
 **Mitigazione**:
+
 - Esplicitare che l'app propone, non decide
 - Messaggi chiari: "Suggerimento", non "Decisione"
 - Conferma utente per azioni critiche
@@ -340,6 +352,7 @@ Questo contratto deve essere approvato prima di qualsiasi modifica runtime.
 ## 12. Prossima slice
 
 Dopo approvazione di questo contratto, procedere con:
+
 - CML-226: Multi-discipline generalization (runtime)
 - CML-227: Curriculum version states (runtime)
 - CML-228: UI redundancy reduction (runtime)

@@ -6,14 +6,14 @@ Creare due skill locali Claude Code per stabilizzare le slice documentali e gli 
 
 ## 2. Baseline Tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Repository | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| HEAD | `d79956e` |
-| origin/main | `d79956e` |
-| Working tree | pulito |
-| Stato OPS | `cml-sync` sincronizzata |
+| Parametro    | Valore                       |
+| ------------ | ---------------------------- |
+| Repository   | `C:\Users\anton\CurManLight` |
+| Branch       | `main`                       |
+| HEAD         | `d79956e`                    |
+| origin/main  | `d79956e`                    |
+| Working tree | pulito                       |
+| Stato OPS    | `cml-sync` sincronizzata     |
 
 ## 3. Collegamento con CML-OPS-001/002/003
 

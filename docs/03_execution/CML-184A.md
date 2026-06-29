@@ -8,18 +8,18 @@ Allineare lo shape test runtime alla copertura 11/14 dopo l'integrazione di Educ
 
 ## Baseline
 
-| Campo | Valore |
-|---|---|
-| Repository | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `12e698d` |
-| origin/main | `12e698d` (allineato post CML-184-SYNC) |
-| Working tree | pulito |
+| Campo              | Valore                                             |
+| ------------------ | -------------------------------------------------- |
+| Repository         | `C:\Users\anton\CurManLight`                       |
+| Branch             | `main`                                             |
+| Commit iniziale    | `12e698d`                                          |
+| origin/main        | `12e698d` (allineato post CML-184-SYNC)            |
+| Working tree       | pulito                                             |
 | Verdict precedente | `CML_184_SYNC_CLOSED_REMOTE_WITH_SHAPE_SCOPE_NOTE` |
-| Dati normalizzati | 11/14 |
-| Runtime mappa | 11/14 |
-| Shape test prima | 10/10 PASS |
-| Deploy | non eseguito |
+| Dati normalizzati  | 11/14                                              |
+| Runtime mappa      | 11/14                                              |
+| Shape test prima   | 10/10 PASS                                         |
+| Deploy             | non eseguito                                       |
 
 ## Collegamento con CML-184
 

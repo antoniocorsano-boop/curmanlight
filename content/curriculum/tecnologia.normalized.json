@@ -650,10 +650,7 @@
       "id": "dec_tec_001",
       "tipo": "inclusione",
       "nodiRiferimento": [],
-      "unitaRiferimento": [
-        "tec_pri_4_001",
-        "tec_sec_2_002"
-      ],
+      "unitaRiferimento": ["tec_pri_4_001", "tec_sec_2_002"],
       "motivazione": "Inserimento dell'Agenda 2030 e dell'Educazione Civica nel curricolo di Tecnologia",
       "stato": "da_validare",
       "fonte": "Indicazioni Nazionali 2012, D.M. 254/2012 + Curricolo di istituto — Agenda 2030 / Nuove Indicazioni D.M. 221/2025 — Educazione Civica"
@@ -662,9 +659,7 @@
       "id": "dec_tec_002",
       "tipo": "inclusione",
       "nodiRiferimento": [],
-      "unitaRiferimento": [
-        "tec_sec_3_001"
-      ],
+      "unitaRiferimento": ["tec_sec_3_001"],
       "motivazione": "Inserimento del pensiero computazionale e della programmazione in Secondaria",
       "stato": "da_validare",
       "fonte": "Indicazioni Nazionali 2012 + Nuove Indicazioni D.M. 221/2025 — Pensiero computazionale"

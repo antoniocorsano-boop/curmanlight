@@ -20,15 +20,15 @@ Server HTTP locale: `python -m http.server 8080`
 
 ## Risultati smoke T01–T13
 
-| Test | Descrizione | Esito | Note |
-|---|---|---|---|
-| T01 | Azioni libere accessibili | PASS | Viewer curricolo, guida, esempi accessibili |
-| T02 | Export dipartimentale protetto | PASS | Modale appare prima dell'esport |
-| T03 | Import referente protetto prima file | PASS | Modale appare prima della selezione file |
-| T04 | Report referente protetto | PASS | Modale appare prima del download |
-| T05 | Codice errato respinto | PASS | Errore visibile, `sessionStorage.roleAccessGranted` non impostato |
-| T06 | Codice corretto accettato | PASS | Callback eseguita, file picker appare |
-| T07-T13 | Non eseguiti | - | Test critici T01-T06 confermano funzionamento corretto |
+| Test    | Descrizione                          | Esito | Note                                                              |
+| ------- | ------------------------------------ | ----- | ----------------------------------------------------------------- |
+| T01     | Azioni libere accessibili            | PASS  | Viewer curricolo, guida, esempi accessibili                       |
+| T02     | Export dipartimentale protetto       | PASS  | Modale appare prima dell'esport                                   |
+| T03     | Import referente protetto prima file | PASS  | Modale appare prima della selezione file                          |
+| T04     | Report referente protetto            | PASS  | Modale appare prima del download                                  |
+| T05     | Codice errato respinto               | PASS  | Errore visibile, `sessionStorage.roleAccessGranted` non impostato |
+| T06     | Codice corretto accettato            | PASS  | Callback eseguita, file picker appare                             |
+| T07-T13 | Non eseguiti                         | -     | Test critici T01-T06 confermano funzionamento corretto            |
 
 ## Dettaglio test T05-T06
 
@@ -48,6 +48,7 @@ Verificato che le funzioni `buildTeacherCmlModel()` e `buildDepartmentOutcomeCml
 ## Perimetro file
 
 Solo documentazione:
+
 - `docs/03_execution/CML-056B.md`
 - `report/CML-056B_role_access_code_gating_real_browser_smoke.md`
 - `docs/REPO-MOVELOG.md`

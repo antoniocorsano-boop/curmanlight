@@ -2,25 +2,27 @@
 
 ## Audit Summary
 
-| Field | Value |
-|-------|-------|
-| Type | Docs-only / Audit-selezione |
-| Commit base | `823dc26` |
-| Opzioni valutate | 4 (A, B, C, D) |
-| Opzione selezionata | **B — Report referente più leggibile** |
-| Runtime modificato | No |
-| Deploy eseguito | No |
-| Schema `.cml` modificato | No |
-| Verdetto | `CML_075_REFERENT_REPORT_READABILITY_NEXT_INCREMENT_SELECTED` |
+| Field                    | Value                                                         |
+| ------------------------ | ------------------------------------------------------------- |
+| Type                     | Docs-only / Audit-selezione                                   |
+| Commit base              | `823dc26`                                                     |
+| Opzioni valutate         | 4 (A, B, C, D)                                                |
+| Opzione selezionata      | **B — Report referente più leggibile**                        |
+| Runtime modificato       | No                                                            |
+| Deploy eseguito          | No                                                            |
+| Schema `.cml` modificato | No                                                            |
+| Verdetto                 | `CML_075_REFERENT_REPORT_READABILITY_NEXT_INCREMENT_SELECTED` |
 
 ## Analisi current report (`buildReferentGroupWorkReportMarkdown`)
 
 ### Punti di forza
+
 - Copre tutti gli aspetti necessari (sintesi, per-disciplina, punti aperti, evidenze)
 - Include traccia per discussione e chiusura prudente
 - Usa dati già presenti in `referentOutcomeState`
 
 ### Punti di miglioramento
+
 - La sintesi iniziale non separa "accolte" da "non accolte" — tutto è aggregato
 - Il referente deve scorrere l'intero report per capire quante decisioni sono chiuse
 - Manca indicazione esplicita su "cosa portare al dipartimento" vs "cosa portare al collegio"
@@ -28,6 +30,7 @@
 - Le domande guida sono utili ma potrebbero essere più contestuali alla situazione reale
 
 ### Dimensione del cambiamento
+
 - Funzione isolata: `buildReferentGroupWorkReportMarkdown()` (linee 3980-4103)
 - ~120 righe JS
 - Dati sorgente: `referentOutcomeState.outcomes` e `files`

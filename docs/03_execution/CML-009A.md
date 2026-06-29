@@ -11,25 +11,28 @@ La vista pubblicata (`tab-lavoro`) espone ~1300 parole di spiegazioni, barre, no
 ## Architettura proposta
 
 ### Livello 1 — Cruscotto minimo
+
 Stato + prossima azione + 3 pulsanti principali.
 
 ### Livello 2 — Sezioni compatte a schede
+
 Documento attuale, Voci da validare, Fonti, Esportazione (sintesi, non dettaglio).
 
 ### Livello 3 — Dettaglio espandibile
+
 Su richiesta: mostra dettaglio, apri confronto, vedi fonte, mostra nota, visualizza mantenimenti.
 
 ## Blocchi da compattare (per CML-009B)
 
-| Blocco | Azione |
-|---|---|
-| orientation-card | → Cruscotto minimo 3 pulsanti |
-| usage-notice | → Espandibile |
-| local-save-bar | → Icona + dropdown |
-| install-hint | → Nascondere dopo prima visita |
-| toolbar export | → Spostare sotto scheda Esportazione |
-| toolbar filtri | → Ridurre a Tutti/Da decidere |
-| progress-bar | → In piccolo nell'header |
+| Blocco           | Azione                               |
+| ---------------- | ------------------------------------ |
+| orientation-card | → Cruscotto minimo 3 pulsanti        |
+| usage-notice     | → Espandibile                        |
+| local-save-bar   | → Icona + dropdown                   |
+| install-hint     | → Nascondere dopo prima visita       |
+| toolbar export   | → Spostare sotto scheda Esportazione |
+| toolbar filtri   | → Ridurre a Tutti/Da decidere        |
+| progress-bar     | → In piccolo nell'header             |
 
 ## Cosa non toccare
 

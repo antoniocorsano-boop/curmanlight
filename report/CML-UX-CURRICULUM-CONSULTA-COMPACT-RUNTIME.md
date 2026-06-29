@@ -10,18 +10,18 @@ La vista Consulta serve solo a leggere e orientarsi. Revisione, validazione e cr
 
 ## Modifiche
 
-| File | Modifica |
-|---|---|
-| `_published_snapshot/netlify-current/index.html` | +8/-95 righe in `renderCurricoloIstituto()` |
-| `_published_snapshot/netlify-current/sw.js` | CACHE_NAME bump `v453p2-navsync` → `v453p3-consulta-compact` |
+| File                                             | Modifica                                                     |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| `_published_snapshot/netlify-current/index.html` | +8/-95 righe in `renderCurricoloIstituto()`                  |
+| `_published_snapshot/netlify-current/sw.js`      | CACHE_NAME bump `v453p2-navsync` → `v453p3-consulta-compact` |
 
 ## Rischi controllati
 
-| Rischio | Contromisura |
-|---|---|
-| Blocchi di revisione non più raggiungibili | CTA "disponibili in Revisione" presente in Consulta |
-| Accordion nasconde contenuti | `<summary>` mostra nome e icona disciplina; contenuto accessibile con 1 click |
-| Service worker serve HTML vecchio | CACHE_NAME bump invalida cache precedente |
+| Rischio                                    | Contromisura                                                                  |
+| ------------------------------------------ | ----------------------------------------------------------------------------- |
+| Blocchi di revisione non più raggiungibili | CTA "disponibili in Revisione" presente in Consulta                           |
+| Accordion nasconde contenuti               | `<summary>` mostra nome e icona disciplina; contenuto accessibile con 1 click |
+| Service worker serve HTML vecchio          | CACHE_NAME bump invalida cache precedente                                     |
 
 ## Verifiche
 

@@ -14,13 +14,13 @@ L'app ha raggiunto uno stato stabile con tutte le funzionalità principali compl
 
 ## Opzioni respinte
 
-| Opzione | Motivo rifiuto |
-|---|---|
-| B — SchoolKB | Rimandato a CML-225: va preceduto da release audit |
-| C — Design/UML | Nessuna urgenza, zero valore utente diretto |
-| D — `.cml` v1.1 / UDA extension | Da valutare dopo audit, scope non chiaro |
-| E — UX polish | Nessuna necessità specifica dopo CML-220 |
-| F — Content polish | Nessuna nuova validazione emersa |
+| Opzione                         | Motivo rifiuto                                     |
+| ------------------------------- | -------------------------------------------------- |
+| B — SchoolKB                    | Rimandato a CML-225: va preceduto da release audit |
+| C — Design/UML                  | Nessuna urgenza, zero valore utente diretto        |
+| D — `.cml` v1.1 / UDA extension | Da valutare dopo audit, scope non chiaro           |
+| E — UX polish                   | Nessuna necessità specifica dopo CML-220           |
+| F — Content polish              | Nessuna nuova validazione emersa                   |
 
 ## Prossima sequenza
 

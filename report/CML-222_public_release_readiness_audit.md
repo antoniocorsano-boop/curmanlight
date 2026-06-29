@@ -29,11 +29,11 @@
 
 ## Gaps documentati
 
-| # | Gap | Priorità | Fix |
-|---|---|---|---|
-| 1 | Root README.md mancante | Alta | Creare README.md con descrizione, URL, stato |
-| 2 | 18 riferimenti Netlify in 12 doc utente | Alta | Sostituire `curmanlight.netlify.app` con `antoniocorsano-boop.github.io/curmanlight/` |
-| 3 | Favicon.ico assente | Bassa | Aggiungere favicon (solo apple-touch-icon presente) |
+| #   | Gap                                     | Priorità | Fix                                                                                   |
+| --- | --------------------------------------- | -------- | ------------------------------------------------------------------------------------- |
+| 1   | Root README.md mancante                 | Alta     | Creare README.md con descrizione, URL, stato                                          |
+| 2   | 18 riferimenti Netlify in 12 doc utente | Alta     | Sostituire `curmanlight.netlify.app` con `antoniocorsano-boop.github.io/curmanlight/` |
+| 3   | Favicon.ico assente                     | Bassa    | Aggiungere favicon (solo apple-touch-icon presente)                                   |
 
 ## Technical checks
 

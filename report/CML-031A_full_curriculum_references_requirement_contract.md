@@ -6,16 +6,17 @@ Correzione del contratto CML-031. Il requisito non è "schede sintetiche + link"
 
 ## Preflight
 
-| Controllo | Esito |
-|---|---|
-| HEAD partenza | `0072e03` ✅ |
-| Working tree | Pulita ✅ |
+| Controllo          | Esito             |
+| ------------------ | ----------------- |
+| HEAD partenza      | `0072e03` ✅      |
+| Working tree       | Pulita ✅         |
 | MEMORY.md presente | ✅ non committato |
-| Runtime modificato | ❌ Nessuno |
+| Runtime modificato | ❌ Nessuno        |
 
 ## Requisito corretto
 
 La sezione "Fonti curricolari" deve rendere **sempre possibile la visualizzazione completa** dei documenti:
+
 - Indicazioni 2012 (D.M. 254/2012)
 - Indicazioni 2025 (D.M. 9 dicembre 2025, n. 221)
 
@@ -23,11 +24,11 @@ Principi: completezza, navigabilità, fonte istituzionale, stato del documento, 
 
 ## Opzioni tecniche per CML-032
 
-| Opzione | Descrizione | Rischio | Manutenzione | Raccomandazione |
-|---|---|---|---|---|
-| A | Viewer PDF ufficiale + indice | Basso | Bassa | Valida |
-| B | Testo strutturato completo nell'app | Alto | Alta | Sconsigliata |
-| **C** | **Soluzione mista forte** | **Medio** | **Media** | **Preferita** |
+| Opzione | Descrizione                         | Rischio   | Manutenzione | Raccomandazione |
+| ------- | ----------------------------------- | --------- | ------------ | --------------- |
+| A       | Viewer PDF ufficiale + indice       | Basso     | Bassa        | Valida          |
+| B       | Testo strutturato completo nell'app | Alto      | Alta         | Sconsigliata    |
+| **C**   | **Soluzione mista forte**           | **Medio** | **Media**    | **Preferita**   |
 
 Opzione C: viewer documento completo + indice navigabile + schede sintetiche + stato istituzionale + link MIM.
 

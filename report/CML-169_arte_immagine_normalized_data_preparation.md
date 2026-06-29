@@ -8,20 +8,21 @@ Preparare il file normalizzato di Arte e Immagine in `content/curriculum/arte-im
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| Commit iniziale | `0674dde` |
-| origin/main | `0674dde` |
-| Working tree | Pulito (sync) |
-| Shape runtime | 8/8 PASS |
+| Parametro             | Valore                                         |
+| --------------------- | ---------------------------------------------- |
+| Branch                | `main`                                         |
+| Commit iniziale       | `0674dde`                                      |
+| origin/main           | `0674dde`                                      |
+| Working tree          | Pulito (sync)                                  |
+| Shape runtime         | 8/8 PASS                                       |
 | Validatore curriculum | 8 file, 105 unità, overallValid true, 0 errori |
-| Push | Non eseguito |
-| Deploy | Non eseguito |
+| Push                  | Non eseguito                                   |
+| Deploy                | Non eseguito                                   |
 
 ## 3. Esito CML-165 e motivazione scelta Arte e Immagine
 
 CML-165 ha valutato 7 discipline candidate per data preparation. Arte e Immagine è stata selezionata come seconda scelta dopo Educazione Civica, con:
+
 - Readiness documentale: media
 - Rischio dati: basso
 - Complessità normalizzazione: medio-bassa
@@ -55,6 +56,7 @@ CML-165 ha valutato 7 discipline candidate per data preparation. Arte e Immagine
 ## 7. Struttura del modello
 
 ### Disciplina
+
 - Nome: `Arte e Immagine`
 - Slug file: `arte-immagine.normalized.json`
 - Meta-disciplina: `Espressivo`
@@ -64,11 +66,13 @@ CML-165 ha valutato 7 discipline candidate per data preparation. Arte e Immagine
 - Human validation required: `true`
 
 ### Nuclei
+
 1. **Esprimersi e comunicare** — 3 unità (Infanzia, Primaria cl. 1, Secondaria cl. 1)
 2. **Osservare** — 2 unità (Primaria cl. 3, Secondaria cl. 3)
 3. **Comprendere le opere d'arte** — 1 unità (Secondaria cl. 2)
 
 ### Strutture sostanziali
+
 1. Esplorazione creativa di materiali, colori e tecniche espressive (Infanzia fascia 5)
 2. Primi elementi del linguaggio visivo: segno, colore, composizione (Primaria cl. 1)
 3. Osservazione, lettura e comprensione di immagini e opere d'arte (Primaria cl. 3)
@@ -77,29 +81,32 @@ CML-165 ha valutato 7 discipline candidate per data preparation. Arte e Immagine
 6. Arte, scienza e cittadinanza: osservazione interdisciplinare e comunicazione visiva (Secondaria cl. 3)
 
 ### Nodi disciplinari
+
 1. Esprimersi e comunicare (3 unità)
 2. Osservare (2 unità)
 3. Comprendere le opere d'arte (1 unità)
 
 ### Progressione verticale
+
 - Infanzia fascia 5, Primaria classi 1 e 3, Secondaria classi 1, 2, 3
 
 ### Decisioni curricolari
+
 - Nessuna decisione documentata — `decisioniCurricolari: []`
 
 ## 8. Conteggi finali
 
-| Campo | Conteggio |
-|-------|:---------:|
-| Unità di apprendimento | 6 |
-| Ordini coperti | 3 |
-| Classi Primaria | 2 (1, 3) |
-| Classi Secondaria | 3 (1, 2, 3) |
-| Infanzia fasce | 1 (5) |
-| struttureSostanziali | 6 |
-| nodiDisciplinari | 3 |
-| progressioneVerticale | 6 |
-| decisioniCurricolari | 0 |
+| Campo                  |  Conteggio  |
+| ---------------------- | :---------: |
+| Unità di apprendimento |      6      |
+| Ordini coperti         |      3      |
+| Classi Primaria        |  2 (1, 3)   |
+| Classi Secondaria      | 3 (1, 2, 3) |
+| Infanzia fasce         |    1 (5)    |
+| struttureSostanziali   |      6      |
+| nodiDisciplinari       |      3      |
+| progressioneVerticale  |      6      |
+| decisioniCurricolari   |      0      |
 
 ## 9. Stato prudenziale dei contenuti
 
@@ -130,16 +137,16 @@ Output: ✅ Generato correttamente — S=6, N=3, P=6, D=0 — nessun redirect Po
 
 ## 12. Verifica codifica
 
-| Controllo | Esito |
-|-----------|:-----:|
-| UTF-8 | ✅ |
-| BOM assente | ✅ |
-| Nessun byte nullo | ✅ |
-| Nessun U+FFFD | ✅ |
-| Nessun `???` | ✅ |
-| JSON.parse valido | ✅ |
-| Accenti italiani | ✅ 23 occorrenze |
-| Campo disciplina | `Arte e Immagine` ✅ |
+| Controllo         |        Esito         |
+| ----------------- | :------------------: |
+| UTF-8             |          ✅          |
+| BOM assente       |          ✅          |
+| Nessun byte nullo |          ✅          |
+| Nessun U+FFFD     |          ✅          |
+| Nessun `???`      |          ✅          |
+| JSON.parse valido |          ✅          |
+| Accenti italiani  |   ✅ 23 occorrenze   |
+| Campo disciplina  | `Arte e Immagine` ✅ |
 
 ## 13. Test shape runtime 8/8 invariato
 
@@ -147,16 +154,16 @@ Il test shape runtime continua a coprire 8/8 discipline (Tecnologia, Italiano, M
 
 ## 14. Verifica invarianti
 
-| Componente | Stato |
-|------------|:-----:|
-| Runtime (`_published_snapshot/netlify-current/index.html`) | Invariato ✅ |
-| Altri file `content/curriculum/` | Invariati ✅ |
-| Tools (`tools/`) | Invariati ✅ |
-| Schema `.cml` | Invariato ✅ |
-| Export/import | Invariati ✅ |
-| Funzioni evidenze/UDA | Invariate ✅ |
-| Service worker | Invariato ✅ |
-| Dipendenze | Nessuna introdotta ✅ |
+| Componente                                                 |         Stato         |
+| ---------------------------------------------------------- | :-------------------: |
+| Runtime (`_published_snapshot/netlify-current/index.html`) |     Invariato ✅      |
+| Altri file `content/curriculum/`                           |     Invariati ✅      |
+| Tools (`tools/`)                                           |     Invariati ✅      |
+| Schema `.cml`                                              |     Invariato ✅      |
+| Export/import                                              |     Invariati ✅      |
+| Funzioni evidenze/UDA                                      |     Invariate ✅      |
+| Service worker                                             |     Invariato ✅      |
+| Dipendenze                                                 | Nessuna introdotta ✅ |
 
 ## 15. Rischi residui
 

@@ -12,17 +12,17 @@
 
 ## Unit distribution
 
-| Ordine | Classe | Unità | Nucleo |
-|--------|--------|-------|--------|
-| Infanzia | 5 | 1 | Paesaggio |
-| Primaria | 1 | 1 | Paesaggio |
-| Primaria | 2 | 1 | Paesaggio |
-| Primaria | 3 | 1 | Transcalarità |
-| Primaria | 4 | 1 | Territorializzazione |
-| Primaria | 5 | 1 | Transcalarità |
-| Secondaria | 1 | 2 | Paesaggio, Transcalarità |
-| Secondaria | 2 | 2 | Transcalarità, Territorializzazione |
-| Secondaria | 3 | 2 | Transcalarità, Territorializzazione |
+| Ordine     | Classe | Unità | Nucleo                              |
+| ---------- | ------ | ----- | ----------------------------------- |
+| Infanzia   | 5      | 1     | Paesaggio                           |
+| Primaria   | 1      | 1     | Paesaggio                           |
+| Primaria   | 2      | 1     | Paesaggio                           |
+| Primaria   | 3      | 1     | Transcalarità                       |
+| Primaria   | 4      | 1     | Territorializzazione                |
+| Primaria   | 5      | 1     | Transcalarità                       |
+| Secondaria | 1      | 2     | Paesaggio, Transcalarità            |
+| Secondaria | 2      | 2     | Transcalarità, Territorializzazione |
+| Secondaria | 3      | 2     | Transcalarità, Territorializzazione |
 
 ## Assi IN 2025
 

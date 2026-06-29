@@ -14,11 +14,11 @@ Smoke test su dispositivi mobili simulati completato. Nessuna modifica runtime.
 
 ## Dispositivi simulati
 
-| Dispositivo | Viewport | User Agent | Screenshot |
-|---|---|---|---|
-| iPhone 13 Pro | 390×844 | Safari iOS 17 | 63797 bytes |
-| Galaxy S21 | 360×800 | Chrome Android 14 | 56494 bytes |
-| Pixel 5 | 393×851 | Chrome Android 14 | 64548 bytes |
+| Dispositivo   | Viewport | User Agent        | Screenshot  |
+| ------------- | -------- | ----------------- | ----------- |
+| iPhone 13 Pro | 390×844  | Safari iOS 17     | 63797 bytes |
+| Galaxy S21    | 360×800  | Chrome Android 14 | 56494 bytes |
+| Pixel 5       | 393×851  | Chrome Android 14 | 64548 bytes |
 
 ## Verifiche
 
@@ -85,11 +85,11 @@ Smoke test su dispositivi mobili simulati completato. Nessuna modifica runtime.
 
 ## Problemi rilevati
 
-| # | Problema | Gravità |
-|---|---|---|
-| P1 | Touch target `.pending-action` ha min-height:34px su mobile, sotto il minimo consigliato Apple HIG (44px). Utenti con dita grandi potrebbero sbagliare tasto. | Media |
-| P2 | Icona 🔍 ("Dettaglio e confronto") non auto-esplicativa senza title tooltip (che non appare su mobile). Dipende dal testo gap-header letto una volta per sezione. | Bassa |
-| P3 | Collapse indicator ▸ su ok/decise cards: utente potrebbe non sapere che sono cliccabili senza il title tooltip (non visibile su mobile). La riga ha `cursor:pointer` ma su mobile non c'è hover. | Bassa |
+| #   | Problema                                                                                                                                                                                         | Gravità |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| P1  | Touch target `.pending-action` ha min-height:34px su mobile, sotto il minimo consigliato Apple HIG (44px). Utenti con dita grandi potrebbero sbagliare tasto.                                    | Media   |
+| P2  | Icona 🔍 ("Dettaglio e confronto") non auto-esplicativa senza title tooltip (che non appare su mobile). Dipende dal testo gap-header letto una volta per sezione.                                | Bassa   |
+| P3  | Collapse indicator ▸ su ok/decise cards: utente potrebbe non sapere che sono cliccabili senza il title tooltip (non visibile su mobile). La riga ha `cursor:pointer` ma su mobile non c'è hover. | Bassa   |
 
 ## Verdetto
 
@@ -100,5 +100,6 @@ CML_010E_REAL_MOBILE_ACCEPTANCE_SMOKE_READY
 ## Prossimo step
 
 Scegliere tra:
+
 - **CML-011A — Export and Guide Clarity Audit** (migliorare esportazione e guida)
 - **CML-011B — Real User Task Flow Audit** (percorso completo apro→controllo→valido→esporto)

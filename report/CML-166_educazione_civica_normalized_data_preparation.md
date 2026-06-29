@@ -17,12 +17,12 @@ Creare il file `content/curriculum/educazione-civica.normalized.json` come fonte
 
 ## Stato pre-intervento
 
-| Indicatore | Valore |
-|-----------|:------:|
-| File `.normalized.json` esistenti | 7 |
-| Unità normalizzate totali | 94 |
-| Discipline integrate runtime | 7/14 |
-| Asse Storico-sociale | Storia + Geografia (manca Educazione Civica) |
+| Indicatore                        |                    Valore                    |
+| --------------------------------- | :------------------------------------------: |
+| File `.normalized.json` esistenti |                      7                       |
+| Unità normalizzate totali         |                      94                      |
+| Discipline integrate runtime      |                     7/14                     |
+| Asse Storico-sociale              | Storia + Geografia (manca Educazione Civica) |
 
 ## File creato
 
@@ -30,15 +30,15 @@ Creare il file `content/curriculum/educazione-civica.normalized.json` come fonte
 
 ## Struttura
 
-| Proprietà | Valore |
-|-----------|--------|
-| schemaVersion | `cml-normalized-curriculum-v1` |
-| disciplina | Educazione Civica |
-| stato | `bozza_generabile` |
-| readiness | `in_revisione` |
-| humanValidationRequired | true |
-| metaDiscipline | Storico-sociale |
-| unità totali | 11 |
+| Proprietà               | Valore                         |
+| ----------------------- | ------------------------------ |
+| schemaVersion           | `cml-normalized-curriculum-v1` |
+| disciplina              | Educazione Civica              |
+| stato                   | `bozza_generabile`             |
+| readiness               | `in_revisione`                 |
+| humanValidationRequired | true                           |
+| metaDiscipline          | Storico-sociale                |
+| unità totali            | 11                             |
 
 ### Nuclei coperti (4/4)
 
@@ -49,12 +49,12 @@ Creare il file `content/curriculum/educazione-civica.normalized.json` come fonte
 
 ### Distribuzione unità
 
-| Ordine | Unità | Classi/fasce coperte |
-|--------|:-----:|---------------------|
-| Infanzia | 2 | fascia 5 |
-| Primaria | 5 | classe 1, 2, 3, 4, 5 |
-| Secondaria | 4 | classe 1, 2, 3 (x2) |
-| **Totale** | **11** | |
+| Ordine     | Unità  | Classi/fasce coperte |
+| ---------- | :----: | -------------------- |
+| Infanzia   |   2    | fascia 5             |
+| Primaria   |   5    | classe 1, 2, 3, 4, 5 |
+| Secondaria |   4    | classe 1, 2, 3 (x2)  |
+| **Totale** | **11** |                      |
 
 ## Riferimenti normativi
 
@@ -68,24 +68,24 @@ Creare il file `content/curriculum/educazione-civica.normalized.json` come fonte
 
 ## Validazioni
 
-| Controllo | Esito |
-|-----------|:-----:|
+| Controllo                                |                  Esito                   |
+| ---------------------------------------- | :--------------------------------------: |
 | `validate-cml-normalized-curriculum.mjs` | ✅ 8 file, 105 unità, overallValid: true |
-| `generate-static-mappa-dati.mjs` | ✅ Output generato |
-| UTF-8 senza BOM | ✅ |
-| No U+FFFD | ✅ |
-| Nessun `???` o `??` | ✅ |
-| JSON valido | ✅ |
-| Accenti italiani | ✅ presenti |
+| `generate-static-mappa-dati.mjs`         |            ✅ Output generato            |
+| UTF-8 senza BOM                          |                    ✅                    |
+| No U+FFFD                                |                    ✅                    |
+| Nessun `???` o `??`                      |                    ✅                    |
+| JSON valido                              |                    ✅                    |
+| Accenti italiani                         |               ✅ presenti                |
 
 ## Stato post-intervento
 
-| Indicatore | Prima | Dopo |
-|-----------|:-----:|:----:|
-| File `.normalized.json` | 7 | **8** |
-| Unità normalizzate | 94 | **105** |
-| Asse Storico-sociale | 2/3 discipline | **3/3** ✅ |
-| Discipline pronte per runtime | 7 | **8** |
+| Indicatore                    |     Prima      |    Dopo    |
+| ----------------------------- | :------------: | :--------: |
+| File `.normalized.json`       |       7        |   **8**    |
+| Unità normalizzate            |       94       |  **105**   |
+| Asse Storico-sociale          | 2/3 discipline | **3/3** ✅ |
+| Discipline pronte per runtime |       7        |   **8**    |
 
 ## Rischi residui
 

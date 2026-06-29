@@ -12,16 +12,16 @@ CurManLight è uno strumento web per la consultazione e revisione del curricolo 
 
 ## Funzionalità
 
-| Funzionalità | Stato |
-|---|---|
-| Curriculum 14/14 discipline | ✅ |
-| `.cml` teacher proposal workflow | ✅ |
-| Department import/validation workflow | ✅ |
-| Referent import/report workflow | ✅ |
-| Evidence panel (marcatura evidenze) | ✅ |
-| UDA draft Markdown preview/copia/download | ✅ |
-| PWA / installabile su dispositivo | ✅ |
-| Guida rapida in-app | ✅ |
+| Funzionalità                              | Stato |
+| ----------------------------------------- | ----- |
+| Curriculum 14/14 discipline               | ✅    |
+| `.cml` teacher proposal workflow          | ✅    |
+| Department import/validation workflow     | ✅    |
+| Referent import/report workflow           | ✅    |
+| Evidence panel (marcatura evidenze)       | ✅    |
+| UDA draft Markdown preview/copia/download | ✅    |
+| PWA / installabile su dispositivo         | ✅    |
+| Guida rapida in-app                       | ✅    |
 
 ## Uso rapido
 
@@ -41,6 +41,7 @@ CurManLight è uno strumento web per la consultazione e revisione del curricolo 
 ## Sviluppo
 
 Validazione:
+
 ```bash
 node tools/validate-cml-normalized-curriculum.mjs
 node tools/test-runtime-mappa-dati-shape.mjs

@@ -17,6 +17,7 @@ Add a new consultative tab "Sezioni generali" to the published CurManLight runti
 ## Implementation Details
 
 ### Files modified
+
 - `_published_snapshot/netlify-current/index.html` — 113 insertions, 2 deletions
 
 ### Changes made
@@ -40,16 +41,16 @@ Added 4th button: `<button onclick="setTab('generali')">📖 Sezioni generali</b
 
 New `<div id="tab-generali">` containing 8 sections:
 
-| Section | Content | Source |
-|---------|---------|--------|
-| Premessa | Constitutional mission, school-family alliance | Word doc para 2 |
-| Nuove Indicazioni Nazionali 2025 | D.M. 221/2025 context, principles | Word doc paras 4–24 |
-| Riferimenti normativi | 8 legislation references | Word doc paras 53–57 |
-| Profilo dello studente | Student profile summary | Word doc para 58 area |
-| Competenze chiave | 8 competences with descriptors | Word doc paras 60–95 |
-| Obiettivi generali | Summary + link to original doc | Word doc paras 96–97 |
-| Raccordo verticale | Infanzia → Primaria → Secondaria | Word doc paras 251–264 |
-| Nota finale | Guarantee: no auto-approval | Original microcopy |
+| Section                          | Content                                        | Source                 |
+| -------------------------------- | ---------------------------------------------- | ---------------------- |
+| Premessa                         | Constitutional mission, school-family alliance | Word doc para 2        |
+| Nuove Indicazioni Nazionali 2025 | D.M. 221/2025 context, principles              | Word doc paras 4–24    |
+| Riferimenti normativi            | 8 legislation references                       | Word doc paras 53–57   |
+| Profilo dello studente           | Student profile summary                        | Word doc para 58 area  |
+| Competenze chiave                | 8 competences with descriptors                 | Word doc paras 60–95   |
+| Obiettivi generali               | Summary + link to original doc                 | Word doc paras 96–97   |
+| Raccordo verticale               | Infanzia → Primaria → Secondaria               | Word doc paras 251–264 |
+| Nota finale                      | Guarantee: no auto-approval                    | Original microcopy     |
 
 **4. setTab() function** (line 1429)
 
@@ -85,8 +86,8 @@ New `<div id="tab-generali">` containing 8 sections:
 
 ## Risks
 
-| Risk | Mitigation |
-|------|------------|
-| 4-tab navigation cramped on small screens | Responsive CSS at 560px/400px reduces font-size/padding |
-| General sections content may become stale | Static HTML, manually updatable; source attribution in each section |
-| User may expect edit capability in new tab | Clear badge "Consultazione — non modificabile" + note at bottom |
+| Risk                                       | Mitigation                                                          |
+| ------------------------------------------ | ------------------------------------------------------------------- |
+| 4-tab navigation cramped on small screens  | Responsive CSS at 560px/400px reduces font-size/padding             |
+| General sections content may become stale  | Static HTML, manually updatable; source attribution in each section |
+| User may expect edit capability in new tab | Clear badge "Consultazione — non modificabile" + note at bottom     |

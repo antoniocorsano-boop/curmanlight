@@ -2,12 +2,12 @@
 
 ## Stato iniziale
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD | `5f83ecc` |
+| Parametro   | Valore    |
+| ----------- | --------- |
+| Branch      | `main`    |
+| HEAD        | `5f83ecc` |
 | origin/main | `5f83ecc` |
-| Stato | Sync |
+| Stato       | Sync      |
 
 ## Sequence pushed
 

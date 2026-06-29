@@ -15,26 +15,26 @@ Audit progettuale completato. Nessuna modifica runtime.
 
 ## Problemi individuati nell'area cards/detail
 
-| # | Problema | Impatto |
-|---|---|---|
-| P1 | Card pending troppo dense (300-400px + gap-header 120px) | Mobile perde il filo |
-| P2 | Gap-header ripetuto ad ogni card | Ridondanza severa |
-| P3 | Testo completo sempre visibile anche per ok/decise | Vocioni schiacciano pending |
-| P4 | Nessuna gerarchia visiva tra pending | Stanchezza decisionale |
-| P5 | Side-by-side panels inutili su mobile | Scroll infinito |
-| P6 | Lock-notice ripetuta per card fuori ordine | Rumore visivo |
-| P7 | Troppi bottoni azione per card | Troppe scelte contemporanee |
+| #   | Problema                                                 | Impatto                     |
+| --- | -------------------------------------------------------- | --------------------------- |
+| P1  | Card pending troppo dense (300-400px + gap-header 120px) | Mobile perde il filo        |
+| P2  | Gap-header ripetuto ad ogni card                         | Ridondanza severa           |
+| P3  | Testo completo sempre visibile anche per ok/decise       | Vocioni schiacciano pending |
+| P4  | Nessuna gerarchia visiva tra pending                     | Stanchezza decisionale      |
+| P5  | Side-by-side panels inutili su mobile                    | Scroll infinito             |
+| P6  | Lock-notice ripetuta per card fuori ordine               | Rumore visivo               |
+| P7  | Troppi bottoni azione per card                           | Troppe scelte contemporanee |
 
 ## Proposta struttura schede compatte
 
 4 sezioni collassabili (o micro-tab secondari) nel tab Lavoro:
 
-| Scheda | Titolo | Azione primaria | Dettaglio espandibile |
-|---|---|---|---|
-| 1 | 📄 Documento attuale | 📖 Mostra dettaglio | Elenco testi + badge esito |
-| 2 | ⏳ Voci da validare | ✅ Approva / ❌ Rifiuta | 🔍 Confronto IN 2012 vs 2025 |
-| 3 | 📚 Fonti e riferimenti | 📖 Apri normativa | Nota metodologica |
-| 4 | 📤 Esportazione | 📝 Genera bozza | Preview textarea |
+| Scheda | Titolo                 | Azione primaria         | Dettaglio espandibile        |
+| ------ | ---------------------- | ----------------------- | ---------------------------- |
+| 1      | 📄 Documento attuale   | 📖 Mostra dettaglio     | Elenco testi + badge esito   |
+| 2      | ⏳ Voci da validare    | ✅ Approva / ❌ Rifiuta | 🔍 Confronto IN 2012 vs 2025 |
+| 3      | 📚 Fonti e riferimenti | 📖 Apri normativa       | Nota metodologica            |
+| 4      | 📤 Esportazione        | 📝 Genera bozza         | Preview textarea             |
 
 ## Cosa fare in CML-010B
 

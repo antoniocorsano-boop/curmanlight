@@ -6,11 +6,11 @@ Chiusura formale del ciclo CML-016A → CML-016B → CML-016C relativo alla qual
 
 ## Contesto
 
-| Campo | Valore |
-|---|---|
-| Repo | C:\Users\anton\CurManLight |
-| Branch | cml-008r-fix-markdown-decision-summary |
-| HEAD partenza | 89fcfb06190578691dc85d4e7d24faa19dfb2a65 |
+| Campo                  | Valore                                              |
+| ---------------------- | --------------------------------------------------- |
+| Repo                   | C:\Users\anton\CurManLight                          |
+| Branch                 | cml-008r-fix-markdown-decision-summary              |
+| HEAD partenza          | 89fcfb06190578691dc85d4e7d24faa19dfb2a65            |
 | Ultimo verdetto chiuso | CML_016C_EXPORT_CLEANUP_PERSONALIZATION_SMOKE_READY |
 
 ## Controlli eseguiti
@@ -35,12 +35,12 @@ Chiusura formale del ciclo CML-016A → CML-016B → CML-016C relativo alla qual
 
 ## Esiti slice precedenti
 
-| Slice | Esito |
-|---|---|
+| Slice    | Esito                                                            |
+| -------- | ---------------------------------------------------------------- |
 | CML-016A | CML_016A_DISCIPLINARY_CONTENT_SOURCES_EXPORT_QUALITY_AUDIT_READY |
-| CML-016B | CML_016B_EXPORT_MARKER_CLEANUP_PERSONALIZATION_INDICATOR_READY |
-| CML-016C | CML_016C_EXPORT_CLEANUP_PERSONALIZATION_SMOKE_READY |
-| CML-016D | CML_016D_DISCIPLINARY_CONTENT_EXPORT_QUALITY_CYCLE_CLOSED |
+| CML-016B | CML_016B_EXPORT_MARKER_CLEANUP_PERSONALIZATION_INDICATOR_READY   |
+| CML-016C | CML_016C_EXPORT_CLEANUP_PERSONALIZATION_SMOKE_READY              |
+| CML-016D | CML_016D_DISCIPLINARY_CONTENT_EXPORT_QUALITY_CYCLE_CLOSED        |
 
 ## Conclusione
 

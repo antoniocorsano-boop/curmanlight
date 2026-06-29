@@ -12,19 +12,19 @@
 
 ## Smoke results
 
-| Check | Result |
-|---|---|
-| Validator | 14/14 PASS |
-| Shape test | 14/14 PASS |
-| All 14 hash routes HTTP 200 | PASS |
-| GitHub Pages canonical URL | HTTP 200, app loads |
-| README | present, URL, purpose, privacy, features, limits |
-| User docs Netlify refs | 0 — CLEAN |
-| PWA markers | manifest.webmanifest, sw.js, apple-touch-icon |
-| localStorage scope | only evidence marking + optional Drive endpoint |
-| Privacy | no student data, no grades, no backend, no OAuth |
-| `git diff --check` | PASS |
-| Secret scan | PASS |
+| Check                       | Result                                           |
+| --------------------------- | ------------------------------------------------ |
+| Validator                   | 14/14 PASS                                       |
+| Shape test                  | 14/14 PASS                                       |
+| All 14 hash routes HTTP 200 | PASS                                             |
+| GitHub Pages canonical URL  | HTTP 200, app loads                              |
+| README                      | present, URL, purpose, privacy, features, limits |
+| User docs Netlify refs      | 0 — CLEAN                                        |
+| PWA markers                 | manifest.webmanifest, sw.js, apple-touch-icon    |
+| localStorage scope          | only evidence marking + optional Drive endpoint  |
+| Privacy                     | no student data, no grades, no backend, no OAuth |
+| `git diff --check`          | PASS                                             |
+| Secret scan                 | PASS                                             |
 
 ## Known limits (unchanged from CML-222)
 

@@ -43,22 +43,22 @@ Non sono stati modificati JSON, contenuti curricolari, service worker, manifest,
 
 ## Verifiche
 
-| Check | Esito |
-|-------|-------|
-| Estrazione script + `node --check` | PASS |
-| Validatore curriculum | 14/14 PASS |
-| Shape test runtime | 14/14 PASS |
-| Smoke locale errori JS reali | 0 |
-| `setTab` globale | definita |
-| `selectDisc` globale | definita |
-| Accordion gruppi ordine | PASS, 3 gruppi renderizzati |
-| Accordion unita' interne | PASS, 13 unita' renderizzate nello smoke |
-| `aria-expanded` | PASS, aggiornato da Enter/Space |
-| `aria-controls` | PASS, target esistenti |
-| Filtri Evidenze | PASS, controlli presenti |
-| Skip link/focus precedente | nessuna regressione rilevata nello smoke locale |
-| Export Center | presente |
-| Mobile bottom bar | presente |
+| Check                              | Esito                                           |
+| ---------------------------------- | ----------------------------------------------- |
+| Estrazione script + `node --check` | PASS                                            |
+| Validatore curriculum              | 14/14 PASS                                      |
+| Shape test runtime                 | 14/14 PASS                                      |
+| Smoke locale errori JS reali       | 0                                               |
+| `setTab` globale                   | definita                                        |
+| `selectDisc` globale               | definita                                        |
+| Accordion gruppi ordine            | PASS, 3 gruppi renderizzati                     |
+| Accordion unita' interne           | PASS, 13 unita' renderizzate nello smoke        |
+| `aria-expanded`                    | PASS, aggiornato da Enter/Space                 |
+| `aria-controls`                    | PASS, target esistenti                          |
+| Filtri Evidenze                    | PASS, controlli presenti                        |
+| Skip link/focus precedente         | nessuna regressione rilevata nello smoke locale |
+| Export Center                      | presente                                        |
+| Mobile bottom bar                  | presente                                        |
 
 ## Note smoke
 

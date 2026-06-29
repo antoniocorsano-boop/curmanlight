@@ -7,16 +7,16 @@
 
 ## Risultati
 
-| Punto | Esito |
-|---|---|
-| Preflight | ✅ Branch/HEAD/tree/URL confermati |
-| Criticità individuate | 7 (C1-C7) |
-| Opzioni valutate | 3 (A: expand migliorato, B: pannello laterale, C: modal/drawer) |
-| Opzione selezionata | **A — Dettaglio espandibile migliorato** |
-| Criteri accettazione CML-014B | 16 criteri definiti |
-| Problemi cosmetici CML-013G | Lasciati come debt non bloccante |
-| Modifica runtime | ❌ Nessuna |
-| Deploy | ❌ Nessuno |
+| Punto                         | Esito                                                           |
+| ----------------------------- | --------------------------------------------------------------- |
+| Preflight                     | ✅ Branch/HEAD/tree/URL confermati                              |
+| Criticità individuate         | 7 (C1-C7)                                                       |
+| Opzioni valutate              | 3 (A: expand migliorato, B: pannello laterale, C: modal/drawer) |
+| Opzione selezionata           | **A — Dettaglio espandibile migliorato**                        |
+| Criteri accettazione CML-014B | 16 criteri definiti                                             |
+| Problemi cosmetici CML-013G   | Lasciati come debt non bloccante                                |
+| Modifica runtime              | ❌ Nessuna                                                      |
+| Deploy                        | ❌ Nessuno                                                      |
 
 ## Opzione selezionata: Dettaglio espandibile migliorato
 

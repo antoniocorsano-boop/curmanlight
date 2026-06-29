@@ -43,6 +43,7 @@
 ## Chi raccoglie le osservazioni
 
 Le osservazioni possono essere raccolte da:
+
 - Referente curricolo
 - Conduttore dell'incontro
 - Un docente incaricato dal DS

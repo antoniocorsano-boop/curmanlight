@@ -12,20 +12,20 @@ Micro-test realistico del flusso referente completo. 13/13 controlli PASS.
 
 ## Risultati
 
-| Controllo | Esito |
-|---|---|
-| Pulsante unico, non interferente | ✅ PASS |
-| Report coerente con esiti importati | ✅ PASS |
-| `da_chiarire` riconoscibili | ✅ PASS |
-| `senza_esito` riconoscibili | ✅ PASS |
-| Nota prudente presente e chiara | ✅ PASS |
-| Report non sembra documento approvato | ✅ PASS |
-| Leggibile fuori dall'app | ✅ PASS |
-| Nessun dato sensibile | ✅ PASS |
+| Controllo                               | Esito   |
+| --------------------------------------- | ------- |
+| Pulsante unico, non interferente        | ✅ PASS |
+| Report coerente con esiti importati     | ✅ PASS |
+| `da_chiarire` riconoscibili             | ✅ PASS |
+| `senza_esito` riconoscibili             | ✅ PASS |
+| Nota prudente presente e chiara         | ✅ PASS |
+| Report non sembra documento approvato   | ✅ PASS |
+| Leggibile fuori dall'app                | ✅ PASS |
+| Nessun dato sensibile                   | ✅ PASS |
 | Nessuna rete/Drive/OAuth/backend/deploy | ✅ PASS |
-| Nome file corretto | ✅ PASS |
-| Flusso vuoto → toast | ✅ PASS |
-| MEMORY.md non committato | ✅ PASS |
+| Nome file corretto                      | ✅ PASS |
+| Flusso vuoto → toast                    | ✅ PASS |
+| MEMORY.md non committato                | ✅ PASS |
 
 ## Verdetto
 

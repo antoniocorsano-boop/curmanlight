@@ -41,55 +41,55 @@ Slice docs-only. Non modifica runtime, curriculum JSON, UDA/evidenze data model,
 
 Tutte le discipline condividono la stessa struttura:
 
-| Campo | Tipo | Popolato | Note |
-|---|---|---|---|
-| `id` | string | Sì | Identificativo univoco |
-| `disciplina` | string | Sì | Nome disciplina |
-| `ordine` | string | Sì | Infanzia/Primaria/Secondaria |
-| `classe` | number/null | Sì | Classe numerica o null |
-| `fascia` | string/null | Sì | Fascia Infanzia o null |
-| `ambito` | string | Sì | Ambito disciplinare |
-| `competenza` | string | Sì | Competenza di riferimento |
-| `traguardo` | string | Sì | Traguardo di competenza |
-| `obiettivi` | string[] | Sì | Array di obiettivi |
-| `conoscenze` | string[] | Sì | Array di conoscenze |
-| `abilita` | string[] | Sì | Array di abilità |
-| `evidenze` | string[] | Sì | Array di evidenze osservabili |
-| `criteriValutazione` | string[] | Sì | Array di criteri di valutazione |
-| `fonte` | string | Sì | Fonte/ riferimento |
-| `stato` | string | Sì | Stato unità (es. `nuovo`) |
-| `validazioneUmana` | boolean | Sì | Richiesta validazione umana |
-| `noteDipartimento` | string | Sì | Note dipartimentali |
+| Campo                | Tipo        | Popolato | Note                            |
+| -------------------- | ----------- | -------- | ------------------------------- |
+| `id`                 | string      | Sì       | Identificativo univoco          |
+| `disciplina`         | string      | Sì       | Nome disciplina                 |
+| `ordine`             | string      | Sì       | Infanzia/Primaria/Secondaria    |
+| `classe`             | number/null | Sì       | Classe numerica o null          |
+| `fascia`             | string/null | Sì       | Fascia Infanzia o null          |
+| `ambito`             | string      | Sì       | Ambito disciplinare             |
+| `competenza`         | string      | Sì       | Competenza di riferimento       |
+| `traguardo`          | string      | Sì       | Traguardo di competenza         |
+| `obiettivi`          | string[]    | Sì       | Array di obiettivi              |
+| `conoscenze`         | string[]    | Sì       | Array di conoscenze             |
+| `abilita`            | string[]    | Sì       | Array di abilità                |
+| `evidenze`           | string[]    | Sì       | Array di evidenze osservabili   |
+| `criteriValutazione` | string[]    | Sì       | Array di criteri di valutazione |
+| `fonte`              | string      | Sì       | Fonte/ riferimento              |
+| `stato`              | string      | Sì       | Stato unità (es. `nuovo`)       |
+| `validazioneUmana`   | boolean     | Sì       | Richiesta validazione umana     |
+| `noteDipartimento`   | string      | Sì       | Note dipartimentali             |
 
 ### 3.2 Copertura evidenze
 
-| Disciplina | Unità totali | Unità con evidenze | % copertura |
-|---|---|---|---|
-| Arte e Immagine | 6 | 6 | 100% |
-| Educazione Civica | 11 | 11 | 100% |
-| Educazione Fisica | 7 | 7 | 100% |
-| Geografia | 12 | 12 | 100% |
-| Inglese | 12 | 12 | 100% |
-| Italiano | 14 | 14 | 100% |
-| Latino (LEL) | 4 | 4 | 100% |
-| Matematica | 13 | 13 | 100% |
-| Musica | 7 | 7 | 100% |
-| Religione Cattolica | 7 | 7 | 100% |
-| Scienze | 15 | 15 | 100% |
-| Seconda Lingua Comunitaria | 6 | 6 | 100% |
-| Storia | 15 | 15 | 100% |
-| Tecnologia | 13 | 13 | 100% |
-| **Totale** | **130** | **130** | **100%** |
+| Disciplina                 | Unità totali | Unità con evidenze | % copertura |
+| -------------------------- | ------------ | ------------------ | ----------- |
+| Arte e Immagine            | 6            | 6                  | 100%        |
+| Educazione Civica          | 11           | 11                 | 100%        |
+| Educazione Fisica          | 7            | 7                  | 100%        |
+| Geografia                  | 12           | 12                 | 100%        |
+| Inglese                    | 12           | 12                 | 100%        |
+| Italiano                   | 14           | 14                 | 100%        |
+| Latino (LEL)               | 4            | 4                  | 100%        |
+| Matematica                 | 13           | 13                 | 100%        |
+| Musica                     | 7            | 7                  | 100%        |
+| Religione Cattolica        | 7            | 7                  | 100%        |
+| Scienze                    | 15           | 15                 | 100%        |
+| Seconda Lingua Comunitaria | 6            | 6                  | 100%        |
+| Storia                     | 15           | 15                 | 100%        |
+| Tecnologia                 | 13           | 13                 | 100%        |
+| **Totale**                 | **130**      | **130**            | **100%**    |
 
 ### 3.3 Livello di dettaglio medio per disciplina
 
-| Disciplina | Media `evidenze`/unità | Media `obiettivi`/unità | Media `criteri`/unità |
-|---|---|---|---|
-| Educazione Fisica | 4.1 | 4.0 | 4.0 |
-| Tecnologia | 3.0 | 3.0 | 3.0 |
-| Italiano | 3.0 | 3.0 | 3.0 |
-| Matematica | 3.0 | 3.0 | 3.0 |
-| Inglese | 4.0 | — | — |
+| Disciplina        | Media `evidenze`/unità | Media `obiettivi`/unità | Media `criteri`/unità |
+| ----------------- | ---------------------- | ----------------------- | --------------------- |
+| Educazione Fisica | 4.1                    | 4.0                     | 4.0                   |
+| Tecnologia        | 3.0                    | 3.0                     | 3.0                   |
+| Italiano          | 3.0                    | 3.0                     | 3.0                   |
+| Matematica        | 3.0                    | 3.0                     | 3.0                   |
+| Inglese           | 4.0                    | —                       | —                     |
 
 ## 4. Stato attuale runtime Didattica
 
@@ -109,46 +109,46 @@ Tutte le discipline condividono la stessa struttura:
 
 ### 4.3 Mapping ruoli workflow
 
-| Ruolo | Azioni attuali supportate | Azioni future suggerite |
-|---|---|---|
-| Docente | Visualizza evidenze Tecnologia, visualizza UDA Tecnologia | Seleziona disciplina/nucleo/unità, marca evidenza come utilizzabile, bozza UDA |
-| Dipartimento | Valida `.cml` (Curriculum > Revisione) | Valida evidenze/UDA come parte della validazione professionale |
-| Referente | Importa/esporta `.cml` | Coordina pacchetti evidenze/UDA per dipartimento |
+| Ruolo        | Azioni attuali supportate                                 | Azioni future suggerite                                                        |
+| ------------ | --------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Docente      | Visualizza evidenze Tecnologia, visualizza UDA Tecnologia | Seleziona disciplina/nucleo/unità, marca evidenza come utilizzabile, bozza UDA |
+| Dipartimento | Valida `.cml` (Curriculum > Revisione)                    | Valida evidenze/UDA come parte della validazione professionale                 |
+| Referente    | Importa/esporta `.cml`                                    | Coordina pacchetti evidenze/UDA per dipartimento                               |
 
 ## 5. Gap e rischi
 
 ### 5.1 Gap identificati
 
-| ID | Gap | Severità | Impatto |
-|---|---|---|---|
-| G1 | Pannello evidenze limitato a Tecnologia | Alta | 13/14 discipline non hanno accesso alle proprie evidenze nel runtime |
-| G2 | UDA disponibili solo per Tecnologia | Alta | Nessuna disciplina oltre Tecnologia ha modelli UDA visualizzabili |
-| G3 | Nessun meccanismo di linking evidenza→UDA | Alta | Il docente non può collegare un'evidenza specifica a un modulo UDA |
-| G4 | Nessun modello dati persistente per UDA/evidenze | Alta | Non esiste contratto dati per salvataggio, stato o condivisione |
-| G5 | Dati evidenze esistenti ma non esposti nel runtime | Media | 130/130 unità hanno evidenze, ma solo Tecnologia le renderizza |
-| G6 | Nessuna distinzione tra "evidenza validata" e "evidenza proposta" | Media | Il docente non può marcare lo stato di utilizzo di un'evidenza |
-| G7 | Nessuna integrazione con `.cml` workflow | Media | Evidenze/UDA sono separati dal flusso di validazione dipartimentale |
+| ID  | Gap                                                               | Severità | Impatto                                                              |
+| --- | ----------------------------------------------------------------- | -------- | -------------------------------------------------------------------- |
+| G1  | Pannello evidenze limitato a Tecnologia                           | Alta     | 13/14 discipline non hanno accesso alle proprie evidenze nel runtime |
+| G2  | UDA disponibili solo per Tecnologia                               | Alta     | Nessuna disciplina oltre Tecnologia ha modelli UDA visualizzabili    |
+| G3  | Nessun meccanismo di linking evidenza→UDA                         | Alta     | Il docente non può collegare un'evidenza specifica a un modulo UDA   |
+| G4  | Nessun modello dati persistente per UDA/evidenze                  | Alta     | Non esiste contratto dati per salvataggio, stato o condivisione      |
+| G5  | Dati evidenze esistenti ma non esposti nel runtime                | Media    | 130/130 unità hanno evidenze, ma solo Tecnologia le renderizza       |
+| G6  | Nessuna distinzione tra "evidenza validata" e "evidenza proposta" | Media    | Il docente non può marcare lo stato di utilizzo di un'evidenza       |
+| G7  | Nessuna integrazione con `.cml` workflow                          | Media    | Evidenze/UDA sono separati dal flusso di validazione dipartimentale  |
 
 ### 5.2 Rischi per categoria
 
-| Categoria | Rischio | Severità | Mitigazione |
-|---|---|---|---|
-| **Curriculum vs Didattica** | Trasformare il curricolo in programmazione lezioni troppo presto | Alta | Mantenere confine netto: evidenze sono collegate a unità curricolo, non a lezioni singole |
-| **Dati persistenti** | Aggiungere persistenza senza schema chiaro | Alta | Definire contratto dati prima di ogni salvataggio |
-| **Duplicazione workflow** | Duplicare logica `.cml` in area didattica | Media | Riutilicare `validazioneUmana` e `stato` esistenti, non reinventare |
-| **Mixing** | Mescolare validazione evidenze con design UDA | Media | Separare: evidenza = cosa osservare; UDA = come organizzare l'apprendimento |
-| **Privacy/dati** | Salvataggio locale senza consenso informato | Bassa | Evitare persistenza server-side in prima fase; usare solo sessione/clipboard |
-| **Complessità UX** | Aggiungere troppi campi editabili | Media | Start read-only, poi gradualmente abilitare marcatori semplici |
+| Categoria                   | Rischio                                                          | Severità | Mitigazione                                                                               |
+| --------------------------- | ---------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| **Curriculum vs Didattica** | Trasformare il curricolo in programmazione lezioni troppo presto | Alta     | Mantenere confine netto: evidenze sono collegate a unità curricolo, non a lezioni singole |
+| **Dati persistenti**        | Aggiungere persistenza senza schema chiaro                       | Alta     | Definire contratto dati prima di ogni salvataggio                                         |
+| **Duplicazione workflow**   | Duplicare logica `.cml` in area didattica                        | Media    | Riutilicare `validazioneUmana` e `stato` esistenti, non reinventare                       |
+| **Mixing**                  | Mescolare validazione evidenze con design UDA                    | Media    | Separare: evidenza = cosa osservare; UDA = come organizzare l'apprendimento               |
+| **Privacy/dati**            | Salvataggio locale senza consenso informato                      | Bassa    | Evitare persistenza server-side in prima fase; usare solo sessione/clipboard              |
+| **Complessità UX**          | Aggiungere troppi campi editabili                                | Media    | Start read-only, poi gradualmente abilitare marcatori semplici                            |
 
 ## 6. Confronto opzioni
 
-| Codice | Opzione | Rischio | Complessità | Valore immediato | Impatto schema `.cml` | Impatto runtime futuro |
-|---|---|---|---|---|---|---|
-| A | Docs-only Evidenze/UDA contract | **Basso** | Bassa | Medio | Nessuno | Minimo |
-| B | Minimal evidence-linking data model | Medio | Media | Alto | Medio | Medio |
-| C | Runtime evidence panel only (tutte le discipline) | Medio | Media | Alto | Nessuno | Medio |
-| D | UDA draft/export prototype | Alto | Alta | Alto | Nessuno | Alto |
-| E | Defer UDA, strengthen evidence taxonomy | Basso | Bassa | Basso | Nessuno | Minimo |
+| Codice | Opzione                                           | Rischio   | Complessità | Valore immediato | Impatto schema `.cml` | Impatto runtime futuro |
+| ------ | ------------------------------------------------- | --------- | ----------- | ---------------- | --------------------- | ---------------------- |
+| A      | Docs-only Evidenze/UDA contract                   | **Basso** | Bassa       | Medio            | Nessuno               | Minimo                 |
+| B      | Minimal evidence-linking data model               | Medio     | Media       | Alto             | Medio                 | Medio                  |
+| C      | Runtime evidence panel only (tutte le discipline) | Medio     | Media       | Alto             | Nessuno               | Medio                  |
+| D      | UDA draft/export prototype                        | Alto      | Alta        | Alto             | Nessuno               | Alto                   |
+| E      | Defer UDA, strengthen evidence taxonomy           | Basso     | Bassa       | Basso            | Nessuno               | Minimo                 |
 
 ### 6.1 Perché A e non B/C/D/E
 
@@ -169,6 +169,7 @@ Rinviare l'UDA a tempo indeterminato mentre il curricolo è già solido spreca u
 **Selezionata: A — Docs-only Evidenze/UDA contract**
 
 CML-214 deve definire:
+
 1. Modello dati minimo per linking evidenza→UDA
 2. Stati possibili per un'evidenza (proposta, adottata, adattata, non applicabile)
 3. Stati possibili per un'UDA (bozza, in uso, validato, archiviato)
@@ -179,12 +180,12 @@ CML-214 deve definire:
 
 ## 8. Sequenza raccomandata
 
-| Slice | Tipo | Descrizione |
-|---|---|---|
-| **CML-214** | Contract/docs | Evidenze/UDA data model and workflow contract |
-| **CML-215** | Runtime | Minimal evidence-linking runtime increment (marca evidenza, stato UDA) |
-| **CML-216** | Runtime | UDA draft/export prototype |
-| **CML-217** | Smoke | Workflow smoke and closure gate |
+| Slice       | Tipo          | Descrizione                                                            |
+| ----------- | ------------- | ---------------------------------------------------------------------- |
+| **CML-214** | Contract/docs | Evidenze/UDA data model and workflow contract                          |
+| **CML-215** | Runtime       | Minimal evidence-linking runtime increment (marca evidenza, stato UDA) |
+| **CML-216** | Runtime       | UDA draft/export prototype                                             |
+| **CML-217** | Smoke         | Workflow smoke and closure gate                                        |
 
 ## 9. Invarianti rispettati
 

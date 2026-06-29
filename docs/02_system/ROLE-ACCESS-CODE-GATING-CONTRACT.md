@@ -19,22 +19,22 @@ Il codice operativo è un blocco locale lato client, non una password, non un lo
 
 ## B. Ruoli
 
-| Ruolo | Codice operativo | Azioni protette |
-|---|---|---|
-| Docente | Non richiesto | Nessuna |
-| Consultatore | Non richiesto | Nessuna |
-| Dipartimento / Coordinatore | Richiesto | Export esito dipartimentale `.cml` |
-| Referente curricolo | Richiesto | Import esiti dipartimentali, Report gruppo curricolo |
+| Ruolo                       | Codice operativo | Azioni protette                                      |
+| --------------------------- | ---------------- | ---------------------------------------------------- |
+| Docente                     | Non richiesto    | Nessuna                                              |
+| Consultatore                | Non richiesto    | Nessuna                                              |
+| Dipartimento / Coordinatore | Richiesto        | Export esito dipartimentale `.cml`                   |
+| Referente curricolo         | Richiesto        | Import esiti dipartimentali, Report gruppo curricolo |
 
 ---
 
 ## C. Azioni protette
 
-| Azione | Costante / ID | Ruolo | Blocco |
-|---|---|---|---|
-| Esportazione esito dipartimentale `.cml` | `departmentOutcomeExport` | Coordinatore | ✅ |
-| Import esiti dipartimentali lato referente | `referentOutcomeImport` | Referente | ✅ |
-| Generazione report gruppo curricolo | `referentReportGeneration` | Referente | ✅ |
+| Azione                                     | Costante / ID              | Ruolo        | Blocco |
+| ------------------------------------------ | -------------------------- | ------------ | ------ |
+| Esportazione esito dipartimentale `.cml`   | `departmentOutcomeExport`  | Coordinatore | ✅     |
+| Import esiti dipartimentali lato referente | `referentOutcomeImport`    | Referente    | ✅     |
+| Generazione report gruppo curricolo        | `referentReportGeneration` | Referente    | ✅     |
 
 ### Dettaglio implementativo
 
@@ -72,16 +72,16 @@ La richiesta codice compare come overlay modale/al centro della scherma:
 
 ### Testi
 
-| Elemento | Testo |
-|---|---|
-| **Titolo** | "Codice operativo richiesto" |
-| **Testo** | "Questa funzione è riservata al ruolo indicato nella prova controllata. Inserisci il codice operativo fornito dal referente." |
-| **Avvertenza** | "Il codice evita usi accidentali dello strumento. Non è una password istituzionale e non sostituisce autorizzazioni, firme o delibere." |
-| **Etichetta campo** | "Codice operativo" |
-| **Placeholder** | "Inserisci il codice…" |
-| **Pulsante positivo** | "Sblocca funzione" |
-| **Pulsante negativo** | "Annulla" |
-| **Errore codice errato** | "Codice non valido. Verifica con il referente il codice operativo corretto." |
+| Elemento                 | Testo                                                                                                                                   |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Titolo**               | "Codice operativo richiesto"                                                                                                            |
+| **Testo**                | "Questa funzione è riservata al ruolo indicato nella prova controllata. Inserisci il codice operativo fornito dal referente."           |
+| **Avvertenza**           | "Il codice evita usi accidentali dello strumento. Non è una password istituzionale e non sostituisce autorizzazioni, firme o delibere." |
+| **Etichetta campo**      | "Codice operativo"                                                                                                                      |
+| **Placeholder**          | "Inserisci il codice…"                                                                                                                  |
+| **Pulsante positivo**    | "Sblocca funzione"                                                                                                                      |
+| **Pulsante negativo**    | "Annulla"                                                                                                                               |
+| **Errore codice errato** | "Codice non valido. Verifica con il referente il codice operativo corretto."                                                            |
 
 ### Blocca di nuovo
 
@@ -89,12 +89,12 @@ Dopo aver sbloccato una funzione, l'utente può bloccarla di nuovo con un pulsan
 
 ### Durata sblocco
 
-| Elemento | Scelta |
-|---|---|
-| Persistenza | **SessionStorage** (scompare alla chiusura della scheda) |
-| localStorage | ❌ Non usare |
-| Sblocco multiprocedura | Sbloccando una procedura (es. export), anche le altre due vengono sbloccate per la stessa sessione |
-| Blocco manuale | Il pulsante "Blocca di nuovo" rimuove il token dalla sessionStorage e ripristina il blocco per tutte e tre le azioni |
+| Elemento               | Scelta                                                                                                               |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Persistenza            | **SessionStorage** (scompare alla chiusura della scheda)                                                             |
+| localStorage           | ❌ Non usare                                                                                                         |
+| Sblocco multiprocedura | Sbloccando una procedura (es. export), anche le altre due vengono sbloccate per la stessa sessione                   |
+| Blocco manuale         | Il pulsante "Blocca di nuovo" rimuove il token dalla sessionStorage e ripristina il blocco per tutte e tre le azioni |
 
 ### Flusso dettagliato
 
@@ -133,64 +133,65 @@ CML2025
 
 ## G. Persistenza
 
-| Aspetto | Scelta |
-|---|---|
-| Dove | `sessionStorage` — chiave: `roleAccessGranted`, valore: `true` o `false` |
-| localStorage | ❌ Non usare — evitare sblocco persistente tra sessioni |
-| Durata | Fino alla chiusura della scheda o al blocco manuale |
-| Dati personali | Nessuno |
-| Cookie | Nessuno |
-| Dati trasmessi | Nessuno |
+| Aspetto        | Scelta                                                                   |
+| -------------- | ------------------------------------------------------------------------ |
+| Dove           | `sessionStorage` — chiave: `roleAccessGranted`, valore: `true` o `false` |
+| localStorage   | ❌ Non usare — evitare sblocco persistente tra sessioni                  |
+| Durata         | Fino alla chiusura della scheda o al blocco manuale                      |
+| Dati personali | Nessuno                                                                  |
+| Cookie         | Nessuno                                                                  |
+| Dati trasmessi | Nessuno                                                                  |
 
 ---
 
 ## H. Sicurezza e limiti
 
-| Aspetto | Dichiarazione |
-|---|---|
-| Aggirabile | ✅ Sì — un utente può aprire la console del browser e impostare `sessionStorage.setItem('roleAccessGranted', 'true')` |
-| Protezione dati | Nessuna — lo strumento non gestisce dati personali o sensibili |
-| Scopo reale | Ridurre errori accidentali durante la prova controllata |
-| Non è | Autenticazione, autorizzazione, firma, validazione, login |
-| Non certifica | Identità, ruolo istituzionale, titolo, appartenenza all'istituzione scolastica |
+| Aspetto         | Dichiarazione                                                                                                         |
+| --------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Aggirabile      | ✅ Sì — un utente può aprire la console del browser e impostare `sessionStorage.setItem('roleAccessGranted', 'true')` |
+| Protezione dati | Nessuna — lo strumento non gestisce dati personali o sensibili                                                        |
+| Scopo reale     | Ridurre errori accidentali durante la prova controllata                                                               |
+| Non è           | Autenticazione, autorizzazione, firma, validazione, login                                                             |
+| Non certifica   | Identità, ruolo istituzionale, titolo, appartenenza all'istituzione scolastica                                        |
 
 **Testo di disclosure consigliato** (da inserire nelle guide o nella sezione info):
+
 > Il codice operativo è un blocco leggero che evita di attivare per errore funzioni operative. Può essere aggirato tecnicamente e non rappresenta una protezione di sicurezza. CurManLight non gestisce dati personali o sensibili.
 
 ---
 
 ## I. Compatibilità
 
-| Componente | Modifica prevista |
-|---|---|
-| Schema `.cml` | ❌ Nessuna |
-| File `.cml` esportati | ❌ Nessuna — non contengono traccia del codice |
-| Flusso docente | ❌ Nessuna |
-| Viewer curricolo | ❌ Nessuna |
-| Sezioni generali | ❌ Nessuna |
-| Report gruppo curricolo | ❌ Nessuna modifica al contenuto — solo richiesta codice prima della generazione |
-| Guide / docs | ✅ Eventuale aggiornamento per menzionare il codice operativo |
-| Backend / login / OAuth / Drive API | ❌ Nessuno — assente per architettura |
+| Componente                          | Modifica prevista                                                                |
+| ----------------------------------- | -------------------------------------------------------------------------------- |
+| Schema `.cml`                       | ❌ Nessuna                                                                       |
+| File `.cml` esportati               | ❌ Nessuna — non contengono traccia del codice                                   |
+| Flusso docente                      | ❌ Nessuna                                                                       |
+| Viewer curricolo                    | ❌ Nessuna                                                                       |
+| Sezioni generali                    | ❌ Nessuna                                                                       |
+| Report gruppo curricolo             | ❌ Nessuna modifica al contenuto — solo richiesta codice prima della generazione |
+| Guide / docs                        | ✅ Eventuale aggiornamento per menzionare il codice operativo                    |
+| Backend / login / OAuth / Drive API | ❌ Nessuno — assente per architettura                                            |
 
 ---
 
 ## J. Smoke test per implementazione futura
 
-| ID | Test | Esito atteso |
-|---|---|---|
-| T01 | Viewer curricolo senza codice | Accesso libero ✅ |
-| T02 | Proposta docente `.cml` senza codice | Esportazione libera ✅ |
-| T03 | Export esito dipartimentale senza codice | Blocco con richiesta codice 🔒 |
-| T04 | Export esito dipartimentale con codice valido | Esportazione riuscita ✅ |
-| T05 | Import esiti referente senza codice | Blocco con richiesta codice 🔒 |
-| T06 | Import esiti referente con codice valido | Import riuscito ✅ |
-| T07 | Report gruppo curricolo senza codice | Blocco con richiesta codice 🔒 |
-| T08 | Report gruppo curricolo con codice valido | Generazione riuscita ✅ |
-| T09 | Codice errato | Messaggio errore non tecnico ❌ |
-| T10 | Blocca di nuovo | Stato bloccato ripristinato 🔒 |
-| T11 | Refresh pagina | Stato bloccato (sessionStorage perso) 🔒 |
-| T12 | Nessuna modifica ai file `.cml` esportati | File invariati ✅ |
-| T13 | Nessuna falsa approvazione nei testi | Avvertenza presente ✅ |
+| ID  | Test                                          | Esito atteso                             |
+| --- | --------------------------------------------- | ---------------------------------------- |
+| T01 | Viewer curricolo senza codice                 | Accesso libero ✅                        |
+| T02 | Proposta docente `.cml` senza codice          | Esportazione libera ✅                   |
+| T03 | Export esito dipartimentale senza codice      | Blocco con richiesta codice 🔒           |
+| T04 | Export esito dipartimentale con codice valido | Esportazione riuscita ✅                 |
+| T05 | Import esiti referente senza codice           | Blocco con richiesta codice 🔒           |
+| T06 | Import esiti referente con codice valido      | Import riuscito ✅                       |
+| T07 | Report gruppo curricolo senza codice          | Blocco con richiesta codice 🔒           |
+| T08 | Report gruppo curricolo con codice valido     | Generazione riuscita ✅                  |
+| T09 | Codice errato                                 | Messaggio errore non tecnico ❌          |
+| T10 | Blocca di nuovo                               | Stato bloccato ripristinato 🔒           |
+| T11 | Refresh pagina                                | Stato bloccato (sessionStorage perso) 🔒 |
+| T12 | Nessuna modifica ai file `.cml` esportati     | File invariati ✅                        |
+| T13 | Nessuna falsa approvazione nei testi          | Avvertenza presente ✅                   |
 
 ---
 
@@ -199,14 +200,14 @@ CML2025
 Implementazione minima prevista in `index.html`:
 
 ```javascript
-const OPERATIVE_CODE = "CML2025";
+const OPERATIVE_CODE = 'CML2025'
 
 function requireOperativeCode(callback) {
-  if (sessionStorage.getItem("roleAccessGranted") === "true") {
-    callback();
-    return;
+  if (sessionStorage.getItem('roleAccessGranted') === 'true') {
+    callback()
+    return
   }
-  showCodeModal(callback);
+  showCodeModal(callback)
 }
 
 function showCodeModal(callback) {
@@ -217,7 +218,7 @@ function showCodeModal(callback) {
 }
 
 function lockAccess() {
-  sessionStorage.removeItem("roleAccessGranted");
+  sessionStorage.removeItem('roleAccessGranted')
 }
 ```
 

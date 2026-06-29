@@ -24,20 +24,20 @@ Questa impostazione è funzionale per una revisione guidata, ma non è ancora su
 
 Campi da normalizzare per ogni disciplina:
 
-| Campo | Stato attuale | Azione richiesta |
-|---|---|---|
-| Disciplina | presente | mantenere |
-| Ordine | presente nelle voci | consolidare |
-| Classe/fascia | presente in parte | normalizzare |
-| Ambito/nucleo | presente come `nuclei` nei metadati | portare a livello voce |
-| Competenza | presente come descrizione generale | portare a livello voce o gruppo |
-| Traguardo | presente | mantenere e collegare |
-| Obiettivi | presenti | mantenere e articolare |
-| Conoscenze | non sistematiche | introdurre |
-| Abilità | non sistematiche | introdurre |
-| Evidenze/criteri | non sistematici | introdurre gradualmente |
-| Fonte | presente in note testuali | normalizzare |
-| Validazione umana | presente come logica generale | rendere esplicita nei pacchetti |
+| Campo             | Stato attuale                       | Azione richiesta                |
+| ----------------- | ----------------------------------- | ------------------------------- |
+| Disciplina        | presente                            | mantenere                       |
+| Ordine            | presente nelle voci                 | consolidare                     |
+| Classe/fascia     | presente in parte                   | normalizzare                    |
+| Ambito/nucleo     | presente come `nuclei` nei metadati | portare a livello voce          |
+| Competenza        | presente come descrizione generale  | portare a livello voce o gruppo |
+| Traguardo         | presente                            | mantenere e collegare           |
+| Obiettivi         | presenti                            | mantenere e articolare          |
+| Conoscenze        | non sistematiche                    | introdurre                      |
+| Abilità           | non sistematiche                    | introdurre                      |
+| Evidenze/criteri  | non sistematici                     | introdurre gradualmente         |
+| Fonte             | presente in note testuali           | normalizzare                    |
+| Validazione umana | presente come logica generale       | rendere esplicita nei pacchetti |
 
 ## Gap UX individuato
 

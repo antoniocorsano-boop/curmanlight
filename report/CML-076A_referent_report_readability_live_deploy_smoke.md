@@ -4,14 +4,14 @@
 
 ### Deploy Details
 
-| Field | Value |
-|-------|-------|
-| Commit | `2411e3a3d9f27424c7508bb417dc20386c7ddf60` |
-| Branch | `main` |
-| Remote | `origin/main` |
-| Push | `ed8caa4..2411e3a main -> main` |
-| URL | `https://antoniocorsano-boop.github.io/curmanlight/` |
-| Deploy type | GitHub Pages automatic |
+| Field       | Value                                                |
+| ----------- | ---------------------------------------------------- |
+| Commit      | `2411e3a3d9f27424c7508bb417dc20386c7ddf60`           |
+| Branch      | `main`                                               |
+| Remote      | `origin/main`                                        |
+| Push        | `ed8caa4..2411e3a main -> main`                      |
+| URL         | `https://antoniocorsano-boop.github.io/curmanlight/` |
+| Deploy type | GitHub Pages automatic                               |
 
 ### Changes Deployed
 

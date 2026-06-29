@@ -20,12 +20,12 @@ Questo pacchetto ha lo scopo di sottoporre al dipartimento una serie di domande 
 
 Educazione Fisica è organizzata in **4 nuclei disciplinari** e **7 unità di apprendimento**:
 
-| Nucleo | Ordini e classi coperte |
-|---|---|
-| Corpo e percezione | Infanzia (fascia 5), Primaria (classe 1), Secondaria (classe 1) |
-| Abilità motorie | Primaria (classe 3) |
-| Gioco e sport | Primaria (classe 5), Secondaria (classe 2) |
-| Espressione e inclusione | Secondaria (classe 3) |
+| Nucleo                   | Ordini e classi coperte                                         |
+| ------------------------ | --------------------------------------------------------------- |
+| Corpo e percezione       | Infanzia (fascia 5), Primaria (classe 1), Secondaria (classe 1) |
+| Abilità motorie          | Primaria (classe 3)                                             |
+| Gioco e sport            | Primaria (classe 5), Secondaria (classe 2)                      |
+| Espressione e inclusione | Secondaria (classe 3)                                           |
 
 ### Cosa significa questo nella pratica
 
@@ -41,6 +41,7 @@ Educazione Fisica è organizzata in **4 nuclei disciplinari** e **7 unità di ap
 Nel modello originario di progettazione era previsto un nucleo autonomo chiamato "Salute e benessere". Attualmente i contenuti relativi (sicurezza, igiene, riscaldamento, benessere scolastico) sono inseriti in altri nuclei.
 
 **Il dipartimento desidera:**
+
 - mantenere l'assorbimento trasverso dei contenuti (nessuna modifica);
 - introdurre "Salute e benessere" come nucleo autonomo, modificando la struttura del curricolo;
 - valutare l'opzione in una fase successiva, dopo ulteriori approfondimenti.
@@ -50,6 +51,7 @@ Nel modello originario di progettazione era previsto un nucleo autonomo chiamato
 La copertura delle classi della Primaria presenta una discontinuità: sono presenti le classi 1, 3 e 5; mancano le classi 2 e 4.
 
 **Il dipartimento desidera:**
+
 - mantenere la copertura attuale (scelta deliberata di semplificazione);
 - integrare le classi 2 e 4 con contenuti aggiuntivi;
 - valutare se la progressione esistente sia sufficiente per garantire continuità didattica.
@@ -59,6 +61,7 @@ La copertura delle classi della Primaria presenta una discontinuità: sono prese
 Il nucleo "Abilità motorie" è attualmente presente solo nella classe 3 della Primaria.
 
 **Il dipartimento desidera:**
+
 - mantenere la distribuzione attuale;
 - articolare il nucleo su più classi o su entrambi i cicli (Primaria e Secondaria);
 - valutare se i contenuti di coordinazione, equilibrio e controllo motorio siano sufficientemente distribuiti nel curricolo.
@@ -68,6 +71,7 @@ Il nucleo "Abilità motorie" è attualmente presente solo nella classe 3 della P
 I curricoli dei tre ordini scolastici sono attualmente organizzati come blocchi separati, senza riferimenti espliciti alle competenze acquisite nei cicli precedenti.
 
 **Il dipartimento desidera:**
+
 - mantenere la struttura attuale;
 - inserire espliciti richiami verticali tra i cicli;
 - valutare l'opportunità di una mappatura delle competenze in entrata e in uscita.
@@ -116,12 +120,12 @@ I curricoli dei tre ordini scolastici sono attualmente organizzati come blocchi 
 
 ## 6. Tabella di decisione
 
-| Opzione | Vantaggio didattico | Impatto operativo | Rischio | Modifiche JSON | Modifiche runtime |
-|---|---|---|---|---|---|
-| A — Mantenere | Nessuna discontinuità | Nessuno | Contenuti fermi | No | No |
-| B — 5 nuclei | Salute valorizzata | Alto | Struttura più complessa | Sì | Sì |
-| C — Perfezionare progressione | Maggiore coerenza | Medio | Basso | Sì | No |
-| D — Rinviare a UDA | Separazione progetti | Nessuno | Tempo indefinito | No | No |
+| Opzione                       | Vantaggio didattico   | Impatto operativo | Rischio                 | Modifiche JSON | Modifiche runtime |
+| ----------------------------- | --------------------- | ----------------- | ----------------------- | -------------- | ----------------- |
+| A — Mantenere                 | Nessuna discontinuità | Nessuno           | Contenuti fermi         | No             | No                |
+| B — 5 nuclei                  | Salute valorizzata    | Alto              | Struttura più complessa | Sì             | Sì                |
+| C — Perfezionare progressione | Maggiore coerenza     | Medio             | Basso                   | Sì             | No                |
+| D — Rinviare a UDA            | Separazione progetti  | Nessuno           | Tempo indefinito        | No             | No                |
 
 ## 7. Scheda di decisione dipartimentale
 
@@ -131,9 +135,7 @@ Da compilare a cura del dipartimento o del docente referente:
 
 **Motivazione:**
 
-
 **Condizioni o vincoli:**
-
 
 **Eventuale slice autorizzata come successiva:**
 [ ] Nessuna — mantenere lo stato attuale
@@ -145,7 +147,6 @@ Da compilare a cura del dipartimento o del docente referente:
 **Firma del referente:** ________________________
 
 **Eventuali note del collegio docenti:**
-
 
 ## 8. Note importanti
 
@@ -170,4 +171,5 @@ Il dipartimento di Educazione Fisica ha accettato il modello a 4 nuclei con il p
 - Ciclo polish provvisorio EF: CHIUSO
 
 Slice successive autorizzate e completate:
+
 - CML-210BS — rigenerazione runtime static map (completata, commit `53013df`)

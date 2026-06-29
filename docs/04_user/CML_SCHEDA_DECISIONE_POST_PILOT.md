@@ -6,38 +6,38 @@ Da compilare dopo aver raccolto le osservazioni della prova controllata.
 
 ## Riepilogo esiti
 
-| Elemento | Esito |
-|---|---|
-| Numero partecipanti | |
-| Ruoli coperti | |
-| Attività minime completate | Sì / No |
+| Elemento                              | Esito   |
+| ------------------------------------- | ------- |
+| Numero partecipanti                   |         |
+| Ruoli coperti                         |         |
+| Attività minime completate            | Sì / No |
 | Assistenza richiesta durante la prova | Sì / No |
-| Durata effettiva della prova | |
+| Durata effettiva della prova          |         |
 
 ## Problemi bloccanti
 
-*Nessuno / elencare: cosa impedisce di proseguire?*
+_Nessuno / elencare: cosa impedisce di proseguire?_
 
 ## Problemi minori
 
-*Nessuno / elencare: cosa può essere migliorato ma non blocca?*
+_Nessuno / elencare: cosa può essere migliorato ma non blocca?_
 
 ## Richieste ricorrenti
 
-*Nessuna / elencare: cosa è stato chiesto da più partecipanti?*
+_Nessuna / elencare: cosa è stato chiesto da più partecipanti?_
 
 ---
 
 ## Decisione
 
-| Opzione | Scelta | Motivazione |
-|---|---|---|
-| Procedere con micro-miglioramenti UX | Sì / No | |
-| Estendere esempi `.cml` ad altre discipline | Sì / No | |
-| Aggiornare contenuti curricolo (con revisione umana) | Sì / No | |
-| Migliorare guide o documentazione | Sì / No | |
-| Fermarsi e consolidare | Sì / No | |
-| Altro | | |
+| Opzione                                              | Scelta  | Motivazione |
+| ---------------------------------------------------- | ------- | ----------- |
+| Procedere con micro-miglioramenti UX                 | Sì / No |             |
+| Estendere esempi `.cml` ad altre discipline          | Sì / No |             |
+| Aggiornare contenuti curricolo (con revisione umana) | Sì / No |             |
+| Migliorare guide o documentazione                    | Sì / No |             |
+| Fermarsi e consolidare                               | Sì / No |             |
+| Altro                                                |         |             |
 
 **Decisione finale:** ...
 

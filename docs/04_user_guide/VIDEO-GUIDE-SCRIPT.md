@@ -185,12 +185,14 @@
 ## Note per la produzione
 
 ### Formato video
+
 - Risoluzione: 1920x1080 (Full HD)
 - Frame rate: 30 fps
 - Codec: H.264
 - Audio: AAC, 128 kbps
 
 ### Stile visivo
+
 - Screen recording pulito, senza elementi di distrazione
 - Cursori evidenziati per migliorare la visibilità
 - Zoom selettivo sui dettagli importanti
@@ -198,19 +200,23 @@
 - Sottotitoli opzionali per accessibilità
 
 ### Audio
+
 - Voce chiara e professionale
 - Velocità moderata (circa 130-150 parole al minuto)
 - Sottotitoli sincronizzati
 - Musica di sottofondo discreta (opzionale)
 
 ### Versioni alternative
+
 - Versione breve (3-5 minuti): focus sui casi d'uso principali
 - Versione estesa (15-20 minuti): approfondimento di ogni funzionalità
 - Versione per ruolo: specifica per docenti, dipartimenti, referenti
 
 ### Lingue
+
 - Italiano (versione principale)
 - Inglese (versione internazionale, se richiesta)
 
 ### Aggiornamento
+
 Lo script dovrebbe essere aggiornato periodicamente in base alle evoluzioni dell'applicazione e alle nuove funzionalità introdotte.

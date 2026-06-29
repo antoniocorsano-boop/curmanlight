@@ -20,11 +20,11 @@
 
 ## Opzioni valutate
 
-| Opzione | Descrizione | Esito |
-|---|---|---|
-| **A** | Badge readiness dentro sezione "Completezza" esistente | Scartata — troppo debole |
-| **B** | Pannello "Readiness approvazione" sotto "Completezza" | **Selezionata** |
-| **C** | Sezione dedicata "Approvazione"/"Stati approvazione" | Scartata — prematura |
+| Opzione | Descrizione                                            | Esito                    |
+| ------- | ------------------------------------------------------ | ------------------------ |
+| **A**   | Badge readiness dentro sezione "Completezza" esistente | Scartata — troppo debole |
+| **B**   | Pannello "Readiness approvazione" sotto "Completezza"  | **Selezionata**          |
+| **C**   | Sezione dedicata "Approvazione"/"Stati approvazione"   | Scartata — prematura     |
 
 ## Opzione selezionata
 

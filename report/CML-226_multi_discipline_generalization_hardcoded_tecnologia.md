@@ -35,6 +35,7 @@
 ## Runtime changes summary
 
 All changes are backward-compatible:
+
 - CSS: renamed classes (only references were in the same file)
 - JS: renamed functions, cache variable, panel show/hide logic
 - HTML: renamed ids and class attributes
@@ -46,14 +47,14 @@ All changes are backward-compatible:
 
 ## Smoke results
 
-| Check | Result |
-|---|---|
-| Validator | 14/14 PASS |
-| Shape test | 14/14 PASS |
-| Hash navigation | 14/14 PASS |
-| `git diff --check` | PASS |
-| No old `tecnologia-export-*` refs | CLEAN |
-| New `disc-export-*` refs | VERIFIED |
+| Check                             | Result     |
+| --------------------------------- | ---------- |
+| Validator                         | 14/14 PASS |
+| Shape test                        | 14/14 PASS |
+| Hash navigation                   | 14/14 PASS |
+| `git diff --check`                | PASS       |
+| No old `tecnologia-export-*` refs | CLEAN      |
+| New `disc-export-*` refs          | VERIFIED   |
 
 ## Next slices
 

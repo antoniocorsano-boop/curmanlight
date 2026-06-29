@@ -19,10 +19,10 @@ npx netlify deploy --prod --dir _published_snapshot/netlify-current
 
 ## Conteggi
 
-| Scope | Voci | modifica | ok | nuovo |
-|---|---|---|---|---|
-| Tecnologia (precedente) | 12 | 8 | 4 | 0 |
-| Tutte le discipline | 104 | 54 | 41 | 9 |
+| Scope                   | Voci | modifica | ok  | nuovo |
+| ----------------------- | ---- | -------- | --- | ----- |
+| Tecnologia (precedente) | 12   | 8        | 4   | 0     |
+| Tutte le discipline     | 104  | 54       | 41  | 9     |
 
 I due insiemi sono coerenti: Tecnologia rappresenta 12/104 voci totali.
 

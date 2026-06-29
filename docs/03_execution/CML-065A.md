@@ -20,16 +20,16 @@ La Home segue il contratto CML-065 e le regole UX definite:
 
 ## Cosa è stato aggiunto
 
-| Elemento | Dettaglio |
-|---|---|
-| Tab "Home" | Posizione 0 nella tabbar, attivo per default |
-| Card Curriculum | 4 link secondari: Consulta, Revisiona, Esporta, Tecnologia normalizzata |
-| Card Didattica | 4 link informativi (disabilitati), badge "Area in preparazione" |
-| CSS home dashboard | `.home-dashboard`, `.home-card`, `.home-card-links`, ecc. |
-| Breadcrumb Home | Label "Home", nascosto su Home |
-| Cruscotto nascosto su Home | `cruscotto.hidden=true` quando tab=home |
-| Mobile bottom bar Home | Pulsante "Home" come primo elemento |
-| Inizializzazione | `currentTab="home"`, `tab-home` visibile, `tab-lavoro` nascosto |
+| Elemento                   | Dettaglio                                                               |
+| -------------------------- | ----------------------------------------------------------------------- |
+| Tab "Home"                 | Posizione 0 nella tabbar, attivo per default                            |
+| Card Curriculum            | 4 link secondari: Consulta, Revisiona, Esporta, Tecnologia normalizzata |
+| Card Didattica             | 4 link informativi (disabilitati), badge "Area in preparazione"         |
+| CSS home dashboard         | `.home-dashboard`, `.home-card`, `.home-card-links`, ecc.               |
+| Breadcrumb Home            | Label "Home", nascosto su Home                                          |
+| Cruscotto nascosto su Home | `cruscotto.hidden=true` quando tab=home                                 |
+| Mobile bottom bar Home     | Pulsante "Home" come primo elemento                                     |
+| Inizializzazione           | `currentTab="home"`, `tab-home` visibile, `tab-lavoro` nascosto         |
 
 ## Cosa non è stato modificato
 
@@ -43,25 +43,25 @@ La Home segue il contratto CML-065 e le regole UX definite:
 
 ## Smoke locale
 
-| Controllo | Esito |
-|---|---|
-| Validazione Tecnologia | PASS (13 unità, 0 warning) |
-| Home visibile nel sorgente | ✅ |
-| Home titolo "Da dove vuoi iniziare?" | ✅ |
-| 2 card principali (Curriculum, Didattica) | ✅ |
-| Tecnologia normalizzata come link secondario | ✅ |
-| Didattica badge "Area in preparazione" | ✅ |
-| Microcopy footer presente | ✅ |
-| Breadcrumb nascosto su Home | ✅ |
-| Cruscotto nascosto su Home | ✅ |
-| Tabbar "Home" primo pulsante | ✅ |
-| Mobile bottom bar "Home" | ✅ |
-| Navigazione verso Revisione | ✅ |
-| Navigazione verso Curricolo | ✅ |
-| Navigazione verso Tecnologia normalizzata | ✅ |
-| Export/import/report invariati | ✅ |
-| Role-access gating invariato | ✅ |
-| Regressione `.cml` | PASS |
+| Controllo                                    | Esito                      |
+| -------------------------------------------- | -------------------------- |
+| Validazione Tecnologia                       | PASS (13 unità, 0 warning) |
+| Home visibile nel sorgente                   | ✅                         |
+| Home titolo "Da dove vuoi iniziare?"         | ✅                         |
+| 2 card principali (Curriculum, Didattica)    | ✅                         |
+| Tecnologia normalizzata come link secondario | ✅                         |
+| Didattica badge "Area in preparazione"       | ✅                         |
+| Microcopy footer presente                    | ✅                         |
+| Breadcrumb nascosto su Home                  | ✅                         |
+| Cruscotto nascosto su Home                   | ✅                         |
+| Tabbar "Home" primo pulsante                 | ✅                         |
+| Mobile bottom bar "Home"                     | ✅                         |
+| Navigazione verso Revisione                  | ✅                         |
+| Navigazione verso Curricolo                  | ✅                         |
+| Navigazione verso Tecnologia normalizzata    | ✅                         |
+| Export/import/report invariati               | ✅                         |
+| Role-access gating invariato                 | ✅                         |
+| Regressione `.cml`                           | PASS                       |
 
 ## Limiti
 

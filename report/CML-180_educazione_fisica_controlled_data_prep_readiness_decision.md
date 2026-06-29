@@ -10,17 +10,17 @@ La slice e documentale. Non crea `educazione-fisica.normalized.json`, non modifi
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Branch | `main` |
-| Commit iniziale | `1923fed` |
-| origin/main iniziale | `1923fed` |
-| Stato iniziale | `main...origin/main` |
-| Working tree iniziale | pulito |
-| Dati normalizzati | 10/14 |
-| Runtime mappa | 10/14 |
-| Shape test | 10/10 PASS |
-| Skill usate | `cml-readiness-audit`, `cml-docs-only-slice` |
+| Parametro             | Valore                                       |
+| --------------------- | -------------------------------------------- |
+| Branch                | `main`                                       |
+| Commit iniziale       | `1923fed`                                    |
+| origin/main iniziale  | `1923fed`                                    |
+| Stato iniziale        | `main...origin/main`                         |
+| Working tree iniziale | pulito                                       |
+| Dati normalizzati     | 10/14                                        |
+| Runtime mappa         | 10/14                                        |
+| Shape test            | 10/10 PASS                                   |
+| Skill usate           | `cml-readiness-audit`, `cml-docs-only-slice` |
 
 ## 3. Collegamento con CML-177, CML-178 e CML-179
 
@@ -66,14 +66,14 @@ CML-179 non ha pero trasformato la bozza in fonte validata.
 
 ## 7. Gap colmati
 
-| Gap CML-178 | Esito dopo CML-179 |
-|---|---|
-| Nuclei non formalizzati | cinque nuclei proposti come base manuale |
-| Progressione I / II / III assente | progressione Secondaria I / II / III proposta |
-| Obiettivi mancanti | obiettivi provvisori formulati |
-| Traguardi mancanti | traguardi provvisori formulati |
-| Lessico non controllato | lessico controllato definito |
-| Rischi istituzionali generici | avvertenze su salute, sicurezza, inclusione e sport scolastico |
+| Gap CML-178                       | Esito dopo CML-179                                             |
+| --------------------------------- | -------------------------------------------------------------- |
+| Nuclei non formalizzati           | cinque nuclei proposti come base manuale                       |
+| Progressione I / II / III assente | progressione Secondaria I / II / III proposta                  |
+| Obiettivi mancanti                | obiettivi provvisori formulati                                 |
+| Traguardi mancanti                | traguardi provvisori formulati                                 |
+| Lessico non controllato           | lessico controllato definito                                   |
+| Rischi istituzionali generici     | avvertenze su salute, sicurezza, inclusione e sport scolastico |
 
 ## 8. Gap ancora aperti
 
@@ -190,11 +190,11 @@ La prossima slice deve:
 
 ## 19. Opzioni scartate
 
-| Opzione | Motivo scarto |
-|---|---|
+| Opzione                              | Motivo scarto                                               |
+| ------------------------------------ | ----------------------------------------------------------- |
 | `DATA_PREP_AUTHORIZED_WITH_CAUTIONS` | troppo anticipata: mancano validazione e copertura completa |
-| `DATA_PREP_BLOCKED` | troppo severa: CML-179 ha prodotto una base utile |
-| `LIMITED_DRAFT_DATA_PREP_ALLOWED` | possibile in futuro, ma solo dopo validazione umana |
+| `DATA_PREP_BLOCKED`                  | troppo severa: CML-179 ha prodotto una base utile           |
+| `LIMITED_DRAFT_DATA_PREP_ALLOWED`    | possibile in futuro, ma solo dopo validazione umana         |
 
 ## 20. Raccomandazione finale
 

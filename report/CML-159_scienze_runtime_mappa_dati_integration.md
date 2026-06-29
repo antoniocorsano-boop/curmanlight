@@ -18,12 +18,19 @@ Integrazione della disciplina Scienze nella vista read-only "Mappa disciplinare"
 Aggiunto pulsante Scienze al selettore discipline della mappa disciplinare:
 
 ```html
-<button class="mappa-disc-btn" onclick="setMappaDisciplina('scienze',this)" style="...">Scienze</button>
+<button
+  class="mappa-disc-btn"
+  onclick="setMappaDisciplina('scienze',this)"
+  style="..."
+>
+  Scienze
+</button>
 ```
 
 ### 2. Variabile `SCIENZE_MAPPA_DATI`
 
 Aggiunto blocco dati completo con:
+
 - **5 strutture sostanziali**: Osservazione e metodo scientifico, Viventi e ambiente, Materia e trasformazioni, Terra/ambiente/sostenibilità, Energia e fenomeni
 - **5 nodi disciplinari**: derivati dai nuclei del JSON normalizzato
 - **9 progressioni verticali**: Infanzia (fascia 5) → Secondaria (classe 3)
@@ -47,12 +54,12 @@ else if (mappaDisciplinaCorrente === 'scienze' && typeof SCIENZE_MAPPA_DATI !== 
 
 ## Validazioni
 
-| Controllo | Comando | Esito |
-|---|---|---|
-| Git diff check | `git diff --check` | ✅ Pulito |
-| Git diff stat | `git diff --stat` | 1 file, +4 righe |
+| Controllo             | Comando                                             | Esito                                                  |
+| --------------------- | --------------------------------------------------- | ------------------------------------------------------ |
+| Git diff check        | `git diff --check`                                  | ✅ Pulito                                              |
+| Git diff stat         | `git diff --stat`                                   | 1 file, +4 righe                                       |
 | Validatore curriculum | `node tools/validate-cml-normalized-curriculum.mjs` | ✅ 7 file / 94 unità / `overallValid: true` / 0 errori |
-| Shape harness | `node tools/test-runtime-mappa-dati-shape.mjs` | ✅ 7/7 discipline PASS (Scienze: S=15 N=5 P=9 D=0) |
+| Shape harness         | `node tools/test-runtime-mappa-dati-shape.mjs`      | ✅ 7/7 discipline PASS (Scienze: S=15 N=5 P=9 D=0)     |
 
 ## Note
 

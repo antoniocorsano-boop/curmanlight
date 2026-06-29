@@ -8,18 +8,18 @@ Creare il file normalizzato di Latino LEL (Esplorazione Linguistica) come bozza 
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `a8bd394` (HEAD locale, 2 ahead origin/main) |
-| origin/main | `ba051ff` (CML-185-SYNC) |
-| Working tree iniziale | pulito |
-| Dati normalizzati prima | 13/14 |
-| Runtime mappa | 11/14 |
-| Shape test | 11/11 PASS |
-| Discipline residue dopo | 0 — tutte completate |
-| Skill usate | `cml-readiness-audit` |
+| Parametro               | Valore                                       |
+| ----------------------- | -------------------------------------------- |
+| Root Git                | `C:\Users\anton\CurManLight`                 |
+| Branch                  | `main`                                       |
+| Commit iniziale         | `a8bd394` (HEAD locale, 2 ahead origin/main) |
+| origin/main             | `ba051ff` (CML-185-SYNC)                     |
+| Working tree iniziale   | pulito                                       |
+| Dati normalizzati prima | 13/14                                        |
+| Runtime mappa           | 11/14                                        |
+| Shape test              | 11/11 PASS                                   |
+| Discipline residue dopo | 0 — tutte completate                         |
+| Skill usate             | `cml-readiness-audit`                        |
 
 ## 3. Collegamento con CML-172, CML-185, CML-186, CML-187
 
@@ -47,12 +47,12 @@ Creare il file normalizzato di Latino LEL (Esplorazione Linguistica) come bozza 
 
 ## 6. Struttura del JSON
 
-| Ordine | Classe | Nucleo | Unità | ID |
-|---|---|---|---|---|
-| Secondaria | 2 | Lessico e morfologia di base | 1 | `lat_sec_2_001` |
-| Secondaria | 2 | Rapporto latino-italiano | 1 | `lat_sec_2_002` |
-| Secondaria | 3 | Cultura classica e civiltà romana | 1 | `lat_sec_3_001` |
-| Secondaria | 3 | Metodo linguistico e lessico settoriale | 1 | `lat_sec_3_002` |
+| Ordine     | Classe | Nucleo                                  | Unità | ID              |
+| ---------- | ------ | --------------------------------------- | ----- | --------------- |
+| Secondaria | 2      | Lessico e morfologia di base            | 1     | `lat_sec_2_001` |
+| Secondaria | 2      | Rapporto latino-italiano                | 1     | `lat_sec_2_002` |
+| Secondaria | 3      | Cultura classica e civiltà romana       | 1     | `lat_sec_3_001` |
+| Secondaria | 3      | Metodo linguistico e lessico settoriale | 1     | `lat_sec_3_002` |
 
 ## 7. Note specifiche
 
@@ -72,30 +72,30 @@ Creare il file normalizzato di Latino LEL (Esplorazione Linguistica) come bozza 
 
 ## 9. Invarianti
 
-| Invariante | Stato |
-|---|---|
-| `_published_snapshot/netlify-current/index.html` | Invariato |
-| Root `index.html` | Invariato |
-| `sw.js` | Invariato |
-| Manifest | Invariato |
-| `tools/` | Invariato |
-| `.claude/` | Invariato |
-| `CLAUDE.md` | Invariato |
-| Schema `.cml` | Invariato |
-| Export/import | Invariato |
-| SchoolKB | Invariato |
-| Dipendenze | Invariate |
-| Deploy | Non eseguito |
-| Push | Non eseguito |
+| Invariante                                       | Stato        |
+| ------------------------------------------------ | ------------ |
+| `_published_snapshot/netlify-current/index.html` | Invariato    |
+| Root `index.html`                                | Invariato    |
+| `sw.js`                                          | Invariato    |
+| Manifest                                         | Invariato    |
+| `tools/`                                         | Invariato    |
+| `.claude/`                                       | Invariato    |
+| `CLAUDE.md`                                      | Invariato    |
+| Schema `.cml`                                    | Invariato    |
+| Export/import                                    | Invariato    |
+| SchoolKB                                         | Invariato    |
+| Dipendenze                                       | Invariate    |
+| Deploy                                           | Non eseguito |
+| Push                                             | Non eseguito |
 
 ## 10. Risultati
 
-| Indicatore | Pre | Post |
-|---|---|---|
-| Dati normalizzati | 13/14 | 14/14 |
-| Runtime mappa | 11/14 | 11/14 (invariato) |
-| Shape test | 11/11 PASS | 11/11 PASS (invariato) |
-| Validatore | 13/13 PASS | 14/14 PASS |
+| Indicatore        | Pre        | Post                   |
+| ----------------- | ---------- | ---------------------- |
+| Dati normalizzati | 13/14      | 14/14                  |
+| Runtime mappa     | 11/14      | 11/14 (invariato)      |
+| Shape test        | 11/11 PASS | 11/11 PASS (invariato) |
+| Validatore        | 13/13 PASS | 14/14 PASS             |
 
 ## 11. Prossima slice consigliata
 

@@ -11,12 +11,12 @@ Nessuna modifica runtime, nessun deploy.
 
 ## Catena CML-011
 
-| Blocco | Commit | Tipo | Verdetto |
-|---|---|---|---|
-| CML-011A | 6c97da4 | Selection audit | `CML_011A_EXPORT_GUIDE_CLARITY_SELECTION_AUDIT_READY` |
-| CML-011B | 2da61ed | Microcopy runtime + deploy | `CML_011B_EXPORT_GUIDE_CLARITY_MICROCOPY_DEPLOYED` |
-| CML-011C | 72bef0c | Real task smoke audit | `CML_011C_EXPORT_GUIDE_REAL_TASK_SMOKE_READY` |
-| CML-011D | (current) | Cycle closure docs | `CML_011D_EXPORT_GUIDE_CLARITY_CYCLE_CLOSED` |
+| Blocco   | Commit    | Tipo                       | Verdetto                                              |
+| -------- | --------- | -------------------------- | ----------------------------------------------------- |
+| CML-011A | 6c97da4   | Selection audit            | `CML_011A_EXPORT_GUIDE_CLARITY_SELECTION_AUDIT_READY` |
+| CML-011B | 2da61ed   | Microcopy runtime + deploy | `CML_011B_EXPORT_GUIDE_CLARITY_MICROCOPY_DEPLOYED`    |
+| CML-011C | 72bef0c   | Real task smoke audit      | `CML_011C_EXPORT_GUIDE_REAL_TASK_SMOKE_READY`         |
+| CML-011D | (current) | Cycle closure docs         | `CML_011D_EXPORT_GUIDE_CLARITY_CYCLE_CLOSED`          |
 
 ## Verifiche
 

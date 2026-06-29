@@ -4,14 +4,14 @@
 
 ### Metadata
 
-| Field | Value |
-|-------|-------|
-| **CML** | CML-068 |
-| **Title** | Didattica — First Read-Only Prototype (Valutazione/Evidenze) |
-| **Date** | 2026-06-23 |
-| **Module** | Option D — Valutazione/Evidenze (selected in CML-067) |
+| Field        | Value                                                                          |
+| ------------ | ------------------------------------------------------------------------------ |
+| **CML**      | CML-068                                                                        |
+| **Title**    | Didattica — First Read-Only Prototype (Valutazione/Evidenze)                   |
+| **Date**     | 2026-06-23                                                                     |
+| **Module**   | Option D — Valutazione/Evidenze (selected in CML-067)                          |
 | **Strategy** | CML-001R — conservative integration, new view without replacing existing logic |
-| **Status** | ✅ Completed |
+| **Status**   | ✅ Completed                                                                   |
 
 ### Summary
 
@@ -31,11 +31,11 @@ This is the first Didattica prototype in CurManLight. It introduces a **read-onl
 
 The 13 unitàApprendimento span:
 
-| Ordine | Units | Classi/Fasce |
-|--------|-------|-------------|
-| Infanzia | 2 | Fascia 3-4, Fascia 5 |
-| Primaria | 5 | Cl. 1, 2, 3, 4, 5 |
-| Secondaria | 6 | Cl. 1 (2 units), Cl. 2 (2 units), Cl. 3 (2 units) |
+| Ordine     | Units | Classi/Fasce                                      |
+| ---------- | ----- | ------------------------------------------------- |
+| Infanzia   | 2     | Fascia 3-4, Fascia 5                              |
+| Primaria   | 5     | Cl. 1, 2, 3, 4, 5                                 |
+| Secondaria | 6     | Cl. 1 (2 units), Cl. 2 (2 units), Cl. 3 (2 units) |
 
 - All units have non-empty `evidenze` and `criteriValutazione` arrays.
 - Data is embedded as `var TECNOLOGIA_NORM_DATA` — no external JSON fetch.
@@ -67,13 +67,13 @@ The 13 unitàApprendimento span:
 
 ### Changelog
 
-| Date | Change | Component |
-|------|--------|-----------|
-| 2026-06-23 | CSS for didattica-evidence section | index.html (CSS) |
-| 2026-06-23 | #tab-didattica HTML structure | index.html (HTML) |
-| 2026-06-23 | Tabbar "Didattica" button | index.html (HTML) |
-| 2026-06-23 | Home card Didattica links | index.html (HTML) |
-| 2026-06-23 | Mobile menu entry | index.html (HTML) |
-| 2026-06-23 | setTab() extension for didattica | index.html (JS) |
-| 2026-06-23 | TECNOLOGIA_NORM_DATA + renderDidattica() | index.html (JS) |
-| 2026-06-23 | setDidatticaFilter() | index.html (JS) |
+| Date       | Change                                   | Component         |
+| ---------- | ---------------------------------------- | ----------------- |
+| 2026-06-23 | CSS for didattica-evidence section       | index.html (CSS)  |
+| 2026-06-23 | #tab-didattica HTML structure            | index.html (HTML) |
+| 2026-06-23 | Tabbar "Didattica" button                | index.html (HTML) |
+| 2026-06-23 | Home card Didattica links                | index.html (HTML) |
+| 2026-06-23 | Mobile menu entry                        | index.html (HTML) |
+| 2026-06-23 | setTab() extension for didattica         | index.html (JS)   |
+| 2026-06-23 | TECNOLOGIA_NORM_DATA + renderDidattica() | index.html (JS)   |
+| 2026-06-23 | setDidatticaFilter()                     | index.html (JS)   |

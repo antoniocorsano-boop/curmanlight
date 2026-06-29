@@ -21,11 +21,11 @@ Una schermata, un compito, una decisione principale.
 
 ### `_published_snapshot/netlify-current/index.html`
 
-| Intervento | Azione | Dettaglio |
-|---|---|---|
-| **Sidebar Fonti nascosta su desktop** | `setTab()`: `asideEl.classList.toggle("aside-hidden", t==="normativa"||t==="generali")` su desktop; `asideEl.classList.remove("aside-hidden")` su mobile quando sidebar visibile | CSS `.aside-hidden{display:none!important}` aggiunto |
-| **Breadcrumb con disciplina attiva** | `setTab()`: `discLabel=selDisc&&(t==="curricolo"||t==="lavoro"||t==="riepilogo")?' — '+selDisc:''` — label `Curriculum — Consultazione — Tecnologia` ecc | Nessun nuovo CSS |
-| **Evidenze raggruppate per ordine** | `renderDidattica()` riscritta: raggruppa unità per Infanzia/Primaria/Secondaria con accordion esterno; primo gruppo aperto di default | CSS `.didattica-evidence-ord-group`, `.didattica-evidence-ord-hd`, `.didattica-evidence-ord-body` |
+| Intervento                            | Azione                                                                                                                                | Dettaglio                                                                                         |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Sidebar Fonti nascosta su desktop** | `setTab()`: `asideEl.classList.toggle("aside-hidden", t==="normativa"                                                                 |                                                                                                   | t==="generali")`su desktop;`asideEl.classList.remove("aside-hidden")` su mobile quando sidebar visibile | CSS `.aside-hidden{display:none!important}` aggiunto |
+| **Breadcrumb con disciplina attiva**  | `setTab()`: `discLabel=selDisc&&(t==="curricolo"                                                                                      |                                                                                                   | t==="lavoro"                                                                                            |                                                      | t==="riepilogo")?' — '+selDisc:''`— label`Curriculum — Consultazione — Tecnologia` ecc | Nessun nuovo CSS |
+| **Evidenze raggruppate per ordine**   | `renderDidattica()` riscritta: raggruppa unità per Infanzia/Primaria/Secondaria con accordion esterno; primo gruppo aperto di default | CSS `.didattica-evidence-ord-group`, `.didattica-evidence-ord-hd`, `.didattica-evidence-ord-body` |
 
 ### Cosa NON è stato modificato
 

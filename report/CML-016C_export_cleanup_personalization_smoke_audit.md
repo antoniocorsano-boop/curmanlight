@@ -6,11 +6,11 @@ Audit smoke di conferma: marker [IN 2025: ...] e indicatore di personalizzazione
 
 ## Contesto
 
-| Campo | Valore |
-|---|---|
-| Repo | C:\Users\anton\CurManLight |
-| Branch | cml-008r-fix-markdown-decision-summary |
-| HEAD partenza | a182347a9e27914c1d87575e036fe063b19835a4 |
+| Campo            | Valore                                                         |
+| ---------------- | -------------------------------------------------------------- |
+| Repo             | C:\Users\anton\CurManLight                                     |
+| Branch           | cml-008r-fix-markdown-decision-summary                         |
+| HEAD partenza    | a182347a9e27914c1d87575e036fe063b19835a4                       |
 | CML-016B verdict | CML_016B_EXPORT_MARKER_CLEANUP_PERSONALIZATION_INDICATOR_READY |
 
 ## Controlli eseguiti
@@ -26,29 +26,29 @@ Audit smoke di conferma: marker [IN 2025: ...] e indicatore di personalizzazione
 
 ## Esiti
 
-| Verifica | Esito |
-|---|---|
-| Stato git iniziale | PASS |
-| Marker sorgente (61) | PASS - invariati nei dati di index.html |
-| Marker in Riepilogo | PASS - 0 |
-| Marker in Markdown/Word/PDF | PASS - 0 |
-| Indicatore ✏️ condizionale | PASS |
-| Legenda personalizzazione | PASS |
-| Conteggi (103/41/54/8) | PASS |
-| Logiche decisionali | PASS - invariate |
-| Responsive 360 px | PASS |
-| Responsive 390 px | PASS |
-| Responsive 414 px | PASS |
-| Responsive 768 px | PASS |
-| Responsive 900 px | PASS |
-| Responsive 901 px | PASS |
-| Responsive 1280 px | PASS |
-| Nessun deploy | PASS |
-| Nessuna modifica runtime | PASS |
-| PDF invariato | PASS |
-| sw.js invariato | PASS |
-| _headers invariato | PASS |
-| Asset invariati | PASS |
+| Verifica                    | Esito                                   |
+| --------------------------- | --------------------------------------- |
+| Stato git iniziale          | PASS                                    |
+| Marker sorgente (61)        | PASS - invariati nei dati di index.html |
+| Marker in Riepilogo         | PASS - 0                                |
+| Marker in Markdown/Word/PDF | PASS - 0                                |
+| Indicatore ✏️ condizionale  | PASS                                    |
+| Legenda personalizzazione   | PASS                                    |
+| Conteggi (103/41/54/8)      | PASS                                    |
+| Logiche decisionali         | PASS - invariate                        |
+| Responsive 360 px           | PASS                                    |
+| Responsive 390 px           | PASS                                    |
+| Responsive 414 px           | PASS                                    |
+| Responsive 768 px           | PASS                                    |
+| Responsive 900 px           | PASS                                    |
+| Responsive 901 px           | PASS                                    |
+| Responsive 1280 px          | PASS                                    |
+| Nessun deploy               | PASS                                    |
+| Nessuna modifica runtime    | PASS                                    |
+| PDF invariato               | PASS                                    |
+| sw.js invariato             | PASS                                    |
+| _headers invariato          | PASS                                    |
+| Asset invariati             | PASS                                    |
 
 ## Osservazioni
 

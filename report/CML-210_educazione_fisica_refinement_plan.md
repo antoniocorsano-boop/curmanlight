@@ -19,12 +19,12 @@ CML-204 è considerato modello di rischio contenutistico, non autorizzazione aut
 
 ## Opzioni valutate
 
-| Opzione | Descrizione |
-|---|---|
-| A. Mantenere 4 nuclei | RACCOMANDATA ORA — struttura stabile, no modifiche |
-| B. Passare a 5 nuclei | Dipendente da validazione umana esplicita |
-| C. Pianificare polish JSON controllato | Dipendente da validazione + accettazione piano |
-| D. Rinviare a UDA/evidenze alignment | Separare piano dati da progettazione didattica |
+| Opzione                                | Descrizione                                        |
+| -------------------------------------- | -------------------------------------------------- |
+| A. Mantenere 4 nuclei                  | RACCOMANDATA ORA — struttura stabile, no modifiche |
+| B. Passare a 5 nuclei                  | Dipendente da validazione umana esplicita          |
+| C. Pianificare polish JSON controllato | Dipendente da validazione + accettazione piano     |
+| D. Rinviare a UDA/evidenze alignment   | Separare piano dati da progettazione didattica     |
 
 ## Gap model ereditato da CML-204
 
@@ -35,12 +35,12 @@ CML-204 è considerato modello di rischio contenutistico, non autorizzazione aut
 
 ## Trigger per azione futura
 
-| Trigger | Azione |
-|---|---|
-| Validazione umana completata | Attivare Opzione B/C/D |
-| Richiesta nucleo "Salute e benessere" | Valutare Opzione B |
-| Piano UDA approvato | Opzione D come ponte a C |
-| Nessuna validazione entro data | Ripresentare in consiglio dipartimento |
+| Trigger                               | Azione                                 |
+| ------------------------------------- | -------------------------------------- |
+| Validazione umana completata          | Attivare Opzione B/C/D                 |
+| Richiesta nucleo "Salute e benessere" | Valutare Opzione B                     |
+| Piano UDA approvato                   | Opzione D come ponte a C               |
+| Nessuna validazione entro data        | Ripresentare in consiglio dipartimento |
 
 ## Prossima slice condizionata
 

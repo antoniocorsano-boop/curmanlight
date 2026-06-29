@@ -12,18 +12,18 @@ Verificare che la build pubblica di GitHub Pages rifletta l'integrazione runtime
 
 ## 3. Risultati
 
-| Verifica | Esito |
-|---|---|
-| HTTP 200 | OK |
-| `DISCIPLINE_META` | 14/14 discipline presenti |
-| `SECONDA_LINGUA_COMUNITARIA_MAPPA_DATI` | Presente |
-| `RELIGIONE_CATTOLICA_MAPPA_DATI` | Presente |
-| `LATINO_LEL_MAPPA_DATI` | Presente |
-| `#cur-SecondaLinguaComunitaria` render branch | Presente |
-| `#cur-ReligioneCattolica` render branch | Presente |
-| `#cur-LatinoLEL` render branch | Presente |
-| 14 selettori | Tutti presenti |
-| Discipline preesistenti (Tecnologia → EF) | Invariate |
+| Verifica                                      | Esito                     |
+| --------------------------------------------- | ------------------------- |
+| HTTP 200                                      | OK                        |
+| `DISCIPLINE_META`                             | 14/14 discipline presenti |
+| `SECONDA_LINGUA_COMUNITARIA_MAPPA_DATI`       | Presente                  |
+| `RELIGIONE_CATTOLICA_MAPPA_DATI`              | Presente                  |
+| `LATINO_LEL_MAPPA_DATI`                       | Presente                  |
+| `#cur-SecondaLinguaComunitaria` render branch | Presente                  |
+| `#cur-ReligioneCattolica` render branch       | Presente                  |
+| `#cur-LatinoLEL` render branch                | Presente                  |
+| 14 selettori                                  | Tutti presenti            |
+| Discipline preesistenti (Tecnologia → EF)     | Invariate                 |
 
 ## 4. Cache/service-worker note
 

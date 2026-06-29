@@ -2,13 +2,13 @@
 
 ## Stato iniziale
 
-| Controllo | Esito |
-|---|---|
-| Branch | cml-008r-fix-markdown-decision-summary |
-| HEAD | bcc505f |
-| Working tree | Pulita |
-| Runtime modificato | solo index.html |
-| Deploy | Nessuno |
+| Controllo          | Esito                                  |
+| ------------------ | -------------------------------------- |
+| Branch             | cml-008r-fix-markdown-decision-summary |
+| HEAD               | bcc505f                                |
+| Working tree       | Pulita                                 |
+| Runtime modificato | solo index.html                        |
+| Deploy             | Nessuno                                |
 
 ## Risultato funzionale
 
@@ -16,15 +16,15 @@ Il coordinatore può selezionare più file .cml dal computer. Ogni file viene le
 
 Test integrato:
 
-| Voce | Risultato |
-|---|---:|
-| File importati | 7 |
-| File validi | 3 |
-| File non riconoscibili | 4 |
-| File da controllare | 5 |
-| Proposte totali | 5 |
-| Discipline | 2 |
-| Proposte da controllare | 3 |
+| Voce                    | Risultato |
+| ----------------------- | --------: |
+| File importati          |         7 |
+| File validi             |         3 |
+| File non riconoscibili  |         4 |
+| File da controllare     |         5 |
+| Proposte totali         |         5 |
+| Discipline              |         2 |
+| Proposte da controllare |         3 |
 
 Sono stati verificati: file valido, duplicato, disciplina mista, tipo errato, JSON invalido, schema minimo mancante e file non-.cml.
 
@@ -48,15 +48,15 @@ Sono stati verificati: file valido, duplicato, disciplina mista, tipo errato, JS
 
 ## Rischi e mitigazioni
 
-| Rischio | Mitigazione |
-|---|---|
-| File errato | Estensione e fileType validati; escluso dalle proposte |
-| JSON non valido | Errore esplicito, file escluso |
-| Proposta incompleta | Chip senza testo/motivazione/fonte |
-| Discipline miste | Avviso non bloccante |
-| File duplicati | Fingerprint e segnalazione duplicato probabile |
-| Docente senza CurManLight | File non riconoscibile, nessun blocco sui validi |
-| Coordinatore importa file sbagliati | Riepilogo file e classificazione leggibile |
+| Rischio                             | Mitigazione                                            |
+| ----------------------------------- | ------------------------------------------------------ |
+| File errato                         | Estensione e fileType validati; escluso dalle proposte |
+| JSON non valido                     | Errore esplicito, file escluso                         |
+| Proposta incompleta                 | Chip senza testo/motivazione/fonte                     |
+| Discipline miste                    | Avviso non bloccante                                   |
+| File duplicati                      | Fingerprint e segnalazione duplicato probabile         |
+| Docente senza CurManLight           | File non riconoscibile, nessun blocco sui validi       |
+| Coordinatore importa file sbagliati | Riepilogo file e classificazione leggibile             |
 
 ## QA interfaccia
 

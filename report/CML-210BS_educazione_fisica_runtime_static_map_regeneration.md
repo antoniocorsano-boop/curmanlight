@@ -12,17 +12,17 @@ Rigenerare la mappa runtime statica di Educazione Fisica in `_published_snapshot
 
 ## 3. Controlli
 
-| Check | Esito |
-|---|---|
-| JSON validator | 14/14 PASS, 0 errori |
-| Shape test | 14/14 PASS |
-| Educazione Fisica runtime | S=7, N=4, P=7, D=0 |
-| CML-210A wording presente | Sì |
-| Altre discipline | Invariate |
-| git diff --check | Pulito |
-| Secret scan | Pulito |
-| Manual deploy | Nessuno |
-| Push | `53013df` |
+| Check                     | Esito                |
+| ------------------------- | -------------------- |
+| JSON validator            | 14/14 PASS, 0 errori |
+| Shape test                | 14/14 PASS           |
+| Educazione Fisica runtime | S=7, N=4, P=7, D=0   |
+| CML-210A wording presente | Sì                   |
+| Altre discipline          | Invariate            |
+| git diff --check          | Pulito               |
+| Secret scan               | Pulito               |
+| Manual deploy             | Nessuno              |
+| Push                      | `53013df`            |
 
 ## 4. Esito pubblico
 
@@ -41,8 +41,8 @@ URL: https://antoniocorsano-boop.github.io/curmanlight/#cur-EducazioneFisica
 
 ## 6. Commits
 
-| Step | Commit |
-|---|---|
-| Start | `39c4f4a` |
+| Step      | Commit    |
+| --------- | --------- |
+| Start     | `39c4f4a` |
 | CML-210BS | `53013df` |
-| Pushed | `53013df` |
+| Pushed    | `53013df` |

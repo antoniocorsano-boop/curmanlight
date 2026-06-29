@@ -5,6 +5,7 @@
 I file nella cartella `docs/04_user/esempi_cml/` sono **esempi dimostrativi**. Permettono di provare il flusso di lavoro di CurManLight — docente → dipartimento → referente — senza usare dati reali della scuola.
 
 Sono utili per:
+
 - formazione interna dei docenti sull'uso dell'app;
 - presentazione del flusso a nuovi membri del dipartimento;
 - test del passaggio proposte → esiti → report senza rischiare dati sensibili.
@@ -59,6 +60,7 @@ Apri l'app all'indirizzo:
 ## Report finale atteso
 
 Il report del referente include:
+
 - **Sommario**: totale esiti, discipline, elementi da chiarire, elementi senza esito
 - **Dettaglio per disciplina**: conteggio per ogni tipo di esito (confluita, riformulata, assorbita, da chiarire, senza esito)
 - **Punti da chiarire** sezione dedicata
@@ -75,6 +77,7 @@ Il report del referente include:
 ## Perche non usare dati reali nella prova
 
 I file di esempio usano solo **dati fittizi**:
+
 - Discipline: Tecnologia, Italiano (discipline reali ma dati inventati)
 - Docenti, classi e plessi: nessun riferimento a persone reali
 - La scuola "Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani»" e citata come scuola di riferimento ma i dati delle proposte sono fittizi
@@ -84,13 +87,13 @@ Durante la formazione, usa sempre file di esempio, mai file con dati reali.
 
 ## Casi coperti dagli esempi
 
-| Caso | Tecnologia | Italiano |
-|---|---|---|
-| Proposta confluita nella sintesi | te_pri1, te_sec2, te_ob_pri2, te_ob_sec1 | it_inf1, it_inf3, it_pri2, it_pri3, it_sec3, it_ob_inf2, it_ob_pri1, it_ob_pri2 |
-| Proposta riformulata dal dipartimento | te_pri2, te_ob_sec2 | it_pri5 |
-| Proposta assorbita in altra proposta | te_sec3 | it_sec2 |
-| Proposta da chiarire | te_ob_sec3 | it_ob_sec1 |
-| Proposta senza esito | (nessuna) | (nessuna) |
+| Caso                                  | Tecnologia                               | Italiano                                                                        |
+| ------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
+| Proposta confluita nella sintesi      | te_pri1, te_sec2, te_ob_pri2, te_ob_sec1 | it_inf1, it_inf3, it_pri2, it_pri3, it_sec3, it_ob_inf2, it_ob_pri1, it_ob_pri2 |
+| Proposta riformulata dal dipartimento | te_pri2, te_ob_sec2                      | it_pri5                                                                         |
+| Proposta assorbita in altra proposta  | te_sec3                                  | it_sec2                                                                         |
+| Proposta da chiarire                  | te_ob_sec3                               | it_ob_sec1                                                                      |
+| Proposta senza esito                  | (nessuna)                                | (nessuna)                                                                       |
 
 ## Note
 

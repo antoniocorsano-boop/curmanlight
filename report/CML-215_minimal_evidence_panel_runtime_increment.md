@@ -32,14 +32,14 @@ Generalized the Evidenze/UDA panel from Tecnologia-only to all 14 disciplines in
 
 ## Smoke results
 
-| Check | Result |
-|---|---|
-| Validator | 14/14 PASS |
-| Shape test | 14/14 PASS |
-| Hash navigation | 14/14 PASS |
-| Evidence panel coverage | 14/14 |
-| Tecnologia-only references | Removed |
-| Secret scan | Clean |
+| Check                      | Result     |
+| -------------------------- | ---------- |
+| Validator                  | 14/14 PASS |
+| Shape test                 | 14/14 PASS |
+| Hash navigation            | 14/14 PASS |
+| Evidence panel coverage    | 14/14      |
+| Tecnologia-only references | Removed    |
+| Secret scan                | Clean      |
 
 ## Verdict
 

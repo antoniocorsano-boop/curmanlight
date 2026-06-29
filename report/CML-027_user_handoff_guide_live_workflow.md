@@ -6,20 +6,20 @@ Creazione della guida operativa breve per utenti reali di CurManLight. Docs-only
 
 ## Documenti creati
 
-| File | Descrizione |
-|---|---|
+| File                                      | Descrizione                                                            |
+| ----------------------------------------- | ---------------------------------------------------------------------- |
 | `docs/04_user/CML_GUIDA_RAPIDA_UTENTE.md` | Guida utente: 8 sezioni, 3 ruoli, flusso operativo, problemi frequenti |
 
 ## Controlli
 
-| Controllo | Esito |
-|---|---|
-| Docs-only | ✅ |
-| Linguaggio non tecnico | ✅ |
-| Distinzione lavoro/approvazione | ✅ |
-| Copertura ruoli | ✅ |
-| Problemi frequenti | ✅ |
-| MEMORY.md non committato | ✅ |
+| Controllo                       | Esito |
+| ------------------------------- | ----- |
+| Docs-only                       | ✅    |
+| Linguaggio non tecnico          | ✅    |
+| Distinzione lavoro/approvazione | ✅    |
+| Copertura ruoli                 | ✅    |
+| Problemi frequenti              | ✅    |
+| MEMORY.md non committato        | ✅    |
 
 ## Verdetto
 

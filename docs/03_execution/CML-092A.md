@@ -27,40 +27,40 @@ Verificare la qualità tecnica, didattica e progettuale della bozza normalizzata
 
 ## Esito tecnico
 
-| Controllo | Esito |
-|---|---|
-| JSON valido | ✅ |
-| Struttura coerente con Italiano | ✅ (18/18 campi allineati, incl. `nucleo`) |
-| ID univoci | ✅ (13/13) |
-| `validazioneUmana: true` su tutte le unità | ✅ |
-| Nessuna formula di approvazione | ✅ (stato: "nuovo" su tutte) |
-| `classe`/`fascia` null conforme a pattern | ✅ |
-| `stato: bozza_generabile` root | ✅ |
-| `readiness: in_revisione` root | ✅ |
+| Controllo                                  | Esito                                      |
+| ------------------------------------------ | ------------------------------------------ |
+| JSON valido                                | ✅                                         |
+| Struttura coerente con Italiano            | ✅ (18/18 campi allineati, incl. `nucleo`) |
+| ID univoci                                 | ✅ (13/13)                                 |
+| `validazioneUmana: true` su tutte le unità | ✅                                         |
+| Nessuna formula di approvazione            | ✅ (stato: "nuovo" su tutte)               |
+| `classe`/`fascia` null conforme a pattern  | ✅                                         |
+| `stato: bozza_generabile` root             | ✅                                         |
+| `readiness: in_revisione` root             | ✅                                         |
 
 ## Esito didattico
 
-| Controllo | Esito |
-|---|---|
-| Traguardi coerenti con DATA + Word doc | ✅ |
-| Obiettivi osservabili | ✅ (3-6 per unità) |
-| Conoscenze distinte dalle abilità | ✅ |
-| Abilità formulate come azioni osservabili | ✅ |
-| Evidenze osservabili per valutazione | ✅ |
-| Criteri descrittivi non numerici | ✅ |
-| Linguaggio scolastico chiaro, non enciclopedico | ✅ |
-| Nessun pattern di contenuto generico | ✅ |
-| Contenuto curricolare (non programmazione annuale) | ✅ |
+| Controllo                                          | Esito              |
+| -------------------------------------------------- | ------------------ |
+| Traguardi coerenti con DATA + Word doc             | ✅                 |
+| Obiettivi osservabili                              | ✅ (3-6 per unità) |
+| Conoscenze distinte dalle abilità                  | ✅                 |
+| Abilità formulate come azioni osservabili          | ✅                 |
+| Evidenze osservabili per valutazione               | ✅                 |
+| Criteri descrittivi non numerici                   | ✅                 |
+| Linguaggio scolastico chiaro, non enciclopedico    | ✅                 |
+| Nessun pattern di contenuto generico               | ✅                 |
+| Contenuto curricolare (non programmazione annuale) | ✅                 |
 
 ## Matrice nuclei/ordini
 
-| Nucleo | Infanzia | Primaria | Secondaria | Totale |
-|---|---|---|---|---|
-| Numeri | 1 (fascia 5) | 2 (cl. 1, cl. 5) | 2 (cl. 1, cl. 3) | 5 |
-| Spazio e figure | — | 1 (cl. 1) | 2 (cl. 1, cl. 2) | 3 |
-| Relazioni e funzioni | — | 1 (cl. 1) | 1 (cl. 1) | 2 |
-| Dati e previsioni | — | — | 1 (cl. 1) | 1 |
-| Informatica | — | 1 (cl. 1) | 1 (cl. 1) | 2 |
+| Nucleo               | Infanzia     | Primaria         | Secondaria       | Totale |
+| -------------------- | ------------ | ---------------- | ---------------- | ------ |
+| Numeri               | 1 (fascia 5) | 2 (cl. 1, cl. 5) | 2 (cl. 1, cl. 3) | 5      |
+| Spazio e figure      | —            | 1 (cl. 1)        | 2 (cl. 1, cl. 2) | 3      |
+| Relazioni e funzioni | —            | 1 (cl. 1)        | 1 (cl. 1)        | 2      |
+| Dati e previsioni    | —            | —                | 1 (cl. 1)        | 1      |
+| Informatica          | —            | 1 (cl. 1)        | 1 (cl. 1)        | 2      |
 
 ## Gap riscontrati
 
@@ -78,20 +78,20 @@ Verificare la qualità tecnica, didattica e progettuale della bozza normalizzata
 
 ### Dati misurati
 
-| Parametro | Tecnologia | Italiano | Matematica |
-|---|---|---|---|
-| Unità | 12 | 14 | 13 |
-| Chars totali JSON | 21.908 | 26.884 | 27.485 |
-| Chars medi per unità | 1.826 | 1.920 | 2.114 |
-| Campi per unità | 17 | 18 | 18 |
-| Stati in uso | 1 ("nuovo") | 1 ("nuovo") | 1 |
+| Parametro            | Tecnologia  | Italiano    | Matematica |
+| -------------------- | ----------- | ----------- | ---------- |
+| Unità                | 12          | 14          | 13         |
+| Chars totali JSON    | 21.908      | 26.884      | 27.485     |
+| Chars medi per unità | 1.826       | 1.920       | 2.114      |
+| Campi per unità      | 17          | 18          | 18         |
+| Stati in uso         | 1 ("nuovo") | 1 ("nuovo") | 1          |
 
 ### Proiezioni
 
-| Scenario | Unità stimate | Dimensione JSON stimata |
-|---|---|---|
-| 10 discipline normalizzate | ~130 | ~325 KB |
-| 15 discipline normalizzate | ~195 | ~488 KB |
+| Scenario                   | Unità stimate | Dimensione JSON stimata |
+| -------------------------- | ------------- | ----------------------- |
+| 10 discipline normalizzate | ~130          | ~325 KB                 |
+| 15 discipline normalizzate | ~195          | ~488 KB                 |
 
 ### Sostenibilità UI
 

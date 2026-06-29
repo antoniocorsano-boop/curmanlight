@@ -4,16 +4,16 @@
 
 Correzione runtime minima per il P1 "accordion Evidenze senza ARIA" rimasto dopo la slice precedente. Intervento applicato solo in `_published_snapshot/netlify-current/index.html`, dentro `renderDidattica()`. Aggiunti attributi `aria-expanded`, `aria-controls`, `role="button"`, `tabindex="0"` e sincronizzazione tastiera (Enter/Space) sugli header dei gruppi ordine e delle unità, senza modificare contenuti, filtri o struttura informativa.
 
-| Aspetto | Valore |
-|---------|--------|
-| Branch | `main` |
-| Commit iniziale | `1ec00f9` |
-| Runtime modificato | `sì` |
-| File modificati | `_published_snapshot/netlify-current/index.html` |
-| Validatore | 14/14 PASS |
-| Shape test | 14/14 PASS |
-| Push eseguito | `no` |
-| Verdict | `CML_UX_ACCESSIBILITY_ARIA_ACCORDION_READY` |
+| Aspetto            | Valore                                           |
+| ------------------ | ------------------------------------------------ |
+| Branch             | `main`                                           |
+| Commit iniziale    | `1ec00f9`                                        |
+| Runtime modificato | `sì`                                             |
+| File modificati    | `_published_snapshot/netlify-current/index.html` |
+| Validatore         | 14/14 PASS                                       |
+| Shape test         | 14/14 PASS                                       |
+| Push eseguito      | `no`                                             |
+| Verdict            | `CML_UX_ACCESSIBILITY_ARIA_ACCORDION_READY`      |
 
 ## Prima / Dopo
 
@@ -60,16 +60,16 @@ Correzione runtime minima per il P1 "accordion Evidenze senza ARIA" rimasto dopo
 
 ## Smoke test tastiera/accordion
 
-| Check | Esito | Evidenza |
-|-------|-------|----------|
-| Tab raggiunge header gruppi | PASS | `tabindex="0"` su ogni header gruppo |
-| Tab raggiunge header unità | PASS | `tabindex="0"` su ogni header unità |
-| Enter apre/chiude gruppo | PASS | `onkeydown` gestisce `event.key==='Enter'` |
-| Space apre/chiude gruppo | PASS | `onkeydown` gestisce `event.key===' '` |
-| Enter/Space su unità | PASS | stesso handler replicato |
-| Focus visibile | PASS | ereditato da `.disc-btn:focus-visible` e stili esistenti |
-| Nessuna trappola da tastiera | PASS | focus si muove liberamente, nessun ciclo o overlay bloccante |
-| Primo gruppo aperto coerente | PASS | `firstOrd` e `openCls` preservati |
+| Check                        | Esito | Evidenza                                                     |
+| ---------------------------- | ----- | ------------------------------------------------------------ |
+| Tab raggiunge header gruppi  | PASS  | `tabindex="0"` su ogni header gruppo                         |
+| Tab raggiunge header unità   | PASS  | `tabindex="0"` su ogni header unità                          |
+| Enter apre/chiude gruppo     | PASS  | `onkeydown` gestisce `event.key==='Enter'`                   |
+| Space apre/chiude gruppo     | PASS  | `onkeydown` gestisce `event.key===' '`                       |
+| Enter/Space su unità         | PASS  | stesso handler replicato                                     |
+| Focus visibile               | PASS  | ereditato da `.disc-btn:focus-visible` e stili esistenti     |
+| Nessuna trappola da tastiera | PASS  | focus si muove liberamente, nessun ciclo o overlay bloccante |
+| Primo gruppo aperto coerente | PASS  | `firstOrd` e `openCls` preservati                            |
 
 ## Validatore e shape test
 
@@ -95,5 +95,6 @@ Correzione runtime minima per il P1 "accordion Evidenze senza ARIA" rimasto dopo
 
 Committare la slice come runtime mirata docs+report+movelog.  
 Prossimi miglioramenti ARIA suggeriti dalla baseline:
+
 - Estensione `:focus-visible` su `.filter-btn` e `.export-btn` (2 righe CSS).
 - `aria-expanded`/`aria-controls` su eventuali altri collassabili residui (es. dettagli card pending).

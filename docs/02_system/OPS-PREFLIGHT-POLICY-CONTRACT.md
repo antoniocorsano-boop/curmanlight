@@ -4,30 +4,30 @@
 
 Every slice passes through these states in order:
 
-| State | Description | Gate |
-|-------|-------------|------|
-| Selection | Choose what to do next, document options A-G | CML-NNN selection doc |
-| Audit | Research/inspect before implementation | CML-NNN audit doc |
-| Implementation | Apply changes (runtime, JSON, docs, etc.) | Commit with scope enforcement |
-| Smoke | Validate changes locally | Validator, shape test, hash smoke |
-| Controlled Push | Push only if authorized | Push + post-push verification |
-| Closure Gate | Verify cycle completeness, document limitations | CML-NNN closure doc |
-| Next-Cycle Selection | Choose next slice | CML-NNN selection doc |
+| State                | Description                                     | Gate                              |
+| -------------------- | ----------------------------------------------- | --------------------------------- |
+| Selection            | Choose what to do next, document options A-G    | CML-NNN selection doc             |
+| Audit                | Research/inspect before implementation          | CML-NNN audit doc                 |
+| Implementation       | Apply changes (runtime, JSON, docs, etc.)       | Commit with scope enforcement     |
+| Smoke                | Validate changes locally                        | Validator, shape test, hash smoke |
+| Controlled Push      | Push only if authorized                         | Push + post-push verification     |
+| Closure Gate         | Verify cycle completeness, document limitations | CML-NNN closure doc               |
+| Next-Cycle Selection | Choose next slice                               | CML-NNN selection doc             |
 
 Slices smaller than a full cycle may combine states (e.g., `S` push slices are single-commit).
 
 ## 2. Slice Types
 
-| Type | Scope | Validation Gates |
-|------|-------|-----------------|
-| docs-only | `docs/`, `report/`, movelog only | diff-check, secret scan |
-| runtime microfix | `index.html` CSS/JS micro-edits | validator, shape test, hash smoke, viewport smoke |
-| runtime increment | `index.html` new feature | validator, shape test, full workflow smoke |
-| curriculum JSON | `content/curriculum/*.normalized.json` | validator required, shape test if runtime-integrated |
-| `.cml` schema/export-import | `.cml` format, export/import JS | backward compat, smoke both ways |
-| OPS/tooling contract | `docs/02_system/`, `CLAUDE.md`, skills | diff-check, secret scan |
-| public smoke/release gate | verification only, no code changes | GH Pages HTTP 200, full workflow smoke |
-| sync | `git push origin main` | pre-push checklist, post-push alignment |
+| Type                        | Scope                                  | Validation Gates                                     |
+| --------------------------- | -------------------------------------- | ---------------------------------------------------- |
+| docs-only                   | `docs/`, `report/`, movelog only       | diff-check, secret scan                              |
+| runtime microfix            | `index.html` CSS/JS micro-edits        | validator, shape test, hash smoke, viewport smoke    |
+| runtime increment           | `index.html` new feature               | validator, shape test, full workflow smoke           |
+| curriculum JSON             | `content/curriculum/*.normalized.json` | validator required, shape test if runtime-integrated |
+| `.cml` schema/export-import | `.cml` format, export/import JS        | backward compat, smoke both ways                     |
+| OPS/tooling contract        | `docs/02_system/`, `CLAUDE.md`, skills | diff-check, secret scan                              |
+| public smoke/release gate   | verification only, no code changes     | GH Pages HTTP 200, full workflow smoke               |
+| sync                        | `git push origin main`                 | pre-push checklist, post-push alignment              |
 
 ## 3. Mandatory Preflight Checks (every slice)
 
@@ -49,11 +49,13 @@ git log --oneline origin/main..HEAD
 ## 4. Mandatory Validation Gates by Slice Type
 
 ### docs-only / OPS contract
+
 - `git diff --check`
 - Targeted secret-pattern scan
 - Confirm no runtime/JSON/tool changes in `git diff --name-only`
 
 ### runtime microfix / increment
+
 - `node tools/validate-cml-normalized-curriculum.mjs` → 14/14 PASS
 - `node tools/test-runtime-mappa-dati-shape.mjs` → 14/14 PASS
 - Hash/navigation smoke (all 14 disciplines)
@@ -62,17 +64,20 @@ git log --oneline origin/main..HEAD
 - Secret scan
 
 ### curriculum JSON data change
+
 - Validator → PASS
 - Before/after structure diff
 - Shape test if discipline is already runtime-integrated
 - No runtime change unless authorized
 
 ### `.cml` schema/export-import change
+
 - Backward compatibility verified
 - Export smoke (create `.cml`, verify structure)
 - Import smoke (re-import, verify no data loss)
 
 ### controlled push
+
 ```bash
 git status -sb
 git log --oneline origin/main..HEAD   # only expected commits
@@ -85,6 +90,7 @@ git rev-parse origin/main
 ```
 
 ### public smoke
+
 - `curl -s -o /dev/null -w "%{http_code}" <URL>` → 200
 - App loads (representative content visible)
 - Curriculum 14/14 selectable
@@ -162,6 +168,7 @@ git rev-parse origin/main
 ## 13. Reusable Prompt Templates
 
 ### docs-only audit template
+
 ```
 Expected HEAD: <commit>
 Expected origin/main: <commit>
@@ -182,6 +189,7 @@ Deliverable: commit "<type>: <message>"
 ```
 
 ### runtime microfix template
+
 ```
 Expected HEAD: <commit>
 Expected origin/main: <commit>
@@ -204,6 +212,7 @@ Smoke: evidence, UDA, Markdown, .cml
 ```
 
 ### controlled push template
+
 ```
 Expected HEAD: <commit>
 Expected origin/main: <commit>
@@ -226,6 +235,7 @@ Post-push:
 ```
 
 ### closure gate template
+
 ```
 Expected HEAD: <commit>
 Cycle: <N> — <description>
@@ -249,6 +259,7 @@ Decision: A/B/C/D
 ## 14. CML-OPS-006 Scope
 
 OPS smoke and closure gate:
+
 - Verify that templates and policy are usable in a real slice.
 - Confirm no gaps in the preflight checklist.
 - Confirm guard-hook principles are complete.

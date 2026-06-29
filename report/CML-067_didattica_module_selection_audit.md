@@ -2,13 +2,13 @@
 
 ## Matrice opzioni
 
-| Opzione | Valore | Rischio | Complessità | Coerenza modello | Dati normalizzati | Priorità contratto | Raccomandazione |
-|---|---|---|---|---|---|---|---|
-| **A. UDA / Progettazione** | Alto | Medio | Alta | Perfetta | Obiettivi, conoscenze, abilità | Alta | Rinviata |
-| **B. Attività didattiche** | Alto | Medio-basso | Media | Buona | Obiettivi, abilità | Media | Rinviata |
-| **C. Materiali per la classe** | Immediato ma limitato | Medio | Bassa | Buona | Minimi | Bassa | Rinviata |
-| **D. Valutazione / evidenze** | Alto | Basso | Bassa | Perfetta | Evidenze, criteri, conoscenze, abilità | Alta (Valutazione) | **Scelta** |
-| **E. Programmazione annuale** | Alto | Medio-alto | Alta | Borderline | Intero dataset | Non elencata | Rinviata |
+| Opzione                        | Valore                | Rischio     | Complessità | Coerenza modello | Dati normalizzati                      | Priorità contratto | Raccomandazione |
+| ------------------------------ | --------------------- | ----------- | ----------- | ---------------- | -------------------------------------- | ------------------ | --------------- |
+| **A. UDA / Progettazione**     | Alto                  | Medio       | Alta        | Perfetta         | Obiettivi, conoscenze, abilità         | Alta               | Rinviata        |
+| **B. Attività didattiche**     | Alto                  | Medio-basso | Media       | Buona            | Obiettivi, abilità                     | Media              | Rinviata        |
+| **C. Materiali per la classe** | Immediato ma limitato | Medio       | Bassa       | Buona            | Minimi                                 | Bassa              | Rinviata        |
+| **D. Valutazione / evidenze**  | Alto                  | Basso       | Bassa       | Perfetta         | Evidenze, criteri, conoscenze, abilità | Alta (Valutazione) | **Scelta**      |
+| **E. Programmazione annuale**  | Alto                  | Medio-alto  | Alta        | Borderline       | Intero dataset                         | Non elencata       | Rinviata        |
 
 ## Scelta: Opzione D — Valutazione / Evidenze
 
@@ -29,15 +29,15 @@
 
 ### Rischi evitati
 
-| Rischio | Come viene evitato |
-|---|---|
-| Complessità eccessiva (UDA) | Scelto modulo più semplice (Valutazione) |
-| Sovrapposizione con Curriculum (Programmazione) | Scartata Opzione E |
-| Area Didattica sembra repository (Materiali) | Scartata Opzione C |
-| Attività senza contesto classe (Attività) | Rimandata Opzione B |
-| Modifica schema `.cml` | Il primo prototipo è solo lettura dati esistenti |
-| Creazione dati personali | Nessun editor, nessuna persistenza |
-| Backend/API/Login | Non necessari per vista read-only statica |
+| Rischio                                         | Come viene evitato                               |
+| ----------------------------------------------- | ------------------------------------------------ |
+| Complessità eccessiva (UDA)                     | Scelto modulo più semplice (Valutazione)         |
+| Sovrapposizione con Curriculum (Programmazione) | Scartata Opzione E                               |
+| Area Didattica sembra repository (Materiali)    | Scartata Opzione C                               |
+| Attività senza contesto classe (Attività)       | Rimandata Opzione B                              |
+| Modifica schema `.cml`                          | Il primo prototipo è solo lettura dati esistenti |
+| Creazione dati personali                        | Nessun editor, nessuna persistenza               |
+| Backend/API/Login                               | Non necessari per vista read-only statica        |
 
 ## Roadmap Didattica
 

@@ -8,11 +8,11 @@ CML_005R_SELECT_GAP_2025_OPERATIONAL_MODEL_READY
 
 ## Stato iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch partenza | `master` |
-| HEAD partenza | `e88a2ef` (CML-004R) |
-| Branch lavoro | `cml-005r-select-gap-2025-operational-model` |
+| Campo           | Valore                                       |
+| --------------- | -------------------------------------------- |
+| Branch partenza | `master`                                     |
+| HEAD partenza   | `e88a2ef` (CML-004R)                         |
+| Branch lavoro   | `cml-005r-select-gap-2025-operational-model` |
 
 ## Runtime analizzato
 
@@ -21,6 +21,7 @@ CML_005R_SELECT_GAP_2025_OPERATIONAL_MODEL_READY
 **Tabs attuali:** Revisione per disciplina | Curricolo definitivo | Riferimenti normativi | Sezioni generali (4 tabs).
 
 **Dati:** 14 discipline, ognuna con traguardi e obiettivi. Ogni item ha:
+
 - `testo` (base IN2012)
 - `proposto` (proposta IN2025)
 - `status`: "ok" | "modifica" | "nuovo"
@@ -35,11 +36,11 @@ CML_005R_SELECT_GAP_2025_OPERATIONAL_MODEL_READY
 
 ## Opzioni valutate
 
-| Opzione | Descrizione | Vantaggi | Rischi |
-|---|---|---|---|
-| **A — Solo microcopy normativa** | Modificare solo la card esistente nei Riferimenti normativi | Impatto minimo, zero regressione | Non basta: l'utente non trova il gap nel contesto della decisione |
-| **B — Indicatore in Revisione + microcopy** | Aggiungere intestazione "Gap 2025 della disciplina" nelle card da decidere + link nella normativa | Gap risolto dove si decide, massima chiarezza, nessun nuovo flusso | Rischio rumore visivo (mitigato: scompare dopo decisione) |
-| **C — Nuovo tab dedicato** | 5° tab "Gap 2025" separato | Massima visibilità iniziale | Separa il gap dal workflow decisionale, aumenta complessità navigazione, impatto mobile |
+| Opzione                                     | Descrizione                                                                                       | Vantaggi                                                           | Rischi                                                                                  |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| **A — Solo microcopy normativa**            | Modificare solo la card esistente nei Riferimenti normativi                                       | Impatto minimo, zero regressione                                   | Non basta: l'utente non trova il gap nel contesto della decisione                       |
+| **B — Indicatore in Revisione + microcopy** | Aggiungere intestazione "Gap 2025 della disciplina" nelle card da decidere + link nella normativa | Gap risolto dove si decide, massima chiarezza, nessun nuovo flusso | Rischio rumore visivo (mitigato: scompare dopo decisione)                               |
+| **C — Nuovo tab dedicato**                  | 5° tab "Gap 2025" separato                                                                        | Massima visibilità iniziale                                        | Separa il gap dal workflow decisionale, aumenta complessità navigazione, impatto mobile |
 
 ## Opzione selezionata: **Opzione B**
 
@@ -57,21 +58,23 @@ CML_005R_SELECT_GAP_2025_OPERATIONAL_MODEL_READY
 
 ### Perimetro implementativo CML-005R
 
-| Elemento | Dettaglio |
-|---|---|
-| **File ammessi** | `_published_snapshot/netlify-current/index.html` |
-| **File vietati** | sw.js, _headers, manifest.webmanifest, PDF, assets, qualsiasi altro file |
-| **Punto A — Card normativa** | Righe 706-707: aggiungere link `<a onclick="setTab('lavoro')">` nel testo descrittivo |
+| Elemento                             | Dettaglio                                                                                                                              |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **File ammessi**                     | `_published_snapshot/netlify-current/index.html`                                                                                       |
+| **File vietati**                     | sw.js, _headers, manifest.webmanifest, PDF, assets, qualsiasi altro file                                                               |
+| **Punto A — Card normativa**         | Righe 706-707: aggiungere link `<a onclick="setTab('lavoro')">` nel testo descrittivo                                                  |
 | **Punto B — Intestazione revisione** | Template card da decidere (righe 1274-1305): aggiungere `<div class="gap-header">` visibile solo su `modifica`/`nuovo` senza decisione |
-| **localStorage** | Nessuna nuova chiave |
-| **Dati discipline** | Non modificati |
+| **localStorage**                     | Nessuna nuova chiave                                                                                                                   |
+| **Dati discipline**                  | Non modificati                                                                                                                         |
 
 ### Microcopy raccomandato
 
 **Card Riferimenti normativi:**
+
 > I gap 2025 non modificano automaticamente il curricolo. Apri Revisione per disciplina per valutare ogni proposta, confrontarla con il curricolo vigente e decidere se approvarla, respingerla o modificarla.
 
 **Blocco Revisione per disciplina (intestazione card da decidere):**
+
 > 🧩 Gap 2025 della disciplina — Queste proposte evidenziano possibili integrazioni rispetto al curricolo vigente. Ogni voce deve essere valutata dal gruppo di lavoro prima di entrare nel curricolo definitivo. Base 2012, evidenze d'istituto e proposta 2025 restano distinguibili fino alla validazione.
 
 ### Criteri di accettazione

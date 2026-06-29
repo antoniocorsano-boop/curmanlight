@@ -6,9 +6,11 @@
 **Motivo del riallineamento semantico:** passare da logica di accolta/non accolta per singola proposta a logica di esito del confronto dipartimentale, enfatizzando il lavoro collegiale e evitando giudizi binari sulle proposte.
 
 ## Obiettivo audit
+
 Eseguire uno smoke audit controllato della nuova semantica di CML-022, verificando che l’esito dipartimentale `.cml` rappresenti correttamente il lavoro collegiale del dipartimento, senza introdurre logiche rigide di approvazione/respingimento delle singole proposte.
 
 ## Confini
+
 - Slice audit/docs-only.
 - Nessuna modifica al runtime.
 - Nessuna modifica a `_published_snapshot/netlify-current/index.html` salvo blocker critici da documentare.
@@ -19,6 +21,7 @@ Eseguire uno smoke audit controllato della nuova semantica di CML-022, verifican
 - Nessuna reintroduzione della semantica `accolta / non_accolta`.
 
 ## Verifiche eseguite
+
 1. Conferma branch corrente: `cml-008r-fix-markdown-decision-summary`.
 2. Conferma HEAD: `004fc43` (compatibile).
 3. Conferma working tree pulita (salvo file non tracciati relativi alla documentazione).
@@ -53,6 +56,7 @@ Eseguire uno smoke audit controllato della nuova semantica di CML-022, verifican
    - Responsive minimo: layout basato su CSS fluido; verificato visivamente che i pannelli rimangano utilizzabili a larghezze 390 px, 768 px, 1280 px (nessuna modifica al CSS effettuata in questa slice).
 
 ## Esiti principali
+
 - Tutte le verifiche richieste sono state soddisfatte.
 - Nessuna modifica al runtime effettuata.
 - Nessun deploy eseguito.
@@ -60,12 +64,15 @@ Eseguire uno smoke audit controllato della nuova semantica di CML-022, verifican
 - Il file `.cml` esportato è JSON valido e conforme allo schema attuale.
 
 ## Eventuali criticità
+
 - Nessuna criticità bloccante riscontrata.
 - Il campo `note` è presente ma sempre vuoto; l’interfaccia non fornisce ancora un modo per modificarlo (da considerare in future slice).
 - La funzione `importTeacherCmlFiles` effettua solo validazione di base; non verifica la coerenza semantica delle proposte importate (out of scope per questa slice).
 
 ## Decisione finale
+
 `CML_022A_DEPARTMENT_OUTCOME_SEMANTIC_EXPORT_SMOKE_READY`
 
 ## Prossimo step raccomandato
+
 Procedere con la slice CML-023 (importazione degli esiti dipartimentali nello strumento del referente curricolo).

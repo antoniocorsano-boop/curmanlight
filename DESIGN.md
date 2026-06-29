@@ -19,75 +19,75 @@
 
 ### Palette primaria
 
-| Ruolo | Colore | Uso |
-|-------|--------|-----|
-| Primario istituzionale | `#1a237e` | Inizio gradiente header, tab active, link, bottoni primari, bordi sinistro sezioni |
-| Secondario istituzionale | `#283593` | Header gradient end, disc header |
-| Accento chiaro | `#e8eaf6` (indigo 100) | Sidebar active, sfondi leggeri, badge ord-tag |
+| Ruolo                    | Colore                 | Uso                                                                                |
+| ------------------------ | ---------------------- | ---------------------------------------------------------------------------------- |
+| Primario istituzionale   | `#1a237e`              | Inizio gradiente header, tab active, link, bottoni primari, bordi sinistro sezioni |
+| Secondario istituzionale | `#283593`              | Header gradient end, disc header                                                   |
+| Accento chiaro           | `#e8eaf6` (indigo 100) | Sidebar active, sfondi leggeri, badge ord-tag                                      |
 
 ### Palette neutra
 
-| Ruolo | Colore | Uso |
-|-------|--------|-----|
-| Sfondo pagina | `#f0f2f5` / mobile `#f6f7fb` | Body |
-| Sfondo card/superfici | `#fff` | Card, toolbar, boxes, panel |
-| Sfondo sidebar | `#37474f` (title), `#eceff1` (order) | Sidebar header/ordini |
-| Bordo leggero | `#e0e0e0` | Card border, tabbar, separatori |
-| Bordo medio | `#cfd8dc` | Filtri, input, btn-secondary |
-| Testo primario | `#212121` / `#333` | Contenuto card, testi |
-| Testo secondario | `#546e7a` / `#78909c` / `#90a4ae` | Meta, note, disabilitato |
-| Testo su sfondo scuro | `#fff` / `#cfd8dc` | Header, sidebar title |
+| Ruolo                 | Colore                               | Uso                             |
+| --------------------- | ------------------------------------ | ------------------------------- |
+| Sfondo pagina         | `#f0f2f5` / mobile `#f6f7fb`         | Body                            |
+| Sfondo card/superfici | `#fff`                               | Card, toolbar, boxes, panel     |
+| Sfondo sidebar        | `#37474f` (title), `#eceff1` (order) | Sidebar header/ordini           |
+| Bordo leggero         | `#e0e0e0`                            | Card border, tabbar, separatori |
+| Bordo medio           | `#cfd8dc`                            | Filtri, input, btn-secondary    |
+| Testo primario        | `#212121` / `#333`                   | Contenuto card, testi           |
+| Testo secondario      | `#546e7a` / `#78909c` / `#90a4ae`    | Meta, note, disabilitato        |
+| Testo su sfondo scuro | `#fff` / `#cfd8dc`                   | Header, sidebar title           |
 
 ### Colori di stato
 
-| Stato | Badge bg | Badge text | Card bg | Card border |
-|-------|----------|------------|---------|-------------|
-| Invariato / confermato (ok) | `#388e3c` | `#fff` | `#f1f8e9` | `#a5d6a7` |
-| Modifica proposta | `#ef6c00` | `#fff` | `#fff` | `#ffcc80` |
-| Nuovo | `#1976d2` | `#fff` | `#fff` | `#90caf9` |
-| Eliminato | `#d32f2f` | `#fff` | `#fff8f8` | `#ef9a9a` |
-| Approvato | `#2e7d32` | `#fff` | `#e8f5e9` | `#81c784` |
-| Rifiutato | `#757575` | `#fff` | `#fafafa` | `#e0e0e0` |
+| Stato                       | Badge bg  | Badge text | Card bg   | Card border |
+| --------------------------- | --------- | ---------- | --------- | ----------- |
+| Invariato / confermato (ok) | `#388e3c` | `#fff`     | `#f1f8e9` | `#a5d6a7`   |
+| Modifica proposta           | `#ef6c00` | `#fff`     | `#fff`    | `#ffcc80`   |
+| Nuovo                       | `#1976d2` | `#fff`     | `#fff`    | `#90caf9`   |
+| Eliminato                   | `#d32f2f` | `#fff`     | `#fff8f8` | `#ef9a9a`   |
+| Approvato                   | `#2e7d32` | `#fff`     | `#e8f5e9` | `#81c784`   |
+| Rifiutato                   | `#757575` | `#fff`     | `#fafafa` | `#e0e0e0`   |
 
 ### Badge semantici (design system, CML-074)
 
-| Variante | Sfondo | Testo | Bordo |
-|----------|--------|-------|-------|
-| `badge--readonly` | `#eceff1` | `#607d8b` | `#cfd8dc` |
-| `badge--prototype` | `#f3e5f5` | `#7b1fa2` | `#ce93d8` |
-| `badge--warning` | `#fff3e0` | `#e65100` | `#ffcc80` |
-| `badge--success` | `#e8f5e9` | `#2e7d32` | `#a5d6a7` |
-| `badge--info` | `#e3f2fd` | `#1565c0` | `#90caf9` |
-| `badge-preparing` | `#eceff1` | `#90a4ae` | (pill 999px) |
+| Variante           | Sfondo    | Testo     | Bordo        |
+| ------------------ | --------- | --------- | ------------ |
+| `badge--readonly`  | `#eceff1` | `#607d8b` | `#cfd8dc`    |
+| `badge--prototype` | `#f3e5f5` | `#7b1fa2` | `#ce93d8`    |
+| `badge--warning`   | `#fff3e0` | `#e65100` | `#ffcc80`    |
+| `badge--success`   | `#e8f5e9` | `#2e7d32` | `#a5d6a7`    |
+| `badge--info`      | `#e3f2fd` | `#1565c0` | `#90caf9`    |
+| `badge-preparing`  | `#eceff1` | `#90a4ae` | (pill 999px) |
 
 ### Colori esportazioni
 
-| Tipo | Sfondo | Testo |
-|------|--------|-------|
+| Tipo     | Sfondo    | Testo  |
+| -------- | --------- | ------ |
 | btn-word | `#1e5a96` | `#fff` |
 | btn-copy | `#00695c` | `#fff` |
-| btn-md | `#5e35b1` | `#fff` |
-| btn-pdf | `#c0392b` | `#fff` |
-| btn-cml | `#3949ab` | `#fff` |
+| btn-md   | `#5e35b1` | `#fff` |
+| btn-pdf  | `#c0392b` | `#fff` |
+| btn-cml  | `#3949ab` | `#fff` |
 
 ### Gradienti
 
-| Elemento | Gradiente |
-|----------|-----------|
-| Header app, Disc header | `linear-gradient(135deg, #1a237e, #283593)` |
-| Progress bar fill | `linear-gradient(90deg, #43a047, #66bb6a)` |
+| Elemento                     | Gradiente                                   |
+| ---------------------------- | ------------------------------------------- |
+| Header app, Disc header      | `linear-gradient(135deg, #1a237e, #283593)` |
+| Progress bar fill            | `linear-gradient(90deg, #43a047, #66bb6a)`  |
 | Orientation card / Cruscotto | `linear-gradient(135deg, #e8eaf6, #c5cae9)` |
-| Didattica evidence header | `linear-gradient(135deg, #00695c, #00897b)` |
-| Didattica UDA header | `linear-gradient(135deg, #4527a0, #7b1fa2)` |
+| Didattica evidence header    | `linear-gradient(135deg, #00695c, #00897b)` |
+| Didattica UDA header         | `linear-gradient(135deg, #4527a0, #7b1fa2)` |
 
 ### Box notice (design system, CML-074)
 
-| Variante | Sfondo | Bordo | Testo |
-|----------|--------|-------|-------|
-| `.notice-box.info` | `#e3f2fd` | `#90caf9` | `#1565c0` |
+| Variante              | Sfondo    | Bordo     | Testo     |
+| --------------------- | --------- | --------- | --------- |
+| `.notice-box.info`    | `#e3f2fd` | `#90caf9` | `#1565c0` |
 | `.notice-box.warning` | `#fff8e1` | `#ffe082` | `#5d4037` |
 | `.notice-box.success` | `#e8f5e9` | `#a5d6a7` | `#1b5e20` |
-| `.notice-box.tip` | `#f3e5f5` | `#ce93d8` | `#4a148c` |
+| `.notice-box.tip`     | `#f3e5f5` | `#ce93d8` | `#4a148c` |
 
 ---
 
@@ -102,36 +102,36 @@ font-family: Consolas, monospace; /* solo code preview */
 
 ### Scala
 
-| Dimensione | Uso |
-|------------|-----|
-| `9px` | aside-ord, panel-lbl, badge-preparing |
-| `10px` | header .sub, aside-title, badge, norm-badge, gen-badge, export-note, didattica-footer |
-| `11px` | filter-btn, export-btn, disc-btn, act, norm-desc, settings label, role-access text |
-| `12px` | tabbar button, card-body, panel-text, h3 sezioni, norm-title, curricolo-item |
-| `13px` | body text, curricolo-viewer, settings input, mobile menu items |
-| `14px` | cruscotto-next, didattica-card-titolo |
-| `15px` | disc-header h2, tecnologia-norm-title |
-| `16px` | home-card-title, section-heading-accent h2 |
-| `17px` | header h1 |
-| `20px` | home-title |
-| `clamp(17px, 4.8vw, 22px)` | header h1 su mobile |
+| Dimensione                 | Uso                                                                                   |
+| -------------------------- | ------------------------------------------------------------------------------------- |
+| `9px`                      | aside-ord, panel-lbl, badge-preparing                                                 |
+| `10px`                     | header .sub, aside-title, badge, norm-badge, gen-badge, export-note, didattica-footer |
+| `11px`                     | filter-btn, export-btn, disc-btn, act, norm-desc, settings label, role-access text    |
+| `12px`                     | tabbar button, card-body, panel-text, h3 sezioni, norm-title, curricolo-item          |
+| `13px`                     | body text, curricolo-viewer, settings input, mobile menu items                        |
+| `14px`                     | cruscotto-next, didattica-card-titolo                                                 |
+| `15px`                     | disc-header h2, tecnologia-norm-title                                                 |
+| `16px`                     | home-card-title, section-heading-accent h2                                            |
+| `17px`                     | header h1                                                                             |
+| `20px`                     | home-title                                                                            |
+| `clamp(17px, 4.8vw, 22px)` | header h1 su mobile                                                                   |
 
 ### Pesi
 
-| Peso | Uso |
-|------|-----|
-| `600` (semi-bold) | tabbar button, subnav-btn, filter-btn |
-| `700` (bold) | badge, act, ord-tag, norm-title, gen-badge, home title |
+| Peso               | Uso                                                                               |
+| ------------------ | --------------------------------------------------------------------------------- |
+| `600` (semi-bold)  | tabbar button, subnav-btn, filter-btn                                             |
+| `700` (bold)       | badge, act, ord-tag, norm-title, gen-badge, home title                            |
 | `800` (extra-bold) | aside-title, aside-ord, panel-lbl, norm-inline-link, cruscotto-state, btn-primary |
 
 ### Letter spacing
 
-| Spacing | Uso |
-|---------|-----|
-| `2px` | header .sub |
-| `1.5px` | aside-ord, norm-cat-title |
-| `1px` | aside-title, ordine-hd, panel-lbl, cruscotto-state |
-| `.5px` | tecnologia-section-title, didattica-section-title, uda-field-label |
+| Spacing | Uso                                                                |
+| ------- | ------------------------------------------------------------------ |
+| `2px`   | header .sub                                                        |
+| `1.5px` | aside-ord, norm-cat-title                                          |
+| `1px`   | aside-title, ordine-hd, panel-lbl, cruscotto-state                 |
+| `.5px`  | tecnologia-section-title, didattica-section-title, uda-field-label |
 
 ---
 
@@ -139,62 +139,62 @@ font-family: Consolas, monospace; /* solo code preview */
 
 ### Padding comuni
 
-| Valore | Uso |
-|--------|-----|
-| `6px 10px` | card-acts, collapse-header |
-| `7px 10px / 7px 11px` | disc-btn, pending-card, ordine-hd |
-| `8px 11px / 8px 14px` | aside-title, aside-ord |
-| `9px 12px / 9px 13px` | panel, toolbar, usage-notice, local-save-bar |
-| `10px 12px / 10px 14px` | quick-info-bar, notice-box, home-card-links a |
-| `11px 14px` | tecnologia-export-panel |
+| Valore                  | Uso                                                          |
+| ----------------------- | ------------------------------------------------------------ |
+| `6px 10px`              | card-acts, collapse-header                                   |
+| `7px 10px / 7px 11px`   | disc-btn, pending-card, ordine-hd                            |
+| `8px 11px / 8px 14px`   | aside-title, aside-ord                                       |
+| `9px 12px / 9px 13px`   | panel, toolbar, usage-notice, local-save-bar                 |
+| `10px 12px / 10px 14px` | quick-info-bar, notice-box, home-card-links a                |
+| `11px 14px`             | tecnologia-export-panel                                      |
 | `12px 14px / 12px 16px` | disc-header, esport-group, guida-card, sum-box, tab-generali |
-| `16px` | home-dashboard, home-card |
+| `16px`                  | home-dashboard, home-card                                    |
 
 ### Gap comuni
 
-| Valore | Uso |
-|--------|-----|
-| `4px` | settings-field, disc-dot gap |
-| `5px` | card-acts, disc-btn gap |
-| `6px` | pending-body, export-group |
-| `7px` | card-hd, toolbar, add-row |
-| `8px` | ordine-hd gap, stats gap, progress-wrap gap |
+| Valore | Uso                                                               |
+| ------ | ----------------------------------------------------------------- |
+| `4px`  | settings-field, disc-dot gap                                      |
+| `5px`  | card-acts, disc-btn gap                                           |
+| `6px`  | pending-body, export-group                                        |
+| `7px`  | card-hd, toolbar, add-row                                         |
+| `8px`  | ordine-hd gap, stats gap, progress-wrap gap                       |
 | `10px` | home-card-links a gap, quick-info-bar gap, notice-box padding gap |
-| `12px` | layout gap, progress-wrap gap |
-| `14px` | home-cards gap |
+| `12px` | layout gap, progress-wrap gap                                     |
+| `14px` | home-cards gap                                                    |
 
 ---
 
 ## 5. Border radius
 
-| Valore | Uso |
-|--------|-----|
-| `4px` | badge, cl-tag, ord-tag, progress bar |
-| `5px` | norm-badge, panel-text.ed |
-| `6px` | stat, act, ordine-hd, pending-action |
-| `7px` | act, add-btn, local-save-btn, department-import-btn, usage-notice |
-| `8px` | card, btn-primary, settings input, role-access, quick-btn |
-| `9px` | aside-box, toolbar, usage-notice, card (CML-074), notice-box |
-| `10px` | tecnologia-export-badge, settings-school-box |
-| `12px` | home-card, quick-info-bar, orientation-card, cruscotto, tecnologia-norm |
-| `14px` | role-access-dialog, mobile-menu-panel |
-| `18px` / `999px` | filter-btn, course-link pill, home-card-links a, badge-preparing |
+| Valore           | Uso                                                                     |
+| ---------------- | ----------------------------------------------------------------------- |
+| `4px`            | badge, cl-tag, ord-tag, progress bar                                    |
+| `5px`            | norm-badge, panel-text.ed                                               |
+| `6px`            | stat, act, ordine-hd, pending-action                                    |
+| `7px`            | act, add-btn, local-save-btn, department-import-btn, usage-notice       |
+| `8px`            | card, btn-primary, settings input, role-access, quick-btn               |
+| `9px`            | aside-box, toolbar, usage-notice, card (CML-074), notice-box            |
+| `10px`           | tecnologia-export-badge, settings-school-box                            |
+| `12px`           | home-card, quick-info-bar, orientation-card, cruscotto, tecnologia-norm |
+| `14px`           | role-access-dialog, mobile-menu-panel                                   |
+| `18px` / `999px` | filter-btn, course-link pill, home-card-links a, badge-preparing        |
 
 ---
 
 ## 6. Ombre
 
-| Ombra | Uso |
-|-------|-----|
-| `0 1px 3px rgba(0,0,0,.05)` | aside-box, toolbar, usage-notice, local-save-bar |
-| `0 1px 3px rgba(0,0,0,.04)` | tecnologia-export-panel, department-import-panel, quick-info-bar |
-| `0 1px 2px rgba(0,0,0,.03)` | card (CML-074), card lightest |
-| `0 2px 8px rgba(0,0,0,.06)` | home-card |
-| `0 2px 8px rgba(26,35,126,.2)` | cruscotto-primary |
-| `0 10px 40px rgba(0,0,0,.3)` | role-access-dialog |
-| `0 -4px 20px rgba(0,0,0,.12)` | mobile-menu-panel |
-| `0 -1px 6px rgba(0,0,0,.06)` | mobile-bottom-bar |
-| `0 0 0 1px #eceff1` | aside-box subtle border replacement |
+| Ombra                          | Uso                                                              |
+| ------------------------------ | ---------------------------------------------------------------- |
+| `0 1px 3px rgba(0,0,0,.05)`    | aside-box, toolbar, usage-notice, local-save-bar                 |
+| `0 1px 3px rgba(0,0,0,.04)`    | tecnologia-export-panel, department-import-panel, quick-info-bar |
+| `0 1px 2px rgba(0,0,0,.03)`    | card (CML-074), card lightest                                    |
+| `0 2px 8px rgba(0,0,0,.06)`    | home-card                                                        |
+| `0 2px 8px rgba(26,35,126,.2)` | cruscotto-primary                                                |
+| `0 10px 40px rgba(0,0,0,.3)`   | role-access-dialog                                               |
+| `0 -4px 20px rgba(0,0,0,.12)`  | mobile-menu-panel                                                |
+| `0 -1px 6px rgba(0,0,0,.06)`   | mobile-bottom-bar                                                |
+| `0 0 0 1px #eceff1`            | aside-box subtle border replacement                              |
 
 ---
 
@@ -202,14 +202,14 @@ font-family: Consolas, monospace; /* solo code preview */
 
 ### Breakpoint
 
-| Breakpoint | Layout | Specifiche |
-|------------|--------|------------|
-| >1180px | 2 colonne (sidebar + main) | aside 185px, sidebar sticky, max-width 1600px |
-| 901-1180px | 2 colonne (sidebar più piccola) | aside 170px, gap 10px |
-| <=900px | 1 colonna, sidebar scorrimento orizzontale | display block, sidebar flex orizzontale, disc-btn su border-bottom |
-| <=640px | Mobile compatto | padding ridotti |
-| <=560px | Mobile piccolo | font-size ridotti (h2 14px, home-title 18px) |
-| <=420px | Mobile molto piccolo | card in colonna singola, padding 8px |
+| Breakpoint | Layout                                     | Specifiche                                                         |
+| ---------- | ------------------------------------------ | ------------------------------------------------------------------ |
+| >1180px    | 2 colonne (sidebar + main)                 | aside 185px, sidebar sticky, max-width 1600px                      |
+| 901-1180px | 2 colonne (sidebar più piccola)            | aside 170px, gap 10px                                              |
+| <=900px    | 1 colonna, sidebar scorrimento orizzontale | display block, sidebar flex orizzontale, disc-btn su border-bottom |
+| <=640px    | Mobile compatto                            | padding ridotti                                                    |
+| <=560px    | Mobile piccolo                             | font-size ridotti (h2 14px, home-title 18px)                       |
+| <=420px    | Mobile molto piccolo                       | card in colonna singola, padding 8px                               |
 
 ### Sidebar discipline (desktop)
 
@@ -278,14 +278,14 @@ font-family: Consolas, monospace; /* solo code preview */
 
 ### Pulsanti
 
-| Gerarchia | Classe | Stile | Uso |
-|-----------|--------|-------|-----|
-| Primario | `btn-primary` | `#1a237e` solid, `#fff` text, 9px 14px | Azione principale |
+| Gerarchia  | Classe          | Stile                                       | Uso                |
+| ---------- | --------------- | ------------------------------------------- | ------------------ |
+| Primario   | `btn-primary`   | `#1a237e` solid, `#fff` text, 9px 14px      | Azione principale  |
 | Secondario | `btn-secondary` | `#fff` bg, `#cfd8dc` border, `#455a64` text | Azione alternativa |
-| Terziario | `btn-tertiary` | Nessun bg/bordo, `#1a237e` text | Azione testuale |
-| Azione | `act` | border 1px colored, 4px 11px, 11px | Azioni su card |
-| Export | `export-btn` | solid colored bg, 5px 12px, 11px | Export actions |
-| Filtro | `filter-btn` | pill 18px, border `#d0d0d0`, 4px 11px | Filtri toolbar |
+| Terziario  | `btn-tertiary`  | Nessun bg/bordo, `#1a237e` text             | Azione testuale    |
+| Azione     | `act`           | border 1px colored, 4px 11px, 11px          | Azioni su card     |
+| Export     | `export-btn`    | solid colored bg, 5px 12px, 11px            | Export actions     |
+| Filtro     | `filter-btn`    | pill 18px, border `#d0d0d0`, 4px 11px       | Filtri toolbar     |
 
 ### Badge di stato
 
@@ -311,16 +311,16 @@ font-family: Consolas, monospace; /* solo code preview */
 
 ### Box informativi
 
-| Tipo | Sfondo | Bordo sinistro | Uso |
-|------|--------|----------------|-----|
-| usage-notice | `#fff8e1` | `#f9a825` 3px | Avvisi generici |
-| notice-box.warning | `#fff8e1` | `#ffe082` 1px | Avvisi |
-| notice-box.tip | `#f3e5f5` | `#ce93d8` 1px | Suggerimenti |
-| notice-box.success | `#e8f5e9` | `#a5d6a7` 1px | Conferme |
-| install-hint | `#fff8e1` | `#f9a825` 3px | Installazione PWA |
-| tecnologia-export-panel | `#f5f5f5` | `#5e35b1` 3px | Export |
-| department-import-panel | `#eef7f6` | `#00796b` 3px | Import |
-| guida-note | `#fff8e1` | `#ffe082` 1px | Guida chiusura |
+| Tipo                    | Sfondo    | Bordo sinistro | Uso               |
+| ----------------------- | --------- | -------------- | ----------------- |
+| usage-notice            | `#fff8e1` | `#f9a825` 3px  | Avvisi generici   |
+| notice-box.warning      | `#fff8e1` | `#ffe082` 1px  | Avvisi            |
+| notice-box.tip          | `#f3e5f5` | `#ce93d8` 1px  | Suggerimenti      |
+| notice-box.success      | `#e8f5e9` | `#a5d6a7` 1px  | Conferme          |
+| install-hint            | `#fff8e1` | `#f9a825` 3px  | Installazione PWA |
+| tecnologia-export-panel | `#f5f5f5` | `#5e35b1` 3px  | Export            |
+| department-import-panel | `#eef7f6` | `#00796b` 3px  | Import            |
+| guida-note              | `#fff8e1` | `#ffe082` 1px  | Guida chiusura    |
 
 ### Esportazioni group (`.esport-group`)
 
@@ -354,14 +354,14 @@ font-family: Consolas, monospace; /* solo code preview */
 
 ## 10. Animazioni
 
-| Animazione | Durata | Elemento |
-|------------|--------|----------|
-| `savePulse` | 2.2s infinite | `.save-chip` box-shadow pulse |
-| `saveDotPulse` | 1.6s infinite | `.save-chip::before` dot pulse |
-| `localSavedFlash` | 1.1s ease-out | `.local-save-bar.saved-flash` background flash |
-| `fadeIn` | .15s | `.mobile-menu-overlay` |
-| `slideUp` | .2s | `.mobile-menu-panel` |
-| Stato attivo transizioni | .1s / .12s / .15s | Tab, filtro, card hover, button, disc-btn |
+| Animazione               | Durata            | Elemento                                       |
+| ------------------------ | ----------------- | ---------------------------------------------- |
+| `savePulse`              | 2.2s infinite     | `.save-chip` box-shadow pulse                  |
+| `saveDotPulse`           | 1.6s infinite     | `.save-chip::before` dot pulse                 |
+| `localSavedFlash`        | 1.1s ease-out     | `.local-save-bar.saved-flash` background flash |
+| `fadeIn`                 | .15s              | `.mobile-menu-overlay`                         |
+| `slideUp`                | .2s               | `.mobile-menu-panel`                           |
+| Stato attivo transizioni | .1s / .12s / .15s | Tab, filtro, card hover, button, disc-btn      |
 
 ---
 

@@ -33,3 +33,7 @@ MEMORY.md
 /.agents/
 /skills-lock.json
 /Consultazione
+# Quality Tools
+coverage/
+.eslintcache
+

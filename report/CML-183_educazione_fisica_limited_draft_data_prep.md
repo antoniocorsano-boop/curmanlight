@@ -8,16 +8,16 @@ Creare il file normalizzato di Educazione Fisica come bozza limitata e prudente,
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `bbd41c0` (allineato con `origin/main`) |
-| Working tree iniziale | pulito |
-| Dati normalizzati prima | 10/14 |
-| Runtime mappa | 10/14 |
-| Shape test | 10/10 PASS |
-| Skill usate | `cml-readiness-audit`, `cml-docs-only-slice` |
+| Parametro               | Valore                                       |
+| ----------------------- | -------------------------------------------- |
+| Root Git                | `C:\Users\anton\CurManLight`                 |
+| Branch                  | `main`                                       |
+| Commit iniziale         | `bbd41c0` (allineato con `origin/main`)      |
+| Working tree iniziale   | pulito                                       |
+| Dati normalizzati prima | 10/14                                        |
+| Runtime mappa           | 10/14                                        |
+| Shape test              | 10/10 PASS                                   |
+| Skill usate             | `cml-readiness-audit`, `cml-docs-only-slice` |
 
 ## 3. Collegamento con CML-178/179/180/182B
 
@@ -30,6 +30,7 @@ Creare il file normalizzato di Educazione Fisica come bozza limitata e prudente,
 ## 4. Decisione autorizzativa CML-182B
 
 `LIMITED_DRAFT_DATA_PREP_ALLOWED` autorizza:
+
 - creazione del JSON normalizzato come bozza;
 - `humanValidationRequired: true` su ogni unita;
 - stato non approvato;
@@ -61,21 +62,21 @@ Creare il file normalizzato di Educazione Fisica come bozza limitata e prudente,
 
 ## 8. Nuclei inseriti
 
-| Nucleo | Ordini coperti |
-|---|---|
-| Corpo e percezione | Infanzia, Primaria 1, Secondaria 1 |
-| Abilita motorie | Primaria 3 |
-| Gioco e sport | Primaria 5, Secondaria 2 |
-| Espressione e inclusione | Secondaria 3 |
+| Nucleo                   | Ordini coperti                     |
+| ------------------------ | ---------------------------------- |
+| Corpo e percezione       | Infanzia, Primaria 1, Secondaria 1 |
+| Abilita motorie          | Primaria 3                         |
+| Gioco e sport            | Primaria 5, Secondaria 2           |
+| Espressione e inclusione | Secondaria 3                       |
 
 Nota: il nucleo "Salute e benessere" non ha una unita dedicata autonoma; i relativi contenuti sono distribuiti nelle unita di Gioco e sport (Secondaria 2, area benessere scolastico) ed Espressione e inclusione (Secondaria 3, area benessere personale). Questo riflette la natura trasversale del tema e la cautela lessicale richiesta da CML-179.
 
 ## 9. Progressione I / II / III
 
-| Classe | Nucleo | Focus |
-|---|---|---|
-| Secondaria I | Corpo e percezione | Regole, schemi motori, coordinazione, sicurezza |
-| Secondaria II | Gioco e sport | Consolidamento, collaborazione, ruoli, fair play |
+| Classe         | Nucleo                   | Focus                                                         |
+| -------------- | ------------------------ | ------------------------------------------------------------- |
+| Secondaria I   | Corpo e percezione       | Regole, schemi motori, coordinazione, sicurezza               |
+| Secondaria II  | Gioco e sport            | Consolidamento, collaborazione, ruoli, fair play              |
 | Secondaria III | Espressione e inclusione | Autonomia, responsabilita, espressione, benessere, inclusione |
 
 ## 10. Marcatori di validazione umana
@@ -129,10 +130,10 @@ Eseguito con `node tools/test-runtime-mappa-dati-shape.mjs`:
 
 ## 15. Rischi residui
 
-| Rischio | Livello | Note |
-|---|---|---|
-| Dati | Medio | Bozza non validata, ma marcata come tale |
-| Istituzionale | Medio | Salute/sicurezza/inclusione formulate in modo prudenziale ma non validate |
+| Rischio       | Livello | Note                                                                      |
+| ------------- | ------- | ------------------------------------------------------------------------- |
+| Dati          | Medio   | Bozza non validata, ma marcata come tale                                  |
+| Istituzionale | Medio   | Salute/sicurezza/inclusione formulate in modo prudenziale ma non validate |
 
 ## 16. Invarianti rispettate
 

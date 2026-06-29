@@ -22,41 +22,41 @@
 
 ## Field checks
 
-| Campo | Presente | Note |
-|-------|----------|------|
-| id | ✅ 12/12 | Unici, formato `geo_{ordine}_{classe/fascia}_{numero}` |
-| disciplina | ✅ 12/12 | "Geografia" |
-| ordine | ✅ 12/12 | Inf/Pri/Sec |
-| classe/fascia | ✅ 12/12 | |
-| nucleo | ✅ 12/12 | 3 assi |
-| ambito | ✅ 12/12 | Specifici |
-| competenza | ✅ 12/12 | |
-| traguardo | ✅ 12/12 | |
-| obiettivi | ✅ 12/12 | Max 5 per unità |
-| conoscenze | ✅ 12/12 | |
-| abilità | ✅ 12/12 | |
-| evidenze | ✅ 12/12 | ≥30 chars |
-| criteriValutazione | ✅ 12/12 | Descrittivi |
-| fonte | ✅ 12/12 | |
-| stato | ✅ 12/12 | Tutti "nuovo" |
-| validazioneUmana | ✅ 12/12 | true |
-| noteDipartimento | ✅ 12/12 | |
+| Campo              | Presente | Note                                                   |
+| ------------------ | -------- | ------------------------------------------------------ |
+| id                 | ✅ 12/12 | Unici, formato `geo_{ordine}_{classe/fascia}_{numero}` |
+| disciplina         | ✅ 12/12 | "Geografia"                                            |
+| ordine             | ✅ 12/12 | Inf/Pri/Sec                                            |
+| classe/fascia      | ✅ 12/12 |                                                        |
+| nucleo             | ✅ 12/12 | 3 assi                                                 |
+| ambito             | ✅ 12/12 | Specifici                                              |
+| competenza         | ✅ 12/12 |                                                        |
+| traguardo          | ✅ 12/12 |                                                        |
+| obiettivi          | ✅ 12/12 | Max 5 per unità                                        |
+| conoscenze         | ✅ 12/12 |                                                        |
+| abilità            | ✅ 12/12 |                                                        |
+| evidenze           | ✅ 12/12 | ≥30 chars                                              |
+| criteriValutazione | ✅ 12/12 | Descrittivi                                            |
+| fonte              | ✅ 12/12 |                                                        |
+| stato              | ✅ 12/12 | Tutti "nuovo"                                          |
+| validazioneUmana   | ✅ 12/12 | true                                                   |
+| noteDipartimento   | ✅ 12/12 |                                                        |
 
 ## Assi coverage
 
-| Asse | Unità | Progressione verticale |
-|------|-------|----------------------|
-| **Paesaggio** | 4 | Inf(5) orientamento → Pri(1) spazio vissuto → Pri(2) elementi naturali/antropici → Sec(1) art.9 Costituzione |
-| **Transcalarità** | 5 | Pri(3) carte → Pri(5) Italia/Europa → Sec(1) scale → Sec(2) popolaz/economia → Sec(3) geopolitica/clima |
-| **Territorializzazione** | 3 | Pri(4) Italia fisica → Sec(2) comunità/ambiente → Sec(3) Irpinia/Campania |
+| Asse                     | Unità | Progressione verticale                                                                                       |
+| ------------------------ | ----- | ------------------------------------------------------------------------------------------------------------ |
+| **Paesaggio**            | 4     | Inf(5) orientamento → Pri(1) spazio vissuto → Pri(2) elementi naturali/antropici → Sec(1) art.9 Costituzione |
+| **Transcalarità**        | 5     | Pri(3) carte → Pri(5) Italia/Europa → Sec(1) scale → Sec(2) popolaz/economia → Sec(3) geopolitica/clima      |
+| **Territorializzazione** | 3     | Pri(4) Italia fisica → Sec(2) comunità/ambiente → Sec(3) Irpinia/Campania                                    |
 
 ## Ordini/classi coverage
 
-| Ordine | Unità | Classi coperte |
-|--------|-------|---------------|
-| Infanzia | 1 | Fascia 5 |
-| Primaria | 5 | Cl.1, 2, 3, 4, 5 |
-| Secondaria | 6 | Cl.1 (2), Cl.2 (2), Cl.3 (2) |
+| Ordine     | Unità | Classi coperte               |
+| ---------- | ----- | ---------------------------- |
+| Infanzia   | 1     | Fascia 5                     |
+| Primaria   | 5     | Cl.1, 2, 3, 4, 5             |
+| Secondaria | 6     | Cl.1 (2), Cl.2 (2), Cl.3 (2) |
 
 ## Human validation checks
 
@@ -66,12 +66,12 @@
 
 ## Structural comparison with benchmarks
 
-| Metrica | Geografia | Storia | Tecnol. | Italiano | Matem. | Scienze | Inglese |
-|---------|-----------|--------|---------|----------|--------|---------|---------|
-| Unità | 12 | 15 | 13 | 14 | 13 | 15 | 12 |
-| Assi/nuclei | 3 | 5 | 0* | 6 | 5 | 5 | 11* |
-| Ordini | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
-| Chars/unità | 1.559 | 1.738 | — | 1.588 | 2.114 | — | — |
+| Metrica     | Geografia | Storia | Tecnol. | Italiano | Matem. | Scienze | Inglese |
+| ----------- | --------- | ------ | ------- | -------- | ------ | ------- | ------- |
+| Unità       | 12        | 15     | 13      | 14       | 13     | 15      | 12      |
+| Assi/nuclei | 3         | 5      | 0*      | 6        | 5      | 5       | 11*     |
+| Ordini      | 3         | 3      | 3       | 3        | 3      | 3       | 3       |
+| Chars/unità | 1.559     | 1.738  | —       | 1.588    | 2.114  | —       | —       |
 
 ## Readiness Geografia
 
@@ -82,14 +82,14 @@
 
 ## Risk assessment
 
-| Rischio | Livello | Note |
-|---------|---------|------|
-| Nomenclatura geografica | BASSO | Obiettivi per competenze, non elenchi di luoghi |
-| Sovrapposizione Ed. Civica | BASSO | Sostenibilità da prospettiva territoriale |
-| Sovrapposizione Storia | BASSO | Spazio vs tempo, complementari |
-| Provincialismo (Irpinia) | BASSO | 1/12 unità |
-| Criteri vaghi | BASSO | Criteri descrittivi osservabili |
-| Progressione debole | BASSO | Verticalità su tutti e 3 gli assi |
+| Rischio                    | Livello | Note                                            |
+| -------------------------- | ------- | ----------------------------------------------- |
+| Nomenclatura geografica    | BASSO   | Obiettivi per competenze, non elenchi di luoghi |
+| Sovrapposizione Ed. Civica | BASSO   | Sostenibilità da prospettiva territoriale       |
+| Sovrapposizione Storia     | BASSO   | Spazio vs tempo, complementari                  |
+| Provincialismo (Irpinia)   | BASSO   | 1/12 unità                                      |
+| Criteri vaghi              | BASSO   | Criteri descrittivi osservabili                 |
+| Progressione debole        | BASSO   | Verticalità su tutti e 3 gli assi               |
 
 ## Gaps identified
 

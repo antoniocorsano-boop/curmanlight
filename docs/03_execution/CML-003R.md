@@ -10,20 +10,20 @@ CML-002R established that the published runtime (`_published_snapshot/netlify-cu
 
 ## Constraint Map
 
-| Constraint | Status |
-|------------|--------|
-| No prototype code copied | ✓ |
-| No index.html architecture replaced | ✓ |
-| No 14-discipline data modified | ✓ |
-| No approve/reject/edit logic modified | ✓ |
-| No IN2012→IN2025 comparison modified | ✓ |
-| No localStorage modified | ✓ |
-| No PDF modified | ✓ |
-| No sw.js modified | ✓ |
-| No _headers modified | ✓ |
-| No backend/API/auth/Netlify Forms | ✓ |
-| No deploy | ✓ |
-| No old PDF link referenced as user link | ✓ |
+| Constraint                              | Status |
+| --------------------------------------- | ------ |
+| No prototype code copied                | ✓      |
+| No index.html architecture replaced     | ✓      |
+| No 14-discipline data modified          | ✓      |
+| No approve/reject/edit logic modified   | ✓      |
+| No IN2012→IN2025 comparison modified    | ✓      |
+| No localStorage modified                | ✓      |
+| No PDF modified                         | ✓      |
+| No sw.js modified                       | ✓      |
+| No _headers modified                    | ✓      |
+| No backend/API/auth/Netlify Forms       | ✓      |
+| No deploy                               | ✓      |
+| No old PDF link referenced as user link | ✓      |
 
 ## File Modified
 
@@ -84,15 +84,16 @@ CML-002R established that the published runtime (`_published_snapshot/netlify-cu
 
 ## Risk Assessment
 
-| Risk | Mitigation |
-|------|------------|
-| Orientation card clutters small screens | Responsive breakpoint at 760px collapses padding and wraps steps |
+| Risk                                        | Mitigation                                                                                             |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Orientation card clutters small screens     | Responsive breakpoint at 760px collapses padding and wraps steps                                       |
 | Users may dismiss card and lose orientation | Card is dismissible but NOT session-persistent — it reappears on page reload (no new localStorage key) |
-| CSS adds ~550 bytes | Trivial for a ~200KB+ single-file SPA |
+| CSS adds ~550 bytes                         | Trivial for a ~200KB+ single-file SPA                                                                  |
 
 ## Next Step
 
 After commit and merge to master, proceed with:
+
 - Optional: add persistent "mostra orientamento" toggle in settings
 - Local visual inspection and deploy smoke test
 - Consider adding the orientation to the settings modal as a persistent re-show option

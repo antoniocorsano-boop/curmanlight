@@ -6,35 +6,35 @@ Audit di selezione per decidere il prossimo passo dopo la mini-release documenta
 
 ## Dettaglio
 
-| Campo | Valore |
-|---|---|
-| HEAD partenza | `9aa1386` |
-| Opzioni valutate | 6 (A–F) |
-| Opzione selezionata | **E — Preparazione incontro presentazione operativa** |
-| Motivazione | Docs-only, rischio nullo, produce protocollo concreto per passare da documentazione a uso reale |
+| Campo               | Valore                                                                                          |
+| ------------------- | ----------------------------------------------------------------------------------------------- |
+| HEAD partenza       | `9aa1386`                                                                                       |
+| Opzioni valutate    | 6 (A–F)                                                                                         |
+| Opzione selezionata | **E — Preparazione incontro presentazione operativa**                                           |
+| Motivazione         | Docs-only, rischio nullo, produce protocollo concreto per passare da documentazione a uso reale |
 
 ## Opzioni a confronto
 
-| Opzione | Voto | Motivazione |
-|---|---|---|
+| Opzione                         | Voto     | Motivazione                                   |
+| ------------------------------- | -------- | --------------------------------------------- |
 | A — Raccolta osservazioni reali | ⭐ Forte | Scopo della release, ma meglio preceduta da E |
-| B — Estensione esempi `.cml` | ⚠️ | Meglio dopo priorità da osservazioni |
-| C — Micro UX | ❌ | Prematuro senza feedback |
-| D — Contenuti curricolo | ❌ | Rischio istituzionale |
-| **E — Incontro presentazione** | **✅** | **Zero rischio, operativizza la raccolta** |
-| F — Fermarsi | ⚠️ | Sicuro ma perde slancio |
+| B — Estensione esempi `.cml`    | ⚠️       | Meglio dopo priorità da osservazioni          |
+| C — Micro UX                    | ❌       | Prematuro senza feedback                      |
+| D — Contenuti curricolo         | ❌       | Rischio istituzionale                         |
+| **E — Incontro presentazione**  | **✅**   | **Zero rischio, operativizza la raccolta**    |
+| F — Fermarsi                    | ⚠️       | Sicuro ma perde slancio                       |
 
 ## Confini
 
-| Controllo | Esito |
-|---|---|
-| Docs-only | ✅ |
-| Nessun runtime modificato | ✅ |
-| Nessun deploy | ✅ |
-| Nessuna modifica schema `.cml` | ✅ |
-| Nessuna modifica persistenza | ✅ |
+| Controllo                         | Esito             |
+| --------------------------------- | ----------------- |
+| Docs-only                         | ✅                |
+| Nessun runtime modificato         | ✅                |
+| Nessun deploy                     | ✅                |
+| Nessuna modifica schema `.cml`    | ✅                |
+| Nessuna modifica persistenza      | ✅                |
 | MEMORY.md presente come untracked | ✅ non committato |
-| `.kilo/` presente come untracked | ✅ non committato |
+| `.kilo/` presente come untracked  | ✅ non committato |
 | CLAUDE.md presente come untracked | ✅ non committato |
 
 ## Prossimo step raccomandato

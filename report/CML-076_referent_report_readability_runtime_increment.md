@@ -12,15 +12,15 @@
 
 ### Prima vs Dopo
 
-| Aspetto | Prima (CML-075) | Dopo (CML-076) |
-|---------|-----------------|----------------|
-| Sezioni | 7 sezioni piatte | 8 sezioni numerate |
-| Sintesi | Lista puntata | Tabella + percentuale |
-| Decisioni | Aggregate per disciplina | Chiuse vs Aperte |
-| Passaggi successivi | Impliciti nelle domande guida | Espliciti (dipartimento vs collegio) |
-| Tabella discipline | Dettaglio per disciplina (liste) | Tabella compatta |
-| Domande guida | Fisse (5 domande) | Contestuali allo stato |
-| Chiusura | 1 riga | 2 righe (identico significato) |
+| Aspetto             | Prima (CML-075)                  | Dopo (CML-076)                       |
+| ------------------- | -------------------------------- | ------------------------------------ |
+| Sezioni             | 7 sezioni piatte                 | 8 sezioni numerate                   |
+| Sintesi             | Lista puntata                    | Tabella + percentuale                |
+| Decisioni           | Aggregate per disciplina         | Chiuse vs Aperte                     |
+| Passaggi successivi | Impliciti nelle domande guida    | Espliciti (dipartimento vs collegio) |
+| Tabella discipline  | Dettaglio per disciplina (liste) | Tabella compatta                     |
+| Domande guida       | Fisse (5 domande)                | Contestuali allo stato               |
+| Chiusura            | 1 riga                           | 2 righe (identico significato)       |
 
 ### Struttura output corrente
 

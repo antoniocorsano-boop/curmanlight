@@ -13,14 +13,15 @@
 
 La vista Revisione (`#tab-lavoro`) mescola **4 compiti distinti** nello stesso spazio, violando il principio `una schermata, un compito, una decisione principale`:
 
-| Compito | Elemento attuale | Problema |
-|---|---|---|
-| **Decidere** (approvare/rifiutare/modificare) | `cards-area` + toolbar filtri | Compito primario, ma affiancato da esportazioni e import |
-| **Esportare per disciplina** | `disc-export-panel` (bozza, copia, download) | Sempre visibile di lato, compete con le cards per attenzione |
-| **Importare proposte** | `department-import-panel` + `referent-validation-panel` | Strumenti di processo, non di revisione diretta |
-| **Esportare confronto** | `toolbar-export` (Word/Copia/Markdown/PDF/CML) | Duplicato con Riepilogo, presente in toolbar sempre accessibile |
+| Compito                                       | Elemento attuale                                        | Problema                                                        |
+| --------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------- |
+| **Decidere** (approvare/rifiutare/modificare) | `cards-area` + toolbar filtri                           | Compito primario, ma affiancato da esportazioni e import        |
+| **Esportare per disciplina**                  | `disc-export-panel` (bozza, copia, download)            | Sempre visibile di lato, compete con le cards per attenzione    |
+| **Importare proposte**                        | `department-import-panel` + `referent-validation-panel` | Strumenti di processo, non di revisione diretta                 |
+| **Esportare confronto**                       | `toolbar-export` (Word/Copia/Markdown/PDF/CML)          | Duplicato con Riepilogo, presente in toolbar sempre accessibile |
 
 Un docente che deve **decidere** se approvare o meno una proposta si trova:
+
 - toolbar con 9+ pulsanti (filtri + esportazioni + toggle)
 - pannello esportazione disciplina visibile sopra le cards
 - pannelli import/validazione in accordion sotto la toolbar
@@ -44,6 +45,7 @@ La vista Revisione ha un solo compito: decidere.
 ```
 
 Tutto ciò che non è **decidere** (approvare/rifiutare/modificare/aggiungere/rimuovere) deve essere:
+
 - spostato in un pannello richiamabile (esportazione disciplina)
 - spostato in un'altra vista (strumenti processo)
 - rimosso in attesa della centralizzazione export (esportazioni confronto)
@@ -52,17 +54,17 @@ Tutto ciò che non è **decidere** (approvare/rifiutare/modificare/aggiungere/ri
 
 ### 1. Toolbar filtri (da mantenere, compattare)
 
-| Pulsante | Decisione |
-|---|---|
-| Tutti | Mantenere |
-| Da decidere | Mantenere |
-| Approvati | Mantenere |
-| Rifiutati | Mantenere |
-| Invariati | Mantenere |
-| Nuovi | Mantenere |
-| Nascondi invariati | Mantenere |
-| Altri filtri toggle | Mantenere |
-| Separatore `\|` | Mantenere |
+| Pulsante                                 | Decisione                                       |
+| ---------------------------------------- | ----------------------------------------------- |
+| Tutti                                    | Mantenere                                       |
+| Da decidere                              | Mantenere                                       |
+| Approvati                                | Mantenere                                       |
+| Rifiutati                                | Mantenere                                       |
+| Invariati                                | Mantenere                                       |
+| Nuovi                                    | Mantenere                                       |
+| Nascondi invariati                       | Mantenere                                       |
+| Altri filtri toggle                      | Mantenere                                       |
+| Separatore `\|`                          | Mantenere                                       |
 | **Esportazioni ▾ (toggle + 6 pulsanti)** | **Rimuovere — delegato a export center (#4-5)** |
 
 La toolbar filtri serve al compito **decidere**: deve rimanere.
@@ -71,49 +73,49 @@ L'esportazione confronto in toolbar (`toolbar-export`) compete con il compito pr
 
 ### 2. Usage notice (da compattare o spostare)
 
-| Elemento | Decisione |
-|---|---|
+| Elemento                    | Decisione                                     |
+| --------------------------- | --------------------------------------------- |
 | `💡 Uso ibrido e requisiti` | Compattare a 1 riga o accordion sempre chiuso |
-| Link PDF corso | Compattare a etichetta singola |
+| Link PDF corso              | Compattare a etichetta singola                |
 
 La notice serve al primo accesso, non alla revisione corrente.
 
 ### 3. Strumenti processo (da isolare)
 
-| Elemento | Decisione |
-|---|---|
-| `🔧 Strumenti di processo` | Estrarre in tab/folder separato `#tab-processo` o accordiono collassato di default |
-| `🏫 Validazione dipartimentale` (import CML) | Spostare in vista processo |
-| `📋 Verifica referente curricolo` (import esiti) | Spostare in vista processo |
-| Blocco `role-access-lock` | Mantenere associato alla funzione referente |
+| Elemento                                         | Decisione                                                                          |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| `🔧 Strumenti di processo`                       | Estrarre in tab/folder separato `#tab-processo` o accordiono collassato di default |
+| `🏫 Validazione dipartimentale` (import CML)     | Spostare in vista processo                                                         |
+| `📋 Verifica referente curricolo` (import esiti) | Spostare in vista processo                                                         |
+| Blocco `role-access-lock`                        | Mantenere associato alla funzione referente                                        |
 
 Questi strumenti non servono alla revisione diretta: un docente che decide non ha bisogno di importare/produrre report. Servono al referente o al dipartimento.
 
 ### 4. Per-discipline export panel (da rendere richiamabile)
 
-| Elemento | Decisione |
-|---|---|
+| Elemento                                          | Decisione                                               |
+| ------------------------------------------------- | ------------------------------------------------------- |
 | `disc-export-panel` (`display:block` dopo render) | Rendere richiamabile da toggle, non visibile di default |
-| Badge `Documento di lavoro — da validare` | Mantenere |
-| Genera bozza | Mantenere ma spostare in toggle |
-| Azioni di esportazione ▾ | Mantenere ma spostare in toggle |
-| Textarea preview | Mantenere ma spostare in toggle |
+| Badge `Documento di lavoro — da validare`         | Mantenere                                               |
+| Genera bozza                                      | Mantenere ma spostare in toggle                         |
+| Azioni di esportazione ▾                          | Mantenere ma spostare in toggle                         |
+| Textarea preview                                  | Mantenere ma spostare in toggle                         |
 
 Il pannello attualmente si attiva quando `render()` viene chiamato (linea 3385). Questo significa che ogni volta che si fa una decisione, il pannello è visibile. Deve essere **richiamabile** (es. pulsante "📝 Bozza disciplina" nella toolbar), non **sempre visibile**.
 
 ### 5. cards-area (da mantenere invariata)
 
-| Elemento | Decisione |
-|---|---|
-| Discipline header | Mantenere |
-| Per-ordine section | Mantenere |
+| Elemento                                  | Decisione |
+| ----------------------------------------- | --------- |
+| Discipline header                         | Mantenere |
+| Per-ordine section                        | Mantenere |
 | Cards confronto (IN 2012 ↔ proposta 2025) | Mantenere |
-| Decision buttons (✅ ❌ 🔍) | Mantenere |
-| Edit inline | Mantenere |
-| Add/Remove | Mantenere |
-| Gap notice | Mantenere |
-| Ordine lock notice | Mantenere |
-| Empty state | Mantenere |
+| Decision buttons (✅ ❌ 🔍)               | Mantenere |
+| Edit inline                               | Mantenere |
+| Add/Remove                                | Mantenere |
+| Gap notice                                | Mantenere |
+| Ordine lock notice                        | Mantenere |
+| Empty state                               | Mantenere |
 
 ## Backlog slice revisione
 
@@ -129,6 +131,7 @@ Prima slice runtime dopo questo piano. Implementa la separazione:
 6. **Bump** CACHE_NAME in `sw.js`
 
 Gate aggiuntivi:
+
 - Decisione su tab separato vs accordiono collassato per strumenti processo
 - Verifica che export disciplina sia raggiungibile con ≤ 2 click
 - Verifica che toolbar filtri non abbia perso funzionalità
@@ -136,11 +139,11 @@ Gate aggiuntivi:
 
 ### Decisioni aperte (da risolvere in slice #3)
 
-| Decisione | Opzioni | Raccomandazione |
-|---|---|---|
-| Destinazione strumenti processo | (a) Nuovo tab `#tab-processo` (b) Accordiono collassato in Revisione (c) Pulsante modale | (a) — separazione netta, coerente con `una schermata, un compito` |
-| Posizione pulsante bozza disciplina | (a) In toolbar filtri (b) In header disciplina (c) In cards-area | (a) — sempre accessibile, non compete con cards |
-| Usage notice: nascondere o compattare | (a) Accordiono sempre chiuso (b) Testo 1 riga (c) Rimuovere | (b) — informazione utile al primo accesso ma non invadente |
+| Decisione                             | Opzioni                                                                                  | Raccomandazione                                                   |
+| ------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Destinazione strumenti processo       | (a) Nuovo tab `#tab-processo` (b) Accordiono collassato in Revisione (c) Pulsante modale | (a) — separazione netta, coerente con `una schermata, un compito` |
+| Posizione pulsante bozza disciplina   | (a) In toolbar filtri (b) In header disciplina (c) In cards-area                         | (a) — sempre accessibile, non compete con cards                   |
+| Usage notice: nascondere o compattare | (a) Accordiono sempre chiuso (b) Testo 1 riga (c) Rimuovere                              | (b) — informazione utile al primo accesso ma non invadente        |
 
 ## Cosa NON cambia in questa slice docs-only
 

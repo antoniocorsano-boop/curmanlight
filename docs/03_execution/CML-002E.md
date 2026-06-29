@@ -1,6 +1,7 @@
 # CML-002E — PDF cache hard reset
 
 ## Obiettivo
+
 Risolvere il caso di utenti che vedono ancora la vecchia versione cacheata del PDF creando una nuova URL fisica del PDF corretto, aggiornando tutti i link pubblicabili e aggiungendo intestazioni anti-cache.
 
 ## Attività

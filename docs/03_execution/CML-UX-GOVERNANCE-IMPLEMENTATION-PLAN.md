@@ -9,6 +9,7 @@
 ## Contesto
 
 L'audit CML-UX-FLOW-AUDIT ha identificato gap critici non ancora risolti:
+
 - Governance curricolare mancante (stati versione, validazione/approvazione)
 - Gestione transizione IN2025 non strutturata
 - Collegamento progettazione-curricolo assente
@@ -29,6 +30,7 @@ Il piano è stato **parzialmente eseguito** e poi **deviato** verso altri obiett
 - **CML-230**: ⚠️ Deviato (TARGETED_ACCESSIBILITY_RESPONSIVE_MICROFIX, non UX-GOVERNANCE-CLOSURE-AUDIT)
 
 Le slice successive hanno seguito percorsi diversi:
+
 - CML-231: ACCESSIBILITY_RESPONSIVE_CLOSURE_GATE
 - CML-232: NEXT_CYCLE_SELECTION_AFTER_ACCESSIBILITY_RESPONSIVE_CLOSURE
 - CML-OPS-004/005/006: OPS guardrails
@@ -38,6 +40,7 @@ Le slice successive hanno seguito percorsi diversi:
 ## Gap rimanenti
 
 I gap identificati in CML-UX-FLOW-AUDIT rimangono **parzialmente aperti**:
+
 - Governance curricolare: ❌ Non implementata (stati versione, validazione/approvazione)
 - Gestione transizione IN2025: ❌ Non strutturata
 - Collegamento progettazione-curricolo: ❌ Non implementato
@@ -60,6 +63,7 @@ Il piano è diviso in **4 fasi sequenziali**, ciascuna con slice atomiche e ripr
 4. **Fase 4**: Riduzione ridondanze UI (runtime)
 
 Ogni slice ha:
+
 - Obiettivo chiaro e delimitato
 - Deliverables specifici
 - Vincoli espliciti
@@ -73,6 +77,7 @@ Ogni slice ha:
 **Obiettivo**: Definire contratto per nuova architettura informativa prima di qualsiasi modifica runtime.
 
 **Perimetro**:
+
 - Nuova struttura tabbar e sotto-tab
 - Definizione sezione "Versioni" (stati curricolari)
 - Definizione sezione "Collegamenti curricolo" (progettazione ↔ versione)
@@ -80,16 +85,19 @@ Ogni slice ha:
 - Specifica mitigazioni rischi di regressione
 
 **Non incluso**:
+
 - Modifiche runtime
 - Implementazione nuova UI
 - Modifica comportamento esistente
 
 **Deliverables**:
+
 - `docs/02_system/UX-MENU-ACTION-CONTRACT.md` (contratto architettura)
 - `docs/03_execution/CML-225.md` (execution log)
 - `report/CML-225_ux_menu_action_contract.md` (report)
 
 **Vincoli**:
+
 - Docs-only
 - Nessuna modifica runtime
 - Nessuna modifica curriculum JSON
@@ -97,6 +105,7 @@ Ogni slice ha:
 - Nessun deploy, nessun push
 
 **Criteri di accettazione**:
+
 - Contratto definisce chiaramente nuova struttura tabbar
 - Contratto definisce stati versione (vigente, in_revisione, proposta, approvata, adottata, superata)
 - Contratto definisce matrice azioni/ruoli
@@ -104,6 +113,7 @@ Ogni slice ha:
 - Report verifica coerenza con CML-UX-FLOW-AUDIT
 
 **Comandi verifica**:
+
 ```bash
 git status -sb
 git log --oneline -1
@@ -121,6 +131,7 @@ git diff --check
 **Obiettivo**: Generalizzare funzioni hardcoded Tecnologia per supportare tutte le 14 discipline.
 
 **Perimetro**:
+
 - Generalizzare `renderTecnologiaNorm()` → `renderDisciplinaNorm(disc)`
 - Generalizzare `generateTecnologiaBozza()` → `generateDisciplinaBozza(disc)`
 - Generalizzare `copyTecnologiaMarkdown()` → `copyDisciplinaMarkdown(disc)`
@@ -130,6 +141,7 @@ git diff --check
 - Cambiare default `selDisc` da "Tecnologia" a prima in ordine alfabetico o ultima usata
 
 **Non incluso**:
+
 - Modifica curriculum JSON
 - Modifica `.cml` schema
 - Modifica export/import
@@ -137,12 +149,14 @@ git diff --check
 - Modifica service-worker/manifest
 
 **Deliverables**:
+
 - `_published_snapshot/netlify-current/index.html` (modificato)
 - `docs/03_execution/CML-226.md` (execution log)
 - `report/CML-226_multi_discipline_generalization.md` (report)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
 **Vincoli**:
+
 - Runtime increment
 - Nessuna modifica curriculum JSON
 - Nessuna modifica `.cml`/export/import
@@ -150,6 +164,7 @@ git diff --check
 - Nessun deploy, nessun push senza autorizzazione
 
 **Criteri di accettazione**:
+
 - Tutte le 14 discipline hanno export panel funzionante
 - Default disciplina non è hardcoded "Tecnologia"
 - Titoli dinamici basati su disciplina selezionata
@@ -159,6 +174,7 @@ git diff --check
 - GitHub Pages HTTP 200
 
 **Comandi verifica**:
+
 ```bash
 git status -sb
 git diff --check
@@ -173,11 +189,13 @@ node tools/shape-test.js
 **Obiettivo**: Push controllato di CML-226.
 
 **Perimetro**:
+
 - Pre-push checks (git status clean, diff-check, validator, shape-test)
 - Push verso origin/main
 - Verifica GitHub Pages
 
 **Deliverables**:
+
 - `docs/03_execution/CML-226S.md` (execution log)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
@@ -192,6 +210,7 @@ node tools/shape-test.js
 **Obiettivo**: Implementare modello stati versione curricolare (vigente, in_revisione, proposta, approvata, adottata, superata).
 
 **Perimetro**:
+
 - Aggiungere sezione "Versioni" in Curriculum (nuovo sotto-tab)
 - Implementare tabella versioni con stati
 - Colonne: versione, stato, data, atto, note, azioni
@@ -202,6 +221,7 @@ node tools/shape-test.js
 - Aggiungere campi per data e atto di approvazione/adozione
 
 **Non incluso**:
+
 - Modifica curriculum JSON
 - Modifica `.cml` schema
 - Modifica export/import
@@ -209,12 +229,14 @@ node tools/shape-test.js
 - Modifica service-worker/manifest
 
 **Deliverables**:
+
 - `_published_snapshot/netlify-current/index.html` (modificato)
 - `docs/03_execution/CML-227.md` (execution log)
 - `report/CML-227_curriculum_version_states.md` (report)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
 **Vincoli**:
+
 - Runtime increment
 - Nessuna modifica curriculum JSON
 - Nessuna modifica `.cml`/export/import
@@ -222,6 +244,7 @@ node tools/shape-test.js
 - Nessun deploy, nessun push senza autorizzazione
 
 **Criteri di accettazione**:
+
 - Sezione "Versioni" visibile e funzionante
 - Tabella versioni mostra stati correttamente
 - Azioni "Registra avanzamento" funzionanti
@@ -232,6 +255,7 @@ node tools/shape-test.js
 - GitHub Pages HTTP 200
 
 **Comandi verifica**:
+
 ```bash
 git status -sb
 git diff --check
@@ -246,11 +270,13 @@ node tools/shape-test.js
 **Obiettivo**: Push controllato di CML-227.
 
 **Perimetro**:
+
 - Pre-push checks (git status clean, diff-check, validator, shape-test)
 - Push verso origin/main
 - Verifica GitHub Pages
 
 **Deliverables**:
+
 - `docs/03_execution/CML-227S.md` (execution log)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
@@ -265,6 +291,7 @@ node tools/shape-test.js
 **Obiettivo**: Ridurre ridondanze UI identificate nell'audit.
 
 **Perimetro**:
+
 - Unificare export in unico pannello per tab
 - Rimuovere tecnologia-export-panel (già generalizzato in CML-226)
 - Collassare pannelli statici ("Stato di completezza", "Readiness per approvazione")
@@ -274,6 +301,7 @@ node tools/shape-test.js
 - Rinominare referent-validation-panel in "Importa esiti dipartimentali"
 
 **Non incluso**:
+
 - Modifica curriculum JSON
 - Modifica `.cml` schema
 - Modifica export/import
@@ -281,12 +309,14 @@ node tools/shape-test.js
 - Modifica service-worker/manifest
 
 **Deliverables**:
+
 - `_published_snapshot/netlify-current/index.html` (modificato)
 - `docs/03_execution/CML-228.md` (execution log)
 - `report/CML-228_ui_redundancy_reduction.md` (report)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
 **Vincoli**:
+
 - Runtime increment
 - Nessuna modifica curriculum JSON
 - Nessuna modifica `.cml`/export/import
@@ -294,6 +324,7 @@ node tools/shape-test.js
 - Nessun deploy, nessun push senza autorizzazione
 
 **Criteri di accettazione**:
+
 - Export unificato in unico pannello per tab
 - Pannelli statici collassabili
 - Sidebar discipline visibile solo in Consulta/Revisione
@@ -304,6 +335,7 @@ node tools/shape-test.js
 - GitHub Pages HTTP 200
 
 **Comandi verifica**:
+
 ```bash
 git status -sb
 git diff --check
@@ -318,11 +350,13 @@ node tools/shape-test.js
 **Obiettivo**: Push controllato di CML-228.
 
 **Perimetro**:
+
 - Pre-push checks (git status clean, diff-check, validator, shape-test)
 - Push verso origin/main
 - Verifica GitHub Pages
 
 **Deliverables**:
+
 - `docs/03_execution/CML-228S.md` (execution log)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
@@ -337,6 +371,7 @@ node tools/shape-test.js
 **Obiettivo**: Collegare progettazione didattica a versione curricolare di riferimento.
 
 **Perimetro**:
+
 - Aggiungere sezione "Collegamenti curricolo" in Progettazione didattica (nuovo sotto-tab)
 - Implementare lista progettazioni didattiche
 - Per ogni progettazione: versione curricolare di riferimento, stato, data
@@ -346,6 +381,7 @@ node tools/shape-test.js
 - Implementare suggerimenti scenari (app propone, non decide)
 
 **Non incluso**:
+
 - Modifica curriculum JSON
 - Modifica `.cml` schema
 - Modifica export/import
@@ -353,12 +389,14 @@ node tools/shape-test.js
 - Modifica service-worker/manifest
 
 **Deliverables**:
+
 - `_published_snapshot/netlify-current/index.html` (modificato)
 - `docs/03_execution/CML-229.md` (execution log)
 - `report/CML-229_progettazione_curricolo_linking.md` (report)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
 **Vincoli**:
+
 - Runtime increment
 - Nessuna modifica curriculum JSON
 - Nessuna modifica `.cml`/export/import
@@ -366,6 +404,7 @@ node tools/shape-test.js
 - Nessun deploy, nessun push senza autorizzazione
 
 **Criteri di accettazione**:
+
 - Sezione "Collegamenti curricolo" visibile e funzionante
 - Lista progettazioni mostra versione riferimento
 - Segnalazione progettazioni su versioni superate funzionante
@@ -377,6 +416,7 @@ node tools/shape-test.js
 - GitHub Pages HTTP 200
 
 **Comandi verifica**:
+
 ```bash
 git status -sb
 git diff --check
@@ -391,11 +431,13 @@ node tools/shape-test.js
 **Obiettivo**: Push controllato di CML-229.
 
 **Perimetro**:
+
 - Pre-push checks (git status clean, diff-check, validator, shape-test)
 - Push verso origin/main
 - Verifica GitHub Pages
 
 **Deliverables**:
+
 - `docs/03_execution/CML-229S.md` (execution log)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
@@ -410,6 +452,7 @@ node tools/shape-test.js
 **Obiettivo**: Audit di closure per verificare che tutti i gap di CML-UX-FLOW-AUDIT siano stati risolti.
 
 **Perimetro**:
+
 - Verifica governance curricolare implementata
 - Verifica gestione transizione IN2025 strutturata
 - Verifica collegamento progettazione-curricolo implementato
@@ -420,17 +463,20 @@ node tools/shape-test.js
 - Verifica compatibilità con CML-224 release candidate
 
 **Non incluso**:
+
 - Modifiche runtime
 - Modifica curriculum JSON
 - Modifica `.cml`/export/import
 - Nessun deploy, nessun push
 
 **Deliverables**:
+
 - `docs/03_execution/CML-230.md` (execution log)
 - `report/CML-230_ux_governance_closure_audit.md` (report)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
 **Vincoli**:
+
 - Docs-only
 - Nessuna modifica runtime
 - Nessuna modifica curriculum JSON
@@ -438,6 +484,7 @@ node tools/shape-test.js
 - Nessun deploy, nessun push
 
 **Criteri di accettazione**:
+
 - Tutti i gap CML-UX-FLOW-AUDIT risolti
 - Governance curricolare funzionante
 - Ridondanze UI ridotte
@@ -449,6 +496,7 @@ node tools/shape-test.js
 - Compatibilità CML-224 mantenuta
 
 **Comandi verifica**:
+
 ```bash
 git status -sb
 git diff --check
@@ -463,11 +511,13 @@ node tools/shape-test.js
 **Obiettivo**: Push controllato di CML-230.
 
 **Perimetro**:
+
 - Pre-push checks (git status clean, diff-check, validator, shape-test)
 - Push verso origin/main
 - Verifica GitHub Pages
 
 **Deliverables**:
+
 - `docs/03_execution/CML-230S.md` (execution log)
 - Aggiornamento `docs/REPO-MOVELOG.md`
 
@@ -478,6 +528,7 @@ node tools/shape-test.js
 ## Istruzioni per ripresa da altri agenti
 
 ### Stato iniziale
+
 - Branch: `main`
 - Commit base: `731cb8b` (CML-224S, aligned)
 - Working tree: pulito
@@ -485,6 +536,7 @@ node tools/shape-test.js
 - Shape test: 14/14 PASS
 
 ### Sequenza di esecuzione
+
 1. Eseguire CML-225 (docs-only)
 2. Eseguire CML-226 + CML-226S (runtime + push)
 3. Eseguire CML-227 + CML-227S (runtime + push)
@@ -493,6 +545,7 @@ node tools/shape-test.js
 6. Eseguire CML-230 + CML-230S (docs-only + push)
 
 ### Comandi di verifica pre-slice
+
 ```bash
 git status -sb
 git log --oneline -1
@@ -502,6 +555,7 @@ node tools/shape-test.js
 ```
 
 ### Comandi di verifica post-slice (runtime)
+
 ```bash
 git status -sb
 git diff --check
@@ -512,6 +566,7 @@ git commit -m "runtime: CML-XXX description"
 ```
 
 ### Comandi di verifica pre-push
+
 ```bash
 git status -sb
 git diff --cached --check
@@ -523,13 +578,16 @@ git status -sb
 ```
 
 ### Recovery in caso di errore
+
 Se una slice fallisce:
+
 1. Documentare l'errore nel report della slice
 2. Rollback con `git reset --hard HEAD~1`
 3. Aggiornare il piano con le modifiche necessarie
 4. Riprovare con correzioni
 
 ### Tracking progresso (esecuzione effettiva)
+
 - CML-225: [X] Completato
 - CML-226: [X] Completato
 - CML-226S: [X] Completato

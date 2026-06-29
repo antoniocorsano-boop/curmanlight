@@ -6,14 +6,14 @@ Smoke audit completo della funzione CML-025 "Scarica report gruppo di lavoro". T
 
 ## Verifiche
 
-| Area | Esito |
-|---|---|
-| Preflight | ✅ PASS |
-| Statico runtime | ✅ PASS |
+| Area                           | Esito   |
+| ------------------------------ | ------- |
+| Preflight                      | ✅ PASS |
+| Statico runtime                | ✅ PASS |
 | Semantico Markdown (9 sezioni) | ✅ PASS |
-| Comportamento | ✅ PASS |
-| Varianti (vuoto/popolato) | ✅ PASS |
-| Asset invariati | ✅ PASS |
+| Comportamento                  | ✅ PASS |
+| Varianti (vuoto/popolato)      | ✅ PASS |
+| Asset invariati                | ✅ PASS |
 
 ## Dettaglio
 
@@ -25,7 +25,7 @@ Smoke audit completo della funzione CML-025 "Scarica report gruppo di lavoro". T
 - **`buildReferentGroupWorkReportMarkdown()`:** 1 occorrenza alla riga 3212 ✅
 - **`downloadBlob()`:** riutilizzato alla riga 3346 ✅
 - **Nessuna rete, Drive, OAuth, backend, nuova dipendenza** ✅
-- **Nessuna modifica a schema .cml, persistenza, sw.js, _headers, PDF, asset** ✅
+- **Nessuna modifica a schema .cml, persistenza, sw.js, \_headers, PDF, asset** ✅
 - **MEMORY.md:** presente come untracked — non committato
 
 ## Verdetto

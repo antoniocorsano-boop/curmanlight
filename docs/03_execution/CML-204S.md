@@ -10,14 +10,14 @@ Slice docs-only + controlled push. Non modifica JSON, runtime, tool o SchoolKB.
 
 ## Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Branch | `main` |
-| Commit CML-204 | `7d43467` |
-| origin/main prima del push | `aff4981` |
-| HEAD prima del push | `7d43467` |
-| HEAD..origin/main | vuoto (nessun commit remoto non presente in HEAD) |
-| origin/main..HEAD | `7d43467` (solo CML-204) |
+| Parametro                  | Valore                                            |
+| -------------------------- | ------------------------------------------------- |
+| Branch                     | `main`                                            |
+| Commit CML-204             | `7d43467`                                         |
+| origin/main prima del push | `aff4981`                                         |
+| HEAD prima del push        | `7d43467`                                         |
+| HEAD..origin/main          | vuoto (nessun commit remoto non presente in HEAD) |
+| origin/main..HEAD          | `7d43467` (solo CML-204)                          |
 
 ## 1. Verifica stato
 
@@ -78,11 +78,11 @@ git log --oneline -1
 
 ## 6. Contenuto sincronizzato
 
-| File | Status |
-|---|---|
-| `docs/03_execution/CML-204.md` | pushato |
-| `report/CML-204_educazione_fisica_detailed_gap_model.md` | pushato |
-| `docs/REPO-MOVELOG.md` | invariato in questo commit (CML-204 già registrato) |
+| File                                                     | Status                                              |
+| -------------------------------------------------------- | --------------------------------------------------- |
+| `docs/03_execution/CML-204.md`                           | pushato                                             |
+| `report/CML-204_educazione_fisica_detailed_gap_model.md` | pushato                                             |
+| `docs/REPO-MOVELOG.md`                                   | invariato in questo commit (CML-204 già registrato) |
 
 ## 7. Invarianti rispettate
 

@@ -18,15 +18,33 @@
 
 - **Prima del fix**: il codice conteneva:
   ```js
-  var decision=decisionIdx>=0?departmentImportState.proposals[decisionIdx].decision:null;
-  return '<article ... data-idx="'+decisionIdx+'" ... onchange="setDepartmentDecision('+decisionIdx+',this.value)" ...';
+  var decision =
+    decisionIdx >= 0
+      ? departmentImportState.proposals[decisionIdx].decision
+      : null
+  return (
+    '<article ... data-idx="' +
+    decisionIdx +
+    '" ... onchange="setDepartmentDecision(' +
+    decisionIdx +
+    ',this.value)" ...'
+  )
   ```
   senza alcuna definizione precedente di `decisionIdx`, causando un `ReferenceError` durante l'esecuzione.
 - **Dopo il fix**: il codice utilizza ora un indice calcolato correttamente:
   ```js
-  const globalIdx=departmentImportState.proposals.findIndex(p=>p===proposal);
-  const decision=globalIdx>=0?departmentImportState.proposals[globalIdx].decision:null;
-  return '<article ... data-idx="'+globalIdx+'" ... onchange="setDepartmentDecision('+globalIdx+',this.value)" ...';
+  const globalIdx = departmentImportState.proposals.findIndex(
+    (p) => p === proposal
+  )
+  const decision =
+    globalIdx >= 0 ? departmentImportState.proposals[globalIdx].decision : null
+  return (
+    '<article ... data-idx="' +
+    globalIdx +
+    '" ... onchange="setDepartmentDecision(' +
+    globalIdx +
+    ',this.value)" ...'
+  )
   ```
   oppure un equivalente che garantisce la definizione della variabile prima del suo utilizzo.
 

@@ -30,7 +30,7 @@ README.md descrive CurManLight come strumento web locale/privacy-first per consu
 ## Netlify reference handling
 
 - 18 riferimenti obsoleti in 12 file utente: tutti aggiornati a GitHub Pages
-- Riferimenti storici in file tecnici/execution docs (CML-*, CML-REPO-*): preservati come documentazione storica
+- Riferimenti storici in file tecnici/execution docs (CML-_, CML-REPO-_): preservati come documentazione storica
 - Zero riferimenti Netlify rimasti in `docs/04_user/`
 
 ## Favicon deferral

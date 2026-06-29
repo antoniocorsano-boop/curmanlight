@@ -12,11 +12,11 @@ La verifica finale ha confrontato il runtime locale pubblicabile con il PDF scar
 
 ## Commit coinvolti
 
-| Slice | Commit | Esito |
-|---|---|---|
-| CML-002B | `452b42184a03b21256ad8f9217885e0648de99b9` | PDF corretto con `ariana: 0`, `arianese: 6` |
+| Slice    | Commit                                     | Esito                                           |
+| -------- | ------------------------------------------ | ----------------------------------------------- |
+| CML-002B | `452b42184a03b21256ad8f9217885e0648de99b9` | PDF corretto con `ariana: 0`, `arianese: 6`     |
 | CML-002C | `cd5996e6ce01cebf7424a4433f6bbc98636aa477` | Link PDF versionati e service worker aggiornato |
-| CML-002D | `8fd4b846a3ee5f3e62aec8b46af26f9acb6ca2c8` | Link residuo motto versionato |
+| CML-002D | `8fd4b846a3ee5f3e62aec8b46af26f9acb6ca2c8` | Link residuo motto versionato                   |
 
 ## Stato Git iniziale
 
@@ -45,26 +45,26 @@ La verifica finale ha confrontato il runtime locale pubblicabile con il PDF scar
 
 Metodo: PyMuPDF, parole intere case-insensitive.
 
-| Termine | Conteggio produzione |
-|---|---:|
-| `ariana` | 0 |
-| `arianese` | 6 |
+| Termine    | Conteggio produzione |
+| ---------- | -------------------: |
+| `ariana`   |                    0 |
+| `arianese` |                    6 |
 
 ## Verifica link anti-cache locali
 
 Runtime verificato: `_published_snapshot/netlify-current/`
 
-| Controllo | Esito |
-|---|---:|
-| File PDF locale esistente | PASS |
-| `index.html` esistente | PASS |
-| `sw.js` esistente | PASS |
-| `motto-non-multa-sed-multum.html` esistente | PASS |
-| Riferimenti HTML al PDF | 4 |
-| Riferimenti HTML con `?v=452b421` | 4 |
-| Riferimenti HTML non versionati | 0 |
-| PDF locale `ariana` | 0 |
-| PDF locale `arianese` | 6 |
+| Controllo                                   | Esito |
+| ------------------------------------------- | ----: |
+| File PDF locale esistente                   |  PASS |
+| `index.html` esistente                      |  PASS |
+| `sw.js` esistente                           |  PASS |
+| `motto-non-multa-sed-multum.html` esistente |  PASS |
+| Riferimenti HTML al PDF                     |     4 |
+| Riferimenti HTML con `?v=452b421`           |     4 |
+| Riferimenti HTML non versionati             |     0 |
+| PDF locale `ariana`                         |     0 |
+| PDF locale `arianese`                       |     6 |
 
 Riferimenti HTML rilevati:
 
@@ -79,11 +79,11 @@ Tutti i riferimenti HTML usano:
 
 ## Verifica service worker
 
-| Controllo | Esito |
-|---|---|
-| `sw.js` contiene `curmanlight-cache-v452b421` | PASS |
-| `sw.js` contiene riferimenti al PDF | nessuno |
-| PDF rimosso dalla precache | PASS |
+| Controllo                                     | Esito   |
+| --------------------------------------------- | ------- |
+| `sw.js` contiene `curmanlight-cache-v452b421` | PASS    |
+| `sw.js` contiene riferimenti al PDF           | nessuno |
+| PDF rimosso dalla precache                    | PASS    |
 
 ## Verifica visiva
 

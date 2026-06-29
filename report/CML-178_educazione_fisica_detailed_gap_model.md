@@ -10,18 +10,18 @@ La slice e docs-only / readiness-audit. Non produce file `.normalized.json`, non
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `129a816` |
-| origin/main iniziale | `129a816` |
-| Working tree iniziale | pulito |
-| Stato remoto iniziale | `main...origin/main` |
-| Dati normalizzati | 10/14 |
-| Runtime mappa | 10/14 |
-| Shape test | 10/10 PASS |
-| Skill usata | `cml-readiness-audit` |
+| Parametro             | Valore                       |
+| --------------------- | ---------------------------- |
+| Root Git              | `C:\Users\anton\CurManLight` |
+| Branch                | `main`                       |
+| Commit iniziale       | `129a816`                    |
+| origin/main iniziale  | `129a816`                    |
+| Working tree iniziale | pulito                       |
+| Stato remoto iniziale | `main...origin/main`         |
+| Dati normalizzati     | 10/14                        |
+| Runtime mappa         | 10/14                        |
+| Shape test            | 10/10 PASS                   |
+| Skill usata           | `cml-readiness-audit`        |
 
 ## 3. Collegamento con CML-177
 
@@ -81,13 +81,13 @@ Il metodo separa:
 
 ## 6. Gap per nuclei disciplinari
 
-| Nucleo possibile | Stato | Gap |
-|---|---|---|
-| Corpo e percezione | inferenza prudenziale | manca fonte con obiettivi, evidenze e progressione |
-| Abilita motorie | inferenza prudenziale | manca distinzione tra coordinazione, equilibrio, schemi motori e prestazioni |
-| Gioco e sport | parzialmente supportato come area | mancano sport/attivita, regole, fair play e criteri osservabili |
-| Salute e benessere | area sensibile | manca perimetro non sanitario e non prescrittivo |
-| Espressione e inclusione | inferenza prudenziale | manca validazione su inclusione, adattamenti e linguaggio |
+| Nucleo possibile         | Stato                             | Gap                                                                          |
+| ------------------------ | --------------------------------- | ---------------------------------------------------------------------------- |
+| Corpo e percezione       | inferenza prudenziale             | manca fonte con obiettivi, evidenze e progressione                           |
+| Abilita motorie          | inferenza prudenziale             | manca distinzione tra coordinazione, equilibrio, schemi motori e prestazioni |
+| Gioco e sport            | parzialmente supportato come area | mancano sport/attivita, regole, fair play e criteri osservabili              |
+| Salute e benessere       | area sensibile                    | manca perimetro non sanitario e non prescrittivo                             |
+| Espressione e inclusione | inferenza prudenziale             | manca validazione su inclusione, adattamenti e linguaggio                    |
 
 Nessuno di questi nuclei e oggi sufficientemente formalizzato per diventare automaticamente `nodiDisciplinari` o `struttureSostanziali`.
 
@@ -95,17 +95,17 @@ Nessuno di questi nuclei e oggi sufficientemente formalizzato per diventare auto
 
 La progressione per Secondaria I / II / III non e disponibile in forma verificabile.
 
-| Classe/Fascia | Stato | Rischio |
-|---|---|---|
-| Infanzia | citata in modo generico | rischio di descrizioni generiche su gioco motorio |
-| Primaria I | non dettagliata | rischio di duplicare obiettivi di Infanzia |
-| Primaria II | non dettagliata | rischio di inventare progressione intermedia |
-| Primaria III | non dettagliata | rischio di introdurre abilita non documentate |
-| Primaria IV | non dettagliata | rischio di salto verticale non giustificato |
-| Primaria V | non dettagliata | rischio di anticipare contenuti sportivi non validati |
-| Secondaria I | non dettagliata | rischio di genericita su sport e regole |
-| Secondaria II | non dettagliata | rischio di progressione fittizia |
-| Secondaria III | non dettagliata | rischio di contenuti salute/sicurezza non validati |
+| Classe/Fascia  | Stato                   | Rischio                                               |
+| -------------- | ----------------------- | ----------------------------------------------------- |
+| Infanzia       | citata in modo generico | rischio di descrizioni generiche su gioco motorio     |
+| Primaria I     | non dettagliata         | rischio di duplicare obiettivi di Infanzia            |
+| Primaria II    | non dettagliata         | rischio di inventare progressione intermedia          |
+| Primaria III   | non dettagliata         | rischio di introdurre abilita non documentate         |
+| Primaria IV    | non dettagliata         | rischio di salto verticale non giustificato           |
+| Primaria V     | non dettagliata         | rischio di anticipare contenuti sportivi non validati |
+| Secondaria I   | non dettagliata         | rischio di genericita su sport e regole               |
+| Secondaria II  | non dettagliata         | rischio di progressione fittizia                      |
+| Secondaria III | non dettagliata         | rischio di contenuti salute/sicurezza non validati    |
 
 Il gap e critico per il contratto CML: `progressioneVerticale` richiede descrizioni per ordine/fascia/classe e fonte.
 
@@ -210,13 +210,13 @@ Educazione Fisica non ha dati sufficienti per classi I / II / III e non dispone 
 
 ## 17. Opzioni prossima slice
 
-| Opzione | Valutazione |
-|---|---|
-| Data preparation controllata | non raccomandata ora |
-| Audit fonti aggiuntivo | utile se si puo accedere a fonte DOCX o documenti ufficiali |
-| Gap-fill documentale/manuale | raccomandata |
-| Validazione dipartimentale | necessaria, ma dopo una traccia minima compilata |
-| Altro | non necessario |
+| Opzione                      | Valutazione                                                 |
+| ---------------------------- | ----------------------------------------------------------- |
+| Data preparation controllata | non raccomandata ora                                        |
+| Audit fonti aggiuntivo       | utile se si puo accedere a fonte DOCX o documenti ufficiali |
+| Gap-fill documentale/manuale | raccomandata                                                |
+| Validazione dipartimentale   | necessaria, ma dopo una traccia minima compilata            |
+| Altro                        | non necessario                                              |
 
 ## 18. Raccomandazione finale
 

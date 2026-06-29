@@ -16,87 +16,87 @@ Definire un modello di stati per la gestione dell'approvazione dei curricoli dis
 
 ## Glossario
 
-| Termine | Significato |
-|---|---|
-| Completezza strutturale | La disciplina ha tutti i campi normalizzati (traguardi, obiettivi, conoscenze, abilità, evidenze, criteri, unità organizzate per ordine) |
-| Bozza disciplinare | Documento normalizzato generabile dal sistema (.md, .docx, .cml) |
-| Revisione | Controllo umano della bozza (dipartimento, commissione, referente) |
-| Readiness per approvazione | Stato dichiarabile solo dopo check umano e documento di sintesi |
-| Approvazione esterna | Delibera formale del Collegio Docenti o altro organo competente, fuori dallo strumento |
+| Termine                    | Significato                                                                                                                              |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Completezza strutturale    | La disciplina ha tutti i campi normalizzati (traguardi, obiettivi, conoscenze, abilità, evidenze, criteri, unità organizzate per ordine) |
+| Bozza disciplinare         | Documento normalizzato generabile dal sistema (.md, .docx, .cml)                                                                         |
+| Revisione                  | Controllo umano della bozza (dipartimento, commissione, referente)                                                                       |
+| Readiness per approvazione | Stato dichiarabile solo dopo check umano e documento di sintesi                                                                          |
+| Approvazione esterna       | Delibera formale del Collegio Docenti o altro organo competente, fuori dallo strumento                                                   |
 
 ## Modello Stati
 
 ### 1. `solo_consultazione`
 
-| Campo | Valore |
-|---|---|
-| Significato | Disciplina con traguardi e obiettivi di base. Non ha struttura normalizzata completa. |
-| Chi lo attribuisce | Default iniziale. Nessuna azione richiesta. |
-| Condizioni minime | La disciplina esiste in `DISCIPLINE_META` e `DATA` con traguardi + obiettivi. |
-| Cosa l'UI può mostrare | Badge "Solo consultazione", label "Non pronta per approvazione". |
-| Cosa l'UI non può fare | Mostrare pulsanti "Approva", "Invia", "Conferma". |
-| Rischio se usato male | Nessuno — è lo stato di partenza. |
-| Microcopy | "Solo consultazione" / "Non pronta per approvazione" |
+| Campo                  | Valore                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------- |
+| Significato            | Disciplina con traguardi e obiettivi di base. Non ha struttura normalizzata completa. |
+| Chi lo attribuisce     | Default iniziale. Nessuna azione richiesta.                                           |
+| Condizioni minime      | La disciplina esiste in `DISCIPLINE_META` e `DATA` con traguardi + obiettivi.         |
+| Cosa l'UI può mostrare | Badge "Solo consultazione", label "Non pronta per approvazione".                      |
+| Cosa l'UI non può fare | Mostrare pulsanti "Approva", "Invia", "Conferma".                                     |
+| Rischio se usato male  | Nessuno — è lo stato di partenza.                                                     |
+| Microcopy              | "Solo consultazione" / "Non pronta per approvazione"                                  |
 
 ### 2. `bozza_generabile`
 
-| Campo | Valore |
-|---|---|
-| Significato | Disciplina con struttura normalizzata completa. Può produrre bozza disciplinare. |
-| Chi lo attribuisce | Sviluppatore / redattore curricolo, con validazione umana esplicita (campo `validazioneUmana` su ogni unità). |
-| Condizioni minime | File normalizzato `.json` presente e valido; tutte le unità hanno `validazioneUmana: true`. |
-| Cosa l'UI può mostrare | Badge "Bozza completa disponibile", label "In revisione". |
-| Cosa l'UI non può fare | Mostrare badge "Approvato", "Pronto per approvazione", o pulsanti di conferma automatica. |
-| Rischio se usato male | Si può credere che "bozza completa" equivalga a "curricolo pronto". Mitigazione: microcopy esplicita. |
-| Microcopy | "Bozza completa disponibile" / "Richiede validazione umana" |
+| Campo                  | Valore                                                                                                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Significato            | Disciplina con struttura normalizzata completa. Può produrre bozza disciplinare.                              |
+| Chi lo attribuisce     | Sviluppatore / redattore curricolo, con validazione umana esplicita (campo `validazioneUmana` su ogni unità). |
+| Condizioni minime      | File normalizzato `.json` presente e valido; tutte le unità hanno `validazioneUmana: true`.                   |
+| Cosa l'UI può mostrare | Badge "Bozza completa disponibile", label "In revisione".                                                     |
+| Cosa l'UI non può fare | Mostrare badge "Approvato", "Pronto per approvazione", o pulsanti di conferma automatica.                     |
+| Rischio se usato male  | Si può credere che "bozza completa" equivalga a "curricolo pronto". Mitigazione: microcopy esplicita.         |
+| Microcopy              | "Bozza completa disponibile" / "Richiede validazione umana"                                                   |
 
 ### 3. `in_revisione`
 
-| Campo | Valore |
-|---|---|
-| Significato | Bozza completa sottoposta a controllo dipartimentale. Non approvata. |
-| Chi lo attribuisce | Coordinatore di dipartimento / referente curricolo, dopo avvio formale della revisione. |
-| Condizioni minime | La disciplina è in stato `bozza_generabile`; esiste un avvio documentato del processo di revisione. |
-| Cosa l'UI può mostrare | Badge "In revisione", note dipartimentali, proposte di modifica, decisioni parziali. |
-| Cosa l'UI non può fare | Chiudere automaticamente la revisione, assegnare `sintesi_pronta` senza intervento umano. |
-| Rischio se usato male | Revisione percepita come definitiva. Mitigazione: stato "In revisione" non è terminale. |
-| Microcopy | "In revisione" / "Voci da validare: N" / "Controlla e decidi" |
+| Campo                  | Valore                                                                                              |
+| ---------------------- | --------------------------------------------------------------------------------------------------- |
+| Significato            | Bozza completa sottoposta a controllo dipartimentale. Non approvata.                                |
+| Chi lo attribuisce     | Coordinatore di dipartimento / referente curricolo, dopo avvio formale della revisione.             |
+| Condizioni minime      | La disciplina è in stato `bozza_generabile`; esiste un avvio documentato del processo di revisione. |
+| Cosa l'UI può mostrare | Badge "In revisione", note dipartimentali, proposte di modifica, decisioni parziali.                |
+| Cosa l'UI non può fare | Chiudere automaticamente la revisione, assegnare `sintesi_pronta` senza intervento umano.           |
+| Rischio se usato male  | Revisione percepita come definitiva. Mitigazione: stato "In revisione" non è terminale.             |
+| Microcopy              | "In revisione" / "Voci da validare: N" / "Controlla e decidi"                                       |
 
 ### 4. `sintesi_pronta`
 
-| Campo | Valore |
-|---|---|
-| Significato | Bozza revisionata e coerente. Pronta per essere portata agli organi competenti. Non ancora approvata. |
-| Chi lo attribuisce | Referente curricolo, dopo verifica della completezza della revisione. |
-| Condizioni minime | Tutte le voci della disciplina sono state valutate (approvate, respinte, modificate); esiste un documento di sintesi. |
-| Cosa l'UI può mostrare | Badge "Sintesi pronta", link "Scarica sintesi", nota "Da portare al Collegio Docenti". |
-| Cosa l'UI non può fare | Assegnare automaticamente `sintesi_pronta` al completamento della revisione; mostrare "Approvato". |
-| Rischio se usato male | Si può confondere "sintesi pronta" con "approvato". Mitigazione: microcopy esplicita che rimanda agli organi. |
-| Microcopy | "Sintesi pronta" / "Pronta per gli organi competenti" / "Da portare al Collegio Docenti" |
+| Campo                  | Valore                                                                                                                |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Significato            | Bozza revisionata e coerente. Pronta per essere portata agli organi competenti. Non ancora approvata.                 |
+| Chi lo attribuisce     | Referente curricolo, dopo verifica della completezza della revisione.                                                 |
+| Condizioni minime      | Tutte le voci della disciplina sono state valutate (approvate, respinte, modificate); esiste un documento di sintesi. |
+| Cosa l'UI può mostrare | Badge "Sintesi pronta", link "Scarica sintesi", nota "Da portare al Collegio Docenti".                                |
+| Cosa l'UI non può fare | Assegnare automaticamente `sintesi_pronta` al completamento della revisione; mostrare "Approvato".                    |
+| Rischio se usato male  | Si può confondere "sintesi pronta" con "approvato". Mitigazione: microcopy esplicita che rimanda agli organi.         |
+| Microcopy              | "Sintesi pronta" / "Pronta per gli organi competenti" / "Da portare al Collegio Docenti"                              |
 
 ### 5. `pronto_approvazione`
 
-| Campo | Valore |
-|---|---|
-| Significato | Stato dichiarabile solo dopo controllo umano e documento di sintesi. Non deve essere assegnato automaticamente. |
-| Chi lo attribuisce | Referente curricolo / DS, con evidenza documentale (verbale, nota, report). |
-| Condizioni minime | Disciplina in `sintesi_pronta`; documento di sintesi prodotto; nota umana che attesta la readiness. |
-| Cosa l'UI può mostrare | Badge "Pronta per approvazione", nota "Richiede delibera del Collegio Docenti". |
-| Cosa l'UI non può fare | Assegnare automaticamente; mostrare "Approvato" o "Deliberato". |
-| Rischio se usato male | Alto — si può scambiare per approvazione effettiva. Mitigazione: microcopy obbligatoria e stato non terminale. |
-| Microcopy | "Pronta per approvazione" / "Richiede delibera del Collegio Docenti" / "L'approvazione resta esterna" |
+| Campo                  | Valore                                                                                                          |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Significato            | Stato dichiarabile solo dopo controllo umano e documento di sintesi. Non deve essere assegnato automaticamente. |
+| Chi lo attribuisce     | Referente curricolo / DS, con evidenza documentale (verbale, nota, report).                                     |
+| Condizioni minime      | Disciplina in `sintesi_pronta`; documento di sintesi prodotto; nota umana che attesta la readiness.             |
+| Cosa l'UI può mostrare | Badge "Pronta per approvazione", nota "Richiede delibera del Collegio Docenti".                                 |
+| Cosa l'UI non può fare | Assegnare automaticamente; mostrare "Approvato" o "Deliberato".                                                 |
+| Rischio se usato male  | Alto — si può scambiare per approvazione effettiva. Mitigazione: microcopy obbligatoria e stato non terminale.  |
+| Microcopy              | "Pronta per approvazione" / "Richiede delibera del Collegio Docenti" / "L'approvazione resta esterna"           |
 
 ### 6. `approvato_esternamente`
 
-| Campo | Valore |
-|---|---|
-| Significato | Stato manuale/documentale. Indica che l'approvazione è avvenuta fuori dallo strumento. |
-| Chi lo attribuisce | Referente curricolo / DS, con riferimento a delibera, verbale o atto scolastico. |
-| Condizioni minime | Riferimento a delibera (numero, data, organo); disciplina in `pronto_approvazione` o `sintesi_pronta`. |
-| Cosa l'UI può mostrare | Badge "Approvata esternamente", riferimento alla delibera, nota "Atto esterno allo strumento". |
-| Cosa l'UI non può fare | Generare la delibera; assegnare automaticamente lo stato; mostrare "Approvato" senza "esternamente". |
-| Rischio se usato male | Alto — equivoco che l'app abbia approvato. Mitigazione: obbligo di riferimento a delibera + microcopy chiara. |
-| Microcopy | "Approvata esternamente" / "Delibera N/X del GG/MM/AAAA" / "Atto esterno allo strumento" |
+| Campo                  | Valore                                                                                                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Significato            | Stato manuale/documentale. Indica che l'approvazione è avvenuta fuori dallo strumento.                        |
+| Chi lo attribuisce     | Referente curricolo / DS, con riferimento a delibera, verbale o atto scolastico.                              |
+| Condizioni minime      | Riferimento a delibera (numero, data, organo); disciplina in `pronto_approvazione` o `sintesi_pronta`.        |
+| Cosa l'UI può mostrare | Badge "Approvata esternamente", riferimento alla delibera, nota "Atto esterno allo strumento".                |
+| Cosa l'UI non può fare | Generare la delibera; assegnare automaticamente lo stato; mostrare "Approvato" senza "esternamente".          |
+| Rischio se usato male  | Alto — equivoco che l'app abbia approvato. Mitigazione: obbligo di riferimento a delibera + microcopy chiara. |
+| Microcopy              | "Approvata esternamente" / "Delibera N/X del GG/MM/AAAA" / "Atto esterno allo strumento"                      |
 
 ## Condizioni di Transizione
 
@@ -112,13 +112,13 @@ Nessuna transizione è automatica. Ogni passaggio richiede una decisione documen
 
 ## Responsabilità Umana
 
-| Transizione | Ruolo | Evidenza minima |
-|---|---|---|
-| `solo_consultazione` → `bozza_generabile` | Sviluppatore + validatore | Validazione umana su ogni unità (`validazioneUmana: true`) |
-| `bozza_generabile` → `in_revisione` | Coordinatore di dipartimento | Avvio formale (nota, email, verbale) |
-| `in_revisione` → `sintesi_pronta` | Referente curricolo | Completezza revisione verificata |
-| `sintesi_pronta` → `pronto_approvazione` | Referente / DS | Documento di sintesi + nota |
-| `pronto_approvazione` → `approvato_esternamente` | DS / Segreteria | Riferimento a delibera |
+| Transizione                                      | Ruolo                        | Evidenza minima                                            |
+| ------------------------------------------------ | ---------------------------- | ---------------------------------------------------------- |
+| `solo_consultazione` → `bozza_generabile`        | Sviluppatore + validatore    | Validazione umana su ogni unità (`validazioneUmana: true`) |
+| `bozza_generabile` → `in_revisione`              | Coordinatore di dipartimento | Avvio formale (nota, email, verbale)                       |
+| `in_revisione` → `sintesi_pronta`                | Referente curricolo          | Completezza revisione verificata                           |
+| `sintesi_pronta` → `pronto_approvazione`         | Referente / DS               | Documento di sintesi + nota                                |
+| `pronto_approvazione` → `approvato_esternamente` | DS / Segreteria              | Riferimento a delibera                                     |
 
 ## Microcopy Consentita
 

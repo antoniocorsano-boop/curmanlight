@@ -2,43 +2,47 @@
 
 ## Fotografia iniziale
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD | `31ef98e` |
-| origin/main | `85bbab4` |
-| Local ahead | 5 commits |
-| Working tree | Pulito (3 tmp-*.json untracked ignorabili) |
-| Validatore | 7/94, `overallValid: true` ✅ |
+| Parametro        | Valore                                            |
+| ---------------- | ------------------------------------------------- |
+| Branch           | `main`                                            |
+| HEAD             | `31ef98e`                                         |
+| origin/main      | `85bbab4`                                         |
+| Local ahead      | 5 commits                                         |
+| Working tree     | Pulito (3 tmp-*.json untracked ignorabili)        |
+| Validatore       | 7/94, `overallValid: true` ✅                     |
 | Residui ignorati | `.agents`, `skills-lock.json`, `Consultazione` ✅ |
 
 ## Sintesi CML-139 → CML-141A
 
-| Slice | Output | Risultato chiave |
-|-------|--------|-----------------|
-| CML-139 | Mappatura layer dati | 7 JSON, 3 MAPPA_DATI hardcoded, 0 usati nel rendering |
-| CML-140 | Design adapter | 4 trasformazioni (ambito, nucleo, ordine, decisioni) |
-| CML-140A | Fix nucleo Tecnologia | 13/13 unità ora hanno `nucleo` |
-| CML-141 | Adapter tool | `tools/json-to-mappa-dati-adapter.mjs` testato su 4 discipline |
-| CML-141A | Confronto shape | `unita[]` vs flat — gap strutturale confermato |
+| Slice    | Output                | Risultato chiave                                               |
+| -------- | --------------------- | -------------------------------------------------------------- |
+| CML-139  | Mappatura layer dati  | 7 JSON, 3 MAPPA_DATI hardcoded, 0 usati nel rendering          |
+| CML-140  | Design adapter        | 4 trasformazioni (ambito, nucleo, ordine, decisioni)           |
+| CML-140A | Fix nucleo Tecnologia | 13/13 unità ora hanno `nucleo`                                 |
+| CML-141  | Adapter tool          | `tools/json-to-mappa-dati-adapter.mjs` testato su 4 discipline |
+| CML-141A | Confronto shape       | `unita[]` vs flat — gap strutturale confermato                 |
 
 ## Shape runtime atteso
 
 Da `renderMappaDisciplinare()` in `index.html`:
 
 ### `struttureSostanziali`
+
 ```
 {nome: string, descrizione: string, fonte: string}
 ```
+
 - `nome`: titolo strong
 - `descrizione`: testo dopo `:`
 - `fonte`: small grigio "Fonte: ..."
 - Tutti obbligatori.
 
 ### `nodiDisciplinari`
+
 ```
 {etichetta: string, tipo: string, descrizione: string, fonte: string}
 ```
+
 - `etichetta`: titolo strong
 - `tipo`: tra parentesi
 - `descrizione`: testo dopo `:`
@@ -46,18 +50,22 @@ Da `renderMappaDisciplinare()` in `index.html`:
 - Tutti obbligatori.
 
 ### `progressioneVerticale`
+
 ```
 {ordine: string, fascia?: string, classe?: string, descrizioneProgressione: string, fonte: string}
 ```
+
 - `ordine`: label "Infanzia" / "Primaria" / "Secondaria"
 - `fascia` o `classe`: label "Fascia X" o "Classe X"
 - `descrizioneProgressione`: testo descrittivo
 - `fonte`: small grigio
 
 ### `decisioniCurricolari`
+
 ```
 {tipo: string, motivazione: string, fonte: string}
 ```
+
 - `tipo`: titolo strong
 - `motivazione`: testo descrittivo
 - `fonte`: small grigio
@@ -65,51 +73,55 @@ Da `renderMappaDisciplinare()` in `index.html`:
 
 ## Shape adapter attuale
 
-| Area | Output adapter |
-|------|---------------|
-| `struttureSostanziali` | `{nome, unita: [{id, titolo, ordine, classe, fascia, nucleo}]}` |
-| `nodiDisciplinari` | `{etichetta, unita: [...]}` |
-| `progressioneVerticale` | `{ordine, classe, fascia, unita: [...]}` |
-| `decisioniCurricolari` | `{id, tipo, nodiRiferimento, unitaRiferimento, motivazione, stato, fonte}` |
+| Area                    | Output adapter                                                             |
+| ----------------------- | -------------------------------------------------------------------------- |
+| `struttureSostanziali`  | `{nome, unita: [{id, titolo, ordine, classe, fascia, nucleo}]}`            |
+| `nodiDisciplinari`      | `{etichetta, unita: [...]}`                                                |
+| `progressioneVerticale` | `{ordine, classe, fascia, unita: [...]}`                                   |
+| `decisioniCurricolari`  | `{id, tipo, nodiRiferimento, unitaRiferimento, motivazione, stato, fonte}` |
 
 ## Gap contract
 
 ### `struttureSostanziali`
-| Campo richiesto | Adapter | Gap |
-|----------------|---------|-----|
-| `nome` | ✅ `nome` | Nessuno |
-| `descrizione` | ❌ Assente | 👉 Generabile da prima competenza del gruppo |
-| `fonte` | ❌ Assente | 👉 Generabile da id unità aggregate |
+
+| Campo richiesto | Adapter    | Gap                                          |
+| --------------- | ---------- | -------------------------------------------- |
+| `nome`          | ✅ `nome`  | Nessuno                                      |
+| `descrizione`   | ❌ Assente | 👉 Generabile da prima competenza del gruppo |
+| `fonte`         | ❌ Assente | 👉 Generabile da id unità aggregate          |
 
 ### `nodiDisciplinari`
-| Campo richiesto | Adapter | Gap |
-|----------------|---------|-----|
-| `etichetta` | ✅ `etichetta` | Nessuno |
-| `tipo` | ❌ Assente | 👉 Fisso `"sostanziale"` |
-| `descrizione` | ❌ Assente | 👉 Generabile da prima competenza del gruppo |
-| `fonte` | ❌ Assente | 👉 Generabile da id unità aggregate |
+
+| Campo richiesto | Adapter        | Gap                                          |
+| --------------- | -------------- | -------------------------------------------- |
+| `etichetta`     | ✅ `etichetta` | Nessuno                                      |
+| `tipo`          | ❌ Assente     | 👉 Fisso `"sostanziale"`                     |
+| `descrizione`   | ❌ Assente     | 👉 Generabile da prima competenza del gruppo |
+| `fonte`         | ❌ Assente     | 👉 Generabile da id unità aggregate          |
 
 ### `progressioneVerticale`
-| Campo richiesto | Adapter | Gap |
-|----------------|---------|-----|
-| `ordine` | ✅ `ordine` | Nessuno |
-| `fascia` | ✅ `fascia` | Nessuno |
-| `classe` | ✅ `classe` | Nessuno |
-| `descrizioneProgressione` | ❌ Assente | 👉 Generabile da prima competenza del gruppo |
-| `fonte` | ❌ Assente | 👉 Generabile da id unità aggregate |
+
+| Campo richiesto           | Adapter     | Gap                                          |
+| ------------------------- | ----------- | -------------------------------------------- |
+| `ordine`                  | ✅ `ordine` | Nessuno                                      |
+| `fascia`                  | ✅ `fascia` | Nessuno                                      |
+| `classe`                  | ✅ `classe` | Nessuno                                      |
+| `descrizioneProgressione` | ❌ Assente  | 👉 Generabile da prima competenza del gruppo |
+| `fonte`                   | ❌ Assente  | 👉 Generabile da id unità aggregate          |
 
 ### `decisioniCurricolari`
+
 ✅ Nessun gap — pass-through compatibile.
 
 ## Opzioni valutate
 
-| Opzione | Vantaggi | Svantaggi | Verdetto |
-|---------|----------|-----------|:--------:|
-| **A** — Adattare adapter a flat | Integrazione diretta | Perde `unita[]` | ❌ Scartata |
-| **B** — `toRuntimeMappaDati()` intermedio | Separa dati, testabile | Passaggio extra | ✅ Raccomandata |
-| **C** — Modificare `renderMappaDisciplinare()` | Usa dati ricchi | Viola vincoli, regressioni | ❌ Scartata |
-| **D** — Pilota solo Tecnologia | Rischio controllato | Doppio regime | ✅ Raccomandata |
-| **E** — Completare prima discipline | Base omogenea | Ritarda integrazione | ❌ Scartata |
+| Opzione                                        | Vantaggi               | Svantaggi                  |    Verdetto     |
+| ---------------------------------------------- | ---------------------- | -------------------------- | :-------------: |
+| **A** — Adattare adapter a flat                | Integrazione diretta   | Perde `unita[]`            |   ❌ Scartata   |
+| **B** — `toRuntimeMappaDati()` intermedio      | Separa dati, testabile | Passaggio extra            | ✅ Raccomandata |
+| **C** — Modificare `renderMappaDisciplinare()` | Usa dati ricchi        | Viola vincoli, regressioni |   ❌ Scartata   |
+| **D** — Pilota solo Tecnologia                 | Rischio controllato    | Doppio regime              | ✅ Raccomandata |
+| **E** — Completare prima discipline            | Base omogenea          | Ritarda integrazione       |   ❌ Scartata   |
 
 ## Opzione selezionata
 
@@ -124,6 +136,7 @@ CML-143 — TO_RUNTIME_MAPPA_DATI_TRANSFORMER_DESIGN_AND_TOOL
 ```
 
 ### Specifiche
+
 - **Nome**: `toRuntimeMappaDati(outputAdapter)` → shape flat
 - **Input**: output di `toMappaDati()` (con `unita[]`)
 - **Output**: `{disciplina, struttureSostanziali[], nodiDisciplinari[], progressioneVerticale[], decisioniCurricolari[]}` con campi flat
@@ -136,6 +149,7 @@ CML-143 — TO_RUNTIME_MAPPA_DATI_TRANSFORMER_DESIGN_AND_TOOL
 - **Stop**: se altera JSON o runtime
 
 ### Criteri accettazione
+
 1. `toRuntimeMappaDati(toMappaDati(tecnologia.json))` produce output semanticamente equivalente a `TECNOLOGIA_MAPPA_DATI`
 2. Validatore 7/94 overallValid: true
 3. Runtime invariato

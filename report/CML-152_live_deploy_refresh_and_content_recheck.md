@@ -2,10 +2,10 @@
 
 ## Stato iniziale
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD | `f845211` (sync) |
+| Parametro | Valore           |
+| --------- | ---------------- |
+| Branch    | `main`           |
+| HEAD      | `f845211` (sync) |
 
 ## URL live
 
@@ -13,11 +13,11 @@ https://antoniocorsano-boop.github.io/curmanlight/?v=cml152
 
 ## Esito
 
-| Verifica | Esito |
-|----------|-------|
-| Cache-busting | ❌ Nessun effetto |
-| TECNOLOGIA_MAPPA_DATI nel live | ❌ Assente |
-| Messaggio "non ancora predisposta" | ❌ Persist |
+| Verifica                           | Esito             |
+| ---------------------------------- | ----------------- |
+| Cache-busting                      | ❌ Nessun effetto |
+| TECNOLOGIA_MAPPA_DATI nel live     | ❌ Assente        |
+| Messaggio "non ancora predisposta" | ❌ Persist        |
 
 ## Causa
 

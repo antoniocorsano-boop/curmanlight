@@ -8,16 +8,16 @@ Integrare la disciplina Seconda Lingua Comunitaria nella mappa dati disciplinare
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `d711872` (CML-191; origin/main allineato) |
-| Working tree iniziale | pulito |
-| Dati normalizzati prima | 14/14 |
-| Runtime mappa prima | 11/14 (Seconda Lingua Comunitaria NON integrata) |
-| Shape test | 11/11 PASS |
-| Skill usate | `cml-sync`, `cml-docs-only-slice`, `cml-readiness-audit` |
+| Parametro               | Valore                                                   |
+| ----------------------- | -------------------------------------------------------- |
+| Root Git                | `C:\Users\anton\CurManLight`                             |
+| Branch                  | `main`                                                   |
+| Commit iniziale         | `d711872` (CML-191; origin/main allineato)               |
+| Working tree iniziale   | pulito                                                   |
+| Dati normalizzati prima | 14/14                                                    |
+| Runtime mappa prima     | 11/14 (Seconda Lingua Comunitaria NON integrata)         |
+| Shape test              | 11/11 PASS                                               |
+| Skill usate             | `cml-sync`, `cml-docs-only-slice`, `cml-readiness-audit` |
 
 ## 3. Decisioni autorizzative
 
@@ -52,18 +52,18 @@ Aggiunto `'seconda-lingua-comunitaria.normalized.json'` all'array `FILES` in `to
 
 ## 5. Dati integrati
 
-| Sezione | Quantità |
-|---|---|
-| Strutture sostanziali | 6 (da 6 unità di apprendimento) |
-| Nodi disciplinari | 6 (1 per nucleo: Ascolto, Produzione orale, Lettura, Produzione scritta, Interazione orale, Cultura) |
-| Progressioni verticali | 3 (Secondaria 1/2/3) |
-| Decisioni curricolari | 0 |
+| Sezione                | Quantità                                                                                             |
+| ---------------------- | ---------------------------------------------------------------------------------------------------- |
+| Strutture sostanziali  | 6 (da 6 unità di apprendimento)                                                                      |
+| Nodi disciplinari      | 6 (1 per nucleo: Ascolto, Produzione orale, Lettura, Produzione scritta, Interazione orale, Cultura) |
+| Progressioni verticali | 3 (Secondaria 1/2/3)                                                                                 |
+| Decisioni curricolari  | 0                                                                                                    |
 
 ## 6. Copertura per ordine
 
-| Ordine | Classi | Unità | Strutture |
-|---|---|---|---|
-| Secondaria | 1, 2, 3 | 6 | 6 |
+| Ordine     | Classi  | Unità | Strutture |
+| ---------- | ------- | ----- | --------- |
+| Secondaria | 1, 2, 3 | 6     | 6         |
 
 Nota: Seconda Lingua Comunitaria è solo Secondaria (classi 1-3, 2 unità per classe). Nessuna Infanzia o Primaria.
 
@@ -79,10 +79,10 @@ Nota: Seconda Lingua Comunitaria è solo Secondaria (classi 1-3, 2 unità per cl
 
 ## 8. Discipline residue nel runtime (2/14)
 
-| Disciplina | Stato |
-|---|---|
+| Disciplina          | Stato         |
+| ------------------- | ------------- |
 | Religione Cattolica | Non integrata |
-| Latino LEL | Non integrata |
+| Latino LEL          | Non integrata |
 
 ## 9. Verdict
 

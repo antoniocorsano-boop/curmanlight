@@ -1,7 +1,7 @@
 # CurManLight — Nota di rilascio e stato attuale
 
 **App:** [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
-**Versione riferimento:** giugno 2026  
+**Versione riferimento:** giugno 2026
 
 Questa nota descrive cosa CurManLight offre oggi, cosa è ancora in fase di lavoro e come usare lo strumento in modo consapevole.
 
@@ -38,12 +38,12 @@ L'intero curricolo visualizzato in CurManLight, inclusi i testi delle discipline
 
 ## Ruoli coinvolti
 
-| Ruolo | Cosa può fare |
-|---|---|
-| Docente | Esplorare il curricolo. Simulare o preparare una proposta di modifica per la propria disciplina tramite file `.cml`. |
+| Ruolo                        | Cosa può fare                                                                                                                    |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Docente                      | Esplorare il curricolo. Simulare o preparare una proposta di modifica per la propria disciplina tramite file `.cml`.             |
 | Coordinatore di dipartimento | Raccogliere le proposte dei docenti, discutere in riunione, registrare l'esito (confluito, riformulato, assorbito, da chiarire). |
-| Referente curricolo | Importare gli esiti dei dipartimenti, verificare il quadro complessivo, scaricare il report del gruppo di lavoro. |
-| Dirigente Scolastico | Visionare il curricolo, il report, e usare il materiale per le delibere di competenza. |
+| Referente curricolo          | Importare gli esiti dei dipartimenti, verificare il quadro complessivo, scaricare il report del gruppo di lavoro.                |
+| Dirigente Scolastico         | Visionare il curricolo, il report, e usare il materiale per le delibere di competenza.                                           |
 
 ## Avvertenze
 
@@ -55,5 +55,5 @@ L'intero curricolo visualizzato in CurManLight, inclusi i testi delle discipline
 
 1. Consultare il curricolo e le sezioni generali.
 2. Utilizzare gli esempi `.cml` per familiarizzare con il flusso.
-3. Raccogliere osservazioni sul funzionamento dello strumento (vedi *Traccia raccolta osservazioni*).
+3. Raccogliere osservazioni sul funzionamento dello strumento (vedi _Traccia raccolta osservazioni_).
 4. Preparare proposte reali su discipline specifiche utilizzando il formato `.cml`.

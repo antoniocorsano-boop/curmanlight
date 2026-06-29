@@ -17,59 +17,59 @@ npx netlify deploy --prod --dir _published_snapshot/netlify-current
 
 ## Preflight
 
-| Verifica | Esito |
-|---|---|
-| Branch corretto (`cml-008r-fix-markdown-decision-summary`) | ✅ |
-| HEAD `b8dece8` (fix: clarify CML top dashboard actions) | ✅ |
-| Working tree pulita | ✅ |
-| `sw.js` invariato | ✅ hash match |
-| `_headers` invariato | ✅ hash match |
-| PDF invariato | ✅ hash match |
+| Verifica                                                   | Esito         |
+| ---------------------------------------------------------- | ------------- |
+| Branch corretto (`cml-008r-fix-markdown-decision-summary`) | ✅            |
+| HEAD `b8dece8` (fix: clarify CML top dashboard actions)    | ✅            |
+| Working tree pulita                                        | ✅            |
+| `sw.js` invariato                                          | ✅ hash match |
+| `_headers` invariato                                       | ✅ hash match |
+| PDF invariato                                              | ✅ hash match |
 
 ## Verifica locale pre-deploy
 
-| Elemento | Esito |
-|---|---|
-| Cruscotto presente | ✅ |
-| Stato + prossima azione visibili | ✅ |
-| 3 pulsanti principali leggibili | ✅ |
-| `setTab('lavoro')` in Controlla voci ed Esporta | ✅ |
-| Toggle filtri/export come button accessibili | ✅ |
-| `button:focus-visible` CSS presente | ✅ |
-| Touch target salvataggio aumentati (4px/11px) | ✅ |
-| Quick-info-bar rimossa | ✅ |
-| Orientation-card rimossa | ✅ |
-| Progress-wrap integrato nel cruscotto | ✅ |
-| 27/27 verifiche locali passate | ✅ |
+| Elemento                                        | Esito |
+| ----------------------------------------------- | ----- |
+| Cruscotto presente                              | ✅    |
+| Stato + prossima azione visibili                | ✅    |
+| 3 pulsanti principali leggibili                 | ✅    |
+| `setTab('lavoro')` in Controlla voci ed Esporta | ✅    |
+| Toggle filtri/export come button accessibili    | ✅    |
+| `button:focus-visible` CSS presente             | ✅    |
+| Touch target salvataggio aumentati (4px/11px)   | ✅    |
+| Quick-info-bar rimossa                          | ✅    |
+| Orientation-card rimossa                        | ✅    |
+| Progress-wrap integrato nel cruscotto           | ✅    |
+| 27/27 verifiche locali passate                  | ✅    |
 
 ## Verifica responsive pre-deploy
 
-| Breakpoint | Screenshot | Esito |
-|---|---|---|
-| 360×800 | 56.494 bytes | ✅ |
-| 414×896 | 68.698 bytes | ✅ |
-| 768×1024 | 149.597 bytes | ✅ |
-| 1280×800 | 184.855 bytes | ✅ |
+| Breakpoint | Screenshot    | Esito |
+| ---------- | ------------- | ----- |
+| 360×800    | 56.494 bytes  | ✅    |
+| 414×896    | 68.698 bytes  | ✅    |
+| 768×1024   | 149.597 bytes | ✅    |
+| 1280×800   | 184.855 bytes | ✅    |
 
 ## Verifica post-deploy
 
-| Verifica | Esito |
-|---|---|
-| Pagina caricata (191.920 bytes) | ✅ |
-| Cruscotto minimo in produzione | ✅ |
-| Tre pulsanti principali funzionanti | ✅ |
-| Toggle filtri/export come button | ✅ |
-| setTab('lavoro') nei pulsanti | ✅ |
-| Cards-area preservata | ✅ |
-| Sidebar preservata | ✅ |
-| Tecnologia export panel preservato | ✅ |
-| Tabs (riepilogo, normativa, generali) preservati | ✅ |
-| Referenza sw.js presente | ✅ |
-| Quick-info-bar rimossa | ✅ |
-| Orientation-card rimossa | ✅ |
-| 14/14 verifiche post-deploy passate | ✅ |
-| Screenshot 360px produzione | 56.494 bytes ✅ |
-| Screenshot 768px produzione | 149.097 bytes ✅ |
+| Verifica                                         | Esito            |
+| ------------------------------------------------ | ---------------- |
+| Pagina caricata (191.920 bytes)                  | ✅               |
+| Cruscotto minimo in produzione                   | ✅               |
+| Tre pulsanti principali funzionanti              | ✅               |
+| Toggle filtri/export come button                 | ✅               |
+| setTab('lavoro') nei pulsanti                    | ✅               |
+| Cards-area preservata                            | ✅               |
+| Sidebar preservata                               | ✅               |
+| Tecnologia export panel preservato               | ✅               |
+| Tabs (riepilogo, normativa, generali) preservati | ✅               |
+| Referenza sw.js presente                         | ✅               |
+| Quick-info-bar rimossa                           | ✅               |
+| Orientation-card rimossa                         | ✅               |
+| 14/14 verifiche post-deploy passate              | ✅               |
+| Screenshot 360px produzione                      | 56.494 bytes ✅  |
+| Screenshot 768px produzione                      | 149.097 bytes ✅ |
 
 ## Nessuna modifica funzionale
 

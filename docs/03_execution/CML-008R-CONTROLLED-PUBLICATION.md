@@ -20,6 +20,7 @@ npx netlify deploy --prod --dir _published_snapshot/netlify-current
 ## Post-deploy
 
 Verifica su produzione conferma:
+
 - "Voci da validare" presente ✅
 - "Dettaglio delle proposte di modifica / Gap 2025" presente ✅
 - "Voci mantenute da validare" presente ✅
@@ -29,11 +30,11 @@ Verifica su produzione conferma:
 
 ## File coinvolti
 
-| File | Azione |
-|---|---|
-| `_published_snapshot/netlify-current/index.html` | Deployato (invariato da commit `9179418`) |
-| `report/CML-008R_controlled_netlify_publication.md` | Creato |
-| `docs/03_execution/CML-008R-CONTROLLED-PUBLICATION.md` | Creato |
+| File                                                   | Azione                                    |
+| ------------------------------------------------------ | ----------------------------------------- |
+| `_published_snapshot/netlify-current/index.html`       | Deployato (invariato da commit `9179418`) |
+| `report/CML-008R_controlled_netlify_publication.md`    | Creato                                    |
+| `docs/03_execution/CML-008R-CONTROLLED-PUBLICATION.md` | Creato                                    |
 
 ## Verdetto
 

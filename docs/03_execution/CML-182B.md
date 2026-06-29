@@ -12,21 +12,21 @@ Questa slice e docs-only correttiva. Non crea `educazione-fisica.normalized.json
 
 ## Baseline
 
-| Campo | Valore |
-|---|---|
-| Repository | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `cf2c607` |
-| origin/main iniziale | `cf2c607` |
-| Working tree iniziale | pulito |
-| Stato remoto iniziale | `main...origin/main` |
-| Slice precedente | CML-182 (commit `cf2c607`, sincronizzato) |
-| Decisione precedente | `VALIDATION_OUTCOME_PENDING` |
-| Nuova decisione | `LIMITED_DRAFT_DATA_PREP_ALLOWED` |
-| Dati normalizzati | 10/14 |
-| Runtime mappa | 10/14 |
-| Shape test | 10/10 PASS |
-| Deploy | non eseguito |
+| Campo                 | Valore                                    |
+| --------------------- | ----------------------------------------- |
+| Repository            | `C:\Users\anton\CurManLight`              |
+| Branch                | `main`                                    |
+| Commit iniziale       | `cf2c607`                                 |
+| origin/main iniziale  | `cf2c607`                                 |
+| Working tree iniziale | pulito                                    |
+| Stato remoto iniziale | `main...origin/main`                      |
+| Slice precedente      | CML-182 (commit `cf2c607`, sincronizzato) |
+| Decisione precedente  | `VALIDATION_OUTCOME_PENDING`              |
+| Nuova decisione       | `LIMITED_DRAFT_DATA_PREP_ALLOWED`         |
+| Dati normalizzati     | 10/14                                     |
+| Runtime mappa         | 10/14                                     |
+| Shape test            | 10/10 PASS                                |
+| Deploy                | non eseguito                              |
 
 ## Scope autorizzato
 
@@ -85,13 +85,13 @@ Questa slice e docs-only correttiva. Non crea `educazione-fisica.normalized.json
 
 ## Distinzione tra CML-182 e CML-182B
 
-| Dimensione | CML-182 | CML-182B (correzione) |
-|---|---|---|
-| Validazione umana richiesta | Per tutto | Per approvazione finale si; per draft prudente no |
-| Bozza normalizzata | Bloccata | Autorizzata come draft |
-| `humanValidationRequired` | N/A | true su ogni unita |
-| Runtime integration | Bloccata | Bloccata |
-| Prossima slice | CML-183 — template raccolta | CML-183 — limited draft data prep |
+| Dimensione                  | CML-182                     | CML-182B (correzione)                             |
+| --------------------------- | --------------------------- | ------------------------------------------------- |
+| Validazione umana richiesta | Per tutto                   | Per approvazione finale si; per draft prudente no |
+| Bozza normalizzata          | Bloccata                    | Autorizzata come draft                            |
+| `humanValidationRequired`   | N/A                         | true su ogni unita                                |
+| Runtime integration         | Bloccata                    | Bloccata                                          |
+| Prossima slice              | CML-183 — template raccolta | CML-183 — limited draft data prep                 |
 
 ## Rischio dati residuo
 

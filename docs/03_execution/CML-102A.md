@@ -32,13 +32,13 @@ Verificare la qualità tecnica, didattica, storica, verticale e progettuale di S
 
 ## Matrice nuclei/ordini
 
-| Nucleo | Infanzia | Primaria | Secondaria |
-|--------|----------|----------|------------|
-| Strumenti concettuali e periodizzazione | 1 (fas.5) | 1 (cl.1) | 2 (cl.1, cl.2) |
-| Uso delle fonti | — | 1 (cl.2) | 1 (cl.1) |
-| Organizzazione delle informazioni | — | 2 (cl.3, cl.5) | 3 (cl.1, cl.2, cl.3) |
-| Produzione scritta e orale | — | 1 (cl.4) | 2 (cl.1, cl.2) |
-| Uso delle fonti e produzione (combinato) | — | — | 1 (cl.3) |
+| Nucleo                                   | Infanzia  | Primaria       | Secondaria           |
+| ---------------------------------------- | --------- | -------------- | -------------------- |
+| Strumenti concettuali e periodizzazione  | 1 (fas.5) | 1 (cl.1)       | 2 (cl.1, cl.2)       |
+| Uso delle fonti                          | —         | 1 (cl.2)       | 1 (cl.1)             |
+| Organizzazione delle informazioni        | —         | 2 (cl.3, cl.5) | 3 (cl.1, cl.2, cl.3) |
+| Produzione scritta e orale               | —         | 1 (cl.4)       | 2 (cl.1, cl.2)       |
+| Uso delle fonti e produzione (combinato) | —         | —              | 1 (cl.3)             |
 
 ## Valutazione periodizzazione
 
@@ -65,11 +65,11 @@ Verificare la qualità tecnica, didattica, storica, verticale e progettuale di S
 
 ## Valutazione headroom
 
-| Metrica | Storia | Tecnologia | Italiano | Matematica | Scienze | Inglese |
-|---------|--------|------------|----------|------------|---------|---------|
-| Unità | 15 | 13 | 14 | 13 | 15 | 12 |
-| Chars/unità | 1.738 | — | 1.588 | 2.114 | — | — |
-| Totale chars | 26.072 | — | 22.233 | 27.483 | — | — |
+| Metrica      | Storia | Tecnologia | Italiano | Matematica | Scienze | Inglese |
+| ------------ | ------ | ---------- | -------- | ---------- | ------- | ------- |
+| Unità        | 15     | 13         | 14       | 13         | 15      | 12      |
+| Chars/unità  | 1.738  | —          | 1.588    | 2.114      | —       | —       |
+| Totale chars | 26.072 | —          | 22.233   | 27.483     | —       | —       |
 
 Headroom: sostenibile. 15 unità, ~1.738 chars/unità, ben distribuite. Nessun rischio di densità eccessiva.
 

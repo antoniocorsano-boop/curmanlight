@@ -15,6 +15,7 @@ CML_008R_SELECT_EXPORT_READINESS_READY
 **Opzione A — Markdown strutturato per singola disciplina (Tecnologia come campione)**
 
 ### Motivazione
+
 1. Impatto minimo: estende `buildDocumentModel()` con filtro, non refactor
 2. Zero dipendenze esterne: JS nativo
 3. Massimo beneficio immediato per il Dipartimento di Tecnologia
@@ -25,19 +26,23 @@ CML_008R_SELECT_EXPORT_READINESS_READY
 ## Perimetro implementativo
 
 ### File ammessi
+
 - `_published_snapshot/netlify-current/index.html`
 
 ### File vietati
+
 - `sw.js`, `_headers`, `manifest.webmanifest`, assets, PDF
 - `exportWord()`, `exportPDF()`, `copyForWord()` (non modificati)
 
 ### Modifiche chiave
+
 - `buildDocumentModel(onlyApproved, {disciplineFilter})` — filtro per singola disciplina
 - `modelToMarkdown()` — flag strutturati (introNote, generliRef, decisionSummary, gapMarkers, disclaimer)
 - `exportMarkdown(onlyApproved, disciplineFilter)` — nuovo parametro
 - UI: pulsante "📝 Esporta Markdown (Tecnologia)" nella barra titolo disciplina (solo per Tecnologia)
 
 ## Output Markdown previsto
+
 - Intestazione con nota "Documento di lavoro — da validare"
 - Riferimenti alle 8 sezioni generali
 - Sintesi decisioni (conteggi)
@@ -46,6 +51,7 @@ CML_008R_SELECT_EXPORT_READINESS_READY
 - Avvertenza finale non deliberativa
 
 ## Criteri di accettazione
+
 1. Export singola disciplina funzionante
 2. Export legacy invariato
 3. Pulsante UI presente solo per Tecnologia

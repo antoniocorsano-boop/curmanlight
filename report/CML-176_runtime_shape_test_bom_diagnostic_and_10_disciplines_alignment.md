@@ -8,17 +8,17 @@ Diagnosticare il problema segnalato sul test shape runtime, verificare se fosse 
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| Commit iniziale | `472f0da` |
-| origin/main | `472f0da` |
-| Working tree | Pulito, sync |
-| Validatore atteso | 10 file, 118 unita, overallValid true, 0 errori |
-| Runtime atteso | 10/14 discipline |
-| Shape test iniziale | 9/9, Musica non inclusa |
-| Deploy | Non eseguito |
-| Push | Non eseguito |
+| Parametro           | Valore                                          |
+| ------------------- | ----------------------------------------------- |
+| Branch              | `main`                                          |
+| Commit iniziale     | `472f0da`                                       |
+| origin/main         | `472f0da`                                       |
+| Working tree        | Pulito, sync                                    |
+| Validatore atteso   | 10 file, 118 unita, overallValid true, 0 errori |
+| Runtime atteso      | 10/14 discipline                                |
+| Shape test iniziale | 9/9, Musica non inclusa                         |
+| Deploy              | Non eseguito                                    |
+| Push                | Non eseguito                                    |
 
 ## 3. Stato consolidato
 
@@ -126,20 +126,20 @@ Discipline testate dopo CML-176:
 
 ## 9. Conteggi Musica
 
-| Campo | Valore |
-|-------|:------:|
-| S - strutture sostanziali | 7 |
-| N - nodi disciplinari | 3 |
-| P - progressione verticale | 7 |
-| D - decisioni curricolari | 0 |
+| Campo                      | Valore |
+| -------------------------- | :----: |
+| S - strutture sostanziali  |   7    |
+| N - nodi disciplinari      |   3    |
+| P - progressione verticale |   7    |
+| D - decisioni curricolari  |   0    |
 
 ## 10. Validazioni finali
 
-| Controllo | Esito |
-|-----------|-------|
+| Controllo                                           | Esito                                                  |
+| --------------------------------------------------- | ------------------------------------------------------ |
 | `node tools/validate-cml-normalized-curriculum.mjs` | PASS - 10 file, 118 unita, overallValid true, 0 errori |
-| `node tools/test-runtime-mappa-dati-shape.mjs` | PASS - 10/10 discipline |
-| `git diff --check` | PASS |
+| `node tools/test-runtime-mappa-dati-shape.mjs`      | PASS - 10/10 discipline                                |
+| `git diff --check`                                  | PASS                                                   |
 
 Shape runtime finale:
 

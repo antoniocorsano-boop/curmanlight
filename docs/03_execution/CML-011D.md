@@ -15,12 +15,12 @@ Nessuna modifica runtime, nessun deploy.
 
 ## Catena CML-011
 
-| Blocco | Tipo | Verdetto |
-|---|---|---|
-| CML-011A | Selection audit | `CML_011A_EXPORT_GUIDE_CLARITY_SELECTION_AUDIT_READY` |
-| CML-011B | Microcopy + C2 fix (runtime + deploy) | `CML_011B_EXPORT_GUIDE_CLARITY_MICROCOPY_DEPLOYED` |
-| CML-011C | Real task smoke (solo audit) | `CML_011C_EXPORT_GUIDE_REAL_TASK_SMOKE_READY` |
-| CML-011D | Cycle closure (solo docs) | `CML_011D_EXPORT_GUIDE_CLARITY_CYCLE_CLOSED` |
+| Blocco   | Tipo                                  | Verdetto                                              |
+| -------- | ------------------------------------- | ----------------------------------------------------- |
+| CML-011A | Selection audit                       | `CML_011A_EXPORT_GUIDE_CLARITY_SELECTION_AUDIT_READY` |
+| CML-011B | Microcopy + C2 fix (runtime + deploy) | `CML_011B_EXPORT_GUIDE_CLARITY_MICROCOPY_DEPLOYED`    |
+| CML-011C | Real task smoke (solo audit)          | `CML_011C_EXPORT_GUIDE_REAL_TASK_SMOKE_READY`         |
+| CML-011D | Cycle closure (solo docs)             | `CML_011D_EXPORT_GUIDE_CLARITY_CYCLE_CLOSED`          |
 
 Tutti e 3 i documenti e report esistono in `docs/03_execution/` e `report/`.
 `docs/REPO-MOVELOG.md` coerente con la sequenza.

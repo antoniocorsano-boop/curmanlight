@@ -7,19 +7,20 @@ Questo registro aiuta a raccogliere in forma sintetica le osservazioni emerse du
 ---
 
 | Data | Ruolo | Area osservata | Osservazione | Priorità | Possibile azione | Decisione |
-|---|---|---|---|---|---|---|
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
+| ---- | ----- | -------------- | ------------ | -------- | ---------------- | --------- |
+|      |       |                |              |          |                  |           |
+|      |       |                |              |          |                  |           |
+|      |       |                |              |          |                  |           |
+|      |       |                |              |          |                  |           |
+|      |       |                |              |          |                  |           |
+|      |       |                |              |          |                  |           |
+|      |       |                |              |          |                  |           |
+|      |       |                |              |          |                  |           |
 
 ---
 
 **Legenda priorità:**
+
 - **ALTA** — blocca l'uso o genera confusione grave
 - **MEDIA** — riduce l'utilità o richiede chiarimento
 - **BASSA** — miglioramento desiderabile
@@ -28,6 +29,7 @@ Questo registro aiuta a raccogliere in forma sintetica le osservazioni emerse du
 Home, Viewer curricolo, IN 2012 / IN 2025, Sezioni generali, Flusso docente, Validazione dipartimentale, Report referente, Guide, Messaggi/avvertenze, Altro
 
 **Decisioni possibili:**
+
 - Da discutere
 - Rimandato a prossimo ciclo
 - Risolto con documentazione

@@ -31,6 +31,7 @@ La decisione non equivale a validazione formale del dipartimento.
 ## Contenuti modificati
 
 Solo `content/curriculum/educazione-fisica.normalized.json`:
+
 - `ef_inf_5_001` — Corpo e percezione, Infanzia
 - `ef_pri_1_001` — Corpo e percezione, Primaria 1
 - `ef_pri_3_001` — Abilità motorie, Primaria 3

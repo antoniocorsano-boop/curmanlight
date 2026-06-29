@@ -15,9 +15,9 @@ Verificare la qualità tecnica, didattica e progettuale della bozza normalizzata
 
 ## File analizzati
 
-| File | Ruolo |
-|---|---|
-| `content/curriculum/italiano.normalized.json` | Sotto audit |
+| File                                            | Ruolo                 |
+| ----------------------------------------------- | --------------------- |
+| `content/curriculum/italiano.normalized.json`   | Sotto audit           |
 | `content/curriculum/tecnologia.normalized.json` | Benchmark strutturale |
 
 ## Criteri di audit
@@ -33,9 +33,10 @@ Verificare la qualità tecnica, didattica e progettuale della bozza normalizzata
 
 ## Definizione operativa di headroom
 
-*headroom = margine di crescita ordinata dell'interfaccia e dei dati, senza perdita di leggibilità, chiarezza decisionale o sostenibilità manutentiva.*
+_headroom = margine di crescita ordinata dell'interfaccia e dei dati, senza perdita di leggibilità, chiarezza decisionale o sostenibilità manutentiva._
 
 Parametri misurati:
+
 - unità totali e media per disciplina
 - densità contenutistica (chars/unità)
 - proiezione a 10 e 15 discipline normalizzate
@@ -44,61 +45,61 @@ Parametri misurati:
 
 ## Esito tecnico
 
-| Controllo | Esito |
-|---|---|
-| JSON valido | ✅ |
-| Struttura coerente con Tecnologia | ✅ (17/17 campi allineati) |
-| Campo extra rispetto a Tecnologia | `nucleo` — miglioramento, non problema |
-| ID univoci | ✅ (14/14) |
-| `validazioneUmana: true` su tutte le unità | ✅ |
-| Nessuna formula di approvazione | ✅ |
-| `classe`/`fascia` null conforme a pattern Tecnologia | ✅ |
+| Controllo                                            | Esito                                  |
+| ---------------------------------------------------- | -------------------------------------- |
+| JSON valido                                          | ✅                                     |
+| Struttura coerente con Tecnologia                    | ✅ (17/17 campi allineati)             |
+| Campo extra rispetto a Tecnologia                    | `nucleo` — miglioramento, non problema |
+| ID univoci                                           | ✅ (14/14)                             |
+| `validazioneUmana: true` su tutte le unità           | ✅                                     |
+| Nessuna formula di approvazione                      | ✅                                     |
+| `classe`/`fascia` null conforme a pattern Tecnologia | ✅                                     |
 
 **Nota**: l'audit tool ha segnalato 14 falsi positivi per `classe=null` (Infanzia) e `fascia=null` (Pri/Sec). I campi sono presenti e valorizzati a `null` esattamente come nel benchmark Tecnologia.
 
 ## Esito didattico
 
-| Controllo | Esito |
-|---|---|
-| Traguardi coerenti con DATA + IN 2012 proposte | ✅ |
-| Obiettivi osservabili | ✅ (3 per unità, azioni concrete) |
-| Conoscenze distinte dalle abilità | ✅ |
-| Abilità formulate come azioni osservabili | ✅ |
-| Evidenze osservabili per valutazione | ✅ |
-| Criteri descrittivi non numerici | ✅ |
-| Linguaggio scolastico chiaro, non enciclopedico | ✅ |
-| Nessun pattern di contenuto generico | ✅ |
-| Contenuto curricolare (non programmazione annuale) | ✅ |
+| Controllo                                          | Esito                             |
+| -------------------------------------------------- | --------------------------------- |
+| Traguardi coerenti con DATA + IN 2012 proposte     | ✅                                |
+| Obiettivi osservabili                              | ✅ (3 per unità, azioni concrete) |
+| Conoscenze distinte dalle abilità                  | ✅                                |
+| Abilità formulate come azioni osservabili          | ✅                                |
+| Evidenze osservabili per valutazione               | ✅                                |
+| Criteri descrittivi non numerici                   | ✅                                |
+| Linguaggio scolastico chiaro, non enciclopedico    | ✅                                |
+| Nessun pattern di contenuto generico               | ✅                                |
+| Contenuto curricolare (non programmazione annuale) | ✅                                |
 
 ## Matrice nuclei/ordini
 
-| Nucleo | Infanzia | Primaria | Secondaria | Totale |
-|---|---|---|---|---|
-| Ascolto | 1 (fascia 3-4) | 1 (cl. 1) | 1 (cl. 1) | 3 |
-| Parlato | 1 (fascia 5) | 1 (cl. 2) | — | 2 |
-| Lettura | 1 (fascia 5) | 1 (cl. 3) | 1 (cl. 1) | 3 |
-| Scrittura | — | 2 (cl. 4) | 1 (cl. 2) | 3 |
-| Lessico | — | 1 (cl. 4) | 1 (cl. 2) | 2 |
-| Riflessione sulla lingua | — | 1 (cl. 5) | 1 (cl. 3) | 2 |
+| Nucleo                   | Infanzia       | Primaria  | Secondaria | Totale |
+| ------------------------ | -------------- | --------- | ---------- | ------ |
+| Ascolto                  | 1 (fascia 3-4) | 1 (cl. 1) | 1 (cl. 1)  | 3      |
+| Parlato                  | 1 (fascia 5)   | 1 (cl. 2) | —          | 2      |
+| Lettura                  | 1 (fascia 5)   | 1 (cl. 3) | 1 (cl. 1)  | 3      |
+| Scrittura                | —              | 2 (cl. 4) | 1 (cl. 2)  | 3      |
+| Lessico                  | —              | 1 (cl. 4) | 1 (cl. 2)  | 2      |
+| Riflessione sulla lingua | —              | 1 (cl. 5) | 1 (cl. 3)  | 2      |
 
 ## Valutazione headroom
 
 ### Dati misurati
 
-| Parametro | Tecnologia | Italiano | Complessivo |
-|---|---|---|---|
-| Unità | 13 | 14 | 27 |
-| Chars totali JSON | 17.184 | 22.230 | 39.414 |
-| Chars medi per unità | 1.322 | 1.588 | 1.459 |
-| Campi per unità | 17 | 18 | — |
-| Stati in uso | 1 ("nuovo") | 1 ("nuovo") | 1 |
+| Parametro            | Tecnologia  | Italiano    | Complessivo |
+| -------------------- | ----------- | ----------- | ----------- |
+| Unità                | 13          | 14          | 27          |
+| Chars totali JSON    | 17.184      | 22.230      | 39.414      |
+| Chars medi per unità | 1.322       | 1.588       | 1.459       |
+| Campi per unità      | 17          | 18          | —           |
+| Stati in uso         | 1 ("nuovo") | 1 ("nuovo") | 1           |
 
 ### Proiezioni
 
-| Scenario | Unità stimate | Dimensione JSON stimata |
-|---|---|---|
-| 10 discipline normalizzate | ~135 | ~53 KB |
-| 15 discipline normalizzate | ~203 | ~79 KB |
+| Scenario                   | Unità stimate | Dimensione JSON stimata |
+| -------------------------- | ------------- | ----------------------- |
+| 10 discipline normalizzate | ~135          | ~53 KB                  |
+| 15 discipline normalizzate | ~203          | ~79 KB                  |
 
 ### Sostenibilità UI
 
@@ -110,6 +111,7 @@ Parametri misurati:
 ### Raccomandazione headroom
 
 Il sistema ha headroom abbondante. Nessuna azione correttiva urgente. Raccomandazioni precauzionali:
+
 - Mantenere unità sotto 2.000 chars ciascuna nelle prossime normalizzazioni
 - Non superare 20 unità per disciplina (soglia di leggibilità UI)
 - Evitare di introdurre più di 4-5 stati unità
@@ -157,6 +159,7 @@ Nessun fix dati richiesto prima del runtime.
 `CML-088 — DISCIPLINARY_COMPLETENESS_STATUS_UPDATE_FOR_ITALIANO_RUNTIME_INCREMENT`
 
 Aggiornare la sezione Curriculum "Stato di completezza dei curricoli disciplinari":
+
 - 2 discipline con bozza completa: Tecnologia e Italiano
 - 13 discipline solo consultazione
 - 0 pronte per approvazione

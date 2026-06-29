@@ -2,17 +2,17 @@
 
 ## 1. Baseline
 
-| Item | Value |
-|---|---|
-| Repo | `curmanlight` |
-| Branch | `main` |
-| Start commit | `a3481e4` |
-| `origin/main` at start | `a3481e4` |
-| Working tree at start | Clean |
-| Slice type | Audit docs-only |
-| Deploy | None |
-| Push | None |
-| Secrets | None |
+| Item                   | Value           |
+| ---------------------- | --------------- |
+| Repo                   | `curmanlight`   |
+| Branch                 | `main`          |
+| Start commit           | `a3481e4`       |
+| `origin/main` at start | `a3481e4`       |
+| Working tree at start  | Clean           |
+| Slice type             | Audit docs-only |
+| Deploy                 | None            |
+| Push                   | None            |
+| Secrets                | None            |
 
 ## 2. Current UX Findings
 
@@ -43,43 +43,43 @@
 
 ### 2.3 Common Patterns
 
-| Pattern | Department | Referent |
-|---|---|---|
-| Multi-file selection | `<input multiple>` | `<input multiple>` |
-| Role gate | No | Yes |
-| Validation codes | Yes | Yes |
-| Warnings array | Yes (inline) | Yes (inline) |
-| Duplicate chip | Yes | **No** (inconsistency) |
-| Mixed-discipline chip | Yes | Yes |
-| Summary stats | Yes (6 blocks) | Yes (6 blocks) |
-| Empty state | "I file non validi sono stati esclusi..." | N/A |
-| Fallback message | Manual download hint | N/A |
+| Pattern               | Department                                | Referent               |
+| --------------------- | ----------------------------------------- | ---------------------- |
+| Multi-file selection  | `<input multiple>`                        | `<input multiple>`     |
+| Role gate             | No                                        | Yes                    |
+| Validation codes      | Yes                                       | Yes                    |
+| Warnings array        | Yes (inline)                              | Yes (inline)           |
+| Duplicate chip        | Yes                                       | **No** (inconsistency) |
+| Mixed-discipline chip | Yes                                       | Yes                    |
+| Summary stats         | Yes (6 blocks)                            | Yes (6 blocks)         |
+| Empty state           | "I file non validi sono stati esclusi..." | N/A                    |
+| Fallback message      | Manual download hint                      | N/A                    |
 
 ## 3. UX Gaps by Severity
 
 ### P1 — High Impact
 
-| # | Gap | Impact |
-|---|---|---|
-| 1 | No preview before import | User imports blindly |
-| 2 | Duplicate rendering inconsistency | Referent hides duplicate flag visually |
-| 3 | Mixed-discipline message generic | Doesn't list which disciplines are mixed |
+| #   | Gap                               | Impact                                   |
+| --- | --------------------------------- | ---------------------------------------- |
+| 1   | No preview before import          | User imports blindly                     |
+| 2   | Duplicate rendering inconsistency | Referent hides duplicate flag visually   |
+| 3   | Mixed-discipline message generic  | Doesn't list which disciplines are mixed |
 
 ### P2 — Medium Impact
 
-| # | Gap | Impact |
-|---|---|---|
-| 4 | No compact import summary | Overview buried in card layout |
-| 5 | No recovery guidance per error | User infers next action |
-| 6 | File size warnings not prominent | Large files slow UI; warning is inline only |
+| #   | Gap                              | Impact                                      |
+| --- | -------------------------------- | ------------------------------------------- |
+| 4   | No compact import summary        | Overview buried in card layout              |
+| 5   | No recovery guidance per error   | User infers next action                     |
+| 6   | File size warnings not prominent | Large files slow UI; warning is inline only |
 
 ### P3 — Low Impact
 
-| # | Gap | Impact |
-|---|---|---|
-| 7 | No drag-and-drop | Must use file picker |
-| 8 | No file count feedback | Could select 100+ files silently |
-| 9 | No reset/clear import | Must reload page |
+| #   | Gap                    | Impact                           |
+| --- | ---------------------- | -------------------------------- |
+| 7   | No drag-and-drop       | Must use file picker             |
+| 8   | No file count feedback | Could select 100+ files silently |
+| 9   | No reset/clear import  | Must reload page                 |
 
 ## 4. Selected Minimal UX Increment (CML-208)
 

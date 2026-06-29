@@ -42,17 +42,17 @@ La mappa Geografia segue la forma già validata dal runtime:
 
 ## Conteggi Geografia
 
-| Area | Esito |
-| --- | --- |
-| Disciplina | Geografia |
-| Strutture sostanziali | 12 |
-| Nodi disciplinari | 3 |
-| Progressione verticale | 9 passaggi |
-| Decisioni curricolari | 0 |
-| Stato decisioni | N/A (nessun audit Geografia eseguito) |
-| Ordini coperti | Infanzia, Primaria, Secondaria |
-| Fonte base | Curriculum normalizzato Geografia |
-| Audit preparatorio | Nessuno (D=0 deliberato) |
+| Area                   | Esito                                 |
+| ---------------------- | ------------------------------------- |
+| Disciplina             | Geografia                             |
+| Strutture sostanziali  | 12                                    |
+| Nodi disciplinari      | 3                                     |
+| Progressione verticale | 9 passaggi                            |
+| Decisioni curricolari  | 0                                     |
+| Stato decisioni        | N/A (nessun audit Geografia eseguito) |
+| Ordini coperti         | Infanzia, Primaria, Secondaria        |
+| Fonte base             | Curriculum normalizzato Geografia     |
+| Audit preparatorio     | Nessuno (D=0 deliberato)              |
 
 ## Strutture sostanziali
 
@@ -99,12 +99,14 @@ La mappa Geografia segue la forma già validata dal runtime:
 ## Validatore curriculum
 
 `node tools/validate-cml-normalized-curriculum.mjs`: PASS
+
 - 7 file / 94 unità / `overallValid: true` / 0 errori
 - Geografia: 12 unità, ordini Infanzia/Primaria/Secondaria coperti
 
 ## Shape runtime
 
 `node tools/test-runtime-mappa-dati-shape.mjs`: PASS
+
 - 7 discipline / 0 failed
 - Geografia: S=12 N=3 P=9 D=0
 

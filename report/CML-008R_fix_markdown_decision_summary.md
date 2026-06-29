@@ -10,22 +10,22 @@ La sintesi mostrava "Da decidere: 12" ma il dettaglio proposte elencava solo 8 v
 
 ## Modifiche applicate
 
-| Modifica | Dettaglio |
-|---|---|
-| Etichetta sintesi | "Da decidere" → "Voci da validare" (mostra 12, il totale) |
+| Modifica          | Dettaglio                                                                                                                                        |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Etichetta sintesi | "Da decidere" → "Voci da validare" (mostra 12, il totale)                                                                                        |
 | Nota post-sintesi | "Le voci invarianti richiedono conferma come mantenimento del curricolo vigente; le voci modificate richiedono valutazione della proposta 2025." |
-| Titolo dettaglio | "Dettaglio delle proposte di revisione" → "Dettaglio delle proposte di modifica / Gap 2025" |
-| Nota metodologica | Aggiunto "mantenimenti" |
-| Nuova sezione | "Voci mantenute da validare" con tabella Area / Testo vigente mantenuto / Stato |
-| Doppio separatore | Rimosso prima del footer |
+| Titolo dettaglio  | "Dettaglio delle proposte di revisione" → "Dettaglio delle proposte di modifica / Gap 2025"                                                      |
+| Nota metodologica | Aggiunto "mantenimenti"                                                                                                                          |
+| Nuova sezione     | "Voci mantenute da validare" con tabella Area / Testo vigente mantenuto / Stato                                                                  |
+| Doppio separatore | Rimosso prima del footer                                                                                                                         |
 
 ## Chiarimento voci
 
-| Categoria | Conteggio | Sezione |
-|---|---|---|
-| Proposte di modifica / Gap 2025 | 8 | Dettaglio delle proposte di modifica / Gap 2025 |
-| Voci mantenute da confermare | 4 | Voci mantenute da validare |
-| **Voci da validare** | **12** | Sintesi delle decisioni |
+| Categoria                       | Conteggio | Sezione                                         |
+| ------------------------------- | --------- | ----------------------------------------------- |
+| Proposte di modifica / Gap 2025 | 8         | Dettaglio delle proposte di modifica / Gap 2025 |
+| Voci mantenute da confermare    | 4         | Voci mantenute da validare                      |
+| **Voci da validare**            | **12**    | Sintesi delle decisioni                         |
 
 ## Verifiche
 

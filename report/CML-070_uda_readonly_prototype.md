@@ -10,15 +10,16 @@
 ## Dati usati
 
 2 unità Tecnologia da `TECNOLOGIA_NORM_DATA`:
+
 - `tec_pri_5_001` (Primaria, Classe 5) — Cittadinanza tecnologica
 - `tec_sec_1_002` (Secondaria, Classe 1) — Digitale, dati, procedure e sicurezza
 
 ## UDA visualizzate
 
-| # | ID | Titolo | Ordine | Classe | Campi totali | Di cui curricolari | Di cui esempio |
-|---|-----|--------|--------|--------|-------------|-------------------|----------------|
-| 1 | uda_pri_5_digitale | Cittadini digitali responsabili | Primaria | 5 | 14 | 8 | 6 |
-| 2 | uda_sec_1_informatica | Dal computer al documento | Secondaria | 1 | 14 | 8 | 6 |
+| #   | ID                    | Titolo                          | Ordine     | Classe | Campi totali | Di cui curricolari | Di cui esempio |
+| --- | --------------------- | ------------------------------- | ---------- | ------ | ------------ | ------------------ | -------------- |
+| 1   | uda_pri_5_digitale    | Cittadini digitali responsabili | Primaria   | 5      | 14           | 8                  | 6              |
+| 2   | uda_sec_1_informatica | Dal computer al documento       | Secondaria | 1      | 14           | 8                  | 6              |
 
 ## Output validazione
 
@@ -41,20 +42,21 @@ node tools/audit-cml-curriculum-coverage.mjs
 ## Esito smoke locale
 
 20/20 controlli PASS:
+
 - Home, card Didattica, tab Didattica, UDA modello, 2 UDA, badge origine, campi, read-only, nessun salvataggio, Valutazione/Evidenze, filtro ordine, Curriculum, Tecnologia, Revisione, export/import/report, role-access, mobile, JS parse, validazione
 
 ## Regressioni escluse
 
-| Area | Esito |
-|------|-------|
-| Curriculum | ✅ Invariato |
-| Valutazione/Evidenze | ✅ Invariato |
-| Export/import/report | ✅ Invariati |
-| Role-access gating | ✅ Invariato |
-| Schema .cml | ✅ Invariato |
-| localStorage/sessionStorage | ✅ Nessuna aggiunta |
-| Mobile bottom bar | ✅ Invariata |
-| Mobile menu overlay | ✅ UDA entry aggiunta |
+| Area                        | Esito                 |
+| --------------------------- | --------------------- |
+| Curriculum                  | ✅ Invariato          |
+| Valutazione/Evidenze        | ✅ Invariato          |
+| Export/import/report        | ✅ Invariati          |
+| Role-access gating          | ✅ Invariato          |
+| Schema .cml                 | ✅ Invariato          |
+| localStorage/sessionStorage | ✅ Nessuna aggiunta   |
+| Mobile bottom bar           | ✅ Invariata          |
+| Mobile menu overlay         | ✅ UDA entry aggiunta |
 
 ## Raccomandazioni successive
 

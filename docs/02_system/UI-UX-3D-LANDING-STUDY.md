@@ -25,20 +25,21 @@ La proposta includeva l'uso di React per la gestione degli stati, Vite come bund
 
 ## Criticità
 
-| Criticità | Descrizione |
-|-----------|-------------|
-| Complessità tecnica | Three.js + React + Vite + Lenis rappresentano un salto tecnologico incompatibile con l'architettura attuale (HTML/CSS/JS monolitico). |
-| Manutenzione | Ogni nuova dipendenza aumenta il costo di manutenzione e il rischio di rottura. |
-| Landing autonoma | Una landing separata dall'applicazione esistente creerebbe discontinuità nell'esperienza utente. |
-| Accessibilità | La navigazione 3D può essere problematica per utenti con disabilità motorie o cognitive. |
-| Performance | Three.js su dispositivi mobili (target primario di CurManLight) può causare problemi di performance e surriscaldamento. |
-| Sovraingegnerizzazione | Per presentare 5 passaggi testuali, la complessità 3D è sproporzionata rispetto al valore comunicativo. |
+| Criticità              | Descrizione                                                                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Complessità tecnica    | Three.js + React + Vite + Lenis rappresentano un salto tecnologico incompatibile con l'architettura attuale (HTML/CSS/JS monolitico). |
+| Manutenzione           | Ogni nuova dipendenza aumenta il costo di manutenzione e il rischio di rottura.                                                       |
+| Landing autonoma       | Una landing separata dall'applicazione esistente creerebbe discontinuità nell'esperienza utente.                                      |
+| Accessibilità          | La navigazione 3D può essere problematica per utenti con disabilità motorie o cognitive.                                              |
+| Performance            | Three.js su dispositivi mobili (target primario di CurManLight) può causare problemi di performance e surriscaldamento.               |
+| Sovraingegnerizzazione | Per presentare 5 passaggi testuali, la complessità 3D è sproporzionata rispetto al valore comunicativo.                               |
 
 ## Decisione progettuale
 
 **La proposta 3D è utile come riferimento concettuale, ma NON è una specifica implementativa.**
 
 Non autorizza:
+
 - React
 - Three.js
 - Vite
@@ -48,6 +49,7 @@ Non autorizza:
 - Cambio architetturale
 
 La sezione introduttiva, se realizzata in futuro, dovrà essere:
+
 - Static HTML/CSS (coerente con l'architettura monolitica esistente)
 - Senza framework o librerie esterne
 - Integrata nella Home tab esistente (non landing autonoma)
@@ -71,10 +73,10 @@ La sezione presenterà il processo umano in 5 passaggi come elenco numerato, riu
 
 ## Stato del documento
 
-| Campo | Valore |
-|-------|--------|
-| Stato | Archiviato |
-| Data | 2026-06-25 |
-| Tipo | Studio concettuale |
-| Implementazione | Nessuna |
-| Riferimento | CML-158 |
+| Campo           | Valore             |
+| --------------- | ------------------ |
+| Stato           | Archiviato         |
+| Data            | 2026-06-25         |
+| Tipo            | Studio concettuale |
+| Implementazione | Nessuna            |
+| Riferimento     | CML-158            |

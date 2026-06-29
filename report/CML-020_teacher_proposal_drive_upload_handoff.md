@@ -2,11 +2,11 @@
 
 ## Stato git iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | cml-008r-fix-markdown-decision-summary |
-| HEAD | 1cee756 |
-| Working tree | Pulita |
+| Campo        | Valore                                 |
+| ------------ | -------------------------------------- |
+| Branch       | cml-008r-fix-markdown-decision-summary |
+| HEAD         | 1cee756                                |
+| Working tree | Pulita                                 |
 
 ## File runtime modificati
 
@@ -14,14 +14,15 @@
 
 ## Funzioni aggiunte
 
-| Funzione | Descrizione |
-|---|---|
+| Funzione                    | Descrizione                                 |
+| --------------------------- | ------------------------------------------- |
 | `uploadTeacherCmlToDrive()` | Invia il file .cml all'endpoint configurato |
-| `getDriveUploadEndpoint()` | Recupera l'endpoint da localStorage |
+| `getDriveUploadEndpoint()`  | Recupera l'endpoint da localStorage         |
 
 ## Conferma riuso schema .cml di CML-019
 
 Il modello .cml è generato tramite `buildTeacherCmlModel()`, confermando:
+
 - `fileType: "teacher_proposal"`
 - `humanValidationRequired: true`
 - `discipline`
@@ -58,15 +59,15 @@ Il pulsante "Scarica proposta .cml" è sempre presente e funzionante.
 
 ## Tabella rischi/mitigazioni
 
-| Rischio | Mitigazione |
-|---|---|
-| Endpoint non configurato | Messaggio informativo con fallback download |
-| Errore invio | Messaggio di errore con fallback download |
-| Doppi invii | Pulsante disabilitato durante invio |
-| File non valido | Usa lo stesso schema validato in CML-019 |
-| Utente senza rete | Download manuale sempre disponibile |
-| Drive non predisposto | Configurazione esterna al repository |
-| Uso accidentale di dati sensibili | Nessun dato sensibile nel payload |
+| Rischio                           | Mitigazione                                 |
+| --------------------------------- | ------------------------------------------- |
+| Endpoint non configurato          | Messaggio informativo con fallback download |
+| Errore invio                      | Messaggio di errore con fallback download   |
+| Doppi invii                       | Pulsante disabilitato durante invio         |
+| File non valido                   | Usa lo stesso schema validato in CML-019    |
+| Utente senza rete                 | Download manuale sempre disponibile         |
+| Drive non predisposto             | Configurazione esterna al repository        |
+| Uso accidentale di dati sensibili | Nessun dato sensibile nel payload           |
 
 ## Verdetto finale
 

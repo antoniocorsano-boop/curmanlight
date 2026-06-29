@@ -6,11 +6,11 @@ Pubblicazione controllata su Netlify della versione CurManLight successiva alla 
 
 ## Contesto
 
-| Campo | Valore |
-|---|---|
-| Repo | C:\Users\anton\CurManLight |
-| Branch | cml-008r-fix-markdown-decision-summary |
-| Commit partenza | 5f2d74c70ccdeee4aa5a0017fb948a4cf50897c9 |
+| Campo            | Valore                                                    |
+| ---------------- | --------------------------------------------------------- |
+| Repo             | C:\Users\anton\CurManLight                                |
+| Branch           | cml-008r-fix-markdown-decision-summary                    |
+| Commit partenza  | 5f2d74c70ccdeee4aa5a0017fb948a4cf50897c9                  |
 | Ciclo precedente | CML-016D_DISCIPLINARY_CONTENT_EXPORT_QUALITY_CYCLE_CLOSED |
 
 ## Stato Netlify
@@ -37,22 +37,22 @@ Pubblicazione controllata su Netlify della versione CurManLight successiva alla 
 
 ## Controlli post-deploy
 
-| Verifica | Esito |
-|---|---|
-| Raggiungibilita produzione | PASS |
-| Caricamento corretto | PASS |
-| Codice deployed contiene cleanup marker | PASS |
-| Codice deployed contiene isPersonalizedItem | PASS |
-| Codice deployed contiene personalization-indicator | PASS |
-| Marker `[IN 2025` presenti solo in dati sorgente | PASS (62 occorrenze totali, 61 marker effettivi + 1 riferimento testuale) |
-| Indicatore ✏️ condizionale | PASS |
-| Conteggi confermati | PASS |
-| Responsive | PASS |
-| Nessuna modifica runtime | PASS |
-| PDF invariato | PASS |
-| sw.js invariato | PASS |
-| _headers invariato | PASS |
-| Asset invariati | PASS |
+| Verifica                                           | Esito                                                                     |
+| -------------------------------------------------- | ------------------------------------------------------------------------- |
+| Raggiungibilita produzione                         | PASS                                                                      |
+| Caricamento corretto                               | PASS                                                                      |
+| Codice deployed contiene cleanup marker            | PASS                                                                      |
+| Codice deployed contiene isPersonalizedItem        | PASS                                                                      |
+| Codice deployed contiene personalization-indicator | PASS                                                                      |
+| Marker `[IN 2025` presenti solo in dati sorgente   | PASS (62 occorrenze totali, 61 marker effettivi + 1 riferimento testuale) |
+| Indicatore ✏️ condizionale                         | PASS                                                                      |
+| Conteggi confermati                                | PASS                                                                      |
+| Responsive                                         | PASS                                                                      |
+| Nessuna modifica runtime                           | PASS                                                                      |
+| PDF invariato                                      | PASS                                                                      |
+| sw.js invariato                                    | PASS                                                                      |
+| _headers invariato                                 | PASS                                                                      |
+| Asset invariati                                    | PASS                                                                      |
 
 ## Confini rispettati
 

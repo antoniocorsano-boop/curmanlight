@@ -28,64 +28,64 @@ Verificare la qualità tecnica, didattica e progettuale della bozza normalizzata
 
 ## Esito tecnico
 
-| Controllo | Esito |
-|---|---|
-| JSON valido | ✅ |
-| Struttura coerente con Italiano (18 campi, incl. `nucleo`) | ✅ |
-| ID univoci | ✅ (15/15) |
-| `validazioneUmana: true` su tutte le unità | ✅ |
-| Nessuna formula di approvazione | ✅ (stato: "nuovo" su tutte) |
-| `classe`/`fascia` null conforme a pattern (Infanzia: classe null, fascia valorizzata; Primaria/Secondaria: fascia null, classe valorizzata) | ✅ |
-| `stato: bozza_generabile` root | ✅ |
-| `readiness: in_revisione` root | ✅ |
+| Controllo                                                                                                                                   | Esito                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| JSON valido                                                                                                                                 | ✅                           |
+| Struttura coerente con Italiano (18 campi, incl. `nucleo`)                                                                                  | ✅                           |
+| ID univoci                                                                                                                                  | ✅ (15/15)                   |
+| `validazioneUmana: true` su tutte le unità                                                                                                  | ✅                           |
+| Nessuna formula di approvazione                                                                                                             | ✅ (stato: "nuovo" su tutte) |
+| `classe`/`fascia` null conforme a pattern (Infanzia: classe null, fascia valorizzata; Primaria/Secondaria: fascia null, classe valorizzata) | ✅                           |
+| `stato: bozza_generabile` root                                                                                                              | ✅                           |
+| `readiness: in_revisione` root                                                                                                              | ✅                           |
 
 ## Esito didattico
 
-| Controllo | Esito |
-|---|---|
-| Traguardi coerenti con DATA HTML (6 traguardi: sc_inf1, sc_pri1, sc_pri2, sc_sec1, sc_sec2, sc_sec3) | ✅ |
-| Traguardi con stato "modifica" (sc_pri2, sc_sec2) riflessi in unità dedicate (sci_pri_5_001, sci_sec_3_001) | ✅ |
-| Traguardo "nuovo" (sc_sec3) implementato come unità dedicata (sci_sec_3_002) | ✅ |
-| Obiettivi osservabili (3-5 per unità) | ✅ |
-| Conoscenze distinte dalle abilità | ✅ |
-| Abilità formulate come azioni osservabili | ✅ |
-| Evidenze osservabili per valutazione | ✅ |
-| Criteri descrittivi non numerici | ✅ |
-| Linguaggio scolastico chiaro, non enciclopedico | ✅ |
-| Nessun pattern di contenuto generico | ✅ |
-| Contenuto curricolare (non programmazione annuale) | ✅ |
-| Progressione verticale su Osservazione (3 ordini) e Viventi (3 ordini) | ✅ |
+| Controllo                                                                                                   | Esito |
+| ----------------------------------------------------------------------------------------------------------- | ----- |
+| Traguardi coerenti con DATA HTML (6 traguardi: sc_inf1, sc_pri1, sc_pri2, sc_sec1, sc_sec2, sc_sec3)        | ✅    |
+| Traguardi con stato "modifica" (sc_pri2, sc_sec2) riflessi in unità dedicate (sci_pri_5_001, sci_sec_3_001) | ✅    |
+| Traguardo "nuovo" (sc_sec3) implementato come unità dedicata (sci_sec_3_002)                                | ✅    |
+| Obiettivi osservabili (3-5 per unità)                                                                       | ✅    |
+| Conoscenze distinte dalle abilità                                                                           | ✅    |
+| Abilità formulate come azioni osservabili                                                                   | ✅    |
+| Evidenze osservabili per valutazione                                                                        | ✅    |
+| Criteri descrittivi non numerici                                                                            | ✅    |
+| Linguaggio scolastico chiaro, non enciclopedico                                                             | ✅    |
+| Nessun pattern di contenuto generico                                                                        | ✅    |
+| Contenuto curricolare (non programmazione annuale)                                                          | ✅    |
+| Progressione verticale su Osservazione (3 ordini) e Viventi (3 ordini)                                      | ✅    |
 
 ## Matrice nuclei/ordini
 
-| Nucleo | Infanzia | Primaria | Secondaria | Totale |
-|---|---|---|---|---|
-| Osservazione e metodo scientifico | 1 (fascia 5) | 1 (cl. 1) | 2 (cl. 1, cl. 3) | 4 |
-| Viventi e ambiente | 1 (fascia 5) | 1 (cl. 2) | 2 (cl. 1, cl. 2) | 4 |
-| Materia e trasformazioni | — | 1 (cl. 3) | 1 (cl. 1) | 2 |
-| Terra, ambiente e sostenibilità | — | 1 (cl. 4) | 2 (cl. 2, cl. 3) | 3 |
-| Energia e fenomeni | — | 1 (cl. 5) | 1 (cl. 3) | 2 |
+| Nucleo                            | Infanzia     | Primaria  | Secondaria       | Totale |
+| --------------------------------- | ------------ | --------- | ---------------- | ------ |
+| Osservazione e metodo scientifico | 1 (fascia 5) | 1 (cl. 1) | 2 (cl. 1, cl. 3) | 4      |
+| Viventi e ambiente                | 1 (fascia 5) | 1 (cl. 2) | 2 (cl. 1, cl. 2) | 4      |
+| Materia e trasformazioni          | —            | 1 (cl. 3) | 1 (cl. 1)        | 2      |
+| Terra, ambiente e sostenibilità   | —            | 1 (cl. 4) | 2 (cl. 2, cl. 3) | 3      |
+| Energia e fenomeni                | —            | 1 (cl. 5) | 1 (cl. 3)        | 2      |
 
 ## Allineamento traguardi DATA ↔ unità
 
-| Traguardo DATA | Stato DATA | Unità riferimento | Copertura |
-|---|---|---|---|
-| sc_inf1 | ok | sci_inf_5_001 | ✅ Osservazione, domande, ipotesi |
-| sc_pri1 | ok | sci_pri_1_001 | ✅ Curiosità, spiegazioni |
-| sc_pri2 | modifica | sci_pri_5_001 | ✅ Cura ambiente, fonti energia, sostenibilità |
-| sc_sec1 | ok | sci_sec_1_001 | ✅ Esplorazione, sperimentazione |
-| sc_sec2 | modifica | sci_sec_3_001 | ✅ Fonti energia, storia, figure femminili |
-| sc_sec3 | nuovo | sci_sec_3_002 | ✅ Errore, decisioni informate |
+| Traguardo DATA | Stato DATA | Unità riferimento | Copertura                                      |
+| -------------- | ---------- | ----------------- | ---------------------------------------------- |
+| sc_inf1        | ok         | sci_inf_5_001     | ✅ Osservazione, domande, ipotesi              |
+| sc_pri1        | ok         | sci_pri_1_001     | ✅ Curiosità, spiegazioni                      |
+| sc_pri2        | modifica   | sci_pri_5_001     | ✅ Cura ambiente, fonti energia, sostenibilità |
+| sc_sec1        | ok         | sci_sec_1_001     | ✅ Esplorazione, sperimentazione               |
+| sc_sec2        | modifica   | sci_sec_3_001     | ✅ Fonti energia, storia, figure femminili     |
+| sc_sec3        | nuovo      | sci_sec_3_002     | ✅ Errore, decisioni informate                 |
 
 ## Gestione overlap Energia con Tecnologia
 
-| Aspetto | Scienze (adottato) | Tecnologia (separato) | Verifica |
-|---|---|---|---|
-| Focus | Fenomeno naturale, trasformazione, osservazione | Ciclo produttivo, impianti, progettazione | ✅ |
-| Rinnovabili | Come fonte naturale | Come tecnologia di produzione | ✅ |
-| Sostenibilità | Impatto ambientale, comportamenti individuali | Efficienza, progettazione sostenibile | ✅ |
-| Storicità | Scoperte scientifiche, figure femminili | Evoluzione tecnologica | ✅ |
-| Note dipartimento | "taglio scientifico, non tecnologico" | N/A | ✅ |
+| Aspetto           | Scienze (adottato)                              | Tecnologia (separato)                     | Verifica |
+| ----------------- | ----------------------------------------------- | ----------------------------------------- | -------- |
+| Focus             | Fenomeno naturale, trasformazione, osservazione | Ciclo produttivo, impianti, progettazione | ✅       |
+| Rinnovabili       | Come fonte naturale                             | Come tecnologia di produzione             | ✅       |
+| Sostenibilità     | Impatto ambientale, comportamenti individuali   | Efficienza, progettazione sostenibile     | ✅       |
+| Storicità         | Scoperte scientifiche, figure femminili         | Evoluzione tecnologica                    | ✅       |
+| Note dipartimento | "taglio scientifico, non tecnologico"           | N/A                                       | ✅       |
 
 ## Gap riscontrati
 
@@ -103,20 +103,20 @@ Verificare la qualità tecnica, didattica e progettuale della bozza normalizzata
 
 ### Dati misurati
 
-| Parametro | Tecnologia | Italiano | Matematica | Scienze |
-|---|---|---|---|---|
-| Unità | 12 | 14 | 13 | 15 |
-| Chars totali JSON | 21.908 | 26.884 | 27.485 | 32.762 |
-| Chars medi per unità | 1.826 | 1.920 | 2.114 | 2.184 |
-| Campi per unità | 17 | 18 | 18 | 18 |
-| Stati in uso | 1 ("nuovo") | 1 ("nuovo") | 1 ("nuovo") | 1 ("nuovo") |
+| Parametro            | Tecnologia  | Italiano    | Matematica  | Scienze     |
+| -------------------- | ----------- | ----------- | ----------- | ----------- |
+| Unità                | 12          | 14          | 13          | 15          |
+| Chars totali JSON    | 21.908      | 26.884      | 27.485      | 32.762      |
+| Chars medi per unità | 1.826       | 1.920       | 2.114       | 2.184       |
+| Campi per unità      | 17          | 18          | 18          | 18          |
+| Stati in uso         | 1 ("nuovo") | 1 ("nuovo") | 1 ("nuovo") | 1 ("nuovo") |
 
 ### Proiezioni
 
-| Scenario | Unità stimate | Dimensione JSON stimata |
-|---|---|---|
-| 10 discipline normalizzate | ~140 | ~350 KB |
-| 15 discipline normalizzate | ~210 | ~525 KB |
+| Scenario                   | Unità stimate | Dimensione JSON stimata |
+| -------------------------- | ------------- | ----------------------- |
+| 10 discipline normalizzate | ~140          | ~350 KB                 |
+| 15 discipline normalizzate | ~210          | ~525 KB                 |
 
 ### Sostenibilità UI
 

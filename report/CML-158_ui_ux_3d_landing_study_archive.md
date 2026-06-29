@@ -2,14 +2,14 @@
 
 ## Preflight
 
-| Parametro | Valore |
-|-----------|--------|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit HEAD | `c854562` |
-| Working tree | Pulito |
-| Origin/main | Allineato (`main...origin/main`) |
-| Diff --check | Passa |
+| Parametro    | Valore                           |
+| ------------ | -------------------------------- |
+| Root Git     | `C:\Users\anton\CurManLight`     |
+| Branch       | `main`                           |
+| Commit HEAD  | `c854562`                        |
+| Working tree | Pulito                           |
+| Origin/main  | Allineato (`main...origin/main`) |
+| Diff --check | Passa                            |
 
 ## Riepilogo dell'analisi
 
@@ -24,6 +24,7 @@ Lo studio UI/UX per una landing page tridimensionale con Three.js è stato valut
 La proposta 3D è archiviata come riferimento concettuale. **Non costituisce specifica implementativa.**
 
 Non autorizza:
+
 - React, Three.js, Vite, Lenis
 - Nuove dipendenze
 - Nuova landing autonoma
@@ -31,26 +32,26 @@ Non autorizza:
 
 ## Controlli eseguiti
 
-| Controllo | Esito |
-|-----------|-------|
-| Root Git verificata | ✅ `C:\Users\anton\CurManLight` |
-| Branch corrente | ✅ `main` |
-| Working tree pulito | ✅ Nessuna modifica non committata |
-| Nessun file Kilo residuo | ✅ Nessun file parziale trovato |
+| Controllo                    | Esito                                                                              |
+| ---------------------------- | ---------------------------------------------------------------------------------- |
+| Root Git verificata          | ✅ `C:\Users\anton\CurManLight`                                                    |
+| Branch corrente              | ✅ `main`                                                                          |
+| Working tree pulito          | ✅ Nessuna modifica non committata                                                 |
+| Nessun file Kilo residuo     | ✅ Nessun file parziale trovato                                                    |
 | Scope autorizzato rispettato | ✅ Solo `docs/02_system/`, `docs/03_execution/`, `report/`, `docs/REPO-MOVELOG.md` |
-| Scope vietato rispettato | ✅ Nessun file runtime modificato |
-| Design system coerenza | ✅ La trasformazione consigliata riutilizza classi CSS esistenti |
+| Scope vietato rispettato     | ✅ Nessun file runtime modificato                                                  |
+| Design system coerenza       | ✅ La trasformazione consigliata riutilizza classi CSS esistenti                   |
 
 ## Assenza modifiche runtime
 
-| File runtime | Modificato? |
-|-------------|-------------|
-| `index.html` | ❌ No |
-| `_published_snapshot/netlify-current/index.html` | ❌ No |
-| `_published_snapshot/netlify-current/sw.js` | ❌ No |
-| `content/` (file JSON) | ❌ No |
-| `tools/` (script .mjs) | ❌ No |
-| File `.cml` | ❌ No |
+| File runtime                                     | Modificato? |
+| ------------------------------------------------ | ----------- |
+| `index.html`                                     | ❌ No       |
+| `_published_snapshot/netlify-current/index.html` | ❌ No       |
+| `_published_snapshot/netlify-current/sw.js`      | ❌ No       |
+| `content/` (file JSON)                           | ❌ No       |
+| `tools/` (script .mjs)                           | ❌ No       |
+| File `.cml`                                      | ❌ No       |
 
 ## Prossima azione consigliata sulle discipline
 

@@ -6,15 +6,15 @@ CurManLight è uno strumento web che supporta la revisione del curricolo discipl
 
 ## Funzioni disponibili
 
-| Funzione | Descrizione |
-|---|---|
-| Consultazione curricolo | Visualizza il curricolo nelle due versioni: IN 2012 (vigente) e IN 2025 (bozza) |
-| Sezioni generali | Premessa, profilo dello studente, valutazione, inclusione, continuità, orientamento |
-| Proposta docente | Il docente esporta un file `.cml` con le modifiche suggerite per la propria disciplina |
-| Validazione dipartimentale | Il coordinatore importa le proposte, le discute in riunione e registra l'esito |
-| Verifica referente | Il referente importa gli esiti dei dipartimenti e verifica il quadro complessivo |
-| Report gruppo di lavoro | Il referente scarica un report con sintesi, punti da chiarire e statistiche |
-| Esempi `.cml` | Quattro file dimostrativi (2 discipline) per formazione e simulazione |
+| Funzione                   | Descrizione                                                                            |
+| -------------------------- | -------------------------------------------------------------------------------------- |
+| Consultazione curricolo    | Visualizza il curricolo nelle due versioni: IN 2012 (vigente) e IN 2025 (bozza)        |
+| Sezioni generali           | Premessa, profilo dello studente, valutazione, inclusione, continuità, orientamento    |
+| Proposta docente           | Il docente esporta un file `.cml` con le modifiche suggerite per la propria disciplina |
+| Validazione dipartimentale | Il coordinatore importa le proposte, le discute in riunione e registra l'esito         |
+| Verifica referente         | Il referente importa gli esiti dei dipartimenti e verifica il quadro complessivo       |
+| Report gruppo di lavoro    | Il referente scarica un report con sintesi, punti da chiarire e statistiche            |
+| Esempi `.cml`              | Quattro file dimostrativi (2 discipline) per formazione e simulazione                  |
 
 ## Documenti e guide disponibili
 
@@ -46,7 +46,7 @@ CurManLight non include:
 ## Prossimi passi possibili
 
 - Utilizzare lo strumento in riunioni di dipartimento reali.
-- Raccogliere osservazioni da docenti, coordinatori e referente (vedi *Traccia raccolta osservazioni*).
+- Raccogliere osservazioni da docenti, coordinatori e referente (vedi _Traccia raccolta osservazioni_).
 - Segnalare criticità o suggerimenti per migliorare lo strumento.
 - Preparare proposte `.cml` su discipline specifiche.
 

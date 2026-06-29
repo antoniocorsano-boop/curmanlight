@@ -2,17 +2,17 @@
 
 ## 1. Baseline
 
-| Item | Value |
-|---|---|
-| Repo | `curmanlight` |
-| Branch | `main` |
-| Start commit | `f0f9817` |
-| `origin/main` at start | `f0f9817` |
-| Working tree at start | Clean |
-| Slice type | Audit docs-only |
-| Deploy | None |
-| Push | None |
-| Secrets | None |
+| Item                   | Value           |
+| ---------------------- | --------------- |
+| Repo                   | `curmanlight`   |
+| Branch                 | `main`          |
+| Start commit           | `f0f9817`       |
+| `origin/main` at start | `f0f9817`       |
+| Working tree at start  | Clean           |
+| Slice type             | Audit docs-only |
+| Deploy                 | None            |
+| Push                   | None            |
+| Secrets                | None            |
 
 ## 2. Current Batch Import Behavior
 
@@ -29,25 +29,26 @@ In short: the operational need "import proposals/outcomes from multiple files ac
 
 ## 3. Option Comparison
 
-| Dimension | A — Keep batch | B — Lightweight package in v1.0 | C — New `multi_discipline_package` | D — Defer to v1.1/v2.0 | E — UX guidance only |
-|---|---|---|---|---|---|
-| Compatibility with existing `.cml` | Full | Full | Requires new handling | Full | Full |
-| Implementation risk | None | Medium (semantic ambiguity) | High (new validator, export, import) | Low (deferred) | Low |
-| User-facing clarity | Medium (batch of files) | Medium (package field) | High (explicit package) | N/A | Medium-High |
-| Workflow impact | None | Medium | High | None | Low |
-| Duplicate/mixed handling | Existing | Existing + new rules | New rules | N/A | Existing |
-| Schema versioning impact | None | None (no bump) | May need bump | Deferred | None |
-| Local-first fit | Perfect | Good | Good | N/A | Perfect |
-| Zero-dependency fit | Perfect | Perfect | Good | N/A | Perfect |
-| Privacy/security impact | None | Low | Medium | None | None |
-| Test burden | None | Medium | High | None | Low |
-| Premature complexity risk | Low | Medium | High | Low | Low |
+| Dimension                          | A — Keep batch          | B — Lightweight package in v1.0 | C — New `multi_discipline_package`   | D — Defer to v1.1/v2.0 | E — UX guidance only |
+| ---------------------------------- | ----------------------- | ------------------------------- | ------------------------------------ | ---------------------- | -------------------- |
+| Compatibility with existing `.cml` | Full                    | Full                            | Requires new handling                | Full                   | Full                 |
+| Implementation risk                | None                    | Medium (semantic ambiguity)     | High (new validator, export, import) | Low (deferred)         | Low                  |
+| User-facing clarity                | Medium (batch of files) | Medium (package field)          | High (explicit package)              | N/A                    | Medium-High          |
+| Workflow impact                    | None                    | Medium                          | High                                 | None                   | Low                  |
+| Duplicate/mixed handling           | Existing                | Existing + new rules            | New rules                            | N/A                    | Existing             |
+| Schema versioning impact           | None                    | None (no bump)                  | May need bump                        | Deferred               | None                 |
+| Local-first fit                    | Perfect                 | Good                            | Good                                 | N/A                    | Perfect              |
+| Zero-dependency fit                | Perfect                 | Perfect                         | Good                                 | N/A                    | Perfect              |
+| Privacy/security impact            | None                    | Low                             | Medium                               | None                   | None                 |
+| Test burden                        | None                    | Medium                          | High                                 | None                   | Low                  |
+| Premature complexity risk          | Low                     | Medium                          | High                                 | Low                    | Low                  |
 
 ## 4. Selected Option
 
 **Option A — Keep current v1.0 single-file types and batch import.**
 
 Rationale:
+
 1. Current behavior satisfies the core operational need: multi-file, multi-discipline import works today.
 2. No evidence that schools require an explicit "package" artifact.
 3. Avoids premature schema complexity and test burden.
@@ -56,12 +57,12 @@ Rationale:
 
 ## 5. Rejected Alternatives
 
-| Option | Reason |
-|---|---|
-| B — Lightweight package manifest in v1.0 | Semantic ambiguity (is a file with `package:` a package or single proposal?); complexity not justified by evidence |
+| Option                                      | Reason                                                                                                                             |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| B — Lightweight package manifest in v1.0    | Semantic ambiguity (is a file with `package:` a package or single proposal?); complexity not justified by evidence                 |
 | C — New `multi_discipline_package` fileType | Introduces 3-way role/file-type matrix; requires new validators, exports, imports, UI flows, and tests; no strong operational need |
-| D — Defer to v1.1 or v2.0 | Overly conservative; Option A suffices without needing future contracts |
-| E — UX guidance only | Useful as a follow-up improvement but does not address the package-format question; better handled as a separate UX slice |
+| D — Defer to v1.1 or v2.0                   | Overly conservative; Option A suffices without needing future contracts                                                            |
+| E — UX guidance only                        | Useful as a follow-up improvement but does not address the package-format question; better handled as a separate UX slice          |
 
 ## 6. Compatibility Impact
 
@@ -81,21 +82,21 @@ If UX improvement is desired without schema changes, a future slice could enhanc
 
 ## 9. Verification
 
-| Check | Result |
-|---|---|
-| `git status` — clean working tree | YES |
-| HEAD at `f0f9817` | YES |
-| `origin/main` at `f0f9817` | YES |
-| `git diff --check` — no whitespace errors | YES |
-| Secret scan — no secrets | YES |
-| No deploy | YES |
-| No push | YES |
-| No secrets | YES |
+| Check                                     | Result |
+| ----------------------------------------- | ------ |
+| `git status` — clean working tree         | YES    |
+| HEAD at `f0f9817`                         | YES    |
+| `origin/main` at `f0f9817`                | YES    |
+| `git diff --check` — no whitespace errors | YES    |
+| Secret scan — no secrets                  | YES    |
+| No deploy                                 | YES    |
+| No push                                   | YES    |
+| No secrets                                | YES    |
 
 ## 10. Meta
 
-| Property | Value |
-|---|---|
-| Start commit | `f0f9817` |
-| Final commit | *TBD after docs commit* |
-| Verdict | `CML_206_MULTI_DISCIPLINE_PACKAGE_FORMAT_SELECTION_AUDIT_READY` |
+| Property     | Value                                                           |
+| ------------ | --------------------------------------------------------------- |
+| Start commit | `f0f9817`                                                       |
+| Final commit | _TBD after docs commit_                                         |
+| Verdict      | `CML_206_MULTI_DISCIPLINE_PACKAGE_FORMAT_SELECTION_AUDIT_READY` |

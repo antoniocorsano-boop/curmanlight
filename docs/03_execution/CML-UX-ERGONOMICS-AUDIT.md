@@ -115,18 +115,18 @@ Analisi per vista delle 9 schermate principali dello strumento, con misurazione 
 
 ## Metriche applicate
 
-| Metrica | Soglia / criterio | Esito sintetico |
-|---|---|---|
-| Una schermata = una decisione principale | Revisione, Esportazioni, Didattica violano | NO |
-| Azione primaria visibile senza scroll | Solo Home/Definitivo parzialmente | PARZIALE |
-| Max 2 livelli navigazione simultanei | tabbar + subnav | OK |
-| Max 1 pulsante primario per area decisionale | Spesso violato | NO |
-| Clic per consultare disciplina | Spesso 3 | ALTO |
-| Clic per prima azione revisione | Spesso 2 da Home | MEDIO |
-| Vista oltre 3 schermate verticali | Consulta, Revisione, Didattica, Esportazioni | SI |
-| Badge/stati/avvisi nella prima schermata | Molti visibili in load | NO |
-| Menu, hash, titolo e contenuto coerenti | Non sempre | PARZIALE |
-| Linguaggio comprensibile a docente non tecnico | Con eccezioni | SI |
+| Metrica                                        | Soglia / criterio                            | Esito sintetico |
+| ---------------------------------------------- | -------------------------------------------- | --------------- |
+| Una schermata = una decisione principale       | Revisione, Esportazioni, Didattica violano   | NO              |
+| Azione primaria visibile senza scroll          | Solo Home/Definitivo parzialmente            | PARZIALE        |
+| Max 2 livelli navigazione simultanei           | tabbar + subnav                              | OK              |
+| Max 1 pulsante primario per area decisionale   | Spesso violato                               | NO              |
+| Clic per consultare disciplina                 | Spesso 3                                     | ALTO            |
+| Clic per prima azione revisione                | Spesso 2 da Home                             | MEDIO           |
+| Vista oltre 3 schermate verticali              | Consulta, Revisione, Didattica, Esportazioni | SI              |
+| Badge/stati/avvisi nella prima schermata       | Molti visibili in load                       | NO              |
+| Menu, hash, titolo e contenuto coerenti        | Non sempre                                   | PARZIALE        |
+| Linguaggio comprensibile a docente non tecnico | Con eccezioni                                | SI              |
 
 ## Problemi classificati
 

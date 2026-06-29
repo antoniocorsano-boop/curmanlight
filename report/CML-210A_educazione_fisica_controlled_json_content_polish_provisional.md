@@ -25,16 +25,16 @@ La decisione non equivale a validazione formale del dipartimento.
 
 ## 3. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `e216633` (CML-211 push) |
-| origin/main iniziale | `e216633` |
-| Working tree iniziale | pulito |
-| Dati normalizzati | 14/14 |
-| Runtime mappa | 14/14 |
-| Shape test | 14/14 PASS |
+| Parametro             | Valore                       |
+| --------------------- | ---------------------------- |
+| Root Git              | `C:\Users\anton\CurManLight` |
+| Branch                | `main`                       |
+| Commit iniziale       | `e216633` (CML-211 push)     |
+| origin/main iniziale  | `e216633`                    |
+| Working tree iniziale | pulito                       |
+| Dati normalizzati     | 14/14                        |
+| Runtime mappa         | 14/14                        |
+| Shape test            | 14/14 PASS                   |
 
 ## 4. File modificato
 
@@ -42,15 +42,16 @@ Solo `content/curriculum/educazione-fisica.normalized.json`
 
 ## 5. Struttura before/after
 
-| Parametro | Before | After |
-|---|---|---|
-| Unità totali | 7 | 7 (invariato) |
-| Nuclei | 4 | 4 (invariato) |
-| Ordini | 3 | 3 (invariato) |
-| Classi Primaria | 1, 3, 5 | 1, 3, 5 (invariato) |
+| Parametro         | Before  | After               |
+| ----------------- | ------- | ------------------- |
+| Unità totali      | 7       | 7 (invariato)       |
+| Nuclei            | 4       | 4 (invariato)       |
+| Ordini            | 3       | 3 (invariato)       |
+| Classi Primaria   | 1, 3, 5 | 1, 3, 5 (invariato) |
 | Classi Secondaria | 1, 2, 3 | 1, 2, 3 (invariato) |
 
 **Nuclei preservati:**
+
 - Corpo e percezione
 - Abilità motorie
 - Gioco e sport
@@ -139,18 +140,19 @@ Aggiunto riferimento a CML-210A come fonte del polish provvisorio.
 
 ## 9. Validazioni
 
-| Check | Esito |
-|---|---|
-| JSON validator | 14/14 PASS, 0 errori |
-| Shape test | 14/14 PASS |
-| Educazione Fisica | S=7, N=4, P=7, D=0 (invariato) |
-| git diff --check | pulito |
-| Secret scan | negativo |
-| JSON parse smoke | 7 unità, 4 nuclei, 3 ordini — corretto |
+| Check             | Esito                                  |
+| ----------------- | -------------------------------------- |
+| JSON validator    | 14/14 PASS, 0 errori                   |
+| Shape test        | 14/14 PASS                             |
+| Educazione Fisica | S=7, N=4, P=7, D=0 (invariato)         |
+| git diff --check  | pulito                                 |
+| Secret scan       | negativo                               |
+| JSON parse smoke  | 7 unità, 4 nuclei, 3 ordini — corretto |
 
 ## 10. Hash/runtime smoke
 
 Il runtime map adapter legge `unitaApprendimento` e produce:
+
 - `struttureSostanziali`: 7 (raggruppate per `ambito`)
 - `nodiDisciplinari`: 4 (raggruppati per `nucleo`)
 - `progressioneVerticale`: 7 (per ordine/classe/fascia)

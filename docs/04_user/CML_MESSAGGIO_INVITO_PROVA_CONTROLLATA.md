@@ -16,6 +16,7 @@ Ti chiediamo di dedicare circa 30–45 minuti a esplorare l'app e le funzioni in
 1–2 settimane.
 
 **Cosa è importante sapere**
+
 - CurManLight è materiale di lavoro. Non sostituisce le delibere del Collegio Docenti o del Dirigente Scolastico.
 - I dati restano sul tuo computer. Nessun dato personale viene raccolto dall'app.
 - Non inserire dati personali o sensibili nei file di prova.

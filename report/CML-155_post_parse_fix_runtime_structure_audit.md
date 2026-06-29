@@ -8,12 +8,12 @@ Audit-only: nessuna modifica runtime.
 
 ## Stato repository
 
-| Campo | Valore |
-|-------|--------|
-| Branch | `main` |
+| Campo           | Valore    |
+| --------------- | --------- |
+| Branch          | `main`    |
 | Commit iniziale | `6885fab` |
-| origin/main | `6885fab` |
-| Stato | allineato |
+| origin/main     | `6885fab` |
+| Stato           | allineato |
 
 ## Sintassi runtime
 
@@ -50,7 +50,10 @@ Effetto osservato: Competenze iniziale mostra contenitore vuoto finche' l'utente
 `renderDepartmentImport()` usa `decisionIdx` senza definirlo:
 
 ```js
-var decision=decisionIdx>=0?departmentImportState.proposals[decisionIdx].decision:null;
+var decision =
+  decisionIdx >= 0
+    ? departmentImportState.proposals[decisionIdx].decision
+    : null
 ```
 
 Smoke mirato con import mock valido:

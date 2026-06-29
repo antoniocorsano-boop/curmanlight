@@ -10,17 +10,17 @@ Audit ergonomico post-deduplicazione Export Center. Punteggio complessivo: **72/
 
 ## Tabella punteggi per area
 
-| Area | Punteggio | Max | % |
-|---|---|---|---|
-| Architettura informativa | 12 | 15 | 80% |
-| Flusso per ruolo e compito | 11 | 15 | 73% |
-| Densità visiva e carico cognitivo | 10 | 15 | 67% |
-| Navigazione e orientamento | 6 | 10 | 60% |
-| Export Center e azioni di output | 8 | 10 | 80% |
-| Mobile/touch ergonomia | 7 | 10 | 70% |
-| Accessibilità e leggibilità | 6 | 10 | 60% |
-| Microcopy e coerenza linguistica | 8 | 10 | 80% |
-| Prevenzione errori e sicurezza operativa | 4 | 5 | 80% |
+| Area                                     | Punteggio | Max | %   |
+| ---------------------------------------- | --------- | --- | --- |
+| Architettura informativa                 | 12        | 15  | 80% |
+| Flusso per ruolo e compito               | 11        | 15  | 73% |
+| Densità visiva e carico cognitivo        | 10        | 15  | 67% |
+| Navigazione e orientamento               | 6         | 10  | 60% |
+| Export Center e azioni di output         | 8         | 10  | 80% |
+| Mobile/touch ergonomia                   | 7         | 10  | 70% |
+| Accessibilità e leggibilità              | 6         | 10  | 60% |
+| Microcopy e coerenza linguistica         | 8         | 10  | 80% |
+| Prevenzione errori e sicurezza operativa | 4         | 5   | 80% |
 
 ## Delta rispetto alla situazione precedente
 
@@ -28,14 +28,14 @@ Baseline numerica non disponibile — audit precedenti erano qualitativi senza p
 
 **Miglioramenti qualitativi**:
 
-| Criticità precedente | Stato |
-|---|---|
-| Export duplicati in 3 punti | RISOLTO |
-| Navigazione forzata (click fraudolenti) | ELIMINATO |
-| Export .cml non in Export Center | AGGIUNTO |
-| Bozza disciplina non in Export Center | AGGIUNTO |
-| Revisione 4-6 schermate | RIDOTTO a 2-4 |
-| Definitivo con export primari | SOSTITUITO da bridge |
+| Criticità precedente                    | Stato                |
+| --------------------------------------- | -------------------- |
+| Export duplicati in 3 punti             | RISOLTO              |
+| Navigazione forzata (click fraudolenti) | ELIMINATO            |
+| Export .cml non in Export Center        | AGGIUNTO             |
+| Bozza disciplina non in Export Center   | AGGIUNTO             |
+| Revisione 4-6 schermate                 | RIDOTTO a 2-4        |
+| Definitivo con export primari           | SOSTITUITO da bridge |
 
 ## Top 5 miglioramenti
 
@@ -56,29 +56,33 @@ Baseline numerica non disponibile — audit precedenti erano qualitativi senza p
 ## Elenco criticità classificate
 
 ### P0: 0
+
 ### P1: 3
-| # | Area | Descrizione |
-|---|---|---|
-| 1 | Navigazione | Sidebar discipline visibile in Fonti |
-| 2 | Densità | Scroll eccessivo in Evidenze (3-6 schermate) |
-| 3 | Orientamento | Breadcrumb hidden di default |
+
+| #   | Area         | Descrizione                                  |
+| --- | ------------ | -------------------------------------------- |
+| 1   | Navigazione  | Sidebar discipline visibile in Fonti         |
+| 2   | Densità      | Scroll eccessivo in Evidenze (3-6 schermate) |
+| 3   | Orientamento | Breadcrumb hidden di default                 |
 
 ### P2: 5
-| # | Area | Descrizione |
-|---|---|---|
-| 4 | Navigazione | Hash non sincronizzato oltre Consulta |
-| 5 | Architettura | selDisc default Tecnologia (percezione tech-centrica) |
-| 6 | Accessibilità | Skip link assente, ARIA parziale, emoji senza alt text |
-| 7 | Orientamento | Breadcrumb non visibile in viste chiave |
-| 8 | Microcopy | Etichetta tabbar "Competenze e progettazione" lunga su mobile |
+
+| #   | Area          | Descrizione                                                   |
+| --- | ------------- | ------------------------------------------------------------- |
+| 4   | Navigazione   | Hash non sincronizzato oltre Consulta                         |
+| 5   | Architettura  | selDisc default Tecnologia (percezione tech-centrica)         |
+| 6   | Accessibilità | Skip link assente, ARIA parziale, emoji senza alt text        |
+| 7   | Orientamento  | Breadcrumb non visibile in viste chiave                       |
+| 8   | Microcopy     | Etichetta tabbar "Competenze e progettazione" lunga su mobile |
 
 ### P3: 4
-| # | Area | Descrizione |
-|---|---|---|
-| 9 | Export | Backup duplicato (Home quick-actions + Export Center) |
-| 10 | Microcopy | Usage-notice ancora 3-4 righe |
-| 11 | Accessibilità | Contrasto badge warning |
-| 12 | Mobile | Abbreviazioni bottom bar non auto-esplicative |
+
+| #   | Area          | Descrizione                                           |
+| --- | ------------- | ----------------------------------------------------- |
+| 9   | Export        | Backup duplicato (Home quick-actions + Export Center) |
+| 10  | Microcopy     | Usage-notice ancora 3-4 righe                         |
+| 11  | Accessibilità | Contrasto badge warning                               |
+| 12  | Mobile        | Abbreviazioni bottom bar non auto-esplicative         |
 
 ## Raccomandazione operativa
 
@@ -87,6 +91,7 @@ L'app è usabile e stabile. Nessuna slice runtime urgente.
 **Prossima slice consigliata**: `CML-UX-NAVIGATION-AND-ORIENTATION` (non bloccante, +4-5 punti stimati)
 
 Coprirebbe:
+
 - Sidebar nascosta in Fonti
 - Breadcrumb sempre visibile
 - Hash navigation sincronizzata

@@ -9,18 +9,18 @@ Chiudere e pushare in modo controllato la sequenza core data layer CML-138→CML
 
 ## Audit pre-push
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| HEAD locale | `a228683` |
-| origin/main | `85bbab4` |
-| Local ahead | 9 commits |
-| Working tree | Pulito |
-| Validatore | 7 file / 94 unità / `overallValid: true` ✅ |
-| Test harness | 7 PASS / 0 FAIL ✅ |
-| Residui ignorati | `.agents`, `skills-lock.json`, `Consultazione` ✅ |
-| Whitespace | OK ✅ |
-| Runtime `index.html` | Non modificato nella sequenza ✅ |
+| Parametro            | Valore                                            |
+| -------------------- | ------------------------------------------------- |
+| Branch               | `main`                                            |
+| HEAD locale          | `a228683`                                         |
+| origin/main          | `85bbab4`                                         |
+| Local ahead          | 9 commits                                         |
+| Working tree         | Pulito                                            |
+| Validatore           | 7 file / 94 unità / `overallValid: true` ✅       |
+| Test harness         | 7 PASS / 0 FAIL ✅                                |
+| Residui ignorati     | `.agents`, `skills-lock.json`, `Consultazione` ✅ |
+| Whitespace           | OK ✅                                             |
+| Runtime `index.html` | Non modificato nella sequenza ✅                  |
 
 ### Commit locali (da pushare)
 
@@ -38,14 +38,14 @@ ac4c724 data: prepare Tecnologia nuclei for CML adapter                (CML-140A
 
 ### Riepilogo tecnico
 
-* JSON disciplinari validati: **7 file / 94 unità**
-* Adapter standalone presente: `tools/json-to-mappa-dati-adapter.mjs`
-* Transformer runtime-shape presente: `tools/to-runtime-mappa-dati-transformer.mjs`
-* Harness shape presente: `tools/test-runtime-mappa-dati-shape.mjs`
-* Harness: **7 PASS, 0 FAIL**
-* Runtime non integrato — `index.html` non toccato
-* Nessun file temporaneo presente
-* `content/curriculum/tecnologia.normalized.json` è l'unico JSON modificato (fix nucleo fields in CML-140A)
+- JSON disciplinari validati: **7 file / 94 unità**
+- Adapter standalone presente: `tools/json-to-mappa-dati-adapter.mjs`
+- Transformer runtime-shape presente: `tools/to-runtime-mappa-dati-transformer.mjs`
+- Harness shape presente: `tools/test-runtime-mappa-dati-shape.mjs`
+- Harness: **7 PASS, 0 FAIL**
+- Runtime non integrato — `index.html` non toccato
+- Nessun file temporaneo presente
+- `content/curriculum/tecnologia.normalized.json` è l'unico JSON modificato (fix nucleo fields in CML-140A)
 
 ### Artificio aggiunto in questa slice
 

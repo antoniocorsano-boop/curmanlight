@@ -14,18 +14,18 @@ L'audit ha analizzato 9 viste dello strumento pubblicato, valutando ergonomia, c
 
 ## Scorecard UX CurManLight
 
-| Dimensione | Punteggio 0–3 | Evidenza |
-|---|---:|---|
-| Orientamento | 1 | Schede complesse, subnav non sempre auto-evidente |
-| Chiarezza del compito | 1 | Azioni multiple competitive nella stessa vista |
-| Densità visiva | 0 | Alta densità, troppi elementi concorrenti |
-| Profondità scroll | 0 | Molte viste oltre 3 schermate |
-| Coerenza navigazione | 1 | Hash e subnav non sincronizzati |
-| Leggibilità | 2 | Font leggibile, avvisi lunghi e microcopy ridondanti |
-| Accessibilità base | 2 | Touch target ok, mancano landmark/aria-current |
-| Controllo utente | 2 | Azioni locali chiare, percorsi confusi da ridondanze |
-| Separazione consultazione/revisione/export | 1 | Azioni duplicate in 3 viste |
-| Prontezza uso scolastico reale | 1 | Funziona ma richiede training o adattamento |
+| Dimensione                                 | Punteggio 0–3 | Evidenza                                             |
+| ------------------------------------------ | ------------: | ---------------------------------------------------- |
+| Orientamento                               |             1 | Schede complesse, subnav non sempre auto-evidente    |
+| Chiarezza del compito                      |             1 | Azioni multiple competitive nella stessa vista       |
+| Densità visiva                             |             0 | Alta densità, troppi elementi concorrenti            |
+| Profondità scroll                          |             0 | Molte viste oltre 3 schermate                        |
+| Coerenza navigazione                       |             1 | Hash e subnav non sincronizzati                      |
+| Leggibilità                                |             2 | Font leggibile, avvisi lunghi e microcopy ridondanti |
+| Accessibilità base                         |             2 | Touch target ok, mancano landmark/aria-current       |
+| Controllo utente                           |             2 | Azioni locali chiare, percorsi confusi da ridondanze |
+| Separazione consultazione/revisione/export |             1 | Azioni duplicate in 3 viste                          |
+| Prontezza uso scolastico reale             |             1 | Funziona ma richiede training o adattamento          |
 
 ## Punteggio complessivo
 
@@ -40,16 +40,16 @@ L'audit ha analizzato 9 viste dello strumento pubblicato, valutando ergonomia, c
 
 ## Mappa rischi
 
-| Priorità | Problema | Impatto utente | Azione consigliata |
-|---|---|---|---|
-| P0 | Navigazione hash + subnav non sincronizzata | Disorientamento | Sincronizzare hash/subnav |
-| P0 | Sidebar in viste readonly | Disorientamento | Rimuovere sidebar dove non serve |
-| P1 | Scroll 4–6 schermate | Perdita contesto | Comprimere viste, accordion |
-| P1 | Export duplicati in 3 punti | Scelta difficile | Centralizzare in Esportazioni |
-| P1 | Azioni multiple competitive | Sovraccarico | Ridurre a 1 primaria per area |
-| P2 | Breadcrumb assente | Percorso non chiaro | Aggiungere breadcrumb |
-| P2 | Disclaimer verbosi | Warning fatigue | Comprimere notice box |
-| P3 | Touch target marginali | Difficoltà motorie | Aumentare padding a viewport ridotta |
+| Priorità | Problema                                    | Impatto utente      | Azione consigliata                   |
+| -------- | ------------------------------------------- | ------------------- | ------------------------------------ |
+| P0       | Navigazione hash + subnav non sincronizzata | Disorientamento     | Sincronizzare hash/subnav            |
+| P0       | Sidebar in viste readonly                   | Disorientamento     | Rimuovere sidebar dove non serve     |
+| P1       | Scroll 4–6 schermate                        | Perdita contesto    | Comprimere viste, accordion          |
+| P1       | Export duplicati in 3 punti                 | Scelta difficile    | Centralizzare in Esportazioni        |
+| P1       | Azioni multiple competitive                 | Sovraccarico        | Ridurre a 1 primaria per area        |
+| P2       | Breadcrumb assente                          | Percorso non chiaro | Aggiungere breadcrumb                |
+| P2       | Disclaimer verbosi                          | Warning fatigue     | Comprimere notice box                |
+| P3       | Touch target marginali                      | Difficoltà motorie  | Aumentare padding a viewport ridotta |
 
 ## Vista per vista
 

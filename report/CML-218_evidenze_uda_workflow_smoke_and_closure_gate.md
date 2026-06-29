@@ -18,6 +18,7 @@ Il ciclo Evidenze/UDA (CML-214 contract → CML-215 evidence panel → CML-216 r
 ## Verifiche
 
 ### A. Pre-flight
+
 - Working tree: pulito, HEAD = origin/main = `5a5f65f`
 - Validator: 14/14 PASS
 - Shape test: 14/14 PASS
@@ -26,21 +27,23 @@ Il ciclo Evidenze/UDA (CML-214 contract → CML-215 evidence panel → CML-216 r
 
 ### B. Static code analysis
 
-| Punto | Risultato |
-|---|---|
-| 1. localStorage solo `cml_evidenze_state` | ✅ |
-| 2. Md fields: tutte 6 sezioni presenti | ✅ |
-| 3. Privacy notice presente | ✅ |
-| 4. Esclusa non trattata come selezionata | ⚠️ logica corretta, label UI inconsistenti |
-| 5. `.cml` workflow invariato | ✅ |
+| Punto                                     | Risultato                                  |
+| ----------------------------------------- | ------------------------------------------ |
+| 1. localStorage solo `cml_evidenze_state` | ✅                                         |
+| 2. Md fields: tutte 6 sezioni presenti    | ✅                                         |
+| 3. Privacy notice presente                | ✅                                         |
+| 4. Esclusa non trattata come selezionata  | ⚠️ logica corretta, label UI inconsistenti |
+| 5. `.cml` workflow invariato              | ✅                                         |
 
 ### C. Public GitHub Pages
+
 - **URL**: https://antoniocorsano-boop.github.io/curmanlight/
 - **HTTP**: 200, app caricata
 - **Evidence panel**: visibile, stati funzionanti
 - **UDA draft panel**: dropdown, generazione, copia/download funzionanti
 
 ### D. Representative workflow
+
 - Tecnologia, Italiano, Matematica, Scienze, Storia: evidenze marcabili, UDA generabile
 
 ## Findings minori (non bloccanti)

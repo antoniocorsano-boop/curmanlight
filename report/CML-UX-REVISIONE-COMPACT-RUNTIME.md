@@ -10,28 +10,28 @@ La vista Revisione ora ha un solo compito: **decidere**. Esportazioni confronto 
 
 ## Modifiche
 
-| File | Modifica |
-|---|---|
+| File                                             | Modifica                                                                                            |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
 | `_published_snapshot/netlify-current/index.html` | -65/+54 righe: export rimosso, notice compattata, processo in tab separato, bozza disciplina toggle |
-| `_published_snapshot/netlify-current/sw.js` | CACHE_NAME bump `v453p3-consulta-compact` → `v453p4-revisione-compact` |
+| `_published_snapshot/netlify-current/sw.js`      | CACHE_NAME bump `v453p3-consulta-compact` → `v453p4-revisione-compact`                              |
 
 ## Componenti Revisione dopo la slice
 
-| Componente | Stato |
-|---|---|
-| Toolbar filtri (Tutti/Da decidere/Altri filtri) | Invariata |
-| 📝 Bozza disciplina toggle | Nuovo, richiamabile |
-| Usage notice | Compattata a 1 riga |
-| cards-area (decisioni) | Invariata |
-| Tab Processo (import/validazione) | Nuovo, spostato da Revisione |
+| Componente                                      | Stato                        |
+| ----------------------------------------------- | ---------------------------- |
+| Toolbar filtri (Tutti/Da decidere/Altri filtri) | Invariata                    |
+| 📝 Bozza disciplina toggle                      | Nuovo, richiamabile          |
+| Usage notice                                    | Compattata a 1 riga          |
+| cards-area (decisioni)                          | Invariata                    |
+| Tab Processo (import/validazione)               | Nuovo, spostato da Revisione |
 
 ## Rischi controllati
 
-| Rischio | Contromisura |
-|---|---|
+| Rischio                                           | Contromisura                                    |
+| ------------------------------------------------- | ----------------------------------------------- |
 | Export confronto non più accessibile da Revisione | Ancora disponibile in Riepilogo ed Esportazioni |
-| Processo nascosto | Subnav esplicita `🔧 Processo` |
-| Bozza disciplina non trovata | Pulsante `📝 Bozza disciplina` in toolbar |
+| Processo nascosto                                 | Subnav esplicita `🔧 Processo`                  |
+| Bozza disciplina non trovata                      | Pulsante `📝 Bozza disciplina` in toolbar       |
 
 ## Verifiche
 

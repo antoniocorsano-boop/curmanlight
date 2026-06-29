@@ -2,11 +2,11 @@
 
 ## Stato git iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | cml-008r-fix-markdown-decision-summary |
-| HEAD | aa78b47 |
-| Working tree | Pulita |
+| Campo        | Valore                                 |
+| ------------ | -------------------------------------- |
+| Branch       | cml-008r-fix-markdown-decision-summary |
+| HEAD         | aa78b47                                |
+| Working tree | Pulita                                 |
 
 ## Conferma docs-only
 
@@ -32,31 +32,31 @@
 
 ## Schema `.cml` implementato
 
-| Campo | Tipo | Descrizione |
-|---|---|---|
-| `schemaVersion` | string | "1.0" |
-| `fileType` | string | "teacher_proposal" |
-| `appName` | string | "CurManLight" |
-| `createdAt` | string | ISO-8601 datetime |
-| `role` | string | "teacher" |
-| `discipline` | string | Disciplina selezionata o null |
-| `sourceContext` | object | currentFramework, revisionFramework |
-| `counts` | object | total, ok, modifica, nuovo |
-| `proposals` | array | Lista voci con modifica/nuovo |
-| `checks` | object | hasProposals, hasDiscipline, hasSources |
-| `humanValidationRequired` | boolean | true |
+| Campo                     | Tipo    | Descrizione                             |
+| ------------------------- | ------- | --------------------------------------- |
+| `schemaVersion`           | string  | "1.0"                                   |
+| `fileType`                | string  | "teacher_proposal"                      |
+| `appName`                 | string  | "CurManLight"                           |
+| `createdAt`               | string  | ISO-8601 datetime                       |
+| `role`                    | string  | "teacher"                               |
+| `discipline`              | string  | Disciplina selezionata o null           |
+| `sourceContext`           | object  | currentFramework, revisionFramework     |
+| `counts`                  | object  | total, ok, modifica, nuovo              |
+| `proposals`               | array   | Lista voci con modifica/nuovo           |
+| `checks`                  | object  | hasProposals, hasDiscipline, hasSources |
+| `humanValidationRequired` | boolean | true                                    |
 
 ## Controlli tecnici
 
-| Verifica | Esito |
-|---|---|
-| Funzione `exportTeacherCml()` definita | ✓ |
-| Pulsante toolbar aggiunto | ✓ |
-| Pulsante Riepilogo aggiunto | ✓ |
-| Esportazione JSON valida | ✓ |
-| Nessun Google API | ✓ |
-| Nessun Apps Script | ✓ |
-| Nessun endpoint reale | ✓ |
+| Verifica                               | Esito |
+| -------------------------------------- | ----- |
+| Funzione `exportTeacherCml()` definita | ✓     |
+| Pulsante toolbar aggiunto              | ✓     |
+| Pulsante Riepilogo aggiunto            | ✓     |
+| Esportazione JSON valida               | ✓     |
+| Nessun Google API                      | ✓     |
+| Nessun Apps Script                     | ✓     |
+| Nessun endpoint reale                  | ✓     |
 
 ## Verdetto finale
 

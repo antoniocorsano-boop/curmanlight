@@ -5,24 +5,24 @@
 
 ## Criticità individuate
 
-| # | Criticità | Gravità |
-|---|---|---|
-| C1 | Due "Markdown" semanticamente diversi (toolbar vs export panel) | Media |
-| C2 | Disclaimer validazione assente su "Curricolo Definitivo" | Alta |
-| C3 | "Prossima azione" statica (sempre 12, nessun progresso) | Media |
-| C4 | Guida "3️⃣ Quando hai finito" in fondo, poco visibile | Bassa |
-| C5 | Export panel solo Tecnologia | Media |
-| C6 | Tooltip non visibili su mobile | Bassa |
-| C7 | "Copia per Word" — nome tecnico poco chiaro | Bassa |
+| #   | Criticità                                                       | Gravità |
+| --- | --------------------------------------------------------------- | ------- |
+| C1  | Due "Markdown" semanticamente diversi (toolbar vs export panel) | Media   |
+| C2  | Disclaimer validazione assente su "Curricolo Definitivo"        | Alta    |
+| C3  | "Prossima azione" statica (sempre 12, nessun progresso)         | Media   |
+| C4  | Guida "3️⃣ Quando hai finito" in fondo, poco visibile            | Bassa   |
+| C5  | Export panel solo Tecnologia                                    | Media   |
+| C6  | Tooltip non visibili su mobile                                  | Bassa   |
+| C7  | "Copia per Word" — nome tecnico poco chiaro                     | Bassa   |
 
 ## Opzioni valutate
 
-| Opzione | Descrizione | Rischio | Raccomandazione |
-|---|---|---|---|
-| A | Microcopy export e guida minima | Molto basso | ✅ Primaria |
-| B | Pannello "Cosa esporti" | Basso | Secondaria |
-| C | Percorso guidato step | Medio | Rimandare |
-| D | Solo disclaimer su Definitivo | Molto basso | ✅ Includere in A |
+| Opzione | Descrizione                     | Rischio     | Raccomandazione   |
+| ------- | ------------------------------- | ----------- | ----------------- |
+| A       | Microcopy export e guida minima | Molto basso | ✅ Primaria       |
+| B       | Pannello "Cosa esporti"         | Basso       | Secondaria        |
+| C       | Percorso guidato step           | Medio       | Rimandare         |
+| D       | Solo disclaimer su Definitivo   | Molto basso | ✅ Includere in A |
 
 ## Opzione selezionata
 

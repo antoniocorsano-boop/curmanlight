@@ -17,17 +17,17 @@
 
 ## Contenuto del pannello
 
-| Elemento | Valore |
-|---|---|
-| Titolo | "Readiness per approvazione" |
-| Sottotitolo | "La completezza della bozza non equivale ad approvazione." |
-| Contatore 1 | 2 in revisione |
-| Contatore 2 | 13 sola consultazione |
-| Contatore 3 | 0 pronte per approvazione |
-| Riga 1 | Tecnologia — In revisione |
-| Riga 2 | Italiano — In revisione |
-| Riga 3 | Altre 13 discipline — Solo consultazione |
-| Nota | "L'approvazione resta esterna allo strumento e richiede validazione degli organi competenti." |
+| Elemento    | Valore                                                                                        |
+| ----------- | --------------------------------------------------------------------------------------------- |
+| Titolo      | "Readiness per approvazione"                                                                  |
+| Sottotitolo | "La completezza della bozza non equivale ad approvazione."                                    |
+| Contatore 1 | 2 in revisione                                                                                |
+| Contatore 2 | 13 sola consultazione                                                                         |
+| Contatore 3 | 0 pronte per approvazione                                                                     |
+| Riga 1      | Tecnologia — In revisione                                                                     |
+| Riga 2      | Italiano — In revisione                                                                       |
+| Riga 3      | Altre 13 discipline — Solo consultazione                                                      |
+| Nota        | "L'approvazione resta esterna allo strumento e richiede validazione degli organi competenti." |
 
 ## Posizione
 
@@ -70,17 +70,17 @@ Curriculum > Consultazione, subito dopo la sezione "Stato di completezza dei cur
 
 ## Controlli PASS/FAIL
 
-| Controllo | Esito |
-|---|---|
-| `git status` — solo file consentiti | ✅ |
-| `git diff --check` | ✅ |
-| Braces CSS bilanciate (2120=2120) | ✅ |
-| Nessuna nuova dipendenza esterna | ✅ |
-| Nessun nuovo `localStorage`/`sessionStorage` | ✅ |
-| Light mode only preservato | ✅ |
-| Dark mode commentato | ✅ |
-| Nessuna `@media` orfana | ✅ |
-| Nessun overflow orizzontale | ✅ |
+| Controllo                                    | Esito |
+| -------------------------------------------- | ----- |
+| `git status` — solo file consentiti          | ✅    |
+| `git diff --check`                           | ✅    |
+| Braces CSS bilanciate (2120=2120)            | ✅    |
+| Nessuna nuova dipendenza esterna             | ✅    |
+| Nessun nuovo `localStorage`/`sessionStorage` | ✅    |
+| Light mode only preservato                   | ✅    |
+| Dark mode commentato                         | ✅    |
+| Nessuna `@media` orfana                      | ✅    |
+| Nessun overflow orizzontale                  | ✅    |
 
 ## Prossimo step raccomandato
 

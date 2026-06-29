@@ -21,23 +21,23 @@
 
 ## Sintesi modello stati
 
-| Stato | Descrizione | Chi attribuisce | UI mostra |
-|---|---|---|---|
-| `solo_consultazione` | Traguardi/obiettivi base | Default | Badge "Solo consultazione" |
-| `bozza_generabile` | Struttura normalizzata completa | Sviluppatore + validatore | Badge "Bozza completa disponibile" |
-| `in_revisione` | Bozza in controllo dipartimentale | Coordinatore dipartimento | Badge "In revisione" |
-| `sintesi_pronta` | Revisionata, pronta per organi | Referente curricolo | Badge "Sintesi pronta" |
-| `pronto_approvazione` | Check umano + documento | Referente / DS | Badge "Pronta per approvazione" |
-| `approvato_esternamente` | Delibera esterna documentata | DS / Segreteria | Badge "Approvata esternamente" |
+| Stato                    | Descrizione                       | Chi attribuisce           | UI mostra                          |
+| ------------------------ | --------------------------------- | ------------------------- | ---------------------------------- |
+| `solo_consultazione`     | Traguardi/obiettivi base          | Default                   | Badge "Solo consultazione"         |
+| `bozza_generabile`       | Struttura normalizzata completa   | Sviluppatore + validatore | Badge "Bozza completa disponibile" |
+| `in_revisione`           | Bozza in controllo dipartimentale | Coordinatore dipartimento | Badge "In revisione"               |
+| `sintesi_pronta`         | Revisionata, pronta per organi    | Referente curricolo       | Badge "Sintesi pronta"             |
+| `pronto_approvazione`    | Check umano + documento           | Referente / DS            | Badge "Pronta per approvazione"    |
+| `approvato_esternamente` | Delibera esterna documentata      | DS / Segreteria           | Badge "Approvata esternamente"     |
 
 ## Classificazione attuale
 
-| Disciplina | Stato | Readiness |
-|---|---|---|
-| Tecnologia | `bozza_generabile / in_revisione` | Non pronta per approvazione |
-| Italiano | `bozza_generabile / in_revisione` | Non pronta per approvazione |
-| Altre 13 discipline | `solo_consultazione` | Non pronte per approvazione |
-| **Pronte per approvazione** | **0** | — |
+| Disciplina                  | Stato                             | Readiness                   |
+| --------------------------- | --------------------------------- | --------------------------- |
+| Tecnologia                  | `bozza_generabile / in_revisione` | Non pronta per approvazione |
+| Italiano                    | `bozza_generabile / in_revisione` | Non pronta per approvazione |
+| Altre 13 discipline         | `solo_consultazione`              | Non pronte per approvazione |
+| **Pronte per approvazione** | **0**                             | —                           |
 
 ## Rischio residuo
 

@@ -8,19 +8,19 @@ Intervento sulla parte alta della vista utente completato.
 
 Unico file modificato: `_published_snapshot/netlify-current/index.html`
 
-| Elemento rimosso | Sostituito con |
-|---|---|
-| `quick-info-bar` (save chip, profile, Azioni) | Cruscotto minimo |
-| `orientation-card` (spiegazione 5 passi) | Cruscotto minimo |
-| `progress-wrap` (separato, 3 righe) | Integrato nella barra del cruscotto |
+| Elemento rimosso                              | Sostituito con                      |
+| --------------------------------------------- | ----------------------------------- |
+| `quick-info-bar` (save chip, profile, Azioni) | Cruscotto minimo                    |
+| `orientation-card` (spiegazione 5 passi)      | Cruscotto minimo                    |
+| `progress-wrap` (separato, 3 righe)           | Integrato nella barra del cruscotto |
 
-| Elemento modificato | Prima | Dopo |
-|---|---|---|
-| toolbar filtri | 6 pulsanti sempre visibili | 2 pulsanti primari + toggle "⋯ Altri filtri" |
-| toolbar export | 4 pulsanti + nota sempre visibili | Toggle "📄 Export ▾" |
-| `usage-notice` | Testo sempre visibile | `<details>` collassato |
-| `local-save-bar` | 5 pulsanti + testo esteso | Testo + 4 pulsanti compatti |
-| `install-hint` | Visibile di default | Nascosto (`display:none`) |
+| Elemento modificato | Prima                             | Dopo                                         |
+| ------------------- | --------------------------------- | -------------------------------------------- |
+| toolbar filtri      | 6 pulsanti sempre visibili        | 2 pulsanti primari + toggle "⋯ Altri filtri" |
+| toolbar export      | 4 pulsanti + nota sempre visibili | Toggle "📄 Export ▾"                         |
+| `usage-notice`      | Testo sempre visibile             | `<details>` collassato                       |
+| `local-save-bar`    | 5 pulsanti + testo esteso         | Testo + 4 pulsanti compatti                  |
+| `install-hint`      | Visibile di default               | Nascosto (`display:none`)                    |
 
 ## Cosa non toccato
 

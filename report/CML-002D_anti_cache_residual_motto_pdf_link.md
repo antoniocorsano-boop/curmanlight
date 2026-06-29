@@ -4,11 +4,11 @@
 
 Il rischio residuo documentato in CML-002C è stato chiuso aggiornando l'unico collegamento non versionato al PDF nella pagina motto.
 
-| Controllo | Prima | Dopo |
-|---|---:|---:|
-| Link PDF nella pagina motto | 1 | 1 |
-| Link motto con `?v=452b421` | 0 | 1 |
-| Riferimenti PDF non versionati nell'intero runtime | 1 | 0 |
+| Controllo                                          | Prima | Dopo |
+| -------------------------------------------------- | ----: | ---: |
+| Link PDF nella pagina motto                        |     1 |    1 |
+| Link motto con `?v=452b421`                        |     0 |    1 |
+| Riferimenti PDF non versionati nell'intero runtime |     1 |    0 |
 
 Tutti e quattro i link utente presenti nel runtime pubblicabile — tre in `index.html` e uno nella pagina motto — puntano ora a `Corso_CurricoloDonMilani_IN2025.pdf?v=452b421`.
 

@@ -4,57 +4,57 @@
 
 ### Dati generali
 
-| Campo | Valore |
-|---|---|
-| Disciplina | Scienze |
-| Stato | `bozza_generabile` |
-| Readiness | `in_revisione` |
-| Schema | `cml-normalized-curriculum-v1` |
-| Totale unità | 15 |
-| Target | 12-15 (max 20) |
+| Campo             | Valore                         |
+| ----------------- | ------------------------------ |
+| Disciplina        | Scienze                        |
+| Stato             | `bozza_generabile`             |
+| Readiness         | `in_revisione`                 |
+| Schema            | `cml-normalized-curriculum-v1` |
+| Totale unità      | 15                             |
+| Target            | 12-15 (max 20)                 |
 | Validazione umana | Richiesta (true su ogni unità) |
-| Commit | HEAD `cddd1f4` + untracked |
+| Commit            | HEAD `cddd1f4` + untracked     |
 
 ### Distribuzione unità per ordine e nucleo
 
-| Nucleo \ Ordine | Infanzia | Primaria | Secondaria | Totale |
-|---|---|---|---|---|
-| Osservazione e metodo scientifico | 1 | 1 | 2 | 4 |
-| Viventi e ambiente | 1 | 1 | 2 | 4 |
-| Materia e trasformazioni | — | 1 | 1 | 2 |
-| Terra, ambiente e sostenibilità | — | 1 | 2 | 3 |
-| Energia e fenomeni | — | 1 | 1 | 2 |
-| **Totale** | **2** | **5** | **8** | **15** |
+| Nucleo \ Ordine                   | Infanzia | Primaria | Secondaria | Totale |
+| --------------------------------- | -------- | -------- | ---------- | ------ |
+| Osservazione e metodo scientifico | 1        | 1        | 2          | 4      |
+| Viventi e ambiente                | 1        | 1        | 2          | 4      |
+| Materia e trasformazioni          | —        | 1        | 1          | 2      |
+| Terra, ambiente e sostenibilità   | —        | 1        | 2          | 3      |
+| Energia e fenomeni                | —        | 1        | 1          | 2      |
+| **Totale**                        | **2**    | **5**    | **8**      | **15** |
 
 ### Dimensione
 
-| Parametro | Valore |
-|---|---|
-| Unità | 15 |
-| Caratteri totali JSON | ~28.500 |
-| Caratteri medi per unità | ~1.900 |
-| Campi per unità | 18 |
-| Stati in uso | 1 ("nuovo") |
+| Parametro                | Valore      |
+| ------------------------ | ----------- |
+| Unità                    | 15          |
+| Caratteri totali JSON    | ~28.500     |
+| Caratteri medi per unità | ~1.900      |
+| Campi per unità          | 18          |
+| Stati in uso             | 1 ("nuovo") |
 
 ### Unità create
 
-| ID | Ordine | Classe/Fascia | Nucleo | Ambito |
-|---|---|---|---|---|
-| sci_inf_5_001 | Infanzia | Fascia 5 | Osservazione e metodo scientifico | Esplorazione sensoriale e prime domande |
-| sci_inf_5_002 | Infanzia | Fascia 5 | Viventi e ambiente | Animali, piante e cicli naturali |
-| sci_pri_1_001 | Primaria | Cl. 1 | Osservazione e metodo scientifico | Primi approcci all'osservazione scientifica |
-| sci_pri_2_001 | Primaria | Cl. 2 | Viventi e ambiente | Esseri viventi e relazioni |
-| sci_pri_3_001 | Primaria | Cl. 3 | Materia e trasformazioni | Proprietà della materia e cambiamenti |
-| sci_pri_4_001 | Primaria | Cl. 4 | Terra, ambiente e sostenibilità | Suolo, ecosistemi e risorse naturali |
-| sci_pri_5_001 | Primaria | Cl. 5 | Energia e fenomeni | Fonti di energia e uso consapevole |
-| sci_sec_1_001 | Secondaria | Cl. 1 | Osservazione e metodo scientifico | Il metodo scientifico sperimentale |
-| sci_sec_1_002 | Secondaria | Cl. 1 | Materia e trasformazioni | Fenomeni fisici e chimici della materia |
-| sci_sec_1_003 | Secondaria | Cl. 1 | Viventi e ambiente | La cellula e la classificazione dei viventi |
-| sci_sec_2_001 | Secondaria | Cl. 2 | Viventi e ambiente | Il corpo umano: anatomia, fisiologia e salute |
-| sci_sec_2_002 | Secondaria | Cl. 2 | Terra, ambiente e sostenibilità | Il sistema Terra: geologia, atmosfera e idrosfera |
-| sci_sec_3_001 | Secondaria | Cl. 3 | Energia e fenomeni | Fonti di energia e applicazioni scientifiche |
-| sci_sec_3_002 | Secondaria | Cl. 3 | Osservazione e metodo scientifico | Errore scientifico, pensiero critico e decisioni informate |
-| sci_sec_3_003 | Secondaria | Cl. 3 | Terra, ambiente e sostenibilità | Biodiversità, evoluzione e sostenibilità globale |
+| ID            | Ordine     | Classe/Fascia | Nucleo                            | Ambito                                                     |
+| ------------- | ---------- | ------------- | --------------------------------- | ---------------------------------------------------------- |
+| sci_inf_5_001 | Infanzia   | Fascia 5      | Osservazione e metodo scientifico | Esplorazione sensoriale e prime domande                    |
+| sci_inf_5_002 | Infanzia   | Fascia 5      | Viventi e ambiente                | Animali, piante e cicli naturali                           |
+| sci_pri_1_001 | Primaria   | Cl. 1         | Osservazione e metodo scientifico | Primi approcci all'osservazione scientifica                |
+| sci_pri_2_001 | Primaria   | Cl. 2         | Viventi e ambiente                | Esseri viventi e relazioni                                 |
+| sci_pri_3_001 | Primaria   | Cl. 3         | Materia e trasformazioni          | Proprietà della materia e cambiamenti                      |
+| sci_pri_4_001 | Primaria   | Cl. 4         | Terra, ambiente e sostenibilità   | Suolo, ecosistemi e risorse naturali                       |
+| sci_pri_5_001 | Primaria   | Cl. 5         | Energia e fenomeni                | Fonti di energia e uso consapevole                         |
+| sci_sec_1_001 | Secondaria | Cl. 1         | Osservazione e metodo scientifico | Il metodo scientifico sperimentale                         |
+| sci_sec_1_002 | Secondaria | Cl. 1         | Materia e trasformazioni          | Fenomeni fisici e chimici della materia                    |
+| sci_sec_1_003 | Secondaria | Cl. 1         | Viventi e ambiente                | La cellula e la classificazione dei viventi                |
+| sci_sec_2_001 | Secondaria | Cl. 2         | Viventi e ambiente                | Il corpo umano: anatomia, fisiologia e salute              |
+| sci_sec_2_002 | Secondaria | Cl. 2         | Terra, ambiente e sostenibilità   | Il sistema Terra: geologia, atmosfera e idrosfera          |
+| sci_sec_3_001 | Secondaria | Cl. 3         | Energia e fenomeni                | Fonti di energia e applicazioni scientifiche               |
+| sci_sec_3_002 | Secondaria | Cl. 3         | Osservazione e metodo scientifico | Errore scientifico, pensiero critico e decisioni informate |
+| sci_sec_3_003 | Secondaria | Cl. 3         | Terra, ambiente e sostenibilità   | Biodiversità, evoluzione e sostenibilità globale           |
 
 ### Fonti utilizzate
 

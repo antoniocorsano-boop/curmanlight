@@ -8,20 +8,21 @@ Preparare il file normalizzato di Musica in `content/curriculum/musica.normalize
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Branch | `main` |
-| Commit iniziale | `84902b5` |
-| origin/main | `84902b5` |
-| Working tree | Pulito (sync) |
-| Shape runtime | 9/9 PASS |
+| Parametro             | Valore                                         |
+| --------------------- | ---------------------------------------------- |
+| Branch                | `main`                                         |
+| Commit iniziale       | `84902b5`                                      |
+| origin/main           | `84902b5`                                      |
+| Working tree          | Pulito (sync)                                  |
+| Shape runtime         | 9/9 PASS                                       |
 | Validatore curriculum | 9 file, 111 unità, overallValid true, 0 errori |
-| Push | Non eseguito |
-| Deploy | Non eseguito |
+| Push                  | Non eseguito                                   |
+| Deploy                | Non eseguito                                   |
 
 ## 3. Esito CML-173 e motivazione scelta Musica
 
 CML-173 ha valutato la readiness documentale di Musica con esito readiness media, rischio basso. Musica è stata confermata come prima disciplina espressiva per:
+
 - **6 items documentati** (3 traguardi + 3 obiettivi)
 - **3 nuclei** chiari e ben separati (Ascolto, Espressione vocale e strumentale, Linguaggi sonori)
 - **3 ordini** coperti (Infanzia, Primaria, Secondaria)
@@ -55,6 +56,7 @@ CML-173 ha valutato la readiness documentale di Musica con esito readiness media
 ## 7. Struttura del modello
 
 ### Disciplina
+
 - Nome: `Musica`
 - Slug file: `musica.normalized.json`
 - Meta-disciplina: `Espressivo`
@@ -64,11 +66,13 @@ CML-173 ha valutato la readiness documentale di Musica con esito readiness media
 - Human validation required: `true`
 
 ### Nuclei
+
 1. **Ascolto** — 2 unità (Infanzia cl. 5, Secondaria cl. 2)
 2. **Espressione vocale e strumentale** — 2 unità (Primaria cl. 5, Secondaria cl. 1)
 3. **Linguaggi sonori** — 3 unità (Primaria cl. 1, 3; Secondaria cl. 3)
 
 ### Strutture sostanziali
+
 1. Esplorazione sonora e ascolto attivo: suoni, rumori e silenzi (Infanzia fascia 5)
 2. Primi elementi del linguaggio musicale: suono, ritmo, timbro e intensità (Primaria cl. 1)
 3. Notazione musicale e canto corale: lettura ritmica e intonazione (Primaria cl. 3)
@@ -78,29 +82,32 @@ CML-173 ha valutato la readiness documentale di Musica con esito readiness media
 7. Creatività sonora, tecnologie digitali e patrimonio musicale: produzione, composizione e cittadinanza culturale (Secondaria cl. 3)
 
 ### Nodi disciplinari
+
 1. Ascolto (2 unità)
 2. Espressione vocale e strumentale (2 unità)
 3. Linguaggi sonori (3 unità)
 
 ### Progressione verticale
+
 - Infanzia fascia 5, Primaria classi 1, 3, 5, Secondaria classi 1, 2, 3
 
 ### Decisioni curricolari
+
 - Nessuna decisione documentata — `decisioniCurricolari: []`
 
 ## 8. Conteggi finali
 
-| Campo | Conteggio |
-|-------|:---------:|
-| Unità di apprendimento | 7 |
-| Ordini coperti | 3 |
-| Classi Primaria | 3 (1, 3, 5) |
-| Classi Secondaria | 3 (1, 2, 3) |
-| Infanzia fasce | 1 (5) |
-| struttureSostanziali | 7 |
-| nodiDisciplinari | 3 |
-| progressioneVerticale | 7 |
-| decisioniCurricolari | 0 |
+| Campo                  |  Conteggio  |
+| ---------------------- | :---------: |
+| Unità di apprendimento |      7      |
+| Ordini coperti         |      3      |
+| Classi Primaria        | 3 (1, 3, 5) |
+| Classi Secondaria      | 3 (1, 2, 3) |
+| Infanzia fasce         |    1 (5)    |
+| struttureSostanziali   |      7      |
+| nodiDisciplinari       |      3      |
+| progressioneVerticale  |      7      |
+| decisioniCurricolari   |      0      |
 
 ## 9. Stato prudenziale dei contenuti
 
@@ -131,16 +138,16 @@ Output: ✅ Generato correttamente — S=7, N=3, P=7, D=0.
 
 ## 12. Verifica codifica
 
-| Controllo | Esito |
-|-----------|:-----:|
-| UTF-8 | ✅ |
-| BOM assente | ✅ |
-| Nessun byte nullo | ✅ |
-| Nessun U+FFFD | ✅ |
-| Nessun `???` | ✅ |
-| JSON.parse valido | ✅ |
-| Accenti italiani | ✅ |
-| Campo disciplina | `Musica` ✅ |
+| Controllo         |    Esito    |
+| ----------------- | :---------: |
+| UTF-8             |     ✅      |
+| BOM assente       |     ✅      |
+| Nessun byte nullo |     ✅      |
+| Nessun U+FFFD     |     ✅      |
+| Nessun `???`      |     ✅      |
+| JSON.parse valido |     ✅      |
+| Accenti italiani  |     ✅      |
+| Campo disciplina  | `Musica` ✅ |
 
 ## 13. Test shape runtime 9/9 invariato
 
@@ -148,16 +155,16 @@ Il test shape runtime continua a coprire 9/9 discipline (Tecnologia, Italiano, M
 
 ## 14. Verifica invarianti
 
-| Componente | Stato |
-|------------|:-----:|
-| Runtime (`_published_snapshot/netlify-current/index.html`) | Invariato ✅ |
-| Altri file `content/curriculum/` | Invariati ✅ |
-| Tools (`tools/`) | Invariati ✅ |
-| Schema `.cml` | Invariato ✅ |
-| Export/import | Invariati ✅ |
-| Funzioni evidenze/UDA | Invariate ✅ |
-| Service worker | Invariato ✅ |
-| Dipendenze | Nessuna introdotta ✅ |
+| Componente                                                 |         Stato         |
+| ---------------------------------------------------------- | :-------------------: |
+| Runtime (`_published_snapshot/netlify-current/index.html`) |     Invariato ✅      |
+| Altri file `content/curriculum/`                           |     Invariati ✅      |
+| Tools (`tools/`)                                           |     Invariati ✅      |
+| Schema `.cml`                                              |     Invariato ✅      |
+| Export/import                                              |     Invariati ✅      |
+| Funzioni evidenze/UDA                                      |     Invariate ✅      |
+| Service worker                                             |     Invariato ✅      |
+| Dipendenze                                                 | Nessuna introdotta ✅ |
 
 ## 15. Rischi residui
 

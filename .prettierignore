@@ -1,0 +1,8 @@
+_handoff/**
+_published_snapshot/**
+node_modules/**
+package-lock.json
+.claude/**
+.codex/**
+.agents/**
+.git/**

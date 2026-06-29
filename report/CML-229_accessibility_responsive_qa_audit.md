@@ -26,10 +26,10 @@
 
 ## Touch usability findings
 
-| Issue | Target | Severity |
-|---|---|---|
-| Tabbar buttons at 400px | ~21px height | P1 |
-| Mappa disc buttons | ~34px height | P3 |
+| Issue                   | Target       | Severity |
+| ----------------------- | ------------ | -------- |
+| Tabbar buttons at 400px | ~21px height | P1       |
+| Mappa disc buttons      | ~34px height | P3       |
 
 ## Labels/semantic findings
 
@@ -46,9 +46,11 @@ All workflows (curriculum, evidence, UDA, .cml export, department import, refere
 ## Issue list by severity
 
 ### P1 — High user-impact
+
 1. Tabbar buttons at 400px viewport: insufficient touch target size
 
 ### P2 — Medium polish/clarity
+
 2. Missing `aria-current` on tabbar
 3. Missing `aria-pressed` on discipline selector
 4. Missing `aria-current` on subnav buttons
@@ -57,6 +59,7 @@ All workflows (curriculum, evidence, UDA, .cml export, department import, refere
 7. No media query below 380px
 
 ### P3 — Low priority
+
 8. Mappa disc buttons inline fixed size (~34px)
 9. Emoji-only icon buttons without accessible text
 
@@ -72,22 +75,23 @@ All workflows (curriculum, evidence, UDA, .cml export, department import, refere
 6. CSS: add `outline:2px solid #1a237e` to `motto-link:focus`
 
 Rejected:
+
 - Media query for 360px: not justified for single device size
 - Emoji accessible labels: complex, low impact
 
 ## Finale
 
-| Field | Value |
-|---|---|
-| Start commit | `432a3e8` |
-| Final commit | da definire |
-| Scope | docs-only |
-| No runtime | Confirmed (this slice) |
-| No JSON | Confirmed |
-| No `.cml` | Confirmed |
-| No SchoolKB | Confirmed |
-| No deploy | Confirmed |
-| No push | Confirmed |
-| No secrets | Confirmed |
-| Verdict | `CML_229_ACCESSIBILITY_RESPONSIVE_QA_AUDIT_COMPLETE` |
-| Next | CML-230 — targeted accessibility/responsive microfix |
+| Field        | Value                                                |
+| ------------ | ---------------------------------------------------- |
+| Start commit | `432a3e8`                                            |
+| Final commit | da definire                                          |
+| Scope        | docs-only                                            |
+| No runtime   | Confirmed (this slice)                               |
+| No JSON      | Confirmed                                            |
+| No `.cml`    | Confirmed                                            |
+| No SchoolKB  | Confirmed                                            |
+| No deploy    | Confirmed                                            |
+| No push      | Confirmed                                            |
+| No secrets   | Confirmed                                            |
+| Verdict      | `CML_229_ACCESSIBILITY_RESPONSIVE_QA_AUDIT_COMPLETE` |
+| Next         | CML-230 — targeted accessibility/responsive microfix |

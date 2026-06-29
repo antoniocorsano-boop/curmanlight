@@ -1,6 +1,7 @@
 # Report: CML-059 — GITHUB_PAGES_STATIC_DEPLOY_SELECTION_AND_SETUP
 
 ## Dettagli tecnici del workflow
+
 Il workflow GitHub Actions è definito in `.github/workflows/pages.yml` e ha le seguenti caratteristiche:
 
 - **Trigger**:
@@ -23,7 +24,9 @@ Il workflow GitHub Actions è definito in `.github/workflows/pages.yml` e ha le 
     4. `actions/deploy-pages@v4`: effettua il deploy e imposta l'URL di output.
 
 ## File autorizzati
+
 Durante lo slice CML-059 sono autorizzati i seguenti file:
+
 - `.github/workflows/pages.yml`
 - `docs/03_execution/CML-059.md`
 - `report/CML-059_github_pages_static_deploy_selection_and_setup.md`
@@ -32,7 +35,9 @@ Durante lo slice CML-059 sono autorizzati i seguenti file:
 Tutti gli altri file, in particolare quelli dentro `_published_snapshot/netlify-current/`, devono rimanere invariati.
 
 ## Controlli eseguiti
+
 Prima di committare, sono stati effettuati i seguenti controlli:
+
 1. `Test-Path _published_snapshot\netlify-current\index.html` → vero (il file esiste).
 2. Verifica che il workflow sia stato creato correttamente (presenza e contenuto).
 3. `git diff --check` → nessun errore di spaziatura.
@@ -40,12 +45,15 @@ Prima di committare, sono stati effettuati i seguenti controlli:
 5. `git diff --name-only -- _published_snapshot/netlify-current` → output vuoto, confermando che nessun file nella cartella di pubblicazione è stato modificato.
 
 ## Conferma nessun runtime modificato
+
 L'output di `git diff --name-only -- _published_snapshot/netlify-current` è vuoto, quindi nessun file nel runtime statale è stato alterato. Inoltre, i controlli sopra mostrano che i soli file modificati sono quelli esplicitamente autorizzati per lo slice.
 
 ## Conferma nessun deploy locale
+
 Non è stato eseguito alcun comando di deploy locale (ad esempio, nessun push manuale a Netlify o Coolify, nessun comando di upload a GitHub Pages esterno al workflow). Il deploy avverrà esclusivamente tramite il workflow GitHub Actions dopo il push e l'esecuzione dello stesso.
 
 ## Procedura per smoke post-deploy
+
 Dopo che il workflow ha eseguito correttamente il deploy su GitHub Pages, procedere come segue:
 
 1. Ottenere l'URL del deploy dalle impostazioni di GitHub Pages (repository → Settings → Pages) o dall'output del workflow step `Deploy to GitHub Pages` (variabile `deployment.outputs.page_url`).
@@ -62,4 +70,5 @@ Dopo che il workflow ha eseguito correttamente il deploy su GitHub Pages, proced
 3. Documentare i risultati dello smoke test in un nuovo report o aggiornare la documentazione esistente.
 
 ## Note sui controlli eseguiti
+
 I controlli sono stati eseguiti su un repository locale con il remote impostato su `https://github.com/antoniocorsano-boop/curmanlight`. Si raccomanda di verificare che l'URL del remote corrisponda al repository effettivo e di avere i diritti di push prima di eseguire il push della branch.

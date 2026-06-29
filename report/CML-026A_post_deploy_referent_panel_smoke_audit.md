@@ -12,14 +12,14 @@ Smoke audit post-deploy sulla versione pubblicata su Netlify. 28/28 controlli PA
 
 ## Controlli
 
-| Area | Esito |
-|---|---|
-| Preflight repository | ✅ PASS |
-| URL pubblicata (caricamento, asset, layout) | ✅ PASS |
-| Pannello referente (raggiungibile, import, pulsante) | ✅ PASS |
+| Area                                                      | Esito   |
+| --------------------------------------------------------- | ------- |
+| Preflight repository                                      | ✅ PASS |
+| URL pubblicata (caricamento, asset, layout)               | ✅ PASS |
+| Pannello referente (raggiungibile, import, pulsante)      | ✅ PASS |
 | Report gruppo di lavoro (9 sezioni, filename, disclaimer) | ✅ PASS |
-| Regressione minima (docenti, dipartimento, navigazione) | ✅ PASS |
-| MEMORY.md non committato | ✅ PASS |
+| Regressione minima (docenti, dipartimento, navigazione)   | ✅ PASS |
+| MEMORY.md non committato                                  | ✅ PASS |
 
 ## Verdetto
 

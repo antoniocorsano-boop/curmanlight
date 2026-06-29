@@ -12,16 +12,16 @@ La slice e docs-only correttiva. Non produce file `.normalized.json`, non modifi
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `cf2c607` (allineato con `origin/main`) |
-| Working tree iniziale | pulito |
-| Dati normalizzati | 10/14 |
-| Runtime mappa | 10/14 |
-| Shape test | 10/10 PASS |
-| Skill usate | `cml-readiness-audit`, `cml-docs-only-slice` |
+| Parametro             | Valore                                       |
+| --------------------- | -------------------------------------------- |
+| Root Git              | `C:\Users\anton\CurManLight`                 |
+| Branch                | `main`                                       |
+| Commit iniziale       | `cf2c607` (allineato con `origin/main`)      |
+| Working tree iniziale | pulito                                       |
+| Dati normalizzati     | 10/14                                        |
+| Runtime mappa         | 10/14                                        |
+| Shape test            | 10/10 PASS                                   |
+| Skill usate           | `cml-readiness-audit`, `cml-docs-only-slice` |
 
 ## 3. Collegamento con CML-178, CML-179, CML-180, CML-181, CML-182
 
@@ -49,9 +49,9 @@ Decisione: checklist non compilata, data-prep bloccata. Non ha distinto tra appr
 
 CML-182 ha bloccato anche la creazione di una bozza normalizzata prudente, confondendo due concetti distinti:
 
-| Concetto | Descrizione | Dipende da validazione umana? |
-|---|---|---|
-| **Approvazione finale** | Il contenuto e validato e puo essere pubblicato/integrato nel runtime | Si, sempre |
+| Concetto                 | Descrizione                                                                                           | Dipende da validazione umana?        |
+| ------------------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| **Approvazione finale**  | Il contenuto e validato e puo essere pubblicato/integrato nel runtime                                 | Si, sempre                           |
 | **Bozza draft prudente** | File `.normalized.json` con `humanValidationRequired: true`, non approvato, non integrato nel runtime | No, e un artefatto di lavoro interno |
 
 CML-182 ha richiesto la validazione umana per entrambi. CML-182B corregge: la bozza draft e autorizzata; l'approvazione finale resta umana.
@@ -65,13 +65,13 @@ CML-182 ha richiesto la validazione umana per entrambi. CML-182B corregge: la bo
 
 ## 6. Cosa cambia rispetto a CML-182
 
-| Dimensione | CML-182 | CML-182B |
-|---|---|---|
-| Bozzo normalizzata | Bloccata | Autorizzata come draft |
-| `humanValidationRequired` | N/A | true su ogni unita |
-| Stato file | N/A | bozza_generabile |
-| Runtime integration | Bloccata | Bloccata |
-| Validazione finale | Richiesta | Resta richiesta |
+| Dimensione                | CML-182   | CML-182B               |
+| ------------------------- | --------- | ---------------------- |
+| Bozzo normalizzata        | Bloccata  | Autorizzata come draft |
+| `humanValidationRequired` | N/A       | true su ogni unita     |
+| Stato file                | N/A       | bozza_generabile       |
+| Runtime integration       | Bloccata  | Bloccata               |
+| Validazione finale        | Richiesta | Resta richiesta        |
 
 ## 7. Cosa non cambia
 
@@ -104,10 +104,10 @@ CML-182 ha richiesto la validazione umana per entrambi. CML-182B corregge: la bo
 
 ## 12. Opzioni scartate
 
-| Opzione | Motivo scarto |
-|---|---|
-| `VALIDATION_OUTCOME_PENDING` (conferma) | Troppo prudente: blocca anche un draft interno non pubblicato |
-| `DATA_PREP_AUTHORIZED_WITH_CAUTIONS` | Non ancora: la validazione finale manca |
+| Opzione                                          | Motivo scarto                                                   |
+| ------------------------------------------------ | --------------------------------------------------------------- |
+| `VALIDATION_OUTCOME_PENDING` (conferma)          | Troppo prudente: blocca anche un draft interno non pubblicato   |
+| `DATA_PREP_AUTHORIZED_WITH_CAUTIONS`             | Non ancora: la validazione finale manca                         |
 | `VALIDATION_SUFFICIENT_FOR_CONTROLLED_DATA_PREP` | La checklist non e compilata: non si puo dichiarare sufficiente |
 
 ## 13. Condizioni per la prossima slice (CML-183)

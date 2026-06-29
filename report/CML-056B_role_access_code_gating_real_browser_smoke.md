@@ -2,11 +2,11 @@
 
 ## Stato git iniziale
 
-| Campo | Valore |
-|---|---|
-| Branch | cml-008r-fix-markdown-decision-summary |
-| HEAD | ab8b310 |
-| Working tree | Pulita |
+| Campo        | Valore                                 |
+| ------------ | -------------------------------------- |
+| Branch       | cml-008r-fix-markdown-decision-summary |
+| HEAD         | ab8b310                                |
+| Working tree | Pulita                                 |
 
 ## Browser/metodo usato
 
@@ -25,21 +25,21 @@ Nessun errore JS aggiuntivo.
 
 ## Risultato sessionStorage/localStorage
 
-| Stato | Valore |
-|---|---|
-| Prima codice | `null` |
-| Dopo codice errato | `null` |
+| Stato                | Valore   |
+| -------------------- | -------- |
+| Prima codice         | `null`   |
+| Dopo codice errato   | `null`   |
 | Dopo codice corretto | `"true"` |
 
 Nessun localStorage aggiunto.
 
 ## Regressione `.cml`
 
-| Campo | Esito |
-|---|---|
-| teacher_proposal schema | Invariato |
-| department_outcome schema | Invariato |
-| Nessun campo auth | Confermato |
+| Campo                     | Esito      |
+| ------------------------- | ---------- |
+| teacher_proposal schema   | Invariato  |
+| department_outcome schema | Invariato  |
+| Nessun campo auth         | Confermato |
 
 ## Verdetto
 

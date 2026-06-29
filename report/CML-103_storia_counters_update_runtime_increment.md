@@ -8,14 +8,14 @@
 
 ## Counter changes
 
-| Sezione | Prima | Dopo |
-|---------|-------|------|
-| Completezza — bozze complete | 5 | **6** |
-| Completezza — sola consultazione | 10 | **9** |
-| Completezza — pronte approvazione | 0 | 0 |
-| Readiness — in revisione | 5 | **6** |
-| Readiness — sola consultazione | 10 | **9** |
-| Readiness — pronte approvazione | 0 | 0 |
+| Sezione                           | Prima | Dopo  |
+| --------------------------------- | ----- | ----- |
+| Completezza — bozze complete      | 5     | **6** |
+| Completezza — sola consultazione  | 10    | **9** |
+| Completezza — pronte approvazione | 0     | 0     |
+| Readiness — in revisione          | 5     | **6** |
+| Readiness — sola consultazione    | 10    | **9** |
+| Readiness — pronte approvazione   | 0     | 0     |
 
 ## Discipline in revisione dopo CML-103
 

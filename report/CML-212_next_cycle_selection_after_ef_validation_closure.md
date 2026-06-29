@@ -12,12 +12,12 @@ Selezionare il prossimo ciclo funzionale dopo la chiusura della validazione dipa
 
 ## 3. Opzioni valutate
 
-| Codice | Opzione | Esito |
-|---|---|---|
-| A | Evidenze/UDA workflow | Accettata |
-| B | SchoolKB / knowledge base | Rinviata |
-| C | architecture/design/UML | Rinviata |
-| D | Ulteriore polish contenutistico disciplinare | Rinviata |
+| Codice | Opzione                                      | Esito     |
+| ------ | -------------------------------------------- | --------- |
+| A      | Evidenze/UDA workflow                        | Accettata |
+| B      | SchoolKB / knowledge base                    | Rinviata  |
+| C      | architecture/design/UML                      | Rinviata  |
+| D      | Ulteriore polish contenutistico disciplinare | Rinviata  |
 
 ## 4. Prossima sequenza raccomandata
 

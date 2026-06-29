@@ -13,22 +13,22 @@ Verificare che la sezione "Stato di completezza dei curricoli disciplinari" sia 
 
 ## Verifica live
 
-| Controllo | Esito |
-|---|---|
-| URL live: `https://antoniocorsano-boop.github.io/curmanlight/` | ✅ |
-| Completamento sezione visibile in Curriculum > Consultazione | ✅ |
-| Contatore bozze complete: **2** | ✅ |
-| Contatore sola consultazione: **13** | ✅ |
-| Contatore pronte per approvazione: **0** | ✅ |
-| Riga Tecnologia: "Bozza completa disponibile / In revisione" | ✅ |
-| Riga Italiano: "Bozza completa disponibile / In revisione" | ✅ |
-| Riga altre discipline: "Solo consultazione" (12 discipline elencate) | ✅ |
-| Nota modelli: "Tecnologia e Italiano sono i modelli strutturali di riferimento" | ✅ |
-| Nessun pulsante di approvazione | ✅ |
-| Home, Didattica, Esportazioni, Guida integre | ✅ |
-| Light mode confermata | ✅ |
-| Motto page HTTP 200 | ✅ |
-| Schema `.cml`, export/import, role-access invariati | ✅ |
+| Controllo                                                                       | Esito |
+| ------------------------------------------------------------------------------- | ----- |
+| URL live: `https://antoniocorsano-boop.github.io/curmanlight/`                  | ✅    |
+| Completamento sezione visibile in Curriculum > Consultazione                    | ✅    |
+| Contatore bozze complete: **2**                                                 | ✅    |
+| Contatore sola consultazione: **13**                                            | ✅    |
+| Contatore pronte per approvazione: **0**                                        | ✅    |
+| Riga Tecnologia: "Bozza completa disponibile / In revisione"                    | ✅    |
+| Riga Italiano: "Bozza completa disponibile / In revisione"                      | ✅    |
+| Riga altre discipline: "Solo consultazione" (12 discipline elencate)            | ✅    |
+| Nota modelli: "Tecnologia e Italiano sono i modelli strutturali di riferimento" | ✅    |
+| Nessun pulsante di approvazione                                                 | ✅    |
+| Home, Didattica, Esportazioni, Guida integre                                    | ✅    |
+| Light mode confermata                                                           | ✅    |
+| Motto page HTTP 200                                                             | ✅    |
+| Schema `.cml`, export/import, role-access invariati                             | ✅    |
 
 ## Verdetto
 

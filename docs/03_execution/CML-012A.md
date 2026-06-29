@@ -23,13 +23,13 @@ distinguere confronto/definitivo → disclaimer → esportare → validazione um
 
 ### Identità
 
-| Campo | Valore |
-|---|---|
-| Nome test | `T01-CML-REAL-USER-TASK` |
-| Versione strumento | HEAD `15fc009` — live su https://curmanlight.netlify.app |
-| Profilo utente | Docente di scuola secondaria di I grado (non necessariamente esperto digitale) |
-| Durata prevista | 10-15 minuti |
-| Consegna iniziale | "Usa lo strumento per preparare il documento da portare al Collegio Docenti." |
+| Campo              | Valore                                                                         |
+| ------------------ | ------------------------------------------------------------------------------ |
+| Nome test          | `T01-CML-REAL-USER-TASK`                                                       |
+| Versione strumento | HEAD `15fc009` — live su https://curmanlight.netlify.app                       |
+| Profilo utente     | Docente di scuola secondaria di I grado (non necessariamente esperto digitale) |
+| Durata prevista    | 10-15 minuti                                                                   |
+| Consegna iniziale  | "Usa lo strumento per preparare il documento da portare al Collegio Docenti."  |
 
 ### Preparazione
 
@@ -41,28 +41,29 @@ distinguere confronto/definitivo → disclaimer → esportare → validazione um
 
 ### Scenario (8 passi)
 
-| # | Azione richiesta | Criterio di accettazione | Rilevazione |
-|---|---|---|---|
-| 1 | Apri lo strumento e trova lo stato del lavoro | Legge "Stato: revisione avviata" e "Prossima azione: controlla le 12 voci da validare" | ✅ supera / ❌ non trova / ⚠️ confuso |
-| 2 | Entra nella revisione di una disciplina | Clicca "Controlla voci" o seleziona una disciplina dalla sidebar | ✅ / ❌ / ⚠️ |
-| 3 | Trova una voce da decidere e aprine il dettaglio | Identifica una card marcata "⏳ Da decidere", clicca per espanderla | ✅ / ❌ / ⚠️ |
-| 4 | Esporta il confronto delle proposte | Apre "📄 Export ▾" nel toolbar, sceglie un formato con "(confronto)" | ✅ / ❌ / ⚠️ |
-| 5 | Trova la sezione del documento definitivo | Passa al tab "📋 Curricolo definitivo", trova la sezione "Curricolo Definitivo dopo Revisione" | ✅ / ❌ / ⚠️ |
-| 6 | Individua l'avvertenza sulla validazione | Legge il disclaimer "⚠️ Documento di lavoro — da validare. Non sostituisce delibera del Collegio Docenti." | ✅ / ❌ / ⚠️ |
-| 7 | Esporta il documento definitivo | Sceglie un formato con "(definitivo)" tra quelli disponibili | ✅ / ❌ / ⚠️ |
-| 8 | Spiega a parole cosa resta da validare | Dice che le proposte vanno approvate dal gruppo di lavoro/dipartimento/Collegio | ✅ / ❌ / ⚠️ |
+| #   | Azione richiesta                                 | Criterio di accettazione                                                                                   | Rilevazione                           |
+| --- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| 1   | Apri lo strumento e trova lo stato del lavoro    | Legge "Stato: revisione avviata" e "Prossima azione: controlla le 12 voci da validare"                     | ✅ supera / ❌ non trova / ⚠️ confuso |
+| 2   | Entra nella revisione di una disciplina          | Clicca "Controlla voci" o seleziona una disciplina dalla sidebar                                           | ✅ / ❌ / ⚠️                          |
+| 3   | Trova una voce da decidere e aprine il dettaglio | Identifica una card marcata "⏳ Da decidere", clicca per espanderla                                        | ✅ / ❌ / ⚠️                          |
+| 4   | Esporta il confronto delle proposte              | Apre "📄 Export ▾" nel toolbar, sceglie un formato con "(confronto)"                                       | ✅ / ❌ / ⚠️                          |
+| 5   | Trova la sezione del documento definitivo        | Passa al tab "📋 Curricolo definitivo", trova la sezione "Curricolo Definitivo dopo Revisione"             | ✅ / ❌ / ⚠️                          |
+| 6   | Individua l'avvertenza sulla validazione         | Legge il disclaimer "⚠️ Documento di lavoro — da validare. Non sostituisce delibera del Collegio Docenti." | ✅ / ❌ / ⚠️                          |
+| 7   | Esporta il documento definitivo                  | Sceglie un formato con "(definitivo)" tra quelli disponibili                                               | ✅ / ❌ / ⚠️                          |
+| 8   | Spiega a parole cosa resta da validare           | Dice che le proposte vanno approvate dal gruppo di lavoro/dipartimento/Collegio                            | ✅ / ❌ / ⚠️                          |
 
 ### Criteri di chiusura
 
-| Esito | Azione |
-|---|---|
-| **8/8 superati** | Fase UX pronta. Chiudere ciclo CML-012. |
-| **6-7/8 superati**, ⚠️ su passi non critici | Micro-correzione guidata (CML-012B) |
+| Esito                                          | Azione                                                   |
+| ---------------------------------------------- | -------------------------------------------------------- |
+| **8/8 superati**                               | Fase UX pronta. Chiudere ciclo CML-012.                  |
+| **6-7/8 superati**, ⚠️ su passi non critici    | Micro-correzione guidata (CML-012B)                      |
 | **≤5/8 superati** o ⚠️ su passo 6 (disclaimer) | Riaprire Opzione B strutturale con motivazione esplicita |
 
 ### Raccolta dati
 
 Per ogni passo, annotare:
+
 - Tempo impiegato (secondi)
 - Commenti/testuali dell'utente
 - Gesti insoliti (click sbagliati, tentativi, esitazioni)
@@ -80,7 +81,9 @@ Per ogni passo, annotare:
 ```
 T01_CML_REAL_USER_TASK_PASSED
 ```
+
 oppure
+
 ```
 T01_CML_REAL_USER_TASK_FAILED_WITH_NOTE
 ```

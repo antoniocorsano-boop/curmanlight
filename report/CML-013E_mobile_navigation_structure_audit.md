@@ -7,15 +7,15 @@
 
 ## Risultati
 
-| Punto | Esito |
-|---|---|
-| Preflight | ✅ Branch/HEAD/tree confermati |
-| Analisi mobile attuale | ✅ 9 elementi analizzati, 7 criticità |
-| Opzioni valutate | 3 (A: bottom bar, B: menu solo, C: ibrido) |
-| Opzione selezionata | **C — Sistema ibrido** |
-| Criteri accettazione CML-013F | 11 criteri definiti |
-| Modifica runtime | ❌ Nessuna |
-| Deploy | ❌ Nessuno |
+| Punto                         | Esito                                      |
+| ----------------------------- | ------------------------------------------ |
+| Preflight                     | ✅ Branch/HEAD/tree confermati             |
+| Analisi mobile attuale        | ✅ 9 elementi analizzati, 7 criticità      |
+| Opzioni valutate              | 3 (A: bottom bar, B: menu solo, C: ibrido) |
+| Opzione selezionata           | **C — Sistema ibrido**                     |
+| Criteri accettazione CML-013F | 11 criteri definiti                        |
+| Modifica runtime              | ❌ Nessuna                                 |
+| Deploy                        | ❌ Nessuno                                 |
 
 ## Opzione selezionata: Sistema ibrido
 

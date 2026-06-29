@@ -16,12 +16,12 @@ Ridurre il primo P1 dell'audit accessibilita' aggiungendo un percorso tastiera d
 
 ### `_published_snapshot/netlify-current/index.html`
 
-| Intervento | Azione | Dettaglio |
-|---|---|---|
-| Skip link | Aggiunto link iniziale verso `#main-content` | Il primo Tab intercetta `Salta al contenuto principale`; il link e' nascosto off-screen e visibile su focus |
-| Focus target | `main-content` reso focusabile dinamicamente | `setTab()` e `selectDisc()` impostano `tabindex="-1"` prima del focus programmato |
-| Focus su cambio tab | `setTab()` porta il focus al contenuto principale quando appropriato | `opts.focus!==false` evita focus forzato nei flussi che lo disabilitano |
-| Focus su cambio disciplina | `selectDisc()` mantiene scroll e focus coerenti con la disciplina selezionata | Hash, titolo, breadcrumb e disciplina restano sincronizzati |
+| Intervento                 | Azione                                                                        | Dettaglio                                                                                                   |
+| -------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Skip link                  | Aggiunto link iniziale verso `#main-content`                                  | Il primo Tab intercetta `Salta al contenuto principale`; il link e' nascosto off-screen e visibile su focus |
+| Focus target               | `main-content` reso focusabile dinamicamente                                  | `setTab()` e `selectDisc()` impostano `tabindex="-1"` prima del focus programmato                           |
+| Focus su cambio tab        | `setTab()` porta il focus al contenuto principale quando appropriato          | `opts.focus!==false` evita focus forzato nei flussi che lo disabilitano                                     |
+| Focus su cambio disciplina | `selectDisc()` mantiene scroll e focus coerenti con la disciplina selezionata | Hash, titolo, breadcrumb e disciplina restano sincronizzati                                                 |
 
 ### Cosa NON e' stato modificato
 
@@ -41,19 +41,19 @@ Ridurre il primo P1 dell'audit accessibilita' aggiungendo un percorso tastiera d
 
 ## Smoke tastiera/focus
 
-| Check | Esito |
-|---|---|
-| Primo Tab intercetta lo skip link | PASS |
-| Invio sullo skip link porta a `#main-content` | PASS |
-| Focus visibile sullo skip link | PASS |
-| Nessuna trappola da tastiera rilevata | PASS |
-| Cambio tab da menu principale porta il focus a `#main-content` | PASS |
-| Cambio disciplina conserva titolo, breadcrumb e hash | PASS |
-| Hash navigation non genera loop | PASS |
-| Bottom bar mobile invariata | PASS |
-| Export Center invariato | PASS |
-| Errori JavaScript reali | 0 |
-| Resource warning / 404 non bloccanti | 3 |
+| Check                                                          | Esito |
+| -------------------------------------------------------------- | ----- |
+| Primo Tab intercetta lo skip link                              | PASS  |
+| Invio sullo skip link porta a `#main-content`                  | PASS  |
+| Focus visibile sullo skip link                                 | PASS  |
+| Nessuna trappola da tastiera rilevata                          | PASS  |
+| Cambio tab da menu principale porta il focus a `#main-content` | PASS  |
+| Cambio disciplina conserva titolo, breadcrumb e hash           | PASS  |
+| Hash navigation non genera loop                                | PASS  |
+| Bottom bar mobile invariata                                    | PASS  |
+| Export Center invariato                                        | PASS  |
+| Errori JavaScript reali                                        | 0     |
+| Resource warning / 404 non bloccanti                           | 3     |
 
 ## Note sui warning
 

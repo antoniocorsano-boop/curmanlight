@@ -8,16 +8,16 @@ Integrare la disciplina Educazione Fisica nella mappa dati disciplinare del runt
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `ed4fd48` (CML-183 committato e sincronizzato; origin/main allineato) |
-| Working tree iniziale | pulito |
-| Dati normalizzati prima | 11/14 (10/14 pre-CML-183 + Educazione Fisica) |
-| Runtime mappa prima | 10/14 (Educazione Fisica NON integrata) |
-| Shape test | 10/10 PASS (invariato — tools/ non modificati) |
-| Skill usate | `cml-sync`, `cml-docs-only-slice`, `cml-readiness-audit` |
+| Parametro               | Valore                                                                |
+| ----------------------- | --------------------------------------------------------------------- |
+| Root Git                | `C:\Users\anton\CurManLight`                                          |
+| Branch                  | `main`                                                                |
+| Commit iniziale         | `ed4fd48` (CML-183 committato e sincronizzato; origin/main allineato) |
+| Working tree iniziale   | pulito                                                                |
+| Dati normalizzati prima | 11/14 (10/14 pre-CML-183 + Educazione Fisica)                         |
+| Runtime mappa prima     | 10/14 (Educazione Fisica NON integrata)                               |
+| Shape test              | 10/10 PASS (invariato — tools/ non modificati)                        |
+| Skill usate             | `cml-sync`, `cml-docs-only-slice`, `cml-readiness-audit`              |
 
 ## 3. Decisioni autorizzative
 
@@ -51,20 +51,20 @@ Aggiunto bottone "Educazione Fisica" dopo il bottone "Musica".
 
 ## 5. Dati integrati
 
-| Sezione | Quantità |
-|---|---|
-| Strutture sostanziali | 7 (da 7 unità di apprendimento) |
-| Nodi disciplinari | 4 (Abilita motorie, Corpo e percezione, Espressione e inclusione, Gioco e sport) |
-| Progressioni verticali | 7 (Infanzia f5, Primaria 1/3/5, Secondaria 1/2/3) |
-| Decisioni curricolari | 0 |
+| Sezione                | Quantità                                                                         |
+| ---------------------- | -------------------------------------------------------------------------------- |
+| Strutture sostanziali  | 7 (da 7 unità di apprendimento)                                                  |
+| Nodi disciplinari      | 4 (Abilita motorie, Corpo e percezione, Espressione e inclusione, Gioco e sport) |
+| Progressioni verticali | 7 (Infanzia f5, Primaria 1/3/5, Secondaria 1/2/3)                                |
+| Decisioni curricolari  | 0                                                                                |
 
 ## 6. Copertura per ordine
 
-| Ordine | Classi/Fasce | Unità | Strutture |
-|---|---|---|---|
-| Infanzia | fascia 5 | 1 | 1 |
-| Primaria | 1, 3, 5 | 3 | 3 |
-| Secondaria | 1, 2, 3 | 3 | 3 |
+| Ordine     | Classi/Fasce | Unità | Strutture |
+| ---------- | ------------ | ----- | --------- |
+| Infanzia   | fascia 5     | 1     | 1         |
+| Primaria   | 1, 3, 5      | 3     | 3         |
+| Secondaria | 1, 2, 3      | 3     | 3         |
 
 ## 7. Validazioni
 
@@ -76,11 +76,11 @@ Aggiunto bottone "Educazione Fisica" dopo il bottone "Musica".
 
 ## 8. Discipline residue nel runtime (3/14)
 
-| Disciplina | Stato |
-|---|---|
+| Disciplina                 | Stato         |
+| -------------------------- | ------------- |
 | Seconda Lingua Comunitaria | Non integrata |
-| Religione Cattolica | Non integrata |
-| Latino LEL | Non integrata |
+| Religione Cattolica        | Non integrata |
+| Latino LEL                 | Non integrata |
 
 ## 9. Verdict
 

@@ -10,18 +10,18 @@ La slice è docs-only / content-quality audit. Non produce file `.normalized.jso
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Root Git | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| Commit iniziale | `e68d22d` |
-| origin/main iniziale | `e68d22d` |
-| Working tree iniziale | pulito |
-| Stato remoto iniziale | `main...origin/main` |
-| Dati normalizzati | 14/14 |
-| Runtime mappa | 14/14 |
-| Shape test | 14/14 PASS |
-| Slice precedente | CML-183 (limited draft data prep) + CML-184 (runtime integration) |
+| Parametro             | Valore                                                            |
+| --------------------- | ----------------------------------------------------------------- |
+| Root Git              | `C:\Users\anton\CurManLight`                                      |
+| Branch                | `main`                                                            |
+| Commit iniziale       | `e68d22d`                                                         |
+| origin/main iniziale  | `e68d22d`                                                         |
+| Working tree iniziale | pulito                                                            |
+| Stato remoto iniziale | `main...origin/main`                                              |
+| Dati normalizzati     | 14/14                                                             |
+| Runtime mappa         | 14/14                                                             |
+| Shape test            | 14/14 PASS                                                        |
+| Slice precedente      | CML-183 (limited draft data prep) + CML-184 (runtime integration) |
 
 ## 3. Collegamento con CML-178/179/183/184
 
@@ -47,6 +47,7 @@ Sono stati consultati in sola lettura:
 - `_published_snapshot/netlify-current/index.html` (runtime map EF)
 
 Il metodo confronta la struttura attuale contro:
+
 - il modello a 5 nuclei proposto in CML-178/179;
 - il livello di dettaglio di discipline già mature (Musica, Arte e Immagine);
 - i requisiti di progressione verticale e assessment readiness del contratto CML.
@@ -55,14 +56,15 @@ Il metodo confronta la struttura attuale contro:
 
 ### Struttura attuale Educazione Fisica
 
-| Nucleo | Ordini/Classi coperte |
-|---|---|
-| Corpo e percezione | Infanzia fascia 5, Primaria classe 1, Secondaria classe 1 |
-| Abilità motorie | Primaria classe 3 |
-| Gioco e sport | Primaria classe 5, Secondaria classe 2 |
-| Espressione e inclusione | Secondaria classe 3 |
+| Nucleo                   | Ordini/Classi coperte                                     |
+| ------------------------ | --------------------------------------------------------- |
+| Corpo e percezione       | Infanzia fascia 5, Primaria classe 1, Secondaria classe 1 |
+| Abilità motorie          | Primaria classe 3                                         |
+| Gioco e sport            | Primaria classe 5, Secondaria classe 2                    |
+| Espressione e inclusione | Secondaria classe 3                                       |
 
 **7 unità totali:**
+
 - `ef_inf_5_001` — Infanzia fascia 5
 - `ef_pri_1_001` — Primaria classe 1
 - `ef_pri_3_001` — Primaria classe 3
@@ -82,6 +84,7 @@ Il modello CML-178/179 proponeva:
 5. Espressione e inclusione
 
 La struttura attuale mantiene 4 di questi 5 nuclei. **Salute e benessere** non è presente come nodo disciplinare autonomo. I contenuti sono distribuiti in:
+
 - `Espressione e inclusione` (Secondaria 3): area benessere personale e vita scolastica;
 - `Gioco e sport` (Secondaria 2): area benessere scolastico, igiene, riscaldamento.
 
@@ -90,6 +93,7 @@ La struttura attuale mantiene 4 di questi 5 nuclei. **Salute e benessere** non �
 ### P0 — Bloccanti
 
 Nessun gap bloccante rilevato. La disciplina è già:
+
 - normalizzata (7 unità, schema valido);
 - integrata nel runtime (S=7, N=4, P=7, D=0);
 - conforme al validator CML (14/14 PASS, 0 errori);
@@ -102,11 +106,13 @@ Nessun gap bloccante rilevato. La disciplina è già:
 Il modello a 5 nuclei prevede "Salute e benessere" come area distinta. Nella struttura attuale il tema è assorbito in altri nuclei senza identità disciplinare separata.
 
 **Impatto:**
+
 - la mappa runtime presenta solo 4 nodi disciplinari invece di 5;
 - il tema salute/sicurezza non ha una sezione dedicata nella UI;
 - la progressione non valorizza esplicitamente la dimensione educativa della salute come nucleo fondante.
 
 **Confronto con discipline simili:**
+
 - Musica e Arte e Immagine hanno nuclei tutti presenti e distinti nella mappa runtime.
 
 **Azione necessaria:** decidere se mantenere l'assorbimento trasverso (scelta già presa in CML-183) o introdurre una unità dedicata.
@@ -115,8 +121,8 @@ Il modello a 5 nuclei prevede "Salute e benessere" come area distinta. Nella str
 
 La copertura Primaria salta le classi 2 e 4.
 
-| Classe | Stato |
-|---|---|
+| Classe     | Stato    |
+| ---------- | -------- |
 | Primaria 1 | presente |
 | Primaria 2 | MANCANTE |
 | Primaria 3 | presente |
@@ -124,6 +130,7 @@ La copertura Primaria salta le classi 2 e 4.
 | Primaria 5 | presente |
 
 **Impatto:**
+
 - la progressione verticale presenta salti non giustificati;
 - il confronto con Musica e Arte e Immagine (che hanno la stessa copertura saltaria per esigenze di semplificazione) mostra che il salto è tollerabile ma va documentato come scelta deliberata;
 - la school-order continuity è debole: non è chiaro se i contenuti di Primaria 1 evolvano linearmente in Primaria 3, o se manchi un ponte didattico.
@@ -133,6 +140,7 @@ La copertura Primaria salta le classi 2 e 4.
 L'unico elemento di "Abilità motorie" è su Primaria classe 3. Non ci sono altre unità con questo nucleo in Primaria 1, 5 o in Secondaria.
 
 **Impatto:**
+
 - il nodo disciplinare "Abilità motorie" appare nella mappa runtime ma raccoglie una sola unità;
 - la progressione su coordinazione, equilibrio e controllo motorio non è articolata su più livelli;
 - la Secondaria riprende questi contenuti dentro "Corpo e percezione" (classe 1) senza una progressione esplicita da "Abilità motorie".
@@ -140,10 +148,12 @@ L'unico elemento di "Abilità motorie" è su Primaria classe 3. Non ci sono altr
 #### P1-4: Progressione Secondaria senza ponte Infanzia-Primaria-Secondaria
 
 Ogni ordine scolastico è trattato come blocco separato. Mancano:
+
 - riferimenti espliciti a quanto appreso in Infanzia/Primaria nella Secondaria;
 - obiettivi che richiamino esplicitamente le basi motorie precedenti.
 
 **Impatto:**
+
 - la school-order continuity è debole;
 - il docente non ha traccia di cosa l'alunno ha fatto prima nella stessa disciplina.
 
@@ -152,6 +162,7 @@ Ogni ordine scolastico è trattato come blocco separato. Mancano:
 #### P2-1: Wording generico in alcuni obiettivi/traguardi
 
 Esempi:
+
 - `ef_pri_3_001`: "adattare il movimento a spazi, ritmi e consegne variabili" — formulazione corretta ma poco contestualizzata.
 - `ef_sec_1_001`: "controlla schemi motori di base in situazioni guidate" — "controlla" è un verbo adatto, ma manca specificità su quale controllo (velocità, precisione, fluidità).
 - `ef_sec_3_001`: "usare movimento ed espressione corporea per comunicare, collaborare e includere" — obiettivo ambizioso ma non scomposto in passi osservabili.
@@ -159,10 +170,12 @@ Esempi:
 #### P2-2: Assessment readiness debole
 
 Le `evidenze` sono presenti in tutte le unità ma:
+
 - alcune sono qualitative senza soglia osservabile chiara (`"Il bambino partecipa a un gioco motorio di gruppo per almeno 5 minuti"` — ok, ma è l'unica evidenza su partecipazione);
 - manca una struttura a livelli/punteggi per disaggregare la classe;
 
 **Confronto con discipline mature:**
+
 - Musica e Arte e Immagine hanno evidenze più specifiche e calibrate per età.
 
 #### P2-3: Assenza di conoscenze in alcune unità
@@ -178,9 +191,11 @@ Le `evidenze` sono presenti in tutte le unità ma:
 #### P2-4: Fonti ripetitive e poco differenziate
 
 Tutte le unità citano:
+
 - `Indicazioni Nazionali 2012, D.M. 254/2012, sezione Educazione Fisica — ...`
 
 Manca:
+
 - riferimento a eventuali documenti d'istituto (PTOF, dipartimento motoria);
 - distinzione tra fonti ministeriali e scelte dipartimentali;
 - riferimento a CML-179 come fonte diretta del contenuto.
@@ -194,6 +209,7 @@ Il campo `decisioniCurricolari` è vuoto (`[]`) per tutte le discipline EF. Ques
 #### P2-6: `readiness` e `stato` non aggiornabili a "validato"
 
 Il file EF è ancora:
+
 - `stato: "bozza_generabile"`
 - `readiness: "in_revisione"`
 - `humanValidationRequired: true`
@@ -211,6 +227,7 @@ Alcune unità usano `attività` con accento acuto invece di `attività` (es. `ef
 #### P3-2: `noteDipartimento` verbose e ripetitive
 
 Le note sono corrette ma lunghe. Esempio:
+
 - `ef_inf_5_001`: "Draft da validare: copertura Infanzia minimale, da integrare con indicazioni di plesso."
 - `ef_pri_1_001`: "Draft da validare: copertura Primaria generica, da integrare con indicazioni di classe."
 
@@ -242,39 +259,41 @@ Come per altre discipline, EF non ha riferimenti a materiali SchoolKB. Questo è
 
 ## 7. Classificazione gap per categoria
 
-| Categoria | Severità | Conteggio | Note |
-|---|---|---|---|
-| missing content | P1 | 2 | Nucleo Salute e benessere assente; Primaria 2 e 4 mancanti |
-| weak progression | P1/P2 | 3 | Salto Primaria; monoclasso Abilità motorie; ponte Infanzia-Primaria-Secondaria debole |
-| weak wording | P2 | 2 | Obiettivi/traguardi talvolta generici; assessment thresholds poco definite |
-| weak school-order continuity | P1 | 1 | Nessun richiamo esplicito tra ordini |
-| weak assessment/use-case readiness | P1/P2 | 2 | Nessuna UDA strutturata; evidence thresholds qualitative |
-| purely editorial | P3 | 4 | Accenti, note verbose, ambiti lunghi, nucleoFondante assente |
+| Categoria                          | Severità | Conteggio | Note                                                                                  |
+| ---------------------------------- | -------- | --------- | ------------------------------------------------------------------------------------- |
+| missing content                    | P1       | 2         | Nucleo Salute e benessere assente; Primaria 2 e 4 mancanti                            |
+| weak progression                   | P1/P2    | 3         | Salto Primaria; monoclasso Abilità motorie; ponte Infanzia-Primaria-Secondaria debole |
+| weak wording                       | P2       | 2         | Obiettivi/traguardi talvolta generici; assessment thresholds poco definite            |
+| weak school-order continuity       | P1       | 1         | Nessun richiamo esplicito tra ordini                                                  |
+| weak assessment/use-case readiness | P1/P2    | 2         | Nessuna UDA strutturata; evidence thresholds qualitative                              |
+| purely editorial                   | P3       | 4         | Accenti, note verbose, ambiti lunghi, nucleoFondante assente                          |
 
 ## 8. Necessità di patch contenutistica futura
 
 **Sì, una patch contenutistica è necessaria**, ma non urgente a livello tecnico.
 
 Motivazione:
+
 - la struttura attuale è valida e funzionante a runtime;
 - i gap P1 non bloccano l'integrazione ma limitano l'uso didattico;
 - i gap P2/P3 migliorano la qualità percepita e la manutenibilità.
 
 Tuttavia:
+
 - nessun gap P0 richiede intervento immediato;
 - la disciplina può restare nello stato corrente fino a una prossima revisione umana.
 
 ## 9. Confronto ponderato con discipline mature
 
-| Aspetto | EF (attuale) | Musica (riferimento) | Arte e Immagine (riferimento) |
-|---|---|---|---|
-| Unità per ordine | 1-2 per fascia/classe | 1 per fascia/classe (salto) | 1 per fascia/classe (salto) |
-| Nuclei distinti | 4 | 3 | 3 |
-| Obiettivi osservabili | Buoni | Buoni | Ottimi |
-| Evidenze specifiche | Discrete | Buone | Ottime |
-| Progressione verticale | Debole | Discreta | Buona |
-| Conoscenze teoriche | Limitanti in Sec. | Bilanciate | Bilanciate |
-| Fonti differenziate | No | Sì (D.M. 221/2025) | Sì (D.M. 221/2025) |
+| Aspetto                | EF (attuale)          | Musica (riferimento)        | Arte e Immagine (riferimento) |
+| ---------------------- | --------------------- | --------------------------- | ----------------------------- |
+| Unità per ordine       | 1-2 per fascia/classe | 1 per fascia/classe (salto) | 1 per fascia/classe (salto)   |
+| Nuclei distinti        | 4                     | 3                           | 3                             |
+| Obiettivi osservabili  | Buoni                 | Buoni                       | Ottimi                        |
+| Evidenze specifiche    | Discrete              | Buone                       | Ottime                        |
+| Progressione verticale | Debole                | Discreta                    | Buona                         |
+| Conoscenze teoriche    | Limitanti in Sec.     | Bilanciate                  | Bilanciate                    |
+| Fonti differenziate    | No                    | Sì (D.M. 221/2025)          | Sì (D.M. 221/2025)            |
 
 ## 10. Raccomandazione prossima slice
 
@@ -300,15 +319,16 @@ Tuttavia:
 
 ### Verdetti
 
-| Opzione | Valutazione |
-|---|---|
-| A. Keep as-is | RACCOMANDATA ORA |
-| B. Docs-only refinement plan | RACCOMANDATA DOPO validazione umana |
+| Opzione                         | Valutazione                                    |
+| ------------------------------- | ---------------------------------------------- |
+| A. Keep as-is                   | RACCOMANDATA ORA                               |
+| B. Docs-only refinement plan    | RACCOMANDATA DOPO validazione umana            |
 | C. UDA/evidenze alignment later | Necessaria, ma non come prossima slice tecnica |
 
 ## 11. Confronto con CML-178
 
 CML-178 concludeva "Non pronta" con motivazioni tecniche (mancanza di file, di progressione, di obiettivi). Oggi:
+
 - il file esiste;
 - la progressione esiste (anche se discontinua);
 - gli obiettivi esistono (anche se talvolta generici).
@@ -317,32 +337,35 @@ Il gap model aggiornato sposta il focus da **prontezza tecnica** a **qualità co
 
 ## 12. Readiness assessment
 
-| Dimensione | Stato | Note |
-|---|---|---|
-| Validazione schema | PASS | 14/14, 0 errori |
-| Integrazione runtime | PASS | S=7, N=4, P=7, D=0 |
-| Completezza classi | PARZIALE | mancano Primaria 2, 4 |
-| Completezza nuclei | PARZIALE | manca Salute e benessere come nodo autonomo |
-| Progressione verticale | DEBOLE | salti non motivati, ponte Infanzia-Primaria-Secondaria debole |
-| Assessment readiness | DISCRETA | evidenze presenti ma soglie poco definite |
-| UDA readiness | ASSENTE | non strutturata |
-| Lessico istituzionale | BUONO | conforme a CML-179, ma con margini P3 |
-| Fonti documentali | PARZIALE | solo IN 2012 + D.M. 254/2012 |
+| Dimensione             | Stato    | Note                                                          |
+| ---------------------- | -------- | ------------------------------------------------------------- |
+| Validazione schema     | PASS     | 14/14, 0 errori                                               |
+| Integrazione runtime   | PASS     | S=7, N=4, P=7, D=0                                            |
+| Completezza classi     | PARZIALE | mancano Primaria 2, 4                                         |
+| Completezza nuclei     | PARZIALE | manca Salute e benessere come nodo autonomo                   |
+| Progressione verticale | DEBOLE   | salti non motivati, ponte Infanzia-Primaria-Secondaria debole |
+| Assessment readiness   | DISCRETA | evidenze presenti ma soglie poco definite                     |
+| UDA readiness          | ASSENTE  | non strutturata                                               |
+| Lessico istituzionale  | BUONO    | conforme a CML-179, ma con margini P3                         |
+| Fonti documentali      | PARZIALE | solo IN 2012 + D.M. 254/2012                                  |
 
 ## 13. Raccomandazione finale
 
 **Prossima slice consigliata: mantenere stato attuale + tracciare gap.**
 
 Motivazione:
+
 - Operare un patch JSON su EF mentre le altre discipline sono in stato "bozza_generabile" simile potrebbe creare asimmetrie;
 - la revisione umana docente/dipartimento è il trigger naturale per un upgrade;
 - il rischio di modificare contenuti già integrati senza validazione è superiore al beneficio.
 
 Quando la validazione umana sarà completata, la prossima slice dovrebbe essere:
+
 - `docs-only refinement plan` (piano di patch JSON EF controllata);
 - seguito da `controlled JSON content polish` (applicazione del piano).
 
 Output atteso di una futura slice di polish:
+
 - inserimento nucleo "Salute e benessere" come unità autonoma o conferma dell'assorbimento trasverso;
 - copertura Primaria 2 e 4 (o motivazione esplicita dell'esclusione);
 - strengthening della progressione verticale con riferimenti espliciti tra ordini;

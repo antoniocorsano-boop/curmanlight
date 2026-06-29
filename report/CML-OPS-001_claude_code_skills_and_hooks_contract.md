@@ -6,18 +6,18 @@ Questo report documenta il contratto operativo per l'uso di Claude Code nel prog
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|-----------|--------|
-| Repository | `C:\Users\anton\CurManLight` |
-| Branch | `main` |
-| HEAD locale | `6485fa2` |
-| origin/main | `6485fa2` |
-| Working tree | pulito |
-| Dati normalizzati | 10/14 discipline |
-| Runtime mappa | 10/14 discipline |
-| Shape test | 10/10 PASS |
-| Prossima disciplina | Educazione Fisica |
-| SKB-001 | chiuso da remoto |
+| Parametro           | Valore                       |
+| ------------------- | ---------------------------- |
+| Repository          | `C:\Users\anton\CurManLight` |
+| Branch              | `main`                       |
+| HEAD locale         | `6485fa2`                    |
+| origin/main         | `6485fa2`                    |
+| Working tree        | pulito                       |
+| Dati normalizzati   | 10/14 discipline             |
+| Runtime mappa       | 10/14 discipline             |
+| Shape test          | 10/10 PASS                   |
+| Prossima disciplina | Educazione Fisica            |
+| SKB-001             | chiuso da remoto             |
 
 ## 3. Perche' introdurre OPS
 
@@ -31,16 +31,16 @@ OPS offre: automazione delle operazioni ripetitive, memoria di progetto, guardra
 
 ## 4. Differenza tra modello, Claude Code e workflow locale
 
-| Concetto | Descrizione | Contesto CML |
-|----------|-------------|-------------|
-| **Modello** | LLM usato nel terminale (es. Claude, GPT, GLM) | Il modello risponde; non ha memoria di progetto, non esegue comandi, non accede al repo |
-| **Claude Code** | Ambiente operativo CLI di Anthropic | Accede al repo, esegue comandi, legge/scrive file, usa skill/hook, ha memoria CLAUDE.md |
-| **Skill** | File markdown in `.claude/skills/` con procedure operative | Istruizioni passo-passo per Claude Code su come eseguire operazioni CML |
-| **Hook** | Script in `.claude/hooks/` che girano automaticamente | Guardrail: bloccano commit/push fuori scope, validano dopo edit |
-| **Subagent** | Agent paralleli per attivita' concorrenti | Audit paralleli su discipline multiple (rinviato) |
-| **MCP** | Protocollo per strumenti esterni | Integrazione con API esterne (rinviato, nessun caso d'uso immediato) |
-| **Plugin** | Estensioni verticali di Claude Code | UI CML, integrazione Netlify CLI (rinviato) |
-| **Workflow locale** | Il processo a slice gia' esistente | OPS lo automatizza e protegge, non lo sostituisce |
+| Concetto            | Descrizione                                                | Contesto CML                                                                            |
+| ------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **Modello**         | LLM usato nel terminale (es. Claude, GPT, GLM)             | Il modello risponde; non ha memoria di progetto, non esegue comandi, non accede al repo |
+| **Claude Code**     | Ambiente operativo CLI di Anthropic                        | Accede al repo, esegue comandi, legge/scrive file, usa skill/hook, ha memoria CLAUDE.md |
+| **Skill**           | File markdown in `.claude/skills/` con procedure operative | Istruizioni passo-passo per Claude Code su come eseguire operazioni CML                 |
+| **Hook**            | Script in `.claude/hooks/` che girano automaticamente      | Guardrail: bloccano commit/push fuori scope, validano dopo edit                         |
+| **Subagent**        | Agent paralleli per attivita' concorrenti                  | Audit paralleli su discipline multiple (rinviato)                                       |
+| **MCP**             | Protocollo per strumenti esterni                           | Integrazione con API esterne (rinviato, nessun caso d'uso immediato)                    |
+| **Plugin**          | Estensioni verticali di Claude Code                        | UI CML, integrazione Netlify CLI (rinviato)                                             |
+| **Workflow locale** | Il processo a slice gia' esistente                         | OPS lo automatizza e protegge, non lo sostituisce                                       |
 
 La distinzione cruciale: il modello e' un interlocutore, Claude Code e' un operatore, il workflow locale e' il processo. OPS potenzia l'operatore nel processo, senza cambiare il processo.
 
@@ -138,29 +138,29 @@ Ogni skill contiene: nome, scopo, precondizioni, passi operativi, validazioni, g
 
 ## 10. Skill prioritarie
 
-| Skill | Priorita' | Slice implementazione |
-|-------|-----------|----------------------|
-| `cml-sync` | P0 | CML-OPS-003 |
-| `cml-docs-only-slice` | P0 | CML-OPS-003 |
-| `cml-readiness-audit` | P1 | CML-OPS-004 |
-| `cml-normalized-data-prep` | P2 | CML-OPS-004 |
-| `cml-runtime-integration` | P3 | Slice runtime future |
-| `cml-shape-test-alignment` | P3 | Slice runtime future |
-| `skb-contract` | P4 | Slice SKB future |
-| `skb-local-prototype` | P5 | Slice SKB future |
+| Skill                      | Priorita' | Slice implementazione |
+| -------------------------- | --------- | --------------------- |
+| `cml-sync`                 | P0        | CML-OPS-003           |
+| `cml-docs-only-slice`      | P0        | CML-OPS-003           |
+| `cml-readiness-audit`      | P1        | CML-OPS-004           |
+| `cml-normalized-data-prep` | P2        | CML-OPS-004           |
+| `cml-runtime-integration`  | P3        | Slice runtime future  |
+| `cml-shape-test-alignment` | P3        | Slice runtime future  |
+| `skb-contract`             | P4        | Slice SKB future      |
+| `skb-local-prototype`      | P5        | Slice SKB future      |
 
 ## 11. Hook prioritari
 
-| Hook | Tipo | Priorita' | Slice implementazione |
-|------|------|-----------|---------------------|
-| `guard-scope` | Pre-commit | P0 | CML-OPS-005 |
-| `guard-secrets` | Pre-commit | P0 | CML-OPS-005 |
-| `guard-push` | Pre-push | P0 | CML-OPS-005 |
-| `guard-runtime-docs` | Pre-commit | P1 | CML-OPS-005 |
-| `guard-curriculum-data` | Pre-commit | P1 | CML-OPS-005 |
-| `post-edit-check` | Post-edit | P1 | Slice successiva |
-| `post-data-validate` | Post-commit | P2 | Slice successiva |
-| `post-shape-validate` | Post-commit | P2 | Slice successiva |
+| Hook                    | Tipo        | Priorita' | Slice implementazione |
+| ----------------------- | ----------- | --------- | --------------------- |
+| `guard-scope`           | Pre-commit  | P0        | CML-OPS-005           |
+| `guard-secrets`         | Pre-commit  | P0        | CML-OPS-005           |
+| `guard-push`            | Pre-push    | P0        | CML-OPS-005           |
+| `guard-runtime-docs`    | Pre-commit  | P1        | CML-OPS-005           |
+| `guard-curriculum-data` | Pre-commit  | P1        | CML-OPS-005           |
+| `post-edit-check`       | Post-edit   | P1        | Slice successiva      |
+| `post-data-validate`    | Post-commit | P2        | Slice successiva      |
+| `post-shape-validate`   | Post-commit | P2        | Slice successiva      |
 
 ## 12. Regole di sicurezza
 
@@ -192,15 +192,15 @@ OPS e SKB sono binari separati:
 
 ## 15. Roadmap CML-OPS
 
-| Step | Slice | Oggetto | Prerequisiti |
-|------|-------|---------|-------------|
-| 1 | CML-OPS-001 | Contratto Claude Code locale | Nessuno |
-| 2 | CML-OPS-002 | CLAUDE.md minimale | OPS-001 chiuso |
-| 3 | CML-OPS-003 | Skill `cml-sync` | OPS-002 chiuso |
-| 4 | CML-OPS-004 | Skill `cml-docs-only-slice` e `cml-readiness-audit` | OPS-003 chiuso |
-| 5 | CML-OPS-005 | Hook `guard-scope`, `guard-secrets`, `guard-push` | OPS-002 chiuso |
-| 6 | CML-OPS-006 | Subagent audit (condizionato) | OPS-004 + OPS-005 chiusi |
-| 7 | CML-OPS-007 | Plugin CurManLight Ops (condizionato) | OPS-006 chiuso o archiviato |
+| Step | Slice       | Oggetto                                             | Prerequisiti                |
+| ---- | ----------- | --------------------------------------------------- | --------------------------- |
+| 1    | CML-OPS-001 | Contratto Claude Code locale                        | Nessuno                     |
+| 2    | CML-OPS-002 | CLAUDE.md minimale                                  | OPS-001 chiuso              |
+| 3    | CML-OPS-003 | Skill `cml-sync`                                    | OPS-002 chiuso              |
+| 4    | CML-OPS-004 | Skill `cml-docs-only-slice` e `cml-readiness-audit` | OPS-003 chiuso              |
+| 5    | CML-OPS-005 | Hook `guard-scope`, `guard-secrets`, `guard-push`   | OPS-002 chiuso              |
+| 6    | CML-OPS-006 | Subagent audit (condizionato)                       | OPS-004 + OPS-005 chiusi    |
+| 7    | CML-OPS-007 | Plugin CurManLight Ops (condizionato)               | OPS-006 chiuso o archiviato |
 
 ## 16. Rischi residui
 

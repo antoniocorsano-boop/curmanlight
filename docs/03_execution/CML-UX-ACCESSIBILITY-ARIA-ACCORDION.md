@@ -34,6 +34,7 @@ Risolvere il P1 rimasto dopo lo skip-link/focus fix: rendere riconoscibili e con
 ### A. Accordion gruppi ordine
 
 Per ogni gruppo generato in `renderDidattica()`:
+
 - Aggiunto `id` stabile al pannello: `didattica-evidence-ord-body-{ord}`.
 - Aggiunto `aria-controls` sull'header che punta a tale `id`.
 - Aggiunto `aria-expanded` calcolato: `"true"` se primo gruppo (`firstOrd`), `"false"` altrimenti.
@@ -44,6 +45,7 @@ Per ogni gruppo generato in `renderDidattica()`:
 ### B. Accordion unità interne
 
 Per ogni unità:
+
 - Aggiunto contatore `unitCounter` per `id` univoci.
 - Aggiunto `id` al pannello: `didattica-evidence-unit-body-{unitCounter}`.
 - Aggiunto `aria-controls` sull'header.
@@ -116,16 +118,16 @@ Per ogni unità:
 
 ## Risultati
 
-| Area | Esito |
-|------|-------|
-| Accordion gruppi ordine | PASS |
-| Accordion unità interne | PASS |
-| `aria-expanded` | PASS |
-| `aria-controls` | PASS |
-| Validatore curriculum | 14/14 PASS |
-| Shape test | 14/14 PASS |
-| Smoke tastiera/accordion | PASS |
-| Regressioni | Nessuna |
+| Area                     | Esito      |
+| ------------------------ | ---------- |
+| Accordion gruppi ordine  | PASS       |
+| Accordion unità interne  | PASS       |
+| `aria-expanded`          | PASS       |
+| `aria-controls`          | PASS       |
+| Validatore curriculum    | 14/14 PASS |
+| Shape test               | 14/14 PASS |
+| Smoke tastiera/accordion | PASS       |
+| Regressioni              | Nessuna    |
 
 ## Verdict
 

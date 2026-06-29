@@ -47,15 +47,16 @@
 
 ## Options Evaluated
 
-| # | Option | Verdict | Justification |
-|---|--------|---------|---------------|
-| A | Expand "Riferimenti normativi" tab | ❌ Rejected | Category confusion: general sections are part of the curriculum, not external references. Users would conflate "what the curriculum says" with "what external documents say" |
-| B | New block in "Curricolo definitivo" tab | ❌ Rejected | Misleading collocation: the "Definitivo" tab implies approved/output content. General sections are reference/consultation material, which would create false expectations of editability or finality |
-| C | New "Sezioni generali" tab | ✅ **Recommended** | Clean separation of concerns: "leggi qui, lavora là". Zero risk to disciplinary workflow. No JS changes. No localStorage changes. Coherent with CML-003R orientation model |
+| #   | Option                                  | Verdict            | Justification                                                                                                                                                                                        |
+| --- | --------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A   | Expand "Riferimenti normativi" tab      | ❌ Rejected        | Category confusion: general sections are part of the curriculum, not external references. Users would conflate "what the curriculum says" with "what external documents say"                         |
+| B   | New block in "Curricolo definitivo" tab | ❌ Rejected        | Misleading collocation: the "Definitivo" tab implies approved/output content. General sections are reference/consultation material, which would create false expectations of editability or finality |
+| C   | New "Sezioni generali" tab              | ✅ **Recommended** | Clean separation of concerns: "leggi qui, lavora là". Zero risk to disciplinary workflow. No JS changes. No localStorage changes. Coherent with CML-003R orientation model                           |
 
 ## Recommended Option: C — New "Sezioni generali" consultative tab
 
 ### Rationale
+
 - Maximum user clarity — separates consultation from revision
 - Zero risk to the existing disciplinary workflow
 - Pure static HTML — no JavaScript, no localStorage, no PWA impact
@@ -63,33 +64,35 @@
 - Minimal interface footprint: 4th tab button + static content div
 
 ### Required changes (for CML-004R implementation)
+
 1. Add 4th button in `.tabbar` with `onclick="setTab('generali')"`
 2. Add `<div id="tab-generali">` with static HTML content (general sections from Word doc)
 3. Update `setTab()` to handle 4 tabs
 4. CSS for responsive tab wrapping on small screens
 
 ### Contents to include
+
 Premessa, Le Nuove Indicazioni Nazionali 2025, I principi ispiratori, Profilo dello studente, Competenze chiave, Obiettivi generali (selection). Source: Word doc general sections only. Read-only mode.
 
 ## Confirmation Checklist
 
-| Check | Status |
-|-------|--------|
-| No runtime files modified | ✓ |
-| No index.html modified | ✓ |
-| No PDF modified | ✓ |
-| No sw.js modified | ✓ |
-| No _headers modified | ✓ |
-| No discipline data modified | ✓ |
-| No workflow logic modified | ✓ |
-| No approve/reject/edit altered | ✓ |
-| No IN2012→IN2025 comparison altered | ✓ |
-| No new localStorage keys | ✓ |
-| No backend/API/auth/Netlify Forms | ✓ |
-| No deploy | ✓ |
-| `git diff --check` clean | ✓ |
-| `git status` shows only docs/report files | ✓ |
-| Source document only read, not moved or copied | ✓ |
+| Check                                          | Status |
+| ---------------------------------------------- | ------ |
+| No runtime files modified                      | ✓      |
+| No index.html modified                         | ✓      |
+| No PDF modified                                | ✓      |
+| No sw.js modified                              | ✓      |
+| No _headers modified                           | ✓      |
+| No discipline data modified                    | ✓      |
+| No workflow logic modified                     | ✓      |
+| No approve/reject/edit altered                 | ✓      |
+| No IN2012→IN2025 comparison altered            | ✓      |
+| No new localStorage keys                       | ✓      |
+| No backend/API/auth/Netlify Forms              | ✓      |
+| No deploy                                      | ✓      |
+| `git diff --check` clean                       | ✓      |
+| `git status` shows only docs/report files      | ✓      |
+| Source document only read, not moved or copied | ✓      |
 
 ## Residual Risks
 
@@ -100,6 +103,7 @@ Premessa, Le Nuove Indicazioni Nazionali 2025, I principi ispiratori, Profilo de
 ## Next Step
 
 Open **CML-004R implementation slice**:
+
 ```
 git switch -c cml-004r-general-sections-readonly master
 ```

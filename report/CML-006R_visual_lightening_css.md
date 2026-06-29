@@ -18,16 +18,16 @@ Opzione A da CML-006R-SELECT: micro-alleggerimento CSS conservativo.
 
 ## Sintesi alleggerimento grafico
 
-| Elemento | Prima | Dopo |
-|---|---|---|
-| **Ombre contenitori** | `rgba(0,0,0,.1)` / `.08` / `.06` | `rgba(0,0,0,.05)` / `.04` |
-| **Bordo card** | `1.5px solid` saturo | `1px solid` desaturato |
-| **Badge** | Saturazione piena | Saturazione -15% |
-| **Footer** | `#263238` / `#90a4ae` | `#37474f` / `#b0bec5` |
-| **Warning border-left** | 4px | 3px |
-| **Pannelli confronto** | Giallo/verde saturi | Giallo/verde pastello |
-| **Norm-card hover** | Ombra 3x | Nessun aumento |
-| **Tab bar border-bottom** | 2px | 1px |
+| Elemento                  | Prima                            | Dopo                      |
+| ------------------------- | -------------------------------- | ------------------------- |
+| **Ombre contenitori**     | `rgba(0,0,0,.1)` / `.08` / `.06` | `rgba(0,0,0,.05)` / `.04` |
+| **Bordo card**            | `1.5px solid` saturo             | `1px solid` desaturato    |
+| **Badge**                 | Saturazione piena                | Saturazione -15%          |
+| **Footer**                | `#263238` / `#90a4ae`            | `#37474f` / `#b0bec5`     |
+| **Warning border-left**   | 4px                              | 3px                       |
+| **Pannelli confronto**    | Giallo/verde saturi              | Giallo/verde pastello     |
+| **Norm-card hover**       | Ombra 3x                         | Nessun aumento            |
+| **Tab bar border-bottom** | 2px                              | 1px                       |
 
 ## Conferme
 

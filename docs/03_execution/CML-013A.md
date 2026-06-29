@@ -17,11 +17,11 @@ Solo documentazione — nessuna modifica runtime, nessun deploy.
 
 ## 1. Contesto storico
 
-| Ciclo | Risultato |
-|---|---|
+| Ciclo       | Risultato                                                                                                          |
+| ----------- | ------------------------------------------------------------------------------------------------------------------ |
 | CML-009/010 | Alleggerimento vista utente, card compatte, dettaglio espandibile, touch target mobile 44px, pubblicazione Netlify |
-| CML-011 | Export microcopy (confronto/definitivo), disclaimer validazione, smoke reale positivo — ciclo chiuso |
-| CML-012A | Test utente reale progettato (8 passi) — preservato per re-test dopo redesign |
+| CML-011     | Export microcopy (confronto/definitivo), disclaimer validazione, smoke reale positivo — ciclo chiuso               |
+| CML-012A    | Test utente reale progettato (8 passi) — preservato per re-test dopo redesign                                      |
 
 ## 2. Diagnosi consolidata
 
@@ -32,13 +32,13 @@ Solo documentazione — nessuna modifica runtime, nessun deploy.
 Lo strumento oggi è funzionale ma espone troppe funzioni allo stesso livello visivo.
 L'utente non distingue subito:
 
-| Domanda | Situazione attuale |
-|---|---|
-| Cosa devo fare adesso? | Mescolato tra cruscotto, toolbar, sidebar, export |
-| Cosa posso consultare? | Fonti, normativa e sezioni generali sono in schede ma con molto testo |
-| Cosa posso modificare? | Card di revisione mescolate con filtri, export, salvataggio |
-| Cosa posso esportare? | Due sezioni export (toolbar confronto + tab riepilogo definitivo) |
-| Cosa resta da validare? | Disclaimer presente ma dopo molte informazioni |
+| Domanda                 | Situazione attuale                                                    |
+| ----------------------- | --------------------------------------------------------------------- |
+| Cosa devo fare adesso?  | Mescolato tra cruscotto, toolbar, sidebar, export                     |
+| Cosa posso consultare?  | Fonti, normativa e sezioni generali sono in schede ma con molto testo |
+| Cosa posso modificare?  | Card di revisione mescolate con filtri, export, salvataggio           |
+| Cosa posso esportare?   | Due sezioni export (toolbar confronto + tab riepilogo definitivo)     |
+| Cosa resta da validare? | Disclaimer presente ma dopo molte informazioni                        |
 
 ### Direzione progettuale
 
@@ -55,13 +55,13 @@ Principio guida: **una schermata, una decisione**.
 
 ### Schermata 1 — Home operativa (orientamento)
 
-| Elemento | Dettaglio |
-|---|---|
-| Stato lavoro | "Revisione avviata" |
-| Prossima azione | "Controlla le voci da validare" |
+| Elemento              | Dettaglio                                  |
+| --------------------- | ------------------------------------------ |
+| Stato lavoro          | "Revisione avviata"                        |
+| Prossima azione       | "Controlla le voci da validare"            |
 | Azioni principali (3) | Controlla voci · Apri definitivo · Esporta |
-| Avanzamento | Barra minima |
-| Menu secondario | Azioni, backup, importazione, guida |
+| Avanzamento           | Barra minima                               |
+| Menu secondario       | Azioni, backup, importazione, guida        |
 
 Tutto il resto sta dietro menu, schede o pannelli espandibili.
 
@@ -83,12 +83,14 @@ Tutto il resto sta dietro menu, schede o pannelli espandibili.
 ### Livello trasversale — Export contestuale
 
 Non una schermata autonoma, ma presente in due punti:
+
 - Durante revisione: export confronto (toolbar contestuale)
 - Su definitivo: export documento ufficiale
 
 ### Livello trasversale — Validazione umana
 
 Non una schermata autonoma, ma segnalata:
+
 - Disclaimer su ogni export
 - Badge "Documento di lavoro — da validare"
 - Nota metodologica persistente
@@ -96,6 +98,7 @@ Non una schermata autonoma, ma segnalata:
 ### Schermata 4 — Dettaglio voce (consultazione)
 
 Contenuto:
+
 - Testo attuale (IN 2012)
 - Proposta di modifica (Gap 2025)
 - Motivazione
@@ -161,65 +164,65 @@ Curricolo Verticale > Tecnologia > Voci da validare > Competenze digitali e STEM
 
 ## 6. Componenti grafici
 
-| Componente | Descrizione |
-|---|---|
-| Header compatto | Nome istituto, titolo, DM |
-| Cruscotto minimo | Stato + prossima azione + 3 pulsanti |
-| Card disciplina | Nome, badge voci, attivo/inattivo |
-| Card operativa | Stato, titolo, sintesi 1 riga, azione primaria |
-| Pannello dettaglio | Testi confronto, fonte, scelta, note |
-| Pannello fonti | Card fonte con metadata, link |
-| Menu azioni | Salva, backup, importa, ripristina, installa, guida |
-| Bottom bar mobile | Revisione / Definitivo / Esporta |
-| Export center contestuale | Formati raggruppati per contesto |
-| Disclaimer validazione | Sempre uguale, riconoscibile, color #e65100 |
-| Stato salvataggio | Icona + percentuale compatta |
-| Breadcrumb | Percorso navigazione |
+| Componente                | Descrizione                                         |
+| ------------------------- | --------------------------------------------------- |
+| Header compatto           | Nome istituto, titolo, DM                           |
+| Cruscotto minimo          | Stato + prossima azione + 3 pulsanti                |
+| Card disciplina           | Nome, badge voci, attivo/inattivo                   |
+| Card operativa            | Stato, titolo, sintesi 1 riga, azione primaria      |
+| Pannello dettaglio        | Testi confronto, fonte, scelta, note                |
+| Pannello fonti            | Card fonte con metadata, link                       |
+| Menu azioni               | Salva, backup, importa, ripristina, installa, guida |
+| Bottom bar mobile         | Revisione / Definitivo / Esporta                    |
+| Export center contestuale | Formati raggruppati per contesto                    |
+| Disclaimer validazione    | Sempre uguale, riconoscibile, color #e65100         |
+| Stato salvataggio         | Icona + percentuale compatta                        |
+| Breadcrumb                | Percorso navigazione                                |
 
 ## 7. Mappa funzione → nuova collocazione
 
-| Funzione attuale | Posizione oggi | Criticità | Nuova collocazione | Azione progettuale |
-|---|---|---|---|---|
-| Header istituzionale | Top pagina | Ok | Header compatto | Mantenere visibile |
-| Tab bar (4 tabs) | Sotto header | Troppi livelli | Breadcrumb + bottom bar | Trasformare in navigazione |
-| Sidebar discipline | Sinistra | Dominante su mobile | Sidebar desktop / menu mobile a scomparsa | Rendere contestuale |
-| Cruscotto stato | Sotto tabs | Ok | Home operativa | Mantenere visibile |
-| Prossima azione | Nel cruscotto | Ok | Home operativa | Mantenere visibile |
-| 3 pulsanti azione | Nel cruscotto | Ok con leggero overlap | Home operativa, raggruppati | Mantenere visibile |
-| Barra salvataggio | Sotto cruscotto | Troppo visibile | Stato compatto + menu Azioni | Trasformare in stato |
-| Pulsante Azioni ⚙️ | Accanto a salvataggio | Ok | Menu Azioni | Mantenere visibile |
-| Installazione app | In menu Azioni | Ok ma secondario | Menu Azioni | Spostare in menu |
-| Impostazioni/onboarding | In menu Azioni | Ok | Menu Azioni | Spostare in menu |
-| Corso PDF | In menu Azioni | Ok | Menu Azioni + tab Fonti | Spostare in menu |
-| Motto e metodo | In menu Azioni | Ok | Menu Azioni + footer | Spostare in menu |
-| Guida rapida | In menu Azioni | Ok | Menu Azioni | Spostare in menu |
-| Toolbar filtri | Sopra card | Troppi filtri insieme | Filtri essenziali + Altri filtri collassato | Collassare |
-| Toolbar export (confronto) | Inline nel toolbar | Troppo visibile in fase di revisione | Export contestuale nella card/disciplina | Rendere contestuale |
-| Uso ibrido e requisiti | Sotto toolbar | Troppo testo inline | Dettaglio espandibile o tooltip | Collassare |
-| Export curricolo revisionato | Pannello dedicato | Separato dal flusso | Unificato con export contestuale | Rendere contestuale |
-| Curricolo Definitivo | Tab Riepilogo | Ok, ma nascosto in tab | Schermata 3 autonoma | Mantenere visibile |
-| Disclaimer validazione | Su definitivo e bozza | Ok, già presente | Persistente su tutti gli export | Mantenere visibile |
-| Fonti normative | Tab Normativa | Molto testo, ok ma isolato | Tab Fonti con indice | Mantenere visibile |
-| Sezioni generali | Sotto fonti | Consultazione non modificabile | Sezione consultazione separata | Mantenere visibile |
-| Gap 2025 | Nota in fondo | Necessario ma marginale nel flusso | Collegato a dettaglio voce | Collegare a dettaglio/fonti |
-| Card revisione | Area centrale | Ok | Schema card invariato | Mantenere visibile |
-| Dettaglio espandibile | In card | Su desktop meglio pannello | Pannello laterale (desktop) / espandibile (mobile) | Rendere contestuale |
-| Filtri approvati/rifiutati | In "Altri filtri" | Ok | Altri filtri collassato | Collassare |
-| Backup/Importa/Ripristina | Sotto toolbar | Secondario | Menu Azioni | Spostare in menu |
-| Export Word/Copia/Markdown/PDF | Due gruppi separati | Distinzione confronto/definitivo ok | Raggruppati per contesto d'uso | Mantenere visibile |
-| Nota metodologica finale | Footer | Importante ma in fondo | Persistente in area validazione | Rendere contestuale |
+| Funzione attuale               | Posizione oggi        | Criticità                            | Nuova collocazione                                 | Azione progettuale          |
+| ------------------------------ | --------------------- | ------------------------------------ | -------------------------------------------------- | --------------------------- |
+| Header istituzionale           | Top pagina            | Ok                                   | Header compatto                                    | Mantenere visibile          |
+| Tab bar (4 tabs)               | Sotto header          | Troppi livelli                       | Breadcrumb + bottom bar                            | Trasformare in navigazione  |
+| Sidebar discipline             | Sinistra              | Dominante su mobile                  | Sidebar desktop / menu mobile a scomparsa          | Rendere contestuale         |
+| Cruscotto stato                | Sotto tabs            | Ok                                   | Home operativa                                     | Mantenere visibile          |
+| Prossima azione                | Nel cruscotto         | Ok                                   | Home operativa                                     | Mantenere visibile          |
+| 3 pulsanti azione              | Nel cruscotto         | Ok con leggero overlap               | Home operativa, raggruppati                        | Mantenere visibile          |
+| Barra salvataggio              | Sotto cruscotto       | Troppo visibile                      | Stato compatto + menu Azioni                       | Trasformare in stato        |
+| Pulsante Azioni ⚙️             | Accanto a salvataggio | Ok                                   | Menu Azioni                                        | Mantenere visibile          |
+| Installazione app              | In menu Azioni        | Ok ma secondario                     | Menu Azioni                                        | Spostare in menu            |
+| Impostazioni/onboarding        | In menu Azioni        | Ok                                   | Menu Azioni                                        | Spostare in menu            |
+| Corso PDF                      | In menu Azioni        | Ok                                   | Menu Azioni + tab Fonti                            | Spostare in menu            |
+| Motto e metodo                 | In menu Azioni        | Ok                                   | Menu Azioni + footer                               | Spostare in menu            |
+| Guida rapida                   | In menu Azioni        | Ok                                   | Menu Azioni                                        | Spostare in menu            |
+| Toolbar filtri                 | Sopra card            | Troppi filtri insieme                | Filtri essenziali + Altri filtri collassato        | Collassare                  |
+| Toolbar export (confronto)     | Inline nel toolbar    | Troppo visibile in fase di revisione | Export contestuale nella card/disciplina           | Rendere contestuale         |
+| Uso ibrido e requisiti         | Sotto toolbar         | Troppo testo inline                  | Dettaglio espandibile o tooltip                    | Collassare                  |
+| Export curricolo revisionato   | Pannello dedicato     | Separato dal flusso                  | Unificato con export contestuale                   | Rendere contestuale         |
+| Curricolo Definitivo           | Tab Riepilogo         | Ok, ma nascosto in tab               | Schermata 3 autonoma                               | Mantenere visibile          |
+| Disclaimer validazione         | Su definitivo e bozza | Ok, già presente                     | Persistente su tutti gli export                    | Mantenere visibile          |
+| Fonti normative                | Tab Normativa         | Molto testo, ok ma isolato           | Tab Fonti con indice                               | Mantenere visibile          |
+| Sezioni generali               | Sotto fonti           | Consultazione non modificabile       | Sezione consultazione separata                     | Mantenere visibile          |
+| Gap 2025                       | Nota in fondo         | Necessario ma marginale nel flusso   | Collegato a dettaglio voce                         | Collegare a dettaglio/fonti |
+| Card revisione                 | Area centrale         | Ok                                   | Schema card invariato                              | Mantenere visibile          |
+| Dettaglio espandibile          | In card               | Su desktop meglio pannello           | Pannello laterale (desktop) / espandibile (mobile) | Rendere contestuale         |
+| Filtri approvati/rifiutati     | In "Altri filtri"     | Ok                                   | Altri filtri collassato                            | Collassare                  |
+| Backup/Importa/Ripristina      | Sotto toolbar         | Secondario                           | Menu Azioni                                        | Spostare in menu            |
+| Export Word/Copia/Markdown/PDF | Due gruppi separati   | Distinzione confronto/definitivo ok  | Raggruppati per contesto d'uso                     | Mantenere visibile          |
+| Nota metodologica finale       | Footer                | Importante ma in fondo               | Persistente in area validazione                    | Rendere contestuale         |
 
 ## 8. Principi visivi
 
 ### Colori
 
-| Colore | Uso |
-|---|---|
-| #1a237e (blu scuro) | Struttura, titoli, navigazione |
-| #00695c (verde) | Salvataggio, conferme, validazioni |
-| #e65100 (arancio) | Avvisi, disclaimer, attenzione |
-| #c62828 (rosso) | Rifiuto, blocco, ripristino |
-| #f5f7fa (grigio chiaro) | Sfondi secondari |
+| Colore                  | Uso                                |
+| ----------------------- | ---------------------------------- |
+| #1a237e (blu scuro)     | Struttura, titoli, navigazione     |
+| #00695c (verde)         | Salvataggio, conferme, validazioni |
+| #e65100 (arancio)       | Avvisi, disclaimer, attenzione     |
+| #c62828 (rosso)         | Rifiuto, blocco, ripristino        |
+| #f5f7fa (grigio chiaro) | Sfondi secondari                   |
 
 ### Tipografia
 
@@ -265,14 +268,14 @@ Regola: **nella vista principale non più di 3 azioni visibili**.
 
 ## 11. Strategia di implementazione
 
-| Blocco | Cosa | Runtime |
-|---|---|---|
-| CML-013A | Studio e contratto (questo) | ❌ No |
-| CML-013B | Prototipo statico nuova home guidata | ✅ CSS/HTML minimo |
-| CML-013C | Navigazione mobile + menu a scomparsa | ✅ |
-| CML-013D | Pannello dettaglio contestuale desktop/mobile | ✅ |
-| CML-013E | Export center contestuale | ✅ |
-| CML-013F | Re-test utente con protocollo CML-012A | ❌ Solo test |
+| Blocco   | Cosa                                          | Runtime            |
+| -------- | --------------------------------------------- | ------------------ |
+| CML-013A | Studio e contratto (questo)                   | ❌ No              |
+| CML-013B | Prototipo statico nuova home guidata          | ✅ CSS/HTML minimo |
+| CML-013C | Navigazione mobile + menu a scomparsa         | ✅                 |
+| CML-013D | Pannello dettaglio contestuale desktop/mobile | ✅                 |
+| CML-013E | Export center contestuale                     | ✅                 |
+| CML-013F | Re-test utente con protocollo CML-012A        | ❌ Solo test       |
 
 ## 12. Verdetto
 

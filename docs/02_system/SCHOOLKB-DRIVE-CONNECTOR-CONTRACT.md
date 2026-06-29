@@ -74,15 +74,15 @@ driveConnector.js
 
 Metodi previsti:
 
-| Metodo | Responsabilita' |
-|--------|-----------------|
-| `initGapiClient()` | Carica e inizializza le librerie Google consentite e il client Drive. |
-| `requestAccessToken()` | Richiede consenso e access token con solo scope `drive.file`. |
-| `restoreSessionToken()` | Ripristina token da memoria/sessione se ancora valido, senza refresh token persistente. |
-| `checkAndCreateRootFolder(folderName)` | Cerca tra le cartelle accessibili all'app o crea `schoolkb`. |
-| `createSubFolder(parentFolderId, subFolderName)` | Crea una sottocartella sotto la root autorizzata. |
-| `uploadConfigTemplate(parentFolderId, fileName, textContent)` | Crea o carica un template testuale iniziale. |
-| `disconnect()` | Revoca/azzera lo stato locale e rimuove token in memoria/sessione. |
+| Metodo                                                        | Responsabilita'                                                                         |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `initGapiClient()`                                            | Carica e inizializza le librerie Google consentite e il client Drive.                   |
+| `requestAccessToken()`                                        | Richiede consenso e access token con solo scope `drive.file`.                           |
+| `restoreSessionToken()`                                       | Ripristina token da memoria/sessione se ancora valido, senza refresh token persistente. |
+| `checkAndCreateRootFolder(folderName)`                        | Cerca tra le cartelle accessibili all'app o crea `schoolkb`.                            |
+| `createSubFolder(parentFolderId, subFolderName)`              | Crea una sottocartella sotto la root autorizzata.                                       |
+| `uploadConfigTemplate(parentFolderId, fileName, textContent)` | Crea o carica un template testuale iniziale.                                            |
+| `disconnect()`                                                | Revoca/azzera lo stato locale e rimuove token in memoria/sessione.                      |
 
 Il modulo deve restare indipendente dal codice curricolare esistente. Ogni chiamata runtime futura deve passare da un layer opzionale con feature flag.
 
@@ -107,12 +107,12 @@ La struttura e' una base di conoscenza, non un database applicativo. Le cartelle
 
 Template previsti, da definire in una slice successiva senza crearli nel runtime in SKB-001:
 
-| File | Scopo |
-|------|-------|
-| `schoolkb-config.json` | Configurazione descrittiva della KB, versione schema, data creazione, note privacy. |
-| `README-SchoolKB.txt` | Spiegazione leggibile per utenti scolastici e amministratori. |
-| `dm-221-2025-alignment.txt` | Nota di allineamento prudente con D.M. 221/2025 e fonti normative. |
-| `curricolo-index.json` | Indice leggero dei riferimenti curricolari, senza duplicare automaticamente i dati locali. |
+| File                        | Scopo                                                                                      |
+| --------------------------- | ------------------------------------------------------------------------------------------ |
+| `schoolkb-config.json`      | Configurazione descrittiva della KB, versione schema, data creazione, note privacy.        |
+| `README-SchoolKB.txt`       | Spiegazione leggibile per utenti scolastici e amministratori.                              |
+| `dm-221-2025-alignment.txt` | Nota di allineamento prudente con D.M. 221/2025 e fonti normative.                         |
+| `curricolo-index.json`      | Indice leggero dei riferimenti curricolari, senza duplicare automaticamente i dati locali. |
 
 Nessun template deve contenere credenziali, ID Drive reali, client ID, token o dati personali.
 
@@ -126,13 +126,13 @@ connect-drive-btn
 
 Stati testuali minimi:
 
-| Stato | Testo UI |
-|-------|----------|
-| Idle | `Connetti a SchoolKB` |
-| Loading | `Inizializzazione in corso...` |
-| Synced | `Sincronizzato` |
-| Error | `Errore connessione` |
-| Disconnect | `Disconnetti` |
+| Stato      | Testo UI                       |
+| ---------- | ------------------------------ |
+| Idle       | `Connetti a SchoolKB`          |
+| Loading    | `Inizializzazione in corso...` |
+| Synced     | `Sincronizzato`                |
+| Error      | `Errore connessione`           |
+| Disconnect | `Disconnetti`                  |
 
 Requisiti UX:
 
@@ -148,33 +148,33 @@ Requisiti UX:
 
 Stati minimi futuri:
 
-| Stato | Significato |
-|-------|-------------|
-| `idle` | Feature disponibile ma non avviata. |
-| `loadingGoogleLibraries` | Librerie Google in caricamento. |
-| `waitingForConsent` | Attesa consenso OAuth utente. |
-| `connected` | Token ottenuto e client pronto. |
-| `initializingSchoolKB` | Creazione/verifica root `schoolkb` e struttura iniziale. |
-| `synced` | Struttura base verificata o creata. |
-| `error` | Errore di librerie, consenso, permessi o Drive API. |
-| `disconnected` | Token locale rimosso e sessione SchoolKB chiusa. |
+| Stato                    | Significato                                              |
+| ------------------------ | -------------------------------------------------------- |
+| `idle`                   | Feature disponibile ma non avviata.                      |
+| `loadingGoogleLibraries` | Librerie Google in caricamento.                          |
+| `waitingForConsent`      | Attesa consenso OAuth utente.                            |
+| `connected`              | Token ottenuto e client pronto.                          |
+| `initializingSchoolKB`   | Creazione/verifica root `schoolkb` e struttura iniziale. |
+| `synced`                 | Struttura base verificata o creata.                      |
+| `error`                  | Errore di librerie, consenso, permessi o Drive API.      |
+| `disconnected`           | Token locale rimosso e sessione SchoolKB chiusa.         |
 
 Le transizioni devono essere esplicite e reversibili. Lo stato `error` non deve compromettere l'uso locale della PWA.
 
 ## 10. Rischi
 
-| Rischio | Mitigazione contrattuale |
-|---------|--------------------------|
-| Dipendenza da Google Cloud OAuth Client ID | Usare solo placeholder in repo; configurazione reale fuori repository. |
-| Authorized origins necessari per localhost e produzione | Documentare origins in audit privacy/workspace prima dell'integrazione. |
-| Restrizioni Workspace scuola | Prevedere SKB-005 privacy/workspace audit. |
-| Consenso OAuth non concesso | Fallback locale e stato `disconnected`. |
-| Token expiration | Richiedere nuovo consenso/token; nessun refresh token statico. |
-| XSS con token in `sessionStorage` | Preferire memoria; se sessione necessaria, sanitizzazione rigorosa e nessun HTML non fidato. |
-| Complessita' superiore al CurManLight locale | Feature flag, modulo isolato, roadmap separata. |
-| Confusione tra dati locali e dati Drive | UX e copy devono dichiarare che SchoolKB e' estensione parallela. |
-| Scope troppo ampio | Vietato scope `drive`; ammesso solo `drive.file`. |
-| Accesso implicito a cartelle preesistenti | Vietato assumere accesso non autorizzato. |
+| Rischio                                                 | Mitigazione contrattuale                                                                     |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Dipendenza da Google Cloud OAuth Client ID              | Usare solo placeholder in repo; configurazione reale fuori repository.                       |
+| Authorized origins necessari per localhost e produzione | Documentare origins in audit privacy/workspace prima dell'integrazione.                      |
+| Restrizioni Workspace scuola                            | Prevedere SKB-005 privacy/workspace audit.                                                   |
+| Consenso OAuth non concesso                             | Fallback locale e stato `disconnected`.                                                      |
+| Token expiration                                        | Richiedere nuovo consenso/token; nessun refresh token statico.                               |
+| XSS con token in `sessionStorage`                       | Preferire memoria; se sessione necessaria, sanitizzazione rigorosa e nessun HTML non fidato. |
+| Complessita' superiore al CurManLight locale            | Feature flag, modulo isolato, roadmap separata.                                              |
+| Confusione tra dati locali e dati Drive                 | UX e copy devono dichiarare che SchoolKB e' estensione parallela.                            |
+| Scope troppo ampio                                      | Vietato scope `drive`; ammesso solo `drive.file`.                                            |
+| Accesso implicito a cartelle preesistenti               | Vietato assumere accesso non autorizzato.                                                    |
 
 ## 11. Non-obiettivi
 
@@ -196,14 +196,14 @@ SKB-001 non implementa:
 
 ## 12. Roadmap proposta
 
-| Slice | Scopo |
-|-------|-------|
-| SKB-001 | Contratto tecnico, privacy, UX e architetturale. |
+| Slice   | Scopo                                                                      |
+| ------- | -------------------------------------------------------------------------- |
+| SKB-001 | Contratto tecnico, privacy, UX e architetturale.                           |
 | SKB-002 | Prototipo locale isolato, non collegato al runtime CurManLight pubblicato. |
-| SKB-003 | Schema cartelle e template SchoolKB con soli placeholder. |
-| SKB-004 | Smoke UI Material Design 3 del componente opzionale. |
-| SKB-005 | Privacy/workspace audit: OAuth client, origins, policy scuola, rischi. |
-| SKB-006 | Eventuale integrazione controllata dietro feature flag. |
+| SKB-003 | Schema cartelle e template SchoolKB con soli placeholder.                  |
+| SKB-004 | Smoke UI Material Design 3 del componente opzionale.                       |
+| SKB-005 | Privacy/workspace audit: OAuth client, origins, policy scuola, rischi.     |
+| SKB-006 | Eventuale integrazione controllata dietro feature flag.                    |
 
 ## Verdetto contrattuale
 

@@ -42,17 +42,17 @@ La mappa Inglese segue la forma già validata dal runtime:
 
 ## Conteggi Inglese
 
-| Area | Esito |
-| --- | --- |
-| Disciplina | Inglese |
-| Strutture sostanziali | 12 |
-| Nodi disciplinari | 11 |
-| Progressione verticale | 9 passaggi |
-| Decisioni curricolari | 0 |
-| Stato decisioni | N/A (nessun audit Inglese eseguito) |
-| Ordini coperti | Infanzia, Primaria, Secondaria |
-| Fonte base | Curriculum normalizzato Inglese |
-| Audit preparatorio | Nessuno (D=0 deliberato) |
+| Area                   | Esito                               |
+| ---------------------- | ----------------------------------- |
+| Disciplina             | Inglese                             |
+| Strutture sostanziali  | 12                                  |
+| Nodi disciplinari      | 11                                  |
+| Progressione verticale | 9 passaggi                          |
+| Decisioni curricolari  | 0                                   |
+| Stato decisioni        | N/A (nessun audit Inglese eseguito) |
+| Ordini coperti         | Infanzia, Primaria, Secondaria      |
+| Fonte base             | Curriculum normalizzato Inglese     |
+| Audit preparatorio     | Nessuno (D=0 deliberato)            |
 
 ## Strutture sostanziali
 
@@ -107,12 +107,14 @@ La mappa Inglese segue la forma già validata dal runtime:
 ## Validatore curriculum
 
 `node tools/validate-cml-normalized-curriculum.mjs`: PASS
+
 - 7 file / 94 unità / `overallValid: true` / 0 errori
 - Inglese: 12 unità, ordini Infanzia/Primaria/Secondaria coperti
 
 ## Shape runtime
 
 `node tools/test-runtime-mappa-dati-shape.mjs`: PASS
+
 - 7 discipline / 0 failed
 - Inglese: S=12 N=11 P=9 D=0
 

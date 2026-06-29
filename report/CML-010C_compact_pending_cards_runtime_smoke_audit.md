@@ -3,6 +3,7 @@
 ## Dettaglio verifiche
 
 ### Repository state
+
 ```
 Branch: cml-008r-fix-markdown-decision-summary
 HEAD:   317222a (docs: CML-010B closure report + CML-010A esito link)
@@ -14,17 +15,17 @@ Working tree: pulita (solo docs/REPO-MOVELOG.md non committata)
 
 Dati estratti da `let DATA = {...}`:
 
-| ID | Ordine | Tipo | Status |
-|---|---|---|---|
-| te_inf1 | Infanzia | Traguardo | ok |
-| te_pri1 | Primaria | Traguardo | modifica |
-| te_pri2 | Primaria | Traguardo | modifica |
-| te_sec1 | Secondaria | Traguardo | ok |
-| te_sec2 | Secondaria | Traguardo | modifica |
-| te_sec3 | Secondaria | Traguardo | modifica |
-| te_ob_inf | Infanzia | Obiettivo | ok |
-| te_ob_pri1 | Primaria | Obiettivo | ok |
-| te_ob_pri2 | Primaria | Obiettivo | modifica |
+| ID         | Ordine     | Tipo      | Status   |
+| ---------- | ---------- | --------- | -------- |
+| te_inf1    | Infanzia   | Traguardo | ok       |
+| te_pri1    | Primaria   | Traguardo | modifica |
+| te_pri2    | Primaria   | Traguardo | modifica |
+| te_sec1    | Secondaria | Traguardo | ok       |
+| te_sec2    | Secondaria | Traguardo | modifica |
+| te_sec3    | Secondaria | Traguardo | modifica |
+| te_ob_inf  | Infanzia   | Obiettivo | ok       |
+| te_ob_pri1 | Primaria   | Obiettivo | ok       |
+| te_ob_pri2 | Primaria   | Obiettivo | modifica |
 | te_ob_sec1 | Secondaria | Obiettivo | modifica |
 | te_ob_sec2 | Secondaria | Obiettivo | modifica |
 | te_ob_sec3 | Secondaria | Obiettivo | modifica |
@@ -34,6 +35,7 @@ Dati estratti da `let DATA = {...}`:
 ### Card rendering (codice sorgente)
 
 Le 4 modalità di `cardHTML()` sono state verificate a livello di codice:
+
 1. **ok** — `div.card.ok` → collapse-header + collapse-body con testo + pulsanti
 2. **decisa** — `div.card.approvata/rifiutata` → collapse-header + collapse-body
 3. **pending edit** — `div.card.pending-card` → pannelli full + textarea + ✅/❌
@@ -58,16 +60,17 @@ Le 4 modalità di `cardHTML()` sono state verificate a livello di codice:
 
 ### Breakpoint screenshots (da CML-010B)
 
-| Breakpoint | Dimensione | Note |
-|---|---|---|
-| 360px | 56494 bytes | Layout compatto, wrap verticale azioni |
-| 414px | 68698 bytes | Pulsanti touch-friendly |
-| 768px | 149156 bytes | Grid card-acts |
-| 1280px | 184876 bytes | Desktop, riga orizzontale |
+| Breakpoint | Dimensione   | Note                                   |
+| ---------- | ------------ | -------------------------------------- |
+| 360px      | 56494 bytes  | Layout compatto, wrap verticale azioni |
+| 414px      | 68698 bytes  | Pulsanti touch-friendly                |
+| 768px      | 149156 bytes | Grid card-acts                         |
+| 1280px     | 184876 bytes | Desktop, riga orizzontale              |
 
 ## Non regressioni
 
 Nessuna delle seguenti aree è stata modificata:
+
 - `usage-notice` (details collassato)
 - `local-save-bar` (pulsanti compatti)
 - `tecnologia-export-panel`

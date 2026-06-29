@@ -10,17 +10,17 @@ Lo scopo e trasformare i gap individuati in una base ordinata da sottoporre a re
 
 ## 2. Baseline tecnica
 
-| Parametro | Valore |
-|---|---|
-| Branch | `main` |
-| Commit iniziale | `d457261` |
-| origin/main iniziale | `129a816` |
-| Stato iniziale | `main...origin/main [ahead 1]` |
-| Slice precedente | CML-178 |
-| Verdict precedente | `CML_178_EDUCAZIONE_FISICA_DETAILED_GAP_MODEL_READY` |
-| Dati normalizzati | 10/14 |
-| Runtime mappa | 10/14 |
-| Shape test | 10/10 |
+| Parametro            | Valore                                               |
+| -------------------- | ---------------------------------------------------- |
+| Branch               | `main`                                               |
+| Commit iniziale      | `d457261`                                            |
+| origin/main iniziale | `129a816`                                            |
+| Stato iniziale       | `main...origin/main [ahead 1]`                       |
+| Slice precedente     | CML-178                                              |
+| Verdict precedente   | `CML_178_EDUCAZIONE_FISICA_DETAILED_GAP_MODEL_READY` |
+| Dati normalizzati    | 10/14                                                |
+| Runtime mappa        | 10/14                                                |
+| Shape test           | 10/10                                                |
 
 ## 3. Collegamento con CML-178
 
@@ -55,23 +55,23 @@ Il metodo usato e manuale e prudenziale:
 
 I nuclei seguenti sono una base manuale da validare, non `nodiDisciplinari` gia approvati.
 
-| Nucleo | Descrizione provvisoria | Validazione richiesta |
-|---|---|---|
-| Corpo, percezione e consapevolezza motoria | Conoscere il proprio corpo in movimento, percepire postura, equilibrio, orientamento e controllo motorio in situazioni scolastiche. | Confermare perimetro e termini usati. |
-| Abilita motorie e coordinazione | Sviluppare schemi motori, coordinazione, equilibrio, ritmo, adattamento a spazi e consegne. | Definire livelli per classe. |
-| Gioco, sport, regole e fair play | Partecipare a giochi e attivita sportive scolastiche rispettando regole, ruoli, compagni e avversari. | Chiarire elenco attivita e grado di specificita. |
-| Salute, benessere, sicurezza e prevenzione scolastica | Riconoscere comportamenti sicuri, cura di se, rispetto degli spazi e abitudini attive in perimetro educativo. | Evitare linguaggio sanitario o prescrittivo. |
-| Espressione corporea, relazione e inclusione | Usare corpo e movimento per comunicare, collaborare, includere e adattare la partecipazione. | Validare il lessico inclusivo con il dipartimento. |
+| Nucleo                                                | Descrizione provvisoria                                                                                                             | Validazione richiesta                              |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Corpo, percezione e consapevolezza motoria            | Conoscere il proprio corpo in movimento, percepire postura, equilibrio, orientamento e controllo motorio in situazioni scolastiche. | Confermare perimetro e termini usati.              |
+| Abilita motorie e coordinazione                       | Sviluppare schemi motori, coordinazione, equilibrio, ritmo, adattamento a spazi e consegne.                                         | Definire livelli per classe.                       |
+| Gioco, sport, regole e fair play                      | Partecipare a giochi e attivita sportive scolastiche rispettando regole, ruoli, compagni e avversari.                               | Chiarire elenco attivita e grado di specificita.   |
+| Salute, benessere, sicurezza e prevenzione scolastica | Riconoscere comportamenti sicuri, cura di se, rispetto degli spazi e abitudini attive in perimetro educativo.                       | Evitare linguaggio sanitario o prescrittivo.       |
+| Espressione corporea, relazione e inclusione          | Usare corpo e movimento per comunicare, collaborare, includere e adattare la partecipazione.                                        | Validare il lessico inclusivo con il dipartimento. |
 
 ## 7. Articolazione classe I / II / III
 
 Questa progressione riguarda la Secondaria di I grado. E una base manuale, da validare prima di diventare progressione CML.
 
-| Classe | Focus provvisorio | Scopo didattico |
-|---|---|---|
-| I | Conoscenza di se, regole, schemi motori, coordinazione di base, sicurezza negli spazi. | Entrare nel lavoro motorio scolastico con attenzione a corpo, regole e partecipazione. |
-| II | Consolidamento motorio, collaborazione, ruoli, giochi di squadra, fair play e gestione delle consegne. | Passare dalla partecipazione guidata a una collaborazione piu consapevole. |
-| III | Autonomia, responsabilita, progettazione semplice di attivita, riflessione su benessere, sicurezza e inclusione. | Usare competenze motorie e relazionali in modo consapevole e responsabile. |
+| Classe | Focus provvisorio                                                                                                | Scopo didattico                                                                        |
+| ------ | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| I      | Conoscenza di se, regole, schemi motori, coordinazione di base, sicurezza negli spazi.                           | Entrare nel lavoro motorio scolastico con attenzione a corpo, regole e partecipazione. |
+| II     | Consolidamento motorio, collaborazione, ruoli, giochi di squadra, fair play e gestione delle consegne.           | Passare dalla partecipazione guidata a una collaborazione piu consapevole.             |
+| III    | Autonomia, responsabilita, progettazione semplice di attivita, riflessione su benessere, sicurezza e inclusione. | Usare competenze motorie e relazionali in modo consapevole e responsabile.             |
 
 ## 8. Obiettivi di apprendimento provvisori
 
@@ -102,11 +102,11 @@ Gli obiettivi seguenti sono bozza documentale. Non devono essere trasferiti in `
 
 I traguardi sono formulati come base manuale da validare.
 
-| Classe | Traguardo provvisorio |
-|---|---|
-| I | L'alunno partecipa ad attivita motorie scolastiche rispettando regole, spazi e compagni; controlla schemi motori di base in situazioni guidate. |
-| II | L'alunno utilizza abilita motorie e collaborative in giochi e attivita strutturate, riconoscendo ruoli, regole e comportamenti sicuri. |
-| III | L'alunno agisce con autonomia e responsabilita in attivita motorie, sportive ed espressive, valorizzando fair play, benessere scolastico e inclusione. |
+| Classe | Traguardo provvisorio                                                                                                                                  |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| I      | L'alunno partecipa ad attivita motorie scolastiche rispettando regole, spazi e compagni; controlla schemi motori di base in situazioni guidate.        |
+| II     | L'alunno utilizza abilita motorie e collaborative in giochi e attivita strutturate, riconoscendo ruoli, regole e comportamenti sicuri.                 |
+| III    | L'alunno agisce con autonomia e responsabilita in attivita motorie, sportive ed espressive, valorizzando fair play, benessere scolastico e inclusione. |
 
 ## 10. Lessico disciplinare controllato
 
@@ -159,12 +159,12 @@ I traguardi sono formulati come base manuale da validare.
 
 Questa sezione non crea UDA. Indica solo una compatibilita futura.
 
-| Area | Compatibilita futura | Limite attuale |
-|---|---|---|
-| Evidenze | osservare rispetto regole, collaborazione, partecipazione, controllo motorio in compiti scolastici | non usare misure fisiche o sanitarie |
-| UDA | possibile costruzione per classe e nucleo dopo validazione | non generabile ora |
-| Criteri | partecipazione, sicurezza, responsabilita, coordinazione, fair play | da calibrare con docente |
-| Progressione | possibile I / II / III | non ancora validata |
+| Area         | Compatibilita futura                                                                               | Limite attuale                       |
+| ------------ | -------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Evidenze     | osservare rispetto regole, collaborazione, partecipazione, controllo motorio in compiti scolastici | non usare misure fisiche o sanitarie |
+| UDA          | possibile costruzione per classe e nucleo dopo validazione                                         | non generabile ora                   |
+| Criteri      | partecipazione, sicurezza, responsabilita, coordinazione, fair play                                | da calibrare con docente             |
+| Progressione | possibile I / II / III                                                                             | non ancora validata                  |
 
 ## 13. Campi popolabili manualmente dopo validazione
 

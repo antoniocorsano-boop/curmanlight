@@ -14,17 +14,17 @@ Micro-test simulato sul percorso utente del dettaglio migliorato. Verifica che u
 
 ## Risultati 9 step
 
-| # | Azione | Esito |
-|---|---|---|
-| 1 | Aprire lo strumento | ✅ |
-| 2 | Entrare nella revisione | ✅ |
-| 3 | Individuare voce da controllare | ✅ |
-| 4 | Aprire il dettaglio | ✅ |
-| 5 | Riconoscere fonti e riferimenti | ✅ |
-| 6 | Distinguere testo vigente/proposta | ✅ |
-| 7 | Capire differenze evidenziate | ✅ |
-| 8 | Individuare "Personalizza testo" | ✅ |
-| 9 | Validare/respingere/personalizzare | ✅ |
+| #   | Azione                             | Esito |
+| --- | ---------------------------------- | ----- |
+| 1   | Aprire lo strumento                | ✅    |
+| 2   | Entrare nella revisione            | ✅    |
+| 3   | Individuare voce da controllare    | ✅    |
+| 4   | Aprire il dettaglio                | ✅    |
+| 5   | Riconoscere fonti e riferimenti    | ✅    |
+| 6   | Distinguere testo vigente/proposta | ✅    |
+| 7   | Capire differenze evidenziate      | ✅    |
+| 8   | Individuare "Personalizza testo"   | ✅    |
+| 9   | Validare/respingere/personalizzare | ✅    |
 
 9/9 ✅ chiaro. Nessun ⚠️ dubbio. Nessun ❌ bloccato.
 

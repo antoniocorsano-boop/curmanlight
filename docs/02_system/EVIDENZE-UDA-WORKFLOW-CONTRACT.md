@@ -23,12 +23,12 @@ Definire il contratto dati e workflow per il modulo Evidenze/UDA di CurManLight,
 
 ## 2. Distinzioni concettuali
 
-| Concetto | Definizione | Responsabile | Output |
-|---|---|---|---|
-| **Evidenza curricolare** | Osservabile collegato a un'unità curricolare; descrive ciò che il docente può vedere in classe | Dipartimento / docente | Lista di evidenze per unità |
-| **Attività didattica** | Azione concreta in classe: laboratorio, consegna, schede, esercitazioni | Docente | Piano attività |
-| **UDA (Unità di Apprendimento)** | Percorso che organizza attività, evidenze e valutazione attorno a un nucleo curricolare | Docente / dipartimento | Modello UDA |
-| **Validazione dipartimentale** | Esito `.cml` sul testo curricolare; non entra nel merito didattico | Dipartimento / referente | Esito `.cml` |
+| Concetto                         | Definizione                                                                                    | Responsabile             | Output                      |
+| -------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------ | --------------------------- |
+| **Evidenza curricolare**         | Osservabile collegato a un'unità curricolare; descrive ciò che il docente può vedere in classe | Dipartimento / docente   | Lista di evidenze per unità |
+| **Attività didattica**           | Azione concreta in classe: laboratorio, consegna, schede, esercitazioni                        | Docente                  | Piano attività              |
+| **UDA (Unità di Apprendimento)** | Percorso che organizza attività, evidenze e valutazione attorno a un nucleo curricolare        | Docente / dipartimento   | Modello UDA                 |
+| **Validazione dipartimentale**   | Esito `.cml` sul testo curricolare; non entra nel merito didattico                             | Dipartimento / referente | Esito `.cml`                |
 
 **Regola di confine:**
 
@@ -70,12 +70,12 @@ Definire il contratto dati e workflow per il modulo Evidenze/UDA di CurManLight,
 
 ### 3.3 Stati consentiti
 
-| Stato | Significato | Chi può impostarlo |
-|---|---|---|
-| `proposta` | Evidenza suggerita dal curricolo | Sistema |
-| `adottata` | Docente conferma utilizzo | Docente |
-| `adattata` | Docente modifica contesto classe | Docente |
-| `non_applicabile` | Esclusa per questa classe/anno | Docente |
+| Stato             | Significato                      | Chi può impostarlo |
+| ----------------- | -------------------------------- | ------------------ |
+| `proposta`        | Evidenza suggerita dal curricolo | Sistema            |
+| `adottata`        | Docente conferma utilizzo        | Docente            |
+| `adattata`        | Docente modifica contesto classe | Docente            |
+| `non_applicabile` | Esclusa per questa classe/anno   | Docente            |
 
 ### 3.4 Regole
 
@@ -117,12 +117,12 @@ Definire il contratto dati e workflow per il modulo Evidenze/UDA di CurManLight,
 
 ### 4.3 Stati consentiti
 
-| Stato | Significato | Chi può impostarlo |
-|---|---|---|
-| `bozza` | UDA in preparazione | Docente |
-| `in_uso` | UDA adottata in classe | Docente |
-| `validato` | UDA approvata dal dipartimento | Dipartimento |
-| `archiviato` | UDA non più in uso | Docente / dipartimento |
+| Stato        | Significato                    | Chi può impostarlo     |
+| ------------ | ------------------------------ | ---------------------- |
+| `bozza`      | UDA in preparazione            | Docente                |
+| `in_uso`     | UDA adottata in classe         | Docente                |
+| `validato`   | UDA approvata dal dipartimento | Dipartimento           |
+| `archiviato` | UDA non più in uso             | Docente / dipartimento |
 
 ### 4.4 Regole
 
@@ -135,11 +135,11 @@ Definire il contratto dati e workflow per il modulo Evidenze/UDA di CurManLight,
 
 ## 5. Ruoli e permessi
 
-| Ruolo | Può | Non può |
-|---|---|---|
-| **Docente** | Marcare evidenze (adottata/adattata/non_applicabile), creare/modificare bozze UDA, esportare UDA proprie | Validare UDA per dipartimento, modificare curricolo |
-| **Dipartimento** | Validare UDA (bozza → validato), marcare evidenze, escludere UDA | Modificare curricolo, approvare modifiche normative |
-| **Referente** | Importare/esportare `.cml`, coordinare pacchetti, leggere stato UDA/evidenze | Modificare evidenze/UDA di altri, validare UDA |
+| Ruolo            | Può                                                                                                      | Non può                                             |
+| ---------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Docente**      | Marcare evidenze (adottata/adattata/non_applicabile), creare/modificare bozze UDA, esportare UDA proprie | Validare UDA per dipartimento, modificare curricolo |
+| **Dipartimento** | Validare UDA (bozza → validato), marcare evidenze, escludere UDA                                         | Modificare curricolo, approvare modifiche normative |
+| **Referente**    | Importare/esportare `.cml`, coordinare pacchetti, leggere stato UDA/evidenze                             | Modificare evidenze/UDA di altri, validare UDA      |
 
 ---
 
@@ -175,11 +175,11 @@ proposta docente → validazione dipartimento → referente import/export → de
 
 ## 7. Permessi di lettura/scrittura
 
-| Oggetto | Lettura | Scrittura | Eliminazione |
-|---|---|---|---|
-| Evidenza curricolare | Tutti | Docente (marcatura), Dipartimento (marcatura) | Mai (immutabile) |
-| UDA draft | Docente autore, Dipartimento, Referente | Docente autore, Dipartimento (solo valida/archivia) | Autore |
-| Curricolo JSON | Tutti | Nessuno (in questo ciclo) | Mai |
+| Oggetto              | Lettura                                 | Scrittura                                           | Eliminazione     |
+| -------------------- | --------------------------------------- | --------------------------------------------------- | ---------------- |
+| Evidenza curricolare | Tutti                                   | Docente (marcatura), Dipartimento (marcatura)       | Mai (immutabile) |
+| UDA draft            | Docente autore, Dipartimento, Referente | Docente autore, Dipartimento (solo valida/archivia) | Autore           |
+| Curricolo JSON       | Tutti                                   | Nessuno (in questo ciclo)                           | Mai              |
 
 ---
 
@@ -195,12 +195,12 @@ proposta docente → validazione dipartimento → referente import/export → de
 
 ## 9. Cosa può essere memorizzato localmente
 
-| Dato | Dove | Quando |
-|---|---|---|
-| Marcatura evidenza (`stato`) | `localStorage` chiave `cml_evidenze_state` | CML-215+ |
-| Bozza UDA | `localStorage` chiave `cml_uda_draft` | CML-216+ |
-| Filtri/UI preferences | `localStorage` esistente | Invariato |
-| Dati curricolari | Mai localmente | Sempre da sorgente |
+| Dato                         | Dove                                       | Quando             |
+| ---------------------------- | ------------------------------------------ | ------------------ |
+| Marcatura evidenza (`stato`) | `localStorage` chiave `cml_evidenze_state` | CML-215+           |
+| Bozza UDA                    | `localStorage` chiave `cml_uda_draft`      | CML-216+           |
+| Filtri/UI preferences        | `localStorage` esistente                   | Invariato          |
+| Dati curricolari             | Mai localmente                             | Sempre da sorgente |
 
 **Regole locali:**
 
@@ -214,33 +214,33 @@ proposta docente → validazione dipartimento → referente import/export → de
 
 ## 10. Privacy
 
-| Categoria | Consentito | Vietato |
-|---|---|---|
-| Identificativi studente | Nome/cognome per classe (opzionale) | Codice fiscale, dati sanitari, foto |
-| Valutazioni | Criteri di valutazione generali | Voti numerici, giudizi personalizzati |
-| Dati sensibili | Nessuno | Origine etnica, condizioni sanitarie, religione (oltre curricolo) |
-| Persistenza | Solo dispositivo locale | Server-side, cloud, sincronizzazione remota |
+| Categoria               | Consentito                          | Vietato                                                           |
+| ----------------------- | ----------------------------------- | ----------------------------------------------------------------- |
+| Identificativi studente | Nome/cognome per classe (opzionale) | Codice fiscale, dati sanitari, foto                               |
+| Valutazioni             | Criteri di valutazione generali     | Voti numerici, giudizi personalizzati                             |
+| Dati sensibili          | Nessuno                             | Origine etnica, condizioni sanitarie, religione (oltre curricolo) |
+| Persistenza             | Solo dispositivo locale             | Server-side, cloud, sincronizzazione remota                       |
 
 ---
 
 ## 11. Relazione con `.cml`
 
-| Aspetto | Regola |
-|---|---|
-| Schema `.cml` | Invariato in CML-214 e CML-215 |
-| Estensione futura | Possibile solo dopo contratto separato |
-| Validazione `.cml` | Resta sul testo curricolare, non su UDA/evidenze |
+| Aspetto              | Regola                                                         |
+| -------------------- | -------------------------------------------------------------- |
+| Schema `.cml`        | Invariato in CML-214 e CML-215                                 |
+| Estensione futura    | Possibile solo dopo contratto separato                         |
+| Validazione `.cml`   | Resta sul testo curricolare, non su UDA/evidenze               |
 | Import/export `.cml` | Invariato; UDA possono essere esportate come allegato/markdown |
 
 ---
 
 ## 12. Relazione con SchoolKB
 
-| Aspetto | Regola |
-|---|---|
-| Dipendenza SchoolKB | Nessuna in questo ciclo |
+| Aspetto             | Regola                            |
+| ------------------- | --------------------------------- |
+| Dipendenza SchoolKB | Nessuna in questo ciclo           |
 | Integrazione futura | Possibile dopo contratto separato |
-| Dati SchoolKB | Non mescolati con evidenze/UDA |
+| Dati SchoolKB       | Non mescolati con evidenze/UDA    |
 
 ---
 
@@ -286,37 +286,37 @@ proposta docente → validazione dipartimento → referente import/export → de
 
 ## 16. Decisioni
 
-| Decisione | Motivazione |
-|---|---|
-| A — Docs-only contract prima di runtime | Evita codice non allineato e rischi di linking senza schema |
-| Evidenze derivate da dati esistenti | 100% copertura già presente; nessun nuovo dato da inserire |
-| UDA come draft locale | Non persiste nel curricolo; rimane progettazione docente |
-| No schema `.cml` change | Separa chiaramente curricolo da didattica |
-| No SchoolKB dependency | Mantiene ciclo autonomo e semplice |
-| Privacy-first, local-first | Rispetta contesto scolastico, nessun dato sensibile |
-| CML-215 read-only prima | Riduce rischio; abilita marcature semplici senza scrittura curricolo |
-| CML-216 export markdown | Output neutro, non istituzionale, facilmente condivisibile |
+| Decisione                               | Motivazione                                                          |
+| --------------------------------------- | -------------------------------------------------------------------- |
+| A — Docs-only contract prima di runtime | Evita codice non allineato e rischi di linking senza schema          |
+| Evidenze derivate da dati esistenti     | 100% copertura già presente; nessun nuovo dato da inserire           |
+| UDA come draft locale                   | Non persiste nel curricolo; rimane progettazione docente             |
+| No schema `.cml` change                 | Separa chiaramente curricolo da didattica                            |
+| No SchoolKB dependency                  | Mantiene ciclo autonomo e semplice                                   |
+| Privacy-first, local-first              | Rispetta contesto scolastico, nessun dato sensibile                  |
+| CML-215 read-only prima                 | Riduce rischio; abilita marcature semplici senza scrittura curricolo |
+| CML-216 export markdown                 | Output neutro, non istituzionale, facilmente condivisibile           |
 
 ---
 
 ## 17. Alternative rigettate
 
-| Alternativa | Motivazione rigetto |
-|---|---|
-| B — Minimal data model senza contratto | Codice prima del contratto produce stash non allineato |
-| C — Panel-only per tutte le discipline senza linking | Falsa completezza: utente vede ma non può fare |
-| D — UDA export prototype prima del linking | Modelli scollegati dal curricolo |
-| E — Defer completo | Spreca opportunità; tassonomia già sufficiente |
+| Alternativa                                          | Motivazione rigetto                                    |
+| ---------------------------------------------------- | ------------------------------------------------------ |
+| B — Minimal data model senza contratto               | Codice prima del contratto produce stash non allineato |
+| C — Panel-only per tutte le discipline senza linking | Falsa completezza: utente vede ma non può fare         |
+| D — UDA export prototype prima del linking           | Modelli scollegati dal curricolo                       |
+| E — Defer completo                                   | Spreca opportunità; tassonomia già sufficiente         |
 
 ---
 
 ## 18. Prossime slice
 
-| Slice | Tipo | Oggetto |
-|---|---|---|
+| Slice       | Tipo    | Oggetto                                    |
+| ----------- | ------- | ------------------------------------------ |
 | **CML-215** | Runtime | Minimal evidence-linking runtime increment |
-| **CML-216** | Runtime | UDA draft/export prototype |
-| **CML-217** | Smoke | Workflow smoke and closure gate |
+| **CML-216** | Runtime | UDA draft/export prototype                 |
+| **CML-217** | Smoke   | Workflow smoke and closure gate            |
 
 ---
 

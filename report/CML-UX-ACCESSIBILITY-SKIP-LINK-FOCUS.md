@@ -13,16 +13,16 @@ Slice runtime mirata per migliorare accessibilita' tastiera e gestione focus di 
 
 ## Esiti
 
-| Area | Esito |
-|---|---|
-| Skip link | PASS |
-| Focus `setTab` | PASS |
-| Focus `selectDisc` | PASS |
-| Validatore curriculum | 14/14 PASS |
-| Shape test runtime | 14/14 PASS |
-| Smoke tastiera/focus | `SMOKE_PASS_WITH_NON_BLOCKING_RESOURCE_WARNINGS` |
-| Errori JavaScript reali | 0 |
-| Resource warning non bloccanti | 3 |
+| Area                           | Esito                                            |
+| ------------------------------ | ------------------------------------------------ |
+| Skip link                      | PASS                                             |
+| Focus `setTab`                 | PASS                                             |
+| Focus `selectDisc`             | PASS                                             |
+| Validatore curriculum          | 14/14 PASS                                       |
+| Shape test runtime             | 14/14 PASS                                       |
+| Smoke tastiera/focus           | `SMOKE_PASS_WITH_NON_BLOCKING_RESOURCE_WARNINGS` |
+| Errori JavaScript reali        | 0                                                |
+| Resource warning non bloccanti | 3                                                |
 
 ## Vincoli rispettati
 

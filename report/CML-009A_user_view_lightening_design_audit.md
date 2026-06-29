@@ -21,27 +21,27 @@ Nessuna gerarchia: spiegazioni, azioni, esportazione, salvataggio e stato sono t
 
 ## Blocchi individuati
 
-| Blocco | Tipo | Dimensione | Azione |
-|---|---|---|---|
-| orientation-card | Spiegazione metodologica | 10 righe | Mantenere come primo livello? Comprimere |
-| usage-notice | Istruzioni uso ibrido | 6 righe | Espandibile |
-| local-save-bar | Barra salvataggio + 5 pulsanti | 5 righe | Compattare in icona+stato |
-| install-hint | Suggerimento installazione PWA | 3 righe | Espandibile / rimuovere dopo install |
-| toolbar (6 filtri) | Filtri disciplina | 3 righe | Mantenere ma dopo il cruscotto |
-| toolbar (5 export) | Pulsanti export | 2 righe + nota | Raggruppare sotto scheda Export |
-| progress-bar | Avanzamento | 3 righe | Compattare |
-| Tecnologia export panel | Solo per Tecnologia | 8 righe | OK ma va nella scheda Export |
+| Blocco                  | Tipo                           | Dimensione     | Azione                                   |
+| ----------------------- | ------------------------------ | -------------- | ---------------------------------------- |
+| orientation-card        | Spiegazione metodologica       | 10 righe       | Mantenere come primo livello? Comprimere |
+| usage-notice            | Istruzioni uso ibrido          | 6 righe        | Espandibile                              |
+| local-save-bar          | Barra salvataggio + 5 pulsanti | 5 righe        | Compattare in icona+stato                |
+| install-hint            | Suggerimento installazione PWA | 3 righe        | Espandibile / rimuovere dopo install     |
+| toolbar (6 filtri)      | Filtri disciplina              | 3 righe        | Mantenere ma dopo il cruscotto           |
+| toolbar (5 export)      | Pulsanti export                | 2 righe + nota | Raggruppare sotto scheda Export          |
+| progress-bar            | Avanzamento                    | 3 righe        | Compattare                               |
+| Tecnologia export panel | Solo per Tecnologia            | 8 righe        | OK ma va nella scheda Export             |
 
 ## Azioni principali identificate
 
 Queste sono le uniche azioni che l'utente DEVE vedere subito:
 
-| Azione | Priorità | Note |
-|---|---|---|
-| Scegliere una disciplina | Alta | Già visibile nella sidebar |
-| Confrontare 2012 vs 2025 | Alta | Deve restare primo livello |
-| Valutare/decidere su ogni voce | Alta | Cuore del workflow |
-| Esportare bozza | Media | Solo dopo aver lavorato |
+| Azione                         | Priorità | Note                       |
+| ------------------------------ | -------- | -------------------------- |
+| Scegliere una disciplina       | Alta     | Già visibile nella sidebar |
+| Confrontare 2012 vs 2025       | Alta     | Deve restare primo livello |
+| Valutare/decidere su ogni voce | Alta     | Cuore del workflow         |
+| Esportare bozza                | Media    | Solo dopo aver lavorato    |
 
 Tutto il resto (salvataggio, installazione, note metodologiche, filtri avanzati) è supporto.
 
@@ -78,12 +78,12 @@ Sostituire l'area pre-cards con:
 
 Dopo il cruscotto, riga di schede sintetiche:
 
-| Scheda | Contenuto |
-|---|---|
-| Documento attuale | Cosa contiene, cosa è modificabile, cosa è consultabile |
-| Voci da validare | 12 totali: 8 Gap 2025, 4 mantenimenti |
-| Fonti e riferimenti | IN 2012, IN 2025, fonti interne, note metodologiche |
-| Esportazione | Markdown, PDF, documento di lavoro, stato revisione |
+| Scheda              | Contenuto                                               |
+| ------------------- | ------------------------------------------------------- |
+| Documento attuale   | Cosa contiene, cosa è modificabile, cosa è consultabile |
+| Voci da validare    | 12 totali: 8 Gap 2025, 4 mantenimenti                   |
+| Fonti e riferimenti | IN 2012, IN 2025, fonti interne, note metodologiche     |
+| Esportazione        | Markdown, PDF, documento di lavoro, stato revisione     |
 
 Ogni scheda mostra sintesi (3-4 righe max) e link "Mostra dettaglio".
 
@@ -122,6 +122,7 @@ Il primo intervento (CML-009B) deve agire solo sulla **parte alta della pagina**
 8. Progress-bar in piccolo in header
 
 Non toccare ancora:
+
 - tabs (riepilogo, normativa, generali)
 - sidebar discipline
 - cards-area

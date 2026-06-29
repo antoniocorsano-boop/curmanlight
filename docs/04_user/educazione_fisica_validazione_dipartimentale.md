@@ -28,12 +28,12 @@ Il curricolo di Educazione Fisica è attualmente composto da **4 nuclei** e **7 
 
 ## Opzioni
 
-| Codice | Descrizione | Modifiche al sistema |
-|---|---|---|
-| A | Mantenere 4 nuclei, nessuna modifica | Nessuna |
-| B | Passare a 5 nuclei (nuovo nucleo "Salute e benessere") | Sì |
-| C | Mantenere 4 nuclei, perfezionare progressione e linguaggio | Sì |
-| D | Rinviare ogni modifica al ciclo UDA/evidenze | Nessuna |
+| Codice | Descrizione                                                | Modifiche al sistema |
+| ------ | ---------------------------------------------------------- | -------------------- |
+| A      | Mantenere 4 nuclei, nessuna modifica                       | Nessuna              |
+| B      | Passare a 5 nuclei (nuovo nucleo "Salute e benessere")     | Sì                   |
+| C      | Mantenere 4 nuclei, perfezionare progressione e linguaggio | Sì                   |
+| D      | Rinviare ogni modifica al ciclo UDA/evidenze               | Nessuna              |
 
 ## Decisione
 
@@ -41,13 +41,11 @@ Il curricolo di Educazione Fisica è attualmente composto da **4 nuclei** e **7 
 
 **Motivazione:**
 
-
 **Condizioni:**
-
 
 **Autorizzata la prossima slice:** [ ] Nessuna [ ] CML-210A — perfezionamento JSON [ ] Altra: _______________
 
-**Data:** ____/____/________
+**Data:** ****/****/________
 
 **Firma referente:** ________________________
 

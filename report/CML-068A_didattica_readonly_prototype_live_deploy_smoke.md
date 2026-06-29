@@ -2,14 +2,14 @@
 
 ## Report
 
-| Field | Value |
-|-------|-------|
-| **CML** | CML-068A |
-| **Title** | Didattica Read-Only Prototype Live Deploy Smoke |
-| **Date** | 2026-06-23 |
-| **Type** | Deploy / Smoke / Documentazione |
-| **Runtime** | Nessuna modifica |
-| **URL** | https://antoniocorsano-boop.github.io/curmanlight/ |
+| Field       | Value                                              |
+| ----------- | -------------------------------------------------- |
+| **CML**     | CML-068A                                           |
+| **Title**   | Didattica Read-Only Prototype Live Deploy Smoke    |
+| **Date**    | 2026-06-23                                         |
+| **Type**    | Deploy / Smoke / Documentazione                    |
+| **Runtime** | Nessuna modifica                                   |
+| **URL**     | https://antoniocorsano-boop.github.io/curmanlight/ |
 
 ## Deploy
 
@@ -22,6 +22,7 @@
 **25/25 controlli PASS:**
 
 ### Didattica prototype (1–15)
+
 - ✅ Pagina caricata (200 OK, 309KB)
 - ✅ Home a due aree visibile
 - ✅ Card Didattica "Valuta evidenze" attivo
@@ -39,6 +40,7 @@
 - ✅ Nessun nuovo salvataggio locale (nessun `didatticaStorage`/`didatticaSave`)
 
 ### Curriculum invariato (16–21)
+
 - ✅ Curriculum raggiungibile (`tab-curricolo`)
 - ✅ Home Curriculum funzionante
 - ✅ Revisione Curriculum funzionante (`tab-lavoro`)
@@ -47,12 +49,14 @@
 - ✅ Export/import/report invariati
 
 ### Gating e regressioni (22–25)
+
 - ✅ Role-access gating invariato (`CML2025`, `Blocca di nuovo`)
 - ✅ Regressione `.cml` PASS (nessun nuovo campo codice/accesso/autenticazione)
 - ✅ Mobile bottom bar Home
 - ✅ Didattica raggiungibile da menu mobile
 
 ### Audit densità live
+
 - button tags: 100
 - export-btn: 27
 - onclick: 114
@@ -62,11 +66,11 @@
 
 ## File modificati
 
-| File | Modifica |
-|------|----------|
-| `docs/03_execution/CML-068A.md` | Creato |
-| `report/CML-068A_didattica_readonly_prototype_live_deploy_smoke.md` | Creato |
-| `docs/REPO-MOVELOG.md` | Aggiornato |
+| File                                                                | Modifica   |
+| ------------------------------------------------------------------- | ---------- |
+| `docs/03_execution/CML-068A.md`                                     | Creato     |
+| `report/CML-068A_didattica_readonly_prototype_live_deploy_smoke.md` | Creato     |
+| `docs/REPO-MOVELOG.md`                                              | Aggiornato |
 
 ## Verdetto
 
