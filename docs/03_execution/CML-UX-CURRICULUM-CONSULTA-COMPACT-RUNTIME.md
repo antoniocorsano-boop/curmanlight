@@ -37,7 +37,7 @@ Solo la funzione `renderCurricoloIstituto()` è stata modificata (+8/-95 righe).
 
 | Blocco rimosso/compattato | Azione |
 |---|---|
-| **Process path** (`curricolo-path`, 13 righe) | Sostituito con header compatto 1-riga con link a Generali, Revisione, Esportazioni |
+| **Process path** (`curricolo-path`, 13 righe) | Sostituito con header descrittivo 1-riga (nessuna azione cliccabile in Consulta) |
 | **State message** (`curricolo-state`) | Compattato da 2 righe a etichetta singola |
 | **Completeness block** (`curricolo-completeness`, 14 righe di card + 14 righe di legenda) | Rimosso dal rendering. Sostituito con CTA: "Validazione dipartimentale e stato di completezza disponibili in Revisione" |
 | **Readiness block** (`curricolo-readiness`, 14 righe di card + 14 righe di legenda) | Rimosso dal rendering |
