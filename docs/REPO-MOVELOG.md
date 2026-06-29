@@ -1,5 +1,12 @@
 # Repo Movelog
 
+## 2026-06-29 — CML_UX_REVISIONE_COMPACT_RUNTIME
+
+- Vista Revisione compattata: export confronto rimosso, notice compattata, export disciplina richiamabile da toggle, strumenti processo in tab separato
+- **Commit runtime**: `da3d197` (-65/+54 in index.html)
+- **Commit sw**: `074ef64` (CACHE_NAME bump)
+- **Verdetto**: `CML_UX_REVISIONE_COMPACT_RUNTIME_READY`
+
 ## 2026-06-29 — CML_UX_REVISIONE_SEPARATION_PLAN
 
 - Definita architettura target per vista Revisione: decide (primario) / esporta disciplina (richiamabile) / strumenti processo (tab separato) / esportazioni confronto (delegate a export center)
