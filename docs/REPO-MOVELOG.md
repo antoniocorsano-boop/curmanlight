@@ -1,5 +1,10 @@
 # Repo Movelog
 
+## 2026-06-29 — CML-UX-ERGONOMICS-AUDIT — Markdown normalization
+
+- Normalizzati i Markdown dell’audit UX ergonomics senza modifiche runtime o variazioni sostanziali di contenuto
+- **Verdetto**: `CML_UX_ERGONOMICS_AUDIT_MARKDOWN_NORMALIZATION_READY`
+
 ## 2026-06-29 — CML-UX-ERGONOMICS-AUDIT — Audit ergonomia UX
 
 - **Commit base**: `c908afd`

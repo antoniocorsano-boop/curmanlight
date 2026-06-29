@@ -1,101 +1,196 @@
-# CML-UX-ERGONOMICS-AUDIT — Audit ergonomia UX
+# CML UX Ergonomics Audit
 
-Data: 2026-06-29
+## Stato della slice
 
-## Contesto
+- **Tipo**: audit-only / docs-only / UX strategy
+- **Scope**: ergonomia, chiarezza, scroll, densità informativa, navigazione
+- **Runtime analizzato**: `_published_snapshot/netlify-current/index.html`
+- **Commit di partenza**: `c908afd`
+- **Verdetto**: `CML_UX_ERGONOMICS_AUDIT_READY`
 
-- Branch: `main`
-- Commit di partenza: `c908afd`
-- Working tree: pulito
-- Runtime analizzato: `_published_snapshot/netlify-current/index.html`
-- Tipo slice: audit-only / docs-only / UX strategy
+## Obiettivo
+
+Auditare l'esperienza utente dello strumento pubblicato, con attenzione a ergonomia, chiarezza, scroll, densità informativa, navigazione e semplicità d'uso per utenti scolastici non tecnici (docenti, dipartimenti, referenti, dirigente/staff).
+
+## Vincoli rispettati
+
 - Nessuna modifica runtime applicata
+- Branch: `main`
+- Working tree: pulito
 
-## Oggetto
+## Metodo di audit
 
-Auditare l’esperienza utente dello strumento pubblicato, con attenzione a ergonomia, chiarezza, scroll, densità informativa, navigazione e semplicità d’uso per utenti scolastici non tecnici.
+Analisi per vista delle 9 schermate principali dello strumento, con misurazione di:
 
-## Riepilogo
+- Azione primaria e azioni secondarie
+- Blocchi informativi visibili
+- Profondità scroll stimata
+- Ambiguïtà e coerenza titolo/menu/stato/contenuto
+- Rischio sovraccarico cognitivo
 
-- Vista peggiore: **Revisione** e **Competenze e progettazione — Evidenze**
-- Problema dominante: **scroll prolungati + azioni duplicate**
-- Azione prioritaria: **centralizzare export, comprimere viste lunghe, separare Evidenze/UDA**
+## Viste analizzate
 
-## 1. Mappa viste e misurazioni
+### Home
 
-| Vista | Azione primaria | Azioni secondarie | Blocchi informativi | Scroll stimato | Problema dominante |
-|---|---|---|---|---|---|
-| Home | Entra in Curriculum/Didattica | Impostazioni, PDF, Motto, Guida | Header, stats, 2 card, footer, microguida | 1–2 schermate | Basso |
-| Curriculum / Consulta | Seleziona disciplina | Versione, filtri ordine, toggle dettagli | Header, versione-tabs, sidebar, indice, contenuti, badge, note | 3–5 schermate | Medio–alto |
-| Curriculum / Revisione | Controlla voci / Approva o Modifica | Filtri, export multipli, import .cml, sidebar | Cruscotto, toolbar, sidebar, cards, export panel, import panel, progress, quick-actions | 4–6 schermate | Alto |
-| Curriculum / Definitivo | Esporta Word definitivo | Copia Markdown, PDF, .cml, Drive, backup | Sum-box, export-group, stats, note | 2–3 schermate | Medio |
-| Curriculum / Fonti | Leggi/naviga fonti | Scarica PDF, apri link | Lista fonti, note, link | 1–2 schermate | Basso |
-| Competenze e progettazione — Evidenze | Adotta / Adatta / Escludi | Filtri ordine, reset marcature, consulta curricolo | Header, notice, stats, filtri, lista evidenze, badge, azioni | 3–6 schermate | Medio–alto |
-| Competenze e progettazione — UDA modello | Genera bozza UDA | Copia Markdown, Scarica Markdown | Selector, azioni, preview, notice | 2–3 schermate | Medio |
-| Esportazioni | Scegli formato e genera | Copia, download, Drive, backup | Gruppi export (istituzionale, dipartimento, disciplina) | 3–5 schermate | Alto |
-| Guida | Leggi/naviga guide | — | Card, link | 2–3 schermate | Basso |
+- **Azione primaria**: Entrare nell'area operativa (Curriculum o Competenze)
+- **Azioni secondarie**: Impostazioni, Corso PDF, Motto, Guida
+- **Blocchi informativi**: Header, stats, 2 home card, footer, microguida
+- **Scroll stimato**: 1–2 schermate
+- **Problema**: Stats tecniche premature per utente al primo accesso
+- **Rischio**: Basso
+- **Coerenza**: Alta
 
-## 2. Metriche UX applicate
+### Curriculum / Consulta
 
-- Una schermata = una decisione principale: NO in Revisione, Esportazioni, Didattica.
-- Azione primaria visibile senza scroll: SOLO parzialmente in Home/Definitivo.
-- Massimo 2 livelli di navigazione simultanei: OK (tabbar + subnav).
-- Massimo 1 pulsante primario per area decisionale: NO spesso violato.
-- Clic per consultare disciplina: spesso 3.
-- Clic per prima azione revisione: spesso 2 da Home, ma non da versione/tab ospite.
-- Vista oltre 3 schermate verticali: SI in Consulta, Revisione, Didattica, Esportazioni.
-- Badge/stati/avvisi nella prima schermata: NO (molti visibili in load).
-- Menu, hash, titolo e contenuto coerenti: PARZIALMENTE.
-- Linguaggio comprensibile a docente non tecnico: SI, con eccezioni.
+- **Azione primaria**: Selezionare una disciplina
+- **Azioni secondarie**: Cambiare versione (2012/2025), filtri ordine, toggle dettagli
+- **Blocchi informativi**: Header disciplina, versione-tabs, sidebar, indice, contenuti, badge, fonti, note
+- **Scroll stimato**: 3–5 schermate
+- **Problema**: Sidebar e azioni editoriali visibili in modalità consultativa
+- **Rischio**: Medio–alto
 
-## 3. Problemi classificati
+### Curriculum / Revisione
 
-### P0
+- **Azione primaria**: Controlla voci / Approva o Modifica
+- **Azioni secondarie**: Filtri, export multipli, import `.cml`, sidebar, reset
+- **Blocchi informativi**: Cruscotto, toolbar, sidebar, cards confronto, export panel, import panel, progress bar, quick-actions
+- **Scroll stimato**: 4–6 schermate
+- **Problema**: Azioni di esportazione duplicate rispetto a scheda Esportazioni
+- **Rischio**: Alto
 
-- Navigazione ibrida hash + subnav non sincronizzata.
-- Sidebar visibile dove non serve (Fonti e viste readonly).
+### Curriculum / Definitivo
 
-### P1
+- **Azione primaria**: Esporta Word definitivo
+- **Azioni secondarie**: Copia Markdown, PDF, `.cml`, Drive, backup
+- **Blocchi informativi**: Sum-box, export-group, stats, note
+- **Scroll stimato**: 2–3 schermate
+- **Problema**: Export ridondanti duplicati rispetto a tab Esportazioni
+- **Rischio**: Medio
 
-- Scroll prolungati in Consulta, Revisione, Didattica, Esportazioni.
-- Export duplicati in 3 punti.
-- Azioni multiple competitive in stessa vista decisionale.
+### Curriculum / Fonti
 
-### P2
+- **Azione primaria**: Leggere/navigare fonti
+- **Azioni secondarie**: Scarica PDF, apri link
+- **Blocchi informativi**: Lista fonti, note, link
+- **Scroll stimato**: 1–2 schermate
+- **Problema**: Sidebar visibile (non necessaria)
+- **Rischio**: Basso
+- **Coerenza**: Alta
 
-- Assenza breadcrumb coerente.
-- Disclaimer verbosi e warning fatigue.
-- Design system non formalizzato.
+### Competenze e progettazione — Evidenze
 
-### P3
+- **Azione primaria**: Adotta / Adatta / Escludi
+- **Azioni secondarie**: Filtri ordine, reset marcature, consulta curricolo
+- **Blocchi informativi**: Header, notice, stats, filtri, lista evidenze, badge, azioni
+- **Scroll stimato**: 3–6 schermate
+- **Problema**: Disclaimer tecnici miscelati con contenuto operativo
+- **Rischio**: Medio–alto
 
-- Microcopy lunga, incoerenze stilistiche minori, touch target marginali.
+### Competenze e progettazione — UDA modello
 
-## 4. Proposta architettura UX
+- **Azione primaria**: Genera bozza UDA
+- **Azioni secondarie**: Copia Markdown, Scarica Markdown
+- **Blocchi informativi**: Selector disciplina/unità, azioni, preview textarea, notice
+- **Scroll stimato**: 2–3 schermate
+- **Problema**: Mappa disciplinare apribile nella stessa vista
+- **Rischio**: Medio
 
-- Consulta: solo lettura, nessuna sidebar/azioni editoriali visibili; indice accordion per ordine.
-- Revisione: cards confronto + sidebar; export in pannello unico separato; riepilogo iniziale.
-- Esportazioni: unico pannello contestuale; rimuovere duplicati da Revisione/Definitivo.
-- Fonti: lista + filtro tipologia; sidebar rimossa.
-- Competenze e progettazione: due sottoview chiare; mappa come vista/dettaglio separato.
+### Esportazioni
 
-## 5. Scorecard
+- **Azione primaria**: Scegliere formato e generare
+- **Azioni secondarie**: Copia, download, Drive, backup, resoconti
+- **Blocchi informativi**: Gruppi export (istituzionale, dipartimento, disciplina)
+- **Scroll stimato**: 3–5 schermate
+- **Problema**: Azioni duplicate rispetto a Revisione/Definitivo
+- **Rischio**: Alto
 
-| Dimensione | Punteggio 0–3 |
-|---|---|
-| Orientamento | 1 |
-| Chiarezza del compito | 1 |
-| Densita visiva | 0 |
-| profondita scroll | 0 |
-| Coerenza navigazione | 1 |
-| Leggibilita | 2 |
-| Accessibilita base | 2 |
-| Controllo utente | 2 |
-| Separazione consultazione/revisione/export | 1 |
-| prontezza uso scolastico reale | 1 |
+### Guida
 
-Punteggio stimato: 11/30
+- **Azione primaria**: Leggere/navigare guide
+- **Azioni secondarie**: Nessuna
+- **Blocchi informativi**: Card documentative, link
+- **Scroll stimato**: 2–3 schermate
+- **Rischio**: Basso
+- **Coerenza**: Alta
 
-## Verdetto
+## Metriche applicate
+
+| Metrica | Soglia / criterio | Esito sintetico |
+|---|---|---|
+| Una schermata = una decisione principale | Revisione, Esportazioni, Didattica violano | NO |
+| Azione primaria visibile senza scroll | Solo Home/Definitivo parzialmente | PARZIALE |
+| Max 2 livelli navigazione simultanei | tabbar + subnav | OK |
+| Max 1 pulsante primario per area decisionale | Spesso violato | NO |
+| Clic per consultare disciplina | Spesso 3 | ALTO |
+| Clic per prima azione revisione | Spesso 2 da Home | MEDIO |
+| Vista oltre 3 schermate verticali | Consulta, Revisione, Didattica, Esportazioni | SI |
+| Badge/stati/avvisi nella prima schermata | Molti visibili in load | NO |
+| Menu, hash, titolo e contenuto coerenti | Non sempre | PARZIALE |
+| Linguaggio comprensibile a docente non tecnico | Con eccezioni | SI |
+
+## Problemi classificati
+
+### P0 — Disorientamento o blocco
+
+- **Navigazione ibrida hash + subnav non sincronizzata**: l'hash `#cur-{disciplina}` governa Curriculum ma non sincronizza Revisione/Didattica/Esportazioni
+- **Sidebar contestuale errata**: sidebar discipline visibile anche in Fonti
+- **Discoverability UDA**: voce "Competenze e progettazione" porta a Evidenze prima di UDA senza heading di secondo livello
+
+### P1 — Fatica elevata o rischio errore
+
+- **Scroll prolungati**: 4–6 schermate in Revisione e Competenze; 3–5 in Consulta/Esportazioni
+- **Export duplicati in 3 punti**: Revisione toolbar, Definitivo export-group, Esportazioni gruppo
+- **Azione multipla concorrente**: 5+ azioni visibili contemporaneamente in stessa vista
+- **Tabbar 5 viste + subnav 4 voci**: soglia cognitiva vicina al limite
+
+### P2 — Miglioria importante
+
+- **Assenza breadcrumb**: percorso corrente non chiarificato
+- **Disclaimer verbosi**: notice box 4–7 righe, warning fatigue
+- **Design system non formalizzato**: mix stili tra tab, badge, toggle, bottoni
+- **Stat counters in Home**: info tecniche premature per primo accesso
+
+### P3 — Rifinitura
+
+- **Microcopy lunga** in footer e note
+- **Incoerenze stilistiche minori**: badge con/senza bordo, ombre differenziate
+- **Abbreviazioni mobile**: "Rev." / "Def." poco auto-esplicative
+- **Touch target marginali** in toolbar a viewport ridotta
+
+## Proposta di architettura UX
+
+### Consulta
+
+Solo lettura, nessuna sidebar/azioni editoriali visibili. Indice accordion per ordine scuola.
+
+### Revisione
+
+Cards confronto + sidebar disciplina. Export in pannello unico richiamabile da toggle. Import/validazione separato. Riepilogo iniziale (conteggio voci).
+
+### Esportazioni
+
+Unico pannello contestuale per ruolo/tab. Eliminare export-replica da Revisione e Definitivo. Raggruppamento per destinazione.
+
+### Fonti
+
+Lista fonti + filtro per tipologia. Sidebar rimossa.
+
+### Competenze e progettazione
+
+Due sottoview chiare: Evidenze e UDA modello. Mappa disciplinare in vista dedicata o accordion compresso.
+
+### Guida
+
+Invariata. Mantenere struttura attuale.
+
+## Gate di accettazione per le prossime slice
+
+- Vista Revisione sotto 3 schermate
+- Export centralizzato in Esportazioni
+- Sidebar assente in Fonti e viste readonly
+- Breadcrumb presente in tutte le viste
+- Una sola azione primaria per area decisionale
+
+## Verdict finale
 
 `CML_UX_ERGONOMICS_AUDIT_READY`
