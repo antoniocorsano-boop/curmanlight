@@ -12,9 +12,21 @@
 - **CSS aggiunte**: `.aside-hidden`, `.didattica-evidence-ord-group`, `.didattica-evidence-ord-hd`, `.didattica-evidence-ord-body`
 - **Validatore**: 14/14 PASS
 - **Shape test**: 14/14 PASS
-- **Push**: non eseguito
+- **Push**: eseguito su origin/main
 - **Artefatti**: `docs/03_execution/CML-UX-NAVIGATION-AND-ORIENTATION.md`, `report/CML-UX-NAVIGATION-AND-ORIENTATION.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_UX_NAVIGATION_AND_ORIENTATION_READY`
+
+## 2026-06-29 — CML-UX-NAVIGATION-AND-ORIENTATION-LIVE-SMOKE — Post-push live smoke
+
+- **Commit**: `f372ceb` (stesso HEAD)
+- **Tipo slice**: docs-only / smoke verification
+- **Oggetto**: verifica GitHub Pages dopo push CML-UX-NAVIGATION-AND-ORIENTATION
+- **Pre-push**: git status clean, validatore 14/14 PASS, shape 14/14 PASS, diff-check clean, secret scan clean
+- **Push**: `git push origin main` completato
+- **GitHub Pages**: HTTP 200, propagato a `f372ceb`
+- **Live smoke 9 aree**: caricamento PASS, breadcrumb PASS, sidebar Fonti nascosta PASS, Evidenze ordine PASS, curriculum dati PASS, esportazioni PASS, mobile bar PASS, sidebar Fonti tab PASS, console shadow PASS
+- **Artefatti**: `docs/03_execution/CML-UX-NAVIGATION-AND-ORIENTATION-LIVE-SMOKE.md`, `report/CML-UX-NAVIGATION-AND-ORIENTATION-LIVE-SMOKE.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_UX_NAVIGATION_AND_ORIENTATION_LIVE_SMOKE_PASS`
 
 ## 2026-06-29 — CML_UX_ERGONOMICS_RE_AUDIT
 
