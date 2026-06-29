@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## 2026-06-29 — CML-UX-ACCESSIBILITY-BASELINE-AUDIT — Accessibility baseline audit
+
+- **Commit verificato**: `dab7748` (HEAD == origin/main, hash navigation syncing pushed)
+- **Tipo slice**: docs-only / audit
+- **Oggetto**: audit accessibilità di base di CurManLight con griglia 10 aree, punteggio, criticità P0-P3, roadmap runtime
+- **Punteggio accessibilità**: 48/100
+- **Punteggio ergonomico collegato**: ~78/100 (accessibilità 10%, contributo +4.8)
+- **P0**: 0 | **P1**: 4 | **P2**: 6 | **P3**: 4
+- **Top 3 criticità P1**: skip link assente, accordion Evidenze senza ARIA, emoji decorative senza aria-hidden
+- **Intervento più impattante**: skip link (HTML+CSS, 10 righe, +5 punti accessibilità)
+- **Prossima slice consigliata**: CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS
+- **Target realistico accessibilità**: 76/100 dopo 5 slice minime
+- **Runtime modificato**: no
+- **Push**: non eseguito
+- **File creati**: `docs/03_execution/CML-UX-ACCESSIBILITY-BASELINE-AUDIT.md`, `report/CML-UX-ACCESSIBILITY-BASELINE-AUDIT.md`
+- **File modificati**: `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_UX_ACCESSIBILITY_BASELINE_AUDIT_READY`
+
 ## 2026-06-29 — CML-UX-NAVIGATION-AND-ORIENTATION — Navigation and orientation
 
 - **Commit base**: `0f735cc` (CML_UX_ERGONOMICS_RE_AUDIT, aligned)
