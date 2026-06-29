@@ -1,5 +1,15 @@
 # Repo Movelog
 
+## 2026-06-29 — CML-UX-ERGONOMICS-AUDIT — Audit ergonomia UX
+
+- **Commit base**: `c908afd`
+- **Tipo slice**: audit-only / UX strategy
+- **Oggetto**: audit ergonomia, chiarezza viste, densità informativa, navigazione e semplicità d’uso per utenti scolastici non tecnici
+- **Artefatti creati**: `docs/03_execution/CML-UX-ERGONOMICS-AUDIT.md`, `report/CML-UX-ERGONOMICS-AUDIT.md`
+- **Runtime**: nessuna modifica applicata
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ERGONOMICS_AUDIT_READY`
+
 ## 2026-06-29 - CLEANUP - REMOVE VIDEO AUTOMATION TOOLING
 
 - **Commit base**: `3f093b2` (main aligned with origin/main)
