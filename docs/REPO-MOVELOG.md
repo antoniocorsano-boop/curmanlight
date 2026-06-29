@@ -1,5 +1,28 @@
 # Repo Movelog
 
+## 2026-06-29 - CML-UX-MOBILE-PROGETTAZIONE-HOTFIX - Mobile and progettazione discipline flow
+
+- **Nome slice**: `CML-UX-MOBILE-PROGETTAZIONE-HOTFIX`
+- **Data**: 2026-06-29
+- **Commit iniziale**: `3c8b54d` (docs-only score refresh locale, non pushato)
+- **Commit remoto di riferimento**: `0c9371c`
+- **Tipo slice**: runtime hotfix mirata + documentazione
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-MOBILE-PROGETTAZIONE-HOTFIX.md`, `report/CML-UX-MOBILE-PROGETTAZIONE-HOTFIX.md`, `docs/REPO-MOVELOG.md`
+- **Runtime modificato**: si
+- **JSON disciplinari modificati**: no
+- **Schema `.cml` modificato**: no
+- **Problema mobile**: P0 non riprodotto; bottom bar e menu mobile funzionano su 390x844, 430x932, 360x740
+- **Problema progettazione**: P1 riprodotto; Competenze/Evidenze poteva restare agganciata a `mappaDisciplinaCorrente=tecnologia` anche con `selDisc` diverso
+- **Fix applicato**: Evidenze da `selDisc`, sincronizzazione mappa su ingresso in Competenze/UDA, select UDA draft riallineata a `selDisc`, card UDA statiche filtrate per disciplina
+- **Discipline testate**: Tecnologia, Italiano, Matematica, Storia, Inglese
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Smoke mobile CDP HTTP**: PASS
+- **Errori JavaScript reali**: 0
+- **Warning/404 non bloccanti**: favicon/risorsa statica locale
+- **Untracked esclusi**: `.env`, `antigravity.config.json`, `.tmp/`, `test-results/`, `tools/smoke-hash-nav.mjs`, `tmp-cml-mobile-progettazione.spec.mjs`
+- **Push**: no
+- **Verdetto**: `CML_UX_MOBILE_PROGETTAZIONE_HOTFIX_READY`
 ## 2026-06-29 - CML-UX-ACCESSIBILITY-SCORE-REFRESH - Accessibility score refresh
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH`

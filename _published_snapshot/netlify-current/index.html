@@ -2527,7 +2527,7 @@ function resetEvidenceStates() {
 }
 
 function getDisciplineEvidenceData() {
-  var discKey = mappaDisciplinaCorrente;
+  var discKey = discKeyFromName(selDisc) || mappaDisciplinaCorrente;
   if (discKey === 'tecnologia' && typeof TECNOLOGIA_NORM_DATA !== 'undefined') {
     return TECNOLOGIA_NORM_DATA.unitaApprendimento || [];
   }
@@ -2668,7 +2668,11 @@ function renderUdaModello(){
   var container=document.getElementById("didattica-uda-list");
   if(!container)return;
   var html="";
+  var selectedDisc = selDisc || "Tecnologia";
+  var modelCount = 0;
   UDA_MODELI.forEach(function(u){
+    if(u.disciplina !== selectedDisc) return;
+    modelCount++;
     html+='<div class="didattica-uda-card">\
       <div class="didattica-uda-card-hd" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'open\')">\
         <div class="didattica-uda-card-left">\
@@ -2695,6 +2699,9 @@ function renderUdaModello(){
       </div>\
     </div>';
   });
+  if(!modelCount){
+    html='<p style="font-size:12px;color:#78909c;line-height:1.5;padding:10px 0">Nessun modello statico disponibile per '+escapeHtml(selectedDisc)+'. Usa il generatore bozza UDA qui sopra: le unita della disciplina selezionata sono caricate dal curricolo strutturato.</p>';
+  }
   container.innerHTML=html||'<p style="font-size:12px;color:#78909c">Nessun UDA modello disponibile.</p>';
 }
 
@@ -2745,7 +2752,7 @@ function getStateLabel(state) {
 function renderUdaDraftPanel() {
   var discSelect = document.getElementById('uda-draft-disc');
   if (!discSelect) return;
-  var current = discSelect.value;
+  var current = selDisc || discSelect.value;
   discSelect.innerHTML = '';
   DISCIPLINE.forEach(function(d) {
     var opt = document.createElement('option');
@@ -3618,7 +3625,11 @@ function setTab(t,opts){
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
   var te=document.getElementById("tab-esportazioni");if(te)te.style.display=t==="esportazioni"?"block":"none";
   var tg=document.getElementById("tab-guida");if(tg)tg.style.display=t==="guida"?"block":"none";
-   if(t==="didattica"||t==="didattica_uda"){renderDidattica();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();}
+   if(t==="didattica"||t==="didattica_uda"){
+     var selectedKey=discKeyFromName(selDisc);
+     if(selectedKey) mappaDisciplinaCorrente=selectedKey;
+     renderDidattica();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();
+   }
    var sm=document.getElementById("didattica-mappa");if(sm)sm.style.display=t==="didattica"?"block":"none";
   var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
   var sd=document.getElementById("subnav-didattica");if(sd)sd.style.display=p==="didattica"?"flex":"none";
