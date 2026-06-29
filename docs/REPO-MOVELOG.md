@@ -1,5 +1,12 @@
 # Repo Movelog
 
+## 2026-06-29 — CML-UX-CURRICULUM-CONSULTA-COMPACT-RUNTIME
+
+- Compattata vista Consulta: rimossi blocchi completezza/readiness/validazione dipartimentale, contenuti in accordion nativo `<details>`, path compatto
+- **Commit runtime**: `abac327` (+8/-95 in index.html)
+- **Commit sw**: `9f81b9c` (CACHE_NAME bump)
+- **Verdetto**: `CML_UX_CURRICULUM_CONSULTA_COMPACT_RUNTIME_READY`
+
 ## 2026-06-29 — CML_UX_DECLUTTER_AND_ERGONOMICS_IMPLEMENTATION_PLAN
 
 - Piano operativo UX per riduzione caos visivo, scroll e sovrapposizione consultazione/revisione/export; nessuna modifica runtime
