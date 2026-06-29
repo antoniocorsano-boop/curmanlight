@@ -268,6 +268,7 @@ footer{background:#37474f;color:#b0bec5;padding:7px 20px;font-size:10px;text-ali
 /* SIDEBAR — less dominant on desktop */
 .aside-box{box-shadow:0 0 0 1px #eceff1}
 .aside-title{background:#78909c;padding:6px 11px}
+aside.aside-hidden{display:none!important}
 /* TOOLBAR — compact */
 .toolbar{box-shadow:none;border:1px solid #eceff1;padding:7px 11px}
 .filter-btn{font-size:10px;padding:3px 9px}
@@ -768,6 +769,13 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .didattica-evidence-unit-hd.open .didattica-evidence-unit-arrow{transform:rotate(180deg)}
 .didattica-evidence-unit-body{display:none;padding:10px 14px;background:#fff}
 .didattica-evidence-unit-body.open{display:block}
+.didattica-evidence-ord-group{margin-bottom:8px}
+.didattica-evidence-ord-hd{background:#e8eaf6;border:1px solid #c5cae9;border-radius:9px;padding:8px 12px;cursor:pointer;font-size:12px;font-weight:700;color:#1a237e;display:flex;justify-content:space-between;align-items:center;transition:.12s}
+.didattica-evidence-ord-hd:hover{background:#dde0f5}
+.didattica-evidence-ord-hd .arrow{font-size:10px;transition:transform .15s}
+.didattica-evidence-ord-hd.open .arrow{transform:rotate(180deg)}
+.didattica-evidence-ord-body{display:none;padding-top:8px}
+.didattica-evidence-ord-body.open{display:block}
 .didattica-evidence-section{margin-bottom:10px}
 .didattica-evidence-section:last-child{margin-bottom:0}
 .didattica-evidence-section-title{font-size:11px;font-weight:800;color:#00695c;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
@@ -2536,44 +2544,62 @@ function renderDidattica(){
   var sec=units.filter(function(u){return u.ordine==="Secondaria"}).length;
   statsEl.innerHTML='<div class="didattica-evidence-stat"><strong>'+total+'</strong>Unit\u00e0 totali</div><div class="didattica-evidence-stat"><strong>'+inf+'</strong>Infanzia</div><div class="didattica-evidence-stat"><strong>'+pri+'</strong>Primaria</div><div class="didattica-evidence-stat"><strong>'+sec+'</strong>Secondaria</div><div class="didattica-evidence-stat">\ud83d\udccb Evidenze e criteri</div>';
   var filtered=didatticaFilter==="all"?units:units.filter(function(u){return u.ordine===didatticaFilter});
+  var ordGroups=["Infanzia","Primaria","Secondaria"];
+  var ordIcons={"Infanzia":"\ud83e\uddf8","Primaria":"\ud83d\udcd8","Secondaria":"\ud83c\udf93"};
+  var groups={};
+  for(var gi=0;gi<filtered.length;gi++){
+    var go=filtered[gi].ordine;
+    if(!groups[go]) groups[go]=[];
+    groups[go].push(filtered[gi]);
+  }
   var html="";
-  for(var i=0;i<filtered.length;i++){
-    var u=filtered[i];
-    var ordLabel=u.ordine==="Infanzia"?"\ud83e\uddf8":u.ordine==="Primaria"?"\ud83d\udcd8":"\ud83c\udf93";
-    var classeLabel=u.fascia?"Fascia "+u.fascia:"Classe "+u.classe;
-    html+='<div class="didattica-evidence-unit"><div class="didattica-evidence-unit-hd" onclick="this.classList.toggle(\'open\');var b=this.nextElementSibling;b.classList.toggle(\'open\')"><div class="didattica-evidence-unit-left"><span class="didattica-evidence-tag">'+ordLabel+' '+u.ordine+'</span><div><div class="didattica-evidence-unit-ambito">'+escapeHtml(u.ambito)+'</div><div class="didattica-evidence-unit-sub">'+escapeHtml(classeLabel)+' \u00b7 '+escapeHtml(u.competenza)+'</div></div></div><span class="didattica-evidence-unit-arrow">\u25bc</span></div><div class="didattica-evidence-unit-body"><div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Traguardo</div><p style="font-size:12px;line-height:1.5;margin:0 0 6px">'+escapeHtml(u.traguardo)+'</p></div>';
-    if(u.obiettivi&&u.obiettivi.length){
-      html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Obiettivi</div><ul>';
-      for(var j=0;j<u.obiettivi.length;j++) html+='<li>'+escapeHtml(u.obiettivi[j])+'</li>';
+  var firstOrd=true;
+  for(var oi=0;oi<ordGroups.length;oi++){
+    var ord=ordGroups[oi];
+    var grp=groups[ord];
+    if(!grp||!grp.length) continue;
+    var ordIcon=ordIcons[ord]||"";
+    var openCls=firstOrd?" open":"";
+    html+='<div class="didattica-evidence-ord-group"><div class="didattica-evidence-ord-hd'+openCls+'" onclick="this.classList.toggle(\'open\');var b=this.nextElementSibling;b.classList.toggle(\'open\')"><span>'+ordIcon+' '+ord+' ('+grp.length+' unit\u00e0)</span><span class="arrow">\u25bc</span></div><div class="didattica-evidence-ord-body'+openCls+'">';
+    for(var ui=0;ui<grp.length;ui++){
+      var u=grp[ui];
+      var classeLabel=u.fascia?"Fascia "+u.fascia:"Classe "+u.classe;
+      html+='<div class="didattica-evidence-unit"><div class="didattica-evidence-unit-hd" onclick="this.classList.toggle(\'open\');var b=this.nextElementSibling;b.classList.toggle(\'open\')"><div class="didattica-evidence-unit-left"><span class="didattica-evidence-tag">'+ordIcon+' '+ord+'</span><div><div class="didattica-evidence-unit-ambito">'+escapeHtml(u.ambito)+'</div><div class="didattica-evidence-unit-sub">'+escapeHtml(classeLabel)+' \u00b7 '+escapeHtml(u.competenza)+'</div></div></div><span class="didattica-evidence-unit-arrow">\u25bc</span></div><div class="didattica-evidence-unit-body"><div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Traguardo</div><p style="font-size:12px;line-height:1.5;margin:0 0 6px">'+escapeHtml(u.traguardo)+'</p></div>';
+      if(u.obiettivi&&u.obiettivi.length){
+        html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Obiettivi</div><ul>';
+        for(var j=0;j<u.obiettivi.length;j++) html+='<li>'+escapeHtml(u.obiettivi[j])+'</li>';
+        html+='</ul></div>';
+      }
+      if(u.conoscenze&&u.conoscenze.length){
+        html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Conoscenze</div><ul>';
+        for(var j=0;j<u.conoscenze.length;j++) html+='<li>'+escapeHtml(u.conoscenze[j])+'</li>';
+        html+='</ul></div>';
+      }
+      if(u.abilita&&u.abilita.length){
+        html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Abilit\u00e0</div><ul>';
+        for(var j=0;j<u.abilita.length;j++) html+='<li>'+escapeHtml(u.abilita[j])+'</li>';
+        html+='</ul></div>';
+      }
+      html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u2705 Evidenze osservabili</div><ul>';
+      for(var j=0;j<u.evidenze.length;j++) {
+        var evId=u.id+'_ev_'+j;
+        var evState=getEvidenceState(evId);
+        var stateBadge='';
+        if(evState==='adottata') stateBadge='<span class="evidence-badge evidence-badge--adopted">✅ Adottata</span>';
+        else if(evState==='adattata') stateBadge='<span class="evidence-badge evidence-badge--adapted">✏ Adattata</span>';
+        else if(evState==='non_applicabile') stateBadge='<span class="evidence-badge evidence-badge--excluded">❌ Non applicabile</span>';
+        html+='<li>'+escapeHtml(u.evidenze[j])+'<div class="evidence-actions">'+stateBadge+'<button class="evidence-btn evidence-btn--adopt" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'adottata\')">Adotta</button><button class="evidence-btn evidence-btn--adapt" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'adattata\')">Adatta</button><button class="evidence-btn evidence-btn--exclude" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'non_applicabile\')">Escludi</button></div></li>';
+      }
       html+='</ul></div>';
-    }
-    if(u.conoscenze&&u.conoscenze.length){
-      html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Conoscenze</div><ul>';
-      for(var j=0;j<u.conoscenze.length;j++) html+='<li>'+escapeHtml(u.conoscenze[j])+'</li>';
+      html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\ud83d\udccb Criteri di valutazione</div><ul>';
+      for(var j=0;j<u.criteriValutazione.length;j++) html+='<li>'+escapeHtml(u.criteriValutazione[j])+'</li>';
       html+='</ul></div>';
+      html+='<div class="didattica-evidence-note">\ud83d\udca1 Da adattare alla classe. Le evidenze e i criteri sono indicativi e richiedono validazione professionale del docente.</div>';
+      html+='<div class="didattica-evidence-note" style="margin-top:2px">\ud83d\udcc4 Fonte: '+escapeHtml(u.fonte)+'</div>';
+      html+='</div></div>';
     }
-    if(u.abilita&&u.abilita.length){
-      html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u00b0 Abilit\u00e0</div><ul>';
-      for(var j=0;j<u.abilita.length;j++) html+='<li>'+escapeHtml(u.abilita[j])+'</li>';
-      html+='</ul></div>';
-    }
-    html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\u2705 Evidenze osservabili</div><ul>';
-    for(var j=0;j<u.evidenze.length;j++) {
-      var evId=u.id+'_ev_'+j;
-      var evState=getEvidenceState(evId);
-      var stateBadge='';
-      if(evState==='adottata') stateBadge='<span class="evidence-badge evidence-badge--adopted">✅ Adottata</span>';
-      else if(evState==='adattata') stateBadge='<span class="evidence-badge evidence-badge--adapted">✏ Adattata</span>';
-      else if(evState==='non_applicabile') stateBadge='<span class="evidence-badge evidence-badge--excluded">❌ Non applicabile</span>';
-      html+='<li>'+escapeHtml(u.evidenze[j])+'<div class="evidence-actions">'+stateBadge+'<button class="evidence-btn evidence-btn--adopt" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'adottata\')">Adotta</button><button class="evidence-btn evidence-btn--adapt" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'adattata\')">Adatta</button><button class="evidence-btn evidence-btn--exclude" onclick="event.stopPropagation();setEvidenceState(\''+evId+'\',\'non_applicabile\')">Escludi</button></div></li>';
-    }
-    html+='</ul></div>';
-    html+='<div class="didattica-evidence-section"><div class="didattica-evidence-section-title">\ud83d\udccb Criteri di valutazione</div><ul>';
-    for(var j=0;j<u.criteriValutazione.length;j++) html+='<li>'+escapeHtml(u.criteriValutazione[j])+'</li>';
-    html+='</ul></div>';
-    html+='<div class="didattica-evidence-note">\ud83d\udca1 Da adattare alla classe. Le evidenze e i criteri sono indicativi e richiedono validazione professionale del docente.</div>';
-    html+='<div class="didattica-evidence-note" style="margin-top:2px">\ud83d\udcc4 Fonte: '+escapeHtml(u.fonte)+'</div>';
     html+='</div></div>';
+    firstOrd=false;
   }
   container.innerHTML=html||'<p style="color:#78909c;font-size:12px;text-align:center;padding:20px">Nessuna unit\u00e0 per questo ordine.</p>';
 }
@@ -3606,12 +3632,15 @@ function setTab(t,opts){
   if(asideEl){
     if(window.innerWidth<=900){
       asideEl.classList.toggle("mbb-show",t==="lavoro"||t==="processo"||t==="riepilogo"||t==="curricolo");
+      asideEl.classList.remove("aside-hidden");
     }else{
       asideEl.classList.remove("mbb-show");
+      asideEl.classList.toggle("aside-hidden", t==="normativa"||t==="generali");
     }
   }
   if(breadcrumbEl){
-    const labels={home:"Home",curricolo:"Curriculum — Consultazione",lavoro:"Curriculum — Revisione",processo:"Curriculum — Processo",riepilogo:"Curriculum — Definitivo",normativa:"Curriculum — Fonti",generali:"Curriculum — Fonti",didattica:"Competenze e progettazione — Valutazione / Evidenze",didattica_uda:"Competenze e progettazione — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+    var discLabel=selDisc&&(t==="curricolo"||t==="lavoro"||t==="riepilogo")?' — '+selDisc:'';
+    const labels={home:"Home",curricolo:"Curriculum — Consultazione"+discLabel,lavoro:"Curriculum — Revisione"+discLabel,processo:"Curriculum — Processo",riepilogo:"Curriculum — Definitivo"+discLabel,normativa:"Curriculum — Fonti",generali:"Curriculum — Fonti",didattica:"Competenze e progettazione — Valutazione / Evidenze",didattica_uda:"Competenze e progettazione — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
     breadcrumbEl.innerHTML='<span class="crumb-current">'+(labels[t]||"Home")+'</span>';
     breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
   }

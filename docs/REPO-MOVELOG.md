@@ -1,5 +1,21 @@
 # Repo Movelog
 
+## 2026-06-29 — CML-UX-NAVIGATION-AND-ORIENTATION — Navigation and orientation
+
+- **Commit base**: `0f735cc` (CML_UX_ERGONOMICS_RE_AUDIT, aligned)
+- **Tipo slice**: runtime microfix (3 P1 ergonomics)
+- **Oggetto**: risolvere 3 P1 audit ergonomico: sidebar in Fonti, scroll eccessivo in Evidenze, breadcrumb poco percepibile
+- **File modificato**: `_published_snapshot/netlify-current/index.html`
+- **Sidebar Fonti**: `asideEl.classList.toggle("aside-hidden", t==="normativa"||t==="generali")` su desktop; `asideEl.classList.remove("aside-hidden")` su mobile
+- **Breadcrumb disciplina**: `discLabel=selDisc&&(t==="curricolo"||t==="lavoro"||t==="riepilogo")?' — '+selDisc:''` — label dinamica
+- **Evidenze ordine grouping**: `renderDidattica()` riscritta con raggruppamento per Infanzia/Primaria/Secondaria, primo gruppo aperto di default
+- **CSS aggiunte**: `.aside-hidden`, `.didattica-evidence-ord-group`, `.didattica-evidence-ord-hd`, `.didattica-evidence-ord-body`
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-UX-NAVIGATION-AND-ORIENTATION.md`, `report/CML-UX-NAVIGATION-AND-ORIENTATION.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_UX_NAVIGATION_AND_ORIENTATION_READY`
+
 ## 2026-06-29 — CML_UX_ERGONOMICS_RE_AUDIT
 
 - Re-audit ergonomico post-deduplicazione Export Center: 72/100 (prima baseline numerica)
