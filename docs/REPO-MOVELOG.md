@@ -17,6 +17,28 @@
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS.md`, `report/CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_UX_ACCESSIBILITY_SKIP_LINK_FOCUS_READY`
+
+## 2026-06-29 - CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS-LIVE-SMOKE — Live smoke post-push GitHub Pages
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS`
+- **Data**: 2026-06-29
+- **Commit verificato**: `b4193c2`
+- **URL live**: `https://antoniocorsano-boop.github.io/curmanlight/`
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS-LIVE-SMOKE.md`, `report/CML-UX-ACCESSIBILITY-SKIP-LINK-FOCUS-LIVE-SMOKE.md`
+- **Scope**: docs-only
+- **Runtime modificato**: no
+- **Deploy manuale**: no
+- **Push**: no
+- **Skip link live**: PASS
+- **Focus setTab live**: PASS
+- **Focus selectDisc live**: PASS
+- **Hash navigation live**: PASS
+- **Mobile live**: PASS
+- **Errori JavaScript reali**: 0
+- **Resource warning non bloccanti**: 2 (localStorage try-catch)
+- **Regressioni**: nessuna
+- **Verdetto**: `CML_UX_ACCESSIBILITY_SKIP_LINK_FOCUS_LIVE_SMOKE_PASS`
+
 ## 2026-06-29 — CML-UX-ACCESSIBILITY-BASELINE-AUDIT — Accessibility baseline audit
 
 - **Commit verificato**: `dab7748` (HEAD == origin/main, hash navigation syncing pushed)
