@@ -5486,8 +5486,8 @@ function renderCurricoloIstituto(version) {
   if (!container) return;
 
   const stateMsg = v === '2012'
-    ? '<strong>Stato da verificare</strong> — Curricolo basato sulle Indicazioni Nazionali 2012 (D.M. 254/2012). Lo stato di approvazione formale da parte degli organi collegiali non è documentato in questa versione.'
-    : '<strong>Bozza simulata</strong> — Versione completa generata per revisione interna, basata sulle Indicazioni Nazionali 2025 (D.M. 9 dicembre 2025, n. 221). Non ancora approvata dagli organi competenti.';
+    ? 'IN 2012 (D.M. 254/2012) — vigente'
+    : 'IN 2025 (D.M. 221/2025) — bozza da revisionare';
 
   const refText = v === '2012'
     ? 'Indicazioni Nazionali per il curricolo della scuola dell\'infanzia e del primo ciclo d\'istruzione — D.M. 254/2012'
@@ -5529,19 +5529,7 @@ function renderCurricoloIstituto(version) {
 
   let html = '<div class="curricolo-viewer">';
 
-  html += '<div class="curricolo-path">' +
-    '<div class="curricolo-path-title">📚 Il processo del curricolo</div>' +
-    '<div class="curricolo-path-steps">' +
-      '<span class="curricolo-path-step">📖 Consulta</span><span class="curricolo-path-arrow">→</span>' +
-      '<span class="curricolo-path-step">🔍 Analizza</span><span class="curricolo-path-arrow">→</span>' +
-      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'lavoro\');return false">✏️ Proponi</a></span><span class="curricolo-path-arrow">→</span>' +
-      '<span class="curricolo-path-step">🤝 Confronta</span><span class="curricolo-path-arrow">→</span>' +
-      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'riepilogo\');return false">📋 Sintetizza</a></span><span class="curricolo-path-arrow">→</span>' +
-      '<span class="curricolo-path-step"><a href="#" onclick="setTab(\'esportazioni\');return false">📤 Esporta</a></span>' +
-    '</div>' +
-    '<div class="curricolo-path-body">Confronta il testo vigente (IN 2012) con la proposta 2025. Nella scheda <a href="#" onclick="setTab(\'lavoro\');return false">Proponi</a> decidi per ogni voce se approvare, modificare o discutere. Il <strong>Sintetizza</strong> riepiloga le decisioni — non sostituisce la delibera del Collegio Docenti.</div>' +
-    '<div class="curricolo-path-footer">Leggi anche le <a href="#" onclick="setTab(\'generali\');return false">sezioni generali</a>: Premessa, Profilo dello studente, Valutazione, Competenze chiave, Raccordo verticale.</div>' +
-  '</div>';
+  html += '<div class="curricolo-path" style="font-size:12px;color:#546e7a;margin-bottom:7px">📖 <a href="#" onclick="setTab(\'generali\');return false">Sezioni generali</a> · <a href="#" onclick="setTab(\'lavoro\');return false">Proponi modifiche</a> · <a href="#" onclick="setTab(\'esportazioni\');return false">Esporta copia</a></div>';
 
   html += '<div class="curricolo-version-tabs">' +
     '<button class="curricolo-version-tab' + (v === '2012' ? ' active' : '') + '" onclick="renderCurricoloIstituto(\'2012\')">📖 IN 2012 (vigente)</button>' +
@@ -5573,81 +5561,7 @@ function renderCurricoloIstituto(version) {
   });
   html += '</div>';
 
-  html += '<div class="curricolo-completeness">' +
-    '<div class="curricolo-completeness-title">\uD83D\uDCCA Stato di completezza dei curricoli disciplinari</div>' +
-    '<div class="curricolo-completeness-subtitle">Prima dell\'approvazione \u00E8 necessario verificare che ogni disciplina abbia una struttura completa. Al momento Tecnologia, Italiano, Matematica, Scienze, Inglese, Storia, Geografia, Educazione Civica, Musica, Arte, Educazione Fisica, Religione Cattolica, Seconda Lingua Comunitaria e Latino (LEL) dispongono di una bozza disciplinare completa e normalizzata.</div>' +
-    '<div class="curricolo-completeness-counters">' +
-      '<div class="completeness-counter completeness-counter--ready"><div class="completeness-counter-num">14</div><div class="completeness-counter-label">Bozza completa disponibile</div></div>' +
-      '<div class="completeness-counter completeness-counter--base"><div class="completeness-counter-num">0</div><div class="completeness-counter-label">Sola consultazione</div></div>' +
-      '<div class="completeness-counter completeness-counter--none"><div class="completeness-counter-num">0</div><div class="completeness-counter-label">Pronte per approvazione</div></div>' +
-    '</div>' +
-    '<div class="curricolo-completeness-legend">' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Tecnologia \u2014 struttura normalizzata con unit\u00E0, conoscenze, abilit\u00E0, evidenze e criteri. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Italiano \u2014 struttura normalizzata con nuclei linguistici, conoscenze, abilit\u00E0, evidenze e criteri. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Matematica \u2014 struttura normalizzata con numeri, spazio e figure, relazioni, dati e informatica. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Scienze \u2014 struttura normalizzata con osservazione, viventi, materia, terra e sostenibilit\u00E0, energia e fenomeni. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Inglese \u2014 struttura normalizzata con ascolto, lettura, produzione orale e scritta, interazione. Livello A1/A2 QCER. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Storia \u2014 struttura normalizzata con fonti, organizzazione, periodizzazione e produzione. Periodizzazione IN 2025. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Geografia \u2014 struttura normalizzata con paesaggio, transcalarit\u00E0 e territorializzazione. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Educazione Civica \u2014 struttura normalizzata con Costituzione, Sviluppo sostenibile, Cittadinanza digitale ed Educazione finanziaria. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Musica \u2014 struttura normalizzata con linguaggi sonori, espressione vocale e strumentale, ascolto. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Arte e Immagine \u2014 struttura normalizzata con esprimersi e comunicare, osservare, comprendere le opere d\u2019arte. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Educazione Fisica \u2014 struttura normalizzata con corpo e movimento, gioco e sport, linguaggio del corpo, sicurezza e salute. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Religione Cattolica \u2014 struttura normalizzata con Dio e l\u2019uomo, Bibbia e fonti, linguaggio religioso, valori etici. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Seconda Lingua Comunitaria \u2014 struttura normalizzata con comprensione e produzione scritta e orale, livello A1. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row"><span class="completeness-badge completeness-badge--ready">Bozza completa disponibile</span> Latino (LEL) \u2014 struttura normalizzata con confronto italiano-latino, lessico comune e cultura europea. Stato: <strong>In revisione</strong>. Azione: controllare e validare in dipartimento.</div>' +
-      '<div class="completeness-row completeness-note">L\'approvazione resta esterna allo strumento e di competenza degli organi scolastici. Tecnologia, Italiano, Matematica, Scienze, Inglese, Storia, Geografia, Educazione Civica, Musica, Arte, Educazione Fisica, Religione Cattolica, Seconda Lingua Comunitaria e Latino (LEL) sono i modelli strutturali di riferimento per le normalizzazioni successive.</div>' +
-    '</div>' +
-  '</div>';
-
-  html += '<div class="curricolo-readiness">' +
-    '<div class="curricolo-readiness-title">Readiness per approvazione</div>' +
-    '<div class="curricolo-readiness-subtitle">La completezza della bozza non equivale ad approvazione.</div>' +
-    '<div class="curricolo-readiness-counters">' +
-      '<div class="readiness-counter readiness-counter--revision"><div class="readiness-counter-num">14</div><div class="readiness-counter-label">In revisione</div></div>' +
-      '<div class="readiness-counter readiness-counter--consult"><div class="readiness-counter-num">0</div><div class="readiness-counter-label">Sola consultazione</div></div>' +
-      '<div class="readiness-counter readiness-counter--none"><div class="readiness-counter-num">0</div><div class="readiness-counter-label">Pronte per approvazione</div></div>' +
-    '</div>' +
-    '<div class="curricolo-readiness-rows">' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Tecnologia \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Italiano \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Matematica \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Scienze \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Inglese \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Storia \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Geografia \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Educazione Civica \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Musica \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Arte e Immagine \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Educazione Fisica \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Religione Cattolica \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Seconda Lingua Comunitaria \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--revision">In revisione</span> Latino (LEL) \u2014 Bozza completa, in revisione. Richiede controllo dipartimentale e validazione umana.</div>' +
-      '<div class="readiness-row"><span class="readiness-badge readiness-badge--consult">Solo consultazione</span> Nessuna disciplina residua.</div>' +
-    '</div>' +
-    '<div class="readiness-note">L\'approvazione resta esterna allo strumento e richiede validazione degli organi competenti.</div>' +
-  '</div>';
-  html += '<div class="curricolo-dept-validation">' +
-    '<div class="curricolo-dept-validation-title">Validazione dipartimentale</div>' +
-    '<div class="curricolo-dept-validation-subtitle">Registra l’esito del controllo dipartimentale per ogni disciplina. La validazione dipartimentale è un passaggio intermedio: non equivale alla delibera formale del Collegio Docenti.</div>' +
-    '<div class="curricolo-dept-validation-list">';
-  Object.keys(DISCIPLINE_META).forEach(function(disc) {
-    html +=
-      '<div class="dept-row">' +
-        '<span class="dept-name">' + disc + '</span>' +
-        '<span class="dept-state">Bozza completa da controllare in dipartimento</span>' +
-        '<select class="dept-outcome" disabled>' +
-          '<option value="da_controllare">Da controllare</option>' +
-          '<option value="osservazioni">Osservazioni da integrare</option>' +
-          '<option value="proposta">Proposta di validazione dipartimentale</option>' +
-        '</select>' +
-        '<input type="text" class="dept-notes" placeholder="Note opzionali" disabled>' +
-        '<button class="dept-save-btn" disabled>Registra proposta</button>' +
-        '<span class="dept-date"></span>' +
-        '<button class="dept-revoke-btn" title="Revoca registrazione">Revoca</button>' +
-      '</div>';
-  });
-  html += '</div></div>';
+  html += '<div style="font-size:11px;color:#78909c;margin-bottom:7px">📊 <a href="#" onclick="setTab(\'lavoro\');return false">Validazione dipartimentale</a> e stato di completezza disponibili in Revisione.</div>';
 
   ordinii.forEach(function(o) {
     if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;
@@ -5659,12 +5573,11 @@ function renderCurricoloIstituto(version) {
       const d = DATA[disc];
       const safeId = disc.replace(/[\s()]/g, '');
 
-      html += '<div class="curricolo-disc" id="cur-' + safeId + '">' +
-        '<div class="curricolo-disc-hd" onclick="var n=this.nextElementSibling;n.style.display=n.style.display===\'none\'?\'block\':\'none\'">' +
+      html += '<details class="curricolo-disc" id="cur-' + safeId + '">' +
+        '<summary class="curricolo-disc-hd">' +
         '<span class="curricolo-disc-icon">' + meta.icon + '</span>' +
         '<span class="curricolo-disc-name">' + disc + '</span>' +
-        '<span class="curricolo-disc-comp">' + meta.comp + '</span></div>' +
-        '<div style="display:block">';
+        '<span class="curricolo-disc-comp">' + meta.comp + '</span></summary>';
 
       const trag = d.traguardi.filter(function(i) { return i.ordine === o; });
       if (trag.length > 0) {
@@ -5687,7 +5600,7 @@ function renderCurricoloIstituto(version) {
         });
       }
 
-      html += '</div></div>';
+      html += '</details>';
       html += '<div class="curricolo-nextaction">✏️ <a href="#" onclick="setTab(\'lavoro\');return false">Revisiona ' + disc + '</a> · valuta le voci e decidi</div>';
     });
 
