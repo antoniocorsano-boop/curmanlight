@@ -1,5 +1,10 @@
 # Repo Movelog
 
+## 2026-06-29 — CML_UX_REVISIONE_SEPARATION_PLAN
+
+- Definita architettura target per vista Revisione: decide (primario) / esporta disciplina (richiamabile) / strumenti processo (tab separato) / esportazioni confronto (delegate a export center)
+- **Verdetto**: `CML_UX_REVISIONE_SEPARATION_PLAN_READY`
+
 ## 2026-06-29 — CML-UX-CURRICULUM-CONSULTA-COMPACT-RUNTIME
 
 - Compattata vista Consulta: rimossi blocchi completezza/readiness/validazione dipartimentale, contenuti in accordion nativo `<details>`, path compatto
