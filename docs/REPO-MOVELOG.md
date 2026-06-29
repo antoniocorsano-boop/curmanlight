@@ -1,5 +1,28 @@
 # Repo Movelog
 
+## 2026-06-29 - CML-UX-ACCESSIBILITY-ARIA-ACCORDION-LIVE-SMOKE — Live smoke post-push GitHub Pages
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-ARIA-ACCORDION`
+- **Data**: 2026-06-29
+- **Commit verificato**: `48ce346` (HEAD == origin/main)
+- **URL live**: `https://antoniocorsano-boop.github.io/curmanlight/`
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-ARIA-ACCORDION-LIVE-SMOKE.md`, `report/CML-UX-ACCESSIBILITY-ARIA-ACCORDION-LIVE-SMOKE.md`
+- **Scope**: docs-only
+- **Runtime modificato**: no (già sincronizzato in commit precedente)
+- **Deploy manuale**: no
+- **Push**: no
+- **Accordion gruppi ordine live**: PENDING_DEPLOY (atteso propagazione)
+- **Accordion unità interne live**: PENDING_DEPLOY (atteso propagazione)
+- **aria-expanded live**: PENDING_DEPLOY (atteso propagazione)
+- **aria-controls live**: PENDING_DEPLOY (atteso propagazione)
+- **Tastiera Enter/Space live**: PENDING_DEPLOY (atteso propagazione)
+- **Filtri Evidenze**: PASS
+- **Mobile live**: PASS
+- **Errori JavaScript reali**: 0
+- **Resource warning non bloccanti**: 2 (docx CDN 404, favicon.ico 404)
+- **Regressioni**: nessuna
+- **Verdetto**: `CML_UX_ACCESSIBILITY_ARIA_ACCORDION_LIVE_SMOKE_PENDING_DEPLOY`
+
 ## 2026-06-29 - CML-UX-ACCESSIBILITY-ARIA-ACCORDION — ARIA accordion Evidenze
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-ARIA-ACCORDION`
