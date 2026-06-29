@@ -1541,24 +1541,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="sum-box">
         <h2>📋 Curricolo Definitivo dopo Revisione</h2>
         <p style="font-size:12px;color:#555;margin-bottom:8px">Voci approvate + invariate. Esporta per il documento ufficiale da presentare al Collegio dei Docenti.</p>
-        <div class="export-group">
-          <div class="export-group-primary">
-            <button class="export-btn btn-word" onclick="exportWord(true)" title="Richiede connessione per la libreria Word avanzata">📄 Word (definitivo)</button>
-            <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('riepilogo-export-more');e.hidden=!e.hidden;this.textContent=e.hidden?'📄 Altre esportazioni ▾':'📄 Altre esportazioni ▴'">📄 Altre esportazioni ▾</button>
-          </div>
-          <div id="riepilogo-export-more" class="export-group-secondary" hidden>
-            <div class="export-group-row">
-              <button class="export-btn btn-copy" onclick="copyForWord(true)" title="Funziona anche senza librerie esterne">📋 Copia per Word (definitivo)</button>
-              <button class="export-btn btn-md" onclick="exportMarkdown(true)" title="Funziona anche offline">📝 Testo (definitivo)</button>
-              <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF (definitivo)</button>
-            </div>
-            <div class="export-group-row">
-              <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff" title="Scarica proposta per Drive condiviso">⬇️ Scarica proposta</button>
-              <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff" title="Invia al Drive condiviso (se configurato)">⬆️ Invia al Drive condiviso</button>
-            </div>
-            <div class="usage-notice" style="margin-top:8px;margin-bottom:0"><strong>Per la condivisione con i colleghi:</strong> usare preferibilmente Copia per Word, Markdown o PDF. Il Word impaginato resta disponibile solo se il browser riesce a caricare la libreria esterna.</div>
-          </div>
-        </div>
+        <p style="font-size:12px;color:#1a237e;margin:8px 0 0;line-height:1.4">🔀 Tutte le esportazioni (Word, Markdown, PDF, .cml, copia di sicurezza) sono ora disponibili nella sezione <a href="#" onclick="setTab('esportazioni');return false" style="font-weight:700;color:#1a237e">📤 Esportazioni</a>.</p>
         <p style="font-size:11px;color:#e65100;margin:6px 0 0;line-height:1.4">⚠️ <strong>Documento di lavoro — da validare.</strong> Non sostituisce delibera del Collegio Docenti.</p>
       </div>
       <div id="riepilogo-body"></div>
@@ -1851,25 +1834,55 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <h2>📤 Esportazioni e consegne</h2>
     <p class="sub">Tutti gli output in un unico punto: esporta, condividi, archivia.</p>
     <div class="esport-group">
-      <h3>📄 Documento istituzionale</h3>
+      <h3>📄 Documento finale</h3>
+      <p style="font-size:11px;color:#666;margin:0 0 8px">Versione approvata del curricolo per il Collegio Docenti.</p>
       <div class="esport-actions">
-        <button class="export-btn btn-word" onclick="setTab('lavoro');setTimeout(function(){var b=document.querySelector('.btn-word');if(b)b.click()},200)">📄 Word confronto</button>
-        <button class="export-btn btn-word" onclick="exportRiepilogoWord()">📄 Word definitivo</button>
-        <button class="export-btn btn-md" onclick="exportMarkdownRiepilogo()">📝 Testo</button>
-        <button class="export-btn btn-pdf" onclick="exportPDFRiepilogo()">📕 PDF</button>
+        <button class="export-btn btn-word" onclick="exportWord(true)">📄 Word definitivo</button>
+        <button class="export-btn btn-copy" onclick="copyForWord(true)">📋 Copia per Word</button>
+        <button class="export-btn btn-md" onclick="exportMarkdown(true)">📝 Testo</button>
+        <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF</button>
       </div>
     </div>
     <div class="esport-group">
-      <h3>💾 Copia di sicurezza e dati</h3>
+      <h3>🔄 Confronto modifiche</h3>
+      <p style="font-size:11px;color:#666;margin:0 0 8px">Documento di lavoro con tutte le proposte di modifica.</p>
       <div class="esport-actions">
-        <button class="export-btn btn-cml" onclick="saveLocalState(false);exportLocalBackup()">⬇️ Copia di sicurezza</button>
+        <button class="export-btn btn-word" onclick="exportWord()">📄 Word confronto</button>
+        <button class="export-btn btn-copy" onclick="copyForWord()">📋 Copia per Word</button>
+        <button class="export-btn btn-md" onclick="exportMarkdown()">📝 Testo</button>
+        <button class="export-btn btn-pdf" onclick="exportPDF()">🖨 PDF</button>
+      </div>
+    </div>
+    <div class="esport-group">
+      <h3>📝 Bozza disciplina</h3>
+      <p style="font-size:11px;color:#666;margin:0 0 8px">Bozza Markdown della disciplina selezionata in Revisione.</p>
+      <div class="esport-actions">
+        <button class="export-btn btn-md" onclick="generateDiscBozza()">📝 Genera bozza</button>
+        <button class="export-btn btn-copy" onclick="copyDiscMarkdown()">📋 Copia testo</button>
+        <button class="export-btn btn-md" onclick="downloadDiscMarkdown()">⬇️ Scarica testo</button>
+      </div>
+    </div>
+    <div class="esport-group">
+      <h3>💼 File di lavoro .cml</h3>
+      <p style="font-size:11px;color:#666;margin:0 0 8px">File .cml per lo scambio tra docenti, dipartimento e referente curricolo.</p>
+      <div class="esport-actions">
+        <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff">⬇️ Scarica proposta docente</button>
+        <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff">⬆️ Invia al Drive</button>
+        <button class="export-btn btn-cml" onclick="exportDepartmentOutcomeCml()" style="background:#004d40;color:#fff">⬇️ Esito dipartimento</button>
+      </div>
+    </div>
+    <div class="esport-group">
+      <h3>📋 Report e resoconti</h3>
+      <div class="esport-actions">
+        <button class="export-btn btn-md" onclick="setTab('riepilogo');renderRiepilogo()">📊 Resoconto sintesi</button>
+        <button class="export-btn btn-md" onclick="downloadReferentGroupWorkReport()">📝 Report gruppo lavoro</button>
+      </div>
+    </div>
+    <div class="esport-group">
+      <h3>💾 Copia di sicurezza</h3>
+      <div class="esport-actions">
+        <button class="export-btn btn-cml" onclick="saveLocalState(false);exportLocalBackup()">⬇️ Salva copia</button>
         <button class="export-btn btn-cml" onclick="document.getElementById('local-backup-input').click()">⬆️ Importa copia</button>
-      </div>
-    </div>
-    <div class="esport-group">
-      <h3>📋 Report gruppo curricolo</h3>
-      <div class="esport-actions">
-        <button class="export-btn btn-md" onclick="setTab('riepilogo');renderRiepilogo();setTimeout(function(){var r=document.querySelector('.sum-box .export-btn');if(r)r.click()},300)">📊 Resoconto sintesi</button>
       </div>
     </div>
     <div class="usage-notice" style="margin-top:10px">Documento di lavoro — da validare. Gli esportati non sostituiscono il documento istituzionale approvato dal Collegio Docenti.</div>

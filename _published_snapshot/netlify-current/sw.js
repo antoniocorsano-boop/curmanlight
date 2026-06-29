@@ -1,4 +1,4 @@
-const CACHE_NAME = "curmanlight-cache-v453p4-revisione-compact";
+const CACHE_NAME = "curmanlight-cache-v453p5-export-center";
 const APP_SHELL = [
   "./",
   "./index.html",

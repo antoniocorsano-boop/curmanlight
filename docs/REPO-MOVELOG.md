@@ -1,5 +1,15 @@
 # Repo Movelog
 
+## 2026-06-29 — CML_UX_EXPORT_CENTER_DEDUPLICATION_RUNTIME
+
+- Export Center riscritto con 6 gruppi (Documento finale, Confronto, Bozza, .cml, Report, Backup)
+- Definitivo deduplicato: export primari rimossi, sostituiti da bridge link verso Esportazioni
+- Bozze disciplinari, file .cml e report gruppo lavoro aggiunti a Export Center
+- Bug fix: 3 funzioni inesistenti rimosse (`exportRiepilogoWord`, `exportMarkdownRiepilogo`, `exportPDFRiepilogo`)
+- **Commit runtime**: `index.html`
+- **Commit sw**: `sw.js` (CACHE_NAME bump v453p4→v453p5)
+- **Verdetto**: `CML_UX_EXPORT_CENTER_DEDUPLICATION_RUNTIME_READY`
+
 ## 2026-06-29 — CML_UX_EXPORT_CENTER_DEDUPLICATION_PLAN
 
 - Definita architettura target Export Center: centralizzare e deduplicare tutte le esportazioni in unico punto, 6 gruppi, 9 regole, 5 slice future
