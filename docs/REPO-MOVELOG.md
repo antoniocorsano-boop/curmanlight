@@ -1,5 +1,13 @@
 # Repo Movelog
 
+## 2026-06-29 — CML_UX_ERGONOMICS_RE_AUDIT
+
+- Re-audit ergonomico post-deduplicazione Export Center: 72/100 (prima baseline numerica)
+- Riscontrati: 0 P0, 3 P1, 5 P2, 4 P3
+- Raccomandazione: slice CML-UX-NAVIGATION-AND-ORIENTATION (non bloccante, +4-5 pt)
+- File creati: `docs/03_execution/CML-UX-ERGONOMICS-RE-AUDIT.md`, `report/CML-UX-ERGONOMICS-RE-AUDIT.md`
+- **Verdetto**: `CML_UX_ERGONOMICS_RE_AUDIT_READY`
+
 ## 2026-06-29 — CML_UX_EXPORT_CENTER_DEDUPLICATION_RUNTIME
 
 - Export Center riscritto con 6 gruppi (Documento finale, Confronto, Bozza, .cml, Report, Backup)
