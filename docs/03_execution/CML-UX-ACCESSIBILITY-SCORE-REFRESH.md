@@ -25,16 +25,50 @@ La slice non introduce modifiche runtime. Formalizza soltanto il passaggio dalla
 | P1 residui | 2 |
 | Prossima slice | `CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS` |
 
+## Delta per area consolidata
+
+| Area | Prima | Dopo | Delta |
+|------|-------|------|-------|
+| Skip link e accesso rapido al contenuto | 0 | 5 | +5 |
+| Focus visibile e ordine di tabulazione | 6 | 7 | +1 |
+| ARIA e stati dinamici | 7 | 13 | +6 |
+| **Totale delta** |  |  | **+12** |
+
 ## Razionale del delta
 
-Il delta +12 consolida gli interventi gia' eseguiti e verificati:
+Il delta +12 consolida solo gli interventi gia' eseguiti e verificati:
 
 - skip link al contenuto principale;
 - gestione focus dopo cambio tab/disciplina;
 - accordion Evidenze con `aria-expanded` e `aria-controls`;
-- hotfix sintattica che ripristina il runtime degli accordion ARIA.
+- pattern interattivo degli accordion preservato con `role="button"`, `tabindex="0"` e gestione tastiera `Enter` / `Space`;
+- hotfix sintattico che ha preservato la patch ARIA e ripristinato il runtime.
+
+Non vengono considerati come gia' risolti:
+
+- `aria-hidden="true"` sulle emoji decorative, ancora da applicare sistematicamente;
+- annunci `aria-live` su cambio disciplina/tab, ancora da progettare e implementare.
 
 La baseline aggiornata mantiene P0 residui pari a 0. Restano 2 P1 da trattare nella prossima slice dedicata agli enhancement ARIA.
+
+## P1 residui
+
+| P1 residuo | Stato |
+|------------|-------|
+| Emoji decorative senza `aria-hidden` | da risolvere sistematicamente |
+| Annunci `aria-live` mancanti su cambio disciplina/tab | da progettare e implementare |
+
+## Prossima slice consigliata
+
+`CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS`
+
+Scope consigliato e limitato:
+
+- emoji decorative;
+- annunci `aria-live`;
+- eventuali etichette ARIA mancanti.
+
+La prossima slice non deve intervenire di nuovo sugli accordion gia' corretti, salvo verifica non invasiva.
 
 ## Scope rispettato
 

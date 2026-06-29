@@ -11,9 +11,12 @@
 - **Punteggio precedente accessibilita'**: 48/100
 - **Punteggio aggiornato**: 60/100
 - **Delta**: +12
+- **Delta per area**: Skip link e accesso rapido al contenuto 0 -> 5 (+5); Focus 6 -> 7 (+1); ARIA e stati dinamici 7 -> 13 (+6)
+- **ARIA consolidata**: `aria-expanded`, `aria-controls`, `role="button"`, `tabindex="0"`, gestione tastiera `Enter` / `Space`, hotfix sintattico preservata
+- **ARIA non ancora consolidata**: emoji decorative senza `aria-hidden`, annunci `aria-live` su cambio disciplina/tab
 - **P0 residui**: 0
-- **P1 residui**: 2
-- **Prossima slice**: `CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS`
+- **P1 residui**: 2 (emoji decorative senza `aria-hidden`; annunci `aria-live` mancanti su cambio disciplina/tab)
+- **Prossima slice**: `CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS`, limitata a emoji decorative, annunci `aria-live` ed eventuali etichette ARIA mancanti; non intervenire di nuovo sugli accordion gia' corretti
 - **Untracked esclusi**: `.env`, `antigravity.config.json`, `test-results/`, `tools/smoke-hash-nav.mjs`
 - **Push**: no
 - **Verdetto**: `CML_UX_ACCESSIBILITY_SCORE_REFRESH_READY`
