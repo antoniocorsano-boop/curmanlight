@@ -28,6 +28,23 @@
 - **Artefatti**: `docs/03_execution/CML-UX-NAVIGATION-AND-ORIENTATION-LIVE-SMOKE.md`, `report/CML-UX-NAVIGATION-AND-ORIENTATION-LIVE-SMOKE.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_UX_NAVIGATION_AND_ORIENTATION_LIVE_SMOKE_PASS`
 
+## 2026-06-29 — CML-UX-ERGONOMICS-SCORE-REFRESH — Post-fix ergonomics score refresh
+
+- **Commit verificato**: `1332720` (HEAD == origin/main)
+- **Tipo slice**: docs-only / score refresh
+- **Oggetto**: ricalcolo punteggio ergonomico dopo fix navigazione/orientamento (sidebar Fonti, Evidenze ordGroup, breadcrumb disciplina)
+- **Punteggio precedente**: 72/100 (baseline CML-UX-ERGONOMICS-RE-AUDIT)
+- **Punteggio aggiornato**: 76/100 (+4)
+- **Delta per area**: Navigazione +2 (6→8), Densità visiva +2 (10→12), altre 7 aree invariate
+- **3 P1 risolti**: sidebar Fonti ✅, scroll Evidenze ✅, breadcrumb disciplina ✅
+- **Criticità residue**: hash navigation non sincronizzato (P2), accessibilità non sistematica (P2), microcopy tablabel lunga (P2)
+- **Prossima slice consigliata**: hash navigation syncing (basso sforzo, +2 punti)
+- **Runtime modificato**: no
+- **Push**: non eseguito
+- **File creati**: `docs/03_execution/CML-UX-ERGONOMICS-SCORE-REFRESH.md`, `report/CML-UX-ERGONOMICS-SCORE-REFRESH.md`
+- **File modificati**: `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_UX_ERGONOMICS_SCORE_REFRESH_READY`
+
 ## 2026-06-29 — CML_UX_ERGONOMICS_RE_AUDIT
 
 - Re-audit ergonomico post-deduplicazione Export Center: 72/100 (prima baseline numerica)
