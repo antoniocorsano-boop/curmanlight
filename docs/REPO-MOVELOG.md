@@ -1,6 +1,15 @@
 # Repo Movelog
- 
- 
+
+## 2026-06-29 - CLEANUP - REMOVE VIDEO AUTOMATION TOOLING
+
+- **Commit base**: `3f093b2` (main aligned with origin/main)
+- **Tipo slice**: cleanup / tooling removal
+- **Oggetto**: rimuovere la funzionalita `tools/` video tooling e gli artefatti `output/` non coerenti con il target vanilla HTML/CSS/JS minimale
+- **Artefatti rimossi**: `tools/` video tooling, `output/`
+- **Runtime/core**: nessuna modifica a navigazione, logica runtime, manifest, service worker, curriculum o snapshot pubblicato
+- **Deploy/push**: non eseguiti
+- **Verdetto**: `CML_REMOVE_VIDEO_AUTOMATION_TOOLING_COMPLETE`
+
 ## 2026-06-28 — CML-236 — STABLE CANDIDATE FREEZE CONTRACT
  
 - **Commit base**: `ebcc29a` (CML-234S, aligned)
