@@ -1,5 +1,25 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-README-ACCESSIBILITY-AND-REPO-OVERVIEW — README refresh (accessibility + repo overview)
+
+- **Nome slice**: `CML-README-ACCESSIBILITY-AND-REPO-OVERVIEW`
+- **Commit base**: `82691b4`
+- **Tipo slice**: docs-only
+- **Runtime modificato**: no
+- **File modificati**: `README.md`, `docs/03_execution/CML-README-ACCESSIBILITY-AND-REPO-OVERVIEW.md`, `report/CML-README-ACCESSIBILITY-AND-REPO-OVERVIEW.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **README aggiornato**: 47 → 75 linee
+- **Nuove sezioni README**: Stato Attuale, Accessibilit\u00e0 88/100, Struttura Repository, Validazione, Contribuzione, Licenza
+- **Accessibilit\u00e0 documentata**: 88/100 audit-ready, evidenze, limitazioni
+- **Riferimenti verificati**: AGENTS.md, CONTRIBUTING.md, CHANGELOG.md, examples, tools
+- **Claim evitati**: certificazione WCAG, conformit\u00e0 legale, score 100/100
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_README_ACCESSIBILITY_AND_REPO_OVERVIEW_READY`
+
 ## 2026-06-30 - CML-REPO-READABILITY-SCAFFOLD-CLOSURE — Repository readability scaffold closure
 
 - **Nome slice**: `CML-REPO-READABILITY-SCAFFOLD-CLOSURE`
