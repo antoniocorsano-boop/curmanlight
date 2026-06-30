@@ -1,5 +1,31 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS - Accessibility aria enhancements
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS`
+- **Commit base**: `3276da2` (CML UDA evidence export UI increment + hardening)
+- **Commit**: `fa0cb61`
+- **Tipo slice**: runtime increment
+- **File modificato**: `_published_snapshot/netlify-current/index.html` (+167/−152)
+- **Novità**:
+  - Aggiunta regione `#a11y-status` con `aria-live="polite" role="status" aria-atomic="true"`
+  - Nuova funzione `announceStatus()` per annunciare cambio disciplina/tab
+  - `selectDisc()` e `setTab()` chiamano `announceStatus()`
+  - `aria-hidden="true"` su tutti gli emoji decorativi statici e dinamici (template JS)
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Diff check**: clean
+- **Icon-only controls**: tutti con `title` o `aria-label`
+- **content/curriculum/**: invariato
+- **Strumenti e test**: invariati
+- **Schema .cml, export/import, service-worker, manifest**: invariati
+- **SchoolKB/SKB**: invariato
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS.md`, `report/CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_UX_ACCESSIBILITY_ARIA_ENHANCEMENTS_READY`
+
 ## 2026-06-30 - CML-UX-CERTIFICATION-READINESS-CURRICULUM-UI - Curriculum UI certification readiness
 
 - **Nome slice**: `CML-UX-CERTIFICATION-READINESS-CURRICULUM-UI`

@@ -999,6 +999,8 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 /* Skip link: hidden off-screen, visible on focus */
 .skip-link{position:absolute;top:-999px;left:8px;z-index:10001;background:#1a237e;color:#fff;padding:8px 16px;border-radius:0 0 6px 6px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
 .skip-link:focus{top:0;outline:2px solid #fff;outline-offset:2px}
+/* Screen-reader only utility */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* DARK MODE BLOCK — NEUTRALIZED: CML light mode only (CML-083B)
    @media(prefers-color-scheme:dark) removed. All dark rules preserved below
@@ -1249,11 +1251,12 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 </head>
 <body>
 <a class="skip-link" href="#main-content">Salta al contenuto principale</a>
+<div id="a11y-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 <header class="app-header" id="app-header">
   <div class="app-header-min">
     <div class="app-title-wrap">
       <div class="app-kicker">I.C. Calvario-Covotta «don Lorenzo Milani»</div>
-      <h1>📚 Curricolo Verticale</h1>
+      <h1><span aria-hidden="true">📚</span> Curricolo Verticale</h1>
       <div class="app-subtitle">IN 2012 → IN 2025 · Ariano Irpino (AV) · AVIC849003</div>
     </div>
     <button id="header-toggle" class="header-toggle" type="button" onclick="toggleHeaderDetails()" aria-expanded="false" aria-controls="header-details">Dettagli ▾</button>
@@ -1269,24 +1272,24 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   </div>
 </header>
 <div class="tabbar" id="tabbar">
-  <button class="active" onclick="setTab('home')">🏠 Home</button>
-  <button onclick="setTab('curricolo')">📚 Curriculum</button>
-  <button onclick="setTab('didattica')">🧑‍🏫 Competenze e progettazione</button>
-  <button onclick="setTab('esportazioni')">📤 Esportazioni</button>
-  <button onclick="setTab('guida')">❔ Guida</button>
+  <button class="active" onclick="setTab('home')"><span aria-hidden="true">🏠</span> Home</button>
+  <button onclick="setTab('curricolo')"><span aria-hidden="true">📚</span> Curriculum</button>
+  <button onclick="setTab('didattica')"><span aria-hidden="true">🧑‍🏫</span> Competenze e progettazione</button>
+  <button onclick="setTab('esportazioni')"><span aria-hidden="true">📤</span> Esportazioni</button>
+  <button onclick="setTab('guida')"><span aria-hidden="true">❔</span> Guida</button>
 </div>
 <!-- SUB-NAV: CURRICULUM -->
 <div class="subnav-bar subnav-curriculum" id="subnav-curriculum" style="display:none">
-  <button class="subnav-btn active" onclick="setTab('curricolo')">📖 Consulta</button>
-  <button class="subnav-btn" onclick="setTab('lavoro')">✏️ Revisione</button>
-  <button class="subnav-btn" onclick="setTab('processo')">🔧 Processo</button>
-  <button class="subnav-btn" onclick="setTab('riepilogo')">📋 Definitivo</button>
-  <button class="subnav-btn" onclick="setTab('normativa')">📜 Fonti</button>
+  <button class="subnav-btn active" onclick="setTab('curricolo')"><span aria-hidden="true">📖</span> Consulta</button>
+  <button class="subnav-btn" onclick="setTab('lavoro')"><span aria-hidden="true">✏️</span> Revisione</button>
+  <button class="subnav-btn" onclick="setTab('processo')"><span aria-hidden="true">🔧</span> Processo</button>
+  <button class="subnav-btn" onclick="setTab('riepilogo')"><span aria-hidden="true">📋</span> Definitivo</button>
+  <button class="subnav-btn" onclick="setTab('normativa')"><span aria-hidden="true">📜</span> Fonti</button>
 </div>
 <!-- SUB-NAV: COMPETENZE E PROGETTAZIONE -->
 <div class="subnav-bar subnav-didattica" id="subnav-didattica" style="display:none">
-  <button class="subnav-btn active" onclick="setTab('didattica')">📊 Valutazione / Evidenze</button>
-  <button class="subnav-btn" onclick="setTab('didattica_uda')">📋 UDA modello</button>
+  <button class="subnav-btn active" onclick="setTab('didattica')"><span aria-hidden="true">📊</span> Valutazione / Evidenze</button>
+  <button class="subnav-btn" onclick="setTab('didattica_uda')"><span aria-hidden="true">📋</span> UDA modello</button>
 </div>
 <div class="path-breadcrumb" id="breadcrumb" hidden><span class="crumb-current">Home</span></div>
 <div class="cruscotto" id="cruscotto" hidden>
@@ -1296,28 +1299,28 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="cruscotto-next">Prossima azione: avvia la consultazione e la revisione del curricolo</div>
     </div>
     <div class="cruscotto-btns">
-      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})">📋 Controlla voci</button>
-      <button class="cruscotto-btn" type="button" onclick="setTab('riepilogo')">📖 Apri documento</button>
-      <button class="cruscotto-btn" type="button" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})">📤 Esporta</button>
+      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})"><span aria-hidden="true">📋</span> Controlla voci</button>
+      <button class="cruscotto-btn" type="button" onclick="setTab('riepilogo')"><span aria-hidden="true">📖</span> Apri documento</button>
+      <button class="cruscotto-btn" type="button" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})"><span aria-hidden="true">📤</span> Esporta</button>
     </div>
     <div class="cruscotto-bar">
-      <span class="cruscotto-save"><span id="local-save-status">💾 Ogni decisione viene conservata in questo browser.</span></span>
+      <span class="cruscotto-save"><span id="local-save-status"><span aria-hidden="true">💾</span> Ogni decisione viene conservata in questo browser.</span></span>
       <span class="cruscotto-prog"><span id="prog-label" style="font-size:11px!important;font-weight:700!important;color:#1a237e!important">—</span> <span id="prog-pct" style="font-size:11px!important;color:#1a237e!important;font-weight:700!important">0%</span></span>
       <div class="prog-bar-bg" style="flex:1;max-width:160px;height:6px"><div class="prog-bar-fill" id="prog-fill" style="width:0%;height:100%"></div></div>
-      <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions">⚙️ Azioni ▾</button>
+      <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions"><span aria-hidden="true">⚙️</span> Azioni ▾</button>
     </div>
   </div>
   <div class="quick-actions" id="quick-actions" hidden>
-    <button class="quick-btn" onclick="saveLocalState(false)" style="gap:4px">💾 Salva</button>
-    <button class="quick-btn" onclick="exportLocalBackup()" style="gap:4px">⬇️ Salva copia</button>
-    <button class="quick-btn" onclick="document.getElementById('local-backup-input').click()" style="gap:4px">⬆️ Importa</button>
-    <button class="quick-btn" onclick="resetLocalState()" style="gap:4px;color:#b71c1c">↺ Ripristina</button>
+    <button class="quick-btn" onclick="saveLocalState(false)" style="gap:4px"><span aria-hidden="true">💾</span> Salva</button>
+    <button class="quick-btn" onclick="exportLocalBackup()" style="gap:4px"><span aria-hidden="true">⬇️</span> Salva copia</button>
+    <button class="quick-btn" onclick="document.getElementById('local-backup-input').click()" style="gap:4px"><span aria-hidden="true">⬆️</span> Importa</button>
+    <button class="quick-btn" onclick="resetLocalState()" style="gap:4px;color:#b71c1c"><span aria-hidden="true">↺</span> Ripristina</button>
     <input id="local-backup-input" type="file" accept="application/json,.json" onchange="importLocalBackup(event)" style="display:none">
-    <button id="install-app-btn" class="quick-btn install-btn" onclick="handleInstallApp()">📲 Installa sul dispositivo</button>
-    <button class="quick-btn" onclick="openSettingsModal()">👤 Impostazioni / onboarding</button>
-    <a class="course-link" href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener">📘 Apri il corso in PDF</a>
-    <a class='course-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Significato operativo del motto latino'>🏛️ Motto e metodo</a>
-    <button class="quick-btn" onclick="showWelcome(true)">❔ Guida rapida</button>
+    <button id="install-app-btn" class="quick-btn install-btn" onclick="handleInstallApp()"><span aria-hidden="true">📲</span> Installa sul dispositivo</button>
+    <button class="quick-btn" onclick="openSettingsModal()"><span aria-hidden="true">👤</span> Impostazioni / onboarding</button>
+    <a class="course-link" href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener"><span aria-hidden="true">📘</span> Apri il corso in PDF</a>
+    <a class='course-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Significato operativo del motto latino'><span aria-hidden="true">🏛️</span> Motto e metodo</a>
+    <button class="quick-btn" onclick="showWelcome(true)"><span aria-hidden="true">❔</span> Guida rapida</button>
   </div>
 </div>
 <div class="layout">
@@ -1334,48 +1337,48 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <h2 class="home-title">Da dove vuoi iniziare?</h2>
         <p class="home-subtitle">Il processo del curricolo: consulta, analizza, proponi, confronta, sintetizza ed esporta.</p>
         <div class="home-process-path">
-          <div class="home-process-path-title">🔄 Percorso di governo del curricolo</div>
+          <div class="home-process-path-title"><span aria-hidden="true">🔄</span> Percorso di governo del curricolo</div>
           <div class="home-process-path-steps">
-            <span class="home-process-path-step">📖 Consulta</span><span class="home-process-path-arrow">→</span>
-            <span class="home-process-path-step">🔍 Analizza</span><span class="home-process-path-arrow">→</span>
-            <span class="home-process-path-step">✏️ Proponi</span><span class="home-process-path-arrow">→</span>
-            <span class="home-process-path-step">🤝 Confronta</span><span class="home-process-path-arrow">→</span>
-            <span class="home-process-path-step">📋 Sintetizza</span><span class="home-process-path-arrow">→</span>
-            <span class="home-process-path-step">📤 Esporta</span>
+            <span class="home-process-path-step"><span aria-hidden="true">📖</span> Consulta</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
+            <span class="home-process-path-step"><span aria-hidden="true">🔍</span> Analizza</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
+            <span class="home-process-path-step"><span aria-hidden="true">✏️</span> Proponi</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
+            <span class="home-process-path-step"><span aria-hidden="true">🤝</span> Confronta</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
+            <span class="home-process-path-step"><span aria-hidden="true">📋</span> Sintetizza</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
+            <span class="home-process-path-step"><span aria-hidden="true">📤</span> Esporta</span>
           </div>
         </div>
         <div class="home-cards">
           <div class="home-card">
             <div class="home-card-header">
-              <span class="home-card-icon">📚</span>
+              <span class="home-card-icon" aria-hidden="true">📚</span>
               <h3 class="home-card-title">Curriculum</h3>
             </div>
             <p class="home-card-text">Consulta, revisiona ed esporta il curricolo di istituto. Qui trovi sezioni generali, discipline, riferimenti, proposte di revisione e pacchetti disciplinari normalizzati.</p>
             <div class="home-card-links">
-              <a href="#" onclick="setTab('curricolo');return false">📖 Consulta</a>
-              <a href="#" onclick="setTab('lavoro');return false">✏️ Revisiona</a>
-              <a href="#" onclick="setTab('esportazioni');return false">📤 Esporta</a>
-              <a href="#" onclick="setTab('curricolo');setTimeout(function(){var p=document.getElementById('tecnologia-norm-panel');if(p)p.scrollIntoView({behavior:'smooth'})},150);return false">⚙️ Tecnologia normalizzata</a>
+              <a href="#" onclick="setTab('curricolo');return false"><span aria-hidden="true">📖</span> Consulta</a>
+              <a href="#" onclick="setTab('lavoro');return false"><span aria-hidden="true">✏️</span> Revisiona</a>
+              <a href="#" onclick="setTab('esportazioni');return false"><span aria-hidden="true">📤</span> Esporta</a>
+              <a href="#" onclick="setTab('curricolo');setTimeout(function(){var p=document.getElementById('tecnologia-norm-panel');if(p)p.scrollIntoView({behavior:'smooth'})},150);return false"><span aria-hidden="true">⚙️</span> Tecnologia normalizzata</a>
             </div>
           </div>
           <div class="home-card home-card-didattica">
             <div class="home-card-header">
-              <span class="home-card-icon">🧑‍🏫</span>
+              <span class="home-card-icon" aria-hidden="true">🧑‍🏫</span>
               <h3 class="home-card-title">Competenze e progettazione</h3>
             </div>
             <p class="home-card-text">Competenze chiave, progettazione per competenze, nodi disciplinari e collegamenti interdisciplinari per guidare la didattica.</p>
-            <div class="home-card-badge badge--prototype">📋 Area operativa</div>
+            <div class="home-card-badge badge--prototype"><span aria-hidden="true">📋</span> Area operativa</div>
             <div class="home-card-links">
-              <a href="#" onclick="setTab('didattica');return false">📊 Valuta evidenze</a>
-              <a href="#" onclick="setTab('didattica_uda');return false">📋 Progetta UDA</a>
-              <span class="dimmed">🧪 Prepara attività <span class="badge-preparing badge--prototype">In preparazione</span></span>
-              <span class="dimmed">📁 Materiali per la classe <span class="badge-preparing badge--prototype">In preparazione</span></span>
+              <a href="#" onclick="setTab('didattica');return false"><span aria-hidden="true">📊</span> Valuta evidenze</a>
+              <a href="#" onclick="setTab('didattica_uda');return false"><span aria-hidden="true">📋</span> Progetta UDA</a>
+              <span class="dimmed"><span aria-hidden="true">🧪</span> Prepara attività <span class="badge-preparing badge--prototype">In preparazione</span></span>
+              <span class="dimmed"><span aria-hidden="true">📁</span> Materiali per la classe <span class="badge-preparing badge--prototype">In preparazione</span></span>
             </div>
             <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00897b">Valutazione ed evidenze</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione. Seleziona una disciplina nella sezione Competenze e progettazione per iniziare.</p>
           </div>
         </div>
         <div class="home-microguide">
-          <div class="home-microguide-title">⏱ Usa CurManLight in 5 minuti</div>
+          <div class="home-microguide-title"><span aria-hidden="true">⏱</span> Usa CurManLight in 5 minuti</div>
           <div class="home-microguide-subtitle">Segui il percorso minimo: leggi, confronta, decidi, esporta e condividi l'esito.</div>
           <ol class="home-microguide-steps">
             <li class="home-microguide-step"><span class="home-microguide-step-num">1</span><span class="home-microguide-step-text">Scegli una proposta di curricolo.</span></li>
@@ -1395,20 +1398,20 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div id="tab-didattica" style="display:none">
       <div class="didattica-evidence">
         <div class="didattica-evidence-header">
-          <h2>🧑‍🏫 Competenze e progettazione — Valutazione ed evidenze</h2>
+          <h2><span aria-hidden="true">🧑‍🏫</span> Competenze e progettazione — Valutazione ed evidenze</h2>
           <p>Collega le unità curricolari a evidenze osservabili e criteri di valutazione. Da adattare alla classe e da validare dal docente.</p>
         </div>
         <div class="didattica-path">
-          <div class="didattica-path-title">📖 Come usare questa sezione</div>
+          <div class="didattica-path-title"><span aria-hidden="true">📖</span> Come usare questa sezione</div>
           <div class="didattica-path-body">Qui trovi le <strong>evidenze osservabili</strong> e i <strong>criteri di valutazione</strong> collegati a ciascuna unità del curricolo. Scegli un ordine (<em>Tutti / Infanzia / Primaria / Secondaria</em>) ed esplora le schede per vedere traguardi, obiettivi, conoscenze, abilità, evidenze e criteri.</div>
           <div class="didattica-path-actions">
-            🟢 <strong>Dato curricolare</strong> — le evidenze e i criteri provengono dal curricolo strutturato
+            <span aria-hidden="true">🟢</span> <strong>Dato curricolare</strong> — le evidenze e i criteri provengono dal curricolo strutturato
             <span class="didattica-path-divider">·</span>
-            <a href="#" onclick="setTab('curricolo');return false">📖 Consulta il curricolo completo →</a>
+            <a href="#" onclick="setTab('curricolo');return false"><span aria-hidden="true">📖</span> Consulta il curricolo completo →</a>
           </div>
         </div>
         <div class="didattica-evidence-box notice-box warning">
-          <strong>🧑‍⚖️ Non sostituisce la valutazione professionale</strong><br>
+          <strong><span aria-hidden="true">🧑‍⚖️</span> Non sostituisce la valutazione professionale</strong><br>
           • Le evidenze e i criteri sono indicativi e richiedono validazione del docente<br>
           • I contenuti provengono dal curricolo strutturato di istituto (Curriculum → Consultazione) e servono come base di lavoro<br>
           • Questa è un'area operativa per la <strong>didattica in classe</strong>, non per la revisione del documento curricolare
@@ -1416,9 +1419,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <div class="didattica-evidence-stats" id="didattica-evidence-stats"></div>
         <div class="didattica-evidence-actions-bar"><button class="evidence-reset-btn" onclick="resetEvidenceStates()">↺ Reset marcature</button></div><div class="didattica-evidence-filters" id="didattica-evidence-filters">
           <button class="didattica-evidence-filter active" onclick="setDidatticaFilter('all',this)">Tutti</button>
-          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Infanzia',this)">🧸 Infanzia</button>
-          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Primaria',this)">📘 Primaria</button>
-          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Secondaria',this)">🎓 Secondaria</button>
+          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Infanzia',this)"><span aria-hidden="true">🧸</span> Infanzia</button>
+          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Primaria',this)"><span aria-hidden="true">📘</span> Primaria</button>
+          <button class="didattica-evidence-filter" onclick="setDidatticaFilter('Secondaria',this)"><span aria-hidden="true">🎓</span> Secondaria</button>
         </div>
         <div class="didattica-evidence-list" id="didattica-evidence-list"></div>
         <div class="didattica-evidence-footer">Evidenze e criteri indicativi · Richiedono validazione professionale del docente · Non costituiscono documento istituzionale approvato · Da adattare alla classe · Dati locali, nessun dato studente</div>
@@ -1426,7 +1429,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <!-- UDA MODELLO -->
       <div class="didattica-uda" id="didattica-uda">
         <div class="didattica-uda-header">
-          <h2>📋 Competenze e progettazione — UDA modello</h2>
+          <h2><span aria-hidden="true">📋</span> Competenze e progettazione — UDA modello</h2>
           <p>Mostra come un'unità curricolare del curricolo può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
         </div>
         <div class="didattica-uda-box notice-box tip">
@@ -1453,7 +1456,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <textarea id="uda-md-preview" placeholder="Genera una bozza per vedere l'anteprima Markdown..." readonly></textarea>
           </div>
           <div class="didattica-uda-draft-notice">
-            <strong>🔒 Bozza locale — nessun dato personale studente</strong><br>
+            <strong><span aria-hidden="true">🔒</span> Bozza locale — nessun dato personale studente</strong><br>
             • Il contenuto è generato dal curricolo di istituto e dalle tue marcature evidenze<br>
             • Non inserire nomi, cognomi, voti o dati sensibili di studenti<br>
             • La bozza non è persistita: rigenerala quando serve<br>
@@ -1464,9 +1467,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <div class="didattica-uda-footer">UDA modello · Da adattare alla classe · Non sostituisce la progettazione del docente · Richiede validazione professionale · Non costituisce documento istituzionale approvato</div>
        </div>
        <details class="didattica-mappa" id="didattica-mappa" style="display:none;padding:6px 13px">
-        <summary style="cursor:pointer;font-weight:700;font-size:13px;color:#1a237e;margin-top:10px">🗺️ Mappa disciplinare</summary>
+         <summary style="cursor:pointer;font-weight:700;font-size:13px;color:#1a237e;margin-top:10px"><span aria-hidden="true">🗺️</span> Mappa disciplinare</summary>
         <div class="didattica-mappa-notice" style="background:#e8f5e9;border:1px solid #a5d6a7;border-left:3px solid #2e7d32;border-radius:9px;padding:9px 13px;margin:8px 0;font-size:11px;color:#1b5e20;line-height:1.45">
-          <strong>🧑‍🏫 Mappa disciplinare</strong> — Questa sezione mostra come una disciplina organizza saperi, nodi e progressione verticale. È una base di lavoro per il confronto dipartimentale e non sostituisce la validazione professionale.<br>
+          <strong><span aria-hidden="true">🧑‍🏫</span> Mappa disciplinare</strong> — Questa sezione mostra come una disciplina organizza saperi, nodi e progressione verticale. È una base di lavoro per il confronto dipartimentale e non sostituisce la validazione professionale.<br>
           <strong>Documento di lavoro — da validare.</strong>
         </div>
         <div class="didattica-mappa-selector" style="display:flex;gap:6px;margin:8px 0;flex-wrap:wrap">
@@ -1495,33 +1498,33 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="toolbar">
         <span style="font-weight:700;color:#333;font-size:12px">Filtro:</span>
         <button class="filter-btn active" onclick="setFilter('all',this)">Tutti</button>
-        <button class="filter-btn" onclick="setFilter('pending',this)">⏳ Da decidere</button>
+        <button class="filter-btn" onclick="setFilter('pending',this)"><span aria-hidden="true">⏳</span> Da decidere</button>
         <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('more-filters');e.hidden=!e.hidden;this.textContent=e.hidden?'⋯ Altri filtri':'⋯ Meno filtri'">⋯ Altri filtri</button>
         <span id="more-filters" hidden>
-          <button class="filter-btn" onclick="setFilter('approvata',this)">✅ Approvati</button>
-          <button class="filter-btn" onclick="setFilter('rifiutata',this)">❌ Rifiutati</button>
+          <button class="filter-btn" onclick="setFilter('approvata',this)"><span aria-hidden="true">✅</span> Approvati</button>
+          <button class="filter-btn" onclick="setFilter('rifiutata',this)"><span aria-hidden="true">❌</span> Rifiutati</button>
           <button class="filter-btn" onclick="setFilter('ok',this)">✓ Invariati</button>
-          <button class="filter-btn" onclick="setFilter('nuovo',this)">★ Nuovi</button>
+          <button class="filter-btn" onclick="setFilter('nuovo',this)"><span aria-hidden="true">★</span> Nuovi</button>
           <label class="toggle-lbl"><input type="checkbox" id="hide-ok" onchange="render()"> Nascondi invariati</label>
         </span>
         <span style="color:#ccc">|</span>
-        <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('disc-export-panel');e.style.display=e.style.display==='block'?'none':'block';this.textContent=e.style.display==='block'?'📝 Bozza disciplina ▴':'📝 Bozza disciplina ▾'">📝 Bozza disciplina ▾</button>
+        <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('disc-export-panel');e.style.display=e.style.display==='block'?'none':'block';this.textContent=e.style.display==='block'?'📝 Bozza disciplina ▴':'📝 Bozza disciplina ▾'"><span aria-hidden="true">📝</span> Bozza disciplina ▾</button>
       </div>
       <p style="margin:4px 13px 8px;font-size:11px;color:#5d4037;line-height:1.4">Area Revisione: scegli, adatta o registra le decisioni sulle proposte della disciplina selezionata. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
 
       <div id="disc-export-panel" class="disc-export-panel" style="display:none">
         <div class="disc-export-header">
-          <span class="disc-export-title">📤 Esportazione del curricolo revisionato</span>
+          <span class="disc-export-title"><span aria-hidden="true">📤</span> Esportazione del curricolo revisionato</span>
           <span class="disc-export-badge badge--warning">Documento di lavoro — da validare</span>
         </div>
         <p class="disc-export-desc" id="disc-export-desc">L'export produce una bozza Markdown della disciplina. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
         <div class="disc-export-actions">
-          <button class="export-btn btn-md" id="btn-generate-disc-bozza" onclick="generateDiscBozza()">📝 Genera bozza</button>
-          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('disc-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di esportazione ▾':'⬇ Azioni di esportazione ▴'">⬇ Azioni di esportazione ▾</button>
+          <button class="export-btn btn-md" id="btn-generate-disc-bozza" onclick="generateDiscBozza()"><span aria-hidden="true">📝</span> Genera bozza</button>
+          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('disc-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di esportazione ▾':'⬇ Azioni di esportazione ▴'"><span aria-hidden="true">⬇</span> Azioni di esportazione ▾</button>
         </div>
         <div id="disc-secondary-actions" class="disc-actions-secondary" hidden>
-          <button class="export-btn btn-copy" id="btn-copy-disc-md" onclick="copyDiscMarkdown()" disabled style="opacity:0.5">📝 Copia testo</button>
-          <button class="export-btn btn-md" id="btn-dl-disc-md" onclick="downloadDiscMarkdown()" disabled style="opacity:0.5">📝 Scarica testo</button>
+          <button class="export-btn btn-copy" id="btn-copy-disc-md" onclick="copyDiscMarkdown()" disabled style="opacity:0.5"><span aria-hidden="true">📝</span> Copia testo</button>
+          <button class="export-btn btn-md" id="btn-dl-disc-md" onclick="downloadDiscMarkdown()" disabled style="opacity:0.5"><span aria-hidden="true">📝</span> Scarica testo</button>
         </div>
         <textarea id="disc-md-preview" class="disc-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del Markdown..." aria-label="Anteprima Markdown"></textarea>
       </div>
@@ -1531,7 +1534,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div id="tab-processo" style="display:none">
       <div class="tool-group-inner" style="padding:12px">
         <details id="department-import-panel" class="department-import-panel" style="margin-bottom:12px">
-          <summary style="font-weight:700;font-size:12px;color:#333;cursor:pointer">🏫 Validazione dipartimentale</summary>
+          <summary style="font-weight:700;font-size:12px;color:#333;cursor:pointer"><span aria-hidden="true">🏫</span> Validazione dipartimentale</summary>
           <p class="department-import-copy">Importa i file proposta ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
           <div class="department-import-controls">
             <input id="department-cml-files" type="file" accept=".cml" multiple hidden onchange="importTeacherCmlFiles(this.files);this.value=''">
@@ -1543,7 +1546,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div id="department-import-results"></div>
         </details>
         <details id="referent-validation-panel" class="referent-validation-panel">
-          <summary style="font-weight:700;font-size:12px;color:#333;cursor:pointer">📋 Verifica referente curricolo</summary>
+          <summary style="font-weight:700;font-size:12px;color:#333;cursor:pointer"><span aria-hidden="true">📋</span> Verifica referente curricolo</summary>
           <p class="referent-validation-copy">Importa gli esiti dipartimentali per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
           <div class="referent-validation-controls">
             <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="handleReferentOutcomeFileSelection(this)">
@@ -1555,7 +1558,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div id="referent-validation-feedback" class="referent-validation-feedback" aria-live="polite"></div>
           <div id="referent-validation-results"></div>
           <div id="referent-validation-report" class="referent-validation-report" style="margin-top:12px;text-align:center">
-            <button class="export-btn btn-md" onclick="requireRoleAccess('referentReportGeneration',downloadReferentGroupWorkReport)" title="Scarica resoconto gruppo di lavoro">📝 Scarica resoconto gruppo di lavoro</button>
+            <button class="export-btn btn-md" onclick="requireRoleAccess('referentReportGeneration',downloadReferentGroupWorkReport)" title="Scarica resoconto gruppo di lavoro"><span aria-hidden="true">📝</span> Scarica resoconto gruppo di lavoro</button>
           </div>
         </details>
       </div>
@@ -1563,10 +1566,10 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <!-- TAB RIEPILOGO -->
     <div id="tab-riepilogo" style="display:none">
       <div class="sum-box">
-        <h2>📋 Curricolo Definitivo dopo Revisione</h2>
+        <h2><span aria-hidden="true">📋</span> Curricolo Definitivo dopo Revisione</h2>
         <p style="font-size:12px;color:#555;margin-bottom:8px">Voci approvate + invariate. Esporta per il documento ufficiale da presentare al Collegio dei Docenti.</p>
-        <p style="font-size:12px;color:#1a237e;margin:8px 0 0;line-height:1.4">🔀 Tutte le esportazioni (Word, Markdown, PDF, .cml, copia di sicurezza) sono ora disponibili nella sezione <a href="#" onclick="setTab('esportazioni');return false" style="font-weight:700;color:#1a237e">📤 Esportazioni</a>.</p>
-        <p style="font-size:11px;color:#e65100;margin:6px 0 0;line-height:1.4">⚠️ <strong>Documento di lavoro — da validare.</strong> Non sostituisce delibera del Collegio Docenti.</p>
+        <p style="font-size:12px;color:#1a237e;margin:8px 0 0;line-height:1.4"><span aria-hidden="true">🔀</span> Tutte le esportazioni (Word, Markdown, PDF, .cml, copia di sicurezza) sono ora disponibili nella sezione <a href="#" onclick="setTab('esportazioni');return false" style="font-weight:700;color:#1a237e"><span aria-hidden="true">📤</span> Esportazioni</a>.</p>
+        <p style="font-size:11px;color:#e65100;margin:6px 0 0;line-height:1.4"><span aria-hidden="true">⚠️</span> <strong>Documento di lavoro — da validare.</strong> Non sostituisce delibera del Collegio Docenti.</p>
       </div>
       <div id="riepilogo-body"></div>
     </div>
@@ -1574,54 +1577,54 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div id="tab-normativa" style="display:none">
       <div class="norm-page">
         <div class="norm-intro">
-          <h2>📜 Fonti ufficiali, normativa e documenti strategici</h2>
+          <h2><span aria-hidden="true">📜</span> Fonti ufficiali, normativa e documenti strategici</h2>
           <p>Questa sezione raccoglie i riferimenti da usare per la revisione del curricolo: <strong>Indicazioni Nazionali 2012</strong>, documenti strategici dell'Istituto, <strong>PTOF 2025-2028</strong>, <strong>RAV 2022-2025</strong>, Scuola in Chiaro e riferimenti nazionali collegati a valutazione, competenze, Educazione civica, inclusione, digitale e autonomia scolastica. Le fonti sono rese evidenti perché il lavoro sul curricolo deve distinguere sempre tra testo ufficiale, contesto di scuola e proposta di aggiornamento.</p>
           <div class="norm-warning"><strong>Uso nello strumento:</strong> le fonti generali sono consultabili e non modificabili. Le modifiche si effettuano solo nelle sezioni disciplinari/didattiche, come proposte da validare in dipartimento, commissione e Collegio dei Docenti.</div>
         </div>
 
         <div class="norm-cat">
-          <div class="norm-cat-title">🏫 Fonti istituzionali dell'Istituto</div>
+          <div class="norm-cat-title"><span aria-hidden="true">🏫</span> Fonti istituzionali dell'Istituto</div>
           <div class="norm-card scuola">
-            <div class="norm-icon">🏛️</div>
+            <div class="norm-icon" aria-hidden="true">🏛️</div>
             <div class="norm-body">
               <div class="norm-title">Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino</div>
               <div class="norm-desc">Fonte anagrafica e istituzionale: Istituto Comprensivo statale con codice meccanografico <strong>AVIC849003</strong>. Il sito della scuola e Scuola in Chiaro sono i riferimenti da usare per dati identificativi, documenti strategici e collegamenti ufficiali.</div>
               <div class="norm-meta">Sito istituzionale · Scuola in Chiaro · Codice meccanografico AVIC849003</div>
               <div class="norm-tags"><span class="norm-tag">Identità scuola</span><span class="norm-tag">Codice AVIC849003</span><span class="norm-tag">Fonte ufficiale</span></div>
-              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/" target="_blank" rel="noopener">🌐 Sito istituzionale</a>
-              <a class="norm-link secondary" href="https://cercalatuascuola.istruzione.it/cercalatuascuola/istituti/AVIC849003/ic-calvario-covotta/" target="_blank" rel="noopener">🏫 Scuola in Chiaro</a>
+              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/" target="_blank" rel="noopener"><span aria-hidden="true">🌐</span> Sito istituzionale</a>
+              <a class="norm-link secondary" href="https://cercalatuascuola.istruzione.it/cercalatuascuola/istituti/AVIC849003/ic-calvario-covotta/" target="_blank" rel="noopener"><span aria-hidden="true">🏫</span> Scuola in Chiaro</a>
             </div>
           </div>
           <div class="norm-card scuola">
-            <div class="norm-icon">📘</div>
+            <div class="norm-icon" aria-hidden="true">📘</div>
             <div class="norm-body">
               <div class="norm-title">PTOF 2025-2028 — Piano Triennale dell'Offerta Formativa</div>
               <div class="norm-desc">Documento programmatico principale per contestualizzare il curricolo. Evidenzia il contesto dei plessi e dei comuni di riferimento, la rete territoriale, le risorse laboratoriali e la missione educativa centrata su apprendimento, educazione, orientamento e relazione.</div>
               <div class="norm-meta">I.C. Calvario-Covotta · Documento pubblicato/revisionato 14/05/2025 · PDF allegato al sito scuola</div>
               <div class="norm-tags"><span class="norm-tag">PTOF 2025-2028</span><span class="norm-tag">Contesto</span><span class="norm-tag">Missione</span><span class="norm-tag">Curricolo</span></div>
-              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/documento/ptof-25-28/" target="_blank" rel="noopener">📄 Scheda PTOF</a>
-              <a class="norm-link secondary" href="https://www.icdonmilaniariano.edu.it/wp-content/uploads/2025/05/AVIC849003-202528-202425-20241227.pdf" target="_blank" rel="noopener">⬇️ PDF PTOF</a>
+              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/documento/ptof-25-28/" target="_blank" rel="noopener"><span aria-hidden="true">📄</span> Scheda PTOF</a>
+              <a class="norm-link secondary" href="https://www.icdonmilaniariano.edu.it/wp-content/uploads/2025/05/AVIC849003-202528-202425-20241227.pdf" target="_blank" rel="noopener"><span aria-hidden="true">⬇️</span> PDF PTOF</a>
               <div class="norm-warning">Da riportare nel curricolo: continuità verticale, successo formativo, personalizzazione, inclusione, territorio, competenze chiave, digitale, STEM, orientamento e valutazione formativa.</div>
             </div>
           </div>
           <div class="norm-card scuola">
-            <div class="norm-icon">📊</div>
+            <div class="norm-icon" aria-hidden="true">📊</div>
             <div class="norm-body">
               <div class="norm-title">RAV 2022-2025 — Rapporto di Autovalutazione</div>
               <div class="norm-desc">Fonte da usare per collegare il curricolo agli esiti e al miglioramento. Le priorità riguardano innalzamento dei livelli di apprendimento, prove standardizzate, competenze chiave europee, cittadinanza digitale/sociale e continuità-orientamento.</div>
               <div class="norm-meta">I.C. Calvario-Covotta · Documento pubblicato/revisionato 14/05/2025 · PDF allegato al sito scuola</div>
               <div class="norm-tags"><span class="norm-tag">RAV 2022-2025</span><span class="norm-tag">Priorità</span><span class="norm-tag">Piano di miglioramento</span><span class="norm-tag">Esiti</span></div>
-              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/documento/rav-2022-2025/" target="_blank" rel="noopener">📄 Scheda RAV</a>
-              <a class="norm-link secondary" href="https://www.icdonmilaniariano.edu.it/wp-content/uploads/2025/05/RAV_202425_AVIC849003_20241220114045.pdf" target="_blank" rel="noopener">⬇️ PDF RAV</a>
+              <a class="norm-link primary" href="https://www.icdonmilaniariano.edu.it/documento/rav-2022-2025/" target="_blank" rel="noopener"><span aria-hidden="true">📄</span> Scheda RAV</a>
+              <a class="norm-link secondary" href="https://www.icdonmilaniariano.edu.it/wp-content/uploads/2025/05/RAV_202425_AVIC849003_20241220114045.pdf" target="_blank" rel="noopener"><span aria-hidden="true">⬇️</span> PDF RAV</a>
               <div class="norm-warning">Da tradurre nel curricolo: prove comuni, rubriche valutative, compiti di prestazione, recupero delle abilità di base, potenziamento delle competenze chiave e monitoraggio della continuità.</div>
             </div>
           </div>
         </div>
 
         <div class="norm-cat">
-          <div class="norm-cat-title">🎯 Evidenze PTOF/RAV da usare per completare il curricolo</div>
+          <div class="norm-cat-title"><span aria-hidden="true">🎯</span> Evidenze PTOF/RAV da usare per completare il curricolo</div>
           <div class="norm-card supporto">
-            <div class="norm-icon">🧭</div>
+            <div class="norm-icon" aria-hidden="true">🧭</div>
             <div class="norm-body">
               <div class="norm-title">Cornice PTOF: contesto, identità, territorio, inclusione</div>
               <div class="norm-desc">Il PTOF descrive l'Istituto come comunità educativa articolata su tre ordini di scuola e su più comuni, con una rete di collaborazioni territoriali e una forte attenzione a inclusione, intercultura, laboratori, competenze digitali, STEM e valorizzazione delle risorse locali.</div>
@@ -1630,7 +1633,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             </div>
           </div>
           <div class="norm-card supporto">
-            <div class="norm-icon">📈</div>
+            <div class="norm-icon" aria-hidden="true">📈</div>
             <div class="norm-body">
               <div class="norm-title">Priorità RAV: miglioramento degli esiti e competenze chiave</div>
               <div class="norm-desc">Il RAV richiede di innalzare i livelli di apprendimento, riequilibrare le fasce di livello verso esiti più alti, rafforzare Italiano, Matematica e Inglese, rielaborare il curricolo verticale per competenze e revisionare rubriche valutative e compiti di prestazione.</div>
@@ -1639,7 +1642,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             </div>
           </div>
           <div class="norm-card supporto">
-            <div class="norm-icon">⚖️</div>
+            <div class="norm-icon" aria-hidden="true">⚖️</div>
             <div class="norm-body">
               <div class="norm-title">Educazione civica: aggiornamento curricolare obbligatorio</div>
               <div class="norm-desc">Il PTOF richiama la Legge 92/2019 e le Linee guida adottate con D.M. 183/2024. Il curricolo di istituto deve essere aggiornato sui tre nuclei: Costituzione, sviluppo economico e sostenibilità, cittadinanza digitale.</div>
@@ -1650,20 +1653,20 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
 
         <div class="norm-cat">
-          <div class="norm-cat-title">🏛 Normativa nazionale per la base IN 2012</div>
+          <div class="norm-cat-title"><span aria-hidden="true">🏛</span> Normativa nazionale per la base IN 2012</div>
           <div class="norm-card min">
-            <div class="norm-icon">📗</div>
+            <div class="norm-icon" aria-hidden="true">📗</div>
             <div class="norm-body">
               <div class="norm-title">D.M. 16 novembre 2012, n. 254 — Indicazioni Nazionali per il curricolo</div>
               <div class="norm-desc">È la fonte di riferimento per la base curricolare 2012 della scuola dell'infanzia e del primo ciclo di istruzione. La struttura del curricolo deve distinguere campi di esperienza, discipline, traguardi per lo sviluppo delle competenze e obiettivi di apprendimento.</div>
               <div class="norm-meta">Gazzetta Ufficiale · Serie Generale n. 30 del 05/02/2013 · Entrata in vigore 20/02/2013</div>
               <div class="norm-tags"><span class="norm-tag">IN 2012</span><span class="norm-tag">Base curricolo</span><span class="norm-tag">Infanzia</span><span class="norm-tag">Primo ciclo</span></div>
-              <a class="norm-link primary" href="https://www.gazzettaufficiale.it/eli/id/2013/02/05/13G00034/sg" target="_blank" rel="noopener">📜 Gazzetta Ufficiale</a>
-              <a class="norm-link secondary" href="https://www.miur.gov.it/documents/20182/51310/DM+254_2012.pdf" target="_blank" rel="noopener">📄 Testo PDF MIM</a>
+              <a class="norm-link primary" href="https://www.gazzettaufficiale.it/eli/id/2013/02/05/13G00034/sg" target="_blank" rel="noopener"><span aria-hidden="true">📜</span> Gazzetta Ufficiale</a>
+              <a class="norm-link secondary" href="https://www.miur.gov.it/documents/20182/51310/DM+254_2012.pdf" target="_blank" rel="noopener"><span aria-hidden="true">📄</span> Testo PDF MIM</a>
             </div>
           </div>
           <div class="norm-card min">
-            <div class="norm-icon">🏫</div>
+            <div class="norm-icon" aria-hidden="true">🏫</div>
             <div class="norm-body">
               <div class="norm-title">D.P.R. 275/1999 e Legge 107/2015 — Autonomia scolastica e PTOF</div>
               <div class="norm-desc">La progettazione curricolare rientra nell'autonomia delle istituzioni scolastiche ed è parte dell'identità culturale e progettuale della scuola. Il PTOF deve restare collegato a contesto, curricolo, valutazione, miglioramento e risorse.</div>
@@ -1672,7 +1675,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             </div>
           </div>
           <div class="norm-card min">
-            <div class="norm-icon">🧾</div>
+            <div class="norm-icon" aria-hidden="true">🧾</div>
             <div class="norm-body">
               <div class="norm-title">D.Lgs. 62/2017 e D.M. 14/2024 — Valutazione e certificazione delle competenze</div>
               <div class="norm-desc">La revisione del curricolo deve essere collegata a criteri di valutazione, livelli di competenza, rubriche, osservazioni, compiti autentici e certificazione delle competenze al termine della primaria e del primo ciclo.</div>
@@ -1681,7 +1684,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             </div>
           </div>
           <div class="norm-card min">
-            <div class="norm-icon">⚖️</div>
+            <div class="norm-icon" aria-hidden="true">⚖️</div>
             <div class="norm-body">
               <div class="norm-title">Legge 92/2019, D.M. 35/2020 e D.M. 183/2024 — Educazione civica</div>
               <div class="norm-desc">L'Educazione civica è trasversale e deve essere resa leggibile nel curricolo. Nella revisione va collegata alle discipline, ai compiti di realtà e ai tre nuclei richiamati dal PTOF: Costituzione, sviluppo economico e sostenibilità, cittadinanza digitale.</div>
@@ -1692,44 +1695,44 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
 
         <div class="norm-cat">
-          <div class="norm-cat-title">🇪🇺 Quadri europei e riferimenti metodologici</div>
+          <div class="norm-cat-title"><span aria-hidden="true">🇪🇺</span> Quadri europei e riferimenti metodologici</div>
           <div class="norm-card europa">
-            <div class="norm-icon">🔑</div>
+            <div class="norm-icon" aria-hidden="true">🔑</div>
             <div class="norm-body">
               <div class="norm-title">Raccomandazione del Consiglio UE 22 maggio 2018 — Competenze chiave</div>
               <div class="norm-desc">Riferimento per il profilo dello studente e per il curricolo per competenze. Lo strumento deve mostrare il raccordo tra discipline, competenze chiave e rubriche valutative.</div>
               <div class="norm-meta">Unione Europea · Apprendimento permanente · Competenze chiave</div>
               <div class="norm-tags"><span class="norm-tag">Competenze chiave</span><span class="norm-tag">Profilo studente</span><span class="norm-tag">Rubriche</span></div>
-              <a class="norm-link primary" href="https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32018H0604(01)" target="_blank" rel="noopener">📄 EUR-Lex</a>
+              <a class="norm-link primary" href="https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32018H0604(01)" target="_blank" rel="noopener"><span aria-hidden="true">📄</span> EUR-Lex</a>
             </div>
           </div>
           <div class="norm-card europa">
-            <div class="norm-icon">💻</div>
+            <div class="norm-icon" aria-hidden="true">💻</div>
             <div class="norm-body">
               <div class="norm-title">DigComp 2.2 e Piano Nazionale Scuola Digitale</div>
               <div class="norm-desc">Riferimenti utili per competenza digitale, uso consapevole delle tecnologie, cittadinanza digitale, sicurezza, dati, ricerca delle informazioni e produzione di contenuti digitali.</div>
               <div class="norm-meta">Competenza digitale · Cittadinanza digitale · Innovazione didattica</div>
               <div class="norm-tags"><span class="norm-tag">Digitale</span><span class="norm-tag">Sicurezza</span><span class="norm-tag">Dati</span><span class="norm-tag">Produzione digitale</span></div>
-              <a class="norm-link primary" href="https://publications.jrc.ec.europa.eu/repository/handle/JRC128415" target="_blank" rel="noopener">📄 DigComp 2.2</a>
-              <a class="norm-link secondary" href="https://www.mim.gov.it/piano-nazionale-scuola-digitale" target="_blank" rel="noopener">🔗 PNSD</a>
+              <a class="norm-link primary" href="https://publications.jrc.ec.europa.eu/repository/handle/JRC128415" target="_blank" rel="noopener"><span aria-hidden="true">📄</span> DigComp 2.2</a>
+              <a class="norm-link secondary" href="https://www.mim.gov.it/piano-nazionale-scuola-digitale" target="_blank" rel="noopener"><span aria-hidden="true">🔗</span> PNSD</a>
             </div>
           </div>
           <div class="norm-card europa">
-            <div class="norm-icon">🌍</div>
+            <div class="norm-icon" aria-hidden="true">🌍</div>
             <div class="norm-body">
               <div class="norm-title">Agenda 2030 e Piano RiGenerazione Scuola</div>
               <div class="norm-desc">Riferimenti per sostenibilità, cittadinanza attiva, cura dell'ambiente, territorio, benessere, compiti autentici e curricolo trasversale di Educazione civica.</div>
               <div class="norm-meta">Sostenibilità · Ambiente · Territorio · Cittadinanza</div>
               <div class="norm-tags"><span class="norm-tag">Agenda 2030</span><span class="norm-tag">Sostenibilità</span><span class="norm-tag">Territorio</span></div>
-              <a class="norm-link primary" href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">🌐 Agenda 2030 ONU</a>
+              <a class="norm-link primary" href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener"><span aria-hidden="true">🌐</span> Agenda 2030 ONU</a>
             </div>
           </div>
         </div>
 
         <div class="norm-cat">
-          <div class="norm-cat-title">⚡ Area di lavoro successiva — Gap verso le IN 2025</div>
+          <div class="norm-cat-title"><span aria-hidden="true">⚡</span> Area di lavoro successiva — Gap verso le IN 2025</div>
           <div class="norm-card in2025">
-            <div class="norm-icon">🧩</div>
+            <div class="norm-icon" aria-hidden="true">🧩</div>
             <div class="norm-body">
               <div class="norm-title">Gap 2025 da trattare come livello separato di revisione</div>
               <div class="norm-desc">La base 2012 deve essere completata prima. Le proposte collegate alle Indicazioni 2025 non devono sovrascrivere la fonte ufficiale: devono comparire come gap, integrazioni o modifiche da discutere. I gap 2025 non modificano automaticamente il curricolo. <a href="#" onclick="setTab('lavoro');return false" style="font-weight:700;color:#1a237e">Apri Revisione per disciplina</a> per valutare ogni proposta, confrontarla con il curricolo vigente e decidere se approvarla, respingerla o modificarla.</div>
@@ -1855,58 +1858,58 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <!-- TAB ESPORTAZIONI -->
 <div id="tab-esportazioni" style="display:none">
   <div class="tab-esportazioni">
-    <h2>📤 Esportazioni e consegne</h2>
+    <h2><span aria-hidden="true">📤</span> Esportazioni e consegne</h2>
     <p class="sub">Tutti gli output in un unico punto: esporta, condividi, archivia.</p>
     <div class="esport-group">
-      <h3>📄 Documento finale</h3>
+      <h3><span aria-hidden="true">📄</span> Documento finale</h3>
       <p style="font-size:11px;color:#666;margin:0 0 8px">Versione approvata del curricolo per il Collegio Docenti.</p>
       <div class="esport-actions">
-        <button class="export-btn btn-word" onclick="exportWord(true)">📄 Word definitivo</button>
-        <button class="export-btn btn-copy" onclick="copyForWord(true)">📋 Copia per Word</button>
-        <button class="export-btn btn-md" onclick="exportMarkdown(true)">📝 Testo</button>
-        <button class="export-btn btn-pdf" onclick="exportPDF(true)">🖨 PDF</button>
+        <button class="export-btn btn-word" onclick="exportWord(true)"><span aria-hidden="true">📄</span> Word definitivo</button>
+        <button class="export-btn btn-copy" onclick="copyForWord(true)"><span aria-hidden="true">📋</span> Copia per Word</button>
+        <button class="export-btn btn-md" onclick="exportMarkdown(true)"><span aria-hidden="true">📝</span> Testo</button>
+        <button class="export-btn btn-pdf" onclick="exportPDF(true)"><span aria-hidden="true">🖨</span> PDF</button>
       </div>
     </div>
     <div class="esport-group">
-      <h3>🔄 Confronto modifiche</h3>
+      <h3><span aria-hidden="true">🔄</span> Confronto modifiche</h3>
       <p style="font-size:11px;color:#666;margin:0 0 8px">Documento di lavoro con tutte le proposte di modifica.</p>
       <div class="esport-actions">
-        <button class="export-btn btn-word" onclick="exportWord()">📄 Word confronto</button>
-        <button class="export-btn btn-copy" onclick="copyForWord()">📋 Copia per Word</button>
-        <button class="export-btn btn-md" onclick="exportMarkdown()">📝 Testo</button>
-        <button class="export-btn btn-pdf" onclick="exportPDF()">🖨 PDF</button>
+        <button class="export-btn btn-word" onclick="exportWord()"><span aria-hidden="true">📄</span> Word confronto</button>
+        <button class="export-btn btn-copy" onclick="copyForWord()"><span aria-hidden="true">📋</span> Copia per Word</button>
+        <button class="export-btn btn-md" onclick="exportMarkdown()"><span aria-hidden="true">📝</span> Testo</button>
+        <button class="export-btn btn-pdf" onclick="exportPDF()"><span aria-hidden="true">🖨</span> PDF</button>
       </div>
     </div>
     <div class="esport-group">
-      <h3>📝 Bozza disciplina</h3>
+      <h3><span aria-hidden="true">📝</span> Bozza disciplina</h3>
       <p style="font-size:11px;color:#666;margin:0 0 8px">Bozza Markdown della disciplina selezionata in Revisione.</p>
       <div class="esport-actions">
-        <button class="export-btn btn-md" onclick="generateDiscBozza()">📝 Genera bozza</button>
-        <button class="export-btn btn-copy" onclick="copyDiscMarkdown()">📋 Copia testo</button>
-        <button class="export-btn btn-md" onclick="downloadDiscMarkdown()">⬇️ Scarica testo</button>
+        <button class="export-btn btn-md" onclick="generateDiscBozza()"><span aria-hidden="true">📝</span> Genera bozza</button>
+        <button class="export-btn btn-copy" onclick="copyDiscMarkdown()"><span aria-hidden="true">📋</span> Copia testo</button>
+        <button class="export-btn btn-md" onclick="downloadDiscMarkdown()"><span aria-hidden="true">⬇️</span> Scarica testo</button>
       </div>
     </div>
     <div class="esport-group">
-      <h3>💼 File di lavoro .cml</h3>
+      <h3><span aria-hidden="true">💼</span> File di lavoro .cml</h3>
       <p style="font-size:11px;color:#666;margin:0 0 8px">File .cml per lo scambio tra docenti, dipartimento e referente curricolo.</p>
       <div class="esport-actions">
-        <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff">⬇️ Scarica proposta docente</button>
-        <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff">⬆️ Invia al Drive</button>
-        <button class="export-btn btn-cml" onclick="exportDepartmentOutcomeCml()" style="background:#004d40;color:#fff">⬇️ Esito dipartimento</button>
+        <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff"><span aria-hidden="true">⬇️</span> Scarica proposta docente</button>
+        <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff"><span aria-hidden="true">⬆️</span> Invia al Drive</button>
+        <button class="export-btn btn-cml" onclick="exportDepartmentOutcomeCml()" style="background:#004d40;color:#fff"><span aria-hidden="true">⬇️</span> Esito dipartimento</button>
       </div>
     </div>
     <div class="esport-group">
-      <h3>📋 Report e resoconti</h3>
+      <h3><span aria-hidden="true">📋</span> Report e resoconti</h3>
       <div class="esport-actions">
-        <button class="export-btn btn-md" onclick="setTab('riepilogo');renderRiepilogo()">📊 Resoconto sintesi</button>
-        <button class="export-btn btn-md" onclick="downloadReferentGroupWorkReport()">📝 Report gruppo lavoro</button>
+        <button class="export-btn btn-md" onclick="setTab('riepilogo');renderRiepilogo()"><span aria-hidden="true">📊</span> Resoconto sintesi</button>
+        <button class="export-btn btn-md" onclick="downloadReferentGroupWorkReport()"><span aria-hidden="true">📝</span> Report gruppo lavoro</button>
       </div>
     </div>
     <div class="esport-group">
-      <h3>💾 Copia di sicurezza</h3>
+      <h3><span aria-hidden="true">💾</span> Copia di sicurezza</h3>
       <div class="esport-actions">
-        <button class="export-btn btn-cml" onclick="saveLocalState(false);exportLocalBackup()">⬇️ Salva copia</button>
-        <button class="export-btn btn-cml" onclick="document.getElementById('local-backup-input').click()">⬆️ Importa copia</button>
+        <button class="export-btn btn-cml" onclick="saveLocalState(false);exportLocalBackup()"><span aria-hidden="true">⬇️</span> Salva copia</button>
+        <button class="export-btn btn-cml" onclick="document.getElementById('local-backup-input').click()"><span aria-hidden="true">⬆️</span> Importa copia</button>
       </div>
     </div>
     <div class="usage-notice" style="margin-top:10px">Documento di lavoro — da validare. Gli esportati non sostituiscono il documento istituzionale approvato dal Collegio Docenti.</div>
@@ -1915,14 +1918,14 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <!-- TAB GUIDA -->
 <div id="tab-guida" style="display:none">
   <div class="tab-guida">
-    <h2>❔ Guida rapida</h2>
+    <h2><span aria-hidden="true">❔</span> Guida rapida</h2>
     <p class="sub">Come usare lo strumento, cosa può fare, cosa non può fare.</p>
     <div class="guida-card">
-      <h3>👋 Come iniziare</h3>
+      <h3><span aria-hidden="true">👋</span> Come iniziare</h3>
       <p>Scegli un'area dalla barra in alto: <strong>Curriculum</strong> per il documento istituzionale, <strong>Competenze e progettazione</strong> per la progettazione operativa. Usa la <strong>Home</strong> per orientarti.</p>
     </div>
     <div class="guida-card">
-      <h3>📚 Curriculum</h3>
+      <h3><span aria-hidden="true">📚</span> Curriculum</h3>
       <ul>
         <li><strong>Consulta</strong> — visualizza il curricolo di istituto (2012 e proposte 2025)</li>
         <li><strong>Revisione</strong> — confronta, approva o modifica le voci disciplina per disciplina</li>
@@ -1931,18 +1934,18 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </ul>
     </div>
     <div class="guida-card">
-      <h3>🧑‍🏫 Competenze e progettazione</h3>
+      <h3><span aria-hidden="true">🧑‍🏫</span> Competenze e progettazione</h3>
       <ul>
         <li><strong>Valutazione / Evidenze</strong> — collega le unità curricolari a evidenze osservabili</li>
         <li><strong>UDA modello</strong> — trasforma una unità curricolare in unità di apprendimento</li>
       </ul>
     </div>
     <div class="guida-card">
-      <h3>📤 Esportazioni</h3>
+      <h3><span aria-hidden="true">📤</span> Esportazioni</h3>
       <p>Trovi tutti gli strumenti di esportazione in un unico tab: Word, Markdown, PDF, copia di sicurezza e resoconto.</p>
     </div>
     <div class="guida-card">
-      <h3>🔒 Cosa non può fare</h3>
+      <h3><span aria-hidden="true">🔒</span> Cosa non può fare</h3>
       <ul>
         <li>Non sostituisce il documento istituzionale approvato dal Collegio Docenti</li>
         <li>Non salva dati su server — tutto resta su questo dispositivo</li>
@@ -1952,10 +1955,10 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </ul>
     </div>
     <div class="guida-card">
-      <h3>💻 Installazione</h3>
-      <p>Puoi installare questo strumento sul telefono o computer come app: usa il pulsante "Installa" nel menu Azioni (icona ⚙️) o dal browser. I dati restano sul dispositivo.</p>
+      <h3><span aria-hidden="true">💻</span> Installazione</h3>
+      <p>Puoi installare questo strumento sul telefono o computer come app: usa il pulsante "Installa" nel menu Azioni (icona <span aria-hidden="true">⚙️</span>) o dal browser. I dati restano sul dispositivo.</p>
     </div>
-    <div class="guida-note"><span class="badge--prototype" style="display:inline-block;margin-right:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700">📋 Prototipo</span> <span class="badge--readonly" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700">🔒 Read-only</span><br>Nessun dato viene salvato su server. Richiede validazione professionale del docente. Non costituisce documento istituzionale approvato.</div>
+    <div class="guida-note"><span class="badge--prototype" style="display:inline-block;margin-right:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">📋</span> Prototipo</span> <span class="badge--readonly" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">🔒</span> Read-only</span><br>Nessun dato viene salvato su server. Richiede validazione professionale del docente. Non costituisce documento istituzionale approvato.</div>
   </div>
 </div>
   </main>
@@ -3183,7 +3186,7 @@ function renderSidebar(){
     else if(items.length && app===items.filter(x=>x.status!=="ok").length && items.filter(x=>x.status!=="ok").length>0){dot="#43a047"; emoji=` <span style="font-size:11px;margin-left:auto">✅</span>`;}
     const meta=DISCIPLINE_META[d];
     html+=`<button class="disc-btn${d===selDisc?" active":""}" onclick="selectDisc('${d.replace(/'/g,"\\'")}')" title="${meta.comp}">
-      <span>${meta.icon}</span>
+      <span aria-hidden="true">${meta.icon}</span>
       <span class="disc-dot" style="background:${dot}"></span>
       <span style="flex:1">${d}${isNewDisc?' <span style="color:#1976d2;font-size:9px">★NEW</span>':''}</span>
       ${emoji}
@@ -3228,6 +3231,7 @@ function selectDisc(d,opts){
     var main=document.getElementById("main-content");
     if(main){main.scrollIntoView({behavior:"smooth",block:"start"});main.setAttribute("tabindex","-1");main.focus({preventScroll:true});}
   }
+  announceStatus("Disciplina selezionata: "+d);
   if(opts.updateHash!==false){
     var nextHash='#cur-'+discHashSlug(d);
     if(location.hash!==nextHash) location.hash=nextHash;
@@ -3404,14 +3408,14 @@ function render(){
   const d=DATA[selDisc]||{traguardi:[],obiettivi:[]};
   const meta=DISCIPLINE_META[selDisc]||{icon:"📘",comp:"",nuclei:""};
   let html=`<div class="disc-header">
-    <h2>${meta.icon} ${selDisc}</h2>
-    <div class="meta">🎯 ${meta.comp}</div>
-    <div class="nucl">📚 Nuclei: ${meta.nuclei}</div>
+    <h2><span aria-hidden="true">${meta.icon}</span> ${selDisc}</h2>
+    <div class="meta"><span aria-hidden="true">🎯</span> ${meta.comp}</div>
+    <div class="nucl"><span aria-hidden="true">📚</span> Nuclei: ${meta.nuclei}</div>
   </div>`;
 
   let anyContent=false;
   for(const ord of ORDINI){
-    for(const [type,label] of [["traguardi","🎯 Traguardi per lo sviluppo delle competenze"],["obiettivi","📋 Obiettivi di apprendimento"]]){
+    for(const [type,label] of [["traguardi","<span aria-hidden=\"true\">🎯</span> Traguardi per lo sviluppo delle competenze"],["obiettivi","<span aria-hidden=\"true\">📋</span> Obiettivi di apprendimento"]]){
       const itemsOrd=(d[type]||[]).filter(x=>x.ordine===ord);
       if(!itemsOrd.length) continue;
       const filtered=itemsOrd.filter(passesFilter);
@@ -3590,14 +3594,14 @@ function renderRiepilogo(){
 
     const meta=DISCIPLINE_META[disc]||{icon:"📘"};
     html+=`<div class="sum-box" style="margin-bottom:10px">
-      <h2 style="font-size:13px;color:#1a237e;margin-bottom:6px">${meta.icon} ${disc}</h2>`;
+      <h2 style="font-size:13px;color:#1a237e;margin-bottom:6px"><span aria-hidden="true">${meta.icon}</span> ${disc}</h2>`;
     if(pendenti.length) html+=`<div style="background:#fff3e0;border-left:3px solid #ff9800;padding:6px 11px;border-radius:5px;font-size:11px;color:#e65100;margin-bottom:8px">⚠️ ${pendenti.length} voci ancora da decidere in questa disciplina — <a href="#" onclick="selectDisc('${disc.replace(/'/g,"\\'")}');setTab('lavoro');return false" style="color:#e65100;font-weight:700">vai a decidere →</a></div>`;
     if(!definitivi.length){html+=`<div style="color:#bbb;font-size:12px">Nessuna voce approvata o invariata ancora.</div></div>`;continue;}
     for(const ord of ORDINI){
       for(const [type,label] of [["traguardi","Traguardi"],["obiettivi","Obiettivi"]]){
         const items=(d[type]||[]).filter(x=>x.ordine===ord && (x.status==="ok"||x.decisione==="approvata"));
         if(!items.length) continue;
-        html+=`<div style="font-size:10px;font-weight:700;color:#607d8b;text-transform:uppercase;letter-spacing:1px;margin:8px 0 4px">${ORDINE_LABEL[ord]} — ${label}</div>`;
+        html+=`<div style="font-size:10px;font-weight:700;color:#607d8b;text-transform:uppercase;letter-spacing:1px;margin:8px 0 4px"><span aria-hidden="true">${ORDINE_LABEL[ord].match(/^(\S+)/)?.[0] || ''}</span> ${ORDINE_LABEL[ord].replace(/^\S+\s*/,'')} — ${label}</div>`;
         html+=items.map(item=>{
           const testo=cleanInlineIn2025Marker(item.status==="ok"?item.testo:(item.testoFinale||item.proposto));
           const isNew=item.status==="nuovo";
@@ -3622,10 +3626,21 @@ function renderRiepilogo(){
   document.getElementById("riepilogo-body").innerHTML=introMsg+personalizationLegend+html||`<div style="color:#bbb;text-align:center;padding:30px">Nessuna voce approvata ancora.</div>`;
 }
 
+function announceStatus(message){
+  var status=document.getElementById("a11y-status");
+  if(!status||!message) return;
+  status.textContent="";
+  window.setTimeout(function(){
+    status.textContent=message;
+  },30);
+}
+
 function setTab(t,opts){
   opts=opts||{};
   currentTab=t;
-  const parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",processo:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};
+  var tabLabels={home:"Home",curricolo:"Curriculum",lavoro:"Revisione",processo:"Processo",riepilogo:"Definitivo",normativa:"Fonti",generali:"Fonti",didattica:"Competenze e progettazione",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+  if(!opts||!opts.updateHash===false) announceStatus("Sezione aperta: "+(tabLabels[t]||t));
+  var parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",processo:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};
   const p=parentMap[t]||"home";
   document.getElementById("tab-home").style.display=t==="home"?"block":"none";
   document.getElementById("tab-didattica").style.display=t==="didattica"||t==="didattica_uda"?"block":"none";
@@ -5643,7 +5658,7 @@ function renderCurricoloIstituto(version) {
   });
   html += '</div>';
 
-  html += '<div style="font-size:11px;color:#78909c;margin-bottom:7px">📊 <a href="#" onclick="setTab(\'lavoro\');return false">Validazione dipartimentale</a> e stato di completezza disponibili in Revisione.</div>';
+  html += '<div style="font-size:11px;color:#78909c;margin-bottom:7px"><span aria-hidden="true">📊</span> <a href="#" onclick="setTab(\'lavoro\');return false">Validazione dipartimentale</a> e stato di completezza disponibili in Revisione.</div>';
 
   ordinii.forEach(function(o) {
     if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;
@@ -5658,13 +5673,13 @@ function renderCurricoloIstituto(version) {
       var discOpen=selDisc===disc?' open':'';
       html += '<details class="curricolo-disc"' + discOpen + ' id="cur-' + safeId + '">' +
         '<summary class="curricolo-disc-hd">' +
-        '<span class="curricolo-disc-icon">' + meta.icon + '</span>' +
+        '<span class="curricolo-disc-icon" aria-hidden="true">' + meta.icon + '</span>' +
         '<span class="curricolo-disc-name">' + disc + '</span>' +
         '<span class="curricolo-disc-comp">' + meta.comp + '</span></summary>';
 
       const trag = d.traguardi.filter(function(i) { return i.ordine === o; });
       if (trag.length > 0) {
-        html += '<div class="curricolo-section-title">🎯 Traguardi per lo sviluppo delle competenze</div>';
+        html += '<div class="curricolo-section-title"><span aria-hidden="true">🎯</span> Traguardi per lo sviluppo delle competenze</div>';
         trag.forEach(function(item) {
           const text = v === '2025' && item.proposto ? item.proposto : item.testo;
           const cls = item.status === 'modifica' ? ' modified' : item.status === 'nuovo' ? ' new' : '';
@@ -5674,7 +5689,7 @@ function renderCurricoloIstituto(version) {
 
       const ob = d.obiettivi.filter(function(i) { return i.ordine === o; });
       if (ob.length > 0) {
-        html += '<div class="curricolo-section-title">📋 Obiettivi di apprendimento</div>';
+        html += '<div class="curricolo-section-title"><span aria-hidden="true">📋</span> Obiettivi di apprendimento</div>';
         ob.forEach(function(item) {
           const text = v === '2025' && item.proposto ? item.proposto : item.testo;
           const cls = item.status === 'modifica' ? ' modified' : item.status === 'nuovo' ? ' new' : '';
