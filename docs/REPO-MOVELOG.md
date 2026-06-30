@@ -6370,3 +6370,24 @@ eport/CML-225_ux_menu_action_contract.md, aggiornamento docs/REPO-MOVELOG.md`n- 
 - **Artefatti**: `docs/03_execution/CML-216.md`, `report/CML-216_uda_draft_export_readiness_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Vincoli**: docs-only, nessuna modifica runtime, nessuna modifica curriculum JSON, nessuna implementazione UDA, nessuna modifica `.cml`/export/import/validator/shape-test/service-worker/manifest, nessuna dipendenza, nessun deploy, nessun push, nessun secret
 - **Verdetto**: `CML_216_UDA_DRAFT_EXPORT_READINESS_AUDIT_COMPLETE`
+
+
+## 2026-06-30 - CML-ANNUAL-PLANNING-EDITABLE-PROGRAMMAZIONE
+
+- **Commit**: (in preparazione)
+- **Tipo slice**: runtime increment controllato
+- **Oggetto**: aggiunta bozza locale editabile per Programmazione annuale dentro `didattica_programmazione`
+- **Base**: `099e0cb` - `CML_ANNUAL_PLANNING_VIEW_LEVELS_ORDS_PUSHED_REMOTE`
+- **Runtime**: modificato solo `_published_snapshot/netlify-current/index.html`
+- **Chiave locale**: `cml_annual_planning_draft_v1`
+- **Funzioni**: selezione disciplina/ordine/classe, selezione unita curricolari, periodo, stato bozza, note generiche, anteprima Markdown, copia Markdown, cancellazione bozza
+- **Privacy**: nessun dato personale studente richiesto; note solo generiche
+- **content/curriculum/**: invariato
+- **Tools/test**: invariati
+- **Asset/manifest/service-worker**: invariati
+- **Schema `.cml` ed export/import**: invariati
+- **Backend/API/endpoint/credenziali/dipendenze**: non introdotti
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-ANNUAL-PLANNING-EDITABLE-PROGRAMMAZIONE.md`, `report/CML-ANNUAL-PLANNING-EDITABLE-PROGRAMMAZIONE.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto atteso**: `CML_ANNUAL_PLANNING_EDITABLE_PROGRAMMAZIONE_READY_LOCAL_NOT_PUSHED`

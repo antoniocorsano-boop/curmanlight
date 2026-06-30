@@ -880,7 +880,30 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .didattica-programmazione-level strong{display:block;font-size:12px;color:#1a237e;margin-bottom:3px}
 .didattica-programmazione-level span{display:block;font-size:10px;color:#455a64;line-height:1.35}
 .didattica-programmazione-footer{background:#e8eaf6;border-radius:0 0 9px 9px;padding:10px 14px;font-size:10px;color:#1a237e;line-height:1.45;text-align:center}
-@media(max-width:900px){.didattica-programmazione-grid,.didattica-programmazione-levels{grid-template-columns:1fr}.didattica-programmazione-level{min-height:auto}}
+.annual-draft-box{background:#fff;border:1px solid #c5cae9;border-left:3px solid #3949ab;border-radius:8px;padding:12px 14px;margin:12px 0;color:#263238}
+.annual-draft-box h3{font-size:14px;color:#1a237e;margin:0 0 4px}
+.annual-draft-intro{font-size:11px;color:#455a64;line-height:1.45;margin:0 0 10px}
+.annual-draft-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:8px 0}
+.annual-draft-field{display:flex;flex-direction:column;gap:4px}
+.annual-draft-field label{font-size:11px;font-weight:800;color:#1a237e}
+.annual-draft-field select,.annual-draft-field input,.annual-draft-field textarea{width:100%;border:1px solid #cfd8dc;border-radius:7px;padding:7px 8px;font:inherit;font-size:12px;background:#fff;color:#263238}
+.annual-draft-field textarea{min-height:76px;resize:vertical}
+.annual-draft-wide{grid-column:1/-1}
+.annual-draft-units{max-height:190px;overflow:auto;border:1px solid #e0e0e0;border-radius:7px;background:#fafafa;padding:7px;display:grid;gap:5px}
+.annual-draft-unit{display:flex;gap:7px;align-items:flex-start;background:#fff;border:1px solid #eceff1;border-radius:6px;padding:6px;font-size:11px;line-height:1.35;color:#37474f}
+.annual-draft-unit input{margin-top:2px}
+.annual-draft-actions{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}
+.annual-draft-btn{border:1px solid #c5cae9;border-radius:7px;background:#fff;color:#1a237e;padding:7px 10px;font-size:11px;font-weight:800;cursor:pointer}
+.annual-draft-btn-primary{background:#1a237e;color:#fff;border-color:#1a237e}
+.annual-draft-btn-danger{background:#fff5f5;color:#b71c1c;border-color:#ffcdd2}
+.annual-draft-status{display:none;margin:6px 0;padding:7px 9px;border-radius:7px;font-size:11px;font-weight:700}
+.annual-draft-status.ok{display:block;background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7}
+.annual-draft-status.warn{display:block;background:#fff3e0;color:#e65100;border:1px solid #ffcc80}
+.annual-draft-preview{background:#f5f7fa;border:1px solid #e0e0e0;border-radius:8px;padding:10px;margin-top:8px}
+.annual-draft-preview h4{font-size:12px;color:#1a237e;margin:0 0 5px}
+.annual-draft-preview pre{white-space:pre-wrap;margin:0;font-size:11px;line-height:1.45;color:#263238;font-family:inherit}
+.annual-draft-privacy{background:#e8f5e9;border:1px solid #a5d6a7;border-left:3px solid #2e7d32;border-radius:7px;padding:8px 10px;font-size:11px;color:#1b5e20;line-height:1.45;margin-top:8px}
+@media(max-width:900px){.didattica-programmazione-grid,.didattica-programmazione-levels,.annual-draft-form{grid-template-columns:1fr}.didattica-programmazione-level{min-height:auto}}
 .home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
 .home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
 .home-card-note{font-size:10px;color:#546e7a;margin:10px 0 0;font-style:italic;line-height:1.4}
@@ -1465,7 +1488,25 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <strong>Livelli di maturità CurManLight → CurMan</strong>
           <div class="didattica-programmazione-levels" id="didattica-programmazione-levels"></div>
         </div>
-        <div class="didattica-programmazione-footer">Vista read-only · Dati derivati dal curricolo strutturato · Nessun salvataggio locale · Nessun dato studente · Nessuna modifica a export/import o schema .cml</div>
+        <div class="annual-draft-box" id="annual-draft-box">
+          <h3>Bozza programmazione annuale locale</h3>
+          <p class="annual-draft-intro">Prepara una bozza operativa sul dispositivo. Usa solo descrittori generici: non inserire nomi, cognomi, valutazioni individuali o dati personali di studenti.</p>
+          <div class="annual-draft-form">
+            <div class="annual-draft-field"><label for="annual-draft-disciplina">Disciplina</label><select id="annual-draft-disciplina" onchange="updateAnnualDraftDiscipline()"></select></div>
+            <div class="annual-draft-field"><label for="annual-draft-ordine">Ordine</label><select id="annual-draft-ordine" onchange="updateAnnualDraftClasses();renderAnnualDraftUnits();updateAnnualDraftPreview()"><option value="Infanzia">Infanzia</option><option value="Primaria">Primaria</option><option value="Secondaria">Secondaria</option></select></div>
+            <div class="annual-draft-field"><label for="annual-draft-classe">Classe/fascia</label><select id="annual-draft-classe" onchange="renderAnnualDraftUnits();updateAnnualDraftPreview()"></select></div>
+            <div class="annual-draft-field"><label for="annual-draft-anno">Anno scolastico</label><input id="annual-draft-anno" type="text" inputmode="numeric" placeholder="2026/2027" oninput="updateAnnualDraftPreview()"></div>
+            <div class="annual-draft-field"><label for="annual-draft-periodo">Periodo</label><input id="annual-draft-periodo" type="text" placeholder="es. settembre-novembre" oninput="updateAnnualDraftPreview()"></div>
+            <div class="annual-draft-field"><label for="annual-draft-stato">Stato bozza</label><select id="annual-draft-stato" onchange="updateAnnualDraftPreview()"><option value="bozza">bozza</option><option value="in revisione">in revisione</option><option value="pronta per confronto">pronta per confronto</option></select></div>
+            <div class="annual-draft-field annual-draft-wide"><label>Unita curricolari selezionate</label><div class="annual-draft-units" id="annual-draft-units"></div></div>
+            <div class="annual-draft-field annual-draft-wide"><label for="annual-draft-note">Note generiche di programmazione</label><textarea id="annual-draft-note" placeholder="Annota raccordi, tempi, attenzioni metodologiche generiche. Non inserire dati personali." oninput="updateAnnualDraftPreview()"></textarea></div>
+          </div>
+          <div class="annual-draft-actions"><button class="annual-draft-btn annual-draft-btn-primary" type="button" onclick="saveAnnualPlanningDraft()">Salva bozza locale</button><button class="annual-draft-btn" type="button" onclick="copyAnnualPlanningMarkdown()">Copia Markdown</button><button class="annual-draft-btn annual-draft-btn-danger" type="button" onclick="clearAnnualPlanningDraft()">Cancella bozza</button></div>
+          <div class="annual-draft-status" id="annual-draft-status"></div>
+          <div class="annual-draft-preview"><h4>Anteprima leggibile</h4><pre id="annual-draft-preview">Compila i campi per generare l'anteprima.</pre></div>
+          <div class="annual-draft-privacy"><strong>Bozza locale da validare</strong><br>La bozza resta su questo dispositivo nella chiave <code>cml_annual_planning_draft_v1</code>, non modifica export/import ne schema .cml e richiede validazione professionale prima dell'uso istituzionale.</div>
+        </div>
+        <div class="didattica-programmazione-footer">Vista read-only - Dati derivati dal curricolo strutturato - Bozza locale separata - Nessun dato studente - Nessuna modifica a export/import o schema .cml</div>
       </div>      <!-- UDA MODELLO -->
       <div class="didattica-uda" id="didattica-uda" style="display:none">
         <div class="didattica-uda-header">
@@ -2683,7 +2724,7 @@ function renderProgrammazioneAnnuale(){
   var total=units.length;
   var nuclei={};
   units.forEach(function(u){var n=u.nucleoFondante||u.nucleo||u.ambito||"Nucleo non indicato";nuclei[n]=true;});
-  statsEl.innerHTML='<div class="didattica-programmazione-stat"><strong>'+escapeHtml(selectedDisc)+'</strong>Disciplina</div>'+'<div class="didattica-programmazione-stat"><strong>'+total+'</strong>Unita derivate</div>'+'<div class="didattica-programmazione-stat"><strong>'+Object.keys(nuclei).length+'</strong>Nuclei/ambiti</div>'+'<div class="didattica-programmazione-stat"><strong>0</strong>Dati salvati</div>';
+  statsEl.innerHTML='<div class="didattica-programmazione-stat"><strong>'+escapeHtml(selectedDisc)+'</strong>Disciplina</div>'+'<div class="didattica-programmazione-stat"><strong>'+total+'</strong>Unita derivate</div>'+'<div class="didattica-programmazione-stat"><strong>'+Object.keys(nuclei).length+'</strong>Nuclei/ambiti</div>'+'<div class="didattica-programmazione-stat"><strong>'+getAnnualPlanningSavedCount()+'</strong>Bozze locali</div>';
   var html='';
   orders.forEach(function(ord){
     var group=units.filter(function(u){return u.ordine===ord});
@@ -2697,7 +2738,28 @@ function renderProgrammazioneAnnuale(){
   ordEl.innerHTML=html;
   var levels=[["1","Consultazione curricolo","Lettura del curricolo strutturato e delle unita disponibili."],["2","Revisione IN2012/IN2025","Confronto e decisioni curricolari nel perimetro istituzionale."],["3","Progettazione annuale","Vista derivata per ordini, classi/fasce, unita e periodi."],["4","UDA smart/collaborative","Bozze UDA collegate a unita, evidenze e validazione dipartimentale."],["5","Campo e analisi","Raccolta evidenze operative e sintesi per miglioramento curricolare."]];
   levelsEl.innerHTML=levels.map(function(l){return '<div class="didattica-programmazione-level"><strong>Livello '+l[0]+'</strong><span>'+escapeHtml(l[1])+'</span><span>'+escapeHtml(l[2])+'</span></div>';}).join('');
+  renderAnnualDraftPanel();
 }
+
+var ANNUAL_PLANNING_DRAFT_KEY="cml_annual_planning_draft_v1";
+var ANNUAL_PLANNING_DRAFT_MARKDOWN="";
+function getAnnualPlanningSavedDraft(){try{return JSON.parse(localStorage.getItem(ANNUAL_PLANNING_DRAFT_KEY)||"null");}catch(err){return null;}}
+function getAnnualPlanningSavedCount(){return getAnnualPlanningSavedDraft()?1:0;}
+function getAnnualDraftUnitsFor(discipline){var discKey=discKeyFromName(discipline)||discKeyFromName(selDisc)||mappaDisciplinaCorrente;if(discKey==="tecnologia"&&typeof TECNOLOGIA_NORM_DATA!=="undefined")return TECNOLOGIA_NORM_DATA.unitaApprendimento||[];if(typeof ALL_CURRICULUM_DATA!=="undefined"&&ALL_CURRICULUM_DATA[discKey])return ALL_CURRICULUM_DATA[discKey].unitaApprendimento||[];return [];}
+function annualDraftClassLabel(u){return u.fascia?"Fascia "+u.fascia:(u.classe?"Classe "+u.classe:"Classe/fascia non indicata");}
+function annualDraftUnitTitle(u){return (u.ambito||u.nucleoFondante||u.nucleo||"Unita curricolare")+" - "+(u.competenza||u.traguardo||"descrizione non disponibile");}
+function setAnnualDraftStatus(message,type){var el=document.getElementById("annual-draft-status");if(!el)return;el.textContent=message;el.className="annual-draft-status "+(type||"ok");}
+function selectedAnnualDraftUnitIds(){return Array.prototype.slice.call(document.querySelectorAll("#annual-draft-units input[type=checkbox]:checked")).map(function(cb){return cb.value;});}
+function updateAnnualDraftDiscipline(){updateAnnualDraftClasses();renderAnnualDraftUnits();updateAnnualDraftPreview();}
+function updateAnnualDraftClasses(preferredClass){var disc=document.getElementById("annual-draft-disciplina");var ord=document.getElementById("annual-draft-ordine");var cls=document.getElementById("annual-draft-classe");if(!disc||!ord||!cls)return;var labels={};getAnnualDraftUnitsFor(disc.value).filter(function(u){return u.ordine===ord.value;}).forEach(function(u){labels[annualDraftClassLabel(u)]=true;});var list=Object.keys(labels).sort();cls.innerHTML=list.map(function(label){return '<option value="'+escapeHtml(label)+'">'+escapeHtml(label)+'</option>';}).join("")||'<option value="">Nessuna classe/fascia disponibile</option>';if(preferredClass&&list.indexOf(preferredClass)!==-1)cls.value=preferredClass;}
+function renderAnnualDraftUnits(preselected){var disc=document.getElementById("annual-draft-disciplina");var ord=document.getElementById("annual-draft-ordine");var cls=document.getElementById("annual-draft-classe");var box=document.getElementById("annual-draft-units");if(!disc||!ord||!cls||!box)return;var selected=preselected||selectedAnnualDraftUnitIds();var units=getAnnualDraftUnitsFor(disc.value).filter(function(u){return u.ordine===ord.value&&annualDraftClassLabel(u)===cls.value;});box.innerHTML=units.map(function(u,i){var id=u.id||("unit_"+i);var checked=selected.indexOf(id)!==-1?" checked":"";return '<label class="annual-draft-unit"><input type="checkbox" value="'+escapeHtml(id)+'" onchange="updateAnnualDraftPreview()"'+checked+'><span><strong>'+escapeHtml(annualDraftClassLabel(u))+'</strong><br>'+escapeHtml(annualDraftUnitTitle(u))+'</span></label>';}).join("")||'<div class="annual-draft-unit">Nessuna unita curricolare disponibile per la combinazione scelta.</div>';}
+function collectAnnualPlanningDraft(){var disc=document.getElementById("annual-draft-disciplina");var ord=document.getElementById("annual-draft-ordine");var cls=document.getElementById("annual-draft-classe");var anno=document.getElementById("annual-draft-anno");var periodo=document.getElementById("annual-draft-periodo");var stato=document.getElementById("annual-draft-stato");var note=document.getElementById("annual-draft-note");var saved=getAnnualPlanningSavedDraft();var now=new Date().toISOString();var selectedIds=selectedAnnualDraftUnitIds();return {id:(saved&&saved.id)||("pa_"+now.slice(0,10).replace(/-/g,"")+"_locale"),tipo:"programmazione_annuale",disciplina:disc?disc.value:"",ordine:ord?ord.value:"",classe:cls?cls.value:"",annoScolastico:anno?anno.value.trim():"",unitaSelezionate:selectedIds,periodi:[{periodo:periodo?periodo.value.trim():"",unitaIds:selectedIds,durataOre:null,note:null}],stato:stato?stato.value:"bozza",autore:null,timestamp:(saved&&saved.timestamp)||now,timestampModifica:now,noteGeneriche:note?note.value.trim():""};}
+function buildAnnualPlanningMarkdown(draft){var units=getAnnualDraftUnitsFor(draft.disciplina).filter(function(u){return draft.unitaSelezionate.indexOf(u.id)!==-1;});var lines=["# Bozza programmazione annuale","","- Disciplina: "+(draft.disciplina||"non indicata"),"- Ordine: "+(draft.ordine||"non indicato"),"- Classe/fascia: "+(draft.classe||"non indicata"),"- Anno scolastico: "+(draft.annoScolastico||"non indicato"),"- Periodo: "+((draft.periodi[0]&&draft.periodi[0].periodo)||"non indicato"),"- Stato: "+(draft.stato||"bozza"),"","## Unita curricolari selezionate"];if(units.length){units.forEach(function(u){lines.push("- "+annualDraftUnitTitle(u));});}else{lines.push("- Nessuna unita selezionata");}lines.push("","## Note generiche",draft.noteGeneriche||"Nessuna nota inserita.","","## Avvertenze","Bozza locale da validare professionalmente. Non inserire dati personali di studenti. Non modifica export/import o schema .cml.");return lines.join("\n");}
+function updateAnnualDraftPreview(){var preview=document.getElementById("annual-draft-preview");if(!preview)return;var draft=collectAnnualPlanningDraft();ANNUAL_PLANNING_DRAFT_MARKDOWN=buildAnnualPlanningMarkdown(draft);preview.textContent=ANNUAL_PLANNING_DRAFT_MARKDOWN;}
+function renderAnnualDraftPanel(){var disc=document.getElementById("annual-draft-disciplina");if(!disc)return;var saved=getAnnualPlanningSavedDraft();var preferredDisc=(saved&&saved.disciplina)||selDisc||DISCIPLINE[0]||"";disc.innerHTML=DISCIPLINE.map(function(d){return '<option value="'+escapeHtml(d)+'">'+escapeHtml(d)+'</option>';}).join("");if(DISCIPLINE.indexOf(preferredDisc)!==-1)disc.value=preferredDisc;var ord=document.getElementById("annual-draft-ordine");if(ord&&saved&&saved.ordine)ord.value=saved.ordine;updateAnnualDraftClasses(saved&&saved.classe);var anno=document.getElementById("annual-draft-anno");if(anno)anno.value=(saved&&saved.annoScolastico)||"";var periodo=document.getElementById("annual-draft-periodo");if(periodo)periodo.value=(saved&&saved.periodi&&saved.periodi[0]&&saved.periodi[0].periodo)||"";var stato=document.getElementById("annual-draft-stato");if(stato&&saved&&saved.stato)stato.value=saved.stato;var note=document.getElementById("annual-draft-note");if(note)note.value=(saved&&saved.noteGeneriche)||"";renderAnnualDraftUnits((saved&&saved.unitaSelezionate)||[]);updateAnnualDraftPreview();}
+function saveAnnualPlanningDraft(){try{var draft=collectAnnualPlanningDraft();localStorage.setItem(ANNUAL_PLANNING_DRAFT_KEY,JSON.stringify(draft));setAnnualDraftStatus("Bozza salvata localmente su questo dispositivo. Non contiene dati studenti se hai rispettato le avvertenze.","ok");renderProgrammazioneAnnuale();}catch(err){setAnnualDraftStatus("Salvataggio locale non disponibile in questo browser.","warn");}}
+function clearAnnualPlanningDraft(){try{localStorage.removeItem(ANNUAL_PLANNING_DRAFT_KEY);}catch(err){}setAnnualDraftStatus("Bozza locale cancellata.","ok");renderProgrammazioneAnnuale();}
+function copyAnnualPlanningMarkdown(){updateAnnualDraftPreview();var text=ANNUAL_PLANNING_DRAFT_MARKDOWN||"";if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){setAnnualDraftStatus("Markdown copiato negli appunti.","ok");}).catch(function(){setAnnualDraftStatus("Copia automatica non riuscita: seleziona l'anteprima e copia manualmente.","warn");});return;}var ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");setAnnualDraftStatus("Markdown copiato negli appunti.","ok");}catch(err){setAnnualDraftStatus("Copia automatica non riuscita: seleziona l'anteprima e copia manualmente.","warn");}document.body.removeChild(ta);}
 // UDA MODELLO DATA
 // ================================================================
 var UDA_MODELI=[{
