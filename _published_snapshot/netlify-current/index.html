@@ -3219,6 +3219,10 @@ function refreshCurrentDisciplineViews(){
     renderMappaDisciplinare();
     renderUdaDraftPanel();
   }
+  var _bc=document.getElementById("breadcrumb");
+  if(_bc&&(currentTab==="curricolo"||currentTab==="lavoro"||currentTab==="riepilogo")){
+    _bc.innerHTML='<span class="crumb-current">'+({curricolo:"Curriculum — Consultazione",lavoro:"Curriculum — Revisione",riepilogo:"Curriculum — Definitivo"}[currentTab])+(selDisc?" — "+selDisc:"")+'</span>';
+  }
 }
 function selectDisc(d,opts){
   opts=opts||{};
