@@ -1,5 +1,30 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-REAL-SCREEN-READER-TEST — Real screen reader test (NVDA)
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-REAL-SCREEN-READER-TEST`
+- **Commit base**: `6279387`
+- **Tipo slice**: audit/report only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-REAL-SCREEN-READER-TEST.md`, `report/CML-UX-ACCESSIBILITY-REAL-SCREEN-READER-TEST.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **NVDA installato**: sì (PID 9772)
+- **NVDA test interattivo**: non eseguito (richiede operatore umano con display fisico)
+- **Analisi strutturale**: completata — ARIA landmarks, heading, live-region, focus, form controls
+- **P0 rilevati**: 0
+- **P1 rilevati**: 0
+- **P2 rilevati**: 1 (pulsanti icon-only card senza label esplicita)
+- **P3 rilevati**: 5 (landmark naming, microcopy)
+- **Errori JS reali**: 0
+- **Score aggiornato**: no (invariato a 76/100)
+- **Score refresh consigliato**: sì, dopo test NVDA interattivo e microfix P2
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_REAL_SCREEN_READER_TEST_READY_WITH_NOTES`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-MICROFIX — Breadcrumb sync microfix
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-MICROFIX`
