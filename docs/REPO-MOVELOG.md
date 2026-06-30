@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-COLOR-CONTRAST-REMEDIATION - Remediation contrasto colore
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-COLOR-CONTRAST-REMEDIATION`
+- **Commit base**: `dfd25db` — **Commit finale**: `ff2976a`
+- **Tipo slice**: runtime chirurgico + documentazione
+- **Runtime modificato**: sì — 7 linee CSS/HTML in `index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-ACCESSIBILITY-COLOR-CONTRAST-REMEDIATION.md`, `report/CML-UX-ACCESSIBILITY-COLOR-CONTRAST-REMEDIATION.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Contrasti pre-fix**: 9 serious `color-contrast`
+- **Contrasti post-fix**: 0 serious (verified via axe local test)
+- **Axe totali**: 16 → 7 (solo `region` moderate residui)
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Errori JS reali**: 0
+- **Layout/comportamento**: invariati
+- **Colori usati**: `#00695c` (teal scuro) e `#546e7a` (blue-grey medio) — palette esistente
+- **Invarianti**: JSON, .cml, Export Center, UDA, aria-live, aria-hidden, icon-only labels, service worker, manifest, tool, asset non toccati
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_COLOR_CONTRAST_REMEDIATION_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION - Esecuzione audit automatico accessibilita
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION`
