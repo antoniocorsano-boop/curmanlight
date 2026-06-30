@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-P3-ACCESSIBILITY-ARIA-MICROFIX-CLOSURE — Close P3 ARIA microfix baseline
+
+- **Nome slice**: `CML-P3-ACCESSIBILITY-ARIA-MICROFIX-CLOSURE`
+- **Commit base**: `65f62ed`
+- **Tipo slice**: docs-only closure
+- **Runtime modificato**: no (solo questa closure)
+- **Score accessibilit\u00e0**: invariato (88/100)
+- **File modificati**: `docs/03_execution/CML-P3-ACCESSIBILITY-ARIA-MICROFIX-CLOSURE.md`, `report/CML-P3-ACCESSIBILITY-ARIA-MICROFIX-CLOSURE.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Issue risolte nella slice precedente**: P3.01\u2013P3.05, P3.07, P3.09
+- **Backlog residuo**: P3.06, P3.08, P3.10, VoiceOver test
+- **Prossima slice consigliata**: `CML-P3-ACCESSIBILITY-RESIDUAL-POLISH` o `CML-VOICEOVER-MACOS-FUTURE-GATE-CONTRACT`
+- **Push**: non eseguito
+- **Verdetto**: `CML_P3_ACCESSIBILITY_ARIA_MICROFIX_CLOSURE_READY`
+
 ## 2026-06-30 - CML-P3-ACCESSIBILITY-ARIA-MICROFIX — ARIA microfix (P3.01/02/03/04/05/07/09)
 
 - **Nome slice**: `CML-P3-ACCESSIBILITY-ARIA-MICROFIX`
