@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-SCREEN-READER-STRUCTURAL - Score refresh post structural screen reader gate
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-SCREEN-READER-STRUCTURAL`
+- **Commit base**: `e28cfa5`
+- **Tipo slice**: docs-only / score refresh / governance accessibilita
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-SCREEN-READER-STRUCTURAL.md`, `report/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-SCREEN-READER-STRUCTURAL.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Score precedente**: 76/100
+- **Score aggiornato**: 76/100
+- **Delta**: +0
+- **Motivazione**: gate automatici puliti e smoke strutturale assistivo completato, ma nessun test reale NVDA/VoiceOver disponibile
+- **Stato**: audit-ready interno avanzato
+- **Gate automatici**: puliti; Lighthouse desktop/mobile 96/100, axe color-contrast 0 serious, axe region 0 atteso
+- **Gate screen reader**: strutturale completato; reale pendente
+- **Soglia >85**: non ancora difendibile senza screen reader reale
+- **Backlog residuo**: `CML-UX-ACCESSIBILITY-OVERLAY-FOCUS-MANAGEMENT`, `CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-AUDIT`, `CML-UX-ACCESSIBILITY-REAL-SCREEN-READER-TEST`
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, asset, manifest, service worker o dati curricolari modificati
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_SCORE_REFRESH_POST_SCREEN_READER_STRUCTURAL_READY`
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-SCREEN-READER-SMOKE-TEST - Screen reader smoke gate strutturale
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCREEN-READER-SMOKE-TEST`
