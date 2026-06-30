@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-DISCIPLINE-GENERALIZATION-AUDIT-AND-FIX-PLAN — Audit generalizzazione discipline
+- **Nome slice**: `CML-DISCIPLINE-GENERALIZATION-AUDIT-AND-FIX-PLAN`
+- **Commit base**: `c4969e2`
+- **Tipo slice**: docs-only audit + fix plan
+- **Runtime modificato**: no
+- **Accessibilità**: 88/100 invariata
+- **File modificati**: `docs/03_execution/CML-DISCIPLINE-GENERALIZATION-AUDIT-AND-FIX-PLAN.md`, `report/CML-DISCIPLINE-GENERALIZATION-AUDIT-AND-FIX-PLAN.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: residui Tecnologia-centrici, UDA/progettazione non generalizzata
+- **Residui trovati**: 18 (13 runtime, 3 docs, 2 esempi accettabili)
+- **Prossima slice**: `CML-DISCIPLINE-GENERALIZATION-RUNTIME-MICROFIX`
+- **Push**: non eseguito
+- **Verdetto**: `CML_DISCIPLINE_GENERALIZATION_AUDIT_AND_FIX_PLAN_READY`
+
 ## 2026-06-30 - CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION — Stabilizzazione navigazione e scrolling
 - **Nome slice**: `CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION`
 - **Commit base**: `ffd78b2`
