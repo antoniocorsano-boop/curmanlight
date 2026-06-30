@@ -1,5 +1,18 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-VIEWS-PRODUCTION-RESTART-SELECTION — Selezione prima vista post-accessibilità
+- **Nome slice**: `CML-VIEWS-PRODUCTION-RESTART-SELECTION`
+- **Commit base**: `9417015`
+- **Tipo slice**: docs-only selection
+- **Runtime modificato**: no
+- **Score accessibilità**: invariato (88/100)
+- **File modificati**: `docs/03_execution/CML-VIEWS-PRODUCTION-RESTART-SELECTION.md`, `report/CML-VIEWS-PRODUCTION-RESTART-SELECTION.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Scelta**: C. Vista "Controllo qualità curricolo" (prime vista/funzionalità)
+- **Motivo**: valore comunicativo massimo, basso rischio runtime, nessun impatto su dati o export
+- **Prossima slice**: `CML-VIEWS-WORKFLOW-STATUS-PANEL`
+- **Push**: non eseguito
+- **Verdetto**: `CML_VIEWS_PRODUCTION_RESTART_SELECTION_READY`
+
 ## 2026-06-30 - CML-VOICEOVER-MACOS-FUTURE-GATE-CONTRACT — Definito contratto futuro test VoiceOver/macOS
 
 - **Nome slice**: `CML-VOICEOVER-MACOS-FUTURE-GATE-CONTRACT`
