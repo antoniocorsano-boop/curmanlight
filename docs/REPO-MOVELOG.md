@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-CERTIFICATION-READINESS-CURRICULUM-UI - Curriculum UI certification readiness
+
+- **Nome slice**: `CML-UX-CERTIFICATION-READINESS-CURRICULUM-UI`
+- **Data**: 2026-06-30
+- **Commit base**: `9219a3e` (origin/main)
+- **Tipo slice**: runtime mirato + documentazione
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-CERTIFICATION-READINESS-CURRICULUM-UI.md`, `report/CML-UX-CERTIFICATION-READINESS-CURRICULUM-UI.md`, `docs/REPO-MOVELOG.md`
+- **Runtime modificato**: si
+- **JSON disciplinari modificati**: no
+- **Schema `.cml` modificato**: no
+- **Ridondanza Curriculum**: index pills + riepilogo + ordini collassati in `<details>` chiuso di default
+- **Disciplina selezionata**: blocco focus + auto-apertura `<details>`
+- **Hardcode rimossi**: `mappaDisciplinaCorrente` non più `'tecnologia'`; `renderUdaModello` non più fallback `"Tecnologia"`
+- **Sync mappa**: aggiunta in `setTab` per didattica/didattica_uda
+- **Discipline testate**: Tecnologia, Italiano, Matematica, Storia, Inglese, Religione Cattolica
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Errori JavaScript reali**: 0
+- **Untracked esclusi**: `.env`, `antigravity.config.json`, `test-results/`, `tools/smoke-hash-nav.mjs`
+- **Push**: no
+- **Verdetto**: `CML_UX_CERTIFICATION_READINESS_CURRICULUM_UI_READY`
+
 ## 2026-06-29 - CML-UX-MOBILE-PROGETTAZIONE-HOTFIX - Mobile and progettazione discipline flow
 
 - **Nome slice**: `CML-UX-MOBILE-PROGETTAZIONE-HOTFIX`

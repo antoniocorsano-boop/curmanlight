@@ -648,6 +648,18 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .curricolo-copertura-item{display:flex;align-items:center;gap:4px}
 .curricolo-copertura-val{font-weight:800;font-size:15px;color:#1b5e20}
 .curricolo-copertura-label{color:#2e7d32}
+.curricolo-disc-focus{background:#e8eaf6;border:1px solid #9fa8da;border-radius:9px;padding:10px 14px;margin-bottom:10px}
+.curricolo-disc-focus-hd{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.curricolo-disc-focus-icon{font-size:22px}
+.curricolo-disc-focus-name{font-weight:800;font-size:15px;color:#1a237e}
+.curricolo-disc-focus-comp{font-size:11px;color:#5c6bc0}
+.curricolo-disc-focus-stats{display:flex;gap:12px;margin-top:4px;font-size:12px;color:#37474f}
+.curricolo-quadro{margin-bottom:14px;border:1px solid #e0e0e0;border-radius:9px;overflow:hidden}
+.curricolo-quadro-summary{background:#f5f5f5;padding:8px 14px;font-size:12px;font-weight:700;color:#455a64;cursor:pointer;border-bottom:1px solid #e0e0e0}
+.curricolo-quadro-summary:hover{background:#eee}
+.curricolo-quadro[open] .curricolo-quadro-summary{border-bottom:1px solid #e0e0e0;margin-bottom:0}
+.curricolo-quadro>.curricolo-index,.curricolo-quadro>.curricolo-riepilogo{padding:10px 14px 0}
+.curricolo-quadro>.curricolo-ordine{padding:0 10px}
 .curricolo-riepilogo{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px;padding:8px 10px;background:#fff;border:1px solid #e0e0e0;border-radius:9px;font-size:11px}
 .curricolo-riepilogo-item{padding:4px 8px;border-radius:6px;background:#f5f5f5;display:inline-flex;align-items:center;gap:3px;color:#455a64}
 .curricolo-riepilogo-item .riepilogo-dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:2px}
@@ -2527,7 +2539,7 @@ function resetEvidenceStates() {
 }
 
 function getDisciplineEvidenceData() {
-  var discKey = discKeyFromName(selDisc) || mappaDisciplinaCorrente;
+  var discKey = discKeyFromName(selDisc) || mappaDisciplinaCorrente || discKeyFromName(DISCIPLINE[0]);
   if (discKey === 'tecnologia' && typeof TECNOLOGIA_NORM_DATA !== 'undefined') {
     return TECNOLOGIA_NORM_DATA.unitaApprendimento || [];
   }
@@ -3628,7 +3640,7 @@ function setTab(t,opts){
    if(t==="didattica"||t==="didattica_uda"){
      var selectedKey=discKeyFromName(selDisc);
      if(selectedKey) mappaDisciplinaCorrente=selectedKey;
-     renderDidattica();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();
+     var dk=discKeyFromName(selDisc);if(dk)mappaDisciplinaCorrente=dk;renderDidattica();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();
    }
    var sm=document.getElementById("didattica-mappa");if(sm)sm.style.display=t==="didattica"?"block":"none";
   var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
@@ -5602,6 +5614,14 @@ function renderCurricoloIstituto(version) {
 
   html += '<div class="curricolo-copertura"><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + DISCIPLINE.length + '</span><span class="curricolo-copertura-label">discipline</span></span><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + totalItems + '</span><span class="curricolo-copertura-label">voci totali</span></span><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + totalChanged + '</span><span class="curricolo-copertura-label">voci con proposta 2025</span></span><span class="curricolo-copertura-item" style="font-size:11px;opacity:.8">Copertura curricolo</span></div>';
 
+  if(selDisc){
+    var sm=DISCIPLINE_META[selDisc]||{icon:"📘",comp:"",nuclei:""};
+    var sd=discSummary[selDisc]||{total:0,changed:0};
+    html += '<div class="curricolo-disc-focus"><div class="curricolo-disc-focus-hd"><span class="curricolo-disc-focus-icon">'+sm.icon+'</span><span class="curricolo-disc-focus-name">'+selDisc+'</span><span class="curricolo-disc-focus-comp">'+sm.comp+'</span></div><div class="curricolo-disc-focus-stats"><span>'+sd.total+' voci</span><span>'+(sd.changed>0?'+'+sd.changed+' proposte 2025':'nessuna proposta 2025')+'</span></div></div>';
+  }
+
+  html += '<details class="curricolo-quadro"><summary class="curricolo-quadro-summary">📊 Quadro generale delle discipline</summary>';
+
   html += '<div class="curricolo-index">';
   ordinii.forEach(o => {
     if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;
@@ -5635,7 +5655,8 @@ function renderCurricoloIstituto(version) {
       const d = DATA[disc];
       const safeId = disc.replace(/[\s()]/g, '');
 
-      html += '<details class="curricolo-disc" id="cur-' + safeId + '">' +
+      var discOpen=selDisc===disc?' open':'';
+      html += '<details class="curricolo-disc"' + discOpen + ' id="cur-' + safeId + '">' +
         '<summary class="curricolo-disc-hd">' +
         '<span class="curricolo-disc-icon">' + meta.icon + '</span>' +
         '<span class="curricolo-disc-name">' + disc + '</span>' +
@@ -5668,6 +5689,8 @@ function renderCurricoloIstituto(version) {
 
     html += '</div>';
   });
+
+  html += '</details>';
 
   html += '<div class="curricolo-ref"><strong>Fonti di riferimento:</strong><br>' + refText + '<br><a href="' + refUrl + '" target="_blank" rel="noopener">Consulta il documento ufficiale</a></div>';
   html += '<div class="curricolo-note">Il presente curricolo di istituto è un documento di lavoro. Non sostituisce la delibera del Collegio Docenti e degli organi competenti.</div>';
