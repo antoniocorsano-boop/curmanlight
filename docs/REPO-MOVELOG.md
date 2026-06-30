@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-MICROFIX — Breadcrumb sync microfix
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-MICROFIX`
+- **Commit base**: `0da32fa` — **Commit runtime**: `5851951`
+- **Tipo slice**: runtime chirurgico + documentazione
+- **Runtime modificato**: sì — 4 righe JS in `index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-MICROFIX.md`, `report/CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-MICROFIX.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Modifica**: aggiornamento breadcrumb in `refreshCurrentDisciplineViews()` dopo cambio disciplina
+- **Breadcrumb stale pre**: sì (100% riproducibile)
+- **Breadcrumb stale post**: no (previsto)
+- **Invarianti**: nessun JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_BREADCRUMB_SYNC_MICROFIX_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-AUDIT — Breadcrumb sync audit
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-AUDIT`
