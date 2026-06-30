@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-P3-ACCESSIBILITY-RESIDUAL-POLISH — Residual P3 accessibility polish (P3.06/08/10)
+
+- **Nome slice**: `CML-P3-ACCESSIBILITY-RESIDUAL-POLISH`
+- **Commit base**: `03c8475`
+- **Tipo slice**: runtime microfix + docs/report
+- **Runtime modificato**: sì (solo attributi/label/microcopy accessibile)
+- **Score accessibilità**: invariato (88/100)
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-P3-ACCESSIBILITY-RESIDUAL-POLISH.md`, `report/CML-P3-ACCESSIBILITY-RESIDUAL-POLISH.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Issue risolte**: P3.06 mobile abbreviazioni, P3.08 mappa aria-current (mobile bottom bar), P3.10 footer naming
+- **Validatori**: 14/14 PASS entrambi
+- **Errori JS reali**: 0
+- **Backlog residuo**: VoiceOver/macOS test futuro
+- **Push**: non eseguito
+- **Verdetto**: `CML_P3_ACCESSIBILITY_RESIDUAL_POLISH_READY`
+
 ## 2026-06-30 - CML-P3-ACCESSIBILITY-ARIA-MICROFIX-CLOSURE — Close P3 ARIA microfix baseline
 
 - **Nome slice**: `CML-P3-ACCESSIBILITY-ARIA-MICROFIX-CLOSURE`
