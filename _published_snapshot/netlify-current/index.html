@@ -5046,6 +5046,8 @@ function showWelcome(force=false){
   const overlay=document.createElement("div");
   overlay.id="welcome-overlay";
   overlay.style.cssText="position:fixed;inset:0;background:rgba(26,35,126,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px";
+  overlay.setAttribute("role","region");
+  overlay.setAttribute("aria-label","Benvenuto");
   overlay.innerHTML=`
     <div style="background:#fff;border-radius:16px;max-width:480px;width:100%;padding:26px 24px;box-shadow:0 10px 40px rgba(0,0,0,.3);max-height:85vh;overflow-y:auto">
       <div style="font-size:32px;margin-bottom:6px">👋</div>
