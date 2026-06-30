@@ -1,5 +1,30 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST - Score refresh post contrast remediation
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST`
+- **Commit base**: `0a93237` — **Commit finale**: TBD
+- **Tipo slice**: docs-only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST.md`, `report/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Score precedente**: 64/100
+- **Score aggiornato**: 76/100
+- **Delta**: +12
+- **Motivazione**: Lighthouse 96/100 desktop+mobile, axe serious color-contrast 0, axe totali 16→7, P1 da 3→1
+- **Stato**: audit-ready interno
+- **P0**: 0
+- **P1**: 1 (region landmark, 7 moderate)
+- **P2**: 0
+- **P3**: 0
+- **Gate esterno**: screen reader test da eseguire per score > 85
+- **Prossima slice**: `CML-UX-ACCESSIBILITY-REGION-LANDMARKS-REMEDIATION` (runtime)
+- **Invarianti**: nessun runtime, JSON, tool, asset, schema .cml modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_SCORE_REFRESH_POST_CONTRAST_READY`
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-COLOR-CONTRAST-REMEDIATION - Remediation contrasto colore
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-COLOR-CONTRAST-REMEDIATION`
