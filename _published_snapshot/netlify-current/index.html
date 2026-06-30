@@ -3356,11 +3356,11 @@ function cardHTML(item, type) {
     <div class="pending-body">
       <span class="pending-text">${truncate(proposalText, 120)}</span>
       <span class="pending-actions">
-        <button class="pending-action approve" onclick="approve('${item.id}')" title="Approva">✅</button>
-        <button class="pending-action reject" onclick="reject('${item.id}')" title="Mantieni testo attuale">❌</button>
-        <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" title="Mostra confronto" id="pdb-${item.id}" aria-label="Mostra confronto">🔍</button>
-        <button class="pending-action edit" onclick="startEdit('${item.id}')" title="Personalizza testo">✏️</button>
-        <button class="pending-action del" onclick="confirmRemove('${type}','${item.id}')" title="Rimuovi">🗑</button>
+        <button class="pending-action approve" onclick="approve('${item.id}')" aria-label="Approva">✅</button>
+        <button class="pending-action reject" onclick="reject('${item.id}')" aria-label="Mantieni testo attuale">❌</button>
+        <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" id="pdb-${item.id}" aria-label="Mostra confronto">🔍</button>
+        <button class="pending-action edit" onclick="startEdit('${item.id}')" aria-label="Personalizza testo">✏️</button>
+        <button class="pending-action del" onclick="confirmRemove('${type}','${item.id}')" aria-label="Rimuovi">🗑</button>
       </span>
     </div>
     <div class="pending-detail" id="pd-${item.id}">
