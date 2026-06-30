@@ -1,0 +1,28 @@
+{
+  "id": "tecnologia",
+  "label": "Tecnologia",
+  "status": "example",
+  "schoolOrders": [
+    {
+      "id": "secondaria_primo_grado",
+      "label": "Scuola secondaria di primo grado",
+      "sections": [
+        {
+          "id": "nucleo_1",
+          "title": "Esempio di nucleo tematico",
+          "items": [
+            {
+              "id": "item_1",
+              "text": "Descrizione curricolare fittizia.",
+              "source": "Esempio"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "example": true,
+    "humanValidationRequired": true
+  }
+}
