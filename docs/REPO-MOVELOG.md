@@ -1,5 +1,30 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA - Accessibility score refresh post aria
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA`
+- **Commit base**: `bf3eab6` — **Commit finale**: `392e6cc`
+- **Tipo slice**: docs-only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA.md`, `report/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Score precedente**: ~44/100 (nuova griglia 8 aree)
+- **Score aggiornato**: 64/100 (~65/100)
+- **Delta**: +20
+- **P0 residui**: 0
+- **P1 residui**: 3 (mancano test axe/Lighthouse, test screen reader, icon-only title vs aria-label)
+- **P2 residui**: 3
+- **P3 residui**: 2
+- **Decisione icon-only**: P2/P3, raccomandata slice separata `CML-UX-ACCESSIBILITY-ICON-ONLY-LABELS`
+- **Invarianti**: nessun file runtime modificato, nessun JSON, nessun tool, nessun schema .cml, nessun export, nessun service worker
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA.md`, `report/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_UX_ACCESSIBILITY_SCORE_REFRESH_POST_ARIA_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS - Accessibility aria enhancements
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-ARIA-ENHANCEMENTS`
