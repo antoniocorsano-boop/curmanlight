@@ -1,5 +1,21 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-ACCESSIBILITY-P3-POLISH-CLOSURE — Chiusura ciclo P3 accessibility polish
+
+- **Nome slice**: `CML-ACCESSIBILITY-P3-POLISH-CLOSURE`
+- **Commit base**: `c8dea74`
+- **Tipo slice**: docs-only closure
+- **Runtime modificato**: no
+- **Score accessibilità**: invariato (88/100)
+- **File modificati**: `docs/03_execution/CML-ACCESSIBILITY-P3-POLISH-CLOSURE.md`, `report/CML-ACCESSIBILITY-P3-POLISH-CLOSURE.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **P3 chiusi**: P3.01–P3.10
+- **Validatori**: 14/14 PASS entrambi
+- **Errori JS reali**: 0
+- **Backlog residuo**: VoiceOver/macOS test futuro, score refresh/README note solo se necessarie
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_ACCESSIBILITY_P3_POLISH_CLOSURE_READY`
+
 ## 2026-06-30 - CML-P3-ACCESSIBILITY-RESIDUAL-POLISH — Residual P3 accessibility polish (P3.06/08/10)
 
 - **Nome slice**: `CML-P3-ACCESSIBILITY-RESIDUAL-POLISH`
