@@ -1,5 +1,29 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION - Esecuzione audit automatico accessibilita
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION`
+- **Commit base**: `60b2b3e` — **Commit finale**: `0237e25`
+- **Tipo slice**: audit/report
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION.md`, `report/CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Strumenti**: axe CLI 4.12.1 (Chrome), Lighthouse 11.x (Chrome)
+- **Lighthouse**: 96/100 (desktop), 96/100 (mobile) — 23 passed, 1 failed (color-contrast)
+- **Axe**: 16 violations — 9 serious (color-contrast), 7 moderate (region)
+- **Score corrente**: 64/100 (invariato per policy: serious violazioni aperte)
+- **P0 residui**: 0
+- **P1 residui**: 2 (color-contrast 9 elementi, region 7 landmark)
+- **P2 residui**: 0 (icon-only risolto)
+- **P3 residui**: 0
+- **Remediation proposta**: slice runtime `CML-UX-ACCESSIBILITY-COLOR-CONTRAST-REMEDIATION` + eventuale landmark fix
+- **Invarianti**: nessun runtime modificato, nessun JSON, nessun tool, nessun asset, nessun schema .cml
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_AUTO_AUDIT_EXECUTION_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-EXTERNAL-AUDIT-PLAN - Piano audit esterno accessibilita
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-EXTERNAL-AUDIT-PLAN`
