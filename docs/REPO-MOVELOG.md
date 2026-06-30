@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-P3-ACCESSIBILITY-NAMING-MICROCOPY-AUDIT — P3 naming and microcopy audit
+
+- **Nome slice**: `CML-P3-ACCESSIBILITY-NAMING-MICROCOPY-AUDIT`
+- **Commit base**: `cc52e30`
+- **Tipo slice**: docs-only audit
+- **Runtime modificato**: no
+- **Score accessibilità**: invariato (88/100)
+- **File modificati**: `docs/03_execution/CML-P3-ACCESSIBILITY-NAMING-MICROCOPY-AUDIT.md`, `report/CML-P3-ACCESSIBILITY-NAMING-MICROCOPY-AUDIT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Issue P3 rilevate**: 10 (P3.01–P3.10)
+- **P0/P1/P2**: 0/0/0 confermato
+- **Issue principali**: aside aria-label, welcome overlay role, settings dialog role, breadcrumb nav, aria-current sidebar/progress, mobile abbreviazioni, footer
+- **Prossima slice consigliata**: runtime microfix ARIA per P3.01/02/03/04/07/09
+- **Push**: non eseguito
+- **Verdetto**: `CML_P3_ACCESSIBILITY_NAMING_MICROCOPY_AUDIT_READY`
+
 ## 2026-06-30 - CML-README-ACCESSIBILITY-AND-REPO-OVERVIEW — README refresh (accessibility + repo overview)
 
 - **Nome slice**: `CML-README-ACCESSIBILITY-AND-REPO-OVERVIEW`
