@@ -3,7 +3,7 @@
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST - Score refresh post contrast remediation
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST`
-- **Commit base**: `0a93237` — **Commit finale**: TBD
+- **Commit base**: `0a93237` — **Commit finale**: `b9ef7f1`
 - **Tipo slice**: docs-only
 - **Runtime modificato**: no
 - **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST.md`, `report/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST.md`, aggiornamento `docs/REPO-MOVELOG.md`
