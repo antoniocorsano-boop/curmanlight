@@ -5041,6 +5041,67 @@ function toggleMobileMenu(){
 
 // ================================================================
 // ================================================================
+function getFocusableElements(container){
+  if(!container) return [];
+  return Array.from(container.querySelectorAll('a[href],button:not([disabled]),textarea:not([disabled]),input:not([disabled]),select:not([disabled]),[tabindex]:not([tabindex="-1"])')).filter(function(el){
+    return !!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+  });
+}
+function trapWelcomeOverlayFocus(event){
+  if(event.key!=="Tab"&&event.key!=="Escape") return;
+  var overlay=document.getElementById("welcome-overlay");
+  if(!overlay) return;
+  if(event.key==="Escape"){
+    event.preventDefault();
+    dismissWelcomeOverlay();
+    return;
+  }
+  var focusable=getFocusableElements(overlay);
+  if(!focusable.length){
+    event.preventDefault();
+    overlay.focus();
+    return;
+  }
+  var first=focusable[0];
+  var last=focusable[focusable.length-1];
+  if(event.shiftKey&&document.activeElement===first){
+    event.preventDefault();
+    last.focus();
+  }else if(!event.shiftKey&&document.activeElement===last){
+    event.preventDefault();
+    first.focus();
+  }
+}
+function focusWelcomeOverlay(){
+  var overlay=document.getElementById("welcome-overlay");
+  if(!overlay) return;
+  var focusable=getFocusableElements(overlay);
+  (focusable[0]||overlay).focus();
+}
+function restoreFocusAfterWelcomeDismiss(){
+  var main=document.getElementById("main-content");
+  if(!main) return;
+  if(!main.hasAttribute("tabindex")) main.setAttribute("tabindex","-1");
+  main.focus({preventScroll:true});
+}
+function dismissWelcomeOverlay(options){
+  options=options||{};
+  var overlay=document.getElementById("welcome-overlay");
+  if(overlay){
+    overlay.removeEventListener("keydown",trapWelcomeOverlayFocus);
+    overlay.remove();
+  }
+  sessionStorage.setItem("welcomeShown","1");
+  if(options.restoreFocus!==false) restoreFocusAfterWelcomeDismiss();
+}
+function openSettingsFromWelcome(){
+  dismissWelcomeOverlay({restoreFocus:false});
+  openSettingsModal();
+  setTimeout(function(){
+    var target=document.getElementById("profile-nome")||document.querySelector("#settings-overlay button,input,select,a");
+    if(target) target.focus();
+  },0);
+}
 function showWelcome(force=false){
   if(!force && sessionStorage.getItem("welcomeShown")) return;
   const overlay=document.createElement("div");
@@ -5048,6 +5109,7 @@ function showWelcome(force=false){
   overlay.style.cssText="position:fixed;inset:0;background:rgba(26,35,126,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px";
   overlay.setAttribute("role","region");
   overlay.setAttribute("aria-label","Benvenuto");
+  overlay.setAttribute("tabindex","-1");
   overlay.innerHTML=`
     <div style="background:#fff;border-radius:16px;max-width:480px;width:100%;padding:26px 24px;box-shadow:0 10px 40px rgba(0,0,0,.3);max-height:85vh;overflow-y:auto">
       <div style="font-size:32px;margin-bottom:6px">👋</div>
@@ -5065,12 +5127,14 @@ function showWelcome(force=false){
       <p style="font-size:11px;color:#6d4c41;background:#fff8e1;border-radius:8px;padding:8px 10px;margin-bottom:10px"><strong>Nota sull’esportazione:</strong> Copia per Word, Markdown e PDF sono i percorsi più sicuri. Il Word impaginato richiede una libreria online e funziona meglio da computer.</p>
       <p style="font-size:11px;color:#1a237e;background:#e8eaf6;border-radius:8px;padding:8px 10px;margin-bottom:16px"><strong>Corso operativo:</strong> il link al materiale di presentazione è disponibile in alto come PDF, accanto alle impostazioni.</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button onclick="document.getElementById('welcome-overlay').remove();sessionStorage.setItem('welcomeShown','1');openSettingsModal()" style="flex:1;min-width:180px;padding:11px;background:#00695c;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Configura dati</button>
-        <button onclick="document.getElementById('welcome-overlay').remove();sessionStorage.setItem('welcomeShown','1')" style="flex:1;min-width:180px;padding:11px;background:#1a237e;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Inizia subito</button>
+        <button onclick="openSettingsFromWelcome()" style="flex:1;min-width:180px;padding:11px;background:#00695c;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Configura dati</button>
+        <button onclick="dismissWelcomeOverlay()" style="flex:1;min-width:180px;padding:11px;background:#1a237e;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Inizia subito</button>
       </div>
     </div>`;
+  overlay.addEventListener("keydown",trapWelcomeOverlayFocus);
   document.body.appendChild(overlay);
   sessionStorage.setItem("welcomeShown","1");
+  setTimeout(focusWelcomeOverlay,0);
 }
 
 // ROLE ACCESS CODE GATING

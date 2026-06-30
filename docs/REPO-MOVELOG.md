@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-OVERLAY-FOCUS-MANAGEMENT - Welcome overlay focus management
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-OVERLAY-FOCUS-MANAGEMENT`
+- **Commit base**: `78388f8`
+- **Tipo slice**: runtime microfix + docs/report
+- **Runtime modificato**: si - welcome overlay in `_published_snapshot/netlify-current/index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-ACCESSIBILITY-OVERLAY-FOCUS-MANAGEMENT.md`, `report/CML-UX-ACCESSIBILITY-OVERLAY-FOCUS-MANAGEMENT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Righe runtime modificate**: 66 insertions / 2 deletions
+- **Focus trap**: implementato per `Tab` e `Shift+Tab` sui controlli overlay
+- **Focus iniziale**: `Configura dati`
+- **Focus post-dismiss**: `#main-content` per `Inizia subito`/`Escape`; `#profile-nome` per `Configura dati`
+- **Escape**: gestito, chiude l'overlay con `dismissWelcomeOverlay()`
+- **Validatore curriculum**: PASS, 14 file validi, 0 invalidi
+- **Shape test**: PASS, 14 discipline passed, 0 failed
+- **Smoke CDP**: PASS, focus trap, dismiss, percorsi tab/discipline/export/mobile, 0 errori JS reali
+- **axe/Lighthouse**: non rieseguiti, CLI locali non disponibili; score non aggiornato
+- **Score aggiornato**: no, baseline mantenuta a 76/100
+- **Backlog residuo**: `CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-AUDIT`, `CML-UX-ACCESSIBILITY-REAL-SCREEN-READER-TEST`, nuova PR readability scaffold
+- **Invarianti**: nessun dato curricolare, tool, asset, manifest, service worker, export/import .cml o schema .cml modificato
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_OVERLAY_FOCUS_MANAGEMENT_READY`
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-SCREEN-READER-STRUCTURAL - Score refresh post structural screen reader gate
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-SCREEN-READER-STRUCTURAL`
