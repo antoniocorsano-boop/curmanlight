@@ -3,7 +3,7 @@
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION - Esecuzione audit automatico accessibilita
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION`
-- **Commit base**: `60b2b3e` — **Commit finale**: `0237e25`
+- **Commit base**: `60b2b3e` — **Commit finale**: `3c09c14`
 - **Tipo slice**: audit/report
 - **Runtime modificato**: no
 - **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION.md`, `report/CML-UX-ACCESSIBILITY-AUTO-AUDIT-EXECUTION.md`, aggiornamento `docs/REPO-MOVELOG.md`
