@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "type": "teacher_proposal",
+  "source": "CurManLight",
+  "humanValidationRequired": true,
+  "discipline": "Tecnologia",
+  "schoolOrder": "secondaria_primo_grado",
+  "proposal": {
+    "title": "Esempio fittizio di proposta docente",
+    "currentText": "Testo curricolare esistente di esempio.",
+    "proposedText": "Testo curricolare proposto di esempio.",
+    "rationale": "Motivazione didattica fittizia per illustrare la struttura del file."
+  },
+  "metadata": {
+    "createdAt": "2026-06-30",
+    "example": true
+  }
+}
