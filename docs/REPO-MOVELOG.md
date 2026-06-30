@@ -1,5 +1,25 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-AUDIT — Breadcrumb sync audit
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-AUDIT`
+- **Commit base**: `275d7f3`
+- **Tipo slice**: audit/report only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-AUDIT.md`, `report/CML-UX-ACCESSIBILITY-BREADCRUMB-SYNC-AUDIT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Esito**: breadcrumb stale confermato — non si aggiorna su cambio disciplina
+- **Causa**: `selectDisc()` non chiama `setTab()`, breadcrumb aggiornato solo in `setTab()`
+- **Severità**: P2 (stale temporaneo, aggirabile con cambio tab e ritorno)
+- **Riproducibilità**: 100%
+- **Mitigazione esistente**: `announceStatus()` via aria-live annuncia cambio disciplina
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_BREADCRUMB_SYNC_AUDIT_ISSUE_CONFIRMED_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-OVERLAY-FOCUS-MANAGEMENT - Welcome overlay focus management
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-OVERLAY-FOCUS-MANAGEMENT`
