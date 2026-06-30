@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-USER-VIEWS-MATURITY-AND-NAVIGATION-AUDIT — Audit maturezza e navigazione viste utente
+
+- **Nome slice**: `CML-USER-VIEWS-MATURITY-AND-NAVIGATION-AUDIT`
+- **Commit base**: `5adcb3c`
+- **Tipo slice**: docs-only audit / product maturity audit
+- **Runtime modificato**: no
+- **Score accessibilità**: invariato (88/100)
+- **File modificati**: `docs/03_execution/CML-USER-VIEWS-MATURITY-AND-NAVIGATION-AUDIT.md`, `report/CML-USER-VIEWS-MATURITY-AND-NAVIGATION-AUDIT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: da cronologia tecnica a qualità prodotto scolastico
+- **Problemi chiave**: scrolling eccessivo, Tecnologia privilegiata, navigazione non affidabile, progettazione/UDA mancanti, analisi non esistente
+- **Prossima slice consigliata**: `CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION`
+- **Push**: non eseguito
+- **Verdetto**: `CML_USER_VIEWS_MATURITY_AND_NAVIGATION_AUDIT_READY`
+
 ## 2026-06-30 - CML-VIEWS-PRODUCTION-RESTART-SELECTION — Selezione prima vista post-accessibilità
 - **Nome slice**: `CML-VIEWS-PRODUCTION-RESTART-SELECTION`
 - **Commit base**: `9417015`
