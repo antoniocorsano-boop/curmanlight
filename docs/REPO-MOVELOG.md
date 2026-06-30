@@ -1,5 +1,29 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-REAL-NVDA-INTERACTIVE-TEST — Real NVDA interactive test (operatore umano)
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-REAL-NVDA-INTERACTIVE-TEST`
+- **Commit base**: `30cda2f`
+- **Tipo slice**: audit/report only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-REAL-NVDA-INTERACTIVE-TEST.md`, `report/CML-UX-ACCESSIBILITY-REAL-NVDA-INTERACTIVE-TEST.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **NVDA installato**: sì
+- **NVDA test interattivo**: eseguito
+- **Operatore umano**: sì
+- **Esito**: tutti i percorsi PASS — 11 percorsi, 5 discipline, 5 pulsanti card
+- **P0/P1/P2 rilevati**: 0/0/0
+- **P3 rilevati**: eventuali note minori backloggabili
+- **Errori JS reali**: 0
+- **Score aggiornato**: no (invariato a 76/100)
+- **Score refresh consigliato**: sì (target 88/100, slice successiva)
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_REAL_NVDA_INTERACTIVE_TEST_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-REAL-SCREEN-READER-TEST — Real screen reader test (NVDA)
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-REAL-SCREEN-READER-TEST`
