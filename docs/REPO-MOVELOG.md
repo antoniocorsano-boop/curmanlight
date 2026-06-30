@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-SCREEN-READER-SMOKE-TEST - Screen reader smoke gate strutturale
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-SCREEN-READER-SMOKE-TEST`
+- **Commit base**: `27836d1`
+- **Tipo slice**: audit/report only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCREEN-READER-SMOKE-TEST.md`, `report/CML-UX-ACCESSIBILITY-SCREEN-READER-SMOKE-TEST.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Screen reader reale**: non disponibile nell'ambiente Windows locale (NVDA non installato; VoiceOver non applicabile)
+- **Tipo test eseguito**: smoke strutturale assistivo via Chrome CDP, Accessibility Tree e navigazione tastiera
+- **Percorsi verificati**: bootstrap/Home, overlay iniziale, focus via tastiera, Curriculum, cambio disciplina, Competenze, Export Center, Guida, ritorno Home, bottom navigation mobile, menu mobile
+- **Landmark verificati**: `banner`, `main`, `contentinfo`, `region: Benvenuto`, `navigation: Navigazione mobile`
+- **Esito principale**: regione welcome-overlay esposta correttamente; navigazione tab/disciplina ed export raggiungibili; nessuna eccezione JS runtime rilevata
+- **Note residue**: overlay iniziale senza focus trap, focus post-dismiss non esplicito, breadcrumb desktop osservato non riallineato subito dopo cambio disciplina
+- **Errori JS**: 0 runtime exceptions; presenti solo 404 statici non bloccanti
+- **Score aggiornato**: no - baseline mantenuta a 76/100 in assenza di test screen reader reale
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, asset o dipendenza modificato
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_SCREEN_READER_SMOKE_TEST_READY_WITH_NOTES`
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-REGION-LANDMARKS-REMEDIATION - Region landmark remediation (welcome-overlay)
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-REGION-LANDMARKS-REMEDIATION`
