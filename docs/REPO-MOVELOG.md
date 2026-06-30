@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-REGION-LANDMARKS-REMEDIATION - Region landmark remediation (welcome-overlay)
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-REGION-LANDMARKS-REMEDIATION`
+- **Commit base**: `3aeac9c` — **Commit runtime**: `57501ce`
+- **Tipo slice**: runtime chirurgico + documentazione
+- **Runtime modificato**: sì — 2 righe JS in `index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-ACCESSIBILITY-REGION-LANDMARKS-REMEDIATION.md`, `report/CML-UX-ACCESSIBILITY-REGION-LANDMARKS-REMEDIATION.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Modifica**: aggiunti `role="region"` e `aria-label="Benvenuto"` al welcome-overlay in `showWelcome()`
+- **Violazioni `region` pre**: 7 moderate
+- **Violazioni `region` post**: 0 (atteso)
+- **P1**: 1 → 0
+- **Invarianti**: nessun JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_REGION_LANDMARKS_REMEDIATION_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST - Score refresh post contrast remediation
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-CONTRAST`
