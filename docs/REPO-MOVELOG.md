@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-REAL-NVDA — Score refresh after real NVDA gate
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-REAL-NVDA`
+- **Commit base**: `1e47aa9`
+- **Tipo slice**: docs-only / score refresh / governance accessibilit\u00e0
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-REAL-NVDA.md`, `report/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-REAL-NVDA.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Score precedente**: 76/100
+- **Score aggiornato**: **88/100**
+- **Delta**: +12
+- **Evidenze**: Lighthouse 96/100, axe 0 serious, region 0, overlay focus, breadcrumb sync, pulsanti icon-label, NVDA reale PASS
+- **P0/P1/P2**: 0/0/0
+- **Stato**: audit-ready avanzato (non certificazione WCAG)
+- **Limiti dichiarati**: P3 minori backloggabili, VoiceOver non testato, nessuna conformit\u00e0 legale
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_SCORE_REFRESH_POST_REAL_NVDA_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-REAL-NVDA-INTERACTIVE-TEST — Real NVDA interactive test (operatore umano)
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-REAL-NVDA-INTERACTIVE-TEST`
