@@ -3312,7 +3312,7 @@ function selectDisc(d,opts){
 function applyHashRoute(){
   var d=resolveDiscFromHash();
   if(d){
-    var discTabs=["curricolo","lavoro","riepilogo","didattica","didattica_uda"];
+    var discTabs=["curricolo","lavoro","riepilogo","didattica","didattica_programmazione","didattica_uda"];
     var targetTab=discTabs.indexOf(currentTab)!==-1?currentTab:"curricolo";
     selectDisc(d,{updateHash:false,scroll:false,tab:targetTab});
     return;
