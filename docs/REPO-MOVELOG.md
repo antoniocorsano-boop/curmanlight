@@ -13,6 +13,17 @@
 - **Push**: non eseguito
 - **Verdetto**: `CML_DISCIPLINE_GENERALIZATION_AUDIT_AND_FIX_PLAN_READY`
 
+## 2026-06-30 - CML-DISCIPLINE-GENERALIZATION-RUNTIME-MICROFIX — Microfix generalizzazione discipline
+- **Nome slice**: `CML-DISCIPLINE-GENERALIZATION-RUNTIME-MICROFIX`
+- **Commit base**: `e9b4d22`
+- **Tipo slice**: runtime microfix + docs/report
+- **Runtime modificato**: sì (5 righe modificate)
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-DISCIPLINE-GENERALIZATION-RUNTIME-MICROFIX.md`, `report/CML-DISCIPLINE-GENERALIZATION-RUNTIME-MICROFIX.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: correzione default impropri e hardcode semplici Tecnologia-centrici
+- **Residui trattati**: 5/18 (C3: 3, D2: 2; E/F/G/H13: esclusi per scope)
+- **Push**: non eseguito
+- **Verdetto**: `CML_DISCIPLINE_GENERALIZATION_RUNTIME_MICROFIX_READY`
+
 ## 2026-06-30 - CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION — Stabilizzazione navigazione e scrolling
 - **Nome slice**: `CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION`
 - **Commit base**: `ffd78b2`

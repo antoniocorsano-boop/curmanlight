@@ -1358,7 +1358,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
               <a href="#" onclick="setTab('curricolo');return false"><span aria-hidden="true">📖</span> Consulta</a>
               <a href="#" onclick="setTab('lavoro');return false"><span aria-hidden="true">✏️</span> Revisiona</a>
               <a href="#" onclick="setTab('esportazioni');return false"><span aria-hidden="true">📤</span> Esporta</a>
-              <a href="#" onclick="setTab('curricolo');setTimeout(function(){var p=document.getElementById('tecnologia-norm-panel');if(p)p.scrollIntoView({behavior:'smooth'})},150);return false"><span aria-hidden="true">⚙️</span> Tecnologia normalizzata</a>
+              <a href="#" onclick="setTab('curricolo');setTimeout(function(){var p=document.getElementById('tecnologia-norm-panel');if(p)p.scrollIntoView({behavior:'smooth'})},150);return false"><span aria-hidden="true">⚙️</span> Curriculum normalizzato</a>
             </div>
           </div>
           <div class="home-card home-card-didattica">
@@ -1472,11 +1472,10 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <strong><span aria-hidden="true">🧑‍🏫</span> Mappa disciplinare</strong> — Questa sezione mostra come una disciplina organizza saperi, nodi e progressione verticale. È una base di lavoro per il confronto dipartimentale e non sostituisce la validazione professionale.<br>
           <strong>Documento di lavoro — da validare.</strong>
         </div>
-        <div class="didattica-mappa-selector" style="display:flex;gap:6px;margin:8px 0;flex-wrap:wrap">
-          <button class="mappa-disc-btn active" onclick="setMappaDisciplina('tecnologia',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #1a237e;background:#1a237e;color:#fff;cursor:pointer;font-size:11px;font-weight:700">Tecnologia</button>
-          <button class="mappa-disc-btn" onclick="setMappaDisciplina('matematica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Matematica</button>
-          <button class="mappa-disc-btn" onclick="setMappaDisciplina('italiano',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Italiano</button>
-          <button class="mappa-disc-btn" onclick="setMappaDisciplina('scienze',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Scienze</button>
+<div class="didattica-mappa-selector" style="display:flex;gap:6px;margin:8px 0;flex-wrap:wrap">
+           <button class="mappa-disc-btn active" onclick="setMappaDisciplina('italiano',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #1a237e;background:#1a237e;color:#fff;cursor:pointer;font-size:11px;font-weight:700">Italiano</button>
+           <button class="mappa-disc-btn" onclick="setMappaDisciplina('matematica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Matematica</button>
+           <button class="mappa-disc-btn" onclick="setMappaDisciplina('scienze',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Scienze</button>
            <button class="mappa-disc-btn" onclick="setMappaDisciplina('storia',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Storia</button>
             <button class="mappa-disc-btn" onclick="setMappaDisciplina('geografia',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Geografia</button>
             <button class="mappa-disc-btn" onclick="setMappaDisciplina('inglese',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Inglese</button>
@@ -2683,7 +2682,7 @@ function renderUdaModello(){
   var container=document.getElementById("didattica-uda-list");
   if(!container)return;
   var html="";
-  var selectedDisc = selDisc || "Tecnologia";
+  var selectedDisc = selDisc || DISCIPLINE[0] || null;
   var modelCount = 0;
   UDA_MODELI.forEach(function(u){
     if(u.disciplina !== selectedDisc) return;
@@ -2971,9 +2970,9 @@ function downloadUdaMarkdown() {
 
 // ================================================================
 // ================================================================
-let selDisc=DISCIPLINE[0]||"Tecnologia", filterStatus="all", currentTab="home";
+let selDisc=DISCIPLINE[0], filterStatus="all", currentTab="home";
 let editingId=null;
-const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:DISCIPLINE[0]||"Tecnologia",ordine:"Secondaria"};
+const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:DISCIPLINE[0],ordine:"Secondaria"};
 let userProfile={...DEFAULT_PROFILE};
 const SCHOOL_PROFILE={istituto:"Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani»",comune:"Ariano Irpino (AV)",codice:"AVIC849003"};
 const ORDER_PROFILE_LABELS={Infanzia:"Scuola dell'Infanzia",Primaria:"Scuola Primaria",Secondaria:"Scuola Secondaria di I grado",Tutti:"Tutti gli ordini / Commissione curricolo"};
