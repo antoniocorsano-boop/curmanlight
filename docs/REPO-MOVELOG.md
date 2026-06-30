@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-P3-ACCESSIBILITY-ARIA-MICROFIX — ARIA microfix (P3.01/02/03/04/05/07/09)
+
+- **Nome slice**: `CML-P3-ACCESSIBILITY-ARIA-MICROFIX`
+- **Commit base**: `015b283`
+- **Tipo slice**: runtime microfix
+- **Runtime modificato**: s\u00ec (solo attributi ARIA)
+- **Score accessibilit\u00e0**: invariato (88/100)
+- **File modificati**: `_published_snapshot/netlify-current/index.html` (+14 -10), `docs/03_execution/CML-P3-ACCESSIBILITY-ARIA-MICROFIX.md`, `report/CML-P3-ACCESSIBILITY-ARIA-MICROFIX.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Issue risolte**: P3.01 aside label, P3.02 welcome dialog, P3.03 settings dialog, P3.04 breadcrumb nav, P3.05 aria-current breadcrumb, P3.07 sidebar active, P3.09 progress live
+- **Validatori**: 14/14 PASS entrambi
+- **Backlog residuo**: P3.06, P3.08, P3.10, VoiceOver test
+- **Push**: non eseguito
+- **Verdetto**: `CML_P3_ACCESSIBILITY_ARIA_MICROFIX_READY`
+
 ## 2026-06-30 - CML-P3-ACCESSIBILITY-NAMING-MICROCOPY-AUDIT — P3 naming and microcopy audit
 
 - **Nome slice**: `CML-P3-ACCESSIBILITY-NAMING-MICROCOPY-AUDIT`

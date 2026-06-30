@@ -1291,7 +1291,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <button class="subnav-btn active" onclick="setTab('didattica')"><span aria-hidden="true">📊</span> Valutazione / Evidenze</button>
   <button class="subnav-btn" onclick="setTab('didattica_uda')"><span aria-hidden="true">📋</span> UDA modello</button>
 </div>
-<div class="path-breadcrumb" id="breadcrumb" hidden><span class="crumb-current">Home</span></div>
+<div class="path-breadcrumb" id="breadcrumb" hidden role="navigation" aria-label="Percorso"><span class="crumb-current">Home</span></div>
 <div class="cruscotto" id="cruscotto" hidden>
   <div class="cruscotto-main">
     <div>
@@ -1305,7 +1305,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     </div>
     <div class="cruscotto-bar">
       <span class="cruscotto-save"><span id="local-save-status"><span aria-hidden="true">💾</span> Ogni decisione viene conservata in questo browser.</span></span>
-      <span class="cruscotto-prog"><span id="prog-label" style="font-size:11px!important;font-weight:700!important;color:#1a237e!important">—</span> <span id="prog-pct" style="font-size:11px!important;color:#1a237e!important;font-weight:700!important">0%</span></span>
+      <span class="cruscotto-prog" aria-live="polite" aria-atomic="true"><span id="prog-label" style="font-size:11px!important;font-weight:700!important;color:#1a237e!important">—</span> <span id="prog-pct" style="font-size:11px!important;color:#1a237e!important;font-weight:700!important">0%</span></span>
       <div class="prog-bar-bg" style="flex:1;max-width:160px;height:6px"><div class="prog-bar-fill" id="prog-fill" style="width:0%;height:100%"></div></div>
       <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions"><span aria-hidden="true">⚙️</span> Azioni ▾</button>
     </div>
@@ -1324,7 +1324,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   </div>
 </div>
 <div class="layout">
-  <aside>
+  <aside aria-label="Elenco discipline">
     <div class="aside-box">
       <div class="aside-title">Discipline</div>
       <div id="sidebar"></div>
@@ -3185,7 +3185,7 @@ function renderSidebar(){
     if(pend>0){dot="#ff9800"; emoji=` <span style="font-size:9px;background:#ff9800;color:#fff;border-radius:8px;padding:1px 5px;margin-left:auto">${pend}</span>`;}
     else if(items.length && app===items.filter(x=>x.status!=="ok").length && items.filter(x=>x.status!=="ok").length>0){dot="#43a047"; emoji=` <span style="font-size:11px;margin-left:auto">✅</span>`;}
     const meta=DISCIPLINE_META[d];
-    html+=`<button class="disc-btn${d===selDisc?" active":""}" onclick="selectDisc('${d.replace(/'/g,"\\'")}')" title="${meta.comp}">
+    html+=`<button class="disc-btn${d===selDisc?" active":""}"${d===selDisc?' aria-current="true"':""} onclick="selectDisc('${d.replace(/'/g,"\\'")}')" title="${meta.comp}">
       <span aria-hidden="true">${meta.icon}</span>
       <span class="disc-dot" style="background:${dot}"></span>
       <span style="flex:1">${d}${isNewDisc?' <span style="color:#1976d2;font-size:9px">★NEW</span>':''}</span>
@@ -3221,7 +3221,7 @@ function refreshCurrentDisciplineViews(){
   }
   var _bc=document.getElementById("breadcrumb");
   if(_bc&&(currentTab==="curricolo"||currentTab==="lavoro"||currentTab==="riepilogo")){
-    _bc.innerHTML='<span class="crumb-current">'+({curricolo:"Curriculum — Consultazione",lavoro:"Curriculum — Revisione",riepilogo:"Curriculum — Definitivo"}[currentTab])+(selDisc?" — "+selDisc:"")+'</span>';
+    _bc.innerHTML='<span class="crumb-current" aria-current="page">'+({curricolo:"Curriculum — Consultazione",lavoro:"Curriculum — Revisione",riepilogo:"Curriculum — Definitivo"}[currentTab])+(selDisc?" — "+selDisc:"")+'</span>';
   }
 }
 function selectDisc(d,opts){
@@ -4837,13 +4837,16 @@ function openSettingsModal(){
   const overlay=document.createElement("div");
   overlay.id="settings-overlay";
   overlay.style.cssText="position:fixed;inset:0;background:rgba(26,35,126,.58);z-index:10001;display:flex;align-items:center;justify-content:center;padding:16px";
+  overlay.setAttribute("role","dialog");
+  overlay.setAttribute("aria-modal","true");
+  overlay.setAttribute("aria-labelledby","settings-title");
   const disciplineOptions=DISCIPLINE.map(d=>`<option value="${escapeHtml(d)}" ${d===(userProfile.disciplina||selDisc)?"selected":""}>${escapeHtml(d)}</option>`).join("");
   overlay.innerHTML=`
-    <div style="background:#fff;border-radius:16px;max-width:560px;width:100%;padding:22px;box-shadow:0 12px 42px rgba(0,0,0,.32);max-height:90vh;overflow-y:auto">
+    <div role="dialog" aria-modal="true" aria-labelledby="settings-title" style="background:#fff;border-radius:16px;max-width:560px;width:100%;padding:22px;box-shadow:0 12px 42px rgba(0,0,0,.32);max-height:90vh;overflow-y:auto">
       <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px">
         <div style="font-size:28px">👤</div>
         <div style="flex:1">
-          <h2 style="font-size:18px;color:#1a237e;margin:0 0 4px">Impostazioni di lavoro</h2>
+          <h2 id="settings-title" style="font-size:18px;color:#1a237e;margin:0 0 4px">Impostazioni di lavoro</h2>
           <p style="font-size:12px;color:#607d8b;line-height:1.45;margin:0">Imposta il profilo personale e l'ordine di scuola. Tutte le sezioni restano visibili; sono modificabili solo quelle coerenti con l'ordine selezionato.</p>
         </div>
         <button onclick="document.getElementById('settings-overlay').remove()" style="border:none;background:#eceff1;border-radius:50%;width:30px;height:30px;cursor:pointer;font-weight:800">×</button>
@@ -5111,13 +5114,14 @@ function showWelcome(force=false){
   const overlay=document.createElement("div");
   overlay.id="welcome-overlay";
   overlay.style.cssText="position:fixed;inset:0;background:rgba(26,35,126,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px";
-  overlay.setAttribute("role","region");
-  overlay.setAttribute("aria-label","Benvenuto");
+  overlay.setAttribute("role","dialog");
+  overlay.setAttribute("aria-modal","true");
+  overlay.setAttribute("aria-labelledby","welcome-title");
   overlay.setAttribute("tabindex","-1");
   overlay.innerHTML=`
     <div style="background:#fff;border-radius:16px;max-width:480px;width:100%;padding:26px 24px;box-shadow:0 10px 40px rgba(0,0,0,.3);max-height:85vh;overflow-y:auto">
       <div style="font-size:32px;margin-bottom:6px">👋</div>
-      <h2 style="font-size:18px;color:#1a237e;margin-bottom:10px">Benvenuto/a in questo strumento!</h2>
+      <h2 id="welcome-title" style="font-size:18px;color:#1a237e;margin-bottom:10px">Benvenuto/a in questo strumento!</h2>
       <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:12px">
         Ti aiuta a confrontare il curricolo verticale attuale dell'istituto con le novità delle nuove Indicazioni Nazionali 2025, disciplina per disciplina.
       </p>
