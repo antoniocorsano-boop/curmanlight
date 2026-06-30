@@ -1,0 +1,16 @@
+{
+  "format": "cml-department-outcome",
+  "version": "1.0",
+  "meta": {
+    "department": "Esempio — Dipartimento",
+    "date": "2026-06-30",
+    "note": "File di esempio per il formato .cml dipartimentale"
+  },
+  "decisions": [
+    {
+      "itemId": "item_001",
+      "decision": "approvata",
+      "note": "Esempio di decisione dipartimentale"
+    }
+  ]
+}

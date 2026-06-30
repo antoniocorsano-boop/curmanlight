@@ -1,0 +1,23 @@
+{
+  "id": "tecnologia",
+  "label": "Tecnologia (esempio)",
+  "schoolOrders": [
+    {
+      "id": "secondaria_primo_grado",
+      "label": "Scuola secondaria di primo grado",
+      "sections": [
+        {
+          "id": "nucleo_1",
+          "title": "Esempio — Nucleo tematico",
+          "items": [
+            {
+              "id": "item_001",
+              "text": "Descrizione curricolare di esempio.",
+              "source": "IN 2012"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
