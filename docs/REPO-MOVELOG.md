@@ -3,7 +3,7 @@
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA - Accessibility score refresh post aria
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA`
-- **Commit base**: `bf3eab6` — **Commit finale**: `392e6cc`
+- **Commit base**: `bf3eab6` — **Commit finale**: `867a139`
 - **Tipo slice**: docs-only
 - **Runtime modificato**: no
 - **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA.md`, `report/CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA.md`, aggiornamento `docs/REPO-MOVELOG.md`
