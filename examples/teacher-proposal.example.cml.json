@@ -1,0 +1,16 @@
+{
+  "format": "cml-teacher-proposal",
+  "version": "1.0",
+  "meta": {
+    "teacher": "Esempio — Docente",
+    "discipline": "Tecnologia",
+    "date": "2026-06-30"
+  },
+  "proposals": [
+    {
+      "itemId": "item_001",
+      "proposedText": "Testo proposto di esempio.",
+      "reason": "Motivazione della proposta"
+    }
+  ]
+}
