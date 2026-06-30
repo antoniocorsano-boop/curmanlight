@@ -1,5 +1,21 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-ANNUAL-PLANNING-VIEW-LEVELS-ORDS - Runtime view Programmazione annuale
+
+- **Nome slice**: `CML-ANNUAL-PLANNING-VIEW-LEVELS-ORDS`
+- **Commit base**: `479f9a3`
+- **Tipo slice**: runtime increment controllato + docs/report
+- **Runtime modificato**: si, `_published_snapshot/netlify-current/index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-ANNUAL-PLANNING-VIEW-LEVELS-ORDS.md`, `report/CML-ANNUAL-PLANNING-VIEW-LEVELS-ORDS.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: introdurre sottovista Didattica `Programmazione annuale` read-only, derivata dai dati curricolari esistenti
+- **Ordini rappresentati**: Infanzia, Primaria, Secondaria
+- **Livelli maturita**: 1 consultazione, 2 revisione, 3 progettazione annuale, 4 UDA smart/collaborative, 5 campo e analisi
+- **Storage**: nessun nuovo `localStorage` o `sessionStorage`
+- **Export/import `.cml`**: invariati
+- **Dati curricolari**: invariati
+- **Backend/API/dipendenze/secrets**: non introdotti
+- **Push**: non eseguito
+- **Verdetto**: `CML_ANNUAL_PLANNING_VIEW_LEVELS_ORDS_READY_LOCAL_NOT_PUSHED`
 ## 2026-06-30 - CML-ANNUAL-PLANNING-UDA-SPECIFICATION-RESEARCH — Specification research annual planning and UDA
 
 - **Nome slice**: `CML-ANNUAL-PLANNING-UDA-SPECIFICATION-RESEARCH`

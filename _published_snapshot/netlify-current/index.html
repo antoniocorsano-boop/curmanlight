@@ -860,6 +860,27 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .didattica-uda-draft-status{padding:6px 10px;border-radius:6px;font-size:11px;font-weight:600;display:none;margin-bottom:4px}
 .didattica-uda-draft-status--ok{display:block;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7}
 .didattica-uda-draft-status--empty{display:block;background:#fff3e0;color:#e65100;border:1px solid #ffcc80}
+.didattica-programmazione{max-width:960px;margin:0 auto}
+.didattica-programmazione-header{background:linear-gradient(135deg,#3949ab,#00897b);color:#fff;border-radius:9px 9px 0 0;padding:14px 18px}
+.didattica-programmazione-header h2{font-size:16px;font-weight:800;margin:0 0 3px}
+.didattica-programmazione-header p{font-size:11px;opacity:.88;line-height:1.5;margin:0}
+.didattica-programmazione-box{background:#eef7f6;border:1px solid #b2dfdb;border-left:3px solid #00897b;border-radius:9px;padding:10px 14px;margin:10px 0;font-size:11px;color:#004d40;line-height:1.5}
+.didattica-programmazione-stats{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.didattica-programmazione-stat{background:#f5f7fa;border:1px solid #e0e0e0;border-radius:8px;padding:7px 10px;font-size:12px;color:#37474f;min-width:84px;text-align:center}
+.didattica-programmazione-stat strong{display:block;font-size:16px;color:#3949ab}
+.didattica-programmazione-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0}
+.didattica-programmazione-card{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:11px 12px}
+.didattica-programmazione-card h3{font-size:13px;color:#1a237e;margin:0 0 5px}
+.didattica-programmazione-card p{font-size:11px;color:#455a64;line-height:1.45;margin:0 0 6px}
+.didattica-programmazione-card ul{font-size:11px;color:#333;line-height:1.45;margin:6px 0 0;padding-left:17px}
+.didattica-programmazione-card li{margin-bottom:2px}
+.didattica-programmazione-pill{display:inline-block;background:#e8eaf6;color:#1a237e;border-radius:12px;padding:2px 7px;font-size:10px;font-weight:700;margin:2px 3px 0 0}
+.didattica-programmazione-levels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:10px 0}
+.didattica-programmazione-level{background:#fff;border:1px solid #c5cae9;border-radius:8px;padding:8px 9px;min-height:88px}
+.didattica-programmazione-level strong{display:block;font-size:12px;color:#1a237e;margin-bottom:3px}
+.didattica-programmazione-level span{display:block;font-size:10px;color:#455a64;line-height:1.35}
+.didattica-programmazione-footer{background:#e8eaf6;border-radius:0 0 9px 9px;padding:10px 14px;font-size:10px;color:#1a237e;line-height:1.45;text-align:center}
+@media(max-width:900px){.didattica-programmazione-grid,.didattica-programmazione-levels{grid-template-columns:1fr}.didattica-programmazione-level{min-height:auto}}
 .home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
 .home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
 .home-card-note{font-size:10px;color:#546e7a;margin:10px 0 0;font-style:italic;line-height:1.4}
@@ -1289,6 +1310,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <!-- SUB-NAV: COMPETENZE E PROGETTAZIONE -->
 <div class="subnav-bar subnav-didattica" id="subnav-didattica" style="display:none">
   <button class="subnav-btn active" onclick="setTab('didattica')"><span aria-hidden="true">📊</span> Valutazione / Evidenze</button>
+  <button class="subnav-btn" onclick="setTab('didattica_programmazione')"><span aria-hidden="true">🗓️</span> Programmazione annuale</button>
   <button class="subnav-btn" onclick="setTab('didattica_uda')"><span aria-hidden="true">📋</span> UDA modello</button>
 </div>
 <div class="path-breadcrumb" id="breadcrumb" hidden role="navigation" aria-label="Percorso"><span class="crumb-current">Home</span></div>
@@ -1370,11 +1392,12 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <div class="home-card-badge badge--prototype"><span aria-hidden="true">📋</span> Area operativa</div>
             <div class="home-card-links">
               <a href="#" onclick="setTab('didattica');return false"><span aria-hidden="true">📊</span> Valuta evidenze</a>
+              <a href="#" onclick="setTab('didattica_programmazione');return false"><span aria-hidden="true">🗓️</span> Programmazione annuale</a>
               <a href="#" onclick="setTab('didattica_uda');return false"><span aria-hidden="true">📋</span> Progetta UDA</a>
               <span class="dimmed"><span aria-hidden="true">🧪</span> Prepara attività <span class="badge-preparing badge--prototype">In preparazione</span></span>
               <span class="dimmed"><span aria-hidden="true">📁</span> Materiali per la classe <span class="badge-preparing badge--prototype">In preparazione</span></span>
             </div>
-            <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00695c">Valutazione ed evidenze</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione. Seleziona una disciplina nella sezione Competenze e progettazione per iniziare.</p>
+            <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00695c">Valutazione ed evidenze</a>, <a href="#" onclick="setTab('didattica_programmazione');return false" style="font-weight:800;color:#1a237e">Programmazione annuale</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione. Seleziona una disciplina nella sezione Competenze e progettazione per iniziare.</p>
           </div>
         </div>
         <div class="home-microguide">
@@ -1396,7 +1419,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     </div>
     <!-- TAB COMPETENZE E PROGETTAZIONE -->
     <div id="tab-didattica" style="display:none">
-      <div class="didattica-evidence">
+      <div class="didattica-evidence" id="didattica-evidence-section">
         <div class="didattica-evidence-header">
           <h2><span aria-hidden="true">🧑‍🏫</span> Competenze e progettazione — Valutazione ed evidenze</h2>
           <p>Collega le unità curricolari a evidenze osservabili e criteri di valutazione. Da adattare alla classe e da validare dal docente.</p>
@@ -1426,8 +1449,25 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <div class="didattica-evidence-list" id="didattica-evidence-list"></div>
         <div class="didattica-evidence-footer">Evidenze e criteri indicativi · Richiedono validazione professionale del docente · Non costituiscono documento istituzionale approvato · Da adattare alla classe · Dati locali, nessun dato studente</div>
       </div>
-      <!-- UDA MODELLO -->
-      <div class="didattica-uda" id="didattica-uda">
+      <!-- PROGRAMMAZIONE ANNUALE -->
+      <div class="didattica-programmazione" id="didattica-programmazione-section" style="display:none">
+        <div class="didattica-programmazione-header">
+          <h2><span aria-hidden="true">🗓️</span> Competenze e progettazione — Programmazione annuale</h2>
+          <p>Vista iniziale read-only per leggere ordini, classi/fasce e maturità della progettazione annuale a partire dai dati curricolari già presenti.</p>
+        </div>
+        <div class="didattica-programmazione-box notice-box tip">
+          <strong>Programmazione annuale — quadro derivato</strong><br>
+          Questa vista non crea UDA, non salva dati e non modifica il curricolo. Serve a preparare il passaggio futuro verso programmazione annuale, UDA smart e raccolta evidenze sul campo.
+        </div>
+        <div class="didattica-programmazione-stats" id="didattica-programmazione-stats"></div>
+        <div class="didattica-programmazione-grid" id="didattica-programmazione-ordini"></div>
+        <div class="didattica-programmazione-box">
+          <strong>Livelli di maturità CurManLight → CurMan</strong>
+          <div class="didattica-programmazione-levels" id="didattica-programmazione-levels"></div>
+        </div>
+        <div class="didattica-programmazione-footer">Vista read-only · Dati derivati dal curricolo strutturato · Nessun salvataggio locale · Nessun dato studente · Nessuna modifica a export/import o schema .cml</div>
+      </div>      <!-- UDA MODELLO -->
+      <div class="didattica-uda" id="didattica-uda" style="display:none">
         <div class="didattica-uda-header">
           <h2><span aria-hidden="true">📋</span> Competenze e progettazione — UDA modello</h2>
           <p>Mostra come un'unità curricolare del curricolo può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
@@ -2630,6 +2670,34 @@ function setDidatticaFilter(f,btn){
 }
 
 // ================================================================
+function renderProgrammazioneAnnuale(){
+  var statsEl=document.getElementById("didattica-programmazione-stats");
+  var ordEl=document.getElementById("didattica-programmazione-ordini");
+  var levelsEl=document.getElementById("didattica-programmazione-levels");
+  if(!statsEl||!ordEl||!levelsEl)return;
+  var units=getDisciplineEvidenceData();
+  var selectedDisc=selDisc||DISCIPLINE[0]||"Disciplina";
+  var orderLabels={Infanzia:"Infanzia",Primaria:"Primaria",Secondaria:"Secondaria I grado"};
+  var orderHelp={Infanzia:"Fasce e campi di esperienza: base per una programmazione osservativa e laboratoriale.",Primaria:"Classi e nuclei: base per distribuire unita, periodi e durate nella programmazione annuale.",Secondaria:"Classi e nuclei disciplinari: base per raccordare unita, evidenze e UDA di periodo."};
+  var orders=["Infanzia","Primaria","Secondaria"];
+  var total=units.length;
+  var nuclei={};
+  units.forEach(function(u){var n=u.nucleoFondante||u.nucleo||u.ambito||"Nucleo non indicato";nuclei[n]=true;});
+  statsEl.innerHTML='<div class="didattica-programmazione-stat"><strong>'+escapeHtml(selectedDisc)+'</strong>Disciplina</div>'+'<div class="didattica-programmazione-stat"><strong>'+total+'</strong>Unita derivate</div>'+'<div class="didattica-programmazione-stat"><strong>'+Object.keys(nuclei).length+'</strong>Nuclei/ambiti</div>'+'<div class="didattica-programmazione-stat"><strong>0</strong>Dati salvati</div>';
+  var html='';
+  orders.forEach(function(ord){
+    var group=units.filter(function(u){return u.ordine===ord});
+    var classSet={};
+    var focus={};
+    group.forEach(function(u){var cls=u.fascia?'Fascia '+u.fascia:(u.classe?'Classe '+u.classe:'Classe non indicata');classSet[cls]=true;var n=u.nucleoFondante||u.nucleo||u.ambito||"Nucleo non indicato";focus[n]=true;});
+    var classLabels=Object.keys(classSet).sort();
+    var focusLabels=Object.keys(focus).slice(0,4);
+    html+='<div class="didattica-programmazione-card"><h3>'+escapeHtml(orderLabels[ord])+'</h3>'+'<p>'+escapeHtml(orderHelp[ord])+'</p>'+'<span class="didattica-programmazione-pill">'+group.length+' unita</span>'+'<span class="didattica-programmazione-pill">'+classLabels.length+' classi/fasce</span>'+'<ul><li><strong>Copertura:</strong> '+escapeHtml(classLabels.join(', ')||'non presente')+'</li>'+'<li><strong>Fuochi:</strong> '+escapeHtml(focusLabels.join('; ')||'da definire')+'</li>'+'<li><strong>Uso previsto:</strong> selezione unita, periodo, durata e note operative in slice futura.</li></ul></div>';
+  });
+  ordEl.innerHTML=html;
+  var levels=[["1","Consultazione curricolo","Lettura del curricolo strutturato e delle unita disponibili."],["2","Revisione IN2012/IN2025","Confronto e decisioni curricolari nel perimetro istituzionale."],["3","Progettazione annuale","Vista derivata per ordini, classi/fasce, unita e periodi."],["4","UDA smart/collaborative","Bozze UDA collegate a unita, evidenze e validazione dipartimentale."],["5","Campo e analisi","Raccolta evidenze operative e sintesi per miglioramento curricolare."]];
+  levelsEl.innerHTML=levels.map(function(l){return '<div class="didattica-programmazione-level"><strong>Livello '+l[0]+'</strong><span>'+escapeHtml(l[1])+'</span><span>'+escapeHtml(l[2])+'</span></div>';}).join('');
+}
 // UDA MODELLO DATA
 // ================================================================
 var UDA_MODELI=[{
@@ -3210,10 +3278,11 @@ function refreshCurrentDisciplineViews(){
     renderCurricoloIstituto();
     renderTecnologiaNorm();
   }
-  if(currentTab==="didattica"||currentTab==="didattica_uda"){
+  if(currentTab==="didattica"||currentTab==="didattica_uda"||currentTab==="didattica_programmazione"){
     var key=discKeyFromName(selDisc);
     if(key) mappaDisciplinaCorrente=key;
     renderDidattica();
+    renderProgrammazioneAnnuale();
     renderUdaModello();
     renderMappaDisciplinare();
     renderUdaDraftPanel();
@@ -3641,12 +3710,12 @@ function announceStatus(message){
 function setTab(t,opts){
   opts=opts||{};
   currentTab=t;
-  var tabLabels={home:"Home",curricolo:"Curriculum",lavoro:"Revisione",processo:"Processo",riepilogo:"Definitivo",normativa:"Fonti",generali:"Fonti",didattica:"Competenze e progettazione",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+  var tabLabels={home:"Home",curricolo:"Curriculum",lavoro:"Revisione",processo:"Processo",riepilogo:"Definitivo",normativa:"Fonti",generali:"Fonti",didattica:"Competenze e progettazione",didattica_programmazione:"Programmazione annuale",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
   if(!opts||!opts.updateHash===false) announceStatus("Sezione aperta: "+(tabLabels[t]||t));
-  var parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",processo:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};
+  var parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",processo:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_programmazione:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};
   const p=parentMap[t]||"home";
   document.getElementById("tab-home").style.display=t==="home"?"block":"none";
-  document.getElementById("tab-didattica").style.display=t==="didattica"||t==="didattica_uda"?"block":"none";
+  document.getElementById("tab-didattica").style.display=t==="didattica"||t==="didattica_uda"||t==="didattica_programmazione"?"block":"none";
   document.getElementById("tab-lavoro").style.display=t==="lavoro"?"block":"none";
   document.getElementById("tab-processo").style.display=t==="processo"?"block":"none";
   document.getElementById("tab-riepilogo").style.display=t==="riepilogo"?"block":"none";
@@ -3655,25 +3724,28 @@ function setTab(t,opts){
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
   var te=document.getElementById("tab-esportazioni");if(te)te.style.display=t==="esportazioni"?"block":"none";
   var tg=document.getElementById("tab-guida");if(tg)tg.style.display=t==="guida"?"block":"none";
-  if(t==="didattica"||t==="didattica_uda"){
-    var dk=discKeyFromName(selDisc);if(dk)mappaDisciplinaCorrente=dk;renderDidattica();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();
+  if(t==="didattica"||t==="didattica_uda"||t==="didattica_programmazione"){
+    var dk=discKeyFromName(selDisc);if(dk)mappaDisciplinaCorrente=dk;renderDidattica();renderProgrammazioneAnnuale();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();
   }
+  var evs=document.getElementById("didattica-evidence-section");if(evs)evs.style.display=t==="didattica"?"block":"none";
+  var ps=document.getElementById("didattica-programmazione-section");if(ps)ps.style.display=t==="didattica_programmazione"?"block":"none";
+  var us=document.getElementById("didattica-uda");if(us)us.style.display=t==="didattica_uda"?"block":"none";
   var sm=document.getElementById("didattica-mappa");if(sm)sm.style.display=t==="didattica"?"block":"none";
   var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
   var sd=document.getElementById("subnav-didattica");if(sd)sd.style.display=p==="didattica"?"flex":"none";
   var sci=document.querySelectorAll("#subnav-curriculum .subnav-btn");var csm=["curricolo","lavoro","processo","riepilogo","normativa"];
   sci.forEach(function(b,i){var a=csm[i]===t||(t==="generali"&&csm[i]==="normativa");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   var sdi=document.querySelectorAll("#subnav-didattica .subnav-btn");
-  sdi.forEach(function(b,i){var a=(i===0&&(t==="didattica"))||(i===1&&t==="didattica_uda");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
+  sdi.forEach(function(b,i){var a=(i===0&&(t==="didattica"))||(i===1&&t==="didattica_programmazione")||(i===2&&t==="didattica_uda");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   const cruscotto=document.getElementById("cruscotto");
-  if(cruscotto) cruscotto.hidden=t==="home"||t==="processo"||t==="didattica"||t==="didattica_uda"||t==="esportazioni"||t==="guida";
+  if(cruscotto) cruscotto.hidden=t==="home"||t==="processo"||t==="didattica"||t==="didattica_programmazione"||t==="didattica_uda"||t==="esportazioni"||t==="guida";
   const breadcrumbEl=document.getElementById("breadcrumb");
   if(breadcrumbEl) breadcrumbEl.hidden=t==="home"||t==="processo"||t==="esportazioni"||t==="guida";
   document.querySelectorAll(".tabbar button").forEach(function(b,i){
     var map=["home","curricolo","didattica","esportazioni","guida"];var a=map[i]===p;
     b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");
   });
-  const mbbMap={home:"mbb-home",curricolo:"mbb-curricolo",lavoro:"mbb-curricolo",processo:"mbb-curricolo",riepilogo:"mbb-curricolo",normativa:"mbb-curricolo",generali:"mbb-curricolo",didattica:"mbb-didattica",didattica_uda:"mbb-didattica",esportazioni:"mbb-esportazioni",guida:"mbb-menu"};
+  const mbbMap={home:"mbb-home",curricolo:"mbb-curricolo",lavoro:"mbb-curricolo",processo:"mbb-curricolo",riepilogo:"mbb-curricolo",normativa:"mbb-curricolo",generali:"mbb-curricolo",didattica:"mbb-didattica",didattica_programmazione:"mbb-didattica",didattica_uda:"mbb-didattica",esportazioni:"mbb-esportazioni",guida:"mbb-menu"};
   document.querySelectorAll(".mbb-btn").forEach(function(b){
     var isActive = b.id === mbbMap[t];
     b.classList.toggle("mbb-active", isActive);
@@ -3692,7 +3764,7 @@ function setTab(t,opts){
   }
   if(breadcrumbEl){
     var discLabel=selDisc&&(t==="curricolo"||t==="lavoro"||t==="riepilogo")?' — '+selDisc:'';
-    const labels={home:"Home",curricolo:"Curriculum — Consultazione"+discLabel,lavoro:"Curriculum — Revisione"+discLabel,processo:"Curriculum — Processo",riepilogo:"Curriculum — Definitivo"+discLabel,normativa:"Curriculum — Fonti",generali:"Curriculum — Fonti",didattica:"Competenze e progettazione — Valutazione / Evidenze",didattica_uda:"Competenze e progettazione — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+    const labels={home:"Home",curricolo:"Curriculum — Consultazione"+discLabel,lavoro:"Curriculum — Revisione"+discLabel,processo:"Curriculum — Processo",riepilogo:"Curriculum — Definitivo"+discLabel,normativa:"Curriculum — Fonti",generali:"Curriculum — Fonti",didattica:"Competenze e progettazione — Valutazione / Evidenze",didattica_programmazione:"Competenze e progettazione — Programmazione annuale",didattica_uda:"Competenze e progettazione — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
     breadcrumbEl.innerHTML='<span class="crumb-current">'+(labels[t]||"Home")+'</span>';
     breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
   }
@@ -5032,6 +5104,7 @@ function toggleMobileMenu(){
     <div class="mm-sep"></div>\
     <div class="mm-title">🧑‍🏫 Competenze e progettazione</div>\
     <button class="mm-item" onclick="setTab(\'didattica\');this.closest(\'.mobile-menu-overlay\').remove()">📊 Valutazione / Evidenze</button>\
+    <button class="mm-item" onclick="setTab(\'didattica_programmazione\');this.closest(\'.mobile-menu-overlay\').remove()">🗓️ Programmazione annuale</button>\
     <button class="mm-item" onclick="setTab(\'didattica_uda\');this.closest(\'.mobile-menu-overlay\').remove()">📋 UDA modello</button>\
     <div class="mm-sep"></div>\
     <div class="mm-title">❔ Guida e strumenti</div>\
