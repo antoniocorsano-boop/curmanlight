@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-ACCESSIBILITY-EXTERNAL-AUDIT-PLAN - Piano audit esterno accessibilita
+
+- **Nome slice**: `CML-UX-ACCESSIBILITY-EXTERNAL-AUDIT-PLAN`
+- **Commit base**: `6dd7e1d` — **Commit finale**: `71cf8ee`
+- **Tipo slice**: docs-only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-ACCESSIBILITY-EXTERNAL-AUDIT-PLAN.md`, `report/CML-UX-ACCESSIBILITY-EXTERNAL-AUDIT-PLAN.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Score corrente**: 64/100
+- **P0 residui**: 0
+- **P1 residui**: 3 (axe/Lighthouse, screen reader, icon-only labels)
+- **Strumenti audit**: axe DevTools, Lighthouse, NVDA, VoiceOver, keyboard-only, mobile touch
+- **Soglie**: 0 critical, 0 serious non giustificati; score > 70 richiede audit automatico; > 80 richiede axe/Lighthouse PASS; > 85 richiede screen reader smoke test
+- **Icon-only decision**: P1 se solo `title`, P2 se nome gia accessibile ma da rafforzare, P3 se polish
+- **Prossime slice**: `CML-UX-ACCESSIBILITY-ICON-ONLY-LABELS` (runtime, dopo autorizzazione)
+- **Invarianti**: nessun runtime modificato, nessun JSON, nessun tool, nessun asset, nessun schema .cml, nessun service worker
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_ACCESSIBILITY_EXTERNAL_AUDIT_PLAN_READY`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA - Accessibility score refresh post aria
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-ARIA`
