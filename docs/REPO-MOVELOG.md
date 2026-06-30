@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION — Stabilizzazione navigazione e scrolling
+- **Nome slice**: `CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION`
+- **Commit base**: `ffd78b2`
+- **Tipo slice**: runtime microfix
+- **Runtime modificato**: sì (4 righe rimosse)
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION.md`, `report/CML-UX-NAVIGATION-AND-SCROLLING-STABILIZATION.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Ridondanza risolta**: `discKeyFromName()` chiamata duplice in `setTab()` rimossa
+- **Scroll risolto**: `scrollIntoView()` ridondante per `didattica_uda` rimosso (conflitto con `window.scrollTo` in `setTab`)
+- **Validatore**: 14/14 PASS
+- **Shape test**: 14/14 PASS
+- **Errori JS reali**: 0
+- **Score accessibilità**: invariato (88/100)
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_NAVIGATION_AND_SCROLLING_STABILIZATION_READY`
+
 ## 2026-06-30 - CML-USER-VIEWS-MATURITY-AND-NAVIGATION-AUDIT — Audit maturezza e navigazione viste utente
 
 - **Nome slice**: `CML-USER-VIEWS-MATURITY-AND-NAVIGATION-AUDIT`

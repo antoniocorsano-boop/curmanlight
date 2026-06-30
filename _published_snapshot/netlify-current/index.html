@@ -3656,19 +3656,16 @@ function setTab(t,opts){
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
   var te=document.getElementById("tab-esportazioni");if(te)te.style.display=t==="esportazioni"?"block":"none";
   var tg=document.getElementById("tab-guida");if(tg)tg.style.display=t==="guida"?"block":"none";
-   if(t==="didattica"||t==="didattica_uda"){
-     var selectedKey=discKeyFromName(selDisc);
-     if(selectedKey) mappaDisciplinaCorrente=selectedKey;
-     var dk=discKeyFromName(selDisc);if(dk)mappaDisciplinaCorrente=dk;renderDidattica();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();
-   }
-   var sm=document.getElementById("didattica-mappa");if(sm)sm.style.display=t==="didattica"?"block":"none";
+  if(t==="didattica"||t==="didattica_uda"){
+    var dk=discKeyFromName(selDisc);if(dk)mappaDisciplinaCorrente=dk;renderDidattica();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();
+  }
+  var sm=document.getElementById("didattica-mappa");if(sm)sm.style.display=t==="didattica"?"block":"none";
   var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
   var sd=document.getElementById("subnav-didattica");if(sd)sd.style.display=p==="didattica"?"flex":"none";
   var sci=document.querySelectorAll("#subnav-curriculum .subnav-btn");var csm=["curricolo","lavoro","processo","riepilogo","normativa"];
   sci.forEach(function(b,i){var a=csm[i]===t||(t==="generali"&&csm[i]==="normativa");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   var sdi=document.querySelectorAll("#subnav-didattica .subnav-btn");
   sdi.forEach(function(b,i){var a=(i===0&&(t==="didattica"))||(i===1&&t==="didattica_uda");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
-  if(t==="didattica_uda"){setTimeout(function(){var u=document.getElementById("didattica-uda");if(u)u.scrollIntoView({behavior:"smooth"})},100);}
   const cruscotto=document.getElementById("cruscotto");
   if(cruscotto) cruscotto.hidden=t==="home"||t==="processo"||t==="didattica"||t==="didattica_uda"||t==="esportazioni"||t==="guida";
   const breadcrumbEl=document.getElementById("breadcrumb");
