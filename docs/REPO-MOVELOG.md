@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-REPO-READABILITY-SCAFFOLD-CLEAN — Repository readability scaffold (clean PR #5)
+
+- **Nome slice**: `CML-REPO-READABILITY-SCAFFOLD-CLEAN`
+- **Commit base**: `79bab3a` — **Commit finale**: `6ea96bc`
+- **Tipo slice**: docs-only (branch + PR)
+- **Runtime modificato**: no
+- **File creati**: `AGENTS.md`, `CONTRIBUTING.md`, `CHANGELOG.md`, `examples/curriculum-discipline.example.json`, `examples/department-outcome.example.cml.json`, `examples/teacher-proposal.example.cml.json`
+- **PR**: #5 (da branch `docs/cml-repo-readability-scaffold-clean`, mergeato su main)
+- **Criteri rispettati**: docs/examples only, nessun runtime, nessun riferimento a file inesistenti, baseline da origin/main
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: eseguito (PR #5 merged)
+- **Verdetto**: `CML_PR5_CLEAN_DOCS_EXAMPLES_ONLY_MERGED`
+
 ## 2026-06-30 - CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-REAL-NVDA — Score refresh after real NVDA gate
 
 - **Nome slice**: `CML-UX-ACCESSIBILITY-SCORE-REFRESH-POST-REAL-NVDA`
