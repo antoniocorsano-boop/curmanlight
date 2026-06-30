@@ -1,5 +1,19 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-ANNUAL-PLANNING-UDA-SPECIFICATION-RESEARCH — Specification research annual planning and UDA
+
+- **Nome slice**: `CML-ANNUAL-PLANNING-UDA-SPECIFICATION-RESEARCH`
+- **Commit base**: `e559625`
+- **Tipo slice**: docs-only / research-specification
+- **Runtime modificato**: no
+- **Accessibilità**: 88/100 invariata
+- **File modificati**: `docs/03_execution/CML-ANNUAL-PLANNING-UDA-SPECIFICATION-RESEARCH.md`, `report/CML-ANNUAL-PLANNING-UDA-SPECIFICATION-RESEARCH.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: specificare requisiti per programmazione annuale, UDA smart, livelli di maturità CurManLight → CurMan
+- **Decisioni**: programmazione annuale come view/aggregazione, UDA editabili/salvabili, invariato `.cml`, privacy solo descrittori operativi
+- **Prossima slice**: `CML-ANNUAL-PLANNING-VIEW-LEVELS-ORDS`
+- **Push**: non eseguito
+- **Verdetto**: `CML_ANNUAL_PLANNING_UDA_SPECIFICATION_RESEARCH_READY`
+
 ## 2026-06-30 - CML-DISCIPLINE-GENERALIZATION-AUDIT-AND-FIX-PLAN — Audit generalizzazione discipline
 - **Nome slice**: `CML-DISCIPLINE-GENERALIZATION-AUDIT-AND-FIX-PLAN`
 - **Commit base**: `c4969e2`
