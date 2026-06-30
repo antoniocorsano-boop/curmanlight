@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-REPO-READABILITY-SCAFFOLD-CLOSURE — Repository readability scaffold closure
+
+- **Nome slice**: `CML-REPO-READABILITY-SCAFFOLD-CLOSURE`
+- **Commit base**: `68742a9`
+- **Tipo slice**: docs-only closure
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-REPO-READABILITY-SCAFFOLD-CLOSURE.md`, `report/CML-REPO-READABILITY-SCAFFOLD-CLOSURE.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Baseline**: main/origin/main@68742a9
+- **PR #4**: chiusa, non merged, superseded
+- **PR #5**: merged
+- **Score accessibilit\u00e0**: 88/100 (invariato)
+- **Scaffold consolidato**: AGENTS.md, CONTRIBUTING.md, CHANGELOG.md, 3 examples
+- **Limiti**: non certificazione WCAG, VoiceOver non testato, P3 backlog
+- **Invarianti**: nessun runtime, JSON, schema .cml, tool, export, o asset modificato
+- **Validatore**: non eseguito (nessun file dati modificato)
+- **Shape test**: non eseguito (nessun file dati modificato)
+- **Secret scan**: clean
+- **Dipendenze**: nessuna
+- **Push**: non eseguito
+- **Verdetto**: `CML_REPO_READABILITY_SCAFFOLD_CLOSURE_READY`
+
 ## 2026-06-30 - CML-REPO-READABILITY-SCAFFOLD-CLEAN — Repository readability scaffold (clean PR #5)
 
 - **Nome slice**: `CML-REPO-READABILITY-SCAFFOLD-CLEAN`
