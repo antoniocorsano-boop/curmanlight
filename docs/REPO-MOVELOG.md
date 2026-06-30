@@ -1,5 +1,20 @@
 # Repo Movelog
 
+## 2026-06-30 - CML-VOICEOVER-MACOS-FUTURE-GATE-CONTRACT — Definito contratto futuro test VoiceOver/macOS
+
+- **Nome slice**: `CML-VOICEOVER-MACOS-FUTURE-GATE-CONTRACT`
+- **Commit base**: `b206f93`
+- **Tipo slice**: docs-only contract
+- **Runtime modificato**: no
+- **Score accessibilità**: invariato (88/100)
+- **File modificati**: `docs/02_system/CML-VOICEOVER-MACOS-FUTURE-GATE-CONTRACT.md`, `docs/03_execution/CML-VOICEOVER-MACOS-FUTURE-GATE-CONTRACT.md`, `report/CML-VOICEOVER-MACOS-FUTURE-GATE-CONTRACT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **VoiceOver/macOS**: futuro backlog separato
+- **Accessibilità runtime**: congelata salvo regressioni
+- **Ritorno a produzione viste**: consentito immediatamente
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_VOICEOVER_MACOS_FUTURE_GATE_CONTRACT_READY`
+
 ## 2026-06-30 - CML-ACCESSIBILITY-P3-POLISH-CLOSURE — Chiusura ciclo P3 accessibility polish
 
 - **Nome slice**: `CML-ACCESSIBILITY-P3-POLISH-CLOSURE`
