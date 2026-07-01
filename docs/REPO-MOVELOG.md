@@ -1,5 +1,19 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1 - Riordino runtime leggero criticita P0/P1
+
+- **Nome slice**: `CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1`
+- **Commit base**: `9fb4ad5`
+- **Tipo slice**: runtime reorder leggero (P0/P1)
+- **Runtime modificato**: si, `_published_snapshot/netlify-current/index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1.md`, `report/CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Interventi chiave**: Home alleggerita; dedup "Bozza disciplina" in Revisione (azioni centralizzate in Esportazioni); Programmazione annuale separata in Passo 1/Passo 2; raccordo UDA modello -> UDA smart; separazione reale Fonti/Sezioni generali con subnav dedicata
+- **Vincoli confermati**: nessuna modifica a dati/logica curricolare/schema/storage/validatori/filtri UDA/flussi `.cml`
+- **Verifiche**: `get_errors` su runtime ok; `tools/test-runtime-mappa-dati-shape.mjs` PASS 14/14; validatore curriculum con warning retrocompatibili noti
+- **Nota working tree**: modifica tracked preesistente `docs/04_user/educazione_fisica_validazione_dipartimentale.md` non inclusa nel commit
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_LIGHTWEIGHT_RUNTIME_REORDER_P0_P1_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UX-AREA-RATIONALIZATION-AND-LIGHTWEIGHT-EXPERIENCE-AUDIT - Audit razionalizzazione e alleggerimento aree UI
 
 - **Nome slice**: `CML-UX-AREA-RATIONALIZATION-AND-LIGHTWEIGHT-EXPERIENCE-AUDIT`

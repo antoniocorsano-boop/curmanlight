@@ -1363,6 +1363,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <button class="subnav-btn" onclick="setTab('processo')"><span aria-hidden="true">🔧</span> Processo</button>
   <button class="subnav-btn" onclick="setTab('riepilogo')"><span aria-hidden="true">📋</span> Definitivo</button>
   <button class="subnav-btn" onclick="setTab('normativa')"><span aria-hidden="true">📜</span> Fonti</button>
+  <button class="subnav-btn" onclick="setTab('generali')"><span aria-hidden="true">📚</span> Sezioni generali</button>
 </div>
 <!-- SUB-NAV: COMPETENZE E PROGETTAZIONE -->
 <div class="subnav-bar subnav-didattica" id="subnav-didattica" style="display:none">
@@ -1414,30 +1415,18 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div id="tab-home" style="display:block">
       <div class="home-dashboard">
         <h2 class="home-title">Da dove vuoi iniziare?</h2>
-        <p class="home-subtitle">Il processo del curricolo: consulta, analizza, proponi, confronta, sintetizza e scarica i documenti.</p>
-        <div class="home-process-path">
-          <div class="home-process-path-title"><span aria-hidden="true">🔄</span> Percorso di governo del curricolo</div>
-          <div class="home-process-path-steps">
-            <span class="home-process-path-step"><span aria-hidden="true">📖</span> Consulta</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
-            <span class="home-process-path-step"><span aria-hidden="true">🔍</span> Analizza</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
-            <span class="home-process-path-step"><span aria-hidden="true">✏️</span> Proponi</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
-            <span class="home-process-path-step"><span aria-hidden="true">🤝</span> Confronta</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
-            <span class="home-process-path-step"><span aria-hidden="true">📋</span> Sintetizza</span><span class="home-process-path-arrow" aria-hidden="true">→</span>
-            <span class="home-process-path-step"><span aria-hidden="true">📤</span> Esporta</span>
-          </div>
-        </div>
+        <p class="home-subtitle">Scegli l'area operativa principale e completa un compito alla volta.</p>
         <div class="home-cards">
           <div class="home-card">
             <div class="home-card-header">
               <span class="home-card-icon" aria-hidden="true">📚</span>
               <h3 class="home-card-title">Curriculum</h3>
             </div>
-            <p class="home-card-text">Consulta, revisiona e scarica il curricolo di istituto. Qui trovi sezioni generali, discipline, riferimenti e proposte di revisione.</p>
+            <p class="home-card-text">Consulta il curricolo, revisionalo per disciplina e prepara i documenti di lavoro.</p>
             <div class="home-card-links">
               <a href="#" onclick="setTab('curricolo');return false"><span aria-hidden="true">📖</span> Consulta</a>
               <a href="#" onclick="setTab('lavoro');return false"><span aria-hidden="true">✏️</span> Revisiona</a>
               <a href="#" onclick="setTab('esportazioni');return false"><span aria-hidden="true">📤</span> Scarica</a>
-              <a href="#" onclick="setTab('curricolo');setTimeout(function(){var p=document.getElementById('tecnologia-norm-panel');if(p)p.scrollIntoView({behavior:'smooth'})},150);return false"><span aria-hidden="true">⚙️</span> Curriculum normalizzato</a>
             </div>
           </div>
           <div class="home-card home-card-didattica">
@@ -1451,26 +1440,12 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
               <a href="#" onclick="setTab('didattica');return false"><span aria-hidden="true">📊</span> Valuta evidenze</a>
               <a href="#" onclick="setTab('didattica_programmazione');return false"><span aria-hidden="true">🗓️</span> Programmazione annuale</a>
               <a href="#" onclick="setTab('didattica_uda');return false"><span aria-hidden="true">📋</span> Progetta UDA</a>
-              <span class="dimmed"><span aria-hidden="true">🧪</span> Prepara attività <span class="badge-preparing badge--prototype">In preparazione</span></span>
-              <span class="dimmed"><span aria-hidden="true">📁</span> Materiali per la classe <span class="badge-preparing badge--prototype">In preparazione</span></span>
             </div>
-            <p class="home-card-note">Disponibili: <a href="#" onclick="setTab('didattica');return false" style="font-weight:800;color:#00695c">Valutazione ed evidenze</a>, <a href="#" onclick="setTab('didattica_programmazione');return false" style="font-weight:800;color:#1a237e">Programmazione annuale</a> e <a href="#" onclick="setTab('didattica_uda');return false" style="font-weight:800;color:#7b1fa2">UDA modello</a> (2 esempi). Le schede "Prepara attività" e "Materiali per la classe" sono in fase di definizione. Seleziona una disciplina nella sezione Competenze e progettazione per iniziare.</p>
+            <p class="home-card-note">Percorso consigliato: evidenze → programmazione annuale → UDA.</p>
           </div>
         </div>
-        <div class="home-microguide">
-          <div class="home-microguide-title"><span aria-hidden="true">⏱</span> Usa CurManLight in 5 minuti</div>
-          <div class="home-microguide-subtitle">Segui il percorso minimo: leggi, confronta, decidi, scarica e condividi l'esito.</div>
-          <ol class="home-microguide-steps">
-            <li class="home-microguide-step"><span class="home-microguide-step-num">1</span><span class="home-microguide-step-text">Scegli una proposta di curricolo.</span></li>
-            <li class="home-microguide-step"><span class="home-microguide-step-num">2</span><span class="home-microguide-step-text">Confronta testo vigente e proposta 2025.</span></li>
-            <li class="home-microguide-step"><span class="home-microguide-step-num">3</span><span class="home-microguide-step-text">Decidi se confermare, modificare o discutere.</span></li>
-            <li class="home-microguide-step"><span class="home-microguide-step-num">4</span><span class="home-microguide-step-text">Salva il file di lavoro CurManLight per il passaggio successivo.</span></li>
-            <li class="home-microguide-step"><span class="home-microguide-step-num">5</span><span class="home-microguide-step-text">Il referente carica gli esiti e prepara la sintesi finale.</span></li>
-          </ol>
-          <div class="home-microguide-footer">La validazione finale resta a cura del gruppo di lavoro e degli organi competenti.</div>
-        </div>
         <div class="home-footer">
-          <p>La Home non modifica i dati. Curriculum e Competenze e progettazione restano separati: il primo riguarda il documento istituzionale, la seconda la progettazione curricolare. Alcune azioni sono riservate ai ruoli autorizzati. Il curricolo strutturato richiede controllo professionale.</p>
+          <p>La Home non modifica i dati. Per istruzioni operative estese apri la sezione Guida. Curriculum e Competenze e progettazione restano separati: il primo riguarda il documento istituzionale, la seconda la progettazione didattica.</p>
         </div>
       </div>
     </div>
@@ -1522,6 +1497,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <strong>Livelli di maturità CurManLight → CurMan</strong>
           <div class="didattica-programmazione-levels" id="didattica-programmazione-levels"></div>
         </div>
+        <details class="didattica-step-box" id="didattica-step-programmazione">
+          <summary><strong>Passo 1 — Bozza programmazione annuale</strong></summary>
+          <p style="margin:6px 0 0;font-size:11px;color:#546e7a">Compila solo quando hai completato la consultazione iniziale.</p>
         <div class="annual-draft-box" id="annual-draft-box">
           <h3>Bozza programmazione annuale locale</h3>
           <p class="annual-draft-intro">Prepara una bozza operativa sul dispositivo. Usa solo descrittori generici: non inserire nomi, cognomi, valutazioni individuali o dati personali di studenti.</p>
@@ -1540,6 +1518,10 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div class="annual-draft-preview"><h4>Anteprima leggibile</h4><pre id="annual-draft-preview">Compila i campi per generare l'anteprima.</pre></div>
           <div class="annual-draft-privacy"><strong>Bozza salvata su questo dispositivo</strong><br>La bozza resta su questo dispositivo, non cambia il documento ufficiale di istituto e richiede controllo didattico prima dell'uso istituzionale.</div>
         </div>
+        </details>
+        <details class="didattica-step-box" id="didattica-step-uda-smart">
+          <summary><strong>Passo 2 — Libreria UDA smart</strong></summary>
+          <p style="margin:6px 0 0;font-size:11px;color:#546e7a">Apri questa sezione dopo aver preparato una bozza annuale.</p>
         <div class="uda-smart-library-section" id="uda-smart-library-section">
           <h3>Libreria UDA smart locale</h3>
           <p class="uda-smart-library-intro">Strumento guidato per preparare una bozza UDA smart basata sulla programmazione annuale e sui dati curricolari esistenti.</p>
@@ -1568,12 +1550,14 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div class="uda-smart-library-list" id="uda-smart-library-list"></div>
           <div class="uda-smart-library-privacy"><strong>Libreria su questo dispositivo</strong><br>Le bozze sono salvate solo su questo dispositivo. Non inserire nomi, cognomi, voti, bisogni educativi o dati sensibili di studenti.</div>
         </div>
+        </details>
         <div class="didattica-programmazione-footer">Vista di sola consultazione - Dati derivati dal curricolo strutturato - Bozza salvata su questo dispositivo - Nessun dato studente - Documento da controllare prima dell'uso istituzionale</div>
       </div>      <!-- UDA MODELLO -->
       <div class="didattica-uda" id="didattica-uda" style="display:none">
         <div class="didattica-uda-header">
           <h2><span aria-hidden="true">📋</span> Competenze e progettazione — UDA modello</h2>
           <p>Mostra come un'unità curricolare del curricolo può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
+          <p style="margin:6px 0 0;font-size:11px;color:#5e35b1">Per gestire filtri e archivio UDA smart usa <a href="#" onclick="setTab('didattica_programmazione');setTimeout(function(){var d=document.getElementById('didattica-step-uda-smart');if(d){d.open=true;d.scrollIntoView({behavior:'smooth'})}},120);return false" style="font-weight:700;color:#5e35b1">Programmazione annuale → Passo 2</a>.</p>
         </div>
         <div class="didattica-uda-box notice-box tip">
           <strong>🧑‍🏫 UDA modello — guida operativa</strong><br>
@@ -1649,27 +1633,8 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <button class="filter-btn" onclick="setFilter('nuovo',this)"><span aria-hidden="true">★</span> Nuovi</button>
           <label class="toggle-lbl"><input type="checkbox" id="hide-ok" onchange="render()"> Nascondi invariati</label>
         </span>
-        <span style="color:#ccc">|</span>
-        <button type="button" class="toolbar-toggle" onclick="var e=document.getElementById('disc-export-panel');e.style.display=e.style.display==='block'?'none':'block';this.textContent=e.style.display==='block'?'📝 Bozza disciplina ▴':'📝 Bozza disciplina ▾'"><span aria-hidden="true">📝</span> Bozza disciplina ▾</button>
       </div>
-      <p style="margin:4px 13px 8px;font-size:11px;color:#5d4037;line-height:1.4">Area Revisione: scegli, adatta o registra le decisioni sulle proposte della disciplina selezionata. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
-
-      <div id="disc-export-panel" class="disc-export-panel" style="display:none">
-        <div class="disc-export-header">
-          <span class="disc-export-title"><span aria-hidden="true">📤</span> Scaricamento del curricolo revisionato</span>
-          <span class="disc-export-badge badge--warning">Documento di lavoro — da validare</span>
-        </div>
-        <p class="disc-export-desc" id="disc-export-desc">Il pulsante genera una bozza di testo modificabile della disciplina. L'approvazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
-        <div class="disc-export-actions">
-          <button class="export-btn btn-md" id="btn-generate-disc-bozza" onclick="generateDiscBozza()"><span aria-hidden="true">📝</span> Genera bozza</button>
-          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('disc-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di scaricamento ▾':'⬇ Azioni di scaricamento ▴'"><span aria-hidden="true">⬇</span> Azioni di scaricamento ▾</button>
-        </div>
-        <div id="disc-secondary-actions" class="disc-actions-secondary" hidden>
-          <button class="export-btn btn-copy" id="btn-copy-disc-md" onclick="copyDiscMarkdown()" disabled style="opacity:0.5"><span aria-hidden="true">📝</span> Copia testo</button>
-          <button class="export-btn btn-md" id="btn-dl-disc-md" onclick="downloadDiscMarkdown()" disabled style="opacity:0.5"><span aria-hidden="true">📝</span> Scarica testo</button>
-        </div>
-        <textarea id="disc-md-preview" class="disc-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del testo..." aria-label="Anteprima del testo"></textarea>
-      </div>
+      <p style="margin:4px 13px 8px;font-size:11px;color:#5d4037;line-height:1.4">Area Revisione: scegli, adatta o registra le decisioni sulle proposte della disciplina selezionata. Le azioni di scaricamento sono in <a href="#" onclick="setTab('esportazioni');return false" style="font-weight:800;color:#1a237e">Esportazioni</a>. <a href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener" style="font-weight:800;color:#1a237e">Apri il corso in PDF</a>.</p>
       <div id="cards-area"></div>
     </div>
     <!-- TAB PROCESSO -->
@@ -1722,6 +1687,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <h2><span aria-hidden="true">📜</span> Fonti ufficiali, normativa e documenti strategici</h2>
           <p>Questa sezione raccoglie i riferimenti da usare per la revisione del curricolo: <strong>Indicazioni Nazionali 2012</strong>, documenti strategici dell'Istituto, <strong>PTOF 2025-2028</strong>, <strong>RAV 2022-2025</strong>, Scuola in Chiaro e riferimenti nazionali collegati a valutazione, competenze, Educazione civica, inclusione, digitale e autonomia scolastica. Le fonti sono rese evidenti perché il lavoro sul curricolo deve distinguere sempre tra testo ufficiale, contesto di scuola e proposta di aggiornamento.</p>
           <div class="norm-warning"><strong>Uso nello strumento:</strong> le fonti generali sono consultabili e non modificabili. Le modifiche si effettuano solo nelle sezioni disciplinari/didattiche, come proposte da validare in dipartimento, commissione e Collegio dei Docenti.</div>
+          <div class="norm-warning" style="margin-top:8px"><strong>Sezioni generali del curricolo:</strong> sono disponibili in una vista separata. <a href="#" onclick="setTab('generali');return false" style="font-weight:700;color:#1a237e">Apri Sezioni generali</a>.</div>
         </div>
 
         <div class="norm-cat">
@@ -1891,6 +1857,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="tab-generali">
         <h2>Sezioni generali del curricolo</h2>
         <span class="gen-badge badge--readonly">Consultazione — non modificabile</span>
+        <p style="margin-top:6px"><a href="#" onclick="setTab('normativa');return false" style="font-weight:700;color:#1a237e">← Torna a Fonti ufficiali</a></p>
         <p>Questa area raccoglie le sezioni generali del curricolo d'istituto: principi, riferimenti, profilo dello studente, competenze chiave, obiettivi formativi e raccordi verticali. I contenuti hanno funzione di orientamento e non modificano il percorso operativo di revisione disciplinare.</p>
 
         <!-- PREMESSA -->
@@ -3903,7 +3870,7 @@ function announceStatus(message){
 function setTab(t,opts){
   opts=opts||{};
   currentTab=t;
-  var tabLabels={home:"Home",curricolo:"Curriculum",lavoro:"Revisione",processo:"Processo",riepilogo:"Definitivo",normativa:"Fonti",generali:"Fonti",didattica:"Competenze e progettazione",didattica_programmazione:"Programmazione annuale",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+  var tabLabels={home:"Home",curricolo:"Curriculum",lavoro:"Revisione",processo:"Processo",riepilogo:"Definitivo",normativa:"Fonti",generali:"Sezioni generali",didattica:"Competenze e progettazione",didattica_programmazione:"Programmazione annuale",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
   if(!opts||!opts.updateHash===false) announceStatus("Sezione aperta: "+(tabLabels[t]||t));
   var parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",processo:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_programmazione:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};
   const p=parentMap[t]||"home";
@@ -3912,8 +3879,8 @@ function setTab(t,opts){
   document.getElementById("tab-lavoro").style.display=t==="lavoro"?"block":"none";
   document.getElementById("tab-processo").style.display=t==="processo"?"block":"none";
   document.getElementById("tab-riepilogo").style.display=t==="riepilogo"?"block":"none";
-  document.getElementById("tab-normativa").style.display=t==="normativa"||t==="generali"?"block":"none";
-  document.getElementById("tab-generali").style.display=t==="normativa"||t==="generali"?"block":"none";
+  document.getElementById("tab-normativa").style.display=t==="normativa"?"block":"none";
+  document.getElementById("tab-generali").style.display=t==="generali"?"block":"none";
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
   var te=document.getElementById("tab-esportazioni");if(te)te.style.display=t==="esportazioni"?"block":"none";
   var tg=document.getElementById("tab-guida");if(tg)tg.style.display=t==="guida"?"block":"none";
@@ -3926,8 +3893,8 @@ function setTab(t,opts){
   var sm=document.getElementById("didattica-mappa");if(sm)sm.style.display=t==="didattica"?"block":"none";
   var sc=document.getElementById("subnav-curriculum");if(sc)sc.style.display=p==="curricolo"?"flex":"none";
   var sd=document.getElementById("subnav-didattica");if(sd)sd.style.display=p==="didattica"?"flex":"none";
-  var sci=document.querySelectorAll("#subnav-curriculum .subnav-btn");var csm=["curricolo","lavoro","processo","riepilogo","normativa"];
-  sci.forEach(function(b,i){var a=csm[i]===t||(t==="generali"&&csm[i]==="normativa");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
+  var sci=document.querySelectorAll("#subnav-curriculum .subnav-btn");var csm=["curricolo","lavoro","processo","riepilogo","normativa","generali"];
+  sci.forEach(function(b,i){var a=csm[i]===t;b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   var sdi=document.querySelectorAll("#subnav-didattica .subnav-btn");
   sdi.forEach(function(b,i){var a=(i===0&&(t==="didattica"))||(i===1&&t==="didattica_programmazione")||(i===2&&t==="didattica_uda");b.classList.toggle("active",a);if(a)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   const cruscotto=document.getElementById("cruscotto");
@@ -3957,7 +3924,7 @@ function setTab(t,opts){
   }
   if(breadcrumbEl){
     var discLabel=selDisc&&(t==="curricolo"||t==="lavoro"||t==="riepilogo")?' — '+selDisc:'';
-    const labels={home:"Home",curricolo:"Curriculum — Consultazione"+discLabel,lavoro:"Curriculum — Revisione"+discLabel,processo:"Curriculum — Processo",riepilogo:"Curriculum — Definitivo"+discLabel,normativa:"Curriculum — Fonti",generali:"Curriculum — Fonti",didattica:"Competenze e progettazione — Valutazione / Evidenze",didattica_programmazione:"Competenze e progettazione — Programmazione annuale",didattica_uda:"Competenze e progettazione — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+    const labels={home:"Home",curricolo:"Curriculum — Consultazione"+discLabel,lavoro:"Curriculum — Revisione"+discLabel,processo:"Curriculum — Processo",riepilogo:"Curriculum — Definitivo"+discLabel,normativa:"Curriculum — Fonti",generali:"Curriculum — Sezioni generali",didattica:"Competenze e progettazione — Valutazione / Evidenze",didattica_programmazione:"Competenze e progettazione — Programmazione annuale",didattica_uda:"Competenze e progettazione — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
     breadcrumbEl.innerHTML='<span class="crumb-current">'+(labels[t]||"Home")+'</span>';
     breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
   }
