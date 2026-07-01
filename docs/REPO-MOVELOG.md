@@ -6411,3 +6411,24 @@ TEST APPEND LINE
 - **Backend/API/dipendenze/secrets**: non introdotti
 - **Push**: non eseguito
 - **Verdetto**: `CML_UDA_SMART_LIBRARY_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
+
+## 2026-07-01 - CML-UDA-SMART-LIBRARY-RUNTIME-SCAFFOLD
+
+- **Commit**: (in preparazione)
+- **Tipo slice**: runtime increment controllato
+- **Oggetto**: scaffold minimo della Libreria UDA smart locale dentro `didattica_programmazione`
+- **Base**: `e337064` - `CML_UDA_SMART_LIBRARY_CONTRACT_PUSHED_REMOTE`
+- **Runtime**: modificato solo `_published_snapshot/netlify-current/index.html`
+- **Chiave locale**: `cml_uda_smart_library_v1`
+- **Funzioni**: load/persist/render library, salvataggio bozza base, eliminazione singola, svuotamento libreria
+- **Privacy**: nessun dato personale studente richiesto; note solo generiche
+- **content/curriculum/**: invariato
+- **Tools/test**: invariati
+- **Asset/manifest/service-worker**: invariati
+- **Schema `.cml` ed export/import**: invariati
+- **Backend/API/endpoint/credenziali/dipendenze**: non introdotti
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Artefatti**: `docs/03_execution/CML-UDA-SMART-LIBRARY-RUNTIME-SCAFFOLD.md`, `report/CML-UDA-SMART-LIBRARY-RUNTIME-SCAFFOLD.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto atteso**: `CML_UDA_SMART_LIBRARY_RUNTIME_SCAFFOLD_READY_LOCAL_NOT_PUSHED`

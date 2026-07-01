@@ -903,7 +903,29 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .annual-draft-preview h4{font-size:12px;color:#1a237e;margin:0 0 5px}
 .annual-draft-preview pre{white-space:pre-wrap;margin:0;font-size:11px;line-height:1.45;color:#263238;font-family:inherit}
 .annual-draft-privacy{background:#e8f5e9;border:1px solid #a5d6a7;border-left:3px solid #2e7d32;border-radius:7px;padding:8px 10px;font-size:11px;color:#1b5e20;line-height:1.45;margin-top:8px}
-@media(max-width:900px){.didattica-programmazione-grid,.didattica-programmazione-levels,.annual-draft-form{grid-template-columns:1fr}.didattica-programmazione-level{min-height:auto}}
+.uda-smart-library-section{background:#fff;border:1px solid #d7ccc8;border-left:3px solid #6d4c41;border-radius:8px;padding:12px 14px;margin:12px 0;color:#263238}
+.uda-smart-library-section h3{font-size:14px;color:#4e342e;margin:0 0 4px}
+.uda-smart-library-intro{font-size:11px;color:#455a64;line-height:1.45;margin:0 0 10px}
+.uda-smart-library-form{display:grid;grid-template-columns:2fr 1fr;gap:9px;margin:8px 0}
+.uda-smart-library-field{display:flex;flex-direction:column;gap:4px}
+.uda-smart-library-field label{font-size:11px;font-weight:800;color:#4e342e}
+.uda-smart-library-field input,.uda-smart-library-field select,.uda-smart-library-field textarea{width:100%;border:1px solid #d7ccc8;border-radius:7px;padding:7px 8px;font:inherit;font-size:12px;background:#fff;color:#263238}
+.uda-smart-library-field textarea{min-height:70px;resize:vertical}
+.uda-smart-library-wide{grid-column:1/-1}
+.uda-smart-library-actions{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}
+.uda-smart-library-btn{border:1px solid #d7ccc8;border-radius:7px;background:#fff;color:#4e342e;padding:7px 10px;font-size:11px;font-weight:800;cursor:pointer}
+.uda-smart-library-btn-primary{background:#4e342e;color:#fff;border-color:#4e342e}
+.uda-smart-library-btn-danger{background:#fff5f5;color:#b71c1c;border-color:#ffcdd2}
+.uda-smart-library-status{display:none;margin:6px 0;padding:7px 9px;border-radius:7px;font-size:11px;font-weight:700}
+.uda-smart-library-status.ok{display:block;background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7}
+.uda-smart-library-status.warn{display:block;background:#fff3e0;color:#e65100;border:1px solid #ffcc80}
+.uda-smart-library-list{display:grid;gap:7px;margin-top:8px}
+.uda-smart-library-card{background:#fafafa;border:1px solid #e0e0e0;border-radius:7px;padding:9px;font-size:11px;line-height:1.45;color:#37474f}
+.uda-smart-library-card strong{display:block;font-size:12px;color:#4e342e;margin-bottom:2px}
+.uda-smart-library-card-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.uda-smart-library-empty{background:#f5f7fa;border:1px dashed #b0bec5;border-radius:7px;padding:10px;font-size:11px;color:#546e7a;line-height:1.45}
+.uda-smart-library-privacy{background:#efebe9;border:1px solid #d7ccc8;border-left:3px solid #6d4c41;border-radius:7px;padding:8px 10px;font-size:11px;color:#4e342e;line-height:1.45;margin-top:8px}
+@media(max-width:900px){.didattica-programmazione-grid,.didattica-programmazione-levels,.annual-draft-form,.uda-smart-library-form{grid-template-columns:1fr}.didattica-programmazione-level{min-height:auto}}
 .home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
 .home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
 .home-card-note{font-size:10px;color:#546e7a;margin:10px 0 0;font-style:italic;line-height:1.4}
@@ -1505,6 +1527,19 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div class="annual-draft-status" id="annual-draft-status"></div>
           <div class="annual-draft-preview"><h4>Anteprima leggibile</h4><pre id="annual-draft-preview">Compila i campi per generare l'anteprima.</pre></div>
           <div class="annual-draft-privacy"><strong>Bozza locale da validare</strong><br>La bozza resta su questo dispositivo nella chiave <code>cml_annual_planning_draft_v1</code>, non modifica export/import ne schema .cml e richiede validazione professionale prima dell'uso istituzionale.</div>
+        </div>
+        <div class="uda-smart-library-section" id="uda-smart-library-section">
+          <h3>Libreria UDA smart locale</h3>
+          <p class="uda-smart-library-intro">Scaffolding iniziale per raccogliere bozze UDA smart locali. Non genera ancora UDA dalla programmazione annuale e non modifica export/import o schema .cml.</p>
+          <div class="uda-smart-library-form">
+            <div class="uda-smart-library-field"><label for="uda-smart-title">Titolo bozza UDA</label><input id="uda-smart-title" type="text" placeholder="es. Percorso interdisciplinare da definire"></div>
+            <div class="uda-smart-library-field"><label for="uda-smart-state">Stato</label><select id="uda-smart-state"><option value="bozza">bozza</option><option value="in_revisione">in revisione</option><option value="pronta_per_confronto">pronta per confronto</option></select></div>
+            <div class="uda-smart-library-field uda-smart-library-wide"><label for="uda-smart-notes">Note generiche</label><textarea id="uda-smart-notes" placeholder="Descrivi in modo generico il bisogno progettuale. Non inserire dati personali di studenti."></textarea></div>
+          </div>
+          <div class="uda-smart-library-actions"><button class="uda-smart-library-btn uda-smart-library-btn-primary" type="button" onclick="saveUdaSmartDraft()">Salva bozza UDA</button><button class="uda-smart-library-btn uda-smart-library-btn-danger" type="button" onclick="clearUdaSmartLibrary()">Svuota libreria locale</button></div>
+          <div class="uda-smart-library-status" id="uda-smart-library-status"></div>
+          <div class="uda-smart-library-list" id="uda-smart-library-list"></div>
+          <div class="uda-smart-library-privacy"><strong>Libreria locale da validare</strong><br>Le bozze sono salvate solo su questo dispositivo nella chiave <code>cml_uda_smart_library_v1</code>. Non inserire nomi, cognomi, voti, bisogni educativi o dati sensibili di studenti.</div>
         </div>
         <div class="didattica-programmazione-footer">Vista read-only - Dati derivati dal curricolo strutturato - Bozza locale separata - Nessun dato studente - Nessuna modifica a export/import o schema .cml</div>
       </div>      <!-- UDA MODELLO -->
@@ -2739,6 +2774,7 @@ function renderProgrammazioneAnnuale(){
   var levels=[["1","Consultazione curricolo","Lettura del curricolo strutturato e delle unita disponibili."],["2","Revisione IN2012/IN2025","Confronto e decisioni curricolari nel perimetro istituzionale."],["3","Progettazione annuale","Vista derivata per ordini, classi/fasce, unita e periodi."],["4","UDA smart/collaborative","Bozze UDA collegate a unita, evidenze e validazione dipartimentale."],["5","Campo e analisi","Raccolta evidenze operative e sintesi per miglioramento curricolare."]];
   levelsEl.innerHTML=levels.map(function(l){return '<div class="didattica-programmazione-level"><strong>Livello '+l[0]+'</strong><span>'+escapeHtml(l[1])+'</span><span>'+escapeHtml(l[2])+'</span></div>';}).join('');
   renderAnnualDraftPanel();
+  renderUdaSmartLibrary();
 }
 
 var ANNUAL_PLANNING_DRAFT_KEY="cml_annual_planning_draft_v1";
@@ -2760,6 +2796,16 @@ function renderAnnualDraftPanel(){var disc=document.getElementById("annual-draft
 function saveAnnualPlanningDraft(){try{var draft=collectAnnualPlanningDraft();localStorage.setItem(ANNUAL_PLANNING_DRAFT_KEY,JSON.stringify(draft));setAnnualDraftStatus("Bozza salvata localmente su questo dispositivo. Non contiene dati studenti se hai rispettato le avvertenze.","ok");renderProgrammazioneAnnuale();}catch(err){setAnnualDraftStatus("Salvataggio locale non disponibile in questo browser.","warn");}}
 function clearAnnualPlanningDraft(){try{localStorage.removeItem(ANNUAL_PLANNING_DRAFT_KEY);}catch(err){}setAnnualDraftStatus("Bozza locale cancellata.","ok");renderProgrammazioneAnnuale();}
 function copyAnnualPlanningMarkdown(){updateAnnualDraftPreview();var text=ANNUAL_PLANNING_DRAFT_MARKDOWN||"";if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){setAnnualDraftStatus("Markdown copiato negli appunti.","ok");}).catch(function(){setAnnualDraftStatus("Copia automatica non riuscita: seleziona l'anteprima e copia manualmente.","warn");});return;}var ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");setAnnualDraftStatus("Markdown copiato negli appunti.","ok");}catch(err){setAnnualDraftStatus("Copia automatica non riuscita: seleziona l'anteprima e copia manualmente.","warn");}document.body.removeChild(ta);}
+
+var UDA_SMART_LIBRARY_KEY="cml_uda_smart_library_v1";
+function loadUdaSmartLibrary(){try{var raw=localStorage.getItem(UDA_SMART_LIBRARY_KEY);var parsed=raw?JSON.parse(raw):[];return Array.isArray(parsed)?parsed:[];}catch(err){return [];}}
+function persistUdaSmartLibrary(items){localStorage.setItem(UDA_SMART_LIBRARY_KEY,JSON.stringify(items));}
+function setUdaSmartLibraryStatus(message,type){var el=document.getElementById("uda-smart-library-status");if(!el)return;el.textContent=message;el.className="uda-smart-library-status "+(type||"ok");}
+function collectUdaSmartDraft(){var titleEl=document.getElementById("uda-smart-title");var stateEl=document.getElementById("uda-smart-state");var notesEl=document.getElementById("uda-smart-notes");var annual=getAnnualPlanningSavedDraft&&getAnnualPlanningSavedDraft();var now=new Date().toISOString();var title=(titleEl&&titleEl.value.trim())||"Bozza UDA smart";return {id:"uda_smart_"+Date.now(),tipo:"uda_draft",titolo:title,disciplina:(annual&&annual.disciplina)||selDisc||"",ordine:(annual&&annual.ordine)||"",classe:(annual&&annual.classe)||null,annoScolastico:(annual&&annual.annoScolastico)||"",periodo:(annual&&annual.periodi&&annual.periodi[0]&&annual.periodi[0].periodo)||"",nuclei:[],unitaCollegate:(annual&&annual.unitaSelezionate)||[],evidenzeSelezionate:[],obiettivoApprendimento:"",attivitaSintesi:"",criteriValutazione:[],durataOre:null,stato:(stateEl&&stateEl.value)||"bozza",autore:null,timestampCreazione:now,timestampModifica:null,fonteCurricolo:"curricolo strutturato locale",fonteProgrammazioneAnnuale:annual?annual.id:"bozza manuale locale",noteDocente:(notesEl&&notesEl.value.trim())||"",privacyNotice:"Nessun dato personale di studenti; bozza locale da validare professionalmente.",esportabile:false};}
+function renderUdaSmartLibrary(){var listEl=document.getElementById("uda-smart-library-list");if(!listEl)return;var items=loadUdaSmartLibrary();if(!items.length){listEl.innerHTML='<div class="uda-smart-library-empty">Nessuna bozza UDA smart salvata. Usa il modulo per creare una scheda locale di scaffolding.</div>';return;}listEl.innerHTML=items.map(function(item){var meta=[item.disciplina,item.ordine,item.classe,item.periodo].filter(Boolean).join(" - ")||"metadati da completare";return '<div class="uda-smart-library-card"><strong>'+escapeHtml(item.titolo||"Bozza UDA smart")+'</strong><span>'+escapeHtml(meta)+'</span><br><span>Stato: '+escapeHtml(item.stato||"bozza")+'</span><br><span>'+escapeHtml(item.noteDocente||"Nessuna nota generica.")+'</span><div class="uda-smart-library-card-actions"><button class="uda-smart-library-btn uda-smart-library-btn-danger" type="button" onclick="deleteUdaSmartDraft(\''+escapeHtml(item.id)+'\')">Elimina bozza</button></div></div>';}).join("");}
+function saveUdaSmartDraft(){try{var draft=collectUdaSmartDraft();var items=loadUdaSmartLibrary();items.unshift(draft);persistUdaSmartLibrary(items);var title=document.getElementById("uda-smart-title");var notes=document.getElementById("uda-smart-notes");if(title)title.value="";if(notes)notes.value="";renderUdaSmartLibrary();setUdaSmartLibraryStatus("Bozza UDA smart salvata localmente.","ok");}catch(err){setUdaSmartLibraryStatus("Salvataggio locale non disponibile in questo browser.","warn");}}
+function deleteUdaSmartDraft(id){try{var items=loadUdaSmartLibrary().filter(function(item){return item.id!==id;});persistUdaSmartLibrary(items);renderUdaSmartLibrary();setUdaSmartLibraryStatus("Bozza eliminata dalla libreria locale.","ok");}catch(err){setUdaSmartLibraryStatus("Eliminazione non disponibile in questo browser.","warn");}}
+function clearUdaSmartLibrary(){try{localStorage.removeItem(UDA_SMART_LIBRARY_KEY);renderUdaSmartLibrary();setUdaSmartLibraryStatus("Libreria UDA smart locale svuotata.","ok");}catch(err){setUdaSmartLibraryStatus("Cancellazione non disponibile in questo browser.","warn");}}
 // UDA MODELLO DATA
 // ================================================================
 var UDA_MODELI=[{
