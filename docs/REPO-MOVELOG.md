@@ -1,5 +1,20 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UX-AREA-RATIONALIZATION-AND-LIGHTWEIGHT-EXPERIENCE-AUDIT - Audit razionalizzazione e alleggerimento aree UI
+
+- **Nome slice**: `CML-UX-AREA-RATIONALIZATION-AND-LIGHTWEIGHT-EXPERIENCE-AUDIT`
+- **Commit base**: `61e623d`
+- **Tipo slice**: docs-only / read-only audit
+- **Runtime modificato**: no
+- **File creati**: `docs/03_execution/CML-UX-AREA-RATIONALIZATION-AND-LIGHTWEIGHT-EXPERIENCE-AUDIT.md`, `report/CML-UX-AREA-RATIONALIZATION-AND-LIGHTWEIGHT-EXPERIENCE-AUDIT.md`; aggiornamento `docs/REPO-MOVELOG.md`
+- **Aree valutate**: 16 superfici (Home, Consulta, Revisione, Processo, Definitivo, Fonti, Sezioni generali, Valutazione/Evidenze, Programmazione annuale, UDA modello, Esportazioni, Guida, cruscotto, modali, stati vuoti, flussi ruolo)
+- **Criticità principali**: P0 Programmazione annuale (3 strumenti in una schermata); P1 Home (orientamento triplicato), Bozza disciplina duplicata, Fonti↔Sezioni generali duplicate, Esportazioni 7 gruppi, UDA scissa
+- **Output**: classificazione decisione+priorità, navigazione target a 7 aree (alternativa a 6), principi UX, scope runtime futuro, smoke test minimo
+- **Vincoli confermati**: nessuna modifica a runtime/dati/schema/storage/validatori/import-export interno/filtri UDA
+- **Nota working tree**: modifica tracked preesistente `docs/04_user/educazione_fisica_validazione_dipartimentale.md` non inclusa nel commit
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_AREA_RATIONALIZATION_AND_LIGHTWEIGHT_EXPERIENCE_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-USER-ONBOARDING-DOCS-ALIGNMENT - Allineamento documentazione utente/onboarding e push controllato
 
 - **Nome slice**: `CML-USER-ONBOARDING-DOCS-ALIGNMENT`
