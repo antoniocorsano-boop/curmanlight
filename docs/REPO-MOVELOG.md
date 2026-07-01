@@ -1,5 +1,19 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-239 - Runtime console pre-existing errors audit
+
+- **Nome slice**: `CML-239`
+- **Commit base**: `ed8ee60`
+- **Tipo slice**: audit-only / docs-only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-239.md`, `report/CML-239_runtime_console_pre_existing_errors_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Contesto**: continuare da smoke CML-238S con 3 errori console pre-esistenti sul deploy pubblico
+- **Errori classificati**: P0/P1 SyntaxError `Unexpected identifier 'open'`, P1/P2 docx CDN 404, P3 favicon 404
+- **Evidenza**: deploy Pages con HTML di taglia/mini contenuto diverso dal file locale; errore non riproducibile con Node.js sul sorgente locale
+- **Raccomandazione**: aprire CML-239.1 per diagnosi deploy/fix `open`, poi CML-239.2 per docx/favicon
+- **Push**: non eseguito
+- **Verdetto**: `CML_239_RUNTIME_CONSOLE_PRE_EXISTING_ERRORS_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-238 - UDA smart empty states micro-slice
 
 - **Nome slice**: `CML-238`
