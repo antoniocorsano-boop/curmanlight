@@ -1,59 +1,86 @@
-# CurManLight — Nota di rilascio e stato attuale
+# CurManLight — Nota di rilascio — Stato attuale
 
-**App:** [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
-**Versione riferimento:** giugno 2026  
+**Data:** 1 luglio 2026
+**Versione:** v1.0 (Ciclo Accessibilità)
+**URL:** [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 
-Questa nota descrive cosa CurManLight offre oggi, cosa è ancora in fase di lavoro e come usare lo strumento in modo consapevole.
+## Stato sintetico
 
----
+CurManLight è una web app statica che supporta la revisione del curricolo verticale d'istituto, dalla consultazione alla proposta, fino alla sintesi di gruppo. Funziona su qualsiasi dispositivo con browser (computer, tablet, smartphone). Può essere installata come app sul dispositivo e funziona anche offline dopo la prima visita.
 
-## Cosa è pronto
+## Cosa è disponibile
 
-CurManLight supporta la revisione del curricolo disciplinare d'istituto con le seguenti funzioni disponibili e verificate:
+### Consultazione del Curriculum
 
-- **Consultazione del curricolo** — il curricolo d'istituto è consultabile nell'app, nelle due versioni:
-  - `📖 IN 2012 (vigente)` — il testo attualmente in vigore (DM 254/2012)
-  - `📖 IN 2025 (bozza)` — il testo proposto dalle nuove Indicazioni Nazionali (DM 221/2025)
-- **Sezioni generali** — premessa, profilo dello studente, valutazione, inclusione, continuità e orientamento sono accessibili separatamente.
-- **Flusso di lavoro dipartimentale** — l'app consente il passaggio ordinato di dati tra:
-  - docente (propone modifiche alle discipline);
-  - coordinatore di dipartimento (valuta le proposte e registra l'esito);
-  - referente curricolo (raccoglie gli esiti e genera un report di sintesi).
-- **Report gruppo curricolo** — il referente può scaricare un report Markdown con la sintesi delle proposte, gli esiti e gli elementi da chiarire.
+- **IN 2012 (vigente)** — il testo attualmente in vigore (DM 254/2012)
+- **IN 2025 (bozza)** — il testo proposto dalle nuove Indicazioni Nazionali (DM 221/2025)
+- **Fonti** — premessa, profilo dello studente, valutazione, inclusione, continuità, orientamento
+- **Indice navigabile** per disciplina e ordine di scuola
+- **Callout informativo** "Prima di leggere le discipline"
 
-## Cosa è simulato
+### Competenze e progettazione
 
-I dati attualmente presenti nell'app — contenuti curricolari, proposte di modifica, esempi `.cml` — hanno valore dimostrativo o di lavoro. Non costituiscono atti approvati.
+- Evidenze per competenza
+- Programmazione annuale
+- Bozze di Unità di Apprendimento (UDA) con anteprima e download
 
-- I file `.cml` presenti nella cartella `esempi_cml/` servono per formazione e simulazione.
-- Le guide utente descrivono il funzionamento dello strumento, non un curricolo già deliberato.
+### Flusso operativo
 
-## Cosa è materiale di lavoro
+- **Proposta docente** — il docente esporta un file `.cml` con le modifiche suggerite
+- **Validazione dipartimentale** — il coordinatore importa le proposte, registra l'esito ed esporta
+- **Verifica referente** — il referente importa gli esiti e genera un report di sintesi
+- **Report gruppo di lavoro** — il referente può scaricare un report con la sintesi delle proposte, gli esiti e gli elementi da chiarire
 
-L'intero curricolo visualizzato in CurManLight, inclusi i testi delle discipline, le proposte di modifica e le sezioni generali, è **materiale di lavoro**. Non sostituisce:
+### Controllo accesso ruoli
 
-- la delibera del Collegio Docenti;
-- la validazione del Dirigente Scolastico;
-- l'approvazione formale degli organi competenti.
+Le funzioni riservate (proposta docente, validazione dipartimentale, verifica referente) sono protette da un codice ruolo. I codici sono comunicati dal referente curricolo.
 
-## Ruoli coinvolti
+### Accessibilità
 
-| Ruolo | Cosa può fare |
-|---|---|
-| Docente | Esplorare il curricolo. Simulare o preparare una proposta di modifica per la propria disciplina tramite file `.cml`. |
-| Coordinatore di dipartimento | Raccogliere le proposte dei docenti, discutere in riunione, registrare l'esito (confluito, riformulato, assorbito, da chiarire). |
-| Referente curricolo | Importare gli esiti dei dipartimenti, verificare il quadro complessivo, scaricare il report del gruppo di lavoro. |
-| Dirigente Scolastico | Visionare il curricolo, il report, e usare il materiale per le delibere di competenza. |
+L'app è stata verificata con strumenti automatici e risulta utilizzabile con lo screen reader. Per miglioramenti o difficoltà, segnala al referente curricolo.
 
-## Avvertenze
+### PWA (installabile)
 
-- **Nessun dato personale.** CurManLight non raccoglie, trasmette o conserva dati personali. Tutti i dati restano sul browser dell'utente (salvo salvataggio manuale di file `.cml`).
-- **Nessuna sostituzione di atti formali.** Lo strumento supporta il lavoro preparatorio, ma non produce documenti deliberativi.
-- **Materiale di lavoro.** I contenuti curricolari visualizzati sono provvisori e in evoluzione.
+L'app può essere installata sul dispositivo (computer, tablet, smartphone) e funziona anche senza connessione internet dopo la prima visita.
 
-## Prossimi usi consigliati
+## Discipline disponibili
 
-1. Consultare il curricolo e le sezioni generali.
-2. Utilizzare gli esempi `.cml` per familiarizzare con il flusso.
-3. Raccogliere osservazioni sul funzionamento dello strumento (vedi *Traccia raccolta osservazioni*).
-4. Preparare proposte reali su discipline specifiche utilizzando il formato `.cml`.
+Tutte le 14 discipline del curricolo verticale sono presenti in entrambe le versioni (IN 2012 e IN 2025):
+
+1. Italiano
+2. Inglese
+3. Francese
+4. Storia
+5. Geografia
+6. Matematica
+7. Scienze
+8. Musica
+9. Arte e Immagine
+10. Educazione Fisica
+11. Tecnologia
+12. IRC
+13. Ed. Civica
+14. Scienze Motorie
+
+## Cosa resta fuori
+
+- **Login o autenticazione** — non c'è un account, l'accesso è regolato da codici ruolo condivisi
+- **Backend o database** — non c'è un server che conserva i dati. I file `.cml` sono salvati manualmente sul computer
+- **Integrazione con Drive o cloud** — il passaggio dei file `.cml` avviene manualmente (email, chiavetta, condivisione file)
+- **Firma digitale o approvazione formale** — lo strumento produce materiale preparatorio, non atti deliberativi
+- **Modifica del curricolo direttamente nell'app** — il curricolo consultato è precaricato; le modifiche passano attraverso il flusso `.cml`
+
+## Uso prudente dello strumento
+
+- Tutti i contenuti sono **materiale di lavoro**.
+- Le proposte simulate negli esempi `.cml` non rappresentano posizioni ufficiali.
+- Il report del referente è una sintesi di lavoro, non un verbale approvato.
+- Per l'adozione formale del curricolo, fare riferimento agli atti del Collegio Docenti e del Dirigente Scolastico.
+
+## Documenti correlati
+
+- `CML_GUIDA_RAPIDA_UTENTE.md` — come iniziare
+- `CML_SCHEDA_STATO_PROGETTO.md` — scheda sintetica del progetto
+- `CML_VADEMECUM_DIPARTIMENTI.md` — come gestire la validazione dipartimentale
+- `CML_SCHEDA_REFERENTE_CURRICOLO.md` — come raccogliere gli esiti e generare il report
+- `CML_GUIDA_SIMULAZIONE_ESEMPI.md` — passo passo con gli esempi `.cml`

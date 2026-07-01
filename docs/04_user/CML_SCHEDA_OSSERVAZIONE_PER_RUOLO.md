@@ -9,14 +9,16 @@ Questa scheda aiuta ogni partecipante alla prova controllata a raccogliere le pr
 ## Docente
 
 **Cosa provare:**
-- Consultare il curricolo (IN 2012 e IN 2025).
+- Consultare il Curriculum (IN 2012 e IN 2025).
 - Usare l'indice navigabile.
+- Esplorare le Fonti (sezioni generali).
 - Scaricare un file `.cml` di esempio.
 - Confrontare le due versioni per la propria disciplina.
 
 **Domande guida:**
 - Hai capito subito cosa fare aprendo l'app?
 - Le due versioni del curricolo sono chiare e distinguibili?
+- Hai trovato le Fonti e le hai riconosciute come quadro d'insieme?
 - Hai trovato la tua disciplina senza difficoltà?
 - Il file `.cml` è comprensibile?
 

@@ -9,6 +9,15 @@ Il referente curricolo coordina il gruppo di lavoro che elabora il curricolo ver
 - genera un report riassuntivo del lavoro svolto;
 - utilizza il report per la discussione nel gruppo di lavoro.
 
+## Accesso riservato
+
+Le funzioni operative (proposta docente, validazione dipartimentale, verifica referente) sono protette da un codice ruolo. Per accedere:
+
+1. Apri CurManLight all'indirizzo [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
+2. Comparirà la schermata di inserimento codice ruolo
+3. Inserisci il codice ruolo di referente
+4. Una volta autenticato, avrai accesso alle funzioni riservate
+
 ## Passo 1 — Raccogliere gli esiti dipartimentali
 
 Ogni coordinatore di dipartimento invia al referente il file `.cml` con l'esito del proprio dipartimento. Conservare tutti i file in una cartella sul computer.
@@ -16,9 +25,10 @@ Ogni coordinatore di dipartimento invia al referente il file `.cml` con l'esito 
 ## Passo 2 — Importare gli esiti in CurManLight
 
 1. Aprire [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight) nel browser.
-2. Nella scheda "Revisione", scorrere fino alla sezione **"Verifica referente curricolo"**.
-3. Usare il pulsante **"Importa esiti dipartimentali .cml"** per caricare ciascun file `.cml` ricevuto.
-4. Verificare che tutti gli esiti siano visualizzati correttamente nel riepilogo.
+2. Inserire il codice ruolo di referente per sbloccare le funzioni riservate.
+3. Nella scheda "Revisione", scorrere fino alla sezione **"Verifica referente curricolo"**.
+4. Usare il pulsante **"Importa esiti dipartimentali .cml"** per caricare ciascun file `.cml` ricevuto.
+5. Verificare che tutti gli esiti siano visualizzati correttamente nel riepilogo.
 
 Nella schermata di riepilogo è possibile vedere, per ciascuna proposta, l'esito assegnato dal dipartimento. Le voci contrassegnate con l'indicatore ✏️ sono proposte personalizzate (modificate dal docente).
 
@@ -52,6 +62,7 @@ Prestare particolare attenzione alle proposte contrassegnate come "da chiarire".
 - Il report generato da CurManLight **non è un atto deliberativo**.
 - Il curricolo aggiornato richiede la validazione del gruppo di lavoro e la delibera degli organi collegiali competenti (Collegio Docenti, Consiglio d'Istituto).
 - CurManLight è uno strumento di supporto alla gestione del materiale di lavoro, non sostituisce la discussione e la decisione umana.
+- Il codice ruolo permette l'accesso alle funzioni riservate: non condividerlo al di fuori del personale autorizzato.
 
 ## Riferimenti
 

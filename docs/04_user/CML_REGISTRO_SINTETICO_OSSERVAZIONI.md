@@ -25,7 +25,7 @@ Questo registro aiuta a raccogliere in forma sintetica le osservazioni emerse du
 - **BASSA** — miglioramento desiderabile
 
 **Aree osservate possibili:**
-Home, Viewer curricolo, IN 2012 / IN 2025, Sezioni generali, Flusso docente, Validazione dipartimentale, Report referente, Guide, Messaggi/avvertenze, Altro
+Home, Viewer curricolo, IN 2012 / IN 2025, Fonti (sezioni generali), Competenze e progettazione, Flusso docente, Validazione dipartimentale, Report referente, Guide, Messaggi/avvertenze, Altro
 
 **Decisioni possibili:**
 - Da discutere

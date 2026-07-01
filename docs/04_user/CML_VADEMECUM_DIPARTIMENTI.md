@@ -4,6 +4,15 @@
 
 Questo documento spiega come il dipartimento utilizza CurManLight per esaminare le proposte dei docenti e produrre l'esito dipartimentale.
 
+## Accesso riservato
+
+Le funzioni operative (proposta docente, validazione dipartimentale, verifica referente) sono protette da un codice ruolo. Se non hai ancora il codice, chiedilo al referente curricolo. Per accedere:
+
+1. Apri CurManLight all'indirizzo [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
+2. Comparirà la schermata di inserimento codice ruolo
+3. Inserisci il codice comunicato dal referente
+4. Una volta autenticato, avrai accesso alle funzioni riservate
+
 ## Passo 1 — Raccogliere le proposte dei docenti
 
 Ogni docente del dipartimento prepara la propria proposta utilizzando CurManLight e la salva come file `.cml`. Il coordinatore riceve i file (via email, chiavetta, condivisione di rete o come concordato) e li conserva in una cartella sul proprio computer.
@@ -11,16 +20,17 @@ Ogni docente del dipartimento prepara la propria proposta utilizzando CurManLigh
 ## Passo 2 — Importare le proposte in CurManLight
 
 1. Aprire [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight) nel browser.
-2. Nella scheda "Revisione", scorrere fino alla sezione **"Validazione dipartimentale"**.
-3. Usare il pulsante **"Importa proposte docenti .cml"** per caricare ciascun file `.cml` ricevuto.
-4. Verificare che le proposte appaiano correttamente nell'elenco.
+2. Inserire il codice ruolo di coordinatore per sbloccare le funzioni riservate.
+3. Nella scheda "Revisione", scorrere fino alla sezione **"Validazione dipartimentale"**.
+4. Usare il pulsante **"Importa proposte docenti .cml"** per caricare ciascun file `.cml` ricevuto.
+5. Verificare che le proposte appaiano correttamente nell'elenco.
 
 ## Passo 3 — Discutere in riunione di dipartimento
 
 Le proposte vanno discusse in riunione. Per ciascuna proposta il dipartimento decide uno dei seguenti esiti:
 
 | Esito | Significato |
-|---|---|---|
+|---|---|
 | Confluita nella sintesi | La proposta è stata assorbita nella sintesi finale |
 | Riformulata dal dipartimento | La proposta è accolta con modifiche concordate in riunione |
 | Assorbita in altra proposta | La proposta confluisce in altra proposta |
@@ -49,6 +59,7 @@ Il file `.cml` con l'esito va inviato al referente curricolo, insieme a un event
 - CurManLight funziona interamente nel browser: i file scaricati sono sul computer del coordinatore. Non esiste un archivio centralizzato.
 - Non inserire dati personali (nomi, cognomi, dati di alunni o docenti) nelle proposte o negli esiti.
 - L'esito dipartimentale è un documento di lavoro: non costituisce atto deliberativo e va validato dagli organi competenti.
+- Il codice ruolo permette l'accesso alle funzioni riservate: non condividerlo al di fuori del personale autorizzato.
 
 ## Riferimenti
 

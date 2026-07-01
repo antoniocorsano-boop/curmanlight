@@ -14,7 +14,7 @@
 
 - [ ] Aprire l'app live all'inizio della demo.
 - [ ] Mostrare le due versioni del curricolo.
-- [ ] Mostrare le sezioni generali e il callout.
+- [ ] Mostrare le Fonti (sezioni generali) e il callout.
 - [ ] Mostrare il flusso completo (docente → dipartimento → referente → report).
 - [ ] Ribadire che è materiale di lavoro, non atto approvato.
 - [ ] Ribadire che nessun dato personale viene raccolto.

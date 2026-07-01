@@ -26,11 +26,13 @@
 
 ### 2. Cosa è già pronto (5 minuti)
 
-- Consultazione del curricolo nelle due versioni: IN 2012 (vigente) e IN 2025 (bozza).
-- Sezioni generali: premessa, profilo, valutazione, inclusione, continuità, orientamento.
+- Consultazione del Curriculum nelle due versioni: IN 2012 (vigente) e IN 2025 (bozza).
+- Fonti (sezioni generali): premessa, profilo, valutazione, inclusione, continuità, orientamento.
+- Competenze e progettazione: evidenze per competenza, programmazione annuale, bozze UDA con anteprima Markdown.
 - Flusso docente → dipartimento → referente → report, completo e verificato.
 - Esempi `.cml` dimostrativi per formazione.
 - Guide e documentazione a supporto.
+- Controllo accesso ruoli tramite codice ruolo per funzioni riservate.
 
 ### 3. Cosa è simulato (3 minuti)
 
@@ -49,15 +51,17 @@
 - Aprire l'app.
 - Mostrare le due versioni: IN 2012 e IN 2025.
 - Mostrare l'indice navigabile.
-- Mostrare le sezioni generali.
+- Mostrare le Fonti (sezioni generali).
 - Mostrare il callout "Prima di leggere le discipline".
+- Mostrare l'area Competenze e progettazione (evidenze, programmazione, UDA).
 
 ### 6. Dimostrazione flusso operativo (8 minuti)
 
 - **Docente:** scaricare un file `.cml` di esempio, mostrare la struttura.
-- **Coordinatore:** importare il file nella sezione "Validazione dipartimentale", registrare un esito, esportare.
+- **Coordinatore:** importare il file nella sezione "Validazione dipartimentale" (scheda Revisione), registrare un esito, esportare.
 - **Referente:** importare l'esito, generare il report del gruppo di lavoro.
 - Sottolineare che tutto avviene sul browser, nessun dato esce dal computer.
+- Mostrare il controllo accesso ruoli (codice ruolo per accedere alle funzioni riservate).
 
 ### 7. Raccolta prime domande (5 minuti)
 
@@ -85,6 +89,7 @@
 - "I dati restano sul tuo computer. Nessun dato personale viene raccolto."
 - "Tutto il materiale è provvisorio finché gli organi competenti non deliberano."
 - "Lo strumento è già funzionante e verificato."
+- "L'app può essere installata sul dispositivo e funziona anche offline."
 
 ## Messaggi da evitare
 

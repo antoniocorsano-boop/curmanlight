@@ -44,7 +44,7 @@
 
 1. **Consultazione curricolo:** aprire l'app, navigare tra le versioni, usare l'indice.
 2. **Confronto IN 2012 / IN 2025:** verificare che la differenza sia chiara.
-3. **Sezioni generali:** verificare accesso e contenuto.
+3. **Fonti (sezioni generali):** verificare accesso e contenuto.
 4. **Proposta docente `.cml`:** scaricare e aprire il file.
 5. **Validazione dipartimentale:** importare, registrare esiti, esportare.
 6. **Report gruppo curricolo:** importare esiti, scaricare report.

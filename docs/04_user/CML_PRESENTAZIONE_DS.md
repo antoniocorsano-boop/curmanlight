@@ -2,7 +2,7 @@
 
 ## Che cos'è
 
-CurManLight è uno strumento web, accessibile da browser, che aiuta l'istituto a gestire il lavoro di aggiornamento del curricolo verticale d'istituto. Funziona senza installazione, senza account e senza archivio dati centralizzato.
+CurManLight è una web app statica, accessibile da browser o installabile come app sul dispositivo, che aiuta l'istituto a gestire il lavoro di aggiornamento del curricolo verticale d'istituto. Funziona senza installazione server, senza account individuali e senza archivio dati centralizzato. È utilizzabile anche offline dopo la prima visita.
 
 ## Quale problema organizzativo aiuta a gestire
 
@@ -19,8 +19,27 @@ CurManLight non risolve questi problemi al posto delle persone: offre un formato
 
 - **Proposta docente**: un file `.cml` che il docente compila e invia al proprio dipartimento.
 - **Esito dipartimentale**: un file `.cml` che il coordinatore di dipartimento genera dopo la riunione, con l'indicazione per ogni proposta (approvata, riformulata, assorbita, da chiarire).
-- **Report gruppo di lavoro**: un documento Markdown che il referente curricolo genera importando gli esiti di tutti i dipartimenti, utilizzabile come base di discussione per la riunione del gruppo di lavoro.
+- **Report gruppo di lavoro**: un documento che il referente curricolo genera importando gli esiti di tutti i dipartimenti, utilizzabile come base di discussione per la riunione del gruppo di lavoro.
 - **Guida rapida utente**: istruzioni complete per i tre ruoli coinvolti.
+
+## Sezioni dell'app
+
+| Sezione | Descrizione |
+|---|---|
+| **Home** | Dashboard con accesso rapido a tutte le aree |
+| **Curriculum** | Consultazione del curricolo nelle versioni IN 2012 e IN 2025 |
+| **Revisione** | Validazione dipartimentale e verifica referente (accesso riservato) |
+| **Definitivo** | Versione definitiva del curricolo |
+| **Fonti** | Sezioni generali: premessa, profilo, valutazione, inclusione, continuità, orientamento |
+| **Competenze e progettazione** | Evidenze per competenza, programmazione annuale, bozze UDA con anteprima e download |
+
+## Controllo accesso ruoli
+
+Le funzioni riservate (proposta docente, validazione dipartimentale, verifica referente) sono protette da un codice ruolo. Questo permette di delimitare l'accesso senza richiedere registrazione o account individuali.
+
+## Accessibilità
+
+L'app è stata verificata con strumenti automatici e risulta utilizzabile con lo screen reader. Per miglioramenti o difficoltà, segnala al referente curricolo.
 
 ## Cosa non produce
 
@@ -44,7 +63,7 @@ CurManLight non risolve questi problemi al posto delle persone: offre un formato
 2. Il dipartimento discute le proposte in riunione.
 3. Il coordinatore importa le proposte, registra l'esito e invia il file al referente.
 4. Il referente importa tutti gli esiti dipartimentali e genera il report.
-5. Il report viene discusso nel gruppo di lavoro curricolo, che valida o richiede modifiche.
+5. Il report viene discusso nel gruppo di lavoro curricolo, che valuta o richiede modifiche.
 6. L'esito finale passa agli organi competenti per la delibera.
 
 ## Garanzie di prudenza istituzionale
@@ -59,4 +78,4 @@ CurManLight non risolve questi problemi al posto delle persone: offre un formato
 
 [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
 
-Nessuna installazione richiesta: funziona con qualsiasi browser moderno (Chrome, Firefox, Edge, Safari).
+Nessuna installazione richiesta: funziona con qualsiasi browser moderno (Chrome, Firefox, Edge, Safari) ed è installabile come app su dispositivi mobili e desktop.

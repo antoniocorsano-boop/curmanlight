@@ -2,19 +2,25 @@
 
 ## Stato sintetico
 
-CurManLight è uno strumento web che supporta la revisione del curricolo disciplinare d'istituto, dalla consultazione alla proposta, fino alla sintesi di gruppo. È disponibile all'indirizzo [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight) e funziona su qualsiasi dispositivo con browser (computer, tablet, smartphone).
+CurManLight è una web app statica che supporta la revisione del curricolo verticale d'istituto, dalla consultazione alla proposta, fino alla sintesi di gruppo. È disponibile all'indirizzo [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight) e funziona su qualsiasi dispositivo con browser (computer, tablet, smartphone). Può essere installata come app sul dispositivo e funziona anche offline.
 
 ## Funzioni disponibili
 
 | Funzione | Descrizione |
 |---|---|
-| Consultazione curricolo | Visualizza il curricolo nelle due versioni: IN 2012 (vigente) e IN 2025 (bozza) |
-| Sezioni generali | Premessa, profilo dello studente, valutazione, inclusione, continuità, orientamento |
+| Consultazione Curriculum | Visualizza il curricolo nelle due versioni: IN 2012 (vigente) e IN 2025 (bozza) |
+| Fonti (sezioni generali) | Premessa, profilo dello studente, valutazione, inclusione, continuità, orientamento |
+| Competenze e progettazione | Evidenze per competenza, programmazione annuale, bozze UDA con anteprima e download |
 | Proposta docente | Il docente esporta un file `.cml` con le modifiche suggerite per la propria disciplina |
 | Validazione dipartimentale | Il coordinatore importa le proposte, le discute in riunione e registra l'esito |
 | Verifica referente | Il referente importa gli esiti dei dipartimenti e verifica il quadro complessivo |
 | Report gruppo di lavoro | Il referente scarica un report con sintesi, punti da chiarire e statistiche |
 | Esempi `.cml` | Quattro file dimostrativi (2 discipline) per formazione e simulazione |
+| Controllo accesso ruoli | Accesso a funzioni riservate (proposta, validazione, verifica) tramite codice ruolo |
+
+## Accessibilità
+
+L'app è stata verificata con strumenti automatici e risulta utilizzabile con lo screen reader. Per miglioramenti o difficoltà, segnala al referente curricolo.
 
 ## Documenti e guide disponibili
 
@@ -30,7 +36,7 @@ Nella documentazione utente sono presenti:
 
 CurManLight non include:
 
-- **Login o autenticazione** — non c'è un account, non ci sono ruoli protetti da password.
+- **Login o autenticazione** — non c'è un account, non ci sono ruoli protetti da password. L'accesso è regolato da codici ruolo condivisi.
 - **Backend o database** — non c'è un server che conserva i dati. I file `.cml` sono salvati manualmente sul computer.
 - **Integrazione con Drive o cloud** — il passaggio dei file `.cml` avviene manualmente (email, chiavetta, condivisione file).
 - **Firma digitale o approvazione formale** — lo strumento produce materiale preparatorio, non atti deliberativi.

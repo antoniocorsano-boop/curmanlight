@@ -13,19 +13,28 @@ Sono utili per:
 
 **Importante:** questi file non rappresentano un curricolo approvato. Usano solo dati fittizi.
 
-## Formato `.cml`
+## Formato file `.cml`
 
-I file `.cml` sono JSON con `fileType` che identifica il ruolo (`teacher_proposal` per proposta docente, `department_outcome` per esito dipartimentale). Seguono lo schema `1.0` riconosciuto dall'app CurManLight.
+I file `.cml` contengono al loro interno, in formato testo strutturato, l'indicazione del ruolo (`proposta docente` o `esito dipartimentale`) e seguono una struttura standard riconosciuta dall'app CurManLight.
 
 ## URL app
 
 Apri l'app all'indirizzo:
 `https://antoniocorsano-boop.github.io/curmanlight`
 
+## Accesso riservato
+
+Le funzioni operative (proposta docente, validazione dipartimentale, verifica referente) sono protette da un codice ruolo. Per accedere:
+
+1. Apri CurManLight all'indirizzo [https://antoniocorsano-boop.github.io/curmanlight](https://antoniocorsano-boop.github.io/curmanlight)
+2. Comparirà la schermata di inserimento codice ruolo
+3. Inserisci il codice ruolo appropriato (docente, coordinatore o referente)
+4. Una volta autenticato, avrai accesso alle funzioni riservate
+
 ## Flusso docente
 
 1. Apri l'app e configura il profilo (es. disciplina: Tecnologia, ordine: Secondaria).
-2. Vai alla scheda **Lavoro** e apporta modifiche ai traguardi/obiettivi proposti.
+2. Vai alla scheda **Revisione** e apporta modifiche ai traguardi/obiettivi proposti.
 3. Usa il pulsante **"Scarica proposta .cml"** per esportare le tue proposte.
 4. **In alternativa**, usa direttamente i file di esempio già pronti:
    - `esempio_proposta_docente_tecnologia.cml`
@@ -94,6 +103,5 @@ Durante la formazione, usa sempre file di esempio, mai file con dati reali.
 
 ## Note
 
-- I file `.cml` devono essere JSON validi.
-- La validazione richiede: `fileType`, `discipline`, `proposals`/`proposalHandling`, `humanValidationRequired: true`.
-- I file di esempio NON attivano il Drive condiviso (upload endpoint non configurato). Funzionano solo in modalita locale (download/import manuale).
+- I file `.cml` devono avere una struttura valida per essere riconosciuti dall'app.
+- I file di esempio funzionano solo in modalita locale (download/import manuale).

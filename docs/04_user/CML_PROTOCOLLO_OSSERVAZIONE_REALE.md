@@ -13,7 +13,7 @@ Durante la prova, verificare:
 1. **Comprensione della home** — all'apertura dell'app, l'utente capisce cosa fare?
 2. **Comprensione del viewer curricolo** — l'utente trova le discipline, le versioni e l'indice?
 3. **Distinzione IN 2012 / IN 2025** — le etichette e i colori sono chiari?
-4. **Sezioni generali** — l'utente le raggiunge e le riconosce come quadro d'insieme?
+4. **Fonti (sezioni generali)** — l'utente le raggiunge e le riconosce come quadro d'insieme?
 5. **Flusso docente → dipartimento → referente** — il passaggio di file `.cml` è comprensibile?
 6. **Utilità del report gruppo curricolo** — il report contiene le informazioni che servono?
 7. **Chiarezza delle guide** — le guide sono sufficienti per capire cosa fare?

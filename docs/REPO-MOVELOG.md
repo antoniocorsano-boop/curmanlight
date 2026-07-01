@@ -1,5 +1,18 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-USER-ONBOARDING-DOCS-ALIGNMENT - Allineamento documentazione utente/onboarding e push controllato
+
+- **Nome slice**: `CML-USER-ONBOARDING-DOCS-ALIGNMENT`
+- **Commit base**: `59e988b`
+- **Tipo slice**: docs-only alignment + controlled push
+- **Runtime modificato**: no
+- **File modificati**: 16 file in `docs/04_user/`, `docs/03_execution/CML-USER-ONBOARDING-DOCS-ALIGNMENT.md`, `report/CML-USER-ONBOARDING-DOCS-ALIGNMENT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Azione principale**: allineamento terminologia UI (Curriculum, Revisione, Definitivo, Fonti, Competenze e progettazione), rimozione termini tecnici (JSON, Lighthouse, axe, NVDA, score, endpoint, Markdown), aggiunta role-access code gating, PWA installabile, accessibilità in linguaggio scolastico
+- **Criteri linguistici**: linguaggio non tecnico, coerenza con UI pubblicata, adatto a docenti di ogni ordine e disciplina
+- **Controlli pre-push**: diff-check clean, secret scan clean, scope documentale confermato, nessun runtime modificato
+- **Push**: eseguito su origin/main
+- **Verdetto**: `CML_USER_ONBOARDING_DOCS_ALIGNMENT_CONTROLLED_PUSH_COMPLETED`
+
 ## 2026-07-01 - CML-UX-NON-TECHNICAL-MICROCOPY-CLOSURE-REPORT - Chiusura documentale post-push e smoke pubblico
 
 - **Nome slice**: `CML-UX-NON-TECHNICAL-MICROCOPY-CLOSURE-REPORT`
