@@ -1,5 +1,22 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UDA-SMART-MARKDOWN-EXPORT - Export Markdown locale bozze UDA smart
+
+- **Nome slice**: `CML-UDA-SMART-MARKDOWN-EXPORT`
+- **Commit base**: `ebf8994`
+- **Tipo slice**: runtime increment controllato + docs/report
+- **Runtime modificato**: si, `_published_snapshot/netlify-current/index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UDA-SMART-MARKDOWN-EXPORT.md`, `report/CML-UDA-SMART-MARKDOWN-EXPORT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: export Markdown locale per bozze UDA smart con azioni Anteprima/Copia/Scarica nella libreria locale
+- **Chiave libreria**: `cml_uda_smart_library_v1` (array JSON mantenuto)
+- **Chiave annuale**: `cml_annual_planning_draft_v1` non alterata
+- **Schema `.cml`**: invariato
+- **Export/import istituzionali**: invariati
+- **Dati curricolari normalizzati**: invariati
+- **Backend/API/endpoint/credenziali/dipendenze**: non introdotti
+- **Push**: non eseguito
+- **Verdetto**: `CML_UDA_SMART_MARKDOWN_EXPORT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UDA-SMART-DRAFT-GENERATOR - Generatore controllato bozza UDA smart
 
 - **Nome slice**: `CML-UDA-SMART-DRAFT-GENERATOR`
