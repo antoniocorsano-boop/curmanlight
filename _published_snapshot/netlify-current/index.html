@@ -65,7 +65,9 @@ main{flex:1;min-width:0}
 .disc-md-preview:focus{color:#333}
 /* DEPARTMENT IMPORT */
 .department-import-panel{background:#eef7f6;border:1px solid #b2dfdb;border-left:3px solid #00796b;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#263238;line-height:1.45;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.department-import-panel>summary{cursor:pointer;font-weight:800;font-size:12px;color:#00695c}
+.referent-validation-panel{background:#eef2f7;border:1px solid #cfd8dc;border-left:3px solid #1a237e;border-radius:9px;padding:9px 13px;margin-bottom:10px;font-size:11px;color:#263238;line-height:1.45;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.referent-validation-panel>summary{cursor:pointer;font-weight:800;font-size:12px;color:#1a237e;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.department-import-panel>summary{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .department-import-copy{margin:7px 0;color:#455a64}
 .department-import-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}
 .department-import-btn{padding:7px 12px;border:0;border-radius:7px;background:#00695c;color:#fff;font-size:11px;font-weight:800;cursor:pointer}
@@ -1645,9 +1647,14 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <!-- TAB PROCESSO -->
     <div id="tab-processo" style="display:none">
       <div class="tool-group-inner" style="padding:12px">
+        <h2 style="font-size:16px;color:#1a237e;margin:0 0 4px"><span aria-hidden="true">🔧</span> Processo di revisione</h2>
+        <p style="font-size:11px;color:#78909c;margin:0 0 12px">Scambio di file <code>.cml</code> tra docenti, dipartimento e referente — tutto su questo dispositivo.</p>
+        <p class="esport-intro-tip"><strong>Sequenza:</strong> il <strong>docente</strong> consulta e propone → il <strong>coordinatore</strong> raccoglie → il <strong>dipartimento</strong> confronta e valida → il <strong>referente</strong> raccoglie gli esiti e prepara report e documento in <a href="#" onclick="setTab('esportazioni');return false" style="font-weight:700;color:#1a237e">Esportazioni</a>. Ogni passaggio richiede <strong>validazione umana</strong>.</p>
         <details id="department-import-panel" class="department-import-panel" style="margin-bottom:12px">
-          <summary style="font-weight:700;font-size:12px;color:#333;cursor:pointer"><span aria-hidden="true">🏫</span> Confronto di dipartimento</summary>
-          <p class="department-import-copy">Importa i file proposta ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
+          <summary><span aria-hidden="true">🏫</span> Fase dipartimentale <span class="esport-role-badge">Coordinatore · Dipartimento</span></summary>
+          <p class="department-import-copy esport-group-desc" style="margin-top:8px"><strong>Docente:</strong> prepara la proposta in Revisione e la consegna come file <code>.cml</code>. Se usa Drive, il caricamento è <strong>manuale</strong> — nessun invio automatico.</p>
+          <p class="department-import-copy"><strong>Coordinatore:</strong> raccoglie le proposte docenti e le organizza per il confronto di dipartimento.</p>
+          <p class="department-import-copy"><strong>Dipartimento:</strong> confronta, discute e valida; l'esito si esporta come file <code>.cml</code> da Esportazioni.</p>
           <div class="department-import-controls">
             <input id="department-cml-files" type="file" accept=".cml" multiple hidden onchange="importTeacherCmlFiles(this.files);this.value=''">
             <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Carica proposte docenti</button>
@@ -1658,8 +1665,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div id="department-import-results"></div>
         </details>
         <details id="referent-validation-panel" class="referent-validation-panel">
-          <summary style="font-weight:700;font-size:12px;color:#333;cursor:pointer"><span aria-hidden="true">📋</span> Verifica referente curricolo</summary>
-          <p class="referent-validation-copy">Importa gli esiti dipartimentali per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
+          <summary><span aria-hidden="true">📋</span> Fase referente <span class="esport-role-badge">Referente curricolo</span></summary>
+          <p class="referent-validation-copy esport-group-desc" style="margin-top:8px"><strong>Referente:</strong> cura la raccolta complessiva degli esiti — non sostituisce il coordinatore nella fase dipartimentale.</p>
+          <p class="referent-validation-copy">Importa gli esiti dipartimentali, verifica completezza ed evidenze, poi prepara report e documento finale in Esportazioni.</p>
           <div class="referent-validation-controls">
             <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="handleReferentOutcomeFileSelection(this)">
             <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Carica esiti dipartimentali</button>
@@ -1673,6 +1681,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <button class="export-btn btn-md" onclick="requireRoleAccess('referentReportGeneration',downloadReferentGroupWorkReport)" title="Scarica resoconto gruppo di lavoro"><span aria-hidden="true">📝</span> Scarica resoconto gruppo di lavoro</button>
           </div>
         </details>
+        <div class="usage-notice" style="margin-top:10px">Strumento di supporto locale. Gli import non approvano automaticamente le modifiche — ogni decisione resta da convalidare professionalmente.</div>
       </div>
     </div>
     <!-- TAB RIEPILOGO -->

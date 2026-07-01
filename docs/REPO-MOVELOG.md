@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-237 - Processo UX runtime micro-slice
+
+- **Nome slice**: `CML-237`
+- **Commit base**: `b51663c`
+- **Tipo slice**: runtime microfix (solo testo Processo)
+- **Runtime modificato**: sì — `#tab-processo` e CSS pannelli referente
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-237.md`, `report/CML-237_processo_ux_runtime_micro_slice.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Azione principale**: sequenza ruoli, distinzione coordinatore/referente, nota Drive manuale e validazione umana nel tab Processo
+- **Scope confermato**: nessuna modifica a funzioni JS, handler import/export, schema `.cml`, JSON curriculum, tools
+- **Push**: non eseguito
+- **Verdetto**: `CML_237_PROCESSO_UX_RUNTIME_MICRO_SLICE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-236 - Guida UX runtime micro-slice
 
 - **Nome slice**: `CML-236`
