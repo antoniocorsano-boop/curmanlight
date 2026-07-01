@@ -906,6 +906,11 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .uda-smart-library-section{background:#fff;border:1px solid #d7ccc8;border-left:3px solid #6d4c41;border-radius:8px;padding:12px 14px;margin:12px 0;color:#263238}
 .uda-smart-library-section h3{font-size:14px;color:#4e342e;margin:0 0 4px}
 .uda-smart-library-intro{font-size:11px;color:#455a64;line-height:1.45;margin:0 0 10px}
+.uda-smart-library-filters{background:#f7f5f2;border:1px solid #e0d7cd;border-radius:7px;padding:8px;margin:8px 0}
+.uda-smart-library-filters-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.uda-smart-library-filters .uda-smart-library-field{margin:0}
+.uda-smart-library-filter-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.uda-smart-library-filter-results{font-size:11px;color:#5d4037;margin-top:6px;font-weight:700}
 .uda-smart-library-form{display:grid;grid-template-columns:2fr 1fr;gap:9px;margin:8px 0}
 .uda-smart-library-field{display:flex;flex-direction:column;gap:4px}
 .uda-smart-library-field label{font-size:11px;font-weight:800;color:#4e342e}
@@ -932,6 +937,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .uda-smart-library-empty{background:#f5f7fa;border:1px dashed #b0bec5;border-radius:7px;padding:10px;font-size:11px;color:#546e7a;line-height:1.45}
 .uda-smart-library-privacy{background:#efebe9;border:1px solid #d7ccc8;border-left:3px solid #6d4c41;border-radius:7px;padding:8px 10px;font-size:11px;color:#4e342e;line-height:1.45;margin-top:8px}
 @media(max-width:900px){.didattica-programmazione-grid,.didattica-programmazione-levels,.annual-draft-form,.uda-smart-library-form{grid-template-columns:1fr}.didattica-programmazione-level{min-height:auto}}
+@media(max-width:900px){.uda-smart-library-filters-grid{grid-template-columns:1fr}}
 .home-card-links-dimmed span{color:#90a4ae;border-color:#e0e0e0;cursor:default}
 .home-card-badge{display:inline-block;background:#e0f2f1;color:#00897b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
 .home-card-note{font-size:10px;color:#546e7a;margin:10px 0 0;font-style:italic;line-height:1.4}
@@ -1537,6 +1543,19 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <div class="uda-smart-library-section" id="uda-smart-library-section">
           <h3>Libreria UDA smart locale</h3>
           <p class="uda-smart-library-intro">Generatore controllato di bozza UDA smart basato su programmazione annuale locale e dati curricolari esistenti. Non modifica export/import o schema .cml.</p>
+          <div class="uda-smart-library-filters">
+            <div class="uda-smart-library-filters-grid">
+              <div class="uda-smart-library-field"><label for="uda-smart-filter-disciplina">Filtro disciplina</label><select id="uda-smart-filter-disciplina"><option value="">Tutte</option></select></div>
+              <div class="uda-smart-library-field"><label for="uda-smart-filter-ordine">Filtro ordine</label><select id="uda-smart-filter-ordine"><option value="">Tutti</option></select></div>
+              <div class="uda-smart-library-field"><label for="uda-smart-filter-classe">Filtro classe/fascia</label><select id="uda-smart-filter-classe"><option value="">Tutte</option></select></div>
+              <div class="uda-smart-library-field"><label for="uda-smart-filter-periodo">Filtro periodo</label><select id="uda-smart-filter-periodo"><option value="">Tutti</option></select></div>
+              <div class="uda-smart-library-field"><label for="uda-smart-filter-stato">Filtro stato</label><select id="uda-smart-filter-stato"><option value="">Tutti</option><option value="bozza">bozza</option><option value="in_revisione">in revisione</option><option value="pronta_per_confronto">pronta per confronto</option><option value="validata">validata</option><option value="archiviato">archiviato</option></select></div>
+              <div class="uda-smart-library-field"><label for="uda-smart-filter-sort">Ordinamento</label><select id="uda-smart-filter-sort"><option value="recent_desc">Piu recenti</option><option value="recent_asc">Meno recenti</option><option value="title_asc">Titolo A-Z</option><option value="disc_asc">Disciplina A-Z</option></select></div>
+              <div class="uda-smart-library-field uda-smart-library-wide"><label for="uda-smart-filter-query">Ricerca testo libero (titolo/note/obiettivo/attivita)</label><input id="uda-smart-filter-query" type="text" placeholder="Cerca parole chiave nella bozza UDA smart"></div>
+            </div>
+            <div class="uda-smart-library-filter-actions"><button class="uda-smart-library-btn" type="button" onclick="applyUdaSmartLibraryFilters()">Applica filtri</button><button class="uda-smart-library-btn" type="button" onclick="clearUdaSmartLibraryFilters()">Pulisci filtri</button></div>
+            <div class="uda-smart-library-filter-results" id="uda-smart-library-filter-results">0 UDA trovate su 0</div>
+          </div>
           <div class="uda-smart-library-form">
             <div class="uda-smart-library-field"><label for="uda-smart-title">Titolo bozza UDA</label><input id="uda-smart-title" type="text" placeholder="es. Percorso interdisciplinare da definire"></div>
             <div class="uda-smart-library-field"><label for="uda-smart-state">Stato</label><select id="uda-smart-state"><option value="bozza">bozza</option><option value="in_revisione">in revisione</option><option value="pronta_per_confronto">pronta per confronto</option><option value="validata">validata</option><option value="archiviato">archiviato</option></select></div>
@@ -2824,9 +2843,23 @@ function deleteUdaSmartDraft(id){try{var items=loadUdaSmartLibrary().filter(func
 function clearUdaSmartLibrary(){try{localStorage.removeItem(UDA_SMART_LIBRARY_KEY);setGeneratedUdaSmartPreview(null);renderUdaSmartLibrary();setUdaSmartLibraryStatus("Libreria UDA smart locale svuotata.","ok");}catch(err){setUdaSmartLibraryStatus("Cancellazione non disponibile in questo browser.","warn");}}
 
 var UDA_SMART_MD_CACHE="";
+var UDA_SMART_LIBRARY_FILTERS={disciplina:"",ordine:"",classe:"",periodo:"",stato:"",query:"",sort:"recent_desc"};
 function markdownFallbackValue(value){if(value===null||value===undefined)return"Da completare";var txt=(""+value).trim();return txt||"Da completare";}
 function markdownListLines(label,items){var list=Array.isArray(items)?items.filter(function(x){return (""+(x||"")).trim().length>0;}):[];if(!list.length)return ["## "+label,"","- Da completare",""];var lines=["## "+label,""];list.forEach(function(item){lines.push("- "+item);});lines.push("");return lines;}
 function getUdaSmartDraftById(id){if(!id)return null;var items=loadUdaSmartLibrary();for(var i=0;i<items.length;i++){if(items[i]&&items[i].id===id)return items[i];}return null;}
+function getUdaSmartDraftTimestamp(item){var raw=(item&&((item.timestamp)||(item.timestampCreazione)||(item.timestampModifica)))||"";var ms=Date.parse(raw);return isNaN(ms)?0:ms;}
+function setUdaSmartLibraryFiltersToUi(filters){var map={"uda-smart-filter-disciplina":filters.disciplina||"","uda-smart-filter-ordine":filters.ordine||"","uda-smart-filter-classe":filters.classe||"","uda-smart-filter-periodo":filters.periodo||"","uda-smart-filter-stato":filters.stato||"","uda-smart-filter-query":filters.query||"","uda-smart-filter-sort":filters.sort||"recent_desc"};Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)el.value=map[id];});}
+function getUdaSmartLibraryFiltersFromUi(){var getVal=function(id,def){var el=document.getElementById(id);if(!el)return def||"";return (el.value||"").trim();};var statoRaw=getVal("uda-smart-filter-stato","");return {disciplina:getVal("uda-smart-filter-disciplina",""),ordine:getVal("uda-smart-filter-ordine",""),classe:getVal("uda-smart-filter-classe",""),periodo:getVal("uda-smart-filter-periodo",""),stato:statoRaw?normalizeUdaSmartState(statoRaw):"",query:getVal("uda-smart-filter-query",""),sort:getVal("uda-smart-filter-sort","recent_desc")||"recent_desc"};}
+function compareCaseInsensitive(a,b){return (a||"").localeCompare((b||""),"it",{sensitivity:"base"});}
+function normalizeSearchText(value){return (value||"").toString().toLowerCase().trim();}
+function ensureSelectHasValue(selectId,value){var el=document.getElementById(selectId);if(!el)return;for(var i=0;i<el.options.length;i++){if(el.options[i].value===value){el.value=value;return;}}el.value="";}
+function updateUdaSmartFilterSelect(selectId,values,allLabel){var el=document.getElementById(selectId);if(!el)return;var current=el.value||"";var html='<option value="">'+allLabel+'</option>';(values||[]).forEach(function(v){html+='<option value="'+escapeHtml(v)+'">'+escapeHtml(v)+'</option>';});el.innerHTML=html;ensureSelectHasValue(selectId,current);}
+function populateUdaSmartLibraryFilterOptions(items){var safe=Array.isArray(items)?items:[];var discipline=uniqueStrings(safe.map(function(item){return item.disciplina||"";})).sort(compareCaseInsensitive);var order=uniqueStrings(safe.map(function(item){return item.ordine||"";})).sort(compareCaseInsensitive);var classe=uniqueStrings(safe.map(function(item){return item.classe||"";})).sort(compareCaseInsensitive);var periodo=uniqueStrings(safe.map(function(item){return item.periodo||"";})).sort(compareCaseInsensitive);updateUdaSmartFilterSelect("uda-smart-filter-disciplina",discipline,"Tutte");updateUdaSmartFilterSelect("uda-smart-filter-ordine",order,"Tutti");updateUdaSmartFilterSelect("uda-smart-filter-classe",classe,"Tutte");updateUdaSmartFilterSelect("uda-smart-filter-periodo",periodo,"Tutti");setUdaSmartLibraryFiltersToUi(UDA_SMART_LIBRARY_FILTERS);}
+function matchUdaSmartDraftFilters(item,filters){if(!item)return false;if(filters.disciplina&&item.disciplina!==filters.disciplina)return false;if(filters.ordine&&item.ordine!==filters.ordine)return false;if(filters.classe&&item.classe!==filters.classe)return false;if(filters.periodo&&item.periodo!==filters.periodo)return false;if(filters.stato&&normalizeUdaSmartState(item.stato)!==filters.stato)return false;var query=normalizeSearchText(filters.query);if(query){var blob=[item.titolo,item.noteDocente,item.obiettivoApprendimento,item.attivitaSintesi].map(function(v){return (v||"").toString().toLowerCase();}).join("\n");if(blob.indexOf(query)===-1)return false;}return true;}
+function sortUdaSmartDrafts(items,mode){var list=(items||[]).slice();if(mode==="recent_asc"){list.sort(function(a,b){return getUdaSmartDraftTimestamp(a)-getUdaSmartDraftTimestamp(b);});return list;}if(mode==="title_asc"){list.sort(function(a,b){return compareCaseInsensitive(a&&a.titolo,b&&b.titolo);});return list;}if(mode==="disc_asc"){list.sort(function(a,b){var discCmp=compareCaseInsensitive(a&&a.disciplina,b&&b.disciplina);if(discCmp!==0)return discCmp;return compareCaseInsensitive(a&&a.titolo,b&&b.titolo);});return list;}list.sort(function(a,b){return getUdaSmartDraftTimestamp(b)-getUdaSmartDraftTimestamp(a);});return list;}
+function setUdaSmartLibraryResultsCount(visible,total){var el=document.getElementById("uda-smart-library-filter-results");if(!el)return;el.textContent=(visible||0)+" UDA trovate su "+(total||0);}
+function applyUdaSmartLibraryFilters(){UDA_SMART_LIBRARY_FILTERS=getUdaSmartLibraryFiltersFromUi();renderUdaSmartLibrary();setUdaSmartLibraryStatus("Filtri applicati.","ok");}
+function clearUdaSmartLibraryFilters(){UDA_SMART_LIBRARY_FILTERS={disciplina:"",ordine:"",classe:"",periodo:"",stato:"",query:"",sort:"recent_desc"};setUdaSmartLibraryFiltersToUi(UDA_SMART_LIBRARY_FILTERS);renderUdaSmartLibrary();setUdaSmartLibraryStatus("Filtri ripristinati.","ok");}
 function buildUdaSmartDraftMarkdown(item){if(!item)return"";var lines=[];var ts=item.timestamp||item.timestampCreazione||new Date().toISOString();lines.push("# "+markdownFallbackValue(item.titolo));lines.push("");lines.push("- Tipo: UDA smart locale (bozza)");lines.push("- Disciplina: "+markdownFallbackValue(item.disciplina));lines.push("- Ordine: "+markdownFallbackValue(item.ordine));lines.push("- Classe/Fascia: "+markdownFallbackValue(item.classe));lines.push("- Anno scolastico: "+markdownFallbackValue(item.annoScolastico));lines.push("- Periodo: "+markdownFallbackValue(item.periodo));lines.push("- Stato: "+markdownFallbackValue(normalizeUdaSmartState(item.stato)));lines.push("- Timestamp: "+markdownFallbackValue(ts));lines.push("");lines=lines.concat(markdownListLines("Nuclei",item.nuclei));lines=lines.concat(markdownListLines("Unita collegate",item.unitaCollegate));lines=lines.concat(markdownListLines("Evidenze selezionate",item.evidenzeSelezionate));lines.push("## Obiettivo di apprendimento");lines.push("");lines.push(markdownFallbackValue(item.obiettivoApprendimento));lines.push("");lines.push("## Attivita in sintesi");lines.push("");lines.push(markdownFallbackValue(item.attivitaSintesi));lines.push("");lines=lines.concat(markdownListLines("Criteri di valutazione",item.criteriValutazione));lines.push("## Durata ore");lines.push("");lines.push(markdownFallbackValue(item.durataOre));lines.push("");lines.push("## Note docente");lines.push("");lines.push(markdownFallbackValue(item.noteDocente));lines.push("");lines.push("## Fonte curricolo");lines.push("");lines.push(markdownFallbackValue(item.fonteCurricolo));lines.push("");lines.push("## Fonte programmazione annuale");lines.push("");lines.push(markdownFallbackValue(item.fonteProgrammazioneAnnuale));lines.push("");lines.push("## Privacy notice");lines.push("");lines.push(markdownFallbackValue(item.privacyNotice));lines.push("");lines.push("## Nota di validazione professionale");lines.push("");lines.push("Bozza professionale da validare in sede docente/dipartimentale prima dell'uso istituzionale. Non inserire dati personali di studenti, voti o osservazioni individuali.");return lines.join("\n");}
 function setUdaSmartMarkdownPreview(markdown){var preview=document.getElementById("uda-smart-markdown-preview");if(!preview)return;preview.textContent=markdown||"Nessuna bozza selezionata. Usa \"Anteprima Markdown\" su una bozza in libreria.";}
 function sanitizeUdaSmartFilenamePart(value){var txt=(value||"uda-smart").toString().toLowerCase();txt=txt.normalize?txt.normalize("NFD").replace(/[\u0300-\u036f]/g,""):txt;txt=txt.replace(/[^a-z0-9_-]+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"");return txt||"uda-smart";}
@@ -2839,12 +2872,21 @@ function renderUdaSmartLibrary(){
   var listEl=document.getElementById("uda-smart-library-list");
   if(!listEl)return;
   var items=loadUdaSmartLibrary();
+  populateUdaSmartLibraryFilterOptions(items);
   if(!items.length){
     listEl.innerHTML='<div class="uda-smart-library-empty">Nessuna bozza UDA smart salvata. Usa il generatore da programmazione annuale o il modulo manuale locale.</div>';
+    setUdaSmartLibraryResultsCount(0,0);
     setUdaSmartMarkdownPreview("");
     return;
   }
-  listEl.innerHTML=items.map(function(item){
+  var filtered=items.filter(function(item){return matchUdaSmartDraftFilters(item,UDA_SMART_LIBRARY_FILTERS);});
+  filtered=sortUdaSmartDrafts(filtered,UDA_SMART_LIBRARY_FILTERS.sort);
+  setUdaSmartLibraryResultsCount(filtered.length,items.length);
+  if(!filtered.length){
+    listEl.innerHTML='<div class="uda-smart-library-empty">Nessuna UDA smart corrisponde ai filtri attivi. Modifica o pulisci i filtri.</div>';
+    return;
+  }
+  listEl.innerHTML=filtered.map(function(item){
     var meta=[item.disciplina,item.ordine,item.classe,item.periodo].filter(Boolean).join(" - ")||"metadati da completare";
     return '<div class="uda-smart-library-card"><strong>'+escapeHtml(item.titolo||"Bozza UDA smart")+'</strong><span>'+escapeHtml(meta)+'</span><br><span>Stato: '+escapeHtml(normalizeUdaSmartState(item.stato||"bozza"))+'</span><br><span>'+escapeHtml(item.noteDocente||"Nessuna nota generica.")+'</span><div class="uda-smart-library-card-actions"><button class="uda-smart-library-btn" type="button" onclick="previewUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Anteprima Markdown</button><button class="uda-smart-library-btn" type="button" onclick="copyUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Copia Markdown</button><button class="uda-smart-library-btn" type="button" onclick="downloadUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Scarica Markdown</button><button class="uda-smart-library-btn uda-smart-library-btn-danger" type="button" onclick="deleteUdaSmartDraft(\''+escapeHtml(item.id)+'\')">Elimina bozza</button></div></div>';
   }).join("");

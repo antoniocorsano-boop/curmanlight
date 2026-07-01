@@ -1,5 +1,22 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UDA-SMART-LIBRARY-FILTERS - Filtri e ordinamento libreria UDA smart locale
+
+- **Nome slice**: `CML-UDA-SMART-LIBRARY-FILTERS`
+- **Commit base**: `34b7e80`
+- **Tipo slice**: runtime increment controllato + docs/report
+- **Runtime modificato**: si, `_published_snapshot/netlify-current/index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UDA-SMART-LIBRARY-FILTERS.md`, `report/CML-UDA-SMART-LIBRARY-FILTERS.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: filtri locali (disciplina/ordine/classe/periodo/stato/testo) e ordinamento (recenti/meno recenti/titolo/disciplina) su libreria UDA smart
+- **Storage**: filtri non persistiti; nessuna nuova chiave localStorage
+- **Relazione chiavi**: `cml_uda_smart_library_v1` solo lettura per visualizzazione filtrata; `cml_annual_planning_draft_v1` non alterata
+- **Schema `.cml`**: invariato
+- **Export/import istituzionali**: invariati
+- **Dati curricolari normalizzati**: invariati
+- **Backend/API/endpoint/credenziali/dipendenze**: non introdotti
+- **Push**: non eseguito
+- **Verdetto**: `CML_UDA_SMART_LIBRARY_FILTERS_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UDA-SMART-MARKDOWN-EXPORT - Export Markdown locale bozze UDA smart
 
 - **Nome slice**: `CML-UDA-SMART-MARKDOWN-EXPORT`
