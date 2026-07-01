@@ -2037,46 +2037,71 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <div id="tab-guida" style="display:none">
   <div class="tab-guida">
     <h2><span aria-hidden="true">❔</span> Guida rapida</h2>
-    <p class="sub">Come usare lo strumento, cosa può fare, cosa non può fare.</p>
+    <p class="sub">Percorsi brevi per ruolo: cosa fare, dove andare, cosa resta sempre manuale.</p>
     <div class="guida-card">
-      <h3><span aria-hidden="true">👋</span> Come iniziare</h3>
-      <p>Scegli un'area dalla barra in alto: <strong>Curriculum</strong> per il documento istituzionale, <strong>Competenze e progettazione</strong> per la progettazione operativa. Usa la <strong>Home</strong> per orientarti.</p>
+      <h3><span aria-hidden="true">👋</span> Da dove iniziare</h3>
+      <p>Usa la <strong>Home</strong> per orientarti, poi scegli un'area dalla barra in alto:</p>
+      <ul>
+        <li><strong>Curriculum</strong> — consulta, revisiona e verifica il documento istituzionale</li>
+        <li><strong>Competenze e progettazione</strong> — evidenze, programmazione annuale e UDA</li>
+        <li><strong>Esportazioni</strong> — scarica documenti, file <code>.cml</code> e copie di sicurezza</li>
+        <li><strong>Processo</strong> (in Curriculum) — confronto dipartimentale e verifica referente</li>
+      </ul>
+    </div>
+    <div class="guida-card tip">
+      <h3><span aria-hidden="true">🧭</span> Percorsi per ruolo</h3>
+      <ul>
+        <li><strong>Docente</strong> — Consulta il curriculum → prepara programmazione/UDA → in <a href="#" onclick="setTab('esportazioni');return false" style="font-weight:700;color:#5e35b1">Esportazioni</a> scarica bozza o proposta <code>.cml</code></li>
+        <li><strong>Dipartimento</strong> — In <strong>Processo</strong> confronta le proposte → valida → in Esportazioni usa confronto modifiche ed esito dipartimento <code>.cml</code></li>
+        <li><strong>Referente</strong> — In Processo raccogli gli esiti → in Esportazioni prepara report e documento finale per il Collegio</li>
+      </ul>
     </div>
     <div class="guida-card">
       <h3><span aria-hidden="true">📚</span> Curriculum</h3>
       <ul>
         <li><strong>Consulta</strong> — visualizza il curricolo di istituto (2012 e proposte 2025)</li>
         <li><strong>Revisione</strong> — confronta, approva o modifica le voci disciplina per disciplina</li>
+        <li><strong>Processo</strong> — dipartimento e referente: importa file <code>.cml</code>, valida, registra esiti</li>
         <li><strong>Definitivo</strong> — riepilogo delle decisioni e versione definitiva</li>
-        <li><strong>Fonti</strong> — riferimenti normativi e sezioni generali</li>
+        <li><strong>Fonti</strong> — riferimenti normativi; <strong>Sezioni generali</strong> in tab dedicato</li>
       </ul>
     </div>
     <div class="guida-card">
       <h3><span aria-hidden="true">🧑‍🏫</span> Competenze e progettazione</h3>
       <ul>
         <li><strong>Valutazione / Evidenze</strong> — collega le unità curricolari a evidenze osservabili</li>
-        <li><strong>UDA modello</strong> — trasforma una unità curricolare in unità di apprendimento</li>
+        <li><strong>Programmazione annuale</strong> — Passo 1 bozza annuale, Passo 2 libreria UDA smart</li>
+        <li><strong>UDA modello</strong> — genera una unità di apprendimento da una unità curricolare</li>
       </ul>
     </div>
     <div class="guida-card">
       <h3><span aria-hidden="true">📤</span> Esportazioni</h3>
-      <p>Trovi tutti gli strumenti di scaricamento in un unico tab: Word, testo modificabile, PDF, copia di sicurezza e resoconto.</p>
+      <p>Tutti gli scaricamenti sono nel tab <strong>Esportazioni</strong>, raggruppati per fase:</p>
+      <ul>
+        <li><strong>Documento finale</strong> — per il Collegio (Word, testo, PDF)</li>
+        <li><strong>Confronto modifiche</strong> — per dipartimento e referente</li>
+        <li><strong>Bozza disciplina</strong> — testo modificabile della disciplina in Revisione</li>
+        <li><strong>File di lavoro <code>.cml</code></strong> — proposta docente ed esito dipartimento</li>
+        <li><strong>Report e resoconti</strong> — sintesi per referente e gruppo di lavoro</li>
+        <li><strong>Copia di sicurezza</strong> — salva o ripristina su questo dispositivo</li>
+      </ul>
+      <p style="margin:6px 0 0;font-size:11px;color:#546e7a"><strong>Invia al Drive</strong> non invia automaticamente: scarica il file <code>.cml</code> e lo carichi manualmente.</p>
     </div>
     <div class="guida-card">
       <h3><span aria-hidden="true">🔒</span> Cosa non può fare</h3>
       <ul>
         <li>Non sostituisce il documento istituzionale approvato dal Collegio Docenti</li>
         <li>Non salva dati su server — tutto resta su questo dispositivo</li>
-        <li>Non invia email né condivide automaticamente</li>
-        <li>Non sostituisce la progettazione professionale del docente</li>
-        <li>Le UDA sono modelli — richiedono adattamento alla classe</li>
+        <li>Non invia email, non carica su Drive né condivide automaticamente</li>
+        <li>Non approva da solo le modifiche curricolari — <strong>validazione umana sempre obbligatoria</strong></li>
+        <li>Le UDA sono modelli — richiedono adattamento professionale alla classe</li>
       </ul>
     </div>
     <div class="guida-card">
       <h3><span aria-hidden="true">💻</span> Installazione</h3>
       <p>Puoi installare questo strumento sul telefono o computer come app: usa il pulsante "Installa" nel menu Azioni (icona <span aria-hidden="true">⚙️</span>) o dal browser. I dati restano sul dispositivo.</p>
     </div>
-    <div class="guida-note"><span class="badge--prototype" style="display:inline-block;margin-right:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">📋</span> Prototipo</span> <span class="badge--readonly" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">🔒</span> Sola consultazione</span><br>Nessun dato viene salvato su server. Richiede validazione professionale del docente. Non costituisce documento istituzionale approvato.</div>
+    <div class="guida-note"><span class="badge--prototype" style="display:inline-block;margin-right:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">📋</span> Prototipo</span> <span class="badge--readonly" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">🔒</span> Sola consultazione</span><br>Strumento di supporto locale. Ogni export va verificato da docente, dipartimento o referente prima dell'uso istituzionale.</div>
   </div>
 </div>
   </main>

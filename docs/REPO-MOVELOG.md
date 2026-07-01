@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-236 - Guida UX runtime micro-slice
+
+- **Nome slice**: `CML-236`
+- **Commit base**: `029c161`
+- **Tipo slice**: runtime microfix (solo testo Guida)
+- **Runtime modificato**: sì — solo `#tab-guida`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-236.md`, `report/CML-236_guida_ux_runtime_micro_slice.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Azione principale**: percorsi per ruolo, allineamento Esportazioni post-CML-235, Processo, Programmazione annuale Passo 1/2, nota Drive manuale e validazione umana
+- **Scope confermato**: nessuna modifica a funzioni JS, handler export, schema `.cml`, JSON curriculum, tools
+- **Push**: non eseguito
+- **Verdetto**: `CML_236_GUIDA_UX_RUNTIME_MICRO_SLICE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-235 - Exports UX runtime micro-slice
 
 - **Nome slice**: `CML-235`
