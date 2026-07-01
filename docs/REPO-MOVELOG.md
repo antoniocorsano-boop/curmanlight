@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-238 - UDA smart empty states micro-slice
+
+- **Nome slice**: `CML-238`
+- **Commit base**: `d7a2679`
+- **Tipo slice**: runtime microfix (stati vuoti UDA smart)
+- **Runtime modificato**: sì — Programmazione annuale Passo 2 / libreria UDA smart
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-238.md`, `report/CML-238_uda_smart_empty_states_micro_slice.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Azione principale**: microcopy stati vuoti libreria, filtri, anteprime e unità programmazione annuale; conteggi filtri contestuali
+- **Scope confermato**: solo stringhe di visualizzazione; nessuna modifica a storage, handler, filtri o schema bozze
+- **Push**: non eseguito
+- **Verdetto**: `CML_238_UDA_SMART_EMPTY_STATES_MICRO_SLICE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-237 - Processo UX runtime micro-slice
 
 - **Nome slice**: `CML-237`
