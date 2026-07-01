@@ -1,5 +1,19 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UDA-SMART-LIBRARY-FILTERS-CLOSURE - Chiusura formale post-push e stabilita remota
+
+- **Nome slice**: `CML-UDA-SMART-LIBRARY-FILTERS-CLOSURE`
+- **Commit base**: `b00465e`
+- **Tipo slice**: docs-only closure
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UDA-SMART-LIBRARY-FILTERS-CLOSURE.md`, `report/CML-UDA-SMART-LIBRARY-FILTERS-CLOSURE.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Contesto consolidato**: push completato (`CML_UDA_SMART_LIBRARY_FILTERS_CONTROLLED_PUSH_COMPLETED`) e remote stability check passato (`CML_UDA_SMART_LIBRARY_FILTERS_REMOTE_STABILITY_CHECK_PASSED`)
+- **Allineamento remoto**: `main`/`origin/main` su `b00465e`
+- **Endpoint pubblico**: `https://antoniocorsano-boop.github.io/curmanlight/` con `200 OK`
+- **Scope closure**: sola formalizzazione documentale, nessuna nuova funzionalita
+- **Push**: non eseguito (closure locale)
+- **Verdetto**: `CML_UDA_SMART_LIBRARY_FILTERS_CLOSURE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UDA-SMART-LIBRARY-FILTERS - Filtri e ordinamento libreria UDA smart locale
 
 - **Nome slice**: `CML-UDA-SMART-LIBRARY-FILTERS`
