@@ -1,5 +1,19 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UX-NON-TECHNICAL-MICROCOPY-CLOSURE-REPORT - Chiusura documentale post-push e smoke pubblico
+
+- **Nome slice**: `CML-UX-NON-TECHNICAL-MICROCOPY-CLOSURE-REPORT`
+- **Commit base**: `a8b5289`
+- **Tipo slice**: docs-only closure report
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-NON-TECHNICAL-MICROCOPY-CLOSURE-REPORT.md`, `report/CML-UX-NON-TECHNICAL-MICROCOPY-CLOSURE-REPORT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Contesto consolidato**: push completato e smoke pubblico passato per la slice runtime microcopy non tecnico
+- **Allineamento remoto**: `main`/`origin/main` su `a8b5289`
+- **Endpoint pubblico**: `https://antoniocorsano-boop.github.io/curmanlight/` con `200 OK`
+- **Scope closure**: formalizzazione documentale, impatto UX, limiti residui, criteri per eventuale secondo passaggio
+- **Push**: non eseguito (closure locale)
+- **Verdetto**: `CML_UX_NON_TECHNICAL_MICROCOPY_CLOSURE_REPORT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION - Remediation microcopy runtime non tecnico
 
 - **Nome slice**: `CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION`
