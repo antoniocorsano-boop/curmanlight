@@ -45,7 +45,7 @@ Il curricolo di Educazione Fisica è attualmente composto da **4 nuclei** e **7 
 **Condizioni:**
 
 
-**Autorizzata la prossima slice:** [ ] Nessuna [ ] CML-210A — perfezionamento JSON [ ] Altra: _______________
+**Autorizzata la prossima slice:** [ ] Nessuna [ ] CML-210A — perfezionamento del formato dati [ ] Altra: _______________
 
 **Data:** ____/____/________
 

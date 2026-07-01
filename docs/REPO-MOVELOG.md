@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-REPO-PENDING-EDUCAZIONE-FISICA-USER-DOC-DELTA-AUDIT - Chiusura delta documento utente Educazione Fisica
+
+- **Nome slice**: `CML-REPO-PENDING-EDUCAZIONE-FISICA-USER-DOC-DELTA-AUDIT`
+- **Commit base**: `1489538`
+- **Tipo slice**: docs-only / pending delta audit
+- **Runtime modificato**: no
+- **File modificati**: `docs/04_user/educazione_fisica_validazione_dipartimentale.md`, `docs/03_execution/CML-REPO-PENDING-EDUCAZIONE-FISICA-USER-DOC-DELTA-AUDIT.md`, `report/CML-REPO-PENDING-EDUCAZIONE-FISICA-USER-DOC-DELTA-AUDIT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Azione principale**: classificato e chiuso il delta pendente sostituendo `perfezionamento JSON` con `perfezionamento del formato dati` nella scheda utente di validazione dipartimentale Educazione Fisica
+- **Scope confermato**: nessuna modifica a runtime, dati curricolari, strumenti, asset, service worker o manifest
+- **Nota lessicale**: `JSON` rimosso dal delta; residuo preesistente `commit` annotato ma non ampliato in questa micro-slice
+- **Push**: non eseguito
+- **Verdetto**: `CML_REPO_PENDING_EDUCAZIONE_FISICA_USER_DOC_DELTA_COMMITTED_LOCAL_NOT_PUSHED`
 ## 2026-07-01 - CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1-CLOSURE - Chiusura documentale post-push e smoke pubblico
 
 - **Nome slice**: `CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1-CLOSURE`
