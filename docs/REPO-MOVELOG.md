@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UX-LIGHTWEIGHT-EXPERIENCE-SECOND-CYCLE-AUDIT - Audit secondo ciclo UX P2/P3
+
+- **Nome slice**: `CML-UX-LIGHTWEIGHT-EXPERIENCE-SECOND-CYCLE-AUDIT`
+- **Commit base**: `f14a33e`
+- **Tipo slice**: docs-only / read-only audit
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-LIGHTWEIGHT-EXPERIENCE-SECOND-CYCLE-AUDIT.md`, `report/CML-UX-LIGHTWEIGHT-EXPERIENCE-SECOND-CYCLE-AUDIT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Azione principale**: secondo audit UX dopo riordino P0/P1, con classificazione residui P2/P3/HOLD e proposta di massimo cinque interventi runtime futuri
+- **Aree candidate**: Esportazioni, Guida, Processo, UDA smart/stati vuoti; Home, Fonti/Sezioni generali e quick actions lasciate in HOLD
+- **Scope confermato**: nessuna modifica a runtime, dati curricolari, schema, storage, import/export, filtri UDA o validatori
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_LIGHTWEIGHT_EXPERIENCE_SECOND_CYCLE_AUDIT_READY_LOCAL_NOT_PUSHED`
 ## 2026-07-01 - CML-REPO-PENDING-EDUCAZIONE-FISICA-USER-DOC-DELTA-AUDIT - Chiusura delta documento utente Educazione Fisica
 
 - **Nome slice**: `CML-REPO-PENDING-EDUCAZIONE-FISICA-USER-DOC-DELTA-AUDIT`
