@@ -1,5 +1,19 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-239.1 - Deploy Pages congruence and syntax error fix
+
+- **Nome slice**: `CML-239.1`
+- **Commit base**: `0857038`
+- **Tipo slice**: runtime diagnostic/fix micro-slice
+- **Runtime modificato**: sì (`_published_snapshot/netlify-current/index.html`, `_published_snapshot/netlify-current/sw.js`)
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `_published_snapshot/netlify-current/sw.js`, `docs/03_execution/CML-239.1.md`, `report/CML-239.1_deploy_pages_congruence_and_syntax_error_fix.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Diagnosi congruenza**: artifact Pages corretto (`_published_snapshot/netlify-current`); mismatch osservato lato browser dovuto a cache service worker stale
+- **Diagnosi errori**: `Unexpected identifier 'open'` e `setTab is not defined` riconducibili a inizializzazione su HTML/script stale lato client, non al blob pubblicabile corrente
+- **Fix applicato**: PWA cache hardening (`network-first` per HTML navigazione, bump cache name, SW register versionato con `updateViaCache: "none"`)
+- **Fuori scope confermato**: `docx.umd.min.js 404` e `favicon.ico 404` restano per CML-239.2
+- **Push**: non eseguito
+- **Verdetto**: `CML_239_1_DEPLOY_PAGES_CONGRUENCE_AND_SYNTAX_ERROR_FIX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-239 - Runtime console pre-existing errors audit
 
 - **Nome slice**: `CML-239`

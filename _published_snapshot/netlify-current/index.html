@@ -5279,7 +5279,7 @@ window.addEventListener("appinstalled",()=>{
 
 function registerOfflineSupport(){
   if("serviceWorker" in navigator && window.isSecureContext){
-    navigator.serviceWorker.register("./sw.js").then(()=>{
+    navigator.serviceWorker.register("./sw.js?v=20260701-cml2391",{updateViaCache:"none"}).then(()=>{
       updateInstallHint("ok","Supporto offline attivo o in preparazione.");
     }).catch(()=>{
       updateInstallHint("warn","Supporto offline non attivato: lo strumento resta comunque utilizzabile online.");
