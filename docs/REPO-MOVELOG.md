@@ -1,5 +1,20 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UDA-SMART-DRAFT-GENERATOR - Generatore controllato bozza UDA smart
+
+- **Nome slice**: `CML-UDA-SMART-DRAFT-GENERATOR`
+- **Commit base**: `a03b77e`
+- **Tipo slice**: runtime increment controllato + docs/report
+- **Runtime modificato**: si, `_published_snapshot/netlify-current/index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UDA-SMART-DRAFT-GENERATOR.md`, `report/CML-UDA-SMART-DRAFT-GENERATOR.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: generare bozza UDA smart locale da `cml_annual_planning_draft_v1` e salvarla in `cml_uda_smart_library_v1`
+- **Schema `.cml`**: invariato
+- **Export/import esistenti**: invariati
+- **Dati curricolari normalizzati**: invariati
+- **Backend/API/endpoint/credenziali/dipendenze**: non introdotti
+- **Push**: non eseguito
+- **Verdetto**: `CML_UDA_SMART_DRAFT_GENERATOR_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-06-30 - CML-ANNUAL-PLANNING-VIEW-LEVELS-ORDS - Runtime view Programmazione annuale
 
 - **Nome slice**: `CML-ANNUAL-PLANNING-VIEW-LEVELS-ORDS`
