@@ -1414,7 +1414,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div id="tab-home" style="display:block">
       <div class="home-dashboard">
         <h2 class="home-title">Da dove vuoi iniziare?</h2>
-        <p class="home-subtitle">Il processo del curricolo: consulta, analizza, proponi, confronta, sintetizza ed esporta.</p>
+        <p class="home-subtitle">Il processo del curricolo: consulta, analizza, proponi, confronta, sintetizza e scarica i documenti.</p>
         <div class="home-process-path">
           <div class="home-process-path-title"><span aria-hidden="true">🔄</span> Percorso di governo del curricolo</div>
           <div class="home-process-path-steps">
@@ -1432,11 +1432,11 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
               <span class="home-card-icon" aria-hidden="true">📚</span>
               <h3 class="home-card-title">Curriculum</h3>
             </div>
-            <p class="home-card-text">Consulta, revisiona ed esporta il curricolo di istituto. Qui trovi sezioni generali, discipline, riferimenti, proposte di revisione e pacchetti disciplinari normalizzati.</p>
+            <p class="home-card-text">Consulta, revisiona e scarica il curricolo di istituto. Qui trovi sezioni generali, discipline, riferimenti e proposte di revisione.</p>
             <div class="home-card-links">
               <a href="#" onclick="setTab('curricolo');return false"><span aria-hidden="true">📖</span> Consulta</a>
               <a href="#" onclick="setTab('lavoro');return false"><span aria-hidden="true">✏️</span> Revisiona</a>
-              <a href="#" onclick="setTab('esportazioni');return false"><span aria-hidden="true">📤</span> Esporta</a>
+              <a href="#" onclick="setTab('esportazioni');return false"><span aria-hidden="true">📤</span> Scarica</a>
               <a href="#" onclick="setTab('curricolo');setTimeout(function(){var p=document.getElementById('tecnologia-norm-panel');if(p)p.scrollIntoView({behavior:'smooth'})},150);return false"><span aria-hidden="true">⚙️</span> Curriculum normalizzato</a>
             </div>
           </div>
@@ -1459,18 +1459,18 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
         <div class="home-microguide">
           <div class="home-microguide-title"><span aria-hidden="true">⏱</span> Usa CurManLight in 5 minuti</div>
-          <div class="home-microguide-subtitle">Segui il percorso minimo: leggi, confronta, decidi, esporta e condividi l'esito.</div>
+          <div class="home-microguide-subtitle">Segui il percorso minimo: leggi, confronta, decidi, scarica e condividi l'esito.</div>
           <ol class="home-microguide-steps">
             <li class="home-microguide-step"><span class="home-microguide-step-num">1</span><span class="home-microguide-step-text">Scegli una proposta di curricolo.</span></li>
             <li class="home-microguide-step"><span class="home-microguide-step-num">2</span><span class="home-microguide-step-text">Confronta testo vigente e proposta 2025.</span></li>
             <li class="home-microguide-step"><span class="home-microguide-step-num">3</span><span class="home-microguide-step-text">Decidi se confermare, modificare o discutere.</span></li>
-            <li class="home-microguide-step"><span class="home-microguide-step-num">4</span><span class="home-microguide-step-text">Esporta il file <code>.cml</code> per il passaggio successivo.</span></li>
-            <li class="home-microguide-step"><span class="home-microguide-step-num">5</span><span class="home-microguide-step-text">Il referente importa gli esiti e prepara la sintesi finale.</span></li>
+            <li class="home-microguide-step"><span class="home-microguide-step-num">4</span><span class="home-microguide-step-text">Salva il file di lavoro CurManLight per il passaggio successivo.</span></li>
+            <li class="home-microguide-step"><span class="home-microguide-step-num">5</span><span class="home-microguide-step-text">Il referente carica gli esiti e prepara la sintesi finale.</span></li>
           </ol>
           <div class="home-microguide-footer">La validazione finale resta a cura del gruppo di lavoro e degli organi competenti.</div>
         </div>
         <div class="home-footer">
-          <p>La Home non modifica i dati. Curriculum e Competenze e progettazione restano separati: il primo riguarda il documento istituzionale, la seconda la progettazione curricolare. Le azioni protette restano sotto codice operativo. Il curricolo strutturato richiede validazione umana.</p>
+          <p>La Home non modifica i dati. Curriculum e Competenze e progettazione restano separati: il primo riguarda il documento istituzionale, la seconda la progettazione curricolare. Alcune azioni sono riservate ai ruoli autorizzati. Il curricolo strutturato richiede controllo professionale.</p>
         </div>
       </div>
     </div>
@@ -1510,7 +1510,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="didattica-programmazione" id="didattica-programmazione-section" style="display:none">
         <div class="didattica-programmazione-header">
           <h2><span aria-hidden="true">🗓️</span> Competenze e progettazione — Programmazione annuale</h2>
-          <p>Vista iniziale read-only per leggere ordini, classi/fasce e maturità della progettazione annuale a partire dai dati curricolari già presenti.</p>
+          <p>Vista iniziale di sola consultazione per leggere ordini, classi/fasce e maturità della progettazione annuale a partire dai dati curricolari già presenti.</p>
         </div>
         <div class="didattica-programmazione-box notice-box tip">
           <strong>Programmazione annuale — quadro derivato</strong><br>
@@ -1535,14 +1535,14 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <div class="annual-draft-field annual-draft-wide"><label>Unita curricolari selezionate</label><div class="annual-draft-units" id="annual-draft-units"></div></div>
             <div class="annual-draft-field annual-draft-wide"><label for="annual-draft-note">Note generiche di programmazione</label><textarea id="annual-draft-note" placeholder="Annota raccordi, tempi, attenzioni metodologiche generiche. Non inserire dati personali." oninput="updateAnnualDraftPreview()"></textarea></div>
           </div>
-          <div class="annual-draft-actions"><button class="annual-draft-btn annual-draft-btn-primary" type="button" onclick="saveAnnualPlanningDraft()">Salva bozza locale</button><button class="annual-draft-btn" type="button" onclick="copyAnnualPlanningMarkdown()">Copia Markdown</button><button class="annual-draft-btn annual-draft-btn-danger" type="button" onclick="clearAnnualPlanningDraft()">Cancella bozza</button></div>
+          <div class="annual-draft-actions"><button class="annual-draft-btn annual-draft-btn-primary" type="button" onclick="saveAnnualPlanningDraft()">Salva bozza su questo dispositivo</button><button class="annual-draft-btn" type="button" onclick="copyAnnualPlanningMarkdown()">Copia testo modificabile</button><button class="annual-draft-btn annual-draft-btn-danger" type="button" onclick="clearAnnualPlanningDraft()">Cancella bozza</button></div>
           <div class="annual-draft-status" id="annual-draft-status"></div>
           <div class="annual-draft-preview"><h4>Anteprima leggibile</h4><pre id="annual-draft-preview">Compila i campi per generare l'anteprima.</pre></div>
-          <div class="annual-draft-privacy"><strong>Bozza locale da validare</strong><br>La bozza resta su questo dispositivo nella chiave <code>cml_annual_planning_draft_v1</code>, non modifica export/import ne schema .cml e richiede validazione professionale prima dell'uso istituzionale.</div>
+          <div class="annual-draft-privacy"><strong>Bozza salvata su questo dispositivo</strong><br>La bozza resta su questo dispositivo, non cambia il documento ufficiale di istituto e richiede controllo didattico prima dell'uso istituzionale.</div>
         </div>
         <div class="uda-smart-library-section" id="uda-smart-library-section">
           <h3>Libreria UDA smart locale</h3>
-          <p class="uda-smart-library-intro">Generatore controllato di bozza UDA smart basato su programmazione annuale locale e dati curricolari esistenti. Non modifica export/import o schema .cml.</p>
+          <p class="uda-smart-library-intro">Strumento guidato per preparare una bozza UDA smart basata sulla programmazione annuale e sui dati curricolari esistenti.</p>
           <div class="uda-smart-library-filters">
             <div class="uda-smart-library-filters-grid">
               <div class="uda-smart-library-field"><label for="uda-smart-filter-disciplina">Filtro disciplina</label><select id="uda-smart-filter-disciplina"><option value="">Tutte</option></select></div>
@@ -1561,14 +1561,14 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <div class="uda-smart-library-field"><label for="uda-smart-state">Stato</label><select id="uda-smart-state"><option value="bozza">bozza</option><option value="in_revisione">in revisione</option><option value="pronta_per_confronto">pronta per confronto</option><option value="validata">validata</option><option value="archiviato">archiviato</option></select></div>
             <div class="uda-smart-library-field uda-smart-library-wide"><label for="uda-smart-notes">Note generiche</label><textarea id="uda-smart-notes" placeholder="Descrivi in modo generico il bisogno progettuale. Non inserire dati personali di studenti."></textarea></div>
           </div>
-          <div class="uda-smart-library-actions"><button class="uda-smart-library-btn uda-smart-library-btn-primary" type="button" onclick="generateUdaSmartDraftFromAnnualPlanning()">Genera UDA da programmazione annuale</button><button class="uda-smart-library-btn" type="button" onclick="saveUdaSmartDraft()">Salva bozza UDA</button><button class="uda-smart-library-btn uda-smart-library-btn-danger" type="button" onclick="clearUdaSmartLibrary()">Svuota libreria locale</button></div>
+          <div class="uda-smart-library-actions"><button class="uda-smart-library-btn uda-smart-library-btn-primary" type="button" onclick="generateUdaSmartDraftFromAnnualPlanning()">Genera UDA da programmazione annuale</button><button class="uda-smart-library-btn" type="button" onclick="saveUdaSmartDraft()">Salva bozza UDA</button><button class="uda-smart-library-btn uda-smart-library-btn-danger" type="button" onclick="clearUdaSmartLibrary()">Svuota libreria su questo dispositivo</button></div>
           <div class="uda-smart-library-status" id="uda-smart-library-status"></div>
           <div class="uda-smart-library-preview"><h4>Anteprima sintetica bozza generata</h4><pre id="uda-smart-generated-preview">Genera una UDA da programmazione annuale per visualizzare una sintesi prudente da validare.</pre></div>
-          <div class="uda-smart-library-markdown"><h4>Anteprima Markdown UDA smart</h4><pre id="uda-smart-markdown-preview">Nessuna bozza selezionata. Usa "Anteprima Markdown" su una bozza in libreria.</pre></div>
+          <div class="uda-smart-library-markdown"><h4>Anteprima del testo UDA smart</h4><pre id="uda-smart-markdown-preview">Nessuna bozza selezionata. Usa "Anteprima del testo" su una bozza in libreria.</pre></div>
           <div class="uda-smart-library-list" id="uda-smart-library-list"></div>
-          <div class="uda-smart-library-privacy"><strong>Libreria locale da validare</strong><br>Le bozze sono salvate solo su questo dispositivo nella chiave <code>cml_uda_smart_library_v1</code>. Non inserire nomi, cognomi, voti, bisogni educativi o dati sensibili di studenti.</div>
+          <div class="uda-smart-library-privacy"><strong>Libreria su questo dispositivo</strong><br>Le bozze sono salvate solo su questo dispositivo. Non inserire nomi, cognomi, voti, bisogni educativi o dati sensibili di studenti.</div>
         </div>
-        <div class="didattica-programmazione-footer">Vista read-only - Dati derivati dal curricolo strutturato - Bozza locale separata - Nessun dato studente - Nessuna modifica a export/import o schema .cml</div>
+        <div class="didattica-programmazione-footer">Vista di sola consultazione - Dati derivati dal curricolo strutturato - Bozza salvata su questo dispositivo - Nessun dato studente - Documento da controllare prima dell'uso istituzionale</div>
       </div>      <!-- UDA MODELLO -->
       <div class="didattica-uda" id="didattica-uda" style="display:none">
         <div class="didattica-uda-header">
@@ -1591,15 +1591,15 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           </div>
           <div class="didattica-uda-draft-actions">
             <button class="didattica-uda-draft-btn didattica-uda-draft-btn-primary" id="btn-gen-uda" onclick="generateUdaDraft()">⚡ Genera bozza UDA</button>
-            <button class="didattica-uda-draft-btn didattica-uda-draft-btn-secondary" id="btn-copy-uda" onclick="copyUdaMarkdown()" disabled>📋 Copia Markdown</button>
-            <button class="didattica-uda-draft-btn didattica-uda-draft-btn-secondary" id="btn-dl-uda" onclick="downloadUdaMarkdown()" disabled>⬇️ Scarica Markdown</button>
+            <button class="didattica-uda-draft-btn didattica-uda-draft-btn-secondary" id="btn-copy-uda" onclick="copyUdaMarkdown()" disabled>📋 Copia testo modificabile</button>
+            <button class="didattica-uda-draft-btn didattica-uda-draft-btn-secondary" id="btn-dl-uda" onclick="downloadUdaMarkdown()" disabled>⬇️ Scarica testo modificabile</button>
           </div>
           <div class="didattica-uda-draft-status" id="uda-draft-status"></div>
           <div class="didattica-uda-draft-preview" id="uda-draft-preview">
-            <textarea id="uda-md-preview" placeholder="Genera una bozza per vedere l'anteprima Markdown..." readonly></textarea>
+            <textarea id="uda-md-preview" placeholder="Genera una bozza per vedere l'anteprima del testo..." readonly></textarea>
           </div>
           <div class="didattica-uda-draft-notice">
-            <strong><span aria-hidden="true">🔒</span> Bozza locale — nessun dato personale studente</strong><br>
+            <strong><span aria-hidden="true">🔒</span> Bozza su questo dispositivo — nessun dato personale studente</strong><br>
             • Il contenuto è generato dal curricolo di istituto e dalle tue marcature evidenze<br>
             • Non inserire nomi, cognomi, voti o dati sensibili di studenti<br>
             • La bozza non è persistita: rigenerala quando serve<br>
@@ -1656,19 +1656,19 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 
       <div id="disc-export-panel" class="disc-export-panel" style="display:none">
         <div class="disc-export-header">
-          <span class="disc-export-title"><span aria-hidden="true">📤</span> Esportazione del curricolo revisionato</span>
+          <span class="disc-export-title"><span aria-hidden="true">📤</span> Scaricamento del curricolo revisionato</span>
           <span class="disc-export-badge badge--warning">Documento di lavoro — da validare</span>
         </div>
-        <p class="disc-export-desc" id="disc-export-desc">L'export produce una bozza Markdown della disciplina. La validazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
+        <p class="disc-export-desc" id="disc-export-desc">Il pulsante genera una bozza di testo modificabile della disciplina. L'approvazione finale resta affidata al gruppo di lavoro e agli organi collegiali competenti.</p>
         <div class="disc-export-actions">
           <button class="export-btn btn-md" id="btn-generate-disc-bozza" onclick="generateDiscBozza()"><span aria-hidden="true">📝</span> Genera bozza</button>
-          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('disc-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di esportazione ▾':'⬇ Azioni di esportazione ▴'"><span aria-hidden="true">⬇</span> Azioni di esportazione ▾</button>
+          <button type="button" class="export-group-toggle" onclick="var e=document.getElementById('disc-secondary-actions');e.hidden=!e.hidden;this.textContent=e.hidden?'⬇ Azioni di scaricamento ▾':'⬇ Azioni di scaricamento ▴'"><span aria-hidden="true">⬇</span> Azioni di scaricamento ▾</button>
         </div>
         <div id="disc-secondary-actions" class="disc-actions-secondary" hidden>
           <button class="export-btn btn-copy" id="btn-copy-disc-md" onclick="copyDiscMarkdown()" disabled style="opacity:0.5"><span aria-hidden="true">📝</span> Copia testo</button>
           <button class="export-btn btn-md" id="btn-dl-disc-md" onclick="downloadDiscMarkdown()" disabled style="opacity:0.5"><span aria-hidden="true">📝</span> Scarica testo</button>
         </div>
-        <textarea id="disc-md-preview" class="disc-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del Markdown..." aria-label="Anteprima Markdown"></textarea>
+        <textarea id="disc-md-preview" class="disc-md-preview" readonly placeholder="Genera la bozza per vedere l'anteprima del testo..." aria-label="Anteprima del testo"></textarea>
       </div>
       <div id="cards-area"></div>
     </div>
@@ -1676,13 +1676,13 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div id="tab-processo" style="display:none">
       <div class="tool-group-inner" style="padding:12px">
         <details id="department-import-panel" class="department-import-panel" style="margin-bottom:12px">
-          <summary style="font-weight:700;font-size:12px;color:#333;cursor:pointer"><span aria-hidden="true">🏫</span> Validazione dipartimentale</summary>
+          <summary style="font-weight:700;font-size:12px;color:#333;cursor:pointer"><span aria-hidden="true">🏫</span> Confronto di dipartimento</summary>
           <p class="department-import-copy">Importa i file proposta ricevuti dai docenti per prepararli alla valutazione del dipartimento.</p>
           <div class="department-import-controls">
             <input id="department-cml-files" type="file" accept=".cml" multiple hidden onchange="importTeacherCmlFiles(this.files);this.value=''">
-            <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Importa proposte docenti</button>
-            <span class="department-import-local">Nessun dato viene inviato online: l'importazione è locale.</span>
-            <span class="department-import-helper" style="display:block;margin-top:4px;font-size:11px;color:#666">Puoi selezionare uno o più file .cml contemporaneamente.</span>
+            <button type="button" class="department-import-btn" onclick="document.getElementById('department-cml-files').click()">Carica proposte docenti</button>
+            <span class="department-import-local">Nessun dato viene inviato online: il caricamento avviene su questo dispositivo.</span>
+            <span class="department-import-helper" style="display:block;margin-top:4px;font-size:11px;color:#666">Puoi selezionare uno o più file di lavoro CurManLight contemporaneamente.</span>
           </div>
           <div id="department-import-feedback" class="department-import-feedback" aria-live="polite"></div>
           <div id="department-import-results"></div>
@@ -1692,10 +1692,10 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <p class="referent-validation-copy">Importa gli esiti dipartimentali per controllare completezza, evidenze e punti da chiarire prima del gruppo di lavoro.</p>
           <div class="referent-validation-controls">
             <input id="referent-cml-files" type="file" accept=".cml" multiple hidden onchange="handleReferentOutcomeFileSelection(this)">
-            <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Importa esiti dipartimentali</button>
+            <button type="button" class="referent-validation-btn" onclick="requireRoleAccess('referentOutcomeImport',openReferentOutcomeFilePicker)">Carica esiti dipartimentali</button>
             <button type="button" class="role-access-lock-btn" data-role-access-lock hidden onclick="lockRoleAccess()">Blocca di nuovo</button>
-            <span class="referent-validation-local">Nessun dato viene inviato online: l'importazione è locale.</span>
-            <span class="referent-validation-helper" style="display:block;margin-top:4px;font-size:11px;color:#666">Puoi selezionare uno o più file .cml contemporaneamente.</span>
+            <span class="referent-validation-local">Nessun dato viene inviato online: il caricamento avviene su questo dispositivo.</span>
+            <span class="referent-validation-helper" style="display:block;margin-top:4px;font-size:11px;color:#666">Puoi selezionare uno o più file di lavoro CurManLight contemporaneamente.</span>
           </div>
           <div id="referent-validation-feedback" class="referent-validation-feedback" aria-live="polite"></div>
           <div id="referent-validation-results"></div>
@@ -1710,7 +1710,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="sum-box">
         <h2><span aria-hidden="true">📋</span> Curricolo Definitivo dopo Revisione</h2>
         <p style="font-size:12px;color:#555;margin-bottom:8px">Voci approvate + invariate. Esporta per il documento ufficiale da presentare al Collegio dei Docenti.</p>
-        <p style="font-size:12px;color:#1a237e;margin:8px 0 0;line-height:1.4"><span aria-hidden="true">🔀</span> Tutte le esportazioni (Word, Markdown, PDF, .cml, copia di sicurezza) sono ora disponibili nella sezione <a href="#" onclick="setTab('esportazioni');return false" style="font-weight:700;color:#1a237e"><span aria-hidden="true">📤</span> Esportazioni</a>.</p>
+        <p style="font-size:12px;color:#1a237e;margin:8px 0 0;line-height:1.4"><span aria-hidden="true">🔀</span> Tutti i documenti scaricabili (Word, testo modificabile, PDF, file di lavoro CurManLight, copia di sicurezza) sono ora disponibili nella sezione <a href="#" onclick="setTab('esportazioni');return false" style="font-weight:700;color:#1a237e"><span aria-hidden="true">📤</span> Esportazioni</a>.</p>
         <p style="font-size:11px;color:#e65100;margin:6px 0 0;line-height:1.4"><span aria-hidden="true">⚠️</span> <strong>Documento di lavoro — da validare.</strong> Non sostituisce delibera del Collegio Docenti.</p>
       </div>
       <div id="riepilogo-body"></div>
@@ -2001,7 +2001,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <div id="tab-esportazioni" style="display:none">
   <div class="tab-esportazioni">
     <h2><span aria-hidden="true">📤</span> Esportazioni e consegne</h2>
-    <p class="sub">Tutti gli output in un unico punto: esporta, condividi, archivia.</p>
+    <p class="sub">Tutti i documenti in un unico punto: scarica, condividi, archivia.</p>
     <div class="esport-group">
       <h3><span aria-hidden="true">📄</span> Documento finale</h3>
       <p style="font-size:11px;color:#666;margin:0 0 8px">Versione approvata del curricolo per il Collegio Docenti.</p>
@@ -2024,7 +2024,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     </div>
     <div class="esport-group">
       <h3><span aria-hidden="true">📝</span> Bozza disciplina</h3>
-      <p style="font-size:11px;color:#666;margin:0 0 8px">Bozza Markdown della disciplina selezionata in Revisione.</p>
+      <p style="font-size:11px;color:#666;margin:0 0 8px">Bozza di testo modificabile della disciplina selezionata in Revisione.</p>
       <div class="esport-actions">
         <button class="export-btn btn-md" onclick="generateDiscBozza()"><span aria-hidden="true">📝</span> Genera bozza</button>
         <button class="export-btn btn-copy" onclick="copyDiscMarkdown()"><span aria-hidden="true">📋</span> Copia testo</button>
@@ -2032,8 +2032,8 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </div>
     </div>
     <div class="esport-group">
-      <h3><span aria-hidden="true">💼</span> File di lavoro .cml</h3>
-      <p style="font-size:11px;color:#666;margin:0 0 8px">File .cml per lo scambio tra docenti, dipartimento e referente curricolo.</p>
+      <h3><span aria-hidden="true">💼</span> File di lavoro CurManLight</h3>
+      <p style="font-size:11px;color:#666;margin:0 0 8px">File di lavoro CurManLight per lo scambio tra docenti, dipartimento e referente curricolo.</p>
       <div class="esport-actions">
         <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff"><span aria-hidden="true">⬇️</span> Scarica proposta docente</button>
         <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff"><span aria-hidden="true">⬆️</span> Invia al Drive</button>
@@ -2084,7 +2084,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     </div>
     <div class="guida-card">
       <h3><span aria-hidden="true">📤</span> Esportazioni</h3>
-      <p>Trovi tutti gli strumenti di esportazione in un unico tab: Word, Markdown, PDF, copia di sicurezza e resoconto.</p>
+      <p>Trovi tutti gli strumenti di scaricamento in un unico tab: Word, testo modificabile, PDF, copia di sicurezza e resoconto.</p>
     </div>
     <div class="guida-card">
       <h3><span aria-hidden="true">🔒</span> Cosa non può fare</h3>
@@ -2100,7 +2100,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <h3><span aria-hidden="true">💻</span> Installazione</h3>
       <p>Puoi installare questo strumento sul telefono o computer come app: usa il pulsante "Installa" nel menu Azioni (icona <span aria-hidden="true">⚙️</span>) o dal browser. I dati restano sul dispositivo.</p>
     </div>
-    <div class="guida-note"><span class="badge--prototype" style="display:inline-block;margin-right:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">📋</span> Prototipo</span> <span class="badge--readonly" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">🔒</span> Read-only</span><br>Nessun dato viene salvato su server. Richiede validazione professionale del docente. Non costituisce documento istituzionale approvato.</div>
+    <div class="guida-note"><span class="badge--prototype" style="display:inline-block;margin-right:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">📋</span> Prototipo</span> <span class="badge--readonly" style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700"><span aria-hidden="true">🔒</span> Sola consultazione</span><br>Nessun dato viene salvato su server. Richiede validazione professionale del docente. Non costituisce documento istituzionale approvato.</div>
   </div>
 </div>
   </main>
@@ -2822,7 +2822,7 @@ function updateAnnualDraftPreview(){var preview=document.getElementById("annual-
 function renderAnnualDraftPanel(){var disc=document.getElementById("annual-draft-disciplina");if(!disc)return;var saved=getAnnualPlanningSavedDraft();var preferredDisc=(saved&&saved.disciplina)||selDisc||DISCIPLINE[0]||"";disc.innerHTML=DISCIPLINE.map(function(d){return '<option value="'+escapeHtml(d)+'">'+escapeHtml(d)+'</option>';}).join("");if(DISCIPLINE.indexOf(preferredDisc)!==-1)disc.value=preferredDisc;var ord=document.getElementById("annual-draft-ordine");if(ord&&saved&&saved.ordine)ord.value=saved.ordine;updateAnnualDraftClasses(saved&&saved.classe);var anno=document.getElementById("annual-draft-anno");if(anno)anno.value=(saved&&saved.annoScolastico)||"";var periodo=document.getElementById("annual-draft-periodo");if(periodo)periodo.value=(saved&&saved.periodi&&saved.periodi[0]&&saved.periodi[0].periodo)||"";var stato=document.getElementById("annual-draft-stato");if(stato&&saved&&saved.stato)stato.value=saved.stato;var note=document.getElementById("annual-draft-note");if(note)note.value=(saved&&saved.noteGeneriche)||"";renderAnnualDraftUnits((saved&&saved.unitaSelezionate)||[]);updateAnnualDraftPreview();}
 function saveAnnualPlanningDraft(){try{var draft=collectAnnualPlanningDraft();localStorage.setItem(ANNUAL_PLANNING_DRAFT_KEY,JSON.stringify(draft));setAnnualDraftStatus("Bozza salvata localmente su questo dispositivo. Non contiene dati studenti se hai rispettato le avvertenze.","ok");renderProgrammazioneAnnuale();}catch(err){setAnnualDraftStatus("Salvataggio locale non disponibile in questo browser.","warn");}}
 function clearAnnualPlanningDraft(){try{localStorage.removeItem(ANNUAL_PLANNING_DRAFT_KEY);}catch(err){}setAnnualDraftStatus("Bozza locale cancellata.","ok");renderProgrammazioneAnnuale();}
-function copyAnnualPlanningMarkdown(){updateAnnualDraftPreview();var text=ANNUAL_PLANNING_DRAFT_MARKDOWN||"";if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){setAnnualDraftStatus("Markdown copiato negli appunti.","ok");}).catch(function(){setAnnualDraftStatus("Copia automatica non riuscita: seleziona l'anteprima e copia manualmente.","warn");});return;}var ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");setAnnualDraftStatus("Markdown copiato negli appunti.","ok");}catch(err){setAnnualDraftStatus("Copia automatica non riuscita: seleziona l'anteprima e copia manualmente.","warn");}document.body.removeChild(ta);}
+function copyAnnualPlanningMarkdown(){updateAnnualDraftPreview();var text=ANNUAL_PLANNING_DRAFT_MARKDOWN||"";if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){setAnnualDraftStatus("Testo modificabile copiato negli appunti.","ok");}).catch(function(){setAnnualDraftStatus("Copia automatica non riuscita: seleziona l'anteprima e copia manualmente.","warn");});return;}var ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");setAnnualDraftStatus("Testo modificabile copiato negli appunti.","ok");}catch(err){setAnnualDraftStatus("Copia automatica non riuscita: seleziona l'anteprima e copia manualmente.","warn");}document.body.removeChild(ta);}
 
 var UDA_SMART_LIBRARY_KEY="cml_uda_smart_library_v1";
 function loadUdaSmartLibrary(){try{var raw=localStorage.getItem(UDA_SMART_LIBRARY_KEY);var parsed=raw?JSON.parse(raw):[];return Array.isArray(parsed)?parsed:[];}catch(err){return [];}}
@@ -2861,12 +2861,12 @@ function setUdaSmartLibraryResultsCount(visible,total){var el=document.getElemen
 function applyUdaSmartLibraryFilters(){UDA_SMART_LIBRARY_FILTERS=getUdaSmartLibraryFiltersFromUi();renderUdaSmartLibrary();setUdaSmartLibraryStatus("Filtri applicati.","ok");}
 function clearUdaSmartLibraryFilters(){UDA_SMART_LIBRARY_FILTERS={disciplina:"",ordine:"",classe:"",periodo:"",stato:"",query:"",sort:"recent_desc"};setUdaSmartLibraryFiltersToUi(UDA_SMART_LIBRARY_FILTERS);renderUdaSmartLibrary();setUdaSmartLibraryStatus("Filtri ripristinati.","ok");}
 function buildUdaSmartDraftMarkdown(item){if(!item)return"";var lines=[];var ts=item.timestamp||item.timestampCreazione||new Date().toISOString();lines.push("# "+markdownFallbackValue(item.titolo));lines.push("");lines.push("- Tipo: UDA smart locale (bozza)");lines.push("- Disciplina: "+markdownFallbackValue(item.disciplina));lines.push("- Ordine: "+markdownFallbackValue(item.ordine));lines.push("- Classe/Fascia: "+markdownFallbackValue(item.classe));lines.push("- Anno scolastico: "+markdownFallbackValue(item.annoScolastico));lines.push("- Periodo: "+markdownFallbackValue(item.periodo));lines.push("- Stato: "+markdownFallbackValue(normalizeUdaSmartState(item.stato)));lines.push("- Timestamp: "+markdownFallbackValue(ts));lines.push("");lines=lines.concat(markdownListLines("Nuclei",item.nuclei));lines=lines.concat(markdownListLines("Unita collegate",item.unitaCollegate));lines=lines.concat(markdownListLines("Evidenze selezionate",item.evidenzeSelezionate));lines.push("## Obiettivo di apprendimento");lines.push("");lines.push(markdownFallbackValue(item.obiettivoApprendimento));lines.push("");lines.push("## Attivita in sintesi");lines.push("");lines.push(markdownFallbackValue(item.attivitaSintesi));lines.push("");lines=lines.concat(markdownListLines("Criteri di valutazione",item.criteriValutazione));lines.push("## Durata ore");lines.push("");lines.push(markdownFallbackValue(item.durataOre));lines.push("");lines.push("## Note docente");lines.push("");lines.push(markdownFallbackValue(item.noteDocente));lines.push("");lines.push("## Fonte curricolo");lines.push("");lines.push(markdownFallbackValue(item.fonteCurricolo));lines.push("");lines.push("## Fonte programmazione annuale");lines.push("");lines.push(markdownFallbackValue(item.fonteProgrammazioneAnnuale));lines.push("");lines.push("## Privacy notice");lines.push("");lines.push(markdownFallbackValue(item.privacyNotice));lines.push("");lines.push("## Nota di validazione professionale");lines.push("");lines.push("Bozza professionale da validare in sede docente/dipartimentale prima dell'uso istituzionale. Non inserire dati personali di studenti, voti o osservazioni individuali.");return lines.join("\n");}
-function setUdaSmartMarkdownPreview(markdown){var preview=document.getElementById("uda-smart-markdown-preview");if(!preview)return;preview.textContent=markdown||"Nessuna bozza selezionata. Usa \"Anteprima Markdown\" su una bozza in libreria.";}
+function setUdaSmartMarkdownPreview(markdown){var preview=document.getElementById("uda-smart-markdown-preview");if(!preview)return;preview.textContent=markdown||"Nessuna bozza selezionata. Usa \"Anteprima del testo\" su una bozza in libreria.";}
 function sanitizeUdaSmartFilenamePart(value){var txt=(value||"uda-smart").toString().toLowerCase();txt=txt.normalize?txt.normalize("NFD").replace(/[\u0300-\u036f]/g,""):txt;txt=txt.replace(/[^a-z0-9_-]+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"");return txt||"uda-smart";}
 function buildUdaSmartMarkdownFilename(item){var base=sanitizeUdaSmartFilenamePart(item&&item.disciplina?item.disciplina:"disciplina");var ts=((item&&item.timestamp)||(item&&item.timestampCreazione)||new Date().toISOString()).replace(/[^0-9]/g,"").slice(0,14)||Date.now().toString();return "uda-smart-"+base+"-"+ts+".md";}
-function previewUdaSmartMarkdown(id){var item=getUdaSmartDraftById(id);if(!item){setUdaSmartMarkdownPreview("");setUdaSmartLibraryStatus("Bozza UDA non trovata in libreria locale.","warn");return;}var md=buildUdaSmartDraftMarkdown(item);UDA_SMART_MD_CACHE=md;setUdaSmartMarkdownPreview(md);setUdaSmartLibraryStatus("Anteprima Markdown aggiornata.","ok");}
-function copyUdaSmartMarkdown(id){var item=getUdaSmartDraftById(id);if(!item){setUdaSmartLibraryStatus("Bozza UDA non trovata in libreria locale.","warn");return;}var md=buildUdaSmartDraftMarkdown(item);UDA_SMART_MD_CACHE=md;setUdaSmartMarkdownPreview(md);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(md).then(function(){setUdaSmartLibraryStatus("Markdown copiato negli appunti.","ok");}).catch(function(){setUdaSmartLibraryStatus("Copia automatica non riuscita: usa l'anteprima Markdown per copia manuale.","warn");});return;}var ta=document.createElement("textarea");ta.value=md;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");setUdaSmartLibraryStatus("Markdown copiato negli appunti.","ok");}catch(err){setUdaSmartLibraryStatus("Copia automatica non supportata: usa l'anteprima Markdown per copia manuale.","warn");}document.body.removeChild(ta);}
-function downloadUdaSmartMarkdown(id){var item=getUdaSmartDraftById(id);if(!item){setUdaSmartLibraryStatus("Bozza UDA non trovata in libreria locale.","warn");return;}var md=buildUdaSmartDraftMarkdown(item);UDA_SMART_MD_CACHE=md;setUdaSmartMarkdownPreview(md);downloadMarkdownString(md,buildUdaSmartMarkdownFilename(item));setUdaSmartLibraryStatus("File Markdown UDA scaricato localmente.","ok");}
+function previewUdaSmartMarkdown(id){var item=getUdaSmartDraftById(id);if(!item){setUdaSmartMarkdownPreview("");setUdaSmartLibraryStatus("Bozza UDA non trovata nella libreria su questo dispositivo.","warn");return;}var md=buildUdaSmartDraftMarkdown(item);UDA_SMART_MD_CACHE=md;setUdaSmartMarkdownPreview(md);setUdaSmartLibraryStatus("Anteprima del testo aggiornata.","ok");}
+function copyUdaSmartMarkdown(id){var item=getUdaSmartDraftById(id);if(!item){setUdaSmartLibraryStatus("Bozza UDA non trovata nella libreria su questo dispositivo.","warn");return;}var md=buildUdaSmartDraftMarkdown(item);UDA_SMART_MD_CACHE=md;setUdaSmartMarkdownPreview(md);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(md).then(function(){setUdaSmartLibraryStatus("Testo modificabile copiato negli appunti.","ok");}).catch(function(){setUdaSmartLibraryStatus("Copia automatica non riuscita: usa l'anteprima del testo per copia manuale.","warn");});return;}var ta=document.createElement("textarea");ta.value=md;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");setUdaSmartLibraryStatus("Testo modificabile copiato negli appunti.","ok");}catch(err){setUdaSmartLibraryStatus("Copia automatica non supportata: usa l'anteprima del testo per copia manuale.","warn");}document.body.removeChild(ta);}
+function downloadUdaSmartMarkdown(id){var item=getUdaSmartDraftById(id);if(!item){setUdaSmartLibraryStatus("Bozza UDA non trovata nella libreria su questo dispositivo.","warn");return;}var md=buildUdaSmartDraftMarkdown(item);UDA_SMART_MD_CACHE=md;setUdaSmartMarkdownPreview(md);downloadMarkdownString(md,buildUdaSmartMarkdownFilename(item));setUdaSmartLibraryStatus("File di testo UDA scaricato su questo dispositivo.","ok");}
 
 function renderUdaSmartLibrary(){
   var listEl=document.getElementById("uda-smart-library-list");
@@ -2888,7 +2888,7 @@ function renderUdaSmartLibrary(){
   }
   listEl.innerHTML=filtered.map(function(item){
     var meta=[item.disciplina,item.ordine,item.classe,item.periodo].filter(Boolean).join(" - ")||"metadati da completare";
-    return '<div class="uda-smart-library-card"><strong>'+escapeHtml(item.titolo||"Bozza UDA smart")+'</strong><span>'+escapeHtml(meta)+'</span><br><span>Stato: '+escapeHtml(normalizeUdaSmartState(item.stato||"bozza"))+'</span><br><span>'+escapeHtml(item.noteDocente||"Nessuna nota generica.")+'</span><div class="uda-smart-library-card-actions"><button class="uda-smart-library-btn" type="button" onclick="previewUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Anteprima Markdown</button><button class="uda-smart-library-btn" type="button" onclick="copyUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Copia Markdown</button><button class="uda-smart-library-btn" type="button" onclick="downloadUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Scarica Markdown</button><button class="uda-smart-library-btn uda-smart-library-btn-danger" type="button" onclick="deleteUdaSmartDraft(\''+escapeHtml(item.id)+'\')">Elimina bozza</button></div></div>';
+    return '<div class="uda-smart-library-card"><strong>'+escapeHtml(item.titolo||"Bozza UDA smart")+'</strong><span>'+escapeHtml(meta)+'</span><br><span>Stato: '+escapeHtml(normalizeUdaSmartState(item.stato||"bozza"))+'</span><br><span>'+escapeHtml(item.noteDocente||"Nessuna nota generica.")+'</span><div class="uda-smart-library-card-actions"><button class="uda-smart-library-btn" type="button" onclick="previewUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Anteprima del testo</button><button class="uda-smart-library-btn" type="button" onclick="copyUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Copia testo</button><button class="uda-smart-library-btn" type="button" onclick="downloadUdaSmartMarkdown(\''+escapeHtml(item.id)+'\')">Scarica testo</button><button class="uda-smart-library-btn uda-smart-library-btn-danger" type="button" onclick="deleteUdaSmartDraft(\''+escapeHtml(item.id)+'\')">Elimina bozza</button></div></div>';
   }).join("");
 }
 // UDA MODELLO DATA
@@ -4479,7 +4479,7 @@ function exportTeacherCml(){
   const safeDisc = discName.replace(/\s+/g, '_').replace(/[^\w\-]/g, '');
   const filename = `proposta_docente_${safeDisc}_${new Date().toISOString().slice(0,10)}.cml`;
   downloadBlob(blob, filename);
-  showToast('✅ File proposta .cml generato correttamente');
+  showToast('✅ File di lavoro docente generato correttamente');
 }
 
 const ALLOWED_ENDPOINT_HOSTS = [
@@ -4517,7 +4517,7 @@ function validateDriveEndpoint(endpoint) {
 function uploadTeacherCmlToDrive(){
   const endpoint = getDriveUploadEndpoint();
   if (!endpoint) {
-    showToast('ℹ️ Invio al Drive non ancora configurato. Puoi scaricare il file proposta .cml e caricarlo manualmente nel Drive condiviso della scuola.');
+    showToast('ℹ️ Invio al Drive non ancora configurato. Puoi scaricare il file di lavoro docente e caricarlo manualmente nel Drive condiviso della scuola.');
     return;
   }
   const validation = validateDriveEndpoint(endpoint);
@@ -4531,7 +4531,7 @@ function uploadTeacherCmlToDrive(){
       host: 'Host non consentito. Verifica l\'endpoint Drive configurato.',
       malformed: 'Endpoint non valido. Verifica l\'URL configurato.'
     };
-    showToast('⚠️ ' + (messages[validation.reason] || messages.malformed) + ' Il file .cml resterà disponibile per il caricamento manuale.');
+    showToast('⚠️ ' + (messages[validation.reason] || messages.malformed) + ' Il file di lavoro resterà disponibile per il caricamento manuale.');
     return;
   }
   const btn = event?.target;
@@ -4558,7 +4558,7 @@ function uploadTeacherCmlToDrive(){
     showToast('✅ Proposta inviata al Drive condiviso. Il dipartimento potrà acquisirla per la validazione.');
   })
   .catch(() => {
-    showToast('⚠️ Non è stato possibile inviare la proposta al Drive. Puoi scaricare il file .cml e caricarlo manualmente.');
+    showToast('⚠️ Non è stato possibile inviare la proposta al Drive. Puoi scaricare il file di lavoro e caricarlo manualmente.');
   })
   .finally(() => {
     if (btn) { btn.disabled = false; btn.textContent = originalText; }
@@ -4667,7 +4667,7 @@ async function importTeacherCmlFiles(fileList){
   const files=Array.from(fileList||[]);
   const feedback=document.getElementById("department-import-feedback");
   if(!files.length){
-    if(feedback) feedback.textContent="Seleziona almeno un file .cml.";
+    if(feedback) feedback.textContent="Seleziona almeno un file di lavoro CurManLight.";
     return;
   }
   const MAX_FILE_SIZE=20*1024*1024;
@@ -4713,7 +4713,7 @@ async function importTeacherCmlFiles(fileList){
   renderDepartmentImport();
   const summary=buildDepartmentImportSummary();
   if(feedback) feedback.textContent=summary.validFiles?"Proposte importate. Il dipartimento può ora leggerle e valutarle.":"Nessuna proposta docente valida importata.";
-  showToast(summary.validFiles?"✅ Proposte docenti importate localmente":"⚠️ Nessun file .cml valido importato");
+  showToast(summary.validFiles?"✅ Proposte docenti caricate su questo dispositivo":"⚠️ Nessun file di lavoro valido caricato");
 }
 
 function renderDepartmentImport(){
@@ -4807,7 +4807,7 @@ function exportDepartmentOutcomeCml(){
   const blob=new Blob([json],{type:"application/json;charset=utf-8"});
   const filename=`esito_dipartimento_${new Date().toISOString().slice(0,10)}.cml`;
   downloadBlob(blob,filename);
-  showToast('✅ Esito dipartimento .cml generato correttamente');
+  showToast('✅ File esito dipartimento generato correttamente');
 }
 // DEPARTMENT IMPORT END
 
@@ -5546,7 +5546,7 @@ async function importDepartmentOutcomeCmlFiles(fileList){
   const files=Array.from(fileList||[]);
   const feedback=document.getElementById("referent-validation-feedback");
   if(!files.length){
-    if(feedback) feedback.textContent="Seleziona almeno un file .cml.";
+    if(feedback) feedback.textContent="Seleziona almeno un file di lavoro CurManLight.";
     return;
   }
   const MAX_FILE_SIZE=20*1024*1024;
@@ -5611,7 +5611,7 @@ async function importDepartmentOutcomeCmlFiles(fileList){
   renderReferentValidation();
   const summary=buildReferentValidationSummary();
   if(feedback) feedback.textContent=summary.validOutcomeFiles?"Esiti dipartimentali importati. Il referente può ora controllare completezza, evidenze e punti da chiarire.":"Nessun esito dipartimentale valido importato.";
-  showToast(summary.validOutcomeFiles?"✅ Esiti dipartimentali importati localmente":"⚠️ Nessun file .cml valido importato");
+  showToast(summary.validOutcomeFiles?"✅ Esiti dipartimentali caricati su questo dispositivo":"⚠️ Nessun file di lavoro valido caricato");
 }
 
 function renderReferentValidation(){
@@ -5889,7 +5889,7 @@ function buildReferentGroupWorkReportMarkdown() {
 function downloadReferentGroupWorkReport() {
   const md = buildReferentGroupWorkReportMarkdown();
   if (!md) {
-    showToast('Importa prima almeno un esito dipartimentale .cml.');
+    showToast('Carica prima almeno un esito dipartimentale in formato CurManLight.');
     return;
   }
   const blob = new Blob([md], {type: 'text/markdown;charset=utf-8'});

@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION - Remediation microcopy runtime non tecnico
+
+- **Nome slice**: `CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION`
+- **Commit base**: `4dfb8e8`
+- **Tipo slice**: runtime microcopy remediation
+- **Runtime modificato**: si, `_published_snapshot/netlify-current/index.html`
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION.md`, `report/CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: semplificazione lessico UI (Home, Programmazione, UDA smart, Processo, Esportazioni, Guida) senza variazioni funzionali
+- **Vincoli confermati**: nessuna modifica logica/schema/storage/import-export tecnico/validatori
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_NON_TECHNICAL_MICROCOPY_RUNTIME_REMEDIATION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION-PLAN - Piano remediation microcopy runtime (docs-only)
 
 - **Nome slice**: `CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION-PLAN`
