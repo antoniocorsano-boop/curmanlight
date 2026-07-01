@@ -975,7 +975,12 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .tab-esportazioni h2{font-size:16px;color:#1a237e;margin:0 0 4px}
 .tab-esportazioni .sub{font-size:11px;color:#78909c;margin:0 0 16px}
 .esport-group{background:#fff;border:1px solid #e0e0e0;border-radius:9px;padding:12px 14px;margin-bottom:10px}
-.esport-group h3{font-size:12px;color:#37474f;margin:0 0 8px;display:flex;align-items:center;gap:6px}
+.esport-group h3{font-size:12px;color:#37474f;margin:0 0 4px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.esport-group-desc{font-size:11px;color:#546e7a;margin:0 0 8px;line-height:1.45}
+.esport-role-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#eceff1;color:#546e7a;border:1px solid #cfd8dc;margin-left:auto}
+.esport-intro-tip{background:#f5f7fa;border:1px solid #dfe3eb;border-radius:8px;padding:8px 11px;font-size:11px;color:#546e7a;line-height:1.45;margin-bottom:12px}
+.esport-group.compare{border-left-color:#ef6c00}
+.esport-group.report{border-left-color:#37474f}
 .esport-actions{display:flex;gap:6px;flex-wrap:wrap}
 /* GUIDA TAB */
 .tab-guida{max-width:960px;margin:0 auto;padding:16px 12px}
@@ -1968,10 +1973,11 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <div id="tab-esportazioni" style="display:none">
   <div class="tab-esportazioni">
     <h2><span aria-hidden="true">📤</span> Esportazioni e consegne</h2>
-    <p class="sub">Tutti i documenti in un unico punto: scarica, condividi, archivia.</p>
+    <p class="sub">Scegli il formato in base al tuo ruolo e alla fase di lavoro.</p>
+    <p class="esport-intro-tip"><strong>Una scelta, una conseguenza.</strong> Documenti leggibili per il Collegio, file di lavoro per lo scambio tra docenti e dipartimento, report per il referente, copia di sicurezza per questo dispositivo.</p>
     <div class="esport-group">
-      <h3><span aria-hidden="true">📄</span> Documento finale</h3>
-      <p style="font-size:11px;color:#666;margin:0 0 8px">Versione approvata del curricolo per il Collegio Docenti.</p>
+      <h3><span aria-hidden="true">📄</span> Documento finale <span class="esport-role-badge">Referente · Collegio</span></h3>
+      <p class="esport-group-desc">Per condividere il curricolo leggibile e approvato.</p>
       <div class="esport-actions">
         <button class="export-btn btn-word" onclick="exportWord(true)"><span aria-hidden="true">📄</span> Word definitivo</button>
         <button class="export-btn btn-copy" onclick="copyForWord(true)"><span aria-hidden="true">📋</span> Copia per Word</button>
@@ -1979,9 +1985,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <button class="export-btn btn-pdf" onclick="exportPDF(true)"><span aria-hidden="true">🖨</span> PDF</button>
       </div>
     </div>
-    <div class="esport-group">
-      <h3><span aria-hidden="true">🔄</span> Confronto modifiche</h3>
-      <p style="font-size:11px;color:#666;margin:0 0 8px">Documento di lavoro con tutte le proposte di modifica.</p>
+    <div class="esport-group compare">
+      <h3><span aria-hidden="true">🔄</span> Confronto modifiche <span class="esport-role-badge">Dipartimento · Referente</span></h3>
+      <p class="esport-group-desc">Per raccogliere e discutere tutte le proposte di modifica prima dell'approvazione.</p>
       <div class="esport-actions">
         <button class="export-btn btn-word" onclick="exportWord()"><span aria-hidden="true">📄</span> Word confronto</button>
         <button class="export-btn btn-copy" onclick="copyForWord()"><span aria-hidden="true">📋</span> Copia per Word</button>
@@ -1990,32 +1996,35 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </div>
     </div>
     <div class="esport-group">
-      <h3><span aria-hidden="true">📝</span> Bozza disciplina</h3>
-      <p style="font-size:11px;color:#666;margin:0 0 8px">Bozza di testo modificabile della disciplina selezionata in Revisione.</p>
+      <h3><span aria-hidden="true">📝</span> Bozza disciplina <span class="esport-role-badge">Docente</span></h3>
+      <p class="esport-group-desc">Bozza di testo della disciplina selezionata in Revisione — da adattare professionalmente.</p>
       <div class="esport-actions">
         <button class="export-btn btn-md" onclick="generateDiscBozza()"><span aria-hidden="true">📝</span> Genera bozza</button>
         <button class="export-btn btn-copy" onclick="copyDiscMarkdown()"><span aria-hidden="true">📋</span> Copia testo</button>
         <button class="export-btn btn-md" onclick="downloadDiscMarkdown()"><span aria-hidden="true">⬇️</span> Scarica testo</button>
       </div>
     </div>
-    <div class="esport-group">
-      <h3><span aria-hidden="true">💼</span> File di lavoro CurManLight</h3>
-      <p style="font-size:11px;color:#666;margin:0 0 8px">File di lavoro CurManLight per lo scambio tra docenti, dipartimento e referente curricolo.</p>
+    <div class="esport-group tech">
+      <h3><span aria-hidden="true">💼</span> File di lavoro CurManLight <span class="esport-role-badge">Docente · Dipartimento</span></h3>
+      <p class="esport-group-desc">Per raccogliere o trasferire proposte tra docenti, dipartimento e referente. Formato <code>.cml</code> — non è un documento Word.</p>
       <div class="esport-actions">
         <button class="export-btn btn-cml" onclick="exportTeacherCml()" style="background:#3949ab;color:#fff"><span aria-hidden="true">⬇️</span> Scarica proposta docente</button>
         <button class="export-btn btn-cml" onclick="uploadTeacherCmlToDrive()" style="background:#00695c;color:#fff"><span aria-hidden="true">⬆️</span> Invia al Drive</button>
         <button class="export-btn btn-cml" onclick="exportDepartmentOutcomeCml()" style="background:#004d40;color:#fff"><span aria-hidden="true">⬇️</span> Esito dipartimento</button>
       </div>
+      <span class="export-note">Invia al Drive: scarica il file e lo carichi manualmente — nessun invio automatico.</span>
     </div>
-    <div class="esport-group">
-      <h3><span aria-hidden="true">📋</span> Report e resoconti</h3>
+    <div class="esport-group report">
+      <h3><span aria-hidden="true">📋</span> Report e resoconti <span class="esport-role-badge">Referente · Gruppo lavoro</span></h3>
+      <p class="esport-group-desc">Per il referente o il gruppo di lavoro: sintesi decisioni e avanzamento revisione.</p>
       <div class="esport-actions">
         <button class="export-btn btn-md" onclick="setTab('riepilogo');renderRiepilogo()"><span aria-hidden="true">📊</span> Resoconto sintesi</button>
         <button class="export-btn btn-md" onclick="downloadReferentGroupWorkReport()"><span aria-hidden="true">📝</span> Report gruppo lavoro</button>
       </div>
     </div>
-    <div class="esport-group">
-      <h3><span aria-hidden="true">💾</span> Copia di sicurezza</h3>
+    <div class="esport-group tool">
+      <h3><span aria-hidden="true">💾</span> Copia di sicurezza <span class="esport-role-badge">Tutti i ruoli</span></h3>
+      <p class="esport-group-desc">Per conservare una copia di sicurezza su questo dispositivo o ripristinare un salvataggio precedente.</p>
       <div class="esport-actions">
         <button class="export-btn btn-cml" onclick="saveLocalState(false);exportLocalBackup()"><span aria-hidden="true">⬇️</span> Salva copia</button>
         <button class="export-btn btn-cml" onclick="document.getElementById('local-backup-input').click()"><span aria-hidden="true">⬆️</span> Importa copia</button>

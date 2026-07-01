@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-235 - Exports UX runtime micro-slice
+
+- **Nome slice**: `CML-235`
+- **Commit base**: `7db124e`
+- **Tipo slice**: runtime microfix
+- **Runtime modificato**: sì — solo area Esportazioni
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-235.md`, `report/CML-235_exports_ux_runtime_micro_slice.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Azione principale**: badge ruolo, microcopy per fase d'uso, distinzione visiva documento/confronto/.cml/report/backup; nota su invio Drive manuale
+- **Scope confermato**: nessuna modifica a funzioni export, schema `.cml`, JSON curriculum, tools, PWA
+- **Push**: non eseguito
+- **Verdetto**: `CML_235_EXPORTS_UX_RUNTIME_MICRO_SLICE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UX-LIGHTWEIGHT-EXPERIENCE-SECOND-CYCLE-AUDIT - Audit secondo ciclo UX P2/P3
 
 - **Nome slice**: `CML-UX-LIGHTWEIGHT-EXPERIENCE-SECOND-CYCLE-AUDIT`
