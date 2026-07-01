@@ -1,5 +1,19 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1-CLOSURE - Chiusura documentale post-push e smoke pubblico
+
+- **Nome slice**: `CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1-CLOSURE`
+- **Commit base**: `18fa3f5`
+- **Tipo slice**: docs-only closure report
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1-CLOSURE.md`, `report/CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1-CLOSURE.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Contesto consolidato**: slice runtime P0/P1 gia pubblicata e verificata (`18fa3f5`, push `9fb4ad5..18fa3f5`, smoke pubblico OK)
+- **Evidenze chiusura**: main/`origin/main`/remoto allineati su `18fa3f5`; endpoint pubblico `HTTP 200`; smoke UI completo superato; nessun errore console/page
+- **Invarianti confermate**: nessuna modifica a dati/logica/schema/storage/validatori/filtri UDA/flussi interni
+- **Nota working tree**: modifica tracked preesistente `docs/04_user/educazione_fisica_validazione_dipartimentale.md` lasciata invariata ed esclusa
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_LIGHTWEIGHT_RUNTIME_REORDER_P0_P1_CLOSURE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1 - Riordino runtime leggero criticita P0/P1
 
 - **Nome slice**: `CML-UX-LIGHTWEIGHT-RUNTIME-REORDER-P0-P1`
