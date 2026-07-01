@@ -1,5 +1,18 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION-PLAN - Piano remediation microcopy runtime (docs-only)
+
+- **Nome slice**: `CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION-PLAN`
+- **Commit base**: `ca1390c`
+- **Tipo slice**: docs-only plan
+- **Runtime modificato**: no
+- **Dipendenza**: audit precedente `CML_UX_NON_TECHNICAL_USER_EXPERIENCE_AUDIT_READY_LOCAL_NOT_PUSHED`
+- **File modificati**: `docs/03_execution/CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION-PLAN.md`, `report/CML-UX-NON-TECHNICAL-MICROCOPY-RUNTIME-REMEDIATION-PLAN.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Output**: priorita P0/P1/P2, mappa operativa remediation, regole di sostituzione linguistica, scope runtime futuro e smoke test minimo
+- **Vincoli confermati**: nessuna modifica a runtime/logica/schema/storage/import-export tecnico/validatori/struttura curriculum
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_NON_TECHNICAL_MICROCOPY_RUNTIME_REMEDIATION_PLAN_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UX-NON-TECHNICAL-USER-EXPERIENCE-AUDIT - Audit lessico non tecnico per utenti scolastici
 
 - **Nome slice**: `CML-UX-NON-TECHNICAL-USER-EXPERIENCE-AUDIT`
