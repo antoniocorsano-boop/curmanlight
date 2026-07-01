@@ -1,5 +1,19 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-UX-NON-TECHNICAL-USER-EXPERIENCE-AUDIT - Audit lessico non tecnico per utenti scolastici
+
+- **Nome slice**: `CML-UX-NON-TECHNICAL-USER-EXPERIENCE-AUDIT`
+- **Commit base**: `83084c4`
+- **Tipo slice**: docs-only audit
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-UX-NON-TECHNICAL-USER-EXPERIENCE-AUDIT.md`, `report/CML-UX-NON-TECHNICAL-USER-EXPERIENCE-AUDIT.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Focus**: individuare termini tecnici in UI ordinaria e proporre microcopy scolastico per docente/dipartimento/referente
+- **Classificazione**: problemi P0/P1/P2 con destinazione (docente, dipartimento, referente, interno tecnico)
+- **Output**: regole linguistiche di superficie + tassonomia sostitutiva + priorita per prossima slice runtime
+- **Scope**: sola analisi read-only del runtime pubblicato locale, nessuna nuova funzionalita
+- **Push**: non eseguito
+- **Verdetto**: `CML_UX_NON_TECHNICAL_USER_EXPERIENCE_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-UDA-SMART-LIBRARY-FILTERS-CLOSURE - Chiusura formale post-push e stabilita remota
 
 - **Nome slice**: `CML-UDA-SMART-LIBRARY-FILTERS-CLOSURE`
