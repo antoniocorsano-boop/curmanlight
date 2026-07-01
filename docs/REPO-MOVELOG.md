@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-239.2 - DOCX CDN and favicon 404 fix
+
+- **Nome slice**: `CML-239.2`
+- **Commit base**: `a1ba6a4`
+- **Tipo slice**: runtime microfix risorse
+- **Runtime modificato**: si (`_published_snapshot/netlify-current/index.html`, `_published_snapshot/netlify-current/favicon.ico`)
+- **File modificati**: `_published_snapshot/netlify-current/index.html`, `_published_snapshot/netlify-current/favicon.ico`, `docs/03_execution/CML-239.2.md`, `report/CML-239.2_docx_cdn_and_favicon_404_fix.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Fix applicato**: sostituita URL `docx` cdnjs 404 con bundle UMD jsDelivr `docx@8.5.0`; aggiunto favicon reale e link esplicito nel runtime
+- **Scope confermato**: nessuna modifica a curriculum JSON, tools, formato `.cml`, storage locale, handler, import/export dati, filtri, generazione UDA, manifest o service worker
+- **Push**: non eseguito
+- **Verdetto**: `CML_239_2_DOCX_CDN_AND_FAVICON_404_FIX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-239.1 - Deploy Pages congruence and syntax error fix
 
 - **Nome slice**: `CML-239.1`
