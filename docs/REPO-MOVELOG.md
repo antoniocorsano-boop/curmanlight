@@ -1,5 +1,25 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-266 - FILE AND DELIVERY LANGUAGE CLEANUP
+
+- **Nome slice**: `CML-266`
+- **Tipo slice**: runtime microfix + docs
+- **Contesto**: prima runtime cleanup dopo CML-265; decisione CML-265: `RUNTIME_CLEANUP_REQUIRED_BEFORE_RELEASE`
+- **Problema**: residui tecnici visibili su codici CML, pacchetto pilota, file/consegne
+- **Interventi**:
+  - rimozione/sostituzione codici CML-xxx visibili in dati curricolari embedded (TECNOLOGIA_NORM, ALL_CURRICULUM_DATA)
+  - sostituzione "Pacchetto pilota CML-062" con "Materiale di lavoro da verificare"
+  - chiarimento `.cml` come file di lavoro CurManLight nei punti principali
+  - sostituzione "Report" con "Documento di sintesi" in contesti visibili
+- **Runtime**: modificato solo microcopy e valori testo in oggetti JS embedded
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Import/export dati**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti/modificati**: `index.html`, `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-266.md`, `report/CML-266_file_and_delivery_language_cleanup.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_266_FILE_AND_DELIVERY_LANGUAGE_CLEANUP_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-265 - VISIBLE TECHNICAL RESIDUALS FULL UI AUDIT
 
 - **Nome slice**: `CML-265`
