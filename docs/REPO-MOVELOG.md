@@ -1,5 +1,19 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-251 - POST-GUIDE ALIGNMENT NEXT UX SELECTION
+
+- **Nome slice**: `CML-251`
+- **Tipo slice**: docs-only / planning audit
+- **Contesto**: ripartenza dopo CML-250P
+- **Stato repository**: main allineato a origin/main, working tree pulito
+- **Aree valutate**: Esportazioni, Stati vuoti e messaggi, UDA smart / Programmazione
+- **Prossima slice selezionata**: `CML-252` — EMPTY STATES AND ACTION MESSAGES MICRO-UX
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-251.md`, `report/CML-251_post_guide_alignment_next_ux_selection.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_251_POST_GUIDE_ALIGNMENT_NEXT_UX_SELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-250 - GUIDE FLOW ALIGNMENT LIVE SMOKE
 
 - **Nome slice**: `CML-250`
