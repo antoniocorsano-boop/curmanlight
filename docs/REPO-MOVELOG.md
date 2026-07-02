@@ -20,6 +20,25 @@
 - **File prodotti**: `docs/03_execution/CML-262.md`, `report/CML-262_role_language_surface_cleanup_live_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_262_ROLE_LANGUAGE_SURFACE_CLEANUP_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED`
 
+## 2026-07-02 - CML-262R — LIVE SMOKE RECTIFICATION (VISIBLE GOVERNANCE REFERENCES)
+
+- **Nome slice**: `CML-262R`
+- **Tipo slice**: docs-only / rectification
+- **Contesto**: rettifica post-smoke. Revisione umana ha rilevato riferimenti di governance interna visibili nella UI pubblica, non coperti dal set CML-261 e non intercettati dallo smoke CML-262.
+- **Gap scoperto**: lo smoke CML-262 ha verificato correttamente il set CML-261 ma non ha coperto il pattern "codici CML visibili nella UI", che costituisce una classe di problema distinta.
+- **Rilievi governance**:
+  - P0: `"Anteprima consultiva basata sul contratto dati CML-061."` (template JS Tecnologia)
+  - P0: `"Fonte: CML-061 / CML-062"` (template JS Tecnologia, metadati)
+  - P1: `"Pacchetto pilota CML-062"` (28 occorrenze noteDipartimento in `tecnologia.normalized.json`)
+- **File rettificati**: `docs/03_execution/CML-262.md` (aggiunta governance references, correzione verdict finale), `report/CML-262_role_language_surface_cleanup_live_smoke.md` (aggiunta sezione rettifica, aggiornamento rischi e raccomandazioni)
+- **File nuovi**: `docs/03_execution/CML-262R.md`, `report/CML-262R_live_smoke_rectification.md`
+- **Prossima slice obbligatoria**: CML-263 (Visible Governance References Cleanup, ~4 righe template JS)
+- **Prossima slice raccomandata**: CML-264 (Curriculum Data Governance Cleanup, 28 campi noteDipartimento)
+- **Runtime**: invariato
+- **Deploy manuale**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_262R_LIVE_SMOKE_RECTIFICATION_VISIBLE_GOVERNANCE_REFERENCES_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-261 — ROLE LANGUAGE SURFACE CLEANUP
 
 - **Nome slice**: `CML-261`

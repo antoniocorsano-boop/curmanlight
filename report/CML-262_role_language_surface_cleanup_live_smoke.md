@@ -60,6 +60,18 @@ Live smoke di verifica pubblicazione CML-261P su GitHub Pages. CML-261 ha sostit
 - "report" in "Report gruppo lavoro": non toccato in CML-261 perché la roadmap CML-260 lo assegnava a CML-263 (Surface Technical Terms Cleanup).
 - "CurManLight" in "Livelli di maturità CurManLight → CurMan": rimandato a CML-263.
 
+## Rettifica CML-262R — Visible Governance References
+
+**Scoperto post-smoke durante revisione umana.** Lo smoke CML-262 ha verificato correttamente il set CML-261 ma NON ha coperto il pattern "codici CML visibili nella UI", che costituisce una classe di problema distinta.
+
+| Issue | Testo live | Priorità | Dove |
+|-------|-----------|----------|------|
+| 1 | `"Anteprima consultiva basata sul contratto dati CML-061."` | P0 | Template JS Tecnologia |
+| 2 | `"Fonte: CML-061 / CML-062"` | P0 | Template JS Tecnologia (metadati) |
+| 3 | `"Pacchetto pilota CML-062"` (28 occorrenze) | P1 | `noteDipartimento` in `tecnologia.normalized.json` |
+
+**Classificazione**: governance reference visible to user. Espone codici interni di sviluppo e terminologia tecnica ("contratto dati") a utenti scolastici.
+
 ## Errori console
 
 Nessun errore JavaScript bloccante rilevato durante il caricamento e la navigazione live.
@@ -81,12 +93,19 @@ Nessun errore JavaScript bloccante rilevato durante il caricamento e la navigazi
 
 | Rischio | Impatto | Mitigazione |
 |---------|---------|-------------|
-| Eventuali termini inglesi in contesti non analizzati (es. "import"/"export" in UI) | Basso | Coperti da CML-263 già in roadmap |
-| CSS class "reset" potrebbe confondere in debug | Molto basso | Nome tecnico standard, non visibile in UI |
+| Governance references visibili (CML-061, CML-062, "contratto dati") | Alto (carico cognitivo, percezione tecnica) | **CML-263 obbligatorio**: fix stringhe template |
+| Codici CML nei dati JSON (28 campi noteDipartimento) | Medio | **CML-264**: fix dati curricolari |
+| Eventuali termini inglesi in contesti non analizzati | Basso | Coperti da CML-265 in roadmap |
+| CSS class "reset" in debug | Molto basso | Nome tecnico standard, non visibile in UI |
 
 ## Raccomandazione prossima slice
 
-CML-263 — Surface Technical Terms Cleanup (P0 da CML-260, "fonte: JSON..." visibile nella UI). Si consiglia di procedere con la roadmap definita.
+**CML-263 (obbligatoria, P0/P1)** — Visible Governance References Cleanup:
+- Sostituire `"Anteprima consultiva basata sul contratto dati CML-061."` → `"Anteprima consultiva da verificare in sede di lavoro disciplinare."`
+- Sostituire `"Fonte: CML-061 / CML-062"` → `"Base di lavoro: materiali curricolari già predisposti"`
+- ~4 righe modificate in `index.html` + snapshot
+
+CML-264 (consigliata, P2) — Curriculum Data Governance Cleanup (28 campi noteDipartimento in `tecnologia.normalized.json`).
 
 ## Checklist finale
 
@@ -102,6 +121,7 @@ CML-263 — Surface Technical Terms Cleanup (P0 da CML-260, "fonte: JSON..." vis
 - [x] console checked
 - [x] responsive checked
 - [x] residual terms reviewed
+- [x] governance references detected post-smoke (CML-262R)
 - [x] validator executed
 - [x] shape test executed
 - [x] runtime unchanged during CML-262
@@ -113,4 +133,10 @@ CML-263 — Surface Technical Terms Cleanup (P0 da CML-260, "fonte: JSON..." vis
 
 ```
 CML_262_ROLE_LANGUAGE_SURFACE_CLEANUP_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED
+```
+
+### Rettifica CML-262R
+
+```
+CML_262R_LIVE_SMOKE_RECTIFICATION_VISIBLE_GOVERNANCE_REFERENCES_READY_LOCAL_NOT_PUSHED
 ```
