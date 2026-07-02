@@ -1,5 +1,23 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-275 - ARCHITECTURE SYNTHESIS AND FIRST RUNTIME SELECTION
+
+- **Nome slice**: `CML-275`
+- **Tipo slice**: docs-only
+- **Contesto**: sintesi architetturale e selezione del primo runtime minimo dopo CML-274
+- **Obiettivo**: consolidare i contratti CML-267→274 e scegliere il primo runtime minimo ad alto valore senza implementarlo ancora
+- **Focus**: visione operativa; incoerenza principale dell'interfaccia attuale; criteri di selezione; valutazione dei candidati; raccomandazione Home/cruscotto + modale minimo + discipline secondarie
+- **Relazione con CML-065**: mantiene il contratto base Curriculum/Didattica
+- **Relazione con CML-267→274**: sintetizza la sequenza di layer e seleziona il primo runtime minimo
+- **File prodotti**: `docs/02_system/ARCHITECTURE-SYNTHESIS-AND-FIRST-RUNTIME-SELECTION-CONTRACT.md`, `docs/03_execution/CML-275.md`, `report/CML-275_architecture_synthesis_and_first_runtime_selection.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_275_ARCHITECTURE_SYNTHESIS_AND_FIRST_RUNTIME_SELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-274 - EXPORT AND DOCUMENT LAYER CONTRACT
 
 - **Nome slice**: `CML-274`
