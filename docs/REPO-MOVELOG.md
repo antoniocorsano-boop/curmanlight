@@ -1,5 +1,23 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-263 - VISIBLE GOVERNANCE REFERENCES CLEANUP
+
+- **Nome slice**: `CML-263`
+- **Tipo slice**: runtime microfix + docs
+- **Contesto**: gap rilevato dopo CML-262/CML-262R
+- **Problema**: riferimenti di governance visibili nella UI pubblica
+- **Interventi**:
+  - rimozione/sostituzione "contratto dati CML-061"
+  - rimozione/sostituzione "Fonte: CML-061 / CML-062"
+- **Runtime**: modificato solo microcopy
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Import/export dati**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti/modificati**: `index.html`, `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-263.md`, `report/CML-263_visible_governance_references_cleanup.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_263_VISIBLE_GOVERNANCE_REFERENCES_CLEANUP_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-262 — ROLE LANGUAGE SURFACE CLEANUP LIVE SMOKE
 
 - **Nome slice**: `CML-262`
