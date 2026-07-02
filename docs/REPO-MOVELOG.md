@@ -1,5 +1,23 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-268 - DASHBOARD AND ONBOARDING CONTRACT
+
+- **Nome slice**: `CML-268`
+- **Tipo slice**: docs-only
+- **Contesto**: specifica del cruscotto professionale dopo CML-267
+- **Obiettivo**: definire Home e onboarding come ingresso per bisogno professionale, non per disciplina
+- **Focus**: Curriculum e Didattica come macro-card; modale ridotto o eliminato; menu discipline secondario; contesto di lavoro visibile; stati vuoti; accessibilità pannelli apribili
+- **Relazione con CML-065**: mantiene il contratto base Curriculum/Didattica
+- **Relazione con CML-267**: traduce in onboarding la visione dell'ambiente curricolare professionale
+- **File prodotti**: `docs/02_system/DASHBOARD-AND-ONBOARDING-CONTRACT.md`, `docs/03_execution/CML-268.md`, `report/CML-268_dashboard_and_onboarding_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_268_DASHBOARD_AND_ONBOARDING_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-267 - PROFESSIONAL CURRICULUM ENVIRONMENT SPEC
 
 - **Nome slice**: `CML-267`
