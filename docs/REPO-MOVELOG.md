@@ -1,5 +1,24 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-250 - GUIDE FLOW ALIGNMENT LIVE SMOKE
+
+- **Nome slice**: `CML-250`
+- **Tipo slice**: deploy/live smoke + docs
+- **Contesto**: verifica pubblicazione live del micro-UX CML-249 "Cosa fare in base al ruolo" nella Guida
+- **Commit verificato**: `1fa69b6` — `runtime: align CML guide to process flow`
+- **URL live**: `https://antoniocorsano-boop.github.io/curmanlight/`
+- **Workflow Pages**: conclusione `success`, commit `1fa69b6`
+- **Blocco "Cosa fare in base al ruolo" in Guida**: visibile con 4 fasi ed esiti attesi
+- **Blocco "Percorso di lavoro" in Home**: visibile (invariato)
+- **Smoke**: Home/Guida/Processo/Esportazioni/selezione disciplina PASS
+- **Console**: nessun errore
+- **Navigazione**: hash/tab funzionanti
+- **Runtime**: invariato rispetto a CML-249
+- **Deploy manuale**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-250.md`, `report/CML-250_guide_flow_alignment_live_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_250_GUIDE_FLOW_ALIGNMENT_LIVE_SMOKE_PASSED`
+
 ## 2026-07-02 - CML-249 - GUIDE FLOW ALIGNMENT MICRO-UX
 
 - **Nome slice**: `CML-249`
