@@ -6728,3 +6728,12 @@ TEST APPEND LINE
 - **Push**: non eseguito
 - **Artefatti**: `docs/03_execution/CML-UDA-SMART-LIBRARY-RUNTIME-SCAFFOLD.md`, `report/CML-UDA-SMART-LIBRARY-RUNTIME-SCAFFOLD.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto atteso**: `CML_UDA_SMART_LIBRARY_RUNTIME_SCAFFOLD_READY_LOCAL_NOT_PUSHED`
+## 2026-07-02 - CML-242 - HERMES ASSISTED MODE GOVERNANCE CONTRACT
+
+- **Scope**: docs-only governance contract for Hermes usage on CurManLight.
+- **No push**: Hermes must never push commits.
+- **Pre‑commit disclosure**: must show git status --short --branch, file list, diff summary, commit message.
+- **Docs‑only allowed paths**: docs/03_execution/, report/, docs/REPO-MOVELOG.md.
+- **Runtime & deploy**: require dedicated slice and explicit approval.
+- **README.md**: no modifications unless explicitly requested.
+- **Verdict**: CML_242_HERMES_ASSISTED_MODE_GOVERNANCE_CONTRACT_READY_LOCAL_NOT_PUSHED
