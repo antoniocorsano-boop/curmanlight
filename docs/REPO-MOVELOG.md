@@ -1,5 +1,29 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-276D - HOME DASHBOARD CONTROLLED PUBLICATION SYNC
+
+- **Nome slice**: `CML-276D`
+- **Tipo slice**: docs-only (controllo publication sync)
+- **Contesto**: CML-276C aveva rilevato live stale rispetto a `main`
+- **Obiettivo**: riallineare GitHub Pages al runtime aggiornato CML-276
+- **Azioni**:
+  - trigger multipli workflow Pages (`pages.yml`) su `main`
+  - analisi run fallite e log deploy-pages
+  - push tecnico no-op su SHA nuovo (`975e40d`) per forzare publication retry
+  - ulteriori retry/cancel controllati
+- **Esito tecnico**:
+  - lock deployment Pages su deployment in-progress precedente
+  - nuovi deploy rifiutati con errore `due to in progress deployment`
+  - live ancora su Home precedente (stale)
+- **Runtime**: invariato in questa slice
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Import/export dati**: invariati
+- **Deploy**: tentato ma non completato per blocco infrastrutturale
+- **Push**: non eseguito in questa slice di sola reportistica
+- **File prodotti**: `docs/03_execution/CML-276D.md`, `report/CML-276D_home_dashboard_controlled_publication_sync.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_276D_HOME_DASHBOARD_CONTROLLED_PUBLICATION_SYNC_BLOCKED_BY_PAGES_DEPLOYMENT_QUEUE`
+
 ## 2026-07-02 - CML-276C - HOME DASHBOARD LIVE DEPLOY SMOKE
 
 - **Nome slice**: `CML-276C`
