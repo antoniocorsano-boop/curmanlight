@@ -1,5 +1,25 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-262 — ROLE LANGUAGE SURFACE CLEANUP LIVE SMOKE
+
+- **Nome slice**: `CML-262`
+- **Tipo slice**: docs-only / live smoke audit
+- **Contesto**: verifica live dopo CML-261P. Controllo pubblicazione sostituzioni linguistiche su GitHub Pages.
+- **URL verificato**: `https://antoniocorsano-boop.github.io/curmanlight/` — HTTP 200
+- **Stato repository**: main allineato a origin/main (HEAD `84b89fe`), working tree pulito
+- **Aree testate**: Home, Guida, Processo, Esportazioni, UDA/Programmazione, Discipline, Console, Responsive
+- **Esito console**: 0 errori bloccanti
+- **Esito responsive**: desktop OK, bottom navigation mobile presente
+- **Esito validatore**: 14/14 valid, overallValid true
+- **Esito shape test**: 14/14 PASS
+- **Residui rilevati**: nessun termine tecnico correto residuo nella UI pubblica. "UDA smart", "persistita", "persistito", "Reset" (UI), "Piu" tutti assenti. "UDA personalizzata" (18x), "salvata" (18x), "salvato" (2x), "Ripristina" (2x), "Più" (1x) presenti.
+- **Residui non bloccanti**: CSS class `.evidence-reset-btn` e `resetEvidenceStates()` — nomi tecnici interni, non superficie UI
+- **Runtime**: invariato
+- **Deploy manuale**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-262.md`, `report/CML-262_role_language_surface_cleanup_live_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_262_ROLE_LANGUAGE_SURFACE_CLEANUP_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-261 — ROLE LANGUAGE SURFACE CLEANUP
 
 - **Nome slice**: `CML-261`
