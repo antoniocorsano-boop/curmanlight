@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-243 - LOCAL AHEAD STACK AUDIT BEFORE ANY PUSH
+
+- **Nome slice**: `CML-243`
+- **Tipo slice**: docs-only / audit-only
+- **Branch**: `main...origin/main [ahead 2]`
+- **Commit locali verificati**: `fbf96e0`, `ef7f8fd`
+- **Delta locale**: solo docs/report (`docs/03_execution/CML-240.md`, `docs/03_execution/CML-242.md`, `docs/REPO-MOVELOG.md`, `report/CML-240_ux_lightweight_and_console_closure_audit.md`, `report/CML-242_hermes_assisted_mode_governance_contract.md`)
+- **Runtime**: invariato
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-243.md`, `report/CML-243_local_ahead_stack_audit_before_any_push.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_243_LOCAL_AHEAD_STACK_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-240 - UX lightweight and console closure audit
 
 - **Nome slice**: `CML-240`
