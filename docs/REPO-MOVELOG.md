@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-01 - CML-240 - UX lightweight and console closure audit
+
+- **Nome slice**: `CML-240`
+- **Commit base**: `05cd399`
+- **Tipo slice**: docs-only / audit-only
+- **Runtime modificato**: no
+- **File modificati**: `docs/03_execution/CML-240.md`, `report/CML-240_ux_lightweight_and_console_closure_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Contesto**: chiusura audit ciclo UX leggero e console dopo CML-235 → CML-239.2S
+- **Esito**: tutti i controlli PASS; console pulita; deploy congruente; 14/14 curriculum validi; shape test 14/14
+- **Push**: non eseguito
+- **Verdetto**: `CML_240_UX_LIGHTWEIGHT_AND_CONSOLE_CLOSURE_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-01 - CML-239.2 - DOCX CDN and favicon 404 fix
 
 - **Nome slice**: `CML-239.2`
