@@ -1,5 +1,25 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-270 - APPLICABILITY LAYER CONTRACT
+
+- **Nome slice**: `CML-270`
+- **Tipo slice**: docs-only
+- **Contesto**: specifica di applicabilità dopo CML-269
+- **Obiettivo**: definire quale curricolo vale per una classe in un anno scolastico specifico
+- **Focus**: matrice anno scolastico × classe; granularità disciplinare opzionale; stati di applicabilità; impatto su progettazione, UDA ed esportazioni; messaggi UI; accessibilità
+- **Relazione con CML-065**: mantiene il contratto base Curriculum/Didattica
+- **Relazione con CML-267**: applica la visione dell'ambiente curricolare professionale
+- **Relazione con CML-268**: usa il cruscotto come punto di ingresso
+- **Relazione con CML-269**: completa il contesto di lavoro con la regola di applicabilità
+- **File prodotti**: `docs/02_system/APPLICABILITY-LAYER-CONTRACT.md`, `docs/03_execution/CML-270.md`, `report/CML-270_applicability_layer_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_270_APPLICABILITY_LAYER_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-269 - WORK CONTEXT LAYER CONTRACT
 
 - **Nome slice**: `CML-269`
