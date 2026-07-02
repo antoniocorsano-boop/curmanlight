@@ -1,5 +1,22 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-247 - PROCESS FLOW MICRO-UX DEPLOY AND LIVE SMOKE
+
+- **Nome slice**: `CML-247`
+- **Tipo slice**: deploy/live smoke + docs
+- **Contesto**: verifica pubblicazione live micro-UX "Percorso di lavoro" CML-246
+- **URL live verificato**: `https://antoniocorsano-boop.github.io/curmanlight/`
+- **Commit live**: `b7cba61`
+- **Blocco "Percorso di lavoro"**: visibile
+- **Smoke**: Home/Processo/Esportazioni/selezione disciplina PASS
+- **Console**: 0 errori, 0 warning nuovi
+- **Responsive**: verificato
+- **Runtime**: invariato
+- **Deploy manuale**: non eseguito
+- **Push**: documentazione pushata
+- **File prodotti**: `docs/03_execution/CML-247.md`, `report/CML-247_process_flow_micro_ux_deploy_and_live_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_247_PROCESS_FLOW_MICRO_UX_DEPLOY_AND_LIVE_SMOKE_PUSHED`
+
 ## 2026-07-02 - CML-246 - PROCESS FLOW CLARITY MICRO-UX
 
 - **Nome slice**: `CML-246`
