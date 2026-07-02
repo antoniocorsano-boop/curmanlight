@@ -1,5 +1,27 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-272 - REVISION PROCESS LAYER CONTRACT
+
+- **Nome slice**: `CML-272`
+- **Tipo slice**: docs-only
+- **Contesto**: specifica del processo di revisione dopo CML-271
+- **Obiettivo**: descrivere il processo di revisione per ruolo, con stati, documenti attesi e messaggi di cautela
+- **Focus**: ruoli operativi; azioni consentite per ruolo; documenti attesi per fase; passaggi del processo; stati di avanzamento; relazione tra proposta, validazione, approvazione e applicabilità; criteri runtime futuri
+- **Relazione con CML-065**: mantiene il contratto base Curriculum/Didattica
+- **Relazione con CML-267**: applica l'ambiente curricolare professionale
+- **Relazione con CML-268**: usa il cruscotto come ingresso
+- **Relazione con CML-269**: usa il contesto di lavoro come base di lettura
+- **Relazione con CML-270**: usa l'applicabilità come esito istituzionale
+- **Relazione con CML-271**: usa l'allineamento IN 2025 come stato di partenza dei contenuti
+- **File prodotti**: `docs/02_system/REVISION-PROCESS-LAYER-CONTRACT.md`, `docs/03_execution/CML-272.md`, `report/CML-272_revision_process_layer_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_272_REVISION_PROCESS_LAYER_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-271 - IN 2025 ALIGNMENT LAYER CONTRACT
 
 - **Nome slice**: `CML-271`
