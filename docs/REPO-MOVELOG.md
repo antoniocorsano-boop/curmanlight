@@ -1,5 +1,22 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-254 - POST-EMPTY-STATES NEXT UX SELECTION
+
+- **Nome slice**: `CML-254`
+- **Tipo slice**: docs-only / planning audit
+- **Contesto**: ripartenza dopo CML-253
+- **Stato repository**: main allineato a origin/main, working tree pulito
+- **Aree valutate**:
+  - Esportazioni
+  - UDA smart / Programmazione
+  - Audit finale di maturità UX
+- **Prossima slice selezionata**: `CML-255` — EXPORTS ROLE-BASED CLARITY MICRO-UX
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-254.md`, `report/CML-254_post_empty_states_next_ux_selection.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_254_POST_EMPTY_STATES_NEXT_UX_SELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-253 - EMPTY STATES ACTION MESSAGES LIVE SMOKE
 
 - **Nome slice**: `CML-253`
