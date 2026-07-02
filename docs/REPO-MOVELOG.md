@@ -1,5 +1,22 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-253 - EMPTY STATES ACTION MESSAGES LIVE SMOKE
+
+- **Nome slice**: `CML-253`
+- **Tipo slice**: live smoke + docs
+- **Contesto**: verifica live del commit `b709cff` (CML-252) su GitHub Pages
+- **URL**: `https://antoniocorsano-boop.github.io/curmanlight/`
+- **Stato repository**: partito da main allineato a origin/main, working tree pulito
+- **Smoke**: Home ✅, Guida ✅, Processo ✅, Esportazioni ✅, selezione disciplina ✅
+- **Messaggi verificati**: 5/5 CML-252 confermati nel bundle live
+- **Console**: nessun errore bloccante evidente
+- **Responsive**: footer mobile presente
+- **Runtime**: invariato
+- **Deploy manuale**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-253.md`, `report/CML-253_empty_states_action_messages_live_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_253_EMPTY_STATES_ACTION_MESSAGES_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-252 - EMPTY STATES AND ACTION MESSAGES MICRO-UX
 
 - **Nome slice**: `CML-252`
