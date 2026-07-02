@@ -1,5 +1,18 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-246 - PROCESS FLOW CLARITY MICRO-UX
+
+- **Nome slice**: `CML-246`
+- **Tipo slice**: runtime micro-UX + docs
+- **Obiettivo**: chiarire il percorso `Docente -> Dipartimento -> Referente -> Documento finale / Esportazione`
+- **File runtime modificati**: `index.html`, `_published_snapshot/netlify-current/index.html`
+- **Documentazione prodotta**: `docs/03_execution/CML-246.md`, `report/CML-246_process_flow_clarity_micro_ux.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Controlli eseguiti**: preflight Git, `git diff --check`, validator curriculum, shape test runtime, smoke Home/Processo/Esportazioni, secret scan minimale
+- **Runtime**: modificato in modo limitato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_246_PROCESS_FLOW_CLARITY_MICRO_UX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-245 - POST-GOVERNANCE UX ROADMAP RESELECTION
 
 - **Nome slice**: `CML-245`
