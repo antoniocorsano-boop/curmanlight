@@ -1,5 +1,20 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-267 - PROFESSIONAL CURRICULUM ENVIRONMENT SPEC
+
+- **Nome slice**: `CML-267`
+- **Tipo slice**: docs-only
+- **Contesto**: specifica architetturale post CML-266, allineata al contratto stabile CML-065
+- **Obiettivo**: formalizzare CurManLight come ambiente curricolare professionale articolato in Curriculum e Didattica
+- **Relazione con CML-065**: estensione operativa, non sostituzione
+- **File prodotti**: `docs/02_system/PROFESSIONAL-CURRICULUM-ENVIRONMENT-SPEC.md`, `docs/03_execution/CML-267.md`, `report/CML-267_professional_curriculum_environment_spec.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_267_PROFESSIONAL_CURRICULUM_ENVIRONMENT_SPEC_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-266 - FILE AND DELIVERY LANGUAGE CLEANUP
 
 - **Nome slice**: `CML-266`
