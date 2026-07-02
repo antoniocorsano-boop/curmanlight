@@ -20,6 +20,22 @@
 - **File prodotti**: `docs/03_execution/CML-257.md`, `report/CML-257_ux_maturity_cycle_closure_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_257_UX_MATURITY_CYCLE_CLOSURE_AUDIT_READY_LOCAL_NOT_PUSHED`
 
+## 2026-07-02 - CML-258 - UDA SMART AND PLANNING FLOW AUDIT
+
+- **Nome slice**: `CML-258`
+- **Tipo slice**: docs-only / flow audit
+- **Contesto**: audit successivo alla chiusura ciclo UX maturo CML-257. Area valutata: UDA smart / Programmazione.
+- **Stato repository**: main allineato a origin/main, working tree pulito, HEAD `44f18e9`
+- **Analisi condotta su**: collocazione funzionale, comprensibilità, flusso operativo, stati/filtri, esportazione/conservazione, rischio runtime
+- **Decisione**: nessuna runtime immediata. L'area funziona correttamente, stati vuoti coperti (CML-238), filtri funzionanti, export Markdown locale presente.
+- **Prossima eventuale slice**: CML-259 — UDA SMART PLANNING MICROCOPY ALIGNMENT (opzionale, P3)
+- **Rilievi principali**: disclaimer contraddittorio (riga 1529), assenza UDA smart in "Percorso di lavoro" Home e Esportazioni — tutti P3
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-258.md`, `report/CML-258_uda_smart_and_planning_flow_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_258_UDA_SMART_AND_PLANNING_FLOW_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-256 - EXPORTS ROLE-BASED CLARITY LIVE SMOKE
 
 - **Nome slice**: `CML-256`
