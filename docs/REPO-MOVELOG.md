@@ -1,5 +1,21 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-260 — MULTI-AGENT ROLE-OPERATIVE LANGUAGE AND COGNITIVE LOAD BACKLOG AUDIT
+
+- **Nome slice**: `CML-260`
+- **Tipo slice**: docs-only / multi-agent audit
+- **Contesto**: audit post chiusura ciclo UX CML-246 → CML-259P. Analisi runtime da 5 prospettive parallele.
+- **Stato repository**: main allineato a origin/main, working tree pulito, HEAD `fb306dd` (CML-259P)
+- **Agenti eseguiti**: Surface Scanner (20 findings), Role Journey (6), Cognitive Load (10), Export Naming (10), School Language (22)
+- **Totale rilievi**: 68 (7 P0, 18 P1, 37 P2, 6 P3)
+- **Decisione**: `ROLE_OPERATIONALIZATION_BACKLOG_READY`
+- **Roadmap proposta**: CML-261 (Role Language Cleanup) → CML-262 (Export Naming) → CML-263 (Technical Terms) → CML-264 (Role Governance) → CML-265 (Cognitive Load) → CML-266 (Live Smoke)
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-260.md`, `report/CML-260_role_operational_language_and_cognitive_load_backlog.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_260_MULTI_AGENT_ROLE_OPERATIONAL_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-257 - UX MATURITY CYCLE CLOSURE AUDIT
 
 - **Nome slice**: `CML-257`
