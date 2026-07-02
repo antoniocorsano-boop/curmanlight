@@ -1,5 +1,18 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-252 - EMPTY STATES AND ACTION MESSAGES MICRO-UX
+
+- **Nome slice**: `CML-252`
+- **Tipo slice**: runtime microfix
+- **Contesto**: miglioramento di 5 messaggi di stato vuoto/debole nell'area Processo con orientamento "Cosa puoi fare ora"
+- **Stato repository**: partito da main (1d6c641), working tree pulito
+- **Modifiche**: 5 messaggi microcopy in `index.html` e `_published_snapshot/netlify-current/index.html`
+- **Validazione**: curricolo 14/14 valid, mappa dati 14/14 PASS, byte count identico
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-252.md`, `report/CML-252_empty_states_and_action_messages_micro_ux.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_252_EMPTY_STATES_ACTION_MESSAGES_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-251 - POST-GUIDE ALIGNMENT NEXT UX SELECTION
 
 - **Nome slice**: `CML-251`

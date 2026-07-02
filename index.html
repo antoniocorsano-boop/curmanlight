@@ -4705,7 +4705,7 @@ async function importTeacherCmlFiles(fileList){
   const files=Array.from(fileList||[]);
   const feedback=document.getElementById("department-import-feedback");
   if(!files.length){
-    if(feedback) feedback.textContent="Seleziona almeno un file di lavoro CurManLight.";
+    if(feedback) feedback.textContent="Seleziona almeno un file di lavoro CurManLight. Cosa puoi fare ora: chiedi ai docenti di preparare la proposta in Revisione ed esportare il file .cml da Esportazioni → File di lavoro CurManLight.";
     return;
   }
   const MAX_FILE_SIZE=20*1024*1024;
@@ -4750,7 +4750,7 @@ async function importTeacherCmlFiles(fileList){
   departmentImportState={files:results,proposals};
   renderDepartmentImport();
   const summary=buildDepartmentImportSummary();
-  if(feedback) feedback.textContent=summary.validFiles?"Proposte importate. Il dipartimento può ora leggerle e valutarle.":"Nessuna proposta docente valida importata.";
+  if(feedback) feedback.textContent=summary.validFiles?"Proposte importate. Il dipartimento può ora leggerle e valutarle.":"Nessuna proposta docente valida importata. I file potrebbero non essere in formato .cml generato da CurManLight, essere danneggiati o già importati. Cosa puoi fare ora: verifica i file e, se necessario, chiedi ai docenti di generare una nuova proposta in Revisione ed esportarla da Esportazioni.";
   showToast(summary.validFiles?"✅ Proposte docenti caricate su questo dispositivo":"⚠️ Nessun file di lavoro valido caricato");
 }
 
@@ -5584,7 +5584,7 @@ async function importDepartmentOutcomeCmlFiles(fileList){
   const files=Array.from(fileList||[]);
   const feedback=document.getElementById("referent-validation-feedback");
   if(!files.length){
-    if(feedback) feedback.textContent="Seleziona almeno un file di lavoro CurManLight.";
+    if(feedback) feedback.textContent="Seleziona almeno un file di esito dipartimentale CurManLight. Cosa puoi fare ora: il coordinatore deve aver prima importato le proposte docenti e generato l'esito dipartimentale da Esportazioni → File di lavoro CurManLight → Esito dipartimento.";
     return;
   }
   const MAX_FILE_SIZE=20*1024*1024;
@@ -5648,7 +5648,7 @@ async function importDepartmentOutcomeCmlFiles(fileList){
   referentOutcomeState={files:results,outcomes};
   renderReferentValidation();
   const summary=buildReferentValidationSummary();
-  if(feedback) feedback.textContent=summary.validOutcomeFiles?"Esiti dipartimentali importati. Il referente può ora controllare completezza, evidenze e punti da chiarire.":"Nessun esito dipartimentale valido importato.";
+  if(feedback) feedback.textContent=summary.validOutcomeFiles?"Esiti dipartimentali importati. Il referente può ora controllare completezza, evidenze e punti da chiarire.":"Nessun esito dipartimentale valido importato. I file potrebbero non essere esiti .cml generati da «Esito dipartimento» in Esportazioni, essere danneggiati o già importati. Cosa puoi fare ora: verifica i file; il coordinatore deve importare le proposte, confrontarle e generare l'esito dipartimentale da Esportazioni.";
   showToast(summary.validOutcomeFiles?"✅ Esiti dipartimentali caricati su questo dispositivo":"⚠️ Nessun file di lavoro valido caricato");
 }
 
@@ -5927,7 +5927,7 @@ function buildReferentGroupWorkReportMarkdown() {
 function downloadReferentGroupWorkReport() {
   const md = buildReferentGroupWorkReportMarkdown();
   if (!md) {
-    showToast('Carica prima almeno un esito dipartimentale in formato CurManLight.');
+    showToast('Carica prima almeno un esito dipartimentale in formato CurManLight. Cosa puoi fare ora: vai in Curriculum → Processo → Fase referente e importa gli esiti dipartimentali tramite Carica esiti dipartimentali.');
     return;
   }
   const blob = new Blob([md], {type: 'text/markdown;charset=utf-8'});
