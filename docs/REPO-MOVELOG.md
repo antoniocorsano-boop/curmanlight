@@ -36,6 +36,22 @@
 - **File prodotti**: `docs/03_execution/CML-258.md`, `report/CML-258_uda_smart_and_planning_flow_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_258_UDA_SMART_AND_PLANNING_FLOW_AUDIT_READY_LOCAL_NOT_PUSHED`
 
+## 2026-07-02 - CML-259 - UX CYCLE STABILITY CLOSURE AUDIT
+
+- **Nome slice**: `CML-259`
+- **Tipo slice**: docs-only / stability closure audit
+- **Contesto**: chiusura finale dopo CML-246 → CML-258P. Verifica stabilità runtime, validatori, shape test, snapshot, repository.
+- **Stato repository**: main allineato a origin/main, working tree pulito, HEAD `aeecc3b` (CML-258P)
+- **Controlli eseguiti**: preflight Git, `git diff --check` (pulito), validatore curriculum 14/14 (0 errori, overallValid true), shape test 14/14 PASS, root/snapshot consistency (entrambi 838400 byte)
+- **Stabilità UX**: tutte le superfici (Home, Guida, Messaggi, Esportazioni, UDA smart/Programmazione) valutate e mature. Nessuna runtime immediata.
+- **Rischi residui**: P3 (disclaimer Programmazione, UDA smart in Esportazioni, link in Home) rimandati a futuro ciclo
+- **Decisione finale**: `UX_CYCLE_STABLE_AND_CLOSED` — ciclo UX formalmente chiuso e stabile
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-259.md`, `report/CML-259_ux_cycle_stability_closure_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_259_UX_CYCLE_STABILITY_CLOSURE_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-256 - EXPORTS ROLE-BASED CLARITY LIVE SMOKE
 
 - **Nome slice**: `CML-256`
