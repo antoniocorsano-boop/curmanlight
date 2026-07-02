@@ -1,5 +1,26 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-271 - IN 2025 ALIGNMENT LAYER CONTRACT
+
+- **Nome slice**: `CML-271`
+- **Tipo slice**: docs-only
+- **Contesto**: specifica di allineamento dopo CML-270
+- **Obiettivo**: distinguere in modo rigoroso curricolo vigente, proposte di adeguamento, materiali non validati, parti validate e parti approvate/applicabili
+- **Focus**: stati del layer; relazione con curricolo vigente; relazione con processo di revisione; relazione con Applicability Layer; impatto su progettazione, UDA ed esportazioni; messaggi concettuali; accessibilità
+- **Relazione con CML-065**: mantiene il contratto base Curriculum/Didattica
+- **Relazione con CML-267**: applica l'ambiente curricolare professionale
+- **Relazione con CML-268**: usa il cruscotto come ingresso
+- **Relazione con CML-269**: usa il contesto di lavoro come base di lettura
+- **Relazione con CML-270**: distingue l'allineamento dallo stato di applicabilità
+- **File prodotti**: `docs/02_system/IN-2025-ALIGNMENT-LAYER-CONTRACT.md`, `docs/03_execution/CML-271.md`, `report/CML-271_in_2025_alignment_layer_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_271_IN_2025_ALIGNMENT_LAYER_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-270 - APPLICABILITY LAYER CONTRACT
 
 - **Nome slice**: `CML-270`
