@@ -1,5 +1,17 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-244 - CONTROLLED PUSH OF DOCS-ONLY LOCAL STACK
+
+- **Nome slice**: `CML-244`
+- **Tipo slice**: controlled-push / docs-only governance
+- **Stato iniziale**: main...origin/main [ahead 3]
+- **Commit locali inclusi**: `fbf96e0` (CML-240), `ef7f8fd` (CML-242), `35b9a7c` (CML-243)
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: previsto dopo controlli
+- **File prodotti**: `docs/03_execution/CML-244.md`, `report/CML-244_controlled_push_docs_only_local_stack.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_244_CONTROLLED_PUSH_DOCS_ONLY_LOCAL_STACK_PUSHED`
+
 ## 2026-07-02 - CML-243 - LOCAL AHEAD STACK AUDIT BEFORE ANY PUSH
 
 - **Nome slice**: `CML-243`
