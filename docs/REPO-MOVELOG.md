@@ -1,5 +1,23 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-276B - HOME DASHBOARD ROOT SNAPSHOT PARITY MICROFIX
+
+- **Nome slice**: `CML-276B`
+- **Tipo slice**: runtime microfix + docs
+- **Contesto**: chiusura parity gap rilevato in CML-276A
+- **Obiettivo**: riallineare `index.html` e `_published_snapshot/netlify-current/index.html` senza modificare UX o dominio
+- **Intervento**: copia controllata del runtime valido snapshot su `index.html`
+- **Verifica chiave**: `git diff --no-index -- index.html _published_snapshot/netlify-current/index.html` senza differenze
+- **Runtime**: allineato root/snapshot
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Import/export dati**: invariati
+- **Validatori**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti/modificati**: `index.html`, `docs/03_execution/CML-276B.md`, `report/CML-276B_home_dashboard_root_snapshot_parity_microfix.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_276B_HOME_DASHBOARD_ROOT_SNAPSHOT_PARITY_MICROFIX_PUSHED`
+
 ## 2026-07-02 - CML-276A - HOME DASHBOARD POST-PUSH SMOKE
 
 - **Nome slice**: `CML-276A`
