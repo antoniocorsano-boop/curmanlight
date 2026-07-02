@@ -1,5 +1,24 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-269 - WORK CONTEXT LAYER CONTRACT
+
+- **Nome slice**: `CML-269`
+- **Tipo slice**: docs-only
+- **Contesto**: specifica del contesto di lavoro dopo CML-268
+- **Obiettivo**: definire il layer che collega ruolo, anno scolastico, classe, disciplina opzionale, versione curricolare e modalità d'uso
+- **Focus**: distinzione tra consultazione libera e contesto impostato; messaggi UI; persistenza locale non sensibile; accessibilità; criteri per futura runtime slice
+- **Relazione con CML-065**: mantiene il contratto base Curriculum/Didattica
+- **Relazione con CML-267**: rende operativo il contesto dell'ambiente curricolare professionale
+- **Relazione con CML-268**: completa il cruscotto con il layer di contesto
+- **File prodotti**: `docs/02_system/WORK-CONTEXT-LAYER-CONTRACT.md`, `docs/03_execution/CML-269.md`, `report/CML-269_work_context_layer_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_269_WORK_CONTEXT_LAYER_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-268 - DASHBOARD AND ONBOARDING CONTRACT
 
 - **Nome slice**: `CML-268`
