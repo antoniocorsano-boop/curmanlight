@@ -1,5 +1,34 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-276E - UTF-8 PUBLIC RUNTIME ENCODING AUDIT AND FIX
+
+- **Nome slice**: `CML-276E`
+- **Tipo slice**: runtime microfix + docs
+- **Contesto**: corruzione Unicode diffusa (mojibake) su testo UI e simboli
+- **Obiettivo**: ripristinare codifica testuale leggibile su runtime root/snapshot senza cambiare logiche
+- **Controlli eseguiti**:
+  - presenza `<meta charset="UTF-8">` su root e snapshot
+  - ricerca pattern corrotti (`ðŸ|â€™|â€œ|â€|Â·|Ã`) nel sorgente
+  - verifica header live (`Content-Type: text/html; charset=utf-8`)
+- **Intervento**:
+  - fix conservativo cp1252->utf8 su segmenti mojibake
+  - applicazione identica su `index.html` e `_published_snapshot/netlify-current/index.html`
+- **Esito tecnico**:
+  - `POST_FIX_BAD_MATCH_COUNT=0` sul sorgente runtime
+  - parita root/snapshot confermata (`SHA256` uguali)
+  - nessun replacement character introdotto
+- **Validatori**:
+  - `git diff --check` PASS
+  - `node tools/validate-cml-normalized-curriculum.mjs` PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs` PASS (14/14)
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Import/export dati**: invariati
+- **Deploy**: non eseguito in questa slice
+- **Push**: non eseguito in questa slice
+- **File prodotti/modificati**: `index.html`, `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-276E.md`, `report/CML-276E_utf8_public_runtime_encoding_audit_and_fix.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_276E_UTF8_PUBLIC_RUNTIME_ENCODING_FIXED`
+
 ## 2026-07-02 - CML-276D - HOME DASHBOARD CONTROLLED PUBLICATION SYNC
 
 - **Nome slice**: `CML-276D`
