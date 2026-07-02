@@ -1,5 +1,18 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-245 - POST-GOVERNANCE UX ROADMAP RESELECTION
+
+- **Nome slice**: `CML-245`
+- **Tipo slice**: docs-only / planning audit
+- **Contesto**: ripartenza roadmap UX dopo chiusura CML-244 e governance Hermes/Codex formalizzata
+- **Aree valutate**: Esportazioni, Guida, Processo, UDA smart / Programmazione, Stati vuoti e messaggi
+- **Prossima slice selezionata**: `CML-246 — PROCESS FLOW CLARITY MICRO-UX`
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-245.md`, `report/CML-245_post_governance_ux_roadmap_reselection.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_245_POST_GOVERNANCE_UX_ROADMAP_RESELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-244 - CONTROLLED PUSH OF DOCS-ONLY LOCAL STACK
 
 - **Nome slice**: `CML-244`
