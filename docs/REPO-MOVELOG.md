@@ -1,5 +1,27 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-276A - HOME DASHBOARD POST-PUSH SMOKE
+
+- **Nome slice**: `CML-276A`
+- **Tipo slice**: docs-only
+- **Contesto**: smoke post-push dopo CML-276
+- **Obiettivo**: verificare path effettivi commit, parita root/snapshot e comportamento runtime Home
+- **Controlli**:
+  - `git show --name-only --oneline 617b9db`
+  - `git diff --no-index -- index.html _published_snapshot/netlify-current/index.html`
+  - smoke runtime locale su `_published_snapshot/netlify-current/index.html`
+- **Esito commit path**: presente `_published_snapshot/netlify-current/index.html`, assente `index.html`
+- **Esito parita root/snapshot**: differenze presenti (parita non allineata)
+- **Esito smoke Home**: no modale automatico, banner inline presente, toggle discipline funzionante, Guida rapida on demand, nessun page error rilevato in smoke
+- **Runtime**: invariato in questa slice
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Import/export dati**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-276A.md`, `report/CML-276A_home_dashboard_post_push_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_276A_HOME_DASHBOARD_POST_PUSH_SMOKE_PASSED_WITH_PARITY_GAP`
+
 ## 2026-07-02 - CML-276 - HOME DASHBOARD MINIMAL RUNTIME REDESIGN
 
 - **Nome slice**: `CML-276`
