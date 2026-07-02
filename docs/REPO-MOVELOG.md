@@ -1,5 +1,21 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-256 - EXPORTS ROLE-BASED CLARITY LIVE SMOKE
+
+- **Nome slice**: `CML-256`
+- **Tipo slice**: live smoke + docs
+- **Contesto**: verifica live del commit `af74ce2` (CML-255) su GitHub Pages
+- **URL**: `https://antoniocorsano-boop.github.io/curmanlight/`
+- **Stato repository**: partito da main allineato, working tree pulito
+- **Smoke**: Home ✅, Guida ✅, Processo ✅, Esportazioni ✅, selezione disciplina ✅
+- **Blocco CML-255 verificato**: 5/5 elementi confermati nel bundle live
+- **Console**: nessun errore bloccante evidente
+- **Runtime**: invariato
+- **Deploy manuale**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-256.md`, `report/CML-256_exports_role_based_clarity_live_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_256_EXPORTS_ROLE_BASED_CLARITY_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-255 - EXPORTS ROLE-BASED CLARITY MICRO-UX
 
 - **Nome slice**: `CML-255`
