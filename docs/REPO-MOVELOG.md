@@ -1,5 +1,29 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-278 - ICON SYSTEM MINIMAL RUNTIME IMPLEMENTATION
+
+- **Nome slice**: `CML-278`
+- **Tipo slice**: runtime microfix + docs
+- **Contesto**: contratto CML-277 consolidato su remoto; avvio sostituzione minima emoji strutturali
+- **Obiettivo**: introdurre subset SVG locale per icone principali in header/nav/Home-cruscotto mantenendo invarianti funzionali
+- **Intervento runtime**:
+  - sprite SVG locale inline (subset minimo)
+  - classi CSS `ui-icon` / `icon-label`
+  - sostituzione icone in intestazione, tabbar principale, card Home, azioni cruscotto, Guida rapida, toggle Mostra/Nascondi discipline
+  - aggiornamento toggle dinamici per mantenere icona + testo
+  - parita root/snapshot riallineata
+- **Vincoli rispettati**:
+  - nessuna modifica logiche curricolari
+  - nessuna modifica dati curricolari
+  - nessuna modifica schema `.cml`
+  - nessuna modifica export/import
+  - nessuna modifica storage
+  - nessuna dipendenza esterna aggiunta
+- **File prodotti/modificati**: `index.html`, `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-278.md`, `report/CML-278_icon_system_minimal_runtime_implementation.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_278_ICON_SYSTEM_MINIMAL_RUNTIME_IMPLEMENTATION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-277 - ICON SYSTEM CONTRACT
 
 - **Nome slice**: `CML-277`

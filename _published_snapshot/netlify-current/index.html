@@ -36,6 +36,9 @@ header h1{font-size:17px;font-weight:700}
 .tabbar{background:#fff;border-bottom:1px solid #e0e0e0;display:flex;gap:0;overflow-x:auto}
 .tabbar button{padding:10px 16px;border:none;background:none;cursor:pointer;font-weight:600;font-size:12px;border-bottom:3px solid transparent;color:#666;transition:.15s;white-space:nowrap}
 .tabbar button.active{border-bottom-color:#1a237e;color:#1a237e}
+.ui-icon{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}
+.ui-icon--sm{width:.95em;height:.95em}
+.icon-label{display:inline-flex;align-items:center;gap:6px}
 /* LAYOUT */
 .layout{display:flex;flex:1;padding:12px;gap:12px;max-width:1600px;width:100%;margin:0 auto}
 /* SIDEBAR */
@@ -759,7 +762,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 @media(max-width:760px){.home-cards{grid-template-columns:1fr}}
 .home-card{background:#fff;border-radius:11px;padding:12px 13px;box-shadow:0 1px 4px rgba(0,0,0,.05);border:1px solid #e0e0e0;border-left:3px solid #1a237e;text-decoration:none;color:inherit;display:block}
 .home-card:hover{background:#f9fbff;border-color:#c5cae9}
-.home-card-title{font-size:13px;font-weight:800;color:#1a237e;margin:0 0 3px}
+.home-card-title{font-size:13px;font-weight:800;color:#1a237e;margin:0 0 3px;display:inline-flex;align-items:center;gap:6px}
 .home-card-text{font-size:11px;color:#455a64;line-height:1.45;margin:0}
 .home-discipline-panel{margin-top:14px;background:#fff;border:1px solid #dfe3eb;border-radius:11px;padding:12px 13px}
 .home-discipline-title{font-size:13px;font-weight:800;color:#37474f;margin:0 0 4px}
@@ -1356,11 +1359,77 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <body>
 <a class="skip-link" href="#main-content">Salta al contenuto principale</a>
 <div id="a11y-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="icon-house" viewBox="0 0 24 24">
+    <path d="M3 10.5 12 4l9 6.5"></path>
+    <path d="M5 9.5V20h14V9.5"></path>
+  </symbol>
+  <symbol id="icon-book-open" viewBox="0 0 24 24">
+    <path d="M12 7v14"></path>
+    <path d="M3 18c0-1.1.9-2 2-2h7"></path>
+    <path d="M21 18c0-1.1-.9-2-2-2h-7"></path>
+    <path d="M5 4h7v14H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
+    <path d="M19 4h-7v14h7a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
+  </symbol>
+  <symbol id="icon-graduation-cap" viewBox="0 0 24 24">
+    <path d="m2 10 10-5 10 5-10 5-10-5z"></path>
+    <path d="M6 12v4.5c0 1.9 2.7 3.5 6 3.5s6-1.6 6-3.5V12"></path>
+    <path d="M22 10v6"></path>
+  </symbol>
+  <symbol id="icon-download" viewBox="0 0 24 24">
+    <path d="M12 3v11"></path>
+    <path d="m7 9 5 5 5-5"></path>
+    <path d="M5 21h14"></path>
+  </symbol>
+  <symbol id="icon-circle-help" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M9.1 9a3 3 0 1 1 5.8 1c0 2-3 2-3 4"></path>
+    <path d="M12 17h.01"></path>
+  </symbol>
+  <symbol id="icon-workflow" viewBox="0 0 24 24">
+    <rect x="3" y="3" width="6" height="6" rx="1"></rect>
+    <rect x="15" y="3" width="6" height="6" rx="1"></rect>
+    <rect x="9" y="15" width="6" height="6" rx="1"></rect>
+    <path d="M9 6h6"></path>
+    <path d="M12 9v6"></path>
+  </symbol>
+  <symbol id="icon-file-text" viewBox="0 0 24 24">
+    <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"></path>
+    <path d="M14 2v5h5"></path>
+    <path d="M9 12h6"></path>
+    <path d="M9 16h6"></path>
+  </symbol>
+  <symbol id="icon-chevrons-up-down" viewBox="0 0 24 24">
+    <path d="m7 15 5 5 5-5"></path>
+    <path d="m7 9 5-5 5 5"></path>
+  </symbol>
+  <symbol id="icon-library" viewBox="0 0 24 24">
+    <path d="m4 22 3-18"></path>
+    <path d="m10 22 3-18"></path>
+    <path d="m16 22 3-18"></path>
+    <path d="M2 22h20"></path>
+  </symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+    <circle cx="9" cy="7" r="3"></circle>
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+    <path d="M16 3.13a3 3 0 0 1 0 5.75"></path>
+  </symbol>
+  <symbol id="icon-triangle-alert" viewBox="0 0 24 24">
+    <path d="M10.3 3.9 1.8 18.2A2 2 0 0 0 3.5 21h17a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0z"></path>
+    <path d="M12 9v4"></path>
+    <path d="M12 17h.01"></path>
+  </symbol>
+  <symbol id="icon-settings" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="3"></circle>
+    <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.2a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5h.2a1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.2a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.5 1z"></path>
+  </symbol>
+</svg>
 <header class="app-header" id="app-header">
   <div class="app-header-min">
     <div class="app-title-wrap">
       <div class="app-kicker">I.C. Calvario-Covotta «don Lorenzo Milani»</div>
-      <h1><span aria-hidden="true">📚</span> Curricolo Verticale</h1>
+      <h1><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curricolo Verticale</span></h1>
       <div class="app-subtitle">IN 2012 → IN 2025 · Ariano Irpino (AV) · AVIC849003</div>
     </div>
     <button id="header-toggle" class="header-toggle" type="button" onclick="toggleHeaderDetails()" aria-expanded="false" aria-controls="header-details">Dettagli ▾</button>
@@ -1369,18 +1438,18 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div class="header-detail-line">Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV) · Codice meccanografico AVIC849003</div>
     <div class="header-badges">
       <span class="norm-badge">D.M. 254/2012</span>
-      <span class="norm-badge" style="background:rgba(192,57,43,.4)">⚡ D.M. 221/2025 — G.U. 27/01/2026 — vigore da 01/09/2026</span>
+      <span class="norm-badge" style="background:rgba(192,57,43,.4)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-triangle-alert"></use></svg> D.M. 221/2025 — G.U. 27/01/2026 — vigore da 01/09/2026</span></span>
       <span class="norm-badge" style="background:rgba(255,255,255,.1)">Motto: <a class='motto-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Apri una breve spiegazione del motto latino: non molte cose, ma molto'>Non multa, sed multum</a></span>
     </div>
     <div class="stats" id="stats"></div>
   </div>
 </header>
 <div class="tabbar" id="tabbar">
-  <button class="active" onclick="setTab('home')"><span aria-hidden="true">🏠</span> Home</button>
-  <button onclick="setTab('curricolo')"><span aria-hidden="true">📚</span> Curriculum</button>
-  <button onclick="setTab('didattica')"><span aria-hidden="true">🧑‍🏫</span> Competenze e progettazione</button>
-  <button onclick="setTab('esportazioni')"><span aria-hidden="true">📤</span> Esportazioni</button>
-  <button onclick="setTab('guida')"><span aria-hidden="true">❔</span> Guida</button>
+  <button class="active" onclick="setTab('home')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-house"></use></svg> Home</span></button>
+  <button onclick="setTab('curricolo')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curriculum</span></button>
+  <button onclick="setTab('didattica')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Competenze e progettazione</span></button>
+  <button onclick="setTab('esportazioni')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Esportazioni</span></button>
+  <button onclick="setTab('guida')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida</span></button>
 </div>
 <!-- SUB-NAV: CURRICULUM -->
 <div class="subnav-bar subnav-curriculum" id="subnav-curriculum" style="display:none">
@@ -1405,15 +1474,15 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="cruscotto-next">Prossima azione: avvia la consultazione e la revisione del curricolo</div>
     </div>
     <div class="cruscotto-btns">
-      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})"><span aria-hidden="true">📋</span> Controlla voci</button>
-      <button class="cruscotto-btn" type="button" onclick="setTab('riepilogo')"><span aria-hidden="true">📖</span> Apri documento</button>
-      <button class="cruscotto-btn" type="button" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})"><span aria-hidden="true">📤</span> Esporta</button>
+      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-workflow"></use></svg> Controlla voci</span></button>
+      <button class="cruscotto-btn" type="button" onclick="setTab('riepilogo')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-file-text"></use></svg> Apri documento</span></button>
+      <button class="cruscotto-btn" type="button" onclick="setTab('lavoro');var t=document.querySelector('.toolbar');if(t)t.scrollIntoView({behavior:'smooth'})"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Esporta</span></button>
     </div>
     <div class="cruscotto-bar">
       <span class="cruscotto-save"><span id="local-save-status"><span aria-hidden="true">💾</span> Ogni decisione viene conservata in questo browser.</span></span>
       <span class="cruscotto-prog" aria-live="polite" aria-atomic="true"><span id="prog-label" style="font-size:11px!important;font-weight:700!important;color:#1a237e!important">—</span> <span id="prog-pct" style="font-size:11px!important;color:#1a237e!important;font-weight:700!important">0%</span></span>
       <div class="prog-bar-bg" style="flex:1;max-width:160px;height:6px"><div class="prog-bar-fill" id="prog-fill" style="width:0%;height:100%"></div></div>
-      <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions"><span aria-hidden="true">⚙ï¸</span> Azioni ▾</button>
+      <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-settings"></use></svg> Azioni ▾</span></button>
     </div>
   </div>
   <div class="quick-actions" id="quick-actions" hidden>
@@ -1426,7 +1495,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <button class="quick-btn" onclick="openSettingsModal()"><span aria-hidden="true">👤</span> Impostazioni / onboarding</button>
     <a class="course-link" href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener"><span aria-hidden="true">📘</span> Apri il corso in PDF</a>
     <a class='course-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Significato operativo del motto latino'><span aria-hidden="true">🏛ï¸</span> Motto e metodo</a>
-    <button class="quick-btn" onclick="showWelcome(true)"><span aria-hidden="true">❔</span> Guida rapida</button>
+    <button class="quick-btn" onclick="showWelcome(true)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida rapida</span></button>
   </div>
 </div>
 <div class="layout">
@@ -1450,33 +1519,33 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <button type="button" onclick="setTab('curricolo')">Verifica applicazione per classi</button>
             <button type="button" onclick="setTab('processo')">Segui la revisione</button>
             <button type="button" onclick="setTab('didattica')">Progetta attivita e UDA</button>
-            <button type="button" class="home-quick-guide" onclick="showWelcome(true)">Guida rapida</button>
+            <button type="button" class="home-quick-guide" onclick="showWelcome(true)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida rapida</span></button>
           </div>
         </section>
         <p class="home-operational-title">Ingressi operativi per bisogno professionale</p>
         <div class="home-cards">
           <a href="#" class="home-card" onclick="setTab('curricolo');return false">
-            <h3 class="home-card-title">Curricolo vigente</h3>
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curricolo vigente</h3>
             <p class="home-card-text">Consulta cosa e valido oggi nel curricolo di istituto.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('curricolo');return false">
-            <h3 class="home-card-title">Applicazione per classi</h3>
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-users"></use></svg> Applicazione per classi</h3>
             <p class="home-card-text">Verifica quale curricolo usare per classe e anno scolastico.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('normativa');return false">
-            <h3 class="home-card-title">Adeguamento IN 2025</h3>
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-triangle-alert"></use></svg> Adeguamento IN 2025</h3>
             <p class="home-card-text">Distingui proposte, parti validate e materiali non ancora approvati.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('processo');return false">
-            <h3 class="home-card-title">Processo di revisione</h3>
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-workflow"></use></svg> Processo di revisione</h3>
             <p class="home-card-text">Accedi alle azioni pertinenti al tuo ruolo professionale.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('didattica');return false">
-            <h3 class="home-card-title">Progettazione e competenze</h3>
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Progettazione e competenze</h3>
             <p class="home-card-text">Lavora su programmazione, UDA e materiali didattici.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('esportazioni');return false">
-            <h3 class="home-card-title">Esportazioni</h3>
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Esportazioni</h3>
             <p class="home-card-text">Produci documenti, file di lavoro e copie di sicurezza.</p>
           </a>
         </div>
@@ -1484,7 +1553,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <h3 class="home-discipline-title">Discipline</h3>
           <p class="home-discipline-copy" id="home-discipline-status">Usale come filtro quando devi consultare o progettare su una disciplina specifica.</p>
           <div class="home-discipline-actions">
-            <button type="button" id="home-discipline-open-btn" class="home-discipline-primary" onclick="toggleHomeDisciplinePanel()">Mostra discipline</button>
+            <button type="button" id="home-discipline-open-btn" class="home-discipline-primary" onclick="toggleHomeDisciplinePanel()"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-chevrons-up-down"></use></svg> Mostra discipline</span></button>
             <button type="button" id="home-discipline-resume-btn" onclick="setTab('curricolo')" hidden>Riprendi</button>
             <button type="button" id="home-discipline-change-btn" onclick="toggleHomeDisciplinePanel()" hidden>Cambia</button>
           </div>
@@ -3530,8 +3599,11 @@ function updateHomeDisciplinePanel(){
     if(resumeBtn) resumeBtn.hidden=true;
     if(changeBtn) changeBtn.hidden=true;
   }
-  openBtn.textContent=homeDisciplinePanelOpen?"Nascondi discipline":"Mostra discipline";
+  openBtn.innerHTML=getHomeDisciplineToggleLabel(homeDisciplinePanelOpen?"Nascondi discipline":"Mostra discipline");
   openBtn.setAttribute("aria-expanded",homeDisciplinePanelOpen?"true":"false");
+}
+function getHomeDisciplineToggleLabel(text){
+  return '<span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-chevrons-up-down"></use></svg> '+text+'</span>';
 }
 function toggleHomeDisciplinePanel(){
   homeDisciplinePanelOpen=!homeDisciplinePanelOpen;
@@ -5337,11 +5409,11 @@ function toggleQuickActions(force){
   if(expand){
     panel.removeAttribute("hidden");
     btn.setAttribute("aria-expanded","true");
-    btn.textContent="Chiudi ▴";
+    btn.innerHTML='<span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-settings"></use></svg> Chiudi ▴</span>';
   } else {
     panel.setAttribute("hidden","");
     btn.setAttribute("aria-expanded","false");
-    btn.textContent="Azioni ▾";
+    btn.innerHTML='<span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-settings"></use></svg> Azioni ▾</span>';
   }
 }
 
