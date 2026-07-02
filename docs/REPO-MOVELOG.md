@@ -1,5 +1,21 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-261 — ROLE LANGUAGE SURFACE CLEANUP
+
+- **Nome slice**: `CML-261`
+- **Tipo slice**: runtime microfix + docs
+- **Contesto**: prima slice della roadmap CML-260. Applica lo style dictionary (Agente 5) sulla superficie UI: "UDA smart" → "UDA personalizzata", "persistita/persistito" → "salvata/salvato", "Reset" (pulsante) → "Ripristina marcature", "Piu" → "Più".
+- **Stato repository**: HEAD `84375e1` (CML-260 docs-only non pushato), working tree modificato con runtime fix
+- **File runtime modificati**: `index.html`, `_published_snapshot/netlify-current/index.html` (26 modifiche per file, 52 totali, bilanciate 26+26)
+- **Documentazione prodotta**: `docs/03_execution/CML-261.md`, `report/CML-261_role_language_surface_cleanup.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Sostituzioni eseguite**: 19× "UDA smart" → "UDA personalizzata", 2× "persistita/persistito" → "salvata/salvato", 1× "Reset" (pulsante) → "Ripristina marcature", 1× "Piu" → "Più"
+- **Non modificate**: CSS class names (`evidence-reset-btn`, `resetEvidenceStates()`), storage keys, variabili JS interne — sono tecnici interni
+- **Verifiche**: `git diff --check` pulito, validatore 14/14 valid, shape test 14/14 PASS, smoke statico zero residui vecchi termini
+- **Runtime**: modificato in modo limitato (solo stringhe UI)
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_261_ROLE_LANGUAGE_SURFACE_CLEANUP_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-260 — MULTI-AGENT ROLE-OPERATIVE LANGUAGE AND COGNITIVE LOAD BACKLOG AUDIT
 
 - **Nome slice**: `CML-260`
