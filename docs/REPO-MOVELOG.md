@@ -1,5 +1,25 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-257 - UX MATURITY CYCLE CLOSURE AUDIT
+
+- **Nome slice**: `CML-257`
+- **Tipo slice**: docs-only / closure audit
+- **Contesto**: chiusura ciclo UX dopo CML-246 → CML-256P
+- **Stato repository**: main allineato a origin/main, working tree pulito
+- **Aree valutate**:
+  - Home / Percorso di lavoro
+  - Guida
+  - Stati vuoti e messaggi
+  - Esportazioni
+  - Stabilità tecnica
+- **Decisione**: `UX_MATURITY_CYCLE_CLOSED` — ciclo UX maturo per uso scolastico leggero
+- **Prossima eventuale slice**: CML-258 — UDA SMART AND PLANNING FLOW AUDIT (docs-only)
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-257.md`, `report/CML-257_ux_maturity_cycle_closure_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_257_UX_MATURITY_CYCLE_CLOSURE_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-256 - EXPORTS ROLE-BASED CLARITY LIVE SMOKE
 
 - **Nome slice**: `CML-256`
