@@ -1,5 +1,18 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-248 - POST-LIVE PROCESS FLOW NEXT UX SELECTION
+
+- **Nome slice**: `CML-248`
+- **Tipo slice**: docs-only / planning audit
+- **Contesto**: ripartenza dopo CML-247
+- **Aree valutate**: Guida, Esportazioni, Stati vuoti/messaggi, UDA smart/Programmazione
+- **Prossima slice selezionata**: `CML-249` — GUIDE FLOW ALIGNMENT MICRO-UX
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-248.md`, `report/CML-248_post_live_process_flow_next_ux_selection.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_248_POST_LIVE_PROCESS_FLOW_NEXT_UX_SELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-247 - PROCESS FLOW MICRO-UX DEPLOY AND LIVE SMOKE
 
 - **Nome slice**: `CML-247`
