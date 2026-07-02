@@ -1,5 +1,29 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-274 - EXPORT AND DOCUMENT LAYER CONTRACT
+
+- **Nome slice**: `CML-274`
+- **Tipo slice**: docs-only
+- **Contesto**: specifica di esportazione e produzione documentale dopo CML-273
+- **Obiettivo**: progettare la produzione documentale partendo dal documento da produrre, non dal formato
+- **Focus**: documenti istituzionali, di revisione e didattici; file `.cml`; backup; report di avanzamento; relazione tra documento esportato e stato della fonte; avvertenze per materiale non validato; distinzione tra ufficiale, lavoro e operativo
+- **Relazione con CML-065**: mantiene il contratto base Curriculum/Didattica
+- **Relazione con CML-267**: applica l'ambiente curricolare professionale
+- **Relazione con CML-268**: usa il cruscotto come ingresso
+- **Relazione con CML-269**: usa il contesto di lavoro come base di lettura
+- **Relazione con CML-270**: usa l'applicabilita come base dei documenti
+- **Relazione con CML-271**: usa l'allineamento IN 2025 come stato della fonte
+- **Relazione con CML-272**: usa il processo di revisione come base documentale
+- **Relazione con CML-273**: usa la didattica come fonte operativa
+- **File prodotti**: `docs/02_system/EXPORT-AND-DOCUMENT-LAYER-CONTRACT.md`, `docs/03_execution/CML-274.md`, `report/CML-274_export_and_document_layer_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_274_EXPORT_AND_DOCUMENT_LAYER_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-273 - DIDACTICS LAYER CONTRACT
 
 - **Nome slice**: `CML-273`
