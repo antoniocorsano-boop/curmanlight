@@ -1,5 +1,22 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-265 - VISIBLE TECHNICAL RESIDUALS FULL UI AUDIT
+
+- **Nome slice**: `CML-265`
+- **Tipo slice**: docs-only / full UI residual audit
+- **Contesto**: audit sistematico dopo CML-263/CML-264
+- **Motivo**: evitare falsi negativi dopo il caso `contratto dati CML-061`
+- **Superfici ispezionate**: Home, Curriculum, Guida, Processo, Esportazioni, Didattica, Programmazione, UDA, Revisione, mobile nav, 14 discipline
+- **Numero rilievi**: 10
+- **Distribuzione P0/P1/P2/P3**: P0=0, P1=3, P2=5, P3=2
+- **Decisione finale**: `RUNTIME_CLEANUP_REQUIRED_BEFORE_RELEASE`
+- **Prossima slice consigliata**: `CML-266 — FILE AND DELIVERY LANGUAGE CLEANUP`
+- **Runtime**: invariato
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-265.md`, `report/CML-265_visible_technical_residuals_full_ui_audit.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_265_VISIBLE_TECHNICAL_RESIDUALS_FULL_UI_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-264 - VISIBLE GOVERNANCE REFERENCES LIVE SMOKE
 
 - **Nome slice**: `CML-264`
