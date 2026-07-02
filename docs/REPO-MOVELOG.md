@@ -1,5 +1,30 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-276C - HOME DASHBOARD LIVE DEPLOY SMOKE
+
+- **Nome slice**: `CML-276C`
+- **Tipo slice**: docs-only
+- **Contesto**: verifica live post CML-276/276A/276B
+- **Obiettivo**: confermare che GitHub Pages serva il runtime Home aggiornato
+- **Controlli live**:
+  - `https://antoniocorsano-boop.github.io/curmanlight/` (HTTP 200)
+  - confronto marker runtime nuovo/vecchio
+  - confronto con raw `main` (`raw.githubusercontent.com/.../main/index.html`)
+  - retry con query cache-busting
+  - smoke browser live
+- **Esito**:
+  - live serve ancora runtime precedente (Home vecchia + modale automatico)
+  - raw `main` contiene runtime nuovo (banner inline + no `showWelcome()` automatico)
+  - stato: live non allineato
+- **Runtime**: invariato in questa slice
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Import/export dati**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-276C.md`, `report/CML-276C_home_dashboard_live_deploy_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_276C_HOME_DASHBOARD_LIVE_DEPLOY_SMOKE_FAILED_STALE_LIVE`
+
 ## 2026-07-02 - CML-276B - HOME DASHBOARD ROOT SNAPSHOT PARITY MICROFIX
 
 - **Nome slice**: `CML-276B`
