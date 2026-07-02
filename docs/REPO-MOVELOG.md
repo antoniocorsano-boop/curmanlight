@@ -8,7 +8,7 @@
 - **Commit locali inclusi**: `fbf96e0` (CML-240), `ef7f8fd` (CML-242), `35b9a7c` (CML-243)
 - **Runtime**: invariato
 - **Deploy**: non eseguito
-- **Push**: previsto dopo controlli
+- **Push**: eseguito (`05cd399..c4ec01e main -> main`)
 - **File prodotti**: `docs/03_execution/CML-244.md`, `report/CML-244_controlled_push_docs_only_local_stack.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_244_CONTROLLED_PUSH_DOCS_ONLY_LOCAL_STACK_PUSHED`
 

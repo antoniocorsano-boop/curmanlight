@@ -50,12 +50,16 @@ git --no-pager log --oneline -8
 git push origin main
 ```
 
-## Controlli post-push attesi
+Push eseguito: `05cd399..c4ec01e main -> main`
 
-- `main...origin/main` allineati
-- Working tree pulito
-- HEAD locale = origin/main
-- Commit CML-240, CML-242, CML-243 presenti in remoto
+## Controlli post-push
+
+| Controllo | Esito |
+|---|---|
+| `main...origin/main` allineati | PASS |
+| HEAD locale = origin/main | PASS (`c4ec01e`) |
+| Working tree pulito | PASS |
+| Commit CML-240, CML-242, CML-243 in remoto | PASS |
 
 ## Checklist
 
@@ -65,7 +69,7 @@ git push origin main
 - [x] runtime invariato
 - [x] nessun force push previsto
 - [x] documentazione CML-244 committata
-- [ ] push eseguito
-- [ ] origin/main allineato
-- [ ] working tree pulito
-- [ ] verdict registrato
+- [x] push eseguito
+- [x] origin/main allineato
+- [x] working tree pulito
+- [x] verdict registrato
