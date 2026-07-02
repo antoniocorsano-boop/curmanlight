@@ -1,5 +1,18 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-255 - EXPORTS ROLE-BASED CLARITY MICRO-UX
+
+- **Nome slice**: `CML-255`
+- **Tipo slice**: runtime microfix
+- **Contesto**: selezione CML-254 — miglioramento microcopy Esportazioni
+- **Stato repository**: partito da main allineato (ec1d904), working tree pulito
+- **Modifiche**: aggiunto blocco "Quale esportazione usare?" — 6 reglie CSS + 9 lines HTML in index.html e snapshot
+- **Validazione**: curricolo 14/14 valid, mappa dati 14/14 PASS, git diff-check OK, byte count identico 838400
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-255.md`, `report/CML-255_exports_role_based_clarity_micro_ux.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_255_EXPORTS_ROLE_BASED_CLARITY_MICRO_UX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-254 - POST-EMPTY-STATES NEXT UX SELECTION
 
 - **Nome slice**: `CML-254`
