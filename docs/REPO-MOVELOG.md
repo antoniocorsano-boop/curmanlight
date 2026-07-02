@@ -1,5 +1,28 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-273 - DIDACTICS LAYER CONTRACT
+
+- **Nome slice**: `CML-273`
+- **Tipo slice**: docs-only
+- **Contesto**: specifica del layer didattico dopo CML-272
+- **Obiettivo**: definire il rapporto tra curricolo applicabile, competenze, programmazione annuale, UDA, attivita, materiali e valutazione
+- **Focus**: base curricolare dichiarata; competenze; programmazione annuale; UDA; attivita e materiali; rubriche e griglie; stato istituzionale della base; messaggi concettuali; accessibilita
+- **Relazione con CML-065**: mantiene il contratto base Curriculum/Didattica
+- **Relazione con CML-267**: usa l'ambiente curricolare professionale
+- **Relazione con CML-268**: usa il cruscotto come ingresso
+- **Relazione con CML-269**: usa il contesto di lavoro come base di lettura
+- **Relazione con CML-270**: usa l'applicabilita come base operativa
+- **Relazione con CML-271**: usa l'allineamento IN 2025 come stato della base
+- **Relazione con CML-272**: usa il processo di revisione come percorso istituzionale
+- **File prodotti**: `docs/02_system/DIDACTICS-LAYER-CONTRACT.md`, `docs/03_execution/CML-273.md`, `report/CML-273_didactics_layer_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Runtime**: invariato
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Export/import**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_273_DIDACTICS_LAYER_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-272 - REVISION PROCESS LAYER CONTRACT
 
 - **Nome slice**: `CML-272`
