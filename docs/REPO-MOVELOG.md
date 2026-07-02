@@ -1,5 +1,34 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-277 - ICON SYSTEM CONTRACT
+
+- **Nome slice**: `CML-277`
+- **Tipo slice**: docs-only
+- **Contesto**: CML-276E ha confermato live UTF-8 corretto su runtime pubblico; gate encoding chiuso
+- **Obiettivo**: definire il sistema icone ufficiale per sostituire progressivamente emoji strutturali con SVG locali
+- **Decisioni fissate**:
+  - Lucide SVG subset locale
+  - no emoji come icone strutturali
+  - no CDN
+  - no font iconici remoti
+  - testo sempre visibile accanto alle icone nelle aree principali
+- **Perimetro CML-278 dichiarato**:
+  - navigazione principale
+  - Home/cruscotto
+  - Guida rapida
+  - Mostra/Nascondi discipline
+  - badge principali
+- **Vincoli invarianti**:
+  - nessuna modifica runtime
+  - nessuna modifica schema `.cml`
+  - nessuna modifica dati curricolari
+  - nessuna modifica export/import
+  - nessuna modifica storage
+- **File prodotti**: `docs/02_system/ICON-SYSTEM-CONTRACT.md`, `docs/03_execution/CML-277.md`, `report/CML-277_icon_system_contract.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_277_ICON_SYSTEM_CONTRACT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-276E - UTF-8 PUBLIC RUNTIME ENCODING AUDIT AND FIX
 
 - **Nome slice**: `CML-276E`
