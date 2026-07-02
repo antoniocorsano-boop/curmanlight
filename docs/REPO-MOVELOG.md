@@ -1,5 +1,27 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-276 - HOME DASHBOARD MINIMAL RUNTIME REDESIGN
+
+- **Nome slice**: `CML-276`
+- **Tipo slice**: runtime microfix + docs
+- **Contesto**: prima implementazione runtime della selezione CML-275
+- **Obiettivo**: rendere la Home orientata al bisogno professionale con onboarding non bloccante e discipline secondarie
+- **Interventi**:
+  - banner inline in Home con orientamento professionale
+  - schede operative Home per bisogno professionale
+  - discipline secondarie con pannello chiuso/apribile in Home
+  - rimozione apertura automatica del modale iniziale
+  - Guida rapida mantenuta su richiesta
+- **Runtime**: modificato in `_published_snapshot/netlify-current/index.html`
+- **Schema `.cml`**: invariato
+- **Storage**: invariato
+- **Import/export dati**: invariati
+- **Validatori**: invariati
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **File prodotti/modificati**: `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-276.md`, `report/CML-276_home_dashboard_minimal_runtime_redesign.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_276_HOME_DASHBOARD_MINIMAL_RUNTIME_REDESIGN_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-275 - ARCHITECTURE SYNTHESIS AND FIRST RUNTIME SELECTION
 
 - **Nome slice**: `CML-275`
