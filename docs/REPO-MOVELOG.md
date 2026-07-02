@@ -20,6 +20,19 @@
 - **File prodotti**: `docs/03_execution/CML-262.md`, `report/CML-262_role_language_surface_cleanup_live_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
 - **Verdetto**: `CML_262_ROLE_LANGUAGE_SURFACE_CLEANUP_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED`
 
+## 2026-07-02 - CML-262RP — CONTROLLED PUSH OF LIVE SMOKE AND RECTIFICATION DOCS
+
+- **Nome slice**: `CML-262RP`
+- **Tipo slice**: OPS / controlled push
+- **Contesto**: push controllato dello stack docs-only CML-262 + CML-262R su origin/main per consentire a CML-263 di partire da base documentale corretta.
+- **Commit pushati**: `bcfce0d` (CML-262), `7982fae` (CML-262R)
+- **Stato pre-push**: main ahead 2 (84b89fe..7982fae), working tree pulito
+- **Stato post-push**: main = origin/main = `7982fae`
+- **Verifica live**: `https://antoniocorsano-boop.github.io/curmanlight/` — HTTP 200
+- **Runtime**: invariato
+- **Deploy manuale**: non eseguito (GitHub Pages rebuild automatico)
+- **Verdetto**: `CML_262RP_CONTROLLED_PUSH_LIVE_SMOKE_AND_RECTIFICATION_DONE`
+
 ## 2026-07-02 - CML-262R — LIVE SMOKE RECTIFICATION (VISIBLE GOVERNANCE REFERENCES)
 
 - **Nome slice**: `CML-262R`
@@ -30,14 +43,13 @@
   - P0: `"Anteprima consultiva basata sul contratto dati CML-061."` (template JS Tecnologia)
   - P0: `"Fonte: CML-061 / CML-062"` (template JS Tecnologia, metadati)
   - P1: `"Pacchetto pilota CML-062"` (28 occorrenze noteDipartimento in `tecnologia.normalized.json`)
-- **File rettificati**: `docs/03_execution/CML-262.md` (aggiunta governance references, correzione verdict finale), `report/CML-262_role_language_surface_cleanup_live_smoke.md` (aggiunta sezione rettifica, aggiornamento rischi e raccomandazioni)
+- **File rettificati**: `docs/03_execution/CML-262.md`, `report/CML-262_role_language_surface_cleanup_live_smoke.md`
 - **File nuovi**: `docs/03_execution/CML-262R.md`, `report/CML-262R_live_smoke_rectification.md`
 - **Prossima slice obbligatoria**: CML-263 (Visible Governance References Cleanup, ~4 righe template JS)
 - **Prossima slice raccomandata**: CML-264 (Curriculum Data Governance Cleanup, 28 campi noteDipartimento)
 - **Runtime**: invariato
-- **Deploy manuale**: non eseguito
-- **Push**: non eseguito
-- **Verdetto**: `CML_262R_LIVE_SMOKE_RECTIFICATION_VISIBLE_GOVERNANCE_REFERENCES_READY_LOCAL_NOT_PUSHED`
+- **Push**: non eseguito (assorbito da CML-262RP)
+- **Verdetto**: `CML_262R_LIVE_SMOKE_RECTIFICATION_VISIBLE_GOVERNANCE_REFERENCES_READY`
 
 ## 2026-07-02 - CML-261 — ROLE LANGUAGE SURFACE CLEANUP
 
