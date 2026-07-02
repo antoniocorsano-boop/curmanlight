@@ -1,5 +1,24 @@
 ﻿# Repo Movelog
 
+## 2026-07-02 - CML-264 - VISIBLE GOVERNANCE REFERENCES LIVE SMOKE
+
+- **Nome slice**: `CML-264`
+- **Tipo slice**: docs-only / live smoke audit
+- **Contesto**: verifica live dopo CML-263P
+- **URL verificato**: `https://antoniocorsano-boop.github.io/curmanlight/`
+- **Aree testate**: Home, Curriculum/Italiano, Curriculum/Matematica, Guida, Esportazioni, responsive, console
+- **Esito assenza riferimenti**: contratto dati CML-061 assente; Fonte: CML-061 / CML-062 assente
+- **Esito presenza nuovi testi**: Anteprima consultiva da verificare in sede di lavoro disciplinare. presente; Base di lavoro: materiali curricolari già predisposti presente
+- **Esito console**: 0 errori, 0 warning nuovi
+- **Esito responsive**: desktop e mobile verificati
+- **Esito validatore**: PASS (14/14)
+- **Esito shape test**: PASS (14/14)
+- **Runtime**: invariato
+- **Deploy manuale**: non eseguito
+- **Push**: non eseguito
+- **File prodotti**: `docs/03_execution/CML-264.md`, `report/CML-264_visible_governance_references_live_smoke.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Verdetto**: `CML_264_VISIBLE_GOVERNANCE_REFERENCES_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-263 - VISIBLE GOVERNANCE REFERENCES CLEANUP
 
 - **Nome slice**: `CML-263`
