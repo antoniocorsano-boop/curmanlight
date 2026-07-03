@@ -96,6 +96,30 @@
 - **Prossima slice**: CML-322P (Controlled Push)
 - **Verdetto**: `CML_322_LOCAL_CHAIN_PRE_PUSH_AUDIT_READY_LOCAL_NOT_PUSHED`
 
+## 2026-07-03 - CML-324 - PM-04 POST-REMEDIATION REAL USER RETEST
+
+- **Nome slice**: `CML-324`
+- **Tipo slice**: docs-only (post-remediation retest)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Dipendenze**: CML-317, CML-319, CML-321, CML-323
+- **Obiettivo**: ripetere test utente reale post-remediation, confrontare con CML-317
+- **Tester reale**: `REAL_USER_RETEST_NOT_AVAILABLE`
+- **Verifica**: proxy tecnico su marker live GitHub Pages
+- **Marker live verificati**: HTTP 200, "Ambiente curricolare", "File e salvataggio", "Indicazioni Nazionali 2012/2025", "Motto e metodo", "responsabilità" — tutti presenti
+- **Residui mojibake live**: FE0F=0, FFFD=0
+- **Matrice confronto**: 5/6 scenari migliorati vs CML-317, mojibake P0 risolto
+- **Decisione PM-04**: `READY_FOR_FORMAL_CLOSURE_REVIEW`
+- **File creati/modificati**:
+  - `docs/03_execution/CML-324.md`
+  - `report/CML-324_pm04_post_remediation_real_user_retest.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**: nessuna modifica runtime, nessun push, nessun deploy
+- **Esito PM-04**: 55%, non chiusa
+- **Prossima slice**: CML-325 (PM-04 Formal Closure Review)
+- **Verdetto**: `CML_324_PM04_POST_REMEDIATION_REAL_USER_RETEST_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-319 - PM-04 CURRICULUM UX RUNTIME REMEDIATION
 
 - **Nome slice**: `CML-319`
