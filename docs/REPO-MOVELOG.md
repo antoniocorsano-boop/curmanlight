@@ -1,5 +1,37 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-313 - PM-04 FORMAL CLOSURE READINESS
+
+- **Nome slice**: `CML-313`
+- **Tipo slice**: docs-only
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-310, CML-311, CML-312
+- **Obiettivo**: valutare readiness formale PM-04 senza chiusura automatica
+- **Refuso runtime (verifica obbligatoria)**:
+  - presente in file tracciati CML-310/CML-311/CML-312: NO
+  - correzione su file tracciati: non necessaria
+  - impatto verdict precedenti: nullo (refuso solo testuale operativo)
+  - coppia runtime confermata: `index.html` + `_published_snapshot/netlify-current/index.html`
+- **Esito readiness PM-04**:
+  - PM-04 resta al 55%
+  - nessun incremento percentuale (evidenze forti aggiuntive assenti)
+  - PM-04 non chiusa
+  - classificazione: chiudibile solo dopo smoke/readiness runtime dedicato
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-313.md`
+  - `report/CML-313_pm04_formal_closure_readiness.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_313_PM04_FORMAL_CLOSURE_READINESS_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-312 - PM-04 CLOSURE EVIDENCE GATE
 
 - **Nome slice**: `CML-312`
