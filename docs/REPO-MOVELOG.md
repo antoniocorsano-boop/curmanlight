@@ -1,5 +1,45 @@
 ﻿# Repo Movelog
 
+## 2026-07-04 - CML-337 - PM-06 COMPILA PRE-SAVE READABILITY CUE RUNTIME MICROFIX
+
+- **Nome slice**: `CML-337`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-06 — Accompagnamento
+- **Backlog target**: UX-004, UX-019
+- **Dipendenze**: CML-336
+- **Obiettivo**: inserire un cue di leggibilita pre-salvataggio in Compila per favorire una revisione rapida prima della bozza locale
+- **Microfix runtime**:
+  - cue breve visibile nel riquadro Compila gia aperto di default
+  - focus su rilettura di titolo, obiettivo, destinatari, tempi e materiali
+  - nessuna modifica di workflow, salvataggio o esportazione
+- **Runtime pair aggiornata in sincrono**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Verifiche**:
+  - `git diff --check`: PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs`: PASS (14/14)
+  - `node tools/validate-cml-normalized-curriculum.mjs`: PASS (`"overallValid": true`)
+  - smoke browser Home/Didattica/Curricolo/Guida: PASS
+  - stato console: `CONSOLE_STREAM_NOT_RELIABLY_TESTED`
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/03_execution/CML-337.md`
+  - `report/CML-337_pm06_compila_pre_save_readability_cue_runtime_microfix.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna nuova guida generale
+  - nessun modale
+  - nessun redesign
+  - nessuna modifica modello dati
+  - nessun push
+  - nessun deploy
+- **Esito PM-06**: 60%
+- **Prossima slice**: CML-338 (o nuovo ciclo)
+- **Verdetto**: `CML_337_PM06_COMPILA_PRE_SAVE_READABILITY_CUE_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-04 - CML-336 - PM-06 COMPILA IN-FLOW SUPPORT RUNTIME MICROFIX
 
 - **Nome slice**: `CML-336`
@@ -19,7 +59,6 @@
   - `git diff --check`: PASS
   - `node tools/test-runtime-mappa-dati-shape.mjs`: PASS (14/14)
   - `node tools/validate-cml-normalized-curriculum.mjs`: PASS (`"overallValid": true`)
-  - `git diff --name-only`: runtime pair confermata
   - smoke browser Home/Didattica/Curricolo/Guida: PASS
   - stato console: `CONSOLE_STREAM_NOT_RELIABLY_TESTED`
 - **File creati/modificati**:
