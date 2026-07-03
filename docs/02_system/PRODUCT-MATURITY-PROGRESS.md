@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-297 (UX-014, UX-015)
+- CML-304 (UX-022 — terminologia non glossario-compliant)
 
 ## Percorso critico (fase 1)
 

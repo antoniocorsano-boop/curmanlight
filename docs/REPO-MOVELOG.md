@@ -48,8 +48,8 @@
   - nessuna regressione su UX chiuse
   - runtime parity mantenuta
   - nessun deploy
-  - nessun push
-- **Verdetto**: `CML_297_UX_014_UX_015_PM04_CLOSURE_READY_LOCAL_NOT_PUSHED`
+  - push eseguito (commit 764056b)
+- **Verdetto**: `CML_297_UX_014_UX_015_PM04_CLOSURE_PUSHED`
 
 ## 2026-07-03 - CML-296 - ROADMAP POST-295 CONSOLIDATION AUDIT
 
