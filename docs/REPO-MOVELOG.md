@@ -1,5 +1,41 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-315 - PM-04 TIMED COMPREHENSION SMOKE
+
+- **Nome slice**: `CML-315`
+- **Tipo slice**: proxy timed smoke in sola lettura + documentazione
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-314
+- **Obiettivo**: verifica temporizzata e osservabile del criterio PM-04 comprensione immediata
+- **Runtime pair verificata**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Tipologia**: PROXY_TIMED_SMOKE_TECNICO (non test utente umano)
+- **Esito scenari**:
+  - Scenario A — Home comprensione iniziale: PASS (media)
+  - Scenario B — Accesso Curriculum: PASS (forte)
+  - Scenario C — Selezione disciplina: PASS (forte)
+  - Scenario D — Linguaggio utente: PASS (forte)
+  - Scenario E — Console/blocchi: NOT TESTED (CONSOLE_STREAM_NOT_RELIABLY_TESTED)
+- **Limite dichiarato**: proxy tecnico; manca test utente umano per chiusura formale PM-04
+- **Esito PM-04**:
+  - PM-04 resta al 55%, non chiusa
+  - classificazione avanzata: pronta per futura closure formale previo test utente reale
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-315.md`
+  - `report/CML-315_pm04_timed_comprehension_smoke.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_315_PM04_TIMED_COMPREHENSION_SMOKE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-314 - PM-04 RUNTIME READINESS SMOKE
 
 - **Nome slice**: `CML-314`

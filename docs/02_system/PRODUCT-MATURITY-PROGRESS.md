@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-315 (PM-04 Timed Comprehension Smoke)
+- CML-316 (PM-04 User Test Closure Gate)
 
 ## Percorso critico (fase 1)
 
@@ -105,9 +105,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-312 (docs-only — PM-04 closure evidence gate)
 - Ultima slice completata: CML-313 (docs-only — PM-04 formal closure readiness)
 - Ultima slice completata: CML-314 (runtime smoke read-only — PM-04 runtime readiness smoke)
+- Ultima slice completata: CML-315 (proxy timed smoke — PM-04 timed comprehension smoke)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-315 (PM-04 Timed Comprehension Smoke)
-- Ultimo aggiornamento: 2026-07-03 (CML-314)
+- Prossima slice operativa prevista: CML-316 (PM-04 User Test Closure Gate)
+- Ultimo aggiornamento: 2026-07-03 (CML-315)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
