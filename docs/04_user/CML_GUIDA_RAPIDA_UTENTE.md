@@ -20,8 +20,10 @@ Non serve installare nulla: apri il browser e collega l'indirizzo.
 | **Curriculum** | Il curricolo della tua scuola in due versioni: IN 2012 (testo vigente) e IN 2025 (bozza delle nuove Indicazioni Nazionali) |
 | **Fonti** | Premessa, profilo dello studente, valutazione, inclusione, continuità, orientamento |
 | **Definitivo** | Versione finale del curricolo, quando sarà approvata |
-| **Competenze e progettazione** | Evidenze per competenza, programmazione annuale, bozze di UnitÃ  di Apprendimento (UDA) |
+| **Competenze e progettazione** | Evidenze per competenza, programmazione annuale, bozze di Unità di Apprendimento (UDA) |
 | **Revisione** | Area riservata per la proposta docente, la validazione dipartimentale e la verifica del referente |
+| **Esportazioni** | Scarica documenti finali, confronti modifiche, bozze, file `.cml` e copie di sicurezza |
+| **Guida** | Istruzioni su ruoli, sezioni, installazione e limiti dello strumento |
 
 ## Accesso alle funzioni riservate
 

@@ -32,7 +32,7 @@ Compilare questa checklist nel documento di esecuzione della slice:
 - [ ] Etichette e microcopy in linguaggio scolastico non tecnico.
 - [ ] Nessuna icona decorativa introdotta.
 - [ ] Icone usate con semantica univoca e documentata.
-- [ ] Guida e guida rapida aggiornate e coerenti con la UI.
+- [x] Guida e guida rapida aggiornate e coerenti con la UI.
 - [ ] Navigazione verificata su percorso utente reale.
 - [ ] Focus verificato dopo cambio sezione/disciplina.
 - [ ] Nessuna esposizione di termini o stati tecnici all'utente.

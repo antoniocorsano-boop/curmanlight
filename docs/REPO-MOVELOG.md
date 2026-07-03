@@ -1,5 +1,38 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-286 - GUIDE AND QUICK GUIDE ALIGNMENT
+
+- **Nome slice**: `CML-286`
+- **Tipo slice**: runtime microfix + documentazione
+- **Macroprogramma**: PM-06 - Guida e documentazione
+- **Backlog target**: UX-004, UX-019
+- **Dipendenze**: CML-285P
+- **Obiettivo**: allineare Guida e Guida rapida allo stato attuale di CurManLight dopo CML-285P
+- **Intervento runtime**:
+  - corretti accenti mancanti in showWelcome (`applicabilita` -> `applicabilità`, `attivita` -> `attività`)
+- **Intervento documentazione**:
+  - aggiornato PROJECT-STATE.md (slice, commit, verdict)
+  - integrate righe Esportazioni e Guida in CML_GUIDA_RAPIDA_UTENTE.md
+  - aggiornato PRODUCT-USABILITY-BACKLOG.md (UX-004 RISOLTO, UX-019 PARZIALMENTE)
+  - spuntata checklist UX-STANDARDS per guida allineata
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/02_system/UX-STANDARDS.md`
+  - `docs/04_user/CML_GUIDA_RAPIDA_UTENTE.md`
+  - `docs/03_execution/CML-286.md`
+  - `report/CML-286_guide_and_quick_guide_alignment.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna nuova funzionalita
+  - nessuna nuova dipendenza
+  - nessuna modifica a schema `.cml` / import / export / storage / service worker
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_286_GUIDE_AND_QUICK_GUIDE_ALIGNMENT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-285 - CURRICULUM INDICATORS AND TERMINOLOGY RATIONALIZATION
 
 - **Nome slice**: `CML-285`

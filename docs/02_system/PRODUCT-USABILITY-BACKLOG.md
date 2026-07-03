@@ -17,7 +17,7 @@ Backlog di maturita prodotto UX aggiornato con il primo audit completo (CML-282)
 | UX-001 | PM-04 | Curriculum | Logiche miste tra consultazione, revisione e azioni operative nella stessa area percepita. | Percorso ambiguo e aumento decisioni simultanee. | P0 | nessuna | PARZIALMENTE RISOLTO (CML-283, CML-284, CML-285) | CML-293 |
 | UX-002 | PM-03 | Navigazione/Focus | Cambio disciplina con focus percepito in area bassa/non sempre ricentrato sul contenuto principale. | Perdita orientamento e rallentamento del compito. | P0 | CML-283 | RISOLTO IN CML-284 | CML-305 |
 | UX-003 | PM-04 | Indicatori | Indicatori non autoesplicativi: "voci totali", "voci con proposta 2025", "copertura curricolo". | Difficolta nel capire stato reale del curricolo. | P1 | CML-283 | RISOLTO IN CML-285 | CML-295 |
-| UX-004 | PM-06 | Guida | Guida e Guida rapida non sempre allineate ai nomi/percorsi mostrati in UI. | L'utente segue istruzioni parzialmente incoerenti. | P1 | CML-283 | TODO | CML-286 |
+| UX-004 | PM-06 | Guida | Guida e Guida rapida non sempre allineate ai nomi/percorsi mostrati in UI. | L'utente segue istruzioni parzialmente incoerenti. | P1 | CML-283 | RISOLTO IN CML-286 | CML-301 |
 | UX-005 | PM-03 | Navigazione | Navigazione non sempre coerente con il compito dell'utente nella sezione Curriculum. | Continuita del flusso ridotta durante cambio disciplina e ritorno al contenuto principale. | P1 | CML-283 | PARZIALMENTE RISOLTO (CML-284) | CML-305 |
 | UX-006 | PM-04 | Terminologia Curriculum | Lessico non uniforme in area Curriculum (es. "pacchetto curricolare"). | Comprensione ridotta per utenti non tecnici. | P1 | CML-285 | RISOLTO IN CML-285 | CML-304 |
 | UX-007 | PM-03 | Home | Home con molti ingressi operativi contemporanei. | Sovraccarico nel decidere da dove iniziare. | P1 | CML-283 | TODO | CML-289 |
@@ -32,7 +32,7 @@ Backlog di maturita prodotto UX aggiornato con il primo audit completo (CML-282)
 | UX-016 | PM-05 | Curriculum/Azioni | Presenza contemporanea di azioni globali e locali senza gerarchia esplicita. | Aumento errori di clic e indecisione. | P1 | CML-283 | TODO | CML-298 |
 | UX-017 | PM-05 | Compila | Sezione "Valutazione/Evidenze" contiene molte avvertenze e note nella parte alta. | Start operativo lento e carico cognitivo elevato. | P1 | CML-283 | TODO | CML-299 |
 | UX-018 | PM-05 | Esportazioni | Numero elevato di pulsanti in sequenza senza progressione guidata a step. | Difficolta a scegliere formato corretto al primo tentativo. | P1 | CML-299 | TODO | CML-300 |
-| UX-019 | PM-06 | Guida rapida | Contenuti estesi e densi, poco "rapidi" per consultazione just-in-time. | Lettura lunga e ridotta efficacia operativa immediata. | P1 | CML-286 | TODO | CML-301 |
+| UX-019 | PM-06 | Guida rapida | Contenuti estesi e densi, poco "rapidi" per consultazione just-in-time. | Lettura lunga e ridotta efficacia operativa immediata. | P1 | CML-286 | PARZIALMENTE RISOLTO (CML-286) | CML-301 |
 | UX-020 | PM-03 | Navigazione mobile | Etichette abbreviate (Curr./Comp./Esp.) e menu separato aumentano la dipendenza da memoria utente. | Orientamento discontinuo nei passaggi frequenti. | P1 | CML-290 | TODO | CML-302 |
 | UX-021 | PM-07 | Iconografia/Mojibake | Presenza residua di simboli corrotti (es. "ï¸\x8f") in alcune etichette. | Percezione di incoerenza e riduzione fiducia. | P1 | CML-287 | TODO | CML-303 |
 | UX-022 | PM-04 | Terminologia tecnica | Termini/marker non glossario-compliant in UI (es. "pacchetto", "voci"). | Comprensione ridotta per target non tecnico. | P1 | CML-285 | TODO | CML-304 |
