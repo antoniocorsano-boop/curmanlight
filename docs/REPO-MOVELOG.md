@@ -1,5 +1,34 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-279 - WORK CONTEXT LIGHTWEIGHT RUNTIME ENTRY
+
+- **Nome slice**: `CML-279`
+- **Tipo slice**: runtime increment
+- **Contesto**: CML-269 Work Context Layer; Home ridisegnata in CML-276; icone SVG in CML-278
+- **Obiettivo**: aggiungere card "Contesto di lavoro" nella Home con impostazione leggera (ruolo, anno, classe, disciplina opzionale, base curricolare)
+- **Intervento runtime**:
+  - card contesto con due stati (vuoto / attivo) nella Home
+  - modal di impostazione con 5 campi
+  - salvataggio localStorage chiave `cml_work_context_v1`
+  - riepilogo contesto attivo con azioni "Modifica contesto" e "Reimposta"
+  - due nuove icone SVG: `icon-briefcase`, `icon-arrow-right`
+  - funzioni JS: loadWorkContext, saveWorkContext, resetWorkContext, openWorkContextPanel, closeWorkContextPanel, applyWorkContext, renderWorkContextSummary
+  - integrazione in setTab (home) e init flow
+  - parita root/snapshot mantenuta
+- **Vincoli rispettati**:
+  - nessuna modifica dati curricolari
+  - nessuna modifica schema `.cml`
+  - nessuna modifica export/import
+  - nessuna nuova dipendenza
+  - nessun backend
+  - nessun dato personale
+  - Home CML-276 preservata
+  - icone CML-278 preservate
+- **File prodotti/modificati**: `index.html`, `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-279.md`, `report/CML-279_work_context_lightweight_runtime_entry.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_279_WORK_CONTEXT_LIGHTWEIGHT_RUNTIME_ENTRY_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-02 - CML-278 - ICON SYSTEM MINIMAL RUNTIME IMPLEMENTATION
 
 - **Nome slice**: `CML-278`

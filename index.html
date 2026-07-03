@@ -770,6 +770,25 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .home-discipline-actions{display:flex;gap:7px;flex-wrap:wrap}
 .home-discipline-actions button{border:1px solid #cfd8dc;background:#fff;color:#455a64;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer}
 .home-discipline-actions .home-discipline-primary{border-color:#1a237e;color:#1a237e}
+.home-context-card{background:#fff;border-radius:11px;padding:12px 13px;box-shadow:0 1px 4px rgba(0,0,0,.05);border:1px solid #e0e0e0;border-left:3px solid #00695c;margin:14px 0}
+.home-context-title{font-size:13px;font-weight:800;color:#00695c;margin:0 0 6px;display:inline-flex;align-items:center;gap:6px}
+.home-context-body{font-size:12px;color:#455a64;line-height:1.5}
+.home-context-empty{color:#78909c;font-style:italic;margin-bottom:8px}
+.home-context-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.home-context-actions button{border:1px solid #cfd8dc;background:#fff;color:#455a64;border-radius:8px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer}
+.home-context-actions .home-context-primary{border-color:#00695c;color:#00695c;background:#e0f2f1}
+.home-context-actions .home-context-danger{border-color:#ef9a9a;color:#b71c1c;background:#fff}
+.home-context-summary{background:#e0f2f1;border-radius:8px;padding:8px 10px;font-size:12px;color:#004d40;line-height:1.45;margin-bottom:6px}
+.home-context-summary strong{color:#00695c}
+.work-context-overlay{position:fixed;inset:0;background:rgba(26,35,126,.55);z-index:10001;display:flex;align-items:center;justify-content:center;padding:16px}
+.work-context-dialog{background:#fff;border-radius:14px;max-width:460px;width:100%;padding:22px;box-shadow:0 10px 40px rgba(0,0,0,.3);max-height:85vh;overflow-y:auto}
+.work-context-dialog h2{font-size:17px;color:#00695c;margin:0 0 14px;display:flex;align-items:center;gap:8px}
+.work-context-field{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+.work-context-field label{font-size:11px;font-weight:800;color:#37474f}
+.work-context-field select,.work-context-field input{border:1px solid #cfd8dc;border-radius:8px;padding:8px 10px;font-size:13px;font-family:inherit;background:#fff}
+.work-context-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.work-context-primary{background:#00695c;color:#fff;border:none;border-radius:8px;padding:9px 14px;font-weight:800;cursor:pointer}
+.work-context-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc;border-radius:8px;padding:9px 14px;font-weight:800;cursor:pointer}
 .home-footer{margin-top:12px}
 .home-footer p{font-size:11px;color:#78909c;line-height:1.5;margin:0}
 /* DIDATTICA EVIDENCE */
@@ -1424,6 +1443,15 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <circle cx="12" cy="12" r="3"></circle>
     <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.2a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5h.2a1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.2a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.5 1z"></path>
   </symbol>
+  <symbol id="icon-briefcase" viewBox="0 0 24 24">
+    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+    <path d="M2 12h20"></path>
+  </symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+    <path d="M5 12h14"></path>
+    <path d="m12 5 7 7-7 7"></path>
+  </symbol>
 </svg>
 <header class="app-header" id="app-header">
   <div class="app-header-min">
@@ -1549,6 +1577,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <p class="home-card-text">Produci documenti, file di lavoro e copie di sicurezza.</p>
           </a>
         </div>
+        <section class="home-context-card" role="region" aria-label="Contesto di lavoro" id="work-context-card">
+          <div id="work-context-body"></div>
+        </section>
         <section class="home-discipline-panel" role="region" aria-label="Discipline come filtro secondario">
           <h3 class="home-discipline-title">Discipline</h3>
           <p class="home-discipline-copy" id="home-discipline-status">Usale come filtro quando devi consultare o progettare su una disciplina specifica.</p>
@@ -4119,7 +4150,7 @@ function setTab(t,opts){
   }
   if(t==="riepilogo") renderRiepilogo();
   if(t==="curricolo"){renderCurricoloIstituto();renderTecnologiaNorm();}
-  if(t==="home"&&opts.updateHash!==false&&location.hash!=="#home") location.hash="#home";
+  if(t==="home"){renderWorkContextSummary();if(opts.updateHash!==false&&location.hash!=="#home") location.hash="#home";}
   if(opts.scroll!==false){
   window.scrollTo({top:0,behavior:"smooth"});
   if(opts.focus!==false&&document.activeElement&&document.activeElement!==document.body){
@@ -6306,9 +6337,129 @@ function renderTecnologiaNorm() {
   };
 }
 
+// ================================================================
+// CML-279 Work Context Lightweight Runtime
+// ================================================================
+const WORK_CONTEXT_KEY="cml_work_context_v1";
+const WORK_CONTEXT_ROLES=["docente","dipartimento","referente","dirigenza/staff","consultatore"];
+const WORK_CONTEXT_BASES=["vigente","proposta IN 2025","validata","approvata","da verificare"];
+const CURRENT_SCHOOL_YEAR="2026/2027";
+const WORK_CONTEXT_CLASSES=["primina","primina/seconda","seconda","terza","quarta","quinta","prima","seconda","terza"];
+
+function loadWorkContext(){
+  try{
+    var raw=localStorage.getItem(WORK_CONTEXT_KEY);
+    if(!raw) return null;
+    return JSON.parse(raw);
+  }catch(e){return null;}
+}
+
+function saveWorkContext(data){
+  try{
+    localStorage.setItem(WORK_CONTEXT_KEY,JSON.stringify(data));
+    return true;
+  }catch(e){return false;}
+}
+
+function resetWorkContext(){
+  if(!confirm("Reimpostare il contesto di lavoro? I dati inseriti verranno cancellati.")) return;
+  try{localStorage.removeItem(WORK_CONTEXT_KEY);}catch(e){}
+  renderWorkContextSummary();
+  showToast("Contesto di lavoro reimpostato");
+}
+
+function openWorkContextPanel(){
+  var existing=document.getElementById("work-context-overlay");
+  if(existing) existing.remove();
+  var ctx=loadWorkContext()||{};
+  var overlay=document.createElement("div");
+  overlay.id="work-context-overlay";
+  overlay.className="work-context-overlay";
+  overlay.setAttribute("role","dialog");
+  overlay.setAttribute("aria-modal","true");
+  overlay.setAttribute("aria-labelledby","wc-title");
+  overlay.innerHTML='<div class="work-context-dialog">'+
+    '<h2 id="wc-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-briefcase"></use></svg> Imposta contesto di lavoro</h2>'+
+    '<div class="work-context-field"><label for="wc-ruolo">Ruolo</label><select id="wc-ruolo">'+
+    WORK_CONTEXT_ROLES.map(function(r){return '<option'+(ctx.ruolo===r?' selected':'')+'>'+r+'</option>';}).join('')+
+    '</select></div>'+
+    '<div class="work-context-field"><label for="wc-anno">Anno scolastico</label><input id="wc-anno" type="text" value="'+(ctx.anno||CURRENT_SCHOOL_YEAR)+'" placeholder="es. 2026/2027"></div>'+
+    '<div class="work-context-field"><label for="wc-classe">Classe</label><select id="wc-classe"><option value="">— Seleziona —</option>'+
+    WORK_CONTEXT_CLASSES.map(function(c){return '<option'+(ctx.classe===c?' selected':'')+'>'+c+'</option>';}).join('')+
+    '</select></div>'+
+    '<div class="work-context-field"><label for="wc-disciplina">Disciplina <span style="font-weight:400;color:#78909c">(opzionale)</span></label><select id="wc-disciplina"><option value="">— Seleziona —</option>'+
+    DISCIPLINE.map(function(d){return '<option'+(ctx.disciplina===d?' selected':'')+'>'+d+'</option>';}).join('')+
+    '</select></div>'+
+    '<div class="work-context-field"><label for="wc-base">Base curricolare</label><select id="wc-base">'+
+    WORK_CONTEXT_BASES.map(function(b){return '<option'+(ctx.base===b?' selected':'')+'>'+b+'</option>';}).join('')+
+    '</select></div>'+
+    '<div class="work-context-actions">'+
+    '<button class="work-context-primary" onclick="applyWorkContext()">Salva contesto</button>'+
+    '<button class="work-context-secondary" onclick="closeWorkContextPanel()">Annulla</button>'+
+    '</div></div>';
+  overlay.addEventListener("keydown",function(e){
+    if(e.key==="Escape") closeWorkContextPanel();
+  });
+  document.body.appendChild(overlay);
+  setTimeout(function(){var el=document.getElementById("wc-ruolo");if(el)el.focus();},0);
+}
+
+function closeWorkContextPanel(){
+  var overlay=document.getElementById("work-context-overlay");
+  if(overlay) overlay.remove();
+}
+
+function applyWorkContext(){
+  var ruolo=document.getElementById("wc-ruolo");
+  var anno=document.getElementById("wc-anno");
+  var classe=document.getElementById("wc-classe");
+  var disciplina=document.getElementById("wc-disciplina");
+  var base=document.getElementById("wc-base");
+  if(!ruolo||!anno||!classe||!base) return;
+  var data={
+    ruolo:ruolo.value,
+    anno:anno.value||CURRENT_SCHOOL_YEAR,
+    classe:classe.value,
+    disciplina:disciplina?disciplina.value:"",
+    base:base.value,
+    savedAt:new Date().toISOString()
+  };
+  saveWorkContext(data);
+  closeWorkContextPanel();
+  renderWorkContextSummary();
+  showToast("Contesto di lavoro salvato");
+}
+
+function renderWorkContextSummary(){
+  var body=document.getElementById("work-context-body");
+  if(!body) return;
+  var ctx=loadWorkContext();
+  if(!ctx||!ctx.ruolo){
+    body.innerHTML='<h3 class="home-context-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-briefcase"></use></svg> Contesto di lavoro</h3>'+
+      '<div class="home-context-body"><p class="home-context-empty">Nessun contesto impostato.</p>'+
+      '<p style="margin-bottom:6px">Puoi consultare liberamente il curricolo oppure impostare anno scolastico, classe, ruolo e disciplina per ricevere indicazioni pi\u00F9 pertinenti.</p></div>'+
+      '<div class="home-context-actions">'+
+      '<button class="home-context-primary" onclick="openWorkContextPanel()">Imposta contesto</button>'+
+      '<button onclick="setTab(\'curricolo\')">Consulta liberamente</button></div>';
+  }else{
+    var parts=[];
+    if(ctx.ruolo) parts.push(ctx.ruolo);
+    if(ctx.anno) parts.push('a.s. '+ctx.anno);
+    if(ctx.classe) parts.push('classe '+ctx.classe);
+    if(ctx.disciplina) parts.push(ctx.disciplina);
+    if(ctx.base) parts.push('curricolo '+ctx.base);
+    body.innerHTML='<h3 class="home-context-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-briefcase"></use></svg> Contesto di lavoro</h3>'+
+      '<div class="home-context-summary"><strong>Contesto attivo:</strong> '+parts.join(' \u00B7 ')+'</div>'+
+      '<div class="home-context-actions">'+
+      '<button class="home-context-primary" onclick="openWorkContextPanel()">Modifica contesto</button>'+
+      '<button class="home-context-danger" onclick="resetWorkContext()">Reimposta</button></div>';
+  }
+}
+
 // INIT
 // ================================================================
 loadLocalState();
+renderWorkContextSummary();
 var initDisc=resolveDiscFromHash();
 if(initDisc) selDisc=initDisc;
 renderProfileSummary();
