@@ -1,5 +1,37 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-314 - PM-04 RUNTIME READINESS SMOKE
+
+- **Nome slice**: `CML-314`
+- **Tipo slice**: runtime smoke in sola lettura + documentazione
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-313
+- **Obiettivo**: produrre verifica runtime dedicata PM-04 senza modifiche runtime e senza chiusura automatica
+- **Runtime pair verificata**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Esito smoke PM-04**:
+  - integrita runtime pair: PASS
+  - test tecnici esistenti repository: PASS
+  - etichette consolidate UX-022 presenti (`Bozza di lavoro`, `Sola consultazione`, `Indicazioni Nazionali 2012`, `Indicazioni Nazionali 2025`)
+  - nessun errore bloccante osservato in navigazione essenziale
+  - evidenza DoD temporale ("pochi secondi") ancora non prodotta
+  - PM-04 confermata al 55%, non chiusa
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-314.md`
+  - `report/CML-314_pm04_runtime_readiness_smoke.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_314_PM04_RUNTIME_READINESS_SMOKE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-313 - PM-04 FORMAL CLOSURE READINESS
 
 - **Nome slice**: `CML-313`
