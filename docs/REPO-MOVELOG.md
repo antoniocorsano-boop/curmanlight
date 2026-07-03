@@ -64,6 +64,38 @@
 - **Prossima slice**: CML-322 (PM-04 Local Chain Pre-Push Audit) o CML-321P (controlled push)
 - **Verdetto**: `CML_321_PM04_MOJIBAKE_AND_EMOJI_RUNTIME_FIX_READY_LOCAL_NOT_PUSHED`
 
+## 2026-07-03 - CML-322 - PM-04 LOCAL CHAIN PRE-PUSH AUDIT
+
+- **Nome slice**: `CML-322`
+- **Tipo slice**: docs-only (pre-push audit)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Dipendenze**: CML-310 → CML-321 (12 commit auditati)
+- **Obiettivo**: audit completo della catena locale non pushata prima del push controllato
+- **Catena auditata**: 12 commit (CML-310 → CML-321), 10 docs-only + 2 runtime+docs
+- **Controlli**:
+  - `git diff --check`: PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs`: 14/14 PASS
+  - `node tools/validate-cml-normalized-curriculum.mjs`: 14/14, overallValid: true
+  - Runtime pair: sincronizzata (862112 byte, match esatto)
+  - Residui FE0F: 0, Residui FFFD: 0
+- **Correzione eseguita**: UX-021 nel backlog aggiornato a RISOLTO IN CML-321/CHIUSA
+- **File creati/modificati**:
+  - `docs/03_execution/CML-322.md`
+  - `report/CML-322_local_chain_pre_push_audit.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Decisione pre-push**: `READY_FOR_CONTROLLED_PUSH`
+- **Esito PM-04**: 55%, non chiusa
+- **Prossima slice**: CML-322P (Controlled Push)
+- **Verdetto**: `CML_322_LOCAL_CHAIN_PRE_PUSH_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-319 - PM-04 CURRICULUM UX RUNTIME REMEDIATION
 
 - **Nome slice**: `CML-319`

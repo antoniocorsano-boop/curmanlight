@@ -3,13 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-321 - PM-04 Mojibake and Emoji Runtime Fix (runtime fix P0)
-- Last commit: CML-321 locale (non push)
+- Last slice: CML-322 - PM-04 Local Chain Pre-Push Audit (docs-only)
+- Last commit: CML-322 locale (non push)
 - Active PM: PM-04 (in corso, 55%)
 - Critical Path: PM-04 -> PM-06
-- Next slice: CML-322 (PM-04 Local Chain Pre-Push Audit) o CML-321P (controlled push)
-- Last verdict: `CML_321_PM04_MOJIBAKE_AND_EMOJI_RUNTIME_FIX_READY_LOCAL_NOT_PUSHED`
-- Repository status: main ahead origin/main (ahead 12 previsto dopo commit), runtime pair riparata da mojibake
+- Next slice: CML-322P (Controlled Push)
+- Last verdict: `CML_322_LOCAL_CHAIN_PRE_PUSH_AUDIT_READY_LOCAL_NOT_PUSHED`
+- Repository status: main ahead origin/main (ahead 13 previsto dopo commit), catena 13 commit pronta per push controllato
 
 ## Runtime Perimeter Reminder
 

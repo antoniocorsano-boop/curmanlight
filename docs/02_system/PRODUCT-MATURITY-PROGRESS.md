@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-322 (PM-04 Local Chain Pre-Push Audit) o CML-321P (controlled push)
+- CML-322P (Controlled Push)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -110,9 +110,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-319 (runtime remediation mirata — PM-04 curriculum UX)
 - Ultima slice completata: CML-320 (docs-only — PM-04 language and identity consolidation)
 - Ultima slice completata: CML-321 (runtime fix P0 — PM-04 mojibake and emoji fix)
+- Ultima slice completata: CML-322 (docs-only — PM-04 local chain pre-push audit)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-322 (PM-04 Local Chain Pre-Push Audit)
-- Ultimo aggiornamento: 2026-07-03 (CML-321)
+- Prossima slice operativa prevista: CML-322P (Controlled Push)
+- Ultimo aggiornamento: 2026-07-03 (CML-322)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
