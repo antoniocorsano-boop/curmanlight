@@ -17,7 +17,7 @@ PM-04 Comprensione Curriculum
 ███████░░░ 70%
 
 PM-05 Esperienza di lavoro
-███░░░░░░░ 30%
+███████████ 100%
 
 PM-06 Accompagnamento
 ░░░░░░░░░░ 0%
@@ -77,8 +77,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-05 - Esperienza di lavoro
 
-███░░░░░░░
-30%
+███████████
+100%
 
 ### Programma PM-06 - Accompagnamento
 
@@ -99,10 +99,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 - Ultima slice completata: CML-306 (runtime microfix — UX-024)
 - Ultima slice completata: CML-307 (runtime microfix — PM-03 cluster)
-- Ultima slice completata: CML-308 (runtime microfix — PM-05 cluster)
+- Ultima slice completata: CML-309 (runtime microfix — PM-05 closure cluster)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-309 (PM-05 Work Experience Follow-up)
-- Ultimo aggiornamento: 2026-07-03 (CML-308)
+- Prossima slice operativa prevista: CML-310 (PM-06 Accompagnamento)
+- Ultimo aggiornamento: 2026-07-03 (CML-309)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

@@ -1,5 +1,45 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-309 - PM-05 WORK EXPERIENCE CLOSURE CLUSTER
+
+- **Nome slice**: `CML-309`
+- **Tipo slice**: runtime microfix + documentazione
+- **Macroprogramma**: PM-05 - Esperienza di lavoro
+- **Backlog target**: UX-016, UX-017, UX-018
+- **Dipendenze**: CML-283, CML-299, CML-304, CML-305, CML-306, CML-307, CML-308
+- **Obiettivo**: completare chiusura cluster PM-05 (gerarchia azioni, evidenza area Compila, guida esportazioni)
+- **Intervento runtime (3 micro-correzioni)**:
+  - Home: pulsante Compila evidenze reso primario + aggiunto pulsante Esportazioni
+  - Didattica: link a Esportazioni rinforzato con testo esplicito "per il formato finale"
+  - Esportazioni: marker "Inizia da qui" nel primo gruppo esportazioni
+- **Stato UX**:
+  - UX-016: RISOLTO IN CML-309
+  - UX-017: RISOLTO IN CML-309
+  - UX-018: RISOLTO IN CML-309
+- **Stato PM**:
+  - PM-03: invariato 30%
+  - PM-04: invariato 70%
+  - PM-05: 30% -> 100%
+  - PM-07: invariato 20%
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/03_execution/CML-309.md`
+  - `report/CML-309_pm05_work_experience_closure_cluster.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessun refactoring generale
+  - nessuna nuova architettura
+  - nessuna nuova dipendenza
+  - nessuna modifica schema `.cml`, dati disciplinari, service worker
+  - nessuna regressione rilevata su CML-304/CML-305/CML-306/CML-307/CML-308
+- **Push**: non eseguito
+- **Verdetto**: `CML_309_PM05_WORK_EXPERIENCE_CLOSURE_CLUSTER_READY_LOCAL_NOT_PUSHED`
+
+
 ## 2026-07-03 - CML-308 - PM-05 WORK EXPERIENCE CLUSTER
 
 - **Nome slice**: `CML-308`

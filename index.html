@@ -1561,7 +1561,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <button type="button" onclick="setTab('curricolo')">Consulta il curricolo</button>
             <button type="button" onclick="openWorkContextPanel()">Verifica applicazione per classi</button>
             <button type="button" onclick="setTab('processo')">Segui la revisione</button>
-            <button type="button" onclick="setTab('didattica')">Compila evidenze e progettazione</button>
+            <button type="button" onclick="setTab('didattica')" class="home-quick-primary">Compila evidenze e progettazione</button>
             <button type="button" class="home-quick-guide" onclick="showWelcome(true)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida rapida</span></button>
           </div>
         </section>
@@ -1627,7 +1627,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <span class="didattica-path-divider">·</span>
             <a href="#" onclick="setTab('curricolo');return false"><span aria-hidden="true">📖</span> Consulta il curricolo completo →</a>
             <span class="didattica-path-divider">·</span>
-            <a href="#" onclick="setTab('esportazioni');return false"><span aria-hidden="true">📤</span> Vai a Esportazioni →</a>
+            <a href="#" onclick="setTab('esportazioni');return false"><span aria-hidden="true">📤</span> Vai a Esportazioni per il formato finale →</a>
           </div>
         </div>
         <div class="didattica-evidence-box notice-box warning">
@@ -2152,6 +2152,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </div>
     </div>
     <div class="esport-group">
+      <div class="esport-group-starter">⭐ Inizia da qui — scegli il formato in base al tuo ruolo</div>
       <h3><span aria-hidden="true">📄</span> Documento finale <span class="esport-role-badge">Referente · Collegio</span></h3>
       <p class="esport-group-desc">Per condividere il curricolo leggibile e approvato.</p>
       <div class="esport-actions">
