@@ -1,5 +1,38 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-318 - PM-04 CURRICULUM UX REMEDIATION PLAN
+
+- **Nome slice**: `CML-318`
+- **Tipo slice**: docs-only (remediation planning)
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-317
+- **Obiettivo**: convertire i rilievi CML-317 in piano remediation P0/P1/P2 con criteri acceptance runtime
+- **Runtime pair verificata**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Piano priorita**:
+  - P0: orientamento Home, microcopy critico, link/icone rotti, scroll disciplina
+  - P1: chiarezza operativa Curriculum, menu Azioni, guida, contestualizzazione verifica dipartimentale
+  - P2: naming/identita visiva, rifinitura linguistica estesa
+- **Esito PM-04**:
+  - PM-04 resta al 55%, non chiusa
+  - readiness ancora insufficiente alla closure
+  - prossima slice naturale: CML-319 runtime remediation
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-318.md`
+  - `report/CML-318_pm04_curriculum_ux_remediation_plan.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_318_PM04_CURRICULUM_UX_REMEDIATION_PLAN_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-317 - PM-04 REAL USER TEST SESSION
 
 - **Nome slice**: `CML-317`
