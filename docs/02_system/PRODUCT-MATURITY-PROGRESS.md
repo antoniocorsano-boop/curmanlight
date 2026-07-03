@@ -14,7 +14,7 @@ PM-03 Orientamento
 ███░░░░░░░ 30%
 
 PM-04 Comprensione Curriculum
-███████░░░ 70%
+█████░░░░░ 55%
 
 PM-05 Esperienza di lavoro
 ███████████ 100%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-310 (PM-06 Accompagnamento)
+- CML-311 (PM-04 Residual Consolidation)
 
 ## Percorso critico (fase 1)
 
@@ -72,8 +72,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-04 - Comprensione del Curriculum
 
-███████░░░
-70%
+█████░░░░░
+55%
 
 ### Programma PM-05 - Esperienza di lavoro
 
@@ -100,9 +100,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-306 (runtime microfix — UX-024)
 - Ultima slice completata: CML-307 (runtime microfix — PM-03 cluster)
 - Ultima slice completata: CML-309 (runtime microfix — PM-05 closure cluster)
+- Ultima slice completata: CML-310 (docs-only — PM-04 residual closure audit)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-310 (PM-06 Accompagnamento)
-- Ultimo aggiornamento: 2026-07-03 (CML-309P)
+- Prossima slice operativa prevista: CML-311 (PM-04 Residual Consolidation)
+- Ultimo aggiornamento: 2026-07-03 (CML-310)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -129,7 +130,7 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 | UX-019 | Guida rapida troppo estesa | PM-06 | CML-301 | CML-286 |
 | UX-020 | Navigazione mobile poco esplicita | PM-03 | CML-307 (parziale), CML-308 | CML-290 |
 | UX-021 | Residui simbolici corrotti | PM-07 | CML-303 | CML-287 |
-| UX-022 | Terminologia non glossario-compliant | PM-04 | CML-304 (risolto) | CML-285 |
+| UX-022 | Terminologia non glossario-compliant | PM-04 | CML-304 (completato non consolidato), CML-311 | CML-285 |
 | UX-023 | Ritorno al punto di lavoro non chiaro | PM-03 | CML-305 (risolto) | CML-284 |
 | UX-024 | Componenti comuni non uniformi | PM-07 | CML-306 (risolto) | CML-291 |
 

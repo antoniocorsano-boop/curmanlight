@@ -1,5 +1,32 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-310 - PM-04 RESIDUAL CLOSURE AUDIT
+
+- **Nome slice**: `CML-310`
+- **Tipo slice**: docs-only
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-293, CML-295, CML-297, CML-304, CML-309P
+- **Obiettivo**: audit prudente dello stato PM-04 evitando chiusure non supportate da evidenze robuste
+- **Esito audit PM-04**:
+  - PM-04 non dichiarato completato
+  - PM-04 impostato a 55% (valutazione prudente)
+  - UX-022 classificata come completata ma non ancora consolidata a livello documentale cross-source
+- **File creati/modificati**:
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-310.md`
+  - `report/CML-310_pm04_residual_closure_audit.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_310_PM04_RESIDUAL_CLOSURE_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-309P - PM-05 POST-PUSH CLOSURE STATE SYNC
 
 - **Nome slice**: `CML-309P`
