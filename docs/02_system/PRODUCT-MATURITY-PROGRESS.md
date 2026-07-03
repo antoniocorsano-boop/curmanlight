@@ -20,7 +20,7 @@ PM-05 Esperienza di lavoro
 ███████████ 100%
 
 PM-06 Accompagnamento
-██░░░░░░░░ 20%
+███░░░░░░░ 30%
 
 PM-07 Uniformita
 ██░░░░░░░░ 20%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-334 (PM-06 onboarding initial task-oriented runtime microfix) o nuovo ciclo
+- CML-335 (PM-06 guida contestuale minima in Compila runtime microfix) o nuovo ciclo
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -81,8 +81,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-06 - Accompagnamento
 
-██░░░░░░░░
-20%
+███░░░░░░░
+30%
 
 ### Programma PM-07 - Uniformita
 
@@ -121,9 +121,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-331 (docs-only — PM-04 formal closure decision)
 - Ultima slice completata: CML-332 (docs-only — PM-06 accompagnamento entry model)
 - Ultima slice completata: CML-333 (docs-only — PM-06 prioritized backlog and first microfix selection)
+- Ultima slice completata: CML-334 (runtime microfix — PM-06 onboarding initial task-oriented)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-334 (PM-06 onboarding initial task-oriented runtime microfix)
-- Ultimo aggiornamento: 2026-07-04 (CML-333)
+- Prossima slice operativa prevista: CML-335 (PM-06 guida contestuale minima in Compila runtime microfix)
+- Ultimo aggiornamento: 2026-07-04 (CML-334)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

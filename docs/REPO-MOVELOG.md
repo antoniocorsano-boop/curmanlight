@@ -1,5 +1,45 @@
 ﻿# Repo Movelog
 
+## 2026-07-04 - CML-334 - PM-06 ONBOARDING INITIAL TASK-ORIENTED RUNTIME MICROFIX
+
+- **Nome slice**: `CML-334`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-06 — Accompagnamento
+- **Backlog target**: UX-004, UX-019
+- **Dipendenze**: CML-333
+- **Obiettivo**: rendere l'onboarding iniziale Home piu orientato al compito con primo passo chiaro e distinzione consultazione/compilazione/guida
+- **Microfix runtime**:
+  - microcopy Home semplificata e task-oriented
+  - primo passo consigliato esplicitato
+  - etichetta azione didattica riallineata: "Prepara un'attivita didattica"
+  - etichetta azione guida riallineata: "Usa la guida"
+- **Runtime pair aggiornata in sincrono**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Verifiche**:
+  - `git diff --check`: PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs`: PASS (14/14)
+  - `node tools/validate-cml-normalized-curriculum.mjs`: PASS (`"overallValid": true`)
+  - smoke browser Home: PASS
+  - stato console: `CONSOLE_STREAM_NOT_RELIABLY_TESTED`
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/03_execution/CML-334.md`
+  - `report/CML-334_pm06_onboarding_initial_task_oriented_runtime_microfix.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessun redesign
+  - nessuna nuova funzionalita ampia
+  - nessuna modifica modello dati
+  - nessun push
+  - nessun deploy
+- **Esito PM-06**: 30%
+- **Prossima slice**: CML-335 (PM-06 guida contestuale minima in Compila runtime microfix)
+- **Verdetto**: `CML_334_PM06_ONBOARDING_INITIAL_TASK_ORIENTED_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-04 - CML-333 - PM-06 PRIORITIZED BACKLOG AND FIRST MICROFIX SELECTION
 
 - **Nome slice**: `CML-333`
