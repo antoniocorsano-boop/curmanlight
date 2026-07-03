@@ -1,5 +1,36 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-320 - PM-04 LANGUAGE AND IDENTITY CONSOLIDATION
+
+- **Nome slice**: `CML-320`
+- **Tipo slice**: docs-only (audit + consolidation plan)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Backlog target**: UX-006, UX-009, UX-021, UX-022
+- **Dipendenze**: CML-319
+- **Obiettivo**: audit su tre assi (lingua, identità, mojibake) del runtime e piano remediation P0/P1/P2
+- **Risultati audit**:
+  - Lingua: accettabile, P2 residuale (convivenza Curricolo/Curriculum funzionale)
+  - Identità: accettabile, 4 icone disciplinari su 14 con mojibake variation selector
+  - Mojibake: ~60 occorrenze emoji con U+FE0F rotto, ~20 occorrenze mojibake grave su Educazione Motoria
+- **Piano remediation**:
+  - P0: riparare variation selector emoji + mojibake Educazione Motoria
+  - P1: uniformare etichette versione, verificare icone e testi home
+  - P2: refactoring naming JS, revisione linguistica estesa, logo
+- **File creati/modificati**:
+  - `docs/03_execution/CML-320.md`
+  - `report/CML-320_pm04_language_identity_consolidation.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Esito PM-04**: 55%, non chiusa (nessuna modifica runtime)
+- **Prossima slice**: CML-321 (PM-04 Mojibake and Emoji Runtime Fix)
+- **Verdetto**: `CML_320_PM04_LANGUAGE_IDENTITY_CONSOLIDATION_AUDIT_PLAN_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-319 - PM-04 CURRICULUM UX RUNTIME REMEDIATION
 
 - **Nome slice**: `CML-319`

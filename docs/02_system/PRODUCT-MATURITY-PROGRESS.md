@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-320 (PM-04 UX Language and Identity Consolidation)
+- CML-321 (PM-04 Mojibake and Emoji Runtime Fix)
 
 ## Percorso critico (fase 1)
 
@@ -109,9 +109,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-317 (docs-only — PM-04 real user test session)
 - Ultima slice completata: CML-318 (docs-only — PM-04 curriculum UX remediation plan)
 - Ultima slice completata: CML-319 (runtime remediation mirata — PM-04 curriculum UX)
+- Ultima slice completata: CML-320 (docs-only — PM-04 language and identity consolidation)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-320 (PM-04 UX Language and Identity Consolidation)
-- Ultimo aggiornamento: 2026-07-03 (CML-319)
+- Prossima slice operativa prevista: CML-321 (PM-04 Mojibake and Emoji Runtime Fix)
+- Ultimo aggiornamento: 2026-07-03 (CML-320)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
