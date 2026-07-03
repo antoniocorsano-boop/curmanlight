@@ -26,7 +26,7 @@ Backlog di maturita prodotto UX aggiornato con il primo audit completo (CML-282)
 | UX-010 | PM-01 | Governance | Checklist UX non ancora applicata in tutte le slice precedenti. | Qualita UX non omogenea nel tempo. | P0 | nessuna | TODO | CML-292 |
 | UX-011 | PM-04 | Curriculum/Testata | Testata disciplina con messaggi multipli (stato, avvisi, base lavoro) nella stessa area iniziale. | Lettura iniziale faticosa e priorita poco chiare. | P1 | CML-283 | RISOLTO IN CML-293 | CML-293 |
 | UX-012 | PM-07 | Curriculum/Selezione disciplina | Sidebar discipline ricca di numeri, emoji e marker "NEW" senza legenda unica. | Difficolta nel capire significato dei segnali visivi. | P1 | CML-287 | TODO | CML-294 |
-| UX-013 | PM-04 | Curriculum/Indicatori | Indicatori numerici duplicati tra pannelli e quadro generale. | Ridondanza informativa e possibile confusione. | P2 | CML-285 | TODO | CML-295 |
+| UX-013 | PM-04 | Curriculum/Indicatori | Indicatori numerici duplicati tra pannelli e quadro generale. | Ridondanza informativa e possibile confusione. | P2 | CML-285 | RISOLTO IN CML-295 | CML-295 |
 | UX-014 | PM-04 | Curriculum/Fonti | Fonti presenti ma non sempre contestualizzate al compito corrente. | L'utente non capisce subito quando consultarle. | P2 | CML-285 | TODO | CML-296 |
 | UX-015 | PM-04 | Curriculum/Proposte 2025 | Distinzione tra vigente e proposta visibile ma con lessico ancora tecnico in punti chiave. | Comprensione parziale della differenza decisionale. | P1 | CML-285 | TODO | CML-297 |
 | UX-016 | PM-05 | Curriculum/Azioni | Presenza contemporanea di azioni globali e locali senza gerarchia esplicita. | Aumento errori di clic e indecisione. | P1 | CML-283 | TODO | CML-298 |

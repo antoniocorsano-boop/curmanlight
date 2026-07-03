@@ -6175,7 +6175,7 @@ function renderCurricoloIstituto(version) {
   if(selDisc){
     var sm=DISCIPLINE_META[selDisc]||{icon:"📘",comp:"",nuclei:""};
     var sd=discSummary[selDisc]||{total:0,changed:0};
-    html += '<div class="curricolo-disc-focus"><div class="curricolo-disc-focus-hd"><span class="curricolo-disc-focus-icon">'+sm.icon+'</span><span class="curricolo-disc-focus-name">'+selDisc+'</span><span class="curricolo-disc-focus-comp">'+sm.comp+'</span></div><div class="curricolo-disc-focus-stats"><span>'+sd.total+' contenuti</span><span>'+(sd.changed>0?'+'+sd.changed+' aggiornamenti 2025':'nessun aggiornamento 2025')+'</span></div></div>';
+    html += '<div class="curricolo-disc-focus"><div class="curricolo-disc-focus-hd"><span class="curricolo-disc-focus-icon">'+sm.icon+'</span><span class="curricolo-disc-focus-name">'+selDisc+'</span><span class="curricolo-disc-focus-comp">'+sm.comp+'</span></div><div class="curricolo-disc-focus-stats"><span>'+(sd.changed>0?'+'+sd.changed+' aggiornamenti 2025':'nessun aggiornamento 2025')+'</span></div></div>';
   }
 
   html += '<details class="curricolo-quadro"><summary class="curricolo-quadro-summary">📊 Quadro generale delle discipline</summary>';

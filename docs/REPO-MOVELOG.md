@@ -1,5 +1,36 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-295 - UX-013 DUPLICATE INDICATORS CLOSURE
+
+- **Nome slice**: `CML-295`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-04 - Comprensione Curriculum
+- **Backlog target**: UX-013
+- **Dipendenze**: CML-291
+- **Obiettivo**: eliminare la ridondanza informativa tra pannello disciplina (tecnologia-norm-stats) e quadro generale (curricolo-disc-focus-stats) quando una disciplina e selezionata nel Curriculum
+- **Intervento runtime**:
+  - rimossa stringa `sd.total + ' contenuti'` dal `curricolo-disc-focus-stats` (riga JS ~6178)
+  - preservato conteggio aggiornamenti 2025 per-disciplina (informazione unica, non presente altrove)
+- **Risultato UX**:
+  - UX-013: TODO → RISOLTO IN CML-295
+  - PM-04: invariato al 65%
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-295.md`
+  - `report/CML-295_ux_013_duplicate_indicators_closure.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna nuova funzionalita
+  - nessuna modifica a schema `.cml` / import / export / storage / service worker
+  - nessuna regressione su UX-001, UX-009, UX-011
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_295_UX_013_DUPLICATE_INDICATORS_CLOSURE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-291 - UX-009 RESIDUAL RUNTIME CLOSURE
 
 - **Nome slice**: `CML-291`

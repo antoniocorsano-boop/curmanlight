@@ -3,12 +3,12 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-291 - UX-009 Residual Runtime Closure
+- Last slice: CML-295 - Duplicate Indicators Closure (UX-013)
 - Last commit: (working tree)
-- Active PM: PM-07 (in corso, 10%)
+- Active PM: PM-04 (in corso, 65%)
 - Critical Path: PM-04 -> PM-05 -> PM-06 -> PM-07
-- Next slice: CML-295 - Indicatori duplicati (UX-013)
-- Last verdict: `CML_291_UX_009_RESIDUAL_RUNTIME_CLOSURE_READY_LOCAL_NOT_PUSHED`
+- Next slice: CML-296 - Fonti non contestualizzate (UX-014)
+- Last verdict: `CML_295_UX_013_DUPLICATE_INDICATORS_CLOSURE_READY_LOCAL_NOT_PUSHED`
 - Repository status: `main` aligned with `origin/main`; working tree modified
 
 ## Runtime Perimeter Reminder

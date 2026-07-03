@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-295 (UX-013)
+- CML-296 (UX-014)
 
 ## Percorso critico (fase 1)
 
@@ -42,6 +42,8 @@ CML-287 ⬅ audit completato
 CML-293 ⬅ semplificazione testata disciplina completata
 ↓
 CML-291 ⬅ unificazione badge/stati (UX-009) completata
+↓
+CML-295 ⬅ indicatori duplicati (UX-013) completata
 
 ## Avanzamento programmi
 
@@ -87,10 +89,10 @@ CML-291 ⬅ unificazione badge/stati (UX-009) completata
 
 ## Stato operativo
 
-- Ultima slice completata: CML-291
+- Ultima slice completata: CML-295
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-295 (UX-013 indicatori duplicati)
-- Ultimo aggiornamento: 2026-07-03 (CML-291)
+- Prossima slice operativa prevista: CML-296 (UX-014 fonti non contestualizzate)
+- Ultimo aggiornamento: 2026-07-03 (CML-295)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -108,7 +110,7 @@ CML-291 ⬅ unificazione badge/stati (UX-009) completata
 | UX-010 | Checklist UX non sistematica | PM-01 | CML-292 | nessuna |
 | UX-011 | Testata Curriculum sovraccarica | PM-04 | CML-293 (risolto) | CML-283 |
 | UX-012 | Sidebar discipline senza legenda unica | PM-07 | CML-294 | CML-287 |
-| UX-013 | Indicatori duplicati | PM-04 | CML-295 | CML-285 |
+| UX-013 | Indicatori duplicati | PM-04 | CML-295 (risolto) | CML-285 |
 | UX-014 | Fonti non contestualizzate | PM-04 | CML-296 | CML-285 |
 | UX-015 | Proposte 2025 non sempre chiare | PM-04 | CML-297 | CML-285 |
 | UX-016 | Azioni Curriculum senza gerarchia | PM-05 | CML-298 | CML-283 |
