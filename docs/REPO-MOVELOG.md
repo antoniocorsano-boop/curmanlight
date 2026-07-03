@@ -1,5 +1,45 @@
 ﻿# Repo Movelog
 
+## 2026-07-04 - CML-335 - PM-06 COMPILA CONTEXTUAL HELP RUNTIME MICROFIX
+
+- **Nome slice**: `CML-335`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-06 — Accompagnamento
+- **Backlog target**: UX-004, UX-019
+- **Dipendenze**: CML-334
+- **Obiettivo**: aggiungere guida contestuale minima in Didattica/Compila per chiarire cosa fare, cosa scrivere e quale risultato aspettarsi
+- **Microfix runtime**:
+  - inserita guida contestuale minima vicino all'area di compilazione
+  - testo breve in 4 punti: azione, contenuto, risultato, supporto
+  - nessuna modifica di workflow, salvataggio o esportazione
+- **Runtime pair aggiornata in sincrono**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Verifiche**:
+  - `git diff --check`: PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs`: PASS (14/14)
+  - `node tools/validate-cml-normalized-curriculum.mjs`: PASS (`"overallValid": true`)
+  - `git diff --name-only`: runtime pair confermata
+  - smoke browser Home/Didattica/Curricolo/Guida: PASS
+  - stato console: `CONSOLE_STREAM_NOT_RELIABLY_TESTED`
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/03_execution/CML-335.md`
+  - `report/CML-335_pm06_compila_contextual_help_runtime_microfix.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessun redesign
+  - nessuna nuova funzionalita ampia
+  - nessuna modifica modello dati
+  - nessun push
+  - nessun deploy
+- **Esito PM-06**: 40%
+- **Prossima slice**: CML-336 (PM-06 supporto in flusso durante Compila runtime microfix)
+- **Verdetto**: `CML_335_PM06_COMPILA_CONTEXTUAL_HELP_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-04 - CML-334 - PM-06 ONBOARDING INITIAL TASK-ORIENTED RUNTIME MICROFIX
 
 - **Nome slice**: `CML-334`

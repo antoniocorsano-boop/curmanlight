@@ -3,13 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-334 - PM-06 Onboarding Initial Task-Oriented Runtime Microfix
-- Last commit: CML-334 locale (non push)
-- Active PM: PM-06 (in corso, 30%)
+- Last slice: CML-335 - PM-06 Guida contestuale minima in Compila Runtime Microfix
+- Last commit: CML-335 locale (non push)
+- Active PM: PM-06 (in corso, 40%)
 - Critical Path: PM-06
-- Next slice: CML-335 (PM-06 guida contestuale minima in Compila runtime microfix) o nuovo ciclo
-- Last verdict: `CML_334_PM06_ONBOARDING_INITIAL_TASK_ORIENTED_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
-- Repository status: main ahead origin/main (locale non pushato), PM-06 in avanzamento operativo
+- Next slice: CML-336 (PM-06 supporto in flusso durante Compila runtime microfix) o nuovo ciclo
+- Last verdict: `CML_335_PM06_COMPILA_CONTEXTUAL_HELP_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
+- Repository status: main ahead origin/main (locale non pushato), PM-06 in avanzamento operativo verificato
 
 ## Runtime Perimeter Reminder
 
