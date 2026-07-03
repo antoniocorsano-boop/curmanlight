@@ -1,5 +1,33 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-280 - APPLICABILITY MATRIX FIRST RUNTIME SELECTION
+
+- **Nome slice**: `CML-280`
+- **Tipo slice**: docs-only / audit-selection
+- **Contesto**: CML-270 Applicability Layer contract; CML-279 Work Context runtime attivo
+- **Obiettivo**: selezionare il primo runtime minimo dell'Applicability Layer senza implementarlo
+- **Analisi**:
+  - valutate 5 opzioni (A→E) con 10 criteri ciascuna
+  - selezionata Opzione E — approccio ibrido (card Home + link a sezione futura)
+  - definiti 9 stati di applicabilità con messaggi UI
+  - definite regole di sicurezza istituzionale
+  - definito perimetro CML-281
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessuna modifica a index.html
+  - nessuna modifica a snapshot
+  - nessuna modifica schema `.cml`
+  - nessuna modifica dati curricolari
+  - nessuna modifica export/import
+  - nessuna modifica storage
+  - nessuna nuova dipendenza
+  - nessun backend
+  - nessun dato personale
+- **File prodotti/modificati**: `docs/03_execution/CML-280.md`, `report/CML-280_applicability_matrix_first_runtime_selection.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_280_APPLICABILITY_MATRIX_FIRST_RUNTIME_SELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-279 - WORK CONTEXT LIGHTWEIGHT RUNTIME ENTRY
 
 - **Nome slice**: `CML-279`
