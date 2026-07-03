@@ -1,5 +1,32 @@
 ﻿# Repo Movelog
 
+## 2026-07-04 - CML-332 - PM-06 ACCOMPAGNAMENTO ENTRY MODEL
+
+- **Nome slice**: `CML-332`
+- **Tipo slice**: docs-only (entry model)
+- **Macroprogramma**: PM-06 — Accompagnamento
+- **Backlog target**: UX-004, UX-019
+- **Dipendenze**: CML-331
+- **Obiettivo**: definire cosa include PM-06 (guida, onboarding, supporto docente, esempi, percorso compilazione, criteri di maturita)
+- **Output**:
+  - modello PM-06 in 5 componenti operative
+  - criteri di maturita base/intermedio/avanzato
+  - gate di esecuzione per le prossime slice PM-06
+- **File creati/modificati**:
+  - `docs/03_execution/CML-332.md`
+  - `report/CML-332_pm06_accompagnamento_entry_model.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Esito PM-06**: 10% (entry model definito)
+- **Prossima slice**: CML-333 (PM-06 prioritized backlog and first microfix selection)
+- **Verdetto**: `CML_332_PM06_ACCOMPAGNAMENTO_ENTRY_MODEL_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-04 - CML-331 - PM-04 FORMAL CLOSURE DECISION
 
 - **Nome slice**: `CML-331`
