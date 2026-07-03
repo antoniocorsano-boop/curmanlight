@@ -1,5 +1,32 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-312 - PM-04 CLOSURE EVIDENCE GATE
+
+- **Nome slice**: `CML-312`
+- **Tipo slice**: docs-only
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-304, CML-310, CML-311
+- **Obiettivo**: verificare se esistono evidenze forti per elevare PM-04 o avviare chiusura formale
+- **Esito gate PM-04**:
+  - PM-04 confermata al 55%
+  - nessun incremento percentuale (evidenze forti aggiuntive assenti)
+  - nessuna chiusura formale PM-04 in questa slice
+  - UX-022 resta consolidata/chiusa
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-312.md`
+  - `report/CML-312_pm04_closure_evidence_gate.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_312_PM04_CLOSURE_EVIDENCE_GATE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-311 - PM-04 RESIDUAL CONSOLIDATION
 
 - **Nome slice**: `CML-311`

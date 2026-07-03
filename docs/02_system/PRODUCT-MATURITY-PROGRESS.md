@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-312 (PM-04 Closure Evidence Gate)
+- CML-313 (PM-04 Formal Closure Readiness)
 
 ## Percorso critico (fase 1)
 
@@ -102,9 +102,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-309 (runtime microfix — PM-05 closure cluster)
 - Ultima slice completata: CML-310 (docs-only — PM-04 residual closure audit)
 - Ultima slice completata: CML-311 (docs-only — PM-04 residual consolidation)
+- Ultima slice completata: CML-312 (docs-only — PM-04 closure evidence gate)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-312 (PM-04 Closure Evidence Gate)
-- Ultimo aggiornamento: 2026-07-03 (CML-311)
+- Prossima slice operativa prevista: CML-313 (PM-04 Formal Closure Readiness)
+- Ultimo aggiornamento: 2026-07-03 (CML-312)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
