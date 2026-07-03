@@ -1,5 +1,37 @@
 ﻿# Repo Movelog
 
+## 2026-07-04 - CML-331 - PM-04 FORMAL CLOSURE DECISION
+
+- **Nome slice**: `CML-331`
+- **Tipo slice**: docs-only (formal decision)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-011, UX-017, UX-022
+- **Dipendenze**: CML-325, CML-326, CML-327, CML-328, CML-329, CML-330
+- **Obiettivo**: decisione formale finale su chiusura PM-04 con criteri, residui e rischi espliciti
+- **Decisione**: `PM_04_FORMALLY_CLOSED_BASED_ON_REAL_USER_EVIDENCE`
+- **Criteri soddisfatti**:
+  - test reale eseguito e verbalizzato
+  - 5/5 task core PASS/PARTIAL non bloccanti
+  - nessun FAIL bloccante
+  - runtime microfix verificato
+- **Residui non bloccanti**:
+  - chiarezza consegna task 4/5 in protocollo test
+  - rifiniture microcopy demandate al ciclo successivo
+- **File creati/modificati**:
+  - `docs/03_execution/CML-331.md`
+  - `report/CML-331_pm04_formal_closure_decision.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Esito PM-04**: chiusa (100%)
+- **Prossima slice**: CML-332 (PM-06 Accompagnamento - entry slice)
+- **Verdetto**: `CML_331_PM04_FORMAL_CLOSURE_DECISION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-330 - PM-04 REAL USER TEST SESSION EXECUTED
 
 - **Nome slice**: `CML-330`

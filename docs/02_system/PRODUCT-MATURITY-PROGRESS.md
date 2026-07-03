@@ -14,7 +14,7 @@ PM-03 Orientamento
 ███░░░░░░░ 30%
 
 PM-04 Comprensione Curriculum
-███████░░░ 70%
+██████████ 100%
 
 PM-05 Esperienza di lavoro
 ███████████ 100%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-331 (PM-04 Formal Closure Decision) o nuovo ciclo
+- CML-332 (PM-06 Accompagnamento - entry slice) o nuovo ciclo
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -71,8 +71,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-04 - Comprensione del Curriculum
 
-███████░░░
-70%
+██████████
+100%
 
 ### Programma PM-05 - Esperienza di lavoro
 
@@ -118,9 +118,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-328 (runtime microfix — PM-04 teacher compile UX)
 - Ultima slice completata: CML-329 (docs-only — PM-04 real user test execution package)
 - Ultima slice completata: CML-330 (docs-only — PM-04 real user test session executed)
+- Ultima slice completata: CML-331 (docs-only — PM-04 formal closure decision)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-331 (PM-04 Formal Closure Decision)
-- Ultimo aggiornamento: 2026-07-03 (CML-330)
+- Prossima slice operativa prevista: CML-332 (PM-06 Accompagnamento - entry slice)
+- Ultimo aggiornamento: 2026-07-04 (CML-331)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
