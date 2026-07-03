@@ -1,5 +1,44 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-308 - PM-05 WORK EXPERIENCE CLUSTER
+
+- **Nome slice**: `CML-308`
+- **Tipo slice**: runtime microfix + documentazione
+- **Macroprogramma**: PM-05 - Esperienza di lavoro
+- **Backlog target**: UX-016, UX-017, UX-018
+- **Dipendenze**: CML-283, CML-299, CML-304, CML-305, CML-306, CML-307
+- **Obiettivo**: rendere piu chiaro il flusso operativo docente (inizio lavoro -> compila -> esporta)
+- **Intervento runtime (3 micro-correzioni)**:
+  - Home: microtesto percorso operativo + etichetta azione Compila esplicita
+  - Compila/Didattica: guida in 3 passi e link diretto a Esportazioni
+  - Esportazioni: percorso in 3 passi e ordine operativo consigliato
+- **Stato UX**:
+  - UX-016: PARZIALMENTE RISOLTO (CML-308)
+  - UX-017: PARZIALMENTE RISOLTO (CML-308)
+  - UX-018: PARZIALMENTE RISOLTO (CML-308)
+- **Stato PM**:
+  - PM-03: invariato 30%
+  - PM-04: invariato 70%
+  - PM-05: 0% -> 30%
+  - PM-07: invariato 20%
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/03_execution/CML-308.md`
+  - `report/CML-308_pm05_work_experience_cluster.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessun refactoring generale
+  - nessuna nuova architettura
+  - nessuna nuova dipendenza
+  - nessuna modifica schema `.cml`, dati disciplinari, service worker
+  - nessuna regressione rilevata su CML-304/CML-305/CML-306/CML-307
+- **Push**: non eseguito
+- **Verdetto**: `CML_308_PM05_WORK_EXPERIENCE_CLUSTER_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-306 - UX-024 COMMON COMPONENTS UNIFORMITY
 
 - **Nome slice**: `CML-306`

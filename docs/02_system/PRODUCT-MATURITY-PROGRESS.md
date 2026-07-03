@@ -17,7 +17,7 @@ PM-04 Comprensione Curriculum
 ███████░░░ 70%
 
 PM-05 Esperienza di lavoro
-░░░░░░░░░░ 0%
+███░░░░░░░ 30%
 
 PM-06 Accompagnamento
 ░░░░░░░░░░ 0%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-308 (PM-05 Work Experience Cluster)
+- CML-309 (PM-05 Work Experience Follow-up)
 
 ## Percorso critico (fase 1)
 
@@ -77,8 +77,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-05 - Esperienza di lavoro
 
-░░░░░░░░░░
-0%
+███░░░░░░░
+30%
 
 ### Programma PM-06 - Accompagnamento
 
@@ -99,9 +99,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 - Ultima slice completata: CML-306 (runtime microfix — UX-024)
 - Ultima slice completata: CML-307 (runtime microfix — PM-03 cluster)
+- Ultima slice completata: CML-308 (runtime microfix — PM-05 cluster)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-308 (PM-05 Work Experience Cluster)
-- Ultimo aggiornamento: 2026-07-03 (CML-307)
+- Prossima slice operativa prevista: CML-309 (PM-05 Work Experience Follow-up)
+- Ultimo aggiornamento: 2026-07-03 (CML-308)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -122,9 +123,9 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 | UX-013 | Indicatori duplicati | PM-04 | CML-295 (risolto) | CML-285 |
 | UX-014 | Fonti non contestualizzate | PM-04 | CML-297 | CML-285 |
 | UX-015 | Proposte 2025 non sempre chiare | PM-04 | CML-297 | CML-285 |
-| UX-016 | Azioni Curriculum senza gerarchia | PM-05 | CML-298 | CML-283 |
-| UX-017 | Compila troppo densa in avvio | PM-05 | CML-299 | CML-283 |
-| UX-018 | Esportazioni non guidate a step | PM-05 | CML-300 | CML-299 |
+| UX-016 | Azioni Curriculum senza gerarchia | PM-05 | CML-308 (parziale), CML-309 | CML-283 |
+| UX-017 | Compila troppo densa in avvio | PM-05 | CML-308 (parziale), CML-309 | CML-283 |
+| UX-018 | Esportazioni non guidate a step | PM-05 | CML-308 (parziale), CML-309 | CML-299 |
 | UX-019 | Guida rapida troppo estesa | PM-06 | CML-301 | CML-286 |
 | UX-020 | Navigazione mobile poco esplicita | PM-03 | CML-307 (parziale), CML-308 | CML-290 |
 | UX-021 | Residui simbolici corrotti | PM-07 | CML-303 | CML-287 |

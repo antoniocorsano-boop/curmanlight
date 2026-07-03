@@ -1555,12 +1555,13 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <h2>CurManLight - ambiente curricolare d'Istituto</h2>
           <p>Scegli da dove partire in base al compito di oggi: Curriculum, Processo di revisione, Progettazione, Esportazioni o Guida rapida.</p>
           <p class="home-inline-guide">Che cosa devi fare oggi? Scegli il bisogno professionale da cui partire. Classe, disciplina e ruolo verranno richiesti solo quando servono.</p>
+          <p class="home-inline-guide"><strong>Percorso operativo:</strong> scegli disciplina, compila il lavoro didattico, poi esporta il risultato.</p>
           <div class="home-inline-meta">Il lavoro viene salvato sul dispositivo in uso.</div>
           <div class="home-inline-actions" role="group" aria-label="Azioni rapide Home">
             <button type="button" onclick="setTab('curricolo')">Consulta il curricolo</button>
             <button type="button" onclick="openWorkContextPanel()">Verifica applicazione per classi</button>
             <button type="button" onclick="setTab('processo')">Segui la revisione</button>
-            <button type="button" onclick="setTab('didattica')">Progetta attivita e UDA</button>
+            <button type="button" onclick="setTab('didattica')">Compila evidenze e progettazione</button>
             <button type="button" class="home-quick-guide" onclick="showWelcome(true)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida rapida</span></button>
           </div>
         </section>
@@ -1620,11 +1621,13 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
         <div class="didattica-path">
           <div class="didattica-path-title"><span aria-hidden="true">📖</span> Come usare questa sezione</div>
-          <div class="didattica-path-body">Qui trovi le <strong>evidenze osservabili</strong> e i <strong>criteri di valutazione</strong> collegati a ciascuna unità del curricolo. Scegli un ordine (<em>Tutti / Infanzia / Primaria / Secondaria</em>) ed esplora le schede per vedere traguardi, obiettivi, conoscenze, abilità, evidenze e criteri.</div>
+          <div class="didattica-path-body">Qui trovi le <strong>evidenze osservabili</strong> e i <strong>criteri di valutazione</strong> collegati a ciascuna unità del curricolo. <strong>Percorso consigliato:</strong> 1) scegli disciplina e ordine, 2) compila evidenze/programmazione/UDA, 3) passa a Esportazioni per il formato finale.</div>
           <div class="didattica-path-actions">
             <span aria-hidden="true">🟢</span> <strong>Dato curricolare</strong> — le evidenze e i criteri provengono dal curricolo strutturato
             <span class="didattica-path-divider">·</span>
             <a href="#" onclick="setTab('curricolo');return false"><span aria-hidden="true">📖</span> Consulta il curricolo completo →</a>
+            <span class="didattica-path-divider">·</span>
+            <a href="#" onclick="setTab('esportazioni');return false"><span aria-hidden="true">📤</span> Vai a Esportazioni →</a>
           </div>
         </div>
         <div class="didattica-evidence-box notice-box warning">
@@ -2138,14 +2141,14 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <div class="tab-esportazioni">
     <h2><span aria-hidden="true">📤</span> Esportazioni e consegne</h2>
     <p class="sub">Scegli il formato in base al tuo ruolo e alla fase di lavoro.</p>
-    <p class="esport-intro-tip"><strong>Una scelta, una conseguenza.</strong> Documenti leggibili per il Collegio, file di lavoro per lo scambio tra docenti e dipartimento, documento di sintesi per il referente, copia di sicurezza per questo dispositivo.</p>
+    <p class="esport-intro-tip"><strong>Percorso in 3 passi:</strong> 1) compila nelle aree operative, 2) verifica il risultato, 3) esporta il formato giusto per il tuo ruolo.</p>
     <div class="esport-role-guide">
-      <h4>📌 Quale esportazione usare?</h4>
+      <h4>📌 Ordine operativo consigliato</h4>
       <div class="esport-role-guide-grid">
-        <div class="esport-role-guide-item"><strong>Docente</strong> → Bozza disciplina, file di lavoro CurManLight (.cml) proposta</div>
-        <div class="esport-role-guide-item"><strong>Dipartimento</strong> → Confronto modifiche, file di lavoro CurManLight (.cml) esito</div>
-        <div class="esport-role-guide-item"><strong>Referente</strong> → Documento di sintesi, Documento finale</div>
-        <div class="esport-role-guide-item"><strong>Tutti</strong> → Copia di sicurezza</div>
+        <div class="esport-role-guide-item"><strong>Passo 1</strong> → Compila in Competenze e progettazione o in Revisione.</div>
+        <div class="esport-role-guide-item"><strong>Passo 2</strong> → Scegli l'uscita in base al ruolo: docente, dipartimento, referente.</div>
+        <div class="esport-role-guide-item"><strong>Passo 3</strong> → Esporta il formato corretto (documento finale, confronto, file di lavoro CurManLight, copia di sicurezza).</div>
+        <div class="esport-role-guide-item"><strong>Riprendi lavoro</strong> → Usa "Torna al punto di lavoro" per continuare senza perdere orientamento.</div>
       </div>
     </div>
     <div class="esport-group">

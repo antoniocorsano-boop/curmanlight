@@ -3,13 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-307 - PM-03 Navigation Orientation Cluster
+- Last slice: CML-308 - PM-05 Work Experience Cluster
 - Last commit: locale, non pushato
-- Active PM: PM-03 (in corso, 30%)
-- Critical Path: PM-03 -> PM-04 -> PM-05 -> PM-06
-- Next slice: CML-308 - PM-05 Work Experience Cluster
-- Last verdict: `CML_307_PM03_NAVIGATION_ORIENTATION_CLUSTER_READY_LOCAL_NOT_PUSHED`
-- Repository status: main con modifiche locali non ancora commit/push
+- Active PM: PM-05 (in corso, 30%)
+- Critical Path: PM-05 -> PM-06
+- Next slice: CML-309 - PM-05 Work Experience Follow-up
+- Last verdict: `CML_308_PM05_WORK_EXPERIENCE_CLUSTER_READY_LOCAL_NOT_PUSHED`
+- Repository status: main con modifiche locali non ancora push
 
 ## Runtime Perimeter Reminder
 
