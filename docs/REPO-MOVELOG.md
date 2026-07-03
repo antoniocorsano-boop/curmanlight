@@ -1,5 +1,34 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-311 - PM-04 RESIDUAL CONSOLIDATION
+
+- **Nome slice**: `CML-311`
+- **Tipo slice**: docs-only
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-304, CML-310, CML-309P
+- **Obiettivo**: consolidare lo stato residuo PM-04 senza forzare percentuali o chiusure automatiche
+- **Correzione preliminare registrata**:
+  - coppia runtime corretta: `index.html` + `_published_snapshot/netlify-current/index.html`
+- **Esito consolidamento**:
+  - PM-04 confermata a 55%
+  - UX-022 consolidata (risoluzione CML-304 confermata da evidenze runtime correnti)
+  - PM-04 non dichiarata chiusa
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-311.md`
+  - `report/CML-311_pm04_residual_consolidation.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_311_PM04_RESIDUAL_CONSOLIDATION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-310 - PM-04 RESIDUAL CLOSURE AUDIT
 
 - **Nome slice**: `CML-310`
