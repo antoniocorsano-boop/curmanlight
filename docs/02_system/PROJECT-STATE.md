@@ -3,12 +3,12 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-295 - Duplicate Indicators Closure (UX-013)
+- Last slice: CML-297 - UX-014 + UX-015 Sources and 2025 Proposal Clarity
 - Last commit: (working tree)
-- Active PM: PM-04 (in corso, 65%)
+- Active PM: PM-04 (in corso, 70%)
 - Critical Path: PM-04 -> PM-05 -> PM-06 -> PM-07
-- Next slice: CML-296 - Fonti non contestualizzate (UX-014)
-- Last verdict: `CML_295_UX_013_DUPLICATE_INDICATORS_CLOSURE_READY_LOCAL_NOT_PUSHED`
+- Next slice: CML-304 - Terminology non-glossary-compliant (UX-022)
+- Last verdict: `CML_297_UX_014_UX_015_PM04_CLOSURE_READY_LOCAL_NOT_PUSHED`
 - Repository status: `main` aligned with `origin/main`; working tree modified
 
 ## Runtime Perimeter Reminder

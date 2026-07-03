@@ -1,5 +1,56 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-297 - UX-014 + UX-015 SOURCES AND 2025 PROPOSAL CLARITY
+
+- **Nome slice**: `CML-297`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-04 - Comprensione Curriculum
+- **Backlog target**: UX-014 (fonti contestualizzate), UX-015 (chiarezza proposta 2025)
+- **Dipendenze**: CML-296
+- **Obiettivo**: rendere piu comprensibili all'utente i riferimenti normativi e il valore della proposta 2025
+- **Intervento runtime**:
+  - espansione dell'abbreviazione "IN" in "Indicazioni Nazionali" in tutti i label UI
+  - `📄 DM 254/2012 (vigente)` → `📄 DM 254/2012 — Indicazioni Nazionali 2012 (vigente)`
+  - `✏️ DM 221/2025 — proposta di aggiornamento` → `✏️ DM 221/2025 — Indicazioni Nazionali 2025 (da valutare)`
+  - `Le IN 2025 introducono questo elemento ex novo` → `Le Indicazioni Nazionali 2025 (D.M. 221/2025) introducono questo elemento ex novo`
+  - `★ Nuova IN 2025` → `★ Nuova (Indicazioni 2025)` nei badge
+  - `★ Nuovi IN 2025` → `★ Nuovi (Indicazioni 2025)` nelle esportazioni
+  - `✓ Invariati (IN 2012)` → `✓ Invariati (Indicazioni 2012)` nelle esportazioni
+  - `Gap verso le IN 2025` → `Gap verso le Indicazioni Nazionali 2025` nel titolo sezione
+  - `IN 2012 (D.M. 254/2012) — vigente` → `Indicazioni Nazionali 2012 (D.M. 254/2012) — vigente` nel selettore versione
+  - `IN 2025 (D.M. 221/2025) — proposta da valutare` → `Indicazioni Nazionali 2025 (D.M. 221/2025) — proposta da valutare`
+  - `*(★ nuovo IN 2025)*` → `*(★ nuovo Indicazioni 2025)*` nelle esportazioni
+- **Risultato UX**:
+  - UX-014: TODO → RISOLTO IN CML-297
+  - UX-015: TODO → RISOLTO IN CML-297
+  - PM-04: 65% → 70%
+  - PM-07: invariato al 10%
+- **Non regressione verificata**:
+  - UX-001: confermata (testata semplificata)
+  - UX-009: confermata (badge uniformati)
+  - UX-011: confermata (meta ridondante assente)
+  - UX-013: confermata (indicatori duplicati rimossi)
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-297.md`
+  - `report/CML-297_ux_014_ux_015_pm04_closure.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessun refactoring generale
+  - nessuna nuova architettura
+  - nessuna modifica a schema `.cml`
+  - nessuna modifica a service worker
+  - nessuna modifica ai dati disciplinari
+  - nessuna regressione su UX chiuse
+  - runtime parity mantenuta
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_297_UX_014_UX_015_PM04_CLOSURE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-296 - ROADMAP POST-295 CONSOLIDATION AUDIT
 
 - **Nome slice**: `CML-296`

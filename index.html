@@ -2007,7 +2007,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
 
         <div class="norm-cat">
-          <div class="norm-cat-title"><span aria-hidden="true">⚡</span> Area di lavoro successiva — Gap verso le IN 2025</div>
+          <div class="norm-cat-title"><span aria-hidden="true">⚡</span> Area di lavoro successiva — Gap verso le Indicazioni Nazionali 2025</div>
           <div class="norm-card in2025">
             <div class="norm-icon" aria-hidden="true">🧩</div>
             <div class="norm-body">
@@ -3773,7 +3773,7 @@ function cardHTML(item, type) {
     return `<div class="card ${item.decisione}${readonlyClass}">
       <div class="card-hd collapse-header" onclick="toggleCollapse('dec-${item.id}')" title="Clicca per mostrare/nascondere il testo">
         <span class="badge ${item.decisione}">${label}</span>
-        ${item.status === "nuovo" ? '<span class="ord-tag">★ Nuova IN 2025</span>' : ""}
+        ${item.status === "nuovo" ? '<span class="ord-tag">★ Nuova (Indicazioni 2025)</span>' : ""}
         ${item.classe ? `<span class="cl-tag">📍 ${item.classe}</span>` : ""}
         <span class="collapse-summary">${truncate(testoShow, 60)}</span>
         <span class="collapse-indicator" id="ico-dec-${item.id}">▸</span>
@@ -3790,7 +3790,7 @@ function cardHTML(item, type) {
   }
 
   // pending — compatta con dettaglio espandibile
-  const badgeText = item.status === "nuovo" ? "★ Nuova IN 2025" : "✎ Modifica proposta";
+  const badgeText = item.status === "nuovo" ? "★ Nuova (Indicazioni 2025)" : "✎ Modifica proposta";
   const proposalText = item.proposto || "";
 
   // edit mode: mostra pannelli completi
@@ -3802,10 +3802,10 @@ function cardHTML(item, type) {
       </div>
       <div class="panels">
         ${item.status === "modifica"
-          ? `<div class="panel current"><div class="panel-lbl">📄 DM 254/2012 (vigente)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
-          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 DM 254/2012 — assente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div></div>`}
+          ? `<div class="panel current"><div class="panel-lbl">📄 DM 254/2012 — Indicazioni Nazionali 2012 (vigente)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
+          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 DM 254/2012 — assente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le Indicazioni Nazionali 2025 (D.M. 221/2025) introducono questo elemento ex novo</div></div>`}
         <div class="panel proposed">
-          <div class="panel-lbl">✏ï¸ DM 221/2025 — proposta di aggiornamento</div>
+          <div class="panel-lbl">✏ï¸ DM 221/2025 — Indicazioni Nazionali 2025 (da valutare)</div>
           <textarea class="panel-text ed" id="edit-${item.id}" rows="5">${item.testoFinale || item.proposto}</textarea>
         </div>
       </div>
@@ -3834,10 +3834,10 @@ function cardHTML(item, type) {
     <div class="pending-detail" id="pd-${item.id}">
       <div class="panels">
         ${item.status === "modifica"
-          ? `<div class="panel current"><div class="panel-lbl">📄 DM 254/2012 (vigente)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
-          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 DM 254/2012 — assente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le IN 2025 introducono questo elemento ex novo</div></div>`}
+          ? `<div class="panel current"><div class="panel-lbl">📄 DM 254/2012 — Indicazioni Nazionali 2012 (vigente)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
+          : `<div class="panel current" style="background:#f3e5f5"><div class="panel-lbl" style="color:#7b1fa2">🆕 DM 254/2012 — assente nel curricolo attuale</div><div class="panel-text" style="color:#9e9e9e;font-style:italic">Le Indicazioni Nazionali 2025 (D.M. 221/2025) introducono questo elemento ex novo</div></div>`}
         <div class="panel proposed">
-          <div class="panel-lbl">✏ï¸ DM 221/2025 — proposta di aggiornamento</div>
+          <div class="panel-lbl">✏ï¸ DM 221/2025 — Indicazioni Nazionali 2025 (da valutare)</div>
           <div class="panel-text">${proposalText}</div>
         </div>
       </div>
@@ -4310,9 +4310,9 @@ Le seguenti sezioni generali del curricolo sono consultabili nell'app CurManLigh
 
 | Categoria | Conteggio |
 |---|---|
-| ✓ Invariati (IN 2012) | ${totOk} |
+| ✓ Invariati (Indicazioni 2012) | ${totOk} |
 | ✎ Modificati | ${totMod} |
-| ★ Nuovi IN 2025 | ${totNew} |
+| ★ Nuovi (Indicazioni 2025) | ${totNew} |
 | **Approvati** | **${totApproved}** |
 | **Rifiutati** | **${totRejected}** |
 | **Voci da validare** | **${totOk + totMod + totNew}** |
@@ -4348,7 +4348,7 @@ Le seguenti sezioni generali del curricolo sono consultabili nell'app CurManLigh
         if(onlyApproved){
           items.forEach(it=>{
             const gapMarker = includeGapMarkers && it.isNew ? ' 🧩 Gap 2025 — nuova proposta' : '';
-            const tag = it.isNew ? ` *(★ nuovo IN 2025)${gapMarker}*` : "";
+            const tag = it.isNew ? ` *(★ nuovo Indicazioni 2025)${gapMarker}*` : "";
             const cl = it.classe ? `*${it.classe}:* ` : "";
             md += `- ${cl}${it.testo}${tag}\n`;
           });
@@ -6118,8 +6118,8 @@ function renderCurricoloIstituto(version) {
   if (!container) return;
 
   const stateMsg = v === '2012'
-    ? 'IN 2012 (D.M. 254/2012) — vigente'
-    : 'IN 2025 (D.M. 221/2025) — proposta da valutare';
+    ? 'Indicazioni Nazionali 2012 (D.M. 254/2012) — vigente'
+    : 'Indicazioni Nazionali 2025 (D.M. 221/2025) — proposta da valutare';
 
   const refText = v === '2012'
     ? 'Indicazioni Nazionali per il curricolo della scuola dell\'infanzia e del primo ciclo d\'istruzione — D.M. 254/2012'

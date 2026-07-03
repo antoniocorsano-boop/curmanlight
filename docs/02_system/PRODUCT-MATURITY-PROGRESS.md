@@ -14,7 +14,7 @@ PM-03 Orientamento
 █░░░░░░░░░ 10%
 
 PM-04 Comprensione Curriculum
-██████░░░░ 65%
+███████░░░ 70%
 
 PM-05 Esperienza di lavoro
 ░░░░░░░░░░ 0%
@@ -44,6 +44,8 @@ CML-293 ⬅ semplificazione testata disciplina completata
 CML-291 ⬅ unificazione badge/stati (UX-009) completata
 ↓
 CML-295 ⬅ indicatori duplicati (UX-013) completata
+↓
+CML-297 ⬅ fonti contestualizzate e chiarezza proposta 2025 (UX-014 + UX-015) completata
 
 ## Avanzamento programmi
 
@@ -64,8 +66,8 @@ CML-295 ⬅ indicatori duplicati (UX-013) completata
 
 ### Programma PM-04 - Comprensione del Curriculum
 
-██████░░░░
-65%
+███████░░░
+70%
 
 ### Programma PM-05 - Esperienza di lavoro
 
@@ -89,10 +91,10 @@ CML-295 ⬅ indicatori duplicati (UX-013) completata
 
 ## Stato operativo
 
-- Ultima slice completata: CML-296 (docs-only audit)
+- Ultima slice completata: CML-297 (runtime microfix — UX-014 + UX-015)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-297 (UX-014 + UX-015)
-- Ultimo aggiornamento: 2026-07-03 (CML-296)
+- Prossima slice operativa prevista: CML-304 (UX-022 — terminologia non glossario-compliant)
+- Ultimo aggiornamento: 2026-07-03 (CML-297)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
