@@ -1,5 +1,48 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-316 - PM-04 USER TEST CLOSURE GATE
+
+- **Nome slice**: `CML-316`
+- **Tipo slice**: user-test closure gate + documentazione
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-315
+- **Obiettivo**: trasformare la readiness tecnica di PM-04 in una valutazione di closure gate basata su evidenza utente reale o, se il test utente non è disponibile, registrare formalmente il limite
+- **Runtime pair verificata**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Tester reale disponibile**: no
+- **Dichiarazione limite**: `USER_TEST_NOT_AVAILABLE`
+- **Console stream**: `CONSOLE_STREAM_NOT_RELIABLY_TESTED`
+- **Protocollo user test**: minimale, osservabile, non invasivo; profilo ideale docente/utente scolastico non tecnico
+- **Esito scenari**:
+  - Scenario A — Comprensione Home: PARTIAL (evidenza proxy, livello media)
+  - Scenario B — Accesso Curriculum: PARTIAL (evidenza proxy, livello forte)
+  - Scenario C — Selezione disciplina: PARTIAL (evidenza proxy, livello forte)
+  - Scenario D — Comprensione stato e linguaggio: PARTIAL (evidenza proxy, livello forte)
+  - Scenario E — Console/blocchi: NOT TESTED (`CONSOLE_STREAM_NOT_RELIABLY_TESTED`)
+- **Limite dichiarato**: nessun test utente umano osservato; console stream non verificato in modo affidabile
+- **Esito PM-04**:
+  - PM-04 resta al 55%, non chiusa
+  - classificazione avanzata: pronta solo condizionatamente per futura closure formale
+  - incremento percentuale: NO
+- **Residui aperti**:
+  1. Test utente reale (anche informale con docente) per confermare criterio DoD temporale.
+  2. Console error stream non verificato: richiede sessione con terminale/browser interattivo disponibile.
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-316.md`
+  - `report/CML-316_pm04_user_test_closure_gate.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_316_PM04_USER_TEST_CLOSURE_GATE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-315 - PM-04 TIMED COMPREHENSION SMOKE
 
 - **Nome slice**: `CML-315`
