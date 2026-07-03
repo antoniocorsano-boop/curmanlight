@@ -3,11 +3,11 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-337 - PM-06 Compila pre-save readability cue runtime microfix
+- Last slice: CML-340 - Product Maturity Strategic Gap Audit
 - Last commit: CML-337 locale (non push)
 - Active PM: PM-06 (in corso, 60%)
 - Critical Path: PM-06
-- Next slice: CML-338 (o nuovo ciclo)
+- Next slice: CML-341 — TBD_AFTER_CML_340_DECISION
 - Last verdict: `CML_337_PM06_COMPILA_PRE_SAVE_READABILITY_CUE_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
 - Repository status: main ahead origin/main (locale non pushato), PM-06 in avanzamento operativo verificato
 

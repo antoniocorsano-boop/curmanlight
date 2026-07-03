@@ -1,4 +1,4 @@
-﻿# Repo Movelog
+# Repo Movelog
 
 ## 2026-07-04 - CML-337 - PM-06 COMPILA PRE-SAVE READABILITY CUE RUNTIME MICROFIX
 
@@ -39,6 +39,26 @@
 - **Esito PM-06**: 60%
 - **Prossima slice**: CML-338 (o nuovo ciclo)
 - **Verdetto**: `CML_337_PM06_COMPILA_PRE_SAVE_READABILITY_CUE_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
+## 2026-07-04 - CML-340 - PM-06 PRODUCT MATURITY STRATEGIC GAP AUDIT
+
+- **Nome slice**: `CML-340`
+- **Tipo slice**: docs-only
+- **Macroprogramma**: PM-06 — Accompagnamento
+- **Backlog target**: (none)
+- **Dipendenze**: CML-337
+- **Obiettivo**: audit strategico di maturità prodotto dopo CML-339, identificare gap e raccomandare prossima slice.
+- **Verifiche**:
+  - `git diff --check`: PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs`: PASS
+  - `node tools/validate-cml-normalized-curriculum.mjs`: PASS
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessun push
+  - nessun deploy
+- **Esito PM-06**: 60%
+- **Prossima slice**: CML-341 — TBD_AFTER_CML_340_DECISION
+- **Verdetto**: `CML_340_PRODUCT_MATURITY_STRATEGIC_GAP_AUDIT_READY_LOCAL_NOT_PUSHED`
 
 ## 2026-07-04 - CML-336 - PM-06 COMPILA IN-FLOW SUPPORT RUNTIME MICROFIX
 

@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-338 (o nuovo ciclo)
+- CML-341 — TBD_AFTER_CML_340_DECISION
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
