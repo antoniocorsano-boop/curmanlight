@@ -1,5 +1,33 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-281 - PRODUCT MATURITY GOVERNANCE FOUNDATION
+
+- **Nome slice**: `CML-281`
+- **Tipo slice**: docs-only
+- **Contesto**: consolidamento di maturita prodotto orientato a utenti scolastici non tecnici
+- **Obiettivo**: impostare governance permanente UX/usabilita con charter, roadmap, backlog, standard, IA e glossario
+- **File creati/modificati**:
+  - `docs/02_system/PRODUCT-MATURITY-CHARTER.md`
+  - `docs/02_system/PRODUCT-USABILITY-AND-UX-MATURITY-ROADMAP.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/02_system/UX-STANDARDS.md`
+  - `docs/02_system/INFORMATION-ARCHITECTURE.md`
+  - `docs/02_system/TERMINOLOGY-GLOSSARY.md`
+  - `docs/03_execution/CML-281.md`
+  - `report/CML-281_product_maturity_governance_foundation.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessuna modifica a `index.html`
+  - nessuna modifica a `_published_snapshot/`
+  - nessuna modifica CSS/JavaScript
+  - nessuna modifica dati disciplinari
+  - nessuna modifica export/import
+  - nessuna modifica workflow applicativi
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_281_PRODUCT_MATURITY_GOVERNANCE_FOUNDATION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-281 - APPLICABILITY HOME CARD MINIMAL RUNTIME
 
 - **Nome slice**: `CML-281`
