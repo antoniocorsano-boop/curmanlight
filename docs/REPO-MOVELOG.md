@@ -1,5 +1,33 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-287 - ROADMAP RESIDUAL UX CLOSURE AUDIT
+
+- **Nome slice**: `CML-287`
+- **Tipo slice**: docs-only audit
+- **Macroprogramma**: PM-04 (Comprensione Curriculum), PM-07 (Uniformità)
+- **Backlog target**: UX-001, UX-009 (audit), UX-003/UX-006 (verifica tenuta)
+- **Dipendenze**: CML-286
+- **Obiettivo**: audit controllato docs-only per stabilire il prossimo avanzamento roadmap dopo CML-286
+- **Decisione roadmap**: Opzione B — prossima slice CML-293 (semplificazione testata disciplina, UX-001 + UX-011)
+- **Audit condotto**:
+  - PM-04: 55%, blocchi identificati (UX-001 P0 è il principale)
+  - UX-001: parziale, richiede runtime (CML-293)
+  - UX-009: parziale, rimandato a CML-291 (P2)
+  - UX-003/UX-006: RISOLTE, nessuna regressione
+- **File creati/modificati**:
+  - `docs/03_execution/CML-287.md`
+  - `report/CML-287_roadmap_residual_ux_closure_audit.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessuna nuova funzionalità
+  - nessuna modifica a schema `.cml` / import / export / storage / service worker
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_287_ROADMAP_RESIDUAL_UX_CLOSURE_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-286 - GUIDE AND QUICK GUIDE ALIGNMENT
 
 - **Nome slice**: `CML-286`

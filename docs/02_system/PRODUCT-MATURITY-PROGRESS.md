@@ -31,15 +31,15 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-286
+- CML-293
 
 ## Percorso critico (fase 1)
 
-CML-286
+CML-286 ⬅ completata
 ↓
-CML-287
+CML-287 ⬅ audit completato
 ↓
-CML-288
+CML-293 — semplificazione testata disciplina (UX-001 + UX-011)
 
 ## Avanzamento programmi
 
@@ -85,9 +85,9 @@ CML-288
 
 ## Stato operativo
 
-- Ultima slice completata: CML-285
+- Ultima slice completata: CML-286
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-286
+- Prossima slice operativa prevista: CML-293
 - Ultimo aggiornamento: 2026-07-03
 
 ## Matrice di trasformazione UX -> PM -> CML
