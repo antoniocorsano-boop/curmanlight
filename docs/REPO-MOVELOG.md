@@ -1,5 +1,41 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-317 - PM-04 REAL USER TEST SESSION
+
+- **Nome slice**: `CML-317`
+- **Tipo slice**: docs-only (formalizzazione test utente reale)
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-316
+- **Obiettivo**: formalizzare test reale docente/utente scolastico su PM-04 e registrare rilievi
+- **Runtime pair verificata**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Tester reale**: SI (docente / utente scolastico interno, 2026-07-03)
+- **Dati personali**: nessuno raccolto
+- **Esito scenari**:
+  - A — Home: PARTIAL / FAIL
+  - B — Accesso Curriculum: PASS con riserva
+  - C — Selezione disciplina: PARTIAL
+  - D — Stato e linguaggio: FAIL / PARTIAL
+  - E — Console/blocchi: PARTIAL / NOT TESTED
+- **Rilievi principali**: nome "Curriculum Light" non adeguato; identita visiva debole; Home non guidante; Curriculum troppo lungo; menu Azioni ambiguo; icone rotte; link "Motto e metodo" errato; scroll disciplina errato; linguaggio tecnico residuo
+- **Esito PM-04**: PM-04 resta al 55%, non chiusa; readiness condizionata ridimensionata; necessaria remediation
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-317.md`
+  - `report/CML-317_pm04_real_user_test_session.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+  - nessun deploy
+  - nessun push
+- **Prossima sequenza**: CML-318 (PM-04 Curriculum UX Remediation Plan), CML-319 (runtime remediation)
+- **Verdetto**: `CML_317_PM04_REAL_USER_TEST_SESSION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-316 - PM-04 USER TEST CLOSURE GATE
 
 - **Nome slice**: `CML-316`

@@ -106,9 +106,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-313 (docs-only — PM-04 formal closure readiness)
 - Ultima slice completata: CML-314 (runtime smoke read-only — PM-04 runtime readiness smoke)
 - Ultima slice completata: CML-316 (user-test closure gate — PM-04 closure readiness)
+- Ultima slice completata: CML-317 (docs-only — PM-04 real user test session)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-317 (PM-04 real user test or console stream closure)
-- Ultimo aggiornamento: 2026-07-03 (CML-316)
+- Prossima slice operativa prevista: CML-318 (PM-04 Curriculum UX Remediation Plan)
+- Ultimo aggiornamento: 2026-07-03 (CML-317)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
