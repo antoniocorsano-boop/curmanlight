@@ -1,5 +1,37 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-293 - DISCIPLINE HEADER SIMPLIFICATION RUNTIME
+
+- **Nome slice**: `CML-293`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-04 - Comprensione Curriculum
+- **Backlog target**: UX-001, UX-011
+- **Dipendenze**: CML-287
+- **Obiettivo**: semplificare la testata disciplina nella vista Consulta, riducendo messaggi ridondanti e separando la modalità consultazione dalle azioni di revisione/esportazione
+- **Intervento runtime**:
+  - titolo semplificato (rimosso "— curricolo della disciplina")
+  - rimossa meta line duplicata ("Stato sezione: sola consultazione · Leggi... passare a Revisione o Esportazioni") — info già coperta da badge e notice
+- **Risultato UX**:
+  - UX-001: PARZIALMENTE RISOLTO → RISOLTO IN CML-293
+  - UX-011: TODO → RISOLTO IN CML-293
+  - PM-04: 55% → 65%
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-293.md`
+  - `report/CML-293_discipline_header_simplification_runtime.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna nuova funzionalità
+  - nessuna modifica a schema `.cml` / import / export / storage / service worker
+  - nessun intervento su UX-009
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_293_DISCIPLINE_HEADER_SIMPLIFICATION_RUNTIME_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-287 - ROADMAP RESIDUAL UX CLOSURE AUDIT
 
 - **Nome slice**: `CML-287`

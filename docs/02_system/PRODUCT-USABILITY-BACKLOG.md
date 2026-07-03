@@ -14,7 +14,7 @@ Backlog di maturita prodotto UX aggiornato con il primo audit completo (CML-282)
 
 | ID UX | Macroprogramma PM | Area | Descrizione | Impatto utente | Priorita | Dipendenze | Stato | Futura slice candidata |
 |---|---|---|---|---|---|---|---|---|
-| UX-001 | PM-04 | Curriculum | Logiche miste tra consultazione, revisione e azioni operative nella stessa area percepita. | Percorso ambiguo e aumento decisioni simultanee. | P0 | nessuna | PARZIALMENTE RISOLTO (CML-283, CML-284, CML-285) | CML-293 |
+| UX-001 | PM-04 | Curriculum | Logiche miste tra consultazione, revisione e azioni operative nella stessa area percepita. | Percorso ambiguo e aumento decisioni simultanee. | P0 | nessuna | RISOLTO IN CML-293 | CML-293 |
 | UX-002 | PM-03 | Navigazione/Focus | Cambio disciplina con focus percepito in area bassa/non sempre ricentrato sul contenuto principale. | Perdita orientamento e rallentamento del compito. | P0 | CML-283 | RISOLTO IN CML-284 | CML-305 |
 | UX-003 | PM-04 | Indicatori | Indicatori non autoesplicativi: "voci totali", "voci con proposta 2025", "copertura curricolo". | Difficolta nel capire stato reale del curricolo. | P1 | CML-283 | RISOLTO IN CML-285 | CML-295 |
 | UX-004 | PM-06 | Guida | Guida e Guida rapida non sempre allineate ai nomi/percorsi mostrati in UI. | L'utente segue istruzioni parzialmente incoerenti. | P1 | CML-283 | RISOLTO IN CML-286 | CML-301 |
@@ -24,7 +24,7 @@ Backlog di maturita prodotto UX aggiornato con il primo audit completo (CML-282)
 | UX-008 | PM-03 | Architettura/Navigazione | Percorsi e menu non sempre coerenti con un compito primario per schermata. | Discontinuita dei flussi e ritorni frequenti. | P1 | CML-283 | TODO | CML-290 |
 | UX-009 | PM-07 | Semantica visiva | Badge/etichette stato con significato non sempre univoco tra sezioni. | Interpretazioni divergenti su stato e affidabilita contenuti. | P2 | CML-287 | PARZIALMENTE RISOLTO (CML-283, CML-285) | CML-291 |
 | UX-010 | PM-01 | Governance | Checklist UX non ancora applicata in tutte le slice precedenti. | Qualita UX non omogenea nel tempo. | P0 | nessuna | TODO | CML-292 |
-| UX-011 | PM-04 | Curriculum/Testata | Testata disciplina con messaggi multipli (stato, avvisi, base lavoro) nella stessa area iniziale. | Lettura iniziale faticosa e priorita poco chiare. | P1 | CML-283 | TODO | CML-293 |
+| UX-011 | PM-04 | Curriculum/Testata | Testata disciplina con messaggi multipli (stato, avvisi, base lavoro) nella stessa area iniziale. | Lettura iniziale faticosa e priorita poco chiare. | P1 | CML-283 | RISOLTO IN CML-293 | CML-293 |
 | UX-012 | PM-07 | Curriculum/Selezione disciplina | Sidebar discipline ricca di numeri, emoji e marker "NEW" senza legenda unica. | Difficolta nel capire significato dei segnali visivi. | P1 | CML-287 | TODO | CML-294 |
 | UX-013 | PM-04 | Curriculum/Indicatori | Indicatori numerici duplicati tra pannelli e quadro generale. | Ridondanza informativa e possibile confusione. | P2 | CML-285 | TODO | CML-295 |
 | UX-014 | PM-04 | Curriculum/Fonti | Fonti presenti ma non sempre contestualizzate al compito corrente. | L'utente non capisce subito quando consultarle. | P2 | CML-285 | TODO | CML-296 |

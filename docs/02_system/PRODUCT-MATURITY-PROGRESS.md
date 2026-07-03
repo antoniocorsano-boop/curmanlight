@@ -14,7 +14,7 @@ PM-03 Orientamento
 █░░░░░░░░░ 10%
 
 PM-04 Comprensione Curriculum
-█████░░░░░ 55%
+██████░░░░ 65%
 
 PM-05 Esperienza di lavoro
 ░░░░░░░░░░ 0%
@@ -39,7 +39,9 @@ CML-286 ⬅ completata
 ↓
 CML-287 ⬅ audit completato
 ↓
-CML-293 — semplificazione testata disciplina (UX-001 + UX-011)
+CML-293 ⬅ semplificazione testata disciplina completata
+↓
+CML-291 — unificazione badge/stati (UX-009)
 
 ## Avanzamento programmi
 
@@ -60,8 +62,8 @@ CML-293 — semplificazione testata disciplina (UX-001 + UX-011)
 
 ### Programma PM-04 - Comprensione del Curriculum
 
-█████░░░░░
-55%
+██████░░░░
+65%
 
 ### Programma PM-05 - Esperienza di lavoro
 
@@ -85,16 +87,16 @@ CML-293 — semplificazione testata disciplina (UX-001 + UX-011)
 
 ## Stato operativo
 
-- Ultima slice completata: CML-286
+- Ultima slice completata: CML-293
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-293
+- Prossima slice operativa prevista: CML-291
 - Ultimo aggiornamento: 2026-07-03
 
 ## Matrice di trasformazione UX -> PM -> CML
 
 | UX ID | Problema sintetico | Macroprogramma | Slice target | Dipendenza |
 |---|---|---|---|---|
-| UX-001 | Logiche miste Curriculum | PM-04 | CML-283/CML-284/CML-285 (parziale) | nessuna |
+| UX-001 | Logiche miste Curriculum | PM-04 | CML-293 (risolto) | nessuna |
 | UX-002 | Focus cambio disciplina | PM-03 | CML-284 (risolto) | CML-283 |
 | UX-003 | Indicatori incomprensibili | PM-04 | CML-285 (risolto) | CML-283 |
 | UX-004 | Guida disallineata | PM-06 | CML-286 | CML-283 |
@@ -104,7 +106,7 @@ CML-293 — semplificazione testata disciplina (UX-001 + UX-011)
 | UX-008 | Percorsi/menu incoerenti | PM-03 | CML-290 | CML-289 |
 | UX-009 | Badge non univoci | PM-07 | CML-285 (parziale), CML-291 | CML-287 |
 | UX-010 | Checklist UX non sistematica | PM-01 | CML-292 | nessuna |
-| UX-011 | Testata Curriculum sovraccarica | PM-04 | CML-293 | CML-283 |
+| UX-011 | Testata Curriculum sovraccarica | PM-04 | CML-293 (risolto) | CML-283 |
 | UX-012 | Sidebar discipline senza legenda unica | PM-07 | CML-294 | CML-287 |
 | UX-013 | Indicatori duplicati | PM-04 | CML-295 | CML-285 |
 | UX-014 | Fonti non contestualizzate | PM-04 | CML-296 | CML-285 |
