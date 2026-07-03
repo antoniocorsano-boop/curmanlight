@@ -6118,7 +6118,7 @@ function renderCurricoloIstituto(version) {
 
   const stateMsg = v === '2012'
     ? 'IN 2012 (D.M. 254/2012) — vigente'
-    : 'IN 2025 (D.M. 221/2025) — bozza da revisionare';
+    : 'IN 2025 (D.M. 221/2025) — proposta da valutare';
 
   const refText = v === '2012'
     ? 'Indicazioni Nazionali per il curricolo della scuola dell\'infanzia e del primo ciclo d\'istruzione — D.M. 254/2012'
@@ -6169,12 +6169,12 @@ function renderCurricoloIstituto(version) {
 
   html += '<div class="curricolo-state">' + stateMsg + '</div>';
 
-  html += '<div class="curricolo-copertura"><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + DISCIPLINE.length + '</span><span class="curricolo-copertura-label">discipline</span></span><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + totalItems + '</span><span class="curricolo-copertura-label">elementi del curricolo</span></span><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + totalChanged + '</span><span class="curricolo-copertura-label">elementi con proposta 2025</span></span></div>';
+  html += '<div class="curricolo-copertura"><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + DISCIPLINE.length + '</span><span class="curricolo-copertura-label">discipline</span></span><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + totalItems + '</span><span class="curricolo-copertura-label">contenuti del curricolo</span></span><span class="curricolo-copertura-item"><span class="curricolo-copertura-val">' + totalChanged + '</span><span class="curricolo-copertura-label">contenuti con aggiornamento 2025</span></span></div>';
 
   if(selDisc){
     var sm=DISCIPLINE_META[selDisc]||{icon:"📘",comp:"",nuclei:""};
     var sd=discSummary[selDisc]||{total:0,changed:0};
-    html += '<div class="curricolo-disc-focus"><div class="curricolo-disc-focus-hd"><span class="curricolo-disc-focus-icon">'+sm.icon+'</span><span class="curricolo-disc-focus-name">'+selDisc+'</span><span class="curricolo-disc-focus-comp">'+sm.comp+'</span></div><div class="curricolo-disc-focus-stats"><span>'+sd.total+' elementi</span><span>'+(sd.changed>0?'+'+sd.changed+' proposte 2025':'nessuna proposta 2025')+'</span></div></div>';
+    html += '<div class="curricolo-disc-focus"><div class="curricolo-disc-focus-hd"><span class="curricolo-disc-focus-icon">'+sm.icon+'</span><span class="curricolo-disc-focus-name">'+selDisc+'</span><span class="curricolo-disc-focus-comp">'+sm.comp+'</span></div><div class="curricolo-disc-focus-stats"><span>'+sd.total+' contenuti</span><span>'+(sd.changed>0?'+'+sd.changed+' aggiornamenti 2025':'nessun aggiornamento 2025')+'</span></div></div>';
   }
 
   html += '<details class="curricolo-quadro"><summary class="curricolo-quadro-summary">📊 Quadro generale delle discipline</summary>';
@@ -6200,7 +6200,7 @@ function renderCurricoloIstituto(version) {
   });
   html += '</div>';
 
-  html += '<div style="font-size:11px;color:#78909c;margin-bottom:7px"><span aria-hidden="true">📊</span> <a href="#" onclick="setTab(\'lavoro\');return false">Validazione dipartimentale</a> e stato di completezza disponibili in Revisione.</div>';
+  html += '<div style="font-size:11px;color:#78909c;margin-bottom:7px"><span aria-hidden="true">📊</span> <a href="#" onclick="setTab(\'lavoro\');return false">Verifica dipartimentale</a> e avanzamento disponibili in Revisione.</div>';
 
   ordinii.forEach(function(o) {
     if (!ordineDiscipline[o] || ordineDiscipline[o].length === 0) return;
@@ -6241,7 +6241,7 @@ function renderCurricoloIstituto(version) {
       }
 
       html += '</details>';
-      html += '<div class="curricolo-nextaction">✏ï¸ <a href="#" onclick="setTab(\'lavoro\');return false">Revisiona ' + disc + '</a> · valuta le voci e decidi</div>';
+      html += '<div class="curricolo-nextaction"><a href="#" onclick="setTab(\'lavoro\');return false">Vai a Revisione per ' + disc + '</a> · valuta i contenuti e decidi</div>';
     });
 
     html += '</div>';
@@ -6332,17 +6332,17 @@ function renderTecnologiaNorm() {
       '<div class="tecnologia-norm-hd">' +
         '<div>' +
           '<div class="tecnologia-norm-title">' + selDisc + ' — curricolo della disciplina</div>' +
-          '<div class="tecnologia-norm-subtitle">Consulta prima il curricolo vigente, poi verifica le eventuali proposte 2025.</div>' +
-          '<div class="tecnologia-norm-badges"><span class="tecnologia-norm-badge badge--readonly">Anteprima non modificabile</span><span class="tecnologia-norm-badge warn badge--warning">Richiede validazione umana</span><span class="tecnologia-norm-badge badge--prototype">Non costituisce approvazione definitiva</span></div>' +
+          '<div class="tecnologia-norm-subtitle">Consulta prima il curricolo vigente, poi verifica gli aggiornamenti 2025 proposti.</div>' +
+          '<div class="tecnologia-norm-badges"><span class="tecnologia-norm-badge badge--readonly">Sola consultazione</span><span class="tecnologia-norm-badge warn badge--warning">Da confermare in dipartimento</span><span class="tecnologia-norm-badge badge--prototype">Non ancora approvato</span></div>' +
         '</div>' +
       '</div>' +
       '<div class="tecnologia-norm-stats">' +
-        '<div class="tecnologia-norm-stat"><strong>' + total + '</strong>unit\u00E0 totali</div>' +
+        '<div class="tecnologia-norm-stat"><strong>' + total + '</strong>contenuti totali</div>' +
         '<div class="tecnologia-norm-stat"><strong>' + inf + '</strong>Infanzia</div>' +
         '<div class="tecnologia-norm-stat"><strong>' + pri + '</strong>Primaria</div>' +
         '<div class="tecnologia-norm-stat"><strong>' + sec + '</strong>Secondaria I</div>' +
       '</div>' +
-      '<div class="tecnologia-norm-meta">Stato: <strong>consultazione didattica</strong> &middot; Contenuti da leggere prima di passare a Revisione o Esportazioni</div>' +
+      '<div class="tecnologia-norm-meta">Stato sezione: <strong>sola consultazione</strong> &middot; Leggi i contenuti prima di passare a Revisione o Esportazioni</div>' +
       '<div class="tecnologia-norm-notice notice-box success">In questa sezione consulti i contenuti. La modifica operativa avviene in Revisione.</div>' +
       filtersHtml +
       '<div class="tecnologia-norm-list" id="tecnologia-norm-list">' + renderList('Tutti') + '</div>' +

@@ -1,5 +1,37 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-285 - CURRICULUM INDICATORS AND TERMINOLOGY RATIONALIZATION
+
+- **Nome slice**: `CML-285`
+- **Tipo slice**: runtime minimo + documentazione
+- **Macroprogramma**: PM-04 - Comprensione Curriculum
+- **Backlog target**: UX-003, UX-006, UX-009, UX-001
+- **Dipendenze**: CML-281, CML-282, CML-282A, CML-283, CML-283G, CML-284
+- **Obiettivo**: rendere pienamente comprensibili indicatori, badge, etichette e microtesti della sezione Curriculum
+- **Intervento runtime**:
+  - rinominati indicatori in linguaggio scolastico orientato al compito
+  - chiarito stato versione 2025 (`proposta da valutare`)
+  - uniformati microtesti di passaggio a Revisione
+  - badge disciplina razionalizzati con semantica univoca
+  - ridotti termini astratti/tecnici residui visibili in Curriculum
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-285.md`
+  - `report/CML-285_curriculum_indicators_and_terminology_rationalization.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna nuova funzionalita
+  - nessun nuovo indicatore
+  - nessuna modifica dati disciplinari/export/import/workflow/schema `.cml`
+  - nessuna nuova icona
+  - nessun aumento azioni visibili
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_285_CURRICULUM_INDICATORS_AND_TERMINOLOGY_RATIONALIZATION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-284 - CURRICULUM NAVIGATION AND FOCUS CONTINUITY
 
 - **Nome slice**: `CML-284`
