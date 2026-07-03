@@ -1,5 +1,54 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-319 - PM-04 CURRICULUM UX RUNTIME REMEDIATION
+
+- **Nome slice**: `CML-319`
+- **Tipo slice**: runtime remediation mirata + documentazione
+- **Macroprogramma**: PM-04 - Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022
+- **Dipendenze**: CML-318
+- **Obiettivo**: applicare remediation runtime controllata su rilievi PM-04 (test reale CML-317 + piano CML-318)
+- **Runtime pair aggiornata in sincrono**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Interventi P0**:
+  - menu rinominato in "File e salvataggio" con voci principali senza icone rotte
+  - link "Motto e metodo" riallineato a destinazione valida
+  - accessi rapidi guida riallineati al tab guida (no ingresso modale fuorviante)
+  - selezione disciplina con scroll sul titolo disciplina (offset controllato)
+- **Interventi P1**:
+  - Home resa piu orientativa e meno dipendente da "compito di oggi"
+  - microcopy "Prossima azione" resa esplicita e operativa
+  - etichette disciplina aggiornate su "proposte IN 2025" e "curricolo vigente IN 2012"
+  - correzioni linguistiche mirate (es. "cosa è valido")
+- **Controlli**:
+  - `git diff --check`: PASS
+  - check sintassi JS runtime (`node --check` su script estratto): PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs`: PASS
+  - `node tools/validate-cml-normalized-curriculum.mjs`: PASS (warning retrocompatibili noti)
+- **Smoke browser locale**:
+  - Home/Curriculum raggiungibili: PASS
+  - selezione Italiano/Matematica: PASS
+  - menu file/salvataggio leggibile: PASS
+  - link motto non rotto: PASS
+  - console: `CONSOLE_STREAM_NOT_RELIABLY_TESTED`
+- **Esito PM-04**:
+  - PM-04 resta al 55%, non chiusa
+  - remediation migliorativa completata, da confermare con nuovo test utente reale
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/03_execution/CML-319.md`
+  - `report/CML-319_pm04_curriculum_ux_runtime_remediation.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica a JSON curricolari, tools, script, dipendenze, configurazioni, service worker, schema `.cml`
+  - nessun push
+  - nessun deploy
+- **Verdetto**: `CML_319_PM04_CURRICULUM_UX_RUNTIME_REMEDIATION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-318 - PM-04 CURRICULUM UX REMEDIATION PLAN
 
 - **Nome slice**: `CML-318`

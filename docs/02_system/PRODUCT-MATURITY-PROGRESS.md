@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-317 (PM-04 real user test or console stream closure)
+- CML-320 (PM-04 UX Language and Identity Consolidation)
 
 ## Percorso critico (fase 1)
 
@@ -108,9 +108,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-316 (user-test closure gate — PM-04 closure readiness)
 - Ultima slice completata: CML-317 (docs-only — PM-04 real user test session)
 - Ultima slice completata: CML-318 (docs-only — PM-04 curriculum UX remediation plan)
+- Ultima slice completata: CML-319 (runtime remediation mirata — PM-04 curriculum UX)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-319 (PM-04 Curriculum UX Runtime Remediation)
-- Ultimo aggiornamento: 2026-07-03 (CML-318)
+- Prossima slice operativa prevista: CML-320 (PM-04 UX Language and Identity Consolidation)
+- Ultimo aggiornamento: 2026-07-03 (CML-319)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

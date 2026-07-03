@@ -3,13 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-318 - PM-04 Curriculum UX Remediation Plan
-- Last commit: f1b7a9d docs: formalize PM-04 real user test session
+- Last slice: CML-319 - PM-04 Curriculum UX Runtime Remediation
+- Last commit: 026d933 docs: plan PM-04 curriculum UX remediation
 - Active PM: PM-04 (in corso, 55%)
 - Critical Path: PM-04 -> PM-06
-- Next slice: CML-319 (PM-04 Curriculum UX Runtime Remediation)
-- Last verdict: `CML_318_PM04_CURRICULUM_UX_REMEDIATION_PLAN_READY_LOCAL_NOT_PUSHED`
-- Repository status: main con modifiche locali docs-only non ancora push
+- Next slice: CML-320 (PM-04 UX Language and Identity Consolidation)
+- Last verdict: `CML_319_PM04_CURRICULUM_UX_RUNTIME_REMEDIATION_READY_LOCAL_NOT_PUSHED`
+- Repository status: main con modifiche locali runtime+docs non ancora push
 
 ## Runtime Perimeter Reminder
 

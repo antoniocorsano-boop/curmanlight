@@ -1481,7 +1481,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div class="header-badges">
       <span class="norm-badge">D.M. 254/2012</span>
       <span class="norm-badge" style="background:rgba(192,57,43,.4)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-triangle-alert"></use></svg> D.M. 221/2025 — G.U. 27/01/2026 — vigore da 01/09/2026</span></span>
-      <span class="norm-badge" style="background:rgba(255,255,255,.1)">Motto: <a class='motto-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Apri una breve spiegazione del motto latino: non molte cose, ma molto'>Non multa, sed multum</a></span>
+      <span class="norm-badge" style="background:rgba(255,255,255,.1)">Motto: <a class='motto-link' href='https://antoniocorsano-boop.github.io/curmanlight/motto-non-multa-sed-multum/' rel='noopener' target='_blank' title='Apri una breve spiegazione del motto latino: non molte cose, ma molto'>Non multa, sed multum</a></span>
     </div>
     <div class="stats" id="stats"></div>
   </div>
@@ -1513,7 +1513,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <div class="cruscotto-main">
     <div>
       <span class="cruscotto-state">Stato: revisione avviata</span>
-      <div class="cruscotto-next">Prossima azione: avvia la consultazione e la revisione del curricolo</div>
+      <div class="cruscotto-next">Prossima azione: consulta il curricolo per disciplina</div>
     </div>
     <div class="cruscotto-btns">
       <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-workflow"></use></svg> Controlla voci</span></button>
@@ -1524,20 +1524,20 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <span class="cruscotto-save"><span id="local-save-status"><span aria-hidden="true">💾</span> Ogni decisione viene conservata in questo browser.</span></span>
       <span class="cruscotto-prog" aria-live="polite" aria-atomic="true"><span id="prog-label" style="font-size:11px!important;font-weight:700!important;color:#1a237e!important">—</span> <span id="prog-pct" style="font-size:11px!important;color:#1a237e!important;font-weight:700!important">0%</span></span>
       <div class="prog-bar-bg" style="flex:1;max-width:160px;height:6px"><div class="prog-bar-fill" id="prog-fill" style="width:0%;height:100%"></div></div>
-      <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-settings"></use></svg> Azioni ▾</span></button>
+      <button class="cruscotto-toggle" id="quick-actions-toggle" type="button" onclick="toggleQuickActions()" aria-expanded="false" aria-controls="quick-actions"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-settings"></use></svg> File e salvataggio ▾</span></button>
     </div>
   </div>
   <div class="quick-actions" id="quick-actions" hidden>
     <button class="quick-btn" onclick="saveLocalState(false)" style="gap:4px"><span aria-hidden="true">💾</span> Salva</button>
-    <button class="quick-btn" onclick="exportLocalBackup()" style="gap:4px"><span aria-hidden="true">⬇ï¸</span> Salva copia</button>
-    <button class="quick-btn" onclick="document.getElementById('local-backup-input').click()" style="gap:4px"><span aria-hidden="true">⬆ï¸</span> Importa</button>
+    <button class="quick-btn" onclick="exportLocalBackup()" style="gap:4px"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Salva copia</span></button>
+    <button class="quick-btn" onclick="document.getElementById('local-backup-input').click()" style="gap:4px"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-upload"></use></svg> Importa</span></button>
     <button class="quick-btn" onclick="resetLocalState()" style="gap:4px;color:#b71c1c"><span aria-hidden="true">↺</span> Ripristina</button>
     <input id="local-backup-input" type="file" accept="application/json,.json" onchange="importLocalBackup(event)" style="display:none">
     <button id="install-app-btn" class="quick-btn install-btn" onclick="handleInstallApp()"><span aria-hidden="true">📲</span> Installa sul dispositivo</button>
     <button class="quick-btn" onclick="openSettingsModal()"><span aria-hidden="true">👤</span> Impostazioni / onboarding</button>
     <a class="course-link" href="Corso_CurricoloDonMilani_IN2025_arianese_20260620.pdf" target="_blank" rel="noopener"><span aria-hidden="true">📘</span> Apri il corso in PDF</a>
-    <a class='course-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Significato operativo del motto latino'><span aria-hidden="true">🏛ï¸</span> Motto e metodo</a>
-    <button class="quick-btn" onclick="showWelcome(true)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida rapida</span></button>
+    <a class='course-link' href='https://antoniocorsano-boop.github.io/curmanlight/motto-non-multa-sed-multum/' rel='noopener' target='_blank' title='Significato operativo del motto latino'><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-landmark"></use></svg> Motto e metodo</span></a>
+    <button class="quick-btn" onclick="setTab('guida')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Apri guida</span></button>
   </div>
 </div>
 <div class="layout">
@@ -1552,9 +1552,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div id="tab-home" style="display:block">
       <div class="home-dashboard">
         <section class="home-inline-banner" role="region" aria-label="Orientamento iniziale">
-          <h2>CurManLight - ambiente curricolare d'Istituto</h2>
-          <p>Scegli da dove partire in base al compito di oggi: Curriculum, Processo di revisione, Progettazione, Esportazioni o Guida rapida.</p>
-          <p class="home-inline-guide">Che cosa devi fare oggi? Scegli il bisogno professionale da cui partire. Classe, disciplina e ruolo verranno richiesti solo quando servono.</p>
+          <h2>Ambiente curricolare d'Istituto</h2>
+          <p>Scegli da dove partire: consulta il curricolo, segui la revisione, progetta attivit&agrave; o esporta documenti.</p>
+          <p class="home-inline-guide">Scegli il bisogno professionale da cui partire. Classe, disciplina e ruolo verranno richiesti solo quando servono.</p>
           <p class="home-inline-guide"><strong>Percorso operativo:</strong> scegli disciplina, compila il lavoro didattico, poi esporta il risultato.</p>
           <div class="home-inline-meta">Il lavoro viene salvato sul dispositivo in uso.</div>
           <div class="home-inline-actions" role="group" aria-label="Azioni rapide Home">
@@ -1562,14 +1562,14 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <button type="button" onclick="openWorkContextPanel()">Verifica applicazione per classi</button>
             <button type="button" onclick="setTab('processo')">Segui la revisione</button>
             <button type="button" onclick="setTab('didattica')" class="home-quick-primary">Compila evidenze e progettazione</button>
-            <button type="button" class="home-quick-guide" onclick="showWelcome(true)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida rapida</span></button>
+            <button type="button" class="home-quick-guide" onclick="setTab('guida')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Apri guida</span></button>
           </div>
         </section>
         <p class="home-operational-title">Ingressi operativi per bisogno professionale</p>
         <div class="home-cards">
           <a href="#" class="home-card" onclick="setTab('curricolo');return false">
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curricolo vigente</h3>
-            <p class="home-card-text">Consulta cosa e valido oggi nel curricolo di istituto.</p>
+            <p class="home-card-text">Consulta cosa è valido oggi nel curricolo di istituto.</p>
           </a>
           <a href="#" class="home-card" onclick="openWorkContextPanel();return false">
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-users"></use></svg> Applicazione per classi</h3>
@@ -2214,7 +2214,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <!-- TAB GUIDA -->
 <div id="tab-guida" style="display:none">
   <div class="tab-guida">
-    <h2><span aria-hidden="true">❔</span> Guida rapida</h2>
+    <h2><span aria-hidden="true">❔</span> Guida operativa</h2>
     <p class="sub">Ogni ruolo ha un compito essenziale e un esito da produrre. Usa la Guida insieme al percorso di lavoro in Home.</p>
     <div class="guida-card">
       <h3><span aria-hidden="true">👋</span> Da dove iniziare</h3>
@@ -2288,7 +2288,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 </div>
   </main>
 </div>
-<footer aria-label="Informazioni istituto">Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV) · AVIC849003 | IN 2012 → D.M. 221/2025 | DigComp 2.2 | Agenda 2030 | PTOF 2025-2028 | <a class='footer-motto-link' href='/motto-non-multa-sed-multum' rel='noopener' target='_blank' title='Approfondisci il motto latino'>Non multa, sed multum</a></footer>
+<footer aria-label="Informazioni istituto">Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV) · AVIC849003 | IN 2012 → D.M. 221/2025 | DigComp 2.2 | Agenda 2030 | PTOF 2025-2028 | <a class='footer-motto-link' href='https://antoniocorsano-boop.github.io/curmanlight/motto-non-multa-sed-multum/' rel='noopener' target='_blank' title='Approfondisci il motto latino'>Non multa, sed multum</a></footer>
 <script>
 // ================================================================
 // IN 2012 (testo) vs IN 2025 (proposto) — D.M. 221/2025
@@ -3702,8 +3702,14 @@ function selectDisc(d,opts){
   if(opts.tab&&opts.tab!==currentTab){setTab(opts.tab,{updateHash:false,scroll:false});}
   refreshCurrentDisciplineViews();
   if(opts.scroll!==false){
-    var main=document.getElementById("main-content");
-    if(main){main.scrollIntoView({behavior:"smooth",block:"start"});main.setAttribute("tabindex","-1");main.focus({preventScroll:true});}
+    var discEl=document.querySelector(".disc-header");
+    if(discEl && currentTab!=="home" && currentTab!=="esportazioni" && currentTab!=="guida"){
+      var top=discEl.getBoundingClientRect().top+window.scrollY-70;
+      if(typeof window.scrollTo==="function"){window.scrollTo({top:top,behavior:"smooth"});}
+    } else {
+      var main=document.getElementById("main-content");
+      if(main){main.scrollIntoView({behavior:"smooth",block:"start"});main.setAttribute("tabindex","-1");main.focus({preventScroll:true});}
+    }
   }
   announceStatus("Disciplina selezionata: "+d);
   if(opts.updateHash!==false){
@@ -5468,7 +5474,7 @@ function toggleQuickActions(force){
   } else {
     panel.setAttribute("hidden","");
     btn.setAttribute("aria-expanded","false");
-    btn.innerHTML='<span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-settings"></use></svg> Azioni ▾</span>';
+    btn.innerHTML='<span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-settings"></use></svg> File e salvataggio ▾</span>';
   }
 }
 
@@ -6182,7 +6188,7 @@ function renderCurricoloIstituto(version) {
   if(selDisc){
     var sm=DISCIPLINE_META[selDisc]||{icon:"📘",comp:"",nuclei:""};
     var sd=discSummary[selDisc]||{total:0,changed:0};
-    html += '<div class="curricolo-disc-focus"><div class="curricolo-disc-focus-hd"><span class="curricolo-disc-focus-icon">'+sm.icon+'</span><span class="curricolo-disc-focus-name">'+selDisc+'</span><span class="curricolo-disc-focus-comp">'+sm.comp+'</span></div><div class="curricolo-disc-focus-stats"><span>'+(sd.changed>0?'+'+sd.changed+' aggiornamenti 2025':'nessun aggiornamento 2025')+'</span></div></div>';
+    html += '<div class="curricolo-disc-focus"><div class="curricolo-disc-focus-hd"><span class="curricolo-disc-focus-icon">'+sm.icon+'</span><span class="curricolo-disc-focus-name">'+selDisc+'</span><span class="curricolo-disc-focus-comp">'+sm.comp+'</span></div><div class="curricolo-disc-focus-stats"><span>'+(sd.changed>0?sd.changed+' proposte di aggiornamento IN 2025':'curricolo vigente IN 2012')+'</span></div></div>';
   }
 
   html += '<details class="curricolo-quadro"><summary class="curricolo-quadro-summary">📊 Quadro generale delle discipline</summary>';
@@ -6204,7 +6210,7 @@ function renderCurricoloIstituto(version) {
     const s = discSummary[disc];
     const pct = s.total > 0 ? Math.round(s.changed / s.total * 100) : 0;
     const cls = pct === 0 ? '#66bb6a' : pct > 50 ? '#ef5350' : '#fdd835';
-    html += '<span class="curricolo-riepilogo-item"><span class="riepilogo-dot" style="background:' + cls + '"></span>' + meta.icon + ' ' + disc + ' <span class="riepilogo-total">(' + s.total + ')</span>' + (s.changed > 0 ? ' <span class="riepilogo-changed">+' + s.changed + '</span>' : '') + '</span>';
+    html += '<span class="curricolo-riepilogo-item"><span class="riepilogo-dot" style="background:' + cls + '"></span>' + meta.icon + ' ' + disc + ' <span class="riepilogo-total">(' + s.total + ')</span>' + (s.changed > 0 ? ' <span class="riepilogo-changed">(' + s.changed + ' proposte IN 2025)</span>' : '') + '</span>';
   });
   html += '</div>';
 
