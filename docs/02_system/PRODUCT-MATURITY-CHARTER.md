@@ -22,6 +22,11 @@ Un prodotto maturo in CurManLight e un prodotto che:
 5. Riduzione sistematica del carico cognitivo.
 6. Coerenza tra UI, guida, lessico e struttura informativa.
 7. Ogni modifica UI deve essere verificabile con criteri UX espliciti.
+8. Durante il Programma di Maturita del Prodotto non si introducono nuove funzionalita, salvo correzioni critiche o interventi strettamente necessari a completare un macroprogramma della roadmap.
+
+## Regola di freeze evolutivo
+
+Finche PM-04 (Comprensione del Curriculum) non e completato, la priorita assoluta e ridurre la complessita percepita. Ogni proposta di modifica deve rispondere prima a questa domanda: l'utente capisce meglio e completa il compito con minore carico cognitivo?
 
 ## Criterio "una schermata = un obiettivo"
 

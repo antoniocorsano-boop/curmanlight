@@ -16,71 +16,67 @@ Roadmap permanente per la maturita di usabilita e UX del prodotto CurManLight.
 
 - Obiettivo: rilevare in modo sistematico criticita UX prioritarie su flussi reali scolastici.
 - Stato iniziale: criticita emerse in modo distribuito e non sempre tracciate in backlog stabile.
+- Stato attuale: COMPLETATO (CML-282 - primo audit completo UX).
 - Dipendenze: PM-01.
 - Criteri di completamento:
   - audit periodico con evidenze tracciate;
   - backlog aggiornato con priorita P0/P1/P2.
-- Collegamento backlog: UX-001, UX-003, UX-007, UX-008.
+- Collegamento backlog: UX-001, UX-002, UX-003, UX-004, UX-005, UX-006, UX-007, UX-008, UX-011, UX-018, UX-020, UX-021, UX-022.
 
-## PM-03 Architettura informativa
+## PM-03 Orientamento
 
-- Obiettivo: allineare sezioni e percorsi all'uso reale, eliminando sovrapposizioni e ambiguita.
-- Stato iniziale: struttura presente ma con punti non sempre coerenti col compito utente.
+- Obiettivo: rendere immediato l'orientamento utente (Home, navigazione, focus, ritorno).
+- Stato iniziale: IN CORSO (baseline definita da CML-282).
 - Dipendenze: PM-01, PM-02.
 - Criteri di completamento:
-  - IA target formalizzata e validata;
-  - percorsi principali definiti e stabili.
-- Collegamento backlog: UX-001, UX-008.
+  - Home con decisione principale chiara;
+  - navigazione prevedibile tra sezioni e sotto-sezioni;
+  - focus e ritorno coerenti dopo cambio disciplina/sezione.
+- Collegamento backlog: UX-002, UX-007, UX-008, UX-020, UX-023.
 
-## PM-04 Razionalizzazione Curriculum
+## PM-04 Comprensione del Curriculum
 
-- Obiettivo: rendere il percorso Curriculum lineare e orientato al compito didattico.
-- Stato iniziale: logiche miste e indicatori non immediati per utenti non tecnici.
-- Dipendenze: PM-02, PM-03, PM-06.
-- Criteri di completamento:
-  - sequenza target Curriculum adottata;
-  - indicatori rinominati e comprensibili.
-- Collegamento backlog: UX-001, UX-003.
-
-## PM-05 Navigazione
-
-- Obiettivo: garantire navigazione prevedibile, focus corretto e continuita tra sezioni.
-- Stato iniziale: in alcuni passaggi focus e orientamento non ottimali.
+- Obiettivo: rendere il Curriculum comprensibile con linguaggio scolastico e struttura lineare.
+- Stato iniziale: IN CORSO (criticita mappate in CML-282).
 - Dipendenze: PM-02, PM-03.
 - Criteri di completamento:
-  - comportamento focus conforme agli standard;
-  - percorsi utente coerenti con l'obiettivo dichiarato.
-- Collegamento backlog: UX-002, UX-008.
+  - separazione netta delle logiche Curriculum;
+  - indicatori e terminologia comprensibili;
+  - distinzione vigente/proposte 2025 sempre chiara.
+- Collegamento backlog: UX-001, UX-003, UX-006, UX-011, UX-013, UX-014, UX-015, UX-022.
 
-## PM-06 Linguaggio
+## PM-05 Esperienza di lavoro
 
-- Obiettivo: adottare lessico scolastico uniforme, eliminando residui tecnici.
-- Stato iniziale: presenza di termini e indicatori non sempre autoesplicativi.
-- Dipendenze: PM-01.
+- Obiettivo: semplificare i flussi operativi nelle aree Compila ed Esportazioni.
+- Stato iniziale: IN CORSO (flussi ad alta densita decisionale).
+- Dipendenze: PM-03, PM-04.
 - Criteri di completamento:
-  - glossario attivo e rispettato in UI/guida;
-  - eliminazione termini non ammessi nelle aree principali.
-- Collegamento backlog: UX-003, UX-006.
+  - una decisione principale per schermata;
+  - percorso operativo a step nelle esportazioni;
+  - riduzione avvisi concorrenti nelle aree operative.
+- Collegamento backlog: UX-016, UX-017, UX-018.
 
-## PM-07 Sistema grafico
+## PM-06 Accompagnamento
 
-- Obiettivo: uniformare icone, badge, box e segnali visivi con significato univoco.
-- Stato iniziale: simboli e segnali non sempre coerenti o omogenei.
-- Dipendenze: PM-02, PM-06.
+- Obiettivo: allineare Guida, Guida rapida e onboarding ai compiti reali.
+- Stato iniziale: IN CORSO (contenuti utili ma non sempre rapidi/allineati).
+- Dipendenze: PM-03, PM-04.
 - Criteri di completamento:
-  - mappa semantica grafica unica;
-  - nessuna icona decorativa senza funzione.
-- Collegamento backlog: UX-005, UX-009.
+  - allineamento pieno tra etichette UI e contenuti guida;
+  - guida rapida orientata a task immediati;
+  - onboarding coerente con primi passi in Home.
+- Collegamento backlog: UX-004, UX-019.
 
-## PM-08 Riduzione carico cognitivo
+## PM-07 Uniformita
 
-- Obiettivo: semplificare Home e sezioni ad alta densita decisionale.
-- Stato iniziale: Home e alcune aree risultano dense per utenti non tecnici.
-- Dipendenze: PM-02, PM-03, PM-06, PM-07.
+- Obiettivo: uniformare icone, badge, colori semantici e componenti comuni.
+- Stato iniziale: IN CORSO (incoerenze visive mappate).
+- Dipendenze: PM-03, PM-04, PM-06.
 - Criteri di completamento:
-  - riduzione contenuti concorrenti nella stessa area;
-  - massimo tre azioni primarie visibili per area.
-- Collegamento backlog: UX-007, UX-008.
+  - semantica icone univoca e senza residui emoji/mojibake;
+  - componenti comuni con microcopy coerente;
+  - significato badge/stati stabile in tutte le sezioni.
+- Collegamento backlog: UX-005, UX-009, UX-012, UX-021, UX-024.
 
 ## PM-09 Validazione con utenti
 
@@ -91,3 +87,41 @@ Roadmap permanente per la maturita di usabilita e UX del prodotto CurManLight.
   - protocollo test utenti periodico attivo;
   - backlog aggiornato da evidenze di test.
 - Collegamento backlog: UX-001, UX-002, UX-003, UX-007, UX-008.
+
+## Macro-slice derivate da CML-282
+
+### PM-03 Orientamento
+
+1. CML-289 - de-densificazione Home per ingresso guidato al compito.
+2. CML-290 - coerenza percorsi e menu.
+3. CML-284 - focus management cambio disciplina.
+4. CML-302 - chiarezza navigazione mobile.
+5. CML-305 - ritorno al punto di lavoro.
+
+### PM-04 Comprensione del Curriculum
+
+1. CML-283 - separazione logica Curriculum (consultazione/revisione/azione).
+2. CML-285 - razionalizzazione indicatori e stato curricolo.
+3. CML-288 - pulizia terminologia Curriculum.
+4. CML-293 - semplificazione testata disciplina.
+5. CML-297 - chiarezza proposte 2025.
+6. CML-304 - glossario enforcement in UI.
+
+### PM-05 Esperienza di lavoro
+
+1. CML-299 - semplificazione area Compila.
+2. CML-300 - percorso Esportazioni a step.
+3. CML-298 - gerarchia azioni Curriculum.
+
+### PM-06 Accompagnamento
+
+1. CML-286 - allineamento Guida.
+2. CML-301 - rifattorizzazione Guida rapida.
+
+### PM-07 Uniformita
+
+1. CML-287 - normalizzazione iconografia.
+2. CML-291 - unificazione semantica badge/stati.
+3. CML-294 - pulizia segnali disciplina.
+4. CML-303 - rimozione residui mojibake simbolici.
+5. CML-306 - allineamento componenti comuni.

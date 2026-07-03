@@ -1,5 +1,60 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-282A - PRODUCT GOVERNANCE CONSOLIDATION MILESTONE
+
+- **Nome slice**: `CML-282A`
+- **Tipo slice**: docs-only
+- **Contesto**: consolidamento governance dopo CML-282 e prima dell'avvio CML-283
+- **Obiettivo**: introdurre cruscotto di avanzamento, matrice UX->PM->CML, dipendenze e critical path
+- **File creati/modificati**:
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-MATURITY-ACCEPTANCE-CRITERIA.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/02_system/PRODUCT-USABILITY-AND-UX-MATURITY-ROADMAP.md`
+  - `docs/03_execution/CML-282A.md`
+  - `report/CML-282A_product_governance_consolidation.md`
+  - `report/CML-282_product_usability_first_audit.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Decisione operativa**:
+  - da questa milestone ogni slice CML deve dichiarare in apertura: Macroprogramma, Backlog UX, Dipende da, Aggiorna `PRODUCT-MATURITY-PROGRESS.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessuna modifica a `index.html`
+  - nessuna modifica a `_published_snapshot/`
+  - nessuna modifica CSS/JavaScript
+  - nessuna modifica dati disciplinari/esportazioni/workflow/configurazioni/dipendenze
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_282A_PRODUCT_GOVERNANCE_CONSOLIDATION_READY_LOCAL_NOT_PUSHED`
+
+## 2026-07-03 - CML-282 - PRODUCT USABILITY BACKLOG FIRST AUDIT
+
+- **Nome slice**: `CML-282`
+- **Tipo slice**: docs-only
+- **Contesto**: primo audit completo UX dopo fondazione governance CML-281
+- **Obiettivo**: fotografare lo stato d'uso reale e alimentare backlog/roadmap con evidenze strutturate
+- **Attivita principali**:
+  - audit completo 8 sezioni dal punto di vista utente scolastico non tecnico
+  - audit specifico Curriculum (testata, disciplina, indicatori, fonti, proposte 2025, azioni)
+  - audit iconografia, terminologia e navigazione
+  - aggiornamento backlog con 24 voci UX e priorita P0/P1/P2
+  - aggiornamento roadmap PM-02 a COMPLETATO
+- **File creati/modificati**:
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/02_system/PRODUCT-USABILITY-AND-UX-MATURITY-ROADMAP.md`
+  - `docs/03_execution/CML-282.md`
+  - `report/CML-282_product_usability_first_audit.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessuna modifica a `index.html`
+  - nessuna modifica a `_published_snapshot/`
+  - nessuna modifica CSS/JavaScript
+  - nessuna modifica dati disciplinari/esportazioni/workflow/configurazioni/dipendenze
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_282_PRODUCT_USABILITY_FIRST_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-281 - PRODUCT MATURITY GOVERNANCE FOUNDATION
 
 - **Nome slice**: `CML-281`
