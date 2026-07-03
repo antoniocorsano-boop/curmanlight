@@ -1553,12 +1553,12 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="home-dashboard">
         <section class="home-inline-banner" role="region" aria-label="Orientamento iniziale">
           <h2>CurManLight - ambiente curricolare d'Istituto</h2>
-          <p>Consulta il curricolo vigente, verifica cosa vale per classi e anni scolastici, segui l'adeguamento alle IN 2025, partecipa alla revisione, progetta attivita didattiche ed esporta materiali di lavoro.</p>
+          <p>Scegli da dove partire in base al compito di oggi: Curriculum, Processo di revisione, Progettazione, Esportazioni o Guida rapida.</p>
           <p class="home-inline-guide">Che cosa devi fare oggi? Scegli il bisogno professionale da cui partire. Classe, disciplina e ruolo verranno richiesti solo quando servono.</p>
           <div class="home-inline-meta">Il lavoro viene salvato sul dispositivo in uso.</div>
           <div class="home-inline-actions" role="group" aria-label="Azioni rapide Home">
             <button type="button" onclick="setTab('curricolo')">Consulta il curricolo</button>
-            <button type="button" onclick="setTab('curricolo')">Verifica applicazione per classi</button>
+            <button type="button" onclick="openWorkContextPanel()">Verifica applicazione per classi</button>
             <button type="button" onclick="setTab('processo')">Segui la revisione</button>
             <button type="button" onclick="setTab('didattica')">Progetta attivita e UDA</button>
             <button type="button" class="home-quick-guide" onclick="showWelcome(true)"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida rapida</span></button>
@@ -1570,9 +1570,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curricolo vigente</h3>
             <p class="home-card-text">Consulta cosa e valido oggi nel curricolo di istituto.</p>
           </a>
-          <a href="#" class="home-card" onclick="setTab('curricolo');return false">
+          <a href="#" class="home-card" onclick="openWorkContextPanel();return false">
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-users"></use></svg> Applicazione per classi</h3>
-            <p class="home-card-text">Verifica quale curricolo usare per classe e anno scolastico.</p>
+            <p class="home-card-text">Imposta classe e anno scolastico per verificare quale curricolo applicare.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('normativa');return false">
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-triangle-alert"></use></svg> Adeguamento IN 2025</h3>
@@ -6529,9 +6529,9 @@ window.setMappaDisciplina = setMappaDisciplina;
 </script>
 <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
   <button class="mbb-btn mbb-active" id="mbb-home" onclick="setTab('home')"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-house"></use></svg><span>Home</span></button>
-  <button class="mbb-btn" id="mbb-curricolo" onclick="setTab('curricolo')" title="Curriculum"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg><span>Curr.</span></button>
-  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')" title="Competenze e progettazione"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg><span>Comp.</span></button>
-  <button class="mbb-btn" id="mbb-esportazioni" onclick="setTab('esportazioni')" title="Esportazioni"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg><span>Esp.</span></button>
+  <button class="mbb-btn" id="mbb-curricolo" onclick="setTab('curricolo')" title="Curriculum"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg><span>Curricolo</span></button>
+  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')" title="Competenze e progettazione"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg><span>Didattica</span></button>
+  <button class="mbb-btn" id="mbb-esportazioni" onclick="setTab('esportazioni')" title="Esportazioni"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg><span>Esporta</span></button>
   <button class="mbb-btn" id="mbb-menu" onclick="toggleMobileMenu()">☰<br>Menu</button>
 </nav>
 <!-- DEPLOY_SYNC_CML_276D -->

@@ -48,31 +48,19 @@
 - **Verdetto**: `CML_306_UX_024_COMMON_COMPONENTS_UNIFORMITY_READY_LOCAL_NOT_PUSHED`
 
 ## 2026-07-03 - CML-305 - UX-023 RETURN TO WORK CONTEXT CLARITY
-
-- **Nome slice**: `CML-305`
-- **Tipo slice**: runtime microfix
-- **Macroprogramma**: PM-03 - Orientamento
-- **Backlog target**: UX-023 (ritorno al punto di lavoro non chiaro)
-- **Dipendenze**: CML-284
-- **Obiettivo**: aggiungere collegamento esplicito "← Torna al punto di lavoro" in Esportazioni e Guida, sezioni senza link di ritorno
-- **Analisi pre-intervento**:
   - breadcrumb nascosto in `esportazioni` e `guida`
   - disciplina preservata in `selDisc` ma senza segnale visibile
   - Home aveva "Riprendi" ma Esportazioni e Guida no
 - **Intervento runtime**:
-  - JS: tracciamento ultimo tab Curriculum in `window._lastWorkTab` in `setTab`
   - HTML: `← Torna al punto di lavoro` dopo l'ultimo gruppo di esportazione
   - HTML: `← Torna al punto di lavoro` dopo l'avviso conclusivo in Guida
-- **Risultato UX**:
   - UX-023: RISOLTO IN CML-305
   - PM-03: 10% → 20%
   - PM-04: invariato 70%
   - PM-07: invariato 10%
-- **Non regressione verificata**:
   - UX-001, UX-004, UX-006, UX-009, UX-011, UX-013, UX-014, UX-015, UX-022: tutte confermate
 - **File creati/modificati**:
   - `index.html`
-  - `_published_snapshot/netlify-current/index.html`
   - `docs/02_system/PROJECT-STATE.md`
   - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
   - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
@@ -80,7 +68,6 @@
   - `report/CML-305_ux_023_return_to_work_context_closure.md`
   - aggiornamento `docs/REPO-MOVELOG.md`
 - **Vincoli rispettati**:
-  - nessun refactoring generale
   - nessuna nuova architettura
   - nessuna modifica a schema `.cml`
   - nessuna modifica a service worker
@@ -90,20 +77,11 @@
   - nessun deploy
   - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
 - **Verdetto**: `CML_305_UX_023_RETURN_TO_WORK_CLARITY_READY_LOCAL_NOT_PUSHED`
-
 ## 2026-07-03 - CML-304 - UX-022 TERMINOLOGY GLOSSARY COMPLIANCE
 
-- **Nome slice**: `CML-304`
-- **Tipo slice**: runtime microfix
-- **Macroprogramma**: PM-04 - Comprensione Curriculum
-- **Backlog target**: UX-022 (terminologia non glossario-compliant)
-- **Dipendenze**: CML-297
-- **Obiettivo**: censire e correggere termini tecnici interni/informatici nel runtime visibile, allineandoli al lessico scolastico
-- **Ricerca lessicale**: 9 termini target esaminati in entrambi i file runtime
   - "pacchetto", "voci", "snapshot", "mappa dati", "normalizzato", "prototipo", "readonly", "badge", "runtime"
 - **Risultato ricerca**: 1 termine visibile da correggere, 5 interni, 3 italiano standard
 - **Intervento runtime**:
-  - `📋 Prototipo` → `📋 Bozza di lavoro` nel badge Guida note
 - **Altri termini verificati**:
   - "pacchetto" — solo in commento codice (interno)
   - "voci" — italiano scolastico standard, invariato
@@ -111,12 +89,9 @@
   - "normalizzato" — solo in commento codice (interno)
   - "readonly" — CSS/HTML interni; testo UI già "Sola consultazione"
   - "badge" — solo in classi CSS (interno)
-  - "runtime" — assente dal runtime
 - **Risultato UX**:
   - UX-022: RISOLTO IN CML-304
   - PM-04: invariato 70%
-  - PM-07: invariato 10%
-- **Non regressione verificata**:
   - UX-001, UX-004, UX-006, UX-009, UX-011, UX-013, UX-014, UX-015: tutte confermate
 - **File creati/modificati**:
   - `index.html`

@@ -11,7 +11,7 @@ PM-02 Audit
 ██████████ 100%
 
 PM-03 Orientamento
-██░░░░░░░░ 20%
+███░░░░░░░ 30%
 
 PM-04 Comprensione Curriculum
 ███████░░░ 70%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- TBD — da definire
+- CML-308 (PM-05 Work Experience Cluster)
 
 ## Percorso critico (fase 1)
 
@@ -67,8 +67,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-03 - Orientamento
 
-██░░░░░░░░
-20%
+███░░░░░░░
+30%
 
 ### Programma PM-04 - Comprensione del Curriculum
 
@@ -98,9 +98,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 ## Stato operativo
 
 - Ultima slice completata: CML-306 (runtime microfix — UX-024)
+- Ultima slice completata: CML-307 (runtime microfix — PM-03 cluster)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: TBD — da definire
-- Ultimo aggiornamento: 2026-07-03 (CML-306)
+- Prossima slice operativa prevista: CML-308 (PM-05 Work Experience Cluster)
+- Ultimo aggiornamento: 2026-07-03 (CML-307)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -110,10 +111,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 | UX-002 | Focus cambio disciplina | PM-03 | CML-284 (risolto) | CML-283 |
 | UX-003 | Indicatori incomprensibili | PM-04 | CML-285 (risolto) | CML-283 |
 | UX-004 | Guida disallineata | PM-06 | CML-286 | CML-283 |
-| UX-005 | Navigazione non coerente con compito | PM-03 | CML-284 (parziale) | CML-283 |
+| UX-005 | Navigazione non coerente con compito | PM-03 | CML-284/CML-307 (parziale) | CML-283 |
 | UX-006 | Lessico non uniforme Curriculum | PM-04 | CML-285 (risolto) | CML-285 |
-| UX-007 | Home troppo densa | PM-03 | CML-289 | CML-283 |
-| UX-008 | Percorsi/menu incoerenti | PM-03 | CML-290 | CML-289 |
+| UX-007 | Home troppo densa | PM-03 | CML-307 (parziale), CML-308 | CML-283 |
+| UX-008 | Percorsi/menu incoerenti | PM-03 | CML-307 (parziale), CML-308 | CML-289 |
 | UX-009 | Badge non univoci | PM-07 | CML-291 (risolto) | CML-287 |
 | UX-010 | Checklist UX non sistematica | PM-01 | CML-292 | nessuna |
 | UX-011 | Testata Curriculum sovraccarica | PM-04 | CML-293 (risolto) | CML-283 |
@@ -125,7 +126,7 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 | UX-017 | Compila troppo densa in avvio | PM-05 | CML-299 | CML-283 |
 | UX-018 | Esportazioni non guidate a step | PM-05 | CML-300 | CML-299 |
 | UX-019 | Guida rapida troppo estesa | PM-06 | CML-301 | CML-286 |
-| UX-020 | Navigazione mobile poco esplicita | PM-03 | CML-302 | CML-290 |
+| UX-020 | Navigazione mobile poco esplicita | PM-03 | CML-307 (parziale), CML-308 | CML-290 |
 | UX-021 | Residui simbolici corrotti | PM-07 | CML-303 | CML-287 |
 | UX-022 | Terminologia non glossario-compliant | PM-04 | CML-304 (risolto) | CML-285 |
 | UX-023 | Ritorno al punto di lavoro non chiaro | PM-03 | CML-305 (risolto) | CML-284 |
