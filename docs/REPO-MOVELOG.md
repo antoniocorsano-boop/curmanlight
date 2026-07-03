@@ -31,6 +31,39 @@
 - **Prossima slice**: CML-321 (PM-04 Mojibake and Emoji Runtime Fix)
 - **Verdetto**: `CML_320_PM04_LANGUAGE_IDENTITY_CONSOLIDATION_AUDIT_PLAN_READY_LOCAL_NOT_PUSHED`
 
+## 2026-07-03 - CML-321 - PM-04 MOJIBAKE AND EMOJI RUNTIME FIX
+
+- **Nome slice**: `CML-321`
+- **Tipo slice**: runtime fix P0 + documentazione
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Backlog target**: UX-021
+- **Dipendenze**: CML-320
+- **Obiettivo**: correggere mojibake emoji (U+FE0F, ~55 occorrenze per file) e caratteri corrotti (U+FFFD, ~26 occorrenze per file) nel runtime
+- **Interventi**:
+  - Rimozione `EF B8 8F` (U+FE0F variation selector) da tutte le emoji (✏️ ⚠️ ⬇️ ⚖️ ℹ️ ⬆️ 🗓️ ⚙️ 🗺️ 🏛️ 🏗️ 1️⃣2️⃣3️⃣)
+  - Correzione `EF BF BD` (U+FFFD) in Educazione Motoria: `responsabilità`, `unità`, `sé`, `à`
+- **Runtime pair aggiornata in sincrono**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **File creati/modificati**:
+  - `docs/03_execution/CML-321.md`
+  - `report/CML-321_pm04_mojibake_and_emoji_runtime_fix.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Controlli**:
+  - `git diff --check`: PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs`: 14/14 PASS
+  - `node tools/validate-cml-normalized-curriculum.mjs`: 14/14, overallValid: true
+  - Ricerca residua FE0F/FFFD: 0 occorrenze
+- **Esito PM-04**: 55%, non chiusa (fix P0 completato, UX-021 risolto)
+- **Prossima slice**: CML-322 (PM-04 Local Chain Pre-Push Audit) o CML-321P (controlled push)
+- **Verdetto**: `CML_321_PM04_MOJIBAKE_AND_EMOJI_RUNTIME_FIX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-319 - PM-04 CURRICULUM UX RUNTIME REMEDIATION
 
 - **Nome slice**: `CML-319`
