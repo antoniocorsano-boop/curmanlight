@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-304 (UX-022 — terminologia non glossario-compliant)
+- CML-305 (UX-023 — ritorno al punto di lavoro non chiaro)
 
 ## Percorso critico (fase 1)
 
@@ -46,6 +46,8 @@ CML-291 ⬅ unificazione badge/stati (UX-009) completata
 CML-295 ⬅ indicatori duplicati (UX-013) completata
 ↓
 CML-297 ⬅ fonti contestualizzate e chiarezza proposta 2025 (UX-014 + UX-015) completata
+↓
+CML-304 ⬅ terminologia glossario-compliant (UX-022) completata
 
 ## Avanzamento programmi
 
@@ -91,10 +93,10 @@ CML-297 ⬅ fonti contestualizzate e chiarezza proposta 2025 (UX-014 + UX-015) c
 
 ## Stato operativo
 
-- Ultima slice completata: CML-297 (runtime microfix — UX-014 + UX-015)
+- Ultima slice completata: CML-304 (runtime microfix — UX-022)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-304 (UX-022 — terminologia non glossario-compliant)
-- Ultimo aggiornamento: 2026-07-03 (CML-297)
+- Prossima slice operativa prevista: CML-305 (UX-023 — ritorno al punto di lavoro non chiaro)
+- Ultimo aggiornamento: 2026-07-03 (CML-304)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -121,7 +123,7 @@ CML-297 ⬅ fonti contestualizzate e chiarezza proposta 2025 (UX-014 + UX-015) c
 | UX-019 | Guida rapida troppo estesa | PM-06 | CML-301 | CML-286 |
 | UX-020 | Navigazione mobile poco esplicita | PM-03 | CML-302 | CML-290 |
 | UX-021 | Residui simbolici corrotti | PM-07 | CML-303 | CML-287 |
-| UX-022 | Terminologia non glossario-compliant | PM-04 | CML-304 | CML-285 |
+| UX-022 | Terminologia non glossario-compliant | PM-04 | CML-304 (risolto) | CML-285 |
 | UX-023 | Ritorno al punto di lavoro non chiaro | PM-03 | CML-305 | CML-284 |
 | UX-024 | Componenti comuni non uniformi | PM-07 | CML-306 | CML-291 |
 

@@ -3,13 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-297 - UX-014 + UX-015 Sources and 2025 Proposal Clarity
-- Last commit: 764056b
+- Last slice: CML-304 - UX-022 Terminology Glossary Compliance
+- Last commit: locale, non pushato
 - Active PM: PM-04 (in corso, 70%)
 - Critical Path: PM-04 -> PM-05 -> PM-06 -> PM-07
-- Next slice: CML-304 - Terminology non-glossary-compliant (UX-022)
-- Last verdict: `CML_297_UX_014_UX_015_PM04_CLOSURE_PUSHED`
-- Repository status: `main` aligned with `origin/main`; clean
+- Next slice: CML-305 - UX-023 ritorno al punto di lavoro non chiaro
+- Last verdict: `CML_304_UX_022_TERMINOLOGY_GLOSSARY_COMPLIANCE_READY_LOCAL_NOT_PUSHED`
+- Repository status: main ahead 1 rispetto a origin/main; working tree clean
 
 ## Runtime Perimeter Reminder
 

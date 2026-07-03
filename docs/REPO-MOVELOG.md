@@ -1,5 +1,52 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-304 - UX-022 TERMINOLOGY GLOSSARY COMPLIANCE
+
+- **Nome slice**: `CML-304`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-04 - Comprensione Curriculum
+- **Backlog target**: UX-022 (terminologia non glossario-compliant)
+- **Dipendenze**: CML-297
+- **Obiettivo**: censire e correggere termini tecnici interni/informatici nel runtime visibile, allineandoli al lessico scolastico
+- **Ricerca lessicale**: 9 termini target esaminati in entrambi i file runtime
+  - "pacchetto", "voci", "snapshot", "mappa dati", "normalizzato", "prototipo", "readonly", "badge", "runtime"
+- **Risultato ricerca**: 1 termine visibile da correggere, 5 interni, 3 italiano standard
+- **Intervento runtime**:
+  - `📋 Prototipo` → `📋 Bozza di lavoro` nel badge Guida note
+- **Altri termini verificati**:
+  - "pacchetto" — solo in commento codice (interno)
+  - "voci" — italiano scolastico standard, invariato
+  - "mappa dati" — solo in nomi variabili JS (interno)
+  - "normalizzato" — solo in commento codice (interno)
+  - "readonly" — CSS/HTML interni; testo UI già "Sola consultazione"
+  - "badge" — solo in classi CSS (interno)
+  - "runtime" — assente dal runtime
+- **Risultato UX**:
+  - UX-022: RISOLTO IN CML-304
+  - PM-04: invariato 70%
+  - PM-07: invariato 10%
+- **Non regressione verificata**:
+  - UX-001, UX-004, UX-006, UX-009, UX-011, UX-013, UX-014, UX-015: tutte confermate
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-304.md`
+  - `report/CML-304_ux_022_terminology_glossary_compliance.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessun refactoring generale
+  - nessuna nuova architettura
+  - nessuna modifica a schema `.cml`
+  - nessuna modifica a service worker
+  - nessuna modifica ai dati disciplinari
+  - nessuna regressione su UX chiuse
+  - runtime parity mantenuta
+  - nessun deploy
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+- **Verdetto**: `CML_304_UX_022_TERMINOLOGY_GLOSSARY_COMPLIANCE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-297 - UX-014 + UX-015 SOURCES AND 2025 PROPOSAL CLARITY
 
 - **Nome slice**: `CML-297`
