@@ -1,5 +1,34 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-309P - PM-05 POST-PUSH CLOSURE STATE SYNC
+
+- **Nome slice**: `CML-309P`
+- **Tipo slice**: docs-only
+- **Macroprogramma**: PM-05 - Esperienza di lavoro
+- **Dipendenze**: CML-309
+- **Obiettivo**: documentare formalmente il post-push di CML-309 e consolidare lo stato di chiusura di PM-05 (nessun intervento runtime, nessun nuovo intervento UX)
+- **Stato UX**:
+  - UX-016: CHIUSA
+  - UX-017: CHIUSA
+  - UX-018: CHIUSA
+- **Stato PM**:
+  - PM-05: 100% — concluso
+  - PM-03: invariato 30%
+  - PM-04: invariato 70%
+  - PM-07: invariato 20%
+- **File creati/modificati**:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/03_execution/CML-309P.md`
+  - `report/CML-309P_pm05_post_push_closure_state_sync.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessuna nuova dipendenza
+- **Push**: non eseguito
+- **Verdetto**: `CML_309P_PM05_POST_PUSH_CLOSURE_STATE_SYNC_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-309 - PM-05 WORK EXPERIENCE CLOSURE CLUSTER
 
 - **Nome slice**: `CML-309`
@@ -36,8 +65,8 @@
   - nessuna nuova dipendenza
   - nessuna modifica schema `.cml`, dati disciplinari, service worker
   - nessuna regressione rilevata su CML-304/CML-305/CML-306/CML-307/CML-308
-- **Push**: non eseguito
-- **Verdetto**: `CML_309_PM05_WORK_EXPERIENCE_CLOSURE_CLUSTER_READY_LOCAL_NOT_PUSHED`
+- **Push**: eseguito (commit `0a9fc2e`, `origin/main`)
+- **Verdetto**: `CML_309_PM05_WORK_EXPERIENCE_CLOSURE_CLUSTER_PUSHED`
 
 
 ## 2026-07-03 - CML-308 - PM-05 WORK EXPERIENCE CLUSTER

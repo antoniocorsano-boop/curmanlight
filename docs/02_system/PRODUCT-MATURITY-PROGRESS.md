@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-309 (PM-05 Work Experience Follow-up)
+- CML-310 (PM-06 Accompagnamento)
 
 ## Percorso critico (fase 1)
 
@@ -102,7 +102,7 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-309 (runtime microfix — PM-05 closure cluster)
 - Milestone di consolidamento governance: CML-282A
 - Prossima slice operativa prevista: CML-310 (PM-06 Accompagnamento)
-- Ultimo aggiornamento: 2026-07-03 (CML-309)
+- Ultimo aggiornamento: 2026-07-03 (CML-309P)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

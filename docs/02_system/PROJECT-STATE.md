@@ -3,13 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-309 - PM-05 Work Experience Closure Cluster
-- Last commit: locale, non pushato
+- Last slice: CML-309P - PM-05 Post-push Closure State Sync
+- Last commit: 0a9fc2e runtime: close CML work experience cluster
 - Active PM: PM-05 (completato, 100%)
 - Critical Path: PM-06
 - Next slice: CML-310 (PM-06 Accompagnamento)
-- Last verdict: `CML_309_PM05_WORK_EXPERIENCE_CLOSURE_CLUSTER_READY_LOCAL_NOT_PUSHED`
-- Repository status: main con modifiche locali non ancora push
+- Last verdict: `CML_309P_PM05_POST_PUSH_CLOSURE_STATE_SYNC_READY_LOCAL_NOT_PUSHED`
+- Repository status: main allineata con origin/main dopo push CML-309; modifiche locali CML-309P non ancora push
 
 ## Runtime Perimeter Reminder
 
