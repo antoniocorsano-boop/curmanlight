@@ -1,5 +1,35 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-281 - APPLICABILITY HOME CARD MINIMAL RUNTIME
+
+- **Nome slice**: `CML-281`
+- **Tipo slice**: runtime increment
+- **Contesto**: CML-270 Applicability Layer contract; CML-279 Work Context runtime; CML-280 ha selezionato Opzione E
+- **Obiettivo**: implementare card "Curricolo applicabile" nella Home con messaggi prudenti
+- **Intervento runtime**:
+  - card Home "Curricolo applicabile" con bordo arancione #e65100
+  - tre stati: nessun contesto, contesto incompleto, applicabilità da verificare
+  - lettura contesto da `cml_work_context_v1` via `loadWorkContext()`
+  - nuova icona SVG `icon-target`
+  - funzione JS `renderApplicabilityCard()` integrata in `renderWorkContextSummary()`
+  - azione "Applicazione per classi" con toast "sezione in preparazione"
+  - avvertenza istituzionale su proposte IN 2025 vs vigente
+  - parità root/snapshot mantenuta
+- **Vincoli rispettati**:
+  - nessuna modifica dati curricolari
+  - nessuna modifica schema `.cml`
+  - nessuna modifica export/import
+  - nessuna nuova dipendenza
+  - nessun backend
+  - nessun dato personale
+  - nessuna regola istituzionale hardcoded non verificata
+  - Home CML-276 preservata
+  - Work Context CML-279 preservato
+- **File prodotti/modificati**: `index.html`, `_published_snapshot/netlify-current/index.html`, `docs/03_execution/CML-281.md`, `report/CML-281_applicability_home_card_minimal_runtime.md`, aggiornamento `docs/REPO-MOVELOG.md`
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_281_APPLICABILITY_HOME_CARD_MINIMAL_RUNTIME_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-280 - APPLICABILITY MATRIX FIRST RUNTIME SELECTION
 
 - **Nome slice**: `CML-280`

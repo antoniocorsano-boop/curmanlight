@@ -789,6 +789,14 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .work-context-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 .work-context-primary{background:#00695c;color:#fff;border:none;border-radius:8px;padding:9px 14px;font-weight:800;cursor:pointer}
 .work-context-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc;border-radius:8px;padding:9px 14px;font-weight:800;cursor:pointer}
+.home-applicability-card{background:#fff;border-radius:11px;padding:12px 13px;box-shadow:0 1px 4px rgba(0,0,0,.05);border:1px solid #e0e0e0;border-left:3px solid #e65100;margin:14px 0}
+.home-applicability-title{font-size:13px;font-weight:800;color:#e65100;margin:0 0 6px;display:inline-flex;align-items:center;gap:6px}
+.home-applicability-body{font-size:12px;color:#455a64;line-height:1.5}
+.home-applicability-empty{color:#78909c;font-style:italic;margin-bottom:8px}
+.home-applicability-summary{background:#fff3e0;border-radius:8px;padding:8px 10px;font-size:12px;color:#e65100;line-height:1.45;margin-bottom:6px}
+.home-applicability-summary strong{color:#bf360c}
+.home-applicability-warning{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:7px 9px;font-size:11px;color:#6d4c41;line-height:1.4;margin-top:8px}
+.home-applicability-detail{font-size:11px;color:#546e7a;margin-top:4px}
 .home-footer{margin-top:12px}
 .home-footer p{font-size:11px;color:#78909c;line-height:1.5;margin:0}
 /* DIDATTICA EVIDENCE */
@@ -1452,6 +1460,11 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <path d="M5 12h14"></path>
     <path d="m12 5 7 7-7 7"></path>
   </symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle>
+    <circle cx="12" cy="12" r="6"></circle>
+    <circle cx="12" cy="12" r="2"></circle>
+  </symbol>
 </svg>
 <header class="app-header" id="app-header">
   <div class="app-header-min">
@@ -1579,6 +1592,9 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
         <section class="home-context-card" role="region" aria-label="Contesto di lavoro" id="work-context-card">
           <div id="work-context-body"></div>
+        </section>
+        <section class="home-applicability-card" role="region" aria-label="Curricolo applicabile" id="applicability-card">
+          <div id="applicability-body"></div>
         </section>
         <section class="home-discipline-panel" role="region" aria-label="Discipline come filtro secondario">
           <h3 class="home-discipline-title">Discipline</h3>
@@ -6454,12 +6470,48 @@ function renderWorkContextSummary(){
       '<button class="home-context-primary" onclick="openWorkContextPanel()">Modifica contesto</button>'+
       '<button class="home-context-danger" onclick="resetWorkContext()">Reimposta</button></div>';
   }
+  renderApplicabilityCard();
+}
+
+function renderApplicabilityCard(){
+  var body=document.getElementById("applicability-body");
+  if(!body) return;
+  var ctx=loadWorkContext();
+  var hasYear=ctx&&ctx.anno&&ctx.anno.trim()!=="";
+  var hasClass=ctx&&ctx.classe&&ctx.classe.trim()!=="";
+  var hasBase=ctx&&ctx.base&&ctx.base.trim()!=="";
+  if(!ctx||!hasYear||!hasClass){
+    body.innerHTML='<h3 class="home-applicability-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-target"></use></svg> Curricolo applicabile</h3>'+
+      '<div class="home-applicability-body">'+
+      '<p class="home-applicability-empty">'+(ctx&&(hasYear||hasClass)?'Contesto incompleto.':'Contesto non impostato.')+'</p>'+
+      '<p style="margin-bottom:6px">'+(ctx?'Per verificare l\'applicabilit\u00E0 servono anno scolastico e classe.':'Imposta almeno anno scolastico e classe per verificare quale curricolo risulta applicabile.')+'</p></div>'+
+      '<div class="home-context-actions">'+
+      '<button class="home-context-primary" onclick="openWorkContextPanel()">'+(ctx?'Imposta anno e classe':'Imposta contesto')+'</button>'+
+      '<button onclick="setTab(\'curricolo\')">Consulta liberamente</button></div>';
+  }else{
+    var details=[];
+    if(ctx.anno) details.push('a.s. '+ctx.anno);
+    if(ctx.classe) details.push('classe '+ctx.classe);
+    if(ctx.disciplina) details.push(ctx.disciplina);
+    var baseNote='';
+    if(hasBase) baseNote='<div class="home-applicability-detail">Base indicata nel contesto: <strong>'+escapeHtml(ctx.base)+'</strong>.</div>';
+    body.innerHTML='<h3 class="home-applicability-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-target"></use></svg> Curricolo applicabile</h3>'+
+      '<div class="home-applicability-summary"><strong>Applicabilit\u00E0 da verificare</strong></div>'+
+      '<div class="home-applicability-body">'+
+      '<p style="margin-bottom:4px">Per '+details.join(' \u00B7 ')+', la versione curricolare deve essere confermata secondo le decisioni dell\u2019Istituto.</p>'+baseNote+
+      '</div>'+
+      '<div class="home-context-actions" style="margin-top:6px">'+
+      '<button onclick="setTab(\'curricolo\')">Consulta curricolo</button>'+
+      '<button onclick="showToast(\'Sezione Applicazione per classi in preparazione\')">Applicazione per classi</button></div>'+
+      '<div class="home-applicability-warning">Le proposte IN 2025 e i materiali validati non sostituiscono il curricolo vigente finch\u00E9 non risultano approvati e applicabili alla classe indicata.</div>';
+  }
 }
 
 // INIT
 // ================================================================
 loadLocalState();
 renderWorkContextSummary();
+renderApplicabilityCard();
 var initDisc=resolveDiscFromHash();
 if(initDisc) selDisc=initDisc;
 renderProfileSummary();
