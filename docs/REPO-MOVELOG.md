@@ -1,5 +1,32 @@
 ﻿# Repo Movelog
 
+## 2026-07-04 - CML-333 - PM-06 PRIORITIZED BACKLOG AND FIRST MICROFIX SELECTION
+
+- **Nome slice**: `CML-333`
+- **Tipo slice**: docs-only (prioritization + microfix selection)
+- **Macroprogramma**: PM-06 — Accompagnamento
+- **Backlog target**: UX-004, UX-019
+- **Dipendenze**: CML-332
+- **Obiettivo**: trasformare il modello PM-06 in backlog operativo prioritizzato e selezionare il primo microfix runtime
+- **Output**:
+  - prioritizzazione PM-06 su livelli P0/P1/P2
+  - selezione primo microfix: onboarding iniziale orientato al compito
+  - criteri di verifica definiti per slice runtime successiva
+- **File creati/modificati**:
+  - `docs/03_execution/CML-333.md`
+  - `report/CML-333_pm06_prioritized_backlog_and_first_microfix_selection.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Esito PM-06**: 20% (prioritization + first microfix selection)
+- **Prossima slice**: CML-334 (PM-06 onboarding initial task-oriented runtime microfix)
+- **Verdetto**: `CML_333_PM06_PRIORITIZED_BACKLOG_AND_FIRST_MICROFIX_SELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-04 - CML-332 - PM-06 ACCOMPAGNAMENTO ENTRY MODEL
 
 - **Nome slice**: `CML-332`
