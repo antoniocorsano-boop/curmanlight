@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-342 — Home Onboarding Cue Runtime Microfix
+- CML-342 — Home Onboarding Cue Solution Design
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -126,7 +126,7 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-337 (runtime microfix — PM-06 compila pre-save readability cue)
 - Ultima slice completata: CML-341 (docs-only — PM-06 onboarding UX planning)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-342 (Home Onboarding Cue Runtime Microfix)
+- Prossima slice operativa prevista: CML-343 (Home Onboarding Cue Runtime Microfix)
 - Ultimo aggiornamento: 2026-07-04 (CML-341)
 
 ## Matrice di trasformazione UX -> PM -> CML

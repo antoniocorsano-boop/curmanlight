@@ -68,6 +68,33 @@
 - **Prossima slice**: CML-338 (o nuovo ciclo)
 - **Verdetto**: `CML_337_PM06_COMPILA_PRE_SAVE_READABILITY_CUE_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
 
+## 2026-07-04 - CML-342 - Home Onboarding Cue Solution Design
+
+- **Nome slice**: `CML-342`
+- **Tipo slice**: docs-only / design-only
+- **Macroprogramma**: PM-06 — Accompagnamento
+- **Backlog target**: UX-007 (Home troppo densa)
+- **Dipendenze**: CML-341 (Onboarding UX Planning)
+- **Obiettivo**: analizzare la Home di CurManLight e proporre micro‑cue di onboarding per utenti scolastici non tecnici.
+- **Output**:
+  - analisi della Home
+  - requisiti del micro‑cue
+  - 3‑4 alternative di design con mock‑up statici
+  - matrice comparativa
+  - decisione raccomandata
+- **File creati/modificati**:
+  - `docs/03_execution/CML-342.md`
+  - `report/CML-342_home_onboarding_cue_solution_design.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessun push
+  - nessun deploy
+- **Esito PM-06**: 60%
+- **Verdetto**: `CML_342_HOME_ONBOARDING_CUE_SOLUTION_DESIGN_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-04 - CML-340 - PM-06 PRODUCT MATURITY STRATEGIC GAP AUDIT
 
 - **Nome slice**: `CML-340`
