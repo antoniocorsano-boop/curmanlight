@@ -1,5 +1,37 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-284 - CURRICULUM NAVIGATION AND FOCUS CONTINUITY
+
+- **Nome slice**: `CML-284`
+- **Tipo slice**: runtime minimo + documentazione
+- **Macroprogramma**: PM-04 - Comprensione Curriculum
+- **Backlog target**: UX-002, UX-005, UX-001
+- **Dipendenze**: CML-281, CML-282, CML-282A, CML-283, CML-283G
+- **Obiettivo**: rendere prevedibile l'atterraggio utente dopo cambio disciplina in Curriculum
+- **Intervento runtime**:
+  - separato hash di navigazione disciplina (`#disc-...`) dagli id interni di dettaglio
+  - mantenuta compatibilita con hash legacy (`#cur-...`)
+  - ricentrato focus in testata contenuto dopo cambio disciplina
+  - allineati link indice discipline al nuovo hash di navigazione
+  - in ingresso con hash disciplina, apertura Curriculum con ritorno in testata
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-284.md`
+  - `report/CML-284_curriculum_navigation_and_focus_continuity.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna nuova funzionalita
+  - nessuna modifica dati disciplinari
+  - nessuna modifica export/import/workflow/schema `.cml`
+  - nessuna nuova icona/indicatore
+  - nessun aumento di azioni visibili
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_284_CURRICULUM_NAVIGATION_AND_FOCUS_CONTINUITY_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-283 - CURRICULUM EXPERIENCE LOGIC RATIONALIZATION
 
 - **Nome slice**: `CML-283`

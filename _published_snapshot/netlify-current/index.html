@@ -3660,7 +3660,7 @@ function discHashSlug(d){
   return String(d||"").replace(/[\s()]/g,'');
 }
 function resolveDiscFromHash(){
-  var m=location.hash.match(/^#cur-(.+)$/);
+  var m=location.hash.match(/^#(?:cur|disc)-(.+)$/);
   if(!m) return null;
   var slug=decodeURIComponent(m[1]);
   return DISCIPLINE.find(function(d){return discHashSlug(d)===slug;})||null;
@@ -3700,7 +3700,7 @@ function selectDisc(d,opts){
   }
   announceStatus("Disciplina selezionata: "+d);
   if(opts.updateHash!==false){
-    var nextHash='#cur-'+discHashSlug(d);
+    var nextHash='#disc-'+discHashSlug(d);
     if(location.hash!==nextHash) location.hash=nextHash;
   }
 }
@@ -3709,7 +3709,7 @@ function applyHashRoute(){
   if(d){
     var discTabs=["curricolo","lavoro","riepilogo","didattica","didattica_programmazione","didattica_uda"];
     var targetTab=discTabs.indexOf(currentTab)!==-1?currentTab:"curricolo";
-    selectDisc(d,{updateHash:false,scroll:false,tab:targetTab});
+    selectDisc(d,{updateHash:false,scroll:true,tab:targetTab});
     return;
   }
   if(location.hash==="#home"||location.hash==="") setTab("home",{updateHash:false,scroll:false});
@@ -6185,7 +6185,7 @@ function renderCurricoloIstituto(version) {
     html += '<div style="font-weight:700;font-size:11px;color:#455a64;width:100%;margin-top:' + (o === 'Infanzia' ? '0' : '6') + 'px">' + ORDINE_LABEL[o] + '</div>';
     ordineDiscipline[o].forEach(function(disc) {
       const safeId = disc.replace(/[\s()]/g, '');
-      html += '<a class="curricolo-index-pill" href="#cur-' + safeId + '">' + DISCIPLINE_META[disc].icon + ' ' + disc + '</a>';
+      html += '<a class="curricolo-index-pill" href="#disc-' + safeId + '">' + DISCIPLINE_META[disc].icon + ' ' + disc + '</a>';
     });
   });
   html += '</div>';
@@ -6517,7 +6517,7 @@ if(initDisc) selDisc=initDisc;
 renderProfileSummary();
 renderSidebar();
 render();
-if(initDisc) setTab("curricolo",{updateHash:false,scroll:false});
+if(initDisc) setTab("curricolo",{updateHash:false,scroll:true});
 else if(location.hash==="#home"||location.hash==="") setTab("home",{updateHash:false,scroll:false});
 updateRoleAccessUi();
 registerOfflineSupport();

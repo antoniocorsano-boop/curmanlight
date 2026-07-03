@@ -11,10 +11,10 @@ PM-02 Audit
 ██████████ 100%
 
 PM-03 Orientamento
-░░░░░░░░░░ 0%
+█░░░░░░░░░ 10%
 
 PM-04 Comprensione Curriculum
-███░░░░░░░ 30%
+████░░░░░░ 40%
 
 PM-05 Esperienza di lavoro
 ░░░░░░░░░░ 0%
@@ -31,14 +31,10 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-284
+- CML-285
 
 ## Percorso critico (fase 1)
 
-CML-283
-↓
-CML-284
-↓
 CML-285
 ↓
 CML-286
@@ -61,13 +57,13 @@ CML-288
 
 ### Programma PM-03 - Orientamento
 
-░░░░░░░░░░
-0%
+█░░░░░░░░░
+10%
 
 ### Programma PM-04 - Comprensione del Curriculum
 
-███░░░░░░░
-30%
+████░░░░░░
+40%
 
 ### Programma PM-05 - Esperienza di lavoro
 
@@ -91,20 +87,20 @@ CML-288
 
 ## Stato operativo
 
-- Ultima slice completata: CML-283
+- Ultima slice completata: CML-284
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-284
+- Prossima slice operativa prevista: CML-285
 - Ultimo aggiornamento: 2026-07-03
 
 ## Matrice di trasformazione UX -> PM -> CML
 
 | UX ID | Problema sintetico | Macroprogramma | Slice target | Dipendenza |
 |---|---|---|---|---|
-| UX-001 | Logiche miste Curriculum | PM-04 | CML-283 (parziale) | nessuna |
-| UX-002 | Focus cambio disciplina | PM-03 | CML-284 | CML-283 |
+| UX-001 | Logiche miste Curriculum | PM-04 | CML-283/CML-284 (parziale) | nessuna |
+| UX-002 | Focus cambio disciplina | PM-03 | CML-284 (risolto) | CML-283 |
 | UX-003 | Indicatori incomprensibili | PM-04 | CML-285 | CML-283 |
 | UX-004 | Guida disallineata | PM-06 | CML-286 | CML-283 |
-| UX-005 | Iconografia incoerente | PM-07 | CML-287 | CML-283 |
+| UX-005 | Navigazione non coerente con compito | PM-03 | CML-284 (parziale) | CML-283 |
 | UX-006 | Lessico non uniforme Curriculum | PM-04 | CML-288 | CML-285 |
 | UX-007 | Home troppo densa | PM-03 | CML-289 | CML-283 |
 | UX-008 | Percorsi/menu incoerenti | PM-03 | CML-290 | CML-289 |
@@ -127,21 +123,19 @@ CML-288
 
 ## Percorso critico (critical path)
 
-1. CML-283 (separazione logiche Curriculum)
-2. CML-284 (focus cambio disciplina)
-3. CML-285 (indicatori + lessico Curriculum)
-4. CML-289 (de-densificazione Home)
-5. CML-290 (coerenza menu e percorsi)
-6. CML-299 (ingresso operativo Compila)
-7. CML-300 (Esportazioni a step)
-8. CML-286 (riallineamento Guida)
-9. CML-287 (normalizzazione iconografia)
+1. CML-285 (indicatori + lessico Curriculum)
+2. CML-289 (de-densificazione Home)
+3. CML-290 (coerenza menu e percorsi)
+4. CML-299 (ingresso operativo Compila)
+5. CML-300 (Esportazioni a step)
+6. CML-286 (riallineamento Guida)
+7. CML-287 (normalizzazione iconografia)
 
 Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad alta priorita e poi consolida accompagnamento e uniformita.
 
 ## Rischi aperti
 
-1. Se CML-283 slitta, si blocca a cascata PM-03, PM-04, PM-05, PM-06 e PM-07.
+1. Se CML-285 slitta, si blocca a cascata PM-04, PM-05, PM-06 e PM-07.
 2. Senza CML-285, restano attivi indicatori e terminologia non comprensibili nel cuore del Curriculum.
 3. Senza CML-300, permane alto il rischio di scelta errata nel flusso Esportazioni.
 
