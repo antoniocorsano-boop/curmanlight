@@ -11,7 +11,7 @@ PM-02 Audit
 ██████████ 100%
 
 PM-03 Orientamento
-█░░░░░░░░░ 10%
+██░░░░░░░░ 20%
 
 PM-04 Comprensione Curriculum
 ███████░░░ 70%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-305 (UX-023 — ritorno al punto di lavoro non chiaro)
+- TBD — da definire
 
 ## Percorso critico (fase 1)
 
@@ -48,6 +48,8 @@ CML-295 ⬅ indicatori duplicati (UX-013) completata
 CML-297 ⬅ fonti contestualizzate e chiarezza proposta 2025 (UX-014 + UX-015) completata
 ↓
 CML-304 ⬅ terminologia glossario-compliant (UX-022) completata
+↓
+CML-305 ⬅ ritorno al punto di lavoro chiaro (UX-023) completata
 
 ## Avanzamento programmi
 
@@ -63,8 +65,8 @@ CML-304 ⬅ terminologia glossario-compliant (UX-022) completata
 
 ### Programma PM-03 - Orientamento
 
-█░░░░░░░░░
-10%
+██░░░░░░░░
+20%
 
 ### Programma PM-04 - Comprensione del Curriculum
 
@@ -93,10 +95,10 @@ CML-304 ⬅ terminologia glossario-compliant (UX-022) completata
 
 ## Stato operativo
 
-- Ultima slice completata: CML-304 (runtime microfix — UX-022)
+- Ultima slice completata: CML-305 (runtime microfix — UX-023)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-305 (UX-023 — ritorno al punto di lavoro non chiaro)
-- Ultimo aggiornamento: 2026-07-03 (CML-304)
+- Prossima slice operativa prevista: TBD — da definire
+- Ultimo aggiornamento: 2026-07-03 (CML-305)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -124,7 +126,7 @@ CML-304 ⬅ terminologia glossario-compliant (UX-022) completata
 | UX-020 | Navigazione mobile poco esplicita | PM-03 | CML-302 | CML-290 |
 | UX-021 | Residui simbolici corrotti | PM-07 | CML-303 | CML-287 |
 | UX-022 | Terminologia non glossario-compliant | PM-04 | CML-304 (risolto) | CML-285 |
-| UX-023 | Ritorno al punto di lavoro non chiaro | PM-03 | CML-305 | CML-284 |
+| UX-023 | Ritorno al punto di lavoro non chiaro | PM-03 | CML-305 (risolto) | CML-284 |
 | UX-024 | Componenti comuni non uniformi | PM-07 | CML-306 | CML-291 |
 
 ## Percorso critico (critical path)

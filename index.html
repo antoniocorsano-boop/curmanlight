@@ -2204,6 +2204,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </div>
     </div>
     <div class="usage-notice" style="margin-top:10px">Documento di lavoro — da validare. Gli esportati non sostituiscono il documento istituzionale approvato dal Collegio Docenti.</div>
+    <p style="margin-top:14px;font-size:12px"><a href="#" onclick="setTab(window._lastWorkTab||'curricolo');return false">← Torna al punto di lavoro</a></p>
   </div>
 </div>
 <!-- TAB GUIDA -->
@@ -2278,6 +2279,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <p>Puoi installare questo strumento sul telefono o computer come app: usa il pulsante "Installa" nel menu Azioni (icona <span aria-hidden="true">⚙ï¸</span>) o dal browser. I dati restano sul dispositivo.</p>
     </div>
     <div class="guida-note"><span class="badge--prototype"><span aria-hidden="true">📋</span> Bozza di lavoro</span> <span class="badge--readonly"><span aria-hidden="true">🔒</span> Sola consultazione</span><br>Strumento di supporto locale. Ogni export va verificato da docente, dipartimento o referente prima dell'uso istituzionale.</div>
+    <p style="margin-top:14px;font-size:12px"><a href="#" onclick="setTab(window._lastWorkTab||'curricolo');return false">← Torna al punto di lavoro</a></p>
   </div>
 </div>
   </main>
@@ -4106,6 +4108,7 @@ function announceStatus(message){
 function setTab(t,opts){
   opts=opts||{};
   currentTab=t;
+  if(["curricolo","lavoro","riepilogo","processo","normativa","generali"].includes(t)) window._lastWorkTab=t;
   var tabLabels={home:"Home",curricolo:"Curriculum",lavoro:"Revisione",processo:"Processo",riepilogo:"Definitivo",normativa:"Fonti",generali:"Sezioni generali",didattica:"Competenze e progettazione",didattica_programmazione:"Programmazione annuale",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
   if(!opts||!opts.updateHash===false) announceStatus("Sezione aperta: "+(tabLabels[t]||t));
   var parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",processo:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_programmazione:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};

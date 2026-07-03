@@ -3,12 +3,12 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-304 - UX-022 Terminology Glossary Compliance
+- Last slice: CML-305 - UX-023 Return to Work Context Clarity
 - Last commit: locale, non pushato
-- Active PM: PM-04 (in corso, 70%)
-- Critical Path: PM-04 -> PM-05 -> PM-06 -> PM-07
-- Next slice: CML-305 - UX-023 ritorno al punto di lavoro non chiaro
-- Last verdict: `CML_304_UX_022_TERMINOLOGY_GLOSSARY_COMPLIANCE_READY_LOCAL_NOT_PUSHED`
+- Active PM: PM-03 (in corso, 20%)
+- Critical Path: PM-03 -> PM-04 -> PM-05 -> PM-06 -> PM-07
+- Next slice: TBD — perimetro da definire
+- Last verdict: `CML_305_UX_023_RETURN_TO_WORK_CLARITY_READY_LOCAL_NOT_PUSHED`
 - Repository status: main ahead 1 rispetto a origin/main; working tree clean
 
 ## Runtime Perimeter Reminder
