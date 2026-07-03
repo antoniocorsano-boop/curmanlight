@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-296 (UX-014)
+- CML-297 (UX-014, UX-015)
 
 ## Percorso critico (fase 1)
 
@@ -89,10 +89,10 @@ CML-295 ⬅ indicatori duplicati (UX-013) completata
 
 ## Stato operativo
 
-- Ultima slice completata: CML-295
+- Ultima slice completata: CML-296 (docs-only audit)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-296 (UX-014 fonti non contestualizzate)
-- Ultimo aggiornamento: 2026-07-03 (CML-295)
+- Prossima slice operativa prevista: CML-297 (UX-014 + UX-015)
+- Ultimo aggiornamento: 2026-07-03 (CML-296)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -111,7 +111,7 @@ CML-295 ⬅ indicatori duplicati (UX-013) completata
 | UX-011 | Testata Curriculum sovraccarica | PM-04 | CML-293 (risolto) | CML-283 |
 | UX-012 | Sidebar discipline senza legenda unica | PM-07 | CML-294 | CML-287 |
 | UX-013 | Indicatori duplicati | PM-04 | CML-295 (risolto) | CML-285 |
-| UX-014 | Fonti non contestualizzate | PM-04 | CML-296 | CML-285 |
+| UX-014 | Fonti non contestualizzate | PM-04 | CML-297 | CML-285 |
 | UX-015 | Proposte 2025 non sempre chiare | PM-04 | CML-297 | CML-285 |
 | UX-016 | Azioni Curriculum senza gerarchia | PM-05 | CML-298 | CML-283 |
 | UX-017 | Compila troppo densa in avvio | PM-05 | CML-299 | CML-283 |
@@ -137,7 +137,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 ## Rischi aperti
 
 1. Se CML-286/CML-287 slittano, si ritarda il consolidamento di PM-06 e PM-07 con effetti a cascata sulle fasi successive.
-2. Senza CML-285, restano attivi indicatori e terminologia non comprensibili nel cuore del Curriculum.
+2. Senza CML-297, restano attive criticita su contestualizzazione fonti e chiarezza proposte 2025 nel cuore del Curriculum.
 3. Senza CML-300, permane alto il rischio di scelta errata nel flusso Esportazioni.
 
 ## Decisioni aperte

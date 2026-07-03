@@ -1,5 +1,32 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-296 - ROADMAP POST-295 CONSOLIDATION AUDIT
+
+- **Nome slice**: `CML-296`
+- **Tipo slice**: docs-only / audit di governo
+- **Macroprogramma**: PM-04 - Comprensione Curriculum
+- **Backlog target**: UX-001, UX-009, UX-011, UX-013 (consolidamento chiusure), UX-014, UX-015 (selezione prossima operativa)
+- **Dipendenze**: CML-281, CML-282, CML-282A, CML-286, CML-291, CML-293, CML-295
+- **Obiettivo**: consolidare fotografia reale post-CML-295 e selezionare la prossima slice operativa senza dispersione
+- **Audit eseguito**:
+  - roadmap residua riletta su backlog/progress/roadmap
+  - confermate chiusure UX-001, UX-009, UX-011, UX-013
+  - backlog ripulito con chiusure marcate come `CHIUSA`
+  - prossima slice operativa selezionata: `CML-297 (UX-014 + UX-015)`
+- **File creati/modificati**:
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-296.md`
+  - `report/CML-296_roadmap_post_295_consolidation_audit.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime
+  - nessuna modifica a `index.html`
+  - nessuna modifica a `_published_snapshot/netlify-current/index.html`
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_296_ROADMAP_POST_295_CONSOLIDATION_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-295 - UX-013 DUPLICATE INDICATORS CLOSURE
 
 - **Nome slice**: `CML-295`
