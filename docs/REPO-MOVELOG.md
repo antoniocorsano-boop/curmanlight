@@ -1,5 +1,38 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-291 - UX-009 RESIDUAL RUNTIME CLOSURE
+
+- **Nome slice**: `CML-291`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-07 - Uniformita
+- **Backlog target**: UX-009
+- **Dipendenze**: CML-293
+- **Obiettivo**: estendere uniformazione badge `badge--readonly` e `badge--prototype` a tutte le sezioni (tab-generali, Guida) usando il Design System senza sezione-specific wrapper
+- **Intervento runtime**:
+  - CSS: `.gen-badge` allineato a `.tecnologia-norm-badge` (border-radius, border, padding)
+  - CSS: nuova regola `.guida-note .badge--readonly, .badge--prototype` per rimpiazzare inline styles
+  - HTML: testo "Consultazione — non modificabile" → "Sola consultazione" in tab-generali
+  - HTML: rimossi stili inline dai badge Guida
+- **Risultato UX**:
+  - UX-009: PARZIALMENTE RISOLTO (CML-283, CML-285) → RISOLTO IN CML-291
+  - PM-07: 0% → 10%
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-291.md`
+  - `report/CML-291_ux_009_residual_runtime_closure.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna nuova funzionalita
+  - nessuna modifica a schema `.cml` / import / export / storage / service worker
+  - nessuna regressione su UX-001 e UX-011
+  - nessun deploy
+  - nessun push
+- **Verdetto**: `CML_291_UX_009_RESIDUAL_RUNTIME_CLOSURE_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-293 - DISCIPLINE HEADER SIMPLIFICATION RUNTIME
 
 - **Nome slice**: `CML-293`

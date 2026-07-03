@@ -22,7 +22,7 @@ Backlog di maturita prodotto UX aggiornato con il primo audit completo (CML-282)
 | UX-006 | PM-04 | Terminologia Curriculum | Lessico non uniforme in area Curriculum (es. "pacchetto curricolare"). | Comprensione ridotta per utenti non tecnici. | P1 | CML-285 | RISOLTO IN CML-285 | CML-304 |
 | UX-007 | PM-03 | Home | Home con molti ingressi operativi contemporanei. | Sovraccarico nel decidere da dove iniziare. | P1 | CML-283 | TODO | CML-289 |
 | UX-008 | PM-03 | Architettura/Navigazione | Percorsi e menu non sempre coerenti con un compito primario per schermata. | Discontinuita dei flussi e ritorni frequenti. | P1 | CML-283 | TODO | CML-290 |
-| UX-009 | PM-07 | Semantica visiva | Badge/etichette stato con significato non sempre univoco tra sezioni. | Interpretazioni divergenti su stato e affidabilita contenuti. | P2 | CML-287 | PARZIALMENTE RISOLTO (CML-283, CML-285) | CML-291 |
+| UX-009 | PM-07 | Semantica visiva | Badge/etichette stato con significato non sempre univoco tra sezioni. | Interpretazioni divergenti su stato e affidabilita contenuti. | P2 | CML-287 | RISOLTO IN CML-291 | CML-291 |
 | UX-010 | PM-01 | Governance | Checklist UX non ancora applicata in tutte le slice precedenti. | Qualita UX non omogenea nel tempo. | P0 | nessuna | TODO | CML-292 |
 | UX-011 | PM-04 | Curriculum/Testata | Testata disciplina con messaggi multipli (stato, avvisi, base lavoro) nella stessa area iniziale. | Lettura iniziale faticosa e priorita poco chiare. | P1 | CML-283 | RISOLTO IN CML-293 | CML-293 |
 | UX-012 | PM-07 | Curriculum/Selezione disciplina | Sidebar discipline ricca di numeri, emoji e marker "NEW" senza legenda unica. | Difficolta nel capire significato dei segnali visivi. | P1 | CML-287 | TODO | CML-294 |

@@ -23,7 +23,7 @@ PM-06 Accompagnamento
 ░░░░░░░░░░ 0%
 
 PM-07 Uniformita
-░░░░░░░░░░ 0%
+█░░░░░░░░░ 10%
 
 ## Slice in esecuzione
 
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-293
+- CML-295 (UX-013)
 
 ## Percorso critico (fase 1)
 
@@ -41,7 +41,7 @@ CML-287 ⬅ audit completato
 ↓
 CML-293 ⬅ semplificazione testata disciplina completata
 ↓
-CML-291 — unificazione badge/stati (UX-009)
+CML-291 ⬅ unificazione badge/stati (UX-009) completata
 
 ## Avanzamento programmi
 
@@ -77,8 +77,8 @@ CML-291 — unificazione badge/stati (UX-009)
 
 ### Programma PM-07 - Uniformita
 
-░░░░░░░░░░
-0%
+█░░░░░░░░░
+10%
 
 ### Programma PM-09 - Validazione con utenti
 
@@ -87,10 +87,10 @@ CML-291 — unificazione badge/stati (UX-009)
 
 ## Stato operativo
 
-- Ultima slice completata: CML-293
+- Ultima slice completata: CML-291
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-291
-- Ultimo aggiornamento: 2026-07-03
+- Prossima slice operativa prevista: CML-295 (UX-013 indicatori duplicati)
+- Ultimo aggiornamento: 2026-07-03 (CML-291)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -104,7 +104,7 @@ CML-291 — unificazione badge/stati (UX-009)
 | UX-006 | Lessico non uniforme Curriculum | PM-04 | CML-285 (risolto) | CML-285 |
 | UX-007 | Home troppo densa | PM-03 | CML-289 | CML-283 |
 | UX-008 | Percorsi/menu incoerenti | PM-03 | CML-290 | CML-289 |
-| UX-009 | Badge non univoci | PM-07 | CML-285 (parziale), CML-291 | CML-287 |
+| UX-009 | Badge non univoci | PM-07 | CML-291 (risolto) | CML-287 |
 | UX-010 | Checklist UX non sistematica | PM-01 | CML-292 | nessuna |
 | UX-011 | Testata Curriculum sovraccarica | PM-04 | CML-293 (risolto) | CML-283 |
 | UX-012 | Sidebar discipline senza legenda unica | PM-07 | CML-294 | CML-287 |
