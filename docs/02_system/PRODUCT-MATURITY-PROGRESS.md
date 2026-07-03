@@ -23,7 +23,7 @@ PM-06 Accompagnamento
 ░░░░░░░░░░ 0%
 
 PM-07 Uniformita
-█░░░░░░░░░ 10%
+██░░░░░░░░ 20%
 
 ## Slice in esecuzione
 
@@ -50,6 +50,8 @@ CML-297 ⬅ fonti contestualizzate e chiarezza proposta 2025 (UX-014 + UX-015) c
 CML-304 ⬅ terminologia glossario-compliant (UX-022) completata
 ↓
 CML-305 ⬅ ritorno al punto di lavoro chiaro (UX-023) completata
+↓
+CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ## Avanzamento programmi
 
@@ -85,8 +87,8 @@ CML-305 ⬅ ritorno al punto di lavoro chiaro (UX-023) completata
 
 ### Programma PM-07 - Uniformita
 
-█░░░░░░░░░
-10%
+██░░░░░░░░
+20%
 
 ### Programma PM-09 - Validazione con utenti
 
@@ -95,10 +97,10 @@ CML-305 ⬅ ritorno al punto di lavoro chiaro (UX-023) completata
 
 ## Stato operativo
 
-- Ultima slice completata: CML-305 (runtime microfix — UX-023)
+- Ultima slice completata: CML-306 (runtime microfix — UX-024)
 - Milestone di consolidamento governance: CML-282A
 - Prossima slice operativa prevista: TBD — da definire
-- Ultimo aggiornamento: 2026-07-03 (CML-305)
+- Ultimo aggiornamento: 2026-07-03 (CML-306)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -127,7 +129,7 @@ CML-305 ⬅ ritorno al punto di lavoro chiaro (UX-023) completata
 | UX-021 | Residui simbolici corrotti | PM-07 | CML-303 | CML-287 |
 | UX-022 | Terminologia non glossario-compliant | PM-04 | CML-304 (risolto) | CML-285 |
 | UX-023 | Ritorno al punto di lavoro non chiaro | PM-03 | CML-305 (risolto) | CML-284 |
-| UX-024 | Componenti comuni non uniformi | PM-07 | CML-306 | CML-291 |
+| UX-024 | Componenti comuni non uniformi | PM-07 | CML-306 (risolto) | CML-291 |
 
 ## Percorso critico (critical path)
 

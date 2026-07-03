@@ -1,5 +1,52 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-306 - UX-024 COMMON COMPONENTS UNIFORMITY
+
+- **Nome slice**: `CML-306`
+- **Tipo slice**: runtime microfix
+- **Macroprogramma**: PM-07 - Uniformità
+- **Backlog target**: UX-024 (componenti comuni non uniformi)
+- **Dipendenze**: CML-291
+- **Obiettivo**: uniformare l'aspetto dei componenti notice/avviso con sfondo ambrato (#fff8e1) che condividevano la stessa semantica ma stili diversi
+- **Analisi pre-intervento**: 6 componenti notice individuati; 4 con bg ambrato e stili divergenti (left accent assente, border-radius 6-9px, font-size 10-11px, text color #795548/#5d4037/#6d4c41)
+- **Componenti uniformati**:
+  - `norm-warning`: aggiunto left accent, border-radius 9px, color #5d4037
+  - `guida-note`: aggiunto left accent, border-radius 9px
+  - `gen-note`: aggiunto bordo 1px + left accent, font-size 11px, border-radius 9px
+  - `home-applicability-warning`: aggiunto left accent, border-radius 9px
+- **Componenti invariati (motivati)**:
+  - `usage-notice`: già canonico
+  - `curricolo-note`: grigio (#f5f5f5) — contesto diverso
+- **Risultato UX**:
+  - UX-024: RISOLTO IN CML-306
+  - PM-07: 10% → 20%
+  - PM-03: invariato 20%
+  - PM-04: invariato 70%
+- **Non regressione verificata**:
+  - UX-001, UX-004, UX-006, UX-009, UX-011, UX-013, UX-014, UX-015, UX-022, UX-023: tutte confermate
+  - CML-304: "Bozza di lavoro" presente, "Prototipo" assente
+  - CML-305: `_lastWorkTab` e "← Torna al punto di lavoro" presenti
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-306.md`
+  - `report/CML-306_ux_024_common_components_uniformity_closure.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessun refactoring generale
+  - nessuna nuova architettura
+  - nessuna modifica a schema `.cml`
+  - nessuna modifica a service worker
+  - nessuna modifica ai dati disciplinari
+  - nessuna regressione su UX chiuse
+  - runtime parity mantenuta
+  - nessun deploy
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+- **Verdetto**: `CML_306_UX_024_COMMON_COMPONENTS_UNIFORMITY_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-305 - UX-023 RETURN TO WORK CONTEXT CLARITY
 
 - **Nome slice**: `CML-305`
