@@ -14,7 +14,7 @@ PM-03 Orientamento
 ███░░░░░░░ 30%
 
 PM-04 Comprensione Curriculum
-█████░░░░░ 55%
+███████░░░ 70%
 
 PM-05 Esperienza di lavoro
 ███████████ 100%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-325 (PM-04 Formal Closure Review) o nuovo ciclo
+- CML-331 (PM-04 Formal Closure Decision) o nuovo ciclo
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -71,8 +71,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-04 - Comprensione del Curriculum
 
-█████░░░░░
-55%
+███████░░░
+70%
 
 ### Programma PM-05 - Esperienza di lavoro
 
@@ -112,9 +112,15 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-321 (runtime fix P0 — PM-04 mojibake and emoji fix)
 - Ultima slice completata: CML-322 (docs-only — PM-04 local chain pre-push audit)
 - Ultima slice completata: CML-324 (docs-only — PM-04 post-remediation real user retest)
+- Ultima slice completata: CML-325 (docs-only — PM-04 formal closure review)
+- Ultima slice completata: CML-326 (docs-only — PM-04 real user test scheduling)
+- Ultima slice completata: CML-327 (docs-only — PM-04 teacher compile UX runtime microfix plan)
+- Ultima slice completata: CML-328 (runtime microfix — PM-04 teacher compile UX)
+- Ultima slice completata: CML-329 (docs-only — PM-04 real user test execution package)
+- Ultima slice completata: CML-330 (docs-only — PM-04 real user test session executed)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-325 (PM-04 Formal Closure Review)
-- Ultimo aggiornamento: 2026-07-03 (CML-322)
+- Prossima slice operativa prevista: CML-331 (PM-04 Formal Closure Decision)
+- Ultimo aggiornamento: 2026-07-03 (CML-330)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

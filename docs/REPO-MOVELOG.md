@@ -1,5 +1,166 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-330 - PM-04 REAL USER TEST SESSION EXECUTED
+
+- **Nome slice**: `CML-330`
+- **Tipo slice**: docs-only (real user test executed)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-011, UX-017, UX-022
+- **Dipendenze**: CML-326, CML-328, CML-329
+- **Obiettivo**: eseguire la sessione reale docente e verbalizzare esiti con regole 80% + fail bloccanti
+- **Output**:
+  - matrice task core compilata su Italiano + Matematica
+  - soglia raggiunta: 100% PASS/PARTIAL non bloccanti (5/5)
+  - fail bloccanti: assenti
+  - attriti residui P1 su comprensione consegna task 4 e task 5
+- **Decisione PM-04**: `READY_FOR_FORMAL_CLOSURE_REVIEW`
+- **File creati/modificati**:
+  - `docs/03_execution/CML-330.md`
+  - `report/CML-330_pm04_real_user_test_session_executed.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Prossima slice**: CML-331 (PM-04 Formal Closure Decision)
+- **Verdetto**: `CML_330_PM04_REAL_USER_TEST_EXECUTED_READY_FOR_FORMAL_CLOSURE_REVIEW_LOCAL_NOT_PUSHED`
+
+## 2026-07-03 - CML-329 - PM-04 REAL USER TEST EXECUTION PACKAGE
+
+- **Nome slice**: `CML-329`
+- **Tipo slice**: docs-only (execution package)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-011, UX-017, UX-022
+- **Dipendenze**: CML-326, CML-328
+- **Obiettivo**: preparare pacchetto esecutivo compilabile per test reale docente senza simulare risultati
+- **Output**:
+  - scheda sessione compilabile con task core e tempi
+  - regole decisionali 80% + fail bloccanti
+  - checklist evidenze da allegare alla review successiva
+- **Tester reale**: `REAL_USER_SESSION_PENDING`
+- **File creati/modificati**:
+  - `docs/03_execution/CML-329.md`
+  - `report/CML-329_pm04_real_user_test_execution_package.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Esito PM-04**: 55%, non chiusa
+- **Prossima slice**: CML-330 (PM-04 Real User Test Session Executed)
+- **Verdetto**: `CML_329_PM04_REAL_USER_TEST_EXECUTION_PACKAGE_READY_LOCAL_NOT_PUSHED`
+
+## 2026-07-03 - CML-328 - PM-04 TEACHER COMPILE UX RUNTIME MICROFIX
+
+- **Nome slice**: `CML-328`
+- **Tipo slice**: runtime microfix + documentazione
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-011, UX-017, UX-022
+- **Dipendenze**: CML-327
+- **Obiettivo**: migliorare avvio operativo in Compila con microfix minimi e senza nuove feature
+- **Micro-correzioni runtime**:
+  - header Compila orientato al primo passo
+  - blocco "Inizia da qui" con decisione principale esplicita
+  - warning professionale de-enfatizzato (testo + stile)
+- **Runtime pair aggiornata in sincrono**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- **Verifiche**:
+  - `git diff --check`: PASS
+  - `node tools/test-runtime-mappa-dati-shape.mjs`: 14/14 PASS
+  - `node tools/validate-cml-normalized-curriculum.mjs | findstr /I "overallValid"`: true
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/03_execution/CML-328.md`
+  - `report/CML-328_pm04_teacher_compile_ux_runtime_microfix.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Esito PM-04**: 55%, non chiusa
+- **Prossima slice**: CML-329 (PM-04 Real User Test Execution)
+- **Verdetto**: `CML_328_PM04_TEACHER_COMPILE_UX_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
+## 2026-07-03 - CML-327 - PM-04 TEACHER COMPILE UX RUNTIME MICROFIX PLAN
+
+- **Nome slice**: `CML-327`
+- **Tipo slice**: docs-only (runtime microfix plan)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-011, UX-017, UX-022
+- **Dipendenze**: CML-326
+- **Obiettivo**: definire piano esecutivo minimo per microfix runtime su Compila senza introdurre nuove feature
+- **Output**:
+  - priorita P0/P1/P2 su avvio Compila e raccordo Curriculum -> Compila
+  - criteri di accettazione runtime per slice esecutiva successiva
+  - checklist verifiche tecniche e smoke operativo docente
+- **Gate PM-04**: `PM_04_CLOSURE_SUBORDINATED_TO_REAL_USER_TEST` (invariato)
+- **File creati/modificati**:
+  - `docs/03_execution/CML-327.md`
+  - `report/CML-327_pm04_teacher_compile_ux_runtime_microfix_plan.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Esito PM-04**: 55%, non chiusa
+- **Prossima slice**: CML-328 (PM-04 Teacher Compile UX Runtime Microfix)
+- **Verdetto**: `CML_327_PM04_TEACHER_COMPILE_UX_RUNTIME_MICROFIX_PLAN_READY_LOCAL_NOT_PUSHED`
+
+## 2026-07-03 - CML-326 - PM-04 REAL USER TEST SCHEDULING
+
+- **Nome slice**: `CML-326`
+- **Tipo slice**: docs-only (real user test scheduling)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Backlog target**: UX-001, UX-003, UX-011, UX-017, UX-022
+- **Dipendenze**: CML-325
+- **Obiettivo**: pianificare test reale docente post-remediation con criteri pragmatici tracciabili
+- **Decisioni operative**:
+  - discipline campione: Italiano + Matematica
+  - durata sessione: 25 minuti
+  - soglia uscita: 80% task core PASS/PARTIAL non bloccante
+  - nessun FAIL bloccante su accesso, comprensione iniziale, selezione disciplina, avvio Compila
+- **Gate PM-04**: `PM_04_CLOSURE_SUBORDINATED_TO_REAL_USER_TEST` (invariato)
+- **File creati/modificati**:
+  - `docs/03_execution/CML-326.md`
+  - `report/CML-326_pm04_real_user_test_scheduling.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna modifica runtime (`index.html`, `_published_snapshot/netlify-current/index.html`)
+  - nessuna modifica a `content/curriculum/`, `tools/`, `assets/`, `manifest.json`, `service-worker.js`
+  - nessun push
+  - nessun deploy
+- **Esito PM-04**: 55%, non chiusa
+- **Prossima slice**: CML-327 (PM-04 Teacher Compile UX Runtime Microfix, condizionale)
+- **Verdetto**: `CML_326_PM04_REAL_USER_TEST_SCHEDULING_READY_LOCAL_NOT_PUSHED`
+
+## 2026-07-03 - CML-325 - PM-04 FORMAL CLOSURE REVIEW
+
+- **Nome slice**: `CML-325`
+- **Tipo slice**: docs-only (formal closure review)
+- **Macroprogramma**: PM-04 — Comprensione del Curriculum
+- **Dipendenze**: CML-310→324
+- **Obiettivo**: decidere formalmente closure PM-04 dopo proxy post-remediation
+- **Decisione**: opzione prudente, PM-04 aperta con condizione esplicita
+- **Gate PM-04**: `PM_04_CLOSURE_SUBORDINATED_TO_REAL_USER_TEST`
+- **Esito PM-04**: 55%, non chiusa
+- **Prossima slice**: CML-326 (PM-04 Real User Test Scheduling)
+- **Verdetto**: `CML_325_PM04_FORMAL_CLOSURE_REVIEW_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-320 - PM-04 LANGUAGE AND IDENTITY CONSOLIDATION
 
 - **Nome slice**: `CML-320`
