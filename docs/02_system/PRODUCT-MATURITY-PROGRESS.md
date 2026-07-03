@@ -14,7 +14,7 @@ PM-03 Orientamento
 ░░░░░░░░░░ 0%
 
 PM-04 Comprensione Curriculum
-░░░░░░░░░░ 0%
+███░░░░░░░ 30%
 
 PM-05 Esperienza di lavoro
 ░░░░░░░░░░ 0%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-283
+- CML-284
 
 ## Percorso critico (fase 1)
 
@@ -61,28 +61,28 @@ CML-288
 
 ### Programma PM-03 - Orientamento
 
-██░░░░░░░░
-20%
+░░░░░░░░░░
+0%
 
 ### Programma PM-04 - Comprensione del Curriculum
 
-█░░░░░░░░░
-10%
+███░░░░░░░
+30%
 
 ### Programma PM-05 - Esperienza di lavoro
 
-█░░░░░░░░░
-10%
+░░░░░░░░░░
+0%
 
 ### Programma PM-06 - Accompagnamento
 
-█░░░░░░░░░
-10%
+░░░░░░░░░░
+0%
 
 ### Programma PM-07 - Uniformita
 
-█░░░░░░░░░
-10%
+░░░░░░░░░░
+0%
 
 ### Programma PM-09 - Validazione con utenti
 
@@ -91,16 +91,16 @@ CML-288
 
 ## Stato operativo
 
-- Ultima slice completata: CML-282
+- Ultima slice completata: CML-283
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-283
+- Prossima slice operativa prevista: CML-284
 - Ultimo aggiornamento: 2026-07-03
 
 ## Matrice di trasformazione UX -> PM -> CML
 
 | UX ID | Problema sintetico | Macroprogramma | Slice target | Dipendenza |
 |---|---|---|---|---|
-| UX-001 | Logiche miste Curriculum | PM-04 | CML-283 | nessuna |
+| UX-001 | Logiche miste Curriculum | PM-04 | CML-283 (parziale) | nessuna |
 | UX-002 | Focus cambio disciplina | PM-03 | CML-284 | CML-283 |
 | UX-003 | Indicatori incomprensibili | PM-04 | CML-285 | CML-283 |
 | UX-004 | Guida disallineata | PM-06 | CML-286 | CML-283 |

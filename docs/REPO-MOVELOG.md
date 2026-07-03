@@ -1,5 +1,38 @@
 ﻿# Repo Movelog
 
+## 2026-07-03 - CML-283 - CURRICULUM EXPERIENCE LOGIC RATIONALIZATION
+
+- **Nome slice**: `CML-283`
+- **Tipo slice**: runtime minimo + documentazione
+- **Macroprogramma**: PM-04 - Comprensione Curriculum
+- **Backlog target**: UX-001, UX-003, UX-006, UX-009
+- **Dipendenze**: CML-281, CML-282, CML-282A
+- **Obiettivo**: rendere la sezione Curriculum immediatamente comprensibile per utente scolastico non tecnico
+- **Intervento runtime**:
+  - microtesto di percorso d'uso reso esplicito
+  - distinzione netta tra `IN 2012 (curricolo vigente)` e `IN 2025 (proposte di aggiornamento)`
+  - indicatori rinominati (`elementi del curricolo`, `elementi con proposta 2025`)
+  - rimozione etichetta ridondante `Copertura curricolo` dalla vista principale
+  - sostituzione lessico `pacchetto curricolare` con `curricolo della disciplina`
+  - chiarimento azione successiva: consultazione prima di Revisione/Esportazioni
+- **File creati/modificati**:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/02_system/PRODUCT-USABILITY-BACKLOG.md`
+  - `docs/03_execution/CML-283.md`
+  - `report/CML-283_curriculum_experience_logic_rationalization.md`
+  - aggiornamento `docs/REPO-MOVELOG.md`
+- **Vincoli rispettati**:
+  - nessuna nuova funzionalita
+  - nessuna modifica dati disciplinari
+  - nessuna modifica export/import
+  - nessuna modifica workflow o schema `.cml`
+  - nessun nuovo indicatore o nuova azione visibile
+- **Deploy**: non eseguito
+- **Push**: non eseguito
+- **Verdetto**: `CML_283_CURRICULUM_EXPERIENCE_LOGIC_RATIONALIZATION_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-03 - CML-282A - PRODUCT GOVERNANCE CONSOLIDATION MILESTONE
 
 - **Nome slice**: `CML-282A`
