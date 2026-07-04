@@ -1,5 +1,25 @@
 # Repo Movelog
 
+## CML-360 — Post-CML-359 Published State Audit and Next PM-07 Selection
+
+- Type: docs-only (audit + selection)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Objective: verificare stato finale post-CML-359 e selezionare prossimo micro-intervento PM-07.
+- Stato catena: `main`/`origin` sincroni, working tree pulito, PR #10 merged, Pages stable (HTTP 200)
+- Residui live: `br:5px`=3 (intenzionali), `br:6px`=0, `br:7px`=0, `br:8px`=109, `br:11px`=5, `br:12px`=12
+- Candidati PM-07:
+  - D — Home Cards (11px→9px, 4 selettori/5 occ): **raccomandato**
+  - E — Special Panels (12px→9px, 7 selettori)
+- Raccomandazione: Home Cards 11px→9px come prossima slice
+- Files created:
+  - `docs/03_execution/CML-360.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Next slice: CML-361 (Home Cards border-radius 11px→9px microfix)
+- Verdict: `CML_360_AUDIT_AND_SELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## CML-359 — PR #10 Review, Merge and Pages Publish
 
 - Type: OPS/tooling (merge + deploy)
