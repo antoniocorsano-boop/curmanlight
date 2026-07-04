@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-388 - Onboarding refresh
-- Last slice: CML-388 — Onboarding refresh (PM-06)
-- Last commit: 844c87e (CML-387 runtime: Guida rapida task-oriented)
-- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (20%)
+- Last milestone: CML-389 - Sidebar legenda unica
+- Last slice: CML-389 — Sidebar legenda unica (PM-07)
+- Last commit: e31b92f (CML-388 runtime: Onboarding refresh)
+- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (25%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: CML-389 (PM-07 Sidebar legenda unica)
-- Last verdict: `CML_388_ONBOARDING_REFRESH_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), onboarding allineato ai percorsi operativi
+- Next slice: CML-390 (PM-07 Microcopy uniform)
+- Last verdict: `CML_389_SIDEBAR_SINGLE_LEGEND_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), sidebar con legenda unica
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

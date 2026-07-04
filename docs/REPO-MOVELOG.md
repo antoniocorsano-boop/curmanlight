@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## CML-389 — Sidebar legenda unica
+
+- Type: runtime micro-intervento
+- Macro-program: PM-07 Uniformità
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `e31b92f` (CML-388)
+- Sidebar con legenda unica: spiegati 4 indicatori di stato (da consultare, da verificare, approvato, nuova disciplina)
+- PM-07: 20% → 25%
+- Files modified:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-389.md`
+  - `report/CML-389_sidebar_single_legend.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo HTML/CSS sidebar, zero logica JS)
+- Dati curricolari modificati: NO
+
 ## CML-388 — Onboarding refresh
 
 - Type: runtime micro-intervento
