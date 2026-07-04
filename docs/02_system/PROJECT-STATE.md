@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-389 - Sidebar legenda unica
-- Last slice: CML-389 — Sidebar legenda unica (PM-07)
-- Last commit: e31b92f (CML-388 runtime: Onboarding refresh)
-- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (25%)
+- Last milestone: CML-390 - Microcopy uniform
+- Last slice: CML-390 — Microcopy uniform (PM-07)
+- Last commit: 170b70e (CML-389 runtime: Sidebar legenda unica)
+- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (30%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: CML-390 (PM-07 Microcopy uniform)
-- Last verdict: `CML_389_SIDEBAR_SINGLE_LEGEND_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), sidebar con legenda unica
+- Next slice: TBD (audit finale PM-07)
+- Last verdict: `CML_390_MICROCOPY_UNIFORMITY_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), microcopy uniformato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

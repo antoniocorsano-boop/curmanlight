@@ -1561,7 +1561,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <button class="subnav-btn" onclick="setTab('normativa')"><span aria-hidden="true">📜</span> Fonti</button>
   <button class="subnav-btn" onclick="setTab('generali')"><span aria-hidden="true">📚</span> Sezioni generali</button>
 </div>
-<!-- SUB-NAV: COMPETENZE E PROGETTAZIONE -->
+<!-- SUB-NAV: COMPILA -->
 <div class="subnav-bar subnav-didattica" id="subnav-didattica" style="display:none">
   <button class="subnav-btn active" onclick="setTab('didattica')"><span aria-hidden="true">📊</span> Valutazione / Evidenze</button>
   <button class="subnav-btn" onclick="setTab('didattica_programmazione')"><span aria-hidden="true">🗓</span> Programmazione annuale</button>
@@ -1575,7 +1575,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <div class="cruscotto-next">Prossima azione: consulta il curricolo per disciplina</div>
     </div>
     <div class="cruscotto-btns">
-      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-workflow"></use></svg> Controlla voci</span></button>
+      <button class="cruscotto-btn cruscotto-primary" type="button" onclick="setTab('lavoro');var b=document.querySelectorAll('.toolbar .filter-btn')[1];if(b)setFilter('pending',b);var c=document.getElementById('cards-area');if(c)c.scrollIntoView({behavior:'smooth'})"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-workflow"></use></svg> Verifica voci</span></button>
       <button class="cruscotto-btn" type="button" onclick="setTab('riepilogo')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-file-text"></use></svg> Apri documento</span></button>
       <button class="cruscotto-btn" type="button" onclick="setTab('esportazioni')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Esporta</span></button>
     </div>
@@ -1677,11 +1677,11 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
       </div>
     </div>
-    <!-- TAB COMPETENZE E PROGETTAZIONE -->
+    <!-- TAB COMPILA -->
     <div id="tab-didattica" style="display:none">
       <div class="didattica-evidence" id="didattica-evidence-section">
         <div class="didattica-evidence-header">
-          <h2><span aria-hidden="true">🧑‍🏫</span> Competenze e progettazione — Compila evidenze e criteri</h2>
+          <h2><span aria-hidden="true">🧑‍🏫</span> Compila — Evidenze e criteri</h2>
           <p><strong>Primo passo:</strong> scegli disciplina e ordine. Poi adatta evidenze e criteri alla classe e valida come docente.</p>
         </div>
         <div class="didattica-path">
@@ -1727,7 +1727,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <!-- PROGRAMMAZIONE ANNUALE -->
       <div class="didattica-programmazione" id="didattica-programmazione-section" style="display:none">
         <div class="didattica-programmazione-header">
-          <h2><span aria-hidden="true">🗓</span> Competenze e progettazione — Programmazione annuale</h2>
+          <h2><span aria-hidden="true">🗓</span> Compila — Programmazione annuale</h2>
           <p>Vista iniziale di sola consultazione per leggere ordini, classi/fasce e maturità della progettazione annuale a partire dai dati curricolari già presenti.</p>
         </div>
         <div class="didattica-programmazione-box notice-box tip">
@@ -1799,7 +1799,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </div>      <!-- UDA MODELLO -->
       <div class="didattica-uda" id="didattica-uda" style="display:none">
         <div class="didattica-uda-header">
-          <h2><span aria-hidden="true">📋</span> Competenze e progettazione — UDA modello</h2>
+          <h2><span aria-hidden="true">📋</span> Compila — UDA modello</h2>
           <p>Mostra come un'unità curricolare del curricolo può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
           <p style="margin:6px 0 0;font-size:11px;color:#5e35b1">Per gestire filtri e archivio UDA personalizzate usa <a href="#" onclick="setTab('didattica_programmazione');setTimeout(function(){var d=document.getElementById('didattica-step-uda-smart');if(d){d.open=true;d.scrollIntoView({behavior:'smooth'})}},120);return false" style="font-weight:700;color:#5e35b1">Programmazione annuale → Passo 2</a>.</p>
         </div>
@@ -2225,7 +2225,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <div class="esport-role-guide">
       <h4>📌 Ordine operativo consigliato</h4>
       <div class="esport-role-guide-grid">
-        <div class="esport-role-guide-item"><strong>Passo 1</strong> → Compila in Competenze e progettazione o in Revisione.</div>
+        <div class="esport-role-guide-item"><strong>Passo 1</strong> → Compila in Compila o in Revisione.</div>
         <div class="esport-role-guide-item"><strong>Passo 2</strong> → Scegli l'uscita in base al ruolo: docente, dipartimento, referente.</div>
         <div class="esport-role-guide-item"><strong>Passo 3</strong> → Esporta il formato corretto (documento finale, confronto, file di lavoro CurManLight, copia di sicurezza).</div>
         <div class="esport-role-guide-item"><strong>Riprendi lavoro</strong> → Usa "Torna al punto di lavoro" per continuare senza perdere orientamento.</div>
@@ -4196,7 +4196,7 @@ function setTab(t,opts){
   opts=opts||{};
   currentTab=t;
   if(["curricolo","lavoro","riepilogo","processo","normativa","generali"].includes(t)) window._lastWorkTab=t;
-  var tabLabels={home:"Home",curricolo:"Curricolo",lavoro:"Revisione",processo:"Processo",riepilogo:"Finale in verifica",normativa:"Fonti",generali:"Sezioni generali",didattica:"Competenze e progettazione",didattica_programmazione:"Programmazione annuale",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+  var tabLabels={home:"Home",curricolo:"Curricolo",lavoro:"Revisione",processo:"Processo",riepilogo:"Finale in verifica",normativa:"Fonti",generali:"Sezioni generali",didattica:"Compila",didattica_programmazione:"Programmazione annuale",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
   if(!opts||!opts.updateHash===false) announceStatus("Sezione aperta: "+(tabLabels[t]||t));
   var parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",processo:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_programmazione:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};
   const p=parentMap[t]||"home";
@@ -4251,7 +4251,7 @@ if(t==="didattica"||t==="didattica_uda"||t==="didattica_programmazione"){
   updateHomeDisciplinePanel();
   if(breadcrumbEl){
     var discLabel=selDisc&&(t==="curricolo"||t==="lavoro"||t==="riepilogo")?' — '+selDisc:'';
-    const labels={home:"Home",curricolo:"Curricolo — Consultazione"+discLabel,lavoro:"Curricolo — Revisione"+discLabel,processo:"Curricolo — Processo",riepilogo:"Curricolo — Finale in verifica"+discLabel,normativa:"Curricolo — Fonti",generali:"Curricolo — Sezioni generali",didattica:"Competenze e progettazione — Valutazione / Evidenze",didattica_programmazione:"Competenze e progettazione — Programmazione annuale",didattica_uda:"Competenze e progettazione — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+    const labels={home:"Home",curricolo:"Curricolo — Consultazione"+discLabel,lavoro:"Curricolo — Revisione"+discLabel,processo:"Curricolo — Processo",riepilogo:"Curricolo — Finale in verifica"+discLabel,normativa:"Curricolo — Fonti",generali:"Curricolo — Sezioni generali",didattica:"Compila — Valutazione / Evidenze",didattica_programmazione:"Compila — Programmazione annuale",didattica_uda:"Compila — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
     breadcrumbEl.innerHTML='<span class="crumb-current">'+(labels[t]||"Home")+'</span>';
     breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
   }
@@ -5583,13 +5583,13 @@ function toggleMobileMenu(){
   overlay.onclick=function(e){if(e.target===this)this.remove()};
   overlay.innerHTML='<div class="mobile-menu-panel">\
     <div class="mm-title">📚 Curricolo</div>\
-    <button class="mm-item" onclick="setTab(\'curricolo\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Consulta</button>\
+    <button class="mm-item" onclick="setTab(\'curricolo\');this.closest(\'.mobile-menu-overlay\').remove()">📖 Curricolo</button>\
     <button class="mm-item" onclick="setTab(\'lavoro\');this.closest(\'.mobile-menu-overlay\').remove()">✏ Revisione</button>\
     <button class="mm-item" onclick="setTab(\'processo\');this.closest(\'.mobile-menu-overlay\').remove()">🔧 Processo</button>\
     <button class="mm-item" onclick="setTab(\'riepilogo\');this.closest(\'.mobile-menu-overlay\').remove()">📋 Finale in verifica</button>\
     <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Fonti</button>\
     <div class="mm-sep"></div>\
-    <div class="mm-title">🧑‍🏫 Competenze e progettazione</div>\
+    <div class="mm-title">🧑‍🏫 Compila</div>\
     <button class="mm-item" onclick="setTab(\'didattica\');this.closest(\'.mobile-menu-overlay\').remove()">📊 Valutazione / Evidenze</button>\
     <button class="mm-item" onclick="setTab(\'didattica_programmazione\');this.closest(\'.mobile-menu-overlay\').remove()">🗓 Programmazione annuale</button>\
     <button class="mm-item" onclick="setTab(\'didattica_uda\');this.closest(\'.mobile-menu-overlay\').remove()">📋 UDA modello</button>\
@@ -6538,7 +6538,7 @@ function renderWorkContextSummary(){
       '<p style="margin-bottom:6px">Puoi consultare liberamente il curricolo oppure impostare anno scolastico, classe, ruolo e disciplina per ricevere indicazioni pi\u00F9 pertinenti.</p></div>'+
       '<div class="home-context-actions">'+
       '<button class="home-context-primary" onclick="openWorkContextPanel()">Imposta contesto</button>'+
-      '<button onclick="setTab(\'curricolo\')">Consulta liberamente</button></div>';
+      '<button onclick="setTab(\'curricolo\')">Consulta il curricolo</button></div>';
   }else{
     var parts=[];
     if(ctx.ruolo) parts.push(ctx.ruolo);
@@ -6569,7 +6569,7 @@ function renderApplicabilityCard(){
       '<p style="margin-bottom:6px">'+(ctx?'Per verificare l\'applicabilit\u00E0 servono anno scolastico e classe.':'Imposta almeno anno scolastico e classe per verificare quale curricolo risulta applicabile.')+'</p></div>'+
       '<div class="home-context-actions">'+
       '<button class="home-context-primary" onclick="openWorkContextPanel()">'+(ctx?'Imposta anno e classe':'Imposta contesto')+'</button>'+
-      '<button onclick="setTab(\'curricolo\')">Consulta liberamente</button></div>';
+      '<button onclick="setTab(\'curricolo\')">Consulta il curricolo</button></div>';
   }else{
     var details=[];
     if(ctx.anno) details.push('a.s. '+ctx.anno);
@@ -6583,7 +6583,7 @@ function renderApplicabilityCard(){
       '<p style="margin-bottom:4px">Per '+details.join(' \u00B7 ')+', la versione curricolare deve essere confermata secondo le decisioni dell\u2019Istituto.</p>'+baseNote+
       '</div>'+
       '<div class="home-context-actions" style="margin-top:6px">'+
-      '<button onclick="setTab(\'curricolo\')">Consulta curricolo</button>'+
+      '<button onclick="setTab(\'curricolo\')">Consulta il curricolo</button>'+
       '<button onclick="showToast(\'Sezione Applicazione per classi in preparazione\')">Applicazione per classi</button></div>'+
       '<div class="home-applicability-warning">Le proposte IN 2025 e i materiali validati non sostituiscono il curricolo vigente finch\u00E9 non risultano approvati e applicabili alla classe indicata.</div>';
   }
@@ -6609,7 +6609,7 @@ window.setMappaDisciplina = setMappaDisciplina;
 <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
   <button class="mbb-btn mbb-active" id="mbb-home" onclick="setTab('home')"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-house"></use></svg><span>Home</span></button>
   <button class="mbb-btn" id="mbb-curricolo" onclick="setTab('curricolo')" title="Curricolo"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg><span>Curricolo</span></button>
-  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')" title="Competenze e progettazione"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg><span>Compila</span></button>
+  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')" title="Compila"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg><span>Compila</span></button>
   <button class="mbb-btn" id="mbb-esportazioni" onclick="setTab('esportazioni')" title="Esportazioni"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg><span>Esportazioni</span></button>
   <button class="mbb-btn" id="mbb-menu" onclick="toggleMobileMenu()">☰<br><span>Menu</span></button>
 </nav>

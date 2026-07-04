@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## CML-390 — Microcopy uniform
+
+- Type: runtime micro-intervento
+- Macro-program: PM-07 Uniformità
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `170b70e` (CML-389)
+- Microcopy uniformato: "Competenze e progettazione"→"Compila" (11 location), "Consulta"→"Curricolo" (mobile menu), CTAs uniformate, "Controlla voci"→"Verifica voci"
+- PM-07: 25% → 30%
+- Files modified:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-390.md`
+  - `report/CML-390_microcopy_uniformity.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo HTML/CSS/JS labels, zero logica)
+- Dati curricolari modificati: NO
+
 ## CML-389 — Sidebar legenda unica
 
 - Type: runtime micro-intervento
