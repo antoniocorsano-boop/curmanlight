@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## CML-392 — PM-07 Audit finale
+
+- Type: docs-only
+- Macro-program: PM-07 Uniformità
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `2278b7d` (CML-391)
+- Audit finale PM-07: verificata coerenza di legenda, microcopy e terminologia "Progetta". Occorrenze residue di "compila" tutte accettabili (form-filling, parole composte). Percorso operativo coerente: consulta → scegli → progetta → esporta → verifica.
+- PM-07: 35% → 40%
+- Files created:
+  - `docs/03_execution/CML-392.md`
+  - `report/CML-392_pm07_final_uniformity_audit.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-391 — Progetta terminology targeted microfix
 
 - Type: runtime micro-intervento

@@ -23,7 +23,7 @@ PM-06 Accompagnamento
 ███████░░░ 70%
 
 PM-07 Uniformita
-███▌░░░░░░ 35%
+████░░░░░░ 40%
 
 ## Slice in esecuzione
 
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-392 (PM-07 Audit finale)
+- TBD (valutare chiusura complessiva PM-03/PM-06/PM-07)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -86,8 +86,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-07 - Uniformita
 
-███▌░░░░░░
-35%
+████░░░░░░
+40%
 
 ### Programma PM-09 - Validazione con utenti
 
@@ -121,9 +121,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-389 (runtime micro-intervento — PM-07 Sidebar legenda unica)
 - Ultima slice completata: CML-390 (runtime micro-intervento — PM-07 Microcopy uniform)
 - Ultima slice completata: CML-391 (runtime micro-intervento — PM-07 Progetta terminology targeted microfix)
+- Ultima slice completata: CML-392 (docs-only — PM-07 Audit finale)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-392 (PM-07 Audit finale)
-- Ultimo aggiornamento: 2026-07-04 (CML-391)
+- Prossima slice operativa prevista: TBD (valutare chiusura complessiva PM-03/PM-06/PM-07)
+- Ultimo aggiornamento: 2026-07-04 (CML-392)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

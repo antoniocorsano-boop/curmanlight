@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-391 - Progetta terminology targeted microfix
-- Last slice: CML-391 — Progetta terminology targeted microfix (PM-07)
-- Last commit: 5baa2b3 (CML-390 runtime: Microcopy uniform)
-- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (35%)
+- Last milestone: CML-392 - PM-07 Audit finale
+- Last slice: CML-392 — PM-07 Audit finale (PM-07)
+- Last commit: 2278b7d (CML-391 runtime: Progetta terminology targeted microfix)
+- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (40%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: CML-392 (PM-07 Audit finale)
-- Last verdict: `CML_391_PROGETTA_TERMINOLOGY_TARGETED_MICROFIX_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), terminologia "Progetta" applicata
+- Next slice: TBD (valutare chiusura complessiva PM-03/PM-06/PM-07)
+- Last verdict: `CML_392_PM07_FINAL_UNIFORMITY_AUDIT_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), audit PM-07 completato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
