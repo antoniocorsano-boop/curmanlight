@@ -208,8 +208,7 @@ button:disabled,.act:disabled{opacity:.48;cursor:not-allowed;filter:grayscale(.2
 .pending-action.detail{border-color:#1565c0;color:#1565c0}
 .pending-action.detail:hover{background:#1565c0;color:#fff}
 .pending-action.del{border-color:#ef5350;color:#ef5350}
-.pending-detail{border-top:1px solid #eee;display:none}
-.pending-detail.open{display:block}
+.pending-detail{border-top:1px solid #eee;display:block}
 .pending-detail .panels .panel.current{border-left:3px solid #f57f17}
 .pending-detail .panels .panel.proposed{border-left:3px solid #43a047}
 .pending-detail .panel-text{max-height:200px;overflow-y:auto;padding-right:4px}
@@ -1512,6 +1511,15 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <path d="M19 6l-1 14H6L5 6"></path>
     <path d="M10 11v6"></path>
     <path d="M14 11v6"></path>
+  </symbol>
+  <symbol id="icon-undo" viewBox="0 0 24 24">
+    <path d="M3 7v6h6"></path>
+    <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path>
+  </symbol>
+  <symbol id="icon-save" viewBox="0 0 24 24">
+    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+    <polyline points="17,21 17,13 7,13 7,21"></polyline>
+    <polyline points="7,3 7,8 15,8"></polyline>
   </symbol>
 </svg>
 <header class="app-header" id="app-header">
@@ -3821,18 +3829,6 @@ function truncate(txt,len){
   return s.length > len ? s.slice(0, len) + "…" : s;
 }
 
-function togglePendingDetail(id) {
-  const el = document.getElementById("pd-" + id);
-  if (!el) return;
-  const open = el.classList.toggle("open");
-  const btn = document.getElementById("pdb-" + id);
-  if (btn) {
-    btn.innerHTML = '<svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-search"></use></svg>';
-    btn.setAttribute("aria-label", open ? "Nascondi confronto" : "Mostra confronto");
-    btn.setAttribute("aria-expanded", open ? "true" : "false");
-  }
-}
-
 function toggleCollapse(id) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -3858,8 +3854,8 @@ function cardHTML(item, type) {
       <div class="collapse-body" id="ok-${item.id}">
         <div class="card-body">${item.testo}</div>
         <div class="card-acts">
-          <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')">✏ Modifica</button>
-          <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')">🗑 Rimuovi</button>
+          <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-edit"></use></svg> Modifica</span></button>
+          <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-trash"></use></svg> Rimuovi</span></button>
         </div>
       </div>
     </div>`;
@@ -3881,19 +3877,17 @@ function cardHTML(item, type) {
       <div class="collapse-body" id="dec-${item.id}">
         <div class="card-body">${testoShow}</div>
         <div class="card-acts">
-          <button class="act act-undo"${disabled} onclick="undoDecision('${item.id}')">↩ Cambia idea</button>
-          <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')">✏ Modifica</button>
-          <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')">🗑 Rimuovi</button>
+          <button class="act act-undo"${disabled} onclick="undoDecision('${item.id}')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-undo"></use></svg> Cambia idea</span></button>
+          <button class="act act-edit"${disabled} onclick="startEdit('${item.id}')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-edit"></use></svg> Modifica</span></button>
+          <button class="act act-delete"${disabled} onclick="confirmRemove('${type}','${item.id}')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-trash"></use></svg> Rimuovi</span></button>
         </div>
       </div>
     </div>`;
   }
 
-  // pending — compatta con dettaglio espandibile
+  // pending — compatta con dettaglio sempre visibile
   const badgeText = item.status === "nuovo" ? "★ Nuova (Indicazioni 2025)" : "✎ Modifica proposta";
   const proposalText = item.proposto || "";
-  const detailStartsOpen = item.status === "nuovo";
-  const detailLabel = detailStartsOpen ? "Nascondi confronto" : "Mostra confronto";
 
   // edit mode: mostra pannelli completi
   if (isEdit) {
@@ -3912,7 +3906,7 @@ function cardHTML(item, type) {
         </div>
       </div>
       <div class="card-acts">
-        <button class="act act-save" onclick="saveEditAndApprove('${item.id}')">✅ Salva e Approva</button>
+        <button class="act act-save" onclick="saveEditAndApprove('${item.id}')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg> Salva e Approva</span></button>
         <button class="act act-cancel" onclick="cancelEdit()">Annulla</button>
       </div>
     </div>`;
@@ -3928,12 +3922,11 @@ function cardHTML(item, type) {
       <span class="pending-actions">
         <button class="pending-action approve" onclick="approve('${item.id}')" aria-label="Approva"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg></button>
         <button class="pending-action reject" onclick="reject('${item.id}')" aria-label="Mantieni testo attuale"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-x"></use></svg></button>
-        <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" id="pdb-${item.id}" aria-label="${detailLabel}" aria-expanded="${detailStartsOpen ? "true" : "false"}"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-search"></use></svg></button>
         <button class="pending-action edit" onclick="startEdit('${item.id}')" aria-label="Personalizza testo"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-edit"></use></svg></button>
         <button class="pending-action del" onclick="confirmRemove('${type}','${item.id}')" aria-label="Rimuovi"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-trash"></use></svg></button>
       </span>
     </div>
-    <div class="pending-detail${detailStartsOpen ? " open" : ""}" id="pd-${item.id}">
+    <div class="pending-detail">
       <div class="panels">
         ${item.status === "modifica"
           ? `<div class="panel current"><div class="panel-lbl">📄 DM 254/2012 — Indicazioni Nazionali 2012 (vigente)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`

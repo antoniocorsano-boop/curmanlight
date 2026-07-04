@@ -1,5 +1,28 @@
 # Repo Movelog
 
+## CML-367 — Teacher Review Always-Visible Comparison and SVG Functional Icons
+
+- Type: runtime increment
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-367-teacher-review-svg-icons`
+- HEAD: commit finale (push non ancora eseguito)
+- Confronto 2012/2025 sempre visibile: sì
+- Toggle rimosso: sì (`togglePendingDetail`, `pdb-`, `pd-`)
+- Icone SVG aggiunte: `icon-undo`, `icon-save`
+- Emoji funzionali sostituiti: `✏→icon-edit`, `🗑→icon-trash`, `↩→icon-undo`, `✅→icon-check` (nei pulsanti .act)
+- Badge decorativi non toccati: sì
+- Bug preesistenti segnalati: `icon-upload`/`icon-landmark` (verifica: già definiti, nessun bug)
+- Files created:
+  - `docs/03_execution/CML-367.md`
+  - `report/CML-367_teacher_review_always_visible_comparison_and_svg_functional_icons.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/REPO-MOVELOG.md`
+- Controlli: diff --check PASS, validate PASS, shape PASS, sintassi JS PASS
+- Verdict: `CML_367_TEACHER_REVIEW_ALWAYS_VISIBLE_COMPARISON_AND_SVG_FUNCTIONAL_ICONS_READY_LOCAL_NOT_PUSHED`
+
 ## CML-366 — PR #12 Merge and Pages Publish
 
 - Type: OPS/tooling (merge + deploy)
