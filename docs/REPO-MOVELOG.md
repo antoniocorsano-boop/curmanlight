@@ -1,5 +1,36 @@
 # Repo Movelog
 
+## CML-353 — Post-CML-352 Local Runtime Smoke and Push Readiness Audit
+
+- Type: docs-only (smoke + push readiness audit)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Commit iniziale: `0473ad9` (CML-351 docs-only)
+- Commit CML-352: `2f30ee9` (runtime microfix)
+- Branch: `codex/cml-352-residual-button-border-radius-uniformity-microfix`
+- Objective: verificare coerenza, isolamento, reversibilità e readiness push della catena CML-351/CML-352.
+- Runtime changes: none (docs-only)
+- Files created:
+  - `docs/03_execution/CML-353.md`
+  - `report/CML-353_post_cml352_local_runtime_smoke_and_push_readiness_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Catena locale: CML-351 (0473ad9, docs-only) + CML-352 (2f30ee9, runtime microfix) — nessun commit estraneo
+- Audit diff CML-352: solo `index.html` e snapshot modificati, solo `border-radius`, no JS/dati/schema/export
+- Parità runtime: 56/56 `border-radius:8px` nel diff (index.html ↔ snapshot) — PASS
+- Controls:
+  - `git diff --check`: PASS
+  - `validate-cml-normalized-curriculum.mjs`: PASS (14/14)
+  - `test-runtime-mappa-dati-shape.mjs`: PASS (14/14)
+  - Residui `border-radius: 7px`: 0/0
+  - Residui `border-radius: 6px`: 0/0
+  - File fuori perimetro: nessuno
+- Rilievi: P0=0, P1=0, P2=0, P3=0, HOLD=esclusioni CML-351 confermate
+- Readiness push controllato: SÌ
+- Next slice: CML-354 (controlled push catena CML-351/CML-352)
+- Push executed: no
+- Verdict: `CML_353_POST_CML352_LOCAL_RUNTIME_SMOKE_AND_PUSH_READINESS_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## CML-352 — Residual Button Border-Radius Uniformity Microfix
 
 - Type: runtime microfix (solo CSS)
