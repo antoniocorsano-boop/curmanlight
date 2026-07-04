@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## CML-378 — Runtime Access Refactor Post-Merge Smoke and Publication Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — smoke post-merge)
+- Status: READY
+- Branch: `main`
+- HEAD: `d08666a` (CML-377)
+- Post-merge smoke: validate ✅, shape ✅, zero residui ✅
+- Catena Runtime Access Refactor: completata e certificata su main
+- Files created:
+  - `docs/03_execution/CML-378.md`
+  - `report/CML-378_runtime_access_refactor_post_merge_smoke.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-377 — Runtime Access Refactor Chain PR Review and Merge Closure
 
 - Type: docs-only
