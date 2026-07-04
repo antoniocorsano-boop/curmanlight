@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## CML-358 — Controlled Push and PR for CML-356/357 Chain
+
+- Type: OPS/tooling (push + PR, no merge)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: PUSHED_AND_PR_OPEN
+- Branch: `codex/cml-357-cluster-c-5px-microfix`
+- HEAD: `4ed30f6` (CML-357)
+- Commit locale ahead of origin/main: 1 (`4ed30f6` — CML-357 runtime microfix)
+- Objective: push controllato del branch su origin e apertura PR verso main per la catena CML-356/357.
+- Commit CML-356 (`4b896d0`) già su origin/main — non incluso nel diff PR
+- Preflight checks: `git diff --check` PASS, working tree pulito, runtime parity PASS
+- Files modificati nel diff: 4 (2 runtime + 2 docs) — `CurManLightBrain/` assente
+- Merge: NON eseguito
+- Deploy: NON eseguito
+- PR: #10 — https://github.com/antoniocorsano-boop/curmanlight/pull/10
+- Files created:
+  - `docs/03_execution/CML-358.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Verdict: `CML_358_PUSHED_AND_PR_OPEN`
+
 ## CML-357 — Cluster C Border-Radius 5px→8px Microfix
 
 - Type: runtime microfix (solo CSS)
