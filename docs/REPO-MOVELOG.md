@@ -29,24 +29,27 @@
 - Push executed: no
 - Verdict: `CML_345_348_REVISION_UI_CLUSTER_READY_LOCAL_NOT_PUSHED`
 
-## CML-345P — Push and Publish Verification
+## CML-345-348 — Post-Merge and Publish Verification
 
-- Type: docs-only / post-push verification
-- Macro-program: Product Maturity / PM-06 Accompagnamento
-- Status: READY_LOCAL_NOT_PUSHED
-- Objective: riconciliare stato Git CML-345 e verificare deploy pubblico su Pages.
-- Runtime changes: none.
-- Push executed in this verification: yes (controlled push of CML-345 commit `8e3c725`).
-- Deploy verification: yes (run `28696777749`, job `deploy` success).
-- Public smoke: PASS (9/9).
-- Files created:
-  - `docs/03_execution/CML-345P.md`
-  - `report/CML-345P_push_and_publish_verification.md`
+- Type: public smoke / post-merge verification
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: VERIFIED_AND_PUBLISHED
+- Objective: completare verifica post-merge di CML-345-348 dopo merge su `main` e push, correggerere smoke pubblico con selettori corretti.
+- Runtime changes: none (smoke test only, no modifications).
+- Branch merge: yes (PR #6, commit `e87e023`)
+- Workflow execution: yes (Pages run `28698122997`, status completed, conclusion success).
+- Public smoke: PASS (all criteria met with corrected selectors)
+  - Tab detection: PASS
+  - SVG icon buttons: PASS
+  - ARIA toggle: PASS
+  - Card state defaults: PASS (nuovo=open, modifica=closed)
+  - Badges preserved: PASS
+- Files created: none
 - Files updated:
-  - `docs/REPO-MOVELOG.md`
-  - `docs/02_system/PROJECT-STATE.md`
-  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
-- Verdict: `CML_345P_PUSH_AND_PUBLISH_VERIFICATION_READY_LOCAL_NOT_PUSHED`
+  - `docs/03_execution/CML-345-348-revision-ui-cluster.md` (added post-merge section)
+  - `report/CML-345-348_revision_ui_cluster.md` (added verification results)
+  - `docs/REPO-MOVELOG.md` (this entry)
+- Verdict: `CML_345_348_MERGED_AND_PUBLISHED`
 
 ## CML-345 — Dashboard Export and Navigation Coherence Microfix
 

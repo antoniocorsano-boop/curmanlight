@@ -43,6 +43,21 @@
 ## Stato remoto post-push branch
 - Branch remoto: `origin/codex/cml-345-348-revision-ui-cluster`
 - Commit pushato: `601e897`
-- Stato: `CML_345_348_BRANCH_PUSHED_NOT_MERGED`
-- Merge su `main`: non eseguito
-- Deploy Pages: non attivato da questa slice, perché il branch non è stato integrato su `main`
+- Stato iniziale: `CML_345_348_BRANCH_PUSHED_NOT_MERGED`
+- Merge su `main`: eseguito (PR #6)
+- Commit merge: `e87e023`
+- Deploy Pages: eseguito con successo
+
+## Verifica post-merge e pubblicazione
+- GitHub Pages workflow run: `28698122997`
+- Workflow status: completed
+- Workflow conclusion: success
+- URL pubblico: https://antoniocorsano-boop.github.io/curmanlight/
+- HTTP status code: 200
+- Smoke test pubblico: PASS
+  - All tabs detected (Home, Lavoro, Processo, Esportazioni)
+  - Action buttons with SVG icons functional
+  - Detail toggle ARIA attributes working
+  - Card states (nuovo=open, modifica=closed) verified
+  - Badges preserved in UI
+- Stato finale: `CML_345_348_MERGED_AND_PUBLISHED`

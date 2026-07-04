@@ -98,6 +98,22 @@
 - `_published_snapshot/netlify-current/index.html`
 - `index.html`
 - `docs/03_execution/CML-345-348-revision-ui-cluster.md`
+
+## Stato post-merge e pubblicazione
+- PR: #6
+- Merge su `main`: eseguito (commit `e87e023`)
+- Commit `main` post-merge: `e87e023eb66a05a7f1e35e7f92706ebc47546562`
+- Workflow GitHub Pages: run `28698122997` — success
+- URL pubblico: https://antoniocorsano-boop.github.io/curmanlight/
+- Verifica HTTP: 200
+- Smoke pubblico: PASS (selettori corretti)
+  - hasHome: true, hasLavoro: true, hasProcesso: true, hasEsportazioni: true
+  - actionButtonsSvgOk: true
+  - detailToggleAriaChanged: true
+  - nuovoOpenOk: NO_NUOVO_CARDS
+  - modificaClosedOk: true
+  - badgesPreserved: true
+- Stato finale: `CML_345_348_MERGED_AND_PUBLISHED`
 - `report/CML-345-348_revision_ui_cluster.md`
 - `docs/REPO-MOVELOG.md`
 
