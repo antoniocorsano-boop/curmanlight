@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- TBD_AFTER_CML_345P
+- CML-382 (stable checkpoint publication audit)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -96,44 +96,24 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ## Stato operativo
 
-- Ultima slice completata: CML-306 (runtime microfix — UX-024)
-- Ultima slice completata: CML-307 (runtime microfix — PM-03 cluster)
-- Ultima slice completata: CML-309 (runtime microfix — PM-05 closure cluster)
-- Ultima slice completata: CML-310 (docs-only — PM-04 residual closure audit)
-- Ultima slice completata: CML-311 (docs-only — PM-04 residual consolidation)
-- Ultima slice completata: CML-312 (docs-only — PM-04 closure evidence gate)
-- Ultima slice completata: CML-313 (docs-only — PM-04 formal closure readiness)
-- Ultima slice completata: CML-314 (runtime smoke read-only — PM-04 runtime readiness smoke)
-- Ultima slice completata: CML-316 (user-test closure gate — PM-04 closure readiness)
-- Ultima slice completata: CML-317 (docs-only — PM-04 real user test session)
-- Ultima slice completata: CML-318 (docs-only — PM-04 curriculum UX remediation plan)
-- Ultima slice completata: CML-319 (runtime remediation mirata — PM-04 curriculum UX)
-- Ultima slice completata: CML-320 (docs-only — PM-04 language and identity consolidation)
-- Ultima slice completata: CML-321 (runtime fix P0 — PM-04 mojibake and emoji fix)
-- Ultima slice completata: CML-322 (docs-only — PM-04 local chain pre-push audit)
-- Ultima slice completata: CML-324 (docs-only — PM-04 post-remediation real user retest)
-- Ultima slice completata: CML-325 (docs-only — PM-04 formal closure review)
-- Ultima slice completata: CML-326 (docs-only — PM-04 real user test scheduling)
-- Ultima slice completata: CML-327 (docs-only — PM-04 teacher compile UX runtime microfix plan)
-- Ultima slice completata: CML-328 (runtime microfix — PM-04 teacher compile UX)
-- Ultima slice completata: CML-329 (docs-only — PM-04 real user test execution package)
-- Ultima slice completata: CML-330 (docs-only — PM-04 real user test session executed)
-- Ultima slice completata: CML-331 (docs-only — PM-04 formal closure decision)
-- Ultima slice completata: CML-332 (docs-only — PM-06 accompagnamento entry model)
-- Ultima slice completata: CML-333 (docs-only — PM-06 prioritized backlog and first microfix selection)
-- Ultima slice completata: CML-334 (runtime microfix — PM-06 onboarding initial task-oriented)
-- Ultima slice completata: CML-335 (runtime microfix — PM-06 guida contestuale minima in Compila)
-- Ultima slice completata: CML-337 (runtime microfix — PM-06 compila pre-save readability cue)
-- Ultima slice completata: CML-341 (docs-only — PM-06 onboarding UX planning)
-- Ultima slice completata: CML-342 (docs-only — PM-06 Home Onboarding Cue Solution Design)
-- Ultima slice completata: CML-342F (docs-only — correzione documentale post-push del design onboarding Home)
-- Ultima slice completata: CML-343 (runtime microfix — onboarding Home callout)
-- Ultima slice completata: CML-344 (runtime microfix — mappa disciplinare quick selector coherence fix)
 - Ultima slice completata: CML-345 (runtime microfix — dashboard export e navigation coherence)
 - Ultima slice completata: CML-345P (docs-only — push reconciliation and deploy verification)
+- Ultima slice completata: CML-369 (docs-only — external provider readiness and discipline data access audit)
+- Ultima slice completata: CML-370 (docs-only — discipline data access contract spec)
+- Ultima slice completata: CML-371 (runtime microrefactor — MAPPA_DATI_INDEX access helper)
+- Ultima slice completata: CML-372 (runtime microrefactor — getUnitsForDiscipline and Tecnologia guard removal)
+- Ultima slice completata: CML-373 (runtime microfix — TECNOLOGIA_NORM dead code removal)
+- Ultima slice completata: CML-374 (docs-only — curriculum runtime access residual hardcode audit)
+- Ultima slice completata: CML-375 (docs-only — runtime access refactor chain pre-push audit)
+- Ultima slice completata: CML-376 (docs-only — runtime access refactor chain pushed closure)
+- Ultima slice completata: CML-377 (docs-only — runtime access refactor chain PR merge closure)
+- Ultima slice completata: CML-378 (docs-only — runtime access refactor post-merge smoke)
+- Ultima slice completata: CML-379 (docs-only — runtime access refactor documentation closure)
+- Ultima slice completata: CML-380 (docs-only — post-refactor runtime stability audit)
+- Ultima slice completata: CML-381 (docs-only — product maturity post-refactor audit)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: TBD_AFTER_CML_345P
-- Ultimo aggiornamento: 2026-07-04 (CML-345P)
+- Prossima slice operativa prevista: CML-382 (stable checkpoint publication audit)
+- Ultimo aggiornamento: 2026-07-04 (CML-381)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

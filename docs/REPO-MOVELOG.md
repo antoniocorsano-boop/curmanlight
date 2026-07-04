@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## CML-381 — Product Maturity Post-Refactor Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — audit maturità post-refactor)
+- Status: READY
+- Branch: `main`
+- HEAD: `f4af23a` (CML-380)
+- Audit stato complessivo dopo catena CML-371→CML-380
+- Runtime stabile, validazioni passate, wiring integro
+- Aggiornamento documentazione: PROJECT-STATE.md e PRODUCT-MATURITY-PROGRESS.md
+- Decisione prossima tranche: stable checkpoint (CML-382)
+- Files created:
+  - `docs/03_execution/CML-381.md`
+  - `report/CML-381_product_maturity_post_refactor_audit.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-380 — Post-Refactor Runtime Stability Audit
 
 - Type: docs-only
