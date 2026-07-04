@@ -574,8 +574,8 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .mobile-bottom-bar{display:none}
 @media(max-width:900px){
   .mobile-bottom-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:80;background:#fff;border-top:1px solid #e0e0e0;box-shadow:0 -1px 6px rgba(0,0,0,.06);justify-content:space-around;align-items:stretch;padding:0;height:52px}
-  .mbb-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:none;background:transparent;color:#546e7a;font-size:10px;font-weight:700;cursor:pointer;touch-action:manipulation;border-top:2px solid transparent;padding:4px 2px;min-height:52px;transition:.1s;font-family:inherit}
-  .mbb-btn.mbb-active{color:#1a237e;border-top-color:#1a237e;background:#f5f6ff}
+  .mbb-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:none;background:transparent;color:#546e7a;font-size:10px;font-weight:700;cursor:pointer;touch-action:manipulation;border-top:3px solid transparent;padding:4px 2px;min-height:52px;transition:.1s;font-family:inherit}
+  .mbb-btn.mbb-active{color:#1a237e;border-top-color:#1a237e;background:#e8eaf6;font-weight:800}
   .mbb-btn:focus-visible{outline:2px solid #1a237e;outline-offset:-2px;border-radius:2px}
   body{padding-bottom:52px}
   .tabbar{display:none!important}
@@ -6603,9 +6603,9 @@ window.setMappaDisciplina = setMappaDisciplina;
 <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
   <button class="mbb-btn mbb-active" id="mbb-home" onclick="setTab('home')"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-house"></use></svg><span>Home</span></button>
   <button class="mbb-btn" id="mbb-curricolo" onclick="setTab('curricolo')" title="Curricolo"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg><span>Curricolo</span></button>
-  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')" title="Competenze e progettazione"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg><span>Didattica</span></button>
-  <button class="mbb-btn" id="mbb-esportazioni" onclick="setTab('esportazioni')" title="Esportazioni"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg><span>Esporta</span></button>
-  <button class="mbb-btn" id="mbb-menu" onclick="toggleMobileMenu()">☰<br>Menu</button>
+  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')" title="Competenze e progettazione"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg><span>Compila</span></button>
+  <button class="mbb-btn" id="mbb-esportazioni" onclick="setTab('esportazioni')" title="Esportazioni"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg><span>Esportazioni</span></button>
+  <button class="mbb-btn" id="mbb-menu" onclick="toggleMobileMenu()">☰<br><span>Menu</span></button>
 </nav>
 <!-- DEPLOY_SYNC_CML_276D -->
 </body>

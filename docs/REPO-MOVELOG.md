@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## CML-385 — PM-03 Navigazione mobile
+
+- Type: runtime micro-intervento
+- Macro-program: PM-03 Orientamento
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `ae0c7bf` (CML-384)
+- Navigazione mobile migliorata: etichette bottom bar aggiornate ("Didattica"→"Compila", "Esporta"→"Esportazioni"), indicatore sezione corrente più visibile (bordo 3px, background più saturo, font-weight 800)
+- PM-03: 35% → 40%
+- Files modified:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-385.md`
+  - `report/CML-385_mobile_navigation_orientation.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo HTML/CSS bottom bar mobile, zero logica JS)
+- Dati curricolari modificati: NO
+
 ## CML-384 — Home de-densificazione
 
 - Type: runtime micro-intervento

@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-384 - Home de-densificazione
-- Last slice: CML-384 — Home de-densificazione (PM-03)
-- Last commit: 2a32c16 (CML-383 docs-only: PM residual intervention map)
-- Active PM: PM-03 (35%), PM-06 (60%), PM-07 (20%)
+- Last milestone: CML-385 - PM-03 Navigazione mobile
+- Last slice: CML-385 — PM-03 Navigazione mobile
+- Last commit: ae0c7bf (CML-384 runtime: Home de-densificazione)
+- Active PM: PM-03 (40%), PM-06 (60%), PM-07 (20%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: CML-385 (PM-03 Navigazione mobile)
-- Last verdict: `CML_384_HOME_DEDENSIFICATION_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), Home de-densificata
+- Next slice: CML-386 (PM-03 Percorsi coerenti)
+- Last verdict: `CML_385_MOBILE_NAVIGATION_ORIENTATION_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), navigazione mobile migliorata
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
