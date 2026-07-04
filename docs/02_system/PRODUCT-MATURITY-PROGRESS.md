@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-344 — Home Onboarding Cue Runtime Smoke
+- CML-345 — TBD_AFTER_CML_344
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -128,9 +128,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-342 (docs-only — PM-06 Home Onboarding Cue Solution Design)
 - Ultima slice completata: CML-342F (docs-only — correzione documentale post-push del design onboarding Home)
 - Ultima slice completata: CML-343 (runtime microfix — onboarding Home callout)
+- Ultima slice completata: CML-344 (runtime microfix — mappa disciplinare quick selector coherence fix)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-344 (Home Onboarding Cue Runtime Smoke)
-- Ultimo aggiornamento: 2026-07-04 (CML-343)
+- Prossima slice operativa prevista: CML-345 (TBD_AFTER_CML_344)
+- Ultimo aggiornamento: 2026-07-04 (CML-344)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

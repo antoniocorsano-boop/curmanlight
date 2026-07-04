@@ -1799,19 +1799,20 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <strong>Documento di lavoro — da validare.</strong>
         </div>
 <div class="didattica-mappa-selector" style="display:flex;gap:6px;margin:8px 0;flex-wrap:wrap">
-           <button class="mappa-disc-btn active" onclick="setMappaDisciplina('italiano',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #1a237e;background:#1a237e;color:#fff;cursor:pointer;font-size:11px;font-weight:700">Italiano</button>
-           <button class="mappa-disc-btn" onclick="setMappaDisciplina('matematica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Matematica</button>
-           <button class="mappa-disc-btn" onclick="setMappaDisciplina('scienze',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Scienze</button>
-           <button class="mappa-disc-btn" onclick="setMappaDisciplina('storia',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Storia</button>
-            <button class="mappa-disc-btn" onclick="setMappaDisciplina('geografia',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Geografia</button>
-            <button class="mappa-disc-btn" onclick="setMappaDisciplina('inglese',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Inglese</button>
-            <button class="mappa-disc-btn" onclick="setMappaDisciplina('educazione-civica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Educazione Civica</button>
-             <button class="mappa-disc-btn" onclick="setMappaDisciplina('arte-immagine',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Arte e Immagine</button>
-            <button class="mappa-disc-btn" onclick="setMappaDisciplina('musica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Musica</button>
-             <button class="mappa-disc-btn" onclick="setMappaDisciplina('educazione-fisica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Educazione Fisica</button>
-           <button class="mappa-disc-btn" onclick="setMappaDisciplina('seconda-lingua-comunitaria',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Seconda Lingua Comunitaria</button>
-           <button class="mappa-disc-btn" onclick="setMappaDisciplina('religione-cattolica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Religione Cattolica</button>
-           <button class="mappa-disc-btn" onclick="setMappaDisciplina('latino-lel',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Latino (LEL)</button>
+           <button class="mappa-disc-btn" data-mappa="italiano" onclick="setMappaDisciplina('italiano',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Italiano</button>
+           <button class="mappa-disc-btn" data-mappa="matematica" onclick="setMappaDisciplina('matematica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Matematica</button>
+           <button class="mappa-disc-btn" data-mappa="scienze" onclick="setMappaDisciplina('scienze',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Scienze</button>
+           <button class="mappa-disc-btn" data-mappa="tecnologia" onclick="setMappaDisciplina('tecnologia',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Tecnologia</button>
+           <button class="mappa-disc-btn" data-mappa="storia" onclick="setMappaDisciplina('storia',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Storia</button>
+             <button class="mappa-disc-btn" data-mappa="geografia" onclick="setMappaDisciplina('geografia',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Geografia</button>
+             <button class="mappa-disc-btn" data-mappa="inglese" onclick="setMappaDisciplina('inglese',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Inglese</button>
+             <button class="mappa-disc-btn" data-mappa="educazione-civica" onclick="setMappaDisciplina('educazione-civica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Educazione Civica</button>
+              <button class="mappa-disc-btn" data-mappa="arte-immagine" onclick="setMappaDisciplina('arte-immagine',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Arte e Immagine</button>
+             <button class="mappa-disc-btn" data-mappa="musica" onclick="setMappaDisciplina('musica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Musica</button>
+              <button class="mappa-disc-btn" data-mappa="educazione-fisica" onclick="setMappaDisciplina('educazione-fisica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Educazione Fisica</button>
+            <button class="mappa-disc-btn" data-mappa="seconda-lingua-comunitaria" onclick="setMappaDisciplina('seconda-lingua-comunitaria',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Seconda Lingua Comunitaria</button>
+            <button class="mappa-disc-btn" data-mappa="religione-cattolica" onclick="setMappaDisciplina('religione-cattolica',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Religione Cattolica</button>
+            <button class="mappa-disc-btn" data-mappa="latino-lel" onclick="setMappaDisciplina('latino-lel',this)" style="padding:5px 12px;border-radius:7px;border:1px solid #c5cae9;background:#fff;color:#1a237e;cursor:pointer;font-size:11px;font-weight:700">Latino (LEL)</button>
              </div>
         <div id="mappa-disciplinare-content"></div>
         <div id="mappa-disciplinare-empty" style="display:none;color:#78909c;font-size:12px;text-align:center;padding:15px">Mappa disciplinare non ancora predisposta per questa disciplina.</div>
@@ -2801,15 +2802,25 @@ var LATINO_LEL_MAPPA_DATI = {"disciplina":"Latino (LEL)","struttureSostanziali":
 var mappaDisciplinaCorrente = 'tecnologia';
 function setMappaDisciplina(d, btn) {
   mappaDisciplinaCorrente = d;
-  document.querySelectorAll('.mappa-disc-btn').forEach(function(b) {
-    b.style.background = b === btn ? '#1a237e' : '#fff';
-    b.style.color = b === btn ? '#fff' : '#1a237e';
-    b.style.borderColor = b === btn ? '#1a237e' : '#c5cae9';
-    b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
-  });
-  renderMappaDisciplinare();
-}
-function renderMappaDisciplinare() {
+document.querySelectorAll('.mappa-disc-btn').forEach(function(b) {
+     b.style.background = b === btn ? '#1a237e' : '#fff';
+     b.style.color = b === btn ? '#fff' : '#1a237e';
+     b.style.borderColor = b === btn ? '#1a237e' : '#c5cae9';
+     b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+   });
+   renderMappaDisciplinare();
+ }
+ function syncMappaDisciplinaButtons() {
+   var current = mappaDisciplinaCorrente || 'tecnologia';
+   document.querySelectorAll('.mappa-disc-btn').forEach(function(b) {
+     var isActive = b.getAttribute('data-mappa') === current;
+     b.style.background = isActive ? '#1a237e' : '#fff';
+     b.style.color = isActive ? '#fff' : '#1a237e';
+     b.style.borderColor = isActive ? '#1a237e' : '#c5cae9';
+     b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+   });
+ }
+ function renderMappaDisciplinare() {
   var container = document.getElementById('mappa-disciplinare-content');
   var emptyEl = document.getElementById('mappa-disciplinare-empty');
   if (!container) return;
@@ -3714,15 +3725,16 @@ function refreshCurrentDisciplineViews(){
     renderCurricoloIstituto();
     renderTecnologiaNorm();
   }
-  if(currentTab==="didattica"||currentTab==="didattica_uda"||currentTab==="didattica_programmazione"){
-    var key=discKeyFromName(selDisc);
-    if(key) mappaDisciplinaCorrente=key;
-    renderDidattica();
-    renderProgrammazioneAnnuale();
-    renderUdaModello();
-    renderMappaDisciplinare();
-    renderUdaDraftPanel();
-  }
+if(currentTab==="didattica"||currentTab==="didattica_uda"||currentTab==="didattica_programmazione"){
+     var key=discKeyFromName(selDisc);
+     if(key) mappaDisciplinaCorrente=key;
+     renderDidattica();
+     renderProgrammazioneAnnuale();
+     renderUdaModello();
+     renderMappaDisciplinare();
+     syncMappaDisciplinaButtons();
+     renderUdaDraftPanel();
+   }
   var _bc=document.getElementById("breadcrumb");
   if(_bc&&(currentTab==="curricolo"||currentTab==="lavoro"||currentTab==="riepilogo")){
     _bc.innerHTML='<span class="crumb-current" aria-current="page">'+({curricolo:"Curriculum — Consultazione",lavoro:"Curriculum — Revisione",riepilogo:"Curriculum — Definitivo"}[currentTab])+(selDisc?" — "+selDisc:"")+'</span>';
@@ -4167,8 +4179,8 @@ function setTab(t,opts){
   document.getElementById("tab-curricolo").style.display=t==="curricolo"?"block":"none";
   var te=document.getElementById("tab-esportazioni");if(te)te.style.display=t==="esportazioni"?"block":"none";
   var tg=document.getElementById("tab-guida");if(tg)tg.style.display=t==="guida"?"block":"none";
-  if(t==="didattica"||t==="didattica_uda"||t==="didattica_programmazione"){
-    var dk=discKeyFromName(selDisc);if(dk)mappaDisciplinaCorrente=dk;renderDidattica();renderProgrammazioneAnnuale();renderUdaModello();renderMappaDisciplinare();renderUdaDraftPanel();
+if(t==="didattica"||t==="didattica_uda"||t==="didattica_programmazione"){
+     var dk=discKeyFromName(selDisc);if(dk)mappaDisciplinaCorrente=dk;renderDidattica();renderProgrammazioneAnnuale();renderUdaModello();renderMappaDisciplinare();syncMappaDisciplinaButtons();renderUdaDraftPanel();
   }
   var evs=document.getElementById("didattica-evidence-section");if(evs)evs.style.display=t==="didattica"?"block":"none";
   var ps=document.getElementById("didattica-programmazione-section");if(ps)ps.style.display=t==="didattica_programmazione"?"block":"none";

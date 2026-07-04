@@ -1,5 +1,33 @@
 # Repo Movelog
 
+## CML-344 — Mappa Disciplinare Quick Selector Coherence Fix
+
+- Type: runtime microfix
+- Macro-program: Product Maturity / PM-06 Accompagnamento
+- Status: READY_LOCAL_NOT_PUSHED
+- Objective: chiudere la coerenza del quick selector nella Mappa disciplinare per Tecnologia.
+- Scope:
+  - verifica marker e sincronizzazione pulsante Tecnologia;
+  - conferma parita root/snapshot;
+  - nessuna modifica fuori perimetro runtime+docs.
+- Runtime changes:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Push: no.
+- Deploy: no.
+- Commit: eseguito localmente in questa slice controllata.
+- Files created:
+  - `docs/03_execution/CML-344.md`
+  - `report/CML-344_mappa_disciplinare_quick_selector_coherence_fix.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- Key fix:
+  - `data-mappa="tecnologia"` presente in root+snapshot;
+  - `syncMappaDisciplinaButtons()` presente e richiamata in root+snapshot.
+- Verdict: `CML_344_MAPPA_DISCIPLINARE_QUICK_SELECTOR_COHERENCE_FIX_READY_LOCAL_NOT_PUSHED`
+
 ## CML-343 — Home Onboarding Cue Runtime Microfix
 
 - Type: runtime microfix
