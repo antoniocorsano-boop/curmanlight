@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-385 - PM-03 Navigazione mobile
-- Last slice: CML-385 — PM-03 Navigazione mobile
-- Last commit: ae0c7bf (CML-384 runtime: Home de-densificazione)
-- Active PM: PM-03 (40%), PM-06 (60%), PM-07 (20%)
+- Last milestone: CML-386 - PM-03 Percorsi coerenti
+- Last slice: CML-386 — PM-03 Percorsi coerenti
+- Last commit: 6ea0b84 (CML-385 runtime: Navigazione mobile)
+- Active PM: PM-03 (45%), PM-06 (60%), PM-07 (20%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: CML-386 (PM-03 Percorsi coerenti)
-- Last verdict: `CML_385_MOBILE_NAVIGATION_ORIENTATION_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), navigazione mobile migliorata
+- Next slice: CML-387 (PM-06 Guida rapida task-oriented)
+- Last verdict: `CML_386_COHERENT_ORIENTATION_PATHS_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), percorsi coerenti uniformati
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

@@ -11,7 +11,7 @@ PM-02 Audit
 ██████████ 100%
 
 PM-03 Orientamento
-████░░░░░░ 40%
+████▌░░░░░ 45%
 
 PM-04 Comprensione Curriculum
 ██████████ 100%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-386 (PM-03 Percorsi coerenti)
+- CML-387 (PM-06 Guida rapida task-oriented)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -66,8 +66,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-03 - Orientamento
 
-████░░░░░░
-40%
+████▌░░░░░
+45%
 
 ### Programma PM-04 - Comprensione del Curriculum
 
@@ -115,9 +115,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-383 (docs-only — PM residual intervention map)
 - Ultima slice completata: CML-384 (runtime micro-intervento — PM-03 Home de-densificazione)
 - Ultima slice completata: CML-385 (runtime micro-intervento — PM-03 Navigazione mobile)
+- Ultima slice completata: CML-386 (runtime micro-intervento — PM-03 Percorsi coerenti)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-386 (PM-03 Percorsi coerenti)
-- Ultimo aggiornamento: 2026-07-04 (CML-385)
+- Prossima slice operativa prevista: CML-387 (PM-06 Guida rapida task-oriented)
+- Ultimo aggiornamento: 2026-07-04 (CML-386)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

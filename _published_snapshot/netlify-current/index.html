@@ -1544,13 +1544,13 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <div class="tabbar" id="tabbar">
   <button class="active" onclick="setTab('home')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-house"></use></svg> Home</span></button>
   <button onclick="setTab('curricolo')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curricolo</span></button>
-  <button onclick="setTab('didattica')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Competenze e progettazione</span></button>
+  <button onclick="setTab('didattica')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Compila</span></button>
   <button onclick="setTab('esportazioni')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Esportazioni</span></button>
   <button onclick="setTab('guida')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida</span></button>
 </div>
 <!-- SUB-NAV: CURRICULUM -->
 <div class="subnav-bar subnav-curriculum" id="subnav-curriculum" style="display:none">
-  <button class="subnav-btn active" onclick="setTab('curricolo')"><span aria-hidden="true">📖</span> Consulta</button>
+  <button class="subnav-btn active" onclick="setTab('curricolo')"><span aria-hidden="true">📖</span> Curricolo</button>
   <button class="subnav-btn" onclick="setTab('lavoro')"><span aria-hidden="true">✏</span> Revisione</button>
   <button class="subnav-btn" onclick="setTab('processo')"><span aria-hidden="true">🔧</span> Processo</button>
   <button class="subnav-btn" onclick="setTab('riepilogo')"><span aria-hidden="true">📋</span> Finale in verifica</button>
@@ -1610,6 +1610,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <section class="home-inline-banner" role="region" aria-label="Orientamento iniziale">
           <h2>Ambiente curricolare d'Istituto</h2>
           <p>Consulta il curricolo, prepara attività didattiche e produci documenti di lavoro.</p>
+          <p class="home-inline-guide"><strong>Percorso:</strong> consulta il curricolo → compila la proposta → esporta i documenti.</p>
           <div class="home-inline-meta">Il lavoro viene salvato sul dispositivo in uso.</div>
           <div class="home-inline-actions" role="group" aria-label="Azioni rapide Home">
             <button type="button" onclick="setTab('curricolo')">Consulta il curricolo</button>
@@ -1623,7 +1624,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <p class="home-card-text">Consulta cosa è valido oggi nel curricolo di istituto.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('didattica');return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Progettazione e competenze</h3>
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Compila</h3>
             <p class="home-card-text">Lavora su programmazione, UDA e materiali didattici.</p>
           </a>
         </div>

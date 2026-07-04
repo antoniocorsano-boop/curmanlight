@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## CML-386 — PM-03 Percorsi coerenti
+
+- Type: runtime micro-intervento
+- Macro-program: PM-03 Orientamento
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `6ea0b84` (CML-385)
+- Percorsi coerenti uniformati: tabbar desktop "Compila", subnav "Curricolo", Home card "Compila", microcopy percorso esplicito
+- PM-03: 40% → 45%
+- Files modified:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-386.md`
+  - `report/CML-386_coherent_orientation_paths.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo HTML/CSS, zero logica JS)
+- Dati curricolari modificati: NO
+
 ## CML-385 — PM-03 Navigazione mobile
 
 - Type: runtime micro-intervento
