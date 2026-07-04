@@ -1,5 +1,115 @@
 # Repo Movelog
 
+## CML-354 — Controlled Push and PR for CML-351/352/353 Chain
+
+- Type: OPS/tooling (push + PR)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: PUSHED_AND_PR_OPEN
+- Branch: `codex/cml-352-residual-button-border-radius-uniformity-microfix`
+- HEAD: `c627415` (CML-353)
+- Objective: push controllato del branch su origin e apertura PR verso main per la catena CML-351/CML-352/CML-353.
+- Preflight checks: `git diff --check` PASS, `validate-cml-normalized-curriculum.mjs` PASS, `test-runtime-mappa-dati-shape.mjs` PASS
+- Commit locali pushed:
+  - `0473ad9` — docs: audit UI consistency after CML-350 (CML-351)
+  - `2f30ee9` — runtime: normalize residual button border radius (CML-352)
+  - `c627415` — docs: audit CML-352 runtime before push (CML-353)
+- Files created:
+  - `docs/03_execution/CML-354.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime changes: nessuno (solo push + PR)
+- PR: #9
+- Verdict: `CML_354_PUSHED_AND_PR_OPEN`
+
+## CML-353 — Post-CML-352 Local Runtime Smoke and Push Readiness Audit
+
+- Type: docs-only (smoke + push readiness audit)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Commit iniziale: `0473ad9` (CML-351 docs-only)
+- Commit CML-352: `2f30ee9` (runtime microfix)
+- Branch: `codex/cml-352-residual-button-border-radius-uniformity-microfix`
+- Objective: verificare coerenza, isolamento, reversibilità e readiness push della catena CML-351/CML-352.
+- Runtime changes: none (docs-only)
+- Files created:
+  - `docs/03_execution/CML-353.md`
+  - `report/CML-353_post_cml352_local_runtime_smoke_and_push_readiness_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Catena locale: CML-351 (0473ad9, docs-only) + CML-352 (2f30ee9, runtime microfix) — nessun commit estraneo
+- Audit diff CML-352: solo `index.html` e snapshot modificati, solo `border-radius`, no JS/dati/schema/export
+- Parità runtime: 56/56 `border-radius:8px` nel diff (index.html ↔ snapshot) — PASS
+- Controls:
+  - `git diff --check`: PASS
+  - `validate-cml-normalized-curriculum.mjs`: PASS (14/14)
+  - `test-runtime-mappa-dati-shape.mjs`: PASS (14/14)
+  - Residui `border-radius: 7px`: 0/0
+  - Residui `border-radius: 6px`: 0/0
+  - File fuori perimetro: nessuno
+- Rilievi: P0=0, P1=0, P2=0, P3=0, HOLD=esclusioni CML-351 confermate
+- Readiness push controllato: SÌ
+- Next slice: CML-354 (controlled push catena CML-351/CML-352)
+- Push executed: no
+- Verdict: `CML_353_POST_CML352_LOCAL_RUNTIME_SMOKE_AND_PUSH_READINESS_AUDIT_READY_LOCAL_NOT_PUSHED`
+
+## CML-352 — Residual Button Border-Radius Uniformity Microfix
+
+- Type: runtime microfix (solo CSS)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Commit iniziale: `0473ad9` (CML-351 docs-only)
+- Branch: `codex/cml-352-residual-button-border-radius-uniformity-microfix`
+- Objective: uniformare a `8px` i border-radius residui di pulsanti/elementi interattivi con `7px` e `6px`, in continuità con CML-350.
+- Runtime changes:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-352.md`
+  - `report/CML-352_residual_button_border_radius_uniformity_microfix.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Changes: 52 occorrenze `border-radius` uniformate a `8px` per file (39 da `7px` + 13 da `6px`). 25 selettori CSS + 14 inline `.mappa-disc-btn` (7px→8px), 11 selettori CSS + 2 inline JS banner (6px→8px).
+- Esclusioni: pill shape (16-999px), container (9px), dialog (14-16px), card Home (11px), pannelli speciali (12px), cluster C (5px)
+- Controls:
+  - `git diff --check`: PASS
+  - Diff solo border-radius: PASS
+  - Parità index.html ↔ snapshot: PASS
+  - Assenza modifiche JS: PASS
+- Push executed: no
+- PR opened: no
+- Deploy executed: no
+- Verdict: `CML_352_RESIDUAL_BUTTON_BORDER_RADIUS_UNIFORMITY_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
+## CML-351 — Post-CML-350 UI Consistency Audit and Next Microfix Selection
+
+- Type: docs-only (audit + selezione)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Commit: `2227581` (baseline, chiusura CML-350)
+- Objective: audit leggero post-CML-350 per individuare il prossimo micro-intervento UI/UX a basso rischio.
+- Branch: `main`
+- Baseline commit: `2227581` (chiusura CML-350 su `main`)
+- Runtime changes: none (docs-only)
+- Files created:
+  - `docs/03_execution/CML-351.md`
+  - `report/CML-351_post_cml350_ui_consistency_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Audit method: ricerca pattern `border-radius:\d+px` nel CSS runtime (243 occorrenze), classificazione per cluster e tipo componente
+- Rilievi:
+  - P0: 0
+  - P1: 0
+  - P2: 40 selettori (26 con 7px + 11 con 6px + 3 con 5px) + 14 inline style `.mappa-disc-btn`
+  - P3: 11 selettori (card Home 11px, pannelli speciali 12px)
+  - HOLD: pill shape, container 9px, dialog 14-16px
+- Next slice: CML-352 — Residual Button Border-Radius Uniformity Microfix (solo CSS, ~37 selettori + 14 inline)
+- Controls:
+  - `git diff --check`: PASS
+  - `git status --short`: pulito
+  - File runtime non modificati: PASS
+- Push executed: no
+- Verdict: `CML_351_POST_CML350_UI_CONSISTENCY_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## CML-350 — PM-07 Cross-Tab Button Uniformity Microfix
 
 - Type: runtime microfix
