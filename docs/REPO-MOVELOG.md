@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## CML-356 — Post-Publish Repository Hygiene and Next PM-07 Selection
+
+- Type: docs-only (hygiene + selection)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Objective: verificare stato finale post-CML-355 e selezionare prossimo micro-intervento PM-07.
+- Stato catena: `main`/`origin` sincroni, working tree pulito, PR #9 merged, Pages stable (HTTP 200)
+- Residui live: `br:7px`=0, `br:6px`=0, `br:5px`=6, `br:11px`=5, `br:12px`=12
+- Candidati PM-07:
+  - A — Cluster C (5px→8px, 3 selettori/6 occ): **raccomandato**
+  - B — Home Cards (11px→9px, 5 occ)
+  - C — Special Panels (12px→9px, 12 occ)
+- Raccomandazione: Cluster C come prossima slice (pattern identico CML-352, rischio nullo)
+- Files created:
+  - `docs/03_execution/CML-356.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Next slice: CML-357 (Cluster C border-radius 5px→8px microfix)
+- Verdict: `CML_356_HYGIENE_AND_SELECTION_READY_LOCAL_NOT_PUSHED`
+
 ## CML-355 — PR #9 Review, Merge and Pages Publish
 
 - Type: OPS/tooling (merge + deploy)
