@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-394 — Push controllato
+
+- Type: docs-only
+- Macro-program: PM-03, PM-06, PM-07
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `1eb9150` (CML-393)
+- Push controllato completato: tutti i commit della tranche PM-03/PM-06/PM-07 (CML-383 → CML-393) sono sincronizzati con origin/main. Repository pronto per smoke post-push.
+- Files created:
+  - `docs/03_execution/CML-394.md`
+  - `report/CML-394_push_controllato.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-393 — PM-03/PM-06/PM-07 Tranche Closure Audit
 
 - Type: docs-only

@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-393 - PM-03/PM-06/PM-07 Tranche Closure Audit
-- Last slice: CML-393 — PM-03/PM-06/PM-07 Tranche Closure Audit (docs-only)
-- Last commit: a225ce3 (CML-392 docs: audit PM-07 uniformity closure)
+- Last milestone: CML-394 - Push controllato
+- Last slice: CML-394 — Push controllato (docs-only)
+- Last commit: 1eb9150 (CML-393 docs: close PM-03 PM-06 PM-07 tranche audit)
 - Active PM: PM-03 (45%), PM-06 (70%), PM-07 (40%)
-- Critical Path: Push controllato → Smoke post-push → Stable checkpoint
-- Next slice: CML-394 (Push controllato)
-- Last verdict: `CML_393_PM030607_TRANCHE_CLOSURE_AUDIT_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), tranche PM-03/PM-06/PM-07 chiusa, ready for push
+- Critical Path: Smoke post-push → Stable checkpoint
+- Next slice: CML-395 (Smoke post-push)
+- Last verdict: `CML_394_PUSH_CONTROLLATO_READY_LOCAL_NOT_PUSHED`
+- Repository status: origin/main sincronizzato, push controllato completato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
