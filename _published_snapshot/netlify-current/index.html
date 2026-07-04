@@ -2845,6 +2845,28 @@ var RELIGIONE_CATTOLICA_MAPPA_DATI = {"disciplina":"Religione Cattolica","strutt
 
 var LATINO_LEL_MAPPA_DATI = {"disciplina":"Latino (LEL)","struttureSostanziali":[{"nome":"Lessico e morfologia di base: alfabeto, pronuncia, declinazioni, confronto con l'italiano","descrizione":"Raccoglie 1 unit\u00E0 di apprendimento: Lessico e morfologia di base. Classe coinvolta: 2","fonte":"JSON curriculum strutturato"},{"nome":"Rapporto latino-italiano: radici latine, etimologia e derivazione lessicale","descrizione":"Raccoglie 1 unit\u00E0 di apprendimento: Rapporto latino-italiano. Classe coinvolta: 2","fonte":"JSON curriculum strutturato"},{"nome":"Cultura classica e civilt\u00E0 romana: vita quotidiana, istituzioni, mitologia","descrizione":"Raccoglie 1 unit\u00E0 di apprendimento: Cultura classica e civilt\u00E0 romana. Classe coinvolta: 3","fonte":"JSON curriculum strutturato"},{"nome":"Metodo linguistico e lessico settoriale: approccio comparativo e autonomia lessicale","descrizione":"Raccoglie 1 unit\u00E0 di apprendimento: Metodo linguistico e lessico settoriale. Classe coinvolta: 3","fonte":"JSON curriculum strutturato"}],"nodiDisciplinari":[{"etichetta":"Lessico e morfologia di base","tipo":"sostanziale","descrizione":"Raccoglie 1 unit\u00E0 di apprendimento: Lessico e morfologia di base. Classe coinvolta: 2","fonte":"JSON curriculum strutturato"},{"etichetta":"Rapporto latino-italiano","tipo":"sostanziale","descrizione":"Raccoglie 1 unit\u00E0 di apprendimento: Rapporto latino-italiano. Classe coinvolta: 2","fonte":"JSON curriculum strutturato"},{"etichetta":"Cultura classica e civilt\u00E0 romana","tipo":"sostanziale","descrizione":"Raccoglie 1 unit\u00E0 di apprendimento: Cultura classica e civilt\u00E0 romana. Classe coinvolta: 3","fonte":"JSON curriculum strutturato"},{"etichetta":"Metodo linguistico e lessico settoriale","tipo":"sostanziale","descrizione":"Raccoglie 1 unit\u00E0 di apprendimento: Metodo linguistico e lessico settoriale. Classe coinvolta: 3","fonte":"JSON curriculum strutturato"}],"progressioneVerticale":[{"ordine":"Secondaria","classe":"2","fascia":null,"descrizioneProgressione":"Raccoglie 2 unit\u00E0: Lessico e morfologia di base, Rapporto latino-italiano","fonte":"JSON curriculum strutturato"},{"ordine":"Secondaria","classe":"3","fascia":null,"descrizioneProgressione":"Raccoglie 2 unit\u00E0: Cultura classica e civilt\u00E0 romana, Metodo linguistico e lessico settoriale","fonte":"JSON curriculum strutturato"}],"decisioniCurricolari":[]};
 
+// MAPPA_DATI_INDEX — indice centralizzato per getMappaForDiscipline
+var MAPPA_DATI_INDEX = {
+  'tecnologia': TECNOLOGIA_MAPPA_DATI,
+  'matematica': MATEMATICA_MAPPA_DATI,
+  'italiano': ITALIANO_MAPPA_DATI,
+  'scienze': SCIENZE_MAPPA_DATI,
+  'storia': STORIA_MAPPA_DATI,
+  'geografia': GEOGRAFIA_MAPPA_DATI,
+  'inglese': INGLESE_MAPPA_DATI,
+  'educazione-civica': EDUCAZIONE_CIVICA_MAPPA_DATI,
+  'arte-immagine': ARTE_IMMAGINE_MAPPA_DATI,
+  'musica': MUSICA_MAPPA_DATI,
+  'educazione-fisica': EDUCAZIONE_FISICA_MAPPA_DATI,
+  'seconda-lingua-comunitaria': SECONDA_LINGUA_COMUNITARIA_MAPPA_DATI,
+  'religione-cattolica': RELIGIONE_CATTOLICA_MAPPA_DATI,
+  'latino-lel': LATINO_LEL_MAPPA_DATI
+};
+
+function getMappaForDiscipline(discKey) {
+  return (discKey && MAPPA_DATI_INDEX[discKey]) || null;
+}
+
 var mappaDisciplinaCorrente = 'tecnologia';
 function setMappaDisciplina(d, btn) {
   mappaDisciplinaCorrente = d;
@@ -2870,21 +2892,7 @@ document.querySelectorAll('.mappa-disc-btn').forEach(function(b) {
   var container = document.getElementById('mappa-disciplinare-content');
   var emptyEl = document.getElementById('mappa-disciplinare-empty');
   if (!container) return;
-  var dati = null;
-  if (mappaDisciplinaCorrente === 'tecnologia' && typeof TECNOLOGIA_MAPPA_DATI !== 'undefined') dati = TECNOLOGIA_MAPPA_DATI;
-  else if (mappaDisciplinaCorrente === 'matematica' && typeof MATEMATICA_MAPPA_DATI !== 'undefined') dati = MATEMATICA_MAPPA_DATI;
-  else if (mappaDisciplinaCorrente === 'italiano' && typeof ITALIANO_MAPPA_DATI !== 'undefined') dati = ITALIANO_MAPPA_DATI;
-  else if (mappaDisciplinaCorrente === 'scienze' && typeof SCIENZE_MAPPA_DATI !== 'undefined') dati = SCIENZE_MAPPA_DATI;
-  else if (mappaDisciplinaCorrente === 'storia' && typeof STORIA_MAPPA_DATI !== 'undefined') dati = STORIA_MAPPA_DATI;
-  else if (mappaDisciplinaCorrente === 'geografia' && typeof GEOGRAFIA_MAPPA_DATI !== 'undefined') dati = GEOGRAFIA_MAPPA_DATI;
-  else if (mappaDisciplinaCorrente === 'inglese' && typeof INGLESE_MAPPA_DATI !== 'undefined') dati = INGLESE_MAPPA_DATI;
-  else if (mappaDisciplinaCorrente === 'educazione-civica' && typeof EDUCAZIONE_CIVICA_MAPPA_DATI !== 'undefined') dati = EDUCAZIONE_CIVICA_MAPPA_DATI;
-   else if (mappaDisciplinaCorrente === 'arte-immagine' && typeof ARTE_IMMAGINE_MAPPA_DATI !== 'undefined') dati = ARTE_IMMAGINE_MAPPA_DATI;
-   else if (mappaDisciplinaCorrente === 'musica' && typeof MUSICA_MAPPA_DATI !== 'undefined') dati = MUSICA_MAPPA_DATI;
-   else if (mappaDisciplinaCorrente === 'educazione-fisica' && typeof EDUCAZIONE_FISICA_MAPPA_DATI !== 'undefined') dati = EDUCAZIONE_FISICA_MAPPA_DATI;
-   else if (mappaDisciplinaCorrente === 'seconda-lingua-comunitaria' && typeof SECONDA_LINGUA_COMUNITARIA_MAPPA_DATI !== 'undefined') dati = SECONDA_LINGUA_COMUNITARIA_MAPPA_DATI;
-   else if (mappaDisciplinaCorrente === 'religione-cattolica' && typeof RELIGIONE_CATTOLICA_MAPPA_DATI !== 'undefined') dati = RELIGIONE_CATTOLICA_MAPPA_DATI;
-   else if (mappaDisciplinaCorrente === 'latino-lel' && typeof LATINO_LEL_MAPPA_DATI !== 'undefined') dati = LATINO_LEL_MAPPA_DATI;
+  var dati = getMappaForDiscipline(mappaDisciplinaCorrente);
   if (!dati) {
     container.innerHTML = '';
     if (emptyEl) emptyEl.style.display = 'block';

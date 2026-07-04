@@ -1,5 +1,33 @@
 # Repo Movelog
 
+## CML-371 — MAPPA_DATI_INDEX and getMappaForDiscipline Runtime Microrefactor
+
+- Type: runtime microrefactor controllato
+- Macro-program: (autonomo — Fase 1 del piano CML-370)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-371-mappa-dati-index-runtime`
+- Base: `0ebfc25` (CML-370 docs contract)
+- MAPPA_DATI_INDEX: introdotto (14 discipline, riferimenti a variabili esistenti)
+- getMappaForDiscipline: introdotta (discKey → mappa dati o null)
+- renderMappaDisciplinare: convertita (if/else 14 rami → chiamata unica)
+- Variabili individuali *MAPPA_DATI: mantenute (non eliminate)
+- TECNOLOGIA_NORM_DATA: non toccata
+- Files created:
+  - `docs/03_execution/CML-371.md`
+  - `report/CML-371_mappa_dati_index_runtime_microrefactor.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo MAPPA_DATI_INDEX + getMappaForDiscipline + render)
+- Dati curricolari modificati: NO
+- Export/import/schema .cml modificati: NO
+- Hook Drive modificati: NO
+- Push: NON eseguito
+- PR: NON aperta
+- Deploy: NON eseguito
+- Verdict: `CML_371_MAPPA_DATI_INDEX_RUNTIME_MICROREFACTOR_READY_LOCAL_NOT_PUSHED`
+
 ## CML-370 — Discipline Data Access Contract and Centralization Plan
 
 - Type: docs-only contract
