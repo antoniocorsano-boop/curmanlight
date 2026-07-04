@@ -1607,36 +1607,28 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <!-- TAB HOME -->
     <div id="tab-home" style="display:block">
       <div class="home-dashboard">
-        <div class="home-recommended-callout" role="region" aria-label="Azione consigliata">
-          <div class="home-recommended-callout-content">
-            <span style="font-size:18px;line-height:1">💡</span>
-            <div>
-              <p class="home-recommended-callout-text"><strong>Consulta il curricolo</strong> e prepara una proposta per il dipartimento.</p>
-              <p class="home-recommended-callout-sub">La compilazione resta guidata e richiede sempre validazione umana.</p>
-            </div>
-          </div>
-          <button type="button" class="home-recommended-callout-btn" onclick="setTab('curricolo')">Vai al curricolo</button>
-        </div>
         <section class="home-inline-banner" role="region" aria-label="Orientamento iniziale">
           <h2>Ambiente curricolare d'Istituto</h2>
-          <p>Qui puoi consultare il curricolo, preparare un'attivita didattica e usare la guida operativa.</p>
-          <p class="home-inline-guide"><strong>Parti dal compito che devi svolgere:</strong> consulta il curricolo, prepara un'attivita didattica o usa la guida se non sai da dove iniziare.</p>
-          <p class="home-inline-guide"><strong>Primo passo consigliato:</strong> consulta il curricolo della disciplina su cui stai lavorando.</p>
+          <p>Consulta il curricolo, prepara attività didattiche e produci documenti di lavoro.</p>
           <div class="home-inline-meta">Il lavoro viene salvato sul dispositivo in uso.</div>
           <div class="home-inline-actions" role="group" aria-label="Azioni rapide Home">
             <button type="button" onclick="setTab('curricolo')">Consulta il curricolo</button>
-            <button type="button" onclick="openWorkContextPanel()">Verifica applicazione per classi</button>
-            <button type="button" onclick="setTab('processo')">Segui la revisione</button>
-            <button type="button" onclick="setTab('didattica')" class="home-quick-primary">Prepara un'attivita didattica</button>
-            <button type="button" class="home-quick-guide" onclick="setTab('guida')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Usa la guida</span></button>
+            <button type="button" onclick="setTab('didattica')" class="home-quick-primary">Prepara un'attività didattica</button>
           </div>
         </section>
-        <p class="home-operational-title">Ingressi operativi per bisogno professionale</p>
+        <p class="home-operational-title">Operazioni principali</p>
         <div class="home-cards">
           <a href="#" class="home-card" onclick="setTab('curricolo');return false">
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curricolo vigente</h3>
             <p class="home-card-text">Consulta cosa è valido oggi nel curricolo di istituto.</p>
           </a>
+          <a href="#" class="home-card" onclick="setTab('didattica');return false">
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Progettazione e competenze</h3>
+            <p class="home-card-text">Lavora su programmazione, UDA e materiali didattici.</p>
+          </a>
+        </div>
+        <p class="home-operational-title">Operazioni di supporto</p>
+        <div class="home-cards">
           <a href="#" class="home-card" onclick="openWorkContextPanel();return false">
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-users"></use></svg> Applicazione per classi</h3>
             <p class="home-card-text">Imposta classe e anno scolastico per verificare quale curricolo applicare.</p>
@@ -1648,10 +1640,6 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <a href="#" class="home-card" onclick="setTab('processo');return false">
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-workflow"></use></svg> Processo di revisione</h3>
             <p class="home-card-text">Accedi alle azioni pertinenti al tuo ruolo professionale.</p>
-          </a>
-          <a href="#" class="home-card" onclick="setTab('didattica');return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Progettazione e competenze</h3>
-            <p class="home-card-text">Lavora su programmazione, UDA e materiali didattici.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('esportazioni');return false">
             <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Esportazioni</h3>

@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-383 - PM Residual Intervention Map
-- Last slice: CML-383 — PM Residual Intervention Map
-- Last commit: 1c90c4f (CML-382 docs-only: stable checkpoint publication audit)
-- Active PM: PM-03 (30%), PM-06 (60%), PM-07 (20%)
+- Last milestone: CML-384 - Home de-densificazione
+- Last slice: CML-384 — Home de-densificazione (PM-03)
+- Last commit: 2a32c16 (CML-383 docs-only: PM residual intervention map)
+- Active PM: PM-03 (35%), PM-06 (60%), PM-07 (20%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: CML-384 (PM-03 Home de-densificazione)
-- Last verdict: `CML_383_PM_RESIDUAL_INTERVENTION_MAP_READY`
-- Repository status: main...origin/main (allineato), mappa interventi residui PM completata
+- Next slice: CML-385 (PM-03 Navigazione mobile)
+- Last verdict: `CML_384_HOME_DEDENSIFICATION_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), Home de-densificata
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

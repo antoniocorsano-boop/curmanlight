@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## CML-384 — Home de-densificazione
+
+- Type: runtime micro-intervento
+- Macro-program: PM-03 Orientamento
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `2a32c16` (CML-383)
+- Home de-densificata: rimossa recommended callout ridondante, semplificato inline banner (5→2 azioni rapide), card raggruppate in 2 gruppi logici
+- PM-03: 30% → 35%
+- Files modified:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-384.md`
+  - `report/CML-384_home_dedensification.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo HTML Home, zero logica JS)
+- Dati curricolari modificati: NO
+
 ## CML-383 — PM Residual Intervention Map
 
 - Type: docs-only
