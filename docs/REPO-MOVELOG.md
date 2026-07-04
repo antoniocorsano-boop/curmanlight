@@ -1,5 +1,34 @@
 # Repo Movelog
 
+## CML-345-348 — Revision UI Cluster
+
+- Type: runtime microfix
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Objective: rendere coerenti icone/stati nelle card Revisione e aprire di default il confronto sulle proposte nuove.
+- Branch: `codex/cml-345-348-revision-ui-cluster`
+- Baseline commit: `5e7da6a68e63f8a4683ba4226e7faed8f2402185`
+- Runtime changes:
+  - `_published_snapshot/netlify-current/index.html`
+  - `index.html`
+- Files created:
+  - `docs/03_execution/CML-345-348-revision-ui-cluster.md`
+  - `report/CML-345-348_revision_ui_cluster.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Controls:
+  - `git diff --check`: PASS
+  - validator curriculum: PASS
+  - shape test runtime: PASS (14/14)
+  - icon references `href="#icon-"`: PASS (nessun id mancante)
+- Out of scope confirmed:
+  - no `.cml` schema changes
+  - no import/export model changes
+  - no storage model changes
+  - no service worker/workflow/deploy changes
+- Push executed: no
+- Verdict: `CML_345_348_REVISION_UI_CLUSTER_READY_LOCAL_NOT_PUSHED`
+
 ## CML-345P — Push and Publish Verification
 
 - Type: docs-only / post-push verification

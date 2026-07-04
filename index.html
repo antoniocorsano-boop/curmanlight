@@ -1419,6 +1419,21 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <path d="m7 9 5 5 5-5"></path>
     <path d="M5 21h14"></path>
   </symbol>
+  <symbol id="icon-upload" viewBox="0 0 24 24">
+    <path d="M12 21V10"></path>
+    <path d="m7 15 5-5 5 5"></path>
+    <path d="M5 21h14"></path>
+  </symbol>
+  <symbol id="icon-landmark" viewBox="0 0 24 24">
+    <path d="m3 10 9-5 9 5"></path>
+    <path d="M4 10h16"></path>
+    <path d="M6 10v8"></path>
+    <path d="M10 10v8"></path>
+    <path d="M14 10v8"></path>
+    <path d="M18 10v8"></path>
+    <path d="M3 18h18"></path>
+    <path d="M2 21h20"></path>
+  </symbol>
   <symbol id="icon-circle-help" viewBox="0 0 24 24">
     <circle cx="12" cy="12" r="10"></circle>
     <path d="M9.1 9a3 3 0 1 1 5.8 1c0 2-3 2-3 4"></path>
@@ -1475,6 +1490,28 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
     <circle cx="12" cy="12" r="10"></circle>
     <circle cx="12" cy="12" r="6"></circle>
     <circle cx="12" cy="12" r="2"></circle>
+  </symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24">
+    <path d="m5 13 4 4L19 7"></path>
+  </symbol>
+  <symbol id="icon-x" viewBox="0 0 24 24">
+    <path d="m18 6-12 12"></path>
+    <path d="m6 6 12 12"></path>
+  </symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7"></circle>
+    <path d="m20 20-3.5-3.5"></path>
+  </symbol>
+  <symbol id="icon-edit" viewBox="0 0 24 24">
+    <path d="M12 20h9"></path>
+    <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+  </symbol>
+  <symbol id="icon-trash" viewBox="0 0 24 24">
+    <path d="M3 6h18"></path>
+    <path d="M8 6V4h8v2"></path>
+    <path d="M19 6l-1 14H6L5 6"></path>
+    <path d="M10 11v6"></path>
+    <path d="M14 11v6"></path>
   </symbol>
 </svg>
 <header class="app-header" id="app-header">
@@ -3788,7 +3825,11 @@ function togglePendingDetail(id) {
   if (!el) return;
   const open = el.classList.toggle("open");
   const btn = document.getElementById("pdb-" + id);
-  if (btn) { btn.textContent = open ? "📖" : "🔍"; btn.setAttribute("aria-label", open ? "Nascondi confronto" : "Mostra confronto"); }
+  if (btn) {
+    btn.innerHTML = '<svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-search"></use></svg>';
+    btn.setAttribute("aria-label", open ? "Nascondi confronto" : "Mostra confronto");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  }
 }
 
 function toggleCollapse(id) {
@@ -3850,6 +3891,8 @@ function cardHTML(item, type) {
   // pending — compatta con dettaglio espandibile
   const badgeText = item.status === "nuovo" ? "★ Nuova (Indicazioni 2025)" : "✎ Modifica proposta";
   const proposalText = item.proposto || "";
+  const detailStartsOpen = item.status === "nuovo";
+  const detailLabel = detailStartsOpen ? "Nascondi confronto" : "Mostra confronto";
 
   // edit mode: mostra pannelli completi
   if (isEdit) {
@@ -3882,14 +3925,14 @@ function cardHTML(item, type) {
     <div class="pending-body">
       <span class="pending-text">${truncate(proposalText, 120)}</span>
       <span class="pending-actions">
-        <button class="pending-action approve" onclick="approve('${item.id}')" aria-label="Approva">✅</button>
-        <button class="pending-action reject" onclick="reject('${item.id}')" aria-label="Mantieni testo attuale">❌</button>
-        <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" id="pdb-${item.id}" aria-label="Mostra confronto">🔍</button>
-        <button class="pending-action edit" onclick="startEdit('${item.id}')" aria-label="Personalizza testo">✏</button>
-        <button class="pending-action del" onclick="confirmRemove('${type}','${item.id}')" aria-label="Rimuovi">🗑</button>
+        <button class="pending-action approve" onclick="approve('${item.id}')" aria-label="Approva"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg></button>
+        <button class="pending-action reject" onclick="reject('${item.id}')" aria-label="Mantieni testo attuale"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-x"></use></svg></button>
+        <button class="pending-action detail" onclick="togglePendingDetail('${item.id}')" id="pdb-${item.id}" aria-label="${detailLabel}" aria-expanded="${detailStartsOpen ? "true" : "false"}"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-search"></use></svg></button>
+        <button class="pending-action edit" onclick="startEdit('${item.id}')" aria-label="Personalizza testo"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-edit"></use></svg></button>
+        <button class="pending-action del" onclick="confirmRemove('${type}','${item.id}')" aria-label="Rimuovi"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-trash"></use></svg></button>
       </span>
     </div>
-    <div class="pending-detail" id="pd-${item.id}">
+    <div class="pending-detail${detailStartsOpen ? " open" : ""}" id="pd-${item.id}">
       <div class="panels">
         ${item.status === "modifica"
           ? `<div class="panel current"><div class="panel-lbl">📄 DM 254/2012 — Indicazioni Nazionali 2012 (vigente)</div><div class="panel-text">${item.testo || '<em style="color:#bbb">— nessun testo —</em>'}</div></div>`
@@ -3900,7 +3943,7 @@ function cardHTML(item, type) {
         </div>
       </div>
       <div class="card-acts">
-        <button class="act act-edit" onclick="startEdit('${item.id}')">✏ Personalizza testo</button>
+        <button class="act act-edit" onclick="startEdit('${item.id}')"><span class="icon-label"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-edit"></use></svg> Personalizza testo</span></button>
       </div>
     </div>
   </div>`;
