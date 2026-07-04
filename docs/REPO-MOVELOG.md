@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-370 — Discipline Data Access Contract and Centralization Plan
+
+- Type: docs-only contract
+- Macro-program: (autonomo)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-370-discipline-data-access-contract`
+- Base: `main` @ `f9f836d` (via CML-369)
+- Contratto definito: `DisciplineDataAccess` — 7 funzioni (getUnitsForDiscipline, getMappaForDiscipline, getCurriculumDataForDiscipline, discKeyToName, isValidDiscKey, listAllDiscKeys, listAllDiscNames)
+- Eliminazione pianificata: `TECNOLOGIA_NORM_DATA`, variabili individuali `*_MAPPA_DATI`, 4 branch `discKey === 'tecnologia'`
+- Migrazione: 3 fasi (CML-371 → CML-372 → CML-373)
+- Files created:
+  - `docs/03_execution/CML-370.md`
+  - `report/CML-370_discipline_data_access_contract_spec.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Verdict: `CML_370_DISCIPLINE_DATA_ACCESS_CONTRACT_AND_CENTRALIZATION_PLAN_READY_LOCAL_NOT_PUSHED`
+
 ## CML-369 — External Provider Readiness and Discipline Data Access Audit
 
 - Type: docs-only audit
