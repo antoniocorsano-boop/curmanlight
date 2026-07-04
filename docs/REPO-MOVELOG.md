@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## CML-368 — PR, Merge and Pages Publish for CML-367 Teacher Review
+
+- Type: OPS/tooling (merge + deploy)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: MERGED_AND_PUBLISHED
+- PR: #13 — merged su `main`
+- Merge commit: `8099543`
+- Workflow Pages: `28707195346` — success
+- URL pubblico: https://antoniocorsano-boop.github.io/curmanlight/ — HTTP 200
+- Smoke post-publish:
+  - `togglePendingDetail` assente ✅
+  - `pdb-` assente ✅
+  - `icon-undo`, `icon-save` presenti ✅
+  - `.pending-detail{display:block}` ✅
+- Files created:
+  - `docs/03_execution/CML-368.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato nella chiusura: NO
+- Verdict: `CML_368_TEACHER_REVIEW_SVG_ICONS_MERGED_AND_PUBLISHED`
+
 ## CML-367 — Teacher Review Always-Visible Comparison and SVG Functional Icons
 
 - Type: runtime increment
