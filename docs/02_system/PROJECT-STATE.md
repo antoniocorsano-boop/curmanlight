@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-392 - PM-07 Audit finale
-- Last slice: CML-392 — PM-07 Audit finale (PM-07)
-- Last commit: 2278b7d (CML-391 runtime: Progetta terminology targeted microfix)
+- Last milestone: CML-393 - PM-03/PM-06/PM-07 Tranche Closure Audit
+- Last slice: CML-393 — PM-03/PM-06/PM-07 Tranche Closure Audit (docs-only)
+- Last commit: a225ce3 (CML-392 docs: audit PM-07 uniformity closure)
 - Active PM: PM-03 (45%), PM-06 (70%), PM-07 (40%)
-- Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: TBD (valutare chiusura complessiva PM-03/PM-06/PM-07)
-- Last verdict: `CML_392_PM07_FINAL_UNIFORMITY_AUDIT_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), audit PM-07 completato
+- Critical Path: Push controllato → Smoke post-push → Stable checkpoint
+- Next slice: CML-394 (Push controllato)
+- Last verdict: `CML_393_PM030607_TRANCHE_CLOSURE_AUDIT_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), tranche PM-03/PM-06/PM-07 chiusa, ready for push
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

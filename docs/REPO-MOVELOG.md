@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-393 — PM-03/PM-06/PM-07 Tranche Closure Audit
+
+- Type: docs-only
+- Macro-program: PM-03, PM-06, PM-07
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `a225ce3` (CML-392)
+- Chiusura formale tranche PM-03/PM-06/PM-07: consolidati avanzamenti (PM-03 45%, PM-06 70%, PM-07 40%), verificata coerenza lessico operativo (consulta → scegli → progetta → esporta → verifica), confermati test runtime, identificati rischi residui. Decisione: push controllato → smoke post-push → stable checkpoint.
+- Files created:
+  - `docs/03_execution/CML-393.md`
+  - `report/CML-393_pm030607_tranche_closure_audit.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-392 — PM-07 Audit finale
 
 - Type: docs-only
