@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-365 — Controlled Push and PR for CML-364
+
+- Type: OPS/tooling (push + PR, no merge)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: PUSHED_AND_PR_OPEN
+- Branch: `codex/cml-364-pannelli-speciali-12px-microfix`
+- HEAD: `8efe772` (CML-364)
+- Objective: push controllato del branch su origin e apertura PR verso main per CML-364.
+- Preflight checks: tutti PASS, residui 12px intenzionali confermati (5)
+- Merge: NON eseguito
+- Deploy: NON eseguito
+- PR: #12 — https://github.com/antoniocorsano-boop/curmanlight/pull/12
+- Files created:
+  - `docs/03_execution/CML-365.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Verdict: `CML_365_PUSHED_AND_PR_OPEN`
+
 ## CML-364 — Pannelli Speciali Border-Radius 12px→9px Microfix
 
 - Type: runtime microfix (solo CSS)
