@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## CML-361 — Home Cards Border-Radius 11px→9px Microfix
+
+- Type: runtime microfix (solo CSS)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-361-home-cards-11px-microfix`
+- Objective: uniformare a 9px (standard container) i quattro selettori Home Card con border-radius:11px.
+- Runtime changes:
+  - `index.html` (4 occorrenze)
+  - `_published_snapshot/netlify-current/index.html` (4 occorrenze)
+- Totale modifiche: 8 (solo border-radius: 11px→9px)
+- Selettori: `.home-card`, `.home-discipline-panel`, `.home-context-card`, `.home-applicability-card`
+- Esclusioni: `.quick-info-bar.compact-actions` (11px, non in cluster Home Cards)
+- Files created:
+  - `docs/03_execution/CML-361.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Controls: diff --check PASS, validate PASS, mappa-dati PASS, parità runtime PASS
+- Next: push, PR, merge, deploy
+- Verdict: `CML_361_HOME_CARDS_11PX_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## CML-360 — Post-CML-359 Published State Audit and Next PM-07 Selection
 
 - Type: docs-only (audit + selection)
