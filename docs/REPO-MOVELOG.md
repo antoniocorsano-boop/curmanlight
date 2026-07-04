@@ -1,5 +1,33 @@
 # Repo Movelog
 
+## CML-352 — Residual Button Border-Radius Uniformity Microfix
+
+- Type: runtime microfix (solo CSS)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Commit iniziale: `0473ad9` (CML-351 docs-only)
+- Branch: `codex/cml-352-residual-button-border-radius-uniformity-microfix`
+- Objective: uniformare a `8px` i border-radius residui di pulsanti/elementi interattivi con `7px` e `6px`, in continuità con CML-350.
+- Runtime changes:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-352.md`
+  - `report/CML-352_residual_button_border_radius_uniformity_microfix.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Changes: 52 occorrenze `border-radius` uniformate a `8px` per file (39 da `7px` + 13 da `6px`). 25 selettori CSS + 14 inline `.mappa-disc-btn` (7px→8px), 11 selettori CSS + 2 inline JS banner (6px→8px).
+- Esclusioni: pill shape (16-999px), container (9px), dialog (14-16px), card Home (11px), pannelli speciali (12px), cluster C (5px)
+- Controls:
+  - `git diff --check`: PASS
+  - Diff solo border-radius: PASS
+  - Parità index.html ↔ snapshot: PASS
+  - Assenza modifiche JS: PASS
+- Push executed: no
+- PR opened: no
+- Deploy executed: no
+- Verdict: `CML_352_RESIDUAL_BUTTON_BORDER_RADIUS_UNIFORMITY_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## CML-351 — Post-CML-350 UI Consistency Audit and Next Microfix Selection
 
 - Type: docs-only (audit + selezione)
