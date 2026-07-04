@@ -1,5 +1,41 @@
 # Repo Movelog
 
+## CML-345 — Dashboard Export and Navigation Coherence Microfix
+
+- Type: runtime microfix
+- Macro-program: Product Maturity / PM-06 Accompagnamento
+- Status: READY_LOCAL_NOT_PUSHED
+- Objective: riallineare CTA dashboard, lessico di navigazione e chiarezza salvataggio locale vs esportazioni.
+- Scope:
+  - CTA `Esporta` del cruscotto verso `Esportazioni`;
+  - allineamento lessico `Curricolo`;
+  - sostituzione etichetta utente `Definitivo` con `Finale in verifica`;
+  - microcopy nel blocco `File e salvataggio`.
+- Runtime changes:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Push: no.
+- Deploy: no.
+- Files created:
+  - `docs/03_execution/CML-345.md`
+  - `report/CML-345_dashboard_export_and_navigation_coherence_microfix.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- Checks:
+  - `git diff --check`: PASS
+  - validator curriculum: PASS
+  - shape test runtime: PASS (14/14)
+  - smoke Playwright: PASS
+- No-regression boundary respected:
+  - no schema `.cml` changes;
+  - no curriculum data changes;
+  - no validator changes;
+  - no import/export model changes;
+  - no role-logic changes.
+- Verdict: `CML_345_DASHBOARD_EXPORT_AND_NAVIGATION_COHERENCE_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## CML-344 — Mappa Disciplinare Quick Selector Coherence Fix
 
 - Type: runtime microfix

@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-345 — TBD_AFTER_CML_344
+- CML-346 — TBD_AFTER_CML_345
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -129,9 +129,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-342F (docs-only — correzione documentale post-push del design onboarding Home)
 - Ultima slice completata: CML-343 (runtime microfix — onboarding Home callout)
 - Ultima slice completata: CML-344 (runtime microfix — mappa disciplinare quick selector coherence fix)
+- Ultima slice completata: CML-345 (runtime microfix — dashboard export e navigation coherence)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-345 (TBD_AFTER_CML_344)
-- Ultimo aggiornamento: 2026-07-04 (CML-344)
+- Prossima slice operativa prevista: CML-346 (TBD_AFTER_CML_345)
+- Ultimo aggiornamento: 2026-07-04 (CML-345)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
