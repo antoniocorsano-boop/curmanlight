@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-366 — PR #12 Merge and Pages Publish
+
+- Type: OPS/tooling (merge + deploy)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: MERGED_AND_PUBLISHED
+- Branch: `main`
+- HEAD post-merge: `ebd9469`
+- PR: #12 — merged su `main`
+- Workflow Pages: `28706540084` — success
+- URL pubblico: https://antoniocorsano-boop.github.io/curmanlight/ — HTTP 200
+- Smoke post-publish: `br:12px`=5 (↓12→5), `br:9px`=63 (↑56→63), `br:8px`=109
+- Files created:
+  - `docs/03_execution/CML-366.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato nella chiusura: NO
+- Verdict: `CML_366_PR12_MERGED_AND_PUBLISHED`
+
 ## CML-365 — Controlled Push and PR for CML-364
 
 - Type: OPS/tooling (push + PR, no merge)
