@@ -1,5 +1,46 @@
 # Repo Movelog
 
+## CML-358 — Controlled Push and PR for CML-356/357 Chain
+
+- Type: OPS/tooling (push + PR, no merge)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: PUSHED_AND_PR_OPEN
+- Branch: `codex/cml-357-cluster-c-5px-microfix`
+- HEAD: `4ed30f6` (CML-357)
+- Commit locale ahead of origin/main: 1 (`4ed30f6` — CML-357 runtime microfix)
+- Objective: push controllato del branch su origin e apertura PR verso main per la catena CML-356/357.
+- Commit CML-356 (`4b896d0`) già su origin/main — non incluso nel diff PR
+- Preflight checks: `git diff --check` PASS, working tree pulito, runtime parity PASS
+- Files modificati nel diff: 4 (2 runtime + 2 docs) — `CurManLightBrain/` assente
+- Merge: NON eseguito
+- Deploy: NON eseguito
+- PR: #10 — https://github.com/antoniocorsano-boop/curmanlight/pull/10
+- Files created:
+  - `docs/03_execution/CML-358.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Verdict: `CML_358_PUSHED_AND_PR_OPEN`
+
+## CML-357 — Cluster C Border-Radius 5px→8px Microfix
+
+- Type: runtime microfix (solo CSS)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-357-cluster-c-5px-microfix`
+- Objective: uniformare a 8px i tre selettori Cluster C con border-radius:5px (norm-badge, disc-md-preview, pending-action).
+- Runtime changes:
+  - `index.html` (3 occorrenze)
+  - `_published_snapshot/netlify-current/index.html` (3 occorrenze)
+- Totale modifiche: 6 (solo border-radius: 5px→8px)
+- Files created:
+  - `docs/03_execution/CML-357.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Esclusioni: panel-text.ed, esport-role-guide-item, inline JS banner (non in audit)
+- Controls: diff --check PASS, validate PASS, mappa-dati PASS, parità runtime PASS
+- Next: push e PR (su decisione)
+- Verdict: `CML_357_CLUSTER_C_5PX_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## CML-356 — Post-Publish Repository Hygiene and Next PM-07 Selection
 
 - Type: docs-only (hygiene + selection)
