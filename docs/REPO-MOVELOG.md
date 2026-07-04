@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-362 — Controlled Push and PR for CML-361
+
+- Type: OPS/tooling (push + PR, no merge)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: PUSHED_AND_PR_OPEN
+- Branch: `codex/cml-361-home-cards-11px-microfix`
+- HEAD: `de4d329` (CML-361)
+- Objective: push controllato del branch su origin e apertura PR verso main per CML-361.
+- Preflight checks: tutti PASS
+- Merge: NON eseguito
+- Deploy: NON eseguito
+- PR: #11 — https://github.com/antoniocorsano-boop/curmanlight/pull/11
+- Files created:
+  - `docs/03_execution/CML-362.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Verdict: `CML_362_PUSHED_AND_PR_OPEN`
+
 ## CML-361 — Home Cards Border-Radius 11px→9px Microfix
 
 - Type: runtime microfix (solo CSS)
