@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## CML-380 — Post-Refactor Runtime Stability Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — audit stabilità post-merge)
+- Status: READY
+- Branch: `main`
+- HEAD: `b42ce55` (CML-379)
+- Validazioni: validate ✅ 14/14, shape ✅ 14/14, diff --check ✅
+- Funzioni chiave: 11/11 presenti (getUnitsForDiscipline, render* etc.)
+- Helper: discKeyFromName, setMappaDisciplina presenti
+- Wiring: tab/discipline integro (renderTecnologiaNorm, renderDidattica etc.)
+- Accesso dati: completamente generalizzato via helper
+- Runtime stabile, nessuna regressione
+- Files created:
+  - `docs/03_execution/CML-380.md`
+  - `report/CML-380_post_refactor_runtime_stability_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-379 — Runtime Access Refactor Documentation Closure
 
 - Type: docs-only
