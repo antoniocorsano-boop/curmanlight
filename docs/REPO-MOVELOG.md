@@ -1,5 +1,29 @@
 # Repo Movelog
 
+## CML-383 — PM Residual Intervention Map
+
+- Type: docs-only
+- Macro-program: PM-03, PM-06, PM-07
+- Status: READY
+- Branch: `main`
+- HEAD: `1c90c4f` (CML-382)
+- Mappa interventi residui per PM incompleti
+- PM-03 (30%): 2 UX completati, 4 parzialmente risolti
+- PM-06 (60%): 1 UX completato, 1 parzialmente risolto
+- PM-07 (20%): 3 UX completati, 1 non risolto
+- Interventi runtime ammessi: CML-384 → CML-390
+- Interventi docs-only: CML-391 → CML-396
+- Catena consigliata: Opzione A (incrementale)
+- Files created:
+  - `docs/03_execution/CML-383.md`
+  - `report/CML-383_pm_residual_intervention_map.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-382 — Stable Checkpoint Publication Audit
 
 - Type: docs-only

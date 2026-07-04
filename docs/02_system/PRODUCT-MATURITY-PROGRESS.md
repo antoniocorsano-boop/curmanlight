@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- TBD (prossima tranche funzionale basata su programmi PM incompleti)
+- CML-384 (PM-03 Home de-densificazione)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -112,9 +112,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-380 (docs-only — post-refactor runtime stability audit)
 - Ultima slice completata: CML-381 (docs-only — product maturity post-refactor audit)
 - Ultima slice completata: CML-382 (docs-only — stable checkpoint publication audit)
+- Ultima slice completata: CML-383 (docs-only — PM residual intervention map)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: TBD (prossima tranche funzionale basata su programmi PM incompleti)
-- Ultimo aggiornamento: 2026-07-04 (CML-382)
+- Prossima slice operativa prevista: CML-384 (PM-03 Home de-densificazione)
+- Ultimo aggiornamento: 2026-07-04 (CML-383)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

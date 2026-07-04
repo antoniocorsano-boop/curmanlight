@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-382 - Stable Checkpoint Publication Audit
-- Last slice: CML-382 — Stable Checkpoint Publication Audit
-- Last commit: ee94214 (CML-381 docs-only: product maturity post-refactor audit)
-- Active PM: PM-06 (in corso, 60%)
-- Critical Path: PM-06
-- Next slice: TBD (prossima tranche funzionale basata su programmi PM incompleti)
-- Last verdict: `CML_382_STABLE_CHECKPOINT_PUBLICATION_AUDIT_READY`
-- Repository status: main...origin/main (allineato), stable checkpoint certificato
+- Last milestone: CML-383 - PM Residual Intervention Map
+- Last slice: CML-383 — PM Residual Intervention Map
+- Last commit: 1c90c4f (CML-382 docs-only: stable checkpoint publication audit)
+- Active PM: PM-03 (30%), PM-06 (60%), PM-07 (20%)
+- Critical Path: PM-03 → PM-06 → PM-07
+- Next slice: CML-384 (PM-03 Home de-densificazione)
+- Last verdict: `CML_383_PM_RESIDUAL_INTERVENTION_MAP_READY`
+- Repository status: main...origin/main (allineato), mappa interventi residui PM completata
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
