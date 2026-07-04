@@ -1,5 +1,33 @@
 # Repo Movelog
 
+## CML-349 — PM-07 Residual Uniformity Selection Audit
+
+- Type: docs-only (selection audit)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Objective: audit dei 5 candidati residui PM-07 dopo chiusura CML-345-348 e selezione della prossima slice di uniformità.
+- Branch: `codex/cml-349-pm07-residual-uniformity-selection-audit`
+- Baseline commit: `5622ae6` (chiusura documentale CML-345-348)
+- Runtime changes: none (docs-only, no modifications)
+- Files created:
+  - `docs/03_execution/CML-349.md`
+  - `report/CML-349_pm07_residual_uniformity_selection_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Decision: C2 — Uniformità pulsanti cross-tab selezionato. C1 (icone emoji), C3 (card/callout), C4 (microcopy), C5 (dashboard) rimandati.
+- Next slice: CML-350 — PM-07 Cross-Tab Button Uniformity Microfix
+- Controls:
+  - `git diff --check`: PASS
+  - `git status --short --branch`: docs-only
+- Out of scope confirmed:
+  - no runtime changes
+  - no `.cml` schema changes
+  - no import/export model changes
+  - no storage model changes
+  - no service worker/workflow/deploy changes
+- Push executed: no
+- Verdict: `CML_349_PM07_RESIDUAL_UNIFORMITY_SELECTION_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## CML-345-348 — Revision UI Cluster
 
 - Type: runtime microfix
