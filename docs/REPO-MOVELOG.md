@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## CML-375 — Runtime Access Refactor Chain Pre-Push Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — pre-push audit catena CML-371→CML-374)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-372-get-units-for-discipline`
+- Base: `fa8d084` (CML-374 commit)
+- Working tree pulito, catena 4 commit lineare
+- Zero residui hardcoded confermati (4 pattern grep)
+- Validazioni: 14/14 curriculum + 14/14 shape runtime
+- Catena pronta per push controllato
+- Files created:
+  - `docs/03_execution/CML-375.md`
+  - `report/CML-375_runtime_access_refactor_chain_pre_push_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-374 — Curriculum Runtime Access Residual Hardcode Audit
 
 - Type: docs-only
