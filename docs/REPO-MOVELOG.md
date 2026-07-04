@@ -1,5 +1,35 @@
 # Repo Movelog
 
+## CML-351 — Post-CML-350 UI Consistency Audit and Next Microfix Selection
+
+- Type: docs-only (audit + selezione)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Commit: `2227581` (baseline, chiusura CML-350)
+- Objective: audit leggero post-CML-350 per individuare il prossimo micro-intervento UI/UX a basso rischio.
+- Branch: `main`
+- Baseline commit: `2227581` (chiusura CML-350 su `main`)
+- Runtime changes: none (docs-only)
+- Files created:
+  - `docs/03_execution/CML-351.md`
+  - `report/CML-351_post_cml350_ui_consistency_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Audit method: ricerca pattern `border-radius:\d+px` nel CSS runtime (243 occorrenze), classificazione per cluster e tipo componente
+- Rilievi:
+  - P0: 0
+  - P1: 0
+  - P2: 40 selettori (26 con 7px + 11 con 6px + 3 con 5px) + 14 inline style `.mappa-disc-btn`
+  - P3: 11 selettori (card Home 11px, pannelli speciali 12px)
+  - HOLD: pill shape, container 9px, dialog 14-16px
+- Next slice: CML-352 — Residual Button Border-Radius Uniformity Microfix (solo CSS, ~37 selettori + 14 inline)
+- Controls:
+  - `git diff --check`: PASS
+  - `git status --short`: pulito
+  - File runtime non modificati: PASS
+- Push executed: no
+- Verdict: `CML_351_POST_CML350_UI_CONSISTENCY_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## CML-350 — PM-07 Cross-Tab Button Uniformity Microfix
 
 - Type: runtime microfix
