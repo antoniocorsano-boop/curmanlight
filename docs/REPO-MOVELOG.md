@@ -4,8 +4,8 @@
 
 - Type: runtime microfix
 - Macro-program: Product Maturity / PM-07 Uniformita
-- Status: COMMITTED_LOCAL_NOT_PUSHED
-- Commit: `8274623`
+- Status: MERGED_AND_PUBLISHED
+- Commit: `48fe37c`
 - Objective: allineare il border-radius dei pulsanti cross-tab a 8px (da CML-349, candidato C2).
 - Branch: `codex/cml-350-cross-tab-button-uniformity-microfix`
 - Baseline commit: `b41d9b7` (merge CML-349 su `main`)
@@ -27,8 +27,14 @@
   - no import/export model changes
   - no storage model changes
   - no service worker/workflow/deploy changes
-- Push executed: no
-- Verdict: `CML_350_CROSS_TAB_BUTTON_UNIFORMITY_MICROFIX_COMMITTED_LOCAL_NOT_PUSHED`
+- Push executed: yes
+- PR: #8 (merged)
+- Merge commit on `main`: `5376298`
+- GitHub Pages run: `28701067028` — success
+- Public URL: https://antoniocorsano-boop.github.io/curmanlight/
+- HTTP check: 200
+- Public smoke: PASS
+- Verdict: `CML_350_MERGED_AND_PUBLISHED`
 
 ## CML-349 — PM-07 Residual Uniformity Selection Audit
 

@@ -41,7 +41,14 @@ Solo CSS. Nessuna modifica HTML, JS, logica, dati, export/import.
 `8274623` su branch `codex/cml-350-cross-tab-button-uniformity-microfix`
 
 ## Verdict
-`CML_350_CROSS_TAB_BUTTON_UNIFORMITY_MICROFIX_COMMITTED_LOCAL_NOT_PUSHED`
+`CML_350_MERGED_AND_PUBLISHED`
 
-## Prossimo passo
-Push del branch e merge su `main` previo review.
+## Stato post-merge e pubblicazione
+- PR: #8
+- Merge su `main`: eseguito
+- Commit `main` post-merge: `5376298`
+- Workflow GitHub Pages: `28701067028` — success
+- URL pubblico: https://antoniocorsano-boop.github.io/curmanlight/
+- Verifica HTTP: 200
+- Smoke pubblico: PASS
+- Stato finale: `CML_350_MERGED_AND_PUBLISHED`
