@@ -4,7 +4,7 @@
 
 - Type: runtime microfix
 - Macro-program: Product Maturity / PM-06 Accompagnamento
-- Status: READY_LOCAL_NOT_PUSHED
+- Status: PUSHED_AND_PUBLISHED
 - Objective: chiudere la coerenza del quick selector nella Mappa disciplinare per Tecnologia.
 - Scope:
   - verifica marker e sincronizzazione pulsante Tecnologia;
@@ -13,9 +13,10 @@
 - Runtime changes:
   - `index.html`
   - `_published_snapshot/netlify-current/index.html`
-- Push: no.
-- Deploy: no.
-- Commit: eseguito localmente in questa slice controllata.
+- Push: yes (branch `main`, commit `bc7524d2518a623dda8031a029210b83380ae184`).
+- Deploy Pages: yes, completato dopo rerun.
+- Deploy manuale: no.
+- GitHub Actions run riuscito: `28695766095`.
 - Files created:
   - `docs/03_execution/CML-344.md`
   - `report/CML-344_mappa_disciplinare_quick_selector_coherence_fix.md`
@@ -26,7 +27,11 @@
 - Key fix:
   - `data-mappa="tecnologia"` presente in root+snapshot;
   - `syncMappaDisciplinaButtons()` presente e richiamata in root+snapshot.
-- Verdict: `CML_344_MAPPA_DISCIPLINARE_QUICK_SELECTOR_COHERENCE_FIX_READY_LOCAL_NOT_PUSHED`
+- Chiusura operativa:
+  - primo deploy post-push fallito/stuck lato GitHub Pages (non regressione runtime);
+  - run bloccato cancellato e nuovo `workflow_dispatch` eseguito;
+  - pubblicazione finale allineata al commit `bc7524d`.
+- Verdict: `CML_344_MAPPA_DISCIPLINARE_QUICK_SELECTOR_COHERENCE_FIX_PUSHED_AND_PUBLISHED`
 
 ## CML-343 — Home Onboarding Cue Runtime Microfix
 
