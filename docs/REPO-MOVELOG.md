@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## CML-379 — Runtime Access Refactor Documentation Closure
+
+- Type: docs-only
+- Macro-program: (autonomo — chiusura documentazione)
+- Status: READY
+- Branch: `main`
+- HEAD: `3fa7a1b` (CML-378)
+- Chiusura documentazione catena CML-371→CML-379
+- Runtime access refactor: completato e certificato su main
+- Files created:
+  - `docs/03_execution/CML-379.md`
+  - `report/CML-379_runtime_access_refactor_docs_closure.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-378 — Runtime Access Refactor Post-Merge Smoke and Publication Audit
 
 - Type: docs-only
