@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## CML-387 — Guida rapida task-oriented
+
+- Type: runtime micro-intervento
+- Macro-program: PM-06 Accompagnamento
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `e660258` (CML-386)
+- Guida rapida riorganizzata: da struttura descrittiva (per sezioni) a struttura operativa (per compiti numerati)
+- PM-06: 60% → 65%
+- Files modified:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-387.md`
+  - `report/CML-387_task_oriented_quick_guide.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo HTML Guida, zero logica JS)
+- Dati curricolari modificati: NO
+
 ## CML-386 — PM-03 Percorsi coerenti
 
 - Type: runtime micro-intervento

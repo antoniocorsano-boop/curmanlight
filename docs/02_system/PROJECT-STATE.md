@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-386 - PM-03 Percorsi coerenti
-- Last slice: CML-386 — PM-03 Percorsi coerenti
-- Last commit: 6ea0b84 (CML-385 runtime: Navigazione mobile)
-- Active PM: PM-03 (45%), PM-06 (60%), PM-07 (20%)
+- Last milestone: CML-387 - Guida rapida task-oriented
+- Last slice: CML-387 — Guida rapida task-oriented (PM-06)
+- Last commit: e660258 (CML-386 runtime: Percorsi coerenti)
+- Active PM: PM-03 (45%), PM-06 (65%), PM-07 (20%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: CML-387 (PM-06 Guida rapida task-oriented)
-- Last verdict: `CML_386_COHERENT_ORIENTATION_PATHS_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), percorsi coerenti uniformati
+- Next slice: CML-388 (PM-06 Onboarding refresh)
+- Last verdict: `CML_387_TASK_ORIENTED_QUICK_GUIDE_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), Guida rapida riorganizzata per compiti
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
