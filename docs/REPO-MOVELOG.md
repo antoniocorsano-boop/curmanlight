@@ -1,5 +1,33 @@
 # Repo Movelog
 
+## CML-343 — Home Onboarding Cue Runtime Microfix
+
+- Type: runtime microfix
+- Macro-program: Product Maturity / Onboarding UX
+- Status: READY_LOCAL_NOT_PUSHED
+- Objective: implement the recommended Home onboarding callout for first-use curricular orientation.
+- Scope:
+  - add one Home callout;
+  - reuse existing UI/runtime patterns where possible;
+  - keep the change minimal and reversible;
+  - update root runtime and published snapshot consistently.
+- Runtime changes:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Push: no.
+- Deploy: no.
+- Commit: no, unless explicitly authorized after review.
+- Files created:
+  - `docs/03_execution/CML-343.md`
+  - `report/CML-343_home_onboarding_cue_runtime_microfix.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- Strategic decision inherited from CML-342F: `RECOMMENDED_ACTION_CALLOUT`
+- Next slice: CML-344 — Home Onboarding Cue Runtime Smoke
+- Verdict: `CML_343_HOME_ONBOARDING_CUE_RUNTIME_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## CML-342F — Home Onboarding Cue Design Post-Push Documentation Fix
 
 - Type: docs-only / correction-only
