@@ -1,5 +1,35 @@
 # Repo Movelog
 
+## CML-350 — PM-07 Cross-Tab Button Uniformity Microfix
+
+- Type: runtime microfix
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: COMMITTED_LOCAL_NOT_PUSHED
+- Commit: `8274623`
+- Objective: allineare il border-radius dei pulsanti cross-tab a 8px (da CML-349, candidato C2).
+- Branch: `codex/cml-350-cross-tab-button-uniformity-microfix`
+- Baseline commit: `b41d9b7` (merge CML-349 su `main`)
+- Runtime changes:
+  - `_published_snapshot/netlify-current/index.html`
+  - `index.html`
+- Files created:
+  - `docs/03_execution/CML-350.md`
+  - `report/CML-350_cross_tab_button_uniformity_microfix.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Changes: 4 CSS `border-radius` values aligned to 8px (`.filter-btn`, `.export-btn`, `.act`, `.add-btn`). No HTML/JS/logic changes.
+- Controls:
+  - `git diff --check`: PASS
+  - validator curriculum: PASS
+  - shape test runtime: PASS (14/14)
+- Out of scope confirmed:
+  - no `.cml` schema changes
+  - no import/export model changes
+  - no storage model changes
+  - no service worker/workflow/deploy changes
+- Push executed: no
+- Verdict: `CML_350_CROSS_TAB_BUTTON_UNIFORMITY_MICROFIX_COMMITTED_LOCAL_NOT_PUSHED`
+
 ## CML-349 — PM-07 Residual Uniformity Selection Audit
 
 - Type: docs-only (selection audit)
