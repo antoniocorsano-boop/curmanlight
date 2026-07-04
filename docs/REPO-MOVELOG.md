@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## CML-354 — Controlled Push and PR for CML-351/352/353 Chain
+
+- Type: OPS/tooling (push + PR)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: PUSHED_AND_PR_OPEN
+- Branch: `codex/cml-352-residual-button-border-radius-uniformity-microfix`
+- HEAD: `c627415` (CML-353)
+- Objective: push controllato del branch su origin e apertura PR verso main per la catena CML-351/CML-352/CML-353.
+- Preflight checks: `git diff --check` PASS, `validate-cml-normalized-curriculum.mjs` PASS, `test-runtime-mappa-dati-shape.mjs` PASS
+- Commit locali pushed:
+  - `0473ad9` — docs: audit UI consistency after CML-350 (CML-351)
+  - `2f30ee9` — runtime: normalize residual button border radius (CML-352)
+  - `c627415` — docs: audit CML-352 runtime before push (CML-353)
+- Files created:
+  - `docs/03_execution/CML-354.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime changes: nessuno (solo push + PR)
+- PR: #9
+- Verdict: `CML_354_PUSHED_AND_PR_OPEN`
+
 ## CML-353 — Post-CML-352 Local Runtime Smoke and Push Readiness Audit
 
 - Type: docs-only (smoke + push readiness audit)
