@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-369 — External Provider Readiness and Discipline Data Access Audit
+
+- Type: docs-only audit
+- Macro-program: (autonomo)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-369-external-provider-readiness-audit`
+- Base: `main` @ `f9f836d`
+- Files created:
+  - `docs/03_execution/CML-369.md`
+  - `report/CML-369_external_provider_readiness_and_discipline_data_access_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- P1 trovato: duplicazione Tecnologia (`TECNOLOGIA_NORM_DATA` + `ALL_CURRICULUM_DATA.tecnologia`)
+- P2 trovato: hook Drive presente ma senza UI di configurazione
+- Raccomandazione: CML-370 (Discipline Data Access Contract and Centralization Plan)
+- Verdict: `CML_369_EXTERNAL_PROVIDER_READINESS_AND_DISCIPLINE_DATA_ACCESS_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## CML-368 — PR, Merge and Pages Publish for CML-367 Teacher Review
 
 - Type: OPS/tooling (merge + deploy)
