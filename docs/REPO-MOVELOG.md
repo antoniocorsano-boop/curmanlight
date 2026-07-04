@@ -1,5 +1,25 @@
 # Repo Movelog
 
+## CML-382 — Stable Checkpoint Publication Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — stable checkpoint post-refactor)
+- Status: READY
+- Branch: `main`
+- HEAD: `ee94214` (CML-381)
+- Stable checkpoint certificato dopo catena CML-371→CML-381
+- Validazioni: validate ✅ 14/14, shape ✅ 14/14, diff --check ✅
+- Zero residui hardcoded confermati
+- Files created:
+  - `docs/03_execution/CML-382.md`
+  - `report/CML-382_stable_checkpoint_publication_audit.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-381 — Product Maturity Post-Refactor Audit
 
 - Type: docs-only

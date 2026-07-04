@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-382 (stable checkpoint publication audit)
+- TBD (prossima tranche funzionale basata su programmi PM incompleti)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -111,9 +111,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-379 (docs-only — runtime access refactor documentation closure)
 - Ultima slice completata: CML-380 (docs-only — post-refactor runtime stability audit)
 - Ultima slice completata: CML-381 (docs-only — product maturity post-refactor audit)
+- Ultima slice completata: CML-382 (docs-only — stable checkpoint publication audit)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-382 (stable checkpoint publication audit)
-- Ultimo aggiornamento: 2026-07-04 (CML-381)
+- Prossima slice operativa prevista: TBD (prossima tranche funzionale basata su programmi PM incompleti)
+- Ultimo aggiornamento: 2026-07-04 (CML-382)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-381 - Product Maturity Post-Refactor Audit
-- Last slice: CML-381 — Product Maturity Post-Refactor Audit
-- Last commit: f4af23a (CML-380 docs-only: post-refactor runtime stability audit)
+- Last milestone: CML-382 - Stable Checkpoint Publication Audit
+- Last slice: CML-382 — Stable Checkpoint Publication Audit
+- Last commit: ee94214 (CML-381 docs-only: product maturity post-refactor audit)
 - Active PM: PM-06 (in corso, 60%)
 - Critical Path: PM-06
-- Next slice: CML-382 (stable checkpoint publication audit)
-- Last verdict: `CML_381_PRODUCT_MATURITY_POST_REFACTOR_AUDIT_READY`
-- Repository status: main...origin/main (allineato), docs-only CML-381 pronta al commit locale controllato
+- Next slice: TBD (prossima tranche funzionale basata su programmi PM incompleti)
+- Last verdict: `CML_382_STABLE_CHECKPOINT_PUBLICATION_AUDIT_READY`
+- Repository status: main...origin/main (allineato), stable checkpoint certificato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
