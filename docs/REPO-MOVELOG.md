@@ -1,5 +1,28 @@
 # Repo Movelog
 
+## CML-373 — Remove TECNOLOGIA_NORM Dead Code and Legacy Data Cleanup
+
+- Type: runtime microfix controllato
+- Macro-program: (autonomo — Fase 3 del piano CML-370)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-373-tecnologia-norm-removal`
+- Base: `cddccec` (CML-371 commit)
+- Eliminatione di TECNOLOGIA_NORM e TECNOLOGIA_NORM_DATA da index.html (L6200-L6204)
+- Stessa eliminazione su _published_snapshot/netlify-current/index.html (L6201-L6205)
+- Tecnologia funziona tramite ALL_CURRICULUM_DATA.tecnologia + getUnitsForDiscipline()
+- Riduzione runtime: ~3.5 KB di dati duplicati eliminati
+- Nessuna funzione runtime modificata (solo dichiarazioni eliminate)
+- Files created:
+  - `docs/03_execution/CML-373.md`
+  - `report/CML-373_tecnologia_norm_removal.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo rimozione dichiarazioni, zero logica)
+- Dati curricolari modificati: NO
+- Validazione: da eseguire
+
 ## CML-372 — getUnitsForDiscipline and Tecnologia Guard Removal
 
 - Type: runtime microrefactor controllato
