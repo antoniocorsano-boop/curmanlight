@@ -1,5 +1,26 @@
 # Repo Movelog
 
+## CML-364 — Pannelli Speciali Border-Radius 12px→9px Microfix
+
+- Type: runtime microfix (solo CSS)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-364-pannelli-speciali-12px-microfix`
+- Objective: uniformare a 9px (standard container) i sette selettori P3 con border-radius:12px.
+- Runtime changes:
+  - `index.html` (7 occorrenze)
+  - `_published_snapshot/netlify-current/index.html` (7 occorrenze)
+- Totale modifiche: 14 (solo border-radius: 12px→9px)
+- Selettori: `.quick-info-bar`, `.orientation-card`, `.cruscotto`, `.curricolo-completeness`, `.curricolo-readiness`, `.tecnologia-norm`, `.home-microguide`
+- Esclusioni: `.evidence-btn`, `.didattica-programmazione-pill`, `.home-inline-banner`, `.home-recommended-callout`, `.curricolo-dept-validation`
+- Files created:
+  - `docs/03_execution/CML-364.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Controls: diff --check PASS, validate PASS, mappa-dati PASS, parità runtime PASS
+- Next: push, PR, merge, deploy
+- Verdict: `CML_364_PANNELLI_SPECIALI_12PX_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## CML-363 — PR #11 Review, Merge and Pages Publish
 
 - Type: OPS/tooling (merge + deploy)
