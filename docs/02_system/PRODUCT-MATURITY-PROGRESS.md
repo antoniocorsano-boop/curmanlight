@@ -20,7 +20,7 @@ PM-05 Esperienza di lavoro
 ███████████ 100%
 
 PM-06 Accompagnamento
-██████▌░░░ 65%
+███████░░░ 70%
 
 PM-07 Uniformita
 ██░░░░░░░░ 20%
@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-388 (PM-06 Onboarding refresh)
+- CML-389 (PM-07 Sidebar legenda unica)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -117,9 +117,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-385 (runtime micro-intervento — PM-03 Navigazione mobile)
 - Ultima slice completata: CML-386 (runtime micro-intervento — PM-03 Percorsi coerenti)
 - Ultima slice completata: CML-387 (runtime micro-intervento — PM-06 Guida rapida task-oriented)
+- Ultima slice completata: CML-388 (runtime micro-intervento — PM-06 Onboarding refresh)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-388 (PM-06 Onboarding refresh)
-- Ultimo aggiornamento: 2026-07-04 (CML-387)
+- Prossima slice operativa prevista: CML-389 (PM-07 Sidebar legenda unica)
+- Ultimo aggiornamento: 2026-07-04 (CML-388)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

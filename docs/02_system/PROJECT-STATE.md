@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-387 - Guida rapida task-oriented
-- Last slice: CML-387 — Guida rapida task-oriented (PM-06)
-- Last commit: e660258 (CML-386 runtime: Percorsi coerenti)
-- Active PM: PM-03 (45%), PM-06 (65%), PM-07 (20%)
+- Last milestone: CML-388 - Onboarding refresh
+- Last slice: CML-388 — Onboarding refresh (PM-06)
+- Last commit: 844c87e (CML-387 runtime: Guida rapida task-oriented)
+- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (20%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: CML-388 (PM-06 Onboarding refresh)
-- Last verdict: `CML_387_TASK_ORIENTED_QUICK_GUIDE_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), Guida rapida riorganizzata per compiti
+- Next slice: CML-389 (PM-07 Sidebar legenda unica)
+- Last verdict: `CML_388_ONBOARDING_REFRESH_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), onboarding allineato ai percorsi operativi
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

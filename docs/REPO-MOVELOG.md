@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## CML-388 — Onboarding refresh
+
+- Type: runtime micro-intervento
+- Macro-program: PM-06 Accompagnamento
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `844c87e` (CML-387)
+- Onboarding allineato ai percorsi operativi: da 3 passi astratti a 5 passi numerati (consulta, scegli, prepara, esporta, verifica), rimozione note ridondanti, bottoni rinominati
+- PM-06: 65% → 70%
+- Files modified:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-388.md`
+  - `report/CML-388_onboarding_refresh.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo HTML onboarding, zero logica JS)
+- Dati curricolari modificati: NO
+
 ## CML-387 — Guida rapida task-oriented
 
 - Type: runtime micro-intervento

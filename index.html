@@ -5669,22 +5669,21 @@ function showWelcome(force=false){
   overlay.innerHTML=`
     <div style="background:#fff;border-radius:16px;max-width:480px;width:100%;padding:26px 24px;box-shadow:0 10px 40px rgba(0,0,0,.3);max-height:85vh;overflow-y:auto">
       <div style="font-size:32px;margin-bottom:6px">👋</div>
-      <h2 id="welcome-title" style="font-size:18px;color:#1a237e;margin-bottom:10px">Benvenuto/a in questo strumento!</h2>
+      <h2 id="welcome-title" style="font-size:18px;color:#1a237e;margin-bottom:10px">Benvenuto/a!</h2>
       <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:12px">
-        Ti aiuta a partire dal bisogno professionale: consultare, verificare applicabilità, seguire la revisione, progettare attività didattiche ed esportare documenti di lavoro.
+        CurManLight ti guida nel percorso operativo: consulta, prepara, esporta.
       </p>
-      <div style="background:#f5f5f5;border-radius:10px;padding:12px 14px;margin-bottom:12px">
-        <div style="font-size:12px;font-weight:700;color:#333;margin-bottom:8px">Come funziona, in 3 passi:</div>
-        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">1⃣</span><span style="font-size:12px;color:#555">In Home scegli il <strong>bisogno professionale</strong> da cui partire</span></div>
-        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">2⃣</span><span style="font-size:12px;color:#555">Quando serve, usa le <strong>discipline come filtro</strong> per approfondire una sezione</span></div>
-        <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:16px">3⃣</span><span style="font-size:12px;color:#555">Concludi in <strong>Esportazioni</strong> con i documenti necessari al passaggio successivo</span></div>
+      <div style="background:#f5f5f5;border-radius:10px;padding:12px 14px;margin-bottom:16px">
+        <div style="font-size:12px;font-weight:700;color:#333;margin-bottom:8px">Percorso di lavoro:</div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">1⃣</span><span style="font-size:12px;color:#555"><strong>Consulta</strong> il curricolo nella sezione Curricolo</span></div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">2⃣</span><span style="font-size:12px;color:#555"><strong>Scegli</strong> la disciplina dalla sidebar</span></div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">3⃣</span><span style="font-size:12px;color:#555"><strong>Prepara</strong> la proposta in Compila</span></div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">4⃣</span><span style="font-size:12px;color:#555"><strong>Esporta</strong> i documenti in Esportazioni</span></div>
+        <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:16px">5⃣</span><span style="font-size:12px;color:#555"><strong>Verifica</strong> con validazione umana</span></div>
       </div>
-      <p style="font-size:11px;color:#1b5e20;background:#e8f5e9;border-radius:8px;padding:8px 10px;margin-bottom:8px"><strong>Salvataggio locale:</strong> le decisioni, le modifiche e le impostazioni personali vengono salvate automaticamente su questo dispositivo. Per lavorare su un altro telefono o computer, usa il pulsante Copia di sicurezza.</p>
-      <p style="font-size:11px;color:#6d4c41;background:#fff8e1;border-radius:8px;padding:8px 10px;margin-bottom:10px"><strong>Nota sull’esportazione:</strong> Copia per Word, Markdown e PDF sono i percorsi più sicuri. Il Word impaginato richiede una libreria online e funziona meglio da computer.</p>
-      <p style="font-size:11px;color:#1a237e;background:#e8eaf6;border-radius:8px;padding:8px 10px;margin-bottom:16px"><strong>Corso operativo:</strong> il link al materiale di presentazione è disponibile in alto come PDF, accanto alle impostazioni.</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button onclick="openSettingsFromWelcome()" style="flex:1;min-width:180px;padding:11px;background:#00695c;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Configura dati</button>
-        <button onclick="dismissWelcomeOverlay()" style="flex:1;min-width:180px;padding:11px;background:#1a237e;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Inizia subito</button>
+        <button onclick="openSettingsFromWelcome()" style="flex:1;min-width:180px;padding:11px;background:#00695c;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Imposta profilo</button>
+        <button onclick="dismissWelcomeOverlay()" style="flex:1;min-width:180px;padding:11px;background:#1a237e;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Inizia</button>
       </div>
     </div>`;
   overlay.addEventListener("keydown",trapWelcomeOverlayFocus);
