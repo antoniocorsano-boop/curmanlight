@@ -1,5 +1,25 @@
 # Repo Movelog
 
+## CML-357 — Cluster C Border-Radius 5px→8px Microfix
+
+- Type: runtime microfix (solo CSS)
+- Macro-program: Product Maturity / PM-07 Uniformita
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-357-cluster-c-5px-microfix`
+- Objective: uniformare a 8px i tre selettori Cluster C con border-radius:5px (norm-badge, disc-md-preview, pending-action).
+- Runtime changes:
+  - `index.html` (3 occorrenze)
+  - `_published_snapshot/netlify-current/index.html` (3 occorrenze)
+- Totale modifiche: 6 (solo border-radius: 5px→8px)
+- Files created:
+  - `docs/03_execution/CML-357.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Esclusioni: panel-text.ed, esport-role-guide-item, inline JS banner (non in audit)
+- Controls: diff --check PASS, validate PASS, mappa-dati PASS, parità runtime PASS
+- Next: push e PR (su decisione)
+- Verdict: `CML_357_CLUSTER_C_5PX_MICROFIX_READY_LOCAL_NOT_PUSHED`
+
 ## CML-356 — Post-Publish Repository Hygiene and Next PM-07 Selection
 
 - Type: docs-only (hygiene + selection)
