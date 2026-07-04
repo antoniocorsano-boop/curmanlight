@@ -1,5 +1,184 @@
 # Repo Movelog
 
+## CML-376 — Runtime Access Refactor Chain Pushed Closure
+
+- Type: docs-only
+- Macro-program: (autonomo — chiusura post-push catena CML-371→CML-375)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-372-get-units-for-discipline`
+- Base: `0b548db` (CML-375 commit)
+- Push eseguito su origin, tracking attivo
+- Catena 5 commit pushati
+- Files created:
+  - `docs/03_execution/CML-376.md`
+  - `report/CML-376_runtime_access_refactor_chain_pushed_closure.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
+## CML-375 — Runtime Access Refactor Chain Pre-Push Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — pre-push audit catena CML-371→CML-374)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-372-get-units-for-discipline`
+- Base: `fa8d084` (CML-374 commit)
+- Working tree pulito, catena 4 commit lineare
+- Zero residui hardcoded confermati (4 pattern grep)
+- Validazioni: 14/14 curriculum + 14/14 shape runtime
+- Catena pronta per push controllato
+- Files created:
+  - `docs/03_execution/CML-375.md`
+  - `report/CML-375_runtime_access_refactor_chain_pre_push_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
+## CML-374 — Curriculum Runtime Access Residual Hardcode Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — audit di consolidamento post CML-371→372→373)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-372-get-units-for-discipline`
+- Base: `43a932d` (CML-373 commit)
+- Audit certifica zero residui hardcoded disciplinari nei runtime files:
+  - TECNOLOGIA_NORM / TECNOLOGIA_NORM_DATA: 0 hits
+  - Pattern *_NORM: 0 hits
+  - ALL_CURRICULUM_DATA.<disciplina> dot access: 0 hits
+  - discKey === 'tecnologia' branch: 0 hits
+- Node validation: 14/14 PASS
+- Runtime shape test: 14/14 PASS
+- Accesso unità di apprendimento completamente generalizzato via getUnitsForDiscipline(discKey)
+- Nessuna modifica runtime — solo docs
+- Files created:
+  - `docs/03_execution/CML-374.md`
+  - `report/CML-374_curriculum_runtime_access_residual_hardcode_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
+## CML-373 — Remove TECNOLOGIA_NORM Dead Code and Legacy Data Cleanup
+
+- Type: runtime microfix controllato
+- Macro-program: (autonomo — Fase 3 del piano CML-370)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-373-tecnologia-norm-removal`
+- Base: `cddccec` (CML-371 commit)
+- Eliminatione di TECNOLOGIA_NORM e TECNOLOGIA_NORM_DATA da index.html (L6200-L6204)
+- Stessa eliminazione su _published_snapshot/netlify-current/index.html (L6201-L6205)
+- Tecnologia funziona tramite ALL_CURRICULUM_DATA.tecnologia + getUnitsForDiscipline()
+- Riduzione runtime: ~3.5 KB di dati duplicati eliminati
+- Nessuna funzione runtime modificata (solo dichiarazioni eliminate)
+- Files created:
+  - `docs/03_execution/CML-373.md`
+  - `report/CML-373_tecnologia_norm_removal.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo rimozione dichiarazioni, zero logica)
+- Dati curricolari modificati: NO
+- Validazione: da eseguire
+
+## CML-372 — getUnitsForDiscipline and Tecnologia Guard Removal
+
+- Type: runtime microrefactor controllato
+- Macro-program: (autonomo — Fase 2 del piano CML-370)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-372-get-units-for-discipline`
+- Base: `cddccec` (CML-371 commit)
+- getUnitsForDiscipline: introdotta (discKey → array unità apprendimento da ALL_CURRICULUM_DATA)
+- Funzioni convertite:
+  - getDisciplineEvidenceData: branch Tecnologia rimosso → chiamata getUnitsForDiscipline
+  - getAnnualDraftUnitsFor: branch Tecnologia rimosso → chiamata getUnitsForDiscipline
+  - getUdaDisciplineUnits: branch Tecnologia rimosso → chiamata getUnitsForDiscipline
+  - renderTecnologiaNorm: branch Tecnologia rimosso → chiamata getUnitsForDiscipline
+- TECNOLOGIA_NORM_DATA: ancora dichiarata ma non più referenziata (dead code)
+- Guardie discKey === 'tecnologia' rimosse: 4 (zero residue)
+- Files created:
+  - `docs/03_execution/CML-372.md`
+  - `report/CML-372_get_units_for_discipline_runtime_microrefactor.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo getUnitsForDiscipline + 4 conversioni)
+- Dati curricolari modificati: NO
+- Variabili individuali *MAPPA_DATI: non toccate
+- Export/import/schema .cml modificati: NO
+- Hook Drive modificati: NO
+- Push: NON eseguito
+- PR: NON aperta
+- Deploy: NON eseguito
+- Verdict: `CML_372_GET_UNITS_FOR_DISCIPLINE_RUNTIME_MICROREFACTOR_READY_LOCAL_NOT_PUSHED`
+
+## CML-371 — MAPPA_DATI_INDEX and getMappaForDiscipline Runtime Microrefactor
+
+- Type: runtime microrefactor controllato
+- Macro-program: (autonomo — Fase 1 del piano CML-370)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-371-mappa-dati-index-runtime`
+- Base: `0ebfc25` (CML-370 docs contract)
+- MAPPA_DATI_INDEX: introdotto (14 discipline, riferimenti a variabili esistenti)
+- getMappaForDiscipline: introdotta (discKey → mappa dati o null)
+- renderMappaDisciplinare: convertita (if/else 14 rami → chiamata unica)
+- Variabili individuali *MAPPA_DATI: mantenute (non eliminate)
+- TECNOLOGIA_NORM_DATA: non toccata
+- Files created:
+  - `docs/03_execution/CML-371.md`
+  - `report/CML-371_mappa_dati_index_runtime_microrefactor.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo MAPPA_DATI_INDEX + getMappaForDiscipline + render)
+- Dati curricolari modificati: NO
+- Export/import/schema .cml modificati: NO
+- Hook Drive modificati: NO
+- Push: NON eseguito
+- PR: NON aperta
+- Deploy: NON eseguito
+- Verdict: `CML_371_MAPPA_DATI_INDEX_RUNTIME_MICROREFACTOR_READY_LOCAL_NOT_PUSHED`
+
+## CML-370 — Discipline Data Access Contract and Centralization Plan
+
+- Type: docs-only contract
+- Macro-program: (autonomo)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-370-discipline-data-access-contract`
+- Base: `main` @ `f9f836d` (via CML-369)
+- Contratto definito: `DisciplineDataAccess` — 7 funzioni (getUnitsForDiscipline, getMappaForDiscipline, getCurriculumDataForDiscipline, discKeyToName, isValidDiscKey, listAllDiscKeys, listAllDiscNames)
+- Eliminazione pianificata: `TECNOLOGIA_NORM_DATA`, variabili individuali `*_MAPPA_DATI`, 4 branch `discKey === 'tecnologia'`
+- Migrazione: 3 fasi (CML-371 → CML-372 → CML-373)
+- Files created:
+  - `docs/03_execution/CML-370.md`
+  - `report/CML-370_discipline_data_access_contract_spec.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Verdict: `CML_370_DISCIPLINE_DATA_ACCESS_CONTRACT_AND_CENTRALIZATION_PLAN_READY_LOCAL_NOT_PUSHED`
+
+## CML-369 — External Provider Readiness and Discipline Data Access Audit
+
+- Type: docs-only audit
+- Macro-program: (autonomo)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-369-external-provider-readiness-audit`
+- Base: `main` @ `f9f836d`
+- Files created:
+  - `docs/03_execution/CML-369.md`
+  - `report/CML-369_external_provider_readiness_and_discipline_data_access_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- P1 trovato: duplicazione Tecnologia (`TECNOLOGIA_NORM_DATA` + `ALL_CURRICULUM_DATA.tecnologia`)
+- P2 trovato: hook Drive presente ma senza UI di configurazione
+- Raccomandazione: CML-370 (Discipline Data Access Contract and Centralization Plan)
+- Verdict: `CML_369_EXTERNAL_PROVIDER_READINESS_AND_DISCIPLINE_DATA_ACCESS_AUDIT_READY_LOCAL_NOT_PUSHED`
+
 ## CML-368 — PR, Merge and Pages Publish for CML-367 Teacher Review
 
 - Type: OPS/tooling (merge + deploy)
