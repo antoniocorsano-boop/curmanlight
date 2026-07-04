@@ -1,5 +1,37 @@
 # Repo Movelog
 
+## CML-372 — getUnitsForDiscipline and Tecnologia Guard Removal
+
+- Type: runtime microrefactor controllato
+- Macro-program: (autonomo — Fase 2 del piano CML-370)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-372-get-units-for-discipline`
+- Base: `cddccec` (CML-371 commit)
+- getUnitsForDiscipline: introdotta (discKey → array unità apprendimento da ALL_CURRICULUM_DATA)
+- Funzioni convertite:
+  - getDisciplineEvidenceData: branch Tecnologia rimosso → chiamata getUnitsForDiscipline
+  - getAnnualDraftUnitsFor: branch Tecnologia rimosso → chiamata getUnitsForDiscipline
+  - getUdaDisciplineUnits: branch Tecnologia rimosso → chiamata getUnitsForDiscipline
+  - renderTecnologiaNorm: branch Tecnologia rimosso → chiamata getUnitsForDiscipline
+- TECNOLOGIA_NORM_DATA: ancora dichiarata ma non più referenziata (dead code)
+- Guardie discKey === 'tecnologia' rimosse: 4 (zero residue)
+- Files created:
+  - `docs/03_execution/CML-372.md`
+  - `report/CML-372_get_units_for_discipline_runtime_microrefactor.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo getUnitsForDiscipline + 4 conversioni)
+- Dati curricolari modificati: NO
+- Variabili individuali *MAPPA_DATI: non toccate
+- Export/import/schema .cml modificati: NO
+- Hook Drive modificati: NO
+- Push: NON eseguito
+- PR: NON aperta
+- Deploy: NON eseguito
+- Verdict: `CML_372_GET_UNITS_FOR_DISCIPLINE_RUNTIME_MICROREFACTOR_READY_LOCAL_NOT_PUSHED`
+
 ## CML-371 — MAPPA_DATI_INDEX and getMappaForDiscipline Runtime Microrefactor
 
 - Type: runtime microrefactor controllato

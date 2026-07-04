@@ -2867,6 +2867,10 @@ function getMappaForDiscipline(discKey) {
   return (discKey && MAPPA_DATI_INDEX[discKey]) || null;
 }
 
+function getUnitsForDiscipline(discKey) {
+  return (discKey && typeof ALL_CURRICULUM_DATA !== 'undefined' && ALL_CURRICULUM_DATA[discKey] && ALL_CURRICULUM_DATA[discKey].unitaApprendimento) || [];
+}
+
 var mappaDisciplinaCorrente = 'tecnologia';
 function setMappaDisciplina(d, btn) {
   mappaDisciplinaCorrente = d;
@@ -2967,13 +2971,7 @@ function resetEvidenceStates() {
 
 function getDisciplineEvidenceData() {
   var discKey = discKeyFromName(selDisc) || mappaDisciplinaCorrente || discKeyFromName(DISCIPLINE[0]);
-  if (discKey === 'tecnologia' && typeof TECNOLOGIA_NORM_DATA !== 'undefined') {
-    return TECNOLOGIA_NORM_DATA.unitaApprendimento || [];
-  }
-  if (typeof ALL_CURRICULUM_DATA !== 'undefined' && ALL_CURRICULUM_DATA[discKey]) {
-    return ALL_CURRICULUM_DATA[discKey].unitaApprendimento || [];
-  }
-  return [];
+  return getUnitsForDiscipline(discKey);
 }
 
 function renderDidattica(){
@@ -3090,7 +3088,7 @@ var ANNUAL_PLANNING_DRAFT_KEY="cml_annual_planning_draft_v1";
 var ANNUAL_PLANNING_DRAFT_MARKDOWN="";
 function getAnnualPlanningSavedDraft(){try{return JSON.parse(localStorage.getItem(ANNUAL_PLANNING_DRAFT_KEY)||"null");}catch(err){return null;}}
 function getAnnualPlanningSavedCount(){return getAnnualPlanningSavedDraft()?1:0;}
-function getAnnualDraftUnitsFor(discipline){var discKey=discKeyFromName(discipline)||discKeyFromName(selDisc)||mappaDisciplinaCorrente;if(discKey==="tecnologia"&&typeof TECNOLOGIA_NORM_DATA!=="undefined")return TECNOLOGIA_NORM_DATA.unitaApprendimento||[];if(typeof ALL_CURRICULUM_DATA!=="undefined"&&ALL_CURRICULUM_DATA[discKey])return ALL_CURRICULUM_DATA[discKey].unitaApprendimento||[];return [];}
+function getAnnualDraftUnitsFor(discipline){var discKey=discKeyFromName(discipline)||discKeyFromName(selDisc)||mappaDisciplinaCorrente;return getUnitsForDiscipline(discKey);}
 function annualDraftClassLabel(u){return u.fascia?"Fascia "+u.fascia:(u.classe?"Classe "+u.classe:"Classe/fascia non indicata");}
 function annualDraftUnitTitle(u){return (u.ambito||u.nucleoFondante||u.nucleo||"Unita curricolare")+" - "+(u.competenza||u.traguardo||"descrizione non disponibile");}
 function setAnnualDraftStatus(message,type){var el=document.getElementById("annual-draft-status");if(!el)return;el.textContent=message;el.className="annual-draft-status "+(type||"ok");}
@@ -3292,13 +3290,7 @@ function getUdaDisciplineUnits() {
   if (!discName) return [];
   var key = discKeyFromName(discName);
   if (!key) return [];
-  if (key === 'tecnologia' && typeof TECNOLOGIA_NORM_DATA !== 'undefined') {
-    return TECNOLOGIA_NORM_DATA.unitaApprendimento || [];
-  }
-  if (typeof ALL_CURRICULUM_DATA !== 'undefined' && ALL_CURRICULUM_DATA[key]) {
-    return ALL_CURRICULUM_DATA[key].unitaApprendimento || [];
-  }
-  return [];
+  return getUnitsForDiscipline(key);
 }
 function getStateLabel(state) {
   if (state === 'adottata') return '✅ Adottata';
@@ -6367,9 +6359,7 @@ function renderTecnologiaNorm() {
   const container = document.getElementById('tecnologia-norm-panel');
   if (!container) return;
   const discKey = discKeyFromName(selDisc);
-  const units = discKey === 'tecnologia'
-    ? ((typeof TECNOLOGIA_NORM_DATA !== 'undefined' && TECNOLOGIA_NORM_DATA.unitaApprendimento) || [])
-    : ((discKey && typeof ALL_CURRICULUM_DATA !== 'undefined' && ALL_CURRICULUM_DATA[discKey] && ALL_CURRICULUM_DATA[discKey].unitaApprendimento) || []);
+  const units = getUnitsForDiscipline(discKey);
   const total = units.length;
   const orders = {};
   units.forEach(u => { orders[u.ordine] = (orders[u.ordine] || 0) + 1; });
