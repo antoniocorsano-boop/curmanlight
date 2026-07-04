@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## CML-377 — Runtime Access Refactor Chain PR Review and Merge Closure
+
+- Type: docs-only
+- Macro-program: (autonomo — chiusura merge catena CML-371→CML-376)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `b1d09fb` (merge commit PR #14)
+- PR #14 merged: codex/cml-372-get-units-for-discipline → main
+- Merge commit: b1d09fb, merged by antoniocorsano-boop
+- Verifiche post-merge: validate ✅ 14/14, shape ✅ 14/14, diff --check ✅
+- Catena Runtime Access Refactor completata e integrata su main
+- Files created:
+  - `docs/03_execution/CML-377.md`
+  - `report/CML-377_runtime_access_refactor_chain_pr_merge_closure.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO (post-merge su main)
+- Dati curricolari modificati: NO
+
 ## CML-376 — Runtime Access Refactor Chain Pushed Closure
 
 - Type: docs-only
