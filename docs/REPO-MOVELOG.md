@@ -1,5 +1,29 @@
 # Repo Movelog
 
+## CML-374 — Curriculum Runtime Access Residual Hardcode Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — audit di consolidamento post CML-371→372→373)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-372-get-units-for-discipline`
+- Base: `43a932d` (CML-373 commit)
+- Audit certifica zero residui hardcoded disciplinari nei runtime files:
+  - TECNOLOGIA_NORM / TECNOLOGIA_NORM_DATA: 0 hits
+  - Pattern *_NORM: 0 hits
+  - ALL_CURRICULUM_DATA.<disciplina> dot access: 0 hits
+  - discKey === 'tecnologia' branch: 0 hits
+- Node validation: 14/14 PASS
+- Runtime shape test: 14/14 PASS
+- Accesso unità di apprendimento completamente generalizzato via getUnitsForDiscipline(discKey)
+- Nessuna modifica runtime — solo docs
+- Files created:
+  - `docs/03_execution/CML-374.md`
+  - `report/CML-374_curriculum_runtime_access_residual_hardcode_audit.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-373 — Remove TECNOLOGIA_NORM Dead Code and Legacy Data Cleanup
 
 - Type: runtime microfix controllato
