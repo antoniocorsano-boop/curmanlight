@@ -1,5 +1,31 @@
 # Repo Movelog
 
+## CML-342F — Home Onboarding Cue Design Post-Push Documentation Fix
+
+- Type: docs-only / correction-only
+- Macro-program: Product Maturity / Onboarding UX
+- Status: READY_LOCAL_NOT_PUSHED
+- Objective: consolidate post-push documentation corrections for CML-342 and align the next-slice references to CML-343.
+- Scope:
+  - CML-342 execution document cleanup;
+  - CML-342 report cleanup;
+  - terminology alignment with CurManLight;
+  - next-slice reference alignment;
+  - no runtime work.
+- Runtime changes: none.
+- Push: no.
+- Deploy: no.
+- Commit: no, unless explicitly authorized after review.
+- Files allowed:
+  - `docs/03_execution/CML-342.md`
+  - `report/CML-342_home_onboarding_cue_solution_design.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Strategic decision: unchanged, `RECOMMENDED_ACTION_CALLOUT`
+- Next slice: `CML-343 — Home Onboarding Cue Runtime Microfix`
+- Verdict: `CML_342F_HOME_ONBOARDING_CUE_DESIGN_POST_PUSH_DOC_FIX_READY_LOCAL_NOT_PUSHED`
+
 ## 2026-07-04 - CML-341 - PM-06 ONBOARDING UX PLANNING
 
 - **Nome slice**: `CML-341`
