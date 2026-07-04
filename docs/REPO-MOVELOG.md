@@ -1,5 +1,27 @@
 # Repo Movelog
 
+## CML-391 — Progetta terminology targeted microfix
+
+- Type: runtime micro-intervento
+- Macro-program: PM-07 Uniformità
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `5baa2b3` (CML-390)
+- Terminologia "Progetta" applicata: tab label, section headers, home card, percorso operativo, istruzioni di progettazione, esportazioni, guida, onboarding, JS label maps. Mantenuti "compila" in dati curricolari e form-filling.
+- PM-07: 30% → 35%
+- Files modified:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+- Files created:
+  - `docs/03_execution/CML-391.md`
+  - `report/CML-391_progetta_terminology_targeted_microfix.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SÌ (solo HTML/CSS/JS labels, zero logica)
+- Dati curricolari modificati: NO
+
 ## CML-390 — Microcopy uniform
 
 - Type: runtime micro-intervento

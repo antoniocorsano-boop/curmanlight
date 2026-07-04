@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-390 - Microcopy uniform
-- Last slice: CML-390 — Microcopy uniform (PM-07)
-- Last commit: 170b70e (CML-389 runtime: Sidebar legenda unica)
-- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (30%)
+- Last milestone: CML-391 - Progetta terminology targeted microfix
+- Last slice: CML-391 — Progetta terminology targeted microfix (PM-07)
+- Last commit: 5baa2b3 (CML-390 runtime: Microcopy uniform)
+- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (35%)
 - Critical Path: PM-03 → PM-06 → PM-07
-- Next slice: TBD (audit finale PM-07)
-- Last verdict: `CML_390_MICROCOPY_UNIFORMITY_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main (allineato), microcopy uniformato
+- Next slice: CML-392 (PM-07 Audit finale)
+- Last verdict: `CML_391_PROGETTA_TERMINOLOGY_TARGETED_MICROFIX_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), terminologia "Progetta" applicata
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

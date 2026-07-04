@@ -1548,7 +1548,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
 <div class="tabbar" id="tabbar">
   <button class="active" onclick="setTab('home')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-house"></use></svg> Home</span></button>
   <button onclick="setTab('curricolo')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curricolo</span></button>
-  <button onclick="setTab('didattica')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Compila</span></button>
+  <button onclick="setTab('didattica')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Progetta</span></button>
   <button onclick="setTab('esportazioni')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Esportazioni</span></button>
   <button onclick="setTab('guida')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida</span></button>
 </div>
@@ -1561,7 +1561,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <button class="subnav-btn" onclick="setTab('normativa')"><span aria-hidden="true">📜</span> Fonti</button>
   <button class="subnav-btn" onclick="setTab('generali')"><span aria-hidden="true">📚</span> Sezioni generali</button>
 </div>
-<!-- SUB-NAV: COMPILA -->
+<!-- SUB-NAV: PROGETTA -->
 <div class="subnav-bar subnav-didattica" id="subnav-didattica" style="display:none">
   <button class="subnav-btn active" onclick="setTab('didattica')"><span aria-hidden="true">📊</span> Valutazione / Evidenze</button>
   <button class="subnav-btn" onclick="setTab('didattica_programmazione')"><span aria-hidden="true">🗓</span> Programmazione annuale</button>
@@ -1620,7 +1620,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <section class="home-inline-banner" role="region" aria-label="Orientamento iniziale">
           <h2>Ambiente curricolare d'Istituto</h2>
           <p>Consulta il curricolo, prepara attività didattiche e produci documenti di lavoro.</p>
-          <p class="home-inline-guide"><strong>Percorso:</strong> consulta il curricolo → compila la proposta → esporta i documenti.</p>
+          <p class="home-inline-guide"><strong>Percorso:</strong> consulta il curricolo → progetta la proposta → esporta i documenti.</p>
           <div class="home-inline-meta">Il lavoro viene salvato sul dispositivo in uso.</div>
           <div class="home-inline-actions" role="group" aria-label="Azioni rapide Home">
             <button type="button" onclick="setTab('curricolo')">Consulta il curricolo</button>
@@ -1634,7 +1634,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <p class="home-card-text">Consulta cosa è valido oggi nel curricolo di istituto.</p>
           </a>
           <a href="#" class="home-card" onclick="setTab('didattica');return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Compila</h3>
+            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Progetta</h3>
             <p class="home-card-text">Lavora su programmazione, UDA e materiali didattici.</p>
           </a>
         </div>
@@ -1677,16 +1677,16 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
       </div>
     </div>
-    <!-- TAB COMPILA -->
+    <!-- TAB PROGETTA -->
     <div id="tab-didattica" style="display:none">
       <div class="didattica-evidence" id="didattica-evidence-section">
         <div class="didattica-evidence-header">
-          <h2><span aria-hidden="true">🧑‍🏫</span> Compila — Evidenze e criteri</h2>
+          <h2><span aria-hidden="true">🧑‍🏫</span> Progetta — Evidenze e criteri</h2>
           <p><strong>Primo passo:</strong> scegli disciplina e ordine. Poi adatta evidenze e criteri alla classe e valida come docente.</p>
         </div>
         <div class="didattica-path">
           <div class="didattica-path-title"><span aria-hidden="true">✅</span> Inizia da qui</div>
-          <div class="didattica-path-body"><strong>Decisione principale:</strong> seleziona disciplina e ordine nei filtri qui sotto. Poi compila evidenze/criteri e passa a Esportazioni per il formato finale.</div>
+          <div class="didattica-path-body"><strong>Decisione principale:</strong> seleziona disciplina e ordine nei filtri qui sotto. Poi progetta evidenze e criteri e passa a Esportazioni per il formato finale.</div>
           <div class="didattica-path-actions">
             <span aria-hidden="true">🟢</span> <strong>Dato curricolare</strong> — le evidenze e i criteri provengono dal curricolo strutturato
             <span class="didattica-path-divider">·</span>
@@ -1697,7 +1697,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
         <div class="didattica-evidence-box notice-box tip">
           <strong><span aria-hidden="true">🧭</span> Guida contestuale minima</strong><br>
-          • Compila una proposta didattica partendo da una disciplina e da un obiettivo chiaro<br>
+          • Progetta una proposta didattica partendo da una disciplina e da un obiettivo chiaro<br>
           • Scrivi in modo semplice: attivita, destinatari, tempi, materiali e risultato atteso<br>
           • Alla fine potrai rileggere, salvare o esportare la bozza<br>
           • Se non sai da dove iniziare, <a href="#" onclick="setTab('guida');return false" style="font-weight:700;color:#1a237e">consulta la guida</a> o parti da un esempio
@@ -1712,7 +1712,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         <div class="didattica-evidence-actions-bar"><button class="evidence-reset-btn" onclick="resetEvidenceStates()">↺ Ripristina marcature</button></div>
         <div class="didattica-inflow-support" style="margin:6px 0 8px;font-size:11px;line-height:1.45;color:#455a64">
           • Parti da un obiettivo semplice e da un'attivita concreta<br>
-          • Compila prima destinatari, tempi e materiali: potrai rifinire dopo<br>
+          • Progetta prima destinatari, tempi e materiali: potrai rifinire dopo<br>
           • Controlla che la proposta sia leggibile anche da un collega prima di rileggere o salvare
         </div>
         <div class="didattica-evidence-filters" id="didattica-evidence-filters">
@@ -1727,7 +1727,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <!-- PROGRAMMAZIONE ANNUALE -->
       <div class="didattica-programmazione" id="didattica-programmazione-section" style="display:none">
         <div class="didattica-programmazione-header">
-          <h2><span aria-hidden="true">🗓</span> Compila — Programmazione annuale</h2>
+          <h2><span aria-hidden="true">🗓</span> Progetta — Programmazione annuale</h2>
           <p>Vista iniziale di sola consultazione per leggere ordini, classi/fasce e maturità della progettazione annuale a partire dai dati curricolari già presenti.</p>
         </div>
         <div class="didattica-programmazione-box notice-box tip">
@@ -1743,7 +1743,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </div>
         <details class="didattica-step-box" id="didattica-step-programmazione">
           <summary><strong>Passo 1 — Bozza programmazione annuale</strong></summary>
-          <p style="margin:6px 0 0;font-size:11px;color:#546e7a">Compila solo quando hai completato la consultazione iniziale.</p>
+          <p style="margin:6px 0 0;font-size:11px;color:#546e7a">Progetta solo quando hai completato la consultazione iniziale.</p>
         <div class="annual-draft-box" id="annual-draft-box">
           <h3>Bozza programmazione annuale locale</h3>
           <p class="annual-draft-intro">Prepara una bozza operativa sul dispositivo. Usa solo descrittori generici: non inserire nomi, cognomi, valutazioni individuali o dati personali di studenti.</p>
@@ -1759,7 +1759,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           </div>
           <div class="annual-draft-actions"><button class="annual-draft-btn annual-draft-btn-primary" type="button" onclick="saveAnnualPlanningDraft()">Salva bozza su questo dispositivo</button><button class="annual-draft-btn" type="button" onclick="copyAnnualPlanningMarkdown()">Copia testo modificabile</button><button class="annual-draft-btn annual-draft-btn-danger" type="button" onclick="clearAnnualPlanningDraft()">Cancella bozza</button></div>
           <div class="annual-draft-status" id="annual-draft-status"></div>
-          <div class="annual-draft-preview"><h4>Anteprima leggibile</h4><pre id="annual-draft-preview">Compila disciplina, ordine, classe e unità per vedere qui l'anteprima della bozza.</pre></div>
+          <div class="annual-draft-preview"><h4>Anteprima leggibile</h4><pre id="annual-draft-preview">Progetta disciplina, ordine, classe e unità per vedere qui l'anteprima della bozza.</pre></div>
           <div class="annual-draft-privacy"><strong>Bozza salvata su questo dispositivo</strong><br>La bozza resta su questo dispositivo, non cambia il documento ufficiale di istituto e richiede controllo didattico prima dell'uso istituzionale.</div>
         </div>
         </details>
@@ -1789,7 +1789,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           </div>
           <div class="uda-smart-library-actions"><button class="uda-smart-library-btn uda-smart-library-btn-primary" type="button" onclick="generateUdaSmartDraftFromAnnualPlanning()">Genera UDA da programmazione annuale</button><button class="uda-smart-library-btn" type="button" onclick="saveUdaSmartDraft()">Salva bozza UDA</button><button class="uda-smart-library-btn uda-smart-library-btn-danger" type="button" onclick="clearUdaSmartLibrary()">Svuota libreria su questo dispositivo</button></div>
           <div class="uda-smart-library-status" id="uda-smart-library-status"></div>
-          <div class="uda-smart-library-preview"><h4>Anteprima sintetica bozza generata</h4><pre id="uda-smart-generated-preview">Compila Passo 1 e premi «Genera UDA da programmazione annuale» per vedere qui una sintesi da validare professionalmente.</pre></div>
+          <div class="uda-smart-library-preview"><h4>Anteprima sintetica bozza generata</h4><pre id="uda-smart-generated-preview">Progetta Passo 1 e premi «Genera UDA da programmazione annuale» per vedere qui una sintesi da validare professionalmente.</pre></div>
           <div class="uda-smart-library-markdown"><h4>Anteprima del testo UDA personalizzata</h4><pre id="uda-smart-markdown-preview">Seleziona una bozza in libreria e usa «Anteprima del testo» per leggere il contenuto.</pre></div>
           <div class="uda-smart-library-list" id="uda-smart-library-list"></div>
           <div class="uda-smart-library-privacy"><strong>Libreria su questo dispositivo</strong><br>Le bozze sono salvate solo su questo dispositivo. Non inserire nomi, cognomi, voti, bisogni educativi o dati sensibili di studenti.</div>
@@ -1799,7 +1799,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       </div>      <!-- UDA MODELLO -->
       <div class="didattica-uda" id="didattica-uda" style="display:none">
         <div class="didattica-uda-header">
-          <h2><span aria-hidden="true">📋</span> Compila — UDA modello</h2>
+          <h2><span aria-hidden="true">📋</span> Progetta — UDA modello</h2>
           <p>Mostra come un'unità curricolare del curricolo può essere trasformata in una unità di apprendimento. Da adattare alla classe e alla progettazione del docente.</p>
           <p style="margin:6px 0 0;font-size:11px;color:#5e35b1">Per gestire filtri e archivio UDA personalizzate usa <a href="#" onclick="setTab('didattica_programmazione');setTimeout(function(){var d=document.getElementById('didattica-step-uda-smart');if(d){d.open=true;d.scrollIntoView({behavior:'smooth'})}},120);return false" style="font-weight:700;color:#5e35b1">Programmazione annuale → Passo 2</a>.</p>
         </div>
@@ -2221,11 +2221,11 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
   <div class="tab-esportazioni">
     <h2><span aria-hidden="true">📤</span> Esportazioni e consegne</h2>
     <p class="sub">Scegli il formato in base al tuo ruolo e alla fase di lavoro.</p>
-    <p class="esport-intro-tip"><strong>Percorso in 3 passi:</strong> 1) compila nelle aree operative, 2) verifica il risultato, 3) esporta il formato giusto per il tuo ruolo.</p>
+    <p class="esport-intro-tip"><strong>Percorso in 3 passi:</strong> 1) progetta nelle aree operative, 2) verifica il risultato, 3) esporta il formato giusto per il tuo ruolo.</p>
     <div class="esport-role-guide">
       <h4>📌 Ordine operativo consigliato</h4>
       <div class="esport-role-guide-grid">
-        <div class="esport-role-guide-item"><strong>Passo 1</strong> → Compila in Compila o in Revisione.</div>
+        <div class="esport-role-guide-item"><strong>Passo 1</strong> → Progetta nella sezione Progetta o in Revisione.</div>
         <div class="esport-role-guide-item"><strong>Passo 2</strong> → Scegli l'uscita in base al ruolo: docente, dipartimento, referente.</div>
         <div class="esport-role-guide-item"><strong>Passo 3</strong> → Esporta il formato corretto (documento finale, confronto, file di lavoro CurManLight, copia di sicurezza).</div>
         <div class="esport-role-guide-item"><strong>Riprendi lavoro</strong> → Usa "Torna al punto di lavoro" per continuare senza perdere orientamento.</div>
@@ -2309,8 +2309,8 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
       <p><small style="color:#546e7a">Utile per: lavorare su una disciplina specifica, preparare una proposta mirata, esportare materiali disciplinari.</small></p>
     </div>
     <div class="guida-card tip">
-      <h3><span aria-hidden="true">🎯</span> 3. Preparare o compilare una proposta</h3>
-      <p><strong>Dove:</strong> tab <strong>Compila</strong> (ex "Competenze e progettazione")</p>
+      <h3><span aria-hidden="true">🎯</span> 3. Progettare una proposta</h3>
+      <p><strong>Dove:</strong> tab <strong>Progetta</strong></p>
       <p><strong>Cosa fare:</strong></p>
       <ul>
         <li><strong>Valutazione / Evidenze</strong> — collega le unità curricolari a evidenze osservabili</li>
@@ -3105,7 +3105,7 @@ function setUdaSmartLibraryStatus(message,type){var el=document.getElementById("
 function normalizeUdaSmartState(raw){var value=(raw||"").toString().trim().toLowerCase();if(value==="in revisione")value="in_revisione";if(value==="pronta per confronto")value="pronta_per_confronto";if(value==="bozza"||value==="in_revisione"||value==="pronta_per_confronto"||value==="validata"||value==="archiviato")return value;return"bozza";}
 function annualPlanningPeriodValue(annual){if(!annual||!annual.periodi||!annual.periodi[0])return"";return annual.periodi[0].periodo||"";}
 function summarizeUdaSmartDraft(item){var lines=[];lines.push("Titolo: "+(item.titolo||"Bozza UDA personalizzata"));lines.push("Disciplina: "+(item.disciplina||"non indicata"));lines.push("Ordine/Classe: "+([item.ordine,item.classe].filter(Boolean).join(" - ")||"da completare"));lines.push("Anno/Periodo: "+([item.annoScolastico,item.periodo].filter(Boolean).join(" - ")||"da completare"));lines.push("Nuclei: "+((item.nuclei&&item.nuclei.length)?item.nuclei.join("; "):"da completare"));lines.push("Unita collegate: "+((item.unitaCollegate&&item.unitaCollegate.length)?item.unitaCollegate.length:"0"));lines.push("Evidenze/criteri: "+((item.evidenzeSelezionate&&item.evidenzeSelezionate.length)?item.evidenzeSelezionate.length:"0")+" / "+((item.criteriValutazione&&item.criteriValutazione.length)?item.criteriValutazione.length:"0"));lines.push("Stato: "+(item.stato||"bozza")+" (richiede validazione professionale)");return lines.join("\n");}
-function setGeneratedUdaSmartPreview(item){var preview=document.getElementById("uda-smart-generated-preview");if(!preview)return;preview.textContent=item?summarizeUdaSmartDraft(item):"Compila Passo 1 e premi «Genera UDA da programmazione annuale» per vedere qui una sintesi da validare professionalmente.";}
+function setGeneratedUdaSmartPreview(item){var preview=document.getElementById("uda-smart-generated-preview");if(!preview)return;preview.textContent=item?summarizeUdaSmartDraft(item):"Progetta Passo 1 e premi «Genera UDA da programmazione annuale» per vedere qui una sintesi da validare professionalmente.";}
 function getAnnualUnitsByIds(annual){var selected=(annual&&annual.unitaSelezionate)||[];if(!selected.length)return[];var units=getAnnualDraftUnitsFor((annual&&annual.disciplina)||"");return units.filter(function(u){return selected.indexOf(u.id)!==-1;});}
 function uniqueStrings(list,max){var out=[];(list||[]).forEach(function(value){if(!value&&value!==0)return;var txt=(""+value).trim();if(!txt)return;if(out.indexOf(txt)===-1)out.push(txt);});if(typeof max==="number")return out.slice(0,max);return out;}
 function buildGeneratedUdaSmartDraft(annual){var titleEl=document.getElementById("uda-smart-title");var notesEl=document.getElementById("uda-smart-notes");var now=new Date().toISOString();var units=getAnnualUnitsByIds(annual);var nuclei=uniqueStrings(units.map(function(u){return u.nucleoFondante||u.nucleo||u.ambito||"";}),6);var obiettivi=uniqueStrings([].concat.apply([],units.map(function(u){return u.obiettivi||[];})),4);var evidenze=uniqueStrings([].concat.apply([],units.map(function(u){return u.evidenze||[];})),8);var criteri=uniqueStrings([].concat.apply([],units.map(function(u){return u.criteriValutazione||[];})),8);var fonteCurricolo=uniqueStrings(units.map(function(u){return u.fonte||"";}),3).join(" | ")||"curricolo strutturato locale (dati non completi, verifica richiesta)";var baseTitle=(titleEl&&titleEl.value.trim())||("UDA personalizzata - "+(annual.disciplina||"disciplina")+" - "+(annual.classe||"classe/fascia"));var docenteNote=(notesEl&&notesEl.value.trim())||"Bozza di lavoro generata localmente: completare, contestualizzare e validare in sede professionale.";var obiettivoText=obiettivi.length?obiettivi.join(" | "):"Obiettivi da completare: usare riferimenti curricolari disponibili e validazione professionale.";var attivitaText="Sintesi iniziale basata su programmazione annuale locale e unita selezionate. Integrare metodologie, tempi, strumenti e verifiche senza dati personali studente.";return {id:"uda_smart_gen_"+Date.now(),tipo:"uda_draft",titolo:baseTitle,disciplina:annual.disciplina||"",ordine:annual.ordine||"",classe:annual.classe||null,annoScolastico:annual.annoScolastico||"",periodo:annualPlanningPeriodValue(annual)||"",nuclei:nuclei,unitaCollegate:(annual.unitaSelezionate||[]).slice(),evidenzeSelezionate:evidenze,obiettivoApprendimento:obiettivoText,attivitaSintesi:attivitaText,criteriValutazione:criteri,durataOre:null,stato:"bozza",autore:null,timestamp:now,timestampCreazione:now,timestampModifica:null,fonteCurricolo:fonteCurricolo,fonteProgrammazioneAnnuale:annual.id||"cml_annual_planning_draft_v1",noteDocente:docenteNote,privacyNotice:"Nessun dato personale di studenti. Bozza locale da validare professionalmente prima dell'uso istituzionale.",esportabile:false};}
@@ -4196,7 +4196,7 @@ function setTab(t,opts){
   opts=opts||{};
   currentTab=t;
   if(["curricolo","lavoro","riepilogo","processo","normativa","generali"].includes(t)) window._lastWorkTab=t;
-  var tabLabels={home:"Home",curricolo:"Curricolo",lavoro:"Revisione",processo:"Processo",riepilogo:"Finale in verifica",normativa:"Fonti",generali:"Sezioni generali",didattica:"Compila",didattica_programmazione:"Programmazione annuale",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+  var tabLabels={home:"Home",curricolo:"Curricolo",lavoro:"Revisione",processo:"Processo",riepilogo:"Finale in verifica",normativa:"Fonti",generali:"Sezioni generali",didattica:"Progetta",didattica_programmazione:"Programmazione annuale",didattica_uda:"UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
   if(!opts||!opts.updateHash===false) announceStatus("Sezione aperta: "+(tabLabels[t]||t));
   var parentMap={home:"home",curricolo:"curricolo",lavoro:"curricolo",processo:"curricolo",riepilogo:"curricolo",normativa:"curricolo",generali:"curricolo",didattica:"didattica",didattica_programmazione:"didattica",didattica_uda:"didattica",esportazioni:"esportazioni",guida:"guida"};
   const p=parentMap[t]||"home";
@@ -4251,7 +4251,7 @@ if(t==="didattica"||t==="didattica_uda"||t==="didattica_programmazione"){
   updateHomeDisciplinePanel();
   if(breadcrumbEl){
     var discLabel=selDisc&&(t==="curricolo"||t==="lavoro"||t==="riepilogo")?' — '+selDisc:'';
-    const labels={home:"Home",curricolo:"Curricolo — Consultazione"+discLabel,lavoro:"Curricolo — Revisione"+discLabel,processo:"Curricolo — Processo",riepilogo:"Curricolo — Finale in verifica"+discLabel,normativa:"Curricolo — Fonti",generali:"Curricolo — Sezioni generali",didattica:"Compila — Valutazione / Evidenze",didattica_programmazione:"Compila — Programmazione annuale",didattica_uda:"Compila — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
+    const labels={home:"Home",curricolo:"Curricolo — Consultazione"+discLabel,lavoro:"Curricolo — Revisione"+discLabel,processo:"Curricolo — Processo",riepilogo:"Curricolo — Finale in verifica"+discLabel,normativa:"Curricolo — Fonti",generali:"Curricolo — Sezioni generali",didattica:"Progetta — Valutazione / Evidenze",didattica_programmazione:"Progetta — Programmazione annuale",didattica_uda:"Progetta — UDA modello",esportazioni:"Esportazioni",guida:"Guida"};
     breadcrumbEl.innerHTML='<span class="crumb-current">'+(labels[t]||"Home")+'</span>';
     breadcrumbEl.hidden=t==="home"||t==="esportazioni"||t==="guida";
   }
@@ -5589,7 +5589,7 @@ function toggleMobileMenu(){
     <button class="mm-item" onclick="setTab(\'riepilogo\');this.closest(\'.mobile-menu-overlay\').remove()">📋 Finale in verifica</button>\
     <button class="mm-item" onclick="setTab(\'normativa\');this.closest(\'.mobile-menu-overlay\').remove()">📜 Fonti</button>\
     <div class="mm-sep"></div>\
-    <div class="mm-title">🧑‍🏫 Compila</div>\
+    <div class="mm-title">🧑‍🏫 Progetta</div>\
     <button class="mm-item" onclick="setTab(\'didattica\');this.closest(\'.mobile-menu-overlay\').remove()">📊 Valutazione / Evidenze</button>\
     <button class="mm-item" onclick="setTab(\'didattica_programmazione\');this.closest(\'.mobile-menu-overlay\').remove()">🗓 Programmazione annuale</button>\
     <button class="mm-item" onclick="setTab(\'didattica_uda\');this.closest(\'.mobile-menu-overlay\').remove()">📋 UDA modello</button>\
@@ -5688,7 +5688,7 @@ function showWelcome(force=false){
         <div style="font-size:12px;font-weight:700;color:#333;margin-bottom:8px">Percorso di lavoro:</div>
         <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">1⃣</span><span style="font-size:12px;color:#555"><strong>Consulta</strong> il curricolo nella sezione Curricolo</span></div>
         <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">2⃣</span><span style="font-size:12px;color:#555"><strong>Scegli</strong> la disciplina dalla sidebar</span></div>
-        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">3⃣</span><span style="font-size:12px;color:#555"><strong>Prepara</strong> la proposta in Compila</span></div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">3⃣</span><span style="font-size:12px;color:#555"><strong>Progetta</strong> la proposta</span></div>
         <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">4⃣</span><span style="font-size:12px;color:#555"><strong>Esporta</strong> i documenti in Esportazioni</span></div>
         <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:16px">5⃣</span><span style="font-size:12px;color:#555"><strong>Verifica</strong> con validazione umana</span></div>
       </div>
@@ -6609,7 +6609,7 @@ window.setMappaDisciplina = setMappaDisciplina;
 <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigazione mobile">
   <button class="mbb-btn mbb-active" id="mbb-home" onclick="setTab('home')"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-house"></use></svg><span>Home</span></button>
   <button class="mbb-btn" id="mbb-curricolo" onclick="setTab('curricolo')" title="Curricolo"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg><span>Curricolo</span></button>
-  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')" title="Compila"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg><span>Compila</span></button>
+  <button class="mbb-btn" id="mbb-didattica" onclick="setTab('didattica')" title="Progetta"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg><span>Progetta</span></button>
   <button class="mbb-btn" id="mbb-esportazioni" onclick="setTab('esportazioni')" title="Esportazioni"><svg class="ui-icon ui-icon--sm" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg><span>Esportazioni</span></button>
   <button class="mbb-btn" id="mbb-menu" onclick="toggleMobileMenu()">☰<br><span>Menu</span></button>
 </nav>
