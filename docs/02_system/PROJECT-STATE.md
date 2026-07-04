@@ -3,13 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-282A - Product Governance Consolidation
-- Last slice: CML-345 — Dashboard Export and Navigation Coherence Microfix
-- Last commit: 598441a (docs: finalize CML-344 pushed and published closure)
+- Last slice: CML-345P — Push Reconciliation and Deploy Verification
+- Last commit: 8e3c725 (CML-345 runtime microfix: dashboard export and navigation coherence)
 - Active PM: PM-06 (in corso, 60%)
 - Critical Path: PM-06
-- Next slice: CML-346 — TBD_AFTER_CML_345
-- Last verdict: `CML_345_DASHBOARD_EXPORT_AND_NAVIGATION_COHERENCE_MICROFIX_READY_LOCAL_NOT_PUSHED`
-- Repository status: main...origin/main, CML-345 pronta al commit locale controllato
+- Next slice: TBD_AFTER_CML_345P
+- Last verdict: `CML_345P_PUSH_AND_PUBLISH_VERIFICATION_READY_LOCAL_NOT_PUSHED`
+- Repository status: main...origin/main (allineato), docs-only CML-345P pronta al commit locale controllato
 
 ## Runtime Perimeter Reminder
 

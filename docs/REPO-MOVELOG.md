@@ -1,10 +1,29 @@
 # Repo Movelog
 
+## CML-345P — Push and Publish Verification
+
+- Type: docs-only / post-push verification
+- Macro-program: Product Maturity / PM-06 Accompagnamento
+- Status: READY_LOCAL_NOT_PUSHED
+- Objective: riconciliare stato Git CML-345 e verificare deploy pubblico su Pages.
+- Runtime changes: none.
+- Push executed in this verification: yes (controlled push of CML-345 commit `8e3c725`).
+- Deploy verification: yes (run `28696777749`, job `deploy` success).
+- Public smoke: PASS (9/9).
+- Files created:
+  - `docs/03_execution/CML-345P.md`
+  - `report/CML-345P_push_and_publish_verification.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- Verdict: `CML_345P_PUSH_AND_PUBLISH_VERIFICATION_READY_LOCAL_NOT_PUSHED`
+
 ## CML-345 — Dashboard Export and Navigation Coherence Microfix
 
 - Type: runtime microfix
 - Macro-program: Product Maturity / PM-06 Accompagnamento
-- Status: READY_LOCAL_NOT_PUSHED
+- Status: PUSHED_AND_PUBLISHED
 - Objective: riallineare CTA dashboard, lessico di navigazione e chiarezza salvataggio locale vs esportazioni.
 - Scope:
   - CTA `Esporta` del cruscotto verso `Esportazioni`;
@@ -14,8 +33,8 @@
 - Runtime changes:
   - `index.html`
   - `_published_snapshot/netlify-current/index.html`
-- Push: no.
-- Deploy: no.
+- Push: yes (`8e3c725`).
+- Deploy: yes (Pages run `28696777749`, deploy success).
 - Files created:
   - `docs/03_execution/CML-345.md`
   - `report/CML-345_dashboard_export_and_navigation_coherence_microfix.md`
@@ -34,7 +53,7 @@
   - no validator changes;
   - no import/export model changes;
   - no role-logic changes.
-- Verdict: `CML_345_DASHBOARD_EXPORT_AND_NAVIGATION_COHERENCE_MICROFIX_READY_LOCAL_NOT_PUSHED`
+- Verdict: `CML_345_DASHBOARD_EXPORT_AND_NAVIGATION_COHERENCE_MICROFIX_PUSHED_AND_PUBLISHED`
 
 ## CML-344 — Mappa Disciplinare Quick Selector Coherence Fix
 
