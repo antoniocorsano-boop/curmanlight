@@ -1,5 +1,22 @@
 # Repo Movelog
 
+## CML-376 — Runtime Access Refactor Chain Pushed Closure
+
+- Type: docs-only
+- Macro-program: (autonomo — chiusura post-push catena CML-371→CML-375)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `codex/cml-372-get-units-for-discipline`
+- Base: `0b548db` (CML-375 commit)
+- Push eseguito su origin, tracking attivo
+- Catena 5 commit pushati
+- Files created:
+  - `docs/03_execution/CML-376.md`
+  - `report/CML-376_runtime_access_refactor_chain_pushed_closure.md`
+- Files updated:
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-375 — Runtime Access Refactor Chain Pre-Push Audit
 
 - Type: docs-only
