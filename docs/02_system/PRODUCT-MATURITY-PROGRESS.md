@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- CML-398 (Protocollo di test utente leggero)
+- CML-399 (User validation scenario pack)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -127,9 +127,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-395 (docs-only — Smoke post-push tranche PM-03/PM-06/PM-07)
 - Ultima slice completata: CML-396 (docs-only — Stable checkpoint post-tranche)
 - Ultima slice completata: CML-397 (docs-only — Next Phase Selection Audit)
+- Ultima slice completata: CML-398 (docs-only — Protocollo di test utente leggero)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-398 (Protocollo di test utente leggero)
-- Ultimo aggiornamento: 2026-07-04 (CML-397)
+- Prossima slice operativa prevista: CML-399 (User validation scenario pack)
+- Ultimo aggiornamento: 2026-07-04 (CML-398)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

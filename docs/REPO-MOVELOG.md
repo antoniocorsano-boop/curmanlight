@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-398 — Protocollo di test utente leggero
+
+- Type: docs-only
+- Macro-program: Validazione con utenti
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `516ad61` (CML-397)
+- Protocollo leggero per validazione con utenti: definiti scenari per docente, dipartimento e referente focalizzati sul percorso consulta → scegli → progetta → esporta → verifica. Griglia osservativa, criteri di successo/criticità, indicazioni privacy. Sessione 10-15 minuti.
+- Files created:
+  - `docs/03_execution/CML-398.md`
+  - `report/CML-398_lightweight_user_test_protocol.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-397 — Next Phase Selection Audit
 
 - Type: docs-only

@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-397 - Next Phase Selection Audit
-- Last slice: CML-397 — Next Phase Selection Audit (docs-only)
-- Last commit: fa13f25 (CML-396 docs: mark stable checkpoint after PM tranche)
+- Last milestone: CML-398 - Protocollo di test utente leggero
+- Last slice: CML-398 — Protocollo di test utente leggero (docs-only)
+- Last commit: 516ad61 (CML-397 docs: select next phase after stable checkpoint)
 - Active PM: PM-03 (45%), PM-06 (70%), PM-07 (40%)
 - Critical Path: Validazione con utenti
-- Next slice: CML-398 (Protocollo di test utente leggero)
-- Last verdict: `CML_397_NEXT_PHASE_SELECTION_AUDIT_READY`
-- Repository status: origin/main sincronizzato, stable checkpoint raggiunto, prossima fase: validazione con utenti
+- Next slice: CML-399 (User validation scenario pack)
+- Last verdict: `CML_398_LIGHTWEIGHT_USER_TEST_PROTOCOL_READY`
+- Repository status: origin/main sincronizzato, protocollo test utente pronto, prossima fase: esecuzione test
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
