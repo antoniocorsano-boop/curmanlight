@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-395 — Smoke post-push tranche PM-03/PM-06/PM-07
+
+- Type: docs-only
+- Macro-program: PM-03, PM-06, PM-07
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `ba14ce2` (CML-394)
+- Smoke post-push completato: deploy GitHub Pages aggiornato, CSS delle modifiche runtime presente (CML-389 Sidebar legenda, CML-385 Navigazione mobile), validazioni locali superate, percorso lessicale confermato (consulta → scegli → progetta → esporta → verifica).
+- Files created:
+  - `docs/03_execution/CML-395.md`
+  - `report/CML-395_post_push_smoke.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-394 — Push controllato
 
 - Type: docs-only

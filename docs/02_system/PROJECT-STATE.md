@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-394 - Push controllato
-- Last slice: CML-394 — Push controllato (docs-only)
-- Last commit: 1eb9150 (CML-393 docs: close PM-03 PM-06 PM-07 tranche audit)
+- Last milestone: CML-395 - Smoke post-push tranche PM-03/PM-06/PM-07
+- Last slice: CML-395 — Smoke post-push (docs-only)
+- Last commit: ba14ce2 (CML-394 docs: correct CML-394 verdict to PUSHED)
 - Active PM: PM-03 (45%), PM-06 (70%), PM-07 (40%)
-- Critical Path: Smoke post-push → Stable checkpoint
-- Next slice: CML-395 (Smoke post-push)
-- Last verdict: `CML_394_PUSH_CONTROLLATO_READY_LOCAL_NOT_PUSHED`
-- Repository status: origin/main sincronizzato, push controllato completato
+- Critical Path: Stable checkpoint
+- Next slice: CML-396 (Stable checkpoint post-tranche)
+- Last verdict: `CML_395_PM030607_TRANCHE_POST_PUSH_SMOKE_PASSED`
+- Repository status: origin/main sincronizzato, smoke post-push completato, deploy GitHub Pages aggiornato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
