@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-396 — Stable checkpoint post-tranche
+
+- Type: docs-only
+- Macro-program: PM-03, PM-06, PM-07
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `8e60c33` (CML-395)
+- Stable checkpoint post-tranche: stato stabile raggiunto dopo pubblicazione e smoke post-push della tranche PM-03/PM-06/PM-07. Deploy GitHub Pages aggiornato, repository sincronizzato, validazioni superate, lessico operativo consolidato (consulta → scegli → progetta → esporta → verifica). Prossima direzione: selezione nuova fase.
+- Files created:
+  - `docs/03_execution/CML-396.md`
+  - `report/CML-396_stable_checkpoint_post_tranche.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-395 — Smoke post-push tranche PM-03/PM-06/PM-07
 
 - Type: docs-only

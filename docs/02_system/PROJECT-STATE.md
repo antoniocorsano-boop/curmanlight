@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-395 - Smoke post-push tranche PM-03/PM-06/PM-07
-- Last slice: CML-395 — Smoke post-push (docs-only)
-- Last commit: ba14ce2 (CML-394 docs: correct CML-394 verdict to PUSHED)
+- Last milestone: CML-396 - Stable checkpoint post-tranche
+- Last slice: CML-396 — Stable checkpoint post-tranche (docs-only)
+- Last commit: 8e60c33 (CML-395 docs: smoke PM-03 PM-06 PM-07 tranche after push)
 - Active PM: PM-03 (45%), PM-06 (70%), PM-07 (40%)
-- Critical Path: Stable checkpoint
-- Next slice: CML-396 (Stable checkpoint post-tranche)
-- Last verdict: `CML_395_PM030607_TRANCHE_POST_PUSH_SMOKE_PASSED`
-- Repository status: origin/main sincronizzato, smoke post-push completato, deploy GitHub Pages aggiornato
+- Critical Path: Selezione nuova fase
+- Next slice: TBD (Selezione nuova fase)
+- Last verdict: `CML_396_STABLE_CHECKPOINT_POST_TRANCHE_READY`
+- Repository status: origin/main sincronizzato, stable checkpoint raggiunto, deploy GitHub Pages aggiornato e verificato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
