@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-397 — Next Phase Selection Audit
+
+- Type: docs-only
+- Macro-program: (autonomo — selezione fase)
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `fa13f25` (CML-396)
+- Selezione prossima fase dopo stable checkpoint: analizzate 4 alternative (ulteriore maturità UX, documentazione d'uso, validazione con utenti, chiusura milestone). Raccomandazione: validazione con utenti (CML-398 → CML-400).
+- Files created:
+  - `docs/03_execution/CML-397.md`
+  - `report/CML-397_next_phase_selection_audit.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-396 — Stable checkpoint post-tranche
 
 - Type: docs-only

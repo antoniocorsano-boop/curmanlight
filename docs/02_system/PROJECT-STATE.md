@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-396 - Stable checkpoint post-tranche
-- Last slice: CML-396 — Stable checkpoint post-tranche (docs-only)
-- Last commit: 8e60c33 (CML-395 docs: smoke PM-03 PM-06 PM-07 tranche after push)
+- Last milestone: CML-397 - Next Phase Selection Audit
+- Last slice: CML-397 — Next Phase Selection Audit (docs-only)
+- Last commit: fa13f25 (CML-396 docs: mark stable checkpoint after PM tranche)
 - Active PM: PM-03 (45%), PM-06 (70%), PM-07 (40%)
-- Critical Path: Selezione nuova fase
-- Next slice: TBD (Selezione nuova fase)
-- Last verdict: `CML_396_STABLE_CHECKPOINT_POST_TRANCHE_READY`
-- Repository status: origin/main sincronizzato, stable checkpoint raggiunto, deploy GitHub Pages aggiornato e verificato
+- Critical Path: Validazione con utenti
+- Next slice: CML-398 (Protocollo di test utente leggero)
+- Last verdict: `CML_397_NEXT_PHASE_SELECTION_AUDIT_READY`
+- Repository status: origin/main sincronizzato, stable checkpoint raggiunto, prossima fase: validazione con utenti
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

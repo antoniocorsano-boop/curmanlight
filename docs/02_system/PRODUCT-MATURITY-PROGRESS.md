@@ -31,7 +31,7 @@ PM-07 Uniformita
 
 ## Prossima slice
 
-- TBD (Selezione nuova fase)
+- CML-398 (Protocollo di test utente leggero)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -126,9 +126,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-394 (docs-only — Push controllato)
 - Ultima slice completata: CML-395 (docs-only — Smoke post-push tranche PM-03/PM-06/PM-07)
 - Ultima slice completata: CML-396 (docs-only — Stable checkpoint post-tranche)
+- Ultima slice completata: CML-397 (docs-only — Next Phase Selection Audit)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: TBD (Selezione nuova fase)
-- Ultimo aggiornamento: 2026-07-04 (CML-396)
+- Prossima slice operativa prevista: CML-398 (Protocollo di test utente leggero)
+- Ultimo aggiornamento: 2026-07-04 (CML-397)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
