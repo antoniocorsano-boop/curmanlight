@@ -105,9 +105,16 @@ node tools/test-runtime-mappa-dati-shape.mjs
 
 ## Stato runtime
 
-- `main`: non modificato.
-- Pages: non toccata.
-- Branch laboratorio: pronta per integrazione controllata.
+- `main`: integrato (merge CML-403, commit `bd0d8b8`).
+- Pages: deploy Netlify attivato dal push su `main`.
+- Branch laboratorio: integrato, mantenuto per riferimento.
+
+## Merge scope (CML-403)
+
+10 file complessivi integrati in `main` via `--no-ff` merge da `remote-lab/cml-401-process-home-runtime-keep` (commit `91d8719`). I controlli funzionali sul runtime restano invariati e positivi:
+
+- `validate-cml-normalized-curriculum.mjs` → `overallValid: true`
+- `test-runtime-mappa-dati-shape.mjs` → `overall: PASS`, 14/0
 
 ## Verdict
 
