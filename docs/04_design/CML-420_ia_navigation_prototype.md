@@ -15,7 +15,7 @@ L'utente deve capire subito quale ambiente usare in base al proprio compito:
 | Che cosa dice il curricolo? | Curricolo |
 | Come progetto attività coerenti? | Progettazione didattica |
 | Che cosa devo scaricare o consegnare? | Esportazione |
-| Come funziona, quali fonti usa e quali sono i limiti? | Wiki del curricolo |
+| Dove trovo fonti, spiegazioni, ruoli e limiti? | Riferimenti e guida |
 
 ## 3. Home prototipo
 
@@ -27,7 +27,7 @@ La Home orienta e non deve contenere tutto il processo.
 
 ```text
 [Ambiente curricolare d'istituto]
-Curricolo, progettazione didattica, esportazioni e wiki operativa.
+Curricolo, progettazione didattica, esportazioni, riferimenti e guida.
 
 [Curricolo]
 Consulta, estrai e verifica fonti, versioni e processo di aggiornamento.
@@ -38,8 +38,8 @@ Prepara evidenze, programmazioni e UDA collegate al curricolo.
 [Esportazione]
 Scarica documenti, report e file di lavoro per scopo e ruolo.
 
-[Wiki del curricolo]
-Comprendi fonti, IN2012/IN2025, ruoli, processo, lessico e limiti.
+[Riferimenti e guida]
+Consulta fonti, IN2012/IN2025, ruoli, processo e limiti.
 
 [Stato sintetico]
 - Curricolo: consultazione disponibile
@@ -55,7 +55,7 @@ Comprendi fonti, IN2012/IN2025, ruoli, processo, lessico e limiti.
 | Curricolo | Apri curricolo | Vedi fonti |
 | Progettazione didattica | Apri progettazione | Vedi collegamenti curricolo |
 | Esportazione | Scegli cosa esportare | Vedi file `.cml` |
-| Wiki del curricolo | Apri wiki | Leggi IN2012/IN2025 |
+| Riferimenti e guida | Apri riferimenti | Leggi IN2012/IN2025 |
 
 ## 4. Curricolo
 
@@ -68,15 +68,16 @@ Curricolo
 ├─ Fonti
 ├─ Versioni
 ├─ Processo aggiornamento
-└─ Definitivo
+└─ Sintesi finale
 ```
 
 ### 4.2 Regole Curricolo
 
 - Mostrare sempre fonte e stato quando un contenuto deriva da 2012/2025.
 - Non presentare IN2025 come vigente.
-- Non presentare definitivo/adottato senza fonte o atto esterno.
+- Non presentare approvato/adottato senza fonte o atto esterno.
 - Processo aggiornamento visibile solo se attivo.
+- La Sintesi finale è esito tecnico del lavoro di revisione, non approvazione collegiale.
 
 ### 4.3 Stato fonte/versione
 
@@ -92,6 +93,10 @@ Indicazioni 2025 — materiale/proposta da verificare; non sostituisce automatic
 
 ```text
 Fonte istituto definita nel repository; verifica esterna pendente.
+```
+
+```text
+La validazione resta umana. L'app prepara materiali di lavoro, non approva il curricolo.
 ```
 
 ### 4.4 Curricolo / Consulta
@@ -134,7 +139,7 @@ Sezioni:
 Azioni:
 - Apri scheda fonte
 - Copia riferimento
-- Vai a Wiki / Fonti
+- Vai a Riferimenti e guida / Fonti e normativa
 ```
 
 ### 4.6 Curricolo / Versioni
@@ -154,6 +159,8 @@ Esempi stati:
 - vigente
 - in revisione
 - proposta
+- sintesi finale pronta
+- approvata esternamente
 - adottata
 - superata
 ```
@@ -175,18 +182,22 @@ Azioni:
 - Esporta report
 ```
 
-### 4.8 Curricolo / Definitivo
+### 4.8 Curricolo / Sintesi finale
 
 ```text
-[Curricolo > Definitivo]
+[Curricolo > Sintesi finale]
 
 Stati possibili:
 - Non disponibile
 - In preparazione
+- Sintesi finale pronta
+- In attesa di approvazione esterna
 - Approvato esternamente, da registrare
 - Adottato, se atto esterno presente
 
 Nota:
+La Sintesi finale raccoglie l'esito tecnico del processo di revisione.
+Non equivale ad approvazione collegiale.
 Non dichiarare adottato senza fonte o atto.
 ```
 
@@ -207,14 +218,15 @@ Progettazione didattica
 - Ogni progettazione deve indicare versione curricolare di riferimento.
 - Le UDA non devono apparire come documenti istituzionali approvati.
 - Se la versione curricolare è in revisione, la progettazione va marcata come da verificare/riallineare.
+- L'area richiede audit dedicato CML-421A prima di qualsiasi runtime.
 
-### 5.3 Struttura vista
+### 5.3 Struttura vista provvisoria
 
 ```text
 [Progettazione didattica]
 
-Azioni principali:
-- Parti da evidenze
+Azioni principali provvisorie:
+- Parti dal curricolo
 - Prepara programmazione annuale
 - Crea UDA modello
 - Verifica collegamento al curricolo
@@ -222,65 +234,83 @@ Azioni principali:
 Pannello stato:
 Versione curricolare di riferimento: 2012 vigente / 2025 proposta / altra
 Coerenza: coerente / da verificare / da riallineare
+
+Nota:
+Modulo da approfondire con CML-421A.
 ```
 
 ## 6. Esportazione
 
-### 6.1 Sotto-viste
+### 6.1 Sotto-viste provvisorie
 
 ```text
 Esportazione
-├─ Per scopo
-├─ Per ruolo
-├─ File .cml
-└─ Report
+├─ Per la classe
+├─ Per la progettazione
+├─ Per il curricolo
+├─ Per il processo
+└─ Archivio e sicurezza
 ```
 
 ### 6.2 Regola chiave
 
-L'utente non deve partire dal formato, ma dallo scopo.
+L'utente non deve partire dal formato, ma dal bisogno scolastico.
 
 ```text
-Che cosa devi ottenere?
+Che documento devi preparare?
+Per quale classe, ruolo o fase di lavoro?
 ```
 
-### 6.3 Esportazione / Per scopo
+### 6.3 Contesto di lavoro
+
+Il Contesto di lavoro non appartiene a Esportazione.
+
+Sta in:
 
 ```text
-[Esportazione > Per scopo]
+Impostazioni / Contesto di lavoro
+```
 
-- Documento curricolo
-- Estratto disciplinare
+Esportazione usa il contesto già configurato. Se manca, mostra:
+
+```text
+Per generare documenti per classe devi prima completare il Contesto di lavoro nelle Impostazioni.
+```
+
+### 6.4 Esportazione aggiornata dopo test
+
+```text
+[Esportazione]
+
+Per la classe:
 - Programmazione annuale
-- UDA modello
-- Proposta docente
+- Programma svolto
+- Relazione finale
+- Sintesi percorso
+
+Per la progettazione:
+- UDA
+- Evidenze
+- Rubriche
+- Collegamenti curricolo
+
+Per il curricolo:
+- Estratto disciplinare
+- Documento curricolo
+- Fonti e versioni
+- Sintesi finale
+
+Per il processo:
+- Proposta docente .cml
 - Esito dipartimentale
 - Report referente
 - Materiale per discussione collegiale
-- Copia di sicurezza
-```
 
-### 6.4 Esportazione / Per ruolo
-
-```text
-Docente:
-- estratto curricolo
-- programmazione/UDA
-- proposta .cml
-
-Dipartimento:
-- confronto proposte
-- esito dipartimentale
-- report sintesi
-
-Referente:
-- import esiti
-- report gruppo curricolo
-- quadro decisioni aperte
-
-Dirigente/governance:
-- stato avanzamento
-- materiali per atti esterni
+Archivio e sicurezza:
+- Copia locale
+- Pacchetto classe
+- Pacchetto dipartimento
+- Backup .cml
 ```
 
 ### 6.5 Avvertenze export
@@ -293,34 +323,34 @@ Ogni export deve indicare:
 - necessità di verifica umana;
 - nessun valore deliberativo automatico.
 
-## 7. Wiki del curricolo
+L'area richiede audit dedicato CML-421B prima di qualsiasi runtime.
 
-### 7.1 Sotto-viste
+## 7. Riferimenti e guida
+
+### 7.1 Sotto-viste compatte
 
 ```text
-Wiki del curricolo
-├─ Come si usa
+Riferimenti e guida
+├─ Fonti e normativa
 ├─ IN2012 e IN2025
-├─ Fonti
-├─ Ruoli
-├─ Processo
-├─ Lessico
-└─ Limiti
+├─ Ruoli e processo
+└─ Uso e limiti
 ```
 
-### 7.2 Regole Wiki
+### 7.2 Regole Riferimenti e guida
 
 - Deve spiegare senza tecnicismi inutili.
 - Deve contenere le cautele su fonti e versioni.
 - Deve esplicitare ciò che il sistema non fa.
+- Deve restare compatta.
 
 ### 7.3 Contenuti prioritari
 
 ```text
-IN2012: riferimento normativo confermato tramite D.M. 254/2012.
-IN2025: materiale/proposta da verificare, non automaticamente vigente.
-Fonti istituto: definite nel repo, verifica esterna pendente.
-Approvazione/adottabilità: resta fuori dall'app.
+Fonti e normativa: fonti confermate, repo-defined, candidate e non risolte.
+IN2012 e IN2025: cosa è vigente e cosa è proposta/materiale da verificare.
+Ruoli e processo: docente, dipartimento, referente, dirigente/organi collegiali.
+Uso e limiti: dati locali, validazione umana, cosa l'app non fa.
 ```
 
 ## 8. Navigazione desktop
@@ -332,13 +362,20 @@ Header compatto
 ├─ Logo/nome ambiente
 ├─ Stato lavoro
 ├─ Azioni rapide
-└─ Accesso wiki/aiuto
+├─ Impostazioni
+└─ Riferimenti e guida
+
+Impostazioni
+├─ Contesto di lavoro
+├─ Preferenze esportazione
+├─ Dati locali
+└─ Accessibilità
 
 Navigazione principale
 ├─ Curricolo
 ├─ Progettazione
 ├─ Esportazione
-└─ Wiki
+└─ Riferimenti e guida
 
 Area contenuto
 ├─ Titolo vista
@@ -352,6 +389,7 @@ Area contenuto
 - Non mostrare troppe sotto-voci sempre aperte.
 - Mostrare sotto-navigazione solo dentro l'ambiente scelto.
 - Mantenere visibile lo stato fonte/versione dove serve.
+- Tenere il Contesto di lavoro nelle Impostazioni.
 
 ## 9. Navigazione mobile
 
@@ -361,13 +399,13 @@ Area contenuto
 Topbar compatta
 - Nome ambiente
 - Stato breve
-- Menu
+- Impostazioni
 
 Bottom bar
 - Curricolo
 - Progetta
 - Esporta
-- Wiki
+- Guida
 
 Contenuto a una colonna
 - Card sintetiche
@@ -379,8 +417,8 @@ Contenuto a una colonna
 - Quattro accessi sempre raggiungibili.
 - Testi brevi.
 - Nessun pannello laterale obbligatorio.
-- Wiki sempre raggiungibile.
-- Export guidato per scopo.
+- Riferimenti e guida sempre raggiungibile.
+- Export guidato per documento scolastico.
 
 ## 10. Stato di processo
 
@@ -406,19 +444,25 @@ Domande da testare:
 
 1. L'utente capisce dove consultare il curricolo?
 2. L'utente capisce dove progettare una UDA?
-3. L'utente capisce dove esportare una proposta o un report?
+3. L'utente capisce dove esportare documenti scolastici ricorrenti?
 4. L'utente capisce dove leggere spiegazioni su IN2012/IN2025?
 5. L'utente capisce che IN2025 non è automaticamente vigente?
 6. L'utente capisce che la validazione resta umana?
 7. L'utente trova le fonti?
-8. L'utente mobile trova gli stessi quattro ambienti?
+8. L'utente capisce che il Contesto di lavoro sta nelle Impostazioni?
+9. L'utente mobile trova gli stessi quattro ambienti?
 
-## 12. Decisione di prototipo
+## 12. Decisione di prototipo dopo CML-421C
 
-Il prototipo CML-420 è approvabile se produce una mappa navigazionale verificabile senza pretendere di implementare subito tutte le funzioni.
+Il prototipo CML-420 è corretto nella terminologia IA principale, ma resta bloccato per runtime finché non sono completati:
+
+```text
+CML-421A — Didactic Design Needs Audit
+CML-421B — School Document Export Needs Audit
+```
 
 ## Verdict
 
 ```text
-CML_420_IA_NAVIGATION_PROTOTYPE_DESIGN_READY
+CML_420_IA_NAVIGATION_PROTOTYPE_TERMINOLOGY_ALIGNED_BY_CML_421C
 ```
