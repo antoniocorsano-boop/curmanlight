@@ -24,11 +24,11 @@ CML-421-R006 — Riferimenti e guida più compatta
 
 Correggere la terminologia dell'architettura informativa prima di qualsiasi runtime.
 
-## Correzioni approvate dal test simulato
+## Correzioni applicate
 
 ### 1. Wiki del curricolo
 
-Sostituire:
+Sostituito:
 
 ```text
 Wiki del curricolo
@@ -49,7 +49,7 @@ Motivazione:
 
 ### 2. Definitivo
 
-Sostituire:
+Sostituito:
 
 ```text
 Definitivo
@@ -70,7 +70,7 @@ Non equivale ad approvazione collegiale.
 
 ### 3. Contesto di lavoro
 
-Collocare il Contesto di lavoro in:
+Collocato in:
 
 ```text
 Impostazioni / Contesto di lavoro
@@ -80,7 +80,7 @@ Non dentro Esportazione.
 
 ### 4. Riferimenti e guida compatta
 
-Usare una struttura compatta:
+Struttura corretta:
 
 ```text
 Riferimenti e guida
@@ -88,6 +88,13 @@ Riferimenti e guida
 ├─ IN2012 e IN2025
 ├─ Ruoli e processo
 └─ Uso e limiti
+```
+
+## Documenti aggiornati
+
+```text
+docs/04_design/CML-420_ia_navigation_prototype.md
+docs/04_design/CML-420_wireframes_logici.md
 ```
 
 ## Architettura informativa corretta
@@ -137,12 +144,16 @@ La validazione resta umana.
 L'app prepara materiali di lavoro, non approva il curricolo.
 ```
 
-## Output attesi
+## Effetto su CML-420
 
-- glossario IA corretto;
-- sostituzioni terminologiche da applicare a CML-420;
-- vincoli per eventuale runtime;
-- conferma che le correzioni non modificano dati curricolari.
+CML-420 resta prototipo informativo/navigazionale e non diventa runtime.
+
+Le correzioni terminologiche sono applicate alla documentazione di prototipo, ma il passaggio runtime resta bloccato fino alla chiusura di:
+
+```text
+CML-421A — Didactic Design Needs Audit
+CML-421B — School Document Export Needs Audit
+```
 
 ## Non autorizzato
 
@@ -153,8 +164,8 @@ CML-421C non autorizza:
 - merge su main;
 - deploy.
 
-## Verdict atteso
+## Verdict
 
 ```text
-CML_421C_IA_TERMINOLOGY_CORRECTIONS_READY_REMOTE_BRANCH
+CML_421C_IA_TERMINOLOGY_CORRECTIONS_APPLIED_REMOTE_BRANCH
 ```
