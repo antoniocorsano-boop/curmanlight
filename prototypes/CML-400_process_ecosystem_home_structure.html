@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CML-400 — Process ecosystem home structure</title>
+<style>
+:root{--blue:#1a237e;--blue2:#283593;--green:#00695c;--bg:#f3f5fa;--text:#263238;--muted:#607d8b;--border:#dfe5f2;--card:#fff;--warn:#f9a825;--violet:#5e35b1;--danger:#c62828}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:13px;line-height:1.45;padding:22px}
+.cml400-board{max-width:1280px;margin:0 auto;background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 28px rgba(26,35,126,.08);overflow:hidden}
+.cml400-header{background:linear-gradient(135deg,#0d1b5e,#1a237e);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.cml400-kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.6px;opacity:.76;margin-bottom:4px}.cml400-header h1{font-size:24px;line-height:1.15}.cml400-header p{font-size:13px;opacity:.88;margin-top:6px;max-width:760px}.cml400-brand{font-size:22px;font-weight:800}.cml400-brand span{color:#80cbc4}.cml400-main{padding:20px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:16px}.cml400-side{display:grid;gap:12px}.cml400-box,.cml400-panel,.cml400-card{background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.035)}.cml400-box{padding:13px}.cml400-box h2{font-size:13px;color:var(--blue);margin-bottom:8px}.cml400-discipline{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:9px;font-size:12px}.cml400-discipline.active{background:#e8eaf6;color:var(--blue);font-weight:800}.dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}.dot.orange{background:var(--warn)}.dot.blue{background:#1976d2}.dot.purple{background:var(--violet)}.dot.green{background:#2e7d32}.dot.teal{background:var(--green)}.cml400-legend{display:grid;gap:5px;font-size:11px;color:var(--muted)}.cml400-content{display:grid;gap:16px}.cml400-hero{background:linear-gradient(135deg,#eef3ff,#fff);border:1px solid #cfd8ff;border-radius:16px;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center}.cml400-hero h2{font-size:22px;color:var(--blue);margin-bottom:6px}.cml400-actions{display:flex;gap:8px;flex-wrap:wrap}.cml400-btn{border:1px solid #9fa8da;background:#fff;color:var(--blue);font-weight:800;border-radius:10px;padding:9px 12px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}.cml400-btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.cml400-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.cml400-step{border:1px solid var(--border);border-radius:14px;padding:12px;background:#fff}.cml400-step strong{display:block;color:var(--blue);font-size:13px;margin-bottom:4px}.cml400-step p{font-size:11px;color:var(--muted)}.cml400-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.cml400-card{padding:14px}.cml400-card h3{font-size:14px;color:var(--blue);margin-bottom:5px}.cml400-card p{font-size:12px;color:var(--muted);margin-bottom:9px}.chips{display:flex;gap:6px;flex-wrap:wrap}.chip{font-size:10px;font-weight:800;border-radius:999px;padding:4px 8px;background:#eef2ff;color:var(--blue);border:1px solid #d1d9f0}.chip.green{background:#e8f5e9;color:#1b5e20;border-color:#a5d6a7}.chip.orange{background:#fff8e1;color:#6d4c41;border-color:#ffe082}.cml400-pipeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;background:#f8f9ff;border:1px solid #d1d9f0;border-radius:16px;padding:14px}.cml400-role{background:#fff;border:1px solid var(--border);border-left:4px solid var(--blue);border-radius:12px;padding:11px;position:relative}.cml400-role:nth-child(2){border-left-color:var(--violet)}.cml400-role:nth-child(3){border-left-color:var(--green)}.cml400-role:nth-child(4){border-left-color:#ef6c00}.cml400-role h3{font-size:13px;color:var(--blue);margin-bottom:5px}.cml400-role p{font-size:11px;color:var(--muted)}.cml400-role code{font-size:10px;background:#eceff1;border-radius:6px;padding:2px 5px;color:#37474f}.cml400-governance{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.cml400-governance .cml400-box{border-left:4px solid var(--green)}.cml400-note{font-size:11px;color:var(--muted);border-top:1px solid var(--border);padding:12px 20px;background:#fbfcff}.cml400-note strong{color:var(--blue)}
+@media(max-width:900px){body{padding:10px}.cml400-main{grid-template-columns:1fr}.cml400-hero{grid-template-columns:1fr}.cml400-flow,.cml400-grid,.cml400-pipeline,.cml400-governance{grid-template-columns:1fr}.cml400-header h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="cml400-board">
+  <header class="cml400-header">
+    <div>
+      <div class="cml400-kicker">Prototipo CML-400</div>
+      <h1>Hub del processo curricolare</h1>
+      <p>CurManLight accompagna l'intero ciclo del curricolo: fonti ufficiali, consultazione, revisione, progettazione didattica, esportazioni, confronto e validazione umana.</p>
+    </div>
+    <div class="cml400-brand">CurMan<span>Light</span></div>
+  </header>
+  <main class="cml400-main">
+    <aside class="cml400-side" aria-label="Discipline e legenda">
+      <section class="cml400-box">
+        <h2>Discipline</h2>
+        <div class="cml400-discipline active"><span class="dot green"></span> Italiano</div>
+        <div class="cml400-discipline"><span class="dot orange"></span> Matematica</div>
+        <div class="cml400-discipline"><span class="dot blue"></span> Lingue straniere</div>
+        <div class="cml400-discipline"><span class="dot green"></span> Scienze</div>
+        <div class="cml400-discipline"><span class="dot purple"></span> Tecnologia</div>
+      </section>
+      <section class="cml400-box">
+        <h2>Legenda stato</h2>
+        <div class="cml400-legend">
+          <span><span class="dot orange"></span> Da consultare</span>
+          <span><span class="dot blue"></span> Da verificare</span>
+          <span><span class="dot purple"></span> In revisione</span>
+          <span><span class="dot green"></span> Approvato</span>
+          <span><span class="dot teal"></span> Pubblicato / definitivo</span>
+        </div>
+      </section>
+    </aside>
+    <section class="cml400-content">
+      <section class="cml400-hero">
+        <div>
+          <h2>Panoramica del processo di istituto</h2>
+          <p>La Home non presenta solo aree di lavoro: mostra come fonti, curricolo, revisione, progettazione, esportazioni e approvazione si collegano in un processo unico e verificabile.</p>
+        </div>
+        <div class="cml400-actions">
+          <a class="cml400-btn primary" href="#curricolo">Consulta il curricolo</a>
+          <a class="cml400-btn" href="#processo">Vedi processo</a>
+          <a class="cml400-btn" href="#progetta">Vai a Progetta</a>
+        </div>
+      </section>
+      <section class="cml400-flow" aria-label="Percorso operativo">
+        <div class="cml400-step"><strong>1. Consulta</strong><p>Fonti, curricolo vigente, sezioni generali.</p></div>
+        <div class="cml400-step"><strong>2. Scegli</strong><p>Disciplina, ordine, classe, unità.</p></div>
+        <div class="cml400-step"><strong>3. Progetta</strong><p>Evidenze, programmazione, UDA.</p></div>
+        <div class="cml400-step"><strong>4. Esporta</strong><p>Documenti, confronti, file .cml.</p></div>
+        <div class="cml400-step"><strong>5. Verifica</strong><p>Coerenza, referente, Collegio.</p></div>
+      </section>
+      <section class="cml400-pipeline" id="processo" aria-label="Pipeline istituzionale">
+        <div class="cml400-role"><h3>Docente</h3><p>Prepara proposta disciplinare e materiali di lavoro.</p><code>proposta .cml</code></div>
+        <div class="cml400-role"><h3>Dipartimento</h3><p>Importa, confronta, discute e registra l'esito condiviso.</p><code>esito dipartimento</code></div>
+        <div class="cml400-role"><h3>Referente</h3><p>Controlla coerenza verticale e prepara la validazione.</p><code>validazione</code></div>
+        <div class="cml400-role"><h3>Collegio</h3><p>Esamina e approva il documento istituzionale finale.</p><code>documento approvato</code></div>
+      </section>
+      <section class="cml400-grid" aria-label="Aree del sistema">
+        <article class="cml400-card" id="curricolo"><h3>Curricolo</h3><p>Consulta, Revisione, Processo, Definitivo, Fonti, Sezioni generali.</p><div class="chips"><span class="chip">Consulta</span><span class="chip">Revisione</span><span class="chip">Fonti</span></div></article>
+        <article class="cml400-card" id="progetta"><h3>Progetta</h3><p>Valutazione/Evidenze, Programmazione annuale, UDA modello.</p><div class="chips"><span class="chip green">Evidenze</span><span class="chip green">Programmazione</span><span class="chip green">UDA</span></div></article>
+        <article class="cml400-card"><h3>Esportazioni</h3><p>Documento finale, confronto modifiche, bozza disciplina, file di lavoro, copia.</p><div class="chips"><span class="chip orange">Word/PDF</span><span class="chip orange">.cml</span><span class="chip orange">Backup</span></div></article>
+        <article class="cml400-card"><h3>Fonti ufficiali</h3><p>IN 2012, D.M. 221/2025, PTOF, RAV, Scuola in Chiaro, DigComp, Agenda 2030.</p><div class="chips"><span class="chip">Fonti</span><span class="chip">Non modificabili</span></div></article>
+        <article class="cml400-card"><h3>Guida</h3><p>Istruzioni operative per docente, dipartimento e referente.</p><div class="chips"><span class="chip green">5 passi</span><span class="chip green">Ruoli</span></div></article>
+        <article class="cml400-card"><h3>Processo</h3><p>Ogni modifica resta proposta fino a validazione umana e approvazione istituzionale.</p><div class="chips"><span class="chip orange">Validazione</span><span class="chip orange">Collegio</span></div></article>
+      </section>
+      <section class="cml400-governance" aria-label="Principi di governance">
+        <div class="cml400-box"><h2>Dati locali</h2><p>Tutto resta sul dispositivo dell'utente.</p></div>
+        <div class="cml400-box"><h2>Nessun invio automatico</h2><p>Drive e condivisioni restano manuali e controllate.</p></div>
+        <div class="cml400-box"><h2>Validazione umana</h2><p>Lo strumento non approva mai autonomamente.</p></div>
+      </section>
+    </section>
+  </main>
+  <div class="cml400-note"><strong>Uso previsto:</strong> questo prototipo traduce i mock in struttura HTML/CSS compatibile con la Home reale. La futura patch runtime deve inserirlo nel file all-in-one e replicarlo nel published snapshot.</div>
+</div>
+</body>
+</html>
