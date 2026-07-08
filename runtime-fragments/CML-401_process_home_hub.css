@@ -1,0 +1,22 @@
+/* CML-401 — Process ecosystem Home hub */
+.home-process-hub{background:linear-gradient(135deg,#eef3ff,#fff);border:1px solid #cfd8ff;border-radius:16px;padding:16px 18px;margin:0 0 14px;box-shadow:0 2px 10px rgba(26,35,126,.06)}
+.home-process-hub__head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.home-process-hub__eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.4px;color:#5c6bc0;font-weight:900;margin-bottom:3px}
+.home-process-hub h2{font-size:20px;line-height:1.2;color:#1a237e;margin:0 0 5px}
+.home-process-hub p{font-size:12px;line-height:1.45;color:#455a64;margin:0}
+.home-process-hub__actions{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.home-process-hub__btn{border:1px solid #9fa8da;background:#fff;color:#1a237e;border-radius:9px;padding:7px 10px;font-size:11px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.home-process-hub__btn.primary{background:#1a237e;border-color:#1a237e;color:#fff}
+.home-process-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:10px 0 12px}
+.home-process-step{background:#fff;border:1px solid #dfe5f2;border-radius:12px;padding:10px;min-height:86px}
+.home-process-step strong{display:block;color:#1a237e;font-size:12px;margin-bottom:3px}
+.home-process-step span{display:block;color:#607d8b;font-size:11px;line-height:1.35}
+.home-process-pipeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;background:#f8f9ff;border:1px solid #d1d9f0;border-radius:14px;padding:10px;margin-bottom:12px}
+.home-process-role{background:#fff;border:1px solid #dfe5f2;border-left:4px solid #1a237e;border-radius:10px;padding:9px}
+.home-process-role:nth-child(2){border-left-color:#5e35b1}.home-process-role:nth-child(3){border-left-color:#00695c}.home-process-role:nth-child(4){border-left-color:#ef6c00}
+.home-process-role strong{display:block;color:#1a237e;font-size:12px;margin-bottom:2px}.home-process-role span{display:block;color:#607d8b;font-size:10.5px;line-height:1.35}.home-process-role code{display:inline-block;margin-top:5px;background:#eceff1;color:#37474f;border-radius:6px;padding:2px 5px;font-size:10px}
+.home-system-areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.home-system-area{background:#fff;border:1px solid #dfe5f2;border-radius:12px;padding:10px}.home-system-area strong{display:block;color:#1a237e;font-size:12px;margin-bottom:3px}.home-system-area span{display:block;color:#607d8b;font-size:10.5px;line-height:1.35}
+.home-governance-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.home-governance-strip div{background:#f1f8f6;border:1px solid #b2dfdb;border-left:4px solid #00695c;border-radius:10px;padding:8px;color:#1b5e20;font-size:11px;line-height:1.35}.home-governance-strip strong{display:block;font-size:11px;margin-bottom:2px}
+@media(max-width:900px){.home-process-flow,.home-process-pipeline,.home-system-areas,.home-governance-strip{grid-template-columns:1fr}.home-process-hub__actions{width:100%}.home-process-hub__btn{flex:1;justify-content:center}}
+/* END CML-401 */
