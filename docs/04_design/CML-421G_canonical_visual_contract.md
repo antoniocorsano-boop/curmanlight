@@ -96,7 +96,76 @@ Non è una sezione principale, ma funzione trasversale raggiungibile dall'header
 Impostazioni / Contesto di lavoro
 ```
 
-## 6. Layout canonico mobile
+## 6. Anno scolastico e Contesto di lavoro
+
+### Regola canonica
+
+```text
+Anno scolastico è dato globale di contesto.
+```
+
+Si imposta in:
+
+```text
+Impostazioni / Contesto di lavoro / Anno scolastico
+```
+
+Si mostra in forma sintetica in:
+
+```text
+Header / chip contesto
+```
+
+Esempio:
+
+```text
+Tecnologia · Secondaria · A.S. 2026/27
+```
+
+### Campi minimi del Contesto di lavoro
+
+```text
+Anno scolastico
+Istituto
+Ordine di scuola
+Plesso / sede
+Ruolo
+Disciplina o ambito
+Classi assegnate
+Versione curricolare di riferimento
+```
+
+### Propagazione obbligatoria
+
+Anno scolastico deve comparire nei metadata di:
+
+```text
+programmazione annuale per classe
+UDA
+programma svolto
+relazione finale
+sintesi percorso
+proposta docente .cml
+esito dipartimentale .cml
+report referente
+backup locale
+pacchetti classe/dipartimento/anno
+```
+
+### Regola UI se manca
+
+```text
+Completa l'Anno scolastico in Impostazioni / Contesto di lavoro per generare documenti per classe o report.
+```
+
+### Divieto
+
+```text
+Anno scolastico non va configurato primariamente dentro Esportazione.
+Esportazione lo usa dal Contesto di lavoro.
+```
+
+## 7. Layout canonico mobile
 
 ```text
 Topbar: nome ambiente + stato breve + impostazioni
@@ -115,7 +184,7 @@ azioni chiare
 no pannelli multipli permanenti
 ```
 
-## 7. Regole per area
+## 8. Regole per area
 
 ### Home
 
@@ -127,7 +196,8 @@ B con cornice A
 - quattro accessi principali;
 - niente processo dominante;
 - validazione umana visibile;
-- stato sintetico ma discreto.
+- stato sintetico ma discreto;
+- chip di contesto con anno scolastico se configurato.
 
 ### Curricolo / Consulta
 
@@ -138,7 +208,8 @@ B + A
 - consultazione semplice;
 - filtri chiari;
 - fonte/stato sempre visibili;
-- azioni: copia, usa in progettazione, esporta.
+- azioni: copia, usa in progettazione, esporta;
+- versione curricolare e anno scolastico non vanno confusi: la versione riguarda il curricolo, l'anno scolastico riguarda il contesto di lavoro.
 
 ### Curricolo / Fonti
 
@@ -195,6 +266,7 @@ B pieno
 - UDA;
 - evidenze;
 - classe/periodo/obiettivi/metodologie/verifiche;
+- anno scolastico derivato dal Contesto di lavoro;
 - bozza locale e validazione professionale.
 
 ### Esportazione
@@ -205,7 +277,8 @@ B pieno
 
 - partire dal documento scolastico, non dal formato;
 - categorie: classe, progettazione, curricolo, processo, archivio;
-- ogni documento mostra requisiti di contesto e stato.
+- ogni documento mostra requisiti di contesto e stato;
+- anno scolastico obbligatorio per documenti per classe e report.
 
 ### Riferimenti e guida
 
@@ -231,9 +304,10 @@ B compatto
 - impostazione guidata;
 - nessun sovraccarico;
 - produce chip di contesto sintetica;
+- include Anno scolastico come campo obbligatorio per documenti scolastici;
 - non modifica fonti ufficiali.
 
-## 8. Componenti canonici
+## 9. Componenti canonici
 
 ### Card ambiente
 
@@ -250,6 +324,7 @@ azione primaria
 nome documento
 destinatario
 contesto richiesto
+anno scolastico
 stato documento
 azione prepara/esporta
 ```
@@ -288,7 +363,7 @@ Sintesi finale pronta
 In attesa di approvazione esterna
 ```
 
-## 9. Icone
+## 10. Icone
 
 Regola:
 
@@ -308,9 +383,10 @@ freccia download/documento = Esportazione
 info/libro aperto = Riferimenti e guida
 ingranaggio = Impostazioni
 scudo/persona = Validazione umana
+calendario = Anno scolastico
 ```
 
-## 10. Colori
+## 11. Colori
 
 Palette indicativa, da adattare al runtime esistente:
 
@@ -330,7 +406,7 @@ Non usare colori troppo saturi o ludici.
 Non usare il colore come unico indicatore di stato.
 ```
 
-## 11. Microcopy canonico
+## 12. Microcopy canonico
 
 Ammessi:
 
@@ -344,6 +420,8 @@ La validazione resta umana
 L'app prepara materiali di lavoro, non approva il curricolo
 Indicazioni 2025 — materiale/proposta da verificare
 Sintesi finale — esito tecnico della revisione
+Anno scolastico non impostato
+Completa l'Anno scolastico in Impostazioni / Contesto di lavoro
 ```
 
 Da evitare:
@@ -357,7 +435,7 @@ Pubblica automaticamente
 Generato ufficialmente
 ```
 
-## 12. Densità informativa
+## 13. Densità informativa
 
 Regola D2:
 
@@ -366,7 +444,7 @@ bassa/media per docente;
 media/alta solo per referente, fonti, versioni, processo.
 ```
 
-## 13. Accessibilità
+## 14. Accessibilità
 
 Minimo richiesto:
 
@@ -380,7 +458,7 @@ mobile touch-friendly
 una azione primaria per vista quando possibile
 ```
 
-## 14. Divieti runtime futuri
+## 15. Divieti runtime futuri
 
 Non implementare:
 
@@ -391,12 +469,13 @@ Home solo dashboard tecnica;
 percorso docente senza fonti/stato;
 Esportazione per formato prima che per documento;
 Contesto di lavoro dentro Esportazione;
+Anno scolastico configurato solo dentro Esportazione;
 validazione nascosta;
 IN2025 come vigente;
 Sintesi finale come approvazione;
 ```
 
-## 15. Gate di conformità visuale
+## 16. Gate di conformità visuale
 
 Ogni futura micro-slice runtime deve dichiarare:
 
@@ -406,6 +485,7 @@ quale modello D2 usa: B, C leggero o A;
 quale componente canonico applica;
 quale microcopy introduce;
 come conserva validazione umana;
+come gestisce Anno scolastico;
 come si comporta su mobile;
 ```
 
