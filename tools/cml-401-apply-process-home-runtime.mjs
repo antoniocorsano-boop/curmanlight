@@ -22,34 +22,25 @@ function insertCss(source, css){
   return source.replace('</style>', '\n' + css.trim() + '\n</style>');
 }
 
-function buildHomeHubJsLiteral(html){
-  const compact = html
-    .replace(/<!-- CML-401[\s\S]*?-->/g, '')
-    .replace(/<!-- END CML-401 -->/g, '')
-    .split('\n')
-    .map(line => line.trim())
-    .filter(Boolean)
-    .join('');
-  return compact
-    .replace(/\\/g, '\\\\')
-    .replace(/'/g, "\\'");
-}
-
 function insertHomeHub(source, html){
-  if(source.includes(HTML_MARKER) || source.includes('home-process-hub')) return source;
-  const hubLiteral = "'" + HTML_MARKER + "'+'" + buildHomeHubJsLiteral(html) + "'+'<!-- END CML-401 -->'";
+  if(source.includes(HTML_MARKER) || source.includes('<section class="home-process-hub"')) return source;
+
+  const indent = '        ';
+  const indented = html.trim().split('\n').map(line => indent + line).join('\n');
 
   const markers = [
-    "'<section class=\"home-inline-banner\"",
-    "'<div class=\"home-grid\"",
-    "'<section class=\"home-context-card\"",
-    "'<div id=\"work-context-body\""
+    '<section class="home-inline-banner"',
+    '<div class="home-cards">',
+    '<section class="home-context-card"',
+    '<div id="work-context-body"'
   ];
 
   for(const marker of markers){
     const idx = source.indexOf(marker);
     if(idx !== -1){
-      return source.slice(0, idx) + hubLiteral + '+\n      ' + source.slice(idx);
+      const lineStart = source.lastIndexOf('\n', idx) + 1;
+      const leadingWs = source.slice(lineStart, idx);
+      return source.slice(0, lineStart) + indented + '\n\n' + leadingWs + source.slice(idx);
     }
   }
 
@@ -77,7 +68,8 @@ for(const rel of RUNTIME_FILES){
 const root = read(RUNTIME_FILES[0]);
 const snap = read(RUNTIME_FILES[1]);
 if(root.includes(CSS_MARKER) !== snap.includes(CSS_MARKER)) throw new Error('Root/snapshot non allineati: CSS CML-401');
-if(root.includes('home-process-hub') !== snap.includes('home-process-hub')) throw new Error('Root/snapshot non allineati: HTML CML-401');
+if(root.includes(HTML_MARKER) !== snap.includes(HTML_MARKER)) throw new Error('Root/snapshot non allineati: HTML CML-401');
+if(root.includes('<section class="home-process-hub"') !== snap.includes('<section class="home-process-hub"')) throw new Error('Root/snapshot non allineati: sezione Home CML-401');
 
 console.log('CML-401 patch completata');
 for(const [rel, changed] of results){
