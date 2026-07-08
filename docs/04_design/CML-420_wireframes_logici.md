@@ -10,9 +10,9 @@ I wireframe servono a valutare architettura, ordine delle informazioni, azioni p
 
 ```text
 ┌────────────────────────────────────────────────────────────┐
-│ Ambiente curricolare d'istituto                 [Wiki] [?] │
+│ Ambiente curricolare d'istituto       [Impostazioni] [?]   │
 ├────────────────────────────────────────────────────────────┤
-│ Curricolo, progettazione didattica, esportazioni e wiki.   │
+│ Curricolo, progettazione didattica, esportazioni, guida.   │
 │                                                            │
 │ Stato: consultazione disponibile                           │
 │ Processo aggiornamento: non attivo / attivo                │
@@ -23,10 +23,10 @@ I wireframe servono a valutare architettura, ordine delle informazioni, azioni p
 │ fonti e versioni     │ collegate al curricolo              │
 │ [Apri curricolo]     │ [Apri progettazione]                │
 ├──────────────────────┼─────────────────────────────────────┤
-│ ESPORTAZIONE         │ WIKI DEL CURRICOLO                  │
-│ Documenti, report,   │ Fonti, ruoli, processo, limiti      │
+│ ESPORTAZIONE         │ RIFERIMENTI E GUIDA                 │
+│ Documenti, report,   │ Fonti, normativa, processo, limiti  │
 │ file .cml            │ e IN2012/IN2025                     │
-│ [Scegli export]      │ [Apri wiki]                         │
+│ [Scegli export]      │ [Apri riferimenti]                  │
 └──────────────────────┴─────────────────────────────────────┘
 ```
 
@@ -36,6 +36,7 @@ I wireframe servono a valutare architettura, ordine delle informazioni, azioni p
 - Processo non dominante.
 - Validazione umana visibile.
 - Nessun riferimento a IN2025 come vigente.
+- Nessun uso del termine Wiki.
 
 ## 3. Wireframe Curricolo / Consulta
 
@@ -95,13 +96,14 @@ I wireframe servono a valutare architettura, ordine delle informazioni, azioni p
 ```text
 ┌────────────────────────────────────────────────────────────┐
 │ Curricolo > Versioni                                      │
-├───────────────┬──────────────┬─────────────┬──────────────┤
-│ Versione      │ Stato        │ Fonte       │ Azione       │
-├───────────────┼──────────────┼─────────────┼──────────────┤
-│ IN2012        │ vigente      │ SRC-001     │ Visualizza   │
-│ IN2025        │ proposta     │ SRC-010?    │ Verifica     │
-│ Istituto      │ non risolta  │ SRC-016     │ Cerca fonte  │
-└───────────────┴──────────────┴─────────────┴──────────────┘
+├───────────────┬─────────────────────┬─────────────┬──────────────┤
+│ Versione      │ Stato               │ Fonte       │ Azione       │
+├───────────────┼─────────────────────┼─────────────┼──────────────┤
+│ IN2012        │ vigente             │ SRC-001     │ Visualizza   │
+│ IN2025        │ proposta            │ SRC-010?    │ Verifica     │
+│ Istituto      │ non risolta         │ SRC-016     │ Cerca fonte  │
+│ Revisione     │ sintesi finale      │ interna     │ Controlla    │
+└───────────────┴─────────────────────┴─────────────┴──────────────┘
 
 Nota: nessuna adozione senza atto esterno.
 ```
@@ -127,7 +129,26 @@ Nota: nessuna adozione senza atto esterno.
 - Nessun pulsante `approva curricolo`.
 - Usare `registra avanzamento`, `prepara report`, `esporta materiale`.
 
-## 7. Wireframe Progettazione didattica
+## 7. Wireframe Curricolo / Sintesi finale
+
+```text
+┌────────────────────────────────────────────────────────────┐
+│ Curricolo > Sintesi finale                                │
+├────────────────────────────────────────────────────────────┤
+│ Stato: non disponibile / in preparazione / pronta          │
+│ Avanzamento: esito tecnico del processo di revisione       │
+│ Approvazione: esterna all'app                              │
+├────────────────────────────────────────────────────────────┤
+│ [Prepara sintesi] [Esporta materiale] [Registra avanzamento]│
+└────────────────────────────────────────────────────────────┘
+```
+
+### Regole
+
+- Sintesi finale non significa curricolo approvato.
+- Approvato/adottato solo dopo atto esterno.
+
+## 8. Wireframe Progettazione didattica
 
 ```text
 ┌────────────────────────────────────────────────────────────┐
@@ -135,8 +156,9 @@ Nota: nessuna adozione senza atto esterno.
 ├────────────────────────────────────────────────────────────┤
 │ Versione curricolare di riferimento: [seleziona]           │
 │ Stato coerenza: coerente / da verificare / da riallineare  │
+│ Nota: modulo da approfondire con CML-421A                  │
 ├──────────────────────┬─────────────────────────────────────┤
-│ Evidenze             │ Programmazione annuale              │
+│ Parti dal curricolo  │ Programmazione annuale              │
 │ [Apri]               │ [Prepara]                           │
 ├──────────────────────┼─────────────────────────────────────┤
 │ UDA modello          │ Collegamenti curricolo              │
@@ -148,61 +170,96 @@ Nota: nessuna adozione senza atto esterno.
 
 - Progettazione autonoma, ma collegata al curricolo.
 - Ogni documento deve indicare versione curricolare.
+- Nessuna implementazione runtime prima dell'audit CML-421A.
 
-## 8. Wireframe Esportazione / Per scopo
+## 9. Wireframe Esportazione
 
 ```text
 ┌────────────────────────────────────────────────────────────┐
-│ Esportazione > Per scopo                                  │
+│ Esportazione                                              │
 ├────────────────────────────────────────────────────────────┤
-│ Che cosa devi ottenere?                                   │
+│ Che documento devi preparare?                             │
 │                                                            │
-│ ( ) Documento curricolo                                   │
-│ ( ) Estratto disciplinare                                 │
-│ ( ) Programmazione annuale                                │
-│ ( ) UDA modello                                           │
-│ ( ) Proposta docente .cml                                 │
-│ ( ) Esito dipartimentale                                  │
-│ ( ) Report referente                                      │
-│ ( ) Materiale per discussione collegiale                  │
-│ ( ) Copia di sicurezza                                    │
+│ [Per la classe]                                           │
+│ - Programmazione annuale                                  │
+│ - Programma svolto                                        │
+│ - Relazione finale                                        │
+│ - Sintesi percorso                                        │
+│                                                            │
+│ [Per la progettazione]                                    │
+│ - UDA                                                     │
+│ - Evidenze                                                │
+│ - Rubriche                                                │
+│ - Collegamenti curricolo                                  │
+│                                                            │
+│ [Per il curricolo]                                        │
+│ - Estratto disciplinare                                   │
+│ - Documento curricolo                                     │
+│ - Fonti e versioni                                        │
+│ - Sintesi finale                                          │
+│                                                            │
+│ [Per il processo]                                         │
+│ - Proposta docente .cml                                   │
+│ - Esito dipartimentale                                    │
+│ - Report referente                                        │
+│ - Materiale per discussione collegiale                    │
+│                                                            │
+│ [Archivio e sicurezza]                                    │
+│ - Copia locale                                            │
+│ - Pacchetto classe                                        │
+│ - Pacchetto dipartimento                                  │
+│ - Backup .cml                                             │
 ├────────────────────────────────────────────────────────────┤
-│ Stato fonti: ...                                          │
-│ Uso consentito: materiale di lavoro / documento verificato │
+│ Nota: usa il Contesto di lavoro impostato in Impostazioni. │
 │ [Prepara esportazione]                                    │
 └────────────────────────────────────────────────────────────┘
 ```
 
-## 9. Wireframe Esportazione / Per ruolo
+### Regole
+
+- Esportazione parte dal documento scolastico, non dal formato.
+- Contesto di lavoro nelle Impostazioni, non dentro Esportazione.
+- Nessuna implementazione runtime prima dell'audit CML-421B.
+
+## 10. Wireframe Impostazioni / Contesto di lavoro
 
 ```text
 ┌────────────────────────────────────────────────────────────┐
-│ Esportazione > Per ruolo                                  │
+│ Impostazioni > Contesto di lavoro                         │
 ├────────────────────────────────────────────────────────────┤
-│ [Docente]       Estratti, UDA, proposta .cml               │
-│ [Dipartimento]  Confronto, esito, sintesi                  │
-│ [Referente]     Report gruppo curricolo, decisioni aperte  │
-│ [Dirigente]     Stato avanzamento, materiali per organi    │
+│ Anno scolastico                                           │
+│ Istituto                                                  │
+│ Ordine di scuola                                          │
+│ Plesso / sede                                             │
+│ Ruolo                                                     │
+│ Disciplina o ambito                                       │
+│ Classi assegnate                                          │
+│ Versione curricolare di riferimento                       │
+├────────────────────────────────────────────────────────────┤
+│ [Salva contesto locale]                                   │
 └────────────────────────────────────────────────────────────┘
 ```
 
-## 10. Wireframe Wiki del curricolo
+### Regole
+
+- Funzione globale.
+- Alimenta Curricolo, Progettazione ed Esportazione.
+- Non cambia fonti ufficiali.
+
+## 11. Wireframe Riferimenti e guida
 
 ```text
 ┌────────────────────────────────────────────────────────────┐
-│ Wiki del curricolo                                        │
+│ Riferimenti e guida                                       │
 ├────────────────────────────────────────────────────────────┤
-│ [Come si usa]                                             │
-│ [IN2012 e IN2025]                                         │
-│ [Fonti]                                                   │
-│ [Ruoli]                                                   │
-│ [Processo]                                                │
-│ [Lessico]                                                 │
-│ [Limiti dello strumento]                                  │
+│ [Fonti e normativa]                                      │
+│ [IN2012 e IN2025]                                        │
+│ [Ruoli e processo]                                       │
+│ [Uso e limiti]                                           │
 └────────────────────────────────────────────────────────────┘
 ```
 
-### Contenuti obbligatori Wiki
+### Contenuti obbligatori
 
 ```text
 IN2012: riferimento normativo confermato.
@@ -212,12 +269,13 @@ Validazione: sempre umana.
 Approvazione/adottabilità: fuori app.
 ```
 
-## 11. Wireframe mobile
+## 12. Wireframe mobile
 
 ```text
 ┌────────────────────────────┐
 │ Ambiente curricolare       │
 │ Stato: consultazione       │
+│ [Impostazioni]             │
 ├────────────────────────────┤
 │ Card vista corrente        │
 │ Titolo                     │
@@ -228,7 +286,7 @@ Approvazione/adottabilità: fuori app.
 │ ...                        │
 ├────────────────────────────┤
 │ Curricolo | Progetta       │
-│ Esporta   | Wiki           │
+│ Esporta   | Guida          │
 └────────────────────────────┘
 ```
 
@@ -238,41 +296,49 @@ Approvazione/adottabilità: fuori app.
 - Sotto-voci dentro menu contestuale.
 - Stato fonte/versione breve ma visibile.
 - Una sola azione primaria per vista.
+- Impostazioni raggiungibili dalla topbar.
 
-## 12. Sequenza test navigazionale
+## 13. Sequenza test navigazionale aggiornata
 
 ### Scenario docente
 
 ```text
-Home → Curricolo → Consulta → Progettazione → Esportazione → Wiki
+Home → Curricolo → Consulta → Progettazione → Esportazione → Riferimenti e guida
 ```
 
 ### Scenario dipartimento
 
 ```text
-Home → Curricolo → Processo aggiornamento → Esportazione per ruolo → Wiki processo
+Home → Curricolo → Processo aggiornamento → Esportazione per processo → Riferimenti e guida / Ruoli e processo
 ```
 
 ### Scenario referente
 
 ```text
-Home → Curricolo → Fonti/Versioni → Processo → Report referente → Wiki ruoli
+Home → Curricolo → Fonti/Versioni → Processo → Report referente → Riferimenti e guida / Fonti e normativa
 ```
 
 ### Scenario dirigente/governance
 
 ```text
-Home → Curricolo → Versioni → Fonti → Esportazione report → Wiki limiti
+Home → Curricolo → Versioni → Fonti → Esportazione report → Riferimenti e guida / Uso e limiti
 ```
 
-## 13. Decisione wireframe
+## 14. Decisione wireframe
 
-I wireframe sono sufficienti per passare a un test su carta o prototipo non runtime.
+I wireframe sono allineati alle correzioni CML-421C.
 
-Non sono sufficienti per implementazione diretta senza ulteriore verifica utente.
+Restano necessari:
+
+```text
+CML-421A — Didactic Design Needs Audit
+CML-421B — School Document Export Needs Audit
+```
+
+prima di qualsiasi scelta runtime.
 
 ## Verdict
 
 ```text
-CML_420_LOGICAL_WIREFRAMES_READY
+CML_420_LOGICAL_WIREFRAMES_TERMINOLOGY_ALIGNED_BY_CML_421C
 ```
