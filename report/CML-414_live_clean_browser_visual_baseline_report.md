@@ -132,7 +132,7 @@ Nessun mock di riferimento approvato come baseline. I mock prodotti in fasi prec
 | # | Problema | Impatto | Note |
 |---|----------|---------|------|
 | 1 | Home contiene due titoli (banner + hub) potenzialmente ridondanti | Medio | "Ambiente curricolare d'Istituto" e "Hub del processo curricolare" |
-| 2 | Percorso operativo (5 step) e pipeline ruoli (4 step) sono separati ma语义 complementari | Basso | Utente potrebbe non collegare i due percorsi |
+| 2 | Percorso operativo (5 step) e pipeline ruoli (4 step) sono separati ma semanticamente complementari | Basso | Utente potrebbe non collegare i due percorsi |
 | 3 | Pannello Discipline inizialmente chiuso — utile ma nascosto | Basso | Richiede click per espandere |
 | 4 | Curricolo: due versioni (2012 / 2025) possono confondere | Medio | Nuovo utente potrebbe non capire quale sia vigente |
 | 5 | Terminologia "Progetta" vs "Valutazione/Evidenze" non allineata | Basso | Sub-tab ha label diversa dal tab principale |
