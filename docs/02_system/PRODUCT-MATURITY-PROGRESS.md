@@ -145,7 +145,7 @@ PM-09 resta al 45%. CML-434S non incrementa la percentuale perché non applica r
 - Ultima slice completata: CML-430 (docs-only — User Validation Intake Summary Template)
 - Ultima slice completata: CML-431 (docs-only — PM-09 Pilot Readiness Checkpoint)
 - Ultima slice completata: CML-434 (runtime micro-slice — Home Task Selector Runtime, merged su main via PR #24 non ancora live)
-- Ultima slice completata: CML-435 (runtime micro-slice — Home Mock Conformance Visibility Gate, su branch, PR #26 aperta)
+- Ultima slice completata: CML-435 (runtime micro-slice — Home Mock Conformance Visibility Gate, merged su main via PR #24; live da verificare con smoke pubblico)
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
 - Ultima slice completata: CML-433U (docs-only — Specifiche utente pre-bozzetto, merged `67e27da`)
