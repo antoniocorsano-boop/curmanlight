@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-431 — PM-09 Pilot Readiness Checkpoint
-- Last slice: CML-431 — PM-09 Pilot Readiness Checkpoint
-- Last commit: 796411e (CML-430 push)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (ready per prova pilota)
-- Critical Path: Validazione con utenti
-- Next action: prova pilota reale con 2–5 docenti (fuori-repo)
-- Last verdict: `CML_431_PM09_PILOT_READINESS_CHECKPOINT_READY_LOCAL_NOT_PUSHED`
-- Repository status: origin/main sincronizzato su 796411e, live su GitHub Pages, CML-431 docs-only locale non pushato
+- Last milestone: CML-432 — Teacher Task View Architecture and Mock Comparison
+- Last slice: CML-432 — Teacher Task View Architecture and Mock Comparison
+- Last commit: 088d9bd (CML-431 push)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (primo pilota raccolto, architettura viste/task definita)
+- Critical Path: Validazione con utenti → Architettura viste docente
+- Next action: fornire mock logico/grafico e validare la vista target prima di nuove patch runtime
+- Last verdict: `CML_432_TEACHER_TASK_VIEW_ARCHITECTURE_PUSHED_REMOTE`
+- Repository status: origin/main aggiornato da remoto tramite PR CML-432; runtime invariato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
