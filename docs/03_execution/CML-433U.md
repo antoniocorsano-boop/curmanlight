@@ -10,7 +10,7 @@ PM-03 Orientamento / PM-05 Esperienza di lavoro / PM-06 Accompagnamento / PM-09 
 
 ## Stato
 
-READY_FOR_REVIEW_REMOTE_BRANCH
+READY_FOR_MERGE_REMOTE_BRANCH
 
 ## Base
 
@@ -73,6 +73,15 @@ Il file dichiarava CML-433 come ultima slice, ma riportava ancora `4537af2` come
 
 CML-433 dichiarava intenzionalmente il movelog non aggiornato. Il problema resta tracciato ma non corretto in questa branch, perché il file richiede una modifica locale sicura.
 
+## Review sync
+
+Rilievi trattati nella review della PR #19:
+
+1. stato documentale trasformato da `in review` a `merge-ready`;
+2. `Slice in esecuzione` riportata a `nessuna`;
+3. incremento PM-09 da 35% a 40% motivato in `PRODUCT-MATURITY-PROGRESS.md`;
+4. rinvio del movelog mantenuto come scelta intenzionale e sicura.
+
 ## Perimetro
 
 Incluso:
@@ -97,6 +106,8 @@ Escluso:
 - Branch di lavoro creata da `main`: OK.
 - Base remota CML-433 individuata: `55c23ab`.
 - Tentativo di sync movelog respinto: OK, evitata cancellazione massiva.
+- Review PR #19 eseguita: OK.
+- Micro-patch di sync stato review: OK.
 - Slice docs-only: OK.
 - Runtime modificato: NO.
 - Dati curricolari modificati: NO.
@@ -118,5 +129,5 @@ Il bozzetto successivo potrà procedere solo se le specifiche utente rispondono 
 ## Verdetto
 
 ```text
-CML_433U_USER_SPECIFICATIONS_PRE_BOZZETTO_READY_FOR_REVIEW_REMOTE_BRANCH
+CML_433U_USER_SPECIFICATIONS_PRE_BOZZETTO_READY_FOR_MERGE_REMOTE_BRANCH
 ```
