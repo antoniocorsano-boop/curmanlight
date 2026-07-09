@@ -5,11 +5,11 @@
 - Last milestone: CML-435 — Home Mock Conformance Visibility Gate
 - Last slice: CML-435 — Home Mock Conformance Visibility Gate
 - Last completed design merge: 67e27da (CML-433U)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (Home conforme al mock CML-434 + visibility gate CML-435; merged su main via PR #24; live da verificare con smoke pubblico)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (CML-434 merged su main via PR #24; CML-435 su branch `codex/cml-435-home-mock-conformance`, PR #26 aperta non mergiata, ready for merge remoto)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: Smoke post-merge e live verification CML-435 su main
+- Next action: Merge CML-435 via PR #26; smoke post-merge e live verification su main
 - Last verdict: `CML_435_HOME_MOCK_CONFORMANCE_VISIBILITY_GATE_READY_FOR_MERGE_REMOTE_BRANCH`
-- Repository status: CML-435 merged su main via PR #24; live da verificare con smoke pubblico; movelog corrente `docs/REPO-MOVELOG-v2.md`
+- Repository status: CML-434 merged su main via PR #24; CML-435 su branch `codex/cml-435-home-mock-conformance`, PR #26 aperta non mergiata, ready for merge remoto; movelog corrente `docs/REPO-MOVELOG-v2.md`
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

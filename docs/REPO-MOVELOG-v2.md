@@ -367,7 +367,7 @@ CML_434_HOME_TASK_SELECTOR_RUNTIME_PUSHED_BRANCH_NOT_MERGED
 
 - **Data**: 2026-07-09
 - **Tipo**: runtime micro-slice (visibility gate)
-- **Stato**: merged su main via PR #24; live da verificare con smoke pubblico
+- **Stato**: branch `codex/cml-435-home-mock-conformance` pushata su origin; PR #26 aperta, non mergiata; ready for merge remoto
 - **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
 - **Dati curricolari**: non modificati
 
