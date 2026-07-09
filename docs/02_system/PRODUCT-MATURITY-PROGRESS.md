@@ -26,7 +26,7 @@ PM-07 Uniformita
 ████▌░░░░░ 45%
 
 PM-09 Validazione con utenti
-███░░░░░░░ 30%
+███▌░░░░░░ 35%
 
 ## Slice in esecuzione
 
@@ -34,7 +34,7 @@ PM-09 Validazione con utenti
 
 ## Prossima slice
 
-- CML-433 (Teacher task view target specification, dopo disponibilità mock logico/grafico)
+- CML-434 (Home task selector runtime, dopo allineamento locale e conferma specifica CML-433)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -94,8 +94,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-09 - Validazione con utenti
 
-███░░░░░░░
-30%
+███▌░░░░░░
+35%
 
 ## Stato operativo
 
@@ -141,9 +141,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-430 (docs-only — User Validation Intake Summary Template)
 - Ultima slice completata: CML-431 (docs-only — PM-09 Pilot Readiness Checkpoint)
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
+- Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: validare mock logico/grafico e vista target prima di runtime
-- Ultimo aggiornamento: 2026-07-09 (CML-432)
+- Prossima azione: allineamento locale, movelog sync CML-433M, poi eventuale CML-434 Home task selector runtime
+- Ultimo aggiornamento: 2026-07-09 (CML-433)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -190,12 +191,14 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 1. Se CML-286/CML-287 slittano, si ritarda il consolidamento di PM-06 e PM-07 con effetti a cascata sulle fasi successive.
 2. Senza CML-297, restano attive criticita su contestualizzazione fonti e chiarezza proposte 2025 nel cuore del Curriculum.
 3. Senza CML-300, permane alto il rischio di scelta errata nel flusso Esportazioni.
+4. Senza una specifica target validata, le patch UI rischiano di correggere singole card senza ridurre il carico cognitivo sistemico.
 
 ## Decisioni aperte
 
 1. Definire soglia oggettiva di passaggio da PM-03/PM-04 in stato IN CORSO a COMPLETATO con test utente.
 2. Stabilire cadenza fissa di aggiornamento percentuali programma (per slice o per milestone).
 3. Formalizzare protocollo di validazione PM-09 con utenti scolastici reali.
+4. Validare sequenza CML-434 → CML-435 → CML-436 prima di runtime esteso.
 
 ## Decisioni architetturali di governance
 
@@ -203,6 +206,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 2. Ogni voce UX e mappata in modo univoco a un macroprogramma PM e a una slice CML target.
 3. Le dipendenze tra slice sono esplicite e governate tramite critical path.
 4. Il presente documento e la fonte primaria di stato programma; backlog e roadmap restano allineati a questo cruscotto.
+5. Dopo CML-433, ogni runtime patch derivata dal mock deve dichiarare claim, hard rules, gate e review avversariale.
 
 ## Regola obbligatoria per future slice CML
 
