@@ -8,7 +8,7 @@
 - Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (selettore task Home implementato; in attesa di merge su main)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
 - Next action: Merge CML-434 su main via PR o push diretto autorizzato; aggiornare docs e validatori
-- Last verdict: `CML_434_HOME_TASK_SELECTOR_RUNTIME_READY_LOCAL_NOT_PUSHED`
+- Last verdict: `CML_434_HOME_TASK_SELECTOR_RUNTIME_PUSHED_BRANCH_NOT_MERGED`
 - Repository status: branch `codex/cml-434-home-task-selector-runtime` con runtime modificato; main invariato; movelog corrente `docs/REPO-MOVELOG-v2.md`
 
 ## Recent Refactor Chain (CML-371 → CML-380)

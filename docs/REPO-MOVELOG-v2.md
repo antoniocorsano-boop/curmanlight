@@ -333,7 +333,7 @@ CML_432_TEACHER_TASK_VIEW_ARCHITECTURE_AND_MOCK_COMPARISON_PUSHED_REMOTE
 
 - **Data**: 2026-07-09
 - **Tipo**: runtime micro-slice
-- **Stato**: su branch `codex/cml-434-home-task-selector-runtime`, non pushato su origin
+- **Stato**: branch `codex/cml-434-home-task-selector-runtime` pushata su origin; PR #24 aperta, non mergiata
 - **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
 - **Dati curricolari**: non modificati
 
@@ -358,5 +358,5 @@ Sostituiti i pulsanti operativi `.home-process-hub__actions` con un selettore di
 ### Verdetto
 
 ```text
-CML_434_HOME_TASK_SELECTOR_RUNTIME_READY_LOCAL_NOT_PUSHED
+CML_434_HOME_TASK_SELECTOR_RUNTIME_PUSHED_BRANCH_NOT_MERGED
 ```
