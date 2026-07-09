@@ -30,11 +30,11 @@ PM-09 Validazione con utenti
 
 ## Slice in esecuzione
 
-- CML-433U (Specifiche utente pre-bozzetto, remote branch in review)
+- nessuna
 
 ## Prossima slice
 
-- Review/merge CML-433U, poi CML-434 (Home task selector runtime, dopo allineamento locale e conferma specifica utente)
+- Merge controllato CML-433U; poi CML-433M movelog sync sicuro oppure CML-434 Home task selector runtime dopo conferma della specifica utente.
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -97,6 +97,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 ████░░░░░░
 40%
 
+## Nota avanzamento PM-09
+
+L'avanzamento PM-09 da 35% a 40% è motivato dal passaggio da specifica target delle viste a specifiche utente pre-bozzetto: profili, contesti d'uso, logica dei pannelli, stati curricolari e criteri di accettazione del bozzetto sono ora formalizzati in un contratto verificabile.
+
 ## Stato operativo
 
 - Ultima slice completata: CML-345 (runtime microfix — dashboard export e navigation coherence)
@@ -142,11 +146,11 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-431 (docs-only — PM-09 Pilot Readiness Checkpoint)
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
-- Slice in review: CML-433U (docs-only — Specifiche utente pre-bozzetto)
-- Movelog sync CML-432/CML-433: da eseguire in locale o con patch puntuale verificabile, non tramite riscrittura remota troncata
+- Slice pronta per merge: CML-433U (docs-only — Specifiche utente pre-bozzetto)
+- Movelog sync CML-432/CML-433/CML-433U: da eseguire in locale o con patch puntuale verificabile, non tramite riscrittura remota troncata
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: review/merge CML-433U, poi eventuale CML-434 Home task selector runtime
-- Ultimo aggiornamento: 2026-07-09 (CML-433U branch)
+- Prossima azione: merge controllato CML-433U, poi CML-433M oppure CML-434 Home task selector runtime
+- Ultimo aggiornamento: 2026-07-09 (CML-433U merge-ready)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -202,7 +206,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 2. Stabilire cadenza fissa di aggiornamento percentuali programma (per slice o per milestone).
 3. Formalizzare protocollo di validazione PM-09 con utenti scolastici reali.
 4. Validare sequenza CML-434 → CML-435 → CML-436 prima di runtime esteso.
-5. Validare CML-433U prima della produzione dei bozzetti alternativi.
+5. Completare merge CML-433U prima della produzione dei bozzetti alternativi.
 
 ## Decisioni architetturali di governance
 
