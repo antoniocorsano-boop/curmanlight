@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-433M — Versioned Movelog Sync
-- Last slice: CML-433M — Versioned Movelog Sync
+- Last milestone: CML-434D — Bozzetti alternativi pre-runtime
+- Last slice: CML-434D — Bozzetti alternativi pre-runtime
 - Last completed design merge: 67e27da (CML-433U)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (specifiche utente pre-bozzetto fuse; movelog operativo v2 aperto)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (bozzetti alternativi pre-runtime definiti; scelta ibrida raccomandata)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: CML-434D bozzetti alternativi pre-runtime
-- Last verdict: `CML_433M_VERSIONED_MOVELOG_SYNC_MERGED_REMOTE`
-- Repository status: main documentale riallineato; runtime e dati curricolari invariati; movelog corrente `docs/REPO-MOVELOG-v2.md`; movelog legacy conservato e non modificato
+- Next action: CML-434 Home task selector runtime micro-slice, solo dopo conferma della direzione ibrida
+- Last verdict: `CML_434D_PRE_RUNTIME_MOCK_ALTERNATIVES_MERGED_REMOTE`
+- Repository status: main documentale riallineato; runtime e dati curricolari invariati; movelog corrente `docs/REPO-MOVELOG-v2.md`; direzione raccomandata B+C con A come evoluzione istituzionale
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
@@ -31,9 +31,13 @@ Never reference only one runtime file in execution summaries.
 
 ## Product Design Governance Reminder
 
-Dopo CML-433U, il bozzetto grafico deve essere valutato contro le specifiche utente, non contro preferenze estetiche isolate.
+Dopo CML-434D, la prima micro-slice runtime deve seguire la direzione ibrida:
 
-Ogni bozzetto deve dichiarare:
+```text
+B come ingresso docente + C come logica operativa + A come evoluzione istituzionale futura
+```
+
+Ogni intervento runtime deve dichiarare:
 
 - profilo utente servito;
 - contesto d'uso supportato;
