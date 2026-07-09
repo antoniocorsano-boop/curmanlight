@@ -326,3 +326,37 @@ Non modificati.
 ```text
 CML_432_TEACHER_TASK_VIEW_ARCHITECTURE_AND_MOCK_COMPARISON_PUSHED_REMOTE
 ```
+
+---
+
+## CML-434 — Home Task Selector Runtime
+
+- **Data**: 2026-07-09
+- **Tipo**: runtime micro-slice
+- **Stato**: su branch `codex/cml-434-home-task-selector-runtime`, non pushato su origin
+- **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
+- **Dati curricolari**: non modificati
+
+### Descrizione
+
+Sostituiti i pulsanti operativi `.home-process-hub__actions` con un selettore di 4 attività docente (Consulta, Progetta, Propone, Esporta) + pannello contestuale. Rimossa CSS morta.
+
+### Cambiamenti
+
+- **CSS**: rimossa `.home-process-hub__actions`, `.home-process-hub__btn`, `.home-process-hub__btn.primary`; aggiunte classi task-selector/task-context
+- **HTML**: `.home-process-hub__actions` → `.home-task-selector` (4 bottoni); aggiunto `.home-task-context`
+- **JS**: `HOME_TASK_CONTEXTS`, `setHomeTaskContext()`, `renderHomeTaskContext()`; chiamata in init e `setTab('home')`
+- **Media query**: rimosse regole orfane per `.home-process-hub__actions`/`.home-process-hub__btn`
+
+### Verifica
+
+- `git diff --check`: ok
+- Curriculum validator: 14/14 PASS
+- Runtime shape test: 14/14 PASS
+- Runtime pair allineato: 28 occorrenze `home-task` in entrambi i file
+
+### Verdetto
+
+```text
+CML_434_HOME_TASK_SELECTOR_RUNTIME_READY_LOCAL_NOT_PUSHED
+```
