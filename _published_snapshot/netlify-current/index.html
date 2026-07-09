@@ -813,6 +813,26 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .home-applicability-detail{font-size:11px;color:#546e7a;margin-top:4px}
 .home-footer{margin-top:12px}
 .home-footer p{font-size:11px;color:#78909c;line-height:1.5;margin:0}
+.home-validation-entry{background:#fff;border-radius:9px;padding:12px 13px;box-shadow:0 1px 4px rgba(0,0,0,.05);border:1px solid #e0e0e0;border-left:3px solid #6a1b9a;margin:14px 0;display:flex;flex-direction:column;gap:8px}
+.home-validation-entry h3{font-size:13px;font-weight:800;color:#6a1b9a;margin:0;display:inline-flex;align-items:center;gap:6px}
+.home-validation-entry p{font-size:12px;color:#455a64;line-height:1.5;margin:0}
+.home-validation-entry button{align-self:flex-start;background:#6a1b9a;color:#fff;border:none;border-radius:8px;padding:7px 14px;font-size:12px;font-weight:700;cursor:pointer}
+.home-validation-entry button:hover{background:#4a148c}
+.validation-overlay{position:fixed;inset:0;background:rgba(26,35,126,.55);z-index:10001;display:flex;align-items:center;justify-content:center;padding:16px}
+.validation-dialog{background:#fff;border-radius:14px;max-width:560px;width:100%;padding:24px;box-shadow:0 10px 40px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto}
+.validation-dialog h2{font-size:17px;color:#6a1b9a;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.validation-dialog .validation-intro{font-size:12px;color:#455a64;line-height:1.5;margin:0 0 14px;padding:10px 12px;background:#f3e5f5;border-radius:8px}
+.validation-dialog h3{font-size:13px;font-weight:800;color:#37474f;margin:14px 0 6px}
+.validation-dialog .validation-scenario{font-size:12px;color:#37474f;line-height:1.55;margin:0 0 10px;padding:10px 12px;background:#f5f7fa;border-radius:8px;border-left:3px solid #6a1b9a}
+.validation-dialog .validation-tasks{font-size:12px;color:#455a64;line-height:1.55;margin:0 0 10px;padding-left:18px}
+.validation-dialog .validation-tasks li{margin-bottom:4px}
+.validation-dialog textarea{width:100%;box-sizing:border-box;min-height:100px;border:1px solid #cfd8dc;border-radius:8px;padding:10px;font-size:12px;font-family:inherit;line-height:1.5;resize:vertical}
+.validation-dialog .validation-prudent{font-size:11px;color:#78909c;font-style:italic;margin:8px 0 14px;padding:8px 10px;background:#fff3e0;border-radius:8px;border-left:3px solid #f9a825}
+.validation-dialog .validation-actions{display:flex;gap:8px;flex-wrap:wrap}
+.validation-dialog .validation-actions button{border-radius:8px;padding:9px 14px;font-size:12px;font-weight:700;cursor:pointer}
+.validation-dialog .validation-primary{background:#6a1b9a;color:#fff;border:none}
+.validation-dialog .validation-primary:hover{background:#4a148c}
+.validation-dialog .validation-secondary{background:#fff;color:#455a64;border:1px solid #cfd8dc}
 /* DIDATTICA EVIDENCE */
 .didattica-evidence{max-width:960px;margin:0 auto}
 .didattica-evidence-header{background:linear-gradient(135deg,#00695c,#00897b);color:#fff;border-radius:9px 9px 0 0;padding:14px 18px}
@@ -1725,6 +1745,11 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
             <p class="home-card-text">Produci documenti, file di lavoro e copie di sicurezza.</p>
           </a>
         </div>
+        <section class="home-validation-entry" role="region" aria-label="Test guidato">
+          <h3><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-file-text"></use></svg> Partecipa al test guidato</h3>
+          <p>Aiuta a verificare se lo strumento è chiaro, utile e coerente con il lavoro scolastico reale.</p>
+          <button type="button" onclick="openValidationPanel()">Avvia test guidato</button>
+        </section>
         <section class="home-context-card" role="region" aria-label="Contesto di lavoro" id="work-context-card">
           <div id="work-context-body"></div>
         </section>
@@ -6594,6 +6619,57 @@ function openWorkContextPanel(){
 function closeWorkContextPanel(){
   var overlay=document.getElementById("work-context-overlay");
   if(overlay) overlay.remove();
+}
+
+function openValidationPanel(){
+  var existing=document.getElementById("validation-overlay");
+  if(existing) return;
+  var overlay=document.createElement("div");
+  overlay.id="validation-overlay";
+  overlay.className="validation-overlay";
+  overlay.setAttribute("role","dialog");
+  overlay.setAttribute("aria-modal","true");
+  overlay.setAttribute("aria-labelledby","validation-title");
+  overlay.innerHTML='<div class="validation-dialog">'+
+    '<h2 id="validation-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-file-text"></use></svg> Test guidato per docenti</h2>'+
+    '<p class="validation-intro">Questo percorso serve a raccogliere osservazioni sull\'usabilit\u00e0 dello strumento. Non valuta il docente e non richiede competenze tecniche.</p>'+
+    '<h3>Scenario</h3>'+
+    '<div class="validation-scenario">Sei un docente che deve consultare il curricolo di istituto e capire se lo strumento pu\u00f2 aiutarti a preparare materiali di lavoro per il dipartimento, senza sostituire la decisione collegiale.</div>'+
+    '<h3>Cosa osservare</h3>'+
+    '<ol class="validation-tasks">'+
+    '<li>Guarda la Home e prova a capire cosa puoi fare oggi.</li>'+
+    '<li>Consulta una disciplina e verifica se il curricolo \u00e8 comprensibile.</li>'+
+    '<li>Prova a individuare come preparare una progettazione.</li>'+
+    '<li>Controlla se \u00e8 chiaro che la validazione resta umana.</li>'+
+    '<li>Scrivi cosa hai capito subito e cosa ti ha creato dubbio.</li>'+
+    '</ol>'+
+    '<h3><label for="validation-notes">Annotazioni non vincolanti</label></h3>'+
+    '<textarea id="validation-notes" placeholder="Scrivi liberamente cosa risulta chiaro, cosa miglioreresti e quali parti useresti davvero nel lavoro scolastico."></textarea>'+
+    '<div class="validation-prudent">Le annotazioni sono materiale di riflessione per migliorare lo strumento. Non costituiscono valutazione del docente.</div>'+
+    '<div class="validation-actions">'+
+    '<button class="validation-primary" onclick="exportValidationObservations()">Esporta osservazioni</button>'+
+    '<button class="validation-secondary" onclick="closeValidationPanel()">Chiudi</button>'+
+    '</div></div>';
+  overlay.addEventListener("keydown",function(e){
+    if(e.key==="Escape") closeValidationPanel();
+  });
+  document.body.appendChild(overlay);
+}
+
+function closeValidationPanel(){
+  var overlay=document.getElementById("validation-overlay");
+  if(overlay) overlay.remove();
+}
+
+function exportValidationObservations(){
+  var notes=document.getElementById("validation-notes");
+  var content="CurManLight \u2014 Test guidato utente\n\n";
+  content+="Data: "+new Date().toLocaleDateString("it-IT")+"\n";
+  content+="Contesto: "+getWorkContextChip()+"\n";
+  content+="Scenario: Sei un docente che deve consultare il curricolo di istituto e capire se lo strumento pu\u00f2 aiutarti a preparare materiali di lavoro per il dipartimento, senza sostituire la decisione collegiale.\n\n";
+  content+="Annotazioni:\n";
+  content+=notes?notes.value||"(nessuna annotazione)":"(nessuna annotazione)";
+  downloadBlob(new Blob([content],{type:"text/plain;charset=utf-8"}),"curmanlight-test-guidato-osservazioni.txt");
 }
 
 function applyWorkContext(){

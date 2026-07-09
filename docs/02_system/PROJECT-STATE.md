@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-399 — User Validation Scenario Pack
-- Last slice: CML-399 — User Validation Scenario Pack (docs-only / product validation design)
-- Last commit: be6d81e (CML-426 docs close)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (in prep)
+- Last milestone: CML-400 — User Validation Entry Runtime
+- Last slice: CML-400 — User Validation Entry Runtime (runtime micro-patch)
+- Last commit: (local — not yet pushed)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (validation ready)
 - Critical Path: Validazione con utenti
-- Next slice: CML-400 (runtime — pulsante provvisorio Home / guida test / campo annotazioni)
-- Last verdict: `CML_399_USER_VALIDATION_SCENARIO_PACK_READY_LOCAL_NOT_PUSHED`
-- Repository status: origin/main sincronizzato su be6d81e, live su GitHub Pages
+- Next slice: validazione utente in campo con docenti reali
+- Last verdict: `CML_400_USER_VALIDATION_ENTRY_RUNTIME_READY_LOCAL_NOT_PUSHED`
+- Repository status: origin/main sincronizzato su 2492e7c, CML-400 modifiche runtime locali non pushatte
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

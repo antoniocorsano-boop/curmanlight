@@ -1,10 +1,30 @@
 # Repo Movelog
 
+## CML-400 — User Validation Entry Runtime
+
+- Type: runtime micro-patch
+- Macro-program: PM-09 Validazione con utenti
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `2492e7c` (CML-399)
+- Home entry per test guidato docenti: card ".home-validation-entry", modal overlay con scenario, 5 compiti osservazione, campo annotazioni, export .txt. Senza backend, account, invio remoto.
+- Files created:
+  - `docs/03_execution/CML-400.md`
+  - `report/CML-400_user_validation_entry_runtime.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SI
+- Dati curricolari modificati: NO
+
 ## CML-399 — User Validation Scenario Pack
 
 - Type: docs-only / product validation design
 - Macro-program: PM-09 Validazione con utenti
-- Status: READY_LOCAL_NOT_PUSHED
+- Status: PUSHED
 - Branch: `main`
 - Base: `be6d81e` (CML-426 docs close)
 - Pacchetto di validazione utente: profilo tester, scenario narrativo, compiti non meccanici, domande di osservazione, griglia valutazione 1-5, formato raccolta annotazioni, esiti attesi roadmap PM/UX.
