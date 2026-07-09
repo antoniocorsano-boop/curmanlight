@@ -138,9 +138,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-427 (audit/smoke — User Validation Entry Live Smoke and Pilot Readiness)
 - Ultima slice completata: CML-428 (docs-only — User Validation Pilot Kit)
 - Ultima slice completata: CML-429 (docs-only — User Validation Evidence Intake Model)
+- Ultima slice completata: CML-430 (docs-only — User Validation Intake Summary Template)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: modello di sintesi delle evidenze raccolte
-- Ultimo aggiornamento: 2026-07-09 (CML-429)
+- Prossima slice operativa prevista: prova pilota con docenti reali
+- Ultimo aggiornamento: 2026-07-09 (CML-430)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

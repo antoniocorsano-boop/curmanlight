@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## CML-430 — User Validation Intake Summary Template
+
+- Type: docs-only
+- Macro-program: PM-09 Validazione con utenti
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `bcb9a0c` (CML-429M push)
+- Modello operativo per sintetizzare evidenze raccolte dai docenti dopo prova pilota: scopo, dati minimi, tabella sintesi evidenze, schema sintesi finale, criteri decisione, priorit, output atteso.
+- Files created:
+  - `docs/03_execution/CML-430.md`
+  - `report/CML-430_user_validation_intake_summary_template.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+- Verdetto: CML_430_USER_VALIDATION_INTAKE_SUMMARY_TEMPLATE_READY_LOCAL_NOT_PUSHED
+
 ## CML-429 — User Validation Evidence Intake Model
 
 - Type: docs-only
