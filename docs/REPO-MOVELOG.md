@@ -1,5 +1,25 @@
 # Repo Movelog
 
+## CML-424 — Work Context and School Year Runtime Patch
+
+- Type: runtime microfix
+- Macro-program: PM-06 (Accompagnamento), PM-05 (Esperienza di lavoro)
+- Status: READY_UNCOMMITTED
+- Branch: `main`
+- Base: `516ad61` (CML-397)
+- Patch runtime per contesto di lavoro e anno scolastico: esteso DEFAULT_PROFILE con annoScolastico, aggiunte funzioni helper (getSchoolYearLabel, getWorkContextChip, requiresSchoolYearMessage), campo Anno scolastico in Impostazioni, chip contesto sintetico in renderProfileSummary, riga Anno scolastico in bozza UDA. Retrocompatibile con salvataggi precedenti.
+- Files created:
+  - `docs/03_execution/CML-424.md`
+  - `report/CML-424_work_context_school_year_runtime_patch_report.md`
+- Files updated:
+  - `index.html`
+  - `_published_snapshot/netlify-current/index.html`
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: SI
+- Dati curricolari modificati: NO
+
 ## CML-398 — Protocollo di test utente leggero
 
 - Type: docs-only

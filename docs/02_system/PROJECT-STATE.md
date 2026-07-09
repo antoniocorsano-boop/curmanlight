@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-398 - Protocollo di test utente leggero
-- Last slice: CML-398 — Protocollo di test utente leggero (docs-only)
+- Last milestone: CML-424 — Work Context and School Year Runtime Patch
+- Last slice: CML-424 — Work Context and School Year Runtime Patch (runtime microfix)
 - Last commit: 516ad61 (CML-397 docs: select next phase after stable checkpoint)
-- Active PM: PM-03 (45%), PM-06 (70%), PM-07 (40%)
+- Active PM: PM-06 (70% → 75%), PM-05 (100%)
 - Critical Path: Validazione con utenti
 - Next slice: CML-399 (User validation scenario pack)
-- Last verdict: `CML_398_LIGHTWEIGHT_USER_TEST_PROTOCOL_READY`
-- Repository status: origin/main sincronizzato, protocollo test utente pronto, prossima fase: esecuzione test
+- Last verdict: `CML_424_WORK_CONTEXT_AND_SCHOOL_YEAR_RUNTIME_PATCH_READY_UNCOMMITTED`
+- Repository status: origin/main sincronizzato, patch contesto lavoro e anno scolastico applicata localmente, non committata
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

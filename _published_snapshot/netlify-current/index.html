@@ -3417,6 +3417,7 @@ function buildUdaDraftMarkdown() {
   lines.push('**Disciplina:** ' + meta.icon + ' ' + discName);
   lines.push('**Competenza chiave:** ' + meta.comp);
   lines.push('**Ordine:** ' + ordLabel + ' \u00b7 ' + classeLabel);
+  lines.push('**Anno scolastico:** ' + getSchoolYearLabel());
   if (meta.nuclei) lines.push('**Nuclei:** ' + meta.nuclei);
   lines.push('**Stato:** \ud83d\udfe0 Bozza generata localmente \u2014 non validata');
   lines.push('**Data generazione:** ' + new Date().toISOString().slice(0, 10));
@@ -3568,7 +3569,7 @@ function downloadUdaMarkdown() {
 // ================================================================
 let selDisc=DISCIPLINE[0], filterStatus="all", currentTab="home", homeDisciplinePanelOpen=false;
 let editingId=null;
-const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:DISCIPLINE[0],ordine:"Secondaria"};
+const DEFAULT_PROFILE={nome:"",cognome:"",disciplina:DISCIPLINE[0],ordine:"Secondaria",annoScolastico:""};
 let userProfile={...DEFAULT_PROFILE};
 const SCHOOL_PROFILE={istituto:"Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani»",comune:"Ariano Irpino (AV)",codice:"AVIC849003"};
 const ORDER_PROFILE_LABELS={Infanzia:"Scuola dell'Infanzia",Primaria:"Scuola Primaria",Secondaria:"Scuola Secondaria di I grado",Tutti:"Tutti gli ordini / Commissione curricolo"};
@@ -3583,10 +3584,25 @@ function isPersonalizedItem(item){return Boolean(item?.testoFinale&&cleanInlineI
 function canEditOrder(ordine){return userProfile.ordine==="Tutti" || !userProfile.ordine || userProfile.ordine===ordine;}
 function selectedOrderLabel(){return ORDER_PROFILE_LABELS[userProfile.ordine]||"Ordine non impostato";}
 function profileDisplayName(){const name=[userProfile.nome,userProfile.cognome].filter(Boolean).join(" ").trim();return name||"utente non indicato";}
-function renderProfileSummary(){const el=document.getElementById("active-profile-summary");if(!el)return;el.innerHTML=`<strong>${escapeHtml(profileDisplayName())}</strong> · ${escapeHtml(userProfile.disciplina||selDisc)} · ${escapeHtml(selectedOrderLabel())}<br><span style="color:#78909c">${escapeHtml(SCHOOL_PROFILE.istituto)} · ${escapeHtml(SCHOOL_PROFILE.comune)} · ${escapeHtml(SCHOOL_PROFILE.codice)}</span>`;}
+function renderProfileSummary(){const el=document.getElementById("active-profile-summary");if(!el)return;el.innerHTML=`<strong>${escapeHtml(profileDisplayName())}</strong><br><span style="color:#37474f;font-size:11px">${escapeHtml(getWorkContextChip())}</span>`;}
 function animateLocalSave(){const bar=document.querySelector(".local-save-bar");if(!bar)return;bar.classList.remove("saved-flash");void bar.offsetWidth;bar.classList.add("saved-flash");}
 function lockNoticeFor(item){if(canEditOrder(item.ordine))return "";return `<div class="readonly-order-note">🔒 Questa sezione è visibile per consultazione. Le modifiche sono abilitate solo per <strong>${escapeHtml(selectedOrderLabel())}</strong>. Per intervenire su questo ordine, apri <strong>Impostazioni / onboarding</strong> e cambia ordine di scuola.</div>`;}
 function disabledFor(item){return canEditOrder(item.ordine)?"":" disabled aria-disabled=\"true\"";}
+function getSchoolYearLabel(){
+  var value=(userProfile&&userProfile.annoScolastico?String(userProfile.annoScolastico).trim():"");
+  return value ? "A.S. "+value : "Anno scolastico non impostato";
+}
+function getWorkContextChip(){
+  var parts=[];
+  if(userProfile.disciplina) parts.push(userProfile.disciplina);
+  if(userProfile.ordine) parts.push(ORDER_PROFILE_LABELS[userProfile.ordine]||userProfile.ordine);
+  if(userProfile.annoScolastico) parts.push("A.S. "+userProfile.annoScolastico);
+  else parts.push("Anno scolastico non impostato");
+  return parts.join(" \u00B7 ");
+}
+function requiresSchoolYearMessage(){
+  return "Completa l'Anno scolastico in Impostazioni / Contesto di lavoro per generare documenti per classe o report.";
+}
 
 // ================================================================
 // ================================================================
@@ -5481,6 +5497,7 @@ function openSettingsModal(){
         <div class="settings-field"><label for="profile-cognome">Cognome</label><input id="profile-cognome" value="${escapeHtml(userProfile.cognome)}" autocomplete="family-name"></div>
       </div>
       <div class="settings-field"><label for="profile-disciplina">Disciplina prevalente</label><select id="profile-disciplina">${disciplineOptions}</select></div>
+      <div class="settings-field"><label for="profile-anno-scolastico">Anno scolastico</label><input id="profile-anno-scolastico" type="text" placeholder="2026/27" autocomplete="off" value="${escapeHtml(userProfile.annoScolastico||"")}"></div>
       <div class="settings-field"><label for="profile-ordine">Ordine di scuola su cui lavorare</label><select id="profile-ordine" onchange="updateSettingsSchoolPreview()">
         <option value="Infanzia" ${userProfile.ordine==="Infanzia"?"selected":""}>Scuola dell'Infanzia</option>
         <option value="Primaria" ${userProfile.ordine==="Primaria"?"selected":""}>Scuola Primaria</option>
@@ -5511,7 +5528,8 @@ function saveSettingsProfile(){
   const cognome=document.getElementById("profile-cognome")?.value.trim()||"";
   const disciplina=document.getElementById("profile-disciplina")?.value||selDisc;
   const ordine=document.getElementById("profile-ordine")?.value||"Secondaria";
-  userProfile={nome,cognome,disciplina,ordine};
+  const annoScolastico=document.getElementById("profile-anno-scolastico")?.value.trim()||"";
+  userProfile={nome,cognome,disciplina,ordine,annoScolastico};
   if(DATA[disciplina]) selDisc=disciplina;
   editingId=null;
   saveLocalState(true);

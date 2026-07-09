@@ -128,9 +128,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-396 (docs-only — Stable checkpoint post-tranche)
 - Ultima slice completata: CML-397 (docs-only — Next Phase Selection Audit)
 - Ultima slice completata: CML-398 (docs-only — Protocollo di test utente leggero)
+- Ultima slice completata: CML-424 (runtime microfix — Work Context and School Year Runtime Patch)
 - Milestone di consolidamento governance: CML-282A
 - Prossima slice operativa prevista: CML-399 (User validation scenario pack)
-- Ultimo aggiornamento: 2026-07-04 (CML-398)
+- Ultimo aggiornamento: 2026-07-09 (CML-424)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
