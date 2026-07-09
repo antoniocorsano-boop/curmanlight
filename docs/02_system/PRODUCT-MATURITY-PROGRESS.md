@@ -34,7 +34,7 @@ PM-09 Validazione con utenti
 
 ## Prossima slice
 
-- CML-434 Home task selector runtime micro-slice in locale o con patch atomica sicura.
+- Merge controllato CML-434 su main; poi smoke post-merge/live.
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -155,8 +155,8 @@ PM-09 resta al 45%. CML-434S non incrementa la percentuale perché non applica r
 - Movelog corrente: `docs/REPO-MOVELOG-v2.md`
 - Movelog legacy: `docs/REPO-MOVELOG.md` conservato e non riscritto
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: CML-434 Home task selector runtime micro-slice in locale o con patch atomica sicura
-- Ultimo aggiornamento: 2026-07-09 (CML-434S)
+- Prossima azione: Merge controllato CML-434 su main; poi smoke post-merge/live
+- Ultimo aggiornamento: 2026-07-09 (CML-434)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
