@@ -7,7 +7,7 @@
 - Last completed design merge: 67e27da (CML-433U)
 - Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (Home conforme al mock CML-434 + visibility gate CML-435; su branch)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: Smoke post-merge/live su main dopo merge CML-435
+- Next action: Smoke post-merge e live verification CML-435 su main
 - Last verdict: `CML_435_HOME_MOCK_CONFORMANCE_VISIBILITY_GATE_PUSHED_BRANCH_NOT_MERGED`
 - Repository status: branch `codex/cml-435-home-mock-conformance` con runtime modificato; main invariato; movelog corrente `docs/REPO-MOVELOG-v2.md`
 

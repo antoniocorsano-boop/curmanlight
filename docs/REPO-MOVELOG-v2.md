@@ -333,7 +333,7 @@ CML_432_TEACHER_TASK_VIEW_ARCHITECTURE_AND_MOCK_COMPARISON_PUSHED_REMOTE
 
 - **Data**: 2026-07-09
 - **Tipo**: runtime micro-slice
-- **Stato**: mergiata su main via PR #24, live su GitHub Pages
+- **Stato**: mergiata su main via PR #24; live da verificare con smoke pubblico
 - **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
 - **Dati curricolari**: non modificati
 
