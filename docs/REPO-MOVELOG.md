@@ -1,5 +1,32 @@
 # Repo Movelog
 
+## CML-427 — User Validation Entry Live Smoke and Pilot Readiness
+
+- Type: audit / smoke test / product validation readiness
+- Macro-program: PM-09 Validazione con utenti
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `f561066` (CML-400 docs closure)
+- Verifica completa che card Home "Partecipa al test guidato" e modal test guidato siano utilizzabili da un docente non tecnico e non appesantiscano l'esperienza iniziale.
+- Controlli eseguiti:
+  - Pre-check Git: OK (HEAD == origin/main == f561066)
+  - Validatori: 14/14 PASS (curriculum) + 14/14 PASS (shape test)
+  - Smoke locale: tutti gli elementi card e modal confermati
+  - Verifica live GitHub Pages: tutti gli elementi presenti
+  - Esportazione .txt: formato verificato (intestazione, data, contesto, scenario, annotazioni)
+  - Navigazione: tutte 5 voci intatte (Home, Curricolo, Progetta, Esportazioni, Guida)
+  - Nessun microfix necessario
+- Files created:
+  - `docs/03_execution/CML-427.md`
+  - `report/CML-427_user_validation_entry_live_smoke.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+- Verdetto: CML_427_USER_VALIDATION_ENTRY_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED
+
 ## CML-400 — User Validation Entry Runtime
 
 - Type: runtime micro-patch
