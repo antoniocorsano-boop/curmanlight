@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-432 — Teacher Task View Architecture and Mock Comparison
-- Last slice: CML-432 — Teacher Task View Architecture and Mock Comparison
-- Last commit: 088d9bd (CML-431 push)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (primo pilota raccolto, architettura viste/task definita)
-- Critical Path: Validazione con utenti → Architettura viste docente
-- Next action: fornire mock logico/grafico e validare la vista target prima di nuove patch runtime
-- Last verdict: `CML_432_TEACHER_TASK_VIEW_ARCHITECTURE_PUSHED_REMOTE`
-- Repository status: origin/main aggiornato da remoto tramite PR CML-432; runtime invariato
+- Last milestone: CML-433 — Teacher Task View Target Specification
+- Last slice: CML-433 — Teacher Task View Target Specification
+- Last commit: 4537af2 (CML-432 merge)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (primo pilota raccolto, mock realistico tradotto in specifica target)
+- Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Runtime controllato
+- Next action: CML-434 Home task selector runtime, solo dopo allineamento locale e review della specifica
+- Last verdict: `CML_433_TEACHER_TASK_VIEW_TARGET_SPEC_PUSHED_REMOTE`
+- Repository status: origin/main aggiornato da remoto tramite PR CML-433; runtime invariato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
