@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-434S — Runtime Remote Safety Gate
-- Last slice: CML-434S — Runtime Remote Safety Gate
+- Last milestone: CML-434 — Home Task Selector Runtime
+- Last slice: CML-434 — Home Task Selector Runtime
 - Last completed design merge: 67e27da (CML-433U)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (bozzetti alternativi definiti; CML-434 runtime bloccata da safety gate remoto)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (selettore task Home implementato; in attesa di merge su main)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: CML-434 Home task selector runtime micro-slice in locale o con patch atomica sicura
-- Last verdict: `CML_434S_RUNTIME_REMOTE_SAFETY_GATE_MERGED_REMOTE_RUNTIME_NOT_MODIFIED`
-- Repository status: main documentale riallineato; runtime e dati curricolari invariati; movelog corrente `docs/REPO-MOVELOG-v2.md`; CML-434 runtime non applicata da remoto per rischio riscrittura completa/troncata
+- Next action: Merge CML-434 su main via PR o push diretto autorizzato; aggiornare docs e validatori
+- Last verdict: `CML_434_HOME_TASK_SELECTOR_RUNTIME_PUSHED_BRANCH_NOT_MERGED`
+- Repository status: branch `codex/cml-434-home-task-selector-runtime` con runtime modificato; main invariato; movelog corrente `docs/REPO-MOVELOG-v2.md`
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
