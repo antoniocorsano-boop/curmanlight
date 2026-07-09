@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-433UP — User Specifications Post-Merge State Sync
-- Last slice: CML-433UP — User Specifications Post-Merge State Sync
+- Last milestone: CML-433M — Versioned Movelog Sync
+- Last slice: CML-433M — Versioned Movelog Sync
 - Last completed design merge: 67e27da (CML-433U)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (specifiche utente pre-bozzetto fuse e stato post-merge riallineato)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (specifiche utente pre-bozzetto fuse; movelog operativo v2 aperto)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: CML-433M movelog sync sicuro oppure CML-434D bozzetti alternativi pre-runtime
-- Last verdict: `CML_433UP_USER_SPECIFICATIONS_POST_MERGE_STATE_SYNC_MERGED_REMOTE`
-- Repository status: main documentale riallineato post-merge; runtime e dati curricolari invariati; movelog sync CML-432/CML-433/CML-433U/CML-433UP differito per modifica locale sicura
+- Next action: CML-434D bozzetti alternativi pre-runtime
+- Last verdict: `CML_433M_VERSIONED_MOVELOG_SYNC_MERGED_REMOTE`
+- Repository status: main documentale riallineato; runtime e dati curricolari invariati; movelog corrente `docs/REPO-MOVELOG-v2.md`; movelog legacy conservato e non modificato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
@@ -43,8 +43,12 @@ Ogni bozzetto deve dichiarare:
 - criterio di accettazione soddisfatto;
 - elementi volutamente esclusi.
 
-## Deferred Documentation Sync
+## Current Movelog
 
-`docs/REPO-MOVELOG.md` richiede una sincronizzazione successiva per CML-432, CML-433, CML-433U e CML-433UP.
+Il registro operativo corrente è:
 
-La sincronizzazione non è inclusa in questa branch perché il file supera diecimila righe e una riscrittura remota basata su risposta troncata produrrebbe cancellazioni massive.
+```text
+docs/REPO-MOVELOG-v2.md
+```
+
+Il file `docs/REPO-MOVELOG.md` resta archivio legacy e non va riscritto da remoto.

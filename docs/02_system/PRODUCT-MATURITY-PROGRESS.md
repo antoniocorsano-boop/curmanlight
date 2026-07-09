@@ -34,7 +34,7 @@ PM-09 Validazione con utenti
 
 ## Prossima slice
 
-- CML-433M movelog sync sicuro oppure CML-434D bozzetti alternativi pre-runtime.
+- CML-434D bozzetti alternativi pre-runtime.
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -147,11 +147,13 @@ L'avanzamento PM-09 da 35% a 40% è motivato dal passaggio da specifica target d
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
 - Ultima slice completata: CML-433U (docs-only — Specifiche utente pre-bozzetto, merged `67e27da`)
-- Ultima slice completata: CML-433UP (docs-only — User Specifications Post-Merge State Sync)
-- Movelog sync CML-432/CML-433/CML-433U/CML-433UP: da eseguire in locale o con patch puntuale verificabile, non tramite riscrittura remota troncata
+- Ultima slice completata: CML-433UP (docs-only — User Specifications Post-Merge State Sync, merged `c99dfda`)
+- Ultima slice completata: CML-433M (docs-only — Versioned Movelog Sync)
+- Movelog corrente: `docs/REPO-MOVELOG-v2.md`
+- Movelog legacy: `docs/REPO-MOVELOG.md` conservato e non riscritto
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: CML-433M movelog sync sicuro oppure CML-434D bozzetti alternativi pre-runtime
-- Ultimo aggiornamento: 2026-07-09 (CML-433UP)
+- Prossima azione: CML-434D bozzetti alternativi pre-runtime
+- Ultimo aggiornamento: 2026-07-09 (CML-433M)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -200,7 +202,6 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 3. Senza CML-300, permane alto il rischio di scelta errata nel flusso Esportazioni.
 4. Senza una specifica target validata, le patch UI rischiano di correggere singole card senza ridurre il carico cognitivo sistemico.
 5. Senza specifiche utente pre-bozzetto, il bozzetto rischia di trasformarsi in scelta estetica non verificabile.
-6. Senza CML-433M, il movelog resta incompleto per la catena CML-432/CML-433/CML-433U/CML-433UP.
 
 ## Decisioni aperte
 
@@ -218,6 +219,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 4. Il presente documento e la fonte primaria di stato programma; backlog e roadmap restano allineati a questo cruscotto.
 5. Dopo CML-433, ogni runtime patch derivata dal mock deve dichiarare claim, hard rules, gate e review avversariale.
 6. Dopo CML-433U, ogni bozzetto deve dichiarare quali specifiche utente soddisfa e quali lascia fuori per scelta intenzionale.
+7. Dopo CML-433M, il registro operativo delle modifiche è `docs/REPO-MOVELOG-v2.md`; il movelog legacy resta archivio non riscritto.
 
 ## Regola obbligatoria per future slice CML
 
