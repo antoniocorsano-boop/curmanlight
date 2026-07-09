@@ -33,6 +33,62 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-434D — Bozzetti alternativi pre-runtime
+
+- Tipo: docs-only / product design / pre-runtime mock alternatives
+- Stato: MERGED_REMOTE
+- Branch: `codex/cml-434d-pre-runtime-mock-alternatives`
+- Base: `main` dopo CML-433M
+- Scopo: produrre tre bozzetti alternativi e scegliere la direzione raccomandata prima della prima micro-slice runtime.
+
+### Bozzetti
+
+1. Bozzetto A — Cruscotto istituzionale.
+2. Bozzetto B — Percorso guidato docente.
+3. Bozzetto C — Ambiente professionale di lavoro.
+
+### Decisione
+
+Direzione raccomandata:
+
+```text
+B come ingresso docente + C come logica operativa + A come evoluzione istituzionale futura
+```
+
+### Prima micro-slice runtime candidata
+
+```text
+CML-434 — Home task selector + pannello contestuale leggero
+```
+
+### File prodotti
+
+- `docs/03_execution/CML-434D.md`
+- `report/CML-434D_bozzetti_alternativi_pre_runtime.md`
+
+### File aggiornati
+
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Runtime
+
+- `index.html`: non modificato
+- `_published_snapshot/netlify-current/index.html`: non modificato
+
+### Dati curricolari
+
+Non modificati.
+
+### Verdetto
+
+```text
+CML_434D_PRE_RUNTIME_MOCK_ALTERNATIVES_MERGED_REMOTE
+```
+
+---
+
 ## CML-433M — Versioned Movelog Sync
 
 - Tipo: docs-only / repository governance
