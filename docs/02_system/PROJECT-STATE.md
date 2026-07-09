@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-433U — Specifiche utente pre-bozzetto
-- Last slice: CML-433U — Specifiche utente pre-bozzetto (merge-ready)
-- Last verified base commit: 55c23ab (CML-433)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (specifiche utente pre-bozzetto definite, merge-ready)
+- Last milestone: CML-433UP — User Specifications Post-Merge State Sync
+- Last slice: CML-433UP — User Specifications Post-Merge State Sync
+- Last completed design merge: 67e27da (CML-433U)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (specifiche utente pre-bozzetto fuse e stato post-merge riallineato)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: merge controllato CML-433U, poi CML-433M movelog sync sicuro oppure CML-434 Home task selector runtime dopo conferma della specifica utente
-- Last verdict: `CML_433U_USER_SPECIFICATIONS_PRE_BOZZETTO_READY_FOR_MERGE_REMOTE_BRANCH`
-- Repository status: branch remoto docs-only pronta al merge; runtime e dati curricolari invariati; movelog sync CML-432/CML-433/CML-433U differito per modifica locale sicura
+- Next action: CML-433M movelog sync sicuro oppure CML-434D bozzetti alternativi pre-runtime
+- Last verdict: `CML_433UP_USER_SPECIFICATIONS_POST_MERGE_STATE_SYNC_MERGED_REMOTE`
+- Repository status: main documentale riallineato post-merge; runtime e dati curricolari invariati; movelog sync CML-432/CML-433/CML-433U/CML-433UP differito per modifica locale sicura
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
@@ -45,6 +45,6 @@ Ogni bozzetto deve dichiarare:
 
 ## Deferred Documentation Sync
 
-`docs/REPO-MOVELOG.md` richiede una sincronizzazione successiva per CML-432, CML-433 e CML-433U.
+`docs/REPO-MOVELOG.md` richiede una sincronizzazione successiva per CML-432, CML-433, CML-433U e CML-433UP.
 
 La sincronizzazione non è inclusa in questa branch perché il file supera diecimila righe e una riscrittura remota basata su risposta troncata produrrebbe cancellazioni massive.

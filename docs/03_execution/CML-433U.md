@@ -10,13 +10,14 @@ PM-03 Orientamento / PM-05 Esperienza di lavoro / PM-06 Accompagnamento / PM-09 
 
 ## Stato
 
-READY_FOR_MERGE_REMOTE_BRANCH
+MERGED_REMOTE
 
 ## Base
 
 - Branch base: `main`
 - Base remota verificata: `55c23ab` — CML-433 Teacher Task View Target Specification
 - Branch remoto di lavoro: `codex/cml-433u-user-specifications-pre-mock`
+- Merge commit: `67e27da` — CML-433U squash merge
 
 ## Obiettivo
 
@@ -82,6 +83,15 @@ Rilievi trattati nella review della PR #19:
 3. incremento PM-09 da 35% a 40% motivato in `PRODUCT-MATURITY-PROGRESS.md`;
 4. rinvio del movelog mantenuto come scelta intenzionale e sicura.
 
+## Post-merge sync
+
+CML-433UP ha riallineato lo stato post-merge:
+
+- CML-433U dichiarata come `MERGED_REMOTE`;
+- rimosse formule residue `merge-ready` dai documenti di stato;
+- prossima azione spostata a CML-433M o CML-434D;
+- runtime e dati curricolari invariati.
+
 ## Perimetro
 
 Incluso:
@@ -108,6 +118,8 @@ Escluso:
 - Tentativo di sync movelog respinto: OK, evitata cancellazione massiva.
 - Review PR #19 eseguita: OK.
 - Micro-patch di sync stato review: OK.
+- Merge PR #19: OK (`67e27da`).
+- Post-merge state sync CML-433UP: OK.
 - Slice docs-only: OK.
 - Runtime modificato: NO.
 - Dati curricolari modificati: NO.
@@ -129,5 +141,5 @@ Il bozzetto successivo potrà procedere solo se le specifiche utente rispondono 
 ## Verdetto
 
 ```text
-CML_433U_USER_SPECIFICATIONS_PRE_BOZZETTO_READY_FOR_MERGE_REMOTE_BRANCH
+CML_433U_USER_SPECIFICATIONS_PRE_BOZZETTO_MERGED_REMOTE
 ```
