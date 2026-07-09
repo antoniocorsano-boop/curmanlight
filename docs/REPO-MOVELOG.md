@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## CML-431 — PM-09 Pilot Readiness Checkpoint
+
+- Type: docs-only
+- Macro-program: PM-09 Validazione con utenti
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `796411e` (CML-430 push)
+- Checkpoint di governance: catena PM-09 completa (CML-399→CML-430), readiness certificata, regola operativa (nessuna modifica UI prima di evidenze reali), prossima azione fuori-repo.
+- Files created:
+  - `docs/03_execution/CML-431.md`
+  - `report/CML-431_pm09_pilot_readiness_checkpoint.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+- Verdetto: CML_431_PM09_PILOT_READINESS_CHECKPOINT_READY_LOCAL_NOT_PUSHED
+
 ## CML-430 — User Validation Intake Summary Template
 
 - Type: docs-only
