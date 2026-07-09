@@ -177,5 +177,5 @@ Questo modello rende possibile passare dalla prova pilota alla roadmap senza imp
 Verdetto:
 
 ```text
-CML_429_USER_VALIDATION_EVIDENCE_INTAKE_MODEL_READY_REMOTE_BRANCH
+CML_429_USER_VALIDATION_EVIDENCE_INTAKE_MODEL_PUSHED_REMOTE
 ```
