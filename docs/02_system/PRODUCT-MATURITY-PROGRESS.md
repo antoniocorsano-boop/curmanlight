@@ -25,13 +25,16 @@ PM-06 Accompagnamento
 PM-07 Uniformita
 ████▌░░░░░ 45%
 
+PM-09 Validazione con utenti
+██░░░░░░░░ 20%
+
 ## Slice in esecuzione
 
 - nessuna
 
 ## Prossima slice
 
-- CML-399 (User validation scenario pack)
+- CML-430 (User validation intake summary template)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -91,8 +94,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-09 - Validazione con utenti
 
-░░░░░░░░░░
-0%
+██░░░░░░░░
+20%
 
 ## Stato operativo
 
@@ -134,14 +137,15 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-400 (runtime micro-patch — User Validation Entry Runtime)
 - Ultima slice completata: CML-427 (audit/smoke — User Validation Entry Live Smoke and Pilot Readiness)
 - Ultima slice completata: CML-428 (docs-only — User Validation Pilot Kit)
+- Ultima slice completata: CML-429 (docs-only — User Validation Evidence Intake Model)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: prova pilota con docenti reali
-- Ultimo aggiornamento: 2026-07-09 (CML-428)
+- Prossima slice operativa prevista: modello di sintesi delle evidenze raccolte
+- Ultimo aggiornamento: 2026-07-09 (CML-429)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
 | UX ID | Problema sintetico | Macroprogramma | Slice target | Dipendenza |
-|---|---|---|---|---|
+|---|---|---|---|
 | UX-001 | Logiche miste Curriculum | PM-04 | CML-293 (risolto) | nessuna |
 | UX-002 | Focus cambio disciplina | PM-03 | CML-284 (risolto) | CML-283 |
 | UX-003 | Indicatori incomprensibili | PM-04 | CML-285 (risolto) | CML-283 |
