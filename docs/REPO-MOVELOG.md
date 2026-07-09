@@ -1,5 +1,24 @@
 # Repo Movelog
 
+## CML-428 — User Validation Pilot Kit
+
+- Type: docs-only
+- Macro-program: PM-09 Validazione con utenti
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `4eed0b4` (CML-427 push)
+- Kit operativo per prova pilota con docenti non tecnici: scopo, profilo partecipanti, messaggio invito, istruzioni operative, durata, cosa osservare, formato restituzione, griglia lettura evidenze, criteri roadmap.
+- Files created:
+  - `docs/03_execution/CML-428.md`
+  - `report/CML-428_user_validation_pilot_kit.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+- Verdetto: CML_428_USER_VALIDATION_PILOT_KIT_READY_LOCAL_NOT_PUSHED
+
 ## CML-427 — User Validation Entry Live Smoke and Pilot Readiness
 
 - Type: audit / smoke test / product validation readiness

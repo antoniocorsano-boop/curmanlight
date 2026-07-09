@@ -3,13 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-400 — User Validation Entry Runtime
-- Last slice: CML-427 — User Validation Entry Live Smoke and Pilot Readiness
-- Last commit: f561066 (CML-400 docs closure)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (validation entry live, pilot ready)
+- Last slice: CML-428 — User Validation Pilot Kit
+- Last commit: 4eed0b4 (CML-427 push)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (validation entry live, pilot kit pronto)
 - Critical Path: Validazione con utenti
-- Next slice: validazione utente in campo con docenti reali
-- Last verdict: `CML_427_USER_VALIDATION_ENTRY_LIVE_SMOKE_READY_LOCAL_NOT_PUSHED`
-- Repository status: origin/main sincronizzato su f561066, live su GitHub Pages, CML-427 docs-only locale non pushato
+- Next slice: prova pilota con docenti reali
+- Last verdict: `CML_428_USER_VALIDATION_PILOT_KIT_READY_LOCAL_NOT_PUSHED`
+- Repository status: origin/main sincronizzato su 4eed0b4, live su GitHub Pages, CML-428 docs-only locale non pushato
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
