@@ -4,7 +4,7 @@
 
 - Type: runtime microfix
 - Macro-program: PM-03 Orientamento / PM-05 Esperienza di lavoro / PM-06 Accompagnamento / PM-07 Uniformità
-- Status: READY_LOCAL_NOT_PUSHED
+- Status: PUSHED_AND_LIVE_VERIFIED
 - Branch: `main`
 - Base: `53b07db` (CML-424)
 - Patch Home D2: aggiunto chip contesto (`getWorkContextChip()`) in Home, titolo "Cosa vuoi fare oggi?", quattro azioni rinominati (Consulta il curricolo, Prepara una progettazione, Esporta un documento, Verifica fonti e limiti), messaggio validazione umana aggiornato.

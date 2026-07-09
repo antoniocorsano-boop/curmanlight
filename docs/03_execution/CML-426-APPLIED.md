@@ -4,7 +4,7 @@
 - Dipende da: CML-425, CML-424, CML-421G
 - Tipo slice: runtime microfix
 - Runtime: modificato (index.html, _published_snapshot/netlify-current/index.html)
-- Main: non ancora pushato
+- Main: pushato su origin/main, live su GitHub Pages
 
 ## Obiettivo
 
@@ -32,4 +32,4 @@ Superficie del Contesto di lavoro (introdotto da CML-424) sulla Home, con microc
 
 ## Verdetto
 
-CML-426_HOME_D2_CONTEXT_CHIP_RUNTIME_PATCH_READY_LOCAL_NOT_PUSHED
+CML-426_HOME_D2_CONTEXT_CHIP_RUNTIME_PATCH_PUSHED_AND_LIVE_VERIFIED

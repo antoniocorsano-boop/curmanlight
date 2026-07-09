@@ -11,7 +11,7 @@ PM-02 Audit
 ██████████ 100%
 
 PM-03 Orientamento
-████▌░░░░░ 45%
+█████░░░░░ 50%
 
 PM-04 Comprensione Curriculum
 ██████████ 100%
@@ -20,10 +20,10 @@ PM-05 Esperienza di lavoro
 ███████████ 100%
 
 PM-06 Accompagnamento
-███████░░░ 70%
+███████▌░░ 75%
 
 PM-07 Uniformita
-████░░░░░░ 40%
+████▌░░░░░ 45%
 
 ## Slice in esecuzione
 
@@ -66,8 +66,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-03 - Orientamento
 
-████▌░░░░░
-45%
+█████░░░░░
+50%
 
 ### Programma PM-04 - Comprensione del Curriculum
 
@@ -81,13 +81,13 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-06 - Accompagnamento
 
-██████▌░░░
-65%
+███████▌░░
+75%
 
 ### Programma PM-07 - Uniformita
 
-████░░░░░░
-40%
+████▌░░░░░
+45%
 
 ### Programma PM-09 - Validazione con utenti
 
