@@ -26,7 +26,7 @@ PM-07 Uniformita
 ████▌░░░░░ 45%
 
 PM-09 Validazione con utenti
-██░░░░░░░░ 20%
+███░░░░░░░ 30%
 
 ## Slice in esecuzione
 
@@ -34,7 +34,7 @@ PM-09 Validazione con utenti
 
 ## Prossima slice
 
-- CML-430 (User validation intake summary template)
+- CML-433 (Teacher task view target specification, dopo disponibilità mock logico/grafico)
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -94,8 +94,8 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-09 - Validazione con utenti
 
-██░░░░░░░░
-20%
+███░░░░░░░
+30%
 
 ## Stato operativo
 
@@ -140,9 +140,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-429 (docs-only — User Validation Evidence Intake Model)
 - Ultima slice completata: CML-430 (docs-only — User Validation Intake Summary Template)
 - Ultima slice completata: CML-431 (docs-only — PM-09 Pilot Readiness Checkpoint)
+- Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: prova pilota reale con 2–5 docenti (fuori-repo)
-- Ultimo aggiornamento: 2026-07-09 (CML-431)
+- Prossima azione: validare mock logico/grafico e vista target prima di runtime
+- Ultimo aggiornamento: 2026-07-09 (CML-432)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
