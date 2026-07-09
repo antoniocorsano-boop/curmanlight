@@ -333,7 +333,7 @@ CML_432_TEACHER_TASK_VIEW_ARCHITECTURE_AND_MOCK_COMPARISON_PUSHED_REMOTE
 
 - **Data**: 2026-07-09
 - **Tipo**: runtime micro-slice
-- **Stato**: branch `codex/cml-434-home-task-selector-runtime` pushata su origin; PR #24 aperta, non mergiata
+- **Stato**: merged su main via PR #24; live da verificare con smoke pubblico
 - **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
 - **Dati curricolari**: non modificati
 
@@ -359,4 +359,48 @@ Sostituiti i pulsanti operativi `.home-process-hub__actions` con un selettore di
 
 ```text
 CML_434_HOME_TASK_SELECTOR_RUNTIME_PUSHED_BRANCH_NOT_MERGED
+```
+
+---
+
+## CML-435 — Home Mock Conformance Visibility Gate
+
+- **Data**: 2026-07-09
+- **Tipo**: runtime micro-slice (visibility gate)
+- **Stato**: branch `codex/cml-435-home-mock-conformance` pushata su origin; PR #26 aperta, non mergiata; ready for merge remoto
+- **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
+- **Dati curricolari**: non modificati
+
+### Descrizione
+
+Rimossi blocchi Home non conformi al mock CML-434: seconda card "Ambiente curricolare d'Istituto", sezioni "Operazioni principali" e "Operazioni di supporto" con card duplicate. Aggiornate etichette pulsante azione pannello contestuale da "Azione: vai a ..." a testo naturale.
+
+### Cambiamenti
+
+- **HTML**: rimosso `.home-inline-banner`, `.home-cards` sotto "Operazioni principali" e "Operazioni di supporto"
+- **JS**: etichette pulsante contesto: `btnLabels` map per task
+- **CML-434**: preservato intatto (task selector, contesto)
+
+### Blocchi rimossi
+
+- "Ambiente curricolare d'Istituto" (card duplicata)
+- "Curricolo vigente", "Progetta" (coperti da task selector)
+- "Applicazione per classi", "Adeguamento IN 2025", "Processo di revisione", "Esportazioni" (coperti da task selector)
+
+### Blocchi mantenuti
+
+- Hub CML-401 (header, task selector, contesto, pipeline, ruoli, aree, governance)
+- Test guidato, Contesto di lavoro, Curricolo applicabile, Discipline, Footer
+
+### Verifica
+
+- `git diff --check`: ok
+- Curriculum validator: 14/14 PASS
+- Runtime shape test: 14/14 PASS
+- Runtime pair allineato: 27 occorrenze CML-434 markers in entrambi
+
+### Verdetto
+
+```text
+CML_435_HOME_MOCK_CONFORMANCE_VISIBILITY_GATE_READY_FOR_MERGE_REMOTE_BRANCH
 ```

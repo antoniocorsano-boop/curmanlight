@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-434 — Home Task Selector Runtime
-- Last slice: CML-434 — Home Task Selector Runtime
+- Last milestone: CML-435 — Home Mock Conformance Visibility Gate
+- Last slice: CML-435 — Home Mock Conformance Visibility Gate
 - Last completed design merge: 67e27da (CML-433U)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (selettore task Home implementato; in attesa di merge su main)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (CML-434 merged su main via PR #24; CML-435 su branch `codex/cml-435-home-mock-conformance`, PR #26 aperta non mergiata, ready for merge remoto)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: Merge CML-434 su main via PR o push diretto autorizzato; aggiornare docs e validatori
-- Last verdict: `CML_434_HOME_TASK_SELECTOR_RUNTIME_PUSHED_BRANCH_NOT_MERGED`
-- Repository status: branch `codex/cml-434-home-task-selector-runtime` con runtime modificato; main invariato; movelog corrente `docs/REPO-MOVELOG-v2.md`
+- Next action: Merge CML-435 via PR #26; smoke post-merge e live verification su main
+- Last verdict: `CML_435_HOME_MOCK_CONFORMANCE_VISIBILITY_GATE_READY_FOR_MERGE_REMOTE_BRANCH`
+- Repository status: CML-434 merged su main via PR #24; CML-435 su branch `codex/cml-435-home-mock-conformance`, PR #26 aperta non mergiata, ready for merge remoto; movelog corrente `docs/REPO-MOVELOG-v2.md`
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

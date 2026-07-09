@@ -34,7 +34,7 @@ PM-09 Validazione con utenti
 
 ## Prossima slice
 
-- Merge controllato CML-434 su main; poi smoke post-merge/live.
+- Merge controllato CML-435 (PR #26) su main; poi smoke post-merge/live.
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -144,7 +144,8 @@ PM-09 resta al 45%. CML-434S non incrementa la percentuale perché non applica r
 - Ultima slice completata: CML-429 (docs-only — User Validation Evidence Intake Model)
 - Ultima slice completata: CML-430 (docs-only — User Validation Intake Summary Template)
 - Ultima slice completata: CML-431 (docs-only — PM-09 Pilot Readiness Checkpoint)
-- Ultima slice completata: CML-434 (runtime micro-slice — Home Task Selector Runtime, branch pushata, PR #24 aperta, non mergiata)
+- Ultima slice completata: CML-434 (runtime micro-slice — Home Task Selector Runtime, merged su main via PR #24 non ancora live)
+- Ultima slice completata: CML-435 (runtime micro-slice — Home Mock Conformance Visibility Gate, branch `codex/cml-435-home-mock-conformance` pushata su origin; PR #26 aperta, non mergiata; ready for merge remoto)
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
 - Ultima slice completata: CML-433U (docs-only — Specifiche utente pre-bozzetto, merged `67e27da`)
@@ -155,8 +156,8 @@ PM-09 resta al 45%. CML-434S non incrementa la percentuale perché non applica r
 - Movelog corrente: `docs/REPO-MOVELOG-v2.md`
 - Movelog legacy: `docs/REPO-MOVELOG.md` conservato e non riscritto
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: Merge controllato CML-434 su main; poi smoke post-merge/live
-- Ultimo aggiornamento: 2026-07-09 (CML-434)
+- Prossima azione: Merge CML-435 via PR #26; smoke post-merge/live su main
+- Ultimo aggiornamento: 2026-07-09 (CML-435)
 
 ## Matrice di trasformazione UX -> PM -> CML
 

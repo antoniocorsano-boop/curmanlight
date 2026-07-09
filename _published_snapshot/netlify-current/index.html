@@ -1721,46 +1721,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
         </section>
         <!-- END CML-401 -->
 
-        <section class="home-inline-banner" role="region" aria-label="Orientamento iniziale">
-          <h2>Ambiente curricolare d'Istituto</h2>
-          <p>Consulta il curricolo, prepara attività didattiche e produci documenti di lavoro.</p>
-          <p class="home-inline-guide"><strong>Percorso:</strong> consulta il curricolo → progetta la proposta → esporta i documenti.</p>
-          <div class="home-inline-meta">Il lavoro viene salvato sul dispositivo in uso.</div>
-          <div class="home-inline-actions" role="group" aria-label="Azioni rapide Home">
-            <button type="button" onclick="setTab('curricolo')">Consulta il curricolo</button>
-            <button type="button" onclick="setTab('didattica')" class="home-quick-primary">Prepara un'attività didattica</button>
-          </div>
-        </section>
-        <p class="home-operational-title">Operazioni principali</p>
-        <div class="home-cards">
-          <a href="#" class="home-card" onclick="setTab('curricolo');return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg> Curricolo vigente</h3>
-            <p class="home-card-text">Consulta cosa è valido oggi nel curricolo di istituto.</p>
-          </a>
-          <a href="#" class="home-card" onclick="setTab('didattica');return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-graduation-cap"></use></svg> Progetta</h3>
-            <p class="home-card-text">Lavora su programmazione, UDA e materiali didattici.</p>
-          </a>
-        </div>
-        <p class="home-operational-title">Operazioni di supporto</p>
-        <div class="home-cards">
-          <a href="#" class="home-card" onclick="openWorkContextPanel();return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-users"></use></svg> Applicazione per classi</h3>
-            <p class="home-card-text">Imposta classe e anno scolastico per verificare quale curricolo applicare.</p>
-          </a>
-          <a href="#" class="home-card" onclick="setTab('normativa');return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-triangle-alert"></use></svg> Adeguamento IN 2025</h3>
-            <p class="home-card-text">Distingui proposte, parti validate e materiali non ancora approvati.</p>
-          </a>
-          <a href="#" class="home-card" onclick="setTab('processo');return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-workflow"></use></svg> Processo di revisione</h3>
-            <p class="home-card-text">Accedi alle azioni pertinenti al tuo ruolo professionale.</p>
-          </a>
-          <a href="#" class="home-card" onclick="setTab('esportazioni');return false">
-            <h3 class="home-card-title"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg> Esportazioni</h3>
-            <p class="home-card-text">Produci documenti, file di lavoro e copie di sicurezza.</p>
-          </a>
-        </div>
+        <!-- CML-435: inline-banner, Operazioni principali/supporto rimossi — coperti dal task selector -->
         <section class="home-validation-entry" role="region" aria-label="Test guidato">
           <h3><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-file-text"></use></svg> Partecipa al test guidato</h3>
           <p>Aiuta a verificare se lo strumento è chiaro, utile e coerente con il lavoro scolastico reale.</p>
@@ -6827,7 +6788,8 @@ function renderHomeTaskContext(){
     html+='</ul>';
   }
   html+='<div class="home-task-context-actions">';
-  html+='<button class="home-task-context-btn" onclick="setHomeTaskContext(\''+homeTaskSelected+'\',{open:true})">Azione: vai a '+ctx.title+'</button>';
+  var btnLabels={consulta:"Apri il curricolo",progetta:"Apri Progetta",proponi:"Apri proposta",esporta:"Apri Esportazioni"};
+  html+='<button class="home-task-context-btn" onclick="setHomeTaskContext(\''+homeTaskSelected+'\',{open:true})">'+(btnLabels[homeTaskSelected]||ctx.title)+'</button>';
   html+='</div>';
   panel.innerHTML=html;
 }
