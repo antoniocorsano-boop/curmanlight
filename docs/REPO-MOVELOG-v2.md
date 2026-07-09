@@ -33,6 +33,56 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-434S — Runtime Remote Safety Gate
+
+- Tipo: docs-only / runtime safety gate / remote execution guard
+- Stato: MERGED_REMOTE
+- Branch: `codex/cml-434s-runtime-remote-safety-gate`
+- Base: `main` dopo CML-434D
+- Scopo: evitare una modifica runtime remota non sicura del runtime pair.
+
+### Esito
+
+CML-434 runtime non applicata da remoto.
+
+### Motivo
+
+Il connettore disponibile non supporta patch testuali parziali sicure sui file HTML grandi. Una riscrittura completa da contenuto potenzialmente troncato rischierebbe perdita contenuto o divergenza tra `index.html` e `_published_snapshot/netlify-current/index.html`.
+
+### Specifica runtime confermata
+
+```text
+Home task selector + pannello contestuale leggero
+```
+
+### File prodotti
+
+- `docs/03_execution/CML-434S.md`
+- `report/CML-434_runtime_remote_safety_gate.md`
+
+### File aggiornati
+
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Runtime
+
+- `index.html`: non modificato
+- `_published_snapshot/netlify-current/index.html`: non modificato
+
+### Dati curricolari
+
+Non modificati.
+
+### Verdetto
+
+```text
+CML_434S_RUNTIME_REMOTE_SAFETY_GATE_MERGED_REMOTE_RUNTIME_NOT_MODIFIED
+```
+
+---
+
 ## CML-434D — Bozzetti alternativi pre-runtime
 
 - Tipo: docs-only / product design / pre-runtime mock alternatives
