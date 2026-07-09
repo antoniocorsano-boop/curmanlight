@@ -1,5 +1,23 @@
 # Repo Movelog
 
+## CML-399 — User Validation Scenario Pack
+
+- Type: docs-only / product validation design
+- Macro-program: PM-09 Validazione con utenti
+- Status: READY_LOCAL_NOT_PUSHED
+- Branch: `main`
+- Base: `be6d81e` (CML-426 docs close)
+- Pacchetto di validazione utente: profilo tester, scenario narrativo, compiti non meccanici, domande di osservazione, griglia valutazione 1-5, formato raccolta annotazioni, esiti attesi roadmap PM/UX.
+- Files created:
+  - `docs/03_execution/CML-399.md`
+  - `report/CML-399_user_validation_scenario_pack.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+  - `docs/REPO-MOVELOG.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+
 ## CML-426 — Apply Home D2 Context Chip Runtime Patch
 
 - Type: runtime microfix

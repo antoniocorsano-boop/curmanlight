@@ -130,9 +130,10 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-398 (docs-only — Protocollo di test utente leggero)
 - Ultima slice completata: CML-424 (runtime microfix — Work Context and School Year Runtime Patch)
 - Ultima slice completata: CML-426 (runtime microfix — Apply Home D2 Context Chip Runtime Patch)
+- Ultima slice completata: CML-399 (docs-only — User Validation Scenario Pack)
 - Milestone di consolidamento governance: CML-282A
-- Prossima slice operativa prevista: CML-399 (User validation scenario pack)
-- Ultimo aggiornamento: 2026-07-09 (CML-426)
+- Prossima slice operativa prevista: CML-400 (runtime — pulsante provvisorio Home / guida test / campo annotazioni)
+- Ultimo aggiornamento: 2026-07-09 (CML-399)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
