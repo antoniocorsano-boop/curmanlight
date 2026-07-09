@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-424 — Work Context and School Year Runtime Patch
-- Last slice: CML-424 — Work Context and School Year Runtime Patch (runtime microfix)
-- Last commit: 516ad61 (CML-397 docs: select next phase after stable checkpoint)
-- Active PM: PM-06 (70% → 75%), PM-05 (100%)
+- Last milestone: CML-426 — Apply Home D2 Context Chip Runtime Patch
+- Last slice: CML-426 — Apply Home D2 Context Chip Runtime Patch (runtime microfix)
+- Last commit: 53b07db (CML-424)
+- Active PM: PM-03 (45% → 50%), PM-05 (100%), PM-06 (70% → 75%), PM-07 (40% → 45%)
 - Critical Path: Validazione con utenti
 - Next slice: CML-399 (User validation scenario pack)
-- Last verdict: `CML_424_WORK_CONTEXT_AND_SCHOOL_YEAR_RUNTIME_PATCH_READY_UNCOMMITTED`
-- Repository status: origin/main sincronizzato, patch contesto lavoro e anno scolastico applicata localmente, non committata
+- Last verdict: `CML_426_HOME_D2_CONTEXT_CHIP_RUNTIME_PATCH_READY_LOCAL_NOT_PUSHED`
+- Repository status: origin/main sincronizzato su CML-424, patch Home D2 applicata localmente, non committata
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

@@ -783,6 +783,7 @@ button:focus-visible{outline:2px solid #1a237e;outline-offset:2px;border-radius:
 .home-discipline-actions{display:flex;gap:7px;flex-wrap:wrap}
 .home-discipline-actions button{border:1px solid #cfd8dc;background:#fff;color:#455a64;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer}
 .home-discipline-actions .home-discipline-primary{border-color:#1a237e;color:#1a237e}
+.home-context-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;line-height:1.35;color:#37474f;background:#f5f7fa;border-radius:999px;padding:5px 12px;margin-bottom:8px;max-width:100%;flex-wrap:wrap}
 .home-context-card{background:#fff;border-radius:9px;padding:12px 13px;box-shadow:0 1px 4px rgba(0,0,0,.05);border:1px solid #e0e0e0;border-left:3px solid #00695c;margin:14px 0}
 .home-context-title{font-size:13px;font-weight:800;color:#00695c;margin:0 0 6px;display:inline-flex;align-items:center;gap:6px}
 .home-context-body{font-size:12px;color:#455a64;line-height:1.5}
@@ -1646,14 +1647,15 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div class="home-process-hub__head">
             <div>
               <div class="home-process-hub__eyebrow">Ambiente curricolare d'istituto</div>
-              <h2 id="home-process-hub-title">Hub del processo curricolare</h2>
+              <div class="home-context-chip" id="home-context-chip" aria-label="Contesto di lavoro"></div>
+              <h2 id="home-process-hub-title">Cosa vuoi fare oggi?</h2>
               <p>CurManLight collega fonti ufficiali, consultazione, revisione, progettazione didattica, esportazioni e validazione umana in un unico percorso di lavoro.</p>
             </div>
             <div class="home-process-hub__actions" aria-label="Azioni principali del processo curricolare">
               <button class="home-process-hub__btn primary" onclick="setTab('curricolo')">Consulta il curricolo</button>
-              <button class="home-process-hub__btn" onclick="setTab('didattica')">Vai a Progetta</button>
-              <button class="home-process-hub__btn" onclick="setTab('esportazioni')">Esportazioni</button>
-              <button class="home-process-hub__btn" onclick="setTab('guida')">Guida</button>
+              <button class="home-process-hub__btn" onclick="setTab('didattica')">Prepara una progettazione</button>
+              <button class="home-process-hub__btn" onclick="setTab('esportazioni')">Esporta un documento</button>
+              <button class="home-process-hub__btn" onclick="setTab('guida')">Verifica fonti e limiti</button>
             </div>
           </div>
           <div class="home-process-flow" aria-label="Percorso operativo essenziale">
@@ -1678,7 +1680,7 @@ button:focus-visible,a:focus-visible,.disc-btn:focus-visible{outline:2px solid #
           <div class="home-governance-strip" aria-label="Principi di governance">
             <div><strong>Dati locali</strong>Tutto resta sul dispositivo dell'utente.</div>
             <div><strong>Nessun invio automatico</strong>Drive e condivisioni restano manuali e controllate.</div>
-            <div><strong>Validazione umana</strong>Lo strumento non approva autonomamente.</div>
+            <div><strong>Validazione umana</strong>La validazione resta umana. L'app prepara materiali di lavoro, non approva il curricolo.</div>
           </div>
         </section>
         <!-- END CML-401 -->
@@ -3807,6 +3809,8 @@ function renderSidebar(){
   updateHomeDisciplinePanel();
 }
 function updateHomeDisciplinePanel(){
+  var contextChip=document.getElementById("home-context-chip");
+  if(contextChip) contextChip.textContent=getWorkContextChip();
   var statusEl=document.getElementById("home-discipline-status");
   var openBtn=document.getElementById("home-discipline-open-btn");
   var resumeBtn=document.getElementById("home-discipline-resume-btn");
