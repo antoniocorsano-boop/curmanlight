@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-434D — Bozzetti alternativi pre-runtime
-- Last slice: CML-434D — Bozzetti alternativi pre-runtime
+- Last milestone: CML-434S — Runtime Remote Safety Gate
+- Last slice: CML-434S — Runtime Remote Safety Gate
 - Last completed design merge: 67e27da (CML-433U)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (bozzetti alternativi pre-runtime definiti; scelta ibrida raccomandata)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (bozzetti alternativi definiti; CML-434 runtime bloccata da safety gate remoto)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: CML-434 Home task selector runtime micro-slice, solo dopo conferma della direzione ibrida
-- Last verdict: `CML_434D_PRE_RUNTIME_MOCK_ALTERNATIVES_MERGED_REMOTE`
-- Repository status: main documentale riallineato; runtime e dati curricolari invariati; movelog corrente `docs/REPO-MOVELOG-v2.md`; direzione raccomandata B+C con A come evoluzione istituzionale
+- Next action: CML-434 Home task selector runtime micro-slice in locale o con patch atomica sicura
+- Last verdict: `CML_434S_RUNTIME_REMOTE_SAFETY_GATE_MERGED_REMOTE_RUNTIME_NOT_MODIFIED`
+- Repository status: main documentale riallineato; runtime e dati curricolari invariati; movelog corrente `docs/REPO-MOVELOG-v2.md`; CML-434 runtime non applicata da remoto per rischio riscrittura completa/troncata
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
@@ -36,6 +36,8 @@ Dopo CML-434D, la prima micro-slice runtime deve seguire la direzione ibrida:
 ```text
 B come ingresso docente + C come logica operativa + A come evoluzione istituzionale futura
 ```
+
+CML-434 runtime non va applicata da remoto se l'unica modalità disponibile è riscrivere integralmente file HTML grandi da contenuto potenzialmente troncato.
 
 Ogni intervento runtime deve dichiarare:
 
