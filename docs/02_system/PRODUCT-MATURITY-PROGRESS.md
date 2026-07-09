@@ -26,7 +26,7 @@ PM-07 Uniformita
 ████▌░░░░░ 45%
 
 PM-09 Validazione con utenti
-████░░░░░░ 40%
+████▌░░░░░ 45%
 
 ## Slice in esecuzione
 
@@ -34,7 +34,7 @@ PM-09 Validazione con utenti
 
 ## Prossima slice
 
-- CML-434D bozzetti alternativi pre-runtime.
+- CML-434 Home task selector runtime micro-slice, solo dopo conferma della direzione ibrida.
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -94,12 +94,12 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-09 - Validazione con utenti
 
-████░░░░░░
-40%
+████▌░░░░░
+45%
 
 ## Nota avanzamento PM-09
 
-L'avanzamento PM-09 da 35% a 40% è motivato dal passaggio da specifica target delle viste a specifiche utente pre-bozzetto: profili, contesti d'uso, logica dei pannelli, stati curricolari e criteri di accettazione del bozzetto sono ora formalizzati in un contratto verificabile.
+L'avanzamento PM-09 da 40% a 45% è motivato dal passaggio da specifiche utente pre-bozzetto a tre bozzetti alternativi confrontati, con raccomandazione operativa ibrida e prima micro-slice runtime candidata.
 
 ## Stato operativo
 
@@ -148,12 +148,13 @@ L'avanzamento PM-09 da 35% a 40% è motivato dal passaggio da specifica target d
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
 - Ultima slice completata: CML-433U (docs-only — Specifiche utente pre-bozzetto, merged `67e27da`)
 - Ultima slice completata: CML-433UP (docs-only — User Specifications Post-Merge State Sync, merged `c99dfda`)
-- Ultima slice completata: CML-433M (docs-only — Versioned Movelog Sync)
+- Ultima slice completata: CML-433M (docs-only — Versioned Movelog Sync, merged `85beb1a`)
+- Ultima slice completata: CML-434D (docs-only — Bozzetti alternativi pre-runtime)
 - Movelog corrente: `docs/REPO-MOVELOG-v2.md`
 - Movelog legacy: `docs/REPO-MOVELOG.md` conservato e non riscritto
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: CML-434D bozzetti alternativi pre-runtime
-- Ultimo aggiornamento: 2026-07-09 (CML-433M)
+- Prossima azione: CML-434 Home task selector runtime micro-slice, solo dopo conferma della direzione ibrida
+- Ultimo aggiornamento: 2026-07-09 (CML-434D)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -202,14 +203,15 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 3. Senza CML-300, permane alto il rischio di scelta errata nel flusso Esportazioni.
 4. Senza una specifica target validata, le patch UI rischiano di correggere singole card senza ridurre il carico cognitivo sistemico.
 5. Senza specifiche utente pre-bozzetto, il bozzetto rischia di trasformarsi in scelta estetica non verificabile.
+6. Se CML-434 runtime anticipa la scelta ibrida, rischia di trasformare il bozzetto in patch estetica invece che in riduzione del carico cognitivo.
 
 ## Decisioni aperte
 
 1. Definire soglia oggettiva di passaggio da PM-03/PM-04 in stato IN CORSO a COMPLETATO con test utente.
 2. Stabilire cadenza fissa di aggiornamento percentuali programma (per slice o per milestone).
 3. Formalizzare protocollo di validazione PM-09 con utenti scolastici reali.
-4. Validare sequenza CML-434D → CML-434 → CML-435 → CML-436 prima di runtime esteso.
-5. Produrre bozzetti alternativi solo contro le specifiche utente CML-433U.
+4. Confermare la direzione ibrida CML-434D prima di CML-434 runtime.
+5. Limitare CML-434 a Home task selector + pannello contestuale leggero.
 
 ## Decisioni architetturali di governance
 
@@ -220,6 +222,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 5. Dopo CML-433, ogni runtime patch derivata dal mock deve dichiarare claim, hard rules, gate e review avversariale.
 6. Dopo CML-433U, ogni bozzetto deve dichiarare quali specifiche utente soddisfa e quali lascia fuori per scelta intenzionale.
 7. Dopo CML-433M, il registro operativo delle modifiche è `docs/REPO-MOVELOG-v2.md`; il movelog legacy resta archivio non riscritto.
+8. Dopo CML-434D, la prima runtime patch deve adottare la direzione ibrida: B ingresso docente, C logica operativa, A evoluzione istituzionale futura.
 
 ## Regola obbligatoria per future slice CML
 
