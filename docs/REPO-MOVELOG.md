@@ -1,10 +1,31 @@
 # Repo Movelog
 
+## CML-429 — User Validation Evidence Intake Model
+
+- Type: docs-only
+- Macro-program: PM-09 Validazione con utenti
+- Status: PUSHED_REMOTE
+- Branch: `main`
+- Base: `c2ac753` (CML-428 push)
+- PR: #16 (squash merge, integrato da remoto)
+- Commit finale: `86ad154`
+- Modello di intake evidenze: protocollo lettura file .txt, matrice classificazione (chiarezza, microcopy, orientamento, guida, mobile, esportazione, non pertinente, fuori ambito), criteri trasformazione in slice CML, regole esclusione backend/account/invio remoto, prioritizzazione.
+- Files created:
+  - `docs/03_execution/CML-429.md`
+  - `report/CML-429_user_validation_evidence_intake_model.md`
+- Files updated:
+  - `docs/02_system/PROJECT-STATE.md`
+  - `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- Runtime modificato: NO
+- Dati curricolari modificati: NO
+- Verdetto: `CML_429_USER_VALIDATION_EVIDENCE_INTAKE_MODEL_PUSHED_REMOTE`
+- REPO-MOVELOG aggiornato da slice locale CML-429M
+
 ## CML-428 — User Validation Pilot Kit
 
 - Type: docs-only
 - Macro-program: PM-09 Validazione con utenti
-- Status: READY_LOCAL_NOT_PUSHED
+- Status: PUSHED
 - Branch: `main`
 - Base: `4eed0b4` (CML-427 push)
 - Kit operativo per prova pilota con docenti non tecnici: scopo, profilo partecipanti, messaggio invito, istruzioni operative, durata, cosa osservare, formato restituzione, griglia lettura evidenze, criteri roadmap.

@@ -4,7 +4,7 @@
 
 - Last milestone: CML-400 — User Validation Entry Runtime
 - Last slice: CML-429 — User Validation Evidence Intake Model
-- Last commit: c2ac753 (CML-428 push)
+- Last commit: 86ad154 (CML-429, integrato da remoto)
 - Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (validation entry live, pilot kit pronto, intake evidenze definito)
 - Critical Path: Validazione con utenti
 - Next slice: raccolta e lettura evidenze dalla prova pilota
