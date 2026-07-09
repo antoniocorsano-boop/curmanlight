@@ -4,7 +4,7 @@
 
 - Type: runtime micro-patch
 - Macro-program: PM-09 Validazione con utenti
-- Status: READY_LOCAL_NOT_PUSHED
+- Status: PUSHED_AND_LIVE_VERIFIED
 - Branch: `main`
 - Base: `2492e7c` (CML-399)
 - Home entry per test guidato docenti: card ".home-validation-entry", modal overlay con scenario, 5 compiti osservazione, campo annotazioni, export .txt. Senza backend, account, invio remoto.

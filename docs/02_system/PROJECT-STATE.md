@@ -4,12 +4,12 @@
 
 - Last milestone: CML-400 — User Validation Entry Runtime
 - Last slice: CML-400 — User Validation Entry Runtime (runtime micro-patch)
-- Last commit: (local — not yet pushed)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (validation ready)
+- Last commit: 70a6f04 (CML-400)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (validation entry live)
 - Critical Path: Validazione con utenti
 - Next slice: validazione utente in campo con docenti reali
-- Last verdict: `CML_400_USER_VALIDATION_ENTRY_RUNTIME_READY_LOCAL_NOT_PUSHED`
-- Repository status: origin/main sincronizzato su 2492e7c, CML-400 modifiche runtime locali non pushatte
+- Last verdict: `CML_400_USER_VALIDATION_ENTRY_RUNTIME_PUSHED_AND_LIVE_VERIFIED`
+- Repository status: origin/main sincronizzato su 70a6f04, live su GitHub Pages
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
