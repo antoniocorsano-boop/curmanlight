@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-433 — Teacher Task View Target Specification
-- Last slice: CML-433 — Teacher Task View Target Specification
-- Last commit: 4537af2 (CML-432 merge)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (primo pilota raccolto, mock realistico tradotto in specifica target)
-- Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Runtime controllato
-- Next action: CML-434 Home task selector runtime, solo dopo allineamento locale e review della specifica
-- Last verdict: `CML_433_TEACHER_TASK_VIEW_TARGET_SPEC_PUSHED_REMOTE`
-- Repository status: origin/main aggiornato da remoto tramite PR CML-433; runtime invariato
+- Last milestone: CML-433U — Specifiche utente pre-bozzetto
+- Last slice: CML-433U — Specifiche utente pre-bozzetto (merge-ready)
+- Last verified base commit: 55c23ab (CML-433)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (specifiche utente pre-bozzetto definite, merge-ready)
+- Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
+- Next action: merge controllato CML-433U, poi CML-433M movelog sync sicuro oppure CML-434 Home task selector runtime dopo conferma della specifica utente
+- Last verdict: `CML_433U_USER_SPECIFICATIONS_PRE_BOZZETTO_READY_FOR_MERGE_REMOTE_BRANCH`
+- Repository status: branch remoto docs-only pronta al merge; runtime e dati curricolari invariati; movelog sync CML-432/CML-433/CML-433U differito per modifica locale sicura
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
@@ -28,3 +28,23 @@ Always treat runtime scope as:
 - _published_snapshot/netlify-current/index.html
 
 Never reference only one runtime file in execution summaries.
+
+## Product Design Governance Reminder
+
+Dopo CML-433U, il bozzetto grafico deve essere valutato contro le specifiche utente, non contro preferenze estetiche isolate.
+
+Ogni bozzetto deve dichiarare:
+
+- profilo utente servito;
+- contesto d'uso supportato;
+- vista o pannello interessato;
+- stato curricolare rappresentato;
+- azione primaria consentita;
+- criterio di accettazione soddisfatto;
+- elementi volutamente esclusi.
+
+## Deferred Documentation Sync
+
+`docs/REPO-MOVELOG.md` richiede una sincronizzazione successiva per CML-432, CML-433 e CML-433U.
+
+La sincronizzazione non è inclusa in questa branch perché il file supera diecimila righe e una riscrittura remota basata su risposta troncata produrrebbe cancellazioni massive.

@@ -26,7 +26,7 @@ PM-07 Uniformita
 ████▌░░░░░ 45%
 
 PM-09 Validazione con utenti
-███▌░░░░░░ 35%
+████░░░░░░ 40%
 
 ## Slice in esecuzione
 
@@ -34,7 +34,7 @@ PM-09 Validazione con utenti
 
 ## Prossima slice
 
-- CML-434 (Home task selector runtime, dopo allineamento locale e conferma specifica CML-433)
+- Merge controllato CML-433U; poi CML-433M movelog sync sicuro oppure CML-434 Home task selector runtime dopo conferma della specifica utente.
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -94,8 +94,12 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ### Programma PM-09 - Validazione con utenti
 
-███▌░░░░░░
-35%
+████░░░░░░
+40%
+
+## Nota avanzamento PM-09
+
+L'avanzamento PM-09 da 35% a 40% è motivato dal passaggio da specifica target delle viste a specifiche utente pre-bozzetto: profili, contesti d'uso, logica dei pannelli, stati curricolari e criteri di accettazione del bozzetto sono ora formalizzati in un contratto verificabile.
 
 ## Stato operativo
 
@@ -142,9 +146,11 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 - Ultima slice completata: CML-431 (docs-only — PM-09 Pilot Readiness Checkpoint)
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
+- Slice pronta per merge: CML-433U (docs-only — Specifiche utente pre-bozzetto)
+- Movelog sync CML-432/CML-433/CML-433U: da eseguire in locale o con patch puntuale verificabile, non tramite riscrittura remota troncata
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: allineamento locale, movelog sync CML-433M, poi eventuale CML-434 Home task selector runtime
-- Ultimo aggiornamento: 2026-07-09 (CML-433)
+- Prossima azione: merge controllato CML-433U, poi CML-433M oppure CML-434 Home task selector runtime
+- Ultimo aggiornamento: 2026-07-09 (CML-433U merge-ready)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -192,6 +198,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 2. Senza CML-297, restano attive criticita su contestualizzazione fonti e chiarezza proposte 2025 nel cuore del Curriculum.
 3. Senza CML-300, permane alto il rischio di scelta errata nel flusso Esportazioni.
 4. Senza una specifica target validata, le patch UI rischiano di correggere singole card senza ridurre il carico cognitivo sistemico.
+5. Senza specifiche utente pre-bozzetto, il bozzetto rischia di trasformarsi in scelta estetica non verificabile.
 
 ## Decisioni aperte
 
@@ -199,6 +206,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 2. Stabilire cadenza fissa di aggiornamento percentuali programma (per slice o per milestone).
 3. Formalizzare protocollo di validazione PM-09 con utenti scolastici reali.
 4. Validare sequenza CML-434 → CML-435 → CML-436 prima di runtime esteso.
+5. Completare merge CML-433U prima della produzione dei bozzetti alternativi.
 
 ## Decisioni architetturali di governance
 
@@ -207,6 +215,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 3. Le dipendenze tra slice sono esplicite e governate tramite critical path.
 4. Il presente documento e la fonte primaria di stato programma; backlog e roadmap restano allineati a questo cruscotto.
 5. Dopo CML-433, ogni runtime patch derivata dal mock deve dichiarare claim, hard rules, gate e review avversariale.
+6. Dopo CML-433U, ogni bozzetto deve dichiarare quali specifiche utente soddisfa e quali lascia fuori per scelta intenzionale.
 
 ## Regola obbligatoria per future slice CML
 
