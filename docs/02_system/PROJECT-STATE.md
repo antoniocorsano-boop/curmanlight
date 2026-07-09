@@ -3,14 +3,13 @@
 ## Snapshot
 
 - Last milestone: CML-433U — Specifiche utente pre-bozzetto
-- Last slice: CML-433U — Specifiche utente pre-bozzetto
-- Last verified main commit: 55c23ab (CML-433)
-- Active branch: `codex/cml-433u-user-specifications-pre-mock`
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (specifiche utente pre-bozzetto in review)
+- Last slice: CML-433U — Specifiche utente pre-bozzetto (merge-ready)
+- Last verified base commit: 55c23ab (CML-433)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (specifiche utente pre-bozzetto definite, merge-ready)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: review/merge CML-433U, poi CML-434 Home task selector runtime solo dopo conferma della specifica utente
-- Last verdict: `CML_433U_USER_SPECIFICATIONS_PRE_BOZZETTO_READY_FOR_REVIEW_REMOTE_BRANCH`
-- Repository status: branch remoto docs-only; runtime e dati curricolari invariati; movelog sync CML-432/CML-433 differito per modifica locale sicura
+- Next action: merge controllato CML-433U, poi CML-433M movelog sync sicuro oppure CML-434 Home task selector runtime dopo conferma della specifica utente
+- Last verdict: `CML_433U_USER_SPECIFICATIONS_PRE_BOZZETTO_READY_FOR_MERGE_REMOTE_BRANCH`
+- Repository status: branch remoto docs-only pronta al merge; runtime e dati curricolari invariati; movelog sync CML-432/CML-433/CML-433U differito per modifica locale sicura
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
