@@ -30,7 +30,7 @@ PM-09 Validazione con utenti
 
 ## Slice in esecuzione
 
-- CML-437 — Post CML-436 Chain State Sync (docs-only, branch remota)
+- CML-437 — Post CML-436 Chain State Sync (docs-only, PR #28 aperta)
 
 ## Prossima slice
 
@@ -150,7 +150,7 @@ PM-09 resta al 45%. CML-434/CML-435/CML-436 hanno consolidato l'ingresso Home e 
 - Ultima slice completata: CML-436 (runtime micro-fix — Pages Stale Home Cache Invalidation, merged/live content smoke PASS; Home CML-435 servita correttamente)
 - Ultima slice completata: CML-418 (audit/smoke — Home and Mobile Live Visual Smoke Report, pushed `3b9eda0`, 1 doc + 8 screenshot)
 - Ultima slice completata: CLAUDE.md §10 (governance — mock conformance rule updated, pushed `ed64938`)
-- Ultima slice in corso: CML-437 (docs-only — Post CML-436 Chain State Sync, branch `codex/cml-437-post-chain-state-sync`)
+- Ultima slice in corso: CML-437 (docs-only — Post CML-436 Chain State Sync, branch `codex/cml-437-post-chain-state-sync`, PR #28 aperta)
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
 - Ultima slice completata: CML-433U (docs-only — Specifiche utente pre-bozzetto, merged `67e27da`)
@@ -161,7 +161,7 @@ PM-09 resta al 45%. CML-434/CML-435/CML-436 hanno consolidato l'ingresso Home e 
 - Movelog corrente: `docs/REPO-MOVELOG-v2.md`
 - Movelog legacy: `docs/REPO-MOVELOG.md` conservato e non riscritto
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: merge CML-437 docs-only; poi selezione prossima slice PM-09/pilot-validation
+- Prossima azione: merge CML-437 docs-only via PR #28; poi selezione prossima slice PM-09/pilot-validation
 - Ultimo aggiornamento: 2026-07-10 (CML-437)
 
 ## Matrice di trasformazione UX -> PM -> CML
