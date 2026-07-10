@@ -96,7 +96,8 @@ See `docs/02_system/OPS-PREFLIGHT-POLICY-CONTRACT.md` for full policy. Key rules
 - `cml-docs-only-slice` — docs-only slice workflow
 - `cml-readiness-audit` — discipline readiness audit before data prep
 
-## 10. Next Recommended Slices
+## 10. Mock Conformance Rule
 
-- CML-234S — controlled push (after CLAUDE.md alignment)
-- CML-235 — post-alignment OPS smoke and next-cycle selection
+Dopo un mock approvato, la UI deve inibire ciò che non è conforme. Non basta aggiungere nuovi blocchi sopra quelli vecchi.
+
+Derived from CML-435 (Home mock conformance visibility gate): il task selector CML-434 ha sostituito i vecchi ingressi Home, ma i blocchi duplicati non sono stati rimossi fino a CML-435. La regola si applica a ogni futura sostituzione UI.
