@@ -20,7 +20,7 @@ const AREA_LABELS: Record<AreaId, string> = {
 }
 
 export function Sidebar() {
-  const { vistaAttiva, setVista, sidebarOpen, toggleSidebar } = useAppStore()
+  const { vistaAttiva, setVista, sidebarOpen, setSidebarOpen } = useAppStore()
   if (!sidebarOpen) return null
 
   const availableItems = NAVIGATION.filter(item => item.available)
@@ -34,12 +34,12 @@ export function Sidebar() {
   function navigateTo(destination: (typeof availableItems)[number]['id']) {
     setVista(destination)
     if (window.matchMedia('(max-width: 639px)').matches) {
-      toggleSidebar()
+      setSidebarOpen(false)
     }
   }
 
   return (
-    <aside className="w-64 h-full border-r border-[var(--color-border)] bg-[var(--color-surface)] flex flex-col py-4 px-3 shrink-0 max-sm:absolute max-sm:z-20 max-sm:shadow-xl">
+    <aside className="w-64 h-full border-r border-[var(--color-border)] bg-white flex flex-col py-4 px-3 shrink-0 max-sm:fixed max-sm:left-0 max-sm:top-14 max-sm:bottom-0 max-sm:z-40 max-sm:shadow-2xl">
       <nav className="flex flex-col gap-1" aria-label="Navigazione principale">
         {Array.from(areas.entries()).map(([area, items]) => (
           <div key={area} className="mb-2">
