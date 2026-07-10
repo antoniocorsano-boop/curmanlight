@@ -11,6 +11,7 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "test:b01": "node tools/check-b01-entry-orientation.mjs",
+    "test:b02": "node tools/check-b02-consultation.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
