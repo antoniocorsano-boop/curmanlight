@@ -27,7 +27,13 @@ for (const file of files) {
   const data = JSON.parse(raw)
 
   const keep = {
+    schemaVersion: data.schemaVersion,
     disciplina: data.disciplina,
+    stato: data.stato,
+    readiness: data.readiness,
+    humanValidationRequired: data.humanValidationRequired,
+    source: data.source,
+    metaDiscipline: data.metaDiscipline,
     unitaApprendimento: data.unitaApprendimento,
     struttureSostanziali: data.struttureSostanziali,
     progressioneVerticale: data.progressioneVerticale,
