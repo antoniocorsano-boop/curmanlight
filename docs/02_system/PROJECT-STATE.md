@@ -9,9 +9,9 @@
 - Last governance update: `CLAUDE.md` §10 mock conformance rule updated (`ed64938`)
 - Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (Home mock conformance chain closed; live Home no longer serves stale duplicate blocks)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato → Live content smoke → Pilot evidence
-- Next action: merge CML-437 docs-only state sync; then select the next PM-09 / pilot-validation slice
+- Next action: merge CML-437 docs-only state sync via PR #28; then select the next PM-09 / pilot-validation slice
 - Last verdict: `CML_437_POST_CML436_CHAIN_STATE_SYNC_READY_REMOTE_BRANCH_NOT_MERGED`
-- Repository status: main includes CML-436 live cache fix, CML-418 report/screenshots, and `CLAUDE.md` §10 rule; CML-437 is docs-only on branch `codex/cml-437-post-chain-state-sync`; movelog corrente `docs/REPO-MOVELOG-v2.md`
+- Repository status: main includes CML-436 live cache fix, CML-418 report/screenshots, and `CLAUDE.md` §10 rule; CML-437 is docs-only on branch `codex/cml-437-post-chain-state-sync`, PR #28 aperta non mergiata; movelog corrente `docs/REPO-MOVELOG-v2.md`
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
