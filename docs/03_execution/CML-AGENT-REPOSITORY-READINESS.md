@@ -29,7 +29,7 @@ Predisporre il repository CurManLight per l'uso da parte di agenti di sviluppo a
 - Branch: `codex/cml-444-react-legacy-capability-inventory`
 - Commit HEAD: `4ee7919`
 - Remote: `origin` → `https://github.com/antoniocorsano-boop/curmanlight`
-- Branch locale in linea con `origin/main`
+- Il ramo locale derivava dalla linea CML-444, non contenuta nel nuovo `origin/main`; il commit di readiness e stato trapiantato sulla base `0bc3e0c`.
 - Working tree: file non tracciati preesistenti (screenshots, CurManLightBrain, cml435_post_merge_home.png)
 - Nessuna modifica preesistente ai file tracciati
 
@@ -50,7 +50,7 @@ Predisporre il repository CurManLight per l'uso da parte di agenti di sviluppo a
 
 La coppia `index.html` / `_published_snapshot/netlify-current/index.html` era gia desincronizzata prima di questa attivita. Questo e un fatto preesistente, non causato da questa preparazione. Il nuovo script `tools/check-app-pair.mjs` rileva e documenta questa divergenza.
 
-## File Creati
+## File Creati (6) + Report (1) = 7 file nuovi
 
 | File | Scopo | Verificato |
 |------|-------|------------|
@@ -60,13 +60,16 @@ La coppia `index.html` / `_published_snapshot/netlify-current/index.html` era gi
 | `docs/02_system/AGENT-VALIDATION-COMMANDS.md` | Registro comandi verificati | Si |
 | `docs/03_execution/TEMPLATE-AGENT-EXECUTION.md` | Modello di rapporto di esecuzione | Si |
 | `tools/check-app-pair.mjs` | Script confronto coppia applicativa | Si — eseguito, funzionante |
+| `docs/03_execution/CML-AGENT-REPOSITORY-READINESS.md` | Questo rapporto | Si |
 
-## File Modificati
+## File Modificati (2)
 
 | File | Tipo modifica | Contenuto |
 |------|---------------|-----------|
 | `AGENTS.md` | Riscrittura | Guida completa per agenti AI con regole, architettura, controlli |
 | `.github/copilot-instructions.md` | Aggiornamento | Riferimento ad AGENTS.md e governance |
+
+**Totale complessivo rispetto a `main`: 8 file di readiness + 1 rapporto di esecuzione = 9 file**
 
 ## Comandi Verificati
 
@@ -76,7 +79,7 @@ La coppia `index.html` / `_published_snapshot/netlify-current/index.html` era gi
 | `git diff --check` | PASS — solo warning CRLF, nessun errore |
 | `node tools/validate-cml-normalized-curriculum.mjs` | PASS — 14/14 |
 | `node tools/test-runtime-mappa-dati-shape.mjs` | PASS — 14/14 |
-| `node tools/check-app-pair.mjs` | PASS — funzionante, rileva divergenza pre-esistente |
+| `node tools/check-app-pair.mjs` | Strumento PASS — rileva correttamente la divergenza. Invariante coppia applicativa: FAIL PREESISTENTE — exit code 1 atteso |
 
 ## Controlli Eseguiti
 
@@ -86,7 +89,7 @@ La coppia `index.html` / `_published_snapshot/netlify-current/index.html` era gi
 | Git diff --check | PASS | Warning CRLF (normalizzazione Windows), zero errori |
 | Curriculum validator | PASS | 14/14 discipline |
 | Shape test | PASS | 14/14 discipline |
-| App pair check | PASS | Script funzionante, divergenza pre-esistente documentata |
+| App pair check | Strumento PASS (exit 0 se sincronizzati, exit 1 se divergenti). Invariante: FAIL PREESISTENTE — exit code 1 atteso, coppia non sincronizzata |
 | No secrets scan | PASS | Nessuna credenziale, token o chiave API trovata |
 | No runtime modification | PASS | Nessun file runtime modificato |
 | No curriculum modification | PASS | Nessun file dati modificato |
@@ -102,29 +105,36 @@ La coppia `index.html` / `_published_snapshot/netlify-current/index.html` era gi
 
 ## Attivita Consigliate successive
 
-1. **Slice di riconciliazione coppia applicativa**: Sincronizzare `index.html` con `_published_snapshot/netlify-current/index.html` (differenza 48 bytes)
-2. **Aggiornamento AGENT-REPOSITORY-MAP.md**: Aggiornare lo stato della coppia applicativa quando riconciliata
-3. **Commit della preparazione**: Committare tutti i file creati e modificati
-4. **Push controllato**: Dopo approvazione, pushare su branch dedicato
+1. **Correggere le incongruenze documentali** (questo commit)
+2. **Aprire una PR** su `main`
+3. **Revisionare e integrare** la PR
+4. **Affrontare separatamente la divergenza della coppia applicativa** (slice dedicata, fuori perimetro da questa preparazione)
 
 ## Stato Git Finale
 
+Stato locale precedente al commit del report:
+
 ```
-## codex/cml-agent-repository-readiness-aligned...origin/codex/cml-agent-repository-readiness-aligned [ahead 1]
+## codex/cml-agent-repository-readiness-aligned [ahead 1]
+?? docs/03_execution/CML-AGENT-REPOSITORY-READINESS.md
 ?? CurManLightBrain/
 ?? cml435_post_merge_home.png
-?? docs/03_execution/CML-AGENT-REPOSITORY-READINESS.md
-?? report/screenshots/CML-427-home-desktop.png
-?? report/screenshots/CML-427-home-mobile.png
-?? report/screenshots/CML-427-validation-modal-desktop.png
+?? report/screenshots/CML-427-*
 ?? report/screenshots/CML-435/
-?? report/screenshots/cml-439-debug-initial.png
+?? report/screenshots/cml-439-*
+```
+
+Stato remoto finale:
+
+```
+## codex/cml-agent-repository-readiness-aligned...origin/codex/cml-agent-repository-readiness-aligned [ahead 0]
 ```
 
 ## Commit Remoto
 
 ```
 3776695 docs: prepare repository for multi-agent execution
+9d5469d docs: update readiness report with rebased and pushed state
 ```
 
 ## Dichiarazioni
@@ -145,3 +155,15 @@ La coppia `index.html` / `_published_snapshot/netlify-current/index.html` era gi
 ```
 CML_AGENT_REPOSITORY_READINESS_PUSHED_REMOTE_NOT_PUBLISHED
 ```
+
+## Note sulla rettifica
+
+Correzioni applicate dopo il controllo remoto:
+
+1. **Stato Git finale**: distinto stato intermedio (1 commit, report non tracciato) da stato remoto finale (2 commit, HEAD `9d5469d`)
+2. **Elenco commit**: aggiunto `9d5469d` (aggiornamento report)
+3. **Attivita future**: rimosse attivita gia concluse (commit, push); sostituite con prossimi passi reali (correzioni, PR, revisione, riconciliazione coppia)
+4. **Ordine scolastico**: corretto "Secondaria II" in "Secondaria di primo grado" nella mappa del repository
+5. **Relazione CML-444**: corretta la falsa affermazione "in linea con origin/main"; documentato che CML-444 non era antenato di origin/main e il commit e stato trapiantato selettivamente
+6. **Esito check-app-pair.mjs**: distinto "strumento funzionante" (PASS) da "invariante coppia applicativa non soddisfatto" (FAIL preesistente, exit code 1 atteso)
+7. **Conteggio file**: 8 file di readiness + 1 rapporto di esecuzione = 9 file complessivi

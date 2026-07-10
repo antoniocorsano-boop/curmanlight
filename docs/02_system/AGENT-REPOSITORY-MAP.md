@@ -5,7 +5,7 @@
 
 ## 1. Panoramica del Prodotto
 
-CurManLight (CML) e una PWA statica per il curricolo verticale dell'I.C. Calvario-Covotta "don Lorenzo Milani", Ariano Irpino. Supporta consultazione, proposta, revisione e validazione umana del curricolo scolastico. Tratta 14 discipline da Infanzia a Secondaria II.
+CurManLight (CML) e una PWA statica per il curricolo verticale dell'I.C. Calvario-Covotta "don Lorenzo Milani", Ariano Irpino. Supporta consultazione, proposta, revisione e validazione umana del curricolo scolastico. Tratta 14 discipline da Infanzia a Secondaria di primo grado.
 
 - **URL pubblico**: `https://antoniocorsano-boop.github.io/curmanlight/`
 - **Remoto**: `origin` → `https://github.com/antoniocorsano-boop/curmanlight`
