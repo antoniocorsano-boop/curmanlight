@@ -1,0 +1,167 @@
+{
+  "date": "2026-07-10T05:54:32.061Z",
+  "summary": "32 / 32 passed",
+  "details": [
+    {
+      "label": "No console errors on load",
+      "pass": true,
+      "detail": "Clean console"
+    },
+    {
+      "label": "Home tab visible",
+      "pass": true,
+      "detail": "block"
+    },
+    {
+      "label": "Test guidato exists",
+      "pass": true,
+      "detail": "present"
+    },
+    {
+      "label": "Footer exists",
+      "pass": true,
+      "detail": "present"
+    },
+    {
+      "label": "4 action cards",
+      "pass": true,
+      "detail": "found 4"
+    },
+    {
+      "label": "First card primary",
+      "pass": true,
+      "detail": "yes"
+    },
+    {
+      "label": "5 path steps",
+      "pass": true,
+      "detail": "found 5"
+    },
+    {
+      "label": "Context panel",
+      "pass": true,
+      "detail": "present"
+    },
+    {
+      "label": "4 context items",
+      "pass": true,
+      "detail": "found 4"
+    },
+    {
+      "label": "Info strip",
+      "pass": true,
+      "detail": "present"
+    },
+    {
+      "label": "Discipline shows current selDisc",
+      "pass": true,
+      "detail": "\"Italiano\""
+    },
+    {
+      "label": "Empty: anno = \"Non impostato\"",
+      "pass": true,
+      "detail": "\"Non impostato\""
+    },
+    {
+      "label": "Empty: ruolo = \"Non definito\"",
+      "pass": true,
+      "detail": "\"Non definito\""
+    },
+    {
+      "label": "Empty: curricolo = \"Non selezionato\"",
+      "pass": true,
+      "detail": "\"Non selezionato\""
+    },
+    {
+      "label": "Work context dialog opens",
+      "pass": true,
+      "detail": "dialog in DOM"
+    },
+    {
+      "label": "Saved: ruolo = \"docente\"",
+      "pass": true,
+      "detail": "\"docente\""
+    },
+    {
+      "label": "Saved: anno has value",
+      "pass": true,
+      "detail": "\"2026/2027\""
+    },
+    {
+      "label": "Saved: curricolo = \"vigente\"",
+      "pass": true,
+      "detail": "\"vigente\""
+    },
+    {
+      "label": "Discipline updates via selectDisc()",
+      "pass": true,
+      "detail": "→ \"Matematica\""
+    },
+    {
+      "label": "Sidebar active = Matematica",
+      "pass": true,
+      "detail": "confirmed"
+    },
+    {
+      "label": "Returned to Home tab",
+      "pass": true,
+      "detail": "yes"
+    },
+    {
+      "label": "Reset: anno = \"Non impostato\"",
+      "pass": true,
+      "detail": "\"Non impostato\""
+    },
+    {
+      "label": "Reset: ruolo = \"Non definito\"",
+      "pass": true,
+      "detail": "\"Non definito\""
+    },
+    {
+      "label": "Reset: curricolo = \"Non selezionato\"",
+      "pass": true,
+      "detail": "\"Non selezionato\""
+    },
+    {
+      "label": "Test guidato section",
+      "pass": true,
+      "detail": "present"
+    },
+    {
+      "label": "Test guidato button",
+      "pass": true,
+      "detail": "\"Avvia test guidato\""
+    },
+    {
+      "label": "Footer present",
+      "pass": true,
+      "detail": "\"La Home non modifica i dati. Le discipline restano secondarie in questa vista e diventano centrali s\""
+    },
+    {
+      "label": "Home tab still visible at 390px",
+      "pass": true,
+      "detail": "yes"
+    },
+    {
+      "label": "Action cards width at 390px",
+      "pass": true,
+      "detail": "card width: 151px"
+    },
+    {
+      "label": "Path steps at 390px",
+      "pass": true,
+      "detail": "vertical"
+    },
+    {
+      "label": "Context wrap at 390px",
+      "pass": true,
+      "detail": "wrapped"
+    },
+    {
+      "label": "No JS errors",
+      "pass": true,
+      "detail": "Clean console"
+    }
+  ],
+  "consoleErrors": []
+}
