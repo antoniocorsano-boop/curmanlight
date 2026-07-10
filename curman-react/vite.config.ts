@@ -5,7 +5,7 @@ import path from 'node:path'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/curmanlight/',
+  base: process.env.VITE_BASE_PATH ?? '/curmanlight/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
