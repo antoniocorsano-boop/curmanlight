@@ -39,5 +39,18 @@ jobs:
         working-directory: curman-react
       - run: npm run test:b01
         working-directory: curman-react
-      - run: npm run build
+      - run: npm run test:b02
         working-directory: curman-react
+      - name: Build React candidate
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee react-build.log
+        working-directory: curman-react
+      - name: Upload build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build-diagnostics
+          path: curman-react/react-build.log
+          if-no-files-found: warn
