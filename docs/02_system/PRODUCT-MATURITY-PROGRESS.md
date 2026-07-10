@@ -30,11 +30,11 @@ PM-09 Validazione con utenti
 
 ## Slice in esecuzione
 
-- CML-437 — Post CML-436 Chain State Sync (docs-only, PR #28 aperta)
+- CML-438 — Pilot Validation Evidence Start Pack (docs-only, branch remota)
 
 ## Prossima slice
 
-- Dopo merge CML-437: selezionare la prossima micro-slice PM-09 / validazione pilota, usando Home live CML-435/436 come baseline.
+- Dopo merge CML-438: eseguire un primo pilot controllato con 2-4 docenti e raccogliere evidenze usando i template CML-438.
 
 ## Percorso critico (fase 1)
 
@@ -100,7 +100,7 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ## Nota avanzamento PM-09
 
-PM-09 resta al 45%. CML-434/CML-435/CML-436 hanno consolidato l'ingresso Home e la conformità live al mock approvato, ma non introducono ancora nuova evidenza da utenti scolastici reali. La prossima crescita PM-09 richiede raccolta e sintesi di evidenze pilota.
+PM-09 resta al 45%. CML-434/CML-435/CML-436 hanno consolidato l'ingresso Home e la conformità live al mock approvato; CML-418 ha prodotto evidenza visuale; CML-437 ha riallineato lo stato. CML-438 prepara la raccolta di evidenze pilota ma non incrementa ancora PM-09 perché non contiene input reali da utenti scolastici.
 
 ## Stato operativo
 
@@ -150,7 +150,8 @@ PM-09 resta al 45%. CML-434/CML-435/CML-436 hanno consolidato l'ingresso Home e 
 - Ultima slice completata: CML-436 (runtime micro-fix — Pages Stale Home Cache Invalidation, merged/live content smoke PASS; Home CML-435 servita correttamente)
 - Ultima slice completata: CML-418 (audit/smoke — Home and Mobile Live Visual Smoke Report, pushed `3b9eda0`, 1 doc + 8 screenshot)
 - Ultima slice completata: CLAUDE.md §10 (governance — mock conformance rule updated, pushed `ed64938`)
-- Ultima slice in corso: CML-437 (docs-only — Post CML-436 Chain State Sync, branch `codex/cml-437-post-chain-state-sync`, PR #28 aperta)
+- Ultima slice completata: CML-437 (docs-only — Post CML-436 Chain State Sync, merged remote `ea775da`)
+- Ultima slice in corso: CML-438 (docs-only — Pilot Validation Evidence Start Pack, branch `codex/cml-438-pilot-validation-evidence-start-pack`)
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
 - Ultima slice completata: CML-433U (docs-only — Specifiche utente pre-bozzetto, merged `67e27da`)
@@ -161,8 +162,8 @@ PM-09 resta al 45%. CML-434/CML-435/CML-436 hanno consolidato l'ingresso Home e 
 - Movelog corrente: `docs/REPO-MOVELOG-v2.md`
 - Movelog legacy: `docs/REPO-MOVELOG.md` conservato e non riscritto
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: merge CML-437 docs-only via PR #28; poi selezione prossima slice PM-09/pilot-validation
-- Ultimo aggiornamento: 2026-07-10 (CML-437)
+- Prossima azione: merge CML-438 docs-only; poi primo pilot controllato con docenti
+- Ultimo aggiornamento: 2026-07-10 (CML-438)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -218,8 +219,8 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 
 1. Definire soglia oggettiva di passaggio da PM-03/PM-04 in stato IN CORSO a COMPLETATO con test utente.
 2. Stabilire cadenza fissa di aggiornamento percentuali programma (per slice o per milestone).
-3. Formalizzare protocollo di validazione PM-09 con utenti scolastici reali.
-4. Selezionare la prossima slice di validazione/pilota dopo la chiusura CML-437.
+3. Eseguire il primo pilot controllato con docenti usando il pacchetto CML-438.
+4. Non decidere nuove patch runtime prima di sintetizzare evidenze ricorrenti.
 
 ## Decisioni architetturali di governance
 
@@ -234,6 +235,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 9. Dopo CML-434S, non applicare runtime pair da remoto se l'operazione richiede riscrittura completa da contenuto potenzialmente troncato.
 10. Dopo CML-435/CML-436, lo smoke pubblico deve verificare contenuto e assenza di blocchi stale, non solo HTTP 200.
 11. Dopo `CLAUDE.md` §10, una UI derivata da mock approvato deve inibire ciò che non è conforme; non basta aggiungere nuovi blocchi.
+12. Dopo CML-438, le evidenze pilota vanno aggregate prima di decidere patch runtime.
 
 ## Regola obbligatoria per future slice CML
 
