@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">CML-440 — Mock Home approvato</title>
+  <desc id="desc">Mock approvato della Home semplificata di CurManLight: quattro azioni principali, collegamento alle impostazioni, nessun percorso a card, nessuna card di stato e test guidato non visibile.</desc>
+  <defs>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#122694"/>
+      <stop offset="1" stop-color="#0d2fa4"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1836b8"/>
+      <stop offset="1" stop-color="#08298e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#1a237e" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .ui{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#15213d}.small{font-size:14px}.nav{font-size:17px;font-weight:700}.title{font-size:44px;font-weight:800;fill:#16318f}.lead{font-size:20px;fill:#33415f}.card-title{font-size:19px;font-weight:800;fill:#15309e}.card-text{font-size:16px;fill:#44516b}.footer{font-size:12px;fill:#e8edf7}.stroke{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <rect width="1536" height="1024" fill="#ffffff"/>
+  <rect width="1536" height="118" fill="url(#header)"/>
+
+  <g transform="translate(34 30)" color="#fff">
+    <path class="stroke" d="M0 18h46M5 18V50M15 18V50M25 18V50M35 18V50M2 50h42M23 0 2 12h42L23 0Z"/>
+  </g>
+  <g class="ui" fill="#fff">
+    <text x="108" y="31" font-size="15">I.C. CALVARIO-COVOTTA «DON LORENZO MILANI»</text>
+    <text x="108" y="62" font-size="28" font-weight="800">Curricolo Verticale</text>
+    <text x="108" y="94" font-size="15">IN 2012 – D.M. 221/2025 – Ariano Irpino (AV) – AVIC849003</text>
+  </g>
+  <rect x="1378" y="31" width="126" height="56" rx="18" fill="none" stroke="#7890e4"/>
+  <text class="ui" x="1441" y="65" fill="#fff" font-size="17" font-weight="800" text-anchor="middle">Dettagli⌄</text>
+
+  <rect y="118" width="1536" height="72" fill="#fff" stroke="#e2e6ee"/>
+  <g class="ui nav" fill="#5b6271">
+    <text x="68" y="161" fill="#15309e">⌂ Home</text>
+    <text x="160" y="161">▣ Curricolo</text>
+    <text x="313" y="161">◇ Progetta</text>
+    <text x="470" y="161">↓ Esportazioni</text>
+    <text x="651" y="161">? Guida</text>
+    <text x="787" y="161">⚙ Impostazioni</text>
+  </g>
+  <rect x="15" y="187" width="124" height="4" fill="#1836b8"/>
+
+  <g transform="translate(134 258)">
+    <text class="ui title" x="0" y="0">Cosa vuoi fare oggi?</text>
+    <text class="ui lead" x="0" y="52">CurManLight collega fonti ufficiali, consultazione, revisione, progettazione didattica,</text>
+    <text class="ui lead" x="0" y="85">esportazioni e validazione umana in un unico percorso di lavoro.</text>
+
+    <g transform="translate(0 145)" filter="url(#shadow)">
+      <rect width="300" height="205" rx="18" fill="url(#primary)"/>
+      <g transform="translate(28 36)" color="#fff"><path class="stroke" d="M0 3c17-8 30-4 40 4v43c-10-8-23-12-40-4V3Zm40 4c10-8 23-12 40-4v43c-17-8-30-4-40 4V7Z"/></g>
+      <text x="96" y="60" font-family="Inter,Segoe UI,Arial" font-size="19" font-weight="800" fill="#fff">Consulta</text>
+      <text x="96" y="90" font-family="Inter,Segoe UI,Arial" font-size="19" font-weight="800" fill="#fff">il curricolo</text>
+      <text x="268" y="78" font-family="Inter,Segoe UI,Arial" font-size="34" fill="#fff">›</text>
+      <text x="28" y="142" font-family="Inter,Segoe UI,Arial" font-size="16" fill="#e7ebff">Leggi il curricolo vigente e</text>
+      <text x="28" y="173" font-family="Inter,Segoe UI,Arial" font-size="16" fill="#e7ebff">le sezioni generali</text>
+    </g>
+
+    <g transform="translate(325 145)" filter="url(#shadow)">
+      <rect width="300" height="205" rx="18" fill="#fff" stroke="#d9dee9"/>
+      <g transform="translate(28 37)" color="#153cc5"><path class="stroke" d="M3 5h40v40H3V5Zm31-9 15 15-28 28-17 2 2-17L34-4Z"/></g>
+      <text class="ui card-title" x="98" y="61">Prepara una</text>
+      <text class="ui card-title" x="98" y="91">progettazione</text>
+      <text x="270" y="79" font-family="Inter,Segoe UI,Arial" font-size="34" fill="#153cc5">›</text>
+      <text class="ui card-text" x="28" y="142">Evidenze, programmazione</text>
+      <text class="ui card-text" x="28" y="173">annuale e UDA modello</text>
+    </g>
+
+    <g transform="translate(650 145)" filter="url(#shadow)">
+      <rect width="300" height="205" rx="18" fill="#fff" stroke="#d9dee9"/>
+      <g transform="translate(28 37)" color="#153cc5"><path class="stroke" d="M43 9A23 23 0 0 0 6 16M6 16V3M6 16h13M3 40a23 23 0 0 0 37-7M40 33v13M40 33H27"/></g>
+      <text class="ui card-title" x="98" y="61">Proponi un</text>
+      <text class="ui card-title" x="98" y="91">aggiornamento</text>
+      <text x="270" y="79" font-family="Inter,Segoe UI,Arial" font-size="34" fill="#153cc5">›</text>
+      <text class="ui card-text" x="28" y="142">Prepara una proposta da</text>
+      <text class="ui card-text" x="28" y="173">discutere in dipartimento</text>
+    </g>
+
+    <g transform="translate(975 145)" filter="url(#shadow)">
+      <rect width="300" height="205" rx="18" fill="#fff" stroke="#d9dee9"/>
+      <g transform="translate(28 34)" color="#153cc5"><path class="stroke" d="M24 0v38M11 25l13 13 13-13M4 38v15h40V38"/></g>
+      <text class="ui card-title" x="98" y="61">Esporta</text>
+      <text class="ui card-title" x="98" y="91">un documento</text>
+      <text x="270" y="79" font-family="Inter,Segoe UI,Arial" font-size="34" fill="#153cc5">›</text>
+      <text class="ui card-text" x="28" y="142">Documento finale, confronto,</text>
+      <text class="ui card-text" x="28" y="173">file .cml e copia</text>
+    </g>
+
+    <g transform="translate(0 405)">
+      <rect width="1275" height="124" rx="16" fill="#f9fbff" stroke="#cfd9f5"/>
+      <g transform="translate(32 34)" color="#153cc5"><circle class="stroke" cx="24" cy="24" r="22"/><path class="stroke" d="M24 19v18M24 11h.01"/></g>
+      <text class="ui" x="102" y="52" font-size="19" font-weight="800" fill="#15309e">Imposta il tuo contesto di lavoro.</text>
+      <text class="ui" x="102" y="87" font-size="17" fill="#526078">Anno scolastico, ruolo, curricolo e disciplina si gestiscono in Impostazioni.</text>
+      <rect x="1054" y="34" width="190" height="56" rx="12" fill="#fff" stroke="#9fb3ef"/>
+      <text class="ui" x="1149" y="69" font-size="17" font-weight="800" fill="#15309e" text-anchor="middle">Vai a Impostazioni</text>
+    </g>
+  </g>
+
+  <rect y="951" width="1536" height="73" fill="#263c48"/>
+  <text class="footer" x="768" y="995" text-anchor="middle">Istituto Comprensivo Calvario-Covotta «don Lorenzo Milani» — Ariano Irpino (AV) • AVIC849003 | IN 2012 — D.M. 221/2025 | DigComp 2.2 | Agenda 2030 | PTOF 2025-2028 | Non multa, sed multum</text>
+</svg>
