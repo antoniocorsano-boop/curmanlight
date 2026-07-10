@@ -33,11 +33,51 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-438 — Pilot Validation Evidence Start Pack
+
+- **Data**: 2026-07-10
+- **Tipo**: docs-only / validation evidence pack
+- **Stato**: branch `codex/cml-438-pilot-validation-evidence-start-pack`, non mergiata
+- **Runtime**: non modificato
+- **Dati curricolari**: non modificati
+
+### Scopo
+
+Preparare il primo pacchetto operativo per validazione pilota con docenti non tecnici, usando la Home live CML-435/436 come baseline stabile.
+
+### File prodotti
+
+- `docs/03_execution/CML-438.md`
+- `report/CML-438_pilot_validation_evidence_start_pack.md`
+- `docs/04_validation/CML-438/teacher_pilot_instructions.md`
+- `docs/04_validation/CML-438/teacher_observation_grid.md`
+- `docs/04_validation/CML-438/pilot_evidence_summary_template.md`
+
+### File aggiornati
+
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Regola metodologica
+
+Non raccogliere gradimento generico. Raccogliere evidenze osservabili: cosa il docente capisce, cosa prova a fare, dove si blocca, quali parole o passaggi risultano ambigui.
+
+### Verdetto
+
+```text
+CML_438_PILOT_VALIDATION_EVIDENCE_START_PACK_READY_REMOTE_BRANCH_NOT_MERGED
+```
+
+---
+
 ## CML-437 — Post CML-436 Chain State Sync
 
 - **Data**: 2026-07-10
 - **Tipo**: docs-only / post-chain state sync
-- **Stato**: branch `codex/cml-437-post-chain-state-sync`, PR #28 aperta, non mergiata
+- **Stato**: MERGED_REMOTE
+- **PR**: #28
+- **Merge commit**: `ea775da`
 - **Runtime**: non modificato
 - **Dati curricolari**: non modificati
 
@@ -67,7 +107,7 @@ Dopo un mock approvato, la UI deve inibire ciò che non è conforme. Non basta a
 ### Verdetto
 
 ```text
-CML_437_POST_CML436_CHAIN_STATE_SYNC_READY_REMOTE_BRANCH_NOT_MERGED
+CML_437_POST_CML436_CHAIN_STATE_SYNC_MERGED_REMOTE
 ```
 
 ---
@@ -372,7 +412,7 @@ CML_432_TEACHER_TASK_VIEW_ARCHITECTURE_AND_MOCK_COMPARISON_PUSHED_REMOTE
 
 - **Data**: 2026-07-09
 - **Tipo**: runtime micro-slice
-- **Stato**: merged su main via PR #24; live da verificare con smoke pubblico
+- **Stato**: merged su main via PR #24; baseline poi corretta da CML-435/CML-436
 - **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
 - **Dati curricolari**: non modificati
 
@@ -406,7 +446,7 @@ CML_434_HOME_TASK_SELECTOR_RUNTIME_PUSHED_BRANCH_NOT_MERGED
 
 - **Data**: 2026-07-09
 - **Tipo**: runtime micro-slice (visibility gate)
-- **Stato**: mergiata su main via PR #26; live da verificare con smoke pubblico
+- **Stato**: mergiata su main via PR #26; poi resa live affidabile da CML-436
 - **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
 - **Dati curricolari**: non modificati
 
@@ -450,7 +490,7 @@ CML_435_HOME_MOCK_CONFORMANCE_VISIBILITY_GATE_READY_FOR_MERGE_REMOTE_BRANCH
 
 - **Data**: 2026-07-10
 - **Tipo**: runtime micro-fix (cache/service worker)
-- **Stato**: branch `codex/cml-436-pages-stale-home-cache-invalidation` pushata su origin, PR aperta, non mergiata
+- **Stato**: merged/live content smoke PASS
 - **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
 - **SW**: _published_snapshot/netlify-current/sw.js modificato; sw.js in root per dev parity
 - **Dati curricolari**: non modificati
@@ -473,5 +513,5 @@ CML-435 era mergiata su main ma GitHub Pages serviva Home stale a causa della ca
 ### Verdetto
 
 ```text
-CML_436_PAGES_STALE_HOME_CACHE_INVALIDATION_READY_BRANCH_NOT_MERGED
+CML_436_PAGES_STALE_HOME_CACHE_INVALIDATION_MERGED_LIVE_CONTENT_SMOKE_PASS
 ```
