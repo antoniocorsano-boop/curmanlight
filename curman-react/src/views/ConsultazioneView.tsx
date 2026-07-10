@@ -11,7 +11,7 @@ const ORDINI: OrdineEsteso[] = ['Tutti', 'Infanzia', 'Primaria', 'Secondaria']
 
 function labelStato(value?: string) {
   if (!value) return 'Stato non indicato'
-  const normalized = value.replaceAll('_', ' ')
+  const normalized = value.replace(/_/g, ' ')
   return normalized.charAt(0).toUpperCase() + normalized.slice(1)
 }
 
