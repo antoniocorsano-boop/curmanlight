@@ -27,7 +27,10 @@ const DEFAULT_PROFILE: ProfiloUtente = {
 
 export function ImpostazioniView() {
   const { profilo, setProfilo, disciplinaSelezionata, setDisciplina } = useAppStore()
-  const [form, setForm] = useState<ProfiloUtente>(() => profilo ?? { ...DEFAULT_PROFILE, disciplina: disciplinaSelezionata ?? '' })
+  const [form, setForm] = useState<ProfiloUtente>(() => ({
+    ...(profilo ?? DEFAULT_PROFILE),
+    disciplina: disciplinaSelezionata ?? profilo?.disciplina ?? '',
+  }))
   const [saved, setSaved] = useState(false)
 
   function update<K extends keyof ProfiloUtente>(key: K, value: ProfiloUtente[K]) {
