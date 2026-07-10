@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* CurManLight Design System - strumento professionale istituzionale
+ * Pesi sottili, border 1px, spaziatura generosa, palette indigo/slate tenue
+ * No emoji, icone Lucide dal subset consentito */
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+h1, h2, h3 { font-weight: 600; }
+label, .label { font-weight: 500; }
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.input-field:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
