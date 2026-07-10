@@ -30,27 +30,27 @@
 
 ### Funziona bene
 
-- 
-- 
-- 
+- [da compilare]
+- [da compilare]
+- [da compilare]
 
 ### Da chiarire
 
-- 
-- 
-- 
+- [da compilare]
+- [da compilare]
+- [da compilare]
 
 ### Blocchi ricorrenti
 
-- 
-- 
-- 
+- [da compilare]
+- [da compilare]
+- [da compilare]
 
 ### Frasi utili dei docenti
 
-- 
-- 
-- 
+- [da compilare]
+- [da compilare]
+- [da compilare]
 
 ## Criterio per patch futura
 
