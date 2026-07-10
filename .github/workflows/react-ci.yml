@@ -37,5 +37,7 @@ jobs:
         working-directory: curman-react
       - run: npm run lint
         working-directory: curman-react
+      - run: npm run test:b01
+        working-directory: curman-react
       - run: npm run build
         working-directory: curman-react
