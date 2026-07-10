@@ -27,7 +27,12 @@ jobs:
           node-version: 20
       - run: npm install --no-save playwright
       - run: npx playwright install --with-deps chromium
-      - run: node tools/cml-453-b02-preview-audit.mjs
+      - name: Run B02 interaction audit
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p report
+          node tools/cml-453-b02-preview-audit.mjs 2>&1 | tee report/CML-453_run.log
       - name: Upload B02 audit evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -35,5 +40,6 @@ jobs:
           name: cml-453-b02-preview-audit
           path: |
             report/CML-453_b02_preview_interaction_audit.md
+            report/CML-453_run.log
             report/screenshots/CML-453/*.png
           if-no-files-found: warn
