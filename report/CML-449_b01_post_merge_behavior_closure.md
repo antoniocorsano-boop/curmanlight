@@ -1,104 +1,138 @@
 # CML-449 — B01 Post-Merge Behavior Closure
 
 > Data: 2026-07-10  
-> Base: `main` a `15e459dd`  
-> Tipo: verifica post-merge, solo documentazione  
+> Base finale: `main` dopo CML-449A, CML-449B e CML-449C  
+> Tipo: verifica post-merge e chiusura comportamentale  
 > Percorso: `B01 — Entrare e orientarsi`
 
 ## 1. Obiettivo
 
-Verificare che l’implementazione CML-448 sia effettivamente presente su `main`, che i controlli obbligatori risultino superati e che il percorso B01 possa essere chiuso sul piano strutturale e automatico.
+Verificare che l’implementazione CML-448 sia presente su `main`, che i controlli automatici risultino superati e che il percorso B01 sia utilizzabile su desktop e mobile nell’anteprima React pubblicata.
 
-## 2. Evidenze verificate
+## 2. Catena verificata
 
-### Integrazione
+### CML-448 — Implementazione B01
 
 - PR #38 integrata;
-- commit di merge: `15e459ddf48716bb8f6c310fa95a344c214287b2`;
-- 9 file React/CI modificati;
-- nessuna modifica al runtime legacy pubblicato;
-- nessun deploy del candidato React.
+- commit di merge `15e459ddf48716bb8f6c310fa95a344c214287b2`;
+- Home orientata ai compiti;
+- Consultazione, Proposta ed Esportazioni collegate a viste reali;
+- Progettazione visibile ma non operativa;
+- Impostazioni reale;
+- viste incomplete escluse dalla navigazione;
+- intestazione coerente con la vista corrente.
 
-### Controlli pre-merge
+### CML-449A — Anteprima separata
 
-La CI della testa finale `fea8f773` ha superato:
+- PR #40 integrata;
+- candidato React pubblicato nel percorso isolato `/curmanlight/react-preview/`;
+- runtime legacy mantenuto alla radice;
+- nessuna sostituzione della versione ufficiale.
+
+### CML-449B — Audit interattivo
+
+Il primo audit con Chromium/Playwright ha rilevato un blocco mobile:
+
+- menu aperto al caricamento;
+- sovrapposizione al contenuto;
+- assenza di fondale oscurato;
+- percorso mobile non considerabile concluso.
+
+### CML-449C — Correzione mobile
+
+- PR #42 integrata;
+- commit di merge `df759ee28f9ad405b2a42b6a320cf348790ae634`;
+- menu chiuso inizialmente su schermo ridotto;
+- pannello mobile opaco;
+- fondale oscurato;
+- chiusura su fondale, tasto Esc e selezione della destinazione;
+- blocco dello scorrimento mentre il menu è aperto;
+- CI React interamente positiva.
+
+## 3. Controlli automatici
+
+La CI React ha superato:
 
 - `npm ci`;
 - `npm run lint`;
 - `npm run test:b01`;
 - `npm run build`.
 
-I due rilievi di revisione sono stati corretti prima del merge:
+L’audit remoto finale ha eseguito Chromium sull’anteprima pubblicata con:
 
-- conservazione della disciplina selezionata riaprendo Impostazioni;
-- chiusura del menu mobile dopo la selezione della destinazione.
+- viewport desktop `1440 × 1000`;
+- viewport mobile `390 × 844`.
 
-### Contenuto effettivo su main
+Esito finale:
 
-La Home integrata presenta:
+- **28 controlli superati su 28**;
+- **0 controlli falliti**;
+- **0 errori console**.
 
-- domanda iniziale “Cosa vuoi fare oggi?”;
-- “Consulta il curricolo” con destinazione reale;
-- “Prepara una progettazione” visibile ma non operativa;
-- “Proponi un aggiornamento” con destinazione reale;
-- “Esporta un documento” con destinazione reale;
-- accesso esplicito a Impostazioni;
-- richiamo alla validazione umana.
+## 4. Risultati verificati
 
-La navigazione operativa filtra le viste non disponibili. L’intestazione usa il titolo della vista corrente. Impostazioni costituisce una destinazione reale e consente di definire il contesto minimo di lavoro.
+| Gate | Desktop | Mobile |
+|---|---:|---:|
+| Home e titolo iniziale | PASS | PASS |
+| Quattro attività visibili | PASS | PASS |
+| Progettazione non operativa | PASS | PASS |
+| Consultazione raggiungibile | PASS | PASS |
+| Proposta raggiungibile | PASS | PASS |
+| Esportazioni raggiungibili | PASS | PASS |
+| Impostazioni raggiungibili | PASS | PASS |
+| Salvataggio del contesto | PASS | PASS |
+| Disciplina conservata nella sessione | PASS | PASS |
+| Menu apribile | PASS | PASS |
+| Menu chiuso dopo navigazione | PASS | PASS |
+| Errori console | 0 | 0 |
 
-## 3. Verifica dei gate CML-447
+## 5. Evidenze prodotte
 
-| Gate | Esito |
-|---|---|
-| Home formulata come insieme di compiti | PASS |
-| Consultazione conduce a vista reale | PASS |
-| Proposta conduce a vista reale | PASS |
-| Esportazione conduce a vista reale | PASS |
-| Progettazione non apre un segnaposto operativo | PASS |
-| Impostazioni è una destinazione reale | PASS |
-| Viste incomplete escluse dalla navigazione operativa | PASS |
-| Intestazione coerente con la vista | PASS |
-| Disciplina conservata durante la navigazione | PASS dopo correzione review |
-| Menu mobile richiudibile dopo la navigazione | PASS dopo correzione review |
-| Lint, controllo B01 e build | PASS |
-| Runtime legacy invariato | PASS |
-| Deploy React non attivato | PASS |
+L’audit ha prodotto schermate di:
 
-## 4. Limite della chiusura
+- Home desktop e mobile;
+- Consultazione desktop e mobile;
+- Proposta desktop e mobile;
+- Esportazioni desktop e mobile;
+- Impostazioni desktop e mobile;
+- stato mobile dopo la navigazione.
 
-B01 è chiuso sul piano:
+Gli strumenti di audit sono stati integrati con PR #41 e possono essere riutilizzati nei cicli successivi.
 
-- strutturale;
-- funzionale dichiarato;
-- statico;
-- di compilazione;
-- di controllo automatico.
+## 6. Limiti residui
 
-Non è ancora stato eseguito un test visivo interattivo del candidato React in un ambiente pubblicato o di anteprima. Questo non riapre CML-448, ma deve essere effettuato prima di dichiarare la nuova applicazione pronta alla sostituzione del runtime legacy.
+La chiusura B01 non equivale alla validazione complessiva del prodotto.
 
-Il test con docenti non tecnici resta parte della validazione complessiva del prodotto e non blocca l’avvio del ciclo successivo.
+Restano fuori dal perimetro:
 
-## 5. Decisione
+- prova con docenti non tecnici;
+- persistenza completa tra sessioni, prevista nel ciclo B04;
+- completamento del percorso di progettazione;
+- parità completa con il runtime legacy;
+- decisione finale di sostituzione della versione pubblicata.
 
-Il percorso `B01 — Entrare e orientarsi` è dichiarato **chiuso tecnicamente nel candidato React**.
+Questi elementi non riaprono B01.
+
+## 7. Decisione
+
+Il percorso `B01 — Entrare e orientarsi` è dichiarato **chiuso tecnicamente, visivamente e interattivamente nel candidato React**.
 
 La migrazione può passare a:
 
 `B02 — Consultare e comprendere il curricolo`.
 
-## 6. Prossima slice
+## 8. Prossima slice
 
 **CML-450 — B02 Consultation and Understanding Behavior Gap Audit**
 
 Obiettivo:
 
-- confrontare il comportamento atteso di consultazione con runtime legacy, audit pregressi e candidato React;
-- verificare selezione disciplina, ordine di scuola, stato curricolare, fonti, filtri e densità informativa;
+- confrontare comportamento atteso, runtime legacy, audit pregressi e candidato React;
+- verificare selezione della disciplina, ordine di scuola, stato curricolare, fonti, filtri e densità informativa;
 - produrre scarti, priorità e criteri di chiusura senza modificare il runtime.
 
-## 7. Verdetto
+## 9. Verdetto
 
 ```text
-CML_449_B01_POST_MERGE_BEHAVIOR_CLOSURE_READY_REMOTE_BRANCH
+CML_449_B01_POST_MERGE_VISUAL_INTERACTIVE_CLOSURE_READY_REMOTE_BRANCH
 ```
