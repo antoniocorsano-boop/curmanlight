@@ -11,7 +11,7 @@ function record(name, pass, detail = '') { results.push({ name, pass, detail }) 
 
 async function auditViewport(name, viewport) {
   const browser = await chromium.launch({ headless: true })
-  const page = await browser.newPage({ viewportSize: viewport })
+  const page = await browser.newPage({ viewport })
   const errors = []
   page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()) })
   page.on('pageerror', err => errors.push(err.message))
@@ -33,13 +33,19 @@ async function auditViewport(name, viewport) {
   record(`${name}: Consultazione aperta`, await page.getByText('Consulta il curricolo', { exact: true }).first().isVisible())
   await page.screenshot({ path: path.join(outDir, `${name}-consultazione.png`), fullPage: true })
 
-  await page.getByRole('button', { name: /^Home$/ }).click()
+  const navButton = async (label) => {
+    const nav = page.getByRole('navigation', { name: 'Navigazione principale' })
+    if (!(await nav.isVisible())) await page.getByRole('button', { name: 'Apri o chiudi il menu' }).click()
+    await nav.getByRole('button', { name: label }).click()
+  }
+
+  await navButton(/^Home$/)
   await page.locator('main').getByRole('button', { name: /Proponi un aggiornamento/ }).click()
   await page.waitForTimeout(300)
   record(`${name}: Revisione aperta`, await page.getByText('Proponi un aggiornamento', { exact: true }).first().isVisible())
   await page.screenshot({ path: path.join(outDir, `${name}-revisione.png`), fullPage: true })
 
-  await page.getByRole('button', { name: /^Home$/ }).click()
+  await navButton(/^Home$/)
   await page.locator('main').getByRole('button', { name: /Esporta un documento/ }).click()
   await page.waitForTimeout(300)
   record(`${name}: Esportazioni aperte`, await page.getByText('Esporta un documento', { exact: true }).first().isVisible())
@@ -55,15 +61,15 @@ async function auditViewport(name, viewport) {
     const selected = await discipline.inputValue()
     await page.getByRole('button', { name: 'Salva il contesto' }).click()
     record(`${name}: Salvataggio contesto`, await page.getByText('Contesto aggiornato.').isVisible())
-    await page.getByRole('button', { name: /^Home$/ }).click()
+    await navButton(/^Home$/)
     await page.getByRole('button', { name: /Apri Impostazioni|Vai a Impostazioni/ }).first().click()
     record(`${name}: Disciplina conservata`, (await page.getByLabel('Disciplina').inputValue()) === selected)
   }
   await page.screenshot({ path: path.join(outDir, `${name}-impostazioni.png`), fullPage: true })
 
   if (name === 'mobile') {
-    await page.getByRole('button', { name: 'Apri o chiudi il menu' }).click()
     const nav = page.getByRole('navigation', { name: 'Navigazione principale' })
+    if (!(await nav.isVisible())) await page.getByRole('button', { name: 'Apri o chiudi il menu' }).click()
     record('mobile: menu aperto', await nav.isVisible())
     await nav.getByRole('button', { name: /Consulta il curricolo/ }).click()
     await page.waitForTimeout(300)
