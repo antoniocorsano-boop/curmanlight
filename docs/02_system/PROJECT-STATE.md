@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last milestone: CML-435 — Home Mock Conformance Visibility Gate
-- Last slice: CML-435 — Home Mock Conformance Visibility Gate
-- Last completed design merge: 67e27da (CML-433U)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (CML-434 merged su main via PR #24; CML-435 su branch `codex/cml-435-home-mock-conformance`, PR #26 aperta non mergiata, ready for merge remoto)
+- Last milestone: CML-436 — Pages Stale Home Cache Invalidation
+- Last slice: CML-436 — Pages Stale Home Cache Invalidation
+- Last completed design merge: 748b468 (CML-435 via PR #26)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (CML-434 merged su main via PR #24; CML-435 merged su main via PR #26; CML-436 cache fix su branch)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato
-- Next action: Merge CML-435 via PR #26; smoke post-merge e live verification su main
-- Last verdict: `CML_435_HOME_MOCK_CONFORMANCE_VISIBILITY_GATE_READY_FOR_MERGE_REMOTE_BRANCH`
-- Repository status: CML-434 merged su main via PR #24; CML-435 su branch `codex/cml-435-home-mock-conformance`, PR #26 aperta non mergiata, ready for merge remoto; movelog corrente `docs/REPO-MOVELOG-v2.md`
+- Next action: Merge CML-436 via PR; smoke post-merge e live verification Home CML-435
+- Last verdict: `CML_436_PAGES_STALE_HOME_CACHE_INVALIDATION_READY_BRANCH_NOT_MERGED`
+- Repository status: CML-434 e CML-435 merged su main; CML-436 su branch `codex/cml-436-pages-stale-home-cache-invalidation`; movelog corrente `docs/REPO-MOVELOG-v2.md`
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
