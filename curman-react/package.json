@@ -10,6 +10,7 @@
     "prebuild": "npm run sync-data",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "test:b01": "node tools/check-b01-entry-orientation.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
