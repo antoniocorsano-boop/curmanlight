@@ -3,15 +3,16 @@
 ## Snapshot
 
 - Last milestone: CML-437 — Post CML-436 Chain State Sync
-- Last slice: CML-437 — Post CML-436 Chain State Sync
+- Last completed sync: CML-437 merged remote (`ea775da`)
+- Active slice: CML-438 — Pilot Validation Evidence Start Pack
 - Last completed design/runtime merge: CML-436 merged and live content smoke PASS
 - Last completed evidence/report commit: CML-418 live visual smoke report pushed (`3b9eda0`)
 - Last governance update: `CLAUDE.md` §10 mock conformance rule updated (`ed64938`)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (Home mock conformance chain closed; live Home no longer serves stale duplicate blocks)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (Home mock conformance chain closed; pilot validation evidence pack in progress)
 - Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato → Live content smoke → Pilot evidence
-- Next action: merge CML-437 docs-only state sync via PR #28; then select the next PM-09 / pilot-validation slice
-- Last verdict: `CML_437_POST_CML436_CHAIN_STATE_SYNC_READY_REMOTE_BRANCH_NOT_MERGED`
-- Repository status: main includes CML-436 live cache fix, CML-418 report/screenshots, and `CLAUDE.md` §10 rule; CML-437 is docs-only on branch `codex/cml-437-post-chain-state-sync`, PR #28 aperta non mergiata; movelog corrente `docs/REPO-MOVELOG-v2.md`
+- Next action: review/merge CML-438 docs-only pack; then run a controlled teacher pilot using Home live CML-435/436 as baseline
+- Last verdict: `CML_438_PILOT_VALIDATION_EVIDENCE_START_PACK_READY_REMOTE_BRANCH_NOT_MERGED`
+- Repository status: main includes CML-437 merged state sync; CML-438 is docs-only on branch `codex/cml-438-pilot-validation-evidence-start-pack`; movelog corrente `docs/REPO-MOVELOG-v2.md`
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 
@@ -54,6 +55,10 @@ Ogni intervento runtime deve dichiarare:
 ## Mock Conformance Rule
 
 Dopo un mock approvato, la UI deve inibire ciò che non è conforme. Non basta aggiungere nuovi blocchi sopra quelli vecchi.
+
+## Pilot Validation Rule
+
+Durante la validazione pilota non chiedere solo se lo strumento piace. Raccogliere evidenze osservabili: cosa il docente capisce, cosa prova a fare, dove si blocca, quali parole o passaggi risultano ambigui.
 
 ## Current Movelog
 
