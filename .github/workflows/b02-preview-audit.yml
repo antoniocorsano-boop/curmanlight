@@ -1,0 +1,39 @@
+name: B02 Preview Audit
+
+on:
+  push:
+    branches:
+      - 'codex/cml-453-b02-visual-audit'
+    paths:
+      - 'tools/cml-453-b02-preview-audit.mjs'
+      - '.github/workflows/b02-preview-audit.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/cml-453-b02-preview-audit.mjs'
+      - '.github/workflows/b02-preview-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - run: node tools/cml-453-b02-preview-audit.mjs
+      - name: Upload B02 audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cml-453-b02-preview-audit
+          path: |
+            report/CML-453_b02_preview_interaction_audit.md
+            report/screenshots/CML-453/*.png
+          if-no-files-found: warn
