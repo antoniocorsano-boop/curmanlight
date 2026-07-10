@@ -2,6 +2,7 @@ import { chromium } from 'playwright'
 import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
+// Re-run against the preview after the CML-449C mobile sidebar correction.
 const baseUrl = 'https://antoniocorsano-boop.github.io/curmanlight/react-preview/'
 const outDir = path.resolve('report/screenshots/CML-449B')
 await mkdir(outDir, { recursive: true })
