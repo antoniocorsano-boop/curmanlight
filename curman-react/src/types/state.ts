@@ -1,7 +1,7 @@
 import type { ProfiloUtente, DecisioniMap, GapLayer, ProgressStats } from './gap'
 
-export type AreaId = 'home' | 'curriculum' | 'didattica' | 'guida'
-export type ViewId = 'home' | 'consultazione' | 'revisione' | 'processo' | 'esportazioni' | 'evidenze-valutazione' | 'programmazione-annuale' | 'uda-modello' | 'guida'
+export type AreaId = 'home' | 'curriculum' | 'didattica' | 'sistema'
+export type ViewId = 'home' | 'consultazione' | 'revisione' | 'processo' | 'esportazioni' | 'evidenze-valutazione' | 'programmazione-annuale' | 'uda-modello' | 'guida' | 'impostazioni'
 export type FiltroStato = 'tutti' | 'da_decidere' | 'approvati' | 'rifiutati'
 
 export interface NavigationItem {
@@ -9,19 +9,34 @@ export interface NavigationItem {
   label: string
   area: AreaId
   icon: string
+  available: boolean
 }
 
 export const NAVIGATION: NavigationItem[] = [
-  { id: 'home', label: 'Home', area: 'home', icon: 'house' },
-  { id: 'consultazione', label: 'Consultazione', area: 'curriculum', icon: 'book-open' },
-  { id: 'revisione', label: 'Revisione', area: 'curriculum', icon: 'refresh-cw' },
-  { id: 'processo', label: 'Processo', area: 'curriculum', icon: 'workflow' },
-  { id: 'esportazioni', label: 'Esportazioni', area: 'curriculum', icon: 'download' },
-  { id: 'evidenze-valutazione', label: 'Evidenze e Valutazione', area: 'didattica', icon: 'eye' },
-  { id: 'programmazione-annuale', label: 'Programmazione Annuale', area: 'didattica', icon: 'layers' },
-  { id: 'uda-modello', label: 'UDA Modello', area: 'didattica', icon: 'file-text' },
-  { id: 'guida', label: 'Guida', area: 'guida', icon: 'circle-help' },
+  { id: 'home', label: 'Home', area: 'home', icon: 'house', available: true },
+  { id: 'consultazione', label: 'Consulta il curricolo', area: 'curriculum', icon: 'book-open', available: true },
+  { id: 'revisione', label: 'Proponi un aggiornamento', area: 'curriculum', icon: 'refresh-cw', available: true },
+  { id: 'processo', label: 'Segui il processo', area: 'curriculum', icon: 'workflow', available: true },
+  { id: 'esportazioni', label: 'Esporta un documento', area: 'curriculum', icon: 'download', available: true },
+  { id: 'evidenze-valutazione', label: 'Evidenze e valutazione', area: 'didattica', icon: 'eye', available: false },
+  { id: 'programmazione-annuale', label: 'Programmazione annuale', area: 'didattica', icon: 'layers', available: false },
+  { id: 'uda-modello', label: 'UDA modello', area: 'didattica', icon: 'file-text', available: false },
+  { id: 'guida', label: 'Guida', area: 'sistema', icon: 'circle-help', available: false },
+  { id: 'impostazioni', label: 'Impostazioni', area: 'sistema', icon: 'settings', available: true },
 ]
+
+export const VIEW_TITLES: Record<ViewId, string> = {
+  home: 'Home',
+  consultazione: 'Consulta il curricolo',
+  revisione: 'Proponi un aggiornamento',
+  processo: 'Segui il processo',
+  esportazioni: 'Esporta un documento',
+  'evidenze-valutazione': 'Evidenze e valutazione',
+  'programmazione-annuale': 'Programmazione annuale',
+  'uda-modello': 'UDA modello',
+  guida: 'Guida',
+  impostazioni: 'Impostazioni',
+}
 
 export interface AppState {
   vistaAttiva: ViewId
