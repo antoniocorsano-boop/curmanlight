@@ -33,6 +33,45 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-437 — Post CML-436 Chain State Sync
+
+- **Data**: 2026-07-10
+- **Tipo**: docs-only / post-chain state sync
+- **Stato**: branch `codex/cml-437-post-chain-state-sync`, PR #28 aperta, non mergiata
+- **Runtime**: non modificato
+- **Dati curricolari**: non modificati
+
+### Scopo
+
+Allineare `PROJECT-STATE`, `PRODUCT-MATURITY-PROGRESS` e `REPO-MOVELOG-v2` dopo la chiusura della catena CML-435/CML-436/CML-418/CLAUDE §10.
+
+### Stato consolidato
+
+```text
+CML_436_PAGES_STALE_HOME_CACHE_INVALIDATION_MERGED_LIVE_CONTENT_SMOKE_PASS
+CML_418_HOME_AND_MOBILE_LIVE_VISUAL_SMOKE_REPORT_PUSHED
+CLAUDE_SECTION_10_MOCK_CONFORMANCE_RULE_UPDATED
+```
+
+### File modificati/prodotti
+
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- `docs/REPO-MOVELOG-v2.md`
+- `docs/03_execution/CML-437.md`
+
+### Regola acquisita
+
+Dopo un mock approvato, la UI deve inibire ciò che non è conforme. Non basta aggiungere nuovi blocchi sopra quelli vecchi.
+
+### Verdetto
+
+```text
+CML_437_POST_CML436_CHAIN_STATE_SYNC_READY_REMOTE_BRANCH_NOT_MERGED
+```
+
+---
+
 ## CML-434S — Runtime Remote Safety Gate
 
 - Tipo: docs-only / runtime safety gate / remote execution guard

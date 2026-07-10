@@ -30,11 +30,12 @@ PM-09 Validazione con utenti
 
 ## Slice in esecuzione
 
-- nessuna
+- CML-437 — Post CML-436 Chain State Sync (docs-only, PR #28 aperta)
 
 ## Prossima slice
 
-- Merge controllato CML-435 (PR #26) su main; poi smoke post-merge/live.
+- Dopo merge CML-437: selezionare la prossima micro-slice PM-09 / validazione pilota, usando Home live CML-435/436 come baseline.
+
 ## Percorso critico (fase 1)
 
 CML-286 ⬅ completata
@@ -99,7 +100,7 @@ CML-306 ⬅ componenti comuni uniformati (UX-024) completata
 
 ## Nota avanzamento PM-09
 
-PM-09 resta al 45%. CML-434S non incrementa la percentuale perché non applica runtime né introduce nuova validazione utente: registra un safety gate necessario per evitare una modifica remota non sicura del runtime pair.
+PM-09 resta al 45%. CML-434/CML-435/CML-436 hanno consolidato l'ingresso Home e la conformità live al mock approvato, ma non introducono ancora nuova evidenza da utenti scolastici reali. La prossima crescita PM-09 richiede raccolta e sintesi di evidenze pilota.
 
 ## Stato operativo
 
@@ -144,9 +145,12 @@ PM-09 resta al 45%. CML-434S non incrementa la percentuale perché non applica r
 - Ultima slice completata: CML-429 (docs-only — User Validation Evidence Intake Model)
 - Ultima slice completata: CML-430 (docs-only — User Validation Intake Summary Template)
 - Ultima slice completata: CML-431 (docs-only — PM-09 Pilot Readiness Checkpoint)
-- Ultima slice completata: CML-434 (runtime micro-slice — Home Task Selector Runtime, merged su main via PR #24, live da verificare)
-- Ultima slice completata: CML-435 (runtime micro-slice — Home Mock Conformance Visibility Gate, merged su main via PR #26, live da verificare)
-- Ultima slice completata: CML-436 (runtime micro-fix — Pages Stale Home Cache Invalidation, branch `codex/cml-436-pages-stale-home-cache-invalidation`, su branch)
+- Ultima slice completata: CML-434 (runtime micro-slice — Home Task Selector Runtime, merged su main via PR #24; baseline poi corretta da CML-435/CML-436)
+- Ultima slice completata: CML-435 (runtime micro-slice — Home Mock Conformance Visibility Gate, merged su main via PR #26; Home duplicata rimossa)
+- Ultima slice completata: CML-436 (runtime micro-fix — Pages Stale Home Cache Invalidation, merged/live content smoke PASS; Home CML-435 servita correttamente)
+- Ultima slice completata: CML-418 (audit/smoke — Home and Mobile Live Visual Smoke Report, pushed `3b9eda0`, 1 doc + 8 screenshot)
+- Ultima slice completata: CLAUDE.md §10 (governance — mock conformance rule updated, pushed `ed64938`)
+- Ultima slice in corso: CML-437 (docs-only — Post CML-436 Chain State Sync, branch `codex/cml-437-post-chain-state-sync`, PR #28 aperta)
 - Ultima slice completata: CML-432 (docs-only — Teacher Task View Architecture and Mock Comparison)
 - Ultima slice completata: CML-433 (docs-only — Teacher Task View Target Specification)
 - Ultima slice completata: CML-433U (docs-only — Specifiche utente pre-bozzetto, merged `67e27da`)
@@ -157,8 +161,8 @@ PM-09 resta al 45%. CML-434S non incrementa la percentuale perché non applica r
 - Movelog corrente: `docs/REPO-MOVELOG-v2.md`
 - Movelog legacy: `docs/REPO-MOVELOG.md` conservato e non riscritto
 - Milestone di consolidamento governance: CML-282A
-- Prossima azione: Merge CML-436 via PR; smoke post-merge/live su main
-- Ultimo aggiornamento: 2026-07-10 (CML-436)
+- Prossima azione: merge CML-437 docs-only via PR #28; poi selezione prossima slice PM-09/pilot-validation
+- Ultimo aggiornamento: 2026-07-10 (CML-437)
 
 ## Matrice di trasformazione UX -> PM -> CML
 
@@ -215,8 +219,7 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 1. Definire soglia oggettiva di passaggio da PM-03/PM-04 in stato IN CORSO a COMPLETATO con test utente.
 2. Stabilire cadenza fissa di aggiornamento percentuali programma (per slice o per milestone).
 3. Formalizzare protocollo di validazione PM-09 con utenti scolastici reali.
-4. Applicare CML-434 solo in locale o con patch atomica sicura.
-5. Limitare CML-434 a Home task selector + pannello contestuale leggero.
+4. Selezionare la prossima slice di validazione/pilota dopo la chiusura CML-437.
 
 ## Decisioni architetturali di governance
 
@@ -229,6 +232,8 @@ Motivo: questo percorso riduce prima i blocchi di orientamento/comprensione ad a
 7. Dopo CML-433M, il registro operativo delle modifiche è `docs/REPO-MOVELOG-v2.md`; il movelog legacy resta archivio non riscritto.
 8. Dopo CML-434D, la prima runtime patch deve adottare la direzione ibrida: B ingresso docente, C logica operativa, A evoluzione istituzionale futura.
 9. Dopo CML-434S, non applicare runtime pair da remoto se l'operazione richiede riscrittura completa da contenuto potenzialmente troncato.
+10. Dopo CML-435/CML-436, lo smoke pubblico deve verificare contenuto e assenza di blocchi stale, non solo HTTP 200.
+11. Dopo `CLAUDE.md` §10, una UI derivata da mock approvato deve inibire ciò che non è conforme; non basta aggiungere nuovi blocchi.
 
 ## Regola obbligatoria per future slice CML
 
