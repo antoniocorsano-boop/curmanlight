@@ -37,7 +37,7 @@ Ogni voce deve indicare almeno:
 
 - **Data**: 2026-07-10
 - **Tipo**: docs-only / post-chain state sync
-- **Stato**: branch `codex/cml-437-post-chain-state-sync` pushata da remoto, PR da aprire, non mergiata
+- **Stato**: branch `codex/cml-437-post-chain-state-sync`, PR #28 aperta, non mergiata
 - **Runtime**: non modificato
 - **Dati curricolari**: non modificati
 
