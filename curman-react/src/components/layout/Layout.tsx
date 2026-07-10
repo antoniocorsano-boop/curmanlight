@@ -1,19 +1,13 @@
-// Layout principale — sidebar + contenuto
-
 import { Sidebar } from './Sidebar'
 import { Header } from './Header'
 
-interface LayoutProps {
-  children: React.ReactNode
-}
-
-export function Layout({ children }: LayoutProps) {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       <Header />
       <div className="flex flex-1 overflow-hidden">
         <Sidebar />
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto p-6 bg-[var(--color-surface-page)]">
           {children}
         </main>
       </div>
