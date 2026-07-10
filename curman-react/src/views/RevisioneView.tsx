@@ -1,0 +1,81 @@
+import { useState } from 'react'
+import { useAppStore } from '@/stores/useAppStore'
+import { useRevisioneStore } from '@/stores/useRevisioneStore'
+import { useCurriculum, useFilteredUnita } from '@/hooks/useCurriculum'
+import { useGapLayer } from '@/hooks/useGapLayer'
+import { useProgress } from '@/hooks/useProgress'
+import { GapComparison } from '@/components/revisione/GapComparison'
+import { ProgressBar } from '@/components/revisione/ProgressBar'
+import { Toast } from '@/components/shared/Toast'
+import { DISCIPLINE_SLUGS, DISCIPLINE_LABELS } from '@/types/curriculum'
+import { needsDecision } from '@/lib/gap'
+import type { DisciplinaSlug } from '@/types/curriculum'
+import type { FiltroStato } from '@/types/state'
+
+const FILTRI: { value: FiltroStato; label: string }[] = [
+  { value: 'tutti', label: 'Tutte' },
+  { value: 'da_decidere', label: 'Da decidere' },
+  { value: 'approvati', label: 'Approvate' },
+  { value: 'rifiutati', label: 'Rifiutate' },
+]
+
+export function RevisioneView() {
+  const { disciplinaSelezionata, setDisciplina, profilo, filtroStato, setFiltroStato } = useAppStore()
+  const slug = disciplinaSelezionata as DisciplinaSlug | null
+  const curriculum = useCurriculum(slug)
+  const gapLayer = useGapLayer(slug)
+  const unita = useFilteredUnita(curriculum, gapLayer, profilo?.ordine ?? 'Tutti')
+  const decisioni = useRevisioneStore(s => s.decisioni)
+  const progress = useProgress(disciplinaSelezionata, gapLayer, decisioni)
+  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' | 'info' } | null>(null)
+
+  const filteredUnita = unita.filter(u => {
+    if (!u.gap) return false
+    const dec = decisioni[u.id]
+    switch (filtroStato) {
+      case 'da_decidere': return needsDecision(u.gap, dec)
+      case 'approvati': return dec?.decisione === 'approvata'
+      case 'rifiutati': return dec?.decisione === 'rifiutata'
+      default: return u.gap.status !== 'vigente' && u.gap.status !== 'archiviato'
+    }
+  })
+
+  return (
+    <div className="max-w-3xl mx-auto flex flex-col gap-6">
+      <div>
+        <h2 className="text-lg font-[600] text-slate-800">Revisione</h2>
+        <p className="text-sm text-slate-500">Confronta il curricolo vigente con le proposte IN 2025.</p>
+      </div>
+      <div className="flex flex-wrap gap-4 items-end">
+        <div>
+          <label className="text-xs font-[500] text-slate-500 block mb-1.5">Disciplina</label>
+          <select value={slug ?? ''} onChange={e => setDisciplina(e.target.value || null)} className="px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white">
+            <option value="">Seleziona</option>
+            {DISCIPLINE_SLUGS.map(s => <option key={s} value={s}>{DISCIPLINE_LABELS[s]}</option>)}
+          </select>
+        </div>
+        <div className="flex gap-1">
+          {FILTRI.map(f => (
+            <button key={f.value} onClick={() => setFiltroStato(f.value)}
+              className={`px-3 py-1.5 text-xs rounded-md transition-colors ${filtroStato === f.value ? 'bg-indigo-50 text-indigo-700 font-[500]' : 'text-slate-500 hover:bg-slate-50'}`}>
+              {f.label}
+            </button>
+          ))}
+        </div>
+      </div>
+      {gapLayer && slug && <ProgressBar stats={progress} label={DISCIPLINE_LABELS[slug]} />}
+      {filteredUnita.length > 0 ? (
+        <div className="flex flex-col gap-4">
+          {filteredUnita.map(u => <GapComparison key={u.id} unita={u} entry={u.gap!} decisione={decisioni[u.id]} />)}
+        </div>
+      ) : slug && gapLayer ? (
+        <p className="text-sm text-slate-400 text-center py-8">
+          {filtroStato === 'tutti' ? 'Nessuna proposta per questa disciplina.' : 'Nessun elemento corrisponde al filtro.'}
+        </p>
+      ) : !slug ? (
+        <p className="text-sm text-slate-400 text-center py-8">Seleziona una disciplina per iniziare.</p>
+      ) : null}
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
+    </div>
+  )
+}
