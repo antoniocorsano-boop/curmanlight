@@ -10,6 +10,11 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+*.tsbuildinfo
+
+# Dati curricolari generati dalla fonte canonica
+src/data/curriculum/*.json
+
 *.local
 
 # Editor directories and files
