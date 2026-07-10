@@ -2,81 +2,29 @@ export type Ordine = 'Infanzia' | 'Primaria' | 'Secondaria'
 export type OrdineEsteso = Ordine | 'Tutti'
 
 export type DisciplinaSlug =
-  | 'arte-immagine'
-  | 'educazione-civica'
-  | 'educazione-fisica'
-  | 'geografia'
-  | 'inglese'
-  | 'italiano'
-  | 'latino-lel'
-  | 'matematica'
-  | 'musica'
-  | 'religione-cattolica'
-  | 'scienze'
-  | 'seconda-lingua-comunitaria'
-  | 'storia'
-  | 'tecnologia'
+  | 'arte-immagine' | 'educazione-civica' | 'educazione-fisica' | 'geografia'
+  | 'inglese' | 'italiano' | 'latino-lel' | 'matematica' | 'musica'
+  | 'religione-cattolica' | 'scienze' | 'seconda-lingua-comunitaria' | 'storia' | 'tecnologia'
 
 export const DISCIPLINE_SLUGS: DisciplinaSlug[] = [
-  'arte-immagine',
-  'educazione-civica',
-  'educazione-fisica',
-  'geografia',
-  'inglese',
-  'italiano',
-  'latino-lel',
-  'matematica',
-  'musica',
-  'religione-cattolica',
-  'scienze',
-  'seconda-lingua-comunitaria',
-  'storia',
-  'tecnologia',
+  'arte-immagine', 'educazione-civica', 'educazione-fisica', 'geografia', 'inglese', 'italiano',
+  'latino-lel', 'matematica', 'musica', 'religione-cattolica', 'scienze',
+  'seconda-lingua-comunitaria', 'storia', 'tecnologia',
 ]
 
 export const DISCIPLINE_LABELS: Record<DisciplinaSlug, string> = {
   'arte-immagine': 'Arte e Immagine',
   'educazione-civica': 'Educazione Civica',
   'educazione-fisica': 'Educazione Fisica',
-  'geografia': 'Geografia',
-  'inglese': 'Inglese',
-  'italiano': 'Italiano',
-  'latino-lel': 'Latino / LEL',
-  'matematica': 'Matematica',
-  'musica': 'Musica',
-  'religione-cattolica': 'Religione Cattolica',
-  'scienze': 'Scienze',
-  'seconda-lingua-comunitaria': 'Seconda Lingua Comunitaria',
-  'storia': 'Storia',
-  'tecnologia': 'Tecnologia',
+  geografia: 'Geografia', inglese: 'Inglese', italiano: 'Italiano',
+  'latino-lel': 'Latino / LEL', matematica: 'Matematica', musica: 'Musica',
+  'religione-cattolica': 'Religione Cattolica', scienze: 'Scienze',
+  'seconda-lingua-comunitaria': 'Seconda Lingua Comunitaria', storia: 'Storia', tecnologia: 'Tecnologia',
 }
 
-export interface StrutturaSostanziale {
-  id: string
-  nome: string
-  descrizione: string
-  fonte: string
-}
-
-export interface ProgressioneVerticale {
-  id: string
-  ordine: Ordine
-  fascia?: string
-  classe?: string
-  descrizioneProgressione: string
-  nodiRiferimento: string[]
-  fonte: string
-}
-
-export interface DecisioneCurricolare {
-  id: string
-  tipo: string
-  nodiRiferimento: string[]
-  unitaRiferimento: string[]
-  motivazione: string
-  stato: string
-  fonte: string
-}
+export interface StrutturaSostanziale { id: string; nome: string; descrizione: string; fonte: string }
+export interface ProgressioneVerticale { id: string; ordine: Ordine; fascia?: string; classe?: string; descrizioneProgressione: string; nodiRiferimento: string[]; fonte: string }
+export interface DecisioneCurricolare { id: string; tipo: string; nodiRiferimento: string[]; unitaRiferimento: string[]; motivazione: string; stato: string; fonte: string }
 
 export interface UnitaApprendimento {
   id: string
@@ -101,7 +49,13 @@ export interface UnitaApprendimento {
 }
 
 export interface CurriculumDisciplina {
+  schemaVersion?: string
   disciplina: string
+  stato?: string
+  readiness?: string
+  humanValidationRequired?: boolean
+  source?: string
+  metaDiscipline?: string
   unitaApprendimento: UnitaApprendimento[]
   struttureSostanziali?: StrutturaSostanziale[]
   progressioneVerticale?: ProgressioneVerticale[]
