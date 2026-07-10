@@ -2,15 +2,12 @@ import { chromium } from 'playwright'
 import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
-// Remote browser audit for the published React preview.
 const baseUrl = 'https://antoniocorsano-boop.github.io/curmanlight/react-preview/'
 const outDir = path.resolve('report/screenshots/CML-449B')
 await mkdir(outDir, { recursive: true })
 
 const results = []
-function record(name, pass, detail = '') {
-  results.push({ name, pass, detail })
-}
+function record(name, pass, detail = '') { results.push({ name, pass, detail }) }
 
 async function auditViewport(name, viewport) {
   const browser = await chromium.launch({ headless: true })
@@ -20,29 +17,30 @@ async function auditViewport(name, viewport) {
   page.on('pageerror', err => errors.push(err.message))
 
   await page.goto(baseUrl, { waitUntil: 'networkidle', timeout: 60000 })
+  const main = page.locator('main')
   await page.screenshot({ path: path.join(outDir, `${name}-home.png`), fullPage: true })
 
-  record(`${name}: Home title`, await page.getByRole('heading', { name: 'Cosa vuoi fare oggi?' }).isVisible())
+  record(`${name}: Home title`, await main.getByRole('heading', { name: 'Cosa vuoi fare oggi?' }).isVisible())
   for (const label of ['Consulta il curricolo', 'Prepara una progettazione', 'Proponi un aggiornamento', 'Esporta un documento']) {
-    record(`${name}: ${label}`, await page.getByText(label, { exact: true }).isVisible())
+    record(`${name}: ${label}`, await main.getByText(label, { exact: true }).first().isVisible())
   }
 
-  const planning = page.getByRole('button', { name: /Prepara una progettazione/ })
+  const planning = main.getByRole('button', { name: /Prepara una progettazione/ })
   record(`${name}: Progettazione non operativa`, await planning.isDisabled())
 
-  await page.getByRole('button', { name: /Consulta il curricolo/ }).click()
+  await main.getByRole('button', { name: /Consulta il curricolo/ }).click()
   await page.waitForTimeout(300)
   record(`${name}: Consultazione aperta`, await page.getByText('Consulta il curricolo', { exact: true }).first().isVisible())
   await page.screenshot({ path: path.join(outDir, `${name}-consultazione.png`), fullPage: true })
 
-  await page.getByRole('button', { name: /Home/ }).click()
-  await page.getByRole('button', { name: /Proponi un aggiornamento/ }).click()
+  await page.getByRole('button', { name: /^Home$/ }).click()
+  await page.locator('main').getByRole('button', { name: /Proponi un aggiornamento/ }).click()
   await page.waitForTimeout(300)
   record(`${name}: Revisione aperta`, await page.getByText('Proponi un aggiornamento', { exact: true }).first().isVisible())
   await page.screenshot({ path: path.join(outDir, `${name}-revisione.png`), fullPage: true })
 
-  await page.getByRole('button', { name: /Home/ }).click()
-  await page.getByRole('button', { name: /Esporta un documento/ }).click()
+  await page.getByRole('button', { name: /^Home$/ }).click()
+  await page.locator('main').getByRole('button', { name: /Esporta un documento/ }).click()
   await page.waitForTimeout(300)
   record(`${name}: Esportazioni aperte`, await page.getByText('Esporta un documento', { exact: true }).first().isVisible())
   await page.screenshot({ path: path.join(outDir, `${name}-esportazioni.png`), fullPage: true })
@@ -57,7 +55,7 @@ async function auditViewport(name, viewport) {
     const selected = await discipline.inputValue()
     await page.getByRole('button', { name: 'Salva il contesto' }).click()
     record(`${name}: Salvataggio contesto`, await page.getByText('Contesto aggiornato.').isVisible())
-    await page.getByRole('button', { name: /Home/ }).click()
+    await page.getByRole('button', { name: /^Home$/ }).click()
     await page.getByRole('button', { name: /Apri Impostazioni|Vai a Impostazioni/ }).first().click()
     record(`${name}: Disciplina conservata`, (await page.getByLabel('Disciplina').inputValue()) === selected)
   }
@@ -67,7 +65,7 @@ async function auditViewport(name, viewport) {
     await page.getByRole('button', { name: 'Apri o chiudi il menu' }).click()
     const nav = page.getByRole('navigation', { name: 'Navigazione principale' })
     record('mobile: menu aperto', await nav.isVisible())
-    await page.getByRole('button', { name: /Consulta il curricolo/ }).click()
+    await nav.getByRole('button', { name: /Consulta il curricolo/ }).click()
     await page.waitForTimeout(300)
     record('mobile: menu chiuso dopo navigazione', !(await nav.isVisible()))
     await page.screenshot({ path: path.join(outDir, 'mobile-after-nav.png'), fullPage: true })
@@ -83,18 +81,13 @@ await auditViewport('mobile', { width: 390, height: 844 })
 const passed = results.filter(r => r.pass).length
 const failed = results.filter(r => !r.pass)
 const markdown = [
-  '# CML-449B — React Preview Visual Interaction Audit',
-  '',
+  '# CML-449B — React Preview Visual Interaction Audit', '',
   `- URL: ${baseUrl}`,
   `- Controlli superati: ${passed}/${results.length}`,
-  `- Controlli falliti: ${failed.length}`,
-  '',
-  '| Controllo | Esito | Dettaglio |',
-  '|---|---|---|',
-  ...results.map(r => `| ${r.name} | ${r.pass ? 'PASS' : 'FAIL'} | ${String(r.detail || '').replaceAll('|', '\\|')} |`),
-  '',
-  failed.length ? '## Verdetto\n\n`CML_449B_REACT_PREVIEW_VISUAL_AUDIT_FAILED`' : '## Verdetto\n\n`CML_449B_REACT_PREVIEW_VISUAL_AUDIT_PASS`',
-  '',
+  `- Controlli falliti: ${failed.length}`, '',
+  '| Controllo | Esito | Dettaglio |', '|---|---|---|',
+  ...results.map(r => `| ${r.name} | ${r.pass ? 'PASS' : 'FAIL'} | ${String(r.detail || '').replaceAll('|', '\\|')} |`), '',
+  failed.length ? '## Verdetto\n\n`CML_449B_REACT_PREVIEW_VISUAL_AUDIT_FAILED`' : '## Verdetto\n\n`CML_449B_REACT_PREVIEW_VISUAL_AUDIT_PASS`', ''
 ].join('\n')
 
 await writeFile('report/CML-449B_react_preview_visual_interaction_audit.md', markdown)
