@@ -1,0 +1,167 @@
+name: CML-441 Remote Home Patch
+
+on:
+  push:
+    branches:
+      - codex/cml-441-home-action-only-simplification
+    paths:
+      - .github/workflows/cml-441-remote-patch.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/cml-441-home-action-only-simplification
+          fetch-depth: 0
+      - name: Apply CML-441 patch
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          files = [Path('index.html'), Path('_published_snapshot/netlify-current/index.html')]
+
+          new_home = r'''<section class="home-process-hub" aria-labelledby="home-process-hub-title">
+          <h2 id="home-process-hub-title">Cosa vuoi fare oggi?</h2>
+          <p class="home-process-hub__lead">CurManLight collega fonti ufficiali, consultazione, revisione, progettazione didattica, esportazioni e validazione umana in un unico percorso di lavoro.</p>
+          <div class="home-action-cards" role="group" aria-label="Azioni principali">
+            <button class="home-action-card home-action-card--primary" type="button" onclick="setTab('curricolo')">
+              <span class="home-action-icon"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"></use></svg></span>
+              <span class="home-action-card-title">Consulta il curricolo</span>
+              <span class="home-action-card-text">Leggi il curricolo vigente e le sezioni generali</span>
+              <span class="home-action-card-arrow"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></span>
+            </button>
+            <button class="home-action-card" type="button" onclick="setTab('didattica')">
+              <span class="home-action-icon"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-edit"></use></svg></span>
+              <span class="home-action-card-title">Prepara una progettazione</span>
+              <span class="home-action-card-text">Evidenze, programmazione annuale e UDA modello</span>
+              <span class="home-action-card-arrow"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></span>
+            </button>
+            <button class="home-action-card" type="button" onclick="setTab('lavoro')">
+              <span class="home-action-icon"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-undo"></use></svg></span>
+              <span class="home-action-card-title">Proponi un aggiornamento</span>
+              <span class="home-action-card-text">Prepara una proposta da discutere in dipartimento</span>
+              <span class="home-action-card-arrow"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></span>
+            </button>
+            <button class="home-action-card" type="button" onclick="setTab('esportazioni')">
+              <span class="home-action-icon"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg></span>
+              <span class="home-action-card-title">Esporta un documento</span>
+              <span class="home-action-card-text">Documento finale, confronto, file .cml e copia</span>
+              <span class="home-action-card-arrow"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></span>
+            </button>
+          </div>
+          <div class="home-settings-callout" role="note" aria-label="Contesto di lavoro">
+            <span class="home-settings-callout__icon"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg></span>
+            <div class="home-settings-callout__content">
+              <strong>Imposta il tuo contesto di lavoro.</strong>
+              <span>Anno scolastico, ruolo, curricolo e disciplina si gestiscono in Impostazioni.</span>
+            </div>
+            <button type="button" class="home-settings-callout__button" onclick="openSettingsModal()">Vai a Impostazioni</button>
+          </div>
+        </section>'''
+
+          css = r'''
+/* CML-441 — Home action-only simplification */
+.home-dashboard{max-width:1180px;margin:0 auto;padding:56px 24px 96px}
+.home-process-hub{background:transparent;border:0;border-radius:0;padding:0;margin:0;box-shadow:none}
+.home-process-hub h2{font-size:34px;line-height:1.12;margin:0 0 18px;color:#12338f;letter-spacing:-.4px}
+.home-process-hub__lead{max-width:760px;font-size:16px!important;line-height:1.65!important;color:#26354f!important;margin:0 0 42px!important}
+.home-action-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:0 0 54px}
+.home-action-card{min-height:205px;background:#fff;border:1px solid #d8deea;border-radius:14px;padding:30px 28px 26px;cursor:pointer;text-align:left;position:relative;transition:border-color .15s,box-shadow .15s,transform .15s;font-family:inherit;display:flex;flex-direction:column;align-items:flex-start;gap:18px;color:#0d2b87}
+.home-action-card:hover{border-color:#8094d6;box-shadow:0 8px 24px rgba(26,35,126,.10);transform:translateY(-2px)}
+.home-action-card:focus-visible{outline:3px solid #5c6bc0;outline-offset:3px}
+.home-action-card--primary{background:linear-gradient(145deg,#123db4,#0b2d99);border-color:#123db4;color:#fff}
+.home-action-card--primary:hover{background:linear-gradient(145deg,#1647c7,#1036aa);border-color:#1647c7}
+.home-action-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:transparent;margin:0;color:#0e39b7}
+.home-action-card--primary .home-action-icon{background:transparent;color:#fff}
+.home-action-icon .ui-icon{width:38px;height:38px;color:inherit}
+.home-action-card-title{font-size:18px;font-weight:800;color:#0d2b87;margin:0;line-height:1.35;max-width:180px}
+.home-action-card--primary .home-action-card-title{color:#fff}
+.home-action-card-text{font-size:14px;color:#3f4d66;line-height:1.55;margin:0 auto 0 0}
+.home-action-card--primary .home-action-card-text{color:#e8ecff}
+.home-action-card-arrow{position:absolute;top:50%;right:22px;transform:translateY(-50%);display:flex;color:#0d39b5}
+.home-action-card--primary .home-action-card-arrow{color:#fff}
+.home-action-card-arrow .ui-icon{width:24px;height:24px}
+.home-action-card:hover .home-action-card-arrow{transform:translate(4px,-50%)}
+.home-settings-callout{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;border:1px solid #cfd8f2;background:#f7f9ff;border-radius:14px;padding:28px 30px}
+.home-settings-callout__icon{display:flex;color:#123ba7}
+.home-settings-callout__icon .ui-icon{width:38px;height:38px}
+.home-settings-callout__content{display:flex;flex-direction:column;gap:8px;color:#40506b}
+.home-settings-callout__content strong{font-size:18px;color:#14338a}
+.home-settings-callout__content span{font-size:14px;line-height:1.5}
+.home-settings-callout__button{border:1px solid #9cace0;background:#fff;color:#15358d;border-radius:10px;padding:13px 22px;font-size:14px;font-weight:800;cursor:pointer;white-space:nowrap}
+.home-settings-callout__button:hover{background:#eef2ff;border-color:#6f85cc}
+@media(max-width:1024px){
+  .home-dashboard{padding:42px 20px 72px}
+  .home-action-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .home-action-card{min-height:180px}
+}
+@media(max-width:700px){
+  .home-dashboard{padding:28px 14px 56px}
+  .home-process-hub h2{font-size:28px}
+  .home-process-hub__lead{font-size:14px!important;margin-bottom:28px!important}
+  .home-action-cards{grid-template-columns:1fr;gap:14px;margin-bottom:30px}
+  .home-action-card{min-height:150px;padding:22px 22px 20px;gap:12px}
+  .home-action-card-title{font-size:17px;max-width:none;padding-right:38px}
+  .home-action-card-text{font-size:13px;padding-right:32px}
+  .home-settings-callout{grid-template-columns:auto 1fr;padding:20px;gap:14px}
+  .home-settings-callout__button{grid-column:1/-1;width:100%}
+}
+/* END CML-441 */
+'''
+
+          tab_old = '''  <button onclick="setTab('guida')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida</span></button>\n</div>'''
+          tab_new = '''  <button onclick="setTab('guida')"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-circle-help"></use></svg> Guida</span></button>\n  <button onclick="openSettingsModal()"><span class="icon-label"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="#icon-settings"></use></svg> Impostazioni</span></button>\n</div>'''
+
+          home_pattern = re.compile(
+              r'<section class="home-process-hub"[\s\S]*?</section>\s*'
+              r'<section class="home-validation-entry"[\s\S]*?</section>\s*'
+              r'<div class="home-footer">[\s\S]*?</div>',
+              re.M,
+          )
+
+          for path in files:
+              text = path.read_text(encoding='utf-8-sig')
+              if tab_old not in text:
+                  raise SystemExit(f'tabbar anchor not found in {path}')
+              text = text.replace(tab_old, tab_new, 1)
+              text, count = home_pattern.subn(new_home, text, count=1)
+              if count != 1:
+                  raise SystemExit(f'home block replacement count={count} in {path}')
+              if '/* CML-441 — Home action-only simplification */' not in text:
+                  text = text.replace('</style>', css + '\n</style>', 1)
+              path.write_text('\ufeff' + text, encoding='utf-8')
+
+          a = files[0].read_bytes()
+          b = files[1].read_bytes()
+          if a != b:
+              raise SystemExit('runtime pair differs after patch')
+
+          report = Path('docs/03_execution/CML-441.md')
+          report.write_text('''# CML-441 — Home Action-Only Simplification Runtime\n\n## Obiettivo\n\nAllineare la Home al mock approvato CML-440, mantenendo solo le quattro azioni principali e un richiamo compatto alle Impostazioni.\n\n## Modifiche\n\n- rimosso il percorso di lavoro dalla Home;\n- rimossi anno, ruolo, curricolo e disciplina dalla Home;\n- rimossa la fascia informativa di governance;\n- disattivato e rimosso dalla Home il test guidato;\n- mantenute quattro azioni dirette, senza stato selezionato persistente;\n- aggiunta la voce Impostazioni nella navigazione;\n- aggiunto il richiamo compatto al contesto di lavoro;\n- mantenuti identici i due file runtime.\n\n## Stato\n\n`CML_441_HOME_ACTION_ONLY_SIMPLIFICATION_RUNTIME_REMOTE_PATCHED_NOT_MERGED`\n''', encoding='utf-8')
+          PY
+
+          cmp -s index.html _published_snapshot/netlify-current/index.html
+          git diff --check
+          grep -q "CML-441 — Home action-only simplification" index.html
+          grep -q "Vai a Impostazioni" index.html
+          ! grep -q "Il percorso di lavoro in 5 passi" index.html
+          ! grep -q "Partecipa al test guidato" index.html
+          ! grep -q "home-work-context" index.html
+          ! grep -q "home-info-strip" index.html
+
+      - name: Commit patch and remove workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/cml-441-remote-patch.yml
+          git add index.html _published_snapshot/netlify-current/index.html docs/03_execution/CML-441.md
+          git commit -m "ux: simplify Home to action-only layout (CML-441)"
+          git push origin HEAD:codex/cml-441-home-action-only-simplification
