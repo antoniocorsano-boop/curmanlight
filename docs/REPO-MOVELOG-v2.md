@@ -367,7 +367,7 @@ CML_434_HOME_TASK_SELECTOR_RUNTIME_PUSHED_BRANCH_NOT_MERGED
 
 - **Data**: 2026-07-09
 - **Tipo**: runtime micro-slice (visibility gate)
-- **Stato**: branch `codex/cml-435-home-mock-conformance` pushata su origin; PR #26 aperta, non mergiata; ready for merge remoto
+- **Stato**: mergiata su main via PR #26; live da verificare con smoke pubblico
 - **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
 - **Dati curricolari**: non modificati
 
@@ -403,4 +403,36 @@ Rimossi blocchi Home non conformi al mock CML-434: seconda card "Ambiente curric
 
 ```text
 CML_435_HOME_MOCK_CONFORMANCE_VISIBILITY_GATE_READY_FOR_MERGE_REMOTE_BRANCH
+```
+
+---
+
+## CML-436 — Pages Stale Home Cache Invalidation and Content Smoke
+
+- **Data**: 2026-07-10
+- **Tipo**: runtime micro-fix (cache/service worker)
+- **Stato**: branch `codex/cml-436-pages-stale-home-cache-invalidation` pushata su origin, PR aperta, non mergiata
+- **Runtime**: index.html + _published_snapshot/netlify-current/index.html (entrambi modificati)
+- **SW**: _published_snapshot/netlify-current/sw.js modificato; sw.js in root per dev parity
+- **Dati curricolari**: non modificati
+
+### Descrizione
+
+CML-435 era mergiata su main ma GitHub Pages serviva Home stale a causa della cache del service worker. Bump cache version e registration URL per forzare install fresco.
+
+### Cambiamenti
+
+- **sw.js**: `CACHE_NAME` da `v454-cml2391` a `v455-cml436`
+- **index.html (entrambi)**: SW registration URL da `./sw.js?v=20260701-cml2391` a `./sw.js?v=20260710-cml436`
+- **sw.js (root)**: copiato dalla snapshot per allineamento dev locale
+
+### Verifica live
+
+- `curl` verso Pages URL: HTTP 200, nessun blocco duplicato, etichette naturali presenti
+- Home CML-435 serve correttamente
+
+### Verdetto
+
+```text
+CML_436_PAGES_STALE_HOME_CACHE_INVALIDATION_READY_BRANCH_NOT_MERGED
 ```
