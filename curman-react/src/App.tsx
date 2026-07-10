@@ -5,13 +5,18 @@ import { ConsultazioneView } from '@/views/ConsultazioneView'
 import { RevisioneView } from '@/views/RevisioneView'
 import { ProcessoView } from '@/views/ProcessoView'
 import { EsportazioniView } from '@/views/EsportazioniView'
+import { ImpostazioniView } from '@/views/ImpostazioniView'
 import type { ViewId } from '@/types/state'
 
-function PlaceholderView({ titolo }: { titolo: string }) {
+function NotAvailableView() {
+  const setVista = useAppStore(s => s.setVista)
   return (
-    <div className="flex flex-col items-center justify-center h-full text-center gap-3 p-8">
-      <h2 className="text-base font-[600] text-slate-700">{titolo}</h2>
-      <p className="text-sm text-slate-400 max-w-sm">Questa sezione sarà disponibile nelle prossime iterazioni.</p>
+    <div className="flex flex-col items-center justify-center h-full text-center gap-4 p-8">
+      <h1 className="text-lg font-[650] text-slate-700">Percorso non ancora disponibile</h1>
+      <p className="text-sm leading-6 text-slate-500 max-w-md">Questa attività sarà resa accessibile quando potrà essere completata dall’inizio alla fine.</p>
+      <button type="button" onClick={() => setVista('home')} className="rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-[600] text-indigo-700 hover:bg-indigo-50">
+        Torna alla Home
+      </button>
     </div>
   )
 }
@@ -24,10 +29,11 @@ export default function App() {
     revisione: <RevisioneView />,
     processo: <ProcessoView />,
     esportazioni: <EsportazioniView />,
-    'evidenze-valutazione': <PlaceholderView titolo="Evidenze e Valutazione" />,
-    'programmazione-annuale': <PlaceholderView titolo="Programmazione Annuale" />,
-    'uda-modello': <PlaceholderView titolo="UDA Modello" />,
-    guida: <PlaceholderView titolo="Guida" />,
+    impostazioni: <ImpostazioniView />,
+    'evidenze-valutazione': <NotAvailableView />,
+    'programmazione-annuale': <NotAvailableView />,
+    'uda-modello': <NotAvailableView />,
+    guida: <NotAvailableView />,
   }
   return <Layout>{views[vistaAttiva] ?? <HomeView />}</Layout>
 }
