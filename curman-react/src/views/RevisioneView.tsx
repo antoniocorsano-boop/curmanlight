@@ -63,18 +63,27 @@ export function RevisioneView() {
           ))}
         </div>
       </div>
-      {gapLayer && slug && <ProgressBar stats={progress} label={DISCIPLINE_LABELS[slug]} />}
-      {filteredUnita.length > 0 ? (
-        <div className="flex flex-col gap-4">
-          {filteredUnita.map(u => <GapComparison key={u.id} unita={u} entry={u.gap!} decisione={decisioni[u.id]} />)}
+      {slug && !gapLayer ? (
+        <div className="card p-5 bg-amber-50 border-amber-200">
+          <p className="text-sm font-[500] text-amber-800">Funzione non disponibile</p>
+          <p className="text-xs text-amber-700 mt-1">Il livello di allineamento (gap layer) non è ancora stato generato per questa disciplina. Torna più tardi o contatta il referente curricolare.</p>
         </div>
-      ) : slug && gapLayer ? (
-        <p className="text-sm text-slate-400 text-center py-8">
-          {filtroStato === 'tutti' ? 'Nessuna proposta per questa disciplina.' : 'Nessun elemento corrisponde al filtro.'}
-        </p>
-      ) : !slug ? (
-        <p className="text-sm text-slate-400 text-center py-8">Seleziona una disciplina per iniziare.</p>
-      ) : null}
+      ) : (
+        <>
+          {slug && <ProgressBar stats={progress} label={DISCIPLINE_LABELS[slug]} />}
+          {filteredUnita.length > 0 ? (
+            <div className="flex flex-col gap-4">
+              {filteredUnita.map(u => <GapComparison key={u.id} unita={u} entry={u.gap!} decisione={decisioni[u.id]} />)}
+            </div>
+          ) : slug ? (
+            <p className="text-sm text-slate-400 text-center py-8">
+              {filtroStato === 'tutti' ? 'Nessuna proposta per questa disciplina.' : 'Nessun elemento corrisponde al filtro.'}
+            </p>
+          ) : (
+            <p className="text-sm text-slate-400 text-center py-8">Seleziona una disciplina per iniziare.</p>
+          )}
+        </>
+      )}
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>
   )

@@ -515,3 +515,72 @@ CML-435 era mergiata su main ma GitHub Pages serviva Home stale a causa della ca
 ```text
 CML_436_PAGES_STALE_HOME_CACHE_INVALIDATION_MERGED_LIVE_CONTENT_SMOKE_PASS
 ```
+
+---
+
+## CML-442 — React Migration Build Stabilization
+
+- **Data**: 2026-07-10
+- **Tipo**: OPS/tooling contract
+- **Stato**: committed local, non pushato
+- **Branch**: `codex/react-migration-stabilization`
+- **Base**: `origin/main`
+- **Runtime storico**: non modificato
+- **Dati curricolari**: non modificati (sola generazione artefatto)
+
+### Problema
+
+Lo scaffold React in `curman-react/` non compilava:
+1. `src/types/curriculum.ts` mancante — 6+ file importavano `@/types/curriculum`
+2. `src/lib/curriculum.ts` mancante — `useCurriculum.ts` importava `filterByOrdine`, `filterByNucleo`, `mergeGapLayer`
+3. `src/data/curriculum/` vuota — `import.meta.glob('../data/curriculum/*.json')` non trovava nulla
+4. `package-lock.json` era placeholder `see_file`
+
+### Decisioni architetturali
+
+- Fonte canonica: `content/curriculum/*.normalized.json`
+- Dati generati (`src/data/curriculum/*.json`) esclusi da git via `.gitignore`
+- `pages.yml` invariato — unico flusso di pubblicazione
+- `react-ci.yml` come sola verifica (npm ci, lint, build)
+- Gap layer assente: banner ambrato in Revisione e Esportazioni
+
+### Files creati
+
+- `.github/workflows/react-ci.yml`
+- `curman-react/src/types/curriculum.ts`
+- `curman-react/src/lib/curriculum.ts`
+- `curman-react/tools/sync-curriculum-data.mjs`
+- `docs/03_execution/CML-442.md`
+
+### Files modificati
+
+- `curman-react/package.json` — script sync-data, predev, prebuild
+- `curman-react/package-lock.json` — rigenerato
+- `curman-react/.gitignore` — esclusi src/data/curriculum/*.json
+- `curman-react/src/views/RevisioneView.tsx` — gap null handling
+- `curman-react/src/views/EsportazioniView.tsx` — gap null handling
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/02_system/PRODUCT-MATURITY-PROGRESS.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Files eliminati
+
+- `curman-react/.github/workflows/deploy-react.yml`
+- `src/data/curriculum/arte-immagine.json` — duplicato PR n. 31
+- `src/data/curriculum/educazione-civica.json` — duplicato PR n. 31
+
+### Verifica riproducibilità
+
+```
+rm -rf node_modules dist src/data/curriculum
+npm ci        # 54 pacchetti, 0 vulnerabilità
+npm run lint  # 0 warnings, 0 errors
+npm run build # tsc -b + vite build ✓
+test -d dist  # ✓
+```
+
+### Verdetto
+
+```text
+CML_442_REACT_MIGRATION_BUILD_STABILIZATION_COMMITTED_LOCAL_NOT_PUSHED
+```

@@ -2,17 +2,16 @@
 
 ## Snapshot
 
-- Last milestone: CML-437 — Post CML-436 Chain State Sync
-- Last completed sync: CML-437 merged remote (`ea775da`)
-- Active slice: CML-438 — Pilot Validation Evidence Start Pack
-- Last completed design/runtime merge: CML-436 merged and live content smoke PASS
-- Last completed evidence/report commit: CML-418 live visual smoke report pushed (`3b9eda0`)
-- Last governance update: `CLAUDE.md` §10 mock conformance rule updated (`ed64938`)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (Home mock conformance chain closed; pilot validation evidence pack in progress)
-- Critical Path: Validazione con utenti → Architettura viste docente → Specifica target → Specifiche utente pre-bozzetto → Bozzetto controllato → Runtime controllato → Live content smoke → Pilot evidence
-- Next action: review/merge CML-438 docs-only pack; then run a controlled teacher pilot using Home live CML-435/436 as baseline
-- Last verdict: `CML_438_PILOT_VALIDATION_EVIDENCE_START_PACK_READY_REMOTE_BRANCH_NOT_MERGED`
-- Repository status: main includes CML-437 merged state sync; CML-438 is docs-only on branch `codex/cml-438-pilot-validation-evidence-start-pack`; movelog corrente `docs/REPO-MOVELOG-v2.md`
+- Last milestone: CML-442 — React Migration Build Stabilization
+- Last completed sync: CML-441 committed (`f7fe7ca`)
+- Active slice: CML-442 — React Migration Build Stabilization (branch `codex/react-migration-stabilization`)
+- Last completed design/runtime merge: CML-441 Home action-only simplification runtime ready
+- Last committed: CML-441 (Home action-only simplification) + CML-442 (React migration foundation)
+- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (ongoing)
+- Critical path: React migration (curman-react/) — filone separato e non produttivo
+- Next action: push CML-441 mainline on approval; continue CML-442 React stabilization on `codex/react-migration-stabilization`
+- Last verdict: `CML_442_REACT_MIGRATION_BUILD_STABILIZATION_COMMITTED_LOCAL_NOT_PUSHED`
+- Repository status: main at CML-441 (Home action-only simplification, not pushed); `codex/react-migration-stabilization` branched from origin/main with CML-442 build stabilization
 
 ## Recent Refactor Chain (CML-371 → CML-380)
 

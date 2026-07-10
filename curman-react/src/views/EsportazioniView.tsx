@@ -19,15 +19,22 @@ export function EsportazioniView() {
         <h2 className="text-lg font-[600] text-slate-800">Esportazioni</h2>
         <p className="text-sm text-slate-500">Genera i file di proposta per la condivisione con il dipartimento.</p>
       </div>
-      <div className="card p-5 flex flex-col gap-3">
-        <p className="text-sm font-[500] text-slate-700">Proposta docente (.cml)</p>
-        <p className="text-xs text-slate-400">Esporta le tue decisioni in formato .cml per la validazione dipartimentale.</p>
-        <button onClick={exportProposal} disabled={!canExport}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-[500] rounded-lg transition-colors w-fit disabled:opacity-40 disabled:cursor-not-allowed bg-indigo-50 text-indigo-700 hover:bg-indigo-100">
-          <Download size={15} /> Esporta proposta
-        </button>
-        {!canExport && <p className="text-xs text-slate-400">Seleziona una disciplina e configura il profilo.</p>}
-      </div>
+      {gapLayer === null && slug ? (
+        <div className="card p-5 bg-amber-50 border-amber-200">
+          <p className="text-sm font-[500] text-amber-800">Funzione non disponibile</p>
+          <p className="text-xs text-amber-700 mt-1">Il livello di allineamento non è ancora stato generato per questa disciplina. Le esportazioni saranno disponibili dopo la generazione del gap layer.</p>
+        </div>
+      ) : (
+        <div className="card p-5 flex flex-col gap-3">
+          <p className="text-sm font-[500] text-slate-700">Proposta docente (.cml)</p>
+          <p className="text-xs text-slate-400">Esporta le tue decisioni in formato .cml per la validazione dipartimentale.</p>
+          <button onClick={exportProposal} disabled={!canExport}
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-[500] rounded-lg transition-colors w-fit disabled:opacity-40 disabled:cursor-not-allowed bg-indigo-50 text-indigo-700 hover:bg-indigo-100">
+            <Download size={15} /> Esporta proposta
+          </button>
+          {!canExport && <p className="text-xs text-slate-400">Seleziona una disciplina e configura il profilo.</p>}
+        </div>
+      )}
     </div>
   )
 }

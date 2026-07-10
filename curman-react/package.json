@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "sync-data": "node tools/sync-curriculum-data.mjs",
+    "predev": "npm run sync-data",
     "dev": "vite",
+    "prebuild": "npm run sync-data",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"

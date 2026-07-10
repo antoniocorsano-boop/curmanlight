@@ -28,6 +28,19 @@ PM-07 Uniformita
 PM-09 Validazione con utenti
 ████▌░░░░░ 45%
 
+---
+
+## Filoni attivi
+
+### Mainline (runtime storico)
+- `_published_snapshot/netlify-current/index.html` — ultima modifica: CML-441 (Home action-only simplification)
+- Stato: ready local, non pushato
+
+### React migration (curman-react/)
+- Stato: build stabilization completata (CML-442)
+- Branch: `codex/react-migration-stabilization`
+- Non produttivo, nessun deploy
+
 ## Slice in esecuzione
 
 - CML-438 — Pilot Validation Evidence Start Pack (docs-only, branch remota)
