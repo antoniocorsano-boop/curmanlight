@@ -2,6 +2,7 @@ import { chromium } from 'playwright'
 import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
+// Remote browser audit for the published React preview.
 const baseUrl = 'https://antoniocorsano-boop.github.io/curmanlight/react-preview/'
 const outDir = path.resolve('report/screenshots/CML-449B')
 await mkdir(outDir, { recursive: true })
