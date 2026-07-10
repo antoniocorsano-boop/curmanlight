@@ -48,6 +48,7 @@ export interface AppState {
   filtroStato: FiltroStato
   setFiltroStato: (filtro: FiltroStato) => void
   sidebarOpen: boolean
+  setSidebarOpen: (open: boolean) => void
   toggleSidebar: () => void
   darkMode: boolean
   toggleDarkMode: () => void
