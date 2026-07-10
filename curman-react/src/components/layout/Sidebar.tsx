@@ -20,7 +20,7 @@ const AREA_LABELS: Record<AreaId, string> = {
 }
 
 export function Sidebar() {
-  const { vistaAttiva, setVista, sidebarOpen } = useAppStore()
+  const { vistaAttiva, setVista, sidebarOpen, toggleSidebar } = useAppStore()
   if (!sidebarOpen) return null
 
   const availableItems = NAVIGATION.filter(item => item.available)
@@ -29,6 +29,13 @@ export function Sidebar() {
     const list = areas.get(item.area) || []
     list.push(item)
     areas.set(item.area, list)
+  }
+
+  function navigateTo(destination: (typeof availableItems)[number]['id']) {
+    setVista(destination)
+    if (window.matchMedia('(max-width: 639px)').matches) {
+      toggleSidebar()
+    }
   }
 
   return (
@@ -46,7 +53,7 @@ export function Sidebar() {
                 <button
                   key={item.id}
                   type="button"
-                  onClick={() => setVista(item.id)}
+                  onClick={() => navigateTo(item.id)}
                   aria-current={active ? 'page' : undefined}
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-left transition-colors ${
                     active ? 'bg-indigo-50 text-indigo-700 font-[550]' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
