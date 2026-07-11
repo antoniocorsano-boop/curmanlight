@@ -634,3 +634,35 @@ Coppia applicativa riconciliata e sincronizzata. Quattro occorrenze letterali `\
 ```text
 CML_462_APP_PAIR_RECONCILIATION_ARROW_FIX_PUSHED_PR_UPDATED_READY_FOR_REVIEW
 ```
+
+---
+
+## CML-462P — Post-Merge Live Smoke (CML-462)
+
+- **Data**: 2026-07-11
+- **Tipo**: public smoke / release gate / post-merge verification
+- **Branch**: `main`
+- **Base**: `f20176bb006f845ce40b522e8af8e261326435c2` (CML-462 merge commit)
+- **Stato**: smoke completato, pubblicazione verificata
+
+### File prodotti
+
+- `docs/03_execution/CML-462P.md`
+- `report/CML-462P_post_merge_live_smoke.md`
+- `report/screenshots/CML-462P/home-desktop-live.png`
+
+### Risultato
+
+Deploy GitHub Pages verificato live. 4 frecce `→` (UTF-8 `E2-86-92`) confermate nella pagina pubblicata. Nessuna occorrenza `\u2192` letterale residua. Nessuna regressione visiva. Coppia applicativa sincronizzata.
+
+### Catena
+
+```
+CML-461 (audit) → CML-462 (reconciliation + arrow fix, PR #52 merged) → CML-462P (live smoke PASS)
+```
+
+### Verdetto
+
+```text
+CML_462P_POST_MERGE_LIVE_SMOKE_VERIFIED_PUBLISHED
+```
