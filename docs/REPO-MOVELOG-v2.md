@@ -584,3 +584,28 @@ test -d dist  # ✓
 ```text
 CML_442_REACT_MIGRATION_BUILD_STABILIZATION_COMMITTED_LOCAL_NOT_PUSHED
 ```
+
+---
+
+## CML-461 — App Pair Divergence Authority Audit
+
+- **Data**: 2026-07-11
+- **Tipo**: docs-only / repository integrity audit / pre-runtime gate
+- **Branch**: `codex/cml-461-app-pair-divergence-authority-audit`
+- **Base**: `2fcad538a4fafbdfc842e42c6736f5b92dcb5f6f`
+- **Stato**: audit completato, commit locale, non pushato
+
+### File prodotti
+
+- `docs/03_execution/CML-461.md`
+- `report/CML-461_app_pair_divergence_authority_audit.md`
+
+### Risultato
+
+4 differenze identificate (CSS blank line, arrow encoding, whitespace, function position), tutte non funzionali. Autorità assegnata alla snapshot pubblicata. Direzione riconciliazione: `published → root` tramite CML-462.
+
+### Verdetto
+
+```text
+CML_461_APP_PAIR_DIVERGENCE_AUTHORITY_AUDIT_READY_LOCAL_NOT_PUSHED
+```
