@@ -1,4 +1,5 @@
 import type { ProfiloUtente, DecisioniMap, GapLayer, ProgressStats } from './gap'
+import type { DecisionContext, RecordWorkDecisionInput, WorkDecision, WorkDecisionMap } from './decision'
 
 export type AreaId = 'home' | 'curriculum' | 'didattica' | 'sistema'
 export type ViewId = 'home' | 'consultazione' | 'revisione' | 'processo' | 'esportazioni' | 'evidenze-valutazione' | 'programmazione-annuale' | 'uda-modello' | 'guida' | 'impostazioni'
@@ -56,12 +57,16 @@ export interface AppState {
 
 export interface RevisioneState {
   decisioni: DecisioniMap
+  workDecisioni: WorkDecisionMap
+  recordWorkDecision: (input: RecordWorkDecisionInput) => WorkDecision
+  reopenWorkDecision: (unitaId: string, contesto: DecisionContext) => WorkDecision | null
   approve: (unitaId: string, testoCustom?: string) => void
   reject: (unitaId: string) => void
   undoDecision: (unitaId: string) => void
   resetAll: () => void
   resetDisciplina: (disciplina: string, gapLayer: GapLayer) => void
   getDecisione: (unitaId: string) => import('./gap').Decisione | undefined
+  getWorkDecision: (unitaId: string) => WorkDecision | undefined
   getProgress: (disciplina: string, gapLayer: GapLayer) => ProgressStats
 }
 
