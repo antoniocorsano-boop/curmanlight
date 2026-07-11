@@ -4,11 +4,11 @@ const STORAGE_KEY = 'curmanlight:work-decisions:v1'
 
 async function configureProfile(page: Page) {
   await page.getByRole('button', { name: 'Apri Impostazioni' }).click()
-  await page.getByLabel('Ruolo').selectOption('docente')
-  await page.getByLabel('Ordine di scuola').selectOption('Secondaria')
-  await page.getByLabel('Disciplina').selectOption('tecnologia')
-  await page.getByLabel('Nome').fill('Audit')
-  await page.getByLabel('Cognome').fill('B03')
+  await page.getByLabel('Ruolo', { exact: true }).selectOption('docente')
+  await page.getByLabel('Ordine di scuola', { exact: true }).selectOption('Secondaria')
+  await page.getByLabel('Disciplina', { exact: true }).selectOption('tecnologia')
+  await page.getByLabel('Nome', { exact: true }).fill('Audit')
+  await page.getByLabel('Cognome', { exact: true }).fill('B03')
   await page.getByRole('button', { name: 'Salva il contesto' }).click()
   await expect(page.getByText('Contesto aggiornato.')).toBeVisible()
 }
@@ -52,15 +52,15 @@ test.describe('CML-468 B03 interactive audit', () => {
 
     await page.getByRole('button', { name: 'Riapri' }).first().click()
     await page.getByRole('button', { name: 'Chiedi revisione' }).first().click()
-    await page.getByLabel('Motivo della revisione richiesta').fill('Chiarire il raccordo con il nucleo tematico.')
+    await page.getByLabel('Motivo della revisione richiesta', { exact: true }).fill('Chiarire il raccordo con il nucleo tematico.')
     await page.getByRole('button', { name: 'Registra richiesta' }).click()
     await expect(page.getByText('Revisione richiesta prima della scelta finale').first()).toBeVisible()
     await expect(page.getByText('Chiarire il raccordo con il nucleo tematico.').first()).toBeVisible()
 
     await page.getByRole('button', { name: 'Riapri' }).first().click()
     await page.getByRole('button', { name: 'Usa testo personalizzato' }).first().click()
-    await page.getByLabel('Testo da utilizzare nel lavoro corrente').fill('Testo curricolare personalizzato per audit B03.')
-    await page.getByLabel('Nota facoltativa').fill('Nota locale non vincolante.')
+    await page.getByLabel('Testo da utilizzare nel lavoro corrente', { exact: true }).fill('Testo curricolare personalizzato per audit B03.')
+    await page.getByLabel('Nota facoltativa', { exact: true }).fill('Nota locale non vincolante.')
     await page.getByRole('button', { name: 'Registra testo' }).click()
     await expect(page.getByText('Testo personalizzato registrato nel lavoro corrente').first()).toBeVisible()
 
