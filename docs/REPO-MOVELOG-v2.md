@@ -666,3 +666,54 @@ CML-461 (audit) → CML-462 (reconciliation + arrow fix, PR #52 merged) → CML-
 ```text
 CML_462P_POST_MERGE_LIVE_SMOKE_VERIFIED_PUBLISHED
 ```
+
+---
+
+## CML-470 — First Gap Layer Data Package (Pilot)
+
+- **Data**: 2026-07-11
+- **Tipo**: curriculum JSON / gap layer data
+- **Branch**: `codex/cml-470-gap-layer-pilot`
+- **PR**: #60
+- **Stato**: PR aperta, CI PASS (2/2 builds)
+- **Runtime**: non modificato
+- **Dati curricolari**: non modificati (proposte in layer separato)
+
+### Scopo
+
+Introdotto il primo pacchetto dati gap layer per Educazione Fisica, dimostrando la pipeline CML-469 con contenuti reali derivati da CML-179 e CML-204.
+
+### File prodotti
+
+- `content/gap/educazione-fisica.gap.json` (7 proposte)
+- `curman-react/src/data/gap/educazione-fisica.gap.json` (copia sincronizzata)
+- `docs/03_execution/CML-470.md`
+
+### Proposte
+
+7 entries (una per unita EF), tutti `status: proposta`:
+- P1-4 progressione verticale: 4 entries (ef_inf_5_001, ef_pri_1_001, ef_pri_5_001, ef_sec_3_001)
+- P1-3 Abilita motorie monoclasso: 1 entry (ef_pri_3_001)
+- P1-1 Salute e benessere assente: 2 entries (ef_sec_1_001, ef_sec_2_001)
+- P2-1 wording generico: 1 entry (ef_sec_3_001)
+
+### Controlli
+
+- `validate-gap-data.mjs`: PASS (7 proposte valide)
+- `sync-gap-data.mjs`: PASS (1 pacchetti)
+- React CI: PASS (2/2 builds)
+- Nessuna modifica runtime
+- Nessuna modifica curricoli normalizzati
+- Nessun deploy
+
+### Catena
+
+```
+CML-469 (gap layer foundation) → CML-470 (first data package pilot, PR #60)
+```
+
+### Verdetto
+
+```text
+CML_470_FIRST_GAP_LAYER_DATA_PACKAGE_PILOT_READY
+```
