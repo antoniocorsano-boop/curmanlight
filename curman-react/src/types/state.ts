@@ -4,6 +4,7 @@ import type { DecisionContext, RecordWorkDecisionInput, WorkDecision, WorkDecisi
 export type AreaId = 'home' | 'curriculum' | 'didattica' | 'sistema'
 export type ViewId = 'home' | 'consultazione' | 'revisione' | 'processo' | 'esportazioni' | 'evidenze-valutazione' | 'programmazione-annuale' | 'uda-modello' | 'guida' | 'impostazioni'
 export type FiltroStato = 'tutti' | 'da_decidere' | 'approvati' | 'rifiutati'
+export type WorkDecisionPersistenceStatus = 'idle' | 'loading' | 'restored' | 'saved' | 'error'
 
 export interface NavigationItem {
   id: ViewId
@@ -59,8 +60,12 @@ export interface RevisioneState {
   decisioni: DecisioniMap
   workDecisioni: WorkDecisionMap
   lastWorkDecisionSaved: string | null
+  workDecisionHydrated: boolean
+  workDecisionPersistenceStatus: WorkDecisionPersistenceStatus
+  workDecisionPersistenceMessage: string | null
   recordWorkDecision: (input: RecordWorkDecisionInput) => WorkDecision
   reopenWorkDecision: (unitaId: string, contesto: DecisionContext) => WorkDecision | null
+  hydrateWorkDecisions: () => void
   saveWorkDecisions: () => boolean
   loadWorkDecisions: () => boolean
   clearWorkDecisionPersistence: () => boolean

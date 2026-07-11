@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useAppStore } from '@/stores/useAppStore'
 import { useRevisioneStore } from '@/stores/useRevisioneStore'
 import { useCurriculum, useFilteredUnita } from '@/hooks/useCurriculum'
@@ -6,11 +5,10 @@ import { useGapLayer } from '@/hooks/useGapLayer'
 import { useProgress } from '@/hooks/useProgress'
 import { GapComparison } from '@/components/revisione/GapComparison'
 import { ProgressBar } from '@/components/revisione/ProgressBar'
-import { Toast } from '@/components/shared/Toast'
 import { DISCIPLINE_SLUGS, DISCIPLINE_LABELS } from '@/types/curriculum'
 import { needsDecision } from '@/lib/gap'
 import type { DisciplinaSlug } from '@/types/curriculum'
-import type { FiltroStato } from '@/types/state'
+import type { FiltroStato, WorkDecisionPersistenceStatus } from '@/types/state'
 
 const FILTRI: { value: FiltroStato; label: string }[] = [
   { value: 'tutti', label: 'Tutte' },
@@ -19,6 +17,14 @@ const FILTRI: { value: FiltroStato; label: string }[] = [
   { value: 'rifiutati', label: 'Testo vigente mantenuto' },
 ]
 
+const STATUS_CLASSES: Record<WorkDecisionPersistenceStatus, string> = {
+  idle: 'border-slate-200 bg-slate-50 text-slate-600',
+  loading: 'border-amber-200 bg-amber-50 text-amber-700',
+  restored: 'border-sky-200 bg-sky-50 text-sky-700',
+  saved: 'border-emerald-200 bg-emerald-50 text-emerald-700',
+  error: 'border-red-200 bg-red-50 text-red-700',
+}
+
 export function RevisioneView() {
   const { disciplinaSelezionata, setDisciplina, profilo, filtroStato, setFiltroStato } = useAppStore()
   const slug = disciplinaSelezionata as DisciplinaSlug | null
@@ -26,8 +32,11 @@ export function RevisioneView() {
   const gapLayer = useGapLayer(slug)
   const unita = useFilteredUnita(curriculum, gapLayer, profilo?.ordine ?? 'Tutti')
   const decisioni = useRevisioneStore(s => s.decisioni)
+  const workDecisionHydrated = useRevisioneStore(s => s.workDecisionHydrated)
+  const persistenceStatus = useRevisioneStore(s => s.workDecisionPersistenceStatus)
+  const persistenceMessage = useRevisioneStore(s => s.workDecisionPersistenceMessage)
+  const lastSaved = useRevisioneStore(s => s.lastWorkDecisionSaved)
   const progress = useProgress(disciplinaSelezionata, gapLayer, decisioni)
-  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' | 'info' } | null>(null)
 
   const filteredUnita = unita.filter(u => {
     if (!u.gap) return false
@@ -40,11 +49,21 @@ export function RevisioneView() {
     }
   })
 
+  const statusMessage = persistenceMessage ?? (workDecisionHydrated
+    ? 'Le scelte vengono conservate automaticamente su questo dispositivo.'
+    : 'Preparazione del lavoro locale in corso…')
+  const savedLabel = lastSaved
+    ? ` Ultimo salvataggio: ${new Date(lastSaved).toLocaleString('it-IT', { dateStyle: 'short', timeStyle: 'short' })}.`
+    : ''
+
   return (
     <div className="max-w-3xl mx-auto flex flex-col gap-6">
       <div>
         <h2 className="text-lg font-[600] text-slate-800">Revisione</h2>
         <p className="text-sm text-slate-500">Confronta il curricolo vigente con le proposte IN 2025 e registra una scelta di lavoro nel contesto dichiarato.</p>
+      </div>
+      <div className={`rounded-lg border px-3 py-2 text-xs leading-5 ${STATUS_CLASSES[persistenceStatus]}`} role="status" aria-live="polite">
+        {statusMessage}{savedLabel}
       </div>
       <div className="flex flex-wrap gap-4 items-end">
         <div>
@@ -86,7 +105,6 @@ export function RevisioneView() {
           )}
         </>
       )}
-      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>
   )
 }
