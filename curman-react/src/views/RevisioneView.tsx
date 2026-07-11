@@ -15,8 +15,8 @@ import type { FiltroStato } from '@/types/state'
 const FILTRI: { value: FiltroStato; label: string }[] = [
   { value: 'tutti', label: 'Tutte' },
   { value: 'da_decidere', label: 'Da decidere' },
-  { value: 'approvati', label: 'Approvate' },
-  { value: 'rifiutati', label: 'Rifiutate' },
+  { value: 'approvati', label: 'Proposte accolte' },
+  { value: 'rifiutati', label: 'Testo vigente mantenuto' },
 ]
 
 export function RevisioneView() {
@@ -44,7 +44,7 @@ export function RevisioneView() {
     <div className="max-w-3xl mx-auto flex flex-col gap-6">
       <div>
         <h2 className="text-lg font-[600] text-slate-800">Revisione</h2>
-        <p className="text-sm text-slate-500">Confronta il curricolo vigente con le proposte IN 2025.</p>
+        <p className="text-sm text-slate-500">Confronta il curricolo vigente con le proposte IN 2025 e registra una scelta di lavoro nel contesto dichiarato.</p>
       </div>
       <div className="flex flex-wrap gap-4 items-end">
         <div>
@@ -66,14 +66,16 @@ export function RevisioneView() {
       {slug && !gapLayer ? (
         <div className="card p-5 bg-amber-50 border-amber-200">
           <p className="text-sm font-[500] text-amber-800">Funzione non disponibile</p>
-          <p className="text-xs text-amber-700 mt-1">Il livello di allineamento (gap layer) non è ancora stato generato per questa disciplina. Torna più tardi o contatta il referente curricolare.</p>
+          <p className="text-xs text-amber-700 mt-1">Il livello di allineamento non è ancora stato generato per questa disciplina. Torna più tardi o contatta il referente curricolare.</p>
         </div>
       ) : (
         <>
           {slug && <ProgressBar stats={progress} label={DISCIPLINE_LABELS[slug]} />}
           {filteredUnita.length > 0 ? (
             <div className="flex flex-col gap-4">
-              {filteredUnita.map(u => <GapComparison key={u.id} unita={u} entry={u.gap!} decisione={decisioni[u.id]} />)}
+              {filteredUnita.map(u => (
+                <GapComparison key={u.id} unita={u} entry={u.gap!} decisione={decisioni[u.id]} profilo={profilo} />
+              ))}
             </div>
           ) : slug ? (
             <p className="text-sm text-slate-400 text-center py-8">
