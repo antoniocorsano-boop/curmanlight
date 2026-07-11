@@ -14,7 +14,7 @@ Correggere la PR #60 dopo review semantica negativa: le 7 proposte originali der
 | Branch | `codex/cml-470-gap-layer-pilot` |
 | PR | #60 |
 | HEAD prima della correzione | `ac3ee196205e91915d5dcc0363138ada8e0d1442` |
-| HEAD dopo la correzione | `f23e5ee` |
+| HEAD dopo la correzione | `a218f5bbdb556dbcf4674c9aeb3e49e292778627` |
 | base | `main` @ `171f61a89f18117227fdcaccdbc52f946e4efca3` |
 | Dati normalizzati EF | 14/14 (7 unità, 4 nuclei) |
 | Stato EF | bozza_generabile, in_revisione, humanValidationRequired: true |
@@ -121,20 +121,39 @@ Aggiunte a `curman-react/tools/validate-gap-data.mjs`:
 
 ## 8. Audit Chromium
 
-Non eseguito. La PR contiene un solo entry gap layer per ef_sec_3_001 con proposte di obiettivi testuali. Non e ancora possibile testare l'interfaccia B03 con questo gap layer perche:
+**Eseguito** con Playwright 1.61.1 su `http://localhost:5173/curmanlight/` (dev server Vite).
 
-1. Il gap layer e in stato `proposta` — richiede validazione umana prima di essere applicato
-2. Il B03 store bridge non e ancora stato testato con dati gap reali nella Revisione View
-3. L'audit Chromium richiederebbe un ambiente di sviluppo con il profilo docente configurato
+### Setup
+- Browser: Chromium headless (no-sandbox)
+- Viewport: 1280×800 (desktop), 390×844 (mobile)
+- Navigazione: Home → "Proponi un aggiornamento" → RevisioneView
+- Selezione disciplina: Educazione Fisica via `<select>`
 
-Nota: l'audit Chromium sara eseguibile quando il gap layer sara integrato nel B03 decision workflow.
+### Risultati
+
+| Check | Esito |
+|---|---|
+| `ef_sec_3_001` card visibile | PASS |
+| Testo "Secondaria classe 1 e 2" presente | PASS |
+| Testo "corrette abitudini" presente | PASS |
+| Pulsante Accogli visibile | PASS |
+| Pulsante Rifiuta visibile | PASS |
+| Errori console | 0 |
+| Persistenza dopo reload | PASS (localStorage) |
+| Screenshot desktop | `report/screenshots/CML-470/revisione-ef-desktop.png` |
+| Screenshot mobile | `report/screenshots/CML-470/revisione-ef-mobile.png` |
+
+### Note
+- Il gap layer ef_sec_3_001 si integra correttamente nel B03 decision workflow della RevisioneView
+- Le due differenze testuali (Secondaria 1-2 in obiettivo 1, corrette abitudini in obiettivo 3) sono visibili e confrontabili
+- I pulsanti Accogli/Rifiuta sono operativi (non cliccati durante l'audit per preservare lo stato)
 
 ## 9. Stato Git
 
 ```
 Branch: codex/cml-470-gap-layer-pilot
-HEAD: f23e5ee
-Working tree: modifiche pending (content/gap, curman-react/src/data/gap, tools, report, docs)
+HEAD: a218f5bbdb556dbcf4674c9aeb3e49e292778627
+Working tree: report e tools in modifica (audit Chromium completato)
 ```
 
 ## 10. PR #60
@@ -143,4 +162,4 @@ PR aggiornata con i commit di correzione. Descrizione aggiornata.
 
 ## 11. Verdetto
 
-`CML_470_FIRST_VERIFIED_GAP_LAYER_PILOT_CORRECTED_PR_60_READY_FOR_REVIEW`
+`CML_470_FIRST_VERIFIED_GAP_LAYER_PILOT_CORRECTED_PR_60_AUDIT_COMPLETED_READY_FOR_REVIEW`

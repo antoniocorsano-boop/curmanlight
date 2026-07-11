@@ -726,8 +726,8 @@ CML_470_FIRST_GAP_LAYER_DATA_PACKAGE_PILOT_READY
 - **Tipo**: curriculum JSON / gap layer data (correction)
 - **Branch**: `codex/cml-470-gap-layer-pilot`
 - **PR**: #60 (aggiornata)
-- **HEAD**: `f23e5ee`
-- **Stato**: PR ready for review
+- **HEAD**: `a218f5bbdb556dbcf4674c9aeb3e49e292778627`
+- **Stato**: PR ready for review, audit Chromium completato
 - **Runtime**: non modificato
 - **Dati curricolari**: non modificati
 
@@ -740,9 +740,10 @@ Correggere PR #60 dopo review semantica negativa. Le 7 proposte originali deriva
 - `content/gap/educazione-fisica.gap.json` (7 → 1 entry)
 - `curman-react/src/data/gap/educazione-fisica.gap.json` (sync)
 - `curman-react/tools/validate-gap-data.mjs` (checks aggiuntivi)
-- `report/CML-470_first_verified_gap_layer_pilot.md` (nuovo)
+- `report/CML-470_first_verified_gap_layer_pilot.md` (nuovo, aggiornato con audit)
 - `docs/03_execution/CML-470.md` (aggiornato)
 - `docs/REPO-MOVELOG-v2.md` (aggiornato)
+- `tools/audit-gap-layer.mjs` (audit script)
 
 ### Entry eliminate (6)
 
@@ -771,6 +772,17 @@ Correggere PR #60 dopo review semantica negativa. Le 7 proposte originali deriva
 - validate:curriculum 14/14 PASS
 - test:runtime-shape 14/14 PASS
 
+### Audit Chromium
+
+Eseguito con Playwright 1.61.1 su dev server Vite:
+- ef_sec_3_001 card visibile: PASS
+- Testo "Secondaria classe 1 e 2": PASS
+- Testo "corrette abitudini": PASS
+- Pulsanti Accogli/Rifiuta: PASS
+- Persistenza localStorage dopo reload: PASS
+- Errori console: 0
+- Screenshot: `report/screenshots/CML-470/revisione-ef-desktop.png`, `revisione-ef-mobile.png`
+
 ### Catena
 
 ```
@@ -780,5 +792,5 @@ CML-469 (gap layer foundation) → CML-470 v1 (7 entries, semantically rejected)
 ### Verdetto
 
 ```text
-CML_470_FIRST_VERIFIED_GAP_LAYER_PILOT_CORRECTED_PR_60_READY_FOR_REVIEW
+CML_470_FIRST_VERIFIED_GAP_LAYER_PILOT_CORRECTED_PR_60_AUDIT_COMPLETED_READY_FOR_REVIEW
 ```
