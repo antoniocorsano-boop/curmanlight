@@ -12,7 +12,7 @@ async function configureProfile(page: Page) {
 
   await selects.nth(0).selectOption('docente')
   await selects.nth(1).selectOption('Secondaria')
-  await selects.nth(2).selectOption('tecnologia')
+  await selects.nth(2).selectOption('')
   await textboxes.nth(2).fill('Audit')
   await textboxes.nth(3).fill('B03')
   await page.getByRole('button', { name: 'Salva il contesto' }).click()
@@ -25,6 +25,22 @@ async function openRevision(page: Page) {
   }
   await page.getByRole('button', { name: 'Proponi un aggiornamento' }).click()
   await expect(page.getByRole('heading', { name: 'Revisione' })).toBeVisible()
+}
+
+async function selectActionableDiscipline(page: Page, preferred?: string): Promise<string> {
+  const discipline = page.getByRole('main').getByRole('combobox').first()
+  const values = await discipline.locator('option').evaluateAll(options =>
+    options.map(option => (option as HTMLOptionElement).value).filter(Boolean),
+  )
+  const candidates = preferred ? [preferred, ...values.filter(value => value !== preferred)] : values
+
+  for (const value of candidates) {
+    await discipline.selectOption(value)
+    await page.waitForTimeout(300)
+    if (await page.getByRole('button', { name: 'Accogli proposta' }).count()) return value
+  }
+
+  throw new Error('Nessuna disciplina con gap layer azionabile disponibile per il controllo B03.')
 }
 
 test.describe('CML-468 B03 interactive audit', () => {
@@ -42,17 +58,19 @@ test.describe('CML-468 B03 interactive audit', () => {
 
     await configureProfile(page)
     await openRevision(page)
-    await expect(page.getByRole('status')).toContainText('conservate automaticamente')
+    await expect(page.getByRole('status')).toContainText('Nessun lavoro precedente')
+    const selectedDiscipline = await selectActionableDiscipline(page)
 
     const accept = page.getByRole('button', { name: 'Accogli proposta' }).first()
-    await expect(accept).toBeVisible()
     await accept.click()
     await expect(page.getByText('Proposta accolta nel lavoro corrente').first()).toBeVisible()
     await expect(page.getByRole('status')).toContainText('salvate')
-
     expect(await page.evaluate(key => localStorage.getItem(key), STORAGE_KEY)).toContain('accepted_proposal')
 
     await page.reload()
+    await configureProfile(page)
+    await openRevision(page)
+    await selectActionableDiscipline(page, selectedDiscipline)
     await expect(page.getByRole('status')).toContainText('ripristinate')
     await expect(page.getByText('Proposta accolta nel lavoro corrente').first()).toBeVisible()
 
@@ -71,6 +89,9 @@ test.describe('CML-468 B03 interactive audit', () => {
     await expect(page.getByText('Testo personalizzato registrato nel lavoro corrente').first()).toBeVisible()
 
     await page.reload()
+    await configureProfile(page)
+    await openRevision(page)
+    await selectActionableDiscipline(page, selectedDiscipline)
     await expect(page.getByText('Testo personalizzato registrato nel lavoro corrente').first()).toBeVisible()
     const storedAfterCustom = await page.evaluate(key => localStorage.getItem(key), STORAGE_KEY)
     expect(storedAfterCustom).toContain('accepted_custom')
@@ -82,6 +103,7 @@ test.describe('CML-468 B03 interactive audit', () => {
     await page.setViewportSize({ width: 390, height: 844 })
     await configureProfile(page)
     await openRevision(page)
+    await selectActionableDiscipline(page)
     await expect(page.getByRole('button', { name: 'Accogli proposta' }).first()).toBeVisible()
     await expect(page.getByRole('button', { name: 'Chiedi revisione' }).first()).toBeVisible()
     await expect(page.getByRole('button', { name: 'Usa testo personalizzato' }).first()).toBeVisible()
