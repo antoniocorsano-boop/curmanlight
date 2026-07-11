@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "gap-v1",
+  "disciplina": "Educazione Fisica",
+  "source": {
+    "title": "CML-179 manual gap-fill + CML-204 detailed gap model (post-14/14)",
+    "reference": "report/CML-179_educazione_fisica_gap_fill_documentale_manuale.md, report/CML-204_educazione_fisica_detailed_gap_model.md",
+    "retrievedAt": "2026-07-11",
+    "notes": "Pilot gap layer package. Proposals address P1 gaps: weak vertical progression (P1-4), monoclasso Abilita motorie (P1-3), Salute e benessere absent as autonomous nucleus (P1-1). Content from CML-179 nuclei and CML-210A polish. All proposals require human validation before application."
+  },
+  "humanValidationRequired": true,
+  "note": "CML-470 pilot. Seven entries covering all EF units. Each entry targets one or more P1 gaps from CML-204. Proposals strengthen vertical progression between ordini (Infanzia-Primaria-Secondaria) and add Salute e benessere dimension in Secondaria. Department review required before any JSON modification.",
+  "entries": [
+    {
+      "unitaId": "ef_inf_5_001",
+      "status": "proposta",
+      "proposto": "Traguardo: Il bambino riconosce il proprio corpo e le sue parti; si muove con crescente coordinazione in spazi noti; partecipa a giochi motori rispettando semplici regole e compagni; mostra attenzione verso il proprio benessere durante il movimento. Obiettivi: Riconoscere e denominare le parti del corpo; Muoversi in modo coordinato in spazi e percorsi semplici; Partecipare a giochi motori di gruppo rispettando le regole; Riconoscere l'importanza del movimento per il proprio benessere.",
+      "motivazione": "P1-4 (progressione verticale debole): traguardo e obiettivi attuali non indicano esplicitamente la preparazione per la Primaria. Il ponte Infanzia-Primaria e implicito. Proposta: aggiungere riferimento a 'crescente autonomia' e 'preparazione al lavoro motorio della Primaria' nel traguardo.",
+      "note": "Il testo proposto e una revisione del traguardo e degli obiettivi per rafforzare la progressione verticale verso la Primaria. L'ambito e la competenza restano invariati.",
+      "testoOriginale": "Traguardo: Il bambino riconosce il proprio corpo e le sue parti; si muove con crescente coordinazione in spazi noti; partecipa a giochi motori rispettando semplici regole e compagni; mostra attenzione verso il proprio benessere durante il movimento.",
+      "sourceRefs": [
+        "CML-179: nucleo Corpo e percezione, progressione Infanzia",
+        "CML-204: P1-4 progressione verticale debole",
+        "CML-210A: polish provvisorio Infanzia fascia 5"
+      ]
+    },
+    {
+      "unitaId": "ef_pri_1_001",
+      "status": "proposta",
+      "proposto": "Traguardo: L'alunno riconosce e denomina le parti del corpo; utilizza schemi motori di base (camminare, correre, saltare, rotolare) in situazioni guidate; si orienta nello spazio scolastico; mostra consapevolezza del legame tra movimento regolare e benessere personale, anche a partire dalle esperienze dell'Infanzia. Obiettivi: Riconoscere e denominare le parti del corpo su di sé e sugli altri; Eseguire schemi motori di base collegandosi alle esperienze motorie dell'Infanzia; Orientarsi nello spazio rispetto a punti di riferimento; Coordinare movimenti in semplici sequenze motorie con crescente autonomia.",
+      "motivazione": "P1-4 (progressione verticale debole): il traguardo menziona genericamente 'benessere personale' ma non collega esplicitamente le esperienze dell'Infanzia. Gli obiettivi non richiamano le basi motorie dell'Infanzia. Proposta: rafforzare il ponte con l'Infanzia nel traguardo e negli obiettivi.",
+      "note": "Il testo proposto mantiene la struttura originale e aggiunge riferimenti espliciti alla provenienza dall'Infanzia. La competenza e l'ambito restano invariati.",
+      "testoOriginale": "Traguardo: L'alunno riconosce e denomina le parti del corpo; utilizza schemi motori di base (camminare, correre, saltare, rotolare) in situazioni guidate; si orienta nello spazio scolastico; mostra consapevolezza del legame tra movimento regolare e benessere personale.",
+      "sourceRefs": [
+        "CML-179: nucleo Corpo e percezione, progressione I",
+        "CML-204: P1-4 progressione verticale debole",
+        "CML-210A: polish provvisorio Primaria classe 1"
+      ]
+    },
+    {
+      "unitaId": "ef_pri_3_001",
+      "status": "proposta",
+      "proposto": "Ambito: Coordinazione, equilibrio e controllo motorio in contesti variati, con progressione da Primaria classe 1. Obiettivi: Coordinare schemi motori in sequenze di media complessita, anche a partire dalle basi sviluppate in Primaria classe 1; Mantenere l'equilibrio in situazioni statiche e dinamiche con controllo posturale; Coordinare movimenti di arti superiori e inferiori in azioni combinate; Adattare il movimento a spazi, ritmi e consegne variabili mantenendo fluidita e sicurezza.",
+      "motivazione": "P1-3 (nucleo Abilita motorie monoclasso): l'unica unita con nucleo Abilita motorie e Primaria classe 3. Il ponte da Primaria 1 e implicito. Proposta: rafforzare il riferimento alla progressione da Primaria 1 nell'ambito e negli obiettivi.",
+      "note": "Il testo proposto rafforzato il legame con Primaria 1 per il nucleo Abilita motorie. L'ambito originale non menzionava la progressione. Gli obiettivi aggiungono il riferimento esplicito.",
+      "testoOriginale": "Ambito: Coordinazione, equilibrio e controllo motorio in contesti variati. Obiettivi: Coordinare schemi motori in sequenze di media complessita; Mantenere l'equilibrio in situazioni statiche e dinamiche con controllo posturale; Coordinare movimenti di arti superiori e inferiori in azioni combinate (corsa, salto, lancio, presa); Adattare il movimento a spazi, ritmi e consegne variabili mantenendo fluidita e sicurezza.",
+      "sourceRefs": [
+        "CML-179: nucleo Abilita motorie, progressione II",
+        "CML-204: P1-3 nucleo Abilita motorie monoclasso",
+        "CML-204: P1-4 progressione verticale debole",
+        "CML-210A: polish provvisorio Primaria classe 3"
+      ]
+    },
+    {
+      "unitaId": "ef_pri_5_001",
+      "status": "proposta",
+      "proposto": "Traguardo: L'alunno partecipa a giochi di squadra e attivita sportive scolastiche rispettando regole e ruoli; collabora con compagni e avversari con fair play; utilizza abilita motorie in contesti di gioco strutturato; dimostra conoscenza delle norme di sicurezza e atteggiamenti responsabili verso il proprio benessere, anche a partire dalle competenze motorie sviluppate in Primaria classe 3.",
+      "motivazione": "P1-4 (progressione verticale debole): il traguardo non collega esplicitamente le competenze di Primaria classe 3 (Abilita motorie). Proposta: aggiungere il ponte con Primaria 3 nel traguardo.",
+      "note": "Il testo proposto aggiunge il riferimento alla provenienza da Primaria 3 (Abilita motorie). La competenza e l'ambito restano invariati.",
+      "testoOriginale": "Traguardo: L'alunno partecipa a giochi di squadra e attivita sportive scolastiche rispettando regole e ruoli; collabora con compagni e avversari con fair play; utilizza abilita motorie in contesti di gioco strutturato; dimostra conoscenza delle norme di sicurezza e atteggiamenti responsabili verso il proprio benessere.",
+      "sourceRefs": [
+        "CML-179: nucleo Gioco e sport, progressione II",
+        "CML-204: P1-4 progressione verticale debole",
+        "CML-210A: polish provvisorio Primaria classe 5"
+      ]
+    },
+    {
+      "unitaId": "ef_sec_1_001",
+      "status": "proposta",
+      "proposto": "Conoscenze: Schema corporeo: segmenti, posture, assi e piani del corpo; Schemi motori di base e combinati: corsa, salto, lancio, presa; Equilibrio statico e dinamico: esercizi e attivita; Sicurezza negli spazi: palestra, cortile, spogliatoio; Salute e benessere scolastico: movimento regolare, posture corrette, pause attive. Obiettivi: Riconoscere e rispettare regole, spazi e consegne nelle attivita motorie scolastiche, anche attraverso la ripresa di schemi gia consolidati in Primaria; Eseguire schemi motori di base e combinati con attenzione a controllo, equilibrio, coordinazione e consapevolezza posturale; Partecipare a giochi motori collaborando con il gruppo e valorizzando le esperienze dei cicli precedenti; Riconoscere comportamenti sicuri e corretti stili di vita durante attivita e spostamenti, anche in relazione al proprio benessere.",
+      "motivazione": "P1-1 (nucleo Salute e benessere assente): il nucleo 'Salute e benessere' non e presente come nodo autonomo. Nella Secondaria 1 il tema e implicito nelle conoscenze su sicurezza. Proposta: aggiungere esplicitamente 'Salute e benessere scolastico' nelle conoscenze e rafforzare il riferimento a stili di vita negli obiettivi.",
+      "note": "Il testo proposto introduce la dimensione Salute e benessere nelle conoscenze e rafforza il riferimento a stili di vita negli obiettivi. Il nucleo rimane 'Corpo e percezione' ma con contenuti trasversali di benessere.",
+      "testoOriginale": "Conoscenze: Schema corporeo: segmenti, posture, assi e piani del corpo; Schemi motori di base e combinati: corsa, salto, lancio, presa; Equilibrio statico e dinamico: esercizi e attivita; Sicurezza negli spazi: palestra, cortile, spogliatoio.",
+      "sourceRefs": [
+        "CML-179: nucleo Salute e benessere, lessico consigliato",
+        "CML-204: P1-1 nucleo Salute e benessere assente",
+        "CML-210A: polish provvisorio Secondaria classe 1"
+      ]
+    },
+    {
+      "unitaId": "ef_sec_2_001",
+      "status": "proposta",
+      "proposto": "Conoscenze: Coordinazione dinamica avanzata: percorsi, circuito, staffette; Giochi sportivi scolastici: regole, ruoli, spazi di gioco; Fair play: gestione del conflitto, rispetto dell'avversario, arbitraggio; Benessere scolastico: igiene, abbigliamento, riscaldamento, recupero; Salute e benessere: movimento regolare, pause attive, corrette abitudini scolastiche.",
+      "motivazione": "P1-1 (nucleo Salute e benessere assente): il tema benessere e presente ma frammentato. L'unita attuale ha 'Benessere scolastico: igiene, abbigliamento, riscaldamento, recupero' che e generico. Proposta: aggiungere una voce esplicita 'Salute e benessere' con contenuti piu specifici (movimento regolare, pause attive, corrette abitudini).",
+      "note": "Il testo proposto aggiunge una voce dedicata Salute e benessere nelle conoscenze, integrando la voce esistente Benessere scolastico. Il nucleo rimane 'Gioco e sport' ma con contenuti trasversali di benessere.",
+      "testoOriginale": "Conoscenze: Coordinazione dinamica avanzata: percorsi, circuito, staffette; Giochi sportivi scolastici: regole, ruoli, spazi di gioco; Fair play: gestione del conflitto, rispetto dell'avversario, arbitraggio; Benessere scolastico: igiene, abbigliamento, riscaldamento, recupero.",
+      "sourceRefs": [
+        "CML-179: nucleo Salute e benessere, lessico consigliato",
+        "CML-204: P1-1 nucleo Salute e benessere assente",
+        "CML-210A: polish provvisorio Secondaria classe 2"
+      ]
+    },
+    {
+      "unitaId": "ef_sec_3_001",
+      "status": "proposta",
+      "proposto": "Obiettivi: Organizzare in modo autonomo sequenze motorie o attivita semplici rispettando obiettivo, spazio e regole, valorizzando le competenze sviluppate in Secondaria classe 1 e 2; Partecipare a giochi e sport scolastici con fair play e responsabilita; Riconoscere il rapporto tra attivita motoria, benessere personale e vita scolastica, con attenzione a corrette abitudini e pause attive; Usare movimento ed espressione corporea per comunicare, collaborare e includere, valorizzando le esperienze dei cicli precedenti.",
+      "motivazione": "P1-4 (progressione verticale debole) + P2-1 (wording generico): gli obiettivi attuali non collegano esplicitamente le competenze di Secondaria 1 e 2. Il riferimento a benessere e generico ('rapporto tra attivita motoria, benessere personale e vita scolastica'). Proposta: rafforzare il ponte con Secondaria 1-2 e specificare il riferimento a benessere con corrette abitudini e pause attive.",
+      "note": "Il testo proposto rafforza il ponte verticale con Secondaria 1-2 e rende piu specifico il riferimento a benessere. La competenza e l'ambito restano invariati.",
+      "testoOriginale": "Obiettivi: Organizzare in modo autonomo sequenze motorie o attivita semplici rispettando obiettivo, spazio e regole; Partecipare a giochi e sport scolastici con fair play e responsabilita; Riconoscere il rapporto tra attivita motoria, benessere personale e vita scolastica; Usare movimento ed espressione corporea per comunicare, collaborare e includere.",
+      "sourceRefs": [
+        "CML-179: nucleo Espressione e inclusione, progressione III",
+        "CML-204: P1-4 progressione verticale debole",
+        "CML-204: P2-1 wording generico",
+        "CML-210A: polish provvisorio Secondaria classe 3"
+      ]
+    }
+  ]
+}
