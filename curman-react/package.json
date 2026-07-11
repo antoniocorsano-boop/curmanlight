@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "sync-data": "node tools/sync-curriculum-data.mjs",
-    "predev": "npm run sync-data",
+    "validate:gap": "node tools/validate-gap-data.mjs",
+    "sync:gap": "npm run validate:gap && node tools/sync-gap-data.mjs",
+    "predev": "npm run sync-data && npm run sync:gap",
     "dev": "vite",
-    "prebuild": "npm run sync-data",
+    "prebuild": "npm run sync-data && npm run sync:gap",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "test:b01": "node tools/check-b01-entry-orientation.mjs",

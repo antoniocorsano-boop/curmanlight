@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://curmanlight.local/schemas/gap-layer-v1.schema.json",
+  "title": "CurManLight Gap Layer v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "disciplina",
+    "source",
+    "humanValidationRequired",
+    "entries"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "gap-v1" },
+    "disciplina": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "reference", "retrievedAt"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "reference": { "type": "string", "minLength": 1 },
+        "retrievedAt": { "type": "string", "format": "date" },
+        "notes": { "type": "string" }
+      }
+    },
+    "humanValidationRequired": { "const": true },
+    "note": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unitaId",
+          "status",
+          "proposto",
+          "motivazione",
+          "sourceRefs"
+        ],
+        "properties": {
+          "unitaId": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["proposta", "non_validato"] },
+          "proposto": { "type": "string", "minLength": 1 },
+          "motivazione": { "type": "string", "minLength": 1 },
+          "note": { "type": "string" },
+          "testoOriginale": { "type": "string" },
+          "sourceRefs": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true
+          }
+        }
+      }
+    }
+  }
+}
