@@ -60,9 +60,16 @@ for (const file of files) {
     seen.add(entry.unitaId)
     if (!allowedStatuses.has(entry.status)) fail(`${prefix}: status non azionabile`)
     if (!entry.proposto?.trim()) fail(`${prefix}: proposto mancante`)
+    if (!entry.testoOriginale?.trim()) fail(`${prefix}: testoOriginale mancante`)
     if (!entry.motivazione?.trim()) fail(`${prefix}: motivazione mancante`)
     if (!Array.isArray(entry.sourceRefs) || entry.sourceRefs.length === 0 || entry.sourceRefs.some(ref => !String(ref).trim())) {
       fail(`${prefix}: sourceRefs mancanti`)
+    }
+    if (entry.proposto && entry.testoOriginale) {
+      const normalizza = s => s.replace(/\s+/g, ' ').trim().toLowerCase()
+      if (normalizza(entry.proposto) === normalizza(entry.testoOriginale)) {
+        fail(`${prefix}: proposto identico a testoOriginale dopo normalizzazione — nessuna differenza reale`)
+      }
     }
   }
 

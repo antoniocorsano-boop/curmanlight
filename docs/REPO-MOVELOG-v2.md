@@ -717,3 +717,68 @@ CML-469 (gap layer foundation) → CML-470 (first data package pilot, PR #60)
 ```text
 CML_470_FIRST_GAP_LAYER_DATA_PACKAGE_PILOT_READY
 ```
+
+---
+
+## CML-470 — First Verified Gap Layer Pilot (Corrected)
+
+- **Data**: 2026-07-11
+- **Tipo**: curriculum JSON / gap layer data (correction)
+- **Branch**: `codex/cml-470-gap-layer-pilot`
+- **PR**: #60 (aggiornata)
+- **HEAD**: `f23e5ee`
+- **Stato**: PR ready for review
+- **Runtime**: non modificato
+- **Dati curricolari**: non modificati
+
+### Scopo
+
+Correggere PR #60 dopo review semantica negativa. Le 7 proposte originali derivavano da gap CML-179/CML-204 pre-polish CML-210A. 6 di 7 entry erano ridondanti con il JSON normalizzato corrente.
+
+### File modificati
+
+- `content/gap/educazione-fisica.gap.json` (7 → 1 entry)
+- `curman-react/src/data/gap/educazione-fisica.gap.json` (sync)
+- `curman-react/tools/validate-gap-data.mjs` (checks aggiuntivi)
+- `report/CML-470_first_verified_gap_layer_pilot.md` (nuovo)
+- `docs/03_execution/CML-470.md` (aggiornato)
+- `docs/REPO-MOVELOG-v2.md` (aggiornato)
+
+### Entry eliminate (6)
+
+| Unità | Motivo |
+|---|---|
+| ef_inf_5_001 | proposto ≡ corrente |
+| ef_pri_1_001 | applicato da CML-210A |
+| ef_pri_3_001 | applicato da CML-210A + labelling |
+| ef_pri_5_001 | applicato da CML-210A |
+| ef_sec_1_001 | gap P1-1 chiuso da dipartimento |
+| ef_sec_2_001 | gap P1-1 chiuso da dipartimento |
+
+### Entry mantenuta (1)
+
+| Unità | Differenze genuine |
+|---|---|
+| ef_sec_3_001 | +Secondaria 1-2 obiettivo 1; +corrette abitudini obiettivo 3 |
+
+### Controlli
+
+- validate:gap PASS (1 proposta), sync:gap PASS, lint PASS (0/0)
+- test:b01/b02/b03 PASS
+- build PASS (977ms)
+- git diff --check PASS (CRLF warnings only)
+- check:pair PASS (allSync: true)
+- validate:curriculum 14/14 PASS
+- test:runtime-shape 14/14 PASS
+
+### Catena
+
+```
+CML-469 (gap layer foundation) → CML-470 v1 (7 entries, semantically rejected) → CML-470 v2 (1 verified entry, PR #60 corrected)
+```
+
+### Verdetto
+
+```text
+CML_470_FIRST_VERIFIED_GAP_LAYER_PILOT_CORRECTED_PR_60_READY_FOR_REVIEW
+```
