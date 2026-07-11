@@ -155,6 +155,7 @@ La regola e stata propagata in tutti i documenti operativi della readiness e nel
 - Modifiche ai dati: nessuna.
 - Modifiche ai workflow: nessuna.
 - Modifiche a `_published_snapshot/`: nessuna.
+- Percorsi trigger Pages presenti nel diff: nessuno.
 - Deploy Pages attivato da questa PR prima del merge: no.
 - Merge: non eseguito.
 - Pubblicazione: non eseguita.
