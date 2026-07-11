@@ -1,9 +1,19 @@
-import type { GapEntry, Decisione } from '@/types/gap'
+import type { GapEntry, Decisione, ProfiloUtente } from '@/types/gap'
 import type { UnitaApprendimento } from '@/types/curriculum'
 import { GapBadge } from '@/components/curriculum/GapBadge'
 import { DecisioneActions } from '@/components/curriculum/DecisioneActions'
 
-export function GapComparison({ unita, entry, decisione }: { unita: UnitaApprendimento; entry: GapEntry; decisione: Decisione | undefined }) {
+export function GapComparison({
+  unita,
+  entry,
+  decisione,
+  profilo,
+}: {
+  unita: UnitaApprendimento
+  entry: GapEntry
+  decisione: Decisione | undefined
+  profilo: ProfiloUtente | null
+}) {
   return (
     <div className="bg-white border border-slate-200 rounded-lg p-4 flex flex-col gap-4">
       <div className="flex items-center gap-2">
@@ -21,7 +31,9 @@ export function GapComparison({ unita, entry, decisione }: { unita: UnitaApprend
         </div>
       </div>
       {entry.motivazione && <p className="text-xs text-slate-400 italic">{entry.motivazione}</p>}
-      <div className="pt-2 border-t border-slate-100"><DecisioneActions entry={entry} decisione={decisione} /></div>
+      <div className="pt-2 border-t border-slate-100">
+        <DecisioneActions unita={unita} entry={entry} decisione={decisione} profilo={profilo} />
+      </div>
     </div>
   )
 }
