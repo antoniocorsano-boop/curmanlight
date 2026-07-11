@@ -1,7 +1,7 @@
 # AGENT-REPOSITORY-MAP.md — Mappa del Repository per Agenti
 
-> Generato il 2026-07-10 dal branch `codex/cml-agent-repository-readiness`.
-> Basato su analisi reale del repository, non su ipotesi.
+> Aggiornato sul branch `codex/cml-agent-repository-readiness-aligned`.
+> Basato su ispezione del repository e delle regole correnti in `PROJECT-STATE.md` e `.github/workflows/pages.yml`.
 
 ## 1. Panoramica del Prodotto
 
@@ -10,292 +10,276 @@ CurManLight (CML) e una PWA statica per il curricolo verticale dell'I.C. Calvari
 - **URL pubblico**: `https://antoniocorsano-boop.github.io/curmanlight/`
 - **Remoto**: `origin` → `https://github.com/antoniocorsano-boop/curmanlight`
 - **Branch principale**: `main`
-- **Runtime attuale**: applicazione monolitica single-file HTML/CSS/JS vanilla
-- **Migrazione**: React/Vite/TypeScript in `curman-react/` (non produttiva)
+- **Runtime legacy**: applicazione monolitica HTML/CSS/JS vanilla
+- **Migrazione React**: `curman-react/`, pubblicata come preview isolata in `/react-preview/`
 
 ## 2. Architettura Tecnica
 
-L'applicazione e un singolo file HTML autocontenuto con CSS inline, JavaScript inline e dati curriculum integrati a runtime. Non esiste una fase di build per il runtime attuale. Il codice e direttamente eseguibile nel browser.
+Il sito GitHub Pages distribuisce un artifact combinato:
 
-**Percorso di esecuzione**:
-1. GitHub Pages serve `_published_snapshot/netlify-current/index.html`
-2. Il file carica CSS, JS e dati tutto inline
-3. Service worker (`sw.js`) gestisce la cache offline
-4. `manifest.webmanifest` abilita l'installazione PWA
+1. `_published_snapshot/netlify-current/` viene copiato nella radice dell'artifact;
+2. `curman-react/` viene compilato con Vite;
+3. `curman-react/dist/` viene copiato in `_site/react-preview/`;
+4. l'intero `_site` viene distribuito su GitHub Pages.
 
-**Flusso dati**:
-- Dati curricolari: `content/curriculum/*.normalized.json` → trasformati in `MAPPA_DATI` inline nel runtime
-- Stato locale: `localStorage` per salvataggi, proposte, importazioni
-- Nessuna chiamata API esterna (tranne CDN opzionale per esportazione Word)
+Il runtime legacy resta direttamente eseguibile senza build. La preview React richiede invece `npm ci` e `npm run build`.
+
+**Flusso dati legacy**:
+
+- dati curricolari: `content/curriculum/*.normalized.json` → struttura runtime incorporata;
+- stato locale: `localStorage` per salvataggi, proposte, importazioni e stato UI;
+- nessun backend applicativo.
 
 ## 3. Albero Ragionato delle Cartelle
 
-```
+```text
 CurManLight/
-├── index.html                          # Runtime radice (copia di lavoro)
-├── sw.js                               # Service worker (identico a published)
-├── AGENTS.md                           # Guida per agenti AI
-├── CLAUDE.md                           # Memoria progetto Claude Code (.gitignored)
-├── CONTRIBUTING.md                     # Linee guida contribuzione
-├── DESIGN.md                           # Sistema di design
-├── CHANGELOG.md                        # Versioni stabili
-├── README.md                           # Readme principale
-├── README-FIRST.md                     # Readme introduttivo
+├── index.html                          # Runtime legacy radice, copia di lavoro
+├── sw.js                               # Service worker radice
+├── AGENTS.md                           # Regole operative per agenti
+├── CONTRIBUTING.md
+├── DESIGN.md
+├── CHANGELOG.md
+├── README.md
 │
 ├── _published_snapshot/
-│   └── netlify-current/                # CARTELLA PUBBLICATA (fonte di verita)
-│       ├── index.html                  # Runtime pubblicato
-│       ├── sw.js                       # Service worker pubblicato
-│       ├── manifest.webmanifest        # Manifest PWA
+│   └── netlify-current/                # Contenuto legacy copiato nella radice Pages
+│       ├── index.html
+│       ├── sw.js
+│       ├── manifest.webmanifest
 │       ├── favicon.ico
-│       ├── icons/                      # Icone PWA (192, 512)
-│       ├── assets/                     # Asset statici
-│       ├── docs_distribuzione/         # Documenti distribuzione
-│       ├── motto-non-multa-sed-multum.html
-│       ├── motto-non-multa-sed-multum/
-│       ├── riferimenti_istituzionali_normativa.json
-│       └── Corso_CurricoloDonMilani_*.pdf
+│       ├── icons/
+│       ├── assets/
+│       ├── docs_distribuzione/
+│       └── altri asset pubblici
 │
-├── content/
-│   └── curriculum/                     # 14 file .normalized.json
-│       ├── italiano.normalized.json
-│       ├── matematica.normalized.json
-│       ├── scienze.normalized.json
-│       ├── storia.normalized.json
-│       ├── geografia.normalized.json
-│       ├── inglese.normalized.json
-│       ├── tecnologia.normalized.json
-│       ├── educazione-civica.normalized.json
-│       ├── educazione-fisica.normalized.json
-│       ├── arte-immagine.normalized.json
-│       ├── musica.normalized.json
-│       ├── seconda-lingua-comunitaria.normalized.json
-│       ├── religione-cattolica.normalized.json
-│       └── latino-lel.normalized.json
-│
-├── docs/
-│   ├── 01_product/                     # Documentazione prodotto
-│   ├── 02_system/                      # Governance, contratti, architettura (37 file)
-│   ├── 03_execution/                   # Report di slice (600+ file)
-│   ├── 04_user/                        # Guida utente
-│   ├── 04_user_guide/
-│   ├── 04_validation/
-│   ├── REPO-MOVELOG.md                 # Cronologia slice (10000+ righe)
-│   └── REPO-MOVELOG-v2.md
-│
-├── report/                             # Report dettagliati per slice (580+ file)
-│   └── screenshots/                    # Screenshot di verifica
-│
-├── tools/                              # Script di validazione e test
-│   ├── validate-cml-normalized-curriculum.mjs
-│   ├── test-runtime-mappa-dati-shape.mjs
-│   ├── check-app-pair.mjs             # Confronto coppia applicativa (da creare)
-│   ├── generate-static-mappa-dati.mjs
-│   ├── json-to-mappa-dati-adapter.mjs
-│   ├── to-runtime-mappa-dati-transformer.mjs
-│   ├── smoke-hash-nav.mjs
-│   └── audit-cml-curriculum-coverage.mjs
-│
-├── curman-react/                       # Migrazione React (non produttiva)
+├── curman-react/                       # Preview React pubblicata in /react-preview/
 │   ├── src/
 │   ├── package.json
+│   ├── package-lock.json
 │   └── vite.config.ts
+│
+├── content/
+│   └── curriculum/                     # 14 file *.normalized.json
+│
+├── docs/
+│   ├── 01_product/
+│   ├── 02_system/                      # Governance, contratti, architettura
+│   ├── 03_execution/                   # Rapporti di slice
+│   ├── 04_user/
+│   ├── 04_validation/
+│   ├── REPO-MOVELOG-v2.md              # Registro operativo corrente
+│   └── REPO-MOVELOG.md                 # Archivio legacy: non riscrivere da remoto
+│
+├── report/                             # Report dettagliati e screenshot
+├── tools/                              # Validatori, test, trasformazioni
+│   ├── validate-cml-normalized-curriculum.mjs
+│   ├── test-runtime-mappa-dati-shape.mjs
+│   ├── check-app-pair.mjs
+│   └── altri strumenti
 │
 ├── .github/
 │   ├── workflows/
-│   │   ├── pages.yml                   # Deploy GitHub Pages
-│   │   └── react-ci.yml               # CI React
-│   └── copilot-instructions.md         # Istruzioni Copilot
+│   │   ├── pages.yml                   # Build e deploy GitHub Pages combinato
+│   │   └── react-ci.yml                # CI React
+│   └── copilot-instructions.md
 │
-├── .codex/                             # Configurazione Codex CLI
-│   ├── AGENTS.md
-│   ├── config.toml
-│   └── agents/
-│
-├── .claude/                            # Configurazione Claude Code
-│   └── skills/
-│       ├── cml-docs-only-slice/
-│       ├── cml-readiness-audit/
-│       ├── cml-sync/
-│       └── curmanlight/
-│
-├── prototypes/                         Prototipi
-├── runtime-fragments/                  Frammenti runtime
-├── stitch/                             Stitch (design tool)
-├── examples/                           Esempi
-├── _handoff/                           Pacchetto handoff
-└── CurManLightBrain/                   Obsidian vault locale
+├── .codex/
+├── .claude/
+├── prototypes/
+├── runtime-fragments/
+├── stitch/
+├── examples/
+└── _handoff/
 ```
+
+`CurManLightBrain/` e altri materiali locali non tracciati non fanno parte del perimetro remoto salvo inclusione esplicita.
 
 ## 4. File Applicativi Principali
 
-| File | Ruolo | Linee | Stato |
-|------|-------|-------|-------|
-| `_published_snapshot/netlify-current/index.html` | Runtime pubblicato | 6512 | Fonte di verita |
-| `index.html` | Runtime radice (copia di lavoro) | 6513 | Potenzialmente desincronizzato |
-| `sw.js` | Service worker | 59 | Identico in entrambe le posizioni |
-| `_published_snapshot/netlify-current/manifest.webmanifest` | Manifest PWA | 30 | Solo nella cartella pubblicata |
+| File o area | Ruolo | Stato operativo |
+|---|---|---|
+| `_published_snapshot/netlify-current/index.html` | Runtime legacy pubblicato | Fonte della radice Pages |
+| `index.html` | Copia di lavoro del runtime legacy | Da mantenere sincronizzata |
+| `sw.js` e `_published_snapshot/netlify-current/sw.js` | Cache offline | Coppia da verificare |
+| `_published_snapshot/netlify-current/manifest.webmanifest` | Manifest PWA | Presente nella cartella pubblicata |
+| `curman-react/` | Preview React | Build e deploy in `/react-preview/` |
 
-## 5. Coppie di File da Mantenere Sincronizzati
+## 5. Coppie di File da Mantenere Sincronizzate
 
-| Coppia | Verifica | Stato attuale |
-|--------|----------|---------------|
-| `index.html` ↔ `_published_snapshot/netlify-current/index.html` | `node tools/check-app-pair.mjs` | **DIVERSI** (43 ins / 44 del) |
-| `sw.js` (radice) ↔ `_published_snapshot/netlify-current/sw.js` | Confronto hash | Identici |
+| Coppia | Verifica | Stato osservato nella slice |
+|---|---|---|
+| `index.html` ↔ `_published_snapshot/netlify-current/index.html` | `node tools/check-app-pair.mjs` | **DIVERGED** di 48 byte, preesistente |
+| `sw.js` ↔ `_published_snapshot/netlify-current/sw.js` | `node tools/check-app-pair.mjs` | Sincronizzati |
 
-**ATTENZIONE**: `index.html` e `_published_snapshot/netlify-current/index.html` sono attualmente DESINCRONIZZATI. Il runtime pubblicato (published) e la fonte di verita. Qualsiasi modifica runtime deve applicarsi a ENTRAMBI i file.
+La divergenza del runtime legacy richiede una slice dedicata. Non va corretta incidentalmente durante altre attivita.
 
 ## 6. Dati Curricolari
 
-- 14 file `content/curriculum/*.normalized.json`
-- Struttura: array di `unitaApprendimento` con campi: id, disciplina, ordine, classe, fascia, ambito, nucleoFondante, competenza, traguardo, obiettivi, conoscenze, abilita, evidenze, criteriValutazione, fonte, stato, validazioneUmana, noteDipartimento
-- Validati: 14/14 PASS con `node tools/validate-cml-normalized-curriculum.mjs`
-- Shape test: 14/14 PASS con `node tools/test-runtime-mappa-dati-shape.mjs`
-- **Non modificare senza attivita dedicata**
+- 14 file in `content/curriculum/*.normalized.json`;
+- validazione: `node tools/validate-cml-normalized-curriculum.mjs`;
+- controllo shape: `node tools/test-runtime-mappa-dati-shape.mjs`;
+- modifiche ammesse solo in una slice dedicata e con validazione completa.
 
-## 7. Funzioni e Aree Applicative Principali
-
-Il runtime e organizzato inthese aree all'interno di `index.html`:
+## 7. Funzioni e Aree Applicative Legacy
 
 | Area | Descrizione |
-|------|-------------|
-| Header | Titolo, motto, statistiche |
-| Sidebar | Navigazione discipline per ordine |
-| Toolbar | Filtri, azioni, esportazione |
-| Main content | Vista curriculum, dettaglio unita |
-| Tab bar | Navigazione sezioni (Consulta, Progetta, Processo, Guida) |
-| Export panel | Esportazione Word/Markdown/Copy |
-| Import panel | Importazione proposte .cml |
-| Referent validation | Validazione referente |
-| UDA draft | Bozza UDA in Markdown |
-| Local save bar | Salvataggio locale |
+|---|---|
+| Header e navigazione | Contesto, titolo, azioni principali |
+| Consultazione curricolo | Discipline, ordini, unita e dettagli |
+| Proposta e revisione | Confronto, decisioni e validazione umana |
+| Import/export `.cml` | Trasferimento locale dei pacchetti di lavoro |
+| Export documenti | Word, Markdown e copia |
+| Persistenza locale | `localStorage` |
 | Service worker | Cache offline |
 
-**Accesso dati runtime**: `getUnitsForDiscipline(discKey)` — accesso generalizzato (refactor CML-371→CML-380).
+L'accesso disciplinare generalizzato usa `getUnitsForDiscipline(discKey)`.
 
-## 8. Persistenza Locale
+## 8. Persistenza e Confini Dati
 
-- `localStorage` per salvataggi, proposte, importazioni, stato UI
-- Nessun backend, nessuna chiamata API
-- Service worker per cache offline
+- stato applicativo locale nel browser;
+- nessun backend operativo;
+- nessun dato personale da introdurre;
+- nessuna autenticazione o telemetria senza contratto e autorizzazione dedicati.
 
 ## 9. Importazione ed Esportazione
 
-- **Esportazione**: Word (.docx via CDN opzionale), Markdown, Copy
-- **Importazione**: File `.cml` (formato proprietario v1.0)
-- **Flusso dipartimentale**: Proposta → Importazione → Validazione
-- **Flusso referente**: Importazione → Report
+- formato di lavoro `.cml`;
+- flusso docente → dipartimento → referente;
+- validazione umana esterna allo strumento;
+- eventuale CDN opzionale solo per specifiche esportazioni documentali gia presenti.
 
 ## 10. Service Worker e Cache
 
-- Cache name: `curmanlight-cache-v455-cml436`
-- Strategia: cache-first per asset shell, network-first per navigazione
-- File cached: index.html, manifest, motto page, fonti, icone
-- Identico in `sw.js` (radice) e `_published_snapshot/netlify-current/sw.js`
+- coppia `sw.js` radice/published da mantenere coerente;
+- ogni modifica richiede verifica della cache e del comportamento offline;
+- evitare modifiche collaterali durante slice non dedicate.
 
-## 11. Flusso di Pubblicazione
+## 11. Flusso di Pubblicazione GitHub Pages
 
-- **GitHub Actions**: `.github/workflows/pages.yml`
-- **Trigger**: push su `main` con modifiche in `_published_snapshot/netlify-current/**`
-- **Alternativa**: `workflow_dispatch`
-- **Percorso osservato**: `_published_snapshot/netlify-current`
-- **Artifact upload**: `actions/upload-pages-artifact@v3`
-- **Deploy**: `actions/deploy-pages@v4`
-- **Branch**: solo `main`
+La fonte di verita e `.github/workflows/pages.yml`.
 
-**Rischio pubblicazione involontaria**: Qualsiasi push a `main` con modifiche nella cartella published attiva il deploy automatico.
+Il workflow puo essere avviato manualmente con `workflow_dispatch` oppure automaticamente da un push su `main` quando cambia almeno uno dei seguenti percorsi:
+
+```text
+_published_snapshot/netlify-current/**
+curman-react/**
+.github/workflows/pages.yml
+```
+
+Il job:
+
+1. installa le dipendenze React;
+2. costruisce la preview React con base `/curmanlight/react-preview/`;
+3. copia il contenuto legacy published nella radice dell'artifact;
+4. copia la build React in `/react-preview/`;
+5. distribuisce l'artifact combinato su GitHub Pages.
+
+### Regola release-gate
+
+Un cambiamento esclusivamente in `curman-react/**` **non e non-pubblicante** quando viene integrato o pushato su `main`: avvia il job Pages e produce un nuovo deploy del sito combinato.
+
+Anche una modifica a `.github/workflows/pages.yml` avvia il workflow dopo il push su `main`.
+
+Prima di ogni merge o push su `main` eseguire almeno:
+
+```bash
+git fetch origin
+git diff --name-only origin/main...HEAD
+```
+
+Se il diff include uno dei tre percorsi trigger, sono obbligatori:
+
+- autorizzazione esplicita alla pubblicazione;
+- monitoraggio del workflow Pages;
+- verifica post-deploy del runtime legacy e, se pertinente, della preview React;
+- rapporto che distingua push su branch, merge su `main`, deploy avviato e pubblicazione verificata.
+
+Un push su un branch dedicato non attiva questo trigger `push` perché il workflow e limitato a `main`.
 
 ## 12. Strumenti di Validazione
 
-| Script | Scopo | Dipendenze |
-|--------|-------|------------|
-| `tools/validate-cml-normalized-curriculum.mjs` | Valida 14 file .normalized.json | fs, path |
-| `tools/test-runtime-mappa-dati-shape.mjs` | Verifica shape runtime mappa dati | fs, child_process, path |
-| `tools/check-app-pair.mjs` | Confronta coppia applicativa | fs, crypto (da creare) |
-| `tools/smoke-hash-nav.mjs` | Smoke test hash navigazione | — |
-| `tools/audit-cml-curriculum-coverage.mjs` | Audit copertura curriculum | — |
-| `tools/generate-static-mappa-dati.mjs` | Genera mappa dati statica | — |
+| Script o comando | Scopo |
+|---|---|
+| `node tools/validate-cml-normalized-curriculum.mjs` | Validazione dei 14 file curricolari |
+| `node tools/test-runtime-mappa-dati-shape.mjs` | Controllo struttura dati runtime |
+| `node tools/check-app-pair.mjs` | Confronto delle coppie applicative |
+| `npm run lint` in `curman-react/` | Lint React |
+| `npm run build` in `curman-react/` | Build React |
+| `git diff --name-only origin/main...HEAD` | Identificazione dei percorsi di release |
+
+`check-app-pair.mjs` termina con exit code 1 quando rileva una divergenza: lo strumento puo quindi funzionare correttamente mentre l'invariante della coppia risulta fallito.
 
 ## 13. Prove Automatiche
 
-- **Nessun Playwright o test E2E configurato** nel runtime attuale
-- `curman-react/` ha lint (`oxlint`) e build (`tsc -b && vite build`)
-- React CI: `.github/workflows/react-ci.yml`
-- Smoke test: HTTP 200 da URL pubblico dopo deploy
+- runtime legacy: validatori e smoke mirati, nessuna suite E2E generale consolidata;
+- React: lint, build e controlli dedicati presenti nel progetto;
+- CI React: `.github/workflows/react-ci.yml`;
+- deploy Pages: `.github/workflows/pages.yml`.
 
-## 14. Documentazione di Governance del Progetto
+## 14. Documentazione di Governance
 
-| File | Scopo |
-|------|-------|
-| `docs/02_system/AI-DEVELOPMENT-GOVERNANCE.md` | Governance per agenti AI |
-| `docs/02_system/PROJECT-STATE.md` | Stato corrente del progetto |
-| `docs/02_system/OPS-PREFLIGHT-POLICY-CONTRACT.md` | Policy preflight |
-| `docs/02_system/STABLE-CANDIDATE-FREEZE-CONTRACT.md` | Freeze del candidato stabile |
-| `docs/02_system/PRODUCT-MATURITY-CHARTER.md` | Charter maturita prodotto |
-| `docs/02_system/PRODUCT-USABILITY-AND-UX-MATURITY-ROADMAP.md` | Roadmap UX |
-| `docs/02_system/PRODUCT-USABILITY-BACKLOG.md` | Backlog UX |
-| `docs/02_system/PRODUCT-MATURITY-PROGRESS.md` | Progresso maturita |
-| `docs/02_system/UX-STANDARDS.md` | Standard UX |
-| `docs/02_system/TERMINOLOGY-GLOSSARY.md` | Glossario termini |
-| `docs/REPO-MOVELOG.md` | Cronologia completa slice |
-| `CONTRIBUTING.md` | Linee guida contribuzione |
-| `DESIGN.md` | Sistema di design |
+| File | Autorita |
+|---|---|
+| `AGENTS.md` | Regole operative principali per agenti |
+| `docs/02_system/PROJECT-STATE.md` | Stato corrente e indicazioni operative |
+| `docs/02_system/AI-DEVELOPMENT-GOVERNANCE.md` | Governance dello sviluppo AI |
+| `docs/02_system/AGENT-WORK-CONTRACT.md` | Contratto di esecuzione |
+| `docs/02_system/AGENT-TASK-TEMPLATE.md` | Modello di incarico |
+| `docs/02_system/AGENT-VALIDATION-COMMANDS.md` | Comandi di controllo |
+| `docs/REPO-MOVELOG-v2.md` | **Registro operativo corrente** |
+| `docs/REPO-MOVELOG.md` | Archivio legacy; **non riscrivere da remoto** |
+| `.github/workflows/pages.yml` | Fonte di verita per trigger e job di pubblicazione |
+
+Quando documenti e workflow divergono, verificare il file operativo reale e aggiornare la documentazione nella stessa slice o in una correzione dedicata.
 
 ## 15. Aree ad Alto Rischio
 
 | Area | Rischio | Motivo |
-|------|---------|--------|
-| `_published_snapshot/netlify-current/index.html` | ALTO | Modifica diretta del runtime pubblico |
-| `index.html` | ALTO | Coppia applicativa — deve restare sincronizzato |
-| `sw.js` | ALTO | Service worker — cache invalidation |
-| `content/curriculum/*.normalized.json` | ALTO | Dati curricolari — struttura rigida |
-| `.github/workflows/pages.yml` | ALTO | Flusso di pubblicazione |
-| `tools/` | MEDIO | Strumenti di validazione |
-| `manifest.webmanifest` | MEDIO | PWA installazione |
-| `curman-react/` | BASSO | Non produttivo, isolate |
+|---|---|---|
+| `_published_snapshot/netlify-current/**` | ALTO | Contenuto legacy distribuito su Pages |
+| `index.html` | ALTO | Coppia del runtime legacy |
+| `sw.js` | ALTO | Cache e aggiornamento client |
+| `content/curriculum/*.normalized.json` | ALTO | Dati curricolari strutturati |
+| `.github/workflows/pages.yml` | ALTO | Trigger, build e deploy |
+| `curman-react/**` | ALTO al merge su `main` | Attiva build e deploy Pages della preview |
+| `tools/` | MEDIO | Guardrail e validatori |
+| `docs/REPO-MOVELOG-v2.md` | MEDIO | Registro operativo corrente |
+| `docs/REPO-MOVELOG.md` | PROTETTO | Archivio legacy da non riscrivere remotamente |
 
 ## 16. Aree che Richiedono Autorizzazione Esplicita
 
-- Qualsiasi modifica a `_published_snapshot/`
-- Qualsiasi modifica a `index.html`
-- Qualsiasi modifica a `sw.js`
-- Qualsiasi modifica a `content/curriculum/`
-- Qualsiasi modifica a `.github/workflows/`
-- Qualsiasi modifica a `tools/`
-- Push, merge, deploy, pubblicazione
-- Introduzione di nuove dipendenze
+- modifiche a runtime legacy, service worker, manifest e dati;
+- modifiche ai workflow;
+- introduzione di dipendenze;
+- push o merge su `main`;
+- pubblicazione e deploy;
+- integrazione in `main` di diff che includono i percorsi trigger Pages;
+- riscrittura di cronologia Git condivisa.
 
-## 17. Procedura Consigliata per una Modifica Minima
+## 17. Procedura per una Modifica Minima
 
-1. Leggere `AGENTS.md`
-2. Leggere `docs/02_system/PROJECT-STATE.md`
-3. Creare branch dedicato: `codex/cml-[NUMERO]-[descrizione]`
-4. Identificare il tipo di slice (docs-only, runtime microfix, runtime increment, curriculum JSON)
-5. Dichiarare il perimetro: file autorizzati e file esclusi
-6. Ispezionare tutti i punti di utilizzo del codice coinvolto
-7. Applicare la modifica minima necessaria
-8. Se runtime: modificare ENTRAMBI i file della coppia applicativa
-9. Eseguire i controlli minimi:
-   ```bash
-   git status --short --branch
-   git diff --check
-   ```
-10. Eseguire i controlli pertinenti al tipo di slice
-11. Produrre rapporto nel formato standard
-12. Fermarsi — non eseguire push senza autorizzazione
+1. Leggere `AGENTS.md`.
+2. Leggere `docs/02_system/PROJECT-STATE.md`.
+3. Confermare che il movelog corrente sia `docs/REPO-MOVELOG-v2.md`.
+4. Creare o usare un branch dedicato.
+5. Dichiarare file autorizzati ed esclusi.
+6. Applicare la modifica minima.
+7. Eseguire i controlli pertinenti.
+8. Aggiornare il rapporto e, se previsto, `docs/REPO-MOVELOG-v2.md`.
+9. Non modificare remotamente `docs/REPO-MOVELOG.md`.
+10. Prima di push/merge, ispezionare i percorsi trigger Pages.
+11. Fermarsi se push, merge o deploy non sono autorizzati.
 
-## Tabella Riepilogativa
+## 18. Tabella Riepilogativa
 
-| Area | File principali | Funzione | Rischio | Controlli richiesti |
-|------|----------------|----------|---------|---------------------|
-| Runtime pubblico | `_published_snapshot/netlify-current/index.html` | Applicazione utente | ALTO | check-app-pair, smoke |
-| Runtime radice | `index.html` | Coppia di lavoro | ALTO | check-app-pair |
-| Service worker | `sw.js` (entrambe le posizioni) | Cache offline | ALTO | Confronto hash |
-| Manifest PWA | `_published_snapshot/netlify-current/manifest.webmanifest` | Installazione PWA | MEDIO | Verifica struttura |
-| Dati curriculum | `content/curriculum/*.normalized.json` | 14 discipline | ALTO | validate-cml, shape-test |
-| Strumenti validazione | `tools/*.mjs` | Controllo qualita | MEDIO | Esecuzione singola |
-| Workflow CI/CD | `.github/workflows/pages.yml` | Pubblicazione GH Pages | ALTO | Nessuna modifica |
-| Workflow React CI | `.github/workflows/react-ci.yml` | Build React | BASSO | lint + build |
-| Governance | `docs/02_system/` | Regole, contratti | BASSO | diff-check |
-| Report | `report/`, `docs/03_execution/` | Documentazione | BASSO | diff-check |
-| React migration | `curman-react/` | Migrazione futuro | BASSO | lint + build |
+| Area | File principali | Controlli | Impatto main |
+|---|---|---|---|
+| Runtime legacy | `index.html`, `_published_snapshot/.../index.html` | app-pair, smoke | Deploy Pages se published cambia |
+| Service worker | `sw.js` in entrambe le posizioni | app-pair, cache smoke | Deploy se cambia la copia published |
+| React preview | `curman-react/**` | lint, build, test dedicati | **Deploy Pages sempre al push su main** |
+| Workflow Pages | `.github/workflows/pages.yml` | review YAML e workflow | **Deploy Pages al push su main** |
+| Dati curriculum | `content/curriculum/**` | validator, shape | Nessun trigger Pages diretto |
+| Governance | `docs/02_system/**`, `AGENTS.md` | diff-check | Nessun trigger Pages diretto |
+| Movelog corrente | `docs/REPO-MOVELOG-v2.md` | diff-check | Nessun trigger Pages diretto |
+| Movelog legacy | `docs/REPO-MOVELOG.md` | nessuna riscrittura remota | Archivio protetto |
