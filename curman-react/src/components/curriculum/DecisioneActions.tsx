@@ -50,7 +50,7 @@ export function DecisioneActions({
   decisione: Decisione | undefined
   profilo: ProfiloUtente | null
 }) {
-  const { approve, reject, undoDecision } = useRevisioneStore()
+  const { recordWorkDecision, reopenWorkDecision } = useRevisioneStore()
   const context = buildDecisionContext(unita, entry, profilo)
 
   const permissionFor = (action: DecisionAction) =>
@@ -73,7 +73,7 @@ export function DecisioneActions({
             type="button"
             disabled={!reopenPermission.allowed}
             title={PERMISSION_MESSAGES[reopenPermission.reason]}
-            onClick={() => runAllowed('reopened', () => undoDecision(entry.unitaId))}
+            onClick={() => runAllowed('reopened', () => reopenWorkDecision(entry.unitaId, context))}
             className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-700 underline disabled:no-underline disabled:cursor-not-allowed disabled:opacity-50"
           >
             <RotateCcw size={12} /> Riapri
@@ -101,7 +101,14 @@ export function DecisioneActions({
           type="button"
           disabled={!acceptPermission.allowed}
           title={PERMISSION_MESSAGES[acceptPermission.reason]}
-          onClick={() => runAllowed('accepted_proposal', () => approve(entry.unitaId))}
+          onClick={() => runAllowed('accepted_proposal', () => recordWorkDecision({
+            outcome: 'accepted_proposal',
+            contesto: context,
+            testoFinale: entry.proposto,
+            motivazione: entry.motivazione ?? null,
+            note: entry.note ?? null,
+            autore: profilo?.nome ?? null,
+          }))}
           className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-[500] rounded-md bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors disabled:cursor-not-allowed disabled:opacity-50"
         >
           <Check size={13} /> Accogli proposta
@@ -110,7 +117,14 @@ export function DecisioneActions({
           type="button"
           disabled={!keepPermission.allowed}
           title={PERMISSION_MESSAGES[keepPermission.reason]}
-          onClick={() => runAllowed('kept_current', () => reject(entry.unitaId))}
+          onClick={() => runAllowed('kept_current', () => recordWorkDecision({
+            outcome: 'kept_current',
+            contesto: context,
+            testoFinale: unita.traguardo,
+            motivazione: entry.motivazione ?? null,
+            note: entry.note ?? null,
+            autore: profilo?.nome ?? null,
+          }))}
           className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-[500] rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors disabled:cursor-not-allowed disabled:opacity-50"
         >
           <X size={13} /> Mantieni vigente
