@@ -1,5 +1,5 @@
 import type { Ordine } from './curriculum'
-import type { GapStatus, Ruolo } from './gap'
+import type { Decisione, GapStatus, Ruolo } from './gap'
 
 export type DecisionScope = 'lavoro_personale' | 'lavoro_dipartimentale'
 
@@ -38,6 +38,30 @@ export interface WorkDecision {
   ambitoDecisione: DecisionScope
   contesto: DecisionContext
   decisionePrecedenteId: string | null
+}
+
+export type WorkDecisionMap = Record<string, WorkDecision>
+
+export interface RecordWorkDecisionInput {
+  outcome: Exclude<DecisionOutcome, 'reopened'>
+  contesto: DecisionContext
+  testoFinale?: string | null
+  motivazione?: string | null
+  note?: string | null
+  autore?: string | null
+}
+
+export function toLegacyDecision(decision: WorkDecision): Decisione | null {
+  if (decision.outcome === 'reopened') return null
+  return {
+    unitaId: decision.unitaId,
+    decisione: decision.outcome === 'kept_current' ? 'rifiutata' : 'approvata',
+    testoFinale: decision.testoFinale,
+    timestamp: decision.timestamp,
+    autore: decision.autore ?? undefined,
+    ruolo: decision.ruolo,
+    note: decision.note ?? undefined,
+  }
 }
 
 export type DecisionPermissionReason =
