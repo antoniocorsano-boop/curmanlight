@@ -10,7 +10,7 @@ CML_461_APP_PAIR_DIVERGENCE_AUTHORITY_AUDIT_READY_LOCAL_NOT_PUSHED
 
 Audita completa della divergenza tra `index.html` e `_published_snapshot/netlify-current/index.html`.
 
-**Risultato**: 4 differenze identificate, tutte non funzionali. Autorità assegnata alla snapshot pubblicata. Riconciliazione sicura tramite CML-462.
+**Risultato**: 4 differenze identificate. Tre erano non funzionali; l'hunk relativo alle frecce era funzionale (in HTML statico `\u2192` viene mostrato letteralmente). Autorità assegnata alla snapshot pubblicata. Correzione applicata in CML-462 durante review PR #52.
 
 ## Hash
 
@@ -24,7 +24,7 @@ Audita completa della divergenza tra `index.html` e `_published_snapshot/netlify
 | # | Hunk | Tipo | Funzionale? |
 |---|------|------|-------------|
 | 1 | CSS blank line dopo `.home-dashboard` | editoriale | no |
-| 2 | Arrow encoding (`→` vs `\u2192`), 4 occorrenze | encoding equivalente | no |
+| 2 | Arrow encoding (`→` vs `\u2192`), 4 occorrenze | encoding letterale non interpretato | **sì** (corretto in CML-462) |
 | 3 | `refreshCurrentDisciplineViews()` whitespace | formatting | no |
 | 4 | `renderHomeWorkContext()` position + commento | ricollocamento | no (hoisting) |
 

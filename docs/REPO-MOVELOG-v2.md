@@ -609,3 +609,28 @@ CML_442_REACT_MIGRATION_BUILD_STABILIZATION_COMMITTED_LOCAL_NOT_PUSHED
 ```text
 CML_461_APP_PAIR_DIVERGENCE_AUTHORITY_AUDIT_READY_LOCAL_NOT_PUSHED
 ```
+
+---
+
+## CML-462 — App Pair Root Reconciliation + Arrow Fix
+
+- **Data**: 2026-07-11
+- **Tipo**: runtime integrity microfix / app pair reconciliation + arrow fix
+- **Branch**: `codex/cml-462-app-pair-root-reconciliation`
+- **Base**: `56bb9cd6aeed9170f4bfd4ec20b36fec7526e931`
+- **Stato**: correzione applicata, amendato, pushato, PR #52 aggiornata
+
+### File prodotti
+
+- `docs/03_execution/CML-462.md`
+- `report/CML-462_app_pair_root_reconciliation.md`
+
+### Risultato
+
+Coppia applicativa riconciliata e sincronizzata. Quattro occorrenze letterali `\u2192` sostituite con `→` in entrambe le copie. `allSync: true`. Snapshot modificata. Pages trigger atteso al merge.
+
+### Verdetto
+
+```text
+CML_462_APP_PAIR_RECONCILIATION_ARROW_FIX_PUSHED_PR_UPDATED_READY_FOR_REVIEW
+```
