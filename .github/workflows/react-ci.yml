@@ -41,6 +41,8 @@ jobs:
         working-directory: curman-react
       - run: npm run test:b02
         working-directory: curman-react
+      - run: npm run test:b03
+        working-directory: curman-react
       - name: Build React candidate
         shell: bash
         run: |
