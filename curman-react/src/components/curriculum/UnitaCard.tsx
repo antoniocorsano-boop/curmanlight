@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDown, ChevronRight } from 'lucide-react'
 import type { UnitaApprendimento } from '@/types/curriculum'
 import type { Decisione } from '@/types/gap'
+import { useAppStore } from '@/stores/useAppStore'
 import { GapBadge } from './GapBadge'
 import { DecisioneActions } from './DecisioneActions'
 import { needsDecision } from '@/lib/gap'
@@ -28,6 +29,7 @@ export function UnitaCard({
   readOnly?: boolean
 }) {
   const [expanded, setExpanded] = useState(false)
+  const profilo = useAppStore(s => s.profilo)
   const gap = unita.gap
   const detailId = `unita-detail-${unita.id}`
 
@@ -74,7 +76,7 @@ export function UnitaCard({
 
       {!readOnly && gap && (needsDecision(gap, decisione) || decisione?.decisione) && (
         <div className="mt-4 border-t border-slate-100 pt-3">
-          <DecisioneActions entry={gap} decisione={decisione} />
+          <DecisioneActions unita={unita} entry={gap} decisione={decisione} profilo={profilo} />
         </div>
       )}
     </article>
