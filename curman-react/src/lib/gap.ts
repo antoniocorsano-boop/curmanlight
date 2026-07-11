@@ -1,9 +1,9 @@
 import type { GapEntry, GapLayer, GapStatus, Decisione, DecisioniMap, ProfiloUtente, ProgressStats } from '@/types/gap'
 import type { Ordine, UnitaApprendimento } from '@/types/curriculum'
+import { isDecisionActionableStatus } from '@/lib/decision-policy'
 
 export function needsDecision(gap: GapEntry | undefined, decisione: Decisione | undefined): boolean {
-  if (!gap) return false
-  if (gap.status === 'vigente' || gap.status === 'applicabile' || gap.status === 'archiviato') return false
+  if (!gap || !isDecisionActionableStatus(gap.status)) return false
   return !decisione?.decisione
 }
 
@@ -14,7 +14,7 @@ export function canEditOrder(ordine: Ordine, profilo: ProfiloUtente): boolean {
 }
 
 export function computeProgress(_disciplina: string, decisioni: DecisioniMap, gapLayer: GapLayer): ProgressStats {
-  const entries = gapLayer.entries.filter(e => e.status !== 'vigente' && e.status !== 'archiviato')
+  const entries = gapLayer.entries.filter(entry => isDecisionActionableStatus(entry.status))
   const totale = entries.length
   let approvate = 0, rifiutate = 0
   for (const entry of entries) {
@@ -38,5 +38,5 @@ export function filterByStatus(entries: GapEntry[], status: GapStatus | 'tutti')
 }
 
 export function isActionableStatus(status: GapStatus): boolean {
-  return status === 'proposta' || status === 'non_validato'
+  return isDecisionActionableStatus(status)
 }
