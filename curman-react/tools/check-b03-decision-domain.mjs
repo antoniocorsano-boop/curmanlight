@@ -4,13 +4,14 @@ import { dirname, resolve } from 'node:path'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const read = path => readFile(resolve(root, path), 'utf8')
-const [types, policy, gap, state, store, actions] = await Promise.all([
+const [types, policy, gap, state, store, actions, persistence] = await Promise.all([
   read('src/types/decision.ts'),
   read('src/lib/decision-policy.ts'),
   read('src/lib/gap.ts'),
   read('src/types/state.ts'),
   read('src/stores/useRevisioneStore.ts'),
   read('src/components/curriculum/DecisioneActions.tsx'),
+  read('src/lib/work-decision-persistence.ts'),
 ])
 
 function requireText(source, text, file) {
@@ -43,4 +44,14 @@ for (const token of ['recordWorkDecision({', "outcome: 'accepted_proposal'", "ou
   requireText(actions, token, 'DecisioneActions.tsx')
 }
 
-console.log('B03 decision domain and work decision store bridge contract: PASS')
+for (const token of ['WorkDecisionLocalPayload', 'lastWorkDecisionSaved', 'saveWorkDecisions', 'loadWorkDecisions', 'clearWorkDecisionPersistence']) {
+  requireText(state, token, 'state.ts')
+}
+for (const token of ['WORK_DECISION_STORAGE_KEY', "'cml-work-decisions-v1'", "'cml-local-v3'", 'parseWorkDecisionPayload', 'saveWorkDecisionPayload', 'loadWorkDecisionPayload', 'clearWorkDecisionPayload']) {
+  requireText(persistence, token, 'work-decision-persistence.ts')
+}
+for (const token of ['get().saveWorkDecisions()', 'loadWorkDecisionPayload(storage)', 'clearWorkDecisionPayload(storage)']) {
+  requireText(store, token, 'useRevisioneStore.ts')
+}
+
+console.log('B03 decision domain, store bridge and local persistence contract: PASS')
