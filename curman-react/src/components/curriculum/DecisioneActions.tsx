@@ -20,11 +20,12 @@ const PERMISSION_MESSAGES: Record<DecisionPermissionReason, string> = {
   save_in_progress: 'Salvataggio in corso. Attendi il completamento dell’operazione.',
 }
 
-const OUTCOME_MESSAGES: Record<Exclude<WorkDecision['outcome'], 'reopened'>, string> = {
+const OUTCOME_MESSAGES: Record<WorkDecision['outcome'], string> = {
   accepted_proposal: 'Proposta accolta nel lavoro corrente',
   kept_current: 'Testo vigente mantenuto',
   revision_requested: 'Revisione richiesta prima della scelta finale',
   accepted_custom: 'Testo personalizzato registrato nel lavoro corrente',
+  reopened: 'Scelta riaperta',
 }
 
 function buildDecisionContext(
