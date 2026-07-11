@@ -1,5 +1,7 @@
+import { useEffect } from 'react'
 import { Layout } from '@/components/layout/Layout'
 import { useAppStore } from '@/stores/useAppStore'
+import { useRevisioneStore } from '@/stores/useRevisioneStore'
 import { HomeView } from '@/views/HomeView'
 import { ConsultazioneView } from '@/views/ConsultazioneView'
 import { RevisioneView } from '@/views/RevisioneView'
@@ -23,6 +25,12 @@ function NotAvailableView() {
 
 export default function App() {
   const vistaAttiva = useAppStore(s => s.vistaAttiva)
+  const hydrateWorkDecisions = useRevisioneStore(s => s.hydrateWorkDecisions)
+
+  useEffect(() => {
+    hydrateWorkDecisions()
+  }, [hydrateWorkDecisions])
+
   const views: Record<ViewId, React.ReactNode> = {
     home: <HomeView />,
     consultazione: <ConsultazioneView />,
