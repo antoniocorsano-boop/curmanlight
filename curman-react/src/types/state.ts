@@ -58,8 +58,12 @@ export interface AppState {
 export interface RevisioneState {
   decisioni: DecisioniMap
   workDecisioni: WorkDecisionMap
+  lastWorkDecisionSaved: string | null
   recordWorkDecision: (input: RecordWorkDecisionInput) => WorkDecision
   reopenWorkDecision: (unitaId: string, contesto: DecisionContext) => WorkDecision | null
+  saveWorkDecisions: () => boolean
+  loadWorkDecisions: () => boolean
+  clearWorkDecisionPersistence: () => boolean
   approve: (unitaId: string, testoCustom?: string) => void
   reject: (unitaId: string) => void
   undoDecision: (unitaId: string) => void
@@ -87,4 +91,11 @@ export interface LocalSavePayload {
   profilo: ProfiloUtente
   decisioni: DecisioniMap
   preferenze: { darkMode: boolean; autoSave: boolean; ultimaDisciplina: string | null; ultimaVista: ViewId }
+}
+
+export interface WorkDecisionLocalPayload {
+  version: 'cml-work-decisions-v1'
+  savedAt: string
+  workDecisioni: WorkDecisionMap
+  decisioni: DecisioniMap
 }

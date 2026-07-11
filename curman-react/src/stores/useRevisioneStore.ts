@@ -4,6 +4,12 @@ import type { Decisione, DecisioniMap, GapLayer, ProgressStats } from '@/types/g
 import type { RecordWorkDecisionInput, WorkDecision, WorkDecisionMap } from '@/types/decision'
 import { toLegacyDecision } from '@/types/decision'
 import { computeProgress } from '@/lib/gap'
+import {
+  clearWorkDecisionPayload,
+  getBrowserStorage,
+  loadWorkDecisionPayload,
+  saveWorkDecisionPayload,
+} from '@/lib/work-decision-persistence'
 
 function createWorkDecision(
   input: RecordWorkDecisionInput,
@@ -29,6 +35,7 @@ function createWorkDecision(
 export const useRevisioneStore = create<RevisioneState>((set, get) => ({
   decisioni: {} as DecisioniMap,
   workDecisioni: {} as WorkDecisionMap,
+  lastWorkDecisionSaved: null,
 
   recordWorkDecision: input => {
     const previous = get().workDecisioni[input.contesto.unitaId]
@@ -45,6 +52,7 @@ export const useRevisioneStore = create<RevisioneState>((set, get) => ({
         : state.decisioni,
     }))
 
+    get().saveWorkDecisions()
     return workDecision
   },
 
@@ -76,7 +84,37 @@ export const useRevisioneStore = create<RevisioneState>((set, get) => ({
       }
     })
 
+    get().saveWorkDecisions()
     return reopened
+  },
+
+  saveWorkDecisions: () => {
+    const storage = getBrowserStorage()
+    if (!storage) return false
+    const savedAt = saveWorkDecisionPayload(storage, get().workDecisioni, get().decisioni)
+    if (!savedAt) return false
+    set({ lastWorkDecisionSaved: savedAt })
+    return true
+  },
+
+  loadWorkDecisions: () => {
+    const storage = getBrowserStorage()
+    if (!storage) return false
+    const hydrated = loadWorkDecisionPayload(storage)
+    if (!hydrated) return false
+    set({
+      workDecisioni: hydrated.workDecisioni,
+      decisioni: hydrated.decisioni,
+      lastWorkDecisionSaved: hydrated.savedAt,
+    })
+    return true
+  },
+
+  clearWorkDecisionPersistence: () => {
+    const storage = getBrowserStorage()
+    if (!storage || !clearWorkDecisionPayload(storage)) return false
+    set({ lastWorkDecisionSaved: null })
+    return true
   },
 
   // Compatibilità transitoria per chiamanti non ancora migrati.
@@ -109,7 +147,7 @@ export const useRevisioneStore = create<RevisioneState>((set, get) => ({
     delete nextWork[unitaId]
     return { decisioni: nextLegacy, workDecisioni: nextWork }
   }),
-  resetAll: () => set({ decisioni: {}, workDecisioni: {} }),
+  resetAll: () => set({ decisioni: {}, workDecisioni: {}, lastWorkDecisionSaved: null }),
   resetDisciplina: (_disciplina: string, gapLayer: GapLayer) => set(state => {
     const ids = new Set(gapLayer.entries.map(entry => entry.unitaId))
     const nextLegacy: DecisioniMap = {}
