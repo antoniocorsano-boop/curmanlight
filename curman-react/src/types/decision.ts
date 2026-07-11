@@ -52,7 +52,7 @@ export interface RecordWorkDecisionInput {
 }
 
 export function toLegacyDecision(decision: WorkDecision): Decisione | null {
-  if (decision.outcome === 'reopened') return null
+  if (decision.outcome === 'reopened' || decision.outcome === 'revision_requested') return null
   return {
     unitaId: decision.unitaId,
     decisione: decision.outcome === 'kept_current' ? 'rifiutata' : 'approvata',
