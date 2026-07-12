@@ -38,7 +38,7 @@ requireText(gap, 'filter(entry => isDecisionActionableStatus(entry.status))', 'g
 for (const token of ['GapTargetField', 'targetField: GapTargetField']) {
   requireText(gapTypes, token, 'gap.ts types')
 }
-for (const token of ['composeUnitText', 'getFieldText', 'FIELD_LABELS', "targetField === 'obiettivi'"]) {
+for (const token of ['composeUnitText', 'getUnitFieldText', 'GAP_FIELD_LABELS', 'ARRAY_FIELDS', "field === 'traguardo'"]) {
   requireText(gapFields, token, 'gap-fields.ts')
 }
 
@@ -69,7 +69,7 @@ for (const token of [
 for (const label of ['Chiedi revisione', 'Personalizza il campo', 'Motivo della revisione richiesta', 'Nota facoltativa']) {
   requireText(actions, label, 'DecisioneActions.tsx')
 }
-for (const token of ['getFieldText', 'FIELD_LABELS', 'Il resto dell’unità resta invariato']) {
+for (const token of ['getUnitFieldText', 'GAP_FIELD_LABELS', 'gli altri contenuti dell’unità restano invariati']) {
   requireText(comparison, token, 'GapComparison.tsx')
 }
 
