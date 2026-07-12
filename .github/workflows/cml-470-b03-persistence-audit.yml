@@ -7,14 +7,12 @@ on:
     paths:
       - 'content/gap/**'
       - 'curman-react/**'
-      - 'tools/audit-gap-layer.mjs'
       - '.github/workflows/cml-470-b03-persistence-audit.yml'
   pull_request:
     branches: [main]
     paths:
       - 'content/gap/**'
       - 'curman-react/**'
-      - 'tools/audit-gap-layer.mjs'
       - '.github/workflows/cml-470-b03-persistence-audit.yml'
 
 permissions:
@@ -60,7 +58,7 @@ jobs:
       - name: Run decision persistence audit
         shell: bash
         working-directory: curman-react
-        run: node ../tools/audit-gap-layer.mjs
+        run: node tools/audit-gap-layer.mjs
       - name: Upload audit evidence
         if: always()
         uses: actions/upload-artifact@v4
