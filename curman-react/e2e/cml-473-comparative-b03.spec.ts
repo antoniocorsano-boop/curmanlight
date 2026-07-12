@@ -61,7 +61,7 @@ async function openRevision(page: Page) {
 async function selectPilot(page: Page, pilot: Pilot, state: PilotState = 'actionable') {
   const discipline = page.getByRole('main').getByRole('combobox').first()
   await discipline.selectOption(pilot.slug)
-  await expect(page.getByText(new RegExp(`Campo:\s*${pilot.visibleFieldLabel}`, 'i')).first()).toBeVisible()
+  await expect(page.getByText(new RegExp(String.raw`Campo:\s*${pilot.visibleFieldLabel}`, 'i')).first()).toBeVisible()
   await expect(page.getByText(new RegExp(`${pilot.visibleFieldLabel} vigent`, 'i')).first()).toBeVisible()
 
   if (state === 'restored') {
