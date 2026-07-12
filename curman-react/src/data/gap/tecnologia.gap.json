@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "gap-v1",
+  "disciplina": "Tecnologia",
+  "source": {
+    "title": "CML-472 second verified field-level pilot",
+    "reference": "content/curriculum/tecnologia.normalized.json, D.M. 221/2025, Indicazioni Nazionali 2025",
+    "retrievedAt": "2026-07-12",
+    "notes": "Second field-level pilot. The proposal targets only conoscenze for tec_pri_4_001 and remains subject to mandatory human validation before any institutional use."
+  },
+  "humanValidationRequired": true,
+  "note": "Field-compatible pilot on a discipline and field different from CML-470. The canonical curriculum is not modified.",
+  "entries": [
+    {
+      "unitaId": "tec_pri_4_001",
+      "status": "proposta",
+      "targetField": "conoscenze",
+      "proposto": "Fonti di energia rinnovabili e non rinnovabili; Concetto di consumo energetico e lettura essenziale del kWh; Ciclo di vita di prodotti e materiali, dalla produzione al riuso o riciclo; Relazione tra scelte tecnologiche, uso delle risorse e impatto ambientale",
+      "motivazione": "La proposta rende più esplicito il passaggio dalla sola classificazione delle fonti energetiche alla comprensione del ciclo di vita dei prodotti e dell'impatto delle scelte tecnologiche. Modifica esclusivamente il campo conoscenze e mantiene invariati traguardo, obiettivi, abilità, evidenze e criteri di valutazione.",
+      "note": "Proposta candidata per validazione dipartimentale. Non costituisce aggiornamento automatico del curricolo vigente.",
+      "testoOriginale": "Fonti di energia (sole, vento, acqua, carbone, petrolio); Concetto di kWh; Rifiuti: differenziata, recupero, riciclo",
+      "sourceRefs": [
+        "D.M. 221/2025 — Indicazioni Nazionali 2025: riferimento generale all'aggiornamento del curricolo del primo ciclo",
+        "Tecnologia tec_pri_4_001: ambito Energia, sostenibilità e ambiente",
+        "CML-471: contratto field-level consolidato e fotografia candidata completa",
+        "Validazione umana obbligatoria prima di ogni applicazione istituzionale"
+      ]
+    }
+  ]
+}
