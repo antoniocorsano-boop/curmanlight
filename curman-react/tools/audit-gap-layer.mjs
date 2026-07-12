@@ -1,3 +1,4 @@
+import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
@@ -14,32 +15,28 @@ function assert(condition, message) {
 }
 
 async function configureProfile(page) {
-  console.log('STEP configure profile')
-  const profiloLink = page.getByText('Profilo', { exact: true }).first()
-  assert(await profiloLink.isVisible(), 'Voce Profilo non visibile')
-  await profiloLink.click()
+  console.log('STEP configure context in Impostazioni')
+  const settingsButton = page.getByRole('button', { name: /Apri Impostazioni/i })
+  assert(await settingsButton.isVisible(), 'Pulsante Apri Impostazioni non visibile')
+  await settingsButton.click()
   await page.waitForTimeout(300)
 
   const selects = page.locator('main select')
-  assert(await selects.count() >= 2, 'Selettori Ruolo/Ordine non disponibili nel profilo')
+  assert(await selects.count() >= 3, 'Selettori Ruolo/Ordine/Disciplina non disponibili in Impostazioni')
   await selects.nth(0).selectOption('docente')
   await selects.nth(1).selectOption('Secondaria')
+  await selects.nth(2).selectOption('educazione-fisica')
 
-  const saveProfile = page.getByRole('button', { name: /Salva profilo/i })
-  assert(await saveProfile.isVisible(), 'Pulsante Salva profilo non visibile')
-  await saveProfile.click()
+  const saveContext = page.getByRole('button', { name: /Salva il contesto/i })
+  assert(await saveContext.isVisible(), 'Pulsante Salva il contesto non visibile')
+  await saveContext.click()
   await page.waitForTimeout(300)
+  assert((await page.locator('body').innerText()).includes('Contesto aggiornato'), 'Conferma contesto aggiornato non visibile')
 }
 
 async function openEducazioneFisica(page) {
   console.log('STEP open Educazione Fisica')
-  const homeLink = page.getByText('Home', { exact: true }).first()
-  if (await homeLink.isVisible()) {
-    await homeLink.click()
-    await page.waitForTimeout(300)
-  }
-
-  const proponi = page.getByText('Proponi un aggiornamento').first()
+  const proponi = page.getByText('Proponi un aggiornamento', { exact: true }).first()
   assert(await proponi.isVisible(), 'Accesso a Revisione non visibile')
   await proponi.click()
   await page.waitForTimeout(500)
@@ -53,6 +50,7 @@ async function openEducazioneFisica(page) {
 }
 
 async function audit() {
+  await fs.mkdir(screenshotDir, { recursive: true })
   const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] })
   const context = await browser.newContext({ viewport: { width: 1280, height: 800 } })
   const page = await context.newPage()
@@ -79,7 +77,7 @@ async function audit() {
     const mantieni = page.getByRole('button', { name: /Mantieni vigente/i }).first()
     assert(await accogli.isVisible(), 'Pulsante Accogli proposta non visibile')
     assert(await mantieni.isVisible(), 'Pulsante Mantieni vigente non visibile')
-    assert(await accogli.isEnabled(), 'Pulsante Accogli proposta disabilitato dopo configurazione profilo')
+    assert(await accogli.isEnabled(), 'Pulsante Accogli proposta disabilitato dopo configurazione contesto')
 
     console.log('STEP record accepted proposal')
     await accogli.click()
