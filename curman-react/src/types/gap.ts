@@ -13,14 +13,17 @@ export type GapStatus =
 
 export type Ruolo = 'docente' | 'dipartimento' | 'referente' | 'dirigenza' | 'consultatore'
 export type DecisioneValore = 'approvata' | 'rifiutata' | null
+export type GapTargetField = 'traguardo' | 'obiettivi' | 'conoscenze' | 'abilita' | 'evidenze' | 'criteriValutazione'
 
 export interface GapEntry {
   unitaId: string
   status: GapStatus
+  targetField: GapTargetField
   proposto: string
   motivazione?: string
   note?: string
-  testoOriginale?: string
+  testoOriginale: string
+  sourceRefs?: string[]
 }
 
 export interface GapLayer {
