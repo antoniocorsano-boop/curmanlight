@@ -104,7 +104,12 @@ export function resolveCurriculumApplicability(
 
   const classYear = context.classYear
   const maxClass = context.order === 'Primaria' ? 5 : 3
-  if (!Number.isInteger(classYear) || classYear === null || classYear < 1 || classYear > maxClass) {
+  if (
+    typeof classYear !== 'number' ||
+    !Number.isInteger(classYear) ||
+    classYear < 1 ||
+    classYear > maxClass
+  ) {
     return fallback()
   }
 
