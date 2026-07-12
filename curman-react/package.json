@@ -18,6 +18,7 @@
     "test:cml472": "node tools/check-cml472-second-gap-pilot.mjs",
     "test:cml473": "playwright test --config=playwright.cml473.config.ts",
     "test:cml478": "node tools/check-cml478-temporal-applicability.mjs",
+    "test:cml479": "node tools/check-cml479-home-applicability.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
