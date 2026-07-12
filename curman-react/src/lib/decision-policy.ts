@@ -1,3 +1,5 @@
+import { DISCIPLINE_LABELS } from '@/types/curriculum'
+import type { DisciplinaSlug } from '@/types/curriculum'
 import type { GapEntry, GapStatus, ProfiloUtente, Ruolo } from '@/types/gap'
 import type {
   DecisionAction,
@@ -19,12 +21,18 @@ export function getDecisionScopeForRole(ruolo: Ruolo): DecisionScope | null {
   return null
 }
 
+function normalizeDiscipline(value: string): string {
+  const label = DISCIPLINE_LABELS[value as DisciplinaSlug] ?? value
+  return label.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
+}
+
 function hasRequiredContextData(context: DecisionContext): boolean {
   return [
     context.disciplina,
     context.ordine,
     context.nucleo,
     context.unitaId,
+    context.targetField,
     context.versioneCurricolare,
     context.fonteVigente,
     context.fonteProposta,
@@ -42,7 +50,7 @@ export function canPerformDecisionAction(
   if (!DECISION_ROLES.has(profile.ruolo)) return { allowed: false, reason: 'role_not_allowed' }
   if (profile.ordine === 'Tutti') return { allowed: false, reason: 'missing_order' }
   if (profile.ordine !== context.ordine) return { allowed: false, reason: 'order_mismatch' }
-  if (profile.disciplina.trim().length > 0 && profile.disciplina !== context.disciplina) {
+  if (profile.disciplina.trim().length > 0 && normalizeDiscipline(profile.disciplina) !== normalizeDiscipline(context.disciplina)) {
     return { allowed: false, reason: 'discipline_mismatch' }
   }
 
@@ -50,7 +58,7 @@ export function canPerformDecisionAction(
   if (!expectedScope || context.ambitoDecisione !== expectedScope || context.ruoloDichiarato !== profile.ruolo) {
     return { allowed: false, reason: 'scope_mismatch' }
   }
-  if (entry.unitaId !== context.unitaId || entry.status !== context.statoGap) {
+  if (entry.unitaId !== context.unitaId || entry.status !== context.statoGap || entry.targetField !== context.targetField) {
     return { allowed: false, reason: 'entry_mismatch' }
   }
   if (!isDecisionActionableStatus(entry.status)) {
