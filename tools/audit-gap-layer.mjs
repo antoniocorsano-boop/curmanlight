@@ -1,115 +1,94 @@
 import { chromium } from 'playwright';
 
-const BASE = 'http://localhost:5173/curmanlight/';
+const BASE = 'http://127.0.0.1:5173/curmanlight/';
+const STORAGE_KEY = 'curmanlight:work-decisions:v1';
+const UNIT_ID = 'ef_sec_3_001';
+
+function assert(condition, message) {
+  if (!condition) throw new Error(message);
+}
+
+async function openEducazioneFisica(page) {
+  const proponi = page.getByText('Proponi un aggiornamento').first();
+  if (await proponi.isVisible()) await proponi.click();
+  await page.waitForTimeout(500);
+
+  const select = page.locator('main select').first();
+  const options = await select.locator('option').allTextContents();
+  const label = options.find(option => option.toLowerCase().includes('fisica'));
+  assert(label, 'Disciplina Educazione Fisica non disponibile');
+  await select.selectOption({ label });
+  await page.waitForTimeout(500);
+}
 
 async function audit() {
   const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
   const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
   const page = await context.newPage();
-  const errors = [];
-  page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
+  const consoleErrors = [];
+  page.on('console', message => {
+    if (message.type() === 'error') consoleErrors.push(message.text());
+  });
 
   try {
-    await page.goto(BASE, { waitUntil: 'networkidle', timeout: 15000 });
-    await page.waitForTimeout(2000);
+    await page.goto(BASE, { waitUntil: 'networkidle', timeout: 30000 });
+    await page.evaluate(key => localStorage.removeItem(key), STORAGE_KEY);
+    await openEducazioneFisica(page);
 
-    // Click on "Proponi un aggiornamento" card on home page
-    const proponi = page.locator('text=Proponi un aggiornamento').first();
-    if (await proponi.isVisible()) {
-      await proponi.click();
-      await page.waitForTimeout(2000);
-      console.log('Clicked "Proponi un aggiornamento"');
-    }
+    const body = await page.locator('body').innerText();
+    assert(body.includes('Espressione e inclusione') || body.includes(UNIT_ID), 'Card ef_sec_3_001 non visibile');
+    assert(body.includes('Secondaria classe 1 e 2'), 'Delta Secondaria classe 1 e 2 non visibile');
+    assert(body.includes('corrette abitudini'), 'Delta corrette abitudini non visibile');
 
-    // Check what we have now
-    const bodyText = await page.textContent('body');
-    console.log('URL:', page.url());
-    console.log('Has "Revisione" heading:', bodyText.includes('Revisione'));
+    const accogli = page.getByRole('button', { name: /Accogli/i }).first();
+    const rifiuta = page.getByRole('button', { name: /Rifiuta/i }).first();
+    assert(await accogli.isVisible(), 'Pulsante Accogli non visibile');
+    assert(await rifiuta.isVisible(), 'Pulsante Rifiuta non visibile');
 
-    // Take screenshot of revisione view
-    await page.screenshot({ path: 'report/screenshots/CML-470/revisione-initial.png', fullPage: true });
+    await accogli.click();
+    await page.waitForTimeout(500);
 
-    // Look for discipline selector
-    const selects = await page.locator('select').count();
-    console.log('Select count:', selects);
+    const saved = await page.evaluate(key => localStorage.getItem(key), STORAGE_KEY);
+    assert(saved, 'Payload decisionale non salvato in localStorage');
+    const parsed = JSON.parse(saved);
+    const decision = parsed.workDecisioni?.[UNIT_ID];
+    assert(decision, `Decisione ${UNIT_ID} assente dal payload`);
+    assert(decision.outcome === 'accepted_proposal', `Outcome inatteso: ${decision.outcome}`);
 
-    if (selects > 0) {
-      // Select Educazione Fisica
-      await page.locator('select').first().selectOption({ label: 'Educazione fisica' }).catch(async () => {
-        // Try value-based
-        const options = await page.locator('select option').allTextContents();
-        console.log('Available options:', options);
-        // Try first option that contains "fisica"
-        for (const opt of options) {
-          if (opt.toLowerCase().includes('fisica')) {
-            await page.locator('select').first().selectOption({ label: opt });
-            break;
-          }
-        }
-      });
-      await page.waitForTimeout(2000);
+    await page.reload({ waitUntil: 'networkidle' });
+    await openEducazioneFisica(page);
 
-      const efText = await page.textContent('body');
-      const results = {
-        ef_sec_3_001_visible: efText.includes('ef_sec_3_001') || efText.includes('Espressione e inclusione'),
-        secondaria_1_2_reference: efText.includes('Secondaria classe 1 e 2') || efText.includes('Secondaria 1 e 2'),
-        corrette_abitudini: efText.includes('corrette abitudini'),
-        accogli_present: efText.includes('Accogli') || efText.includes('accogli'),
-        rifiuta_present: efText.includes('Rifiuta') || efText.includes('rifiuta'),
-        console_errors: errors,
-      };
+    const savedAfterReload = await page.evaluate(key => localStorage.getItem(key), STORAGE_KEY);
+    assert(savedAfterReload, 'Payload decisionale perso dopo reload');
+    const parsedAfterReload = JSON.parse(savedAfterReload);
+    assert(parsedAfterReload.workDecisioni?.[UNIT_ID]?.outcome === 'accepted_proposal', 'Decisione non ripristinata dopo reload');
 
-      // Desktop screenshot
-      await page.screenshot({ path: 'report/screenshots/CML-470/revisione-ef-desktop.png', fullPage: true });
+    await page.screenshot({ path: 'report/screenshots/CML-470/revisione-ef-decision-persisted.png', fullPage: true });
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.screenshot({ path: 'report/screenshots/CML-470/revisione-ef-mobile-persisted.png', fullPage: true });
 
-      // Test Accogli click if button exists
-      const accogliBtn = page.locator('button:has-text("Accogli"), button:has-text("accogli")').first();
-      if (await accogliBtn.isVisible()) {
-        console.log('Accogli button found - NOT clicking (audit only)');
-        results.accogli_button_found = true;
-      }
+    assert(consoleErrors.length === 0, `Errori console: ${consoleErrors.join(' | ')}`);
 
-      // Reload to test persistence
-      await page.reload({ waitUntil: 'networkidle' });
-      await page.waitForTimeout(2000);
-      // Navigate back to revisione after reload
-      const proponiAfterReload = page.locator('text=Proponi un aggiornamento').first();
-      if (await proponiAfterReload.isVisible()) {
-        await proponiAfterReload.click();
-        await page.waitForTimeout(2000);
-      }
-      // Re-select EF if needed
-      const selectsAfterReload = await page.locator('select').count();
-      if (selectsAfterReload > 0) {
-        const options = await page.locator('select option').allTextContents();
-        for (const opt of options) {
-          if (opt.toLowerCase().includes('fisica')) {
-            await page.locator('select').first().selectOption({ label: opt });
-            break;
-          }
-        }
-        await page.waitForTimeout(2000);
-      }
-      const afterReloadText = await page.textContent('body');
-      results.persistence_check = afterReloadText.includes('Espressione e inclusione') || afterReloadText.includes('ef_sec_3_001');
+    await page.evaluate(key => localStorage.removeItem(key), STORAGE_KEY);
 
-      // Mobile viewport
-      await page.setViewportSize({ width: 390, height: 844 });
-      await page.waitForTimeout(1000);
-      await page.screenshot({ path: 'report/screenshots/CML-470/revisione-ef-mobile.png', fullPage: true });
-
-      console.log('\n=== AUDIT RESULTS ===');
-      console.log(JSON.stringify(results, null, 2));
-    } else {
-      console.log('No <select> found. Body excerpt:', bodyText.substring(0, 1500));
-      // Maybe need to look for a different selector (could be a custom dropdown)
-      const buttons = await page.locator('button').allTextContents();
-      console.log('Buttons:', buttons.filter(b => b.trim()).map(b => b.trim().substring(0, 60)));
-    }
-
+    console.log(JSON.stringify({
+      unitId: UNIT_ID,
+      cardVisible: true,
+      deltasVisible: true,
+      accogliVisible: true,
+      rifiutaVisible: true,
+      decisionSaved: true,
+      outcome: 'accepted_proposal',
+      decisionRestoredAfterReload: true,
+      consoleErrors: 0,
+      storageCleaned: true,
+    }, null, 2));
   } finally {
     await browser.close();
   }
 }
 
-audit().catch(e => { console.error('FATAL:', e.message); process.exit(1); });
+audit().catch(error => {
+  console.error('CML-470 audit failed:', error);
+  process.exit(1);
+});
