@@ -5,23 +5,24 @@
     "title": "CML-204 detailed gap model + CML-210A post-polish verification",
     "reference": "report/CML-204_educazione_fisica_detailed_gap_model.md, docs/03_execution/CML-210A.md",
     "retrievedAt": "2026-07-11",
-    "notes": "CML-470 corrected pilot. 6 of 7 original entries eliminated: 4 already applied by CML-210A, 2 targeting gap P1-1 (Salute e benessere nucleus) closed by department validation (Option C accepted). Only ef_sec_3_001 retained with 2 genuine deltas vs current normalized JSON."
+    "notes": "CML-470 corrected pilot. One field-level proposal retained for ef_sec_3_001. The proposal updates only obiettivi; B03 preserves every other unit field in the recorded final snapshot."
   },
   "humanValidationRequired": true,
-  "note": "Single entry retained. Proposals target P1-4 (vertical progression, Secondaria 1-2 bridge) and P2-1 (wording specificity for benessere). Both are verifiable differences from the current normalized JSON that CML-210A did not address.",
+  "note": "Field-compatible B03 pilot. The entry targets obiettivi and does not replace the unit traguardo.",
   "entries": [
     {
       "unitaId": "ef_sec_3_001",
       "status": "proposta",
-      "proposto": "Obiettivi: Organizzare in modo autonomo sequenze motorie o attivita semplici rispettando obiettivo, spazio e regole, valorizzando le competenze sviluppate in Secondaria classe 1 e 2; Partecipare a giochi e sport scolastici con fair play e responsabilita; Riconoscere il rapporto tra attivita motoria, benessere personale e vita scolastica, con attenzione a corrette abitudini e pause attive; Usare movimento ed espressione corporea per comunicare, collaborare e includere, valorizzando le esperienze dei cicli precedenti.",
-      "motivazione": "P1-4 (progressione verticale debole): obiettivo 1 non collega le competenze di Secondaria 1 e 2. P2-1 (wording generico): obiettivo 3 menziona 'benessere personale e vita scolastica' senza specificare abitudini e pause attive. Entrambi i gap non sono stati coperti da CML-210A.",
-      "note": "Obiettivo 4 ('valorizzando le esperienze dei cicli precedenti') e gia presente nel JSON corrente. Le due differenze reali sono: (1) aggiunta riferimento Secondaria 1-2 nell'obiettivo 1; (2) aggiunta 'corrette abitudini e pause attive' nell'obiettivo 3.",
-      "testoOriginale": "Obiettivi: Organizzare in modo autonomo sequenze motorie o attivita semplici rispettando obiettivo, spazio e regole; Partecipare a giochi e sport scolastici con fair play e responsabilita; Riconoscere il rapporto tra attivita motoria, benessere personale e vita scolastica; Usare movimento ed espressione corporea per comunicare, collaborare e includere, valorizzando le esperienze dei cicli precedenti.",
+      "targetField": "obiettivi",
+      "proposto": "Organizzare in modo autonomo sequenze motorie o attività semplici rispettando obiettivo, spazio e regole, valorizzando le competenze sviluppate in Secondaria classe 1 e 2; Partecipare a giochi e sport scolastici con fair play e responsabilità; Riconoscere il rapporto tra attività motoria, benessere personale e vita scolastica, con attenzione a corrette abitudini e pause attive; Usare movimento ed espressione corporea per comunicare, collaborare e includere, valorizzando le esperienze dei cicli precedenti",
+      "motivazione": "P1-4: il primo obiettivo esplicita la continuità con Secondaria classe 1 e 2. P2-1: il terzo obiettivo specifica corrette abitudini e pause attive. La proposta modifica esclusivamente il campo obiettivi.",
+      "note": "Il traguardo e gli altri campi dell'unità restano invariati. B03 compone una fotografia finale completa dell'unità quando la proposta viene accolta.",
+      "testoOriginale": "Organizzare in modo autonomo sequenze motorie o attività semplici rispettando obiettivo, spazio e regole; Partecipare a giochi e sport scolastici con fair play e responsabilità; Riconoscere il rapporto tra attività motoria, benessere personale e vita scolastica; Usare movimento ed espressione corporea per comunicare, collaborare e includere, valorizzando le esperienze dei cicli precedenti",
       "sourceRefs": [
         "CML-179: nucleo Espressione e inclusione, progressione III",
         "CML-204: P1-4 progressione verticale debole",
         "CML-204: P2-1 wording generico",
-        "CML-210A: polish provvisorio Secondaria classe 3 (ponte aggiunto a obiettivo 4, non a 1 e 3)"
+        "CML-210A: ponte già presente nel traguardo e nell'obiettivo 4; delta residui negli obiettivi 1 e 3"
       ]
     }
   ]
