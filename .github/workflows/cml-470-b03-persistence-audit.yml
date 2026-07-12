@@ -59,9 +59,8 @@ jobs:
           exit 1
       - name: Run decision persistence audit
         shell: bash
-        env:
-          NODE_PATH: ${{ github.workspace }}/curman-react/node_modules
-        run: node tools/audit-gap-layer.mjs
+        working-directory: curman-react
+        run: node ../tools/audit-gap-layer.mjs
       - name: Upload audit evidence
         if: always()
         uses: actions/upload-artifact@v4
