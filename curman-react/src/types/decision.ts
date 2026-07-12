@@ -1,5 +1,6 @@
-import type { Ordine } from './curriculum'
+import type { Ordine, UnitaApprendimento } from './curriculum'
 import type { Decisione, GapStatus, GapTargetField, Ruolo } from './gap'
+import type { CurriculumFieldValue } from '@/lib/field-decision'
 
 export type DecisionScope = 'lavoro_personale' | 'lavoro_dipartimentale'
 
@@ -26,11 +27,20 @@ export interface DecisionContext {
   fonteProposta: string
 }
 
+export interface FieldDecisionSnapshot {
+  targetField: GapTargetField
+  valoreVigente: CurriculumFieldValue
+  valoreProposto: CurriculumFieldValue
+  valoreDeciso: CurriculumFieldValue | null
+  fotografiaUnita: UnitaApprendimento | null
+}
+
 export interface WorkDecision {
   id: string
   unitaId: string
   outcome: DecisionOutcome
   testoFinale: string | null
+  fieldDecision: FieldDecisionSnapshot
   motivazione: string | null
   note: string | null
   timestamp: string
@@ -47,6 +57,7 @@ export interface RecordWorkDecisionInput {
   outcome: Exclude<DecisionOutcome, 'reopened'>
   contesto: DecisionContext
   testoFinale?: string | null
+  fieldDecision: FieldDecisionSnapshot
   motivazione?: string | null
   note?: string | null
   autore?: string | null
