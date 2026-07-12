@@ -36,17 +36,29 @@
         "required": [
           "unitaId",
           "status",
+          "targetField",
           "proposto",
+          "testoOriginale",
           "motivazione",
           "sourceRefs"
         ],
         "properties": {
           "unitaId": { "type": "string", "minLength": 1 },
           "status": { "enum": ["proposta", "non_validato"] },
+          "targetField": {
+            "enum": [
+              "traguardo",
+              "obiettivi",
+              "conoscenze",
+              "abilita",
+              "evidenze",
+              "criteriValutazione"
+            ]
+          },
           "proposto": { "type": "string", "minLength": 1 },
           "motivazione": { "type": "string", "minLength": 1 },
           "note": { "type": "string" },
-          "testoOriginale": { "type": "string" },
+          "testoOriginale": { "type": "string", "minLength": 1 },
           "sourceRefs": {
             "type": "array",
             "minItems": 1,
