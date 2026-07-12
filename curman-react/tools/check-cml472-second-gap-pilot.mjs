@@ -5,11 +5,12 @@ import { fileURLToPath } from 'node:url'
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const readJson = async path => JSON.parse(await readFile(resolve(root, path), 'utf8'))
 
-const [gap, mirroredGap, curriculum, sourceProposal] = await Promise.all([
+const [gap, mirroredGap, curriculum, sourceProposal, gapSchema] = await Promise.all([
   readJson('content/gap/tecnologia.gap.json'),
   readJson('curman-react/src/data/gap/tecnologia.gap.json'),
   readJson('content/curriculum/tecnologia.normalized.json'),
   readJson('docs/04_user/esempi_cml/esempio_proposta_docente_tecnologia.cml'),
+  readJson('schemas/gap-layer-v1.schema.json'),
 ])
 
 function assert(condition, message) {
@@ -22,9 +23,18 @@ assert(gap.disciplina === 'Tecnologia', 'disciplina non valida')
 assert(gap.humanValidationRequired === true, 'validazione umana non obbligatoria')
 assert(gap.entries.length === 1, 'Il pilot deve contenere una sola proposta')
 
+const entrySchema = gapSchema.properties?.entries?.items
+const targetFieldSchema = entrySchema?.properties?.targetField
+const allowedTargetFields = ['traguardo', 'obiettivi', 'conoscenze', 'abilita', 'evidenze', 'criteriValutazione']
+assert(entrySchema?.additionalProperties === false, 'Lo schema entry deve restare chiuso')
+assert(entrySchema?.required?.includes('targetField'), 'Lo schema deve richiedere targetField')
+assert(entrySchema?.required?.includes('testoOriginale'), 'Lo schema deve richiedere testoOriginale')
+assert(JSON.stringify(targetFieldSchema?.enum) === JSON.stringify(allowedTargetFields), 'Enum targetField non allineato al dominio B03')
+
 const entry = gap.entries[0]
 assert(entry.unitaId === 'tec_pri_1_001', 'Unità pilot inattesa')
 assert(entry.targetField === 'traguardo', 'Il secondo pilot deve verificare il campo traguardo')
+assert(targetFieldSchema.enum.includes(entry.targetField), 'Il targetField del pilot non è ammesso dallo schema')
 assert(entry.status === 'proposta', 'La proposta deve essere azionabile in B03')
 
 const unit = curriculum.unitaApprendimento.find(item => item.id === entry.unitaId)
@@ -37,4 +47,4 @@ assert(sourceIds.has('te_pri1') && sourceIds.has('te_pri2'), 'Le proposte sorgen
 assert(entry.sourceRefs.some(ref => ref.includes('te_pri1') && ref.includes('te_pri2')), 'Riferimento alle proposte sorgente mancante')
 assert(entry.note.includes('Obiettivi, conoscenze, abilità, evidenze e criteri di valutazione restano invariati'), 'Garanzia field-level incompleta')
 
-console.log('CML-472 second verified Tecnologia traguardo pilot: PASS')
+console.log('CML-472 second verified Tecnologia traguardo pilot and Gap schema contract: PASS')
