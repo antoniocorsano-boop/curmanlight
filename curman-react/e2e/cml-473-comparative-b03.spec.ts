@@ -44,8 +44,8 @@ async function configureProfile(page: Page, pilot: Pilot) {
   await page.getByLabel('Ordine di scuola').selectOption(pilot.order)
   await page.getByLabel('Classe o sezione').selectOption(pilot.classYear)
   await page.getByLabel('Disciplina').selectOption(pilot.slug)
-  await page.getByLabel('Nome').fill('Audit')
-  await page.getByLabel('Cognome').fill('CML-473')
+  await page.getByLabel('Nome', { exact: true }).fill('Audit')
+  await page.getByLabel('Cognome', { exact: true }).fill('CML-473')
   await page.getByRole('button', { name: 'Salva il contesto' }).click()
   await expect(page.getByText('Contesto aggiornato.')).toBeVisible()
 }
