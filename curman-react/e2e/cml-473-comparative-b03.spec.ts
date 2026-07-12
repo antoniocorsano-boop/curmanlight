@@ -7,11 +7,24 @@ type Pilot = {
   order: 'Secondaria' | 'Primaria'
   unitId: 'ef_sec_3_001' | 'tec_pri_1_001'
   targetField: 'obiettivi' | 'traguardo'
+  visibleFieldLabel: 'Obiettivi' | 'Traguardo'
 }
 
 const PILOTS: Pilot[] = [
-  { slug: 'educazione-fisica', order: 'Secondaria', unitId: 'ef_sec_3_001', targetField: 'obiettivi' },
-  { slug: 'tecnologia', order: 'Primaria', unitId: 'tec_pri_1_001', targetField: 'traguardo' },
+  {
+    slug: 'educazione-fisica',
+    order: 'Secondaria',
+    unitId: 'ef_sec_3_001',
+    targetField: 'obiettivi',
+    visibleFieldLabel: 'Obiettivi',
+  },
+  {
+    slug: 'tecnologia',
+    order: 'Primaria',
+    unitId: 'tec_pri_1_001',
+    targetField: 'traguardo',
+    visibleFieldLabel: 'Traguardo',
+  },
 ]
 
 async function cleanStorage(page: Page) {
@@ -46,8 +59,8 @@ async function openRevision(page: Page) {
 async function selectPilot(page: Page, pilot: Pilot) {
   const discipline = page.getByRole('main').getByRole('combobox').first()
   await discipline.selectOption(pilot.slug)
-  await expect(page.getByText(pilot.unitId)).toBeVisible()
-  await expect(page.getByText(new RegExp(pilot.targetField, 'i')).first()).toBeVisible()
+  await expect(page.getByText(new RegExp(`Campo:\\s*${pilot.visibleFieldLabel}`, 'i')).first()).toBeVisible()
+  await expect(page.getByText(new RegExp(`${pilot.visibleFieldLabel} vigent`, 'i')).first()).toBeVisible()
   await expect(page.getByRole('button', { name: 'Accogli proposta' }).first()).toBeVisible()
 }
 
