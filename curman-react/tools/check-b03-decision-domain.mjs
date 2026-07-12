@@ -4,11 +4,12 @@ import { dirname, resolve } from 'node:path'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const read = path => readFile(resolve(root, path), 'utf8')
-const [types, policy, gap, gapFields, gapTypes, state, store, actions, persistence, app, revisionView, comparison] = await Promise.all([
+const [types, policy, gap, gapFields, fieldDecision, gapTypes, state, store, actions, persistence, app, revisionView, comparison] = await Promise.all([
   read('src/types/decision.ts'),
   read('src/lib/decision-policy.ts'),
   read('src/lib/gap.ts'),
   read('src/lib/gap-fields.ts'),
+  read('src/lib/field-decision.ts'),
   read('src/types/gap.ts'),
   read('src/types/state.ts'),
   read('src/stores/useRevisioneStore.ts'),
@@ -41,8 +42,18 @@ for (const token of ['GapTargetField', 'targetField: GapTargetField']) {
 for (const token of ['composeUnitText', 'getUnitFieldText', 'GAP_FIELD_LABELS', 'ARRAY_FIELDS', "field === 'traguardo'"]) {
   requireText(gapFields, token, 'gap-fields.ts')
 }
+for (const token of [
+  'CurriculumFieldValue',
+  'getCurrentFieldValue',
+  'normalizeProposedFieldValue',
+  'applyFieldDecisionToUnit',
+  'composeCandidateUnitSnapshot',
+  'serializeFieldValue',
+]) {
+  requireText(fieldDecision, token, 'field-decision.ts')
+}
 
-for (const token of ['WorkDecisionMap', 'RecordWorkDecisionInput', 'toLegacyDecision']) {
+for (const token of ['WorkDecisionMap', 'RecordWorkDecisionInput', 'FieldDecisionSnapshot', 'fieldDecision', 'valoreVigente', 'valoreProposto', 'valoreDeciso', 'fotografiaUnita', 'toLegacyDecision']) {
   requireText(types, token, 'decision.ts')
 }
 requireText(types, "decision.outcome === 'reopened' || decision.outcome === 'revision_requested'", 'decision.ts')
@@ -50,18 +61,21 @@ for (const token of ['workDecisioni', 'recordWorkDecision', 'reopenWorkDecision'
   requireText(state, token, 'state.ts')
   requireText(store, token, 'useRevisioneStore.ts')
 }
-for (const token of ['decisionePrecedenteId', 'toLegacyDecision(workDecision)', "outcome: 'reopened'"]) {
+for (const token of ['decisionePrecedenteId', 'toLegacyDecision(workDecision)', "outcome: 'reopened'", 'previous.fieldDecision']) {
   requireText(store, token, 'useRevisioneStore.ts')
 }
 
 for (const token of [
   'recordWorkDecision({',
-  "record('accepted_proposal', entry.proposto)",
-  "record('kept_current', entry.testoOriginale)",
+  "record('accepted_proposal', valoreProposto)",
+  "record('kept_current', valoreVigente)",
   "runAllowed('revision_requested'",
   "record('accepted_custom', value",
   'reopenWorkDecision(entry.unitaId, context)',
-  'composeUnitText(unita, entry.targetField, replacement)',
+  'composeCandidateUnitSnapshot',
+  'getCurrentFieldValue',
+  'normalizeProposedFieldValue',
+  'fieldDecision:',
   'targetField: entry.targetField',
 ]) {
   requireText(actions, token, 'DecisioneActions.tsx')
@@ -76,7 +90,7 @@ for (const token of ['getUnitFieldText', 'GAP_FIELD_LABELS', 'gli altri contenut
 for (const token of ['WorkDecisionLocalPayload', 'lastWorkDecisionSaved', 'workDecisionHydrated', 'WorkDecisionPersistenceStatus', 'hydrateWorkDecisions', 'saveWorkDecisions', 'loadWorkDecisions', 'clearWorkDecisionPersistence']) {
   requireText(state, token, 'state.ts')
 }
-for (const token of ['WORK_DECISION_STORAGE_KEY', "'cml-work-decisions-v1'", "'cml-local-v3'", 'parseWorkDecisionPayload', 'saveWorkDecisionPayload', 'loadWorkDecisionPayload', 'clearWorkDecisionPayload']) {
+for (const token of ['WORK_DECISION_STORAGE_KEY', "'cml-work-decisions-v2'", "'cml-work-decisions-v1'", "'cml-local-v3'", 'withLegacyFieldFallback', 'parseWorkDecisionPayload', 'saveWorkDecisionPayload', 'loadWorkDecisionPayload', 'clearWorkDecisionPayload']) {
   requireText(persistence, token, 'work-decision-persistence.ts')
 }
 for (const token of ['get().saveWorkDecisions()', 'loadWorkDecisionPayload(storage)', 'clearWorkDecisionPayload(storage)', "workDecisionPersistenceStatus: 'restored'", "workDecisionPersistenceStatus: 'saved'"]) {
@@ -87,4 +101,4 @@ for (const token of ['workDecisionPersistenceStatus', 'workDecisionPersistenceMe
   requireText(revisionView, token, 'RevisioneView.tsx')
 }
 
-console.log('B03 field-level decision workflow completion contract: PASS')
+console.log('B03 consolidated field-level decision contract: PASS')
