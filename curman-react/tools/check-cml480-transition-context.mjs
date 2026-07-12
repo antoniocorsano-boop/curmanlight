@@ -19,8 +19,8 @@ const checks = [
   ['consultation names shown curriculum', consultation.includes('Curricolo mostrato')],
   ['consultation blocks automatic switch claim', consultation.includes('non cambia automaticamente')],
   ['revision mounts banner', revision.includes('mode="revisione"')],
-  ['revision keeps comparison separate', revision.includes('Testo vigente, proposta e decisione restano separati')],
-  ['revision blocks automatic application', revision.includes('nessuna proposta viene applicata automaticamente')],
+  ['revision keeps comparison separate', banner.includes('Testo vigente, proposta e decisione restano separati')],
+  ['revision blocks automatic application', banner.includes('nessuna proposta viene applicata automaticamente')],
 ]
 
 for (const [label, passed] of checks) {
