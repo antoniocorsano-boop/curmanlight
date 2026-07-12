@@ -22,11 +22,10 @@ async function configureProfile(page) {
   await settingsButton.click()
   await page.waitForTimeout(300)
 
-  const selects = page.locator('main select')
-  assert(await selects.count() >= 3, 'Selettori Ruolo/Ordine/Disciplina non disponibili in Impostazioni')
-  await selects.nth(0).selectOption('docente')
-  await selects.nth(1).selectOption('Secondaria')
-  await selects.nth(2).selectOption('educazione-fisica')
+  await page.getByLabel('Ruolo').selectOption('docente')
+  await page.getByLabel('Ordine di scuola').selectOption('Secondaria')
+  await page.getByLabel('Classe o sezione').selectOption('3')
+  await page.getByLabel('Disciplina').selectOption('educazione-fisica')
 
   const saveContext = page.getByRole('button', { name: /Salva il contesto/i })
   assert(await saveContext.isVisible(), 'Pulsante Salva il contesto non visibile')
