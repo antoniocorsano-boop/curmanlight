@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "cml-temporal-applicability-v1",
+  "normativeFrameworks": {
+    "IN_2012": {
+      "label": "Indicazioni nazionali 2012",
+      "sourceRefs": ["D.M. 254/2012"]
+    },
+    "IN_2025": {
+      "label": "Indicazioni nazionali 2025",
+      "sourceRefs": ["D.M. 221/2025", "G.U. Serie Generale n. 21 del 27-01-2026"]
+    }
+  },
+  "transition": {
+    "firstAcademicYear": "2026/2027",
+    "primaryFullAcademicYear": "2030/2031",
+    "lowerSecondaryFullAcademicYear": "2028/2029",
+    "infancy": {
+      "framework": "IN_2025",
+      "fromAcademicYear": "2026/2027"
+    },
+    "primary": {
+      "entryClass": 1,
+      "maxClass": 5,
+      "firstAcademicYear": "2026/2027"
+    },
+    "lowerSecondary": {
+      "entryClass": 1,
+      "maxClass": 3,
+      "firstAcademicYear": "2026/2027"
+    }
+  },
+  "exceptions": [
+    {
+      "id": "history-primary-class-3-2027",
+      "academicYear": "2027/2028",
+      "order": "Primaria",
+      "classYear": 3,
+      "discipline": "Storia",
+      "framework": "IN_2025",
+      "ruleType": "anticipazione_transitoria",
+      "sourceRefs": ["D.M. 221/2025, art. 5"]
+    }
+  ],
+  "fallback": {
+    "status": "da_verificare",
+    "message": "Applicabilità non determinabile con i dati disponibili. Verificare anno scolastico, ordine, classe e disciplina."
+  }
+}
