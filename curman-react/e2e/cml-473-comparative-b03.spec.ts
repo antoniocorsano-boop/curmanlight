@@ -10,6 +10,8 @@ type Pilot = {
   visibleFieldLabel: 'Obiettivi' | 'Traguardo'
 }
 
+type PilotState = 'actionable' | 'restored'
+
 const PILOTS: Pilot[] = [
   {
     slug: 'educazione-fisica',
@@ -56,11 +58,18 @@ async function openRevision(page: Page) {
   await expect(page.getByRole('heading', { name: 'Revisione' })).toBeVisible()
 }
 
-async function selectPilot(page: Page, pilot: Pilot) {
+async function selectPilot(page: Page, pilot: Pilot, state: PilotState = 'actionable') {
   const discipline = page.getByRole('main').getByRole('combobox').first()
   await discipline.selectOption(pilot.slug)
   await expect(page.getByText(new RegExp(`Campo:\\s*${pilot.visibleFieldLabel}`, 'i')).first()).toBeVisible()
   await expect(page.getByText(new RegExp(`${pilot.visibleFieldLabel} vigent`, 'i')).first()).toBeVisible()
+
+  if (state === 'restored') {
+    await expect(page.getByText('Proposta accolta nel lavoro corrente').first()).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Riapri' }).first()).toBeVisible()
+    return
+  }
+
   await expect(page.getByRole('button', { name: 'Accogli proposta' }).first()).toBeVisible()
 }
 
@@ -68,7 +77,7 @@ async function reopenAfterReload(page: Page, pilot: Pilot) {
   await page.reload()
   await configureProfile(page, pilot)
   await openRevision(page)
-  await selectPilot(page, pilot)
+  await selectPilot(page, pilot, 'restored')
 }
 
 async function readPayload(page: Page) {
@@ -103,7 +112,6 @@ async function auditPilot(page: Page, pilot: Pilot) {
   expect(accepted.workDecisioni?.[pilot.unitId]?.fieldDecision?.fotografiaUnita).toBeTruthy()
 
   await reopenAfterReload(page, pilot)
-  await expect(page.getByText('Proposta accolta nel lavoro corrente').first()).toBeVisible()
   await page.getByRole('button', { name: 'Riapri' }).first().click()
   await expect(page.getByRole('button', { name: 'Accogli proposta' }).first()).toBeVisible()
 
@@ -155,7 +163,6 @@ test.describe('CML-473 cold mobile audit', () => {
       await configureProfile(page, pilot)
       await openRevision(page)
       await selectPilot(page, pilot)
-      await expect(page.getByRole('button', { name: 'Accogli proposta' }).first()).toBeVisible()
       await expect(page.getByRole('button', { name: 'Chiedi revisione' }).first()).toBeVisible()
       await expect(page.getByRole('button', { name: 'Personalizza il campo' }).first()).toBeVisible()
       await page.screenshot({ path: `test-results/cml-473-${pilot.slug}-mobile.png`, fullPage: true })
