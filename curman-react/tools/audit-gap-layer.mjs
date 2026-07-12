@@ -25,7 +25,7 @@ async function configureProfile(page) {
   assert(await selects.count() >= 3, 'Selettori Ruolo/Ordine/Disciplina non disponibili in Impostazioni')
   await selects.nth(0).selectOption('docente')
   await selects.nth(1).selectOption('Secondaria')
-  await selects.nth(2).selectOption('educazione-fisica')
+  await selects.nth(2).selectOption('')
 
   const saveContext = page.getByRole('button', { name: /Salva il contesto/i })
   assert(await saveContext.isVisible(), 'Pulsante Salva il contesto non visibile')
