@@ -99,7 +99,7 @@ export interface LocalSavePayload {
 }
 
 export interface WorkDecisionLocalPayload {
-  version: 'cml-work-decisions-v1'
+  version: 'cml-work-decisions-v2'
   savedAt: string
   workDecisioni: WorkDecisionMap
   decisioni: DecisioniMap

@@ -17,7 +17,7 @@ export function createWorkDecisionPayload(
   savedAt = new Date().toISOString(),
 ): WorkDecisionLocalPayload {
   return {
-    version: 'cml-work-decisions-v1',
+    version: 'cml-work-decisions-v2',
     savedAt,
     workDecisioni,
     decisioni,
@@ -26,6 +26,20 @@ export function createWorkDecisionPayload(
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
+}
+
+function withLegacyFieldFallback(workDecisioni: Record<string, unknown>): WorkDecisionMap {
+  const migrated: WorkDecisionMap = {}
+  for (const [id, rawDecision] of Object.entries(workDecisioni)) {
+    if (!isRecord(rawDecision)) continue
+    migrated[id] = {
+      ...(rawDecision as unknown as WorkDecisionMap[string]),
+      fieldDecision: isRecord(rawDecision.fieldDecision)
+        ? rawDecision.fieldDecision as unknown as WorkDecisionMap[string]['fieldDecision']
+        : null,
+    }
+  }
+  return migrated
 }
 
 export function parseWorkDecisionPayload(raw: string): HydratedWorkDecisionState | null {
@@ -38,13 +52,23 @@ export function parseWorkDecisionPayload(raw: string): HydratedWorkDecisionState
 
   if (!isRecord(parsed)) return null
 
+  if (parsed.version === 'cml-work-decisions-v2') {
+    if (!isRecord(parsed.workDecisioni) || !isRecord(parsed.decisioni)) return null
+    return {
+      savedAt: typeof parsed.savedAt === 'string' ? parsed.savedAt : null,
+      workDecisioni: withLegacyFieldFallback(parsed.workDecisioni),
+      decisioni: parsed.decisioni as DecisioniMap,
+      migratedFromLegacy: false,
+    }
+  }
+
   if (parsed.version === 'cml-work-decisions-v1') {
     if (!isRecord(parsed.workDecisioni) || !isRecord(parsed.decisioni)) return null
     return {
       savedAt: typeof parsed.savedAt === 'string' ? parsed.savedAt : null,
-      workDecisioni: parsed.workDecisioni as WorkDecisionMap,
+      workDecisioni: withLegacyFieldFallback(parsed.workDecisioni),
       decisioni: parsed.decisioni as DecisioniMap,
-      migratedFromLegacy: false,
+      migratedFromLegacy: true,
     }
   }
 

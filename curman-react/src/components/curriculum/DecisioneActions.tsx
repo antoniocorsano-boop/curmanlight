@@ -3,6 +3,14 @@ import { Check, MessageSquareText, PencilLine, RotateCcw, X } from 'lucide-react
 import { useRevisioneStore } from '@/stores/useRevisioneStore'
 import { canPerformDecisionAction, getDecisionScopeForRole } from '@/lib/decision-policy'
 import { composeUnitText } from '@/lib/gap-fields'
+import {
+  composeCandidateUnitSnapshot,
+  getCurrentFieldValue,
+  normalizeFieldValue,
+  normalizeProposedFieldValue,
+  serializeFieldValue,
+  type CurriculumFieldValue,
+} from '@/lib/field-decision'
 import type { DecisionAction, DecisionContext, DecisionPermissionReason, WorkDecision } from '@/types/decision'
 import type { UnitaApprendimento } from '@/types/curriculum'
 import type { Decisione, GapEntry, ProfiloUtente } from '@/types/gap'
@@ -60,6 +68,8 @@ export function DecisioneActions({ unita, entry, decisione, profilo }: {
   const [customText, setCustomText] = useState(entry.proposto)
   const [customNote, setCustomNote] = useState('')
   const context = buildDecisionContext(unita, entry, profilo)
+  const valoreVigente = getCurrentFieldValue(unita, entry.targetField)
+  const valoreProposto = normalizeProposedFieldValue(entry)
 
   const permissionFor = (action: DecisionAction) => canPerformDecisionAction(profilo, context, entry, action)
   const runAllowed = (action: DecisionAction, operation: () => void) => {
@@ -99,11 +109,20 @@ export function DecisioneActions({ unita, entry, decisione, profilo }: {
   const firstDenied = [acceptPermission, keepPermission, revisionPermission, customPermission].find(permission => !permission.allowed)
   const sharedReason = firstDenied ? PERMISSION_MESSAGES[firstDenied.reason] : ''
 
-  const record = (outcome: 'accepted_proposal' | 'kept_current' | 'accepted_custom', replacement: string, note?: string | null) => {
+  const record = (outcome: 'accepted_proposal' | 'kept_current' | 'accepted_custom', decidedValue: CurriculumFieldValue, note?: string | null) => {
+    const valoreDeciso = normalizeFieldValue(entry.targetField, decidedValue)
+    const fotografiaUnita = composeCandidateUnitSnapshot(unita, entry.targetField, valoreDeciso)
     runAllowed(outcome, () => recordWorkDecision({
       outcome,
       contesto: context,
-      testoFinale: composeUnitText(unita, entry.targetField, replacement),
+      testoFinale: composeUnitText(unita, entry.targetField, serializeFieldValue(valoreDeciso)),
+      fieldDecision: {
+        targetField: entry.targetField,
+        valoreVigente,
+        valoreProposto,
+        valoreDeciso,
+        fotografiaUnita,
+      },
       motivazione: entry.motivazione ?? null,
       note: note ?? entry.note ?? null,
       autore: profilo?.nome ?? null,
@@ -114,8 +133,19 @@ export function DecisioneActions({ unita, entry, decisione, profilo }: {
     const motivazione = revisionReason.trim()
     if (!motivazione) return
     runAllowed('revision_requested', () => recordWorkDecision({
-      outcome: 'revision_requested', contesto: context, testoFinale: null, motivazione,
-      note: entry.note ?? null, autore: profilo?.nome ?? null,
+      outcome: 'revision_requested',
+      contesto: context,
+      testoFinale: null,
+      fieldDecision: {
+        targetField: entry.targetField,
+        valoreVigente,
+        valoreProposto,
+        valoreDeciso: null,
+        fotografiaUnita: null,
+      },
+      motivazione,
+      note: entry.note ?? null,
+      autore: profilo?.nome ?? null,
     }))
     setEditorMode(null)
     setRevisionReason('')
@@ -133,12 +163,12 @@ export function DecisioneActions({ unita, entry, decisione, profilo }: {
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center gap-2">
         <button type="button" disabled={!acceptPermission.allowed} title={PERMISSION_MESSAGES[acceptPermission.reason]}
-          onClick={() => record('accepted_proposal', entry.proposto)}
+          onClick={() => record('accepted_proposal', valoreProposto)}
           className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-[500] rounded-md bg-emerald-50 text-emerald-700 hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-50">
           <Check size={13} /> Accogli proposta
         </button>
         <button type="button" disabled={!keepPermission.allowed} title={PERMISSION_MESSAGES[keepPermission.reason]}
-          onClick={() => record('kept_current', entry.testoOriginale)}
+          onClick={() => record('kept_current', valoreVigente)}
           className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-[500] rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-50">
           <X size={13} /> Mantieni vigente
         </button>

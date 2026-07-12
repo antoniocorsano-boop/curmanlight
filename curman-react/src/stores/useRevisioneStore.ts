@@ -21,6 +21,7 @@ function createWorkDecision(
     unitaId: input.contesto.unitaId,
     outcome: input.outcome,
     testoFinale: input.testoFinale ?? null,
+    fieldDecision: input.fieldDecision,
     motivazione: input.motivazione ?? null,
     note: input.note ?? null,
     timestamp,
@@ -72,6 +73,13 @@ export const useRevisioneStore = create<RevisioneState>((set, get) => ({
       id: `${unitaId}:${timestamp}`,
       outcome: 'reopened',
       testoFinale: null,
+      fieldDecision: previous.fieldDecision
+        ? {
+            ...previous.fieldDecision,
+            valoreDeciso: null,
+            fotografiaUnita: null,
+          }
+        : null,
       motivazione: null,
       note: null,
       timestamp,
