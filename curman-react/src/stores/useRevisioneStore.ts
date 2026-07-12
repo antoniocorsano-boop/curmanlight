@@ -73,11 +73,13 @@ export const useRevisioneStore = create<RevisioneState>((set, get) => ({
       id: `${unitaId}:${timestamp}`,
       outcome: 'reopened',
       testoFinale: null,
-      fieldDecision: {
-        ...previous.fieldDecision,
-        valoreDeciso: null,
-        fotografiaUnita: null,
-      },
+      fieldDecision: previous.fieldDecision
+        ? {
+            ...previous.fieldDecision,
+            valoreDeciso: null,
+            fotografiaUnita: null,
+          }
+        : null,
       motivazione: null,
       note: null,
       timestamp,
