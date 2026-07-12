@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "gap-v1",
+  "disciplina": "Tecnologia",
+  "source": {
+    "title": "CML-472 second verified field-level pilot",
+    "reference": "docs/04_user/esempi_cml/esempio_proposta_docente_tecnologia.cml, content/curriculum/tecnologia.normalized.json, D.M. 221/2025",
+    "retrievedAt": "2026-07-12",
+    "notes": "Second field-level pilot based on an existing documented teacher proposal. The entry targets only traguardo for tec_pri_1_001 and remains subject to mandatory human validation."
+  },
+  "humanValidationRequired": true,
+  "note": "Field-compatible pilot on a discipline and field different from CML-470. The canonical curriculum is not modified.",
+  "entries": [
+    {
+      "unitaId": "tec_pri_1_001",
+      "status": "proposta",
+      "targetField": "traguardo",
+      "proposto": "L'alunno si orienta tra i mezzi di comunicazione e usa gli strumenti digitali con consapevolezza, sviluppando competenze di base su hardware, software e reti; riconosce criticamente caratteristiche, funzioni e limiti delle tecnologie, incluse le applicazioni dell'intelligenza artificiale, valutandone gli impatti ambientali e sociali",
+      "motivazione": "La proposta integra nel traguardo già vigente l'alfabetizzazione informatica di base e un riferimento esplicito alla valutazione critica delle applicazioni dell'intelligenza artificiale e dei loro impatti. Il testo deriva dalle proposte te_pri1 e te_pri2 già documentate nel file di esempio docente. Modifica esclusivamente il campo traguardo.",
+      "note": "Obiettivi, conoscenze, abilità, evidenze e criteri di valutazione restano invariati. La proposta richiede validazione dipartimentale e non aggiorna automaticamente il curricolo vigente.",
+      "testoOriginale": "L'alunno si orienta tra i diversi mezzi di comunicazione e inizia a riconoscere in modo critico le caratteristiche, le funzioni e i limiti della tecnologia attuale",
+      "sourceRefs": [
+        "docs/04_user/esempi_cml/esempio_proposta_docente_tecnologia.cml — proposte te_pri1 e te_pri2",
+        "D.M. 221/2025 — Tecnologia, ambito Informatica e uso critico delle tecnologie",
+        "content/curriculum/tecnologia.normalized.json — unità tec_pri_1_001",
+        "CML-471 — contratto field-level consolidato e fotografia candidata completa"
+      ]
+    }
+  ]
+}
