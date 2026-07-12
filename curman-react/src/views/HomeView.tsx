@@ -1,6 +1,12 @@
-import { BookOpen, Download, FilePenLine, PencilRuler, Settings } from 'lucide-react'
+import { BookOpen, Download, FilePenLine, Info, PencilRuler, Settings } from 'lucide-react'
+import { resolveCurriculumApplicability, type SchoolOrder } from '@/lib/temporal-applicability'
 import { useAppStore } from '@/stores/useAppStore'
 import type { ViewId } from '@/types/state'
+
+const FRAMEWORK_LABELS = {
+  IN_2012: 'Indicazioni nazionali 2012',
+  IN_2025: 'Indicazioni nazionali 2025',
+} as const
 
 type TaskCardProps = {
   title: string
@@ -40,6 +46,57 @@ function TaskCard({ title, description, icon: Icon, destination, primary = false
   )
 }
 
+function ApplicabilityCard() {
+  const profilo = useAppStore(s => s.profilo)
+  const setVista = useAppStore(s => s.setVista)
+
+  const hasUsableOrder = profilo?.ordine === 'Infanzia' || profilo?.ordine === 'Primaria' || profilo?.ordine === 'Secondaria'
+  const classYear = profilo?.ordine === 'Infanzia' ? null : Number(profilo?.classe)
+  const resolution = profilo && hasUsableOrder
+    ? resolveCurriculumApplicability({
+        academicYear: profilo.annoScolastico,
+        order: profilo.ordine as SchoolOrder,
+        classYear: Number.isInteger(classYear) ? classYear : null,
+        discipline: profilo.disciplina || null,
+      })
+    : null
+
+  const frameworkLabel = resolution?.framework ? FRAMEWORK_LABELS[resolution.framework] : null
+  const isResolved = resolution?.status === 'applicabile' && frameworkLabel !== null
+
+  return (
+    <section aria-labelledby="applicability-title" className="rounded-2xl border border-slate-200 bg-white p-5">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex items-start gap-3">
+          <Info size={22} className="mt-0.5 shrink-0 text-indigo-600" />
+          <div>
+            <h2 id="applicability-title" className="text-sm font-[650] text-slate-900">Curricolo applicabile</h2>
+            {isResolved ? (
+              <>
+                <p className="mt-2 text-lg font-[700] text-indigo-800">{frameworkLabel}</p>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">{resolution.message}</p>
+                <p className="mt-3 text-xs leading-5 text-slate-500">
+                  Questo dato indica il quadro nazionale applicabile. Non certifica che il curricolo d’istituto sia già aggiornato, deliberato o approvato.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="mt-2 text-sm font-[650] text-amber-800">Applicabilità da verificare</p>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+                  Imposta anno scolastico, ordine e classe per determinare quale quadro nazionale si applica al contesto selezionato.
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+        <button type="button" onClick={() => setVista('impostazioni')} className="shrink-0 rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-[600] text-indigo-700 hover:bg-indigo-50">
+          {isResolved ? 'Modifica contesto' : 'Imposta il contesto'}
+        </button>
+      </div>
+    </section>
+  )
+}
+
 export function HomeView() {
   const setVista = useAppStore(s => s.setVista)
   return (
@@ -50,6 +107,8 @@ export function HomeView() {
           Consulta il curricolo, prepara una proposta, avvia una progettazione o produci un documento in un percorso guidato e sempre soggetto a validazione umana.
         </p>
       </section>
+
+      <ApplicabilityCard />
 
       <section aria-label="Attività principali" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         <TaskCard
@@ -84,7 +143,7 @@ export function HomeView() {
           <Settings size={22} className="mt-0.5 text-indigo-600 shrink-0" />
           <div>
             <h2 className="text-sm font-[650] text-indigo-900">Imposta il tuo contesto di lavoro</h2>
-            <p className="mt-1 text-sm text-slate-600">Ruolo, istituto, anno scolastico e disciplina si gestiscono nelle Impostazioni.</p>
+            <p className="mt-1 text-sm text-slate-600">Ruolo, istituto, anno scolastico, ordine, classe e disciplina si gestiscono nelle Impostazioni.</p>
           </div>
         </div>
         <button type="button" onClick={() => setVista('impostazioni')} className="shrink-0 rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-[600] text-indigo-700 hover:bg-indigo-50">
