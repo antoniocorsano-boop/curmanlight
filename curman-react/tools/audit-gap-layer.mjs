@@ -13,9 +13,35 @@ function assert(condition, message) {
   if (!condition) throw new Error(message)
 }
 
+async function configureProfile(page) {
+  console.log('STEP configure profile')
+  const profiloLink = page.getByText('Profilo', { exact: true }).first()
+  assert(await profiloLink.isVisible(), 'Voce Profilo non visibile')
+  await profiloLink.click()
+  await page.waitForTimeout(300)
+
+  const selects = page.locator('main select')
+  assert(await selects.count() >= 2, 'Selettori Ruolo/Ordine non disponibili nel profilo')
+  await selects.nth(0).selectOption('docente')
+  await selects.nth(1).selectOption('Secondaria')
+
+  const saveProfile = page.getByRole('button', { name: /Salva profilo/i })
+  assert(await saveProfile.isVisible(), 'Pulsante Salva profilo non visibile')
+  await saveProfile.click()
+  await page.waitForTimeout(300)
+}
+
 async function openEducazioneFisica(page) {
+  console.log('STEP open Educazione Fisica')
+  const homeLink = page.getByText('Home', { exact: true }).first()
+  if (await homeLink.isVisible()) {
+    await homeLink.click()
+    await page.waitForTimeout(300)
+  }
+
   const proponi = page.getByText('Proponi un aggiornamento').first()
-  if (await proponi.isVisible()) await proponi.click()
+  assert(await proponi.isVisible(), 'Accesso a Revisione non visibile')
+  await proponi.click()
   await page.waitForTimeout(500)
 
   const select = page.locator('main select').first()
@@ -36,22 +62,28 @@ async function audit() {
   })
 
   try {
+    console.log('STEP load app')
     await page.goto(BASE, { waitUntil: 'networkidle', timeout: 30000 })
     await page.evaluate(key => localStorage.removeItem(key), STORAGE_KEY)
+
+    await configureProfile(page)
     await openEducazioneFisica(page)
 
+    console.log('STEP verify card and deltas')
     const body = await page.locator('body').innerText()
     assert(body.includes('Espressione e inclusione') || body.includes(UNIT_ID), 'Card ef_sec_3_001 non visibile')
     assert(body.includes('Secondaria classe 1 e 2'), 'Delta Secondaria classe 1 e 2 non visibile')
     assert(body.includes('corrette abitudini'), 'Delta corrette abitudini non visibile')
 
-    const accogli = page.getByRole('button', { name: /Accogli/i }).first()
-    const rifiuta = page.getByRole('button', { name: /Rifiuta/i }).first()
-    assert(await accogli.isVisible(), 'Pulsante Accogli non visibile')
-    assert(await rifiuta.isVisible(), 'Pulsante Rifiuta non visibile')
+    const accogli = page.getByRole('button', { name: /Accogli proposta/i }).first()
+    const mantieni = page.getByRole('button', { name: /Mantieni vigente/i }).first()
+    assert(await accogli.isVisible(), 'Pulsante Accogli proposta non visibile')
+    assert(await mantieni.isVisible(), 'Pulsante Mantieni vigente non visibile')
+    assert(await accogli.isEnabled(), 'Pulsante Accogli proposta disabilitato dopo configurazione profilo')
 
+    console.log('STEP record accepted proposal')
     await accogli.click()
-    await page.waitForTimeout(500)
+    await page.waitForTimeout(700)
 
     const saved = await page.evaluate(key => localStorage.getItem(key), STORAGE_KEY)
     assert(saved, 'Payload decisionale non salvato in localStorage')
@@ -60,6 +92,7 @@ async function audit() {
     assert(decision, `Decisione ${UNIT_ID} assente dal payload`)
     assert(decision.outcome === 'accepted_proposal', `Outcome inatteso: ${decision.outcome}`)
 
+    console.log('STEP reload and restore')
     await page.reload({ waitUntil: 'networkidle' })
     await openEducazioneFisica(page)
 
@@ -67,6 +100,7 @@ async function audit() {
     assert(savedAfterReload, 'Payload decisionale perso dopo reload')
     const parsedAfterReload = JSON.parse(savedAfterReload)
     assert(parsedAfterReload.workDecisioni?.[UNIT_ID]?.outcome === 'accepted_proposal', 'Decisione non ripristinata dopo reload')
+    assert((await page.locator('body').innerText()).includes('Proposta accolta nel lavoro corrente'), 'Esito accolto non ripristinato nella UI')
 
     await page.screenshot({ path: path.join(screenshotDir, 'revisione-ef-decision-persisted.png'), fullPage: true })
     await page.setViewportSize({ width: 390, height: 844 })
@@ -74,20 +108,27 @@ async function audit() {
 
     assert(consoleErrors.length === 0, `Errori console: ${consoleErrors.join(' | ')}`)
 
+    console.log('STEP cleanup')
     await page.evaluate(key => localStorage.removeItem(key), STORAGE_KEY)
+    const cleaned = await page.evaluate(key => localStorage.getItem(key), STORAGE_KEY)
+    assert(cleaned === null, 'Pulizia localStorage non riuscita')
 
     console.log(JSON.stringify({
       unitId: UNIT_ID,
       cardVisible: true,
       deltasVisible: true,
       accogliVisible: true,
-      rifiutaVisible: true,
+      mantieniVigenteVisible: true,
       decisionSaved: true,
       outcome: 'accepted_proposal',
       decisionRestoredAfterReload: true,
+      uiRestoredAfterReload: true,
       consoleErrors: 0,
       storageCleaned: true,
     }, null, 2))
+  } catch (error) {
+    await page.screenshot({ path: path.join(screenshotDir, 'revisione-ef-audit-failure.png'), fullPage: true }).catch(() => {})
+    throw error
   } finally {
     await browser.close()
   }
