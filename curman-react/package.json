@@ -16,6 +16,7 @@
     "test:b02": "node tools/check-b02-consultation.mjs",
     "test:b03": "node tools/check-b03-decision-domain.mjs",
     "test:cml472": "node tools/check-cml472-second-gap-pilot.mjs",
+    "test:cml473": "playwright test --config=playwright.cml473.config.ts",
     "preview": "vite preview"
   },
   "dependencies": {
