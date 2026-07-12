@@ -20,9 +20,17 @@ const DEFAULT_PROFILE: ProfiloUtente = {
   ordine: 'Tutti',
   disciplina: '',
   annoScolastico: '2026/2027',
+  classe: '',
   istituto: '',
   nome: '',
   cognome: '',
+}
+
+function classOptions(order: OrdineEsteso): Array<{ value: string; label: string }> {
+  if (order === 'Infanzia') return [{ value: '0', label: 'Tutte le sezioni' }]
+  if (order === 'Primaria') return Array.from({ length: 5 }, (_, index) => ({ value: String(index + 1), label: `${index + 1}ª primaria` }))
+  if (order === 'Secondaria') return Array.from({ length: 3 }, (_, index) => ({ value: String(index + 1), label: `${index + 1}ª secondaria` }))
+  return []
 }
 
 export function ImpostazioniView() {
@@ -38,6 +46,15 @@ export function ImpostazioniView() {
     setForm(current => ({ ...current, [key]: value }))
   }
 
+  function updateOrder(order: OrdineEsteso) {
+    setSaved(false)
+    setForm(current => ({
+      ...current,
+      ordine: order,
+      classe: order === 'Infanzia' ? '0' : '',
+    }))
+  }
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setProfilo(form)
@@ -45,6 +62,7 @@ export function ImpostazioniView() {
     setSaved(true)
   }
 
+  const availableClasses = classOptions(form.ordine)
   const fieldClass = 'mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-800 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-100'
 
   return (
@@ -74,12 +92,26 @@ export function ImpostazioniView() {
 
         <label className="text-sm font-[550] text-slate-700">
           Ordine di scuola
-          <select value={form.ordine} onChange={event => update('ordine', event.target.value as OrdineEsteso)} className={fieldClass}>
+          <select value={form.ordine} onChange={event => updateOrder(event.target.value as OrdineEsteso)} className={fieldClass}>
             {ORDINI.map(order => <option key={order} value={order}>{order}</option>)}
           </select>
         </label>
 
         <label className="text-sm font-[550] text-slate-700">
+          Classe o sezione
+          <select
+            value={form.classe ?? ''}
+            onChange={event => update('classe', event.target.value)}
+            className={fieldClass}
+            disabled={availableClasses.length === 0}
+            required={form.ordine === 'Primaria' || form.ordine === 'Secondaria'}
+          >
+            <option value="">{availableClasses.length === 0 ? 'Seleziona prima un ordine' : 'Seleziona la classe'}</option>
+            {availableClasses.map(item => <option key={item.value} value={item.value}>{item.label}</option>)}
+          </select>
+        </label>
+
+        <label className="text-sm font-[550] text-slate-700 sm:col-span-2">
           Disciplina
           <select value={form.disciplina} onChange={event => update('disciplina', event.target.value)} className={fieldClass}>
             <option value="">Nessuna disciplina selezionata</option>
