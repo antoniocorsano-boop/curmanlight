@@ -5,6 +5,7 @@ const STORAGE_KEY = 'curmanlight:work-decisions:v1'
 type Pilot = {
   slug: 'educazione-fisica' | 'tecnologia'
   order: 'Secondaria' | 'Primaria'
+  classYear: '3' | '1'
   unitId: 'ef_sec_3_001' | 'tec_pri_1_001'
   targetField: 'obiettivi' | 'traguardo'
   visibleFieldLabel: 'Obiettivi' | 'Traguardo'
@@ -16,6 +17,7 @@ const PILOTS: Pilot[] = [
   {
     slug: 'educazione-fisica',
     order: 'Secondaria',
+    classYear: '3',
     unitId: 'ef_sec_3_001',
     targetField: 'obiettivi',
     visibleFieldLabel: 'Obiettivi',
@@ -23,6 +25,7 @@ const PILOTS: Pilot[] = [
   {
     slug: 'tecnologia',
     order: 'Primaria',
+    classYear: '1',
     unitId: 'tec_pri_1_001',
     targetField: 'traguardo',
     visibleFieldLabel: 'Traguardo',
@@ -37,15 +40,12 @@ async function configureProfile(page: Page, pilot: Pilot) {
   await page.getByRole('button', { name: 'Apri Impostazioni' }).click()
   await expect(page.getByRole('heading', { name: 'Impostazioni' })).toBeVisible()
 
-  const form = page.getByRole('main')
-  const selects = form.getByRole('combobox')
-  const textboxes = form.getByRole('textbox')
-
-  await selects.nth(0).selectOption('docente')
-  await selects.nth(1).selectOption(pilot.order)
-  await selects.nth(2).selectOption(pilot.slug)
-  await textboxes.nth(2).fill('Audit')
-  await textboxes.nth(3).fill('CML-473')
+  await page.getByLabel('Ruolo').selectOption('docente')
+  await page.getByLabel('Ordine di scuola').selectOption(pilot.order)
+  await page.getByLabel('Classe o sezione').selectOption(pilot.classYear)
+  await page.getByLabel('Disciplina').selectOption(pilot.slug)
+  await page.getByLabel('Nome').fill('Audit')
+  await page.getByLabel('Cognome').fill('CML-473')
   await page.getByRole('button', { name: 'Salva il contesto' }).click()
   await expect(page.getByText('Contesto aggiornato.')).toBeVisible()
 }
@@ -61,7 +61,7 @@ async function openRevision(page: Page) {
 async function selectPilot(page: Page, pilot: Pilot, state: PilotState = 'actionable') {
   const discipline = page.getByRole('main').getByRole('combobox').first()
   await discipline.selectOption(pilot.slug)
-  await expect(page.getByText(new RegExp(`Campo:\\s*${pilot.visibleFieldLabel}`, 'i')).first()).toBeVisible()
+  await expect(page.getByText(new RegExp(`Campo:\s*${pilot.visibleFieldLabel}`, 'i')).first()).toBeVisible()
   await expect(page.getByText(new RegExp(`${pilot.visibleFieldLabel} vigent`, 'i')).first()).toBeVisible()
 
   if (state === 'restored') {
