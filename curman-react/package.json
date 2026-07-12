@@ -16,6 +16,7 @@
     "test:b02": "node tools/check-b02-consultation.mjs",
     "test:b03": "node tools/check-b03-decision-domain.mjs",
     "test:cml472": "node tools/check-cml472-second-gap-pilot.mjs",
+    "test:cml473": "playwright test --config=playwright.cml473.config.ts",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -31,7 +32,7 @@
   "devDependencies": {
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
+    "@types/react-dom": "^19.2.17",
     "@vitejs/plugin-react": "^6.0.3",
     "oxlint": "^1.71.0",
     "typescript": "~6.0.2",
