@@ -40,7 +40,7 @@ export interface WorkDecision {
   unitaId: string
   outcome: DecisionOutcome
   testoFinale: string | null
-  fieldDecision: FieldDecisionSnapshot
+  fieldDecision: FieldDecisionSnapshot | null
   motivazione: string | null
   note: string | null
   timestamp: string
