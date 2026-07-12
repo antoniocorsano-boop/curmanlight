@@ -1,5 +1,6 @@
 name: CML-470 B03 Persistence Audit
 
+# Audit script is colocated with the React workspace so ESM resolves Playwright correctly.
 on:
   push:
     branches:
