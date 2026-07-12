@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "gap-v1",
+  "disciplina": "Educazione Fisica",
+  "source": {
+    "title": "CML-204 detailed gap model + CML-210A post-polish verification",
+    "reference": "report/CML-204_educazione_fisica_detailed_gap_model.md, docs/03_execution/CML-210A.md",
+    "retrievedAt": "2026-07-11",
+    "notes": "CML-470 corrected pilot. One field-level proposal retained for ef_sec_3_001. The proposal updates only obiettivi; B03 preserves every other unit field in the recorded final snapshot."
+  },
+  "humanValidationRequired": true,
+  "note": "Field-compatible B03 pilot. The entry targets obiettivi and does not replace the unit traguardo.",
+  "entries": [
+    {
+      "unitaId": "ef_sec_3_001",
+      "status": "proposta",
+      "targetField": "obiettivi",
+      "proposto": "Organizzare in modo autonomo sequenze motorie o attività semplici rispettando obiettivo, spazio e regole, valorizzando le competenze sviluppate in Secondaria classe 1 e 2; Partecipare a giochi e sport scolastici con fair play e responsabilità; Riconoscere il rapporto tra attività motoria, benessere personale e vita scolastica, con attenzione a corrette abitudini e pause attive; Usare movimento ed espressione corporea per comunicare, collaborare e includere, valorizzando le esperienze dei cicli precedenti",
+      "motivazione": "P1-4: il primo obiettivo esplicita la continuità con Secondaria classe 1 e 2. P2-1: il terzo obiettivo specifica corrette abitudini e pause attive. La proposta modifica esclusivamente il campo obiettivi.",
+      "note": "Il traguardo e gli altri campi dell'unità restano invariati. B03 compone una fotografia finale completa dell'unità quando la proposta viene accolta.",
+      "testoOriginale": "Organizzare in modo autonomo sequenze motorie o attività semplici rispettando obiettivo, spazio e regole; Partecipare a giochi e sport scolastici con fair play e responsabilità; Riconoscere il rapporto tra attività motoria, benessere personale e vita scolastica; Usare movimento ed espressione corporea per comunicare, collaborare e includere, valorizzando le esperienze dei cicli precedenti",
+      "sourceRefs": [
+        "CML-179: nucleo Espressione e inclusione, progressione III",
+        "CML-204: P1-4 progressione verticale debole",
+        "CML-204: P2-1 wording generico",
+        "CML-210A: ponte già presente nel traguardo e nell'obiettivo 4; delta residui negli obiettivi 1 e 3"
+      ]
+    }
+  ]
+}

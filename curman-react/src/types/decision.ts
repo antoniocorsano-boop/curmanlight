@@ -1,5 +1,5 @@
 import type { Ordine } from './curriculum'
-import type { Decisione, GapStatus, Ruolo } from './gap'
+import type { Decisione, GapStatus, GapTargetField, Ruolo } from './gap'
 
 export type DecisionScope = 'lavoro_personale' | 'lavoro_dipartimentale'
 
@@ -17,6 +17,7 @@ export interface DecisionContext {
   ordine: Ordine
   nucleo: string
   unitaId: string
+  targetField: GapTargetField
   ruoloDichiarato: Ruolo
   ambitoDecisione: DecisionScope
   statoGap: GapStatus
