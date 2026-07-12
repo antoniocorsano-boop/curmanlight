@@ -19,6 +19,7 @@
     "test:cml473": "playwright test --config=playwright.cml473.config.ts",
     "test:cml478": "node tools/check-cml478-temporal-applicability.mjs",
     "test:cml479": "node tools/check-cml479-home-applicability.mjs",
+    "test:cml480": "node tools/check-cml480-transition-context.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

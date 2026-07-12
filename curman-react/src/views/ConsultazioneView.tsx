@@ -4,6 +4,7 @@ import { useAppStore } from '@/stores/useAppStore'
 import { useCurriculum } from '@/hooks/useCurriculum'
 import { filterByNucleo, filterByOrdine } from '@/lib/curriculum'
 import { UnitaCard } from '@/components/curriculum/UnitaCard'
+import { ApplicabilityContextBanner } from '@/components/curriculum/ApplicabilityContextBanner'
 import { DISCIPLINE_SLUGS, DISCIPLINE_LABELS } from '@/types/curriculum'
 import type { DisciplinaSlug, OrdineEsteso } from '@/types/curriculum'
 
@@ -52,6 +53,8 @@ export function ConsultazioneView() {
         <p className="mt-2 text-sm leading-6 text-slate-600">Scegli disciplina, ordine e nucleo per consultare il curricolo di riferimento senza modificare o approvare contenuti.</p>
       </header>
 
+      <ApplicabilityContextBanner profilo={profilo} ordine={ordine} disciplina={slug} mode="consultazione" />
+
       <section className="grid grid-cols-1 gap-4 rounded-2xl border border-slate-200 bg-white p-5 md:grid-cols-[1.2fr_1fr_1fr_auto] md:items-end" aria-label="Filtri del curricolo">
         <label className="text-sm font-[550] text-slate-700">
           Disciplina
@@ -93,7 +96,7 @@ export function ConsultazioneView() {
           <section className="rounded-2xl border border-indigo-100 bg-indigo-50/50 p-5">
             <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
               <div>
-                <p className="text-xs font-[650] uppercase tracking-wide text-indigo-600">Curricolo di riferimento</p>
+                <p className="text-xs font-[650] uppercase tracking-wide text-indigo-600">Curricolo mostrato</p>
                 <h2 className="mt-1 text-lg font-[700] text-indigo-950">{curriculum.disciplina} · {ordine === 'Tutti' ? 'Tutti gli ordini' : ordine}</h2>
               </div>
               <span className="self-start rounded-full bg-white px-3 py-1 text-xs font-[600] text-indigo-700">{labelStato(curriculum.readiness ?? curriculum.stato)}</span>
@@ -102,6 +105,7 @@ export function ConsultazioneView() {
               <div><dt className="font-[650]">Fonte</dt><dd className="mt-1 leading-6">{curriculum.source || 'Fonte generale non indicata'}</dd></div>
               <div><dt className="font-[650]">Validazione</dt><dd className="mt-1 leading-6">{curriculum.humanValidationRequired ? 'Richiede validazione umana' : 'Indicazione non disponibile'}</dd></div>
             </dl>
+            <p className="mt-4 border-t border-indigo-100 pt-3 text-xs leading-5 text-indigo-800">Il curricolo mostrato non cambia automaticamente quando varia il quadro nazionale applicabile. La corrispondenza tra versione consultata e contesto deve restare esplicita e verificabile.</p>
           </section>
 
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">

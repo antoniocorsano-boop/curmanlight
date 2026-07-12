@@ -14,7 +14,7 @@ function requireText(source, text, file) {
   if (!source.includes(text)) throw new Error(`${file}: contenuto obbligatorio assente: ${text}`)
 }
 
-for (const label of ['Disciplina', 'Ordine di scuola', 'Nucleo', 'Azzera filtri', 'Curricolo di riferimento', 'Richiede validazione umana', 'Nessun risultato']) {
+for (const label of ['Disciplina', 'Ordine di scuola', 'Nucleo', 'Azzera filtri', 'Curricolo mostrato', 'Richiede validazione umana', 'Nessun risultato']) {
   requireText(view, label, 'ConsultazioneView.tsx')
 }
 requireText(view, 'readOnly', 'ConsultazioneView.tsx')

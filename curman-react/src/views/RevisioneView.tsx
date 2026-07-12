@@ -5,9 +5,10 @@ import { useGapLayer } from '@/hooks/useGapLayer'
 import { useProgress } from '@/hooks/useProgress'
 import { GapComparison } from '@/components/revisione/GapComparison'
 import { ProgressBar } from '@/components/revisione/ProgressBar'
+import { ApplicabilityContextBanner } from '@/components/curriculum/ApplicabilityContextBanner'
 import { DISCIPLINE_SLUGS, DISCIPLINE_LABELS } from '@/types/curriculum'
 import { needsDecision } from '@/lib/gap'
-import type { DisciplinaSlug } from '@/types/curriculum'
+import type { DisciplinaSlug, OrdineEsteso } from '@/types/curriculum'
 import type { FiltroStato, WorkDecisionPersistenceStatus } from '@/types/state'
 
 const FILTRI: { value: FiltroStato; label: string }[] = [
@@ -30,7 +31,8 @@ export function RevisioneView() {
   const slug = disciplinaSelezionata as DisciplinaSlug | null
   const curriculum = useCurriculum(slug)
   const gapLayer = useGapLayer(slug)
-  const unita = useFilteredUnita(curriculum, gapLayer, profilo?.ordine ?? 'Tutti')
+  const ordine = (profilo?.ordine ?? 'Tutti') as OrdineEsteso
+  const unita = useFilteredUnita(curriculum, gapLayer, ordine)
   const decisioni = useRevisioneStore(s => s.decisioni)
   const workDecisionHydrated = useRevisioneStore(s => s.workDecisionHydrated)
   const persistenceStatus = useRevisioneStore(s => s.workDecisionPersistenceStatus)
@@ -62,6 +64,14 @@ export function RevisioneView() {
         <h2 className="text-lg font-[600] text-slate-800">Revisione</h2>
         <p className="text-sm text-slate-500">Confronta il curricolo vigente con le proposte IN 2025 e registra una scelta di lavoro nel contesto dichiarato.</p>
       </div>
+
+      <ApplicabilityContextBanner profilo={profilo} ordine={ordine} disciplina={slug} mode="revisione" />
+
+      <div className="rounded-2xl border border-violet-200 bg-violet-50 p-4 text-sm leading-6 text-violet-950">
+        <p className="font-[650]">Confronto transitorio, non sostituzione automatica</p>
+        <p className="mt-1">Il testo vigente resta leggibile insieme alla proposta. Accogliere una proposta registra una scelta di lavoro locale e non modifica da sola il curricolo deliberato dell'istituto.</p>
+      </div>
+
       <div className={`rounded-lg border px-3 py-2 text-xs leading-5 ${STATUS_CLASSES[persistenceStatus]}`} role="status" aria-live="polite">
         {statusMessage}{savedLabel}
       </div>
