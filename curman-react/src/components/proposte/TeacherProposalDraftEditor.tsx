@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Save, Trash2 } from 'lucide-react'
+import { AlertTriangle, Save, Trash2 } from 'lucide-react'
 import { useProposalStore } from '@/stores/useProposalStore'
 import type { ProposalTargetField } from '@/types/proposal'
 import type { UnitaApprendimento } from '@/types/curriculum'
@@ -23,6 +23,7 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
   const existing = useProposalStore(state => state.drafts[unit.id])
   const saveDraft = useProposalStore(state => state.saveDraft)
   const deleteDraft = useProposalStore(state => state.deleteDraft)
+  const persistenceError = useProposalStore(state => state.persistenceError)
   const [targetField, setTargetField] = useState<ProposalTargetField>(existing?.targetField ?? 'traguardo')
   const currentText = useMemo(() => fieldText(unit, targetField), [unit, targetField])
   const [proposedText, setProposedText] = useState(existing?.testoProposto ?? currentText)
@@ -49,7 +50,7 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
 
   function handleSave() {
     if (!canSave) return
-    saveDraft({
+    const result = saveDraft({
       unitaId: unit.id,
       disciplina: unit.disciplina,
       ordine: unit.ordine,
@@ -61,8 +62,13 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
       fonte: source.trim(),
       note: notes.trim(),
     })
+    if (!result) return
     setSaved(true)
     window.setTimeout(() => setSaved(false), 1800)
+  }
+
+  function handleDelete() {
+    deleteDraft(unit.id)
   }
 
   return (
@@ -75,6 +81,13 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
         </div>
         {existing && <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-[600] text-amber-700">Bozza salvata</span>}
       </div>
+
+      {persistenceError && (
+        <div role="alert" className="mt-4 flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 p-3 text-sm leading-6 text-red-800">
+          <AlertTriangle size={18} className="mt-0.5 shrink-0" />
+          <p>{persistenceError}</p>
+        </div>
+      )}
 
       <div className="mt-5 grid gap-5">
         <label className="text-sm font-[600] text-slate-700">Campo da aggiornare
@@ -109,7 +122,7 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
         <p className="text-xs leading-5 text-slate-500">La bozza resta sul dispositivo e non modifica il curricolo vigente.</p>
         <div className="flex gap-2">
-          {existing && <button type="button" onClick={() => deleteDraft(unit.id)} className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2 text-sm font-[600] text-slate-600 hover:bg-slate-50"><Trash2 size={16} /> Elimina bozza</button>}
+          {existing && <button type="button" onClick={handleDelete} className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2 text-sm font-[600] text-slate-600 hover:bg-slate-50"><Trash2 size={16} /> Elimina bozza</button>}
           <button type="button" disabled={!canSave} onClick={handleSave} className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-sm font-[650] text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"><Save size={16} /> {saved ? 'Bozza salvata' : 'Salva bozza'}</button>
         </div>
       </div>
