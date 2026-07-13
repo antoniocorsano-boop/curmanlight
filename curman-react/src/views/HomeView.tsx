@@ -35,8 +35,14 @@ function TaskCard({ title, description, icon: Icon, destination, primary = false
       aria-disabled={unavailable}
     >
       <div className="flex items-start justify-between gap-4">
-        <Icon size={25} className={unavailable ? 'text-slate-400' : 'text-indigo-600'} />
-        {!unavailable && <span aria-hidden="true" className="text-xl leading-none text-slate-500">›</span>}
+        <span className="flex h-7 w-7 shrink-0 items-center justify-center">
+          <Icon size={25} className={unavailable ? 'text-slate-400' : 'text-indigo-600'} />
+        </span>
+        {!unavailable && (
+          <span aria-hidden="true" className="flex h-7 w-7 items-center justify-center text-xl leading-none text-slate-500">
+            ›
+          </span>
+        )}
       </div>
       <div>
         <h3 className="text-base font-[650]">{title}</h3>
@@ -66,24 +72,26 @@ function ApplicabilityCard() {
   const isResolved = resolution?.status === 'applicabile' && frameworkLabel !== null
 
   return (
-    <section aria-labelledby="applicability-title" className="rounded-2xl border border-slate-200 bg-white p-5">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+    <section aria-labelledby="applicability-title" className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
         <div className="flex items-start gap-3">
-          <Info size={22} className="mt-0.5 shrink-0 text-indigo-600" />
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center">
+            <Info size={21} className="text-indigo-600" />
+          </span>
           <div>
             <h2 id="applicability-title" className="text-sm font-[650] text-slate-900">Curricolo applicabile</h2>
             {isResolved ? (
               <>
-                <p className="mt-1.5 text-lg font-[700] text-indigo-800">{frameworkLabel}</p>
-                <p className="mt-1.5 max-w-3xl text-sm leading-6 text-slate-600">{resolution.message}</p>
-                <p className="mt-2.5 text-xs leading-5 text-slate-500">
+                <p className="mt-1 text-base font-[700] text-indigo-800">{frameworkLabel}</p>
+                <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">{resolution.message}</p>
+                <p className="mt-2 text-xs leading-5 text-slate-500">
                   Questo dato indica il quadro nazionale applicabile. Non certifica che il curricolo d’istituto sia già aggiornato, deliberato o approvato.
                 </p>
               </>
             ) : (
               <>
-                <p className="mt-1.5 text-sm font-[650] text-amber-800">Applicabilità da verificare</p>
-                <p className="mt-1.5 max-w-3xl text-sm leading-6 text-slate-600">
+                <p className="mt-1 text-sm font-[650] text-amber-800">Applicabilità da verificare</p>
+                <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
                   Imposta anno scolastico, ordine e classe per determinare quale quadro nazionale si applica al contesto selezionato.
                 </p>
               </>
@@ -101,7 +109,7 @@ function ApplicabilityCard() {
 export function HomeView() {
   const setVista = useAppStore(s => s.setVista)
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-6 py-2">
+    <div className="mx-auto flex max-w-5xl flex-col gap-5 py-2">
       <section>
         <h1 className="text-3xl font-[700] text-indigo-800">Cosa vuoi fare oggi?</h1>
         <p className="mt-2 max-w-3xl text-base leading-7 text-slate-600">
@@ -111,7 +119,7 @@ export function HomeView() {
 
       <ApplicabilityCard />
 
-      <section aria-label="Attività principali" className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <section aria-label="Attività principali" className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <TaskCard
           title="Consulta il curricolo"
           description="Leggi il curricolo vigente e trova i contenuti della disciplina che ti interessa."
@@ -143,7 +151,9 @@ export function HomeView() {
 
       <section className="flex flex-col justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
         <div className="flex items-start gap-3">
-          <Settings size={22} className="mt-0.5 shrink-0 text-indigo-600" />
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center">
+            <Settings size={21} className="text-indigo-600" />
+          </span>
           <div>
             <h2 className="text-sm font-[650] text-slate-900">Imposta il tuo contesto di lavoro</h2>
             <p className="mt-1 text-sm leading-6 text-slate-600">Ruolo, istituto, anno scolastico, ordine, classe e disciplina si gestiscono nelle Impostazioni.</p>
