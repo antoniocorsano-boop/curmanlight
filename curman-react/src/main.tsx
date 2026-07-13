@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import App from './App'
 import './index.css'
+import './styles/cml490-guided-evaluation-neutral.css'
 
 const CLOUDFLARE_CACHE_RESET_KEY = 'cml-cloudflare-cache-reset-v1'
 
@@ -33,5 +34,5 @@ createRoot(document.getElementById('root')!).render(
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>
-  </StrictMode>
+  </StrictMode>,
 )
