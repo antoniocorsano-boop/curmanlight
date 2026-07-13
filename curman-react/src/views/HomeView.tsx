@@ -1,4 +1,4 @@
-import { BookOpen, Download, FilePenLine, Info, PencilRuler, Settings } from 'lucide-react'
+import { BookOpen, Download, FilePenLine, Info, PencilRuler } from 'lucide-react'
 import { GuidedTeacherEvaluation } from '@/components/evaluation/GuidedTeacherEvaluation'
 import { resolveCurriculumApplicability, type SchoolOrder } from '@/lib/temporal-applicability'
 import { useAppStore } from '@/stores/useAppStore'
@@ -85,14 +85,14 @@ function ApplicabilityCard() {
                 <p className="mt-1 text-base font-[700] text-indigo-800">{frameworkLabel}</p>
                 <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">{resolution.message}</p>
                 <p className="mt-2 text-xs leading-5 text-slate-500">
-                  Questo dato indica il quadro nazionale applicabile. Non certifica che il curricolo d’istituto sia già aggiornato, deliberato o approvato.
+                  Il quadro applicabile non certifica l’aggiornamento o l’approvazione del curricolo d’istituto.
                 </p>
               </>
             ) : (
               <>
                 <p className="mt-1 text-sm font-[650] text-amber-800">Applicabilità da verificare</p>
                 <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-                  Imposta anno scolastico, ordine e classe per determinare quale quadro nazionale si applica al contesto selezionato.
+                  Imposta anno scolastico, ordine e classe per vedere il quadro nazionale applicabile.
                 </p>
               </>
             )}
@@ -107,13 +107,13 @@ function ApplicabilityCard() {
 }
 
 export function HomeView() {
-  const setVista = useAppStore(s => s.setVista)
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-5 py-2">
       <section>
         <h1 className="text-3xl font-[700] text-indigo-800">Cosa vuoi fare oggi?</h1>
         <p className="mt-2 max-w-3xl text-base leading-7 text-slate-600">
-          Consulta il curricolo, prepara una proposta, avvia una progettazione o produci un documento in un percorso guidato e sempre soggetto a validazione umana.
+          <span className="sm:hidden">Consulta il curricolo, prepara una proposta o produci un documento con un percorso guidato.</span>
+          <span className="hidden sm:inline">Consulta il curricolo, prepara una proposta, avvia una progettazione o produci un documento in un percorso guidato e sempre soggetto a validazione umana.</span>
         </p>
       </section>
 
@@ -148,21 +148,6 @@ export function HomeView() {
       </section>
 
       <GuidedTeacherEvaluation />
-
-      <section className="flex flex-col justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
-        <div className="flex items-start gap-3">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center">
-            <Settings size={21} className="text-indigo-600" />
-          </span>
-          <div>
-            <h2 className="text-sm font-[650] text-slate-900">Imposta il tuo contesto di lavoro</h2>
-            <p className="mt-1 text-sm leading-6 text-slate-600">Ruolo, istituto, anno scolastico, ordine, classe e disciplina si gestiscono nelle Impostazioni.</p>
-          </div>
-        </div>
-        <button type="button" onClick={() => setVista('impostazioni')} className="shrink-0 rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-[600] text-indigo-700 hover:bg-indigo-50">
-          Vai a Impostazioni
-        </button>
-      </section>
     </div>
   )
 }
