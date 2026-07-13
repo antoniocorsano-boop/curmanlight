@@ -34,7 +34,7 @@ for (const label of [
   'Prepara una progettazione',
   'Proponi un aggiornamento',
   'Esporta un documento',
-  'Vai a Impostazioni',
+  'Imposta il contesto',
 ]) {
   requireText(home, label, 'HomeView.tsx')
 }
