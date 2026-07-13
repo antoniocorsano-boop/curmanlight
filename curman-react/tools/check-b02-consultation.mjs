@@ -20,6 +20,11 @@ for (const label of [
   'Ordine di scuola',
   'Nucleo',
   'Azzera filtri',
+  'Cerca nei contenuti',
+  'Cancella ricerca',
+  'Orientamento dei risultati',
+  'Filtri attivi',
+  'Mostra tutti i contenuti',
   'Curricolo mostrato',
   'Richiede validazione umana',
   'Nessun contenuto con questi filtri',
@@ -29,6 +34,9 @@ for (const label of [
   'Cambia disciplina',
 ]) {
   requireText(view, label, 'ConsultazioneView.tsx')
+}
+for (const implementation of ['matchesSearch', 'normalize', 'query', 'structuralResults']) {
+  requireText(view, implementation, 'ConsultazioneView.tsx')
 }
 for (const state of ["'idle'", "'loading'", "'success'", "'error'"]) {
   requireText(hook, state, 'useCurriculum.ts')
