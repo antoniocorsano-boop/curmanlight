@@ -6,6 +6,7 @@
   "scripts": {
     "sync-data": "node tools/sync-curriculum-data.mjs",
     "validate:gap": "node tools/validate-gap-data.mjs",
+    "validate:versions": "node tools/validate-curriculum-version-registry.mjs",
     "sync:gap": "npm run validate:gap && node tools/sync-gap-data.mjs",
     "predev": "npm run sync-data && npm run sync:gap",
     "dev": "vite",
@@ -20,6 +21,7 @@
     "test:cml478": "node tools/check-cml478-temporal-applicability.mjs",
     "test:cml479": "node tools/check-cml479-home-applicability.mjs",
     "test:cml480": "node tools/check-cml480-transition-context.mjs",
+    "test:cml482": "npm run validate:versions",
     "preview": "vite preview"
   },
   "dependencies": {
