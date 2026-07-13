@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { AlertTriangle, LoaderCircle, RotateCcw, Search, X } from 'lucide-react'
+import { AlertTriangle, ChevronsUpDown, ListCollapse, LoaderCircle, RotateCcw, Search, X } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
 import { useCurriculumResource } from '@/hooks/useCurriculum'
 import { filterByNucleo, filterByOrdine } from '@/lib/curriculum'
@@ -27,10 +27,12 @@ export function ConsultazioneView() {
   const [ordine, setOrdine] = useState<OrdineEsteso>(initialOrder)
   const [nucleo, setNucleo] = useState('Tutti')
   const [query, setQuery] = useState('')
+  const [expandedUnitIds, setExpandedUnitIds] = useState<Set<string>>(() => new Set())
 
   useEffect(() => {
     setNucleo('Tutti')
     setQuery('')
+    setExpandedUnitIds(new Set())
   }, [slug])
 
   useEffect(() => { setNucleo('Tutti') }, [ordine])
@@ -48,11 +50,31 @@ export function ConsultazioneView() {
 
   const unita = useMemo(() => structuralResults.filter(unit => matchesSearch(unit, query)), [structuralResults, query])
   const hasActiveFilters = ordine !== initialOrder || nucleo !== 'Tutti' || query.trim().length > 0
+  const allVisibleExpanded = unita.length > 0 && unita.every(unit => expandedUnitIds.has(unit.id))
+
+  useEffect(() => {
+    const visibleIds = new Set(unita.map(unit => unit.id))
+    setExpandedUnitIds(current => new Set([...current].filter(id => visibleIds.has(id))))
+  }, [unita])
 
   function resetFilters() {
     setOrdine(initialOrder)
     setNucleo('Tutti')
     setQuery('')
+    setExpandedUnitIds(new Set())
+  }
+
+  function toggleAllDetails() {
+    setExpandedUnitIds(allVisibleExpanded ? new Set() : new Set(unita.map(unit => unit.id)))
+  }
+
+  function setUnitExpanded(id: string, expanded: boolean) {
+    setExpandedUnitIds(current => {
+      const next = new Set(current)
+      if (expanded) next.add(id)
+      else next.delete(id)
+      return next
+    })
   }
 
   const selectClass = 'mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-800 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-100'
@@ -110,11 +132,20 @@ export function ConsultazioneView() {
         </section>
 
         <section aria-label="Orientamento dei risultati" className="rounded-2xl border border-slate-200 bg-white px-4 py-3">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"><p className="text-sm font-[650] text-slate-800">{unita.length} {unita.length === 1 ? 'unità trovata' : 'unità trovate'}{unita.length !== structuralResults.length && <span className="font-[500] text-slate-500"> su {structuralResults.length}</span>}</p><p className="text-xs text-slate-500">Disciplina: {DISCIPLINE_LABELS[slug!]}</p></div>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm font-[650] text-slate-800">{unita.length} {unita.length === 1 ? 'unità trovata' : 'unità trovate'}{unita.length !== structuralResults.length && <span className="font-[500] text-slate-500"> su {structuralResults.length}</span>}</p>
+              <p className="mt-1 text-xs text-slate-500">Disciplina: {DISCIPLINE_LABELS[slug!]}</p>
+            </div>
+            {unita.length > 0 && <button type="button" onClick={toggleAllDetails} className="flex min-h-10 items-center justify-center gap-2 rounded-xl border border-slate-200 px-3 py-2 text-sm font-[600] text-slate-700 hover:bg-slate-50">
+              {allVisibleExpanded ? <ListCollapse size={16} /> : <ChevronsUpDown size={16} />}
+              {allVisibleExpanded ? 'Comprimi tutti' : 'Espandi tutti'}
+            </button>}
+          </div>
           <div className="mt-2 flex flex-wrap gap-2" aria-label="Filtri attivi"><span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-600">Ordine: {ordine === 'Tutti' ? 'tutti' : ordine}</span><span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-600">Nucleo: {nucleo === 'Tutti' ? 'tutti' : nucleo}</span>{query.trim() && <span className="rounded-full bg-indigo-50 px-2.5 py-1 text-xs text-indigo-700">Ricerca: “{query.trim()}”</span>}</div>
         </section>
 
-        {unita.length > 0 ? <section className="flex flex-col gap-3" aria-label="Unità del curricolo">{unita.map(unit => <UnitaCard key={unit.id} unita={unit} readOnly />)}</section> : <section className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center"><h2 className="text-base font-[650] text-slate-700">Nessun contenuto con questi filtri</h2><p className="mt-2 text-sm text-slate-500">Prova termini più generali, modifica ordine o nucleo, oppure ripristina la vista completa.</p><button type="button" onClick={resetFilters} className="mt-4 rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-[600] text-slate-700 hover:bg-slate-100">Mostra tutti i contenuti</button></section>}
+        {unita.length > 0 ? <section className="flex flex-col gap-3" aria-label="Unità del curricolo">{unita.map(unit => <UnitaCard key={unit.id} unita={unit} readOnly expanded={expandedUnitIds.has(unit.id)} onExpandedChange={expanded => setUnitExpanded(unit.id, expanded)} />)}</section> : <section className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center"><h2 className="text-base font-[650] text-slate-700">Nessun contenuto con questi filtri</h2><p className="mt-2 text-sm text-slate-500">Prova termini più generali, modifica ordine o nucleo, oppure ripristina la vista completa.</p><button type="button" onClick={resetFilters} className="mt-4 rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-[600] text-slate-700 hover:bg-slate-100">Mostra tutti i contenuti</button></section>}
       </>}
 
       {status === 'error' && slug && <section role="alert" className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><div className="flex items-start gap-3"><AlertTriangle size={20} className="mt-0.5 shrink-0 text-amber-700" /><div className="flex-1"><h2 className="font-[650] text-amber-900">Curricolo non caricato</h2><p className="mt-1 text-sm leading-6 text-amber-800">{error ?? 'Si è verificato un problema durante il caricamento.'}</p><div className="mt-4 flex flex-wrap gap-3"><button type="button" onClick={retry} className="rounded-xl bg-amber-800 px-4 py-2 text-sm font-[650] text-white hover:bg-amber-900">Riprova</button><button type="button" onClick={() => setDisciplina(null)} className="rounded-xl border border-amber-300 bg-white px-4 py-2 text-sm font-[600] text-amber-900 hover:bg-amber-100">Cambia disciplina</button></div></div></div></section>}
