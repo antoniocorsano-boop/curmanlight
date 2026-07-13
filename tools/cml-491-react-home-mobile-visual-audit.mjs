@@ -27,34 +27,61 @@ for (const viewport of viewports) {
   page.on('pageerror', error => errors.push(error.message))
 
   await page.goto(baseUrl, { waitUntil: 'networkidle', timeout: 60000 })
-  await page.screenshot({ path: path.join(outDir, `${viewport.name}-viewport.png`) })
-  await page.screenshot({ path: path.join(outDir, `${viewport.name}-full.png`), fullPage: true })
 
-  const metrics = await page.evaluate(() => ({
-    documentWidth: document.documentElement.scrollWidth,
-    viewportWidth: document.documentElement.clientWidth,
-    documentHeight: document.documentElement.scrollHeight,
-    viewportHeight: document.documentElement.clientHeight,
+  const main = page.locator('main')
+  const consultCta = main.getByRole('button', { name: /Consulta il curricolo/ }).first()
+  const guidedCta = main.getByRole('button', { name: /Inizia il percorso|Riprendi il percorso/ }).first()
+
+  await page.screenshot({ path: path.join(outDir, `${viewport.name}-viewport.png`) })
+
+  const metrics = await main.evaluate(element => ({
+    scrollWidth: element.scrollWidth,
+    clientWidth: element.clientWidth,
+    scrollHeight: element.scrollHeight,
+    clientHeight: element.clientHeight,
   }))
 
-  record(viewport.name, 'nessun overflow orizzontale', metrics.documentWidth <= metrics.viewportWidth + 1, `${metrics.documentWidth}px / ${metrics.viewportWidth}px`)
-  record(viewport.name, 'titolo Home visibile', await page.getByRole('heading', { name: 'Cosa vuoi fare oggi?' }).isVisible())
-  record(viewport.name, 'CTA Consulta visibile', await page.getByRole('button', { name: /Consulta il curricolo/ }).isVisible())
-  record(viewport.name, 'CTA percorso guidato visibile', await page.getByRole('button', { name: /Inizia il percorso|Riprendi il percorso/ }).isVisible())
-  record(viewport.name, 'touch target CTA principale', await page.getByRole('button', { name: /Consulta il curricolo/ }).evaluate(el => {
-    const rect = el.getBoundingClientRect()
+  record(viewport.name, 'nessun overflow orizzontale', metrics.scrollWidth <= metrics.clientWidth + 1, `${metrics.scrollWidth}px / ${metrics.clientWidth}px`)
+  record(viewport.name, 'titolo Home visibile', await main.getByRole('heading', { name: 'Cosa vuoi fare oggi?' }).isVisible())
+  record(viewport.name, 'CTA Consulta presente', await consultCta.isVisible())
+  record(viewport.name, 'CTA percorso guidato presente', await guidedCta.isVisible())
+  record(viewport.name, 'touch target CTA principale', await consultCta.evaluate(element => {
+    const rect = element.getBoundingClientRect()
     return rect.height >= 44 && rect.width >= 44
   }))
   record(viewport.name, 'nessun errore console', errors.length === 0, errors.join(' | '))
 
-  const ctaTop = await page.getByRole('button', { name: /Consulta il curricolo/ }).evaluate(el => el.getBoundingClientRect().top)
-  const guidedTop = await page.getByRole('button', { name: /Inizia il percorso|Riprendi il percorso/ }).evaluate(el => el.getBoundingClientRect().top)
+  const ctaOffset = await consultCta.evaluate(element => element.offsetTop)
+  const guidedOffset = await guidedCta.evaluate(element => element.offsetTop)
   observations.push({
     viewport: viewport.name,
-    pageHeight: metrics.documentHeight,
-    ctaTop: Math.round(ctaTop),
-    guidedTop: Math.round(guidedTop),
+    contentHeight: metrics.scrollHeight,
+    visibleHeight: metrics.clientHeight,
+    ctaOffset: Math.round(ctaOffset),
+    guidedOffset: Math.round(guidedOffset),
   })
+
+  await page.evaluate(() => {
+    const shell = document.querySelector('body > div > div')
+    const contentRow = shell?.children?.[1]
+    const mainElement = document.querySelector('main')
+    if (shell instanceof HTMLElement) {
+      shell.style.height = 'auto'
+      shell.style.overflow = 'visible'
+    }
+    if (contentRow instanceof HTMLElement) {
+      contentRow.style.overflow = 'visible'
+      contentRow.style.minHeight = '0'
+    }
+    if (mainElement instanceof HTMLElement) {
+      mainElement.style.overflow = 'visible'
+      mainElement.style.height = 'auto'
+    }
+    document.documentElement.style.height = 'auto'
+    document.body.style.height = 'auto'
+    document.body.style.overflow = 'visible'
+  })
+  await page.screenshot({ path: path.join(outDir, `${viewport.name}-full.png`), fullPage: true })
 
   await page.close()
 }
@@ -78,15 +105,15 @@ const markdown = [
   '',
   '## Misure di densità',
   '',
-  '| Viewport | Altezza pagina | Inizio CTA Consulta | Inizio CTA percorso guidato |',
-  '|---|---:|---:|---:|',
-  ...observations.map(item => `| ${item.viewport} | ${item.pageHeight}px | ${item.ctaTop}px | ${item.guidedTop}px |`),
+  '| Viewport | Altezza contenuto | Altezza visibile | Offset CTA Consulta | Offset CTA percorso guidato |',
+  '|---|---:|---:|---:|---:|',
+  ...observations.map(item => `| ${item.viewport} | ${item.contentHeight}px | ${item.visibleHeight}px | ${item.ctaOffset}px | ${item.guidedOffset}px |`),
   '',
   '## Evidenze',
   '',
   '- screenshot viewport e full-page in `report/screenshots/CML-491/`;',
-  '- controllo overflow orizzontale;',
-  '- visibilità delle CTA principali;',
+  '- controllo overflow orizzontale sul contenitore `main`;',
+  '- visibilità delle CTA principali nella superficie di contenuto;',
   '- touch target minimo;',
   '- errori console e runtime.',
   '',
