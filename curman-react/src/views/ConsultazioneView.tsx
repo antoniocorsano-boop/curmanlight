@@ -10,7 +10,8 @@ import type { DisciplinaSlug, OrdineEsteso, UnitaApprendimento } from '@/types/c
 
 const ORDINI: OrdineEsteso[] = ['Tutti', 'Infanzia', 'Primaria', 'Secondaria']
 const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('it').trim()
-const matchesSearch = (unit: UnitaApprendimento, query: string) => !normalize(query) || normalize(JSON.stringify(unit)).includes(normalize(query))
+const searchableText = (unit: UnitaApprendimento) => [unit.disciplina, unit.ordine, unit.classe ?? '', unit.fascia ?? '', unit.ambito, unit.nucleo, unit.competenza, unit.traguardo, ...unit.obiettivi, ...unit.conoscenze, ...unit.abilita, ...unit.evidenze, ...unit.criteriValutazione, unit.fonte, unit.stato, unit.noteDipartimento].join(' ')
+const matchesSearch = (unit: UnitaApprendimento, query: string) => !normalize(query) || normalize(searchableText(unit)).includes(normalize(query))
 
 function labelStato(value?: string) {
   if (!value) return 'Stato non indicato'
