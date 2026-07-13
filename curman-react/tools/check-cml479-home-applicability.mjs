@@ -8,7 +8,7 @@ assert.match(home, /resolveCurriculumApplicability/)
 assert.match(home, /Curricolo applicabile/)
 assert.match(home, /Indicazioni nazionali 2012/)
 assert.match(home, /Indicazioni nazionali 2025/)
-assert.match(home, /Non certifica che il curricolo d’istituto sia già aggiornato, deliberato o approvato/)
+assert.match(home, /non certifica l’aggiornamento o l’approvazione del curricolo d’istituto/i)
 assert.match(home, /Applicabilità da verificare/)
 assert.match(home, /Imposta il contesto/)
 
