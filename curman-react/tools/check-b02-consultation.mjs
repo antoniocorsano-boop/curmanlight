@@ -25,6 +25,8 @@ for (const label of [
   'Orientamento dei risultati',
   'Filtri attivi',
   'Mostra tutti i contenuti',
+  'Espandi tutti',
+  'Comprimi tutti',
   'Curricolo mostrato',
   'Richiede validazione umana',
   'Nessun contenuto con questi filtri',
@@ -35,7 +37,7 @@ for (const label of [
 ]) {
   requireText(view, label, 'ConsultazioneView.tsx')
 }
-for (const implementation of ['matchesSearch', 'normalize', 'query', 'structuralResults']) {
+for (const implementation of ['matchesSearch', 'normalize', 'query', 'structuralResults', 'expandedUnitIds', 'onExpandedChange']) {
   requireText(view, implementation, 'ConsultazioneView.tsx')
 }
 for (const state of ["'idle'", "'loading'", "'success'", "'error'"]) {
@@ -43,7 +45,9 @@ for (const state of ["'idle'", "'loading'", "'success'", "'error'"]) {
 }
 requireText(hook, 'retry', 'useCurriculum.ts')
 requireText(view, 'readOnly', 'ConsultazioneView.tsx')
-requireText(card, 'aria-expanded', 'UnitaCard.tsx')
+for (const label of ['aria-expanded', 'Mostra dettagli', 'Nascondi dettagli', 'lg:grid-cols-2']) {
+  requireText(card, label, 'UnitaCard.tsx')
+}
 for (const label of ['Competenza', 'Obiettivi', 'Conoscenze', 'Abilità', 'Evidenze', 'Criteri di valutazione', 'Fonte', 'Validazione']) {
   requireText(card, label, 'UnitaCard.tsx')
 }
