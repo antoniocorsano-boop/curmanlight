@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
-import { RotateCcw } from 'lucide-react'
+import { AlertTriangle, LoaderCircle, RotateCcw } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
-import { useCurriculum } from '@/hooks/useCurriculum'
+import { useCurriculumResource } from '@/hooks/useCurriculum'
 import { filterByNucleo, filterByOrdine } from '@/lib/curriculum'
 import { UnitaCard } from '@/components/curriculum/UnitaCard'
 import { ApplicabilityContextBanner } from '@/components/curriculum/ApplicabilityContextBanner'
@@ -19,7 +19,7 @@ function labelStato(value?: string) {
 export function ConsultazioneView() {
   const { disciplinaSelezionata, setDisciplina, profilo } = useAppStore()
   const slug = disciplinaSelezionata as DisciplinaSlug | null
-  const curriculum = useCurriculum(slug)
+  const { data: curriculum, status, error, retry } = useCurriculumResource(slug)
   const initialOrder = profilo?.ordine ?? 'Tutti'
   const [ordine, setOrdine] = useState<OrdineEsteso>(initialOrder)
   const [nucleo, setNucleo] = useState('Tutti')
@@ -66,32 +66,39 @@ export function ConsultazioneView() {
 
         <label className="text-sm font-[550] text-slate-700">
           Ordine di scuola
-          <select value={ordine} onChange={event => setOrdine(event.target.value as OrdineEsteso)} className={selectClass} disabled={!slug}>
+          <select value={ordine} onChange={event => setOrdine(event.target.value as OrdineEsteso)} className={selectClass} disabled={!slug || status === 'loading'}>
             {ORDINI.map(item => <option key={item} value={item}>{item === 'Tutti' ? 'Tutti gli ordini' : item}</option>)}
           </select>
         </label>
 
         <label className="text-sm font-[550] text-slate-700">
           Nucleo
-          <select value={nucleo} onChange={event => setNucleo(event.target.value)} className={selectClass} disabled={!curriculum}>
+          <select value={nucleo} onChange={event => setNucleo(event.target.value)} className={selectClass} disabled={status !== 'success'}>
             <option value="Tutti">Tutti i nuclei</option>
             {nuclei.map(item => <option key={item} value={item}>{item}</option>)}
           </select>
         </label>
 
-        <button type="button" onClick={resetFilters} disabled={!slug} className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-[600] text-slate-600 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50">
+        <button type="button" onClick={resetFilters} disabled={!slug || status === 'loading'} className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-[600] text-slate-600 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50">
           <RotateCcw size={16} /> Azzera filtri
         </button>
       </section>
 
-      {!slug && (
+      {status === 'idle' && (
         <section className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center">
           <h2 className="text-base font-[650] text-slate-700">Seleziona una disciplina</h2>
           <p className="mt-2 text-sm text-slate-500">Potrai poi restringere la consultazione per ordine di scuola e nucleo.</p>
         </section>
       )}
 
-      {slug && curriculum && (
+      {status === 'loading' && (
+        <section aria-live="polite" className="flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white p-8 text-slate-600">
+          <LoaderCircle size={20} className="animate-spin text-indigo-600" />
+          <p className="text-sm font-[600]">Caricamento del curricolo in corso…</p>
+        </section>
+      )}
+
+      {status === 'success' && curriculum && (
         <>
           <section className="rounded-2xl border border-indigo-100 bg-indigo-50/50 p-5">
             <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
@@ -110,7 +117,7 @@ export function ConsultazioneView() {
 
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm font-[600] text-slate-700">{unita.length} {unita.length === 1 ? 'unità trovata' : 'unità trovate'}</p>
-            <p className="text-xs text-slate-500">Disciplina: {DISCIPLINE_LABELS[slug]} · Ordine: {ordine} · Nucleo: {nucleo}</p>
+            <p className="text-xs text-slate-500">Disciplina: {DISCIPLINE_LABELS[slug!]} · Ordine: {ordine} · Nucleo: {nucleo}</p>
           </div>
 
           {unita.length > 0 ? (
@@ -119,17 +126,26 @@ export function ConsultazioneView() {
             </section>
           ) : (
             <section className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center">
-              <h2 className="text-base font-[650] text-slate-700">Nessun risultato</h2>
-              <p className="mt-2 text-sm text-slate-500">Modifica ordine o nucleo, oppure azzera i filtri.</p>
+              <h2 className="text-base font-[650] text-slate-700">Nessun contenuto con questi filtri</h2>
+              <p className="mt-2 text-sm text-slate-500">Modifica ordine o nucleo, oppure usa “Azzera filtri” per tornare alla vista completa.</p>
             </section>
           )}
         </>
       )}
 
-      {slug && !curriculum && (
-        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
-          <h2 className="font-[650] text-amber-900">Dati non disponibili</h2>
-          <p className="mt-1 text-sm text-amber-800">Scegli un’altra disciplina oppure riprova dopo aver aggiornato la pagina.</p>
+      {status === 'error' && slug && (
+        <section role="alert" className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle size={20} className="mt-0.5 shrink-0 text-amber-700" />
+            <div className="flex-1">
+              <h2 className="font-[650] text-amber-900">Curricolo non caricato</h2>
+              <p className="mt-1 text-sm leading-6 text-amber-800">{error ?? 'Si è verificato un problema durante il caricamento.'}</p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <button type="button" onClick={retry} className="rounded-xl bg-amber-800 px-4 py-2 text-sm font-[650] text-white hover:bg-amber-900">Riprova</button>
+                <button type="button" onClick={() => setDisciplina(null)} className="rounded-xl border border-amber-300 bg-white px-4 py-2 text-sm font-[600] text-amber-900 hover:bg-amber-100">Cambia disciplina</button>
+              </div>
+            </div>
+          </div>
         </section>
       )}
     </div>
