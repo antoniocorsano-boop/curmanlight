@@ -7,6 +7,7 @@ on:
       - 'tools/cml-491-react-home-mobile-visual-audit.mjs'
       - '.github/workflows/cml-491-react-home-mobile-visual-audit.yml'
       - 'curman-react/src/**'
+      - 'curman-react/tools/**'
   workflow_dispatch:
 
 permissions:
@@ -20,11 +21,28 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Install React dependencies
+        run: npm ci --prefix curman-react
+      - name: Build React candidate
+        run: VITE_BASE_PATH=/ npm run build --prefix curman-react
+      - name: Start local candidate preview
+        run: |
+          npm run preview --prefix curman-react -- --host 127.0.0.1 --port 4173 > /tmp/cml491-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4173/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/cml491-preview.log
+          exit 1
       - name: Install Playwright
         run: npm install --no-save playwright
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Run CML-491 mobile visual audit
+        env:
+          CML_PREVIEW_URL: http://127.0.0.1:4173/
         run: node tools/cml-491-react-home-mobile-visual-audit.mjs
       - name: Upload audit evidence
         if: always()
@@ -34,4 +52,5 @@ jobs:
           path: |
             report/CML-491_react_home_mobile_visual_audit.md
             report/screenshots/CML-491/*.png
+            /tmp/cml491-preview.log
           if-no-files-found: warn
