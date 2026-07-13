@@ -55,12 +55,13 @@ async function openRevision(page: Page) {
     await page.getByRole('button', { name: 'Apri o chiudi il menu' }).click()
   }
   await page.getByRole('button', { name: 'Proponi un aggiornamento' }).click()
-  await expect(page.getByRole('heading', { name: 'Revisione' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Proponi un aggiornamento', level: 1 })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Valuta proposte già disponibili', level: 2 })).toBeVisible()
 }
 
 async function selectPilot(page: Page, pilot: Pilot, state: PilotState = 'actionable') {
-  const discipline = page.getByRole('main').getByRole('combobox').first()
-  await discipline.selectOption(pilot.slug)
+  const proposalRegion = page.getByRole('region', { name: 'Nuova proposta docente' })
+  await proposalRegion.getByLabel('Disciplina').selectOption(pilot.slug)
   await expect(page.getByText(new RegExp(String.raw`Campo:\s*${pilot.visibleFieldLabel}`, 'i')).first()).toBeVisible()
   await expect(page.getByText(new RegExp(`${pilot.visibleFieldLabel} vigent`, 'i')).first()).toBeVisible()
 
