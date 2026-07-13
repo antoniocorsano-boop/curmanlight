@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { ClipboardCheck, Download, RotateCcw, Trash2, X } from 'lucide-react'
 
 const STORAGE_KEY = 'curmanlight:guided-teacher-evaluation:v1'
@@ -105,14 +105,27 @@ function downloadEvaluation(data: EvaluationData) {
 export function GuidedTeacherEvaluation() {
   const [isOpen, setIsOpen] = useState(false)
   const [data, setData] = useState<EvaluationData>(() => loadEvaluation() ?? createEvaluation())
+  const [confirmDelete, setConfirmDelete] = useState(false)
+  const dialogRef = useRef<HTMLDivElement>(null)
+  const skipSaveRef = useRef(false)
   const hasSavedProgress = useMemo(
     () => data.completed || data.currentStep > 0 || data.notes.some(note => note.trim().length > 0),
     [data],
   )
 
   useEffect(() => {
+    if (skipSaveRef.current) { skipSaveRef.current = false; return }
     saveEvaluation(data)
   }, [data])
+
+  useEffect(() => {
+    if (!isOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setIsOpen(false); setConfirmDelete(false) }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen])
 
   const step = STEPS[data.currentStep]
 
@@ -125,7 +138,10 @@ export function GuidedTeacherEvaluation() {
 
   const resetEvaluation = () => {
     localStorage.removeItem(STORAGE_KEY)
+    skipSaveRef.current = true
     setData(createEvaluation())
+    setConfirmDelete(false)
+    setIsOpen(false)
   }
 
   return (
@@ -141,7 +157,7 @@ export function GuidedTeacherEvaluation() {
               </p>
               {hasSavedProgress && (
                 <p className="mt-2 text-xs font-[650] text-emerald-800">
-                  Percorso salvato: tappa {data.currentStep + 1} di {STEPS.length}{data.completed ? ' — completato' : ''}.
+                  Percorso salvato: tappa {data.currentStep + 1} di {STEPS.length}{data.completed ? ' \u2014 completato' : ''}.
                 </p>
               )}
             </div>
@@ -153,90 +169,116 @@ export function GuidedTeacherEvaluation() {
       </section>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/55 p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="evaluation-dialog-title">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/55 p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="evaluation-dialog-title" ref={dialogRef}>
           <div className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
             <header className="flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 sm:px-6">
               <div>
-                <p className="text-xs font-[700] uppercase tracking-wide text-emerald-700">Percorso di valutazione · {data.currentStep + 1}/{STEPS.length}</p>
-                <h2 id="evaluation-dialog-title" className="mt-1 text-xl font-[750] text-slate-900">{step.title}</h2>
+                {data.completed ? (
+                  <>
+                    <p className="text-xs font-[700] uppercase tracking-wide text-emerald-700">Percorso di valutazione</p>
+                    <h2 id="evaluation-dialog-title" className="mt-1 text-xl font-[750] text-slate-900">Percorso completato</h2>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-xs font-[700] uppercase tracking-wide text-emerald-700">Percorso di valutazione \u00b7 {data.currentStep + 1}/{STEPS.length}</p>
+                    <h2 id="evaluation-dialog-title" className="mt-1 text-xl font-[750] text-slate-900">{step.title}</h2>
+                  </>
+                )}
               </div>
-              <button type="button" onClick={() => setIsOpen(false)} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100" aria-label="Chiudi e continua più tardi">
+              <button type="button" onClick={() => { setIsOpen(false); setConfirmDelete(false) }} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100" aria-label="Chiudi e continua pi\u00f9 tardi">
                 <X size={21} />
               </button>
             </header>
 
             <div className="overflow-y-auto px-5 py-5 sm:px-6">
-              <div className="mb-5 h-2 overflow-hidden rounded-full bg-slate-100" aria-hidden="true">
-                <div className="h-full bg-emerald-600 transition-all" style={{ width: `${((data.currentStep + 1) / STEPS.length) * 100}%` }} />
-              </div>
-
-              <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
-                <p className="text-sm leading-6 text-slate-700">{step.instruction}</p>
-                <p className="mt-3 text-xs text-slate-500">Puoi chiudere il pannello, usare liberamente lo strumento e riprendere il percorso dalla Home.</p>
-              </div>
-
-              <label className="mt-5 block text-sm font-[650] text-slate-800" htmlFor="guided-evaluation-note">{step.prompt}</label>
-              <textarea
-                id="guided-evaluation-note"
-                value={data.notes[data.currentStep]}
-                onChange={event => updateNote(event.target.value)}
-                rows={7}
-                placeholder="Annotazione facoltativa"
-                className="mt-2 w-full resize-y rounded-xl border border-slate-300 p-3 text-sm leading-6 text-slate-800 outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100"
-              />
-
-              {data.currentStep === STEPS.length - 1 && (
-                <fieldset className="mt-5">
-                  <legend className="text-sm font-[650] text-slate-800">Saresti disponibile per un secondo breve test?</legend>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {[
-                      { value: true, label: 'Sì' },
-                      { value: false, label: 'No' },
-                      { value: null, label: 'Preferisco non indicarlo' },
-                    ].map(option => (
-                      <button
-                        key={option.label}
-                        type="button"
-                        onClick={() => setData(current => ({ ...current, secondTestAvailable: option.value }))}
-                        className={`rounded-xl border px-3 py-2 text-sm ${data.secondTestAvailable === option.value ? 'border-emerald-600 bg-emerald-50 text-emerald-800' : 'border-slate-200 text-slate-600 hover:bg-slate-50'}`}
-                      >
-                        {option.label}
-                      </button>
-                    ))}
+              {data.completed ? (
+                <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5 text-center">
+                  <p className="text-sm font-[650] text-emerald-800">Grazie, il percorso è stato completato.</p>
+                  <p className="mt-2 text-sm text-slate-600">Puoi esportare le osservazioni in qualsiasi momento oppure chiudere il pannello.</p>
+                </div>
+              ) : (
+                <>
+                  <div className="mb-5 h-2 overflow-hidden rounded-full bg-slate-100" aria-hidden="true">
+                    <div className="h-full bg-emerald-600 transition-all" style={{ width: `${((data.currentStep + 1) / STEPS.length) * 100}%` }} />
                   </div>
-                </fieldset>
+
+                  <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
+                    <p className="text-sm leading-6 text-slate-700">{step.instruction}</p>
+                    <p className="mt-3 text-xs text-slate-500">Puoi chiudere il pannello, usare liberamente lo strumento e riprendere il percorso dalla Home.</p>
+                  </div>
+
+                  <label className="mt-5 block text-sm font-[650] text-slate-800" htmlFor="guided-evaluation-note">{step.prompt}</label>
+                  <textarea
+                    id="guided-evaluation-note"
+                    value={data.notes[data.currentStep]}
+                    onChange={event => updateNote(event.target.value)}
+                    rows={7}
+                    placeholder="Annotazione facoltativa"
+                    className="mt-2 w-full resize-y rounded-xl border border-slate-300 p-3 text-sm leading-6 text-slate-800 outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100"
+                  />
+
+                  {data.currentStep === STEPS.length - 1 && (
+                    <fieldset className="mt-5">
+                      <legend className="text-sm font-[650] text-slate-800">Saresti disponibile per un secondo breve test?</legend>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {[
+                          { value: true, label: 'S\u00ec' },
+                          { value: false, label: 'No' },
+                          { value: null, label: 'Preferisco non indicarlo' },
+                        ].map(option => (
+                          <button
+                            key={option.label}
+                            type="button"
+                            onClick={() => setData(current => ({ ...current, secondTestAvailable: option.value }))}
+                            className={`rounded-xl border px-3 py-2 text-sm ${data.secondTestAvailable === option.value ? 'border-emerald-600 bg-emerald-50 text-emerald-800' : 'border-slate-200 text-slate-600 hover:bg-slate-50'}`}
+                          >
+                            {option.label}
+                          </button>
+                        ))}
+                      </div>
+                    </fieldset>
+                  )}
+                </>
               )}
             </div>
 
             <footer className="flex flex-col gap-3 border-t border-slate-200 bg-slate-50 px-5 py-4 sm:px-6">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <button type="button" onClick={resetEvaluation} className="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-[600] text-red-700 hover:bg-red-50">
-                  <Trash2 size={17} /> Cancella il percorso locale
-                </button>
-                <button type="button" onClick={() => downloadEvaluation(data)} className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-[600] text-slate-700 hover:bg-slate-100">
-                  <Download size={17} /> Esporta osservazioni
-                </button>
-              </div>
-              <div className="flex items-center justify-between gap-3">
-                <button
-                  type="button"
-                  disabled={data.currentStep === 0}
-                  onClick={() => setData(current => ({ ...current, currentStep: Math.max(0, current.currentStep - 1), completed: false }))}
-                  className="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-[600] text-slate-700 hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
-                >
-                  Indietro
-                </button>
-                {data.currentStep < STEPS.length - 1 ? (
+              {confirmDelete ? (
+                <div className="flex items-center justify-between gap-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3">
+                  <p className="text-sm text-red-800">Eliminare tutte le annotazioni e il percorso?</p>
                   <div className="flex gap-2">
-                    <button type="button" onClick={() => setData(current => ({ ...current, currentStep: Math.min(STEPS.length - 1, current.currentStep + 1) }))} className="rounded-xl px-4 py-2 text-sm font-[600] text-slate-600 hover:bg-slate-100">
-                      Salta
-                    </button>
-                    <button type="button" onClick={() => setData(current => ({ ...current, currentStep: Math.min(STEPS.length - 1, current.currentStep + 1) }))} className="rounded-xl bg-emerald-700 px-4 py-2 text-sm font-[650] text-white hover:bg-emerald-800">
-                      Continua
-                    </button>
+                    <button type="button" onClick={() => setConfirmDelete(false)} className="rounded-xl border border-slate-300 bg-white px-3 py-1.5 text-sm font-[600] text-slate-700 hover:bg-slate-100">Annulla</button>
+                    <button type="button" onClick={resetEvaluation} className="rounded-xl bg-red-700 px-3 py-1.5 text-sm font-[600] text-white hover:bg-red-800">Sì, elimina</button>
                   </div>
-                ) : (
-                  <button type="button" onClick={() => setData(current => ({ ...current, completed: true }))} className="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-4 py-2 text-sm font-[650] text-white hover:bg-emerald-800">
+                </div>
+              ) : (
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <button type="button" onClick={() => setConfirmDelete(true)} className="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-[600] text-red-700 hover:bg-red-50">
+                    <Trash2 size={17} /> Cancella il percorso locale
+                  </button>
+                  <button type="button" onClick={() => downloadEvaluation(data)} className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-[600] text-slate-700 hover:bg-slate-100">
+                    <Download size={17} /> Esporta osservazioni
+                  </button>
+                </div>
+              )}
+              <div className="flex items-center justify-between gap-3">
+                {!data.completed && (
+                  <button
+                    type="button"
+                    disabled={data.currentStep === 0}
+                    onClick={() => setData(current => ({ ...current, currentStep: Math.max(0, current.currentStep - 1), completed: false }))}
+                    className="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-[600] text-slate-700 hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
+                  >
+                    Indietro
+                  </button>
+                )}
+                {!data.completed && data.currentStep < STEPS.length - 1 && (
+                  <button type="button" onClick={() => setData(current => ({ ...current, currentStep: Math.min(STEPS.length - 1, current.currentStep + 1) }))} className="ml-auto rounded-xl bg-emerald-700 px-4 py-2 text-sm font-[650] text-white hover:bg-emerald-800">
+                    Continua
+                  </button>
+                )}
+                {!data.completed && data.currentStep === STEPS.length - 1 && (
+                  <button type="button" onClick={() => setData(current => ({ ...current, completed: true }))} className="ml-auto inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-4 py-2 text-sm font-[650] text-white hover:bg-emerald-800">
                     <RotateCcw size={17} /> Salva e completa
                   </button>
                 )}

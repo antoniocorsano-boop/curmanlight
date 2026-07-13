@@ -1,0 +1,50 @@
+{
+  "schema": "cml-guided-teacher-evaluation-v1",
+  "id": "edaabd2f-033c-4c19-90fc-6307dd961d82",
+  "createdAt": "2026-07-13T04:20:29.745Z",
+  "updatedAt": "2026-07-13T04:20:37.716Z",
+  "currentStep": 4,
+  "completed": true,
+  "notes": [
+    "Test di osservazione CML-483: la Home e chiara.",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "secondTestAvailable": true,
+  "product": "CurManLight React",
+  "responses": [
+    {
+      "step": 1,
+      "title": "Orientarsi",
+      "prompt": "Che cosa rende chiaro o poco chiaro il primo passo?",
+      "note": "Test di osservazione CML-483: la Home e chiara."
+    },
+    {
+      "step": 2,
+      "title": "Consultare",
+      "prompt": "Che cosa facilita o ostacola la comprensione del curricolo?",
+      "note": ""
+    },
+    {
+      "step": 3,
+      "title": "Provare un’attività",
+      "prompt": "Il processo e il significato delle azioni risultano comprensibili?",
+      "note": ""
+    },
+    {
+      "step": 4,
+      "title": "Valutare il supporto",
+      "prompt": "Quale aiuto è utile e quale supporto manca?",
+      "note": ""
+    },
+    {
+      "step": 5,
+      "title": "Restituire un giudizio",
+      "prompt": "Indica punti di forza, difficoltà e il miglioramento prioritario.",
+      "note": ""
+    }
+  ],
+  "privacy": "Dati raccolti ed esportati esclusivamente sul dispositivo dell’utente."
+}
