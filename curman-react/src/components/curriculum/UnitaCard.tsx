@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronDown, ChevronRight } from 'lucide-react'
+import { ChevronDown, ChevronRight, FilePenLine } from 'lucide-react'
 import type { UnitaApprendimento } from '@/types/curriculum'
 import type { Decisione } from '@/types/gap'
 import { useAppStore } from '@/stores/useAppStore'
@@ -25,12 +25,14 @@ export function UnitaCard({
   readOnly = false,
   expanded: controlledExpanded,
   onExpandedChange,
+  onPrepareProposal,
 }: {
   unita: UnitaApprendimento
   decisione?: Decisione
   readOnly?: boolean
   expanded?: boolean
   onExpandedChange?: (expanded: boolean) => void
+  onPrepareProposal?: (unit: UnitaApprendimento) => void
 }) {
   const [internalExpanded, setInternalExpanded] = useState(false)
   const profilo = useAppStore(s => s.profilo)
@@ -84,6 +86,14 @@ export function UnitaCard({
             <p><strong>Validazione:</strong> {unita.validazioneUmana ? 'Richiede validazione umana' : 'Non indicata'}</p>
             {unita.noteDipartimento && <p><strong>Nota:</strong> {unita.noteDipartimento}</p>}
           </section>
+        </div>
+      )}
+
+      {onPrepareProposal && (
+        <div className="flex justify-end border-t border-slate-100 p-3">
+          <button type="button" onClick={() => onPrepareProposal(unita)} className="inline-flex items-center gap-2 rounded-xl border border-indigo-200 bg-white px-3 py-2 text-sm font-[600] text-indigo-700 hover:bg-indigo-50">
+            <FilePenLine size={16} /> Prepara una proposta
+          </button>
         </div>
       )}
 
