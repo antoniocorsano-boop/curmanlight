@@ -1,0 +1,19 @@
+{
+  "schema": "cml-guided-teacher-evaluation-v1",
+  "id": "example-only",
+  "createdAt": "2026-07-13T00:00:00.000Z",
+  "updatedAt": "2026-07-13T00:15:00.000Z",
+  "currentStep": 4,
+  "completed": true,
+  "notes": [
+    "La Home chiarisce le attività principali, ma il rapporto tra contesto e primo passo può essere reso ancora più evidente.",
+    "I filtri aiutano la consultazione; la fonte e lo stato sono comprensibili.",
+    "Il confronto è leggibile, ma serve ribadire che la scelta non equivale ad approvazione istituzionale.",
+    "I messaggi contestuali sono utili; sarebbe utile un richiamo persistente al percorso in corso.",
+    "Punto di forza: chiarezza della consultazione. Priorità: rendere ancora più evidente il processo complessivo."
+  ],
+  "secondTestAvailable": true,
+  "product": "CurManLight React",
+  "responses": [],
+  "privacy": "Dati raccolti ed esportati esclusivamente sul dispositivo dell’utente."
+}

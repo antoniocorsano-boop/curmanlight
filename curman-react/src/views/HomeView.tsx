@@ -1,4 +1,5 @@
 import { BookOpen, Download, FilePenLine, Info, PencilRuler, Settings } from 'lucide-react'
+import { GuidedTeacherEvaluation } from '@/components/evaluation/GuidedTeacherEvaluation'
 import { resolveCurriculumApplicability, type SchoolOrder } from '@/lib/temporal-applicability'
 import { useAppStore } from '@/stores/useAppStore'
 import type { ViewId } from '@/types/state'
@@ -137,6 +138,8 @@ export function HomeView() {
           destination="esportazioni"
         />
       </section>
+
+      <GuidedTeacherEvaluation />
 
       <section className="rounded-2xl border border-indigo-100 bg-indigo-50/40 p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-start gap-3">
