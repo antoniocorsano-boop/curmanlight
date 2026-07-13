@@ -4,19 +4,36 @@ import { dirname, resolve } from 'node:path'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const read = path => readFile(resolve(root, path), 'utf8')
-const [view, card, sync] = await Promise.all([
+const [view, card, sync, hook] = await Promise.all([
   read('src/views/ConsultazioneView.tsx'),
   read('src/components/curriculum/UnitaCard.tsx'),
   read('tools/sync-curriculum-data.mjs'),
+  read('src/hooks/useCurriculum.ts'),
 ])
 
 function requireText(source, text, file) {
   if (!source.includes(text)) throw new Error(`${file}: contenuto obbligatorio assente: ${text}`)
 }
 
-for (const label of ['Disciplina', 'Ordine di scuola', 'Nucleo', 'Azzera filtri', 'Curricolo mostrato', 'Richiede validazione umana', 'Nessun risultato']) {
+for (const label of [
+  'Disciplina',
+  'Ordine di scuola',
+  'Nucleo',
+  'Azzera filtri',
+  'Curricolo mostrato',
+  'Richiede validazione umana',
+  'Nessun contenuto con questi filtri',
+  'Caricamento del curricolo in corso',
+  'Curricolo non caricato',
+  'Riprova',
+  'Cambia disciplina',
+]) {
   requireText(view, label, 'ConsultazioneView.tsx')
 }
+for (const state of ["'idle'", "'loading'", "'success'", "'error'"]) {
+  requireText(hook, state, 'useCurriculum.ts')
+}
+requireText(hook, 'retry', 'useCurriculum.ts')
 requireText(view, 'readOnly', 'ConsultazioneView.tsx')
 requireText(card, 'aria-expanded', 'UnitaCard.tsx')
 for (const label of ['Competenza', 'Obiettivi', 'Conoscenze', 'Abilità', 'Evidenze', 'Criteri di valutazione', 'Fonte', 'Validazione']) {
