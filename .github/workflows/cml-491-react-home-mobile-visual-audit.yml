@@ -27,7 +27,7 @@ jobs:
         run: VITE_BASE_PATH=/ npm run build --prefix curman-react
       - name: Start local candidate preview
         run: |
-          npm run preview --prefix curman-react -- --host 127.0.0.1 --port 4173 > /tmp/cml491-preview.log 2>&1 &
+          VITE_BASE_PATH=/ npm run preview --prefix curman-react -- --host 127.0.0.1 --port 4173 > /tmp/cml491-preview.log 2>&1 &
           for attempt in {1..30}; do
             if curl --fail --silent http://127.0.0.1:4173/ > /dev/null; then
               exit 0
