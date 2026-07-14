@@ -110,12 +110,50 @@ Per ogni disciplina e ordine:
 8. consolidamento dei rilievi;
 9. definizione delle priorità di correzione.
 
-## Stato iniziale
+## Stato operativo
 
 Branch dedicata:
 
 `codex/cml-curr-audit-01-full-curriculum-document-audit`
 
-Verdetto iniziale:
+Completato:
 
-`CML_CURR_AUDIT_01_INITIALIZED_DOCUMENTARY_ONLY`
+- inventario automatico di 14 discipline e 142 unità;
+- verifica di campi, identificativi, tipi, livelli, fonti e validazione;
+- artifact GitHub Actions riproducibile anche in presenza di P0;
+- rilevazione esplicita di unità prive di `ordine`;
+- report direzionale iniziale;
+- confronto con il contratto temporale CML-477;
+- registro analitico dei 22 gap candidati di livello.
+
+Esito dell’analisi di applicabilità:
+
+- CML-477 determina il quadro temporale IN 2012/IN 2025;
+- CML-477 non costituisce una matrice disciplina × ordine × classe/fascia;
+- le 22 assenze non sono ancora classificabili tutte come lacune curricolari confermate;
+- le assenze sono registrate come gap candidati da validare;
+- le dieci assenze dell’Infanzia richiedono cautela perché i contenuti sono organizzati per campi di esperienza;
+- le dodici assenze della Primaria devono essere distinte tra progressione annuale, aggregazione pluriclasse e gap obbligatorio.
+
+Output aggiornati:
+
+- `tools/audit-cml-curriculum-complete.mjs`;
+- `.github/workflows/cml-curr-audit-01.yml`;
+- `report/CML-CURR-AUDIT-01-complete-documentary-findings.md`;
+- `report/CML-CURR-AUDIT-01-applicability-review.md`;
+- artifact `report/CML-CURR-AUDIT-01/` generato dal workflow.
+
+## Passaggio successivo
+
+Costruire una matrice documentale di applicabilità con esito per ogni combinazione rilevante:
+
+- `APPLICABILE_OBBLIGATORIO`;
+- `APPLICABILE_AGGREGATO`;
+- `NON_APPLICABILE`;
+- `DA_VERIFICARE`.
+
+La matrice dovrà indicare fonte e validazione umana. Solo i gap classificati come obbligatori potranno generare una successiva proposta di integrazione curricolare.
+
+## Verdetto corrente
+
+`CML_CURR_AUDIT_01_STRUCTURAL_PASS_APPLICABILITY_CLASSIFICATION_IN_PROGRESS`
