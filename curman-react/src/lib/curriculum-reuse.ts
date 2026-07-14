@@ -35,7 +35,7 @@ export function mergeSourceIds(current: string[] | undefined, additions: string[
 }
 
 export function filterUnitsForContext(units: UnitaApprendimento[], ordine: string, classe: string) {
-  const byOrder = units.filter(unit => unit.ordine === ordine)
+  const byOrder = ordine === 'Tutti' ? units : units.filter(unit => unit.ordine === ordine)
   const normalizedClass = normalize(classe)
   if (!normalizedClass) return byOrder
 
