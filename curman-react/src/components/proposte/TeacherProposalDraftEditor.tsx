@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
-import { AlertTriangle, Save, Trash2 } from 'lucide-react'
+import { AlertTriangle, Download, Save, Trash2 } from 'lucide-react'
+import { downloadTeacherProposal } from '@/lib/proposalFile'
+import { useAppStore } from '@/stores/useAppStore'
 import { useProposalStore } from '@/stores/useProposalStore'
 import type { ProposalTargetField } from '@/types/proposal'
 import type { UnitaApprendimento } from '@/types/curriculum'
@@ -20,6 +22,7 @@ function fieldText(unit: UnitaApprendimento, field: ProposalTargetField) {
 }
 
 export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento }) {
+  const profilo = useAppStore(state => state.profilo)
   const existing = useProposalStore(state => state.drafts[unit.id])
   const saveDraft = useProposalStore(state => state.saveDraft)
   const deleteDraft = useProposalStore(state => state.deleteDraft)
@@ -71,6 +74,11 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
     deleteDraft(unit.id)
   }
 
+  function handleExport() {
+    if (!existing) return
+    downloadTeacherProposal(existing, profilo)
+  }
+
   return (
     <section className="rounded-2xl border border-indigo-200 bg-white p-5" aria-labelledby="proposal-draft-title">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
@@ -120,9 +128,10 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
       </div>
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
-        <p className="text-xs leading-5 text-slate-500">La bozza resta sul dispositivo e non modifica il curricolo vigente.</p>
-        <div className="flex gap-2">
+        <p className="text-xs leading-5 text-slate-500">La bozza resta sul dispositivo e non modifica il curricolo vigente. L’esportazione crea un file locale trasferibile.</p>
+        <div className="flex flex-wrap gap-2">
           {existing && <button type="button" onClick={handleDelete} className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2 text-sm font-[600] text-slate-600 hover:bg-slate-50"><Trash2 size={16} /> Elimina bozza</button>}
+          {existing && <button type="button" onClick={handleExport} className="inline-flex items-center gap-2 rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-[600] text-indigo-700 hover:bg-indigo-50"><Download size={16} /> Esporta .cml</button>}
           <button type="button" disabled={!canSave} onClick={handleSave} className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-sm font-[650] text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"><Save size={16} /> {saved ? 'Bozza salvata' : 'Salva bozza'}</button>
         </div>
       </div>
