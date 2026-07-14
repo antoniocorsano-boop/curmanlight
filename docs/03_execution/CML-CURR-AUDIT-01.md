@@ -2,185 +2,124 @@
 
 ## Obiettivo
 
-Verificare in modo sistematico l’intero patrimonio curricolare di CurManLight, senza modificare i contenuti disciplinari, per accertarne completezza, coerenza, tracciabilità e utilizzabilità nei diversi ordini di scuola.
+Verificare sistematicamente il patrimonio curricolare di CurManLight senza modificare i contenuti disciplinari, accertando completezza, coerenza, tracciabilità, applicabilità e utilizzabilità nei diversi ordini di scuola.
 
 ## Perimetro
 
-L’audit comprende tutti i dati curricolari presenti nel repository e tutte le discipline canoniche, con controllo per:
+L’audit comprende:
 
-- ordine e livello scolastico;
-- disciplina;
-- competenze;
-- traguardi per lo sviluppo delle competenze;
-- obiettivi di apprendimento;
-- conoscenze;
-- abilità, quando presenti;
-- nuclei tematici;
-- unità o aggregazioni curricolari;
-- fonti normative e documentali;
-- stato del contenuto e validazione;
-- relazioni fra livelli, discipline e strutture dati;
-- corrispondenza fra dato sorgente, contratto normalizzato e consultazione React/legacy.
+- 14 discipline canoniche e 142 unità curricolari;
+- ordine, classe o fascia e disciplina;
+- competenze, traguardi, obiettivi, conoscenze, abilità, evidenze e criteri;
+- nuclei, ambiti, fonti, stato e validazione;
+- progressione verticale e coerenza orizzontale;
+- corrispondenza fra dato normalizzato e runtime;
+- applicabilità temporale IN 2012/IN 2025.
 
-## Livelli di controllo
+## Classificazione
 
-### A. Inventario strutturale
-
-Per ogni disciplina e ordine:
-
-- presenza del file o blocco dati;
-- identificativo stabile;
-- denominazione canonica;
-- ordine di scuola dichiarato;
-- struttura conforme al contratto normalizzato;
-- conteggio di competenze, traguardi, obiettivi, conoscenze e nuclei;
-- campi obbligatori mancanti, vuoti o duplicati.
-
-### B. Coerenza verticale
-
-- progressione fra Infanzia, Primaria e Secondaria di primo grado;
-- continuità dei nuclei;
-- gradualità degli obiettivi;
-- assenza di salti, inversioni o ripetizioni non motivate;
-- corrispondenza tra traguardi terminali e obiettivi intermedi.
-
-### C. Coerenza orizzontale
-
-- uniformità terminologica tra discipline;
-- struttura comparabile a parità di ordine;
-- uso coerente di competenza, traguardo, obiettivo, conoscenza e abilità;
-- individuazione di elementi impropriamente collocati o classificati.
-
-### D. Qualità documentale
-
-- formulazioni incomplete, ambigue o eccessivamente generiche;
-- duplicati testuali o quasi duplicati;
-- errori ortografici, mojibake e punteggiatura anomala;
-- riferimenti temporali o normativi non coerenti;
-- fonti assenti, non identificabili o non collegate al contenuto;
-- stato di validazione non dichiarato.
-
-### E. Integrità applicativa
-
-- corrispondenza tra dati normalizzati e runtime;
-- copertura delle 14 discipline canoniche;
-- copertura di tutti gli ordini dichiarati;
-- elementi presenti nei dati ma non consultabili;
-- elementi mostrati in interfaccia ma non riconducibili alla fonte;
-- divergenze fra React, legacy e snapshot pubblicato.
-
-## Classificazione dei rilievi
-
-- **P0 — Integrità compromessa:** dati mancanti o non leggibili che impediscono la consultazione corretta.
-- **P1 — Completezza o tracciabilità:** blocchi curricolari mancanti, fonti assenti, livelli non coperti o contratti incoerenti.
-- **P2 — Coerenza didattica/documentale:** progressioni deboli, duplicazioni, classificazioni improprie o terminologia incoerente.
-- **P3 — Qualità editoriale:** refusi, punteggiatura, uniformità delle etichette e micro-incoerenze.
-
-## Deliverable
-
-1. inventario completo per ordine e disciplina;
-2. matrice di copertura di competenze, traguardi, obiettivi, conoscenze, abilità e nuclei;
-3. matrice delle fonti e dello stato di validazione;
-4. elenco completo dei rilievi con severità e posizione;
-5. analisi della coerenza verticale;
-6. analisi della coerenza orizzontale;
-7. confronto dato sorgente → contratto normalizzato → runtime;
-8. report sintetico direzionale;
-9. piano di correzione separato, senza applicare automaticamente modifiche ai contenuti.
+- **P0:** integrità compromessa.
+- **P1:** completezza, provenienza o tracciabilità insufficiente.
+- **P2:** coerenza didattica o documentale da verificare.
+- **P3:** qualità editoriale.
 
 ## Vincoli
 
-- audit esclusivamente documentale;
-- nessuna modifica ai dati curricolari durante la fase di analisi;
+- nessuna modifica automatica ai dati curricolari;
 - nessuna normalizzazione silenziosa;
-- nessuna correzione automatica dei testi;
-- ogni rilievo deve essere collegato a file, disciplina, ordine e campo;
-- ogni valutazione didattica deve essere distinguibile da un controllo puramente tecnico;
-- validazione umana obbligatoria prima di qualunque futura modifica sostanziale.
-
-## Sequenza di lavoro
-
-1. mappatura delle sorgenti e dei contratti;
-2. inventario quantitativo completo;
-3. controllo strutturale automatizzabile;
-4. controllo documentale per disciplina;
-5. controllo verticale per ordine;
-6. controllo trasversale e terminologico;
-7. verifica delle fonti;
-8. consolidamento dei rilievi;
-9. definizione delle priorità di correzione.
+- ogni rilievo collegato a disciplina, ordine, livello e campo;
+- distinzione fra controllo tecnico e valutazione didattica;
+- validazione umana obbligatoria prima di correzioni sostanziali.
 
 ## Stato operativo
 
-Branch dedicata:
+Branch:
 
 `codex/cml-curr-audit-01-full-curriculum-document-audit`
 
 Completato:
 
 - inventario automatico di 14 discipline e 142 unità;
-- verifica di campi, identificativi, tipi, livelli, fonti e validazione;
+- verifica di campi, tipi, identificativi, livelli, fonti e validazione;
 - artifact GitHub Actions riproducibile anche in presenza di P0;
 - rilevazione esplicita di unità prive di `ordine`;
 - report direzionale iniziale;
 - confronto con il contratto temporale CML-477;
-- registro analitico dei 22 gap candidati di livello;
+- registro dei 22 gap candidati di livello;
 - matrice preliminare disciplina × ordine × livello;
-- pilot semantico completo delle fonti di Tecnologia.
+- pilot semantico Tecnologia;
+- pilot semantico Educazione Civica;
+- pilot semantico Italiano.
 
-Esito dell’analisi di applicabilità:
+## Applicabilità e gap
 
-- CML-477 determina il quadro temporale IN 2012/IN 2025;
-- CML-477 non costituisce una matrice disciplina × ordine × classe/fascia;
-- le 22 assenze non sono ancora classificabili tutte come lacune curricolari confermate;
-- le assenze sono registrate come gap candidati da validare;
-- le dieci assenze dell’Infanzia richiedono cautela perché i contenuti sono organizzati per campi di esperienza;
-- le dodici assenze della Primaria devono essere distinte tra progressione annuale, aggregazione pluriclasse e gap obbligatorio;
-- Italiano e Tecnologia risultano coperti su tutti i livelli rappresentati;
-- Seconda Lingua Comunitaria e Latino LEL hanno perimetri specifici e non devono generare falsi gap fuori dal proprio ordine o dalle classi previste.
+- CML-477 determina il quadro temporale IN 2012/IN 2025, non la granularità disciplinare per classe;
+- le 22 assenze sono gap candidati, non lacune automaticamente confermate;
+- le 10 assenze dell’Infanzia richiedono verifica rispetto ai campi di esperienza;
+- le 12 assenze della Primaria devono essere distinte fra progressione annuale, aggregazione pluriclasse e gap obbligatorio;
+- Seconda Lingua Comunitaria e Latino LEL hanno perimetri specifici e non devono generare falsi gap.
 
-Esito del pilot semantico Tecnologia:
+## Pilot semantico Tecnologia
 
-- tutte le 13 unità hanno una fonte presente;
-- il riferimento principale alle Indicazioni 2012 e al D.M. 254/2012 è formalmente identificabile;
-- le fonti miste 2012/2025 non dichiarano il quadro applicabile alla specifica classe e anno scolastico;
-- il singolo campo `fonte` non distingue la provenienza di competenza, traguardo, obiettivi, conoscenze, abilità, evidenze e criteri;
-- contenuto normativo, adattamento d’istituto e integrazione didattica risultano mescolati nella stessa stringa;
-- citazioni come `Educazione Civica` e `Pensiero computazionale` collegate al D.M. 221/2025 richiedono confronto puntuale con l’atto ufficiale;
-- la completezza formale della fonte non equivale a certificazione semantica.
+- 13/13 unità con fonte presente;
+- D.M. 254/2012 formalmente identificabile;
+- fonti miste 2012/2025 prive di applicabilità per classe e anno;
+- contenuto normativo, adattamento d’istituto e integrazione didattica mescolati nello stesso campo;
+- riferimenti al D.M. 221/2025 da verificare puntualmente.
 
-Output aggiornati:
+Output:
+
+`report/CML-CURR-AUDIT-01-semantic-source-pilot-tecnologia.md`
+
+## Pilot semantico Educazione Civica
+
+- 11/11 unità con fonte presente;
+- pluralità di fonti: D.M. 254/2012, Legge 92/2019, D.M. 183/2024, D.M. 221/2025, Agenda 2030 e fonti sovranazionali;
+- citazioni non granulari e prive di articolo, allegato o pagina;
+- educazione finanziaria e cittadinanza digitale richiedono verifica puntuale;
+- evidenze e criteri appaiono come adattamento didattico locale non esplicitamente classificato;
+- stato generale e stato delle singole unità non descrivono approvazione o applicabilità.
+
+Output:
+
+`report/CML-CURR-AUDIT-01-semantic-source-pilot-educazione-civica.md`
+
+## Pilot semantico Italiano
+
+Italiano è coperto strutturalmente per Infanzia, Primaria e Secondaria, ma presenta una criticità di provenienza:
+
+- il metadato generale dichiara che il corpus è stato adattato dal benchmark strutturale di Tecnologia;
+- il riuso è ammissibile come modello tecnico, non come fonte disciplinare;
+- le 14 unità hanno fonte presente, ma senza citazione puntuale o distinzione fra citazione, parafrasi e adattamento;
+- corsivo, tre libri annui, riassunto e centralità grammaticale sono attribuiti al D.M. 221/2025 senza articolo, allegato o pagina;
+- la presenza di almeno una unità per classe non dimostra un programma annuale completo: molti nuclei sono distribuiti uno per classe e devono essere letti come progressione sintetica;
+- evidenze, soglie quantitative e criteri richiedono l’etichetta esplicita di adattamento didattico.
+
+Output:
+
+`report/CML-CURR-AUDIT-01-semantic-source-pilot-italiano.md`
+
+## Output principali
 
 - `tools/audit-cml-curriculum-complete.mjs`;
 - `.github/workflows/cml-curr-audit-01.yml`;
 - `report/CML-CURR-AUDIT-01-complete-documentary-findings.md`;
 - `report/CML-CURR-AUDIT-01-applicability-review.md`;
 - `report/CML-CURR-AUDIT-01-discipline-applicability-matrix.md`;
-- `report/CML-CURR-AUDIT-01-semantic-source-pilot-tecnologia.md`;
+- i tre pilot semantici disciplinari;
 - artifact `report/CML-CURR-AUDIT-01/` generato dal workflow.
 
 ## Passaggio successivo
 
-Estendere il protocollo semantico alle discipline con profili differenti:
+Correlare fonte e gap candidati su una disciplina incompleta, iniziando da **Matematica** o **Arte e Immagine**, per stabilire se le classi mancanti rappresentino:
 
-1. Educazione Civica, per la pluralità di fonti normative;
-2. Italiano, come disciplina strutturalmente completa;
-3. Arte e Immagine o Matematica, per correlare fonti e gap candidati di livello;
-4. Infanzia, verificando la relazione fra disciplina e campi di esperienza.
+- `APPLICABILE_OBBLIGATORIO`;
+- `APPLICABILE_AGGREGATO`;
+- `NON_APPLICABILE`;
+- `DA_VERIFICARE`.
 
-La verifica dovrà classificare separatamente:
-
-- fonte formalmente presente;
-- atto identificabile;
-- citazione puntuale disponibile;
-- contenuto ufficiale;
-- adattamento d’istituto;
-- integrazione didattica;
-- applicabilità temporale;
-- necessità di validazione umana.
-
-Nessun gap o testo curricolare sarà corretto automaticamente durante l’audit.
+Successivamente va consolidato un contratto di provenienza che distingua testo ufficiale, parafrasi, adattamento d’istituto e integrazione didattica.
 
 ## Verdetto corrente
 
-`CML_CURR_AUDIT_01_TECNOLOGIA_SEMANTIC_SOURCE_PILOT_COMPLETE_CROSS_DISCIPLINE_VALIDATION_NEXT`
+`CML_CURR_AUDIT_01_THREE_SEMANTIC_PILOTS_COMPLETE_ITALIANO_PROVENANCE_GAP_CONFIRMED`
