@@ -146,10 +146,12 @@ export function GuidedTeacherEvaluation() {
 
   return (
     <>
-      <section aria-labelledby="guided-evaluation-title" className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5">
+      <section aria-labelledby="guided-evaluation-title" className="rounded-2xl border border-slate-200 bg-white p-5">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex items-start gap-3">
-            <ClipboardCheck size={23} className="mt-0.5 shrink-0 text-emerald-700" />
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center">
+              <ClipboardCheck size={22} className="text-emerald-700" />
+            </span>
             <div>
               <h2 id="guided-evaluation-title" className="text-base font-[700] text-slate-900">Esplora lo strumento e lascia le tue osservazioni</h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
@@ -157,7 +159,7 @@ export function GuidedTeacherEvaluation() {
               </p>
               {hasSavedProgress && (
                 <p className="mt-2 text-xs font-[650] text-emerald-800">
-                  Percorso salvato: tappa {data.currentStep + 1} di {STEPS.length}{data.completed ? ' \u2014 completato' : ''}.
+                  Percorso salvato: tappa {data.currentStep + 1} di {STEPS.length}{data.completed ? ' — completato' : ''}.
                 </p>
               )}
             </div>
@@ -180,12 +182,12 @@ export function GuidedTeacherEvaluation() {
                   </>
                 ) : (
                   <>
-                    <p className="text-xs font-[700] uppercase tracking-wide text-emerald-700">Percorso di valutazione \u00b7 {data.currentStep + 1}/{STEPS.length}</p>
+                    <p className="text-xs font-[700] uppercase tracking-wide text-emerald-700">Percorso di valutazione · {data.currentStep + 1}/{STEPS.length}</p>
                     <h2 id="evaluation-dialog-title" className="mt-1 text-xl font-[750] text-slate-900">{step.title}</h2>
                   </>
                 )}
               </div>
-              <button type="button" onClick={() => { setIsOpen(false); setConfirmDelete(false) }} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100" aria-label="Chiudi e continua pi\u00f9 tardi">
+              <button type="button" onClick={() => { setIsOpen(false); setConfirmDelete(false) }} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100" aria-label="Chiudi e continua più tardi">
                 <X size={21} />
               </button>
             </header>
@@ -222,7 +224,7 @@ export function GuidedTeacherEvaluation() {
                       <legend className="text-sm font-[650] text-slate-800">Saresti disponibile per un secondo breve test?</legend>
                       <div className="mt-2 flex flex-wrap gap-2">
                         {[
-                          { value: true, label: 'S\u00ec' },
+                          { value: true, label: 'Sì' },
                           { value: false, label: 'No' },
                           { value: null, label: 'Preferisco non indicarlo' },
                         ].map(option => (
