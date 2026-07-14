@@ -1,7 +1,7 @@
 import { downloadCml } from '@/lib/cml'
-import type { CmlDepartmentOutcome, HandlingItem } from '@/types/cml'
+import type { CmlDepartmentOutcome, DepartmentHandlingValue, HandlingItem, ProposalItem } from '@/types/cml'
 import type { OrdineEsteso } from '@/types/curriculum'
-import type { DepartmentQueueItem } from '@/types/departmentQueue'
+import type { DepartmentDecisionValue, DepartmentQueueItem } from '@/types/departmentQueue'
 
 type SourceProposal = {
   queueItemId: string
@@ -15,7 +15,7 @@ type SourceProposal = {
   author: string
   testoAttuale: string
   testoProposto: string
-  decisione: HandlingItem['handling']
+  decisione: DepartmentDecisionValue
   testoFinale: string | null
   notaDipartimentale?: string
 }
@@ -35,6 +35,8 @@ export type DepartmentOutcomeReadiness = {
   invalid: number
   ready: boolean
 }
+
+type CompatibleProposalItem = ProposalItem & { id?: string }
 
 function decisionIsComplete(item: DepartmentQueueItem) {
   if (!item.decision) return false
@@ -66,24 +68,39 @@ function finalText(item: DepartmentQueueItem) {
   return null
 }
 
+function referentHandling(value: DepartmentDecisionValue): DepartmentHandlingValue {
+  if (value === 'accettata') return 'confluita_nella_sintesi'
+  if (value === 'modificata') return 'riformulata_dal_dipartimento'
+  if (value === 'respinta') return 'assorbita_in_altra_proposta'
+  return 'da_chiarire'
+}
+
+function proposalIdentity(item: DepartmentQueueItem) {
+  const proposal = item.proposal as CompatibleProposalItem
+  return proposal.id?.trim() || proposal.unitaId
+}
+
 export function buildDepartmentOutcomeFile(items: DepartmentQueueItem[]): DepartmentOutcomeFile {
   const decidedItems = items.filter(decisionIsComplete)
   if (decidedItems.length === 0) throw new Error('Non ci sono decisioni complete da esportare.')
 
+  const disciplines = [...new Set(decidedItems.map(item => item.discipline))].sort()
+  const discipline = disciplines.length === 1 ? disciplines[0] : 'Multidisciplinare'
+
   const proposalHandling: HandlingItem[] = decidedItems.map(item => ({
-    proposalId: item.id,
-    handling: item.decision!.value,
+    proposalId: proposalIdentity(item),
+    handling: referentHandling(item.decision!.value),
     note: item.decision!.note || undefined,
     testoModificato: item.decision!.value === 'modificata' ? item.decision!.testoModificato ?? undefined : undefined,
     timestamp: item.decision!.decidedAt,
   }))
 
   const summary = {
-    totale: proposalHandling.length,
-    accettate: proposalHandling.filter(item => item.handling === 'accettata').length,
-    respinte: proposalHandling.filter(item => item.handling === 'respinta').length,
-    modificate: proposalHandling.filter(item => item.handling === 'modificata').length,
-    rinviate: proposalHandling.filter(item => item.handling === 'rinviata').length,
+    totale: decidedItems.length,
+    accettate: decidedItems.filter(item => item.decision!.value === 'accettata').length,
+    respinte: decidedItems.filter(item => item.decision!.value === 'respinta').length,
+    modificate: decidedItems.filter(item => item.decision!.value === 'modificata').length,
+    rinviate: decidedItems.filter(item => item.decision!.value === 'rinviata').length,
   }
 
   return {
@@ -92,7 +109,9 @@ export function buildDepartmentOutcomeFile(items: DepartmentQueueItem[]): Depart
     appName: 'CurManLight',
     createdAt: new Date().toISOString(),
     role: 'department',
-    disciplines: [...new Set(decidedItems.map(item => item.discipline))].sort(),
+    discipline,
+    disciplineWorkStatus: 'completed',
+    disciplines,
     ordine: resolveOrder(decidedItems),
     annoScolastico: resolveSchoolYear(decidedItems),
     proposalHandling,
@@ -101,7 +120,7 @@ export function buildDepartmentOutcomeFile(items: DepartmentQueueItem[]): Depart
       queueItemId: item.id,
       sourceFingerprint: item.sourceFingerprint,
       sourceFileName: item.sourceFileName,
-      proposalId: item.id,
+      proposalId: proposalIdentity(item),
       unitaId: item.proposal.unitaId,
       discipline: item.discipline,
       ordine: item.ordine,
