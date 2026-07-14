@@ -15,16 +15,16 @@ Il contratto CML-477 determina il quadro nazionale applicabile nel tempo, ma non
 
 | Disciplina | Infanzia 3–4 | Infanzia 5 | Primaria | Secondaria I grado | Esito preliminare |
 |---|---|---|---|---|---|
-| Arte e Immagine | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1 e 3 presenti; 2 DA_VERIFICARE; 4–5 APPLICABILE_AGGREGATO in `art_pri_3_001` | 1–3 presenti | aggregazione 3–5 documentata; classe 2 ancora da verificare |
+| Arte e Immagine | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1 e 3 presenti; 2 DA_VERIFICARE con forte evidenza di gap; 4–5 APPLICABILE_AGGREGATO in `art_pri_3_001` | 1–3 presenti | aggregazione 3–5 documentata; classe 2 candidata P1 |
 | Educazione Civica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | fascia 3–4 dipendente dal modello per campi di esperienza |
-| Educazione Fisica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 DA_VERIFICARE; 4 APPLICABILE_AGGREGATO nelle unità di classi 3 e 5 | 1–3 presenti | classe 4 aggregata 3–5; classe 2 ancora da verificare |
+| Educazione Fisica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 DA_VERIFICARE con forte evidenza di gap; 4 APPLICABILE_AGGREGATO | 1–3 presenti | classe 4 aggregata 3–5; classe 2 candidata P1 |
 | Geografia | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | duplicato testuale separato |
 | Inglese | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | fascia 3–4 dipendente dal modello per campi di esperienza |
 | Italiano | presente | presente | 1–5 presenti | 1–3 presenti | copertura strutturale completa |
 | Latino LEL | NON_APPLICABILE | NON_APPLICABILE | NON_APPLICABILE | classe 1 NON_APPLICABILE; 2–3 presenti | perimetro specifico già documentato |
-| Matematica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1 e 5 presenti; 2, 3, 4 DA_VERIFICARE | 1–3 presenti | possibile aggregazione o lacuna reale da determinare |
-| Musica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | nessuna aggregazione pluriclasse dichiarata |
-| Religione Cattolica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | nessuna aggregazione pluriclasse dichiarata; governance della validazione incoerente |
+| Matematica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1 e 5 presenti; 2, 3, 4 DA_VERIFICARE con forte evidenza di gap | 1–3 presenti | tre livelli candidati P1; nessuna aggregazione dichiarata |
+| Musica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE con forte evidenza di gap | 1–3 presenti | due livelli candidati P1; nessuna aggregazione dichiarata |
+| Religione Cattolica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE con forte evidenza di gap | 1–3 presenti | due livelli candidati P1; governance della validazione incoerente |
 | Scienze | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | fascia 3–4 dipendente dal modello per campi di esperienza |
 | Seconda Lingua Comunitaria | NON_APPLICABILE | NON_APPLICABILE | NON_APPLICABILE | 1–3 presenti | applicabilità limitata alla Secondaria I grado |
 | Storia | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | applicabilità temporale CML-477 distinta |
@@ -38,10 +38,10 @@ L’audit automatico aveva rilevato 22 combinazioni disciplina/livello prive di 
 - Arte e Immagine, Primaria classe 5 → `APPLICABILE_AGGREGATO`;
 - Educazione Fisica, Primaria classe 4 → `APPLICABILE_AGGREGATO`.
 
-Restano 19 combinazioni non risolte. Esse non hanno però lo stesso significato:
+Restano 19 combinazioni non risolte, ma con due significati distinti:
 
 - 10 combinazioni Infanzia derivano da un unico problema sistemico di granularità e modello;
-- 9 combinazioni Primaria restano gap disciplina/classe da verificare singolarmente.
+- 9 combinazioni Primaria sono candidati P1 ad alta confidenza, ancora subordinati a validazione umana.
 
 ## Infanzia 3–4 anni — un gap sistemico, dieci manifestazioni
 
@@ -74,7 +74,7 @@ Decisione richiesta all’istituto:
 2. unità uniche plurifascia 3–5 con applicabilità esplicita;
 3. modello nativo per campi di esperienza senza duplicazione disciplinare.
 
-## Primaria — 9 casi ancora da verificare
+## Primaria — 9 candidati P1 ad alta confidenza
 
 - Arte e Immagine: classe 2;
 - Educazione Fisica: classe 2;
@@ -82,19 +82,22 @@ Decisione richiesta all’istituto:
 - Musica: classi 2, 4;
 - Religione Cattolica: classi 2, 4.
 
-Casi riclassificati:
+Per tutti i nove casi:
 
-- Arte e Immagine: classi 4 e 5 `APPLICABILE_AGGREGATO` nell’unità `art_pri_3_001`, la cui fonte dichiara classi 3–4–5;
-- Educazione Fisica: classe 4 `APPLICABILE_AGGREGATO` nelle unità `ef_pri_3_001` e `ef_pri_5_001`, entrambe con fonte riferita alle classi 3–4–5.
+- la disciplina è attiva nella Primaria;
+- esistono record per annualità precedenti e successive;
+- non esiste una dichiarazione di non applicabilità;
+- non esiste una fonte o nota che assegni la copertura a una unità pluriclasse;
+- la progressione verticale risulta interrotta.
 
-I pilot Musica e Religione Cattolica non hanno prodotto ulteriori riclassificazioni: nessuna unità o nota dichiara una copertura pluriclasse per le classi 2 o 4.
+La classificazione formale resta `DA_VERIFICARE`, ma il livello di evidenza interno è alto. Prima della chiusura del curricolo serve una validazione disciplinare esplicita che stabilisca se ciascun livello richiede un record autonomo o una aggregazione formalmente approvata.
 
-Possibili esiti dopo validazione umana:
+Casi già riclassificati:
 
-- `APPLICABILE_OBBLIGATORIO`, se il curricolo richiede una progressione annuale distinta;
-- `APPLICABILE_AGGREGATO`, se una unità copre intenzionalmente più classi;
-- `NON_APPLICABILE`, solo in presenza di una fonte o delibera esplicita;
-- permanenza `DA_VERIFICARE`, se la documentazione non consente ancora una decisione.
+- Arte e Immagine: classi 4 e 5 `APPLICABILE_AGGREGATO` nell’unità `art_pri_3_001`;
+- Educazione Fisica: classe 4 `APPLICABILE_AGGREGATO` nelle unità riferite alle classi 3–4–5.
+
+Nessuna correzione o generazione automatica è autorizzata dall’audit.
 
 ## Fonti e limiti
 
@@ -105,9 +108,11 @@ Fonti interne usate:
 - `report/CML-CURR-AUDIT-01-complete-documentary-findings.md`;
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-arte-immagine.md`;
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-educazione-fisica.md`;
+- `report/CML-CURR-AUDIT-01-semantic-source-pilot-matematica.md`;
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-musica.md`;
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-religione-cattolica.md`;
-- `report/CML-CURR-AUDIT-01-infanzia-cross-discipline-granularity-review.md`.
+- `report/CML-CURR-AUDIT-01-infanzia-cross-discipline-granularity-review.md`;
+- `report/CML-CURR-AUDIT-01-primary-residual-gap-assessment.md`.
 
 Limiti:
 
@@ -126,4 +131,4 @@ La PR #106 deve mantenere separati:
 4. granularità scelta dall’istituto;
 5. qualità semantica del contenuto.
 
-`CML_CURR_AUDIT_01_MATRIX_9_PRIMARY_GAPS_PLUS_1_SYSTEMIC_INFANZIA_GRANULARITY_ISSUE`
+`CML_CURR_AUDIT_01_MATRIX_9_HIGH_CONFIDENCE_PRIMARY_CANDIDATE_GAPS_PLUS_1_SYSTEMIC_INFANZIA_ISSUE`
