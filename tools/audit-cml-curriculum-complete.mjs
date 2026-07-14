@@ -36,8 +36,10 @@ for (const fileName of files) {
   const localTexts = new Map()
 
   for (const unit of units) {
-    const order = unit.ordine || 'SENZA_ORDINE'
+    const hasOrder = nonEmpty(unit.ordine)
+    const order = hasOrder ? String(unit.ordine).trim() : 'SENZA_ORDINE'
     const level = keyFor(unit) || 'SENZA_CLASSE_FASCIA'
+    if (!hasOrder) issues.push({ severity: 'P1', type: 'ordine_mancante', unitId: unit.id, order, level })
     orders[order] ??= { total: 0, levels: {}, nuclei: new Set(), ambiti: new Set() }
     orders[order].total++
     orders[order].levels[level] = (orders[order].levels[level] || 0) + 1
