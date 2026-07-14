@@ -1,0 +1,27 @@
+name: CML-CURR-AUDIT-01 Complete Curriculum Audit
+
+on:
+  pull_request:
+    paths:
+      - 'content/curriculum/**'
+      - 'tools/audit-cml-curriculum-complete.mjs'
+      - '.github/workflows/cml-curr-audit-01.yml'
+      - 'docs/03_execution/CML-CURR-AUDIT-01.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run complete documentary audit
+        run: node tools/audit-cml-curriculum-complete.mjs
+      - name: Upload audit reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: CML-CURR-AUDIT-01
+          path: report/CML-CURR-AUDIT-01/
+          if-no-files-found: error
