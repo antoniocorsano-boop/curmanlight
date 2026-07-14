@@ -1,6 +1,7 @@
 import { useMemo, useRef, useState } from 'react'
-import { AlertTriangle, CheckCircle2, Copy, FileUp, RotateCcw } from 'lucide-react'
+import { AlertTriangle, CheckCircle2, Copy, FileUp, ListPlus, RotateCcw } from 'lucide-react'
 import { readTeacherProposalFiles, type TeacherProposalImportRecord } from '@/lib/teacherProposalImport'
+import { useDepartmentQueueStore } from '@/stores/useDepartmentQueueStore'
 
 function statusBadge(record: TeacherProposalImportRecord) {
   if (record.status === 'valid') {
@@ -16,6 +17,8 @@ export function TeacherProposalMultiImport() {
   const inputRef = useRef<HTMLInputElement>(null)
   const [records, setRecords] = useState<TeacherProposalImportRecord[]>([])
   const [reading, setReading] = useState(false)
+  const [queueMessage, setQueueMessage] = useState<string | null>(null)
+  const importRecords = useDepartmentQueueStore(state => state.importRecords)
 
   const summary = useMemo(() => ({
     files: records.length,
@@ -28,12 +31,27 @@ export function TeacherProposalMultiImport() {
   async function handleFiles(files: FileList | null) {
     if (!files?.length) return
     setReading(true)
+    setQueueMessage(null)
     try {
       setRecords(await readTeacherProposalFiles(files))
     } finally {
       setReading(false)
       if (inputRef.current) inputRef.current.value = ''
     }
+  }
+
+  function addToQueue() {
+    const result = importRecords(records)
+    if (result.added === 0) {
+      setQueueMessage(result.skipped > 0 ? 'Le proposte selezionate erano già presenti nella coda.' : 'Nessuna proposta valida da aggiungere.')
+      return
+    }
+    setQueueMessage(`${result.added} ${result.added === 1 ? 'proposta aggiunta' : 'proposte aggiunte'} alla coda${result.skipped ? `; ${result.skipped} già presenti` : ''}.`)
+  }
+
+  function reset() {
+    setRecords([])
+    setQueueMessage(null)
   }
 
   return (
@@ -45,7 +63,7 @@ export function TeacherProposalMultiImport() {
           <p className="mt-1 text-sm leading-6 text-slate-500">Seleziona uno o più file `.cml`. I file vengono letti e verificati solo nel browser.</p>
         </div>
         {records.length > 0 && (
-          <button type="button" onClick={() => setRecords([])} className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-[600] text-slate-600 hover:bg-slate-50">
+          <button type="button" onClick={reset} className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-[600] text-slate-600 hover:bg-slate-50">
             <RotateCcw size={15} /> Azzera
           </button>
         )}
@@ -95,7 +113,14 @@ export function TeacherProposalMultiImport() {
             ))}
           </div>
 
-          <p className="mt-4 text-xs leading-5 text-slate-500">Solo i file validi e non duplicati saranno disponibili alla futura coda decisionale dipartimentale. Nessun dato viene caricato o inviato all’esterno.</p>
+          <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center">
+            <button type="button" disabled={summary.proposals === 0} onClick={addToQueue} className="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-[650] text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-40">
+              <ListPlus size={16} /> Aggiungi alla coda
+            </button>
+            {queueMessage && <p className="text-xs text-slate-600" role="status">{queueMessage}</p>}
+          </div>
+
+          <p className="mt-4 text-xs leading-5 text-slate-500">Solo i file validi e non duplicati vengono aggiunti alla coda dipartimentale. Nessun dato viene caricato o inviato all’esterno.</p>
         </>
       )}
     </section>
