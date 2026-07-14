@@ -17,7 +17,7 @@ Il contratto CML-477 determina il quadro nazionale applicabile nel tempo, ma non
 |---|---|---|---|---|---|
 | Arte e Immagine | DA_VERIFICARE | presente | 1 e 3 presenti; 2 DA_VERIFICARE; 4–5 APPLICABILE_AGGREGATO in `art_pri_3_001` | 1–3 presenti | aggregazione 3–5 documentata; classe 2 ancora da verificare |
 | Educazione Civica | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | solo fascia Infanzia da verificare |
-| Educazione Fisica | DA_VERIFICARE | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | possibile aggregazione pluriclasse da documentare |
+| Educazione Fisica | DA_VERIFICARE | presente | 1, 3, 5 presenti; 2 DA_VERIFICARE; 4 APPLICABILE_AGGREGATO nelle unità di classi 3 e 5 | 1–3 presenti | classe 4 aggregata 3–5; classe 2 ancora da verificare |
 | Geografia | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | fascia Infanzia da verificare; duplicato testuale separato |
 | Inglese | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | fascia Infanzia da verificare |
 | Italiano | presente | presente | 1–5 presenti | 1–3 presenti | copertura strutturale completa |
@@ -32,12 +32,13 @@ Il contratto CML-477 determina il quadro nazionale applicabile nel tempo, ma non
 
 ## Registro delle assenze originarie
 
-L’audit automatico aveva rilevato 22 combinazioni disciplina/livello prive di record autonomo. Il pilot Arte e Immagine ha permesso di riclassificare due casi come aggregazioni documentate:
+L’audit automatico aveva rilevato 22 combinazioni disciplina/livello prive di record autonomo. I pilot disciplinari hanno riclassificato tre casi come aggregazioni documentate:
 
 - Arte e Immagine, Primaria classe 4 → `APPLICABILE_AGGREGATO`;
-- Arte e Immagine, Primaria classe 5 → `APPLICABILE_AGGREGATO`.
+- Arte e Immagine, Primaria classe 5 → `APPLICABILE_AGGREGATO`;
+- Educazione Fisica, Primaria classe 4 → `APPLICABILE_AGGREGATO`.
 
-Restano quindi 20 casi non ancora risolti: 10 nell’Infanzia e 10 nella Primaria.
+Restano quindi 19 casi non ancora risolti: 10 nell’Infanzia e 9 nella Primaria.
 
 ### Infanzia 3–4 anni — 10 casi
 
@@ -56,17 +57,18 @@ Tutti classificati `DA_VERIFICARE`:
 
 Motivo: nell’Infanzia la progettazione nazionale è spesso organizzata per campi di esperienza e sviluppo unitario, non necessariamente per discipline autonome. Serve una decisione esplicita sul modello dati d’istituto prima di dichiarare ogni assenza come P1 definitiva.
 
-### Primaria — 10 casi ancora da verificare
+### Primaria — 9 casi ancora da verificare
 
 - Arte e Immagine: classe 2;
-- Educazione Fisica: classi 2, 4;
+- Educazione Fisica: classe 2;
 - Matematica: classi 2, 3, 4;
 - Musica: classi 2, 4;
 - Religione Cattolica: classi 2, 4.
 
 Casi riclassificati:
 
-- Arte e Immagine: classi 4 e 5 `APPLICABILE_AGGREGATO` nell’unità `art_pri_3_001`, la cui fonte dichiara classi 3–4–5 e la nota dipartimentale classi 3–5.
+- Arte e Immagine: classi 4 e 5 `APPLICABILE_AGGREGATO` nell’unità `art_pri_3_001`, la cui fonte dichiara classi 3–4–5;
+- Educazione Fisica: classe 4 `APPLICABILE_AGGREGATO` nelle unità `ef_pri_3_001` e `ef_pri_5_001`, entrambe con fonte riferita alle classi 3–4–5.
 
 Possibili esiti dopo validazione umana:
 
@@ -82,7 +84,8 @@ Fonti interne usate:
 - `content/curriculum/*.normalized.json`;
 - `docs/02_system/DUAL-CURRICULUM-TEMPORAL-APPLICABILITY-CONTRACT.md`;
 - `report/CML-CURR-AUDIT-01-complete-documentary-findings.md`;
-- `report/CML-CURR-AUDIT-01-semantic-source-pilot-arte-immagine.md`.
+- `report/CML-CURR-AUDIT-01-semantic-source-pilot-arte-immagine.md`;
+- `report/CML-CURR-AUDIT-01-semantic-source-pilot-educazione-fisica.md`.
 
 Limiti:
 
@@ -101,4 +104,4 @@ La PR #106 deve mantenere separati:
 4. granularità scelta dall’istituto;
 5. qualità semantica del contenuto.
 
-`CML_CURR_AUDIT_01_DISCIPLINE_APPLICABILITY_MATRIX_20_UNRESOLVED_GAPS_2_AGGREGATED_LEVELS`
+`CML_CURR_AUDIT_01_DISCIPLINE_APPLICABILITY_MATRIX_19_UNRESOLVED_GAPS_3_AGGREGATED_LEVELS`
