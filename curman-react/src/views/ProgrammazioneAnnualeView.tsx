@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Save, BookOpen } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
 
 const STORAGE_KEY = 'cml-programmazione-annuale-v1'
+const STORE_VERSION = 'cml-programmazione-annuale-store-v1'
 
 type AnnualPlan = {
   version: 'cml-programmazione-annuale-v1'
@@ -19,6 +20,11 @@ type AnnualPlan = {
   valutazione: string
 }
 
+type AnnualPlanStore = {
+  version: typeof STORE_VERSION
+  plans: Record<string, AnnualPlan>
+}
+
 const EMPTY_PLAN: Omit<AnnualPlan, 'savedAt' | 'disciplina' | 'annoScolastico' | 'ordine'> = {
   version: 'cml-programmazione-annuale-v1',
   classe: '',
@@ -30,11 +36,34 @@ const EMPTY_PLAN: Omit<AnnualPlan, 'savedAt' | 'disciplina' | 'annoScolastico' |
   valutazione: '',
 }
 
+function buildPlanKey(disciplina: string, ordine: string, annoScolastico: string, classe: string) {
+  return [disciplina, ordine, annoScolastico, classe]
+    .map(value => encodeURIComponent(value.trim().toLocaleLowerCase('it-IT')))
+    .join('::')
+}
+
+function readStore(): AnnualPlanStore {
+  const raw = localStorage.getItem(STORAGE_KEY)
+  if (!raw) return { version: STORE_VERSION, plans: {} }
+
+  const parsed = JSON.parse(raw) as AnnualPlanStore | AnnualPlan
+  if ('plans' in parsed && parsed.version === STORE_VERSION) return parsed
+
+  if (parsed.version === 'cml-programmazione-annuale-v1') {
+    const legacyKey = buildPlanKey(parsed.disciplina, parsed.ordine, parsed.annoScolastico, parsed.classe)
+    return { version: STORE_VERSION, plans: { [legacyKey]: parsed } }
+  }
+
+  return { version: STORE_VERSION, plans: {} }
+}
+
 export function ProgrammazioneAnnualeView() {
   const profilo = useAppStore(s => s.profilo)
   const disciplinaSelezionata = useAppStore(s => s.disciplinaSelezionata)
   const [plan, setPlan] = useState(EMPTY_PLAN)
   const [savedAt, setSavedAt] = useState<string | null>(null)
+  const [storageError, setStorageError] = useState<string | null>(null)
+  const loadedPlanKey = useRef<string | null>(null)
 
   const contesto = useMemo(() => ({
     disciplina: disciplinaSelezionata ?? '',
@@ -42,12 +71,25 @@ export function ProgrammazioneAnnualeView() {
     ordine: profilo?.ordine ?? '',
   }), [disciplinaSelezionata, profilo])
 
+  const planKey = useMemo(() => {
+    if (!contesto.disciplina || !contesto.annoScolastico || !contesto.ordine || !plan.classe.trim()) return null
+    return buildPlanKey(contesto.disciplina, contesto.ordine, contesto.annoScolastico, plan.classe)
+  }, [contesto, plan.classe])
+
   useEffect(() => {
+    if (!planKey || loadedPlanKey.current === planKey) return
+
     try {
-      const raw = localStorage.getItem(STORAGE_KEY)
-      if (!raw) return
-      const saved = JSON.parse(raw) as AnnualPlan
-      if (saved.version !== 'cml-programmazione-annuale-v1') return
+      const saved = readStore().plans[planKey]
+      loadedPlanKey.current = planKey
+      setStorageError(null)
+
+      if (!saved) {
+        setPlan(current => ({ ...EMPTY_PLAN, classe: current.classe }))
+        setSavedAt(null)
+        return
+      }
+
       setPlan({
         version: saved.version,
         classe: saved.classe ?? '',
@@ -60,21 +102,38 @@ export function ProgrammazioneAnnualeView() {
       })
       setSavedAt(saved.savedAt)
     } catch {
+      loadedPlanKey.current = planKey
       setSavedAt(null)
+      setStorageError('Non è stato possibile leggere il salvataggio locale. Il piano corrente non è stato modificato.')
     }
-  }, [])
+  }, [planKey])
 
   function update<K extends keyof typeof plan>(key: K, value: (typeof plan)[K]) {
+    if (key === 'classe') loadedPlanKey.current = null
+    setStorageError(null)
     setPlan(current => ({ ...current, [key]: value }))
   }
 
   function save() {
+    if (!planKey) return
+
     const payload: AnnualPlan = { ...plan, ...contesto, savedAt: new Date().toISOString() }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
-    setSavedAt(payload.savedAt)
+
+    try {
+      const store = readStore()
+      const nextStore: AnnualPlanStore = {
+        version: STORE_VERSION,
+        plans: { ...store.plans, [planKey]: payload },
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(nextStore))
+      setSavedAt(payload.savedAt)
+      setStorageError(null)
+    } catch {
+      setStorageError('Salvataggio non riuscito. Verifica lo spazio disponibile o le impostazioni del browser e riprova.')
+    }
   }
 
-  const missingContext = !contesto.disciplina || !contesto.annoScolastico || !contesto.ordine
+  const missingContext = !contesto.disciplina || !contesto.annoScolastico || !contesto.ordine || !plan.classe.trim()
 
   return (
     <div className="mx-auto w-full max-w-5xl p-5 sm:p-8">
@@ -95,8 +154,9 @@ export function ProgrammazioneAnnualeView() {
           <div className="text-sm leading-6 text-slate-600">
             <p><strong>Disciplina:</strong> {contesto.disciplina || 'da selezionare'}</p>
             <p><strong>Ordine:</strong> {contesto.ordine || 'da impostare'} · <strong>Anno scolastico:</strong> {contesto.annoScolastico || 'da impostare'}</p>
-            {missingContext && <p className="mt-1 font-[600] text-amber-700">Completa il contesto e seleziona una disciplina prima del salvataggio.</p>}
+            {missingContext && <p className="mt-1 font-[600] text-amber-700">Completa il contesto, seleziona una disciplina e indica la classe prima del salvataggio.</p>}
             {savedAt && <p className="mt-1 text-emerald-700">Ultimo salvataggio: {new Date(savedAt).toLocaleString('it-IT')}</p>}
+            {storageError && <p role="alert" className="mt-1 font-[600] text-red-700">{storageError}</p>}
           </div>
         </div>
       </section>
