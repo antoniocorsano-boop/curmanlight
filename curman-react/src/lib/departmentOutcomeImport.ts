@@ -42,9 +42,16 @@ export function validateDepartmentOutcomeModel(value: unknown): ValidationResult
   if (!Array.isArray(value.proposalHandling) || value.proposalHandling.length === 0) {
     return { valid: false, message: 'Il file non contiene esiti dipartimentali.' }
   }
+
+  const proposalIds = new Set<string>()
   for (const [index, handling] of value.proposalHandling.entries()) {
     const result = validateHandling(handling, index)
     if (!result.valid) return result
+    const proposalId = (handling as Record<string, unknown>).proposalId as string
+    if (proposalIds.has(proposalId)) {
+      return { valid: false, message: `Il file contiene più esiti per la proposta ${proposalId}.` }
+    }
+    proposalIds.add(proposalId)
   }
   return { valid: true, message: '' }
 }
