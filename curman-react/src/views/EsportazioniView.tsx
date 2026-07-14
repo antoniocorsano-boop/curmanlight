@@ -1,6 +1,7 @@
 import { Download } from 'lucide-react'
 import { DepartmentProposalQueue } from '@/components/dipartimento/DepartmentProposalQueue'
 import { TeacherProposalMultiImport } from '@/components/dipartimento/TeacherProposalMultiImport'
+import { DepartmentOutcomeImport } from '@/components/referente/DepartmentOutcomeImport'
 import { useAppStore } from '@/stores/useAppStore'
 import { useRevisioneStore } from '@/stores/useRevisioneStore'
 import { useGapLayer } from '@/hooks/useGapLayer'
@@ -15,12 +16,13 @@ export function EsportazioniView() {
   const decisioni = useRevisioneStore(s => s.decisioni)
   const { exportProposal, canExport } = useExportProposal(slug ? DISCIPLINE_LABELS[slug] : null, gapLayer, decisioni, profilo)
   const showDepartmentImport = profilo?.ruolo === 'dipartimento'
+  const showReferentImport = profilo?.ruolo === 'referente'
 
   return (
     <div className="max-w-3xl mx-auto flex flex-col gap-6">
       <div>
         <h2 className="text-lg font-[600] text-slate-800">Esportazioni e passaggi di lavoro</h2>
-        <p className="text-sm text-slate-500">Prepara i file docente oppure raccogli le proposte destinate al dipartimento.</p>
+        <p className="text-sm text-slate-500">Prepara o raccogli i file coerenti con il ruolo configurato.</p>
       </div>
 
       {showDepartmentImport ? (
@@ -28,6 +30,8 @@ export function EsportazioniView() {
           <TeacherProposalMultiImport />
           <DepartmentProposalQueue />
         </>
+      ) : showReferentImport ? (
+        <DepartmentOutcomeImport />
       ) : gapLayer === null && slug ? (
         <div className="card p-5 bg-amber-50 border-amber-200">
           <p className="text-sm font-[500] text-amber-800">Funzione non disponibile</p>
