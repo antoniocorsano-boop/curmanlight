@@ -25,12 +25,23 @@ export type ReferentValidationFile = CmlReferentValidation & {
   }
 }
 
+const UNKNOWN_ORDER = 'Ordine non indicato'
+const UNKNOWN_SCHOOL_YEAR = 'Anno scolastico non indicato'
+
 function validationKey(fingerprint: string, proposalId: string) {
   return `${fingerprint}:${proposalId}`
 }
 
 function validRecords(records: DepartmentOutcomeImportRecord[]) {
   return records.filter(record => record.status === 'valid' && record.model && record.fingerprint)
+}
+
+function sourceOrder(record: DepartmentOutcomeImportRecord) {
+  return record.model?.ordine?.trim() || UNKNOWN_ORDER
+}
+
+function sourceSchoolYear(record: DepartmentOutcomeImportRecord) {
+  return record.model?.annoScolastico?.trim() || UNKNOWN_SCHOOL_YEAR
 }
 
 export function getReferentValidationExportReadiness(
@@ -55,7 +66,7 @@ export function buildReferentValidationFile(
   if (sources.length === 0) throw new Error('Non ci sono validazioni del Referente da esportare.')
 
   const disciplines = [...new Set(sources.map(entry => entry.record.model!.discipline))].sort()
-  const years = [...new Set(sources.map(entry => entry.record.model!.annoScolastico).filter(Boolean))]
+  const years = [...new Set(sources.map(entry => sourceSchoolYear(entry.record)))]
 
   const validationItems: ValidationItem[] = sources.map(entry => ({
     proposalId: entry.item.proposalId,
@@ -83,8 +94,8 @@ export function buildReferentValidationFile(
       sourceFingerprint: entry.record.fingerprint!,
       sourceFileName: entry.record.fileName,
       discipline: entry.record.model!.discipline,
-      ordine: entry.record.model!.ordine,
-      annoScolastico: entry.record.model!.annoScolastico,
+      ordine: sourceOrder(entry.record),
+      annoScolastico: sourceSchoolYear(entry.record),
       proposalId: entry.item.proposalId,
     })),
     checks: {
@@ -108,7 +119,7 @@ function safeFilePart(value: string) {
 export function referentValidationFilename(records: DepartmentOutcomeImportRecord[]) {
   const available = validRecords(records)
   const disciplines = [...new Set(available.map(record => record.model!.discipline))]
-  const years = [...new Set(available.map(record => record.model!.annoScolastico).filter(Boolean))]
+  const years = [...new Set(available.map(record => sourceSchoolYear(record)))]
   const discipline = disciplines.length === 1 ? safeFilePart(disciplines[0]) : 'multidisciplinare'
   const year = safeFilePart(years.length === 1 ? years[0] : years.join('-')) || 'anno-scolastico'
   return `curmanlight-validazione-referente-${discipline}-${year}.cml`
