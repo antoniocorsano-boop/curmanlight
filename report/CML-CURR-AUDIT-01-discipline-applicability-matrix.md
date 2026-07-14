@@ -15,19 +15,19 @@ Il contratto CML-477 determina il quadro nazionale applicabile nel tempo, ma non
 
 | Disciplina | Infanzia 3–4 | Infanzia 5 | Primaria | Secondaria I grado | Esito preliminare |
 |---|---|---|---|---|---|
-| Arte e Immagine | DA_VERIFICARE | presente | 1 e 3 presenti; 2 DA_VERIFICARE; 4–5 APPLICABILE_AGGREGATO in `art_pri_3_001` | 1–3 presenti | aggregazione 3–5 documentata; classe 2 ancora da verificare |
-| Educazione Civica | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | solo fascia Infanzia da verificare |
-| Educazione Fisica | DA_VERIFICARE | presente | 1, 3, 5 presenti; 2 DA_VERIFICARE; 4 APPLICABILE_AGGREGATO nelle unità di classi 3 e 5 | 1–3 presenti | classe 4 aggregata 3–5; classe 2 ancora da verificare |
-| Geografia | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | fascia Infanzia da verificare; duplicato testuale separato |
-| Inglese | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | fascia Infanzia da verificare |
+| Arte e Immagine | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1 e 3 presenti; 2 DA_VERIFICARE; 4–5 APPLICABILE_AGGREGATO in `art_pri_3_001` | 1–3 presenti | aggregazione 3–5 documentata; classe 2 ancora da verificare |
+| Educazione Civica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | fascia 3–4 dipendente dal modello per campi di esperienza |
+| Educazione Fisica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 DA_VERIFICARE; 4 APPLICABILE_AGGREGATO nelle unità di classi 3 e 5 | 1–3 presenti | classe 4 aggregata 3–5; classe 2 ancora da verificare |
+| Geografia | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | duplicato testuale separato |
+| Inglese | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | fascia 3–4 dipendente dal modello per campi di esperienza |
 | Italiano | presente | presente | 1–5 presenti | 1–3 presenti | copertura strutturale completa |
 | Latino LEL | NON_APPLICABILE | NON_APPLICABILE | NON_APPLICABILE | classe 1 NON_APPLICABILE; 2–3 presenti | perimetro specifico già documentato |
-| Matematica | DA_VERIFICARE | presente | 1 e 5 presenti; 2, 3, 4 DA_VERIFICARE | 1–3 presenti | possibile aggregazione o lacuna reale da determinare |
-| Musica | DA_VERIFICARE | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | nessuna aggregazione pluriclasse dichiarata; classi 2 e 4 ancora da verificare |
-| Religione Cattolica | DA_VERIFICARE | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | nessuna aggregazione pluriclasse dichiarata; classi 2 e 4 ancora da verificare; governance della validazione incoerente |
-| Scienze | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | solo fascia Infanzia da verificare |
+| Matematica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1 e 5 presenti; 2, 3, 4 DA_VERIFICARE | 1–3 presenti | possibile aggregazione o lacuna reale da determinare |
+| Musica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | nessuna aggregazione pluriclasse dichiarata |
+| Religione Cattolica | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | nessuna aggregazione pluriclasse dichiarata; governance della validazione incoerente |
+| Scienze | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | fascia 3–4 dipendente dal modello per campi di esperienza |
 | Seconda Lingua Comunitaria | NON_APPLICABILE | NON_APPLICABILE | NON_APPLICABILE | 1–3 presenti | applicabilità limitata alla Secondaria I grado |
-| Storia | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | fascia Infanzia da verificare; applicabilità temporale CML-477 distinta |
+| Storia | DA_VERIFICARE — parte del gap sistemico Infanzia | presente | 1–5 presenti | 1–3 presenti | applicabilità temporale CML-477 distinta |
 | Tecnologia | presente | presente | 1–5 presenti | 1–3 presenti | copertura strutturale completa |
 
 ## Registro delle assenze originarie
@@ -38,26 +38,43 @@ L’audit automatico aveva rilevato 22 combinazioni disciplina/livello prive di 
 - Arte e Immagine, Primaria classe 5 → `APPLICABILE_AGGREGATO`;
 - Educazione Fisica, Primaria classe 4 → `APPLICABILE_AGGREGATO`.
 
-Restano quindi 19 casi non ancora risolti: 10 nell’Infanzia e 9 nella Primaria.
+Restano 19 combinazioni non risolte. Esse non hanno però lo stesso significato:
 
-### Infanzia 3–4 anni — 10 casi
+- 10 combinazioni Infanzia derivano da un unico problema sistemico di granularità e modello;
+- 9 combinazioni Primaria restano gap disciplina/classe da verificare singolarmente.
 
-Tutti classificati `DA_VERIFICARE`:
+## Infanzia 3–4 anni — un gap sistemico, dieci manifestazioni
 
-1. Arte e Immagine
-2. Educazione Civica
-3. Educazione Fisica
-4. Geografia
-5. Inglese
-6. Matematica
-7. Musica
-8. Religione Cattolica
-9. Scienze
-10. Storia
+Le dieci discipline coinvolte sono:
 
-Motivo: nell’Infanzia la progettazione nazionale è spesso organizzata per campi di esperienza e sviluppo unitario, non necessariamente per discipline autonome. Serve una decisione esplicita sul modello dati d’istituto prima di dichiarare ogni assenza come P1 definitiva.
+1. Arte e Immagine;
+2. Educazione Civica;
+3. Educazione Fisica;
+4. Geografia;
+5. Inglese;
+6. Matematica;
+7. Musica;
+8. Religione Cattolica;
+9. Scienze;
+10. Storia.
 
-### Primaria — 9 casi ancora da verificare
+La revisione trasversale mostra che le rispettive unità di fascia 5 rinviano ai cinque campi di esperienza:
+
+- `Immagini, suoni, colori`;
+- `Il corpo e il movimento`;
+- `I discorsi e le parole`;
+- `La conoscenza del mondo`;
+- `Il sé e l'altro`.
+
+La fascia 5 non può essere automaticamente estesa alla fascia 3–4, perché nessun metadato strutturato dichiara una validità plurifascia 3–5. Le dieci assenze restano quindi `DA_VERIFICARE`, ma devono essere governate come un solo rilievo P1 di modellazione dell’Infanzia, non come dieci lacune disciplinari indipendenti.
+
+Decisione richiesta all’istituto:
+
+1. unità distinte 3–4 e 5;
+2. unità uniche plurifascia 3–5 con applicabilità esplicita;
+3. modello nativo per campi di esperienza senza duplicazione disciplinare.
+
+## Primaria — 9 casi ancora da verificare
 
 - Arte e Immagine: classe 2;
 - Educazione Fisica: classe 2;
@@ -89,7 +106,8 @@ Fonti interne usate:
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-arte-immagine.md`;
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-educazione-fisica.md`;
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-musica.md`;
-- `report/CML-CURR-AUDIT-01-semantic-source-pilot-religione-cattolica.md`.
+- `report/CML-CURR-AUDIT-01-semantic-source-pilot-religione-cattolica.md`;
+- `report/CML-CURR-AUDIT-01-infanzia-cross-discipline-granularity-review.md`.
 
 Limiti:
 
@@ -108,4 +126,4 @@ La PR #106 deve mantenere separati:
 4. granularità scelta dall’istituto;
 5. qualità semantica del contenuto.
 
-`CML_CURR_AUDIT_01_DISCIPLINE_APPLICABILITY_MATRIX_19_UNRESOLVED_GAPS_3_AGGREGATED_LEVELS`
+`CML_CURR_AUDIT_01_MATRIX_9_PRIMARY_GAPS_PLUS_1_SYSTEMIC_INFANZIA_GRANULARITY_ISSUE`
