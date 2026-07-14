@@ -125,7 +125,8 @@ Completato:
 - report direzionale iniziale;
 - confronto con il contratto temporale CML-477;
 - registro analitico dei 22 gap candidati di livello;
-- matrice preliminare disciplina × ordine × livello.
+- matrice preliminare disciplina × ordine × livello;
+- pilot semantico completo delle fonti di Tecnologia.
 
 Esito dell’analisi di applicabilità:
 
@@ -138,6 +139,16 @@ Esito dell’analisi di applicabilità:
 - Italiano e Tecnologia risultano coperti su tutti i livelli rappresentati;
 - Seconda Lingua Comunitaria e Latino LEL hanno perimetri specifici e non devono generare falsi gap fuori dal proprio ordine o dalle classi previste.
 
+Esito del pilot semantico Tecnologia:
+
+- tutte le 13 unità hanno una fonte presente;
+- il riferimento principale alle Indicazioni 2012 e al D.M. 254/2012 è formalmente identificabile;
+- le fonti miste 2012/2025 non dichiarano il quadro applicabile alla specifica classe e anno scolastico;
+- il singolo campo `fonte` non distingue la provenienza di competenza, traguardo, obiettivi, conoscenze, abilità, evidenze e criteri;
+- contenuto normativo, adattamento d’istituto e integrazione didattica risultano mescolati nella stessa stringa;
+- citazioni come `Educazione Civica` e `Pensiero computazionale` collegate al D.M. 221/2025 richiedono confronto puntuale con l’atto ufficiale;
+- la completezza formale della fonte non equivale a certificazione semantica.
+
 Output aggiornati:
 
 - `tools/audit-cml-curriculum-complete.mjs`;
@@ -145,19 +156,31 @@ Output aggiornati:
 - `report/CML-CURR-AUDIT-01-complete-documentary-findings.md`;
 - `report/CML-CURR-AUDIT-01-applicability-review.md`;
 - `report/CML-CURR-AUDIT-01-discipline-applicability-matrix.md`;
+- `report/CML-CURR-AUDIT-01-semantic-source-pilot-tecnologia.md`;
 - artifact `report/CML-CURR-AUDIT-01/` generato dal workflow.
 
 ## Passaggio successivo
 
-Validare la matrice preliminare contro fonti disciplinari e decisioni d’istituto, classificando ogni gap candidato come:
+Estendere il protocollo semantico alle discipline con profili differenti:
 
-- `APPLICABILE_OBBLIGATORIO`;
-- `APPLICABILE_AGGREGATO`;
-- `NON_APPLICABILE`;
-- `DA_VERIFICARE`.
+1. Educazione Civica, per la pluralità di fonti normative;
+2. Italiano, come disciplina strutturalmente completa;
+3. Arte e Immagine o Matematica, per correlare fonti e gap candidati di livello;
+4. Infanzia, verificando la relazione fra disciplina e campi di esperienza.
 
-Solo i gap classificati come obbligatori potranno generare una successiva proposta di integrazione curricolare. In parallelo deve iniziare la verifica semantica delle fonti e della progressione interna, disciplina per disciplina.
+La verifica dovrà classificare separatamente:
+
+- fonte formalmente presente;
+- atto identificabile;
+- citazione puntuale disponibile;
+- contenuto ufficiale;
+- adattamento d’istituto;
+- integrazione didattica;
+- applicabilità temporale;
+- necessità di validazione umana.
+
+Nessun gap o testo curricolare sarà corretto automaticamente durante l’audit.
 
 ## Verdetto corrente
 
-`CML_CURR_AUDIT_01_PRELIMINARY_DISCIPLINE_APPLICABILITY_MATRIX_READY_SEMANTIC_VALIDATION_NEXT`
+`CML_CURR_AUDIT_01_TECNOLOGIA_SEMANTIC_SOURCE_PILOT_COMPLETE_CROSS_DISCIPLINE_VALIDATION_NEXT`
