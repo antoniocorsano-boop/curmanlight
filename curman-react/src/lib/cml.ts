@@ -16,8 +16,10 @@ export function buildTeacherProposal(disciplina: string, gapLayer: GapLayer, dec
 
 export function buildDepartmentOutcome(_proposals: ProposalItem[], handlings: HandlingMap, disciplines: string[], annoScolastico: string): CmlDepartmentOutcome {
   const handlingList = Object.values(handlings)
-  const summary = { totale: handlingList.length, accettate: handlingList.filter(h => h.handling === 'accettata').length, respinte: handlingList.filter(h => h.handling === 'respinta').length, modificate: handlingList.filter(h => h.handling === 'modificata').length, rinviate: handlingList.filter(h => h.handling === 'rinviata').length }
-  return { schemaVersion: '1.0', fileType: 'department_outcome', appName: 'CurManLight', createdAt: new Date().toISOString(), role: 'department', disciplines, ordine: 'Tutti', annoScolastico, proposalHandling: handlingList, summary, humanValidationRequired: true }
+  const summary = { totale: handlingList.length, accettate: handlingList.filter(h => h.handling === 'accettata' || h.handling === 'confluita_nella_sintesi').length, respinte: handlingList.filter(h => h.handling === 'respinta' || h.handling === 'assorbita_in_altra_proposta').length, modificate: handlingList.filter(h => h.handling === 'modificata' || h.handling === 'riformulata_dal_dipartimento').length, rinviate: handlingList.filter(h => h.handling === 'rinviata' || h.handling === 'da_chiarire').length }
+  const uniqueDisciplines = [...new Set(disciplines.filter(Boolean))]
+  const discipline = uniqueDisciplines.length === 1 ? uniqueDisciplines[0] : 'Multidisciplinare'
+  return { schemaVersion: '1.0', fileType: 'department_outcome', appName: 'CurManLight', createdAt: new Date().toISOString(), role: 'department', discipline, disciplineWorkStatus: 'completed', disciplines: uniqueDisciplines, ordine: 'Tutti', annoScolastico, proposalHandling: handlingList, summary, humanValidationRequired: true }
 }
 
 export function parseCmlFile(json: unknown): CmlFile | null {

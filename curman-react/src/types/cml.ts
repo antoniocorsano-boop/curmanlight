@@ -11,9 +11,19 @@ export interface ProposalItem {
   note?: string
 }
 
+export type DepartmentHandlingValue =
+  | 'accettata'
+  | 'respinta'
+  | 'modificata'
+  | 'rinviata'
+  | 'confluita_nella_sintesi'
+  | 'riformulata_dal_dipartimento'
+  | 'assorbita_in_altra_proposta'
+  | 'da_chiarire'
+
 export interface HandlingItem {
   proposalId: string
-  handling: 'accettata' | 'respinta' | 'modificata' | 'rinviata'
+  handling: DepartmentHandlingValue
   note?: string
   testoModificato?: string
   timestamp: string
@@ -46,6 +56,8 @@ export interface CmlDepartmentOutcome {
   appName: 'CurManLight'
   createdAt: string
   role: 'department'
+  discipline: string
+  disciplineWorkStatus: 'completed'
   disciplines: string[]
   ordine: OrdineEsteso
   annoScolastico: string
