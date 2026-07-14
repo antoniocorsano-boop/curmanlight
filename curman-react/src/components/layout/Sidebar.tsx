@@ -1,4 +1,4 @@
-import { House, BookOpen, RefreshCw, Workflow, Download, Settings, Layers } from 'lucide-react'
+import { House, BookOpen, RefreshCw, Workflow, Download, Settings, Layers, FileText } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
 import type { AreaId, ViewId } from '@/types/state'
 import { NAVIGATION } from '@/types/state'
@@ -10,6 +10,7 @@ const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string }>> 
   workflow: Workflow,
   download: Download,
   layers: Layers,
+  'file-text': FileText,
   settings: Settings,
 }
 
@@ -25,6 +26,7 @@ const ROLE_HINTS: Partial<Record<ViewId, string>> = {
   processo: 'Dipartimento · Referente',
   esportazioni: 'Scambio locale .cml',
   'programmazione-annuale': 'Bozza locale',
+  'uda-modello': 'Bozza locale',
 }
 
 export function Sidebar() {
