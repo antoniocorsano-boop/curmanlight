@@ -51,8 +51,11 @@ export const useDepartmentQueueStore = create<DepartmentQueueState>((set, get) =
 
     for (const record of records) {
       if (record.status !== 'valid' || !record.model || !record.fingerprint) continue
-      record.model.proposals.forEach((proposal, index) => {
-        const id = `${record.fingerprint}:${proposal.unitaId}:${index}`
+      const model = record.model
+      const fingerprint = record.fingerprint
+
+      model.proposals.forEach((proposal, index) => {
+        const id = `${fingerprint}:${proposal.unitaId}:${index}`
         if (existing.has(id)) {
           skipped += 1
           return
@@ -60,12 +63,12 @@ export const useDepartmentQueueStore = create<DepartmentQueueState>((set, get) =
         existing.add(id)
         additions.push({
           id,
-          sourceFingerprint: record.fingerprint,
+          sourceFingerprint: fingerprint,
           sourceFileName: record.fileName,
           importedAt,
-          discipline: record.model!.discipline,
-          ordine: record.model!.ordine,
-          annoScolastico: record.model!.annoScolastico,
+          discipline: model.discipline,
+          ordine: model.ordine,
+          annoScolastico: model.annoScolastico,
           author: authorLabel(record),
           proposal,
         })
