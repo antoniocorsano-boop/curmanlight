@@ -1,6 +1,6 @@
 import { House, BookOpen, RefreshCw, Workflow, Download, Settings } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
-import type { AreaId } from '@/types/state'
+import type { AreaId, ViewId } from '@/types/state'
 import { NAVIGATION } from '@/types/state'
 
 const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string }>> = {
@@ -14,9 +14,15 @@ const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string }>> 
 
 const AREA_LABELS: Record<AreaId, string> = {
   home: '',
-  curriculum: 'Curricolo',
-  didattica: 'Didattica',
+  curriculum: 'Percorso curricolare',
+  didattica: 'Progettazione didattica',
   sistema: 'Contesto',
+}
+
+const ROLE_HINTS: Partial<Record<ViewId, string>> = {
+  revisione: 'Docente',
+  processo: 'Dipartimento · Referente',
+  esportazioni: 'Scambio locale .cml',
 }
 
 export function Sidebar() {
@@ -49,18 +55,22 @@ export function Sidebar() {
             {items.map(item => {
               const Icon = ICON_MAP[item.icon]
               const active = vistaAttiva === item.id
+              const roleHint = ROLE_HINTS[item.id]
               return (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => navigateTo(item.id)}
                   aria-current={active ? 'page' : undefined}
-                  className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-left transition-colors ${
+                  className={`w-full flex items-start gap-3 px-3 py-2 rounded-lg text-sm text-left transition-colors ${
                     active ? 'bg-indigo-50 text-indigo-700 font-[550]' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
                   }`}
                 >
-                  {Icon && <Icon size={17} />}
-                  <span>{item.label}</span>
+                  {Icon && <Icon size={17} className="mt-0.5 shrink-0" />}
+                  <span className="min-w-0">
+                    <span className="block">{item.label}</span>
+                    {roleHint && <span className="mt-0.5 block text-[11px] font-[500] text-slate-400">{roleHint}</span>}
+                  </span>
                 </button>
               )
             })}
