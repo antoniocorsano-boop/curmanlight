@@ -24,7 +24,7 @@ Il contratto CML-477 determina il quadro nazionale applicabile nel tempo, ma non
 | Latino LEL | NON_APPLICABILE | NON_APPLICABILE | NON_APPLICABILE | classe 1 NON_APPLICABILE; 2–3 presenti | perimetro specifico già documentato |
 | Matematica | DA_VERIFICARE | presente | 1 e 5 presenti; 2, 3, 4 DA_VERIFICARE | 1–3 presenti | possibile aggregazione o lacuna reale da determinare |
 | Musica | DA_VERIFICARE | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | nessuna aggregazione pluriclasse dichiarata; classi 2 e 4 ancora da verificare |
-| Religione Cattolica | DA_VERIFICARE | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | possibile aggregazione pluriclasse da documentare |
+| Religione Cattolica | DA_VERIFICARE | presente | 1, 3, 5 presenti; 2 e 4 DA_VERIFICARE | 1–3 presenti | nessuna aggregazione pluriclasse dichiarata; classi 2 e 4 ancora da verificare; governance della validazione incoerente |
 | Scienze | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | solo fascia Infanzia da verificare |
 | Seconda Lingua Comunitaria | NON_APPLICABILE | NON_APPLICABILE | NON_APPLICABILE | 1–3 presenti | applicabilità limitata alla Secondaria I grado |
 | Storia | DA_VERIFICARE | presente | 1–5 presenti | 1–3 presenti | fascia Infanzia da verificare; applicabilità temporale CML-477 distinta |
@@ -70,7 +70,7 @@ Casi riclassificati:
 - Arte e Immagine: classi 4 e 5 `APPLICABILE_AGGREGATO` nell’unità `art_pri_3_001`, la cui fonte dichiara classi 3–4–5;
 - Educazione Fisica: classe 4 `APPLICABILE_AGGREGATO` nelle unità `ef_pri_3_001` e `ef_pri_5_001`, entrambe con fonte riferita alle classi 3–4–5.
 
-Il pilot Musica non ha prodotto ulteriori riclassificazioni: nessuna unità o nota dichiara una copertura pluriclasse per le classi 2 o 4.
+I pilot Musica e Religione Cattolica non hanno prodotto ulteriori riclassificazioni: nessuna unità o nota dichiara una copertura pluriclasse per le classi 2 o 4.
 
 Possibili esiti dopo validazione umana:
 
@@ -88,7 +88,8 @@ Fonti interne usate:
 - `report/CML-CURR-AUDIT-01-complete-documentary-findings.md`;
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-arte-immagine.md`;
 - `report/CML-CURR-AUDIT-01-semantic-source-pilot-educazione-fisica.md`;
-- `report/CML-CURR-AUDIT-01-semantic-source-pilot-musica.md`.
+- `report/CML-CURR-AUDIT-01-semantic-source-pilot-musica.md`;
+- `report/CML-CURR-AUDIT-01-semantic-source-pilot-religione-cattolica.md`.
 
 Limiti:
 
