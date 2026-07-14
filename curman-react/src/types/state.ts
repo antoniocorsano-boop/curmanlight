@@ -21,7 +21,7 @@ export const NAVIGATION: NavigationItem[] = [
   { id: 'processo', label: 'Segui il processo', area: 'curriculum', icon: 'workflow', available: true },
   { id: 'esportazioni', label: 'Esporta un documento', area: 'curriculum', icon: 'download', available: true },
   { id: 'evidenze-valutazione', label: 'Evidenze e valutazione', area: 'didattica', icon: 'eye', available: false },
-  { id: 'programmazione-annuale', label: 'Programmazione annuale', area: 'didattica', icon: 'layers', available: false },
+  { id: 'programmazione-annuale', label: 'Programmazione annuale', area: 'didattica', icon: 'layers', available: true },
   { id: 'uda-modello', label: 'UDA modello', area: 'didattica', icon: 'file-text', available: false },
   { id: 'guida', label: 'Guida', area: 'sistema', icon: 'circle-help', available: false },
   { id: 'impostazioni', label: 'Impostazioni', area: 'sistema', icon: 'settings', available: true },
