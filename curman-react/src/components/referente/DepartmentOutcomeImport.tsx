@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
-import { FileCheck2, Upload } from 'lucide-react'
+import { FileCheck2, LockKeyhole, Upload } from 'lucide-react'
 import { readDepartmentOutcomeFiles, type DepartmentOutcomeImportRecord } from '@/lib/departmentOutcomeImport'
+import { grantRoleAccess, isRoleAccessGranted, revokeRoleAccess } from '@/lib/roleAccess'
 
 const HANDLING_LABELS: Record<string, string> = {
   confluita_nella_sintesi: 'Confluita nella sintesi',
@@ -16,6 +17,9 @@ const HANDLING_LABELS: Record<string, string> = {
 export function DepartmentOutcomeImport() {
   const [records, setRecords] = useState<DepartmentOutcomeImportRecord[]>([])
   const [reading, setReading] = useState(false)
+  const [accessGranted, setAccessGranted] = useState(() => isRoleAccessGranted())
+  const [code, setCode] = useState('')
+  const [accessError, setAccessError] = useState<string | null>(null)
 
   const validRecords = records.filter(record => record.status === 'valid' && record.model)
   const summary = useMemo(() => ({
@@ -24,7 +28,27 @@ export function DepartmentOutcomeImport() {
     outcomes: validRecords.reduce((total, record) => total + record.model!.proposalHandling.length, 0),
   }), [validRecords])
 
+  function unlockAccess() {
+    if (!grantRoleAccess(code)) {
+      setAccessError('Codice operativo non valido.')
+      return
+    }
+    setAccessGranted(true)
+    setAccessError(null)
+    setCode('')
+  }
+
+  function lockAccess() {
+    revokeRoleAccess()
+    setAccessGranted(false)
+    setRecords([])
+  }
+
   async function handleFiles(files: FileList | null) {
+    if (!accessGranted) {
+      setAccessError('Inserisci il codice operativo prima di selezionare i file.')
+      return
+    }
     if (!files?.length) return
     setReading(true)
     setRecords(await readDepartmentOutcomeFiles(files))
@@ -39,10 +63,33 @@ export function DepartmentOutcomeImport() {
         <p className="mt-1 text-sm leading-6 text-slate-500">Importa uno o più file `.cml` prodotti dai Dipartimenti e consultali in modalità sola lettura prima della validazione finale.</p>
       </div>
 
-      <label className="mt-4 flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-indigo-300 bg-indigo-50/50 px-4 py-5 text-sm font-[650] text-indigo-700 hover:bg-indigo-50">
-        <Upload size={17} /> {reading ? 'Lettura in corso…' : 'Seleziona esiti dipartimentali'}
-        <input type="file" accept=".cml,application/json" multiple className="sr-only" disabled={reading} onChange={event => void handleFiles(event.target.files)} />
-      </label>
+      {!accessGranted ? (
+        <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4">
+          <div className="flex items-start gap-3">
+            <LockKeyhole size={18} className="mt-0.5 shrink-0 text-amber-700" />
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-[650] text-amber-900">Accesso operativo richiesto</p>
+              <p className="mt-1 text-xs leading-5 text-amber-800">Inserisci il codice condiviso per abilitare l’import degli esiti del Dipartimento in questa sessione.</p>
+              <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                <input type="password" value={code} onChange={event => setCode(event.target.value)} onKeyDown={event => { if (event.key === 'Enter') unlockAccess() }}
+                  aria-label="Codice operativo" className="min-w-0 flex-1 rounded-lg border border-amber-300 bg-white px-3 py-2 text-sm outline-none focus:border-amber-500" />
+                <button type="button" onClick={unlockAccess} className="rounded-lg bg-amber-700 px-4 py-2 text-sm font-[650] text-white hover:bg-amber-800">Sblocca import</button>
+              </div>
+              {accessError && <p className="mt-2 text-xs font-[600] text-red-700">{accessError}</p>}
+            </div>
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className="mt-4 flex justify-end">
+            <button type="button" onClick={lockAccess} className="text-xs font-[600] text-slate-500 hover:text-slate-700">Blocca di nuovo</button>
+          </div>
+          <label className="mt-2 flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-indigo-300 bg-indigo-50/50 px-4 py-5 text-sm font-[650] text-indigo-700 hover:bg-indigo-50">
+            <Upload size={17} /> {reading ? 'Lettura in corso…' : 'Seleziona esiti dipartimentali'}
+            <input type="file" accept=".cml,application/json" multiple className="sr-only" disabled={reading} onChange={event => void handleFiles(event.target.files)} />
+          </label>
+        </>
+      )}
 
       {records.length > 0 && (
         <div className="mt-5 grid gap-3 sm:grid-cols-3">
