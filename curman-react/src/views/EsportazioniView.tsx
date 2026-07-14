@@ -1,4 +1,5 @@
 import { Download } from 'lucide-react'
+import { TeacherProposalMultiImport } from '@/components/dipartimento/TeacherProposalMultiImport'
 import { useAppStore } from '@/stores/useAppStore'
 import { useRevisioneStore } from '@/stores/useRevisioneStore'
 import { useGapLayer } from '@/hooks/useGapLayer'
@@ -12,14 +13,18 @@ export function EsportazioniView() {
   const gapLayer = useGapLayer(slug)
   const decisioni = useRevisioneStore(s => s.decisioni)
   const { exportProposal, canExport } = useExportProposal(slug ? DISCIPLINE_LABELS[slug] : null, gapLayer, decisioni, profilo)
+  const showDepartmentImport = profilo?.ruolo === 'dipartimento'
 
   return (
-    <div className="max-w-2xl mx-auto flex flex-col gap-6">
+    <div className="max-w-3xl mx-auto flex flex-col gap-6">
       <div>
-        <h2 className="text-lg font-[600] text-slate-800">Esportazioni</h2>
-        <p className="text-sm text-slate-500">Genera i file di proposta per la condivisione con il dipartimento.</p>
+        <h2 className="text-lg font-[600] text-slate-800">Esportazioni e passaggi di lavoro</h2>
+        <p className="text-sm text-slate-500">Prepara i file docente oppure raccogli le proposte destinate al dipartimento.</p>
       </div>
-      {gapLayer === null && slug ? (
+
+      {showDepartmentImport ? (
+        <TeacherProposalMultiImport />
+      ) : gapLayer === null && slug ? (
         <div className="card p-5 bg-amber-50 border-amber-200">
           <p className="text-sm font-[500] text-amber-800">Funzione non disponibile</p>
           <p className="text-xs text-amber-700 mt-1">Il livello di allineamento non è ancora stato generato per questa disciplina. Le esportazioni saranno disponibili dopo la generazione del gap layer.</p>
@@ -33,6 +38,12 @@ export function EsportazioniView() {
             <Download size={15} /> Esporta proposta
           </button>
           {!canExport && <p className="text-xs text-slate-400">Seleziona una disciplina e configura il profilo.</p>}
+        </div>
+      )}
+
+      {!profilo && (
+        <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-600">
+          Configura il profilo per visualizzare il passaggio di lavoro coerente con il tuo ruolo.
         </div>
       )}
     </div>
