@@ -80,12 +80,15 @@ export function ProgrammazioneAnnualeView() {
     if (!planKey || loadedPlanKey.current === planKey) return
 
     try {
+      const previousPlanKey = loadedPlanKey.current
       const saved = readStore().plans[planKey]
       loadedPlanKey.current = planKey
       setStorageError(null)
 
       if (!saved) {
-        setPlan(current => ({ ...EMPTY_PLAN, classe: current.classe }))
+        if (previousPlanKey !== null) {
+          setPlan(current => ({ ...EMPTY_PLAN, classe: current.classe }))
+        }
         setSavedAt(null)
         return
       }
@@ -109,7 +112,6 @@ export function ProgrammazioneAnnualeView() {
   }, [planKey])
 
   function update<K extends keyof typeof plan>(key: K, value: (typeof plan)[K]) {
-    if (key === 'classe') loadedPlanKey.current = null
     setStorageError(null)
     setPlan(current => ({ ...current, [key]: value }))
   }
