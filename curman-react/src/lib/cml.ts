@@ -1,15 +1,29 @@
 import type { GapLayer, DecisioniMap, ProfiloUtente } from '@/types/gap'
-import type { CmlTeacherProposal, CmlDepartmentOutcome, CmlFile, ProposalItem, HandlingItem } from '@/types/cml'
+import type { CmlTeacherProposal, CmlDepartmentOutcome, CmlReferentValidation, CmlFile, ProposalItem, HandlingItem } from '@/types/cml'
 import type { Ordine } from '@/types/curriculum'
 
 export type HandlingMap = Record<string, HandlingItem>
+
+function proposalSource(sourceRefs?: string[]) {
+  return sourceRefs?.filter(Boolean).join('; ') || 'Gap layer CurManLight'
+}
 
 export function buildTeacherProposal(disciplina: string, gapLayer: GapLayer, decisioni: DecisioniMap, profilo: ProfiloUtente): CmlTeacherProposal {
   const proposals: ProposalItem[] = gapLayer.entries
     .filter(e => e.status !== 'vigente' && e.status !== 'archiviato')
     .map(entry => {
       const dec = decisioni[entry.unitaId]
-      return { unitaId: entry.unitaId, status: entry.status, testoAttuale: entry.testoOriginale || '', proposta: entry.proposto, decisione: dec?.decisione ?? null, testoFinale: dec?.testoFinale ?? null, note: dec?.note }
+      return {
+        unitaId: entry.unitaId,
+        status: entry.status,
+        testoAttuale: entry.testoOriginale || '',
+        proposta: entry.proposto,
+        motivazione: entry.motivazione?.trim() || entry.note?.trim() || 'Proposta derivata dal confronto curricolare.',
+        fonte: proposalSource(entry.sourceRefs),
+        decisione: dec?.decisione ?? null,
+        testoFinale: dec?.testoFinale ?? null,
+        note: dec?.note,
+      }
     })
   return { schemaVersion: '1.0', fileType: 'teacher_proposal', appName: 'CurManLight', createdAt: new Date().toISOString(), role: 'teacher', discipline: disciplina, ordine: (profilo.ordine === 'Tutti' ? 'Primaria' : profilo.ordine) as Ordine, annoScolastico: profilo.annoScolastico, profilo: { nome: profilo.nome, cognome: profilo.cognome, istituto: profilo.istituto }, proposals, humanValidationRequired: true }
 }
@@ -29,6 +43,7 @@ export function parseCmlFile(json: unknown): CmlFile | null {
   switch (obj.fileType) {
     case 'teacher_proposal': return Array.isArray(obj.proposals) ? obj as unknown as CmlTeacherProposal : null
     case 'department_outcome': return Array.isArray(obj.proposalHandling) ? obj as unknown as CmlDepartmentOutcome : null
+    case 'referent_validation': return Array.isArray(obj.validations) ? obj as unknown as CmlReferentValidation : null
     default: return null
   }
 }

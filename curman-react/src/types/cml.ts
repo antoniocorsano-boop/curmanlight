@@ -6,6 +6,8 @@ export interface ProposalItem {
   status: GapStatus
   testoAttuale: string
   proposta: string
+  motivazione: string
+  fonte: string
   decisione: DecisioneValore
   testoFinale: string | null
   note?: string
