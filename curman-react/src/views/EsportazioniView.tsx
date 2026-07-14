@@ -2,6 +2,7 @@ import { Download } from 'lucide-react'
 import { DepartmentProposalQueue } from '@/components/dipartimento/DepartmentProposalQueue'
 import { TeacherProposalMultiImport } from '@/components/dipartimento/TeacherProposalMultiImport'
 import { DepartmentOutcomeImport } from '@/components/referente/DepartmentOutcomeImport'
+import { ReferentValidationExportPanel } from '@/components/referente/ReferentValidationExportPanel'
 import { useAppStore } from '@/stores/useAppStore'
 import { useRevisioneStore } from '@/stores/useRevisioneStore'
 import { useGapLayer } from '@/hooks/useGapLayer'
@@ -31,7 +32,10 @@ export function EsportazioniView() {
           <DepartmentProposalQueue />
         </>
       ) : showReferentImport ? (
-        <DepartmentOutcomeImport />
+        <>
+          <DepartmentOutcomeImport />
+          <ReferentValidationExportPanel />
+        </>
       ) : gapLayer === null && slug ? (
         <div className="card p-5 bg-amber-50 border-amber-200">
           <p className="text-sm font-[500] text-amber-800">Funzione non disponibile</p>
