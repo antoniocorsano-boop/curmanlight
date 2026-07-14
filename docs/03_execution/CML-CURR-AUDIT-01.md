@@ -124,7 +124,8 @@ Completato:
 - rilevazione esplicita di unità prive di `ordine`;
 - report direzionale iniziale;
 - confronto con il contratto temporale CML-477;
-- registro analitico dei 22 gap candidati di livello.
+- registro analitico dei 22 gap candidati di livello;
+- matrice preliminare disciplina × ordine × livello.
 
 Esito dell’analisi di applicabilità:
 
@@ -133,7 +134,9 @@ Esito dell’analisi di applicabilità:
 - le 22 assenze non sono ancora classificabili tutte come lacune curricolari confermate;
 - le assenze sono registrate come gap candidati da validare;
 - le dieci assenze dell’Infanzia richiedono cautela perché i contenuti sono organizzati per campi di esperienza;
-- le dodici assenze della Primaria devono essere distinte tra progressione annuale, aggregazione pluriclasse e gap obbligatorio.
+- le dodici assenze della Primaria devono essere distinte tra progressione annuale, aggregazione pluriclasse e gap obbligatorio;
+- Italiano e Tecnologia risultano coperti su tutti i livelli rappresentati;
+- Seconda Lingua Comunitaria e Latino LEL hanno perimetri specifici e non devono generare falsi gap fuori dal proprio ordine o dalle classi previste.
 
 Output aggiornati:
 
@@ -141,19 +144,20 @@ Output aggiornati:
 - `.github/workflows/cml-curr-audit-01.yml`;
 - `report/CML-CURR-AUDIT-01-complete-documentary-findings.md`;
 - `report/CML-CURR-AUDIT-01-applicability-review.md`;
+- `report/CML-CURR-AUDIT-01-discipline-applicability-matrix.md`;
 - artifact `report/CML-CURR-AUDIT-01/` generato dal workflow.
 
 ## Passaggio successivo
 
-Costruire una matrice documentale di applicabilità con esito per ogni combinazione rilevante:
+Validare la matrice preliminare contro fonti disciplinari e decisioni d’istituto, classificando ogni gap candidato come:
 
 - `APPLICABILE_OBBLIGATORIO`;
 - `APPLICABILE_AGGREGATO`;
 - `NON_APPLICABILE`;
 - `DA_VERIFICARE`.
 
-La matrice dovrà indicare fonte e validazione umana. Solo i gap classificati come obbligatori potranno generare una successiva proposta di integrazione curricolare.
+Solo i gap classificati come obbligatori potranno generare una successiva proposta di integrazione curricolare. In parallelo deve iniziare la verifica semantica delle fonti e della progressione interna, disciplina per disciplina.
 
 ## Verdetto corrente
 
-`CML_CURR_AUDIT_01_STRUCTURAL_PASS_APPLICABILITY_CLASSIFICATION_IN_PROGRESS`
+`CML_CURR_AUDIT_01_PRELIMINARY_DISCIPLINE_APPLICABILITY_MATRIX_READY_SEMANTIC_VALIDATION_NEXT`
