@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AlertTriangle, Download, Save, Trash2 } from 'lucide-react'
 import { downloadTeacherProposal } from '@/lib/proposalFile'
+import { useAppStore } from '@/stores/useAppStore'
 import { useProposalStore } from '@/stores/useProposalStore'
 import type { ProposalTargetField } from '@/types/proposal'
 import type { UnitaApprendimento } from '@/types/curriculum'
@@ -21,6 +22,7 @@ function fieldText(unit: UnitaApprendimento, field: ProposalTargetField) {
 }
 
 export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento }) {
+  const profilo = useAppStore(state => state.profilo)
   const existing = useProposalStore(state => state.drafts[unit.id])
   const saveDraft = useProposalStore(state => state.saveDraft)
   const deleteDraft = useProposalStore(state => state.deleteDraft)
@@ -74,7 +76,7 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
 
   function handleExport() {
     if (!existing) return
-    downloadTeacherProposal(existing)
+    downloadTeacherProposal(existing, profilo)
   }
 
   return (
