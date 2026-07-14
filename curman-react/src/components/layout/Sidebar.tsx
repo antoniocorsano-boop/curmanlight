@@ -1,4 +1,4 @@
-import { House, BookOpen, RefreshCw, Workflow, Download, Settings } from 'lucide-react'
+import { House, BookOpen, RefreshCw, Workflow, Download, Settings, Layers } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
 import type { AreaId, ViewId } from '@/types/state'
 import { NAVIGATION } from '@/types/state'
@@ -9,6 +9,7 @@ const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string }>> 
   'refresh-cw': RefreshCw,
   workflow: Workflow,
   download: Download,
+  layers: Layers,
   settings: Settings,
 }
 
@@ -23,6 +24,7 @@ const ROLE_HINTS: Partial<Record<ViewId, string>> = {
   revisione: 'Docente',
   processo: 'Dipartimento · Referente',
   esportazioni: 'Scambio locale .cml',
+  'programmazione-annuale': 'Bozza locale',
 }
 
 export function Sidebar() {

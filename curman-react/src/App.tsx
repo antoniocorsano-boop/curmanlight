@@ -9,6 +9,7 @@ import { RevisioneView } from '@/views/RevisioneView'
 import { ProcessoView } from '@/views/ProcessoView'
 import { EsportazioniView } from '@/views/EsportazioniView'
 import { ImpostazioniView } from '@/views/ImpostazioniView'
+import { ProgrammazioneAnnualeView } from '@/views/ProgrammazioneAnnualeView'
 import type { ViewId } from '@/types/state'
 
 function NotAvailableView() {
@@ -42,7 +43,7 @@ export default function App() {
     esportazioni: <EsportazioniView />,
     impostazioni: <ImpostazioniView />,
     'evidenze-valutazione': <NotAvailableView />,
-    'programmazione-annuale': <NotAvailableView />,
+    'programmazione-annuale': <ProgrammazioneAnnualeView />,
     'uda-modello': <NotAvailableView />,
     guida: <NotAvailableView />,
   }
