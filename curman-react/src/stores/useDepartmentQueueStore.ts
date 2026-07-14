@@ -1,8 +1,11 @@
 import { create } from 'zustand'
 import type { TeacherProposalImportRecord } from '@/lib/teacherProposalImport'
+import type { ProposalItem } from '@/types/cml'
 import type { DepartmentQueueImportResult, DepartmentQueueItem } from '@/types/departmentQueue'
 
 const STORAGE_KEY = 'curmanlight.department-proposal-queue.v1'
+
+type CompatibleProposalItem = ProposalItem & { id?: string }
 
 type DepartmentQueueState = {
   items: DepartmentQueueItem[]
@@ -55,7 +58,11 @@ export const useDepartmentQueueStore = create<DepartmentQueueState>((set, get) =
       const fingerprint = record.fingerprint
 
       model.proposals.forEach((proposal, index) => {
-        const id = `${fingerprint}:${proposal.unitaId}:${index}`
+        const compatibleProposal = proposal as CompatibleProposalItem
+        const unitId = compatibleProposal.unitaId ?? compatibleProposal.id
+        if (!unitId) return
+
+        const id = `${fingerprint}:${unitId}:${index}`
         if (existing.has(id)) {
           skipped += 1
           return
@@ -70,7 +77,7 @@ export const useDepartmentQueueStore = create<DepartmentQueueState>((set, get) =
           ordine: model.ordine,
           annoScolastico: model.annoScolastico,
           author: authorLabel(record),
-          proposal,
+          proposal: { ...proposal, unitaId: unitId },
         })
       })
     }
