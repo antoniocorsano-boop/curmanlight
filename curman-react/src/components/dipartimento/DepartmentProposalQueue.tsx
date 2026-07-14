@@ -1,5 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
-import { CheckCircle2, Clock3, Inbox, PencilLine, RotateCcw, Trash2, X, XCircle } from 'lucide-react'
+import { CheckCircle2, Clock3, Download, Inbox, PencilLine, RotateCcw, Trash2, X, XCircle } from 'lucide-react'
+import {
+  downloadDepartmentOutcome,
+  getDepartmentOutcomeReadiness,
+} from '@/lib/departmentOutcomeExport'
 import { useDepartmentQueueStore } from '@/stores/useDepartmentQueueStore'
 import type { DepartmentDecisionValue, DepartmentQueueItem } from '@/types/departmentQueue'
 
@@ -68,6 +72,7 @@ function DecisionEditor({ item, onClose }: { item: DepartmentQueueItem; onClose:
 export function DepartmentProposalQueue() {
   const { items, hydrated, persistenceError, hydrate, clearDecision, removeItem, clearQueue } = useDepartmentQueueStore()
   const [editingId, setEditingId] = useState<string | null>(null)
+  const [exportError, setExportError] = useState<string | null>(null)
 
   useEffect(() => hydrate(), [hydrate])
 
@@ -78,13 +83,30 @@ export function DepartmentProposalQueue() {
     disciplines: new Set(items.map(item => item.discipline)).size,
   }), [items])
 
+  const readiness = useMemo(() => getDepartmentOutcomeReadiness(items), [items])
+  const decisionCounts = useMemo(() => ({
+    accettate: items.filter(item => item.decision?.value === 'accettata').length,
+    respinte: items.filter(item => item.decision?.value === 'respinta').length,
+    modificate: items.filter(item => item.decision?.value === 'modificata').length,
+    rinviate: items.filter(item => item.decision?.value === 'rinviata').length,
+  }), [items])
+
+  function handleExport() {
+    try {
+      downloadDepartmentOutcome(items)
+      setExportError(null)
+    } catch (error) {
+      setExportError(error instanceof Error ? error.message : 'Non è stato possibile creare il file di esito.')
+    }
+  }
+
   return (
     <section className="card p-5" aria-labelledby="department-queue-title">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="text-xs font-[650] uppercase tracking-wide text-indigo-600">Area dipartimentale</p>
           <h3 id="department-queue-title" className="mt-1 text-base font-[650] text-slate-800">Coda delle proposte</h3>
-          <p className="mt-1 text-sm leading-6 text-slate-500">Esamina ogni proposta e registra una decisione locale. L’esportazione dell’esito sarà disponibile nel passaggio successivo.</p>
+          <p className="mt-1 text-sm leading-6 text-slate-500">Esamina ogni proposta, registra la decisione e scarica localmente l’esito dipartimentale.</p>
         </div>
         {items.length > 0 && (
           <button type="button" onClick={clearQueue} className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-[600] text-slate-600 hover:bg-slate-50">
@@ -118,6 +140,25 @@ export function DepartmentProposalQueue() {
               </div>
             ))}
           </div>
+
+          <section className="mt-5 rounded-xl border border-indigo-200 bg-indigo-50/50 p-4" aria-labelledby="department-export-title">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <p className="text-xs font-[650] uppercase tracking-wide text-indigo-700">Esito dipartimentale</p>
+                <h4 id="department-export-title" className="mt-1 text-sm font-[700] text-slate-800">File pronto per la validazione umana</h4>
+                <p className="mt-1 text-xs leading-5 text-slate-600">
+                  {readiness.decided} decisioni complete saranno esportate. {readiness.pending} proposte ancora da decidere saranno escluse.
+                </p>
+                <p className="mt-2 text-[11px] text-slate-500">Accettate {decisionCounts.accettate} · Respinte {decisionCounts.respinte} · Modificate {decisionCounts.modificate} · Rinviate {decisionCounts.rinviate}</p>
+                {readiness.invalid > 0 && <p className="mt-2 text-xs font-[600] text-red-700">{readiness.invalid} decisioni modificate non hanno un testo concordato valido.</p>}
+                {exportError && <p className="mt-2 text-xs font-[600] text-red-700">{exportError}</p>}
+              </div>
+              <button type="button" onClick={handleExport} disabled={!readiness.ready}
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-[650] text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-300">
+                <Download size={16} /> Esporta esito dipartimentale
+              </button>
+            </div>
+          </section>
 
           <div className="mt-5 grid gap-3">
             {items.map(item => (
