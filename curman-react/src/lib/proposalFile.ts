@@ -1,22 +1,89 @@
+import { downloadCml } from '@/lib/cml'
+import type { CmlTeacherProposal, ProposalItem } from '@/types/cml'
+import type { ProfiloUtente } from '@/types/gap'
 import type { TeacherProposalDraft } from '@/types/proposal'
 
-export const TEACHER_PROPOSAL_FILE_SCHEMA = 'cml-teacher-proposal-v1' as const
-
-export type TeacherProposalFile = {
-  schema: typeof TEACHER_PROPOSAL_FILE_SCHEMA
-  kind: 'teacher_proposal'
-  exportedAt: string
-  product: 'CurManLight React'
-  proposal: TeacherProposalDraft
+type CompatibleProposalItem = ProposalItem & {
+  id: string
+  discipline: string
+  ordine: TeacherProposalDraft['ordine']
+  classe: string
+  type: TeacherProposalDraft['targetField']
+  motivazione: string
+  fonte: string
 }
 
-export function buildTeacherProposalFile(proposal: TeacherProposalDraft): TeacherProposalFile {
+export type TeacherProposalFile = CmlTeacherProposal & {
+  sourceContext: {
+    currentFramework: 'D.M. 254/2012'
+    revisionFramework: 'D.M. 221/2025'
+  }
+  counts: {
+    total: number
+    ok: number
+    modifica: number
+    nuovo: number
+  }
+  proposals: CompatibleProposalItem[]
+  checks: {
+    hasProposals: true
+    hasDiscipline: true
+    hasSources: boolean
+  }
+}
+
+export function buildTeacherProposalFile(
+  proposal: TeacherProposalDraft,
+  profilo: ProfiloUtente | null,
+): TeacherProposalFile {
+  const item: CompatibleProposalItem = {
+    id: proposal.id,
+    unitaId: proposal.unitaId,
+    discipline: proposal.disciplina,
+    ordine: proposal.ordine,
+    classe: profilo?.classe ?? '',
+    type: proposal.targetField,
+    status: 'proposta',
+    decisione: null,
+    testoAttuale: proposal.testoVigente,
+    proposta: proposal.testoProposto,
+    testoFinale: null,
+    motivazione: proposal.motivazione,
+    fonte: proposal.fonte,
+    note: proposal.note || undefined,
+  }
+
   return {
-    schema: TEACHER_PROPOSAL_FILE_SCHEMA,
-    kind: 'teacher_proposal',
-    exportedAt: new Date().toISOString(),
-    product: 'CurManLight React',
-    proposal,
+    schemaVersion: '1.0',
+    fileType: 'teacher_proposal',
+    appName: 'CurManLight',
+    createdAt: new Date().toISOString(),
+    role: 'teacher',
+    discipline: proposal.disciplina,
+    ordine: proposal.ordine,
+    annoScolastico: profilo?.annoScolastico ?? '',
+    profilo: {
+      nome: profilo?.nome,
+      cognome: profilo?.cognome,
+      istituto: profilo?.istituto,
+    },
+    sourceContext: {
+      currentFramework: 'D.M. 254/2012',
+      revisionFramework: 'D.M. 221/2025',
+    },
+    counts: {
+      total: 1,
+      ok: 0,
+      modifica: 1,
+      nuovo: 0,
+    },
+    proposals: [item],
+    checks: {
+      hasProposals: true,
+      hasDiscipline: true,
+      hasSources: proposal.fonte.trim().length > 0,
+    },
+    humanValidationRequired: true,
   }
 }
 
@@ -36,17 +103,9 @@ export function teacherProposalFilename(proposal: TeacherProposalDraft) {
   return `curmanlight-proposta-${discipline}-${unit}.cml`
 }
 
-export function downloadTeacherProposal(proposal: TeacherProposalDraft) {
-  const payload = buildTeacherProposalFile(proposal)
-  const blob = new Blob([JSON.stringify(payload, null, 2)], {
-    type: 'application/vnd.curmanlight.proposal+json;charset=utf-8',
-  })
-  const url = URL.createObjectURL(blob)
-  const anchor = document.createElement('a')
-  anchor.href = url
-  anchor.download = teacherProposalFilename(proposal)
-  document.body.appendChild(anchor)
-  anchor.click()
-  anchor.remove()
-  URL.revokeObjectURL(url)
+export function downloadTeacherProposal(
+  proposal: TeacherProposalDraft,
+  profilo: ProfiloUtente | null,
+) {
+  downloadCml(buildTeacherProposalFile(proposal, profilo), teacherProposalFilename(proposal))
 }
