@@ -22,7 +22,7 @@ export const NAVIGATION: NavigationItem[] = [
   { id: 'esportazioni', label: 'Esporta un documento', area: 'curriculum', icon: 'download', available: true },
   { id: 'evidenze-valutazione', label: 'Evidenze e valutazione', area: 'didattica', icon: 'eye', available: false },
   { id: 'programmazione-annuale', label: 'Programmazione annuale', area: 'didattica', icon: 'layers', available: true },
-  { id: 'uda-modello', label: 'UDA modello', area: 'didattica', icon: 'file-text', available: false },
+  { id: 'uda-modello', label: 'UDA essenziale', area: 'didattica', icon: 'file-text', available: true },
   { id: 'guida', label: 'Guida', area: 'sistema', icon: 'circle-help', available: false },
   { id: 'impostazioni', label: 'Impostazioni', area: 'sistema', icon: 'settings', available: true },
 ]
@@ -35,7 +35,7 @@ export const VIEW_TITLES: Record<ViewId, string> = {
   esportazioni: 'Esporta un documento',
   'evidenze-valutazione': 'Evidenze e valutazione',
   'programmazione-annuale': 'Programmazione annuale',
-  'uda-modello': 'UDA modello',
+  'uda-modello': 'UDA essenziale',
   guida: 'Guida',
   impostazioni: 'Impostazioni',
 }
