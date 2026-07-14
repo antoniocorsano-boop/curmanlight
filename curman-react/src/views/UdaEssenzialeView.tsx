@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { FileText, Save } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
+import { CurriculumReusePanel } from '@/components/didattica/CurriculumReusePanel'
+import { appendUniqueLines, mergeSourceIds } from '@/lib/curriculum-reuse'
+import type { CurriculumReusePayload } from '@/lib/curriculum-reuse'
 
 const STORAGE_KEY = 'cml-uda-essenziale-v1'
 const STORE_VERSION = 'cml-uda-essenziale-store-v1'
@@ -20,6 +23,7 @@ type UdaDraft = {
   tempi: string
   prodottoFinale: string
   valutazione: string
+  sourceUnitIds?: string[]
 }
 
 type UdaStore = {
@@ -40,6 +44,7 @@ const EMPTY_DRAFT: EditableDraft = {
   tempi: '',
   prodottoFinale: '',
   valutazione: '',
+  sourceUnitIds: [],
 }
 
 function buildDraftKey(disciplina: string, ordine: string, annoScolastico: string, classe: string) {
@@ -103,6 +108,7 @@ export function UdaEssenzialeView() {
         tempi: saved.tempi ?? '',
         prodottoFinale: saved.prodottoFinale ?? '',
         valutazione: saved.valutazione ?? '',
+        sourceUnitIds: saved.sourceUnitIds ?? [],
       })
       setSavedAt(saved.savedAt)
     } catch {
@@ -116,6 +122,16 @@ export function UdaEssenzialeView() {
     if (key === 'classe') loadedDraftKey.current = null
     setStorageError(null)
     setDraft(current => ({ ...current, [key]: value }))
+  }
+
+  function insertCurriculum(payload: CurriculumReusePayload) {
+    setDraft(current => ({
+      ...current,
+      competenze: appendUniqueLines(current.competenze, payload.competenze),
+      obiettivi: appendUniqueLines(current.obiettivi, payload.obiettivi),
+      attivita: appendUniqueLines(current.attivita, payload.contenuti),
+      sourceUnitIds: mergeSourceIds(current.sourceUnitIds, payload.sourceUnitIds),
+    }))
   }
 
   function save() {
@@ -164,6 +180,8 @@ export function UdaEssenzialeView() {
           </div>
         </div>
       </section>
+
+      <CurriculumReusePanel disciplina={contesto.disciplina} ordine={contesto.ordine} classe={draft.classe} destinationLabel="UDA" onInsert={insertCurriculum} />
 
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Classe" value={draft.classe} onChange={value => update('classe', value)} />

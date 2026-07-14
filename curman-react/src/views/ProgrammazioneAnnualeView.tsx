@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Save, BookOpen } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
+import { CurriculumReusePanel } from '@/components/didattica/CurriculumReusePanel'
+import { appendUniqueLines, mergeSourceIds } from '@/lib/curriculum-reuse'
+import type { CurriculumReusePayload } from '@/lib/curriculum-reuse'
 
 const STORAGE_KEY = 'cml-programmazione-annuale-v1'
 const STORE_VERSION = 'cml-programmazione-annuale-store-v1'
@@ -15,25 +18,31 @@ type AnnualPlan = {
   titolo: string
   finalita: string
   competenze: string
+  obiettivi: string
   nuclei: string
   metodologia: string
   valutazione: string
+  sourceUnitIds?: string[]
 }
+
+type EditableAnnualPlan = Omit<AnnualPlan, 'savedAt' | 'disciplina' | 'annoScolastico' | 'ordine'>
 
 type AnnualPlanStore = {
   version: typeof STORE_VERSION
   plans: Record<string, AnnualPlan>
 }
 
-const EMPTY_PLAN: Omit<AnnualPlan, 'savedAt' | 'disciplina' | 'annoScolastico' | 'ordine'> = {
+const EMPTY_PLAN: EditableAnnualPlan = {
   version: 'cml-programmazione-annuale-v1',
   classe: '',
   titolo: '',
   finalita: '',
   competenze: '',
+  obiettivi: '',
   nuclei: '',
   metodologia: '',
   valutazione: '',
+  sourceUnitIds: [],
 }
 
 function buildPlanKey(disciplina: string, ordine: string, annoScolastico: string, classe: string) {
@@ -60,7 +69,7 @@ function readStore(): AnnualPlanStore {
 export function ProgrammazioneAnnualeView() {
   const profilo = useAppStore(s => s.profilo)
   const disciplinaSelezionata = useAppStore(s => s.disciplinaSelezionata)
-  const [plan, setPlan] = useState(EMPTY_PLAN)
+  const [plan, setPlan] = useState<EditableAnnualPlan>(EMPTY_PLAN)
   const [savedAt, setSavedAt] = useState<string | null>(null)
   const [storageError, setStorageError] = useState<string | null>(null)
   const loadedPlanKey = useRef<string | null>(null)
@@ -99,9 +108,11 @@ export function ProgrammazioneAnnualeView() {
         titolo: saved.titolo ?? '',
         finalita: saved.finalita ?? '',
         competenze: saved.competenze ?? '',
+        obiettivi: saved.obiettivi ?? '',
         nuclei: saved.nuclei ?? '',
         metodologia: saved.metodologia ?? '',
         valutazione: saved.valutazione ?? '',
+        sourceUnitIds: saved.sourceUnitIds ?? [],
       })
       setSavedAt(saved.savedAt)
     } catch {
@@ -111,9 +122,19 @@ export function ProgrammazioneAnnualeView() {
     }
   }, [planKey])
 
-  function update<K extends keyof typeof plan>(key: K, value: (typeof plan)[K]) {
+  function update<K extends keyof EditableAnnualPlan>(key: K, value: EditableAnnualPlan[K]) {
     setStorageError(null)
     setPlan(current => ({ ...current, [key]: value }))
+  }
+
+  function insertCurriculum(payload: CurriculumReusePayload) {
+    setPlan(current => ({
+      ...current,
+      competenze: appendUniqueLines(current.competenze, payload.competenze),
+      obiettivi: appendUniqueLines(current.obiettivi, payload.obiettivi),
+      nuclei: appendUniqueLines(current.nuclei, payload.contenuti),
+      sourceUnitIds: mergeSourceIds(current.sourceUnitIds, payload.sourceUnitIds),
+    }))
   }
 
   function save() {
@@ -163,11 +184,14 @@ export function ProgrammazioneAnnualeView() {
         </div>
       </section>
 
+      <CurriculumReusePanel disciplina={contesto.disciplina} ordine={contesto.ordine} classe={plan.classe} destinationLabel="programmazione" onInsert={insertCurriculum} />
+
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Classe" value={plan.classe} onChange={value => update('classe', value)} />
         <Field label="Titolo della programmazione" value={plan.titolo} onChange={value => update('titolo', value)} />
         <TextArea label="Finalità formative" value={plan.finalita} onChange={value => update('finalita', value)} />
         <TextArea label="Competenze attese" value={plan.competenze} onChange={value => update('competenze', value)} />
+        <TextArea label="Obiettivi di apprendimento" value={plan.obiettivi} onChange={value => update('obiettivi', value)} />
         <TextArea label="Nuclei e contenuti" value={plan.nuclei} onChange={value => update('nuclei', value)} />
         <TextArea label="Metodologia" value={plan.metodologia} onChange={value => update('metodologia', value)} />
         <div className="sm:col-span-2"><TextArea label="Criteri e strumenti di valutazione" value={plan.valutazione} onChange={value => update('valutazione', value)} /></div>
