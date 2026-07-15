@@ -10,7 +10,12 @@ type Props = {
 }
 
 type SavedDocument = Record<string, unknown> & {
+  version?: string
   savedAt?: string
+  disciplina?: string
+  annoScolastico?: string
+  ordine?: string
+  classe?: string
   titolo?: string
   sourceUnitIds?: string[]
 }
@@ -76,10 +81,19 @@ export function DuplicateDocumentPanel({ currentClass, documentLabel, disabled =
     const collection = isUda() ? 'drafts' : 'plans'
     const raw = localStorage.getItem(storageKey)
     if (!raw) return null
+
     const parsed = JSON.parse(raw) as Record<string, unknown>
     const records = parsed[collection]
-    if (!records || typeof records !== 'object') return null
-    return (records as Record<string, SavedDocument>)[key] ?? null
+    if (records && typeof records === 'object') {
+      const saved = (records as Record<string, SavedDocument>)[key]
+      if (saved) return saved
+    }
+
+    if (!isUda() && isLegacyAnnualPlan(parsed, disciplina, ordine, annoScolastico, currentClass)) {
+      return parsed as SavedDocument
+    }
+
+    return null
   }
 
   function buildMarkdown(saved: SavedDocument) {
@@ -164,6 +178,24 @@ export function DuplicateDocumentPanel({ currentClass, documentLabel, disabled =
       </div>
     </section>
   )
+}
+
+function isLegacyAnnualPlan(
+  value: Record<string, unknown>,
+  disciplina: string,
+  ordine: string,
+  annoScolastico: string,
+  classe: string,
+) {
+  return value.version === 'cml-programmazione-annuale-v1'
+    && sameValue(value.disciplina, disciplina)
+    && sameValue(value.ordine, ordine)
+    && sameValue(value.annoScolastico, annoScolastico)
+    && sameValue(value.classe, classe)
+}
+
+function sameValue(value: unknown, expected: string) {
+  return String(value ?? '').trim().toLocaleLowerCase('it-IT') === expected.trim().toLocaleLowerCase('it-IT')
 }
 
 function safeFilename(value: string) {
