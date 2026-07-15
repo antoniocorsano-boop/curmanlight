@@ -4,14 +4,14 @@ on:
   pull_request:
     paths:
       - 'docs/04_user/esempi_cml/**'
-      - 'tools/validate-cml-examples.mjs'
+      - 'tools/validate-managed-cml-pilots.mjs'
       - '.github/workflows/cml-example-contract.yml'
   push:
     branches:
       - main
     paths:
       - 'docs/04_user/esempi_cml/**'
-      - 'tools/validate-cml-examples.mjs'
+      - 'tools/validate-managed-cml-pilots.mjs'
       - '.github/workflows/cml-example-contract.yml'
 
 permissions:
@@ -29,5 +29,5 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Validate CML example library
-        run: node tools/validate-cml-examples.mjs
+      - name: Validate managed CML pilot library
+        run: node tools/validate-managed-cml-pilots.mjs
