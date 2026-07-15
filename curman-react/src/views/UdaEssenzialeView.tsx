@@ -120,7 +120,6 @@ export function UdaEssenzialeView() {
   }, [draftKey])
 
   function update<K extends keyof EditableDraft>(key: K, value: EditableDraft[K]) {
-    if (key === 'classe') loadedDraftKey.current = null
     setStorageError(null)
     setDraft(current => ({ ...current, [key]: value }))
   }
