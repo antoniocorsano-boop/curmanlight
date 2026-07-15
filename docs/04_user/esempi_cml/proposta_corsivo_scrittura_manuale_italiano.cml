@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T11:05:00.000Z",
+  "role": "teacher",
+  "discipline": "Italiano",
+  "ordine": "Infanzia e Primaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {
+    "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
+  },
+  "counts": {
+    "total": 2,
+    "ok": 0,
+    "modifica": 2,
+    "nuovo": 0
+  },
+  "proposals": [
+    {
+      "id": "ita_inf_5_002-pregrafismo-scrittura-manuale",
+      "unitaId": "ita_inf_5_002",
+      "status": "modifica",
+      "testoAttuale": "Riconoscere lettere dell'alfabeto; tracciare segni e forme; associare immagini a parole scritte.",
+      "proposta": "Sviluppare coordinazione oculo-manuale, direzionalità e controllo del gesto attraverso attività di pregrafismo, tracciati, forme e riproduzione guidata di segni; esplorare lettere e parole senza anticipare obblighi formali di scrittura corsiva.",
+      "motivazione": "La proposta distingue il lavoro preparatorio sulla motricità fine dall'insegnamento formale della scrittura, evitando di trasformare il raccordo d'istituto in una prescrizione precoce non validata.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Italiano, Infanzia; crosswalk Milani ↔ CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il team docente deve definire attività, tempi, strumenti e criteri osservativi nel rispetto dello sviluppo individuale. Nessun obbligo automatico di corsivo nell'Infanzia."
+    },
+    {
+      "id": "ita_pri_4_001-corsivo-scrittura-funzionale",
+      "unitaId": "ita_pri_4_001",
+      "status": "modifica",
+      "testoAttuale": "Produrre testi narrativi coerenti e coesi; applicare le regole ortografiche di base; produrre un riassunto di un breve testo.",
+      "proposta": "Consolidare una scrittura manuale leggibile, fluida e funzionale, anche in corsivo, scegliendo strumenti e strategie adeguati al compito; curare impaginazione, spaziatura e revisione grafica senza penalizzare gli alunni che necessitano di adattamenti o strumenti compensativi.",
+      "motivazione": "L'integrazione valorizza la scrittura manuale come strumento di produzione e revisione del testo, ma evita di trasformare il corsivo in un criterio esclusivo o in una misura valutativa rigida.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Italiano, Primaria; crosswalk Milani ↔ CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve concordare progressione, adattamenti, strumenti compensativi e criteri di osservazione. Validazione umana obbligatoria."
+    }
+  ],
+  "humanValidationRequired": true
+}
