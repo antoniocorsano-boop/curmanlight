@@ -1,0 +1,71 @@
+name: CML-517C Synthetic Browser Pilot
+
+on:
+  push:
+    branches:
+      - 'codex/cml-517c-first-synthetic-browser-pilot'
+    paths:
+      - 'agent-evaluation/**'
+      - 'curman-react/e2e/cml-517c-synthetic-swarm.spec.ts'
+      - 'curman-react/playwright.cml517c.config.ts'
+      - '.github/workflows/cml-517c-synthetic-browser-pilot.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'agent-evaluation/**'
+      - 'curman-react/e2e/cml-517c-synthetic-swarm.spec.ts'
+      - 'curman-react/playwright.cml517c.config.ts'
+      - '.github/workflows/cml-517c-synthetic-browser-pilot.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cml-517c-synthetic-browser-pilot-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  synthetic-browser-pilot:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: curman-react
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: curman-react/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - name: Install Playwright runner and Chromium
+        run: |
+          npm install --no-save --no-package-lock @playwright/test@1.54.1
+          npx playwright install --with-deps chromium
+      - name: Start Vite preview
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 > cml-517c-vite.log 2>&1 &
+          echo $! > cml-517c-vite.pid
+      - name: Wait for preview
+        run: |
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4173 >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat cml-517c-vite.log
+          exit 1
+      - name: Run 30-combination synthetic pilot
+        run: npx playwright test --config=playwright.cml517c.config.ts
+      - name: Upload pilot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cml-517c-synthetic-browser-pilot
+          path: |
+            curman-react/test-results
+            curman-react/cml-517c-vite.log
+          if-no-files-found: warn
