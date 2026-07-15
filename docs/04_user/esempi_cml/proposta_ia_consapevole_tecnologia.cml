@@ -10,26 +10,34 @@
   "profilo": {
     "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
   },
+  "counts": {
+    "total": 2,
+    "ok": 0,
+    "modifica": 2,
+    "nuovo": 0
+  },
   "proposals": [
     {
+      "id": "tec_sec_3_001-ia-consapevole",
       "unitaId": "tec_sec_3_001",
       "status": "modifica",
       "testoAttuale": "Scrivere semplici algoritmi in Scratch o Python; comprendere variabili, cicli e condizioni; applicare la programmazione a problemi reali.",
       "proposta": "Descrivere con un modello semplificato il percorso input → elaborazione → output → verifica umana; distinguere una procedura programmata da un sistema basato su dati e modelli; documentare quando e come viene utilizzato uno strumento di intelligenza artificiale.",
       "motivazione": "Il curricolo Milani propone una prima alfabetizzazione sull'intelligenza artificiale. L'integrazione completa l'unità di programmazione senza antropomorfizzare i sistemi e mantiene esplicita la responsabilità della verifica umana.",
       "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Tecnologia, Secondaria; crosswalk CML-514D",
-      "decisione": "modifica",
+      "decisione": null,
       "testoFinale": null,
       "note": "Proposta d'istituto da discutere nel Dipartimento di Tecnologia; non modifica automaticamente il curricolo canonico."
     },
     {
+      "id": "tec_sec_3_002-etica-ia",
       "unitaId": "tec_sec_3_002",
       "status": "modifica",
       "testoAttuale": "Analizzare casi di impatto tecnologico; riconoscere diritti e doveri nel digitale; proporre soluzioni etiche a problemi tecnologici.",
       "proposta": "Valutare qualità e provenienza dei dati, limiti delle risposte, possibili errori e bias; confrontare risultati generati con fonti attendibili; tutelare dati personali e diritto d'autore; dichiarare l'impiego dell'intelligenza artificiale e motivare le verifiche svolte.",
       "motivazione": "L'unità di cittadinanza tecnologica già tratta privacy, diritti e impatti sociali. La proposta aggiunge criteri osservabili per un uso critico e trasparente dell'intelligenza artificiale, coerente con il principio di validazione umana di CurManLight.",
       "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — raccordo Intelligenza Artificiale consapevole; crosswalk CML-514D",
-      "decisione": "modifica",
+      "decisione": null,
       "testoFinale": null,
       "note": "Il Dipartimento deve definire strumenti ammessi, compiti autentici, criteri di privacy e modalità di dichiarazione dell'uso dell'IA."
     }
