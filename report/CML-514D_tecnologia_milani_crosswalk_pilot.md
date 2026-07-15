@@ -6,11 +6,11 @@ Collegare puntualmente i contenuti di Tecnologia del curricolo Milani alle unit�
 
 ## 2. Baseline CurManLight Tecnologia
 
-Il file canonico Tecnologia contiene 11 unità:
+Il file canonico Tecnologia contiene 13 unità:
 
 - Infanzia: 2;
 - Primaria: 5;
-- Secondaria: 4.
+- Secondaria: 6.
 
 Le unità sono organizzate nei nuclei:
 
@@ -81,10 +81,10 @@ Le unità sono organizzate nei nuclei:
 
 ## 5. Esiti quantitativi
 
-Su 20 elementi Milani individuati:
+Su 21 elementi Milani individuati:
 
 - 8 risultano sostanzialmente già coperti;
-- 9 sono integrazioni compatibili;
+- 10 sono integrazioni compatibili, incluse le righe `EQ + INT` classificate qui per la componente incrementale;
 - 3 richiedono decomposizione o decisione di governance;
 - 0 richiedono sostituzione diretta delle unità canoniche.
 
@@ -172,7 +172,7 @@ Su 20 elementi Milani individuati:
 
 ## 8. Decisione del pilot
 
-Il curricolo Milani non sostituisce alcuna delle 11 unità Tecnologia.
+Il curricolo Milani non sostituisce alcuna delle 13 unità Tecnologia.
 
 Il pilot identifica quattro proposte candidate:
 
