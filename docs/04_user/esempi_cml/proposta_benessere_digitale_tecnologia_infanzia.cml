@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T10:30:00.000Z",
+  "role": "teacher",
+  "discipline": "Tecnologia",
+  "ordine": "Infanzia",
+  "annoScolastico": "2026-2027",
+  "profilo": {
+    "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
+  },
+  "counts": {
+    "total": 1,
+    "modified": 1,
+    "approved": 0,
+    "rejected": 0
+  },
+  "proposals": [
+    {
+      "unitaId": "tec_inf_5_001",
+      "status": "modifica",
+      "testoAttuale": "Usare tablet per scattare foto e fare video brevi; seguire istruzioni sequenziali semplici; collaborare con pari tramite strumento digitale.",
+      "proposta": "Utilizzare strumenti digitali per attività brevi, guidate e finalizzate; riconoscere che lo schermo ha tempi e scopi limitati; alternare l’esperienza digitale con attività manipolative, motorie, creative e relazionali; spegnere e riporre il dispositivo al termine dell’attività.",
+      "motivazione": "Il curricolo Milani introduce il benessere digitale precoce e la consapevolezza dei limiti degli schermi. La proposta integra l’unità esistente senza medicalizzare il tema e mantiene il digitale come esperienza educativa guidata, non sostitutiva del gioco, del movimento e della relazione.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Tecnologia, Infanzia; crosswalk CML-514D",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Proposta da discutere con il team Infanzia. Definire durata indicativa, finalità delle attività digitali, presenza dell’adulto e raccordo con il patto educativo con le famiglie."
+    }
+  ],
+  "humanValidationRequired": true
+}
