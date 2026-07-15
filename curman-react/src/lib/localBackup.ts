@@ -8,6 +8,9 @@ const BACKUP_KEYS = [
   'curmanlight.referent-validations.v1',
 ] as const
 
+type BackupKey = typeof BACKUP_KEYS[number]
+type UnknownRecord = Record<string, unknown>
+
 export type LocalBackupPayload = {
   schemaVersion: typeof BACKUP_SCHEMA
   appName: 'CurManLight'
@@ -41,8 +44,15 @@ export function parseBackup(raw: string): BackupPreview {
     throw new Error('Formato di backup non riconosciuto.')
   }
   const keys = Object.keys(parsed.entries)
-  const unsupported = keys.filter(key => !BACKUP_KEYS.includes(key as typeof BACKUP_KEYS[number]))
+  const unsupported = keys.filter(key => !BACKUP_KEYS.includes(key as BackupKey))
   if (unsupported.length > 0) throw new Error('Il backup contiene archivi non supportati.')
+
+  for (const key of keys as BackupKey[]) {
+    if (!isValidStorePayload(key, parsed.entries[key])) {
+      throw new Error(`Il backup contiene un archivio non valido: ${key}.`)
+    }
+  }
+
   return {
     payload: parsed as LocalBackupPayload,
     entryCount: keys.length,
@@ -78,7 +88,32 @@ export function backupFilename(createdAt: string) {
   return `curmanlight-backup-${stamp}.json`
 }
 
-function isStringMap(value: unknown): value is Record<string, string> {
+function isValidStorePayload(key: BackupKey, raw: string) {
+  try {
+    const parsed = JSON.parse(raw)
+    if (!isRecord(parsed)) return false
+
+    switch (key) {
+      case 'cml-programmazione-annuale-v1':
+        return isRecord(parsed.plans) || parsed.version === 'cml-programmazione-annuale-v1'
+      case 'cml-uda-essenziale-v1':
+        return isRecord(parsed.drafts)
+      case 'curmanlight.teacher-proposal-drafts.v1':
+        return isRecord(parsed.drafts)
+      case 'curmanlight.department-proposal-queue.v1':
+        return Array.isArray(parsed.items)
+      case 'curmanlight.referent-validations.v1':
+        return isRecord(parsed.validations)
+    }
+  } catch {
+    return false
+  }
+}
+
+function isRecord(value: unknown): value is UnknownRecord {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
-    && Object.values(value).every(item => typeof item === 'string')
+}
+
+function isStringMap(value: unknown): value is Record<string, string> {
+  return isRecord(value) && Object.values(value).every(item => typeof item === 'string')
 }
