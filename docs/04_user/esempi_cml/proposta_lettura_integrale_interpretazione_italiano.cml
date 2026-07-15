@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T10:45:00.000Z",
+  "role": "teacher",
+  "discipline": "Italiano",
+  "ordine": "Verticale Primaria-Secondaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {
+    "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
+  },
+  "counts": {
+    "total": 2,
+    "ok": 0,
+    "modifica": 2,
+    "nuovo": 0
+  },
+  "proposals": [
+    {
+      "id": "ita_pri_3_001-lettura-integrale",
+      "unitaId": "ita_pri_3_001",
+      "status": "modifica",
+      "testoAttuale": "Leggere ad alta voce in modo scorrevole e comprensibile; comprendere le informazioni principali di un testo; distinguere tipologie testuali.",
+      "proposta": "Leggere integralmente almeno un'opera narrativa adeguata all'età nel corso dell'anno, accompagnando la lettura con diario del lettore, confronto guidato e produzione di una restituzione personale che colleghi personaggi, eventi, temi e lessico del testo.",
+      "motivazione": "Il curricolo Milani valorizza la lettura integrale e la discussione condivisa. La proposta rende osservabile il percorso di lettura senza trasformare il numero di libri in un automatismo prescrittivo non deliberato.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Italiano, Primaria; crosswalk CML-514C",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve definire opere, tempi, accessibilità, modalità inclusive e criteri di restituzione. Nessuna modifica automatica al curricolo canonico."
+    },
+    {
+      "id": "ita_sec_1_002-interpretazione-critica",
+      "unitaId": "ita_sec_1_002",
+      "status": "modifica",
+      "testoAttuale": "Leggere testi narrativi completi; riconoscere le caratteristiche dei generi letterari; esprimere un giudizio motivato sul testo letto.",
+      "proposta": "Leggere integralmente opere narrative e testi multimodali, formulando interpretazioni motivate mediante citazioni o riferimenti puntuali al testo; confrontare punti di vista, scelte narrative e temi, distinguendo comprensione, inferenza e giudizio personale.",
+      "motivazione": "La proposta rafforza l'interpretazione critica già prevista nell'unità e introduce una progressione esplicita dalla comprensione all'argomentazione, coerente con il curricolo Milani.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Italiano, Secondaria; crosswalk CML-514C",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve stabilire corpus, pluralità degli autori, eventuali graphic novel o testi multimodali, strumenti compensativi e criteri di valutazione."
+    }
+  ],
+  "humanValidationRequired": true
+}
