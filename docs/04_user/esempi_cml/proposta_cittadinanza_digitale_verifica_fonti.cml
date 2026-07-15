@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T12:20:00.000Z",
+  "role": "teacher",
+  "discipline": "Educazione Civica",
+  "ordine": "Primaria e Secondaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {
+    "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
+  },
+  "counts": {
+    "total": 2,
+    "ok": 0,
+    "modifica": 2,
+    "nuovo": 0
+  },
+  "proposals": [
+    {
+      "id": "edu_pri_3_001-fonti-netiquette",
+      "unitaId": "edu_pri_3_001",
+      "status": "modifica",
+      "testoAttuale": "Utilizzare dispositivi digitali seguendo le indicazioni dell'insegnante; conoscere le regole base della navigazione sicura; applicare la netiquette; riconoscere situazioni di rischio online.",
+      "proposta": "Usare strumenti digitali in modo guidato e responsabile; riconoscere autore, data e provenienza di un contenuto; distinguere in esempi selezionati fatti, opinioni e messaggi promozionali; confrontare due fonti indicate dal docente e motivare quale appare più attendibile; applicare netiquette e regole di protezione dei dati personali.",
+      "motivazione": "La proposta amplia la sicurezza online con una prima educazione alla qualità dell'informazione, senza anticipare procedure complesse di fact-checking e senza richiedere account personali.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Educazione civica, cittadinanza digitale; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve selezionare fonti adatte all'età, definire esempi protetti e concordare criteri osservabili. Nessuna modifica automatica al curricolo canonico."
+    },
+    {
+      "id": "edu_sec_3_001-fact-checking-responsabilita",
+      "unitaId": "edu_sec_3_001",
+      "status": "modifica",
+      "testoAttuale": "Verificare l'attendibilità di una notizia; gestire privacy e identità digitale; riconoscere il cyberbullismo; produrre contenuti citando le fonti.",
+      "proposta": "Verificare una notizia confrontando autore, data, scopo, prove e almeno due fonti indipendenti; distinguere fatti, opinioni, inferenze e contenuti manipolativi; documentare il percorso di verifica; gestire consapevolmente dati personali e reputazione digitale; citare correttamente testi e immagini; riconoscere e segnalare contenuti offensivi o ingannevoli.",
+      "motivazione": "L'integrazione rende osservabile il processo di verifica delle fonti e collega media literacy, responsabilità comunicativa, privacy e diritto d'autore senza duplicare le competenze tecniche di Tecnologia.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Educazione civica, cittadinanza digitale; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve definire casi di studio, strumenti ammessi, protocollo di segnalazione e rubrica. Non usare profili social reali o dati personali degli alunni."
+    }
+  ],
+  "humanValidationRequired": true
+}
