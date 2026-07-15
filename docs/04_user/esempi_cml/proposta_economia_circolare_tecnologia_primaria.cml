@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T09:40:00.000Z",
+  "role": "teacher",
+  "discipline": "Tecnologia",
+  "ordine": "Primaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {
+    "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
+  },
+  "counts": {
+    "total": 2,
+    "modified": 2,
+    "approved": 0,
+    "rejected": 0
+  },
+  "proposals": [
+    {
+      "unitaId": "tec_pri_2_001",
+      "status": "modifica",
+      "testoAttuale": "Sperimentare trasformazioni di materiali; riconoscere proprietà fisiche semplici; collegare materiali a usi specifici.",
+      "proposta": "Sperimentare trasformazioni e riusi di materiali; distinguere materiale vergine, riciclato e riutilizzato; scegliere materiali adatti allo scopo considerando proprietà, durata e possibilità di recupero.",
+      "motivazione": "Il curricolo Milani introduce il ciclo di vita dei materiali e l'economia circolare. La proposta amplia l'unità già dedicata a proprietà e trasformazioni senza sostituirne il nucleo, rendendo più esplicita la consapevolezza delle scelte materiali.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Tecnologia, Primaria; crosswalk CML-514D",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve stabilire se applicare la proposta in classe seconda o distribuirla nella fascia classi 2-3. Nessuna modifica automatica al curricolo canonico."
+    },
+    {
+      "unitaId": "tec_pri_4_001",
+      "status": "modifica",
+      "testoAttuale": "Distinguere fonti rinnovabili e non rinnovabili; calcolare il consumo energetico di un oggetto; progettare un comportamento sostenibile.",
+      "proposta": "Descrivere il ciclo di vita essenziale di un materiale o manufatto; distinguere riduzione, riuso, riparazione, riciclo e recupero; progettare un semplice oggetto o comportamento applicando criteri di economia circolare e motivando le scelte.",
+      "motivazione": "L'unità tratta già rifiuti, recupero e riciclo. La proposta aggiunge una progressione osservabile verso il ciclo di vita e la progettazione sostenibile, coerente con le scelte d'istituto e con l'Agenda 2030.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — raccordo Economia circolare e riciclo; crosswalk CML-514D",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Proposta da discutere nel Dipartimento di Tecnologia e coordinare con Educazione civica. Definire compito autentico, materiali disponibili e criteri di valutazione."
+    }
+  ],
+  "humanValidationRequired": true
+}
