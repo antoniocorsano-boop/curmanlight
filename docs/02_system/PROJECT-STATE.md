@@ -2,59 +2,104 @@
 
 ## Snapshot
 
-- Last merged milestone: CML-514P — Etica tecnologica per Educazione civica
-- Current `main`: `0c2d660242d17c5a6752ef81b6c6cfb22eb7c3e0`
-- Active reconciliation slice: CML-515 — Program State Reconciliation
-- Runtime storico: mantenuto e stabile; interventi strutturali da evitare senza necessità verificata
-- React application (`curman-react/`): filone evolutivo principale da consolidare e validare
-- Canonical curriculum data: invariati dalle proposte `.cml`; validazione umana obbligatoria
+- Last merged milestone: CML-517E — Regression Swarm
+- Current `main`: `80f3633cb44d0a6e92d82f9d5d6cb7cc3483be36`
+- Active slice: CML-518A — React Baseline and Capability Perimeter
+- React application (`curman-react/`): baseline evolutiva principale
+- Runtime storico: stabile, mantenuto come riferimento e fallback; non esteso per default
+- Canonical curriculum data: invariati; validazione umana obbligatoria
 - Current movelog: `docs/REPO-MOVELOG-v2.md`
-- Next strategic action: consolidare la libreria di proposte `.cml`, quindi avviare un pilot controllato con docenti
+- Next strategic action: verificare tecnicamente l'inventario React e chiudere i gap end-to-end prima del pilot umano
 
-## Programmi e lotti completati
+## Decisione di baseline
 
-### Tecnologia
+La baseline evolutiva principale è `curman-react/`.
 
-Completato il pilot di proposte docente su:
+Il runtime storico formato da:
 
-- IA consapevole;
-- economia circolare;
-- benessere digitale per l'Infanzia;
-- prototipazione nella Secondaria.
+- `index.html`;
+- `_published_snapshot/netlify-current/index.html`;
 
-### Italiano
+resta disponibile come riferimento stabile e fallback. Nuove capacità strutturali devono essere sviluppate in React salvo eccezioni motivate e approvate esplicitamente.
 
-Completato il lotto di proposte docente su:
+Il passaggio definitivo alla baseline React richiede pilot umano, chiusura dei gap bloccanti, audit accessibilità/mobile e release candidate.
 
-- lettura integrale e interpretazione;
-- riassunto e riscrittura;
-- corsivo e scrittura manuale;
-- grammatica normativa.
+## Milestone completati
 
-### Educazione civica
+### Prodotto React
 
-Completato il lotto di proposte docente su:
+- Home e contesto di lavoro;
+- consultazione completa del curricolo;
+- creazione, validazione ed esportazione della proposta docente;
+- import, coda, decisione ed esportazione dipartimentale;
+- import, validazione ed esportazione del Referente;
+- round-trip dei contratti `.cml`;
+- programmazione annuale e UDA essenziale;
+- riutilizzo guidato dei dati curricolari;
+- salvataggio, duplicazione ed esportazione locale;
+- archivio locale unificato;
+- backup e ripristino;
+- regressione browser sintetica 6 personas × 5 scenari.
 
-- cittadinanza digitale e verifica delle fonti;
-- sostenibilità e cura dei beni comuni;
-- Costituzione e partecipazione democratica;
-- etica tecnologica.
+### Libreria proposte docente
+
+Completati i lotti per:
+
+- Tecnologia: IA consapevole, economia circolare, benessere digitale, prototipazione;
+- Italiano: lettura, riassunto, scrittura manuale/corsivo, grammatica;
+- Educazione civica: cittadinanza digitale, sostenibilità, Costituzione, etica tecnologica.
 
 Tutte le proposte restano esempi `teacher_proposal`, non modificano automaticamente i curricoli canonici e richiedono una decisione umana esplicita.
 
-## Priorità di roadmap
+## Stato delle capacità
 
-1. CML-515 — riallineamento di stato, roadmap e governance.
-2. CML-516 — consolidamento e validazione automatica della libreria `.cml`.
-3. CML-517 — pilot controllato con 3-5 docenti e raccolta di evidenze osservabili.
-4. CML-518 — decisione formale sul passaggio dal runtime storico all'app React.
-5. CML-519 — nuovo audit PM-03, PM-06, PM-07 e PM-09 sulla baseline corrente.
-6. CML-520 — suite automatica per contratti, round-trip, backup/restore e regressioni.
-7. CML-521 — percorso guidato locale di valutazione prodotto per docenti non tecnici.
+La fonte primaria è:
+
+`docs/02_system/REACT-BASELINE-AND-CAPABILITY-PERIMETER.md`
+
+Sintesi:
+
+- consultazione curricolo: completa tecnicamente;
+- proposta docente: completa tecnicamente, comprensione da validare;
+- processo Dipartimento: completo tecnicamente, conflitti/duplicati parziali;
+- processo Referente: completo tecnicamente, consolidamento istituzionale mancante;
+- progettazione didattica: completa tecnicamente;
+- persistenza e backup: completi tecnicamente;
+- accessibilità e mobile: parziali;
+- pilot umano: non ancora eseguito;
+- modalità pubblica/personale/istituto: non completa e fuori dalla prima chiusura operativa.
+
+## Roadmap corrente
+
+1. CML-518A — baseline React e perimetro delle capacità.
+2. CML-518B — inventario tecnico verificato delle superfici React.
+3. CML-518C — chiusura gap Docente end-to-end.
+4. CML-518D — chiusura gap Dipartimento.
+5. CML-518E — chiusura gap Referente.
+6. CML-519 — audit di maturità sulla baseline React.
+7. CML-520 — suite contratti, recovery e casi avversariali.
+8. CML-521 — percorso guidato di valutazione umana.
+9. CML-522 — primo pilot reale con 3–5 docenti.
+10. CML-523 — correzioni confermate dal pilot.
+11. CML-524 — release candidate React.
+
+## Gate per il pilot umano
+
+Il pilot richiede:
+
+- URL React stabile;
+- percorso Docente → Dipartimento → Referente accessibile;
+- nessun dato personale reale;
+- comprensione esplicita di salvataggio, export e validazione;
+- nessuna modifica automatica del curricolo canonico;
+- backup e ripristino disponibili;
+- nessun blocco critico desktop/mobile;
+- protocollo CML-517D applicato;
+- evidenze sintetiche e umane mantenute separate.
 
 ## Runtime Perimeter Reminder
 
-Ogni intervento sul runtime storico deve trattare insieme:
+Ogni eventuale intervento sul runtime storico deve trattare insieme:
 
 - `index.html`;
 - `_published_snapshot/netlify-current/index.html`.
@@ -79,31 +124,25 @@ Ogni intervento deve dichiarare:
 - criterio di accettazione;
 - elementi esclusi intenzionalmente.
 
-## Mock Conformance Rule
-
-Dopo un mock approvato, la UI deve inibire ciò che non è conforme. Non basta aggiungere nuovi blocchi sopra quelli precedenti.
-
 ## Pilot Validation Rule
 
-Durante il pilot raccogliere evidenze osservabili: cosa il docente comprende, quale azione tenta, dove si blocca e quali parole o passaggi interpreta in modo ambiguo. Il gradimento generale non è sufficiente.
+Durante il pilot raccogliere evidenze osservabili: cosa il docente comprende, quale azione tenta, dove si blocca, quali ritorni compie e quali parole interpreta in modo ambiguo. Il gradimento generale non è sufficiente.
 
 ## Governance dei file `.cml`
 
-Gli esempi devono mantenere:
+I file devono mantenere:
 
 - `schemaVersion: "1.0"`;
-- `fileType: "teacher_proposal"`;
+- tipo coerente con il ruolo;
 - `counts` coerenti;
-- `id` e `unitaId` stabili;
-- `decisione: null` prima della valutazione dipartimentale;
+- identificativi stabili;
+- decisioni non precompilate nel passaggio precedente;
 - `humanValidationRequired: true`;
 - nessun dato personale reale;
 - nessuna approvazione automatica.
 
 ## Stato di chiusura
 
-Verdetto corrente:
-
 ```text
-CML_POST_514_PROGRAM_BASELINE_RECONCILED_MAIN_0C2D6602
+CML_518A_REACT_BASELINE_AND_CAPABILITY_PERIMETER_IN_PROGRESS_MAIN_80F3633C
 ```
