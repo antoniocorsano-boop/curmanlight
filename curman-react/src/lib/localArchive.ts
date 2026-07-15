@@ -41,9 +41,9 @@ export function readLocalArchive(storage: Storage = window.localStorage): LocalA
 }
 
 function parse(storage: Storage, key: string, errors: string[]): UnknownRecord | null {
-  const raw = storage.getItem(key)
-  if (!raw) return null
   try {
+    const raw = storage.getItem(key)
+    if (!raw) return null
     const parsed = JSON.parse(raw)
     return isRecord(parsed) ? parsed : null
   } catch {
@@ -97,11 +97,14 @@ function readTeacherProposals(storage: Storage, entries: LocalArchiveEntry[], er
   if (!parsed || !isRecord(parsed.drafts)) return
   for (const [key, value] of Object.entries(parsed.drafts)) {
     if (!isRecord(value)) continue
+    const unitId = text(value.unitaId) || key
+    const nucleus = text(value.nucleo)
+    const target = text(value.targetField)
     entries.push({
       id: `proposal:${key}`,
       kind: 'teacher-proposal',
-      title: text(value.titolo) || text(value.unitaTitolo) || 'Proposta docente',
-      context: [text(value.disciplina), text(value.ordine)].filter(Boolean).join(' · ') || 'Contesto non indicato',
+      title: nucleus ? `${nucleus} — ${target || unitId}` : `Proposta ${unitId}`,
+      context: [text(value.disciplina), text(value.ordine), target].filter(Boolean).join(' · ') || 'Contesto non indicato',
       status: text(value.stato) || 'Bozza',
       updatedAt: text(value.updatedAt) || text(value.createdAt) || null,
       storageKey: STORAGE_KEYS.proposals,
@@ -116,11 +119,13 @@ function readDepartmentItems(storage: Storage, entries: LocalArchiveEntry[], err
     if (!isRecord(value)) return
     const proposal = isRecord(value.proposal) ? value.proposal : {}
     const decision = isRecord(value.decision) ? value.decision : null
+    const unitId = text(proposal.unitaId) || `elemento ${index + 1}`
+    const proposalText = text(proposal.proposta)
     entries.push({
       id: `department:${text(value.id) || index}`,
       kind: 'department-item',
-      title: text(proposal.titolo) || text(proposal.unitaTitolo) || 'Proposta in Dipartimento',
-      context: [text(value.discipline), text(value.ordine), text(value.annoScolastico)].filter(Boolean).join(' · ') || 'Contesto non indicato',
+      title: proposalText ? `${unitId} — ${truncate(proposalText)}` : `Proposta ${unitId}`,
+      context: [text(value.discipline), text(value.ordine), text(value.annoScolastico), text(value.author)].filter(Boolean).join(' · ') || 'Contesto non indicato',
       status: decision ? `Decisione: ${text(decision.value) || 'registrata'}` : 'Da decidere',
       updatedAt: decision ? text(decision.decidedAt) || text(value.importedAt) || null : text(value.importedAt) || null,
       storageKey: STORAGE_KEYS.department,
@@ -149,6 +154,10 @@ function joinContext(value: UnknownRecord) {
   return [text(value.disciplina), text(value.ordine), text(value.annoScolastico), text(value.classe)]
     .filter(Boolean)
     .join(' · ') || 'Contesto non indicato'
+}
+
+function truncate(value: string, max = 72) {
+  return value.length > max ? `${value.slice(0, max - 1).trimEnd()}…` : value
 }
 
 function isRecord(value: unknown): value is UnknownRecord {
