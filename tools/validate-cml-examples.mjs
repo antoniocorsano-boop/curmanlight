@@ -8,6 +8,7 @@ const examplesDir = path.join(root, 'docs', '04_user', 'esempi_cml');
 
 const failures = [];
 let checkedFiles = 0;
+let checkedTeacherFiles = 0;
 let checkedProposals = 0;
 
 function fail(file, message) {
@@ -94,8 +95,15 @@ async function main() {
       continue;
     }
 
+    if (!isNonEmptyString(doc.fileType)) {
+      fail(file, 'fileType mancante');
+      continue;
+    }
+
+    if (doc.fileType !== 'teacher_proposal') continue;
+    checkedTeacherFiles += 1;
+
     if (doc.schemaVersion !== '1.0') fail(file, 'schemaVersion deve essere "1.0"');
-    if (doc.fileType !== 'teacher_proposal') fail(file, 'fileType deve essere "teacher_proposal"');
     if (doc.humanValidationRequired !== true) fail(file, 'humanValidationRequired deve essere true');
     if (!Array.isArray(doc.proposals)) {
       fail(file, 'proposals deve essere un array');
@@ -107,6 +115,10 @@ async function main() {
     doc.proposals.forEach((proposal, index) => validateProposal(file, proposal, index, ids));
   }
 
+  if (checkedTeacherFiles === 0) {
+    fail('libreria', 'nessun teacher_proposal trovato');
+  }
+
   if (failures.length > 0) {
     console.error(`CML example validation FAILED: ${failures.length} problema/i`);
     for (const failure of failures) console.error(`- ${failure}`);
@@ -114,7 +126,9 @@ async function main() {
     return;
   }
 
-  console.log(`CML example validation PASS: ${checkedFiles} file, ${checkedProposals} proposte`);
+  console.log(
+    `CML example validation PASS: ${checkedFiles} file .cml, ${checkedTeacherFiles} teacher_proposal, ${checkedProposals} proposte`,
+  );
 }
 
 main().catch((error) => {
