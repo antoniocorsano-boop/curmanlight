@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T11:10:00.000Z",
+  "role": "teacher",
+  "discipline": "Italiano",
+  "ordine": "Primaria e Secondaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {"istituto": "I.C. Calvario-Covotta don Lorenzo Milani"},
+  "counts": {"total": 2, "ok": 0, "modifica": 2, "nuovo": 0},
+  "proposals": [
+    {
+      "id": "ita_pri_5_001-grammatica-revisione",
+      "unitaId": "ita_pri_5_001",
+      "status": "modifica",
+      "testoAttuale": "Riconoscere le parti del discorso; analizzare la frase minima; applicare le regole grammaticali nella produzione scritta.",
+      "proposta": "Riconoscere e usare le principali categorie grammaticali e la struttura della frase minima; applicare concordanze, punteggiatura e regole ortografiche; rileggere un breve testo individuando e correggendo errori e motivando almeno una correzione.",
+      "motivazione": "Collega lo studio esplicito della grammatica all'uso reale della lingua e alla revisione del testo.",
+      "fonte": "Curricolo verticale Milani 2026-2027 — Italiano, Primaria; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve concordare progressione, terminologia, strumenti compensativi e criteri di valutazione."
+    },
+    {
+      "id": "ita_sec_3_001-sintassi-revisione-linguistica",
+      "unitaId": "ita_sec_3_001",
+      "status": "modifica",
+      "testoAttuale": "Riconoscere la frase complessa; analizzare le funzioni sintattiche; usare consapevolmente modi e tempi verbali.",
+      "proposta": "Analizzare frase semplice e periodo; usare consapevolmente modi, tempi, connettivi e punteggiatura; revisionare testi individuando errori morfosintattici, ambiguità e incoerenze e motivando le correzioni.",
+      "motivazione": "Rende la grammatica uno strumento di comprensione e miglioramento della scrittura.",
+      "fonte": "Curricolo verticale Milani 2026-2027 — Italiano, Secondaria; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve definire profondità dell'analisi, corpus di esercizi e rubriche."
+    }
+  ],
+  "humanValidationRequired": true
+}
