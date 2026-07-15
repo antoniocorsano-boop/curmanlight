@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T13:05:00.000Z",
+  "role": "teacher",
+  "discipline": "Educazione Civica",
+  "ordine": "Primaria e Secondaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {"istituto": "I.C. Calvario-Covotta don Lorenzo Milani"},
+  "counts": {"total": 2, "ok": 0, "modifica": 2, "nuovo": 0},
+  "proposals": [
+    {
+      "id": "edu_pri_2_001-beni-comuni-sostenibilita",
+      "unitaId": "edu_pri_2_001",
+      "status": "modifica",
+      "testoAttuale": "Distinguere le diverse tipologie di rifiuti; conoscere obiettivi dell'Agenda 2030; riconoscere l'importanza del risparmio energetico e idrico; adottare comportamenti di cura verso gli spazi comuni.",
+      "proposta": "Osservare uno spazio comune della scuola, individuare un problema concreto di cura o spreco, raccogliere semplici evidenze e progettare in gruppo un'azione sostenibile definendo compiti, tempi e modalità di verifica.",
+      "motivazione": "La proposta trasforma le buone pratiche ambientali in un compito civico osservabile e partecipato, senza duplicare il percorso tecnologico sui materiali.",
+      "fonte": "Curricolo verticale Milani 2026-2027 — Educazione civica; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il team docente deve scegliere lo spazio, garantire accessibilità e concordare criteri di osservazione. Nessun dato personale degli alunni deve essere pubblicato."
+    },
+    {
+      "id": "edu_sec_2_001-azione-sostenibile-comunita",
+      "unitaId": "edu_sec_2_001",
+      "status": "modifica",
+      "testoAttuale": "Analizzare le dimensioni dello sviluppo sostenibile; approfondire l'Agenda 2030; riconoscere il valore del patrimonio locale; progettare azioni di sostenibilità nella comunità scolastica.",
+      "proposta": "Analizzare un problema ambientale o di gestione dei beni comuni vicino alla scuola usando fonti verificabili; confrontare alternative e progettare un'azione sostenibile con obiettivi, destinatari, risorse, responsabilità, indicatori e restituzione pubblica.",
+      "motivazione": "L'integrazione rende esplicito il passaggio dall'analisi alla partecipazione civica e alla valutazione degli effetti dell'azione.",
+      "fonte": "Curricolo verticale Milani 2026-2027 — Educazione civica e sostenibilità; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve verificare fattibilità, sicurezza, raccordi con territorio e criteri di valutazione. La restituzione deve evitare dati personali e immagini non autorizzate."
+    }
+  ],
+  "humanValidationRequired": true
+}
