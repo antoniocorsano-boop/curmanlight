@@ -124,7 +124,6 @@ export function ProgrammazioneAnnualeView() {
   }, [planKey])
 
   function update<K extends keyof EditableAnnualPlan>(key: K, value: EditableAnnualPlan[K]) {
-    if (key === 'classe') loadedPlanKey.current = null
     setStorageError(null)
     setPlan(current => ({ ...current, [key]: value }))
   }
