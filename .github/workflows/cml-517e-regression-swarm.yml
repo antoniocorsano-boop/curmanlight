@@ -4,16 +4,14 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'curman-react/e2e/cml-517e-regression-swarm.spec.ts'
-      - 'curman-react/playwright.cml517e.config.ts'
+      - 'curman-react/**'
       - 'agent-evaluation/**'
       - '.github/workflows/cml-517e-regression-swarm.yml'
   push:
     branches:
       - 'codex/cml-517e-regression-swarm'
     paths:
-      - 'curman-react/e2e/cml-517e-regression-swarm.spec.ts'
-      - 'curman-react/playwright.cml517e.config.ts'
+      - 'curman-react/**'
       - 'agent-evaluation/**'
       - '.github/workflows/cml-517e-regression-swarm.yml'
   workflow_dispatch:
