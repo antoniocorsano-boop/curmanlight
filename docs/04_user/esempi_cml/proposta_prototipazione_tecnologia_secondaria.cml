@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T10:35:00.000Z",
+  "role": "teacher",
+  "discipline": "Tecnologia",
+  "ordine": "Secondaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {
+    "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
+  },
+  "counts": {
+    "total": 2,
+    "ok": 0,
+    "modifica": 2,
+    "nuovo": 0
+  },
+  "proposals": [
+    {
+      "id": "tec_sec_1_001",
+      "unitaId": "tec_sec_1_001",
+      "status": "modifica",
+      "testoAttuale": "Leggere e interpretare semplici disegni tecnici; analizzare oggetti d'uso comune; produrre elaborati grafici in scala con CAD base.",
+      "proposta": "Analizzare un bisogno semplice, definire vincoli e requisiti, produrre schizzi e disegni in scala e realizzare un modello o prototipo documentando materiali, strumenti, fasi, verifiche e modifiche apportate.",
+      "motivazione": "Il curricolo Milani valorizza manufatti e prototipi come evidenze osservabili. La proposta collega rappresentazione grafica e realizzazione concreta senza sostituire il nucleo di disegno tecnico.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Tecnologia, Secondaria; crosswalk CML-514D",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve definire complessità, materiali ammessi, norme di sicurezza e criteri di documentazione per la classe prima."
+    },
+    {
+      "id": "tec_sec_2_001",
+      "unitaId": "tec_sec_2_001",
+      "status": "modifica",
+      "testoAttuale": "Individuare materiali tipici del territorio; ricostruire il ciclo produttivo di un oggetto; collegare proprietà dei materiali a usi specifici.",
+      "proposta": "Progettare e realizzare un prototipo funzionale scegliendo materiali in base a proprietà, provenienza, disponibilità e impatto; documentare prove, problemi incontrati, modifiche e motivazione della soluzione finale.",
+      "motivazione": "L'unità sui materiali e sui cicli produttivi può essere resa operativa attraverso una prova di prototipazione che renda osservabili scelta dei materiali, iterazione e verifica.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — manufatti e prototipi; crosswalk CML-514D",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve stabilire se la proposta è trasversale alle classi prima e seconda e definire criteri su funzionalità, sicurezza, sostenibilità e qualità della documentazione."
+    }
+  ],
+  "humanValidationRequired": true
+}
