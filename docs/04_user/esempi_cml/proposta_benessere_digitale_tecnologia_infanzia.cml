@@ -12,12 +12,13 @@
   },
   "counts": {
     "total": 1,
-    "modified": 1,
-    "approved": 0,
-    "rejected": 0
+    "ok": 0,
+    "modifica": 1,
+    "nuovo": 0
   },
   "proposals": [
     {
+      "id": "tec_inf_5_001-benessere-digitale",
       "unitaId": "tec_inf_5_001",
       "status": "modifica",
       "testoAttuale": "Usare tablet per scattare foto e fare video brevi; seguire istruzioni sequenziali semplici; collaborare con pari tramite strumento digitale.",

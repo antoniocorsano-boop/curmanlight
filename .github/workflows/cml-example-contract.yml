@@ -1,0 +1,33 @@
+name: CML example contract
+
+on:
+  pull_request:
+    paths:
+      - 'docs/04_user/esempi_cml/**'
+      - 'tools/validate-managed-cml-pilots.mjs'
+      - '.github/workflows/cml-example-contract.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/04_user/esempi_cml/**'
+      - 'tools/validate-managed-cml-pilots.mjs'
+      - '.github/workflows/cml-example-contract.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-cml-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate managed CML pilot library
+        run: node tools/validate-managed-cml-pilots.mjs
