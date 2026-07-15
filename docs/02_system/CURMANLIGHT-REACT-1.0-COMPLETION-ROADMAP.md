@@ -2,29 +2,32 @@
 
 ## Stato complessivo
 
-Avanzamento stimato verso una versione 1.0 realmente utilizzabile: **89%**.
+Avanzamento stimato verso una versione 1.0 realmente utilizzabile: **92%**.
 
 La percentuale registra lo stato effettivo dopo:
 
 - completamento del flusso Docente → Dipartimento → Referente;
 - audit end-to-end CML-505;
 - chiusura dei due P1 contrattuali con CML-506;
-- riallineamento della navigazione e della visibilità dei ruoli con CML-507.
+- riallineamento della navigazione e della visibilità dei ruoli con CML-507;
+- Programmazione annuale foundation con CML-508;
+- UDA essenziale con CML-509;
+- riutilizzo guidato dei dati curricolari con CML-510.
 
 | Area | Peso | Avanzamento |
 |---|---:|---:|
-| Dati curricolari e contratti | 15% | 96% |
+| Dati curricolari e contratti | 15% | 97% |
 | Consultazione del curricolo | 12% | 95% |
 | Proposte di aggiornamento e confronto | 12% | 96% |
 | Test guidato per docenti | 8% | 85% |
 | Persistenza ed esportazioni | 10% | 90% |
 | Contesto utente e impostazioni | 8% | 82% |
-| Progettazione annuale e UDA | 12% | 25% |
+| Progettazione annuale e UDA | 12% | 70% |
 | Processo, stati e ruoli | 8% | 94% |
 | Modalità pubblica/personale/istituto | 5% | 35% |
-| UX, accessibilità e mobile | 5% | 78% |
+| UX, accessibilità e mobile | 5% | 80% |
 | Deploy, preview e distribuzione | 3% | 90% |
-| Documentazione e rilascio | 2% | 76% |
+| Documentazione e rilascio | 2% | 78% |
 
 ## Definizione di prodotto finito
 
@@ -94,13 +97,15 @@ Criterio raggiunto: Docente, Dipartimento e Referente risultano riconoscibili se
 
 ### Fase 7 — Progettazione didattica
 
-**89% → 94%**
+**92% → 94%**
 
-- CML-508 — Programmazione annuale foundation — **in review**.
-- CML-509 — UDA essenziale.
-- CML-510 — Riutilizzo dei dati curricolari.
+- CML-508 — Programmazione annuale foundation — **completata**.
+- CML-509 — UDA essenziale — **completata**.
+- CML-510 — Riutilizzo dei dati curricolari — **completata**.
 - CML-511 — Salvataggio e duplicazione.
 - CML-512 — Esportazione progettazione.
+
+Avanzamento della fase: **60%**.
 
 Criterio di chiusura: un docente può produrre, salvare, duplicare ed esportare una programmazione annuale o una UDA completa usando i dati curricolari già presenti.
 
@@ -146,9 +151,10 @@ CML-502 → CML-504   Processo Referente                      COMPLETATA
 CML-505             Audit end-to-end `.cml`                 COMPLETATO
 CML-506             Chiusura contratti e round-trip         COMPLETATA
 CML-507             Visibilità ruoli nella navigazione      COMPLETATA
-CML-505R            Riallineamento roadmap                  IN CORSO
-CML-508             Programmazione annuale foundation       IN REVIEW
-CML-509 → CML-512   UDA e completamento progettazione       PIANIFICATA
+CML-508             Programmazione annuale foundation       COMPLETATA
+CML-509             UDA essenziale                          COMPLETATA
+CML-510             Riutilizzo dati curricolari             COMPLETATA
+CML-511 → CML-512   Duplicazione ed export progettazione    PIANIFICATA
 CML-513 → CML-516   Persistenza, backup e recupero          PIANIFICATA
 CML-517 → CML-521   Qualità, audit e test utenti            PIANIFICATA
 CML-522 → CML-526   Release 1.0                             PIANIFICATA
@@ -159,6 +165,7 @@ CML-522 → CML-526   Release 1.0                             PIANIFICATA
 | Traguardo | Avanzamento |
 |---|---:|
 | Stato dopo CML-507 | 89% |
+| Stato dopo CML-510 | 92% |
 | Progettazione e UDA complete | 94% |
 | Persistenza e backup completi | 97% |
 | Audit e test utenti completati | 99% |
@@ -170,28 +177,27 @@ CML-522 → CML-526   Release 1.0                             PIANIFICATA
 - CML-505 resta assegnata all’audit end-to-end.
 - CML-506 resta assegnata alla chiusura dei contratti `.cml`.
 - CML-507 resta assegnata alla visibilità dei ruoli nella navigazione.
-- CML-505R identifica esclusivamente il presente riallineamento documentale.
 - La progettazione didattica prosegue da CML-508.
 - Nessun codice già utilizzato può essere riassegnato.
 
 ## Prossima slice operativa
 
-**CML-508 — Programmazione annuale foundation**
+**CML-511 — Salvataggio e duplicazione**
 
-Stato: PR aperta.
+Stato: pianificata.
 
 Confini della slice:
 
-- prima vista React per la programmazione annuale;
-- riuso del contesto già configurato;
-- campi essenziali;
-- salvataggio locale versionato;
+- salvataggio esplicito e affidabile di Programmazione annuale e UDA;
+- duplicazione controllata della bozza corrente;
+- scelta del nuovo contesto di destinazione;
+- nessuna sovrascrittura automatica;
+- compatibilità con i dati CML-508, CML-509 e CML-510;
 - nessun backend;
-- nessun export;
-- nessuna UDA nella stessa slice.
+- nessuna esportazione, riservata a CML-512.
 
-Dopo CML-508, la roadmap prosegue con CML-509 — UDA essenziale.
+Dopo CML-511, la roadmap prosegue con CML-512 — Esportazione progettazione.
 
 ## Verdetto
 
-`CML_REACT_1_0_ROADMAP_REALIGNED_THROUGH_CML_508`
+`CML_REACT_1_0_ROADMAP_REALIGNED_THROUGH_CML_510_AT_92_PERCENT`
