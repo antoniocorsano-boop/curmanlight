@@ -12,12 +12,13 @@
   },
   "counts": {
     "total": 2,
-    "modified": 2,
-    "approved": 0,
-    "rejected": 0
+    "ok": 0,
+    "modifica": 2,
+    "nuovo": 0
   },
   "proposals": [
     {
+      "id": "tec_pri_2_001",
       "unitaId": "tec_pri_2_001",
       "status": "modifica",
       "testoAttuale": "Sperimentare trasformazioni di materiali; riconoscere proprietà fisiche semplici; collegare materiali a usi specifici.",
@@ -29,6 +30,7 @@
       "note": "Il Dipartimento deve stabilire se applicare la proposta in classe seconda o distribuirla nella fascia classi 2-3. Nessuna modifica automatica al curricolo canonico."
     },
     {
+      "id": "tec_pri_4_001",
       "unitaId": "tec_pri_4_001",
       "status": "modifica",
       "testoAttuale": "Distinguere fonti rinnovabili e non rinnovabili; calcolare il consumo energetico di un oggetto; progettare un comportamento sostenibile.",
