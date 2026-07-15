@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T13:10:00.000Z",
+  "role": "teacher",
+  "discipline": "Educazione Civica",
+  "ordine": "Primaria e Secondaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {
+    "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
+  },
+  "counts": {
+    "total": 2,
+    "ok": 0,
+    "modifica": 2,
+    "nuovo": 0
+  },
+  "proposals": [
+    {
+      "id": "edu_pri_5_001-costituzione-partecipazione",
+      "unitaId": "edu_pri_5_001",
+      "status": "modifica",
+      "testoAttuale": "Conoscere i principi fondamentali della Costituzione, le principali istituzioni dello Stato e il valore della partecipazione democratica.",
+      "proposta": "Collegare alcuni principi fondamentali della Costituzione a situazioni concrete della vita scolastica; distinguere regole, diritti, doveri e responsabilità; partecipare a una decisione simulata definendo problema, alternative, criteri, voto e restituzione motivata dell'esito.",
+      "motivazione": "Rende osservabile il passaggio dalla conoscenza delle istituzioni all'esercizio guidato della partecipazione democratica.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Educazione civica, Primaria; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve concordare articoli, situazioni-problema, modalità inclusive di partecipazione e criteri di valutazione. Nessuna decisione reale della scuola viene sostituita dalla simulazione."
+    },
+    {
+      "id": "edu_sec_1_001-legalita-partecipazione",
+      "unitaId": "edu_sec_1_001",
+      "status": "modifica",
+      "testoAttuale": "Analizzare i principi costituzionali, comprendere legalità e partecipare alla vita democratica della classe e della scuola.",
+      "proposta": "Analizzare un caso vicino all'esperienza scolastica collegandolo a diritti, doveri, regole e principi costituzionali; distinguere legalità, responsabilità e sanzione; formulare una proposta civica, discuterla con argomenti e controargomenti e documentare il processo decisionale.",
+      "motivazione": "Integra conoscenza costituzionale, argomentazione e partecipazione responsabile senza trasformare l'attività didattica in una deliberazione istituzionale.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Educazione civica, Secondaria; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve definire casi, fonti normative, ruoli, tempi e rubriche. Dati personali, vicende disciplinari reali e posizioni politiche degli alunni non devono essere raccolti."
+    }
+  ],
+  "humanValidationRequired": true
+}
