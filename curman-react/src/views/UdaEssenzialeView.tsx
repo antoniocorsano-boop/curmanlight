@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { FileText, Save } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
 import { CurriculumReusePanel } from '@/components/didattica/CurriculumReusePanel'
+import { DuplicateDocumentPanel } from '@/components/didattica/DuplicateDocumentPanel'
 import { appendUniqueLines, mergeSourceIds } from '@/lib/curriculum-reuse'
 import type { CurriculumReusePayload } from '@/lib/curriculum-reuse'
 
@@ -152,6 +153,37 @@ export function UdaEssenzialeView() {
     }
   }
 
+  function duplicate(targetClass: string) {
+    if (!draftKey || !savedAt) return { ok: false, message: 'Salva prima l’UDA corrente.' }
+    if (!targetClass) return { ok: false, message: 'Indica la classe di destinazione.' }
+    if (targetClass.trim().toLocaleLowerCase('it-IT') === draft.classe.trim().toLocaleLowerCase('it-IT')) {
+      return { ok: false, message: 'La classe di destinazione deve essere diversa da quella corrente.' }
+    }
+
+    const targetKey = buildDraftKey(contesto.disciplina, contesto.ordine, contesto.annoScolastico, targetClass)
+    try {
+      const store = readStore()
+      if (store.drafts[targetKey]) return { ok: false, message: 'Esiste già un’UDA per la classe indicata. La copia non è stata creata.' }
+
+      const copiedAt = new Date().toISOString()
+      const copy: UdaDraft = {
+        ...draft,
+        ...contesto,
+        classe: targetClass,
+        titolo: draft.titolo.trim() ? `${draft.titolo} — copia` : 'UDA — copia',
+        savedAt: copiedAt,
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: STORE_VERSION, drafts: { ...store.drafts, [targetKey]: copy } } satisfies UdaStore))
+      loadedDraftKey.current = targetKey
+      setDraft({ ...copy })
+      setSavedAt(copiedAt)
+      setStorageError(null)
+      return { ok: true, message: `Copia creata per la classe ${targetClass}. Ora stai modificando la copia.` }
+    } catch {
+      return { ok: false, message: 'Duplicazione non riuscita. Verifica lo spazio disponibile o le impostazioni del browser.' }
+    }
+  }
+
   const missingContext = !contesto.disciplina || !contesto.annoScolastico || !contesto.ordine || !draft.classe.trim()
   const missingRequired = missingContext || !draft.titolo.trim() || !draft.situazioneProblema.trim()
 
@@ -181,6 +213,7 @@ export function UdaEssenzialeView() {
         </div>
       </section>
 
+      <DuplicateDocumentPanel currentClass={draft.classe} documentLabel="l’UDA" disabled={!savedAt || missingRequired} onDuplicate={duplicate} />
       <CurriculumReusePanel disciplina={contesto.disciplina} ordine={contesto.ordine} classe={draft.classe} destinationLabel="UDA" onInsert={insertCurriculum} />
 
       <div className="grid gap-5 sm:grid-cols-2">
