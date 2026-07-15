@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T13:15:00.000Z",
+  "role": "teacher",
+  "discipline": "Educazione Civica",
+  "ordine": "Primaria e Secondaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {"istituto": "I.C. Calvario-Covotta don Lorenzo Milani"},
+  "counts": {"total": 2, "ok": 0, "modifica": 2, "nuovo": 0},
+  "proposals": [
+    {
+      "id": "edu_pri_3_001-etica-uso-tecnologie",
+      "unitaId": "edu_pri_3_001",
+      "status": "modifica",
+      "testoAttuale": "Utilizzare dispositivi digitali seguendo le indicazioni dell'insegnante; conoscere le regole base della navigazione sicura; applicare la netiquette; riconoscere situazioni di rischio online.",
+      "proposta": "Riconoscere che strumenti e servizi digitali producono effetti sulle persone e sull'ambiente; distinguere azioni automatiche da decisioni umane; discutere semplici casi di uso corretto o scorretto di dati, immagini e contenuti; motivare una scelta responsabile considerando rispetto, sicurezza, inclusione e riduzione degli sprechi digitali.",
+      "motivazione": "Introduce una prima riflessione etica sull'uso delle tecnologie senza anticipare contenuti specialistici né sostituire la supervisione adulta.",
+      "fonte": "Curricolo verticale Milani 2026-2027 — Educazione civica; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il team docente deve selezionare casi adeguati all'età, evitare dati personali reali e distinguere attività simulate da servizi online effettivi."
+    },
+    {
+      "id": "edu_sec_3_001-etica-automazione-dati-bias",
+      "unitaId": "edu_sec_3_001",
+      "status": "modifica",
+      "testoAttuale": "Valutare criticamente le fonti online; gestire privacy e identità digitale; riconoscere il cyberbullismo; rispettare diritto d'autore e licenze.",
+      "proposta": "Analizzare casi di sistemi automatizzati e contenuti generati o raccomandati da algoritmi, identificando dati utilizzati, soggetti coinvolti, benefici, rischi e possibili errori; distinguere responsabilità dello strumento, del produttore e dell'utilizzatore; formulare criteri di uso trasparente, verificabile e sottoposto a decisione umana.",
+      "motivazione": "Integra media literacy e cittadinanza digitale con responsabilità, trasparenza, bias e controllo umano, mantenendo distinto il focus civico dalla proposta disciplinare sull'intelligenza artificiale in Tecnologia.",
+      "fonte": "Curricolo verticale Milani 2026-2027 — Educazione civica; crosswalk Milani-CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve definire casi, lessico, criteri di valutazione e limiti d'uso. Non usare dati personali degli alunni né affidare a sistemi automatici decisioni valutative o disciplinari."
+    }
+  ],
+  "humanValidationRequired": true
+}
