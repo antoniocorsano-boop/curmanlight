@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "fileType": "teacher_proposal",
+  "appName": "CurManLight",
+  "createdAt": "2026-07-15T10:50:00.000Z",
+  "role": "teacher",
+  "discipline": "Italiano",
+  "ordine": "Primaria e Secondaria",
+  "annoScolastico": "2026-2027",
+  "profilo": {
+    "istituto": "I.C. Calvario-Covotta don Lorenzo Milani"
+  },
+  "counts": {
+    "total": 2,
+    "ok": 0,
+    "modifica": 2,
+    "nuovo": 0
+  },
+  "proposals": [
+    {
+      "id": "ita_pri_4_001-riassunto-riscrittura",
+      "unitaId": "ita_pri_4_001",
+      "status": "modifica",
+      "testoAttuale": "Produrre testi narrativi coerenti e coesi; applicare le regole ortografiche di base; produrre un riassunto di un breve testo.",
+      "proposta": "Individuare le informazioni essenziali di un testo, organizzarle in una scaletta e produrre un riassunto coerente usando parole proprie; riscrivere un breve testo modificando punto di vista, destinatario o forma, quindi rileggere e correggere il prodotto con una guida condivisa.",
+      "motivazione": "La proposta rende osservabile il passaggio dalla comprensione alla sintesi e alla riscrittura, valorizzando pianificazione, riformulazione e revisione senza sostituire gli obiettivi canonici dell'unità.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Italiano, Primaria; crosswalk Milani ↔ CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve definire lunghezza dei testi, strumenti compensativi, rubriche e progressione nelle classi. Nessuna approvazione o modifica automatica del curricolo canonico."
+    },
+    {
+      "id": "ita_sec_2_001-riscrittura-revisione",
+      "unitaId": "ita_sec_2_001",
+      "status": "modifica",
+      "testoAttuale": "Produrre testi di tipologia diversa; applicare le tecniche del riassunto e della riscrittura; rivedere e correggere il proprio testo in modo autonomo.",
+      "proposta": "Produrre riassunti, parafrasi e riscritture da testi-modello distinguendo informazioni essenziali e secondarie; adattare registro, struttura e punto di vista allo scopo; documentare almeno una revisione motivata relativa a contenuto, coesione, lessico o correttezza linguistica.",
+      "motivazione": "L'integrazione esplicita il processo di scrittura come ciclo di pianificazione, stesura, controllo e revisione e consente evidenze verificabili del miglioramento tra prima e seconda versione.",
+      "fonte": "Curricolo verticale I.C. Calvario-Covotta don Lorenzo Milani 2026-2027 — Italiano, Secondaria; crosswalk Milani ↔ CurManLight",
+      "decisione": null,
+      "testoFinale": null,
+      "note": "Il Dipartimento deve concordare tipologie testuali, strumenti di revisione, criteri di valutazione e uso eventuale di strumenti digitali. Validazione umana obbligatoria."
+    }
+  ],
+  "humanValidationRequired": true
+}
