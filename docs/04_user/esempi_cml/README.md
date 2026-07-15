@@ -59,17 +59,16 @@ Ogni nuovo esempio docente deve mantenere:
 Dalla radice del repository:
 
 ```bash
-node tools/validate-cml-examples.mjs
+node tools/validate-managed-cml-pilots.mjs
 ```
 
 Il controllo:
 
-1. legge tutti i file `.cml` della cartella;
-2. verifica che il JSON sia valido e che `fileType` sia dichiarato;
-3. applica il contratto v1 completo ai `teacher_proposal` gestiti `proposta_*.cml`;
-4. applica ai file docente legacy soltanto i gate di leggibilità, versione e validazione umana;
-5. controlla conteggi, identificativi, stati e campi decisionali della libreria gestita;
-6. non tratta gli esiti dipartimentali come proposte docente.
+1. verifica la presenza dei dodici file pilota gestiti;
+2. legge e valida il JSON dei file dichiarati nel manifest;
+3. applica il contratto v1 completo;
+4. controlla conteggi, identificativi, stati e campi decisionali;
+5. lascia separati gli esempi legacy e gli esiti dipartimentali.
 
 ## Regola d'uso
 
