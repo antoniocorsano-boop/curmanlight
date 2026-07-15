@@ -2,60 +2,41 @@
 
 ## Stato
 
-**BLOCKED — non pronta per PR o merge.**
+Implementazione remota del primo pilot sintetico browser sulla base della foundation CML-517B.
 
-## Obiettivo
+## Ambito
 
-Eseguire il primo pilot sintetico browser sulla matrice di 6 personas × 5 scenari definita in CML-517B, producendo 30 record di evidenza, screenshot, log console e rapporto consolidato.
+- 6 personas;
+- 5 scenari;
+- 30 combinazioni eseguite con Playwright;
+- desktop 1440 × 1000;
+- mobile 390 × 844 per il profilo mobile-first;
+- dati esclusivamente sintetici;
+- nessuna telemetria;
+- nessuna modifica al curricolo canonico;
+- evidenze sintetiche non equiparate a feedback di docenti reali.
 
-## Baseline
-
-- `main`: `b84fb4e8043d74759f6e778001f90e099a0afd68`;
-- branch: `codex/cml-517c-first-synthetic-browser-pilot`;
-- foundation: `agent-evaluation/`;
-- applicazione target: `curman-react/`;
-- harness Playwright storico disponibile come riferimento: CML-473.
-
-## Verifiche svolte
-
-- ispezionato `curman-react/playwright.cml473.config.ts`;
-- ispezionato `curman-react/e2e/cml-473-comparative-b03.spec.ts`;
-- ispezionato `.github/workflows/cml-473-comparative-b03-audit.yml`;
-- confermato il pattern CI che installa temporaneamente `@playwright/test` e Chromium senza modificare il lockfile;
-- confermata la matrice dichiarativa di 6 personas e 5 scenari.
-
-## Blocker
-
-Il connettore GitHub della sessione blocca la creazione dei file TypeScript del nuovo driver Playwright. L'ambiente locale non dispone inoltre del comando `agent-browser` né di `gh` e non contiene un checkout autenticato del repository.
-
-Non è quindi possibile, in questa sessione, eseguire o validare onestamente le 30 combinazioni browser.
-
-## Criteri per la ripresa
-
-CML-517C può riprendere quando è disponibile almeno una delle seguenti condizioni:
-
-1. checkout locale autenticato con possibilità di creare e pushare file TypeScript;
-2. connettore GitHub che consenta la scrittura del driver Playwright;
-3. runtime `agent-browser` o Playwright disponibile per eseguire la baseline pubblicata.
-
-## Output ancora richiesti
+## Output
 
 - `curman-react/playwright.cml517c.config.ts`;
 - `curman-react/e2e/cml-517c-synthetic-swarm.spec.ts`;
-- workflow GitHub Actions dedicato;
-- 30 record JSON conformi a `agent-evaluation/evidence-schema.json`;
-- screenshot desktop/mobile;
-- report consolidato con finding sintetici distinti dalle evidenze umane.
+- `.github/workflows/cml-517c-synthetic-browser-pilot.yml`;
+- artefatto GitHub Actions con JSON, screenshot e log runtime.
 
-## Confini rispettati
+## Criteri
 
-- nessuna modifica a `main`;
-- nessuna modifica al runtime storico;
-- nessuna modifica ai dati curricolari canonici;
-- nessuna telemetria;
-- nessun dato personale;
-- nessuna dichiarazione falsa di test eseguito.
+Ogni combinazione deve caricare la baseline React, produrre un record di evidenza e verificare:
 
-## Verdetto
+1. pagina leggibile;
+2. presenza di controlli interattivi;
+3. assenza di errori console;
+4. formato uniforme del record;
+5. human review obbligatoria.
 
-`CML_517C_FIRST_SYNTHETIC_BROWSER_PILOT_BLOCKED_DRIVER_WRITE_AND_BROWSER_RUNTIME_UNAVAILABLE_NOT_MERGED`
+## Vincoli interpretativi
+
+Il test corrente è un pilot di orientamento e stabilità, non un agente autonomo capace di decidere liberamente il percorso. La comprensione reale dei compiti resta da validare con docenti e con driver agentico successivo.
+
+## Verdetto atteso
+
+`CML_517C_FIRST_SYNTHETIC_BROWSER_PILOT_30_RUNS_PASS_NO_RUNTIME_OR_CANONICAL_CHANGE`
