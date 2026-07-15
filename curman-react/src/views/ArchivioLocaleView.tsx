@@ -74,9 +74,7 @@ export function ArchivioLocaleView() {
       setFeedback({ kind: 'error', message: result.message })
       return
     }
-    setPreview(null)
-    refresh()
-    setFeedback({ kind: 'success', message: 'Backup ripristinato. L’archivio è stato aggiornato.' })
+    window.location.reload()
   }
 
   return (
@@ -108,7 +106,7 @@ export function ArchivioLocaleView() {
         {preview && (
           <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm font-[700] text-amber-900">Conferma richiesta</p>
-            <p className="mt-1 text-sm leading-6 text-amber-800">Il backup del {new Date(preview.payload.createdAt).toLocaleString('it-IT')} contiene {preview.entryCount} archivi. Il ripristino sostituirà gli archivi locali supportati e rimuoverà quelli non presenti nel file.</p>
+            <p className="mt-1 text-sm leading-6 text-amber-800">Il backup del {new Date(preview.payload.createdAt).toLocaleString('it-IT')} contiene {preview.entryCount} archivi. Il ripristino sostituirà gli archivi locali supportati e rimuoverà quelli non presenti nel file. Al termine CurManLight verrà ricaricato per utilizzare subito i dati ripristinati.</p>
             <div className="mt-3 flex flex-col gap-2 sm:flex-row">
               <button type="button" onClick={confirmRestore} className="rounded-xl bg-amber-700 px-4 py-2.5 text-sm font-[700] text-white hover:bg-amber-800">Ripristina ora</button>
               <button type="button" onClick={() => setPreview(null)} className="rounded-xl border border-amber-300 bg-white px-4 py-2.5 text-sm font-[650] text-amber-800">Annulla</button>
