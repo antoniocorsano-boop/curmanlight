@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Save, BookOpen } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
 import { CurriculumReusePanel } from '@/components/didattica/CurriculumReusePanel'
+import { DuplicateDocumentPanel } from '@/components/didattica/DuplicateDocumentPanel'
 import { appendUniqueLines, mergeSourceIds } from '@/lib/curriculum-reuse'
 import type { CurriculumReusePayload } from '@/lib/curriculum-reuse'
 
@@ -156,6 +157,37 @@ export function ProgrammazioneAnnualeView() {
     }
   }
 
+  function duplicate(targetClass: string) {
+    if (!planKey || !savedAt) return { ok: false, message: 'Salva prima la programmazione corrente.' }
+    if (!targetClass) return { ok: false, message: 'Indica la classe di destinazione.' }
+    if (targetClass.trim().toLocaleLowerCase('it-IT') === plan.classe.trim().toLocaleLowerCase('it-IT')) {
+      return { ok: false, message: 'La classe di destinazione deve essere diversa da quella corrente.' }
+    }
+
+    const targetKey = buildPlanKey(contesto.disciplina, contesto.ordine, contesto.annoScolastico, targetClass)
+    try {
+      const store = readStore()
+      if (store.plans[targetKey]) return { ok: false, message: 'Esiste già una programmazione per la classe indicata. La copia non è stata creata.' }
+
+      const copiedAt = new Date().toISOString()
+      const copy: AnnualPlan = {
+        ...plan,
+        ...contesto,
+        classe: targetClass,
+        titolo: plan.titolo.trim() ? `${plan.titolo} — copia` : 'Programmazione — copia',
+        savedAt: copiedAt,
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: STORE_VERSION, plans: { ...store.plans, [targetKey]: copy } } satisfies AnnualPlanStore))
+      loadedPlanKey.current = targetKey
+      setPlan({ ...copy })
+      setSavedAt(copiedAt)
+      setStorageError(null)
+      return { ok: true, message: `Copia creata per la classe ${targetClass}. Ora stai modificando la copia.` }
+    } catch {
+      return { ok: false, message: 'Duplicazione non riuscita. Verifica lo spazio disponibile o le impostazioni del browser.' }
+    }
+  }
+
   const missingContext = !contesto.disciplina || !contesto.annoScolastico || !contesto.ordine || !plan.classe.trim()
 
   return (
@@ -184,6 +216,7 @@ export function ProgrammazioneAnnualeView() {
         </div>
       </section>
 
+      <DuplicateDocumentPanel currentClass={plan.classe} documentLabel="la programmazione" disabled={!savedAt || missingContext} onDuplicate={duplicate} />
       <CurriculumReusePanel disciplina={contesto.disciplina} ordine={contesto.ordine} classe={plan.classe} destinationLabel="programmazione" onInsert={insertCurriculum} />
 
       <div className="grid gap-5 sm:grid-cols-2">
