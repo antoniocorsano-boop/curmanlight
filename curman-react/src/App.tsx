@@ -11,6 +11,7 @@ import { EsportazioniView } from '@/views/EsportazioniView'
 import { ImpostazioniView } from '@/views/ImpostazioniView'
 import { ProgrammazioneAnnualeView } from '@/views/ProgrammazioneAnnualeView'
 import { UdaEssenzialeView } from '@/views/UdaEssenzialeView'
+import { ArchivioLocaleView } from '@/views/ArchivioLocaleView'
 import type { ViewId } from '@/types/state'
 
 function NotAvailableView() {
@@ -46,6 +47,7 @@ export default function App() {
     'evidenze-valutazione': <NotAvailableView />,
     'programmazione-annuale': <ProgrammazioneAnnualeView />,
     'uda-modello': <UdaEssenzialeView />,
+    'archivio-locale': <ArchivioLocaleView />,
     guida: <NotAvailableView />,
   }
   return <Layout>{views[vistaAttiva] ?? <HomeView />}</Layout>
