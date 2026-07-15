@@ -2,69 +2,108 @@
 
 ## Snapshot
 
-- Last milestone: CML-442 — React Migration Build Stabilization
-- Last completed sync: CML-441 committed (`f7fe7ca`)
-- Active slice: CML-442 — React Migration Build Stabilization (branch `codex/react-migration-stabilization`)
-- Last completed design/runtime merge: CML-441 Home action-only simplification runtime ready
-- Last committed: CML-441 (Home action-only simplification) + CML-442 (React migration foundation)
-- Active PM: PM-03 (50%), PM-05 (100%), PM-06 (75%), PM-07 (45%), PM-09 (ongoing)
-- Critical path: React migration (curman-react/) — filone separato e non produttivo
-- Next action: push CML-441 mainline on approval; continue CML-442 React stabilization on `codex/react-migration-stabilization`
-- Last verdict: `CML_442_REACT_MIGRATION_BUILD_STABILIZATION_COMMITTED_LOCAL_NOT_PUSHED`
-- Repository status: main at CML-441 (Home action-only simplification, not pushed); `codex/react-migration-stabilization` branched from origin/main with CML-442 build stabilization
+- Last merged milestone: CML-514P — Etica tecnologica per Educazione civica
+- Current `main`: `0c2d660242d17c5a6752ef81b6c6cfb22eb7c3e0`
+- Active reconciliation slice: CML-515 — Program State Reconciliation
+- Runtime storico: mantenuto e stabile; interventi strutturali da evitare senza necessità verificata
+- React application (`curman-react/`): filone evolutivo principale da consolidare e validare
+- Canonical curriculum data: invariati dalle proposte `.cml`; validazione umana obbligatoria
+- Current movelog: `docs/REPO-MOVELOG-v2.md`
+- Next strategic action: consolidare la libreria di proposte `.cml`, quindi avviare un pilot controllato con docenti
 
-## Recent Refactor Chain (CML-371 → CML-380)
+## Programmi e lotti completati
 
-La catena CML-371 → CML-380 ha completato il refactor dell'accesso runtime ai dati disciplinari:
+### Tecnologia
 
-- Runtime access generalizzato via `getUnitsForDiscipline(discKey)`
-- Rimozione dead code `TECNOLOGIA_NORM` / `TECNOLOGIA_NORM_DATA`
-- Zero residui hardcoded disciplinari certificati
-- Runtime stabile, nessuna regressione
+Completato il pilot di proposte docente su:
+
+- IA consapevole;
+- economia circolare;
+- benessere digitale per l'Infanzia;
+- prototipazione nella Secondaria.
+
+### Italiano
+
+Completato il lotto di proposte docente su:
+
+- lettura integrale e interpretazione;
+- riassunto e riscrittura;
+- corsivo e scrittura manuale;
+- grammatica normativa.
+
+### Educazione civica
+
+Completato il lotto di proposte docente su:
+
+- cittadinanza digitale e verifica delle fonti;
+- sostenibilità e cura dei beni comuni;
+- Costituzione e partecipazione democratica;
+- etica tecnologica.
+
+Tutte le proposte restano esempi `teacher_proposal`, non modificano automaticamente i curricoli canonici e richiedono una decisione umana esplicita.
+
+## Priorità di roadmap
+
+1. CML-515 — riallineamento di stato, roadmap e governance.
+2. CML-516 — consolidamento e validazione automatica della libreria `.cml`.
+3. CML-517 — pilot controllato con 3-5 docenti e raccolta di evidenze osservabili.
+4. CML-518 — decisione formale sul passaggio dal runtime storico all'app React.
+5. CML-519 — nuovo audit PM-03, PM-06, PM-07 e PM-09 sulla baseline corrente.
+6. CML-520 — suite automatica per contratti, round-trip, backup/restore e regressioni.
+7. CML-521 — percorso guidato locale di valutazione prodotto per docenti non tecnici.
 
 ## Runtime Perimeter Reminder
 
-Always treat runtime scope as:
+Ogni intervento sul runtime storico deve trattare insieme:
 
-- index.html
-- _published_snapshot/netlify-current/index.html
+- `index.html`;
+- `_published_snapshot/netlify-current/index.html`.
 
-Never reference only one runtime file in execution summaries.
+Non modificare un solo file della coppia e non riscrivere da remoto file HTML grandi da contenuto potenzialmente troncato.
 
-## Product Design Governance Reminder
+## Product Design Governance
 
-Dopo CML-434D, la prima micro-slice runtime deve seguire la direzione ibrida:
+La direzione di prodotto resta:
 
 ```text
 B come ingresso docente + C come logica operativa + A come evoluzione istituzionale futura
 ```
 
-CML-434 runtime non va applicata da remoto se l'unica modalità disponibile è riscrivere integralmente file HTML grandi da contenuto potenzialmente troncato.
-
-Ogni intervento runtime deve dichiarare:
+Ogni intervento deve dichiarare:
 
 - profilo utente servito;
-- contesto d'uso supportato;
-- vista o pannello interessato;
+- contesto d'uso;
+- vista interessata;
 - stato curricolare rappresentato;
-- azione primaria consentita;
-- criterio di accettazione soddisfatto;
-- elementi volutamente esclusi.
+- azione primaria;
+- criterio di accettazione;
+- elementi esclusi intenzionalmente.
 
 ## Mock Conformance Rule
 
-Dopo un mock approvato, la UI deve inibire ciò che non è conforme. Non basta aggiungere nuovi blocchi sopra quelli vecchi.
+Dopo un mock approvato, la UI deve inibire ciò che non è conforme. Non basta aggiungere nuovi blocchi sopra quelli precedenti.
 
 ## Pilot Validation Rule
 
-Durante la validazione pilota non chiedere solo se lo strumento piace. Raccogliere evidenze osservabili: cosa il docente capisce, cosa prova a fare, dove si blocca, quali parole o passaggi risultano ambigui.
+Durante il pilot raccogliere evidenze osservabili: cosa il docente comprende, quale azione tenta, dove si blocca e quali parole o passaggi interpreta in modo ambiguo. Il gradimento generale non è sufficiente.
 
-## Current Movelog
+## Governance dei file `.cml`
 
-Il registro operativo corrente è:
+Gli esempi devono mantenere:
+
+- `schemaVersion: "1.0"`;
+- `fileType: "teacher_proposal"`;
+- `counts` coerenti;
+- `id` e `unitaId` stabili;
+- `decisione: null` prima della valutazione dipartimentale;
+- `humanValidationRequired: true`;
+- nessun dato personale reale;
+- nessuna approvazione automatica.
+
+## Stato di chiusura
+
+Verdetto corrente:
 
 ```text
-docs/REPO-MOVELOG-v2.md
+CML_POST_514_PROGRAM_BASELINE_RECONCILED_MAIN_0C2D6602
 ```
-
-Il file `docs/REPO-MOVELOG.md` resta archivio legacy e non va riscritto da remoto.
