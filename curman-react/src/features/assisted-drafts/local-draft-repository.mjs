@@ -23,12 +23,15 @@ export function createInMemoryDraftStorage() {
       const value = stable.get(packageId);
       return value ? clone(value) : null;
     },
-    async commitStable(record) {
+    async commitStable(record, expectedVersion) {
       if (failNextCommit) {
         failNextCommit = false;
         throw new Error("simulated-storage-failure");
       }
+      const currentVersion = stable.get(record.packageId)?.version ?? 0;
+      if (currentVersion !== expectedVersion) return { committed: false, currentVersion };
       stable.set(record.packageId, clone(record));
+      return { committed: true, currentVersion: record.version };
     },
     async readRecovery(packageId) {
       const value = recovery.get(packageId);
@@ -57,37 +60,46 @@ export function createAssistedDraftRepository({ storage, registry, now = () => n
     return report;
   };
 
+  const save = async (draft, { expectedVersion = null } = {}) => {
+    const report = validate(draft);
+    const current = await storage.readStable(draft.packageId);
+    const observedVersion = current?.version ?? 0;
+    if (expectedVersion !== null && expectedVersion !== observedVersion) {
+      throw new AssistedDraftRepositoryError("ADR-003", "Conflitto di versione.", {
+        expectedVersion,
+        currentVersion: observedVersion,
+      });
+    }
+
+    const record = {
+      packageId: draft.packageId,
+      version: observedVersion + 1,
+      savedAt: now(),
+      draft: clone({ ...draft, packageVersion: observedVersion + 1 }),
+      validatorReport: clone(report),
+    };
+
+    try {
+      const result = await storage.commitStable(record, observedVersion);
+      if (!result?.committed) {
+        throw new AssistedDraftRepositoryError("ADR-003", "Conflitto di versione.", {
+          expectedVersion: observedVersion,
+          currentVersion: result?.currentVersion ?? null,
+        });
+      }
+    } catch (cause) {
+      if (cause instanceof AssistedDraftRepositoryError) throw cause;
+      throw new AssistedDraftRepositoryError("ADR-004", "Salvataggio atomico non completato.", { cause: String(cause) });
+    }
+    return clone(record);
+  };
+
   return {
     async load(packageId) {
       return storage.readStable(packageId);
     },
 
-    async save(draft, { expectedVersion = null } = {}) {
-      const report = validate(draft);
-      const current = await storage.readStable(draft.packageId);
-      const currentVersion = current?.version ?? 0;
-      if (expectedVersion !== null && expectedVersion !== currentVersion) {
-        throw new AssistedDraftRepositoryError("ADR-003", "Conflitto di versione.", {
-          expectedVersion,
-          currentVersion,
-        });
-      }
-
-      const record = {
-        packageId: draft.packageId,
-        version: currentVersion + 1,
-        savedAt: now(),
-        draft: clone({ ...draft, packageVersion: currentVersion + 1 }),
-        validatorReport: clone(report),
-      };
-
-      try {
-        await storage.commitStable(record);
-      } catch (cause) {
-        throw new AssistedDraftRepositoryError("ADR-004", "Salvataggio atomico non completato.", { cause: String(cause) });
-      }
-      return clone(record);
-    },
+    save,
 
     async saveRecovery(draft) {
       const report = validate(draft);
@@ -111,7 +123,7 @@ export function createAssistedDraftRepository({ storage, registry, now = () => n
     async restoreRecovery(packageId, { expectedVersion = null } = {}) {
       const recovery = await storage.readRecovery(packageId);
       if (!recovery) throw new AssistedDraftRepositoryError("ADR-005", "Snapshot di recovery non disponibile.");
-      const restored = await this.save(recovery.draft, { expectedVersion });
+      const restored = await save(recovery.draft, { expectedVersion });
       await storage.deleteRecovery(packageId);
       return restored;
     },
