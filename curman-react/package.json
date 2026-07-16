@@ -30,6 +30,8 @@
     "test:cml525k": "node tools/check-cml525k-assisted-draft-workspace-shell.mjs",
     "test:cml525l": "node tools/check-cml525l-draft-proposal-editor.mjs",
     "test:cml525m": "node tools/check-cml525m-assisted-draft-demo-route.mjs",
+    "test:cml525n": "node tools/check-cml525n-interactive-demo-smoke.mjs",
+    "test:cml525n:e2e": "playwright test --config=playwright.cml525n.config.ts",
     "preview": "vite preview"
   },
   "dependencies": {
