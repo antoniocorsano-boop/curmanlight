@@ -127,14 +127,15 @@ export function DepartmentProposalQueue() {
         </div>
       ) : (
         <>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label="Riepilogo coda dipartimentale">
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5" aria-label="Riepilogo coda dipartimentale">
             {[
               ['Proposte', summary.total],
               ['Da decidere', summary.pending],
               ['Decise', summary.decided],
               ['Discipline', summary.disciplines],
+              ['Conflitti', readiness.conflicts],
             ].map(([label, value]) => (
-              <div key={label} className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-3">
+              <div key={label} className={`rounded-xl border px-3 py-3 ${label === 'Conflitti' && Number(value) > 0 ? 'border-amber-300 bg-amber-50' : 'border-slate-200 bg-slate-50'}`}>
                 <p className="text-xs text-slate-500">{label}</p>
                 <p className="mt-1 text-lg font-[700] text-slate-800">{value}</p>
               </div>
@@ -151,6 +152,7 @@ export function DepartmentProposalQueue() {
                 </p>
                 <p className="mt-2 text-[11px] text-slate-500">Accettate {decisionCounts.accettate} · Respinte {decisionCounts.respinte} · Modificate {decisionCounts.modificate} · Rinviate {decisionCounts.rinviate}</p>
                 {readiness.invalid > 0 && <p className="mt-2 text-xs font-[600] text-red-700">{readiness.invalid} decisioni modificate non hanno un testo concordato valido.</p>}
+                {readiness.conflicts > 0 && <p role="alert" className="mt-2 text-xs font-[650] text-amber-800">{readiness.conflicts} {readiness.conflicts === 1 ? 'unità contiene' : 'unità contengono'} più decisioni positive. Mantieni una sola proposta accettata o modificata per unità prima di esportare.</p>}
                 {exportError && <p className="mt-2 text-xs font-[600] text-red-700">{exportError}</p>}
               </div>
               <button type="button" onClick={handleExport} disabled={!readiness.ready}
