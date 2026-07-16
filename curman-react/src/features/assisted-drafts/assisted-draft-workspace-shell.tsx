@@ -12,6 +12,7 @@ export interface AssistedDraftWorkspaceShellProps {
 }
 
 const busyStatuses = new Set(["loading", "saving", "checkpointing", "restoring"]);
+const runHandled = (operation: Promise<unknown>) => void operation.catch(() => undefined);
 
 export function AssistedDraftWorkspaceShell({
   service,
@@ -52,16 +53,16 @@ export function AssistedDraftWorkspaceShell({
       </header>
 
       {recoveryDecisionRequired && (
-        <aside role="alertdialog" aria-labelledby="assisted-recovery-title" aria-describedby="assisted-recovery-description" className="rounded-xl border border-amber-300 bg-amber-50 p-4">
+        <aside role="alert" aria-labelledby="assisted-recovery-title" aria-describedby="assisted-recovery-description" className="rounded-xl border border-amber-300 bg-amber-50 p-4">
           <h2 id="assisted-recovery-title" className="font-semibold text-amber-950">È disponibile una copia di recupero</h2>
           <p id="assisted-recovery-description" className="mt-1 text-sm text-amber-900">
-            Scegli esplicitamente se ripristinarla oppure conservarla fuori dal lavoro corrente. Nessuna scelta viene applicata automaticamente.
+            Scegli esplicitamente se ripristinarla oppure scartarla. Nessuna scelta viene applicata automaticamente.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
-            <button type="button" disabled={busy} onClick={() => void workspace.restoreRecovery()} className="rounded-lg bg-amber-900 px-3 py-2 text-sm font-medium text-white disabled:opacity-50">
+            <button type="button" disabled={busy} onClick={() => runHandled(workspace.restoreRecovery())} className="rounded-lg bg-amber-900 px-3 py-2 text-sm font-medium text-white disabled:opacity-50">
               Ripristina copia di recupero
             </button>
-            <button type="button" disabled={busy} onClick={() => void workspace.discardRecovery()} className="rounded-lg border border-amber-400 bg-white px-3 py-2 text-sm font-medium text-amber-950 disabled:opacity-50">
+            <button type="button" disabled={busy} onClick={() => runHandled(workspace.discardRecovery())} className="rounded-lg border border-amber-400 bg-white px-3 py-2 text-sm font-medium text-amber-950 disabled:opacity-50">
               Scarta copia di recupero
             </button>
           </div>
@@ -72,7 +73,7 @@ export function AssistedDraftWorkspaceShell({
         <div role="alert" className="rounded-xl border border-rose-300 bg-rose-50 p-4 text-sm text-rose-950">
           <strong>La bozza è cambiata in un’altra scheda.</strong>
           <p className="mt-1">Ricarica la versione più recente prima di salvare o creare una copia di recupero.</p>
-          <button type="button" onClick={() => void workspace.refresh()} className="mt-3 rounded-lg border border-rose-400 bg-white px-3 py-2 font-medium">
+          <button type="button" onClick={() => runHandled(workspace.refresh())} className="mt-3 rounded-lg border border-rose-400 bg-white px-3 py-2 font-medium">
             Ricarica versione recente
           </button>
         </div>
@@ -87,10 +88,10 @@ export function AssistedDraftWorkspaceShell({
       <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">{children}</div>
 
       <footer className="flex flex-wrap justify-end gap-2 rounded-xl border border-slate-200 bg-white p-4">
-        <button type="button" disabled={actionsDisabled} onClick={() => draft && void workspace.checkpoint(draft)} className="rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-800 disabled:opacity-50">
+        <button type="button" disabled={actionsDisabled} onClick={() => draft && runHandled(workspace.checkpoint(draft))} className="rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-800 disabled:opacity-50">
           Crea copia di recupero
         </button>
-        <button type="button" disabled={actionsDisabled} onClick={() => draft && void workspace.save(draft)} className="rounded-lg bg-slate-950 px-3 py-2 text-sm font-medium text-white disabled:opacity-50">
+        <button type="button" disabled={actionsDisabled} onClick={() => draft && runHandled(workspace.save(draft))} className="rounded-lg bg-slate-950 px-3 py-2 text-sm font-medium text-white disabled:opacity-50">
           Salva bozza locale
         </button>
       </footer>
