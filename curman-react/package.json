@@ -26,6 +26,7 @@
     "test:cml525g": "node tools/check-cml525g-assisted-draft-contracts.mjs",
     "test:cml525h": "node tools/check-cml525h-validator-runtime.mjs",
     "test:cml525i": "node tools/check-cml525i-local-draft-repository.mjs",
+    "test:cml525j": "node tools/check-cml525j-assisted-draft-application-service.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
