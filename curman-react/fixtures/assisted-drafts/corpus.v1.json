@@ -1,0 +1,160 @@
+{
+  "corpusVersion": "1.0",
+  "registryVersion": "tec-secondary-v1",
+  "fixtures": [
+    {
+      "fixtureId": "valid-minimal-single-source",
+      "expectedResult": "valid",
+      "expectedCodes": [],
+      "draft": {
+        "schemaVersion": "1.0",
+        "fileType": "assisted_curriculum_draft",
+        "packageId": "pkg-valid-001",
+        "packageVersion": 1,
+        "humanValidationRequired": true,
+        "canonicalWriteAllowed": false,
+        "targetRegistryVersion": "tec-secondary-v1",
+        "suggestions": [{
+          "suggestionId": "sug-001",
+          "state": "generated_unreviewed",
+          "originalGeneratedText": "Confrontare fonti rinnovabili e non rinnovabili.",
+          "proposedText": "Confrontare fonti rinnovabili e non rinnovabili.",
+          "target": {
+            "registryVersion": "tec-secondary-v1",
+            "disciplineId": "tecnologia",
+            "orderId": "secondaria",
+            "unitId": "tec_sec_2_002",
+            "nucleusId": "energia-sostenibilita",
+            "fieldId": "conoscenze"
+          },
+          "evidence": [{
+            "sourceId": "src-ministero-001",
+            "sourceVersionId": "src-ministero-001-v1",
+            "locatorType": "section",
+            "locatorValue": "Energia",
+            "excerpt": "Conoscere le fonti energetiche rinnovabili e non rinnovabili.",
+            "excerptHash": "hash-evidence-001"
+          }],
+          "humanValidationRequired": true,
+          "canonicalWriteAllowed": false
+        }],
+        "auditTrail": []
+      }
+    },
+    {
+      "fixtureId": "invalid-canonical-write-true",
+      "expectedResult": "invalid",
+      "expectedCodes": ["ADP-003"],
+      "draft": {
+        "schemaVersion": "1.0",
+        "fileType": "assisted_curriculum_draft",
+        "packageId": "pkg-invalid-003",
+        "packageVersion": 1,
+        "humanValidationRequired": true,
+        "canonicalWriteAllowed": true,
+        "targetRegistryVersion": "tec-secondary-v1",
+        "suggestions": [],
+        "auditTrail": []
+      }
+    },
+    {
+      "fixtureId": "invalid-human-validation-false",
+      "expectedResult": "invalid",
+      "expectedCodes": ["ADP-004"],
+      "draft": {
+        "schemaVersion": "1.0",
+        "fileType": "assisted_curriculum_draft",
+        "packageId": "pkg-invalid-004",
+        "packageVersion": 1,
+        "humanValidationRequired": false,
+        "canonicalWriteAllowed": false,
+        "targetRegistryVersion": "tec-secondary-v1",
+        "suggestions": [],
+        "auditTrail": []
+      }
+    },
+    {
+      "fixtureId": "invalid-duplicate-suggestion-id",
+      "expectedResult": "invalid",
+      "expectedCodes": ["ADP-006"],
+      "draft": {
+        "schemaVersion": "1.0",
+        "fileType": "assisted_curriculum_draft",
+        "packageId": "pkg-invalid-006",
+        "packageVersion": 1,
+        "humanValidationRequired": true,
+        "canonicalWriteAllowed": false,
+        "targetRegistryVersion": "tec-secondary-v1",
+        "suggestions": [
+          {"suggestionId":"dup-1","state":"generated_unreviewed","originalGeneratedText":"A","proposedText":"A","target":{"registryVersion":"tec-secondary-v1","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_3_001","nucleusId":"digitale-informatica","fieldId":"obiettivi"},"evidence":[],"humanValidationRequired":true,"canonicalWriteAllowed":false},
+          {"suggestionId":"dup-1","state":"generated_unreviewed","originalGeneratedText":"B","proposedText":"B","target":{"registryVersion":"tec-secondary-v1","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_3_001","nucleusId":"digitale-informatica","fieldId":"obiettivi"},"evidence":[],"humanValidationRequired":true,"canonicalWriteAllowed":false}
+        ],
+        "auditTrail": []
+      }
+    },
+    {
+      "fixtureId": "invalid-target-id",
+      "expectedResult": "invalid",
+      "expectedCodes": ["ADP-008"],
+      "draft": {
+        "schemaVersion": "1.0",
+        "fileType": "assisted_curriculum_draft",
+        "packageId": "pkg-invalid-008",
+        "packageVersion": 1,
+        "humanValidationRequired": true,
+        "canonicalWriteAllowed": false,
+        "targetRegistryVersion": "tec-secondary-v1",
+        "suggestions": [{"suggestionId":"bad-target","state":"generated_unreviewed","originalGeneratedText":"Test","proposedText":"Test","target":{"registryVersion":"tec-secondary-v1","disciplineId":"tecnologia","orderId":"secondaria","unitId":"missing-unit","nucleusId":"missing","fieldId":"obiettivi"},"evidence":[{"sourceId":"src","sourceVersionId":"src-v1","locatorType":"section","locatorValue":"x","excerpt":"x","excerptHash":"h"}],"humanValidationRequired":true,"canonicalWriteAllowed":false}],
+        "auditTrail": []
+      }
+    },
+    {
+      "fixtureId": "invalid-accepted-without-evidence",
+      "expectedResult": "invalid",
+      "expectedCodes": ["ADP-018"],
+      "draft": {
+        "schemaVersion": "1.0",
+        "fileType": "assisted_curriculum_draft",
+        "packageId": "pkg-invalid-018",
+        "packageVersion": 1,
+        "humanValidationRequired": true,
+        "canonicalWriteAllowed": false,
+        "targetRegistryVersion": "tec-secondary-v1",
+        "suggestions": [{"suggestionId":"accepted-no-evidence","state":"teacher_accepted","originalGeneratedText":"Programmare","proposedText":"Programmare","target":{"registryVersion":"tec-secondary-v1","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_3_001","nucleusId":"digitale-informatica","fieldId":"obiettivi"},"evidence":[],"humanValidationRequired":true,"canonicalWriteAllowed":false}],
+        "auditTrail": []
+      }
+    },
+    {
+      "fixtureId": "invalid-registry-version-missing",
+      "expectedResult": "invalid",
+      "expectedCodes": ["ADP-023"],
+      "draft": {
+        "schemaVersion": "1.0",
+        "fileType": "assisted_curriculum_draft",
+        "packageId": "pkg-invalid-023",
+        "packageVersion": 1,
+        "humanValidationRequired": true,
+        "canonicalWriteAllowed": false,
+        "targetRegistryVersion": "",
+        "suggestions": [],
+        "auditTrail": []
+      }
+    },
+    {
+      "fixtureId": "warning-deprecated-target",
+      "expectedResult": "valid_with_warnings",
+      "expectedCodes": ["ADP-024"],
+      "draft": {
+        "schemaVersion": "1.0",
+        "fileType": "assisted_curriculum_draft",
+        "packageId": "pkg-warning-024",
+        "packageVersion": 1,
+        "humanValidationRequired": true,
+        "canonicalWriteAllowed": false,
+        "targetRegistryVersion": "tec-secondary-v1",
+        "suggestions": [],
+        "auditTrail": [{"eventType":"fixture_warning","code":"ADP-024"}]
+      }
+    }
+  ]
+}
