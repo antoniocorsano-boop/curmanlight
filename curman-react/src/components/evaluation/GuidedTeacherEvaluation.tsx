@@ -11,6 +11,14 @@ import {
   type PilotEvaluationData,
 } from '@/features/pilot-evaluation/pilot-evaluation.mjs'
 
+function getSafeLocalStorage(): Storage | null {
+  try {
+    return window.localStorage
+  } catch {
+    return null
+  }
+}
+
 function downloadText(filename: string, content: string, type: string) {
   const blob = new Blob([content], { type })
   const url = URL.createObjectURL(blob)
@@ -24,8 +32,12 @@ function downloadText(filename: string, content: string, type: string) {
 }
 
 export function GuidedTeacherEvaluation() {
+  const storageRef = useRef<Storage | null>(getSafeLocalStorage())
   const [isOpen, setIsOpen] = useState(false)
-  const [data, setData] = useState<PilotEvaluationData>(() => readPilotEvaluation(localStorage) ?? createPilotEvaluation())
+  const [data, setData] = useState<PilotEvaluationData>(() => {
+    const storage = storageRef.current
+    return (storage ? readPilotEvaluation(storage) : null) ?? createPilotEvaluation()
+  })
   const [confirmDelete, setConfirmDelete] = useState(false)
   const skipSaveRef = useRef(false)
   const hasSavedProgress = useMemo(
@@ -38,8 +50,10 @@ export function GuidedTeacherEvaluation() {
       skipSaveRef.current = false
       return
     }
+    const storage = storageRef.current
+    if (!storage) return
     try {
-      writePilotEvaluation(localStorage, data)
+      writePilotEvaluation(storage, data)
     } catch {
       // La raccolta resta utilizzabile anche se lo storage locale non è disponibile.
     }
@@ -72,7 +86,14 @@ export function GuidedTeacherEvaluation() {
   }
 
   const resetEvaluation = () => {
-    clearPilotEvaluation(localStorage)
+    const storage = storageRef.current
+    if (storage) {
+      try {
+        clearPilotEvaluation(storage)
+      } catch {
+        // Lo stato in memoria viene comunque azzerato.
+      }
+    }
     skipSaveRef.current = true
     setData(createPilotEvaluation())
     setConfirmDelete(false)
