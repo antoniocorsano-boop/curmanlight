@@ -33,6 +33,7 @@
     "test:cml525n": "node tools/check-cml525n-interactive-demo-smoke.mjs",
     "pretest:cml525n:e2e": "npm install --no-save --package-lock=false @playwright/test",
     "test:cml525n:e2e": "playwright test --config=playwright.cml525n.config.ts",
+    "test:cml525o": "node tools/check-cml525o-pilot-evaluation-feedback.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
