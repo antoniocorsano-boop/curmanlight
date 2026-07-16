@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import type { AssistedCurriculumDraft } from "./contracts";
-import type { AssistedDraftApplicationService } from "./application-service.mjs";
+import type { AssistedDraftApplicationService, AssistedDraftInspection } from "./application-service.mjs";
 import { useAssistedDraftWorkspace } from "./use-assisted-draft-workspace";
 
 export interface AssistedDraftWorkspaceShellProps {
@@ -9,6 +9,7 @@ export interface AssistedDraftWorkspaceShellProps {
   draft: AssistedCurriculumDraft | null;
   title?: string;
   children?: ReactNode;
+  onInspectionChange?: (inspection: AssistedDraftInspection | null) => void;
 }
 
 const busyStatuses = new Set(["loading", "saving", "checkpointing", "restoring"]);
@@ -20,11 +21,16 @@ export function AssistedDraftWorkspaceShell({
   draft,
   title = "Bozza curricolare assistita",
   children,
+  onInspectionChange,
 }: AssistedDraftWorkspaceShellProps) {
   const workspace = useAssistedDraftWorkspace(service, packageId);
   const busy = busyStatuses.has(workspace.status);
   const recoveryDecisionRequired = Boolean(workspace.inspection?.recoveryDecisionRequired);
   const actionsDisabled = busy || !draft || !packageId || recoveryDecisionRequired;
+
+  useEffect(() => {
+    onInspectionChange?.(workspace.inspection);
+  }, [onInspectionChange, workspace.inspection]);
 
   return (
     <section aria-labelledby="assisted-draft-workspace-title" className="space-y-4">

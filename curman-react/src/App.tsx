@@ -12,6 +12,7 @@ import { ImpostazioniView } from '@/views/ImpostazioniView'
 import { ProgrammazioneAnnualeView } from '@/views/ProgrammazioneAnnualeView'
 import { UdaEssenzialeView } from '@/views/UdaEssenzialeView'
 import { ArchivioLocaleView } from '@/views/ArchivioLocaleView'
+import { AssistedDraftDemoView } from '@/views/AssistedDraftDemoView'
 import type { ViewId } from '@/types/state'
 
 function NotAvailableView() {
@@ -41,6 +42,7 @@ export default function App() {
     home: <HomeView />,
     consultazione: <ConsultazioneView />,
     revisione: <RevisioneView />,
+    'laboratorio-assistito': <AssistedDraftDemoView />,
     processo: <ProcessoView />,
     esportazioni: <EsportazioniView />,
     impostazioni: <ImpostazioniView />,

@@ -29,6 +29,7 @@
     "test:cml525j": "node tools/check-cml525j-assisted-draft-application-service.mjs",
     "test:cml525k": "node tools/check-cml525k-assisted-draft-workspace-shell.mjs",
     "test:cml525l": "node tools/check-cml525l-draft-proposal-editor.mjs",
+    "test:cml525m": "node tools/check-cml525m-assisted-draft-demo-route.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
