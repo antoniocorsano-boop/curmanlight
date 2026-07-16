@@ -1,4 +1,4 @@
-import { House, BookOpen, RefreshCw, Workflow, Download, Settings, Layers, FileText, Sparkles } from 'lucide-react'
+import { House, BookOpen, RefreshCw, Workflow, Download, Settings, Layers, FileText, Sparkles, ChartNoAxesColumn } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
 import type { AreaId, ViewId } from '@/types/state'
 import { NAVIGATION } from '@/types/state'
@@ -12,6 +12,7 @@ const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string }>> 
   layers: Layers,
   'file-text': FileText,
   sparkles: Sparkles,
+  'chart-no-axes-column': ChartNoAxesColumn,
   settings: Settings,
 }
 
@@ -29,6 +30,7 @@ const ROLE_HINTS: Partial<Record<ViewId, string>> = {
   esportazioni: 'Scambio locale .cml',
   'programmazione-annuale': 'Bozza locale',
   'uda-modello': 'Bozza locale',
+  'analisi-feedback-pilota': 'Analisi locale · Referente',
 }
 
 export function Sidebar() {

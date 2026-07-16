@@ -13,6 +13,7 @@ import { ProgrammazioneAnnualeView } from '@/views/ProgrammazioneAnnualeView'
 import { UdaEssenzialeView } from '@/views/UdaEssenzialeView'
 import { ArchivioLocaleView } from '@/views/ArchivioLocaleView'
 import { AssistedDraftDemoView } from '@/views/AssistedDraftDemoView'
+import { PilotFeedbackAnalysisView } from '@/views/PilotFeedbackAnalysisView'
 import type { ViewId } from '@/types/state'
 
 function NotAvailableView() {
@@ -50,6 +51,7 @@ export default function App() {
     'programmazione-annuale': <ProgrammazioneAnnualeView />,
     'uda-modello': <UdaEssenzialeView />,
     'archivio-locale': <ArchivioLocaleView />,
+    'analisi-feedback-pilota': <PilotFeedbackAnalysisView />,
     guida: <NotAvailableView />,
   }
   return <Layout>{views[vistaAttiva] ?? <HomeView />}</Layout>
