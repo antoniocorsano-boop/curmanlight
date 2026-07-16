@@ -28,9 +28,6 @@ jobs:
           cache-dependency-path: curman-react/package-lock.json
       - name: Install React dependencies
         run: npm ci --prefix curman-react
-      - name: Install Playwright runner
-        run: npm install --no-save @playwright/test
-        working-directory: curman-react
       - name: Run CML-525N contract check
         run: npm run test:cml525n --prefix curman-react
       - name: Build React candidate
@@ -47,7 +44,7 @@ jobs:
           cat /tmp/cml525n-preview.log
           exit 1
       - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+        run: npx --yes playwright install --with-deps chromium
         working-directory: curman-react
       - name: Run interactive demo smoke
         run: npm run test:cml525n:e2e
