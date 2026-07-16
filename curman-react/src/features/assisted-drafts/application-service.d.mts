@@ -14,18 +14,29 @@ export interface AssistedDraftInspection {
   currentVersion: number;
 }
 
+export interface AssistedDraftConflictResult {
+  status: "conflict";
+  errorCode: "ADR-003";
+  currentVersion: number | null;
+  expectedVersion: number | null;
+}
+
 export type AssistedDraftSaveResult =
   | { status: "saved"; stable: AssistedDraftStableRecord }
-  | { status: "conflict"; errorCode: "ADR-003"; currentVersion: number | null; expectedVersion: number | null };
+  | AssistedDraftConflictResult;
+
+export type AssistedDraftCheckpointResult =
+  | { status: "recovery_saved"; recovery: AssistedDraftRecoveryRecord }
+  | AssistedDraftConflictResult;
 
 export type AssistedDraftRestoreResult =
   | { status: "restored"; stable: AssistedDraftStableRecord }
-  | { status: "conflict"; errorCode: "ADR-003"; currentVersion: number | null; expectedVersion: number | null };
+  | AssistedDraftConflictResult;
 
 export interface AssistedDraftApplicationService {
   inspect(packageId: string): Promise<AssistedDraftInspection>;
   save(draft: AssistedCurriculumDraft, expectedVersion: number | null): Promise<AssistedDraftSaveResult>;
-  checkpoint(draft: AssistedCurriculumDraft): Promise<{ status: "recovery_saved"; recovery: AssistedDraftRecoveryRecord }>;
+  checkpoint(draft: AssistedCurriculumDraft, expectedVersion: number | null): Promise<AssistedDraftCheckpointResult>;
   restore(packageId: string, expectedVersion: number | null): Promise<AssistedDraftRestoreResult>;
   discardRecovery(packageId: string): Promise<{ status: "recovery_discarded"; packageId: string }>;
 }
