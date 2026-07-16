@@ -30,7 +30,7 @@ for (const viewport of viewports) {
 
   const main = page.locator('main')
   const consultCta = main.getByRole('button', { name: /Consulta il curricolo/ }).first()
-  const guidedCta = main.getByRole('button', { name: /Inizia il percorso|Riprendi il percorso/ }).first()
+  const guidedCta = main.getByRole('button', { name: /Inizia il test pilota|Riprendi il test pilota|Inizia il percorso|Riprendi il percorso/ }).first()
 
   await page.screenshot({ path: path.join(outDir, `${viewport.name}-viewport.png`) })
 
@@ -44,7 +44,7 @@ for (const viewport of viewports) {
   record(viewport.name, 'nessun overflow orizzontale', metrics.scrollWidth <= metrics.clientWidth + 1, `${metrics.scrollWidth}px / ${metrics.clientWidth}px`)
   record(viewport.name, 'titolo Home visibile', await main.getByRole('heading', { name: 'Cosa vuoi fare oggi?' }).isVisible())
   record(viewport.name, 'CTA Consulta presente', await consultCta.isVisible())
-  record(viewport.name, 'CTA percorso guidato presente', await guidedCta.isVisible())
+  record(viewport.name, 'CTA test pilota presente', await guidedCta.isVisible())
   record(viewport.name, 'touch target CTA principale', await consultCta.evaluate(element => {
     const rect = element.getBoundingClientRect()
     return rect.height >= 44 && rect.width >= 44
@@ -105,7 +105,7 @@ const markdown = [
   '',
   '## Misure di densità',
   '',
-  '| Viewport | Altezza contenuto | Altezza visibile | Offset CTA Consulta | Offset CTA percorso guidato |',
+  '| Viewport | Altezza contenuto | Altezza visibile | Offset CTA Consulta | Offset CTA test pilota |',
   '|---|---:|---:|---:|---:|',
   ...observations.map(item => `| ${item.viewport} | ${item.contentHeight}px | ${item.visibleHeight}px | ${item.ctaOffset}px | ${item.guidedOffset}px |`),
   '',
