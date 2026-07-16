@@ -8,7 +8,9 @@ Aggiungere un application service sopra il repository locale CML-525I e un hook 
 
 - service con `inspect`, `save`, `checkpoint`, `restore` e `discardRecovery`;
 - conflitti di versione esposti come outcome strutturati;
+- checkpoint recovery vincolato alla versione stabile;
 - hook `useAssistedDraftWorkspace` con stati espliciti;
+- ispezioni obsolete ignorate dopo il cambio di draft;
 - recovery rilevato all'apertura e mai applicato automaticamente;
 - gate `npm run test:cml525j`.
 
