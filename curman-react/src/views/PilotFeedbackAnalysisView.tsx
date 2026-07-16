@@ -30,6 +30,16 @@ export function PilotFeedbackAnalysisView() {
   const [imports, setImports] = useState<PilotFeedbackImportResult[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
   const aggregate = useMemo(() => aggregatePilotFeedback(records), [records])
+  const summaryCards: Array<{ label: string; value: number }> = [
+    { label: 'File unici', value: aggregate.total },
+    { label: 'Percorsi completati', value: aggregate.completed },
+    { label: 'Duplicati esclusi', value: aggregate.duplicateIds.length },
+    { label: 'Disponibili al secondo test', value: aggregate.secondTest.yes },
+  ]
+  const distributions: Array<{ title: string; values: Record<string, number> }> = [
+    { title: 'Ruoli dichiarati', values: aggregate.roles },
+    { title: 'Ordini di scuola', values: aggregate.schoolOrders },
+  ]
 
   const importFiles = async (files: FileList | null) => {
     if (!files) return
@@ -69,7 +79,7 @@ export function PilotFeedbackAnalysisView() {
       </section>
 
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label="Riepilogo importazione">
-        {[['File unici', aggregate.total], ['Percorsi completati', aggregate.completed], ['Duplicati esclusi', aggregate.duplicateIds.length], ['Disponibili al secondo test', aggregate.secondTest.yes]].map(([label, value]) => <div key={String(label)} className="rounded-2xl border border-slate-200 bg-white p-4"><p className="text-xs font-[650] uppercase tracking-wide text-slate-500">{label}</p><p className="mt-2 text-2xl font-[750] text-indigo-800">{value}</p></div>)}
+        {summaryCards.map(card => <div key={card.label} className="rounded-2xl border border-slate-200 bg-white p-4"><p className="text-xs font-[650] uppercase tracking-wide text-slate-500">{card.label}</p><p className="mt-2 text-2xl font-[750] text-indigo-800">{card.value}</p></div>)}
       </section>
 
       {aggregate.total === 0 ? (
@@ -77,7 +87,7 @@ export function PilotFeedbackAnalysisView() {
       ) : (
         <>
           <section className="grid gap-4 md:grid-cols-2">
-            {[['Ruoli dichiarati', aggregate.roles], ['Ordini di scuola', aggregate.schoolOrders]].map(([title, values]) => <div key={String(title)} className="rounded-2xl border border-slate-200 bg-white p-5"><h2 className="font-[700] text-slate-900">{title}</h2><dl className="mt-3 space-y-2">{Object.entries(values as Record<string, number>).map(([key, value]) => <div key={key} className="flex justify-between gap-4 text-sm"><dt className="text-slate-600">{LABELS[key] ?? key}</dt><dd className="font-[700] text-slate-900">{value}</dd></div>)}</dl></div>)}
+            {distributions.map(distribution => <div key={distribution.title} className="rounded-2xl border border-slate-200 bg-white p-5"><h2 className="font-[700] text-slate-900">{distribution.title}</h2><dl className="mt-3 space-y-2">{Object.entries(distribution.values).map(([key, value]) => <div key={key} className="flex justify-between gap-4 text-sm"><dt className="text-slate-600">{LABELS[key] ?? key}</dt><dd className="font-[700] text-slate-900">{value}</dd></div>)}</dl></div>)}
           </section>
 
           <section className="space-y-4" aria-labelledby="pilot-notes-title">
