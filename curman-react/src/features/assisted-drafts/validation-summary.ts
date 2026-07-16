@@ -13,6 +13,25 @@ export interface AssistedDraftValidationSummary {
   packageFindings: AssistedDraftValidatorFinding[];
 }
 
+function findSuggestionId(
+  draft: AssistedCurriculumDraft,
+  finding: AssistedDraftValidatorFinding,
+) {
+  const directlyRelated = draft.suggestions.find((suggestion) =>
+    finding.relatedIds?.includes(suggestion.suggestionId),
+  );
+  if (directlyRelated) return directlyRelated.suggestionId;
+
+  const embedded = draft.suggestions.find((suggestion) =>
+    finding.path.includes(suggestion.suggestionId),
+  );
+  if (embedded) return embedded.suggestionId;
+
+  const indexMatch = finding.path.match(/suggestions(?:\.|\[)(\d+)/);
+  if (!indexMatch) return null;
+  return draft.suggestions[Number(indexMatch[1])]?.suggestionId ?? null;
+}
+
 export function buildAssistedDraftValidationSummary(
   draft: AssistedCurriculumDraft,
   registry: CurriculumTargetRegistry,
@@ -24,9 +43,7 @@ export function buildAssistedDraftValidationSummary(
 
   for (const finding of report.findings) {
     counts[finding.severity] += 1;
-    const suggestionId = draft.suggestions.find((suggestion) =>
-      finding.path.includes(suggestion.suggestionId),
-    )?.suggestionId;
+    const suggestionId = findSuggestionId(draft, finding);
     if (suggestionId) {
       (findingsBySuggestionId[suggestionId] ??= []).push(finding);
     } else {
