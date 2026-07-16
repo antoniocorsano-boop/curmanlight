@@ -1,4 +1,4 @@
-import { House, BookOpen, RefreshCw, Workflow, Download, Settings, Layers, FileText } from 'lucide-react'
+import { House, BookOpen, RefreshCw, Workflow, Download, Settings, Layers, FileText, Sparkles } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore'
 import type { AreaId, ViewId } from '@/types/state'
 import { NAVIGATION } from '@/types/state'
@@ -11,6 +11,7 @@ const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string }>> 
   download: Download,
   layers: Layers,
   'file-text': FileText,
+  sparkles: Sparkles,
   settings: Settings,
 }
 
@@ -23,6 +24,7 @@ const AREA_LABELS: Record<AreaId, string> = {
 
 const ROLE_HINTS: Partial<Record<ViewId, string>> = {
   revisione: 'Docente',
+  'laboratorio-assistito': 'Demo locale · Docente',
   processo: 'Dipartimento · Referente',
   esportazioni: 'Scambio locale .cml',
   'programmazione-annuale': 'Bozza locale',
