@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { AssistedCurriculumDraft } from "./contracts";
 import type {
   AssistedDraftApplicationService,
@@ -25,6 +25,7 @@ export function useAssistedDraftWorkspace(
   service: AssistedDraftApplicationService,
   packageId: string | null,
 ) {
+  const requestSequence = useRef(0);
   const [state, setState] = useState<AssistedDraftWorkspaceState>({
     status: "idle",
     inspection: null,
@@ -32,6 +33,7 @@ export function useAssistedDraftWorkspace(
   });
 
   const refresh = useCallback(async () => {
+    const requestId = ++requestSequence.current;
     if (!packageId) {
       setState({ status: "idle", inspection: null, error: null });
       return null;
@@ -39,10 +41,14 @@ export function useAssistedDraftWorkspace(
     setState((current) => ({ ...current, status: "loading", error: null }));
     try {
       const inspection = await service.inspect(packageId);
-      setState({ status: "ready", inspection, error: null });
+      if (requestId === requestSequence.current) {
+        setState({ status: "ready", inspection, error: null });
+      }
       return inspection;
     } catch (error) {
-      setState((current) => ({ ...current, status: "error", error }));
+      if (requestId === requestSequence.current) {
+        setState((current) => ({ ...current, status: "error", error }));
+      }
       throw error;
     }
   }, [packageId, service]);
@@ -73,9 +79,14 @@ export function useAssistedDraftWorkspace(
 
   const checkpoint = useCallback(
     async (draft: AssistedCurriculumDraft) => {
+      const expectedVersion = state.inspection?.currentVersion ?? 0;
       setState((current) => ({ ...current, status: "checkpointing", error: null }));
       try {
-        const result = await service.checkpoint(draft);
+        const result = await service.checkpoint(draft, expectedVersion);
+        if (result.status === "conflict") {
+          setState((current) => ({ ...current, status: "conflict", error: result }));
+          return result;
+        }
         await refresh();
         return result;
       } catch (error) {
@@ -83,7 +94,7 @@ export function useAssistedDraftWorkspace(
         throw error;
       }
     },
-    [refresh, service],
+    [refresh, service, state.inspection?.currentVersion],
   );
 
   const restoreRecovery = useCallback(async () => {
