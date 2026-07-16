@@ -23,6 +23,7 @@
     "test:cml480": "node tools/check-cml480-transition-context.mjs",
     "test:cml482": "npm run validate:versions",
     "test:cml518e": "node tools/check-cml518e-referent-completeness-guard.mjs",
+    "test:cml525g": "node tools/check-cml525g-assisted-draft-contracts.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
