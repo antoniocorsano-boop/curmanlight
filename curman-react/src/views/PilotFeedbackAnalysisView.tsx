@@ -17,26 +17,11 @@ import {
   type PilotFinding,
   type PilotFindingsBacklog,
 } from '@/features/pilot-evaluation/pilot-findings-backlog.mjs'
+import { getSafeStorage, downloadMarkdown } from '@/lib/local-storage'
 
 const LABELS: Record<string, string> = {
   docente: 'Docente', dipartimento: 'Dipartimento', referente: 'Referente', altro: 'Altro',
   infanzia: 'Infanzia', primaria: 'Primaria', secondaria: 'Secondaria di primo grado', non_indicato: 'Non indicato',
-}
-
-function getSafeStorage(): Storage | null {
-  try { return window.localStorage } catch { return null }
-}
-
-function downloadMarkdown(filename: string, content: string) {
-  const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const anchor = document.createElement('a')
-  anchor.href = url
-  anchor.download = filename
-  document.body.appendChild(anchor)
-  anchor.click()
-  anchor.remove()
-  URL.revokeObjectURL(url)
 }
 
 function BacklogItemEditor({ item, onChange, onRemove }: {

@@ -2,7 +2,7 @@ import type { ProfiloUtente, DecisioniMap, GapLayer, ProgressStats } from './gap
 import type { DecisionContext, RecordWorkDecisionInput, WorkDecision, WorkDecisionMap } from './decision'
 
 export type AreaId = 'home' | 'curriculum' | 'didattica' | 'sistema'
-export type ViewId = 'home' | 'consultazione' | 'revisione' | 'laboratorio-assistito' | 'processo' | 'esportazioni' | 'evidenze-valutazione' | 'programmazione-annuale' | 'uda-modello' | 'archivio-locale' | 'analisi-feedback-pilota' | 'guida' | 'impostazioni'
+export type ViewId = 'home' | 'consultazione' | 'revisione' | 'laboratorio-assistito' | 'processo' | 'esportazioni' | 'evidenze-valutazione' | 'programmazione-annuale' | 'uda-modello' | 'archivio-locale' | 'analisi-feedback-pilota' | 'registro-decisioni' | 'guida' | 'impostazioni'
 export type FiltroStato = 'tutti' | 'da_decidere' | 'approvati' | 'rifiutati'
 export type WorkDecisionPersistenceStatus = 'idle' | 'loading' | 'restored' | 'saved' | 'error'
 
@@ -26,6 +26,7 @@ export const NAVIGATION: NavigationItem[] = [
   { id: 'uda-modello', label: 'UDA essenziale', area: 'didattica', icon: 'file-text', available: true },
   { id: 'archivio-locale', label: 'Archivio locale', area: 'sistema', icon: 'archive', available: true },
   { id: 'analisi-feedback-pilota', label: 'Analizza feedback pilota', area: 'sistema', icon: 'chart-no-axes-column', available: true },
+  { id: 'registro-decisioni', label: 'Registro decisioni', area: 'sistema', icon: 'gavel', available: true },
   { id: 'guida', label: 'Guida', area: 'sistema', icon: 'circle-help', available: false },
   { id: 'impostazioni', label: 'Impostazioni', area: 'sistema', icon: 'settings', available: true },
 ]
@@ -42,6 +43,7 @@ export const VIEW_TITLES: Record<ViewId, string> = {
   'uda-modello': 'UDA essenziale',
   'archivio-locale': 'Archivio locale',
   'analisi-feedback-pilota': 'Analizza feedback pilota',
+  'registro-decisioni': 'Registro decisioni',
   guida: 'Guida',
   impostazioni: 'Impostazioni',
 }
