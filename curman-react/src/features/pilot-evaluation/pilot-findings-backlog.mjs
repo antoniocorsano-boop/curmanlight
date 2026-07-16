@@ -69,10 +69,15 @@ export function addPilotFinding(backlog, input) {
 
 export function updatePilotFinding(backlog, id, patch) {
   const current = normalizePilotFindingsBacklog(backlog) ?? createPilotFindingsBacklog()
+  const updatedAt = nowIso()
   return {
     ...current,
-    updatedAt: nowIso(),
-    items: current.items.map(item => item.id === id ? createPilotFinding({ ...item, ...patch, id: item.id, source: { ...item.source, ...(patch.source ?? {}) } }) : item).map(item => item.id === id ? { ...item, id, createdAt: current.items.find(candidate => candidate.id === id)?.createdAt ?? item.createdAt, updatedAt: nowIso() } : item),
+    updatedAt,
+    items: current.items.map(item => {
+      if (item.id !== id) return item
+      const normalized = createPilotFinding({ ...item, ...patch, source: { ...item.source, ...(patch.source ?? {}) } })
+      return { ...normalized, id: item.id, createdAt: item.createdAt, updatedAt }
+    }),
   }
 }
 
