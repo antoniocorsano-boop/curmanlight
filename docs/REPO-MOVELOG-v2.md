@@ -33,6 +33,72 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-526 — Product Decision Register and Development Traceability
+
+- **Data**: 2026-07-16
+- **Tipo**: React preview / runtime increment + docs + test
+- **Stato**: locale su branch `feat/cml-526-product-decision-register`, NON pushato, NON mergiato
+- **Runtime storico**: non modificato (`index.html`, `_published_snapshot/netlify-current/index.html`)
+- **Schema `.cml`**: invariato
+- **Dati curricolari canonici**: non modificati
+- **PilotFinding / PilotFindingsBacklog**: estesi per riferimento, comportamento invariato
+- **Backend/telemetria**: assenti
+- **Percorsi Pages trigger**: `curman-react/**` (il merge su `main` attiverebbe il deploy Pages)
+
+### Modello e storage
+
+- `src/features/pilot-evaluation/product-decision-register.d.mts` (A)
+- `src/features/pilot-evaluation/product-decision-register.mjs` (A)
+- `DecisionRecord` con `pilotFindingIds[]` (collegamento 1..N a `PilotFinding`, sorgente non duplicata); schema `cml-product-decision-register-v1`; storage key `curmanlight:product-decision-register:v1`; funzioni `read/write/create/update/delete/normalize` + `serializeDecisionRegisterMarkdown`.
+
+### Interfaccia
+
+- `src/views/ProductDecisionRegisterView.tsx` (A): elenco, filtri (stato/area), ricerca, creazione, modifica, eliminazione, archiviazione, collegamento PilotFinding (solo `pilotFindingIds`, nessuna copia del contenuto), export Markdown.
+- `src/lib/local-storage.ts` (A): helper condiviso `getSafeStorage`/`downloadMarkdown` (deduplicato da `PilotFeedbackAnalysisView`).
+- `src/views/PilotFeedbackAnalysisView.tsx` (M): rimossa duplicazione helper, ora importa da `@/lib/local-storage`.
+- `src/App.tsx` (M): mount su `ViewId = 'registro-decisioni'`.
+- `src/types/state.ts` (M): `ViewId`, `NAVIGATION`, `VIEW_TITLES`.
+- `src/components/layout/Sidebar.tsx` (M): icona `gavel` + hint ruolo.
+
+### Resilienza storage (verificata per test)
+
+- Storage assente/undefined → registro vuoto, nessun errore.
+- JSON corrotto → `try/catch` → registro vuoto.
+- Chiave mancante → registro vuoto.
+- Schema errato o `items` non array → `normalizeDecisionRegister` ritorna `null` → registro vuoto.
+- Campi mancanti → normalizzati ai default (forward-compatibility).
+- Riferimento `PilotFinding` non più disponibile → mantenuto per id; export mostra "Nessuna osservazione pilota collegata." (nessuna rottura).
+
+### Test e documentazione
+
+- `curman-react/tools/check-cml526-product-decision-register.mjs` (A) → `npm run test:cml526`
+  Casi coperti: creazione, lettura, update workflow (proposto→…→completato→archiviato),
+  persistenza, collegamento PilotFinding senza duplicazione, export Markdown, eliminazione,
+  registro vuoto, storage corrotto, storage assente, aggiornamento schema (forward-compat),
+  eliminazione PilotFinding con riferimento orfano, export vuoto, export molti record (25).
+- `curman-react/package.json` (M): script `test:cml526`
+- `docs/02_system/PRODUCT-DECISION-REGISTER-CONTRACT.md` (A)
+
+### Controlli
+
+- `git diff --check` PASS
+- `npm run test:cml526` PASS
+- `npm run lint` 0 errori (warning solo su file preesistenti non toccati)
+- `npm run build` (tsc -b + vite build) PASS
+
+### Verdetto
+
+`CML_526_PRODUCT_DECISION_REGISTER_READY_LOCAL_NOT_PUSHED`
+
+### Roadmap successiva (non bloccante, fuori perimetro CML-526)
+
+- **CML-527 (candidata)**: tracciabilità storica delle decisioni. Estendere `DecisionRecord`
+  con `statusHistory[]`, `implementationHistory[]`, `publicationHistory[]` per ricostruire
+  quando/perché è cambiato stato (utile se CurManLight diventa strumento di governance
+  condiviso). Non implementata in CML-526; il modello attuale persiste solo lo stato corrente.
+
+---
+
 ## CML-518A–E — React Baseline e Chiusura Gap dei Tre Ruoli
 
 - **Data**: 2026-07-16
