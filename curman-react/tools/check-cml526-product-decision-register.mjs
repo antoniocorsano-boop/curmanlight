@@ -191,4 +191,15 @@ assert.match(bigMarkdown, /Decisioni totali: 25/)
 assert.match(bigMarkdown, /Decisione numerata 0/)
 assert.match(bigMarkdown, /Decisione numerata 24/)
 
+// --- CML-526S: binding Versione implementata (persistenza + export) ---
+let implRegister = { ...createDecisionRegister(), items: [createDecision({ title: 'Decisione con versione implementata', status: 'in_verifica' })] }
+const implId = implRegister.items[0].id
+implRegister = updateDecision(implRegister, implId, { implementedVersion: 'v1.3-rc2' })
+assert.equal(implRegister.items[0].implementedVersion, 'v1.3-rc2')
+writeDecisionRegister(storage, implRegister)
+const implRestored = readDecisionRegister(storage)
+assert.equal(implRestored.items[0].implementedVersion, 'v1.3-rc2')
+const implMarkdown = serializeDecisionRegisterMarkdown(implRestored, {})
+assert.match(implMarkdown, /Versione implementata: v1\.3-rc2/)
+
 console.log('CML-526 product decision register gate: PASS')
