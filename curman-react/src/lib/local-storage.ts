@@ -8,7 +8,11 @@ export function downloadMarkdown(filename: string, content: string) {
   const anchor = document.createElement('a')
   anchor.href = url
   anchor.download = filename
-  anchor.click()
-  anchor.remove()
-  URL.revokeObjectURL(url)
+  try {
+    document.body.appendChild(anchor)
+    anchor.click()
+  } finally {
+    anchor.remove()
+    URL.revokeObjectURL(url)
+  }
 }
