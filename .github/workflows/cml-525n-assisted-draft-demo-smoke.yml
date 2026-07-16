@@ -1,0 +1,61 @@
+name: CML-525N Assisted Draft Demo Smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'curman-react/src/features/assisted-drafts/**'
+      - 'curman-react/src/views/AssistedDraftDemoView.tsx'
+      - 'curman-react/e2e/cml-525n-assisted-draft-demo.spec.ts'
+      - 'curman-react/playwright.cml525n.config.ts'
+      - 'curman-react/tools/check-cml525n-interactive-demo-smoke.mjs'
+      - 'curman-react/package.json'
+      - '.github/workflows/cml-525n-assisted-draft-demo-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: curman-react/package-lock.json
+      - name: Install React dependencies
+        run: npm ci --prefix curman-react
+      - name: Run CML-525N contract check
+        run: npm run test:cml525n --prefix curman-react
+      - name: Build React candidate
+        run: VITE_BASE_PATH=/ npm run build --prefix curman-react
+      - name: Start local candidate preview
+        run: |
+          VITE_BASE_PATH=/ npm run preview --prefix curman-react -- --host 127.0.0.1 --port 4173 > /tmp/cml525n-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4173/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/cml525n-preview.log
+          exit 1
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+        working-directory: curman-react
+      - name: Run interactive demo smoke
+        run: npm run test:cml525n:e2e
+        working-directory: curman-react
+      - name: Upload smoke evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cml-525n-assisted-draft-demo-smoke
+          path: |
+            curman-react/playwright-report-cml525n
+            curman-react/test-results
+            /tmp/cml525n-preview.log
+          if-no-files-found: warn
