@@ -22,7 +22,7 @@ assert.equal(saved.stable.version, 1);
 
 const edited = structuredClone(saved.stable.draft);
 edited.suggestions[0].proposedText += " checkpoint";
-const checkpoint = await service.checkpoint(edited);
+const checkpoint = await service.checkpoint(edited, 1);
 assert.equal(checkpoint.status, "recovery_saved");
 assert.equal(checkpoint.recovery.basedOnVersion, 1);
 
@@ -37,15 +37,21 @@ assert.equal((await service.inspect(draft.packageId)).recoveryAvailable, false);
 
 const staleDraft = structuredClone(restored.stable.draft);
 staleDraft.suggestions[0].proposedText += " stale";
-const conflict = await service.save(staleDraft, 1);
-assert.equal(conflict.status, "conflict");
-assert.equal(conflict.errorCode, "ADR-003");
-assert.equal(conflict.currentVersion, 2);
-assert.equal(conflict.expectedVersion, 1);
+const saveConflict = await service.save(staleDraft, 1);
+assert.equal(saveConflict.status, "conflict");
+assert.equal(saveConflict.errorCode, "ADR-003");
+assert.equal(saveConflict.currentVersion, 2);
+assert.equal(saveConflict.expectedVersion, 1);
 
-await service.checkpoint(staleDraft);
+const checkpointConflict = await service.checkpoint(staleDraft, 1);
+assert.equal(checkpointConflict.status, "conflict");
+assert.equal(checkpointConflict.currentVersion, 2);
+assert.equal((await service.inspect(draft.packageId)).recoveryAvailable, false);
+
+const currentCheckpoint = await service.checkpoint(staleDraft, 2);
+assert.equal(currentCheckpoint.status, "recovery_saved");
 const discarded = await service.discardRecovery(draft.packageId);
 assert.equal(discarded.status, "recovery_discarded");
 assert.equal((await service.inspect(draft.packageId)).recoveryAvailable, false);
 
-console.log("CML-525J PASS: application service outcomes and recovery decisions.");
+console.log("CML-525J PASS: application service outcomes, stale checkpoint rejection and recovery decisions.");
