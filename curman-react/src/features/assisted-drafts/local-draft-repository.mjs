@@ -1,6 +1,6 @@
 import { validateAssistedDraft } from "./validator-runtime.mjs";
 
-export const ASSISTED_DRAFT_REPOSITORY_VERSION = "1.0.0";
+export const ASSISTED_DRAFT_REPOSITORY_VERSION = "1.1.0";
 
 export class AssistedDraftRepositoryError extends Error {
   constructor(code, message, details = {}) {
@@ -37,8 +37,11 @@ export function createInMemoryDraftStorage() {
       const value = recovery.get(packageId);
       return value ? clone(value) : null;
     },
-    async writeRecovery(record) {
+    async commitRecovery(record, expectedStableVersion) {
+      const currentVersion = stable.get(record.packageId)?.version ?? 0;
+      if (currentVersion !== expectedStableVersion) return { committed: false, currentVersion };
       recovery.set(record.packageId, clone(record));
+      return { committed: true, currentVersion };
     },
     async deleteRecovery(packageId) {
       recovery.delete(packageId);
@@ -101,18 +104,31 @@ export function createAssistedDraftRepository({ storage, registry, now = () => n
 
     save,
 
-    async saveRecovery(draft) {
+    async saveRecovery(draft, { expectedVersion = null } = {}) {
       const report = validate(draft);
       const stableRecord = await storage.readStable(draft.packageId);
+      const observedVersion = stableRecord?.version ?? 0;
+      if (expectedVersion !== null && expectedVersion !== observedVersion) {
+        throw new AssistedDraftRepositoryError("ADR-003", "Conflitto di versione.", {
+          expectedVersion,
+          currentVersion: observedVersion,
+        });
+      }
       const record = {
         packageId: draft.packageId,
         recoveryId: `${draft.packageId}:${now()}`,
-        basedOnVersion: stableRecord?.version ?? 0,
+        basedOnVersion: observedVersion,
         createdAt: now(),
         draft: clone(draft),
         validatorReport: clone(report),
       };
-      await storage.writeRecovery(record);
+      const result = await storage.commitRecovery(record, observedVersion);
+      if (!result?.committed) {
+        throw new AssistedDraftRepositoryError("ADR-003", "Conflitto di versione.", {
+          expectedVersion: observedVersion,
+          currentVersion: result?.currentVersion ?? null,
+        });
+      }
       return clone(record);
     },
 
