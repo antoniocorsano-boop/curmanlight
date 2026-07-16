@@ -33,6 +33,68 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-518A–E — React Baseline e Chiusura Gap dei Tre Ruoli
+
+- **Data**: 2026-07-16
+- **Tipo**: React preview / docs + guardie applicative React
+- **Stato**: tutte MERGED_MAIN
+- **Runtime storico**: non modificato (`index.html`, `_published_snapshot/netlify-current/index.html`)
+- **Schema `.cml`**: invariato
+- **Dati curricolari canonici**: non modificati
+- **Backend/telemetria**: assenti
+- **Baseline `main` di partenza**: `80f3633` → serie chiusa su `afd8f7d`
+
+### CML-518A — React Baseline and Capability Perimeter
+
+- **Tipo**: docs-only
+- **PR**: #139 — merge commit `e3c02cb`
+- **Branch**: `codex/cml-518a-react-baseline`
+- **File**: `docs/02_system/PROJECT-STATE.md` (M), `docs/02_system/REACT-BASELINE-AND-CAPABILITY-PERIMETER.md` (A), `docs/03_execution/CML-518A.md` (A)
+- **Scopo**: formalizzare `curman-react/` come baseline evolutiva principale, runtime storico come fallback; matrice capacità (completa/parziale/mancante/fuori 1.0) per Docente, Dipartimento, Referente; gate pilot umano e passaggio definitivo a React.
+- **Controlli**: `git diff --check` PASS; perimetro limitato a 3 file docs; nessuna modifica runtime/canonica.
+- **Verdetto**: `CML_518A_REACT_BASELINE_PR_OPEN_MERGEABLE_NOT_MERGED_NO_RUNTIME_OR_CANONICAL_CHANGE` → mergiata.
+
+### CML-518B — Full App Audit + React Surface Inventory
+
+- **Tipo**: docs / visual audit
+- **Merge commit**: `a4c477c`
+- **File**: report audit app completo + dashboard SVG (`report/CML-518B-full-app-audit-dashboard.svg`), execution record CML-518B.
+- **Scopo**: inventario verificato delle superfici React e audit visivo dell'app completa.
+
+### CML-518C — Teacher Export Freshness Guard
+
+- **Tipo**: React runtime guard
+- **PR**: #142 — merge commit `7ba8a07`
+- **Commit chiave**: `a930386` ux: prevent stale teacher proposal export
+- **Scopo**: impedire l'export di una proposta docente non più aggiornata rispetto alla sorgente ricaricata.
+
+### CML-518D — Department Conflict Guard
+
+- **Tipo**: React runtime guard
+- **PR**: #143 — merge commit `134148b`
+- **Commit chiave**: `daf29bf` fix: block conflicting department outcomes; `4edde85` ux: surface department decision conflicts
+- **Scopo**: bloccare esiti dipartimentali in conflitto e renderli visibili in UI.
+
+### CML-518E — Referent Completeness Guard
+
+- **Tipo**: React runtime guard + test mirato
+- **PR**: #144 — merge commit `afd8f7d` — head `174c7d3`
+- **Branch**: `codex/cml-518e-referent-completeness-guard`
+- **File**: `curman-react/src/lib/referentValidationExport.ts` (M), `curman-react/src/components/referente/ReferentValidationExportPanel.tsx` (M), `curman-react/tools/check-cml518e-referent-completeness-guard.mjs` (A), `curman-react/package.json` (M, script `test:cml518e`), `docs/03_execution/CML-518E.md` (A)
+- **Scopo**: impedire l'esportazione di una validazione Referente parziale. Readiness vera solo con `validated > 0 && pending === 0`; guardia nel builder contro bypass UI; `checks.pendingExcluded: 0`; messaggio UI con tre stati e `role="status"`; rimosso testo obsoleto "…saranno esclusi".
+- **Test CML-518E**: zero validazioni → ready false; parziale 1/2 bloccata; completa esportabile; builder parziale → errore; builder completo → `pendingExcluded === 0`, `humanValidationRequired === true`, summary coerente.
+- **Controlli**: lint PASS (0 errori); build PASS; suite `test:b01/b02/b03/cml478/cml479/cml480/cml482/cml518e` PASS; `git diff --check` PASS.
+- **Gate CI (head `174c7d3`)**: React CI, CML-470 B03 Persistence Audit, CML-473 Comparative B03 Audit, CML-491 React Home Mobile Visual Audit, CML-517E Regression Swarm, Cloudflare Workers preview → tutti SUCCESS. Review: 0, thread irrisolti: 0.
+- **Verdetto**: `CML_518E_REFERENT_COMPLETENESS_GUARD_MERGED_MAIN_CI_GREEN_NO_CANONICAL_CHANGE`
+
+### Verdetto serie
+
+```text
+CML_518_SERIES_REACT_BASELINE_AND_ROLE_GAP_GUARDS_MERGED_MAIN_NO_RUNTIME_OR_CANONICAL_CHANGE
+```
+
+---
+
 ## CML-438 — Pilot Validation Evidence Start Pack
 
 - **Data**: 2026-07-10

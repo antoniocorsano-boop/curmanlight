@@ -2,14 +2,24 @@
 
 ## Snapshot
 
-- Last merged milestone: CML-517E — Regression Swarm
-- Current `main`: `80f3633cb44d0a6e92d82f9d5d6cb7cc3483be36`
-- Active slice: CML-518A — React Baseline and Capability Perimeter
+- Last merged milestone: CML-518E — Referent Completeness Guard
+- Current `main`: `afd8f7dde6f5532e256638b69cc6e15dfd75772c`
+- Active slice: nessuna (serie CML-518A–E chiusa e integrata in `main`)
 - React application (`curman-react/`): baseline evolutiva principale
 - Runtime storico: stabile, mantenuto come riferimento e fallback; non esteso per default
 - Canonical curriculum data: invariati; validazione umana obbligatoria
 - Current movelog: `docs/REPO-MOVELOG-v2.md`
-- Next strategic action: verificare tecnicamente l'inventario React e chiudere i gap end-to-end prima del pilot umano
+- Next strategic action: preparare il pilot umano dei tre ruoli (Docente, Dipartimento, Referente) con le nuove guardie di completezza attive
+
+## Serie CML-518A–E (chiusa)
+
+- CML-518A — React Baseline and Capability Perimeter — PR #139 — merge `e3c02cb`
+- CML-518B — Full App Audit + React Surface Inventory — merge `a4c477c`
+- CML-518C — Teacher Export Freshness Guard — PR #142 — merge `7ba8a07`
+- CML-518D — Department Conflict Guard — PR #143 — merge `134148b`
+- CML-518E — Referent Completeness Guard — PR #144 — merge `afd8f7d`
+
+Le guardie dei tre ruoli impediscono export/decisioni parziali o non aggiornati; runtime storico, schema `.cml` e dati canonici invariati.
 
 ## Decisione di baseline
 
