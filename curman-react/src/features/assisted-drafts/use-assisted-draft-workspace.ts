@@ -48,7 +48,7 @@ export function useAssistedDraftWorkspace(
   }, [packageId, service]);
 
   useEffect(() => {
-    void refresh();
+    void refresh().catch(() => undefined);
   }, [refresh]);
 
   const save = useCallback(
