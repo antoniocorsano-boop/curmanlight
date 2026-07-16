@@ -22,6 +22,7 @@
     "test:cml479": "node tools/check-cml479-home-applicability.mjs",
     "test:cml480": "node tools/check-cml480-transition-context.mjs",
     "test:cml482": "npm run validate:versions",
+    "test:cml518e": "node tools/check-cml518e-referent-completeness-guard.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

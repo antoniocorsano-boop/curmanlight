@@ -50,20 +50,25 @@ export function getReferentValidationExportReadiness(
 ): ReferentValidationExportReadiness {
   const imported = validRecords(records).reduce((total, record) => total + record.model!.proposalHandling.length, 0)
   const validated = validRecords(records).reduce((total, record) => total + record.model!.proposalHandling.filter(item => validations[validationKey(record.fingerprint!, item.proposalId)]).length, 0)
-  return { imported, validated, pending: imported - validated, ready: validated > 0 }
+  const pending = imported - validated
+  return { imported, validated, pending, ready: validated > 0 && pending === 0 }
 }
 
 export function buildReferentValidationFile(
   records: DepartmentOutcomeImportRecord[],
   validations: ReferentValidationMap,
 ): ReferentValidationFile {
+  const readiness = getReferentValidationExportReadiness(records, validations)
+  if (readiness.validated === 0) throw new Error('Non ci sono validazioni del Referente da esportare.')
+  if (readiness.pending > 0) {
+    throw new Error(`Completa le ${readiness.pending} validazioni mancanti prima di esportare il passaggio finale.`)
+  }
+
   const sources = validRecords(records).flatMap(record => record.model!.proposalHandling.map(item => ({
     record,
     item,
     validation: validations[validationKey(record.fingerprint!, item.proposalId)] ?? null,
   }))).filter(entry => entry.validation)
-
-  if (sources.length === 0) throw new Error('Non ci sono validazioni del Referente da esportare.')
 
   const disciplines = [...new Set(sources.map(entry => entry.record.model!.discipline))].sort()
   const years = [...new Set(sources.map(entry => sourceSchoolYear(entry.record)))]
@@ -100,7 +105,7 @@ export function buildReferentValidationFile(
     })),
     checks: {
       hasValidations: true,
-      pendingExcluded: getReferentValidationExportReadiness(records, validations).pending,
+      pendingExcluded: 0,
     },
     humanValidationRequired: true,
   }
