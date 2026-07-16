@@ -33,6 +33,7 @@ export type DepartmentOutcomeReadiness = {
   decided: number
   pending: number
   invalid: number
+  conflicts: number
   ready: boolean
 }
 
@@ -43,11 +44,30 @@ function decisionIsComplete(item: DepartmentQueueItem) {
   return item.decision.value !== 'modificata' || Boolean(item.decision.testoModificato?.trim())
 }
 
+function conflictKey(item: DepartmentQueueItem) {
+  return [item.discipline, item.ordine, item.annoScolastico, item.proposal.unitaId].join('::')
+}
+
+function isPositiveDecision(item: DepartmentQueueItem) {
+  return item.decision?.value === 'accettata' || item.decision?.value === 'modificata'
+}
+
+export function getDepartmentConflictCount(items: DepartmentQueueItem[]) {
+  const positiveByUnit = new Map<string, number>()
+  for (const item of items) {
+    if (!decisionIsComplete(item) || !isPositiveDecision(item)) continue
+    const key = conflictKey(item)
+    positiveByUnit.set(key, (positiveByUnit.get(key) ?? 0) + 1)
+  }
+  return [...positiveByUnit.values()].filter(count => count > 1).length
+}
+
 export function getDepartmentOutcomeReadiness(items: DepartmentQueueItem[]): DepartmentOutcomeReadiness {
   const decided = items.filter(decisionIsComplete).length
   const pending = items.filter(item => !item.decision).length
   const invalid = items.filter(item => item.decision && !decisionIsComplete(item)).length
-  return { decided, pending, invalid, ready: decided > 0 && invalid === 0 }
+  const conflicts = getDepartmentConflictCount(items)
+  return { decided, pending, invalid, conflicts, ready: decided > 0 && invalid === 0 && conflicts === 0 }
 }
 
 function resolveOrder(items: DepartmentQueueItem[]): OrdineEsteso {
@@ -81,6 +101,11 @@ function proposalIdentity(item: DepartmentQueueItem) {
 }
 
 export function buildDepartmentOutcomeFile(items: DepartmentQueueItem[]): DepartmentOutcomeFile {
+  const readiness = getDepartmentOutcomeReadiness(items)
+  if (readiness.conflicts > 0) {
+    throw new Error('Risolvi i conflitti tra decisioni positive sulla stessa unità prima di esportare.')
+  }
+
   const decidedItems = items.filter(decisionIsComplete)
   if (decidedItems.length === 0) throw new Error('Non ci sono decisioni complete da esportare.')
 
