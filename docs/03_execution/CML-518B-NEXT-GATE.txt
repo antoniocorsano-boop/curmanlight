@@ -1,0 +1,1 @@
+Next gate: open PR for review. Do not merge unless the diff remains docs/report only and preview/checks succeed.

@@ -1,0 +1,1 @@
+CML-518B is evidence-based. Dashboard percentages are comparative maturity estimates, not certification metrics. No-known-P0 means none in available evidence; live, accessibility, mobile, adversarial, and human tests remain required.
