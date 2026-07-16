@@ -44,7 +44,7 @@ export function ReferentValidationExportPanel() {
     <section className="card p-5" aria-labelledby="referent-validation-export-title">
       <p className="text-xs font-[650] uppercase tracking-wide text-emerald-700">Chiusura del passaggio</p>
       <h3 id="referent-validation-export-title" className="mt-1 text-base font-[650] text-slate-800">Esporta validazione Referente</h3>
-      <p className="mt-1 text-sm leading-6 text-slate-500">Ricarica gli stessi esiti dipartimentali: le validazioni locali già registrate vengono riconosciute tramite fingerprint e identificativo della proposta.</p>
+      <p className="mt-1 text-sm leading-6 text-slate-500">Ricarica gli stessi esiti dipartimentali. Le validazioni locali vengono riconosciute tramite fingerprint e identificativo della proposta. Il file finale può essere esportato solo quando tutti gli esiti selezionati sono stati validati.</p>
 
       <label className="mt-4 flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-emerald-300 bg-emerald-50/50 px-4 py-5 text-sm font-[650] text-emerald-800 hover:bg-emerald-50">
         <FileUp size={17} /> {reading ? 'Verifica in corso…' : 'Seleziona esiti da includere'}
@@ -53,17 +53,18 @@ export function ReferentValidationExportPanel() {
 
       {records.length > 0 && (
         <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50/60 p-4">
-          <p className="text-sm font-[650] text-slate-800">{readiness.validated} validazioni esportabili</p>
-          <p className="mt-1 text-xs leading-5 text-slate-600">
-            {readiness.pending > 0
-              ? `${readiness.pending} esiti ancora senza validazione saranno esclusi.`
-              : 'Tutti gli esiti selezionati risultano validati.'}
+          <p className="text-sm font-[650] text-slate-800">{readiness.validated} di {readiness.imported} esiti validati</p>
+          <p role="status" className="mt-1 text-xs leading-5 text-slate-600">
+            {readiness.validated === 0
+              ? 'Non sono state trovate validazioni locali associate agli esiti selezionati.'
+              : readiness.pending > 0
+                ? `Completa le ${readiness.pending} validazioni mancanti prima di esportare il passaggio finale.`
+                : 'Tutti gli esiti selezionati risultano validati. Il file finale può essere esportato.'}
           </p>
           <button type="button" onClick={exportValidation} disabled={!readiness.ready}
             className="mt-3 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-4 py-2 text-sm font-[650] text-white hover:bg-emerald-800 disabled:cursor-not-allowed disabled:bg-slate-300">
             <Download size={16} /> Scarica referent_validation.cml
           </button>
-          {!readiness.ready && <p className="mt-2 text-xs text-slate-500">Non sono state trovate validazioni locali associate agli esiti selezionati.</p>}
         </div>
       )}
       {error && <p className="mt-3 text-xs font-[600] text-red-700">{error}</p>}
