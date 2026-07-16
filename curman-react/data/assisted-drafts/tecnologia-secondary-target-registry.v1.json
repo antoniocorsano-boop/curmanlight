@@ -1,0 +1,17 @@
+{
+  "registryType": "curriculum_target_registry",
+  "registryVersion": "tec-secondary-v1",
+  "canonicalDataVersion": "cml-normalized-curriculum-v1",
+  "disciplineId": "tecnologia",
+  "orderId": "secondaria",
+  "readOnly": true,
+  "generatedFrom": "content/curriculum/tecnologia.normalized.json",
+  "targets": [
+    {"targetId":"cml:tecnologia:secondaria:tec_sec_2_002:energia-sostenibilita:obiettivi","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_2_002","nucleusId":"energia-sostenibilita","fieldId":"obiettivi","label":"Obiettivi — Energia e sostenibilità — classe 2","canonicalPath":"unitaApprendimento[id=tec_sec_2_002].obiettivi","status":"active","aliases":["energia","fonti rinnovabili","efficienza energetica","mobilità sostenibile"]},
+    {"targetId":"cml:tecnologia:secondaria:tec_sec_2_002:energia-sostenibilita:conoscenze","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_2_002","nucleusId":"energia-sostenibilita","fieldId":"conoscenze","label":"Conoscenze — Energia e sostenibilità — classe 2","canonicalPath":"unitaApprendimento[id=tec_sec_2_002].conoscenze","status":"active","aliases":["fonti energetiche","rinnovabili","non rinnovabili","efficienza"]},
+    {"targetId":"cml:tecnologia:secondaria:tec_sec_3_001:digitale-informatica:obiettivi","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_3_001","nucleusId":"digitale-informatica","fieldId":"obiettivi","label":"Obiettivi — Digitale e informatica — classe 3","canonicalPath":"unitaApprendimento[id=tec_sec_3_001].obiettivi","status":"active","aliases":["programmazione","algoritmi","Scratch","Python","pensiero computazionale"]},
+    {"targetId":"cml:tecnologia:secondaria:tec_sec_3_001:digitale-informatica:abilita","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_3_001","nucleusId":"digitale-informatica","fieldId":"abilita","label":"Abilità — Digitale e informatica — classe 3","canonicalPath":"unitaApprendimento[id=tec_sec_3_001].abilita","status":"active","aliases":["scrivere un programma","debugging","documentare il codice"]},
+    {"targetId":"cml:tecnologia:secondaria:tec_sec_3_002:cittadinanza-tecnologica:conoscenze","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_3_002","nucleusId":"cittadinanza-tecnologica","fieldId":"conoscenze","label":"Conoscenze — Cittadinanza tecnologica — classe 3","canonicalPath":"unitaApprendimento[id=tec_sec_3_002].conoscenze","status":"active","aliases":["privacy","dati personali","diritto d'autore","licenze open","e-waste"]},
+    {"targetId":"cml:tecnologia:secondaria:tec_sec_3_002:cittadinanza-tecnologica:obiettivi","disciplineId":"tecnologia","orderId":"secondaria","unitId":"tec_sec_3_002","nucleusId":"cittadinanza-tecnologica","fieldId":"obiettivi","label":"Obiettivi — Cittadinanza tecnologica — classe 3","canonicalPath":"unitaApprendimento[id=tec_sec_3_002].obiettivi","status":"active","aliases":["diritti digitali","doveri nel digitale","impatto sociale","etica tecnologica"]}
+  ]
+}
