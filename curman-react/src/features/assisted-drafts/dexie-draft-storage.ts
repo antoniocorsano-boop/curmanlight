@@ -21,9 +21,13 @@ export function createDexieDraftStorage(databaseName = "curmanlight-assisted-dra
     async readStable(packageId) {
       return (await db.stableDrafts.get(packageId)) ?? null;
     },
-    async commitStable(record) {
-      await db.transaction("rw", db.stableDrafts, async () => {
+    async commitStable(record, expectedVersion) {
+      return db.transaction("rw", db.stableDrafts, async () => {
+        const current = await db.stableDrafts.get(record.packageId);
+        const currentVersion = current?.version ?? 0;
+        if (currentVersion !== expectedVersion) return { committed: false, currentVersion };
         await db.stableDrafts.put(structuredClone(record));
+        return { committed: true, currentVersion: record.version };
       });
     },
     async readRecovery(packageId) {
