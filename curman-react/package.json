@@ -31,6 +31,7 @@
     "test:cml525l": "node tools/check-cml525l-draft-proposal-editor.mjs",
     "test:cml525m": "node tools/check-cml525m-assisted-draft-demo-route.mjs",
     "test:cml525n": "node tools/check-cml525n-interactive-demo-smoke.mjs",
+    "pretest:cml525n:e2e": "npm install --no-save --package-lock=false @playwright/test",
     "test:cml525n:e2e": "playwright test --config=playwright.cml525n.config.ts",
     "preview": "vite preview"
   },
