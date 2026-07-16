@@ -13,7 +13,13 @@ export interface DraftProposalEditorProps {
   readOnly?: boolean;
 }
 
-const suggestionStates = ["generated", "under_review", "accepted", "rejected"] as const;
+const suggestionStates = [
+  { value: "generated_unreviewed", label: "Da esaminare" },
+  { value: "teacher_edited", label: "Modificata dal docente" },
+  { value: "teacher_accepted", label: "Accettata dal docente" },
+  { value: "teacher_rejected", label: "Rifiutata dal docente" },
+  { value: "teacher_deferred", label: "Rinviata" },
+] as const;
 
 function updateSuggestion(
   draft: AssistedCurriculumDraft,
@@ -104,7 +110,7 @@ export function DraftProposalEditor({
                     }
                     className="mt-1 block rounded-lg border border-slate-300 bg-white px-3 py-2"
                   >
-                    {suggestionStates.map((state) => <option key={state} value={state}>{state}</option>)}
+                    {suggestionStates.map((state) => <option key={state.value} value={state.value}>{state.label}</option>)}
                   </select>
                 </label>
               </div>
