@@ -53,6 +53,8 @@ jobs:
         working-directory: curman-react
       - run: npm run test:cml525o
         working-directory: curman-react
+      - run: npm run test:cml525p
+        working-directory: curman-react
       - name: Build React candidate
         shell: bash
         run: |
