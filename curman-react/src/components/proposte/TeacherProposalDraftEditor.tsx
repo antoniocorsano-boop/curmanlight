@@ -50,6 +50,17 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
   }, [currentText, existing, targetField])
 
   const canSave = proposedText.trim().length > 0 && motivation.trim().length > 0
+  const isDirty = useMemo(() => {
+    if (!existing) return canSave
+    return (
+      existing.targetField !== targetField ||
+      existing.testoProposto !== proposedText.trim() ||
+      existing.motivazione !== motivation.trim() ||
+      existing.fonte !== source.trim() ||
+      existing.note !== notes.trim()
+    )
+  }, [canSave, existing, motivation, notes, proposedText, source, targetField])
+  const canExport = Boolean(existing) && !isDirty
 
   function handleSave() {
     if (!canSave) return
@@ -75,7 +86,7 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
   }
 
   function handleExport() {
-    if (!existing) return
+    if (!existing || isDirty) return
     downloadTeacherProposal(existing, profilo)
   }
 
@@ -87,7 +98,11 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
           <h2 id="proposal-draft-title" className="mt-1 text-lg font-[700] text-slate-900">Prepara una proposta di aggiornamento</h2>
           <p className="mt-1 text-sm leading-6 text-slate-600">{unit.disciplina} · {unit.ordine} · {unit.nucleo}</p>
         </div>
-        {existing && <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-[600] text-amber-700">Bozza salvata</span>}
+        {existing && (
+          <span className={`rounded-full px-3 py-1 text-xs font-[600] ${isDirty ? 'bg-orange-50 text-orange-700' : 'bg-emerald-50 text-emerald-700'}`}>
+            {isDirty ? 'Modifiche non salvate' : 'Bozza salvata'}
+          </span>
+        )}
       </div>
 
       {persistenceError && (
@@ -128,11 +143,14 @@ export function TeacherProposalDraftEditor({ unit }: { unit: UnitaApprendimento 
       </div>
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
-        <p className="text-xs leading-5 text-slate-500">La bozza resta sul dispositivo e non modifica il curricolo vigente. L’esportazione crea un file locale trasferibile.</p>
+        <div>
+          <p className="text-xs leading-5 text-slate-500">La bozza resta sul dispositivo e non modifica il curricolo vigente. L’esportazione crea un file locale trasferibile.</p>
+          {existing && isDirty && <p role="status" className="mt-1 text-xs font-[600] leading-5 text-orange-700">Salva le modifiche prima di esportare: il file deve corrispondere alla versione mostrata.</p>}
+        </div>
         <div className="flex flex-wrap gap-2">
           {existing && <button type="button" onClick={handleDelete} className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2 text-sm font-[600] text-slate-600 hover:bg-slate-50"><Trash2 size={16} /> Elimina bozza</button>}
-          {existing && <button type="button" onClick={handleExport} className="inline-flex items-center gap-2 rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-[600] text-indigo-700 hover:bg-indigo-50"><Download size={16} /> Esporta .cml</button>}
-          <button type="button" disabled={!canSave} onClick={handleSave} className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-sm font-[650] text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"><Save size={16} /> {saved ? 'Bozza salvata' : 'Salva bozza'}</button>
+          {existing && <button type="button" disabled={!canExport} onClick={handleExport} className="inline-flex items-center gap-2 rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-[600] text-indigo-700 hover:bg-indigo-50 disabled:cursor-not-allowed disabled:border-slate-200 disabled:text-slate-400 disabled:hover:bg-white"><Download size={16} /> Esporta .cml</button>}
+          <button type="button" disabled={!canSave || !isDirty} onClick={handleSave} className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-sm font-[650] text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"><Save size={16} /> {saved ? 'Bozza salvata' : isDirty ? 'Salva bozza' : 'Bozza aggiornata'}</button>
         </div>
       </div>
     </section>
