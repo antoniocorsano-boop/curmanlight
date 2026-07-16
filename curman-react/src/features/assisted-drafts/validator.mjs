@@ -1,5 +1,5 @@
 export const ASSISTED_DRAFT_VALIDATOR_ID = "assisted-draft-validator";
-export const ASSISTED_DRAFT_VALIDATOR_VERSION = "1.1.0";
+export const ASSISTED_DRAFT_VALIDATOR_VERSION = "1.1.1";
 
 const SUPPORTED_STATES = new Set(["generated_unreviewed", "teacher_accepted", "teacher_edited", "teacher_rejected", "teacher_deferred"]);
 
@@ -7,7 +7,7 @@ const makeFinding = (code, severity, path, message, relatedIds) => ({ code, seve
 const targetKey = (target = {}) => `${target.unitId ?? ""}|${target.nucleusId ?? ""}|${target.fieldId ?? ""}`;
 
 export function buildTargetIndex(registry) {
-  return new Map((registry?.targets ?? []).map((target) => [targetKey(target), target]));
+  return new Map((Array.isArray(registry?.targets) ? registry.targets : []).map((target) => [targetKey(target), target]));
 }
 
 export function validateAssistedDraft(draft, registry) {
@@ -15,7 +15,7 @@ export function validateAssistedDraft(draft, registry) {
   const add = (...args) => findings.push(makeFinding(...args));
   const targetIndex = buildTargetIndex(registry);
 
-  if (!draft || typeof draft !== "object") {
+  if (!draft || typeof draft !== "object" || Array.isArray(draft)) {
     add("ADP-001", "fatal", "$", "Il pacchetto non è un oggetto leggibile.");
     return finalize(findings);
   }
@@ -27,31 +27,44 @@ export function validateAssistedDraft(draft, registry) {
   if (!draft.packageId) add("ADP-005", "blocking", "packageId", "Identificativo del pacchetto mancante.");
   if (!draft.targetRegistryVersion || (registry?.registryVersion && draft.targetRegistryVersion !== registry.registryVersion)) add("ADP-023", "blocking", "targetRegistryVersion", "Versione del registro target mancante o non allineata.");
 
-  const ids = new Set();
-  for (const [index, suggestion] of (draft.suggestions ?? []).entries()) {
-    const base = `suggestions[${index}]`;
-    if (!suggestion?.suggestionId || ids.has(suggestion.suggestionId)) add("ADP-006", "blocking", `${base}.suggestionId`, "Identificativo suggerimento mancante o duplicato.");
-    if (suggestion?.suggestionId) ids.add(suggestion.suggestionId);
-    if (!SUPPORTED_STATES.has(suggestion?.state)) add("ADP-009", "blocking", `${base}.state`, "Stato del suggerimento non consentito.");
-    if (!suggestion?.originalGeneratedText) add("ADP-017", "blocking", `${base}.originalGeneratedText`, "Testo generato originale mancante.");
-    if (suggestion?.humanValidationRequired !== true) add("ADP-004", "fatal", `${base}.humanValidationRequired`, "La validazione umana deve restare obbligatoria.");
-    if (suggestion?.canonicalWriteAllowed !== false) add("ADP-003", "fatal", `${base}.canonicalWriteAllowed`, "La scrittura canonica del suggerimento deve essere disabilitata.");
+  const suggestions = Array.isArray(draft.suggestions) ? draft.suggestions : [];
+  if (!Array.isArray(draft.suggestions)) add("ADP-020", "blocking", "suggestions", "L'elenco dei suggerimenti è mancante o malformato.");
 
-    const registryTarget = targetIndex.get(targetKey(suggestion?.target));
+  const ids = new Set();
+  for (const [index, suggestion] of suggestions.entries()) {
+    const base = `suggestions[${index}]`;
+    if (!suggestion || typeof suggestion !== "object" || Array.isArray(suggestion)) {
+      add("ADP-020", "blocking", base, "Il suggerimento non è un record leggibile.");
+      continue;
+    }
+    if (!suggestion.suggestionId || ids.has(suggestion.suggestionId)) add("ADP-006", "blocking", `${base}.suggestionId`, "Identificativo suggerimento mancante o duplicato.");
+    if (suggestion.suggestionId) ids.add(suggestion.suggestionId);
+    if (!SUPPORTED_STATES.has(suggestion.state)) add("ADP-009", "blocking", `${base}.state`, "Stato del suggerimento non consentito.");
+    if (!suggestion.originalGeneratedText) add("ADP-017", "blocking", `${base}.originalGeneratedText`, "Testo generato originale mancante.");
+    if (suggestion.humanValidationRequired !== true) add("ADP-004", "fatal", `${base}.humanValidationRequired`, "La validazione umana deve restare obbligatoria.");
+    if (suggestion.canonicalWriteAllowed !== false) add("ADP-003", "fatal", `${base}.canonicalWriteAllowed`, "La scrittura canonica del suggerimento deve essere disabilitata.");
+
+    const registryTarget = targetIndex.get(targetKey(suggestion.target));
     if (!registryTarget) add("ADP-008", "blocking", `${base}.target`, "Target non presente nel registro read-only.");
     else if (registryTarget.status === "deprecated") add("ADP-024", "warning", `${base}.target`, "Il target deprecato richiede conferma umana.");
 
-    if (!Array.isArray(suggestion?.evidence)) add("ADP-007", "blocking", `${base}.evidence`, "Riferimenti di evidenza mancanti.");
+    if (!Array.isArray(suggestion.evidence)) add("ADP-007", "blocking", `${base}.evidence`, "Riferimenti di evidenza mancanti o malformati.");
     else for (const [evidenceIndex, evidence] of suggestion.evidence.entries()) {
-      if (!evidence?.sourceId || !evidence?.sourceVersionId || !evidence?.locatorValue || !evidence?.excerptHash) add("ADP-007", "blocking", `${base}.evidence[${evidenceIndex}]`, "Riferimento di evidenza incompleto.");
+      if (!evidence || typeof evidence !== "object" || Array.isArray(evidence) || !evidence.sourceId || !evidence.sourceVersionId || !evidence.locatorValue || !evidence.excerptHash) add("ADP-007", "blocking", `${base}.evidence[${evidenceIndex}]`, "Riferimento di evidenza incompleto.");
     }
 
-    if (["teacher_accepted", "teacher_edited"].includes(suggestion?.state) && !(suggestion?.evidence?.length > 0)) add("ADP-018", "blocking", `${base}.evidence`, "Un elemento accettato deve conservare almeno una evidenza.");
+    if (["teacher_accepted", "teacher_edited"].includes(suggestion.state) && !(suggestion.evidence?.length > 0)) add("ADP-018", "blocking", `${base}.evidence`, "Un elemento accettato deve conservare almeno una evidenza.");
   }
 
-  for (const event of draft.auditTrail ?? []) {
-    if (event?.code === "ADP-012") add("ADP-012", "warning", "auditTrail", "La fonte non aggiornata richiede conferma umana.");
-    if (event?.code === "ADP-022") add("ADP-022", "blocking", "auditTrail", "Possibile dato personale: rimuovere prima di proseguire.");
+  const auditTrail = Array.isArray(draft.auditTrail) ? draft.auditTrail : [];
+  if (draft.auditTrail !== undefined && !Array.isArray(draft.auditTrail)) add("ADP-020", "blocking", "auditTrail", "La cronologia di audit è malformata.");
+  for (const event of auditTrail) {
+    if (!event || typeof event !== "object" || Array.isArray(event)) {
+      add("ADP-020", "blocking", "auditTrail", "La cronologia contiene un evento non leggibile.");
+      continue;
+    }
+    if (event.code === "ADP-012") add("ADP-012", "warning", "auditTrail", "La fonte non aggiornata richiede conferma umana.");
+    if (event.code === "ADP-022") add("ADP-022", "blocking", "auditTrail", "Possibile dato personale: rimuovere prima di proseguire.");
   }
 
   return finalize(findings);
