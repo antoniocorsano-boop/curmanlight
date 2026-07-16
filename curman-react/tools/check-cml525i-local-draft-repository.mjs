@@ -55,7 +55,7 @@ await assert.rejects(
 );
 
 const raceStorage = createInMemoryDraftStorage();
-const raceRepo = createAssistedDraftRepository({ raceStorage, storage: raceStorage, registry, now });
+const raceRepo = createAssistedDraftRepository({ storage: raceStorage, registry, now });
 const raceDraftA = structuredClone(valid);
 const raceDraftB = structuredClone(valid);
 raceDraftA.packageId = "race-package";
