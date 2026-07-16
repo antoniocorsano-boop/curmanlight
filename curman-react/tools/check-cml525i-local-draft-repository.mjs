@@ -11,7 +11,7 @@ const corpus = read("fixtures/assisted-drafts/corpus.v1.json");
 const registry = read("data/assisted-drafts/tecnologia-secondary-target-registry.v1.json");
 const valid = structuredClone(corpus.fixtures.find((item) => item.fixtureId === "valid-minimal-single-source").draft);
 let tick = 0;
-const now = () => `2026-07-16T12:00:0${tick++}.000Z`;
+const now = () => `2026-07-16T12:00:${String(tick++).padStart(2, "0")}.000Z`;
 const storage = createInMemoryDraftStorage();
 const repo = createAssistedDraftRepository({ storage, registry, now });
 
@@ -42,7 +42,8 @@ const recovery = await repo.saveRecovery(recoveryDraft);
 assert.equal(recovery.basedOnVersion, 2);
 assert.equal((await repo.load(valid.packageId)).version, 2);
 
-const restored = await repo.restoreRecovery(valid.packageId, { expectedVersion: 2 });
+const { restoreRecovery } = repo;
+const restored = await restoreRecovery(valid.packageId, { expectedVersion: 2 });
 assert.equal(restored.version, 3);
 assert.equal(await repo.getRecovery(valid.packageId), null);
 
@@ -53,4 +54,20 @@ await assert.rejects(
   (error) => error instanceof AssistedDraftRepositoryError && error.code === "ADR-002",
 );
 
-console.log("CML-525I PASS: atomic save, conflict, failure preservation, recovery and validation.");
+const raceStorage = createInMemoryDraftStorage();
+const raceRepo = createAssistedDraftRepository({ raceStorage, storage: raceStorage, registry, now });
+const raceDraftA = structuredClone(valid);
+const raceDraftB = structuredClone(valid);
+raceDraftA.packageId = "race-package";
+raceDraftB.packageId = "race-package";
+raceDraftA.suggestions[0].proposedText += " A";
+raceDraftB.suggestions[0].proposedText += " B";
+const race = await Promise.allSettled([
+  raceRepo.save(raceDraftA, { expectedVersion: 0 }),
+  raceRepo.save(raceDraftB, { expectedVersion: 0 }),
+]);
+assert.equal(race.filter((result) => result.status === "fulfilled").length, 1);
+assert.equal(race.filter((result) => result.status === "rejected" && result.reason?.code === "ADR-003").length, 1);
+assert.equal((await raceRepo.load("race-package")).version, 1);
+
+console.log("CML-525I PASS: atomic save, race conflict, detached restore, failure preservation, recovery and validation.");
