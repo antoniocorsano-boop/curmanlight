@@ -1,0 +1,15 @@
+{
+  "manifestVersion": "1.0",
+  "corpusFile": "corpus.v1.json",
+  "registryVersion": "tec-secondary-v1",
+  "fixtures": [
+    {"fixtureId":"valid-minimal-single-source","category":"valid","expectedResult":"valid","expectedCodes":[],"expectedReadiness":{"inspectable":true,"importable":true,"teacherExportable":true}},
+    {"fixtureId":"invalid-canonical-write-true","category":"invalid","expectedResult":"invalid","expectedCodes":["ADP-003"],"expectedReadiness":{"inspectable":false,"importable":false,"teacherExportable":false}},
+    {"fixtureId":"invalid-human-validation-false","category":"invalid","expectedResult":"invalid","expectedCodes":["ADP-004"],"expectedReadiness":{"inspectable":false,"importable":false,"teacherExportable":false}},
+    {"fixtureId":"invalid-duplicate-suggestion-id","category":"invalid","expectedResult":"invalid","expectedCodes":["ADP-006","ADP-007","ADP-008"],"expectedReadiness":{"inspectable":true,"importable":false,"teacherExportable":false}},
+    {"fixtureId":"invalid-target-id","category":"invalid","expectedResult":"invalid","expectedCodes":["ADP-008"],"expectedReadiness":{"inspectable":true,"importable":false,"teacherExportable":false}},
+    {"fixtureId":"invalid-accepted-without-evidence","category":"invalid","expectedResult":"invalid","expectedCodes":["ADP-018"],"expectedReadiness":{"inspectable":true,"importable":false,"teacherExportable":false}},
+    {"fixtureId":"invalid-registry-version-missing","category":"invalid","expectedResult":"invalid","expectedCodes":["ADP-023"],"expectedReadiness":{"inspectable":true,"importable":false,"teacherExportable":false}},
+    {"fixtureId":"warning-deprecated-target","category":"warning","expectedResult":"valid_with_warnings","expectedCodes":["ADP-024"],"expectedReadiness":{"inspectable":true,"importable":true,"teacherExportable":false}}
+  ]
+}
