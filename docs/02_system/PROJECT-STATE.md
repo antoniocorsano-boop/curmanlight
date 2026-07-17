@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last completed local slice: CML-535 - Guided Teacher Pilot Runtime Entry Point
+- Last completed local slice: CML-536 - Guided Teacher Pilot Step Flow
 - Current `main`: `9a6ecacf759b68e5ef6035f5a184fd4f04b0a533`
-- Active slice: nessuna (CML-535 runtime entry pronto localmente)
+- Active slice: nessuna (CML-536 step flow pronto localmente)
 - React application (`curman-react/`): baseline evolutiva principale
 - Runtime storico: stabile, mantenuto come riferimento e fallback; non esteso per default
 - Canonical curriculum data: invariati; validazione umana obbligatoria
 - Current movelog: `docs/REPO-MOVELOG-v2.md`
-- Next strategic action: esecuzione pilot o CML-536 - Guided Teacher Pilot Evidence Intake
+- Next strategic action: esecuzione pilot o CML-537 - Guided Teacher Pilot Evidence Intake
 
 
 ## CML-527 - SW Install Resilience Post-Publish Closure
@@ -126,6 +126,28 @@
 
 1. Eseguire il pilot con 3-5 docenti usando il punto di ingresso CML-535.
 2. Preparare CML-536 per intake e sintesi evidenze reali, senza raccolta automatica non richiesta.
+3. Aprire microfix mobile/accessibilita o flusso ruoli solo se emergono P0/P1.
+
+## CML-536 - Guided Teacher Pilot Step Flow
+
+- **Tipo**: React preview / runtime step flow
+- **Branch**: `feat/cml-536-guided-teacher-pilot-step-flow`
+- **Base locale**: `9546beeb459bb65e06e6ab1e7e5f904e0e7ce21c`
+- **Runtime storico modificato**: no
+- **React modificato**: si, flusso multi-step nella vista `pilot-guidato-docenti`
+- **Dati curricolari modificati**: no
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Decisione**: estendere il punto di ingresso CML-535 in quattro passaggi guidati non persistenti
+- **Copertura**: Home, consultazione disciplina, proposta docente, passaggio di validazione
+- **Limiti intenzionali**: nessuna raccolta osservazioni, nessun localStorage, nessun export, nessun backend, nessuna telemetria
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Verdetto**: `CML_536_GUIDED_TEACHER_PILOT_STEP_FLOW_READY_LOCAL_NOT_PUSHED`
+
+### Prossima sequenza consigliata aggiornata
+
+1. Eseguire il pilot con 3-5 docenti usando il flusso CML-536.
+2. Preparare CML-537 per intake e sintesi evidenze reali.
 3. Aprire microfix mobile/accessibilita o flusso ruoli solo se emergono P0/P1.
 ## Serie CML-518A–E (chiusa)
 
