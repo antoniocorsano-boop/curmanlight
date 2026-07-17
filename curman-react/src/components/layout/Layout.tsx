@@ -38,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       <Header />
-      <div className="relative flex flex-1 overflow-hidden">
+      <div className="relative flex min-h-0 flex-1 overflow-hidden">
         {mobileSidebarOpen && (
           <button
             type="button"
@@ -48,7 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           />
         )}
         <Sidebar />
-        <main className="flex-1 overflow-y-auto p-6 max-sm:p-4 bg-[var(--color-surface-page)]">
+        <main className="min-h-0 flex-1 overflow-y-auto p-6 max-sm:p-4 bg-[var(--color-surface-page)]">
           {children}
         </main>
       </div>

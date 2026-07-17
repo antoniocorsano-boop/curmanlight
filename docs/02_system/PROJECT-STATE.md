@@ -149,6 +149,20 @@
 1. Eseguire il pilot con 3-5 docenti usando il flusso CML-536.
 2. Preparare CML-537 per intake e sintesi evidenze reali.
 3. Aprire microfix mobile/accessibilita o flusso ruoli solo se emergono P0/P1.
+
+## CML-538 - Desktop Sidebar Vertical Scroll and Reachability Fix
+
+- **Tipo**: React preview / layout microfix
+- **Branch**: `fix/cml-538-sidebar-scroll-reachability`
+- **Base locale**: `d96691a72fd04ece1d0b67cbd717005a93ccb780`
+- **Runtime storico modificato**: no
+- **React modificato**: si, layout/sidebar
+- **Dati curricolari modificati**: no
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Decisione**: rendere la sidebar scrollabile autonomamente con viewport basse
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Verdetto**: `CML_538_DESKTOP_SIDEBAR_VERTICAL_SCROLL_REACHABILITY_FIXED`
 ## Serie CML-518A–E (chiusa)
 
 - CML-518A — React Baseline and Capability Perimeter — PR #139 — merge `e3c02cb`

@@ -57,7 +57,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="w-64 h-full border-r border-[var(--color-border)] bg-white flex flex-col py-4 px-3 shrink-0 max-sm:fixed max-sm:left-0 max-sm:top-14 max-sm:bottom-0 max-sm:z-40 max-sm:shadow-2xl">
+    <aside className="h-full min-h-0 w-64 shrink-0 overflow-y-auto overscroll-contain border-r border-[var(--color-border)] bg-white px-3 py-4 pb-6 max-sm:fixed max-sm:bottom-0 max-sm:left-0 max-sm:top-14 max-sm:h-[calc(100vh-3.5rem)] max-sm:z-40 max-sm:shadow-2xl">
       <nav className="flex flex-col gap-1" aria-label="Navigazione principale">
         {Array.from(areas.entries()).map(([area, items]) => (
           <div key={area} className="mb-2">
@@ -75,7 +75,7 @@ export function Sidebar() {
                   onClick={() => navigateTo(item.id)}
                   aria-current={active ? 'page' : undefined}
                   className={`w-full flex items-start gap-3 px-3 py-2 rounded-lg text-sm text-left transition-colors ${
-                    active ? 'bg-indigo-50 text-indigo-700 font-[550]' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
+                    active ? 'bg-indigo-50 text-indigo-700 font-[550] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                   }`}
                 >
                   {Icon && <Icon size={17} className="mt-0.5 shrink-0" />}

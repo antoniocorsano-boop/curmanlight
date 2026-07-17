@@ -33,7 +33,42 @@ Ogni voce deve indicare almeno:
 
 ---
 
-## CML-536 - Guided Teacher Pilot Step Flow
+## CML-538 - Desktop Sidebar Vertical Scroll and Reachability Fix
+
+- **Data**: 2026-07-17
+- **Tipo**: React preview / layout microfix
+- **Stato**: READY_LOCAL_NOT_PUSHED
+- **Branch**: `fix/cml-538-sidebar-scroll-reachability`
+- **Base locale**: `d96691a72fd04ece1d0b67cbd717005a93ccb780`
+- **Runtime storico modificato**: no
+- **React modificato**: si
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Trigger Pages nel diff**: `curman-react/**`, solo in caso di merge/push su `main`
+
+### Scopo
+
+Rendere la sidebar React scrollabile verticalmente e indipendente dal contenuto centrale, evitando che le voci finali restino sotto la viewport.
+
+### File prodotti/modificati
+
+- `curman-react/src/components/layout/Layout.tsx`
+- `curman-react/src/components/layout/Sidebar.tsx`
+- `curman-react/package.json`
+- `curman-react/tools/check-cml538-sidebar-scroll-reachability.mjs`
+- `docs/03_execution/CML-538.md`
+- `report/CML-538_sidebar_vertical_scroll_reachability.md`
+- `report/screenshots/CML-538/`
+
+### Verdetto
+
+```text
+CML_538_DESKTOP_SIDEBAR_VERTICAL_SCROLL_REACHABILITY_FIXED
+```
+
+---## CML-536 - Guided Teacher Pilot Step Flow
 
 - **Data**: 2026-07-17
 - **Tipo**: React preview / runtime step flow
