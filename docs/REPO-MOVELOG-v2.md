@@ -33,7 +33,51 @@ Ogni voce deve indicare almeno:
 
 ---
 
-## CML-535 - Guided Teacher Pilot Runtime Entry Point
+## CML-536 - Guided Teacher Pilot Step Flow
+
+- **Data**: 2026-07-17
+- **Tipo**: React preview / runtime step flow
+- **Stato**: READY_LOCAL_NOT_PUSHED
+- **Branch**: `feat/cml-536-guided-teacher-pilot-step-flow`
+- **Base locale**: `9546beeb459bb65e06e6ab1e7e5f904e0e7ce21c`
+- **Runtime storico modificato**: no
+- **React modificato**: si
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Trigger Pages nel diff**: `curman-react/**`, solo in caso di merge/push su `main`
+
+### Scopo
+
+Estendere il punto di ingresso CML-535 in un percorso guidato breve a quattro passaggi, mantenendo il pilot non persistente e reversibile.
+
+### Implementazione
+
+- Lista locale `PILOT_TASKS` con quattro passaggi.
+- Indicatore del passaggio corrente.
+- Azioni `Precedente`, `Continua`, funzione collegata, ritorno alle regole ed uscita.
+- Ripresa in sessione dell'ultimo passaggio visitato.
+- Nessuna raccolta, persistenza, export, backend o telemetria.
+
+### File prodotti/modificati
+
+- `curman-react/src/views/GuidedTeacherPilotView.tsx`
+- `curman-react/tools/check-cml536-guided-teacher-pilot-step-flow.mjs`
+- `curman-react/package.json`
+- `docs/03_execution/CML-536.md`
+- `report/CML-536_guided_teacher_pilot_step_flow.md`
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/REPO-MOVELOG-v2.md`
+- `report/screenshots/CML-536/`
+
+### Verdetto
+
+```text
+CML_536_GUIDED_TEACHER_PILOT_STEP_FLOW_READY_LOCAL_NOT_PUSHED
+```
+
+---## CML-535 - Guided Teacher Pilot Runtime Entry Point
 
 - **Data**: 2026-07-17
 - **Tipo**: React preview / runtime entry point
