@@ -57,7 +57,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="w-64 h-full border-r border-[var(--color-border)] bg-white flex flex-col py-4 px-3 shrink-0 max-sm:fixed max-sm:left-0 max-sm:top-14 max-sm:bottom-0 max-sm:z-40 max-sm:shadow-2xl">
+    <aside className="w-64 h-full min-h-0 overflow-y-auto overscroll-contain border-r border-[var(--color-border)] bg-white flex flex-col py-4 px-3 pb-8 shrink-0 max-sm:fixed max-sm:left-0 max-sm:top-14 max-sm:bottom-0 max-sm:z-40 max-sm:shadow-2xl">
       <nav className="flex flex-col gap-1" aria-label="Navigazione principale">
         {Array.from(areas.entries()).map(([area, items]) => (
           <div key={area} className="mb-2">
@@ -74,7 +74,7 @@ export function Sidebar() {
                   type="button"
                   onClick={() => navigateTo(item.id)}
                   aria-current={active ? 'page' : undefined}
-                  className={`w-full flex items-start gap-3 px-3 py-2 rounded-lg text-sm text-left transition-colors ${
+                  className={`w-full flex items-start gap-3 px-3 py-2 rounded-lg text-sm text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 ${
                     active ? 'bg-indigo-50 text-indigo-700 font-[550]' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
                   }`}
                 >
