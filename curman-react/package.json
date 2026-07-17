@@ -40,6 +40,7 @@
     "test:cml535": "node tools/check-cml535-guided-teacher-pilot-entry.mjs",
     "test:cml536": "node tools/check-cml536-guided-teacher-pilot-step-flow.mjs",
     "test:cml537": "node tools/check-cml537-guided-pilot-observation-capture.mjs",
+    "test:cml538": "node tools/check-cml538-desktop-sidebar-scroll.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
