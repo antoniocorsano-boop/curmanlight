@@ -11,7 +11,17 @@ const APP_SHELL = [
   "./icons/icon-192.png",
   "./icons/icon-512.png"
 ];
-
+function offlineFallbackResponse(request) {
+  const acceptHeader = request.headers.get("accept") || "";
+  const isHtml = request.mode === "navigate" || acceptHeader.includes("text/html");
+  if (isHtml) {
+    return new Response("<!doctype html><html lang=\"it\"><meta charset=\"utf-8\"><title>CurManLight offline</title><body><h1>CurManLight non disponibile offline</h1><p>Ricarica la pagina quando la connessione torna disponibile.</p></body></html>", {
+      status: 503,
+      headers: { "Content-Type": "text/html; charset=utf-8" }
+    });
+  }
+  return new Response("", { status: 504, statusText: "Offline" });
+}
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
@@ -49,7 +59,9 @@ self.addEventListener("fetch", event => {
           caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
           return response;
         })
-        .catch(() => caches.match(request).then(cached => cached || caches.match("./index.html")))
+        .catch(() => caches.match(request)
+          .then(cached => cached || caches.match("./index.html"))
+          .then(fallback => fallback || offlineFallbackResponse(request)))
     );
     return;
   }
@@ -63,7 +75,8 @@ self.addEventListener("fetch", event => {
           caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
         }
         return response;
-      }).catch(() => caches.match("./index.html"));
+      }).catch(() => caches.match("./index.html")
+        .then(fallback => fallback || offlineFallbackResponse(request)));
     })
   );
 });
