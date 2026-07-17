@@ -2,15 +2,52 @@
 
 ## Snapshot
 
-- Last merged milestone: CML-518E — Referent Completeness Guard
-- Current `main`: `afd8f7dde6f5532e256638b69cc6e15dfd75772c`
-- Active slice: nessuna (serie CML-518A–E chiusa e integrata in `main`)
+- Last completed local slice: CML-528 - Service Worker App Shell Contract Audit
+- Current `main`: `3ce03b04489e618d70ad38ca13ef18ac3b5ed738`
+- Active slice: nessuna (CML-528 audit chiuso localmente)
 - React application (`curman-react/`): baseline evolutiva principale
 - Runtime storico: stabile, mantenuto come riferimento e fallback; non esteso per default
 - Canonical curriculum data: invariati; validazione umana obbligatoria
 - Current movelog: `docs/REPO-MOVELOG-v2.md`
-- Next strategic action: preparare il pilot umano dei tre ruoli (Docente, Dipartimento, Referente) con le nuove guardie di completezza attive
+- Next strategic action: CML-529 - Fetch Fallback Always-Response Microfix
 
+
+## CML-527 - SW Install Resilience Post-Publish Closure
+
+- **Tipo**: docs-only / post-publish closure
+- **Commit verificato**: `3ce03b04489e618d70ad38ca13ef18ac3b5ed738`
+- **Run Pages**: `29558661911`
+- **Esito Pages**: `completed / success`
+- **Verifica live**: positiva su `https://antoniocorsano-boop.github.io/curmanlight/`
+- **Runtime modificato in CML-527**: no
+- **Dati curricolari modificati**: no
+- **Movelog corrente**: `docs/REPO-MOVELOG-v2.md`
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Verdetto**: `CML_SW_INSTALL_RESILIENCE_PUSHED_PAGES_DEPLOYED_AND_LIVE_VERIFIED`
+
+### Prossima sequenza consigliata
+
+1. CML-528 - Service Worker App Shell Contract Cleanup.
+2. CML-529 - Fetch Fallback Always-Response Microfix.
+3. CML-530 - Offline Test and Cache Update.
+
+
+## CML-528 - Service Worker App Shell Contract Audit
+
+- **Tipo**: docs-only / service worker audit
+- **Commit base**: `3ce03b04489e618d70ad38ca13ef18ac3b5ed738`
+- **Runtime modificato**: no
+- **Dati curricolari modificati**: no
+- **Esito APP_SHELL**: 9/9 risorse presenti nello snapshot pubblicato e 9/9 HTTP 200 su Pages live
+- **Rischio principale rilevato**: due fallback `fetch` possono risolversi a `undefined` se rete e `./index.html` in cache falliscono entrambi
+- **URL motto canonico UI**: `/motto-non-multa-sed-multum/`; `motto-non-multa-sed-multum.html` resta presente ma non canonico nella UI corrente
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Verdetto**: `CML_528_SERVICE_WORKER_APP_SHELL_CONTRACT_AUDIT_READY_LOCAL_NOT_PUSHED`
+
+### Prossima sequenza consigliata aggiornata
+
+1. CML-529 - Fetch Fallback Always-Response Microfix.
+2. CML-530 - Offline Test and Cache Update.
 ## Serie CML-518A–E (chiusa)
 
 - CML-518A — React Baseline and Capability Perimeter — PR #139 — merge `e3c02cb`

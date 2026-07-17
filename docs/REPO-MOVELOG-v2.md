@@ -33,6 +33,122 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-528 - Service Worker App Shell Contract Audit
+
+- **Data**: 2026-07-17
+- **Tipo**: docs-only / service worker audit
+- **Stato**: READY_LOCAL_NOT_PUSHED
+- **Branch**: `main`
+- **Commit base**: `3ce03b04489e618d70ad38ca13ef18ac3b5ed738`
+- **Runtime storico modificato**: no
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+
+### Scopo
+
+Audit del service worker senza modifiche runtime: inventario `APP_SHELL`, verifica pubblicazione, classificazione risorse, analisi `install`/`activate`/`fetch`, individuazione rischi `respondWith(undefined)` e contratto offline proposto.
+
+### Evidenze APP_SHELL
+
+- 9/9 URL presenti nello snapshot `_published_snapshot/netlify-current`.
+- 9/9 URL HTTP 200 su `https://antoniocorsano-boop.github.io/curmanlight/`.
+- Risorse essenziali: `./`, `./index.html`, `./manifest.webmanifest`, `./icons/icon-192.png`, `./icons/icon-512.png`.
+- Risorsa opzionale/non canonica: `./motto-non-multa-sed-multum.html` perche la UI usa l'URL pulito `/motto-non-multa-sed-multum/`, anch'esso live 200.
+- Risorse opzionali candidate a uscire dal precache: `./riferimenti_istituzionali_normativa.json`, `./docs_distribuzione/FONTI_PTOF_RAV_NORMATIVA.md`, `./docs_distribuzione/NOTE_TESTATA_ESPANDIBILE_MOBILE.txt`.
+
+### Rischi individuati
+
+- Ramo navigation: se rete, cache della richiesta e `./index.html` falliscono, `event.respondWith()` puo ricevere una Promise risolta a `undefined`.
+- Ramo GET non-navigation: se cache miss, rete fallita e `./index.html` assente dalla cache, stesso rischio.
+- Fallback generico a `index.html` per asset non HTML puo restituire HTML dove il chiamante attende JSON, immagine o altro asset.
+
+### Prossime slice
+
+- CML-529: microfix fetch fallback sempre-`Response`.
+- CML-530: test offline, cache vuota, aggiornamento cache e smoke post-deploy se necessario.
+
+### File prodotti/modificati
+
+- `docs/03_execution/CML-528.md`
+- `report/CML-528_service_worker_app_shell_contract_audit.md`
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Controlli
+
+- `Get-Content sw.js` PASS
+- `Get-Content _published_snapshot/netlify-current/sw.js` PASS
+- Verifica filesystem APP_SHELL PASS, 9/9 presenti
+- `Invoke-WebRequest -Method Head` su Pages PASS, 9/9 HTTP 200
+- `rg` riferimenti HTML/manifest PASS
+- `git diff --check` PASS, soli warning CRLF non bloccanti
+
+### Verdetto
+
+```text
+CML_528_SERVICE_WORKER_APP_SHELL_CONTRACT_AUDIT_READY_LOCAL_NOT_PUSHED
+```
+
+---
+
+## CML-527 - SW Install Resilience Post-Publish Closure
+
+- **Data**: 2026-07-17
+- **Tipo**: docs-only / post-publish closure
+- **Stato**: COMPLETED
+- **Branch**: `main`
+- **Commit verificato**: `3ce03b04489e618d70ad38ca13ef18ac3b5ed738`
+- **Run Pages**: `29558661911`
+- **Esito live**: positivo
+- **Runtime storico modificato in CML-527**: no
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+
+### Scopo
+
+Formalizzare la chiusura del fix service worker gia pubblicato, senza riaprire CML-526 e senza modificare runtime.
+
+### Causa radice
+
+L'installazione del service worker era fragile: un singolo asset `APP_SHELL` non recuperabile poteva far fallire il precache e quindi l'intera fase `install`.
+
+### Correzione verificata
+
+Il commit `3ce03b0` gestisce localmente l'errore di ogni `cache.add(url)`, rendendo l'installazione resiliente rispetto ad asset mancanti o temporaneamente non disponibili.
+
+### Verifica
+
+- `gh run list --workflow pages.yml --branch main --limit 5` PASS
+- `gh run view 29558661911` PASS, `headSha` = `3ce03b04489e618d70ad38ca13ef18ac3b5ed738`
+- `gh run watch 29558661911 --exit-status` PASS
+- Browser live pulito su GitHub Pages: HTTP 200, `h1` = `Curricolo Verticale`, service worker attivo, cache `curmanlight-cache-v455-cml436`, console errors 0, page errors 0
+- `git diff --check` PASS
+
+### File prodotti/modificati
+
+- `docs/03_execution/CML-527.md`
+- `report/CML-527_sw_install_resilience_live_verification.md`
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Rischi residui / prossime slice
+
+- CML-528: censire e classificare `APP_SHELL` come essenziale/opzionale/obsoleto.
+- CML-529: garantire fallback `fetch` sempre-`Response`.
+- CML-530: test offline e aggiornamento cache.
+
+### Verdetto
+
+```text
+CML_SW_INSTALL_RESILIENCE_PUSHED_PAGES_DEPLOYED_AND_LIVE_VERIFIED
+```
+
+---
+
 ## CML-526 — Product Decision Register and Development Traceability
 
 - **Data**: 2026-07-16
