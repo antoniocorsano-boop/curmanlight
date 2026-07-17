@@ -3,11 +3,7 @@ const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
-
-  "./motto-non-multa-sed-multum.html",
-  "./riferimenti_istituzionali_normativa.json",
-  "./docs_distribuzione/FONTI_PTOF_RAV_NORMATIVA.md",
-  "./docs_distribuzione/NOTE_TESTATA_ESPANDIBILE_MOBILE.txt",
+  "./motto-non-multa-sed-multum/",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
 ];
