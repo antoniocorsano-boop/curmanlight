@@ -15,6 +15,7 @@ import { ArchivioLocaleView } from '@/views/ArchivioLocaleView'
 import { AssistedDraftDemoView } from '@/views/AssistedDraftDemoView'
 import { PilotFeedbackAnalysisView } from '@/views/PilotFeedbackAnalysisView'
 import { ProductDecisionRegisterView } from '@/views/ProductDecisionRegisterView'
+import { GuidedTeacherPilotView } from '@/views/GuidedTeacherPilotView'
 import type { ViewId } from '@/types/state'
 
 function NotAvailableView() {
@@ -52,6 +53,7 @@ export default function App() {
     'programmazione-annuale': <ProgrammazioneAnnualeView />,
     'uda-modello': <UdaEssenzialeView />,
     'archivio-locale': <ArchivioLocaleView />,
+    'pilot-guidato-docenti': <GuidedTeacherPilotView />,
     'analisi-feedback-pilota': <PilotFeedbackAnalysisView />,
     'registro-decisioni': <ProductDecisionRegisterView />,
     guida: <NotAvailableView />,

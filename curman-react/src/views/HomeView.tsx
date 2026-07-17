@@ -1,4 +1,4 @@
-import { BookOpen, Download, FilePenLine, Info, PencilRuler } from 'lucide-react'
+import { BookOpen, Download, FilePenLine, Info, PencilRuler, UserCheck } from 'lucide-react'
 import { GuidedTeacherEvaluation } from '@/components/evaluation/GuidedTeacherEvaluation'
 import { resolveCurriculumApplicability, type SchoolOrder } from '@/lib/temporal-applicability'
 import { useAppStore } from '@/stores/useAppStore'
@@ -107,6 +107,8 @@ function ApplicabilityCard() {
 }
 
 export function HomeView() {
+  const setVista = useAppStore(s => s.setVista)
+
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-5 py-2">
       <section>
@@ -147,6 +149,29 @@ export function HomeView() {
         />
       </section>
 
+      <section aria-labelledby="guided-pilot-entry-title" className="rounded-2xl border border-indigo-100 bg-indigo-50/60 p-4 sm:p-5">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-3">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-white text-indigo-700">
+              <UserCheck size={20} />
+            </span>
+            <div>
+              <p className="text-xs font-[750] uppercase tracking-wide text-indigo-600">Pilot temporaneo</p>
+              <h2 id="guided-pilot-entry-title" className="mt-1 text-base font-[750] text-slate-900">Partecipa alla prova guidata</h2>
+              <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+                Esplora alcune funzioni di CurManLight e annota cio che risulta chiaro, difficile o migliorabile.
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => setVista('pilot-guidato-docenti')}
+            className="inline-flex shrink-0 items-center justify-center rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-[650] text-indigo-700 hover:bg-indigo-50"
+          >
+            Apri la prova
+          </button>
+        </div>
+      </section>
       <GuidedTeacherEvaluation />
     </div>
   )

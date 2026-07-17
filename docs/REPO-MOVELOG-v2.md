@@ -33,6 +33,141 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-535 - Guided Teacher Pilot Runtime Entry Point
+
+- **Data**: 2026-07-17
+- **Tipo**: React preview / runtime entry point
+- **Stato**: READY_LOCAL_NOT_PUSHED
+- **Branch**: `feat/cml-535-guided-teacher-pilot-entry`
+- **Base locale**: `c2fcc3fe87fbd83ef0ceab8d88d9d1271ec78f97`
+- **Runtime storico modificato**: no
+- **React modificato**: si
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Trigger Pages nel diff**: `curman-react/**`, solo in caso di merge/push su `main`
+
+### Scopo
+
+Aggiungere nella baseline React un punto di accesso provvisorio e non invasivo alla prova guidata docenti definita da CML-534.
+
+### Implementazione
+
+- Nuova vista `pilot-guidato-docenti`.
+- Ingresso Home "Partecipa alla prova guidata".
+- Schermata iniziale con scopo, regole, durata e azioni.
+- Primo compito CML-534: orientarsi nella Home.
+- Uscita sicura verso Home e ritorno alle regole.
+- Nessuna raccolta persistente, nessun backend, nessuna telemetria.
+
+### File prodotti/modificati
+
+- `curman-react/src/App.tsx`
+- `curman-react/src/types/state.ts`
+- `curman-react/src/components/layout/Sidebar.tsx`
+- `curman-react/src/views/HomeView.tsx`
+- `curman-react/src/views/GuidedTeacherPilotView.tsx`
+- `curman-react/tools/check-cml535-guided-teacher-pilot-entry.mjs`
+- `curman-react/package.json`
+- `docs/03_execution/CML-535.md`
+- `report/CML-535_guided_teacher_pilot_runtime_entry.md`
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Verdetto
+
+```text
+CML_535_GUIDED_TEACHER_PILOT_RUNTIME_ENTRY_READY_LOCAL_NOT_PUSHED
+```
+
+---## CML-534 - Guided Teacher Pilot Protocol for React Baseline
+
+- **Data**: 2026-07-17
+- **Tipo**: docs-only / guided teacher pilot protocol
+- **Stato**: READY_LOCAL_NOT_PUSHED
+- **Branch**: `main`
+- **Base locale**: `9a6ecacf759b68e5ef6035f5a184fd4f04b0a533`
+- **Runtime storico modificato**: no
+- **React modificato**: no
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+
+### Scopo
+
+Definire un protocollo breve per il pilot guidato con 3-5 docenti sulla baseline React, separando evidenze osservabili, opinioni e gate mobile/accessibilita.
+
+### Evidenze
+
+- CML-533 ha indicato il pilot docenti come prossimo incremento P0.
+- La baseline React dispone gia di feedback guidato, import analisi, backlog e Registro decisioni.
+- I protocolli esistenti richiedono campione minimo 3, raccomandato 5, nessun dato personale e separazione tra evidenze sintetiche e umane.
+
+### File prodotti/modificati
+
+- `docs/03_execution/CML-534.md`
+- `report/CML-534_guided_teacher_pilot_protocol.md`
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Verdetto
+
+```text
+CML_534_GUIDED_TEACHER_PILOT_PROTOCOL_READY_LOCAL_NOT_PUSHED
+```
+
+---
+## CML-533 - React Product Roadmap Re-entry Audit
+
+- **Data**: 2026-07-17
+- **Tipo**: docs-only / React roadmap decision audit
+- **Stato**: READY_LOCAL_NOT_PUSHED
+- **Branch**: `main`
+- **Base locale**: `9a6ecacf759b68e5ef6035f5a184fd4f04b0a533`
+- **Runtime storico modificato**: no
+- **React modificato**: no
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+
+### Scopo
+
+Rientrare nella roadmap React dopo CML-531/532 e scegliere il prossimo incremento a maggior valore tra Registro decisioni, pilot docenti, mobile/accessibilita e flusso dei tre ruoli.
+
+### Evidenze
+
+- Registro decisioni: CML-526 completo tecnicamente, collegato a `PilotFinding`, export Markdown e campi implementazione/verifica/pubblicazione.
+- Pilot docenti: CML-525O/P/Q coprono raccolta, import, analisi descrittiva e backlog manuale.
+- Mobile/accessibilita: baseline parziale, da trattare come gate P0/P1 in scenari reali.
+- Flusso ruoli: CML-518C/D/E introducono guardie tecniche solide; orientamento operativo ancora da validare con utenti.
+
+### Decisione
+
+Il prossimo incremento consigliato e:
+
+```text
+CML-534 - Guided Teacher Pilot Protocol for React Baseline
+```
+
+Non ampliare ora il Registro decisioni; usarlo invece per tracciare decisioni derivate da evidenze reali. Non avviare un refactor preventivo mobile/accessibilita o flusso ruoli salvo blocchi osservati nel pilot.
+
+### File prodotti/modificati
+
+- `docs/03_execution/CML-533.md`
+- `report/CML-533_react_product_roadmap_reentry_audit.md`
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Verdetto
+
+```text
+CML_533_REACT_PRODUCT_ROADMAP_REENTRY_AUDIT_READY_LOCAL_NOT_PUSHED
+```
+
+---
 ## CML-532 - Offline Service Worker Regression Check
 
 - **Data**: 2026-07-17

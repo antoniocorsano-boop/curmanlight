@@ -37,6 +37,7 @@
     "test:cml525p": "node tools/check-cml525p-pilot-feedback-analysis.mjs",
     "test:cml525q": "node tools/check-cml525q-pilot-findings-triage.mjs",
     "test:cml526": "node tools/check-cml526-product-decision-register.mjs",
+    "test:cml535": "node tools/check-cml535-guided-teacher-pilot-entry.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
