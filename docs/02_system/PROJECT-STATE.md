@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last completed local slice: CML-532 - Offline Service Worker Regression Check
-- Current `main`: `39ef8d915996b40162b6cac275781ede8e5b587b`
-- Active slice: nessuna (CML-532 regression check pronto localmente)
+- Last completed local slice: CML-534 - Guided Teacher Pilot Protocol for React Baseline
+- Current `main`: `9a6ecacf759b68e5ef6035f5a184fd4f04b0a533`
+- Active slice: nessuna (CML-534 protocollo pronto localmente)
 - React application (`curman-react/`): baseline evolutiva principale
 - Runtime storico: stabile, mantenuto come riferimento e fallback; non esteso per default
 - Canonical curriculum data: invariati; validazione umana obbligatoria
 - Current movelog: `docs/REPO-MOVELOG-v2.md`
-- Next strategic action: commit separati CML-531 runtime e CML-532 test/docs, poi rientro roadmap React
+- Next strategic action: CML-535 - Guided Teacher Pilot Evidence Intake
 
 
 ## CML-527 - SW Install Resilience Post-Publish Closure
@@ -65,6 +65,46 @@
 1. Commit runtime CML-531 con soli `sw.js` e `_published_snapshot/netlify-current/sw.js`.
 2. Commit test/docs CML-532.
 3. Push controllato su `main`, Pages verification, poi rientro roadmap React.
+
+## CML-533 - React Product Roadmap Re-entry Audit
+
+- **Tipo**: docs-only / React roadmap decision audit
+- **Base locale**: `9a6ecacf759b68e5ef6035f5a184fd4f04b0a533`
+- **Runtime modificato**: no
+- **React modificato**: no
+- **Dati curricolari modificati**: no
+- **Decisione**: prossimo incremento consigliato = pilot docenti guidato sulla baseline React
+- **Candidato successivo**: `CML-534 - Guided Teacher Pilot Protocol for React Baseline`
+- **Motivo**: riduce rischio pilot, produce evidenze reali, riusa CML-525O/P/Q e CML-526, evita duplicazione di capacita gia presenti
+- **Gate**: mobile/accessibilita e flusso ruoli da verificare come P0/P1 durante scenari reali, non come grande refactor preventivo
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Verdetto**: `CML_533_REACT_PRODUCT_ROADMAP_REENTRY_AUDIT_READY_LOCAL_NOT_PUSHED`
+
+### Prossima sequenza consigliata aggiornata
+
+1. CML-534 - Guided Teacher Pilot Protocol for React Baseline.
+2. Eventuale microfix mobile/accessibilita solo se emerge blocco P0/P1.
+3. Eventuale orientamento flusso ruoli solo se il pilot mostra perdita o ambiguita reale.
+
+## CML-534 - Guided Teacher Pilot Protocol for React Baseline
+
+- **Tipo**: docs-only / guided teacher pilot protocol
+- **Base locale**: `9a6ecacf759b68e5ef6035f5a184fd4f04b0a533`
+- **Runtime modificato**: no
+- **React modificato**: no
+- **Dati curricolari modificati**: no
+- **Decisione**: protocollo operativo breve per 3-5 docenti sulla baseline React
+- **Copertura**: orientamento, consultazione, proposta, salvataggio, export, passaggio Docente -> Dipartimento -> Referente, feedback guidato
+- **Vincoli**: nessun dato personale reale, nessuna modifica automatica al curricolo canonico, evidenze osservabili separate da opinioni
+- **Gate**: stop esplicito per blocchi P0 mobile/accessibilita, export, salvataggio, canonico o privacy; P1 ripetuto candidato a micro-slice
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Verdetto**: `CML_534_GUIDED_TEACHER_PILOT_PROTOCOL_READY_LOCAL_NOT_PUSHED`
+
+### Prossima sequenza consigliata aggiornata
+
+1. CML-535 - Guided Teacher Pilot Evidence Intake.
+2. Eventuale microfix mobile/accessibilita solo se emerge blocco P0/P1.
+3. Eventuale orientamento flusso ruoli solo se il pilot mostra perdita o ambiguita reale.
 ## Serie CML-518A–E (chiusa)
 
 - CML-518A — React Baseline and Capability Perimeter — PR #139 — merge `e3c02cb`
