@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last completed local slice: CML-534 - Guided Teacher Pilot Protocol for React Baseline
+- Last completed local slice: CML-535 - Guided Teacher Pilot Runtime Entry Point
 - Current `main`: `9a6ecacf759b68e5ef6035f5a184fd4f04b0a533`
-- Active slice: nessuna (CML-534 protocollo pronto localmente)
+- Active slice: nessuna (CML-535 runtime entry pronto localmente)
 - React application (`curman-react/`): baseline evolutiva principale
 - Runtime storico: stabile, mantenuto come riferimento e fallback; non esteso per default
 - Canonical curriculum data: invariati; validazione umana obbligatoria
 - Current movelog: `docs/REPO-MOVELOG-v2.md`
-- Next strategic action: CML-535 - Guided Teacher Pilot Evidence Intake
+- Next strategic action: esecuzione pilot o CML-536 - Guided Teacher Pilot Evidence Intake
 
 
 ## CML-527 - SW Install Resilience Post-Publish Closure
@@ -105,6 +105,28 @@
 1. CML-535 - Guided Teacher Pilot Evidence Intake.
 2. Eventuale microfix mobile/accessibilita solo se emerge blocco P0/P1.
 3. Eventuale orientamento flusso ruoli solo se il pilot mostra perdita o ambiguita reale.
+
+## CML-535 - Guided Teacher Pilot Runtime Entry Point
+
+- **Tipo**: React preview / runtime entry point
+- **Branch**: `feat/cml-535-guided-teacher-pilot-entry`
+- **Base locale**: `c2fcc3fe87fbd83ef0ceab8d88d9d1271ec78f97`
+- **Runtime storico modificato**: no
+- **React modificato**: si, ingresso Home e vista `pilot-guidato-docenti`
+- **Dati curricolari modificati**: no
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Decisione**: esporre un ingresso provvisorio e non invasivo al pilot docenti guidato
+- **Copertura**: schermata iniziale, regole essenziali, durata, uscita sicura, primo compito di orientamento nella Home
+- **Limiti intenzionali**: nessun motore multi-step, nessuna raccolta persistente, nessun export, nessun backend, nessuna telemetria
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Verdetto**: `CML_535_GUIDED_TEACHER_PILOT_RUNTIME_ENTRY_READY_LOCAL_NOT_PUSHED`
+
+### Prossima sequenza consigliata aggiornata
+
+1. Eseguire il pilot con 3-5 docenti usando il punto di ingresso CML-535.
+2. Preparare CML-536 per intake e sintesi evidenze reali, senza raccolta automatica non richiesta.
+3. Aprire microfix mobile/accessibilita o flusso ruoli solo se emergono P0/P1.
 ## Serie CML-518A–E (chiusa)
 
 - CML-518A — React Baseline and Capability Perimeter — PR #139 — merge `e3c02cb`

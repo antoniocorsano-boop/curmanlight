@@ -33,7 +33,55 @@ Ogni voce deve indicare almeno:
 
 ---
 
-## CML-534 - Guided Teacher Pilot Protocol for React Baseline
+## CML-535 - Guided Teacher Pilot Runtime Entry Point
+
+- **Data**: 2026-07-17
+- **Tipo**: React preview / runtime entry point
+- **Stato**: READY_LOCAL_NOT_PUSHED
+- **Branch**: `feat/cml-535-guided-teacher-pilot-entry`
+- **Base locale**: `c2fcc3fe87fbd83ef0ceab8d88d9d1271ec78f97`
+- **Runtime storico modificato**: no
+- **React modificato**: si
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Trigger Pages nel diff**: `curman-react/**`, solo in caso di merge/push su `main`
+
+### Scopo
+
+Aggiungere nella baseline React un punto di accesso provvisorio e non invasivo alla prova guidata docenti definita da CML-534.
+
+### Implementazione
+
+- Nuova vista `pilot-guidato-docenti`.
+- Ingresso Home "Partecipa alla prova guidata".
+- Schermata iniziale con scopo, regole, durata e azioni.
+- Primo compito CML-534: orientarsi nella Home.
+- Uscita sicura verso Home e ritorno alle regole.
+- Nessuna raccolta persistente, nessun backend, nessuna telemetria.
+
+### File prodotti/modificati
+
+- `curman-react/src/App.tsx`
+- `curman-react/src/types/state.ts`
+- `curman-react/src/components/layout/Sidebar.tsx`
+- `curman-react/src/views/HomeView.tsx`
+- `curman-react/src/views/GuidedTeacherPilotView.tsx`
+- `curman-react/tools/check-cml535-guided-teacher-pilot-entry.mjs`
+- `curman-react/package.json`
+- `docs/03_execution/CML-535.md`
+- `report/CML-535_guided_teacher_pilot_runtime_entry.md`
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Verdetto
+
+```text
+CML_535_GUIDED_TEACHER_PILOT_RUNTIME_ENTRY_READY_LOCAL_NOT_PUSHED
+```
+
+---## CML-534 - Guided Teacher Pilot Protocol for React Baseline
 
 - **Data**: 2026-07-17
 - **Tipo**: docs-only / guided teacher pilot protocol
