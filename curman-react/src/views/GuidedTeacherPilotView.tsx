@@ -1,4 +1,4 @@
-import { ArrowLeft, ClipboardCheck, Home, PlayCircle } from 'lucide-react'
+import { ArrowLeft, ClipboardCheck, Home, MessageSquareText, PlayCircle, Trash2 } from 'lucide-react'
 import { useState } from 'react'
 import { useAppStore } from '@/stores/useAppStore'
 import type { ViewId } from '@/types/state'
@@ -15,6 +15,11 @@ type PilotTask = {
   actionLabel: string
 }
 
+type PilotObservation = {
+  evidence: string
+  opinion: string
+}
+
 const RULES = [
   'non inserire nomi o dati personali reali',
   'non usare documenti riservati',
@@ -24,6 +29,7 @@ const RULES = [
 ]
 
 let sessionPilotTaskIndex: number | null = null
+let sessionPilotObservations: Record<string, PilotObservation> = {}
 
 const PILOT_TASKS: PilotTask[] = [
   {
@@ -64,15 +70,22 @@ const PILOT_TASKS: PilotTask[] = [
   },
 ]
 
+function emptyObservation(): PilotObservation {
+  return { evidence: '', opinion: '' }
+}
+
 export function GuidedTeacherPilotView() {
   const [step, setStep] = useState<PilotStep>('intro')
   const [currentTaskIndex, setCurrentTaskIndex] = useState<number>(sessionPilotTaskIndex ?? 0)
   const [lastVisitedTaskIndex, setLastVisitedTaskIndex] = useState<number | null>(sessionPilotTaskIndex)
+  const [observations, setObservations] = useState<Record<string, PilotObservation>>(() => ({ ...sessionPilotObservations }))
   const setVista = useAppStore(state => state.setVista)
 
   const currentTask = PILOT_TASKS[currentTaskIndex]
+  const currentObservation = observations[currentTask.id] ?? emptyObservation()
   const canGoBack = currentTaskIndex > 0
   const canContinue = currentTaskIndex < PILOT_TASKS.length - 1
+  const observationCount = Object.values(observations).filter(item => item.evidence.trim() || item.opinion.trim()).length
 
   function rememberTask(index: number) {
     sessionPilotTaskIndex = index
@@ -88,6 +101,23 @@ export function GuidedTeacherPilotView() {
   function goToFunction() {
     rememberTask(currentTaskIndex)
     setVista(currentTask.destination)
+  }
+
+  function updateObservation(field: keyof PilotObservation, value: string) {
+    const next = {
+      ...observations,
+      [currentTask.id]: {
+        ...currentObservation,
+        [field]: value,
+      },
+    }
+    sessionPilotObservations = next
+    setObservations(next)
+  }
+
+  function clearSessionObservations() {
+    sessionPilotObservations = {}
+    setObservations({})
   }
 
   if (step === 'tasks') {
@@ -136,6 +166,48 @@ export function GuidedTeacherPilotView() {
               <p className="mt-2 text-sm leading-6 text-slate-600">{currentTask.observe}</p>
             </div>
           </div>
+
+          <section aria-labelledby="pilot-observation-title" className="mt-6 rounded-xl border border-indigo-100 bg-indigo-50/40 p-4 sm:p-5">
+            <div className="flex items-start gap-3">
+              <MessageSquareText aria-hidden="true" className="mt-0.5 shrink-0 text-indigo-700" size={20} />
+              <div>
+                <h2 id="pilot-observation-title" className="text-sm font-[750] text-slate-900">Annotazioni del passaggio</h2>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  Scrivi solo ciò che può aiutare a migliorare lo strumento. Le annotazioni restano nella sessione corrente e non vengono inviate.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <label className="block text-sm font-[650] text-slate-800">
+                Che cosa hai osservato?
+                <span className="mt-1 block text-xs font-normal leading-5 text-slate-500">Descrivi un fatto, un tentativo o un punto di esitazione.</span>
+                <textarea
+                  value={currentObservation.evidence}
+                  onChange={event => updateObservation('evidence', event.target.value)}
+                  rows={5}
+                  maxLength={1200}
+                  placeholder="Esempio: ho cercato prima nel menu laterale..."
+                  className="mt-2 w-full resize-y rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal leading-6 text-slate-800 outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+                />
+              </label>
+              <label className="block text-sm font-[650] text-slate-800">
+                Che cosa miglioreresti?
+                <span className="mt-1 block text-xs font-normal leading-5 text-slate-500">Aggiungi un'opinione o una proposta, senza indicare persone reali.</span>
+                <textarea
+                  value={currentObservation.opinion}
+                  onChange={event => updateObservation('opinion', event.target.value)}
+                  rows={5}
+                  maxLength={1200}
+                  placeholder="Esempio: renderei più evidente il pulsante..."
+                  className="mt-2 w-full resize-y rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal leading-6 text-slate-800 outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+                />
+              </label>
+            </div>
+            <p className="mt-3 text-xs leading-5 text-slate-500" aria-live="polite">
+              Annotazioni compilate in questa sessione: {observationCount} di {PILOT_TASKS.length} passaggi.
+            </p>
+          </section>
 
           <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
             <h2 className="text-sm font-[700] text-amber-950">Prima di usare la funzione</h2>
@@ -216,6 +288,19 @@ export function GuidedTeacherPilotView() {
             <p className="mt-3 text-sm leading-6 text-slate-600">
               Puoi interrompere la prova in qualsiasi momento e tornare al normale uso dell'app.
             </p>
+            {observationCount > 0 && (
+              <div className="mt-4 border-t border-slate-200 pt-4">
+                <p className="text-sm leading-6 text-slate-600">Annotazioni presenti: {observationCount} passaggi.</p>
+                <button
+                  type="button"
+                  onClick={clearSessionObservations}
+                  className="mt-2 inline-flex items-center gap-2 text-sm font-[650] text-rose-700 hover:text-rose-800"
+                >
+                  <Trash2 size={16} />
+                  Cancella annotazioni della sessione
+                </button>
+              </div>
+            )}
           </aside>
         </div>
 
