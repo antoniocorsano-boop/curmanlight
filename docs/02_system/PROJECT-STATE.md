@@ -2,14 +2,14 @@
 
 ## Snapshot
 
-- Last completed local slice: CML-528 - Service Worker App Shell Contract Audit
-- Current `main`: `3ce03b04489e618d70ad38ca13ef18ac3b5ed738`
-- Active slice: nessuna (CML-528 audit chiuso localmente)
+- Last completed local slice: CML-532 - Offline Service Worker Regression Check
+- Current `main`: `39ef8d915996b40162b6cac275781ede8e5b587b`
+- Active slice: nessuna (CML-532 regression check pronto localmente)
 - React application (`curman-react/`): baseline evolutiva principale
 - Runtime storico: stabile, mantenuto come riferimento e fallback; non esteso per default
 - Canonical curriculum data: invariati; validazione umana obbligatoria
 - Current movelog: `docs/REPO-MOVELOG-v2.md`
-- Next strategic action: CML-529 - Fetch Fallback Always-Response Microfix
+- Next strategic action: commit separati CML-531 runtime e CML-532 test/docs, poi rientro roadmap React
 
 
 ## CML-527 - SW Install Resilience Post-Publish Closure
@@ -48,6 +48,23 @@
 
 1. CML-529 - Fetch Fallback Always-Response Microfix.
 2. CML-530 - Offline Test and Cache Update.
+
+## CML-532 - Offline Service Worker Regression Check
+
+- **Tipo**: tooling / regression check
+- **Base locale**: `39ef8d915996b40162b6cac275781ede8e5b587b`
+- **Runtime modificato in CML-532**: no
+- **Controllo aggiunto**: `tools/check-service-worker-offline-regression.mjs`
+- **Copertura**: APP_SHELL minima, motto canonico, risorse vietate assenti, fallback 503/504, install con asset mancanti, `respondWith()` sempre `Response`, sync dei due `sw.js`
+- **Esito**: PASS
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+- **Verdetto**: `CML_532_OFFLINE_SERVICE_WORKER_REGRESSION_CHECK_READY_LOCAL_NOT_PUSHED`
+
+### Prossima sequenza consigliata aggiornata
+
+1. Commit runtime CML-531 con soli `sw.js` e `_published_snapshot/netlify-current/sw.js`.
+2. Commit test/docs CML-532.
+3. Push controllato su `main`, Pages verification, poi rientro roadmap React.
 ## Serie CML-518A–E (chiusa)
 
 - CML-518A — React Baseline and Capability Perimeter — PR #139 — merge `e3c02cb`

@@ -33,6 +33,60 @@ Ogni voce deve indicare almeno:
 
 ---
 
+## CML-532 - Offline Service Worker Regression Check
+
+- **Data**: 2026-07-17
+- **Tipo**: tooling / regression check
+- **Stato**: READY_LOCAL_NOT_PUSHED
+- **Branch**: `main`
+- **Base locale**: `39ef8d915996b40162b6cac275781ede8e5b587b`
+- **Runtime storico modificato in CML-532**: no
+- **Dati curricolari canonici**: non modificati
+- **Schema `.cml`**: invariato
+- **Workflow Pages**: non modificato
+- **Archivio legacy**: `docs/REPO-MOVELOG.md` non modificato
+
+### Scopo
+
+Aggiungere un controllo automatico locale per impedire regressioni sul service worker dopo CML-529/CML-531.
+
+### File prodotti/modificati
+
+- `tools/check-service-worker-offline-regression.mjs`
+- `docs/03_execution/CML-532.md`
+- `report/CML-532_offline_service_worker_regression_check.md`
+- `docs/02_system/PROJECT-STATE.md`
+- `docs/REPO-MOVELOG-v2.md`
+
+### Copertura
+
+- Sync byte-for-byte tra `sw.js` e `_published_snapshot/netlify-current/sw.js`.
+- `APP_SHELL` minima esatta.
+- Motto canonico `./motto-non-multa-sed-multum/`.
+- Risorse opzionali/normative escluse dal precache.
+- Fallback offline 503/504 presenti.
+- Install resiliente con asset mancanti.
+- Navigation offline/cache vuota -> `Response 503`.
+- Asset offline/cache vuota -> `Response 504`.
+- Nessun `respondWith(undefined)` nei percorsi simulati.
+
+### Controlli
+
+- RED TDD: `node tools/check-service-worker-offline-regression.mjs` FAIL atteso per script mancante.
+- GREEN: `node tools/check-service-worker-offline-regression.mjs` PASS.
+- `node --check tools/check-service-worker-offline-regression.mjs` PASS.
+- `node --check sw.js` PASS.
+- `node --check _published_snapshot/netlify-current/sw.js` PASS.
+- `node tools/check-app-pair.mjs` PASS.
+- `git diff --check` PASS, solo warning CRLF non bloccanti.
+
+### Verdetto
+
+```text
+CML_532_OFFLINE_SERVICE_WORKER_REGRESSION_CHECK_READY_LOCAL_NOT_PUSHED
+```
+
+---
 ## CML-528 - Service Worker App Shell Contract Audit
 
 - **Data**: 2026-07-17
