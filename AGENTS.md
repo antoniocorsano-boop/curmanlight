@@ -2,12 +2,14 @@
 
 CurManLight (CML) e una PWA statica per il curricolo verticale dell'I.C. Calvario-Covotta "don Lorenzo Milani", Ariano Irpino. Supporta consultazione, proposta, revisione e validazione umana del curricolo scolastico. Non deve sostituire le decisioni collegiali. Tratta contenuti curricolari e non deve introdurre dati personali. Privilegia semplicita, trasparenza e funzionamento locale.
 
+**Stato corrente del repository:** `LEGACY_STABLE / MAINTENANCE_ONLY`. Prima di qualsiasi intervento leggere `STATUS.md`: nuove feature e sviluppo evolutivo non appartengono piu a questo repository salvo riapertura esplicita secondo i trigger documentati.
+
 ## Stack
 
 - HTML/CSS/JavaScript vanilla (applicazione monolitica single-file)
 - Nessuna dipendenza runtime nel codice pubblicato
 - Nessun backend, nessun framework nel runtime attivo
-- React/Vite/TypeScript in `curman-react/` (migrazione in corso, pubblicata come preview isolata)
+- React/Vite/TypeScript in `curman-react/` (preview storica mantenuta come riferimento; evoluzione congelata in questo repository)
 
 ## Architettura
 
@@ -49,20 +51,22 @@ CurManLight (CML) e una PWA statica per il curricolo verticale dell'I.C. Calvari
 ### Obblighi
 
 1. Leggere questo file prima di qualsiasi intervento
-2. Leggere lo stato di progetto: `docs/02_system/PROJECT-STATE.md`
-3. Identificare il perimetro dell'attivita e dichiararlo
-4. Ispezionare tutti i punti di utilizzo del codice coinvolto
-5. Applicare la modifica minima necessaria
-6. Mantenere sincronizzati i file della coppia applicativa
-7. Eseguire tutti i controlli prima di dichiarare concluso
-8. Aggiornare il movelog operativo corrente `docs/REPO-MOVELOG-v2.md` quando la slice richiede una registrazione; non riscrivere `docs/REPO-MOVELOG.md` da remoto
-9. Prima di qualunque push o merge su `main`, ispezionare i file cambiati rispetto a `origin/main` e verificare se ricadono nei trigger Pages
-10. Trattare come operazione di pubblicazione ogni push o merge su `main` che include `_published_snapshot/netlify-current/**`, `curman-react/**` oppure `.github/workflows/pages.yml`
-11. Produrre un rapporto nel formato standard
-12. Fermarsi prima di push, merge o pubblicazione se non esplicitamente autorizzati
+2. Leggere `STATUS.md` come autorita sullo stato corrente e poi `docs/02_system/PROJECT-STATE.md`
+3. Verificare che l'attivita sia manutenzione ammessa; nuove feature richiedono una riapertura esplicita del repository
+4. Identificare il perimetro dell'attivita e dichiararlo
+5. Ispezionare tutti i punti di utilizzo del codice coinvolto
+6. Applicare la modifica minima necessaria
+7. Mantenere sincronizzati i file della coppia applicativa
+8. Eseguire tutti i controlli prima di dichiarare concluso
+9. Aggiornare il movelog operativo corrente `docs/REPO-MOVELOG-v2.md` quando la slice richiede una registrazione; non riscrivere `docs/REPO-MOVELOG.md` da remoto
+10. Prima di qualunque push o merge su `main`, ispezionare i file cambiati rispetto a `origin/main` e verificare se ricadono nei trigger Pages
+11. Trattare come operazione di pubblicazione ogni push o merge su `main` che include `_published_snapshot/netlify-current/**`, `curman-react/**` oppure `.github/workflows/pages.yml`
+12. Produrre un rapporto nel formato standard
+13. Fermarsi prima di push, merge o pubblicazione se non esplicitamente autorizzati
 
 ### Divieti
 
+- Non avviare nuove feature, nuove roadmap o nuovi incrementi CML in questo repository mentre lo stato e `MAINTENANCE_ONLY`; indirizzare l'evoluzione verso i repository successori indicati in `STATUS.md`
 - Non modificare solo uno dei due file applicativi (`index.html` e `_published_snapshot/netlify-current/index.html`)
 - Non introdurre librerie, servizi esterni o dipendenze senza autorizzazione esplicita
 - Non introdurre autenticazione, backend, analisi comportamentale o raccolta dati
