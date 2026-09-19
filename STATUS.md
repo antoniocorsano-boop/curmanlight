@@ -50,7 +50,7 @@ The transition to maintenance mode does not erase known limitations:
 - accessibility P3 naming/microcopy backlog remains visible;
 - VoiceOver/macOS has not been verified as part of the original accessibility evidence;
 - UDA drafts are not importable/exportable as `.cml`;
-- UDA drafts are not persistently stored;
+- UDA drafts are persisted only locally in the browser; no server-side or shared institutional persistence is provided;
 - department validation remains human/manual;
 - SchoolKB is not integrated in this implementation.
 
