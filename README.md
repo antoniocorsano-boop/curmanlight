@@ -2,9 +2,13 @@
 
 **Versione pubblica:** https://antoniocorsano-boop.github.io/curmanlight/
 
+**Stato del repository:** `LEGACY_STABLE / MAINTENANCE_ONLY` — vedi [`STATUS.md`](STATUS.md).
+
 CurManLight è una PWA statica per la consultazione e revisione del curricolo verticale d'istituto della scuola dell'infanzia e del primo ciclo. Funziona interamente nel browser: nessun dato viene inviato a server, nessun account richiesto.
 
-Baseline: `main@82691b4`.
+Stato di `main` alla transizione in manutenzione: `7cc338459b9d80ee9b8ea602a1fd53b3565130e6`.
+
+Lo sviluppo evolutivo prosegue in **CurManLight Arena**, **Curriculum Atlas** e **Docente OS 2026/27**, secondo la separazione di responsabilità descritta in `STATUS.md`.
 
 ## Principi
 
