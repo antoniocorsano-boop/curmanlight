@@ -1,16 +1,27 @@
 # Project State
 
-## Snapshot
+## Snapshot corrente
 
-- Last completed local slice: CML-536 - Guided Teacher Pilot Step Flow
-- Current `main`: `9a6ecacf759b68e5ef6035f5a184fd4f04b0a533`
-- Active slice: nessuna (CML-536 step flow pronto localmente)
-- React application (`curman-react/`): baseline evolutiva principale
-- Runtime storico: stabile, mantenuto come riferimento e fallback; non esteso per default
-- Canonical curriculum data: invariati; validazione umana obbligatoria
-- Current movelog: `docs/REPO-MOVELOG-v2.md`
-- Next strategic action: esecuzione pilot o CML-537 - Guided Teacher Pilot Evidence Intake
+- Stato formale del repository: `LEGACY_STABLE / MAINTENANCE_ONLY`.
+- Documento canonico di stato: `STATUS.md`.
+- Stato di `main` alla transizione: `7cc338459b9d80ee9b8ea602a1fd53b3565130e6`.
+- Sviluppo evolutivo attivo in questo repository: **nessuno**.
+- `curman-react/`: preview storica mantenuta come riferimento; non è più una baseline evolutiva attiva.
+- Runtime legacy: stabile, mantenuto per continuità, compatibilità e correzioni critiche.
+- Dati curricolari canonici: invariati; validazione umana obbligatoria.
+- Movelog storico operativo: `docs/REPO-MOVELOG-v2.md`.
+- Evoluzione funzionale: CurManLight Arena.
+- Evoluzione visuale/semantica: Curriculum Atlas.
+- Integrazione operativa docente: Docente OS 2026/27.
+- Qualunque riapertura dello sviluppo in questo repository richiede il trigger e la decisione esplicita definiti in `STATUS.md`.
 
+## Autorità dello stato
+
+A partire dal 2026-09-19, `STATUS.md` e questa sezione descrivono lo stato corrente del repository e **sostituiscono ogni precedente indicazione di "next slice", "baseline evolutiva", roadmap attiva o incremento CML futuro contenuta nelle sezioni storiche sottostanti**.
+
+Le sezioni successive sono conservate come **registro storico dell'esecuzione** e non autorizzano nuovo sviluppo funzionale in `curmanlight`.
+
+## Registro storico dell'esecuzione
 
 ## CML-527 - SW Install Resilience Post-Publish Closure
 
